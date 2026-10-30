@@ -1,6 +1,6 @@
 {
   "_schema": {
-    "description": "Legislative Assembly districts (all 88). District list and regions from the VEC district and region pages (checked 2026-10-30). Sitting MPs, margins and retiring flags from the 30 Oct 2026 research report.",
+    "description": "Legislative Assembly districts (all 88). District list and regions from the VEC district and region pages (checked 2026-10-30). Sitting MPs, margins and retiring flags seeded from the 30 Oct 2026 research report and refreshed daily from the ABC election guide by scripts/refresh.py.",
     "fields": {
       "id": "URL slug, used as the #hash on lower.html (e.g. bendigo-east)",
       "name": "District name as the VEC writes it",
@@ -8,8 +8,11 @@
       "area": "metro | regional (by region: the five metropolitan regions are metro, the three Victoria regions regional)",
       "sitting_mp": "Name of the sitting member",
       "party": "Party code of the sitting member (ALP, LIB, NAT, GRN, ILAB = Independent Labor)",
-      "margin": "{party, vs, pct}: ABC notional 2PP/2CP margin in percentage points; vs LNP means Labor v Coalition",
-      "retiring": "true if the sitting member is not recontesting",
+      "margin": "{party, vs, pct}: ABC notional 2PP/2CP margin in percentage points; vs LNP means Labor v Coalition. party and pct are updated from the ABC guide",
+      "classification": "ABC seat classification, e.g. 'Very Safe Labor' (from the ABC guide)",
+      "retiring": "true if the sitting member is not recontesting (ABC district page or retiring MPs list)",
+      "abc_code": "ABC election guide code for the district, e.g. bewe",
+      "abc_url": "Link to the district's ABC election guide page",
       "needs_check": "true where the research report flagged the region allocation as uncertain",
       "region_note": "Optional: why needs_check is set, or how the region was resolved",
       "notes": "Optional free text (roles, margin caveats, candidates not yet named)"

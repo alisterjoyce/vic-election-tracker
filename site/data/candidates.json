@@ -1,18 +1,20 @@
 {
   "_schema": {
-    "description": "Candidates for both houses. Seeded from the 30 Oct 2026 research report. scripts/refresh.py adds names it finds on the Wikipedia candidates page as 'announced' and never changes or removes existing rows. Nominations close 12 noon 9 Nov 2026; VEC-nominated rows will follow once fetch_vec_candidates() is implemented.",
+    "description": "Candidates for both houses. Seeded from the 30 Oct 2026 research report. scripts/refresh.py adds Wikipedia names as 'announced' without changing existing rows, then applies the ABC election guide, the primary lower-house source: ABC-listed candidates become 'endorsed', and an ABC entry supersedes any other row for the same party and seat (the older row is kept with status 'superseded', never deleted). Nominations close 12 noon 9 Nov 2026; VEC-nominated rows will follow once fetch_vec_candidates() is implemented.",
     "fields": {
       "district": "id of the district in districts.json (Legislative Assembly); null for Legislative Council rows",
       "region": "Legislative Council rows only: id of the region in regions.json",
       "name": "Candidate name",
       "party": "Party code (ALP, LIB, NAT, LNP, GRN, ONP, VS, AJP, ND, WEST, SAL, LBT, FF, LCV, SUS, DLP, SFF, IND, OTH)",
-      "status": "endorsed (preselected or endorsed by the party) | reported (reported, not independently verified) | announced (listed on Wikipedia, added automatically) | vec_nominated | withdrawn",
+      "status": "endorsed (preselected or endorsed by the party, or listed in the ABC guide) | reported (reported, not independently verified) | announced (listed on Wikipedia, added automatically) | vec_nominated | withdrawn | superseded (replaced by an ABC entry for the same party and seat)",
       "ballot_position": "Assembly: integer position on the ballot paper once drawn by the VEC, else null",
       "ticket_position": "Council rows only: position in the party's group as reported",
       "incumbent": "Assembly: true if this is the sitting member",
-      "source": "wikipedia for rows added by refresh.py; absent for rows from the research report",
-      "source_url": "Where the row came from",
+      "source": "abc (listed in the ABC guide) | wikipedia (added from Wikipedia) | absent for rows only in the research report",
+      "source_url": "Where the row came from (the ABC district page for source abc)",
       "date_added": "YYYY-MM-DD the row was added by refresh.py (Melbourne date)",
+      "superseded_by": "superseded rows: name of the ABC entry that replaced this one",
+      "superseded_on": "superseded rows: YYYY-MM-DD it was superseded",
       "updated": "YYYY-MM-DD the row was last checked",
       "notes": "Optional: backing (e.g. Climate 200), source conflicts or other caveats"
     }

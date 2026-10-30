@@ -19,6 +19,11 @@
     return "Safe";
   }
 
+  // The ABC's classification ("Very Safe Labor") when we have it.
+  function seatLabel(d) {
+    return d.classification || marginLabel(d.margin && d.margin.pct);
+  }
+
   function marginText(m) {
     if (!m || m.pct == null) return "–";
     return `${escapeHtml(partyShort(m.party))} ${Number(m.pct).toFixed(1)}%${m.vs ? ` vs ${escapeHtml(partyShort(m.vs))}` : ""}`;
@@ -57,14 +62,16 @@
               <td>${escapeHtml(regionsById[d.region] ? regionsById[d.region].name : d.region)}</td>
               <td>${partyBadge(d.party, { full: false })}</td>
               <td class="num">${d.margin && d.margin.pct != null ? Number(d.margin.pct).toFixed(1) : "–"}</td>
-              <td>${escapeHtml(marginLabel(d.margin && d.margin.pct))}</td>
+              <td>${escapeHtml(seatLabel(d))}</td>
             </tr>`).join("")}
         </tbody>
       </table>`;
   }
 
+  const isInactive = (c) => c.status === "withdrawn" || c.status === "superseded";
+
   function candidateSort(a, b) {
-    const wa = a.status === "withdrawn", wb = b.status === "withdrawn";
+    const wa = isInactive(a), wb = isInactive(b);
     if (wa !== wb) return wa ? 1 : -1;
     const pa = a.ballot_position ?? Infinity, pb = b.ballot_position ?? Infinity;
     const rank = (s) => STATUS_RANK.indexOf(s) + 1 || STATUS_RANK.length + 1;
@@ -93,12 +100,15 @@
     el.innerHTML = `
       <div class="card-head">
         <h2>${escapeHtml(d.name)}</h2>
-        <button class="icon-btn" type="button" id="copy-link">Copy link</button>
+        <div class="card-actions">
+          ${d.abc_url ? `<a class="icon-btn" href="${escapeHtml(d.abc_url)}" target="_blank" rel="noopener">ABC guide ↗</a>` : ""}
+          <button class="icon-btn" type="button" id="copy-link">Copy link</button>
+        </div>
       </div>
       <div class="facts">
         <div class="fact"><div class="label">Sitting MP</div><div class="value">${escapeHtml(d.sitting_mp || "–")}${d.retiring ? ' <span class="badge neutral">Retiring</span>' : ""}</div></div>
         <div class="fact"><div class="label">Held by</div><div class="value">${partyBadge(d.party)}</div></div>
-        <div class="fact"><div class="label">Margin</div><div class="value">${marginText(d.margin)}</div><div class="muted small">${escapeHtml(marginLabel(d.margin && d.margin.pct))}</div></div>
+        <div class="fact"><div class="label">Margin</div><div class="value">${marginText(d.margin)}</div><div class="muted small">${escapeHtml(seatLabel(d))}</div></div>
         <div class="fact"><div class="label">Region</div><div class="value">${region ? `<a href="upper.html#${escapeHtml(region.id)}">${escapeHtml(region.name)}</a>` : escapeHtml(d.region)}${d.needs_check ? ' <span class="badge reported" title="Region allocation flagged for checking">Check</span>' : ""}</div><div class="muted small">${d.area === "regional" ? "Regional" : "Metro"}</div></div>
       </div>
       ${d.notes ? `<p>${escapeHtml(d.notes)}</p>` : ""}
@@ -107,7 +117,7 @@
       ${cands.length ? `
         <ul class="people">
           ${cands.map((c) => `
-            <li class="${c.status === "withdrawn" ? "is-withdrawn" : ""}">
+            <li class="${isInactive(c) ? "is-withdrawn" : ""}">
               ${anyBallot ? `<span class="pos" title="Ballot position">${c.ballot_position ?? "–"}</span>` : ""}
               <span class="name">${escapeHtml(c.name)}${c.incumbent ? ' <span class="muted small">(sitting MP)</span>' : ""}</span>
               ${partyBadge(c.party)}

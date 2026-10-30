@@ -212,6 +212,8 @@ main { padding: 24px 0 40px; }
   gap: 12px; flex-wrap: wrap; margin-bottom: 12px;
 }
 .card-head h2 { margin: 0; }
+.card-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+a.icon-btn { text-decoration: none; display: inline-block; }
 
 .grid { display: grid; gap: 20px; }
 .grid-2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
@@ -283,6 +285,7 @@ select {
 .badge.endorsed      { background: var(--s-endorsed-bg);  color: var(--s-endorsed-fg); }
 .badge.vec_nominated { background: var(--s-nominated-bg); color: var(--s-nominated-fg); }
 .badge.withdrawn     { background: var(--s-withdrawn-bg); color: var(--s-withdrawn-fg); }
+.badge.superseded    { background: var(--surface-2); color: var(--muted); }
 .badge.neutral       { background: var(--surface-2); color: var(--muted); }
 
 /* ---------- District / region detail ---------- */

@@ -29,7 +29,7 @@ netlify.toml
 
 Each JSON file has a `_schema` key that describes its fields.
 
-**Data sources:** the district list and each district's region come from the [VEC district](https://www.vec.vic.gov.au/electoral-boundaries/state-districts) and region pages. Sitting MPs, margins, retiring flags, candidates and upper-house tickets come from a research report dated 30 October 2026. Candidate status is `endorsed` or `reported` as the report marks it. No one is VEC-nominated until nominations close at noon on 9 November. Districts with `needs_check: true` are ones whose region the report flagged as uncertain.
+**Data sources:** the district list and each district's region come from the [VEC district](https://www.vec.vic.gov.au/electoral-boundaries/state-districts) and region pages. Sitting MPs, margins, retiring flags, candidates and upper-house tickets were seeded from a research report dated 30 October 2026, with candidate status `endorsed` or `reported` as the report marks it. The daily refresh then adds names from Wikipedia and makes the ABC election guide the primary source for the lower house (see below). No one is VEC-nominated until nominations close at noon on 9 November. Districts with `needs_check: true` are ones whose region the report flagged as uncertain.
 
 If a file is ever reset to placeholder rows, set `meta.json` → `sample_data.<name>` to `true` to show the "sample data" banner. `refresh.py` clears the `polls` flag itself after a successful fetch.
 
@@ -58,8 +58,15 @@ What it does:
    - Names not already present are added with status `announced`, `source: "wikipedia"` and a `date_added`. Council candidates get a `region` and `ticket_position` instead of a `district`.
    - Existing rows are never changed, downgraded or deleted. A name counts as already present if it matches ignoring case, accents and punctuation, or if it's a near-identical spelling for the same party and seat. Council names already on a ticket in `regions.json` also count.
    - If Wikipedia lists a second candidate for a party that already has one in a seat, the new row gets a "Conflicts with …" note, and the script logs a warning.
-3. Calls `fetch_vec_candidates()`, a clearly marked **placeholder** for the VEC candidate list. It returns `None` until implemented, so this step leaves `candidates.json` alone.
-4. Updates `meta.json`: `last_updated` (only when a source refreshed successfully) and the per-source status.
+3. Reads the [ABC election guide](https://www.abc.net.au/news/elections/vic/2026/guide/electorates), the **primary source for lower-house candidates**:
+   - It collects each district's ABC code from the electorates index and stores it in `districts.json` as `abc_code` and `abc_url`. Each district page on the site links to its ABC page.
+   - From each district page it takes only facts: the margin and classification (e.g. "Very Safe Labor 14.6%"), the sitting member, whether the "Held by" line says they are retiring, and the "Candidates in alphabetical order" table. No profile or biography text is stored.
+   - ABC-listed candidates are set to `endorsed` with `source: "abc"` and the page URL. A `vec_nominated` row is never overridden.
+   - **Supersede rule:** an ABC entry for a party in a seat supersedes any other row for that party there. The older row is kept, not deleted. Its status becomes `superseded`, with `superseded_by`, `superseded_on` and a note, and the script logs a warning. Independents are exempt because several can stand in one seat.
+   - The [retiring MPs page](https://www.abc.net.au/news/elections/vic/2026/guide/retiring-mps) sets `retiring` for MPs and MLCs. It currently lists only MPs.
+   - It is polite to the ABC: one request per second and a descriptive User-Agent. If any page fails three times, the whole ABC step is skipped and no file changes. A full run makes about 90 requests, so it takes about a minute and a half.
+4. Calls `fetch_vec_candidates()`, a clearly marked **placeholder** for the VEC candidate list. It returns `None` until implemented, so this step leaves `candidates.json` alone.
+5. Updates `meta.json`: `last_updated` (only when a source refreshed successfully) and the per-source status.
 
 If any fetch or parse fails, the error is logged (and shown as a warning annotation in GitHub Actions), and the existing file is kept as it was.
 

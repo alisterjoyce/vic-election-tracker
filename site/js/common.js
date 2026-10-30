@@ -34,6 +34,7 @@
     endorsed: "Endorsed",
     vec_nominated: "VEC-nominated",
     withdrawn: "Withdrawn",
+    superseded: "Superseded",
   };
 
   const cache = {};
