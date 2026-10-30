@@ -12,7 +12,7 @@
       "reconciliation": "Written by scripts/refresh.py after the ABC district pages: lower-house candidates compared with the ABC A-Z list. {date (Melbourne), scope, abc_list_url, totals: {tracker, abc_list}, tracker_by_source: {abc, wikipedia, report}, only_in_tracker, only_on_abc (missing from the tracker before this run; added), unmatched_electorates, tracked_all (active candidates in both houses, shown in the footer)}"
     }
   },
-  "last_updated": "2026-10-30T02:32:35Z",
+  "last_updated": "2026-10-30T02:47:54Z",
   "election_date": "2026-11-28",
   "previous_election": {
     "date": "2022-11-26",
@@ -34,7 +34,7 @@
     "polls": {
       "status": "ok",
       "url": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election",
-      "last_success": "2026-10-30T02:30:02Z",
+      "last_success": "2026-10-30T02:45:21Z",
       "message": "67 polls"
     },
     "vec_candidates": {
@@ -46,14 +46,19 @@
     "wikipedia_candidates": {
       "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
       "status": "ok",
-      "last_success": "2026-10-30T02:30:02Z",
+      "last_success": "2026-10-30T02:45:21Z",
       "message": "544 assembly and 96 council names read; 0 assembly and 0 council added"
     },
     "abc_guide": {
       "url": "https://www.abc.net.au/news/elections/vic/2026/guide/electorates",
       "status": "ok",
-      "last_success": "2026-10-30T02:32:35Z",
-      "message": "88 district pages, 0 districts updated; 0 candidates added, 556 confirmed, 1 superseded"
+      "last_success": "2026-10-30T02:47:53Z",
+      "message": "88 district pages, 0 districts updated; 0 candidates added, 556 confirmed, 0 superseded"
+    },
+    "sportsbet": {
+      "url": "https://www.sportsbet.com.au/betting/politics/australian-politics/victorian-state-election",
+      "status": "manual",
+      "message": "Blocked or unrecognised (HTTPError); manual values kept."
     }
   },
   "reconciliation": {
