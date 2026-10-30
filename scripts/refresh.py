@@ -400,6 +400,20 @@ def _same_person(a: str, b: str) -> bool:
     return difflib.SequenceMatcher(None, ka, kb).ratio() >= 0.85
 
 
+def _near_identical(a: str, b: str) -> bool:
+    """Stricter test for parties that can field several people in one seat
+    (independents): near-identical surname AND first name, e.g.
+    "Ashley Vandenburg" / "Ashleigh Vandenberg". A shared surname alone
+    is not enough."""
+    pa, pb = a.split(), b.split()
+    if not pa or not pb:
+        return False
+    fa, fb = _name_key(pa[0]), _name_key(pb[0])
+    sa, sb = _name_key(pa[-1]), _name_key(pb[-1])
+    first_ok = fa == fb or fa.startswith(fb) or fb.startswith(fa) or difflib.SequenceMatcher(None, fa, fb).ratio() >= 0.7
+    return first_ok and difflib.SequenceMatcher(None, sa, sb).ratio() >= 0.85
+
+
 def _sort_candidates(rows: list[dict]) -> list[dict]:
     return sorted(rows, key=lambda c: (c.get("district") or "", c.get("region") or "",
                                        c.get("ticket_position") or 0, c.get("name", "")))
@@ -557,7 +571,8 @@ def refresh_wiki_candidates(data_dir: Path, meta: dict) -> bool:
         seat = c.get("district") or c["region"]
         key = (seat, _name_key(c["name"]))
         others = same_party.get((seat, c["party"]), [])
-        if key in known or any(_same_person(c["name"], o) for o in others):
+        similar = _near_identical if c["party"] in MULTI_PER_SEAT else _same_person
+        if key in known or any(similar(c["name"], o) for o in others):
             continue
         known.add(key)
         row = {**({"district": c["district"]} if "district" in c else {"district": None, "region": c["region"]}),
@@ -771,9 +786,9 @@ def _find_in_seat(seat_rows: list[dict], name: str, party: str) -> dict | None:
     """The row for this person in a seat: same name, or a near-identical
     spelling for the same party."""
     key = _name_key(name)
+    similar = _near_identical if party in MULTI_PER_SEAT else _same_person
     return (next((c for c in seat_rows if _name_key(c["name"]) == key), None)
-            or next((c for c in seat_rows if c.get("party") == party and party not in MULTI_PER_SEAT
-                     and _same_person(c["name"], name)), None))
+            or next((c for c in seat_rows if c.get("party") == party and similar(c["name"], name)), None))
 
 
 def _apply_abc_entry(entry: dict, did: str, url: str, seat_rows: list[dict], rows: list[dict],
@@ -821,19 +836,33 @@ def _supersede(did: str, seat_rows: list[dict], abc_rows: list[dict], today: str
     """Supersede rule: the ABC entry for a party in a seat supersedes any
     other (older) entry for that party there. Rows are kept, not deleted."""
     abc_ids = {id(c) for c in abc_rows}
-    for party in {c["party"] for c in abc_rows} - MULTI_PER_SEAT:
+
+    def mark(old: dict, winners: str) -> None:
+        log.warning("%s: %s (%s, %s) superseded by ABC entry %s", did, old["name"], old.get("party"), old.get("status"), winners)
+        old["status"] = "superseded"
+        old["superseded_by"] = winners
+        old["superseded_on"] = today
+        old["notes"] = "; ".join(filter(None, [old.get("notes"), f"Superseded by {winners} (ABC guide, {today})"]))
+        old["updated"] = today
+        stats["superseded"] += 1
+
+    def replaceable(old: dict, party: str) -> bool:
+        return (id(old) not in abc_ids and old.get("party") == party
+                and old.get("status") not in FINAL_STATUSES | {"superseded", "withdrawn"})
+
+    for party in {c["party"] for c in abc_rows}:
+        if party in MULTI_PER_SEAT:
+            # Several independents can stand in one seat, so only a
+            # differently spelt copy of the same person is superseded.
+            for new in (c for c in abc_rows if c["party"] == party):
+                for old in seat_rows:
+                    if replaceable(old, party) and _near_identical(old["name"], new["name"]):
+                        mark(old, new["name"])
+            continue
         winners = " / ".join(c["name"] for c in abc_rows if c["party"] == party)
         for old in seat_rows:
-            if (id(old) in abc_ids or old.get("party") != party
-                    or old.get("status") in FINAL_STATUSES | {"superseded", "withdrawn"}):
-                continue
-            log.warning("%s: %s (%s, %s) superseded by ABC entry %s", did, old["name"], party, old.get("status"), winners)
-            old["status"] = "superseded"
-            old["superseded_by"] = winners
-            old["superseded_on"] = today
-            old["notes"] = "; ".join(filter(None, [old.get("notes"), f"Superseded by {winners} (ABC guide, {today})"]))
-            old["updated"] = today
-            stats["superseded"] += 1
+            if replaceable(old, party):
+                mark(old, winners)
 
 
 def _active(c: dict) -> bool:
