@@ -8,7 +8,7 @@
       "sources": "Source -> {status: ok | error | skipped, url, items, message}"
     }
   },
-  "updated": "2026-10-30T21:55:23Z",
+  "updated": "2026-10-30T22:05:11Z",
   "statewide": [
     {
       "title": "Liberal plan to scrap Treaty risks 'sending us back', Aboriginal leader warns",
@@ -53,6 +53,12 @@
       "url": "https://www.theaustralian.com.au/commentary/victoria-ink/victorian-election-rivals-share-melbourne-cbd-barista-after-setting-up-headquarters-next-door/news-story/1925ea62df9683004405075fee074524"
     },
     {
+      "title": "Video: Attend the Socialist Equality Party launch for the Victorian election!",
+      "outlet": "World Socialist Web Site",
+      "published": "2026-10-28T17:00:00Z",
+      "url": "https://www.wsws.org/en/articles/2026/10/29/fivz-o29.html"
+    },
+    {
       "title": "Victorian state election: what’s at stake for treaty and Indigenous self‑determination?",
       "outlet": "The Conversation",
       "published": "2026-10-28T16:03:00Z",
@@ -75,6 +81,12 @@
       "outlet": "Brimbank & North West | Star Weekly",
       "published": "2026-10-27T17:00:00Z",
       "url": "https://brimbanknorthwest.starweekly.com.au/news/socialist-leanna-nguyen-to-contest-st-albans/"
+    },
+    {
+      "title": "Two councillors step aside ahead of election",
+      "outlet": "Phillip Island & San Remo Advertiser",
+      "published": "2026-10-27T11:09:00Z",
+      "url": "https://www.pisra.com.au/two-councillors-step-aside-ahead-of-election/"
     },
     {
       "title": "Bishops encourage Catholic voters to put faith into action at upcoming Victorian election",
@@ -103,7 +115,7 @@
     {
       "title": "Coalition pledges fire truck",
       "outlet": "gannawarratimes.com.au",
-      "published": "2026-10-25T17:00:00Z",
+      "published": "2026-10-25T22:00:00Z",
       "url": "https://gannawarratimes.com.au/news/2026/10/26/coalition-pledges-fire-truck/"
     },
     {
@@ -147,18 +159,6 @@
       "outlet": "The SE Voice",
       "published": "2026-10-20T08:11:00Z",
       "url": "https://sevoice.com.au/new-henty-fire-shed-on-the-agenda-for-state-election/"
-    },
-    {
-      "title": "Candidate forum",
-      "outlet": "gannawarratimes.com.au",
-      "published": "2026-10-19T17:00:00Z",
-      "url": "https://gannawarratimes.com.au/news/2026/10/20/candidate-forum-2/"
-    },
-    {
-      "title": "Ben Carroll ‘rejected out of hand’ push to join ‘red shirts’",
-      "outlet": "The Australian",
-      "published": "2026-10-19T15:14:00Z",
-      "url": "https://www.theaustralian.com.au/nation/i-wasnt-going-to-have-anything-to-do-with-it-ben-carroll-on-red-shirts-rort/news-story/c72093c01a837996c888eda5cb1d83e0"
     }
   ],
   "seats": {
@@ -171,8 +171,22 @@
       }
     ],
     "ashwood": [],
-    "bass": [],
-    "bayswater": [],
+    "bass": [
+      {
+        "title": "Two councillors step aside ahead of election",
+        "outlet": "Phillip Island & San Remo Advertiser",
+        "published": "2026-10-27T11:09:00Z",
+        "url": "https://www.pisra.com.au/two-councillors-step-aside-ahead-of-election/"
+      }
+    ],
+    "bayswater": [
+      {
+        "title": "Bayswater election results 2022: live count for 2026 from 28 November",
+        "outlet": "onenewsaustralia.com",
+        "published": "2026-09-30T22:01:00Z",
+        "url": "https://www.onenewsaustralia.com/bayswater-election-results-2026/"
+      }
+    ],
     "bellarine": [
       {
         "title": "Mayor Welcomes New Support For Bellarine Link",
@@ -262,10 +276,10 @@
     ],
     "brunswick": [
       {
-        "title": "Who's who of Victorian politics turns out for state funeral of Greens MP Tim Read: 'Mr integrity'",
+        "title": "Who's who of Victorian politics turns out for state funeral of Greens MP Tim Read: 'Mr Integrity'",
         "outlet": "Daily Mail on MSN",
         "published": "2026-10-28T02:22:22Z",
-        "url": "https://www.msn.com/en-ae/news/other/whos-who-of-victorian-politics-turns-out-for-state-funeral-of-greens-mp-tim-read-mr-integrity/ar-AA2geAsq"
+        "url": "https://www.msn.com/en-ph/news/other/whos-who-of-victorian-politics-turns-out-for-state-funeral-of-greens-mp-tim-read-mr-integrity/ar-AA2geFmM"
       },
       {
         "title": "Multicultural Victoria ahead of the state election",
@@ -287,9 +301,15 @@
       },
       {
         "title": "Beloved Victorian Greens MP Tim Read dies after stage four skin cancer battle",
-        "outlet": "Northern Territory News",
+        "outlet": "The Toowoomba Chronicle",
         "published": "2026-09-19T11:09:00Z",
-        "url": "https://www.ntnews.com.au/news/victoria/beloved-victorian-greens-mp-tim-read-dies-after-stage-four-skin-cancer-battle/news-story/581fde1f2b23dd01749a971c48896b3a"
+        "url": "https://www.thechronicle.com.au/news/victoria/beloved-victorian-greens-mp-tim-read-dies-after-stage-four-skin-cancer-battle/news-story/581fde1f2b23dd01749a971c48896b3a"
+      },
+      {
+        "title": "Tim Read, member for Brunswick in Victoria, dies after cancer battle",
+        "outlet": "Nine.com.au",
+        "published": "2026-09-18T17:09:00Z",
+        "url": "https://www.nine.com.au/australia-news/vic/tim-read-greens-brunswick-melbourne-victoria-dies-cancer-melanoma-20260919-p60ysr.html"
       }
     ],
     "bulleen": [],
@@ -304,7 +324,7 @@
         "title": "BioNTech mRNA manufacturing facility opens",
         "outlet": "India Education Diary on MSN",
         "published": "2026-10-26T03:36:00Z",
-        "url": "https://www.msn.com/en-in/news/other/biontech-mrna-manufacturing-facility-opens/ar-AA2g6A8N"
+        "url": "https://www.msn.com/en-in/money/general/biontech-mrna-manufacturing-facility-opens/ar-AA2g6A8N"
       },
       {
         "title": "Moray & Agnew brings Victorian business leaders together with Treasurer Colin Brooks",
@@ -394,7 +414,14 @@
         "url": "https://www.dailymail.com/news/article-16062957/one-nation-essendon-john-barnes.html"
       }
     ],
-    "eureka": [],
+    "eureka": [
+      {
+        "title": "‘This is a revolution’: Hanson invokes Ned Kelly, Eureka Stockade in Vic launch",
+        "outlet": "The Australian Financial Review",
+        "published": "2026-10-03T10:07:00Z",
+        "url": "https://www.afr.com/politics/this-is-a-revolution-hanson-invokes-ned-kelly-eureka-stockade-in-vic-launch-20261003-p612ky"
+      }
+    ],
     "euroa": [
       {
         "title": "Euroa election results 2022: live count for 2026 from 28 November",
@@ -557,6 +584,12 @@
         "url": "https://www.thechronicle.com.au/news/victoria/political-football-jess-wilson-slams-ben-carroll-over-30m-election-pledge-for-free-abortions/news-story/042c83e4be4c5e7b4169f27ea2833036"
       },
       {
+        "title": "Kew election results 2022: live count for 2026 from 28 November",
+        "outlet": "onenewsaustralia.com",
+        "published": "2026-10-13T14:36:00Z",
+        "url": "https://www.onenewsaustralia.com/kew-election-results-2026/"
+      },
+      {
         "title": "52 questions with Jess Wilson: Toddler chaos, Macca’s runs and her pitch to lead Victoria",
         "outlet": "The Toowoomba Chronicle",
         "published": "2026-09-19T12:00:00Z",
@@ -593,16 +626,22 @@
         "url": "https://sevoice.com.au/new-henty-fire-shed-on-the-agenda-for-state-election/"
       },
       {
+        "title": "A Yes for Green's Lowan because 'someone has to save the trees,' voter says",
+        "outlet": "The Canadian Press on MSN",
+        "published": "2026-10-16T18:00:38Z",
+        "url": "https://www.msn.com/en-ca/news/canada/grand-chief-stewart-phillip-whose-wife-was-ndp-mla-endorses-bc-green-leader-lowan/ar-AA2eoxd0"
+      },
+      {
         "title": "Lowan election results 2022: live count for 2026 from 28 November",
         "outlet": "onenewsaustralia.com",
         "published": "2026-10-06T21:36:00Z",
         "url": "https://www.onenewsaustralia.com/lowan-election-results-2026/"
       },
       {
-        "title": "BC Green’s Emily Lowan to Run in Victoria-Area Riding as Rob Botterell Steps Aside",
-        "outlet": "cmsapi.theepochtimes.com",
-        "published": "2026-09-22T17:00:00Z",
-        "url": "https://cmsapi.theepochtimes.com/world/bc-greens-emily-lowan-to-run-in-victoria-area-riding-as-rob-botterell-steps-aside-6093979"
+        "title": "BC Green's Emily Lowan to run in Victoria-area riding as Rob Botterell steps aside",
+        "outlet": "Castanet.net",
+        "published": "2026-09-23T04:57:00Z",
+        "url": "https://www.castanet.net/news/BC/632169/BC-Green-s-Emily-Lowan-to-run-in-Victoria-area-riding-as-Rob-Botterell-steps-aside"
       }
     ],
     "macedon": [
@@ -655,6 +694,12 @@
         "url": "https://www.mpnews.com.au/2026/10/29/liberals-commit-2m-to-mornington-to-moorooduc-bike-trail/"
       },
       {
+        "title": "Daniel Andrews living in luxury Mornington Peninsula home owned by Labor donor",
+        "outlet": "The Australian",
+        "published": "2026-10-05T04:28:00Z",
+        "url": "https://www.theaustralian.com.au/nation/daniel-andrews-living-in-luxury-mornington-peninsula-home-owned-by-labor-donor/news-story/4798f171d3f476a6e2689a49a481ce7b"
+      },
+      {
         "title": "The Peninsula wants answers: Shout Out election forums announced",
         "outlet": "mornpen.vic",
         "published": "2026-09-22T17:00:00Z",
@@ -667,7 +712,7 @@
       {
         "title": "Coalition pledges fire truck",
         "outlet": "gannawarratimes.com.au",
-        "published": "2026-10-25T17:00:00Z",
+        "published": "2026-10-25T22:00:00Z",
         "url": "https://gannawarratimes.com.au/news/2026/10/26/coalition-pledges-fire-truck/"
       },
       {
@@ -744,10 +789,16 @@
         "url": "https://www.adelaidenow.com.au/news/opinion/steve-price-ben-carrolls-fingerprints-all-over-victorias-biggest-fails/news-story/442edb4924120c4b535d59c13155d022"
       },
       {
-        "title": "Who is Ben Carroll? MP's path from checkout worker to Victoria's 50th premier",
+        "title": "Premier Ben Carroll makes historic apology to victims of child sex abuse in Victorian public schools",
+        "outlet": "heraldsun.com.au",
+        "published": "2026-07-30T06:33:00Z",
+        "url": "https://www.heraldsun.com.au/news/victoria/premier-ben-carroll-makes-historic-apology-to-victims-of-child-sex-abuse-in-victorian-public-schools/news-story/53c2afd9b32756b74a9686c20d6eface"
+      },
+      {
+        "title": "Ben Carroll begins first full day as Victorian premier as election countdown begins",
         "outlet": "Australian Broadcasting Corporation",
-        "published": "2026-07-27T19:53:00Z",
-        "url": "https://www.abc.net.au/news/2026-07-28/ben-carroll-new-victorian-premier-jacinta-allan-successor/106787490"
+        "published": "2026-07-28T05:16:00Z",
+        "url": "https://www.abc.net.au/news/2026-07-29/ben-carroll-first-full-day-as-victorian-premier/106968666"
       }
     ],
     "northcote": [
@@ -896,8 +947,8 @@
     "Bing News search": {
       "status": "ok",
       "url": "https://www.bing.com/news/search",
-      "items": 176,
-      "message": "176 searches for 88 districts"
+      "items": 175,
+      "message": "175 searches for 88 districts"
     },
     "Google News": {
       "status": "skipped",
