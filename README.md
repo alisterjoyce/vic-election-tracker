@@ -11,6 +11,9 @@ A static tracker for the 2026 Victorian state election (polling day Saturday 28 
   - **Seat polls:** from `seat_polls.json`.
 - **Upper house** (`upper.html`): pick one of the 8 regions to see its current MLCs and 2026 tickets.
 - **Candidates** (`candidate.html`): a directory of every candidate and current MLC (filter by name, seat, house, party), and a profile for each (`candidate.html#bendigo-west/brenton-baldwin`): photo with its source credit, party, status, seat facts, sources, others in the same contest, and a downloadable share card. Seat pages have a share card too.
+- **Pendulum** (`pendulum.html`): all 88 seats on a two-sided ladder by notional margin, with a swing slider (−10 to +15, starting at the poll-of-polls swing) that recolours seats that fall and counts seats against the 45-seat majority line. Only Labor-v-Coalition contests swing. Below it, three scenarios (Coalition majority, Coalition relying on One Nation, Labor-Greens minority), each with the swing and 2PP range it needs, the seats that must fall and which current polls support it, recomputed from `polls.json` and `seat_odds.json` on every load.
+- **Polls** (`poll.html`): every poll, and a page per poll (`poll.html#newspoll-2026-10-22`) with pollster, client, fieldwork, sample, primaries, 2PP, preferred premier, approval, source link, and that pollster's trend against the other pollsters' average (its house effect).
+- **Quota calculator** (on each region in `upper.html`): editable primary votes seeded from the latest regional poll (`council_polls.json`), live quota maths under the 2026 rules, and an adjustable exhaustion rate; shows the 5 seats filled and the margin for the last seat.
 - **My seats** (`myseats.html`): seats starred with ☆, saved in the browser's localStorage (no backend), shown side by side.
 - **About** (`about.html`): what each number means, sources and refresh times, limits, corrections and credits.
 - **On every page:** a key-dates strip under the header (countdowns plus a "Today:" note, from `meta.json` → `key_dates`), and a search box that matches districts, regions, candidates, suburbs and postcodes.
@@ -22,7 +25,7 @@ A static tracker for the 2026 Victorian state election (polling day Saturday 28 
 
 ```
 site/                  # published by Netlify
-  index.html, lower.html, upper.html, candidate.html, myseats.html, about.html
+  index.html, lower.html, upper.html, candidate.html, pendulum.html, poll.html, myseats.html, about.html
   css/style.css
   js/common.js, home.js, lower.js, upper.js, candidate.js, sharecard.js
   data/
@@ -34,6 +37,7 @@ site/                  # published by Netlify
     seat_models.json   # MRP seat estimates (manual; YouGov Jun-Jul 2026, DemosAU slot)
     seat_odds.json     # Sportsbet seat markets: every option and price, favourite (manual; entered from 30 Oct 2026 screenshots)
     seat_polls.json    # single-seat polls (manual; empty until one is published)
+    council_polls.json # upper-house primary vote by region (manual; seeds the quota calculator)
     localities.json    # suburb/postcode -> district(s) for search (scripts/build_localities.py)
     headshots.json     # candidate photos: file, source credit, licence note (scripts/build_headshots.py)
   photos/320/, 160/    # candidate headshots (WebP)
@@ -74,7 +78,7 @@ python scripts/refresh.py
 
 What it does:
 
-1. Fetches [Opinion polling for the 2026 Victorian state election](https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election), reads the statewide Legislative Assembly tables (under "Voting intention") with `pandas.read_html`, and writes `site/data/polls.json`.
+1. Fetches [Opinion polling for the 2026 Victorian state election](https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election), reads the statewide Legislative Assembly tables (under "Voting intention") with `pandas.read_html`, and writes `site/data/polls.json`. Each poll gets a stable id, its client and its first citation link; preferred-premier, approval and three-party-preferred rows from the page's other tables are attached to the same firm's poll with overlapping fieldwork.
 2. Reads [Candidates of the 2026 Victorian state election](https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election) with `pandas.read_html`, covering the Legislative Assembly table and each Legislative Council region table, and merges it into `candidates.json`:
    - Names not already present are added with status `announced`, `source: "wikipedia"` and a `date_added`. Council candidates get a `region` and `ticket_position` instead of a `district`.
    - Existing rows are never changed, downgraded or deleted. A name counts as already present if it matches ignoring case, accents and punctuation, or if it's a near-identical spelling for the same party and seat. Council names already on a ticket in `regions.json` also count.

@@ -71,12 +71,18 @@ MONTHS = {m.lower(): i for i, m in enumerate(calendar.month_abbr) if m}
 POLLS_SCHEMA = {
     "description": "Published voting-intention polls, scraped from Wikipedia by scripts/refresh.py.",
     "fields": {
+        "id": "Stable id: <pollster slug>-<end_date>, with -2, -3 for repeats (used by poll.html#<id>)",
         "start_date": "Fieldwork start, YYYY-MM-DD (may equal end_date)",
         "end_date": "Fieldwork end, YYYY-MM-DD",
         "pollster": "Polling firm / brand",
+        "client": "Commissioning client (newspaper, party, lobby group), or null if none or not published",
         "sample_size": "Integer respondents, or null if not published",
+        "source_url": "The poll's first citation on Wikipedia (pollster release or news report), or null",
         "primary": "Map of party code -> primary vote %. Codes: ALP, LNP (Liberal + National), GRN, ONP, IND, OTH",
         "tpp": "Two-party-preferred %: {ALP, LNP}; omitted when the poll did not publish an ALP v L/NP figure",
+        "tpp3": "Optional three-party-preferred %: {ALP, LNP, ONP}",
+        "preferred_premier": "Optional: {matchup, leaders: {surname: %}, undecided: %}",
+        "approval": "Optional: {matchup, leaders: {surname: {positive, negative, undecided, net}}} (net = positive - negative, as published)",
     },
 }
 
@@ -195,29 +201,69 @@ def _find(columns, *needles):
     return None
 
 
+def wiki_sections(doc) -> list[dict]:
+    """Every wikitable on the page with the h2/h3/h4 headings above it
+    (lower-cased, without "[edit]") and the year when the h4 is one."""
+    h2 = h3 = h4 = ""
+    found = []
+    for el in doc.iter("h2", "h3", "h4", "table"):
+        text = clean_text(el.text_content()).lower().removesuffix("edit").strip() if el.tag != "table" else ""
+        if el.tag == "h2":
+            h2, h3, h4 = text, "", ""
+        elif el.tag == "h3":
+            h3, h4 = text, ""
+        elif el.tag == "h4":
+            h4 = text
+        elif "wikitable" in (el.get("class") or ""):
+            m = re.fullmatch(r"(\d{4})", h4)
+            found.append({"h2": h2, "h3": h3, "h4": h4, "year": int(m.group(1)) if m else None, "table": el})
+    return found
+
+
 def statewide_tables(html: str) -> list[tuple[int | None, str]]:
     """Return (year, table_html) for each table under "Voting intention" ->
     "Legislative Assembly". The page also has upper-house, sub-state and
     demographic tables with identical headers, which must not be mixed in.
     The year comes from the h4 above each table (the current year's table
     leaves the year off its dates)."""
-    doc = lxml.html.fromstring(html)
-    h2 = h3 = ""
-    year = None
-    found = []
-    for el in doc.iter("h2", "h3", "h4", "table"):
-        text = clean_text(el.text_content()).lower() if el.tag != "table" else ""
-        if el.tag == "h2":
-            h2, h3, year = text, "", None
-        elif el.tag == "h3":
-            h3, year = text, None
-        elif el.tag == "h4":
-            m = re.fullmatch(r"(\d{4})", text)
-            year = int(m.group(1)) if m else None
-        elif ("voting intention" in h2 and "council" not in h3
-              and "wikitable" in (el.get("class") or "")):
-            found.append((year, lxml.html.tostring(el, encoding="unicode")))
-    return found
+    return [(s["year"], lxml.html.tostring(s["table"], encoding="unicode"))
+            for s in wiki_sections(lxml.html.fromstring(html))
+            if "voting intention" in s["h2"] and "council" not in s["h3"]]
+
+
+def _reference_urls(doc) -> dict[str, str]:
+    """Footnote id -> first external link in that reference."""
+    out = {}
+    for li in doc.xpath("//ol[contains(@class, 'references')]/li[@id]"):
+        hrefs = li.xpath(".//a[contains(@class, 'external')]/@href")
+        if hrefs:
+            out[li.get("id")] = hrefs[0]
+    return out
+
+
+def row_sources(table, refs: dict[str, str]) -> dict[tuple[str, str], str]:
+    """(date text, firm text) -> URL of the first footnote in the firm cell."""
+    out = {}
+    for tr in table.xpath(".//tr"):
+        cells = tr.xpath("./td|./th")
+        if len(cells) < 2:
+            continue
+        for a in cells[1].xpath(".//sup[contains(@class, 'reference')]//a/@href"):
+            url = refs.get(a.lstrip("#"))
+            if url:
+                out[(clean_text(cells[0].text_content()), clean_text(cells[1].text_content()))] = url
+                break
+    return out
+
+
+def firm_key(name: str) -> str:
+    """"DemosAU/Premier National" and "DemosAU" are the same firm; so are "RedBridge" and "Redbridge"."""
+    return re.sub(r"[^a-z]", "", name.lower().split("/")[0])
+
+
+def _client(value) -> str | None:
+    s = clean_text(value)
+    return None if not s or re.fullmatch(r"-?\s*(n/?a)?", s, re.I) else s.replace("(subscription required)", "").strip()
 
 
 def _collapse_merged_cells(values: list[list]) -> list[list]:
@@ -243,6 +289,7 @@ def parse_poll_table(df: pd.DataFrame, today: date, year: int | None = None) -> 
     date_col = _find(cols, "date")
     firm_col = _find(cols, "polling firm", "pollster", "firm", "brand")
     sample_col = _find(cols, "sample")
+    client_col = _find(cols, "client")
     if date_col is None or firm_col is None:
         return []
 
@@ -300,7 +347,9 @@ def parse_poll_table(df: pd.DataFrame, today: date, year: int | None = None) -> 
             "start_date": start.isoformat(),
             "end_date": end.isoformat(),
             "pollster": firm,
+            "client": _client(row[client_col]) if client_col is not None else None,
             "sample_size": int(sample) if sample else None,
+            "_key": (raw_date, firm),
             "primary": primary,
         }
         if tpp:
@@ -309,18 +358,106 @@ def parse_poll_table(df: pd.DataFrame, today: date, year: int | None = None) -> 
     return polls
 
 
+def _row_dates(row, date_col, year, today):
+    raw = clean_text(row[date_col])
+    dates = parse_date_range(raw, year or today.year)
+    if dates and year is None and dates[1] > today and not re.search(r"\d{4}", raw):
+        dates = (dates[0].replace(year=dates[0].year - 1), dates[1].replace(year=dates[1].year - 1))
+    return dates
+
+
+def parse_leadership_table(df: pd.DataFrame, kind: str, today: date) -> list[dict]:
+    """Preferred-premier rows -> {firm, start, end, leaders: {name: %}, undecided}, or
+    approval rows -> {firm, start, end, leaders: {name: {positive, negative, undecided, net}}}."""
+    cols = list(df.columns)
+    date_col, firm_col = _find(cols, "date"), _find(cols, "polling firm", "pollster", "firm")
+    if date_col is None or firm_col is None:
+        return []
+    out = []
+    for _, row in df.iterrows():
+        firm = clean_text(row[firm_col])
+        dates = _row_dates(row, date_col, None, today)
+        if not firm or not dates or "election" in firm.lower():
+            continue
+        leaders, undecided = {}, None
+        for col in cols:
+            levels = _flatten(col)
+            if len(levels) < 2:
+                continue
+            v = to_number(row[col])
+            if kind == "premier" and "leader" in levels[0].lower():
+                if "know" in levels[-1].lower() or "undecided" in levels[-1].lower():
+                    undecided = v
+                elif v is not None:
+                    leaders[levels[-1]] = v
+            elif kind == "approval" and levels[0].lower() not in ("date", "polling firm", "client", "sample size"):
+                field = {"pos.": "positive", "neg.": "negative", "dk": "undecided", "net": "net"}.get(levels[-1].lower())
+                if field and v is not None:
+                    leaders.setdefault(levels[0], {})[field] = v
+        if leaders:
+            rec = {"firm": firm, "start": dates[0], "end": dates[1], "leaders": leaders}
+            if kind == "premier":
+                rec["undecided"] = undecided
+            out.append(rec)
+    return out
+
+
+def parse_tpp3_table(df: pd.DataFrame, today: date) -> list[dict]:
+    cols = list(df.columns)
+    date_col, firm_col = _find(cols, "date"), _find(cols, "polling firm", "pollster", "firm")
+    if date_col is None or firm_col is None:
+        return []
+    out = []
+    for _, row in df.iterrows():
+        firm = clean_text(row[firm_col])
+        dates = _row_dates(row, date_col, None, today)
+        vals = {}
+        for col in cols:
+            levels = _flatten(col)
+            code = PARTY_CODES.get(levels[-1].upper()) if len(levels) > 1 and "3pp" in levels[0].lower() else None
+            if code and to_number(row[col]) is not None:
+                vals[code] = to_number(row[col])
+        if firm and dates and len(vals) == 3:
+            out.append({"firm": firm, "start": dates[0], "end": dates[1], "values": vals})
+    return out
+
+
+def _attach(polls: list[dict], extras: list[dict], field: str, build) -> int:
+    """Attach each leadership/3PP row to the voting-intention poll from the same firm whose
+    fieldwork overlaps it (closest end date wins). Returns how many were attached."""
+    attached = 0
+    for x in extras:
+        best = None
+        for p in polls:
+            if firm_key(p["pollster"]) != firm_key(x["firm"]):
+                continue
+            ps, pe = date.fromisoformat(p["start_date"]), date.fromisoformat(p["end_date"])
+            if ps <= x["end"] and x["start"] <= pe:
+                gap = abs((pe - x["end"]).days)
+                if best is None or gap < best[0]:
+                    best = (gap, p)
+        if best and field not in best[1]:
+            best[1][field] = build(x)
+            attached += 1
+    return attached
+
+
 def fetch_polls(today: date | None = None) -> list[dict]:
     today = today or datetime.now(timezone.utc).date()
     resp = requests.get(POLLS_URL, headers={"User-Agent": USER_AGENT}, timeout=TIMEOUT)
     resp.raise_for_status()
-    tables = statewide_tables(resp.text)
+    doc = lxml.html.fromstring(resp.text)
+    sections = wiki_sections(doc)
+    refs = _reference_urls(doc)
+    tables = [s for s in sections if "voting intention" in s["h2"] and "council" not in s["h3"]]
     if not tables:
         raise ValueError("no tables found under the 'Voting intention' heading")
 
-    polls, used = [], 0
-    for year, table_html in tables:
-        for df in pd.read_html(io.StringIO(table_html)):
-            rows = parse_poll_table(df, today, year)
+    polls, used, sources = [], 0, {}
+    for s in tables:
+        sources.update(row_sources(s["table"], refs))
+        for df in pd.read_html(io.StringIO(lxml.html.tostring(s["table"], encoding="unicode"))):
+            rows = parse_poll_table(df, today, s["year"])
             if rows:
                 used += 1
                 polls.extend(rows)
@@ -333,7 +470,38 @@ def fetch_polls(today: date | None = None) -> list[dict]:
         if key not in seen:
             seen.add(key)
             unique.append(p)
-    log.info("Parsed %d polls from %d of %d tables", len(unique), used, len(tables))
+
+    # Links, then leadership and three-party-preferred figures from their own tables.
+    for p in unique:
+        p["source_url"] = sources.get(p.pop("_key"))
+    extras = {"premier": [], "approval": [], "tpp3": []}
+    for s in sections:
+        kind = ("premier" if "preferred premier" in s["h3"] else "approval" if "approval" in s["h3"] else None) \
+            if "leadership" in s["h2"] else ("tpp3" if "three-party" in s["h2"] else None)
+        if not kind:
+            continue
+        for df in pd.read_html(io.StringIO(lxml.html.tostring(s["table"], encoding="unicode"))):
+            rows = parse_tpp3_table(df, today) if kind == "tpp3" else parse_leadership_table(df, kind, today)
+            for r in rows:
+                r["matchup"] = s["h4"].title().replace(" Vs ", " vs ")
+            extras[kind].extend(rows)
+    n_pp = _attach(unique, extras["premier"], "preferred_premier",
+                   lambda x: {"matchup": x["matchup"], "leaders": x["leaders"], "undecided": x["undecided"]})
+    n_ap = _attach(unique, extras["approval"], "approval", lambda x: {"matchup": x["matchup"], "leaders": x["leaders"]})
+    n_3 = _attach(unique, extras["tpp3"], "tpp3", lambda x: x["values"])
+
+    # Stable ids, oldest first so a later poll never renumbers an earlier one.
+    counts = {}
+    for p in sorted(unique, key=lambda p: (p["end_date"], p["start_date"], p["pollster"])):
+        base = f"{re.sub(r'[^a-z0-9]+', '-', p['pollster'].lower()).strip('-')}-{p['end_date']}"
+        counts[base] = counts.get(base, 0) + 1
+        p["id"] = base if counts[base] == 1 else f"{base}-{counts[base]}"
+    order = ["id", "start_date", "end_date", "pollster", "client", "sample_size", "source_url",
+             "primary", "tpp", "tpp3", "preferred_premier", "approval"]
+    unique = [{k: p[k] for k in order if k in p} for p in unique]
+    log.info("Parsed %d polls from %d of %d tables; attached %d/%d preferred-premier, %d/%d approval, %d/%d 3PP rows; "
+             "%d with a source link", len(unique), used, len(tables), n_pp, len(extras["premier"]),
+             n_ap, len(extras["approval"]), n_3, len(extras["tpp3"]), sum(1 for p in unique if p["source_url"]))
     return unique
 
 

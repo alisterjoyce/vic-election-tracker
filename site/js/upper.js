@@ -8,6 +8,7 @@
   let districts = [];
   let councilCandidates = [];
   let shots = {};   // candidate id -> headshot (data/headshots.json)
+  let councilPolls = [];   // regional upper-house polls (data/council_polls.json), newest first
 
   function ticketSort(a, b) {
     const wa = a.status === "withdrawn", wb = b.status === "withdrawn";
@@ -112,6 +113,8 @@
 
       ${renderExtraCandidates(r)}
 
+      <section class="card quota" id="quota-card" aria-label="Quota calculator"></section>
+
       <div class="card">
         <h2>Districts in this region</h2>
         ${inRegion.length ? `<div class="chips">${inRegion.map((d) =>
@@ -119,6 +122,7 @@
           : '<p class="empty">No districts in the dataset for this region yet.</p>'}
       </div>`;
     document.getElementById("copy-link").addEventListener("click", (e) => copyLink(e.currentTarget));
+    if (App.Quota) App.Quota.mount(document.getElementById("quota-card"), r, councilPolls.find((p) => p.regions && p.regions[r.id]));
   }
 
   function onHashChange() {
@@ -135,6 +139,7 @@
       districts = dd.districts;
       councilCandidates = (cd.candidates || []).filter((c) => c.region && !c.district);
       shots = await App.loadHeadshots();
+      councilPolls = await loadJSON("council_polls").then((d) => d.polls || []).catch(() => []);
       document.getElementById("region-chips").addEventListener("click", (e) => {
         const btn = e.target.closest("button[data-id]");
         if (btn) location.hash = btn.dataset.id;

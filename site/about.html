@@ -21,6 +21,8 @@
         <a href="lower.html">Lower house</a>
         <a href="upper.html">Upper house</a>
         <a href="candidate.html">Candidates</a>
+        <a href="pendulum.html">Pendulum</a>
+        <a href="poll.html">Polls</a>
         <a href="myseats.html">My seats</a>
         <a href="about.html" aria-current="page">About</a>
       </nav>
@@ -62,6 +64,14 @@
         <dd>Districts coloured by the current holder; by margin band (the ABC's Marginal, Safe and Very Safe, shaded in the leading party's colour); by Sportsbet favourite (dashed outline for joint favourites); and, once counting starts on 28 Nov, by result. The Regions view shades each upper-house region by the party with the most current MLCs. The Melbourne inset shows the small metropolitan seats. Boundaries are simplified to about 60 m for speed.</dd>
         <dt>How it voted in 2022</dt>
         <dd>Each district's final 2022 result from the VEC: first preferences, two-candidate preferred, and the swing since the notional 2018 result on today's boundaries (the 2021 redistribution changed many seats, so raw 2018 results aren't comparable). On the booth map, each voting centre is coloured by its two-candidate-preferred leader and sized by votes. Early, postal, absent and other declaration votes aren't tied to a place, so they appear in the table instead. On election night the same map will show 2026 booths from the VEC results feed.</dd>
+        <dt>Pendulum</dt>
+        <dd>Every lower-house seat ordered by its 2022 notional margin, Labor and Greens seats on the left and Coalition and other seats on the right. The slider applies the same two-party swing everywhere (a uniform swing): a seat falls when the swing is bigger than its margin. Only Labor-v-Coalition contests move. Seats contested by Labor and the Greens, or by the Coalition and an independent, have a dashed outline and stay with their holder, because a statewide 2PP swing says nothing about them. Real swings are never uniform, so treat the count as a guide.</dd>
+        <dt>Scenarios</dt>
+        <dd>Each scenario is tested at every swing on the slider. Seats where Sportsbet's outright favourite is One Nation, the Greens or an independent go to that favourite; every other seat follows the swing. The range shown is the set of swings (and the L/NP two-party vote they imply against 45.0 in 2022) where the scenario holds. "Seats that must fall" are the seats that change hands at the point the scenario is first reached. A current poll (the latest from each pollster in the last 90 days) supports a scenario when its L/NP two-party figure is inside that range.</dd>
+        <dt>Quota calculator</dt>
+        <dd>Each region elects 5 members; a quota is one-sixth of the formal vote plus one (16.7%). Since 2026 there are no group voting tickets and above-the-line voters number at least 5 boxes, so preferences go only where voters send them and some run out (exhaust). The calculator treats each party as one group: whole quotas elect members, then the lowest party is excluded, a set share of its votes exhausts (you choose it) and the rest goes to parties of the same leaning in proportion to their votes. "Others" in a poll is several small parties, so it can't win as a group. The last-seat margin is the gap between the last party elected and the runner-up when the race was decided.</dd>
+        <dt>House effect</dt>
+        <dd>On each poll's page, the pollster's figures are compared with the average of every other pollster on the same day (the same smoothing as the poll of polls, leaving that pollster out). A gap that persists across its polls is a house effect, a lean from method rather than from voters.</dd>
         <dt>Search by suburb or postcode</dt>
         <dd>Suburbs and postcodes are matched to districts by land area, from official boundary data. Where one straddles more than one district, every district is listed with its share of the area. Area isn't population, so check your exact address with the VEC.</dd>
       </dl>
@@ -76,7 +86,7 @@
           <tbody>
             <tr><td><a href="https://www.vec.vic.gov.au/electoral-boundaries/state-districts">VEC state districts and regions</a></td><td>The 88 districts and the region each belongs to</td><td>Checked 30 Oct 2026 (boundaries unchanged since 2021)</td></tr>
             <tr><td><a href="https://www.abc.net.au/news/elections/vic/2026/guide/electorates">ABC election guide</a>, <a href="https://www.abc.net.au/news/elections/vic/2026/guide/candidates">A-Z candidates</a> and <a href="https://www.abc.net.au/news/elections/vic/2026/guide/retiring-mps">retiring MPs</a></td><td>Margins, classifications, sitting members, retirements, lower-house candidates (primary source). Each district links to its ABC page</td><td>Daily</td></tr>
-            <tr><td><a href="https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election">Wikipedia: opinion polling</a></td><td>Statewide polls for the poll of polls and latest-polls table</td><td>Daily</td></tr>
+            <tr><td><a href="https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election">Wikipedia: opinion polling</a></td><td>Statewide polls for the poll of polls, the latest-polls table and each poll's page, including preferred premier and leader approval; each poll links to its own source where Wikipedia cites one</td><td>Daily</td></tr>
             <tr><td><a href="https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election">Wikipedia: candidates</a></td><td>Extra candidate names (lower and upper house) not yet in the ABC guide</td><td>Daily</td></tr>
             <tr><td>VEC nominations list</td><td>Official candidates and ballot order once nominations close at noon on 9 Nov</td><td>Not yet connected</td></tr>
             <tr><td><a href="https://actionnetwork.org/user_files/user_files/000/146/615/original/yougov-vic-mrp-treaty-report-state-voting-intetion-treaty-support.pdf">YouGov MRP for Common Threads</a> (fieldwork 16 Jun to 10 Jul 2026)</td><td>MRP seat estimates</td><td>By hand when new models are published</td></tr>
@@ -87,6 +97,7 @@
             <tr><td><a href="https://en.wikipedia.org/wiki/Results_of_the_2022_Victorian_state_election_(Legislative_Assembly)">Wikipedia: 2022 Assembly results</a></td><td>Swings since the notional 2018 result</td><td>One-off</td></tr>
             <tr><td>VEC results media feed</td><td>Election-night results (2026), in the same format as the 2022 booth data</td><td>Live from 28 Nov 2026 (requires the VEC's terms of use)</td></tr>
             <tr><td>Party and campaign websites (candidate pages)</td><td>Candidate photos. Each photo's source is credited beneath it and linked</td><td>By hand (collected 30 Oct 2026)</td></tr>
+            <tr><td><a href="https://www.roymorgan.com/findings/10361-victorian-state-voting-intention-september-2026">Roy Morgan upper-house survey</a> (fieldwork Jul–Sep 2026, published 20 Oct 2026)</td><td>Regional primary votes that seed the quota calculator</td><td>By hand when a new regional poll is published</td></tr>
             <tr><td>Research report (30 Oct 2026)</td><td>Initial upper-house tickets, current MLCs and candidate statuses</td><td>One-off seed, since superseded where newer sources exist</td></tr>
           </tbody>
         </table>

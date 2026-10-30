@@ -10,12 +10,15 @@ site/                     # published as-is (netlify.toml: publish = "site", no 
   lower.html              # Legislative Assembly: filters, district detail, seat outlook (#district-id)
   upper.html              # Legislative Council: 8 regions, MLCs, tickets (#region-id)
   candidate.html          # candidate profiles (#<seat id>/<name slug>) and, with no hash, the candidate directory
+  pendulum.html           # interactive pendulum (#swing=3.2) and scenario explorer
+  poll.html               # poll detail (#<poll id>) with the pollster's trend and house effect; no hash = all polls
   myseats.html            # watchlist ("My seats"), stored in localStorage
   about.html              # about and methodology, sources, credits
   css/style.css           # all styles; design tokens on :root
   js/common.js            # shared: data loading, theme, formats, party palette, header chrome
                           #   (key-dates strip, search, footer), poll smoothing, seat-outlook maths
-  js/home.js, lower.js, upper.js, myseats.js, candidate.js
+  js/home.js, lower.js, upper.js, myseats.js, candidate.js, pendulum.js, poll.js
+  js/quota.js             # upper-house quota calculator (mounted on each region in upper.html)
   js/sharecard.js         # 1200x630 PNG share cards (candidate, seat) drawn on a canvas in the current theme
   data/*.json             # every file has a "_schema" key describing its fields
 scripts/refresh.py        # daily refresh (see "Data pipeline")
@@ -42,11 +45,12 @@ Each file's `_schema` is the authoritative field list. Keep it in sync when addi
 | `districts.json` | 88 districts: region (from the VEC), sitting MP, party, margin `{party, vs, pct}`, ABC classification/code/url, retiring, needs_check | seed + refresh.py (ABC) |
 | `candidates.json` | Candidates for both houses. Assembly rows have `district`; Council rows have `region` + `ticket_position` | seed + refresh.py (Wikipedia, ABC) |
 | `regions.json` | 8 regions: MLCs (with retiring), tickets, notes | seed + refresh.py (MLC retiring only) |
-| `polls.json` | Statewide polls (primaries, 2PP) | refresh.py (Wikipedia), fully rewritten each run |
+| `polls.json` | Statewide polls: id, client, source_url, primaries, 2PP, and where published 3PP, preferred premier and leader approval (matched from Wikipedia's leadership tables by firm and overlapping fieldwork) | refresh.py (Wikipedia), fully rewritten each run |
 | `meta.json` | last_updated, previous_election 2PP baseline, key_dates, source status, reconciliation summary | refresh.py + hand |
 | `seat_models.json` | MRP seat estimates, one entry per district per model; `null` = not published | hand |
 | `seat_odds.json` | Sportsbet market per district: options, favourite, joint_favourites, partial, date_checked | hand (refresh.py tries Sportsbet; it is blocked, so the file is kept as manual) |
 | `seat_polls.json` | Single-seat polls | hand |
+| `council_polls.json` | Upper-house primary vote by region (seeds the quota calculator); OTH is a pollster's combined "others", never one party | hand, from the pollster's release |
 | `geo/districts.geojson`, `geo/regions.geojson` | Simplified boundaries (keep both under 1.5 MB together) | `scripts/build_boundaries.py` (Vicmap Admin; the VEC only offers PDF/PNG maps) |
 | `results_2022/<district>.json`, `results_2022/index.json` | 2022 results by voting centre in vec-contest-v1 format, plus swings from notional 2018 | `scripts/build_results_2022.py` (one-off) |
 | `results_2026/index.json` (+ per-district files on election night) | 2026 results in the same format; empty until 28 Nov, when the home map's Result mode switches on | `scripts/vec_feed.py` |
@@ -110,7 +114,7 @@ Typography: **Archivo** (display: headings, brand, big numbers) and **Inter** (b
 
 ## Pages and UI conventions
 - The header (brand, nav, search, theme toggle) and the key-dates strip are rendered by `common.js` on every page. Add new pages to the nav in all HTML files.
-- Shareable URLs use the hash: `lower.html#bendigo-east`, `upper.html#northern-victoria`, `candidate.html#bendigo-west/brenton-baldwin`. Link a name to its profile with `App.profileLink(seat, name)`; `App.loadPeople()` merges candidates, ticket names and MLCs into one list by candidate id (two ids for one name in different seats are never merged).
+- Shareable URLs use the hash: `lower.html#bendigo-east`, `upper.html#northern-victoria`, `candidate.html#bendigo-west/brenton-baldwin`, `pendulum.html#swing=3.2`, `poll.html#newspoll-2026-10-22`. Poll ids are `<pollster slug>-<end date>` (refresh.py), so they survive the daily rewrite. Link a name to its profile with `App.profileLink(seat, name)`; `App.loadPeople()` merges candidates, ticket names and MLCs into one list by candidate id (two ids for one name in different seats are never merged).
 - Share cards print the photo credit on the image. Seat pages draw theirs only when the "Share card" panel is opened.
 - `localStorage` is only for per-viewer conveniences (theme, watchlist). Wrap every access in try/catch, and the page must work without it.
 - Mobile first: 16px side gutter, no horizontal page scroll; tables scroll inside `.table-scroll`.

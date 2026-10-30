@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Polls · Vic Election 2026</title>
+  <meta name="description" content="Every published voting-intention poll for the 2026 Victorian state election, with each poll's full record and its pollster's trend.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d4ed8'/%3E%3Cpath d='M8 17l5 5 11-12' stroke='white' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Vic Election <span>2026</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="lower.html">Lower house</a>
+        <a href="upper.html">Upper house</a>
+        <a href="candidate.html">Candidates</a>
+        <a href="pendulum.html">Pendulum</a>
+        <a href="poll.html" aria-current="page">Polls</a>
+        <a href="myseats.html">My seats</a>
+        <a href="about.html">About</a>
+      </nav>
+      <button id="theme-toggle" class="icon-btn" type="button">Theme</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="sample-banner" class="banner" hidden></div>
+
+    <div id="poll-detail" aria-live="polite" hidden></div>
+
+    <div id="poll-index">
+      <section class="hero">
+        <h1>Polls</h1>
+        <p class="muted">Every published statewide voting-intention poll since the 2022 election. Choose one for its full record and its pollster's trend.</p>
+        <p class="muted small" id="poll-list-note"></p>
+      </section>
+      <section class="card" aria-labelledby="pl-title">
+        <div class="card-head"><h2 id="pl-title">All polls</h2><span class="muted small" id="poll-count"></span></div>
+        <div class="filters" style="margin-bottom:12px">
+          <label class="field">Pollster <select id="poll-firm"></select></label>
+        </div>
+        <div id="poll-list"><p class="empty">Loading…</p></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p id="last-updated">Data last updated: loading…</p>
+      <p><a href="about.html">About and methodology</a> · Polls via <a href="https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election">Wikipedia</a>, linked to each pollster's release where cited.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" integrity="sha384-bs/nf9FbdNouRbMiFcrcZfLXYPKiPaGVGplVbv7dLGECccEXDW+S3zjqSKR5ZEaD" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/common.js"></script>
+  <script src="js/poll.js"></script>
+</body>
+</html>

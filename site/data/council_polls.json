@@ -1,0 +1,42 @@
+{
+  "_schema": {
+    "description": "Published Legislative Council voting intention by region, entered by hand from the pollster's release. Seeds the upper-house quota calculator (upper.html). Newest poll first; the calculator uses the first one that covers the region.",
+    "fields": {
+      "id": "Stable id: <pollster slug>-<end_date>",
+      "pollster": "Polling firm",
+      "client": "Commissioning client, or null",
+      "start_date": "Fieldwork start, YYYY-MM-DD (first of the month when only months are published)",
+      "end_date": "Fieldwork end, YYYY-MM-DD (last of the month when only months are published)",
+      "fieldwork_label": "Fieldwork as published, for display",
+      "published": "YYYY-MM-DD the results were released",
+      "sample_size": "Total respondents across all regions",
+      "source_url": "The pollster's release",
+      "regions": "Region id (regions.json) -> {party code: primary vote %}. OTH is the pollster's combined 'Ind/Others' figure, several small parties together, not one party",
+      "notes": "Caveats"
+    }
+  },
+  "polls": [
+    {
+      "id": "roy-morgan-2026-09-30",
+      "pollster": "Roy Morgan",
+      "client": null,
+      "start_date": "2026-07-01",
+      "end_date": "2026-09-30",
+      "fieldwork_label": "Jul–Sep 2026",
+      "published": "2026-10-20",
+      "sample_size": 2845,
+      "source_url": "https://www.roymorgan.com/findings/10361-victorian-state-voting-intention-september-2026",
+      "regions": {
+        "eastern-victoria": { "LNP": 35, "ONP": 21.5, "ALP": 21, "GRN": 15, "OTH": 7.5 },
+        "northern-victoria": { "LNP": 29, "ONP": 24, "ALP": 24, "GRN": 12.5, "OTH": 10.5 },
+        "western-victoria": { "LNP": 26, "ONP": 24, "ALP": 21, "GRN": 16.5, "OTH": 12.5 },
+        "northern-metropolitan": { "ALP": 34.5, "LNP": 14.5, "ONP": 11, "GRN": 26, "OTH": 14 },
+        "southern-metropolitan": { "ALP": 23, "LNP": 32.5, "ONP": 8.5, "GRN": 23, "OTH": 13 },
+        "western-metropolitan": { "ALP": 24.5, "LNP": 28, "ONP": 20.5, "GRN": 18, "OTH": 9 },
+        "north-eastern-metropolitan": { "ALP": 30.5, "LNP": 25.5, "ONP": 12.5, "GRN": 19.5, "OTH": 12 },
+        "south-eastern-metropolitan": { "ALP": 23, "LNP": 30.5, "ONP": 20.5, "GRN": 16, "OTH": 10 }
+      },
+      "notes": "About 340 electors per country region and 370 per metropolitan region, so each regional figure has a margin of error of roughly ±5 points. Figures from the region tables in the release."
+    }
+  ]
+}

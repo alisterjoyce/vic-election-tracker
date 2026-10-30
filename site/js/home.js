@@ -142,6 +142,12 @@
         responsive: true,
         maintainAspectRatio: false,
         interaction: { mode: "nearest", intersect: false },
+        // A poll dot opens that poll's page.
+        onClick: (evt, els) => {
+          const el = els.find((e) => chart.data.datasets[e.datasetIndex].type === "scatter");
+          const raw = el && chart.data.datasets[el.datasetIndex].data[el.index];
+          if (raw && raw.poll && raw.poll.id) location.href = `poll.html#${raw.poll.id}`;
+        },
         scales: {
           x: {
             type: "linear",
@@ -217,15 +223,15 @@
           ${latest.map((p) => `
             <tr>
               <td>${escapeHtml(fmtDate(p.end_date))}</td>
-              <td>${escapeHtml(p.pollster)}</td>
+              <td>${p.id ? `<a href="poll.html#${escapeHtml(p.id)}">${escapeHtml(p.pollster)}</a>` : escapeHtml(p.pollster)}</td>
               ${cell(p.sample_size ? p.sample_size.toLocaleString("en-AU") : null)}
               ${primKeys.map((k) => cell(p.primary && p.primary[k])).join("")}
               ${tppKeys.map((k) => cell(p.tpp && p.tpp[k])).join("")}
             </tr>`).join("")}
         </tbody>
       </table>`;
-    document.getElementById("polls-source").textContent =
-      data.source === "sample" ? "Sample rows" : `${polls.length} polls`;
+    document.getElementById("polls-source").innerHTML =
+      data.source === "sample" ? "Sample rows" : `<a href="poll.html">All ${polls.length} polls</a>`;
   }
 
   async function init() {
