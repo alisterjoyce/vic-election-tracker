@@ -2,7 +2,7 @@
 
 A static tracker for the 2026 Victorian state election (polling day Saturday 28 November 2026). It's plain HTML, CSS and vanilla JS with no build step, hosted on Netlify. A daily GitHub Action refreshes the data.
 
-- **Home** (`index.html`): countdown, headline seat counts, a poll-of-polls chart (Chart.js 4.4.1 from cdnjs) and a table of the latest polls.
+- **Home** (`index.html`): a map of all 88 districts (Leaflet, with a Melbourne inset), coloured by holder, margin band, Sportsbet favourite or (from 28 Nov) result, with a Regions view for the upper house; then the countdown, headline seat counts, a poll-of-polls chart (Chart.js 4.4.1 from cdnjs) and a table of the latest polls.
 - **Lower house** (`lower.html`): filter districts by region and metro/regional, then pick one to see its sitting MP, margin and candidates with status badges.
 - **Seat outlook** (on each district page, under the margin cards):
   - **Swing-adjusted margin:** the current poll-of-polls statewide 2PP swing since 2022 (`meta.json` → `previous_election`), applied uniformly to the seat margin. Shown only for Labor-v-Coalition contests.
@@ -36,6 +36,9 @@ site/                  # published by Netlify
     localities.json    # suburb/postcode -> district(s) for search (scripts/build_localities.py)
 scripts/refresh.py     # data refresh
 scripts/build_localities.py  # rebuilds localities.json from Vicmap boundaries (by hand; needs shapely)
+scripts/build_boundaries.py  # map boundaries (by hand; needs shapely + topojson)
+scripts/build_results_2022.py  # 2022 results by voting centre (by hand, one-off)
+scripts/vec_feed.py    # converts the VEC election-night media feed to the same format; --selftest on the VEC samples
 CLAUDE.md              # project conventions: schemas, merge rules, design system, formats
 .github/workflows/refresh.yml
 netlify.toml

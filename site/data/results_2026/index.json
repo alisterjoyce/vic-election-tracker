@@ -1,0 +1,11 @@
+{
+  "_schema": {
+    "description": "2026 Legislative Assembly results index, filled on election night from the VEC media feed (scripts/vec_feed.py writes one vec-contest-v1 file per district alongside this index). While 'districts' is empty, the home map's Result mode stays disabled.",
+    "fields": {
+      "updated": "When the feed file was produced",
+      "districts": "{district id: {leader (party code of the 2CP or first-preference leader), declared (bool), text (tooltip summary)}}"
+    }
+  },
+  "updated": null,
+  "districts": {}
+}

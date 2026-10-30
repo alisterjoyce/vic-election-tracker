@@ -1,0 +1,1077 @@
+{
+ "_schema": {
+  "description": "Contest results in the 'vec-contest-v1' format: the VEC media-feed structure (AEC mediafeed/EML) as JSON, so 2022 history and 2026 election-night results share one shape. See scripts/results_format.py.",
+  "fields": {
+   "format": "Always 'vec-contest-v1'",
+   "event": "{name, date, source}",
+   "phase": "final (2022) | ElectionNight | PostElection (feed phases)",
+   "updated": "When the source was produced",
+   "contest": "{district (site id), name, enrolment, declared}",
+   "candidates": "[{id, name ('SURNAME, Given' as the VEC writes it), party (site code), party_name, ballot_position, independent, elected}]",
+   "first_preferences": "{candidates: {id: votes}, by_type: {type: {id: votes}}, formal, informal, total}",
+   "tcp": "Two-candidate-preferred (the VEC's indicative count, also published by polling place): {candidates: {id: votes}, by_type: {type: {id: votes}}}, or null before the 2CP count or when withheld",
+   "distribution": "Final result after the full distribution of preferences: {candidates: {id: votes}} for the last two candidates, or null when not yet available (the media feed doesn't carry it). Its pair can differ from tcp's",
+   "polling_places": "[{id, name, classification, lat, lon, first_preferences: {id: votes}, formal, informal, total, tcp: {id: votes} | null}]",
+   "swing": "2022 only: change since the notional 2018 result (2021 boundaries), percentage points: {source, first_preferences: {id: pts}, tcp: {id: pts}}"
+  }
+ },
+ "source": "VEC 2022 results by voting centre; swings from Wikipedia",
+ "districts": {
+  "albert-park": {
+   "winner": "ALP",
+   "winner_name": "TAYLOR, Nina",
+   "final": {
+    "ALP": 61.15,
+    "LIB": 38.85
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 14,
+   "booths_located": 14,
+   "swing_found": true
+  },
+  "ashwood": {
+   "winner": "ALP",
+   "winner_name": "FREGON, Matt",
+   "final": {
+    "LIB": 43.85,
+    "ALP": 56.15
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 17,
+   "booths_located": 17,
+   "swing_found": true
+  },
+  "bass": {
+   "winner": "ALP",
+   "winner_name": "CRUGNALE, Jordan",
+   "final": {
+    "ALP": 50.24,
+    "LIB": 49.76
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 24,
+   "booths_located": 24,
+   "swing_found": true
+  },
+  "bayswater": {
+   "winner": "ALP",
+   "winner_name": "TAYLOR, Jackson",
+   "final": {
+    "LIB": 45.77,
+    "ALP": 54.23
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 19,
+   "booths_located": 19,
+   "swing_found": true
+  },
+  "bellarine": {
+   "winner": "ALP",
+   "winner_name": "MARCHANT, Alison",
+   "final": {
+    "LIB": 41.54,
+    "ALP": 58.46
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 14,
+   "booths_located": 14,
+   "swing_found": true
+  },
+  "benambra": {
+   "winner": "LIB",
+   "winner_name": "TILLEY, Bill",
+   "final": {
+    "IND": 49.06,
+    "LIB": 50.94
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 24,
+   "booths_located": 24,
+   "swing_found": true
+  },
+  "bendigo-east": {
+   "winner": "ALP",
+   "winner_name": "ALLAN, Jacinta",
+   "final": {
+    "LIB": 39.09,
+    "ALP": 60.91
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 30,
+   "booths_located": 30,
+   "swing_found": true
+  },
+  "bendigo-west": {
+   "winner": "ALP",
+   "winner_name": "EDWARDS, Maree",
+   "final": {
+    "LIB": 35.65,
+    "ALP": 64.35
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 26,
+   "booths_located": 26,
+   "swing_found": true
+  },
+  "bentleigh": {
+   "winner": "ALP",
+   "winner_name": "STAIKOS, Nick",
+   "final": {
+    "ALP": 58.04,
+    "LIB": 41.96
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 16,
+   "booths_located": 16,
+   "swing_found": true
+  },
+  "berwick": {
+   "winner": "LIB",
+   "winner_name": "BATTIN, Brad",
+   "final": {
+    "LIB": 54.71,
+    "ALP": 45.29
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 13,
+   "booths_located": 13,
+   "swing_found": true
+  },
+  "box-hill": {
+   "winner": "ALP",
+   "winner_name": "HAMER, Paul",
+   "final": {
+    "LIB": 42.77,
+    "ALP": 57.23
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 21,
+   "booths_located": 21,
+   "swing_found": true
+  },
+  "brighton": {
+   "winner": "LIB",
+   "winner_name": "NEWBURY, James",
+   "final": {
+    "LIB": 54.21,
+    "ALP": 45.79
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 16,
+   "booths_located": 16,
+   "swing_found": true
+  },
+  "broadmeadows": {
+   "winner": "ALP",
+   "winner_name": "MATTHEWS-WARD, Kathleen",
+   "final": {
+    "LIB": 34.55,
+    "ALP": 65.45
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 18,
+   "booths_located": 18,
+   "swing_found": true
+  },
+  "brunswick": {
+   "winner": "GRN",
+   "winner_name": "READ, Tim",
+   "final": {
+    "ALP": 36.54,
+    "GRN": 63.46
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 16,
+   "booths_located": 16,
+   "swing_found": true
+  },
+  "bulleen": {
+   "winner": "LIB",
+   "winner_name": "GUY, Matthew",
+   "final": {
+    "LIB": 55.94,
+    "ALP": 44.06
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 17,
+   "booths_located": 17,
+   "swing_found": true
+  },
+  "bundoora": {
+   "winner": "ALP",
+   "winner_name": "BROOKS, Colin",
+   "final": {
+    "LIB": 37.26,
+    "ALP": 62.74
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 17,
+   "booths_located": 17,
+   "swing_found": true
+  },
+  "carrum": {
+   "winner": "ALP",
+   "winner_name": "KILKENNY, Sonya",
+   "final": {
+    "LIB": 40.06,
+    "ALP": 59.94
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 14,
+   "booths_located": 14,
+   "swing_found": true
+  },
+  "caulfield": {
+   "winner": "LIB",
+   "winner_name": "SOUTHWICK, David",
+   "final": {
+    "LIB": 52.07,
+    "ALP": 47.93
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 15,
+   "booths_located": 15,
+   "swing_found": true
+  },
+  "clarinda": {
+   "winner": "ALP",
+   "winner_name": "TAK, Meng Heang",
+   "final": {
+    "ALP": 60.37,
+    "LIB": 39.63
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 20,
+   "booths_located": 20,
+   "swing_found": true
+  },
+  "cranbourne": {
+   "winner": "ALP",
+   "winner_name": "RICHARDS, Pauline",
+   "final": {
+    "LIB": 41.0,
+    "ALP": 59.0
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 17,
+   "booths_located": 17,
+   "swing_found": true
+  },
+  "croydon": {
+   "winner": "LIB",
+   "winner_name": "HODGETT, David",
+   "final": {
+    "ALP": 48.63,
+    "LIB": 51.37
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 19,
+   "booths_located": 19,
+   "swing_found": true
+  },
+  "dandenong": {
+   "winner": "ALP",
+   "winner_name": "WILLIAMS, Gabrielle",
+   "final": {
+    "ALP": 69.11,
+    "LIB": 30.89
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 16,
+   "booths_located": 16,
+   "swing_found": true
+  },
+  "eildon": {
+   "winner": "LIB",
+   "winner_name": "McLEISH, Cindy",
+   "final": {
+    "ALP": 42.92,
+    "LIB": 57.08
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 40,
+   "booths_located": 40,
+   "swing_found": true
+  },
+  "eltham": {
+   "winner": "ALP",
+   "winner_name": "WARD, Vicki",
+   "final": {
+    "ALP": 59.0,
+    "LIB": 41.0
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 15,
+   "booths_located": 15,
+   "swing_found": true
+  },
+  "essendon": {
+   "winner": "ALP",
+   "winner_name": "PEARSON, Danny",
+   "final": {
+    "LIB": 37.55,
+    "ALP": 62.45
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 14,
+   "booths_located": 14,
+   "swing_found": true
+  },
+  "eureka": {
+   "winner": "ALP",
+   "winner_name": "SETTLE, Michaela",
+   "final": {
+    "LIB": 42.83,
+    "ALP": 57.17
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 26,
+   "booths_located": 26,
+   "swing_found": true
+  },
+  "euroa": {
+   "winner": "NAT",
+   "winner_name": "CLEELAND, Annabelle",
+   "final": {
+    "ALP": 40.07,
+    "NAT": 59.93
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 37,
+   "booths_located": 37,
+   "swing_found": true
+  },
+  "evelyn": {
+   "winner": "LIB",
+   "winner_name": "VALLENCE, Bridget",
+   "final": {
+    "ALP": 44.79,
+    "LIB": 55.21
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 16,
+   "booths_located": 16,
+   "swing_found": true
+  },
+  "footscray": {
+   "winner": "ALP",
+   "winner_name": "HALL, Katie",
+   "final": {
+    "GRN": 45.76,
+    "ALP": 54.24
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 16,
+   "booths_located": 16,
+   "swing_found": true
+  },
+  "frankston": {
+   "winner": "ALP",
+   "winner_name": "EDBROOKE, Paul",
+   "final": {
+    "ALP": 58.66,
+    "LIB": 41.34
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 18,
+   "booths_located": 18,
+   "swing_found": true
+  },
+  "geelong": {
+   "winner": "ALP",
+   "winner_name": "COUZENS, Christine",
+   "final": {
+    "LIB": 35.29,
+    "ALP": 64.71
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 26,
+   "booths_located": 26,
+   "swing_found": true
+  },
+  "gippsland-east": {
+   "winner": "NAT",
+   "winner_name": "BULL, Tim",
+   "final": {
+    "NAT": 73.92,
+    "ALP": 26.08
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 38,
+   "booths_located": 38,
+   "swing_found": true
+  },
+  "gippsland-south": {
+   "winner": "NAT",
+   "winner_name": "O'BRIEN, Danny",
+   "final": {
+    "ALP": 34.75,
+    "NAT": 65.25
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 46,
+   "booths_located": 46,
+   "swing_found": true
+  },
+  "glen-waverley": {
+   "winner": "ALP",
+   "winner_name": "MULLAHY, John",
+   "final": {
+    "ALP": 53.3,
+    "LIB": 46.7
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 22,
+   "booths_located": 22,
+   "swing_found": true
+  },
+  "greenvale": {
+   "winner": "ALP",
+   "winner_name": "WALTERS, Iwan",
+   "final": {
+    "LIB": 43.08,
+    "ALP": 56.92
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 11,
+   "booths_located": 11,
+   "swing_found": true
+  },
+  "hastings": {
+   "winner": "ALP",
+   "winner_name": "MERCURIO, Paul",
+   "final": {
+    "ALP": 51.35,
+    "LIB": 48.65
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 14,
+   "booths_located": 14,
+   "swing_found": true
+  },
+  "hawthorn": {
+   "winner": "LIB",
+   "winner_name": "PESUTTO, John",
+   "final": {
+    "ALP": 48.26,
+    "LIB": 51.74
+   },
+   "booth_tcp_pair_differs": true,
+   "booths": 20,
+   "booths_located": 20,
+   "swing_found": true
+  },
+  "ivanhoe": {
+   "winner": "ALP",
+   "winner_name": "CARBINES, Anthony",
+   "final": {
+    "ALP": 62.75,
+    "LIB": 37.25
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 15,
+   "booths_located": 15,
+   "swing_found": true
+  },
+  "kalkallo": {
+   "winner": "ALP",
+   "winner_name": "SPENCE, Ros",
+   "final": {
+    "ALP": 66.43,
+    "LIB": 33.57
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 11,
+   "booths_located": 11,
+   "swing_found": true
+  },
+  "kew": {
+   "winner": "LIB",
+   "winner_name": "WILSON, Jess",
+   "final": {
+    "ALP": 46.02,
+    "LIB": 53.98
+   },
+   "booth_tcp_pair_differs": true,
+   "booths": 19,
+   "booths_located": 19,
+   "swing_found": true
+  },
+  "kororoit": {
+   "winner": "ALP",
+   "winner_name": "GRIGOROVITCH, Luba",
+   "final": {
+    "ALP": 64.25,
+    "LIB": 35.75
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 13,
+   "booths_located": 13,
+   "swing_found": true
+  },
+  "lara": {
+   "winner": "ALP",
+   "winner_name": "GEORGE, Ella",
+   "final": {
+    "LIB": 33.85,
+    "ALP": 66.15
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 17,
+   "booths_located": 17,
+   "swing_found": true
+  },
+  "laverton": {
+   "winner": "ALP",
+   "winner_name": "CONNOLLY, Sarah",
+   "final": {
+    "ALP": 68.01,
+    "LIB": 31.99
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 12,
+   "booths_located": 12,
+   "swing_found": true
+  },
+  "lowan": {
+   "winner": "NAT",
+   "winner_name": "KEALY, Emma",
+   "final": {
+    "NAT": 71.61,
+    "ALP": 28.39
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 53,
+   "booths_located": 53,
+   "swing_found": true
+  },
+  "macedon": {
+   "winner": "ALP",
+   "winner_name": "THOMAS, Mary-Anne",
+   "final": {
+    "LIB": 40.46,
+    "ALP": 59.54
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 27,
+   "booths_located": 27,
+   "swing_found": true
+  },
+  "malvern": {
+   "winner": "LIB",
+   "winner_name": "O'BRIEN, Michael",
+   "final": {
+    "ALP": 41.72,
+    "LIB": 58.28
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 15,
+   "booths_located": 15,
+   "swing_found": true
+  },
+  "melbourne": {
+   "winner": "GRN",
+   "winner_name": "SANDELL, Ellen",
+   "final": {
+    "GRN": 60.19,
+    "ALP": 39.81
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 11,
+   "booths_located": 11,
+   "swing_found": true
+  },
+  "melton": {
+   "winner": "ALP",
+   "winner_name": "McGHIE, Steve",
+   "final": {
+    "LIB": 45.41,
+    "ALP": 54.59
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 11,
+   "booths_located": 11,
+   "swing_found": true
+  },
+  "mildura": {
+   "winner": "NAT",
+   "winner_name": "BENHAM, Jade",
+   "final": {
+    "IND": 48.82,
+    "NAT": 51.18
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 35,
+   "booths_located": 35,
+   "swing_found": true
+  },
+  "mill-park": {
+   "winner": "ALP",
+   "winner_name": "D'AMBROSIO, Lily",
+   "final": {
+    "LIB": 38.57,
+    "ALP": 61.43
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 14,
+   "booths_located": 14,
+   "swing_found": true
+  },
+  "monbulk": {
+   "winner": "ALP",
+   "winner_name": "DE MARTINO, Daniela",
+   "final": {
+    "LIB": 42.45,
+    "ALP": 57.55
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 26,
+   "booths_located": 26,
+   "swing_found": true
+  },
+  "mordialloc": {
+   "winner": "ALP",
+   "winner_name": "RICHARDSON, Tim",
+   "final": {
+    "ALP": 58.19,
+    "LIB": 41.81
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 14,
+   "booths_located": 14,
+   "swing_found": true
+  },
+  "mornington": {
+   "winner": "LIB",
+   "winner_name": "CREWTHER, Chris",
+   "final": {
+    "IND": 49.3,
+    "LIB": 50.7
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 14,
+   "booths_located": 14,
+   "swing_found": true
+  },
+  "morwell": {
+   "winner": "NAT",
+   "winner_name": "CAMERON, Martin",
+   "final": {
+    "NAT": 54.42,
+    "ALP": 45.58
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 20,
+   "booths_located": 20,
+   "swing_found": true
+  },
+  "mulgrave": {
+   "winner": "ALP",
+   "winner_name": "ANDREWS, Daniel",
+   "final": {
+    "ALP": 60.2,
+    "LIB": 39.8
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 20,
+   "booths_located": 20,
+   "swing_found": true
+  },
+  "murray-plains": {
+   "winner": "NAT",
+   "winner_name": "WALSH, Peter",
+   "final": {
+    "ALP": 27.11,
+    "NAT": 72.89
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 40,
+   "booths_located": 40,
+   "swing_found": true
+  },
+  "narracan": {
+   "winner": "LIB",
+   "winner_name": "FARNHAM, Wayne",
+   "final": {
+    "IND": 37.1,
+    "LIB": 62.9
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 26,
+   "booths_located": 26,
+   "swing_found": false
+  },
+  "narre-warren-north": {
+   "winner": "ALP",
+   "winner_name": "WILSON, Belinda",
+   "final": {
+    "ALP": 59.16,
+    "LIB": 40.84
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 17,
+   "booths_located": 17,
+   "swing_found": true
+  },
+  "narre-warren-south": {
+   "winner": "ALP",
+   "winner_name": "MAAS, Gary",
+   "final": {
+    "LIB": 41.5,
+    "ALP": 58.5
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 13,
+   "booths_located": 13,
+   "swing_found": true
+  },
+  "nepean": {
+   "winner": "LIB",
+   "winner_name": "GROTH, Sam",
+   "final": {
+    "LIB": 56.68,
+    "ALP": 43.32
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 18,
+   "booths_located": 18,
+   "swing_found": true
+  },
+  "niddrie": {
+   "winner": "ALP",
+   "winner_name": "CARROLL, Ben",
+   "final": {
+    "ALP": 56.69,
+    "LIB": 43.31
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 17,
+   "booths_located": 17,
+   "swing_found": true
+  },
+  "northcote": {
+   "winner": "ALP",
+   "winner_name": "THEOPHANOUS, Kat",
+   "final": {
+    "GRN": 49.78,
+    "ALP": 50.22
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 15,
+   "booths_located": 15,
+   "swing_found": true
+  },
+  "oakleigh": {
+   "winner": "ALP",
+   "winner_name": "DIMOPOULOS, Steve",
+   "final": {
+    "ALP": 63.48,
+    "LIB": 36.52
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 19,
+   "booths_located": 19,
+   "swing_found": true
+  },
+  "ovens-valley": {
+   "winner": "NAT",
+   "winner_name": "McCURDY, Tim",
+   "final": {
+    "NAT": 67.97,
+    "ALP": 32.03
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 33,
+   "booths_located": 33,
+   "swing_found": true
+  },
+  "pakenham": {
+   "winner": "ALP",
+   "winner_name": "VULIN, Emma",
+   "final": {
+    "LIB": 49.61,
+    "ALP": 50.39
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 12,
+   "booths_located": 12,
+   "swing_found": true
+  },
+  "pascoe-vale": {
+   "winner": "ALP",
+   "winner_name": "CIANFLONE, Anthony",
+   "final": {
+    "ALP": 52.02,
+    "GRN": 47.98
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 19,
+   "booths_located": 19,
+   "swing_found": true
+  },
+  "point-cook": {
+   "winner": "ALP",
+   "winner_name": "HILAKARI, Mathew",
+   "final": {
+    "LIB": 41.66,
+    "ALP": 58.34
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 13,
+   "booths_located": 13,
+   "swing_found": true
+  },
+  "polwarth": {
+   "winner": "LIB",
+   "winner_name": "RIORDAN, Richard",
+   "final": {
+    "ALP": 48.21,
+    "LIB": 51.79
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 33,
+   "booths_located": 33,
+   "swing_found": true
+  },
+  "prahran": {
+   "winner": "GRN",
+   "winner_name": "HIBBINS, Sam",
+   "final": {
+    "LIB": 37.99,
+    "GRN": 62.01
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 15,
+   "booths_located": 15,
+   "swing_found": true
+  },
+  "preston": {
+   "winner": "ALP",
+   "winner_name": "LAMBERT, Nathan",
+   "final": {
+    "GRN": 47.91,
+    "ALP": 52.09
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 20,
+   "booths_located": 20,
+   "swing_found": true
+  },
+  "richmond": {
+   "winner": "GRN",
+   "winner_name": "DE VIETRI, Gabrielle",
+   "final": {
+    "GRN": 57.32,
+    "ALP": 42.68
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 13,
+   "booths_located": 13,
+   "swing_found": true
+  },
+  "ringwood": {
+   "winner": "ALP",
+   "winner_name": "FOWLES, Will",
+   "final": {
+    "ALP": 57.53,
+    "LIB": 42.47
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 22,
+   "booths_located": 22,
+   "swing_found": true
+  },
+  "ripon": {
+   "winner": "ALP",
+   "winner_name": "HAYLETT, Martha",
+   "final": {
+    "ALP": 52.99,
+    "LIB": 47.01
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 41,
+   "booths_located": 41,
+   "swing_found": true
+  },
+  "rowville": {
+   "winner": "LIB",
+   "winner_name": "WELLS, Kim",
+   "final": {
+    "LIB": 53.67,
+    "ALP": 46.33
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 12,
+   "booths_located": 12,
+   "swing_found": true
+  },
+  "sandringham": {
+   "winner": "LIB",
+   "winner_name": "ROWSWELL, Brad",
+   "final": {
+    "ALP": 44.85,
+    "LIB": 55.15
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 18,
+   "booths_located": 18,
+   "swing_found": true
+  },
+  "shepparton": {
+   "winner": "NAT",
+   "winner_name": "O'KEEFFE, Kim",
+   "final": {
+    "NAT": 56.79,
+    "IND": 43.21
+   },
+   "booth_tcp_pair_differs": true,
+   "booths": 29,
+   "booths_located": 29,
+   "swing_found": true
+  },
+  "south-barwon": {
+   "winner": "ALP",
+   "winner_name": "CHEESEMAN, Darren",
+   "final": {
+    "LIB": 40.2,
+    "ALP": 59.8
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 16,
+   "booths_located": 16,
+   "swing_found": true
+  },
+  "south-west-coast": {
+   "winner": "LIB",
+   "winner_name": "BRITNELL, Roma",
+   "final": {
+    "ALP": 41.95,
+    "LIB": 58.05
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 35,
+   "booths_located": 35,
+   "swing_found": true
+  },
+  "st-albans": {
+   "winner": "ALP",
+   "winner_name": "SULEYMAN, Natalie",
+   "final": {
+    "LIB": 40.44,
+    "ALP": 59.56
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 15,
+   "booths_located": 15,
+   "swing_found": true
+  },
+  "sunbury": {
+   "winner": "ALP",
+   "winner_name": "BULL, Josh",
+   "final": {
+    "LIB": 43.59,
+    "ALP": 56.41
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 14,
+   "booths_located": 14,
+   "swing_found": true
+  },
+  "sydenham": {
+   "winner": "ALP",
+   "winner_name": "HUTCHINS, Natalie",
+   "final": {
+    "ALP": 58.73,
+    "LIB": 41.27
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 13,
+   "booths_located": 13,
+   "swing_found": true
+  },
+  "tarneit": {
+   "winner": "ALP",
+   "winner_name": "WIGHT, Dylan",
+   "final": {
+    "ALP": 62.58,
+    "LIB": 37.42
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 13,
+   "booths_located": 13,
+   "swing_found": true
+  },
+  "thomastown": {
+   "winner": "ALP",
+   "winner_name": "HALFPENNY, Bronwyn",
+   "final": {
+    "LIB": 34.0,
+    "ALP": 66.0
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 16,
+   "booths_located": 16,
+   "swing_found": true
+  },
+  "warrandyte": {
+   "winner": "LIB",
+   "winner_name": "SMITH, Ryan",
+   "final": {
+    "ALP": 45.85,
+    "LIB": 54.15
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 21,
+   "booths_located": 21,
+   "swing_found": true
+  },
+  "wendouree": {
+   "winner": "ALP",
+   "winner_name": "ADDISON, Juliana",
+   "final": {
+    "LIB": 36.54,
+    "ALP": 63.46
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 18,
+   "booths_located": 18,
+   "swing_found": true
+  },
+  "werribee": {
+   "winner": "ALP",
+   "winner_name": "PALLAS, Tim",
+   "final": {
+    "ALP": 60.5,
+    "LIB": 39.5
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 13,
+   "booths_located": 13,
+   "swing_found": true
+  },
+  "williamstown": {
+   "winner": "ALP",
+   "winner_name": "HORNE, Melissa",
+   "final": {
+    "LIB": 36.56,
+    "ALP": 63.44
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 16,
+   "booths_located": 16,
+   "swing_found": true
+  },
+  "yan-yean": {
+   "winner": "ALP",
+   "winner_name": "KATHAGE, Lauren",
+   "final": {
+    "LIB": 45.55,
+    "ALP": 54.45
+   },
+   "booth_tcp_pair_differs": false,
+   "booths": 11,
+   "booths_located": 11,
+   "swing_found": true
+  }
+ }
+}

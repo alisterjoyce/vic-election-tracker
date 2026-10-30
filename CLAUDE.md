@@ -18,6 +18,11 @@ site/                     # published as-is (netlify.toml: publish = "site", no 
   data/*.json             # every file has a "_schema" key describing its fields
 scripts/refresh.py        # daily refresh (see "Data pipeline")
 scripts/build_localities.py  # rebuilds data/localities.json from Vicmap Admin polygons (run by hand; needs shapely)
+scripts/build_boundaries.py  # data/geo/{districts,regions}.geojson, topology-preserving simplification (needs shapely, topojson)
+scripts/results_format.py    # the vec-contest-v1 results format (2022 history and 2026 election night)
+scripts/build_results_2022.py  # data/results_2022/ from VEC 2022 results by voting centre (one-off)
+scripts/vec_feed.py       # VEC media feed (XML) -> vec-contest-v1; --selftest <samples folder>
+site/js/maps.js           # Leaflet: home choropleth with metro inset, seat-page booth map
 .github/workflows/refresh.yml   # 20:00 UTC daily + workflow_dispatch; commits site/data if changed
 ```
 
@@ -37,6 +42,9 @@ Each file's `_schema` is the authoritative field list. Keep it in sync when addi
 | `seat_models.json` | MRP seat estimates, one entry per district per model; `null` = not published | hand |
 | `seat_odds.json` | Sportsbet market per district: options, favourite, joint_favourites, partial, date_checked | hand (refresh.py tries Sportsbet; it is blocked, so the file is kept as manual) |
 | `seat_polls.json` | Single-seat polls | hand |
+| `geo/districts.geojson`, `geo/regions.geojson` | Simplified boundaries (keep both under 1.5 MB together) | `scripts/build_boundaries.py` (Vicmap Admin; the VEC only offers PDF/PNG maps) |
+| `results_2022/<district>.json`, `results_2022/index.json` | 2022 results by voting centre in vec-contest-v1 format, plus swings from notional 2018 | `scripts/build_results_2022.py` (one-off) |
+| `results_2026/index.json` (+ per-district files on election night) | 2026 results in the same format; empty until 28 Nov, when the home map's Result mode switches on | `scripts/vec_feed.py` |
 | `localities.json` | Suburb/locality and postcode → district(s) with area shares, for search | `scripts/build_localities.py` (Vicmap Admin boundaries; the VEC publishes no downloadable locality list) |
 
 Party codes: ALP, LIB, NAT, LNP (joint Coalition), GRN, ONP, IND, ILAB (Independent Labor), AJP, LCV, VS, LBT, FF, SAL, ND, WEST, SFF, DLP, SUS, OTH.
@@ -54,6 +62,10 @@ Order each run: polls → Wikipedia candidates → ABC guide (district pages, th
 - **Reconciliation:** every name on the ABC A-Z list is checked against the tracker. Missing names are added under the same rules. A summary goes to `meta.json` → `reconciliation`.
 - **Politeness:** ABC requests are made one per second, with a descriptive User-Agent, and three tries per page. If any page fails three times, the whole ABC step is skipped and no file changes. Check robots.txt before adding any new scraped source.
 - **Failure handling:** if any fetch or parse fails, log it (plus a `::warning::` in Actions), keep the existing file, and exit 0.
+
+## Results format (vec-contest-v1)
+
+2022 history and 2026 election night use one JSON shape that mirrors the VEC media feed (AEC mediafeed/EML), so `maps.js`'s booth map and the seat-page result panels read both. The format is defined in `scripts/results_format.py`, which also maps feed elements to JSON keys. Don't add fields to one source only; add them to the format, both builders, and `vec_feed.py --selftest`, which checks that the keys match `results_2022`. The VEC feed and its sample files are covered by the VEC's terms of use, so keep them out of the repo (the samples folder is git-ignored).
 
 ## Copyright: link, never copy
 

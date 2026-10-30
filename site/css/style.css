@@ -220,6 +220,53 @@ h3 { font-size: 1rem; }
 .kd-list li.done .kd-when { color: var(--muted); font-weight: 600; }
 .kd-today { margin: 4px 0 0; color: var(--text); }
 
+/* Maps (Leaflet, no tiles) */
+.map-controls { display: flex; flex-wrap: wrap; gap: 8px; }
+.segmented button:disabled { opacity: 0.45; cursor: not-allowed; }
+.segmented button[data-dim] { opacity: 0.55; }
+.map-wrap { position: relative; }
+.map-main { height: 520px; border-radius: 8px; background: var(--surface-2); }
+.map-inset {
+  position: absolute; top: 10px; right: 10px; width: 38%; max-width: 360px; height: 260px; z-index: 500;
+  border: 1px solid var(--border); border-radius: 8px; background: var(--surface-2); box-shadow: var(--shadow); overflow: hidden;
+}
+.map-inset-map { position: absolute; inset: 0; background: var(--surface-2); }
+.map-inset-label {
+  position: absolute; z-index: 600; top: 6px; left: 8px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.05em; color: var(--muted); background: var(--surface); padding: 1px 6px; border-radius: 4px; pointer-events: none;
+}
+.map-legend { margin-top: 10px; }
+.leaflet-container { font-family: var(--font-body); background: var(--surface-2); }
+.leaflet-tooltip.map-tip, .leaflet-popup-content-wrapper, .leaflet-popup-tip, .leaflet-tooltip {
+  background: var(--surface); color: var(--text); border-color: var(--border); box-shadow: var(--shadow);
+}
+.leaflet-container a { color: var(--accent); }
+.leaflet-bar a, .leaflet-control-attribution { background: var(--surface); color: var(--text); }
+.leaflet-control-attribution { font-size: 0.68rem; }
+@media (max-width: 640px) {
+  .map-main { height: 380px; }
+  .map-inset { position: relative; top: auto; right: auto; width: auto; max-width: none; height: 240px; margin-top: 10px; }
+}
+
+/* Seat page: 2022 results */
+.r22 h3 { margin-top: 18px; }
+.vote-bars { list-style: none; padding: 0; margin: 0; }
+.vote-bars li { display: grid; grid-template-columns: minmax(110px, 1.2fr) 3fr auto; gap: 4px 10px; align-items: center; padding: 4px 0; }
+.vote-bars .vb-name { overflow-wrap: anywhere; font-size: 0.9rem; }
+.vote-bars .vb-track { height: 14px; background: var(--surface-2); border-radius: 4px; overflow: hidden; }
+.vote-bars .vb-fill { height: 100%; }
+.vote-bars .vb-num { font-size: 0.85rem; text-align: right; white-space: nowrap; }
+.swing-up { color: var(--s-nominated-fg); }
+.swing-down { color: var(--s-withdrawn-fg); }
+.tcp-bar { display: flex; height: 26px; border-radius: 6px; overflow: hidden; margin: 6px 0; }
+.tcp-bar span { display: flex; align-items: center; padding: 0 8px; color: #fff; font-size: 0.82rem; font-weight: 700; white-space: nowrap; }
+.booth-map { height: 420px; border-radius: 8px; margin-top: 8px; }
+.booth-pop table { margin-top: 6px; font-size: 0.8rem; }
+.booth-pop th, .booth-pop td { padding: 2px 6px; }
+.booth-pop .booth-tcp { margin-top: 6px; font-size: 0.85rem; }
+details.booth-table summary { cursor: pointer; margin-top: 12px; color: var(--accent); }
+@media (max-width: 640px) { .booth-map { height: 320px; } .vote-bars li { grid-template-columns: 1fr auto; } .vote-bars .vb-track { grid-column: 1 / -1; grid-row: 2; } }
+
 /* About page */
 .prose p, .prose li, .prose dd { max-width: 75ch; }
 .prose ul { padding-left: 1.2rem; margin: 0; }

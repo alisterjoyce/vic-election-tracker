@@ -205,8 +205,108 @@
             </li>`).join("")}
         </ul>
         <p class="muted small" style="margin-top:8px">Last checked ${escapeHtml(fmtDate(cands.map((c) => c.updated).filter(Boolean).sort().pop()))}</p>`
-        : '<p class="empty">No candidates recorded yet.</p>'}`;
+        : '<p class="empty">No candidates recorded yet.</p>'}
+      <section class="r22" id="r22" aria-labelledby="r22-h">
+        <h3 id="r22-h">How it voted in 2022</h3>
+        <p class="empty">Loading 2022 results…</p>
+      </section>`;
     $("copy-link").addEventListener("click", (e) => copyLink(e.currentTarget));
+    renderResults2022(d);
+  }
+
+  /* ---------- How it voted in 2022 (vec-contest-v1 format, shared with the 2026 feed) ---------- */
+  const pct = (n, total) => (total ? (100 * n) / total : 0);
+  const swingSpan = (v) => (v == null ? "" :
+    ` <span class="small ${v >= 0 ? "swing-up" : "swing-down"}" title="Swing since the notional 2018 result">${App.fmtSwing(v)}</span>`);
+  const TYPE_LABELS = { Ordinary: "Voting centres", EVCEarly: "Early voting centres", MobileVotingEarly: "Mobile voting",
+    Early: "Early votes", Postal: "Postal", Absent: "Absent", MarkedAsVoted: "Marked as voted", Provisional: "Provisional" };
+
+  async function renderResults2022(d) {
+    const el = $("r22");
+    let r;
+    try {
+      r = await loadJSON(`results_2022/${d.id}`);
+    } catch (err) {
+      el.innerHTML = '<h3 id="r22-h">How it voted in 2022</h3><p class="empty">2022 results are not available for this district.</p>';
+      return;
+    }
+    if (hashId() !== d.id || !document.getElementById("r22")) return;   // user moved on
+    const cand = Object.fromEntries(r.candidates.map((c) => [c.id, c]));
+    const fp = r.first_preferences;
+    const sw = (r.swing && r.swing.first_preferences) || {};
+    const tsw = (r.swing && r.swing.tcp) || {};
+    const fpRows = Object.entries(fp.candidates).sort((a, b) => b[1] - a[1]);
+    const maxShare = Math.max(...fpRows.map(([, v]) => pct(v, fp.formal)));
+    const label = (c) => `${escapeHtml(App.partyName(c.party))} <span class="muted small">${escapeHtml(c.name)}</span>`;
+
+    // Booth-level 2CP is the VEC's indicative count. The headline uses the final distribution
+    // of preferences when it ended with two candidates (it stops early once someone passes 50%).
+    const tcpEntries = r.tcp ? Object.entries(r.tcp.candidates).sort((a, b) => b[1] - a[1]) : [];
+    const dist = r.distribution && Object.keys(r.distribution.candidates).length === 2 ? r.distribution.candidates : null;
+    const headEntries = dist ? Object.entries(dist).sort((a, b) => b[1] - a[1]) : tcpEntries;
+    const headTotal = headEntries.reduce((a, [, v]) => a + v, 0);
+    const byType = r.tcp ? Object.keys(r.tcp.by_type) : [];
+    const elected = r.candidates.find((c) => c.elected);
+    const name = (id) => `${escapeHtml(App.partyName(cand[id].party))} (${escapeHtml(cand[id].name.split(",")[0])})`;
+    const notes = [];
+    if (dist && r.tcp && !Object.keys(dist).every((id) => id in r.tcp.candidates)) {
+      notes.push(`The VEC's voting-centre count was between ${tcpEntries.map(([id]) => name(id)).join(" and ")}, so the booth map compares those two; the final count was between ${headEntries.map(([id]) => name(id)).join(" and ")}.`);
+    } else if (elected && tcpEntries.length && tcpEntries[0][0] !== elected.id) {
+      notes.push(`${name(elected.id)} trailed in the VEC's indicative two-candidate count but won after the full distribution of preferences.`);
+    }
+
+    el.innerHTML = `
+      <h3 id="r22-h">How it voted in 2022</h3>
+      <p class="muted small" style="margin-top:0">${r.event.name && !/^State Election 2022/.test(r.event.name)
+        ? `${escapeHtml(r.event.name)} (${escapeHtml(App.fmtDate(r.event.date))}), held after the November 2022 poll failed; results from the`
+        : "Final 2022 results from the"} <a href="${escapeHtml(r.event.source)}" rel="noopener" target="_blank">VEC</a>.
+        Swings compare with the notional 2018 result on today's boundaries (<a href="${escapeHtml((r.swing && r.swing.source) || "#")}" rel="noopener" target="_blank">Wikipedia</a>).</p>
+      <h4>First preferences</h4>
+      <ul class="vote-bars">
+        ${fpRows.map(([id, v]) => {
+          const c = cand[id];
+          return `<li><span class="vb-name">${label(c)}</span>
+            <span class="vb-track"><span class="vb-fill" style="display:block;width:${(100 * pct(v, fp.formal)) / maxShare}%;background:var(${App.partyVar(c.party)})"></span></span>
+            <span class="vb-num">${pct(v, fp.formal).toFixed(1)}%${swingSpan(sw[id])}</span></li>`;
+        }).join("")}
+      </ul>
+      <p class="muted small">${fp.formal.toLocaleString("en-AU")} formal votes, ${fp.informal.toLocaleString("en-AU")} informal (${pct(fp.informal, fp.total).toFixed(1)}%)${r.contest.enrolment ? `; enrolment ${r.contest.enrolment.toLocaleString("en-AU")}` : ""}.</p>
+      ${headEntries.length ? `
+        <h4>${dist ? "After preferences" : "Two-candidate preferred"}</h4>
+        <div class="tcp-bar" role="img" aria-label="${headEntries.map(([id, v]) => `${App.partyName(cand[id].party)} ${pct(v, headTotal).toFixed(1)}%`).join(", ")}">
+          ${headEntries.map(([id, v]) => `<span style="width:${pct(v, headTotal)}%;background:var(${App.partyVar(cand[id].party)})"></span>`).join("")}
+        </div>
+        <p>${headEntries.map(([id, v]) => `${label(cand[id])} <strong>${pct(v, headTotal).toFixed(1)}%</strong>${swingSpan(tsw[id])}`).join(" · ")}</p>
+        ${notes.map((n) => `<p class="muted small">${n}</p>`).join("")}` : ""}
+      <h4>Voting centres</h4>
+      <div class="booth-map" id="booth-map"></div>
+      <p class="muted small" id="booth-note"></p>
+      ${byType.length ? `
+        <div class="table-scroll"><table>
+          <thead><tr><th>Vote type (2CP)</th>${tcpEntries.map(([id]) => `<th class="num">${escapeHtml(App.partyShort(cand[id].party))}</th>`).join("")}<th class="num">Votes</th></tr></thead>
+          <tbody>${byType.map((t) => {
+            const row = r.tcp.by_type[t];
+            const sum = Object.values(row).reduce((a, b) => a + (b || 0), 0);
+            return `<tr><td>${escapeHtml(TYPE_LABELS[t] || t)}</td>${tcpEntries.map(([id]) => `<td class="num">${pct(row[id] || 0, sum).toFixed(1)}%</td>`).join("")}<td class="num">${sum.toLocaleString("en-AU")}</td></tr>`;
+          }).join("")}</tbody>
+        </table></div>` : ""}
+      <details class="booth-table"><summary>All ${r.polling_places.length} voting centres</summary>
+        <div class="table-scroll"><table>
+          <thead><tr><th>Voting centre</th><th class="num">Votes</th>${tcpEntries.map(([id]) => `<th class="num">${escapeHtml(App.partyShort(cand[id].party))} 2CP</th>`).join("")}</tr></thead>
+          <tbody>${r.polling_places.slice().sort((a, b) => (b.total || 0) - (a.total || 0)).map((p) => {
+            const s = p.tcp ? Object.values(p.tcp).reduce((a, b) => a + (b || 0), 0) : 0;
+            return `<tr><td>${escapeHtml(p.name)}${p.lat == null ? ' <span class="muted small">(not mapped)</span>' : ""}</td><td class="num">${(p.total ?? 0).toLocaleString("en-AU")}</td>${tcpEntries.map(([id]) => `<td class="num">${p.tcp ? `${pct(p.tcp[id] || 0, s).toFixed(1)}%` : "–"}</td>`).join("")}</tr>`;
+          }).join("")}</tbody>
+        </table></div>
+      </details>`;
+
+    if (window.L && App.Maps) {
+      const { placed, total } = await App.Maps.boothMap($("booth-map"), d.id, r);
+      $("booth-note").textContent = `${placed} of ${total} voting centres mapped. Circles are sized by votes and coloured by the two-candidate-preferred leader; tap one for its numbers. Early, postal, absent and other declaration votes aren't tied to a place, so they're in the table below instead.`;
+    } else {
+      $("booth-map").remove();
+      $("booth-note").textContent = "The map library failed to load; the voting-centre table below has every result.";
+    }
   }
 
   function onHashChange() {

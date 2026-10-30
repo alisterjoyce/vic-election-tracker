@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" integrity="sha384-c6Rcwz4e4CITMbu/NBmnNS8yN2sC3cUElMEMfP3vqqKFp7GOYaaBBCqmaWBjmkjb" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -33,6 +34,33 @@
     <section class="hero">
       <h1>2026 Victorian state election</h1>
       <p class="muted"><span id="election-date">Polling day</span> · <span id="countdown" class="countdown"></span></p>
+    </section>
+
+    <section class="card map-card" id="state-map" aria-labelledby="map-title">
+      <div class="card-head">
+        <h2 id="map-title">The map</h2>
+        <div class="map-controls">
+          <div class="segmented" role="group" aria-label="Show">
+            <button type="button" data-layer="districts" aria-pressed="true">Districts</button>
+            <button type="button" data-layer="regions" aria-pressed="false">Regions</button>
+          </div>
+          <div class="segmented" role="group" aria-label="Colour districts by">
+            <button type="button" data-mode="holder" aria-pressed="true">Held by</button>
+            <button type="button" data-mode="margin" aria-pressed="false">Margin</button>
+            <button type="button" data-mode="odds" aria-pressed="false">Favourite</button>
+            <button type="button" data-mode="result" aria-pressed="false">Result</button>
+          </div>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <div class="map-main" data-map="main" role="img" aria-label="Map of Victoria's 88 districts. Use the search box or the lower house list to reach a district by keyboard."></div>
+        <div class="map-inset">
+          <span class="map-inset-label">Melbourne</span>
+          <div class="map-inset-map" data-map="inset" aria-hidden="true"></div>
+        </div>
+      </div>
+      <ul class="seat-legend map-legend" data-map="legend"></ul>
+      <p class="muted small" style="margin:8px 0 0">Click a district for its page, or switch to Regions for the upper house. Margin shading follows the ABC's classification.</p>
     </section>
 
     <section class="grid grid-2" aria-label="Seat counts">
@@ -73,7 +101,9 @@
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" integrity="sha384-bs/nf9FbdNouRbMiFcrcZfLXYPKiPaGVGplVbv7dLGECccEXDW+S3zjqSKR5ZEaD" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" integrity="sha384-NElt3Op+9NBMCYaef5HxeJmU4Xeard/Lku8ek6hoPTvYkQPh3zLIrJP7KiRocsxO" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/common.js"></script>
+  <script src="js/maps.js"></script>
   <script src="js/home.js"></script>
 </body>
 </html>

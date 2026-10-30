@@ -57,6 +57,10 @@
         <dd><strong>VEC-nominated</strong>: on the Victorian Electoral Commission's list after nominations close. <strong>Endorsed</strong>: preselected or endorsed by the party, or listed in the ABC guide. <strong>Reported</strong>: reported but not independently confirmed. <strong>Announced</strong>: listed on Wikipedia and added automatically. <strong>Superseded</strong>: replaced by a newer ABC entry for the same party and seat. These rows are kept in the data but hidden on the page. <strong>Withdrawn</strong>: no longer standing.</dd>
         <dt>"N candidates tracked"</dt>
         <dd>The count of active candidates in both houses, after the daily check of every name on the ABC's A-Z candidate list. Hover over the footer line for the lower-house comparison.</dd>
+        <dt>The map</dt>
+        <dd>Districts coloured by the current holder; by margin band (the ABC's Marginal, Safe and Very Safe, shaded in the leading party's colour); by Sportsbet favourite (dashed outline for joint favourites); and, once counting starts on 28 Nov, by result. The Regions view shades each upper-house region by the party with the most current MLCs. The Melbourne inset shows the small metropolitan seats. Boundaries are simplified to about 60 m for speed.</dd>
+        <dt>How it voted in 2022</dt>
+        <dd>Each district's final 2022 result from the VEC: first preferences, two-candidate preferred, and the swing since the notional 2018 result on today's boundaries (the 2021 redistribution changed many seats, so raw 2018 results aren't comparable). On the booth map, each voting centre is coloured by its two-candidate-preferred leader and sized by votes. Early, postal, absent and other declaration votes aren't tied to a place, so they appear in the table instead. On election night the same map will show 2026 booths from the VEC results feed.</dd>
         <dt>Search by suburb or postcode</dt>
         <dd>Suburbs and postcodes are matched to districts by land area, from official boundary data. Where one straddles more than one district, every district is listed with its share of the area. Area isn't population, so check your exact address with the VEC.</dd>
       </dl>
@@ -76,7 +80,11 @@
             <tr><td>VEC nominations list</td><td>Official candidates and ballot order once nominations close at noon on 9 Nov</td><td>Not yet connected</td></tr>
             <tr><td><a href="https://actionnetwork.org/user_files/user_files/000/146/615/original/yougov-vic-mrp-treaty-report-state-voting-intetion-treaty-support.pdf">YouGov MRP for Common Threads</a> (fieldwork 16 Jun to 10 Jul 2026)</td><td>MRP seat estimates</td><td>By hand when new models are published</td></tr>
             <tr><td><a href="https://www.sportsbet.com.au/betting/politics/vic-politics/victorian-state-election-seat-betting-10944986">Sportsbet seat betting</a></td><td>Betting favourite and full market per seat</td><td>By hand (as at 30 Oct 2026). Sportsbet blocks automated access</td></tr>
-            <tr><td><a href="https://opendata.maps.vic.gov.au/">Vicmap Admin</a> (locality, postcode and state district boundaries)</td><td>Suburb and postcode search</td><td>Built 30 Oct 2026</td></tr>
+            <tr><td><a href="https://opendata.maps.vic.gov.au/">Vicmap Admin</a> (locality, postcode and state district boundaries)</td><td>The map, region outlines, and suburb and postcode search</td><td>Built 30 Oct 2026 (boundaries unchanged since 2021)</td></tr>
+            <tr><td><a href="https://www.vec.vic.gov.au/results/state-election-results/2022-state-election-results">VEC 2022 results by district</a>, results by voting centre and 2CP by voting centre</td><td>How it voted in 2022: first preferences, 2CP, voting-centre results</td><td>One-off (final results)</td></tr>
+            <tr><td><a href="https://www.vec.vic.gov.au/electoral-boundaries/download-boundary-maps">VEC 2022 voting centre locations</a></td><td>Positions of 2022 voting centres on the booth map</td><td>One-off</td></tr>
+            <tr><td><a href="https://en.wikipedia.org/wiki/Results_of_the_2022_Victorian_state_election_(Legislative_Assembly)">Wikipedia: 2022 Assembly results</a></td><td>Swings since the notional 2018 result</td><td>One-off</td></tr>
+            <tr><td>VEC results media feed</td><td>Election-night results (2026), in the same format as the 2022 booth data</td><td>Live from 28 Nov 2026 (requires the VEC's terms of use)</td></tr>
             <tr><td>Research report (30 Oct 2026)</td><td>Initial upper-house tickets, current MLCs and candidate statuses</td><td>One-off seed, since superseded where newer sources exist</td></tr>
           </tbody>
         </table>
@@ -109,7 +117,7 @@
         <li>Opinion polls and candidate lists compiled by <a href="https://en.wikipedia.org/">Wikipedia</a> contributors (CC BY-SA 4.0).</li>
         <li>Boundary data: Vicmap Admin, © State of Victoria (Department of Energy, Environment and Climate Action), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</li>
         <li>MRP estimates: YouGov for Common Threads. Betting prices: Sportsbet.</li>
-        <li>Built with <a href="https://www.chartjs.org/">Chart.js</a>. Fonts: Archivo and Inter (SIL Open Font License) via Google Fonts.</li>
+        <li>Built with <a href="https://www.chartjs.org/">Chart.js</a> and <a href="https://leafletjs.com/">Leaflet</a>. Fonts: Archivo and Inter (SIL Open Font License) via Google Fonts.</li>
       </ul>
     </section>
   </main>
