@@ -1,7 +1,8 @@
 /* Home page: countdown, headline seat counts, poll-of-polls chart, latest polls table. */
 (function () {
   "use strict";
-  const { loadJSON, escapeHtml, partyName, partyVar, partyColor, parseDate, fmtDate, cssVar,
+  const App = window.App;
+  const { loadJSON, escapeHtml, partyName, partyVar, partyColor, fmtDate, cssVar,
     DAY, preparePolls, smoothedSeries } = window.App;
 
   const PARTY_ORDER = ["ALP", "LNP", "LIB", "NAT", "GRN", "ONP", "LCV", "IND", "OTH"];
@@ -36,11 +37,8 @@
   /* ---------- Countdown ---------- */
   function renderCountdown(meta) {
     if (!meta.election_date) return;
-    const day = parseDate(meta.election_date);
-    document.getElementById("election-date").textContent =
-      day.toLocaleDateString("en-AU", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
-    const today = new Date(); today.setHours(0, 0, 0, 0);
-    const days = Math.round((day - today) / DAY);
+    document.getElementById("election-date").textContent = `Polling day ${fmtDate(meta.election_date)}`;
+    const days = App.daysBetween(App.melbourneToday(), meta.election_date);
     document.getElementById("countdown").textContent =
       days > 1 ? `${days} days to go` : days === 1 ? "Tomorrow" : days === 0 ? "Polling day" : "Election held";
   }
@@ -135,7 +133,7 @@
 
     const text = cssVar("--muted");
     const grid = cssVar("--border");
-    const fmtTick = (v) => new Date(v).toLocaleDateString("en-AU", { month: "short", year: "2-digit" });
+    const fmtTick = (v) => App.fmtMonth(v);
 
     if (chart) chart.destroy();
     chart = new Chart(canvas, {
@@ -173,7 +171,7 @@
           },
           tooltip: {
             callbacks: {
-              title: (items) => items.length ? fmtDate(new Date(items[0].parsed.x).toISOString().slice(0, 10)) : "",
+              title: (items) => items.length ? fmtDate(new Date(items[0].parsed.x)) : "",
               label: (ctx) => {
                 const poll = ctx.raw && ctx.raw.poll;
                 return poll

@@ -10,6 +10,9 @@ A static tracker for the 2026 Victorian state election (polling day Saturday 28 
   - **Betting favourite:** from `seat_odds.json`.
   - **Seat polls:** from `seat_polls.json`.
 - **Upper house** (`upper.html`): pick one of the 8 regions to see its current MLCs and 2026 tickets.
+- **My seats** (`myseats.html`): seats starred with ☆, saved in the browser's localStorage (no backend), shown side by side.
+- **About** (`about.html`): what each number means, sources and refresh times, limits, corrections and credits.
+- **On every page:** a key-dates strip under the header (countdowns plus a "Today:" note, from `meta.json` → `key_dates`), and a search box that matches districts, regions, candidates, suburbs and postcodes.
 - Shareable links: `lower.html#bendigo-east`, `upper.html#northern-victoria`. A district hash on the home page (`/#bendigo-east`) redirects to the lower-house page.
 - Light and dark mode follow the system setting and can be overridden with the toggle in the header.
 - The footer shows `last_updated` from `site/data/meta.json`.
@@ -30,7 +33,10 @@ site/                  # published by Netlify
     seat_models.json   # MRP seat estimates (manual; YouGov Jun-Jul 2026, DemosAU slot)
     seat_odds.json     # Sportsbet seat markets: every option and price, favourite (manual; entered from 30 Oct 2026 screenshots)
     seat_polls.json    # single-seat polls (manual; empty until one is published)
+    localities.json    # suburb/postcode -> district(s) for search (scripts/build_localities.py)
 scripts/refresh.py     # data refresh
+scripts/build_localities.py  # rebuilds localities.json from Vicmap boundaries (by hand; needs shapely)
+CLAUDE.md              # project conventions: schemas, merge rules, design system, formats
 .github/workflows/refresh.yml
 netlify.toml
 ```

@@ -5,6 +5,7 @@
       "last_updated": "ISO 8601 UTC timestamp of the last successful data refresh",
       "election_date": "Polling day, YYYY-MM-DD",
       "previous_election": "{date, tpp: {ALP, LNP}}: statewide 2PP at the last election, used as the baseline for uniform-swing seat estimates",
+      "key_dates": "Key-dates strip: {countdowns: [{label, at (ISO with offset), today (text on the day), after (text once passed)}], events: [{from, to (optional, inclusive), text}]}; the narrowest event covering today is shown as 'Today:'",
       "assembly_seats": "Total Legislative Assembly (lower house) seats",
       "council_seats": "Total Legislative Council (upper house) seats",
       "sample_data": "Map of dataset name -> true while that file still holds placeholder rows (drives the 'sample data' banner)",
@@ -21,6 +22,23 @@
       "LNP": 45.0
     },
     "note": "Statewide two-party-preferred at the 2022 election, the baseline for the swing-adjusted seat margins."
+  },
+  "key_dates": {
+    "countdowns": [
+      { "label": "Nominations close", "at": "2026-11-09T12:00:00+11:00", "today": "today, noon", "after": "closed" },
+      { "label": "Early voting opens", "at": "2026-11-18T08:00:00+11:00", "today": "today", "after": "open" },
+      { "label": "Election day", "at": "2026-11-28T08:00:00+11:00", "today": "today", "after": "voting under way" }
+    ],
+    "events": [
+      { "from": "2026-11-03", "text": "Writs issue and caretaker period begins; the electoral roll closes at 8 pm." },
+      { "from": "2026-11-04", "to": "2026-11-08", "text": "Nominations are open (from 9 am on 4 Nov); postal vote applications are open." },
+      { "from": "2026-11-09", "text": "Nominations close at 12 noon, followed by the VEC's ballot draw and first candidate list." },
+      { "from": "2026-11-10", "to": "2026-11-17", "text": "Candidate lists are final; how-to-vote card registration opened on 10 Nov." },
+      { "from": "2026-11-18", "to": "2026-11-27", "text": "Early voting is open at early voting centres." },
+      { "from": "2026-11-25", "text": "Early voting is open; postal vote applications close at 6 pm." },
+      { "from": "2026-11-28", "text": "Election day: voting centres are open 8 am to 6 pm, then counting begins." },
+      { "from": "2026-11-29", "to": "2026-12-19", "text": "Counting and preference distributions continue; writs are returned by 19 Dec." }
+    ]
   },
   "assembly_seats": 88,
   "council_seats": 40,

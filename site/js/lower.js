@@ -23,33 +23,7 @@
   }
 
   /* ---------- Seat outlook ---------- */
-  const COALITION = ["LNP", "LIB", "NAT"];
   const fmt1 = (n) => Number(n).toFixed(1);
-
-  // Statewide swing to the Coalition: current poll-of-polls L/NP 2PP minus
-  // the previous election's L/NP 2PP.
-  function statewideSwing(meta, pollData) {
-    const base = meta && meta.previous_election && meta.previous_election.tpp && meta.previous_election.tpp.LNP;
-    const series = App.smoothedSeries(App.preparePolls(pollData), (p) => (p.tpp && p.tpp.LNP != null ? p.tpp.LNP : null));
-    if (base == null || !series.length) return null;
-    const current = series[series.length - 1].y;
-    return { current, base, swing: current - base, year: (meta.previous_election.date || "").slice(0, 4) };
-  }
-
-  // Uniform swing applied to a Labor-v-Coalition margin; null otherwise.
-  function swingAdjusted(m, s) {
-    if (!m || m.pct == null || !s) return null;
-    const coalitionLabel = COALITION.includes(m.vs) ? partyShort(m.vs) : partyShort(m.party);
-    if (m.party === "ALP" && COALITION.includes(m.vs)) {
-      const after = m.pct - s.swing;   // Labor's margin after the swing
-      return { before: `ALP ${fmt1(m.pct)}`, after: after >= 0 ? `ALP ${fmt1(after)}` : `${coalitionLabel} ${fmt1(-after)}` };
-    }
-    if (COALITION.includes(m.party) && m.vs === "ALP") {
-      const after = m.pct + s.swing;   // Coalition's margin after the swing
-      return { before: `${partyShort(m.party)} ${fmt1(m.pct)}`, after: after >= 0 ? `${partyShort(m.party)} ${fmt1(after)}` : `ALP ${fmt1(-after)}` };
-    }
-    return null;
-  }
 
   function outlookRow(label, body) {
     return `<div class="outlook-row"><dt>${escapeHtml(label)}</dt><dd>${body}</dd></div>`;
@@ -57,14 +31,13 @@
 
   function renderOutlook(d) {
     const s = outlook.swing;
-    const adj = swingAdjusted(d.margin, s);
+    const adj = App.swingAdjusted(d.margin, s);
     let swingCell;
     if (!s) swingCell = '<span class="muted">n/a (no two-party-preferred polling)</span>';
     else if (!adj) swingCell = '<span class="muted">n/a (not a Labor-Coalition contest)</span>';
     else {
-      const dir = s.swing >= 0 ? "L/NP" : "ALP";
       swingCell = `<strong>${escapeHtml(adj.before)} → ${escapeHtml(adj.after)}</strong> on current polling
-        <div class="muted small">Statewide swing of ${fmt1(Math.abs(s.swing))} to ${dir}: L/NP ${fmt1(s.current)}% 2PP now vs ${fmt1(s.base)}% in ${escapeHtml(s.year)}</div>`;
+        <div class="muted small">Statewide swing to L/NP ${App.fmtSwing(s.swing)}: L/NP ${fmt1(s.current)}% 2PP now vs ${fmt1(s.base)}% in ${escapeHtml(s.year)}</div>`;
     }
 
     const models = (outlook.models && outlook.models.models) || [];
@@ -82,7 +55,7 @@
     const odds = outlook.odds;
     const seatOdds = odds && (odds.seats || []).find((x) => x.district === d.id);
     let oddsCell;
-    const price = (p) => `$${Number(p).toFixed(2)}`;
+    const price = App.fmtPrice;
     const favLabel = (code, candidate) => (candidate ? `${escapeHtml(candidate)} (Ind)`
       : App.PARTIES[code] ? partyBadge(code) : escapeHtml(code));
     if (seatOdds && (seatOdds.favourite || seatOdds.joint_favourites || (seatOdds.options || []).length)) {
@@ -156,10 +129,11 @@
     }
     $("district-list").innerHTML = `
       <table>
-        <thead><tr><th>District</th><th>Region</th><th>Held by</th><th class="num">Margin</th><th>Seat</th></tr></thead>
+        <thead><tr><th><span class="sr-only">My seats</span></th><th>District</th><th>Region</th><th>Held by</th><th class="num">Margin</th><th>Seat</th></tr></thead>
         <tbody>
           ${list.map((d) => `
             <tr class="clickable${d.id === current ? " selected" : ""}" data-id="${escapeHtml(d.id)}">
+              <td class="star-cell">${App.starButton(d.id, d.name)}</td>
               <td><a href="#${escapeHtml(d.id)}">${escapeHtml(d.name)}</a></td>
               <td>${escapeHtml(regionsById[d.region] ? regionsById[d.region].name : d.region)}</td>
               <td>${partyBadge(d.party, { full: false })}</td>
@@ -202,7 +176,7 @@
     el.hidden = false;
     el.innerHTML = `
       <div class="card-head">
-        <h2>${escapeHtml(d.name)}</h2>
+        <h2>${App.starButton(d.id, d.name)} ${escapeHtml(d.name)}</h2>
         <div class="card-actions">
           ${d.abc_url ? `<a class="icon-btn" href="${escapeHtml(d.abc_url)}" target="_blank" rel="noopener">ABC guide ↗</a>` : ""}
           <button class="icon-btn" type="button" id="copy-link">Copy link</button>
@@ -253,7 +227,7 @@
         loadJSON("districts"), loadJSON("candidates"), loadJSON("regions"),
         optional("meta"), optional("polls"), optional("seat_models"), optional("seat_odds"), optional("seat_polls"),
       ]);
-      outlook = { swing: statewideSwing(meta, pollData), models, odds, seatPolls };
+      outlook = { swing: App.statewideSwing(meta, pollData), models, odds, seatPolls };
       districts = dd.districts.slice().sort((a, b) => a.name.localeCompare(b.name));
       candidates = cd.candidates || [];
       rd.regions.forEach((r) => { regionsById[r.id] = r; });
@@ -273,7 +247,7 @@
       });
       $("district-list").addEventListener("click", (e) => {
         const row = e.target.closest("tr[data-id]");
-        if (row && !e.target.closest("a")) location.hash = row.dataset.id;
+        if (row && !e.target.closest("a, [data-star]")) location.hash = row.dataset.id;
       });
       window.addEventListener("hashchange", onHashChange);
       onHashChange();

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Seats · Vic Election 2026</title>
+  <meta name="description" content="Your starred seats for the 2026 Victorian state election: margins, swing-adjusted outlook, models and betting.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d4ed8'/%3E%3Cpath d='M8 17l5 5 11-12' stroke='white' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Vic Election <span>2026</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="lower.html">Lower house</a>
+        <a href="upper.html">Upper house</a>
+        <a href="myseats.html" aria-current="page">My seats</a>
+        <a href="about.html">About</a>
+      </nav>
+      <button id="theme-toggle" class="icon-btn" type="button">Theme</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="sample-banner" class="banner" hidden></div>
+    <div id="storage-banner" class="banner" hidden>Your browser is blocking local storage, so starred seats only last until you leave this page.</div>
+
+    <section class="hero">
+      <h1>My seats</h1>
+      <p class="muted">Seats you've starred (☆) on the lower house page. They're saved in this browser only; nothing is sent anywhere.</p>
+    </section>
+
+    <section class="card" aria-labelledby="mine-title">
+      <div class="card-head">
+        <h2 id="mine-title">Starred seats</h2>
+        <button class="icon-btn" type="button" id="clear-all" hidden>Clear all</button>
+      </div>
+      <div class="table-scroll" id="my-seats"><p class="empty">Loading…</p></div>
+      <p class="muted small" style="margin:10px 0 0">The swing-adjusted figure is a uniform-swing estimate; One Nation's vote breaks uniform swing in outer-suburban and regional seats. See <a href="about.html#numbers">what each number means</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p id="last-updated">Data last updated: loading…</p>
+      <p><a href="about.html">About and methodology</a> · Data: VEC, ABC, Wikipedia, Vicmap. Corrections welcome.</p>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/myseats.js"></script>
+</body>
+</html>

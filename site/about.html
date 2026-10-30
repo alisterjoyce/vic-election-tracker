@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About and Methodology · Vic Election 2026</title>
+  <meta name="description" content="How the 2026 Victorian election tracker works: what each number means, data sources and refresh times, limitations, corrections and credits.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d4ed8'/%3E%3Cpath d='M8 17l5 5 11-12' stroke='white' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Vic Election <span>2026</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="lower.html">Lower house</a>
+        <a href="upper.html">Upper house</a>
+        <a href="myseats.html">My seats</a>
+        <a href="about.html" aria-current="page">About</a>
+      </nav>
+      <button id="theme-toggle" class="icon-btn" type="button">Theme</button>
+    </div>
+  </header>
+
+  <main class="container prose">
+    <section class="hero">
+      <h1>About and methodology</h1>
+      <p class="muted">An independent tracker for the Victorian state election on Saturday 28 Nov 2026. It isn't affiliated with the Victorian Electoral Commission, the ABC or any party. It collects published facts and links to the sources; it doesn't republish anyone's articles or profiles.</p>
+      <p class="toc small"><a href="#numbers">What the numbers mean</a> · <a href="#sources">Sources and refresh times</a> · <a href="#limits">What the site doesn't know</a> · <a href="#corrections">Corrections</a> · <a href="#credits">Credits</a></p>
+    </section>
+
+    <section class="card" id="numbers" aria-labelledby="numbers-h">
+      <h2 id="numbers-h">What each number means</h2>
+      <dl class="defs">
+        <dt>Margin</dt>
+        <dd>The seat's notional margin from the ABC election guide: how far the leading party's two-party (or two-candidate) preferred vote was above 50% at the 2022 election, adjusted for by-elections. "ALP 4.6 vs L/NP" means Labor would lose the seat on a uniform swing of more than 4.6 points to the Coalition. Shown to one decimal place.</dd>
+        <dt>Classification</dt>
+        <dd>The ABC's own label for the seat, such as "Marginal Labor" or "Very Safe Liberal", taken from its guide.</dd>
+        <dt>Seat counts (home page)</dt>
+        <dd>Sitting members by party going into the election, not a projection. The majority line is 45 of 88 seats in the Assembly and 21 of 40 in the Council.</dd>
+        <dt>Poll of polls</dt>
+        <dd>A smoothed average of every published statewide poll. Each poll is weighted by the square root of its sample size and by distance in time (a Gaussian kernel with a three-week standard deviation). Dots are individual polls. Independents are counted in "Other" because pollsters report them differently.</dd>
+        <dt>Swing-adjusted margin</dt>
+        <dd>The current poll-of-polls Coalition two-party-preferred vote minus its 2022 result (45.0%) gives a statewide swing, shown with a sign (for example +9.7 to L/NP). That swing is applied uniformly to the seat's margin: "ALP 4.6 → L/NP 4.4 on current polling". It's only calculated for Labor-versus-Coalition seats. Uniform swing is a rough guide, and One Nation's vote breaks it in outer-suburban and regional seats.</dd>
+        <dt>MRP estimates</dt>
+        <dd>Seat-level projections from multilevel regression and post-stratification models. The tracker shows the projected winner, runner-up and winner's two-candidate share where the pollster published them, and "not published" otherwise. YouGov did not publish win probabilities.</dd>
+        <dt>Betting favourite</dt>
+        <dd>The shortest-priced option in Sportsbet's seat market, as decimal odds (1.72 returns $1.72 per $1, stake included), with the date the prices were taken. When two options share the shortest price they're shown as joint favourites. "Any Other" is never counted as the favourite. Odds reflect where money is being bet, not a probability of winning. <span class="muted">For information only, not betting advice. Gambler's Help: 1800 858 858.</span></dd>
+        <dt>Seat polls</dt>
+        <dd>Published single-electorate polls, with pollster, date, sample and the two-candidate result. Single-seat polls have small samples and wide error margins.</dd>
+        <dt>Candidate status</dt>
+        <dd><strong>VEC-nominated</strong>: on the Victorian Electoral Commission's list after nominations close. <strong>Endorsed</strong>: preselected or endorsed by the party, or listed in the ABC guide. <strong>Reported</strong>: reported but not independently confirmed. <strong>Announced</strong>: listed on Wikipedia and added automatically. <strong>Superseded</strong>: replaced by a newer ABC entry for the same party and seat. These rows are kept in the data but hidden on the page. <strong>Withdrawn</strong>: no longer standing.</dd>
+        <dt>"N candidates tracked"</dt>
+        <dd>The count of active candidates in both houses, after the daily check of every name on the ABC's A-Z candidate list. Hover over the footer line for the lower-house comparison.</dd>
+        <dt>Search by suburb or postcode</dt>
+        <dd>Suburbs and postcodes are matched to districts by land area, from official boundary data. Where one straddles more than one district, every district is listed with its share of the area. Area isn't population, so check your exact address with the VEC.</dd>
+      </dl>
+    </section>
+
+    <section class="card" id="sources" aria-labelledby="sources-h">
+      <h2 id="sources-h">Sources and refresh times</h2>
+      <p>An automated refresh runs every day at 20:00 UTC (7 am in Melbourne during daylight saving) and publishes any changes. The footer shows when the data last changed.</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Source</th><th>Used for</th><th>Refresh</th></tr></thead>
+          <tbody>
+            <tr><td><a href="https://www.vec.vic.gov.au/electoral-boundaries/state-districts">VEC state districts and regions</a></td><td>The 88 districts and the region each belongs to</td><td>Checked 30 Oct 2026 (boundaries unchanged since 2021)</td></tr>
+            <tr><td><a href="https://www.abc.net.au/news/elections/vic/2026/guide/electorates">ABC election guide</a>, <a href="https://www.abc.net.au/news/elections/vic/2026/guide/candidates">A-Z candidates</a> and <a href="https://www.abc.net.au/news/elections/vic/2026/guide/retiring-mps">retiring MPs</a></td><td>Margins, classifications, sitting members, retirements, lower-house candidates (primary source). Each district links to its ABC page</td><td>Daily</td></tr>
+            <tr><td><a href="https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election">Wikipedia: opinion polling</a></td><td>Statewide polls for the poll of polls and latest-polls table</td><td>Daily</td></tr>
+            <tr><td><a href="https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election">Wikipedia: candidates</a></td><td>Extra candidate names (lower and upper house) not yet in the ABC guide</td><td>Daily</td></tr>
+            <tr><td>VEC nominations list</td><td>Official candidates and ballot order once nominations close at noon on 9 Nov</td><td>Not yet connected</td></tr>
+            <tr><td><a href="https://actionnetwork.org/user_files/user_files/000/146/615/original/yougov-vic-mrp-treaty-report-state-voting-intetion-treaty-support.pdf">YouGov MRP for Common Threads</a> (fieldwork 16 Jun to 10 Jul 2026)</td><td>MRP seat estimates</td><td>By hand when new models are published</td></tr>
+            <tr><td><a href="https://www.sportsbet.com.au/betting/politics/vic-politics/victorian-state-election-seat-betting-10944986">Sportsbet seat betting</a></td><td>Betting favourite and full market per seat</td><td>By hand (as at 30 Oct 2026). Sportsbet blocks automated access</td></tr>
+            <tr><td><a href="https://opendata.maps.vic.gov.au/">Vicmap Admin</a> (locality, postcode and state district boundaries)</td><td>Suburb and postcode search</td><td>Built 30 Oct 2026</td></tr>
+            <tr><td>Research report (30 Oct 2026)</td><td>Initial upper-house tickets, current MLCs and candidate statuses</td><td>One-off seed, since superseded where newer sources exist</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card" id="limits" aria-labelledby="limits-h">
+      <h2 id="limits-h">What the site doesn't know</h2>
+      <ul>
+        <li><strong>No candidate is confirmed until the VEC publishes the nominations list</strong> after noon on 9 Nov 2026. Until then, every name is endorsed, reported or announced, and late independents are likely.</li>
+        <li><strong>Upper-house tickets are incomplete.</strong> Labor's tickets weren't final when the data was seeded, and some group orders are reported rather than confirmed.</li>
+        <li><strong>Betting markets may be partial.</strong> Some Sportsbet markets fold longer-priced options under "Show All"; those seats are marked "more options not shown". Prices change constantly, and the tracker shows the date they were taken.</li>
+        <li><strong>Models disagree, and polls age.</strong> The YouGov MRP fieldwork predates the July 2026 Labor leadership change. No DemosAU Victorian seat-level MRP was found.</li>
+        <li><strong>Uniform swing is a simplification</strong>, especially with One Nation polling around 20%.</li>
+        <li><strong>Suburb search is by area, not address.</strong> Use the VEC to confirm the district for a particular address.</li>
+        <li><strong>Some facts are disputed in the sources</strong>, for example an MLC's party status. These are flagged in the notes on the relevant page.</li>
+      </ul>
+    </section>
+
+    <section class="card" id="corrections" aria-labelledby="corrections-h">
+      <h2 id="corrections-h">Corrections</h2>
+      <p>Spotted something wrong or out of date? Please open an issue on <a href="https://github.com/alisterjoyce/vic-election-tracker/issues">the project's GitHub page</a> with the page, what's wrong and a link to a source. Corrections are made in the data files, so each fix is visible in the project's history.</p>
+    </section>
+
+    <section class="card" id="credits" aria-labelledby="credits-h">
+      <h2 id="credits-h">Credits</h2>
+      <ul>
+        <li>District and region boundaries and election information: <a href="https://www.vec.vic.gov.au/">Victorian Electoral Commission</a>.</li>
+        <li>Seat margins, classifications, candidate lists and retiring MPs: <a href="https://www.abc.net.au/news/elections/vic/2026/guide/electorates">ABC News Victorian election guide</a>. The tracker stores only facts and links back to each ABC page; it doesn't reproduce the ABC's profiles or analysis.</li>
+        <li>Opinion polls and candidate lists compiled by <a href="https://en.wikipedia.org/">Wikipedia</a> contributors (CC BY-SA 4.0).</li>
+        <li>Boundary data: Vicmap Admin, © State of Victoria (Department of Energy, Environment and Climate Action), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</li>
+        <li>MRP estimates: YouGov for Common Threads. Betting prices: Sportsbet.</li>
+        <li>Built with <a href="https://www.chartjs.org/">Chart.js</a>. Fonts: Archivo and Inter (SIL Open Font License) via Google Fonts.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p id="last-updated">Data last updated: loading…</p>
+      <p><a href="about.html">About and methodology</a> · Data: VEC, ABC, Wikipedia, Vicmap. Corrections welcome.</p>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+</body>
+</html>
