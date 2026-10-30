@@ -1,0 +1,37 @@
+{
+  "_schema": {
+    "description": "Site-wide metadata. last_updated is written by scripts/refresh.py after a successful refresh and shown in the footer.",
+    "fields": {
+      "last_updated": "ISO 8601 UTC timestamp of the last successful data refresh",
+      "election_date": "Polling day, YYYY-MM-DD",
+      "assembly_seats": "Total Legislative Assembly (lower house) seats",
+      "council_seats": "Total Legislative Council (upper house) seats",
+      "sample_data": "Map of dataset name -> true while that file still holds placeholder rows (drives the 'sample data' banner)",
+      "sources": "Map of source name -> {status: ok | error | placeholder, url, last_success, message}"
+    }
+  },
+  "last_updated": "2026-10-30T00:00:00Z",
+  "election_date": "2026-11-28",
+  "assembly_seats": 88,
+  "council_seats": 40,
+  "sample_data": {
+    "districts": true,
+    "candidates": true,
+    "regions": true,
+    "polls": true
+  },
+  "sources": {
+    "polls": {
+      "status": "placeholder",
+      "url": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election",
+      "last_success": null,
+      "message": "Sample rows; run scripts/refresh.py to fetch real polls."
+    },
+    "vec_candidates": {
+      "status": "placeholder",
+      "url": "https://www.vec.vic.gov.au/",
+      "last_success": null,
+      "message": "VEC candidate import not implemented yet."
+    }
+  }
+}

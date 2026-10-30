@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vic Election 2026 Tracker</title>
+  <meta name="description" content="Polls, seats and candidates for the 2026 Victorian state election.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d4ed8'/%3E%3Cpath d='M8 17l5 5 11-12' stroke='white' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Vic Election <span>2026</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="lower.html">Lower house</a>
+        <a href="upper.html">Upper house</a>
+      </nav>
+      <button id="theme-toggle" class="icon-btn" type="button">Theme</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="sample-banner" class="banner" hidden></div>
+
+    <section class="hero">
+      <h1>2026 Victorian state election</h1>
+      <p class="muted"><span id="election-date">Polling day</span> · <span id="countdown" class="countdown"></span></p>
+    </section>
+
+    <section class="grid grid-2" aria-label="Seat counts">
+      <div class="card">
+        <div class="card-head"><h2>Legislative Assembly</h2><span class="muted small" id="la-note"></span></div>
+        <div id="la-seats"><p class="empty">Loading…</p></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h2>Legislative Council</h2><span class="muted small" id="lc-note"></span></div>
+        <div id="lc-seats"><p class="empty">Loading…</p></div>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: 20px" aria-labelledby="pop-title">
+      <div class="card-head">
+        <h2 id="pop-title">Poll of polls</h2>
+        <div class="segmented" role="group" aria-label="Measure">
+          <button type="button" data-measure="tpp" aria-pressed="true">Two-party preferred</button>
+          <button type="button" data-measure="primary" aria-pressed="false">Primary vote</button>
+        </div>
+      </div>
+      <div class="chart-wrap"><canvas id="pop-chart" aria-label="Poll of polls chart" role="img"></canvas></div>
+      <p class="muted small" style="margin: 10px 0 0">Lines are a smoothed average of published polls (3-week Gaussian kernel, weighted by sample size). Dots are individual polls. Independents are counted in Other.</p>
+    </section>
+
+    <section class="card" aria-labelledby="polls-title">
+      <div class="card-head"><h2 id="polls-title">Latest polls</h2><span class="muted small" id="polls-source"></span></div>
+      <div class="table-scroll" id="polls-table"><p class="empty">Loading…</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p id="last-updated">Data last updated: loading…</p>
+      <p>Polls via <a href="https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election">Wikipedia</a>. Candidate nominations via the <a href="https://www.vec.vic.gov.au/">Victorian Electoral Commission</a>.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" integrity="sha384-bs/nf9FbdNouRbMiFcrcZfLXYPKiPaGVGplVbv7dLGECccEXDW+S3zjqSKR5ZEaD" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

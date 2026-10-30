@@ -1,0 +1,119 @@
+{
+  "_schema": {
+    "description": "Legislative Council regions (8 regions x 5 members = 40). Region names are real; MLCs and tickets below are SAMPLE placeholders. Districts in each region are derived from districts.json.",
+    "fields": {
+      "id": "URL slug, used as the #hash on upper.html (e.g. northern-victoria)",
+      "name": "Region name",
+      "area": "metro | regional",
+      "mlcs": "Current members: [{name, party, notes}]",
+      "tickets": "Groups on the 2026 ballot: [{group (ballot letter or null before the draw), party, status (announced | endorsed | vec_nominated | withdrawn), candidates: [names in ticket order]}]"
+    }
+  },
+  "regions": [
+    {
+      "id": "eastern-victoria", "name": "Eastern Victoria", "area": "regional",
+      "mlcs": [
+        { "name": "Sample MLC 1", "party": "ALP", "notes": "" },
+        { "name": "Sample MLC 2", "party": "ALP", "notes": "" },
+        { "name": "Sample MLC 3", "party": "LIB", "notes": "" },
+        { "name": "Sample MLC 4", "party": "NAT", "notes": "" },
+        { "name": "Sample MLC 5", "party": "OTH", "notes": "" }
+      ],
+      "tickets": [
+        { "group": null, "party": "ALP", "status": "endorsed", "candidates": ["Sample MLC 1", "Jane Citizen", "Sam Example"] },
+        { "group": null, "party": "LIB", "status": "endorsed", "candidates": ["Sample MLC 3", "Alex Placeholder"] },
+        { "group": null, "party": "GRN", "status": "announced", "candidates": ["Chris Template"] }
+      ]
+    },
+    {
+      "id": "north-eastern-metropolitan", "name": "North-Eastern Metropolitan", "area": "metro",
+      "mlcs": [
+        { "name": "Sample MLC 1", "party": "ALP", "notes": "" },
+        { "name": "Sample MLC 2", "party": "ALP", "notes": "" },
+        { "name": "Sample MLC 3", "party": "LIB", "notes": "" },
+        { "name": "Sample MLC 4", "party": "LIB", "notes": "" },
+        { "name": "Sample MLC 5", "party": "GRN", "notes": "" }
+      ],
+      "tickets": []
+    },
+    {
+      "id": "northern-metropolitan", "name": "Northern Metropolitan", "area": "metro",
+      "mlcs": [
+        { "name": "Sample MLC 1", "party": "ALP", "notes": "" },
+        { "name": "Sample MLC 2", "party": "ALP", "notes": "" },
+        { "name": "Sample MLC 3", "party": "GRN", "notes": "" },
+        { "name": "Sample MLC 4", "party": "LIB", "notes": "" },
+        { "name": "Sample MLC 5", "party": "OTH", "notes": "" }
+      ],
+      "tickets": [
+        { "group": "A", "party": "GRN", "status": "vec_nominated", "candidates": ["Sample MLC 3", "Pat Example", "Robin Sample"] },
+        { "group": "B", "party": "ALP", "status": "vec_nominated", "candidates": ["Sample MLC 1", "Sample MLC 2", "Jordan Citizen"] },
+        { "group": "C", "party": "LIB", "status": "vec_nominated", "candidates": ["Sample MLC 4", "Taylor Example"] },
+        { "group": null, "party": "IND", "status": "withdrawn", "candidates": ["Morgan Placeholder"] }
+      ]
+    },
+    {
+      "id": "northern-victoria", "name": "Northern Victoria", "area": "regional",
+      "mlcs": [
+        { "name": "Sample MLC 1", "party": "ALP", "notes": "" },
+        { "name": "Sample MLC 2", "party": "NAT", "notes": "" },
+        { "name": "Sample MLC 3", "party": "LIB", "notes": "" },
+        { "name": "Sample MLC 4", "party": "OTH", "notes": "" },
+        { "name": "Sample MLC 5", "party": "OTH", "notes": "" }
+      ],
+      "tickets": [
+        { "group": null, "party": "NAT", "status": "endorsed", "candidates": ["Sample MLC 2", "Casey Template"] },
+        { "group": null, "party": "ALP", "status": "announced", "candidates": ["Sample MLC 1", "Drew Sample"] }
+      ]
+    },
+    {
+      "id": "south-eastern-metropolitan", "name": "South-Eastern Metropolitan", "area": "metro",
+      "mlcs": [
+        { "name": "Sample MLC 1", "party": "ALP", "notes": "" },
+        { "name": "Sample MLC 2", "party": "ALP", "notes": "" },
+        { "name": "Sample MLC 3", "party": "LIB", "notes": "" },
+        { "name": "Sample MLC 4", "party": "OTH", "notes": "" },
+        { "name": "Sample MLC 5", "party": "OTH", "notes": "" }
+      ],
+      "tickets": []
+    },
+    {
+      "id": "southern-metropolitan", "name": "Southern Metropolitan", "area": "metro",
+      "mlcs": [
+        { "name": "Sample MLC 1", "party": "LIB", "notes": "" },
+        { "name": "Sample MLC 2", "party": "LIB", "notes": "" },
+        { "name": "Sample MLC 3", "party": "ALP", "notes": "" },
+        { "name": "Sample MLC 4", "party": "GRN", "notes": "" },
+        { "name": "Sample MLC 5", "party": "ALP", "notes": "" }
+      ],
+      "tickets": [
+        { "group": null, "party": "LIB", "status": "endorsed", "candidates": ["Sample MLC 1", "Sample MLC 2", "Quinn Placeholder"] }
+      ]
+    },
+    {
+      "id": "western-metropolitan", "name": "Western Metropolitan", "area": "metro",
+      "mlcs": [
+        { "name": "Sample MLC 1", "party": "ALP", "notes": "" },
+        { "name": "Sample MLC 2", "party": "ALP", "notes": "" },
+        { "name": "Sample MLC 3", "party": "LIB", "notes": "" },
+        { "name": "Sample MLC 4", "party": "OTH", "notes": "" },
+        { "name": "Sample MLC 5", "party": "OTH", "notes": "" }
+      ],
+      "tickets": []
+    },
+    {
+      "id": "western-victoria", "name": "Western Victoria", "area": "regional",
+      "mlcs": [
+        { "name": "Sample MLC 1", "party": "ALP", "notes": "" },
+        { "name": "Sample MLC 2", "party": "LIB", "notes": "" },
+        { "name": "Sample MLC 3", "party": "NAT", "notes": "" },
+        { "name": "Sample MLC 4", "party": "OTH", "notes": "" },
+        { "name": "Sample MLC 5", "party": "OTH", "notes": "" }
+      ],
+      "tickets": [
+        { "group": null, "party": "ALP", "status": "endorsed", "candidates": ["Sample MLC 1", "Avery Template"] },
+        { "group": null, "party": "GRN", "status": "announced", "candidates": ["Harper Example"] }
+      ]
+    }
+  ]
+}

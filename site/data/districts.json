@@ -1,0 +1,43 @@
+{
+  "_schema": {
+    "description": "Legislative Assembly districts (88 in total). Rows below are a SAMPLE subset: district names and regions are real, sitting MPs and margins are placeholders to be replaced.",
+    "fields": {
+      "id": "URL slug, used as the #hash on lower.html (e.g. bendigo-east)",
+      "name": "District name",
+      "region": "id of the Legislative Council region in regions.json",
+      "area": "metro | regional",
+      "sitting_mp": "Name of the sitting member",
+      "party": "Party code of the sitting member (ALP, LIB, NAT, GRN, IND, ...)",
+      "margin": "{party, vs, pct}: two-candidate-preferred margin in percentage points, party ahead vs runner-up",
+      "retiring": "true if the sitting member is not recontesting",
+      "notes": "Optional free text"
+    }
+  },
+  "districts": [
+    { "id": "melbourne", "name": "Melbourne", "region": "northern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "GRN", "margin": { "party": "GRN", "vs": "ALP", "pct": 7.4 }, "retiring": false, "notes": "" },
+    { "id": "brunswick", "name": "Brunswick", "region": "northern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "GRN", "margin": { "party": "GRN", "vs": "ALP", "pct": 9.1 }, "retiring": false, "notes": "" },
+    { "id": "richmond", "name": "Richmond", "region": "northern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "GRN", "margin": { "party": "GRN", "vs": "ALP", "pct": 2.3 }, "retiring": false, "notes": "" },
+    { "id": "preston", "name": "Preston", "region": "northern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "ALP", "margin": { "party": "ALP", "vs": "GRN", "pct": 4.1 }, "retiring": false, "notes": "" },
+    { "id": "hawthorn", "name": "Hawthorn", "region": "southern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "LIB", "margin": { "party": "LIB", "vs": "IND", "pct": 3.6 }, "retiring": false, "notes": "" },
+    { "id": "prahran", "name": "Prahran", "region": "southern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "LIB", "margin": { "party": "LIB", "vs": "GRN", "pct": 2.8 }, "retiring": false, "notes": "" },
+    { "id": "kew", "name": "Kew", "region": "southern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "LIB", "margin": { "party": "LIB", "vs": "ALP", "pct": 6.2 }, "retiring": false, "notes": "" },
+    { "id": "footscray", "name": "Footscray", "region": "western-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "ALP", "margin": { "party": "ALP", "vs": "GRN", "pct": 5.5 }, "retiring": false, "notes": "" },
+    { "id": "werribee", "name": "Werribee", "region": "western-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "ALP", "margin": { "party": "ALP", "vs": "LIB", "pct": 3.1 }, "retiring": false, "notes": "" },
+    { "id": "williamstown", "name": "Williamstown", "region": "western-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "ALP", "margin": { "party": "ALP", "vs": "LIB", "pct": 12.4 }, "retiring": true, "notes": "" },
+    { "id": "mulgrave", "name": "Mulgrave", "region": "south-eastern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "ALP", "margin": { "party": "ALP", "vs": "IND", "pct": 4.8 }, "retiring": false, "notes": "" },
+    { "id": "frankston", "name": "Frankston", "region": "south-eastern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "ALP", "margin": { "party": "ALP", "vs": "LIB", "pct": 1.9 }, "retiring": false, "notes": "" },
+    { "id": "clarinda", "name": "Clarinda", "region": "south-eastern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "ALP", "margin": { "party": "ALP", "vs": "LIB", "pct": 14.0 }, "retiring": false, "notes": "" },
+    { "id": "warrandyte", "name": "Warrandyte", "region": "north-eastern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "LIB", "margin": { "party": "LIB", "vs": "ALP", "pct": 8.3 }, "retiring": false, "notes": "" },
+    { "id": "box-hill", "name": "Box Hill", "region": "north-eastern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "ALP", "margin": { "party": "ALP", "vs": "LIB", "pct": 2.2 }, "retiring": false, "notes": "" },
+    { "id": "ringwood", "name": "Ringwood", "region": "north-eastern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "ALP", "margin": { "party": "ALP", "vs": "LIB", "pct": 1.4 }, "retiring": false, "notes": "" },
+    { "id": "bendigo-east", "name": "Bendigo East", "region": "northern-victoria", "area": "regional", "sitting_mp": "Sample MP", "party": "ALP", "margin": { "party": "ALP", "vs": "LIB", "pct": 9.0 }, "retiring": false, "notes": "" },
+    { "id": "shepparton", "name": "Shepparton", "region": "northern-victoria", "area": "regional", "sitting_mp": "Sample MP", "party": "NAT", "margin": { "party": "NAT", "vs": "IND", "pct": 5.1 }, "retiring": false, "notes": "" },
+    { "id": "benambra", "name": "Benambra", "region": "northern-victoria", "area": "regional", "sitting_mp": "Sample MP", "party": "LIB", "margin": { "party": "LIB", "vs": "IND", "pct": 4.4 }, "retiring": false, "notes": "" },
+    { "id": "geelong", "name": "Geelong", "region": "western-victoria", "area": "regional", "sitting_mp": "Sample MP", "party": "ALP", "margin": { "party": "ALP", "vs": "LIB", "pct": 10.7 }, "retiring": false, "notes": "" },
+    { "id": "ballarat-wendouree", "name": "Ballarat Wendouree", "region": "western-victoria", "area": "regional", "sitting_mp": "Sample MP", "party": "ALP", "margin": { "party": "ALP", "vs": "LIB", "pct": 7.9 }, "retiring": false, "notes": "" },
+    { "id": "lowan", "name": "Lowan", "region": "western-victoria", "area": "regional", "sitting_mp": "Sample MP", "party": "NAT", "margin": { "party": "NAT", "vs": "ALP", "pct": 23.5 }, "retiring": false, "notes": "" },
+    { "id": "morwell", "name": "Morwell", "region": "eastern-victoria", "area": "regional", "sitting_mp": "Sample MP", "party": "NAT", "margin": { "party": "NAT", "vs": "ALP", "pct": 3.3 }, "retiring": false, "notes": "" },
+    { "id": "gippsland-east", "name": "Gippsland East", "region": "eastern-victoria", "area": "regional", "sitting_mp": "Sample MP", "party": "NAT", "margin": { "party": "NAT", "vs": "ALP", "pct": 18.2 }, "retiring": false, "notes": "" },
+    { "id": "mornington", "name": "Mornington", "region": "eastern-victoria", "area": "metro", "sitting_mp": "Sample MP", "party": "LIB", "margin": { "party": "LIB", "vs": "IND", "pct": 0.9 }, "retiring": false, "notes": "" }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "_schema": {
+    "description": "Published voting-intention polls. Overwritten by scripts/refresh.py from Wikipedia. The rows below are SAMPLE values, not real polls.",
+    "fields": {
+      "start_date": "Fieldwork start, YYYY-MM-DD (may equal end_date)",
+      "end_date": "Fieldwork end, YYYY-MM-DD",
+      "pollster": "Polling firm / brand",
+      "sample_size": "Integer respondents, or null if not published",
+      "primary": "Map of party code -> primary vote %. Codes: ALP, LNP (Liberal + National), GRN, ONP, OTH",
+      "tpp": "Two-party-preferred %: {ALP, LNP}"
+    }
+  },
+  "source": "sample",
+  "polls": [
+    { "start_date": "2026-01-14", "end_date": "2026-01-20", "pollster": "Sample Pollster A", "sample_size": 1050, "primary": { "ALP": 31, "LNP": 38, "GRN": 13, "OTH": 18 }, "tpp": { "ALP": 49, "LNP": 51 } },
+    { "start_date": "2026-02-10", "end_date": "2026-02-15", "pollster": "Sample Pollster B", "sample_size": 1200, "primary": { "ALP": 30, "LNP": 39, "GRN": 12, "OTH": 19 }, "tpp": { "ALP": 48, "LNP": 52 } },
+    { "start_date": "2026-03-05", "end_date": "2026-03-11", "pollster": "Sample Pollster A", "sample_size": 980, "primary": { "ALP": 32, "LNP": 37, "GRN": 13, "OTH": 18 }, "tpp": { "ALP": 50, "LNP": 50 } },
+    { "start_date": "2026-04-02", "end_date": "2026-04-08", "pollster": "Sample Pollster C", "sample_size": 1500, "primary": { "ALP": 31, "LNP": 38, "GRN": 14, "OTH": 17 }, "tpp": { "ALP": 49.5, "LNP": 50.5 } },
+    { "start_date": "2026-05-06", "end_date": "2026-05-12", "pollster": "Sample Pollster B", "sample_size": 1100, "primary": { "ALP": 30, "LNP": 40, "GRN": 12, "OTH": 18 }, "tpp": { "ALP": 47.5, "LNP": 52.5 } },
+    { "start_date": "2026-06-03", "end_date": "2026-06-09", "pollster": "Sample Pollster A", "sample_size": 1020, "primary": { "ALP": 31, "LNP": 39, "GRN": 13, "OTH": 17 }, "tpp": { "ALP": 48.5, "LNP": 51.5 } },
+    { "start_date": "2026-07-08", "end_date": "2026-07-14", "pollster": "Sample Pollster C", "sample_size": 1450, "primary": { "ALP": 32, "LNP": 38, "GRN": 13, "OTH": 17 }, "tpp": { "ALP": 49.5, "LNP": 50.5 } },
+    { "start_date": "2026-08-05", "end_date": "2026-08-10", "pollster": "Sample Pollster B", "sample_size": 1150, "primary": { "ALP": 33, "LNP": 37, "GRN": 13, "OTH": 17 }, "tpp": { "ALP": 50.5, "LNP": 49.5 } },
+    { "start_date": "2026-09-02", "end_date": "2026-09-08", "pollster": "Sample Pollster A", "sample_size": 1000, "primary": { "ALP": 32, "LNP": 38, "GRN": 14, "OTH": 16 }, "tpp": { "ALP": 50, "LNP": 50 } },
+    { "start_date": "2026-09-23", "end_date": "2026-09-28", "pollster": "Sample Pollster C", "sample_size": 1600, "primary": { "ALP": 33, "LNP": 37, "GRN": 13, "OTH": 17 }, "tpp": { "ALP": 51, "LNP": 49 } },
+    { "start_date": "2026-10-07", "end_date": "2026-10-12", "pollster": "Sample Pollster B", "sample_size": 1180, "primary": { "ALP": 32, "LNP": 38, "GRN": 13, "OTH": 17 }, "tpp": { "ALP": 50, "LNP": 50 } },
+    { "start_date": "2026-10-21", "end_date": "2026-10-26", "pollster": "Sample Pollster A", "sample_size": 1040, "primary": { "ALP": 33, "LNP": 37, "GRN": 14, "OTH": 16 }, "tpp": { "ALP": 51, "LNP": 49 } }
+  ]
+}

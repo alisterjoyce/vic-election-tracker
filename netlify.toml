@@ -1,0 +1,9 @@
+[build]
+  publish = "site"
+  command = ""
+
+# Data files change daily; let browsers and the CDN revalidate them quickly.
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300, must-revalidate"

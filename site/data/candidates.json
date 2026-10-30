@@ -1,0 +1,42 @@
+{
+  "_schema": {
+    "description": "Legislative Assembly candidates by district. Rows below are SAMPLE placeholders. scripts/refresh.py will fill VEC-nominated candidates once fetch_vec_candidates() is implemented.",
+    "fields": {
+      "district": "id of the district in districts.json",
+      "name": "Candidate name",
+      "party": "Party code (ALP, LIB, NAT, GRN, ONP, LCV, IND, ...)",
+      "status": "announced | endorsed | vec_nominated | withdrawn",
+      "ballot_position": "Integer position on the ballot paper once drawn by the VEC, else null",
+      "incumbent": "true if this is the sitting member",
+      "source_url": "Where the status was confirmed (media release, party site, VEC)",
+      "updated": "YYYY-MM-DD the row was last checked"
+    }
+  },
+  "candidates": [
+    { "district": "melbourne", "name": "Sample MP", "party": "GRN", "status": "endorsed", "ballot_position": null, "incumbent": true, "source_url": "", "updated": "2026-10-28" },
+    { "district": "melbourne", "name": "Jane Citizen", "party": "ALP", "status": "endorsed", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
+    { "district": "melbourne", "name": "Sam Example", "party": "LIB", "status": "announced", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
+    { "district": "richmond", "name": "Sample MP", "party": "GRN", "status": "endorsed", "ballot_position": null, "incumbent": true, "source_url": "", "updated": "2026-10-28" },
+    { "district": "richmond", "name": "Alex Placeholder", "party": "ALP", "status": "endorsed", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
+    { "district": "richmond", "name": "Chris Template", "party": "IND", "status": "withdrawn", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-20" },
+    { "district": "hawthorn", "name": "Sample MP", "party": "LIB", "status": "endorsed", "ballot_position": null, "incumbent": true, "source_url": "", "updated": "2026-10-28" },
+    { "district": "hawthorn", "name": "Pat Example", "party": "IND", "status": "announced", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
+    { "district": "hawthorn", "name": "Robin Sample", "party": "ALP", "status": "announced", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
+    { "district": "werribee", "name": "Sample MP", "party": "ALP", "status": "endorsed", "ballot_position": null, "incumbent": true, "source_url": "", "updated": "2026-10-28" },
+    { "district": "werribee", "name": "Jordan Citizen", "party": "LIB", "status": "endorsed", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
+    { "district": "williamstown", "name": "Taylor Example", "party": "ALP", "status": "endorsed", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
+    { "district": "williamstown", "name": "Morgan Placeholder", "party": "GRN", "status": "announced", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
+    { "district": "frankston", "name": "Sample MP", "party": "ALP", "status": "endorsed", "ballot_position": null, "incumbent": true, "source_url": "", "updated": "2026-10-28" },
+    { "district": "frankston", "name": "Casey Template", "party": "LIB", "status": "endorsed", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
+    { "district": "frankston", "name": "Drew Sample", "party": "ONP", "status": "announced", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
+    { "district": "bendigo-east", "name": "Sample MP", "party": "ALP", "status": "vec_nominated", "ballot_position": 2, "incumbent": true, "source_url": "", "updated": "2026-10-28" },
+    { "district": "bendigo-east", "name": "Jamie Example", "party": "LIB", "status": "vec_nominated", "ballot_position": 1, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
+    { "district": "bendigo-east", "name": "Riley Citizen", "party": "GRN", "status": "vec_nominated", "ballot_position": 3, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
+    { "district": "shepparton", "name": "Sample MP", "party": "NAT", "status": "endorsed", "ballot_position": null, "incumbent": true, "source_url": "", "updated": "2026-10-28" },
+    { "district": "shepparton", "name": "Quinn Placeholder", "party": "IND", "status": "announced", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
+    { "district": "morwell", "name": "Sample MP", "party": "NAT", "status": "endorsed", "ballot_position": null, "incumbent": true, "source_url": "", "updated": "2026-10-28" },
+    { "district": "morwell", "name": "Avery Template", "party": "ALP", "status": "announced", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
+    { "district": "mornington", "name": "Sample MP", "party": "LIB", "status": "endorsed", "ballot_position": null, "incumbent": true, "source_url": "", "updated": "2026-10-28" },
+    { "district": "mornington", "name": "Harper Example", "party": "IND", "status": "endorsed", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" }
+  ]
+}

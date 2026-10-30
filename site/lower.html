@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lower House Districts · Vic Election 2026</title>
+  <meta name="description" content="Legislative Assembly districts, sitting members, margins and candidates for the 2026 Victorian state election.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d4ed8'/%3E%3Cpath d='M8 17l5 5 11-12' stroke='white' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Vic Election <span>2026</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="lower.html" aria-current="page">Lower house</a>
+        <a href="upper.html">Upper house</a>
+      </nav>
+      <button id="theme-toggle" class="icon-btn" type="button">Theme</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="sample-banner" class="banner" hidden></div>
+
+    <section class="hero">
+      <h1>Legislative Assembly</h1>
+      <p class="muted">88 single-member districts. Pick one to see the sitting MP, margin and candidates.</p>
+    </section>
+
+    <section class="card" aria-label="Filters">
+      <div class="filters">
+        <label class="field">Region
+          <select id="f-region"><option value="">All regions</option></select>
+        </label>
+        <label class="field">Area
+          <select id="f-area">
+            <option value="">Metro and regional</option>
+            <option value="metro">Metro</option>
+            <option value="regional">Regional</option>
+          </select>
+        </label>
+        <label class="field">District
+          <select id="f-district"><option value="">Choose a district…</option></select>
+        </label>
+      </div>
+    </section>
+
+    <section id="district-detail" class="card" hidden aria-live="polite"></section>
+
+    <section class="card" aria-labelledby="list-title">
+      <div class="card-head"><h2 id="list-title">Districts</h2><span class="muted small" id="list-count"></span></div>
+      <div class="table-scroll" id="district-list"><p class="empty">Loading…</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p id="last-updated">Data last updated: loading…</p>
+      <p>Candidate nominations via the <a href="https://www.vec.vic.gov.au/">Victorian Electoral Commission</a>.</p>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/lower.js"></script>
+</body>
+</html>
