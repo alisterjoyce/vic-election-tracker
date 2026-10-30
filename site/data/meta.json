@@ -11,7 +11,7 @@
       "reconciliation": "Written by scripts/refresh.py after the ABC district pages: lower-house candidates compared with the ABC A-Z list. {date (Melbourne), scope, abc_list_url, totals: {tracker, abc_list}, tracker_by_source: {abc, wikipedia, report}, only_in_tracker, only_on_abc (missing from the tracker before this run; added), unmatched_electorates, tracked_all (active candidates in both houses, shown in the footer)}"
     }
   },
-  "last_updated": "2026-10-30T01:18:52Z",
+  "last_updated": "2026-10-30T02:22:24Z",
   "election_date": "2026-11-28",
   "assembly_seats": 88,
   "council_seats": 40,
@@ -25,7 +25,7 @@
     "polls": {
       "status": "ok",
       "url": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election",
-      "last_success": "2026-10-30T01:18:51Z",
+      "last_success": "2026-10-30T02:19:43Z",
       "message": "67 polls"
     },
     "vec_candidates": {
@@ -37,8 +37,32 @@
     "wikipedia_candidates": {
       "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
       "status": "ok",
-      "last_success": "2026-10-30T01:18:52Z",
-      "message": "544 assembly and 96 council names read; 299 assembly and 39 council added"
+      "last_success": "2026-10-30T02:19:44Z",
+      "message": "544 assembly and 96 council names read; 0 assembly and 0 council added"
+    },
+    "abc_guide": {
+      "url": "https://www.abc.net.au/news/elections/vic/2026/guide/electorates",
+      "status": "ok",
+      "last_success": "2026-10-30T02:22:24Z",
+      "message": "88 district pages, 88 districts updated; 17 candidates added, 539 confirmed, 9 superseded"
     }
+  },
+  "reconciliation": {
+    "date": "2026-10-30",
+    "scope": "Legislative Assembly",
+    "abc_list_url": "https://www.abc.net.au/news/elections/vic/2026/guide/candidates",
+    "totals": {
+      "tracker": 568,
+      "abc_list": 556
+    },
+    "tracker_by_source": {
+      "abc": 556,
+      "report": 9,
+      "wikipedia": 3
+    },
+    "only_in_tracker": 12,
+    "only_on_abc": 0,
+    "unmatched_electorates": 0,
+    "tracked_all": 607
   }
 }
