@@ -1,16 +1,20 @@
 {
   "_schema": {
-    "description": "Legislative Assembly candidates from the 30 Oct 2026 research report. Nominations close 12 noon 9 Nov 2026; no candidate is VEC-nominated yet. scripts/refresh.py will add VEC-nominated rows once fetch_vec_candidates() is implemented.",
+    "description": "Candidates for both houses. Seeded from the 30 Oct 2026 research report. scripts/refresh.py adds names it finds on the Wikipedia candidates page as 'announced' and never changes or removes existing rows. Nominations close 12 noon 9 Nov 2026; VEC-nominated rows will follow once fetch_vec_candidates() is implemented.",
     "fields": {
-      "district": "id of the district in districts.json",
+      "district": "id of the district in districts.json (Legislative Assembly); null for Legislative Council rows",
+      "region": "Legislative Council rows only: id of the region in regions.json",
       "name": "Candidate name",
-      "party": "Party code (ALP, LIB, NAT, GRN, ONP, VS, AJP, ND, WEST, SAL, LBT, FF, IND, ...)",
-      "status": "endorsed (preselected or endorsed by the party) | reported (reported or announced, not independently verified) | announced | vec_nominated | withdrawn",
-      "ballot_position": "Integer position on the ballot paper once drawn by the VEC, else null",
-      "incumbent": "true if this is the sitting member",
-      "source_url": "First source the report cites for this district's candidates",
+      "party": "Party code (ALP, LIB, NAT, LNP, GRN, ONP, VS, AJP, ND, WEST, SAL, LBT, FF, LCV, SUS, DLP, SFF, IND, OTH)",
+      "status": "endorsed (preselected or endorsed by the party) | reported (reported, not independently verified) | announced (listed on Wikipedia, added automatically) | vec_nominated | withdrawn",
+      "ballot_position": "Assembly: integer position on the ballot paper once drawn by the VEC, else null",
+      "ticket_position": "Council rows only: position in the party's group as reported",
+      "incumbent": "Assembly: true if this is the sitting member",
+      "source": "wikipedia for rows added by refresh.py; absent for rows from the research report",
+      "source_url": "Where the row came from",
+      "date_added": "YYYY-MM-DD the row was added by refresh.py (Melbourne date)",
       "updated": "YYYY-MM-DD the row was last checked",
-      "notes": "Optional: backing (e.g. Climate 200) or other caveats"
+      "notes": "Optional: backing (e.g. Climate 200), source conflicts or other caveats"
     }
   },
   "candidates": [

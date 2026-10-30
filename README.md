@@ -54,8 +54,12 @@ python scripts/refresh.py
 What it does:
 
 1. Fetches [Opinion polling for the 2026 Victorian state election](https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election), reads the statewide Legislative Assembly tables (under "Voting intention") with `pandas.read_html`, and writes `site/data/polls.json`.
-2. Calls `fetch_vec_candidates()`, a clearly marked **placeholder** for the VEC candidate list. It returns `None` until implemented, so `candidates.json` is left alone.
-3. Updates `meta.json`: `last_updated` (only when a source refreshed successfully) and the per-source status.
+2. Reads [Candidates of the 2026 Victorian state election](https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election) with `pandas.read_html`, covering the Legislative Assembly table and each Legislative Council region table, and merges it into `candidates.json`:
+   - Names not already present are added with status `announced`, `source: "wikipedia"` and a `date_added`. Council candidates get a `region` and `ticket_position` instead of a `district`.
+   - Existing rows are never changed, downgraded or deleted. A name counts as already present if it matches ignoring case, accents and punctuation, or if it's a near-identical spelling for the same party and seat. Council names already on a ticket in `regions.json` also count.
+   - If Wikipedia lists a second candidate for a party that already has one in a seat, the new row gets a "Conflicts with …" note, and the script logs a warning.
+3. Calls `fetch_vec_candidates()`, a clearly marked **placeholder** for the VEC candidate list. It returns `None` until implemented, so this step leaves `candidates.json` alone.
+4. Updates `meta.json`: `last_updated` (only when a source refreshed successfully) and the per-source status.
 
 If any fetch or parse fails, the error is logged (and shown as a warning annotation in GitHub Actions), and the existing file is kept as it was.
 

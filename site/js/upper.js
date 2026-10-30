@@ -5,6 +5,7 @@
 
   let regions = [];
   let districts = [];
+  let councilCandidates = [];
 
   function ticketSort(a, b) {
     const wa = a.status === "withdrawn", wb = b.status === "withdrawn";
@@ -19,6 +20,36 @@
     document.getElementById("region-chips").innerHTML = regions.map((r) =>
       `<button type="button" class="chip" data-id="${escapeHtml(r.id)}" aria-pressed="${r.id === current}">${escapeHtml(r.name)}</button>`
     ).join("");
+  }
+
+  // Council candidates added to candidates.json (e.g. from Wikipedia) that
+  // aren't on a ticket in regions.json, grouped by party in ticket order.
+  function renderExtraCandidates(r) {
+    const rows = councilCandidates.filter((c) => c.region === r.id);
+    if (!rows.length) return "";
+    const byParty = {};
+    rows.forEach((c) => { (byParty[c.party] = byParty[c.party] || []).push(c); });
+    const parties = Object.keys(byParty).sort((a, b) => partyName(a).localeCompare(partyName(b)));
+    return `
+      <div class="card">
+        <div class="card-head"><h2>Other announced candidates</h2><span class="muted small">${rows.length} name${rows.length === 1 ? "" : "s"}</span></div>
+        <p class="muted small" style="margin-top:0">Names reported elsewhere (mostly Wikipedia) that aren't on the tickets above yet. Numbers are the reported ticket positions.</p>
+        <div class="tickets">
+          ${parties.map((p) => `
+            <div class="ticket" style="--party-color: var(${partyVar(p)})">
+              <div class="ticket-head"><strong>${escapeHtml(partyName(p))}</strong></div>
+              <ul class="people">
+                ${byParty[p].sort((a, b) => (a.ticket_position || 99) - (b.ticket_position || 99)).map((c) => `
+                  <li>
+                    ${c.ticket_position ? `<span class="pos" title="Reported ticket position">${c.ticket_position}</span>` : ""}
+                    <span class="name">${escapeHtml(c.name)}</span>
+                    ${statusBadge(c.status)}
+                    ${c.notes ? `<span class="note muted small">${escapeHtml(c.notes)}</span>` : ""}
+                  </li>`).join("")}
+              </ul>
+            </div>`).join("")}
+        </div>
+      </div>`;
   }
 
   function renderDetail(r) {
@@ -70,6 +101,8 @@
         ${r.notes ? `<p class="muted small" style="margin-bottom:0">${escapeHtml(r.notes)}</p>` : ""}
       </div>
 
+      ${renderExtraCandidates(r)}
+
       <div class="card">
         <h2>Districts in this region</h2>
         ${inRegion.length ? `<div class="chips">${inRegion.map((d) =>
@@ -88,9 +121,10 @@
 
   async function init() {
     try {
-      const [rd, dd] = await Promise.all([loadJSON("regions"), loadJSON("districts")]);
+      const [rd, dd, cd] = await Promise.all([loadJSON("regions"), loadJSON("districts"), loadJSON("candidates")]);
       regions = rd.regions.slice().sort((a, b) => a.name.localeCompare(b.name));
       districts = dd.districts;
+      councilCandidates = (cd.candidates || []).filter((c) => c.region && !c.district);
       document.getElementById("region-chips").addEventListener("click", (e) => {
         const btn = e.target.closest("button[data-id]");
         if (btn) location.hash = btn.dataset.id;

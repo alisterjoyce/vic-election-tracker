@@ -3,6 +3,9 @@
 
 * Polls: scraped from the Wikipedia page "Opinion polling for the 2026
   Victorian state election" with pandas.read_html, written to polls.json.
+* Candidates: new names from the Wikipedia page "Candidates of the 2026
+  Victorian state election" (Assembly and Council tables) are added to
+  candidates.json as "announced". Existing rows are never changed.
 * VEC candidates: placeholder (see fetch_vec_candidates below).
 * meta.json: last_updated and per-source status.
 
@@ -17,6 +20,7 @@ from __future__ import annotations
 
 import argparse
 import calendar
+import difflib
 import io
 import json
 import logging
@@ -24,8 +28,10 @@ import os
 import re
 import sys
 import tempfile
+import unicodedata
 from datetime import date, datetime, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import lxml.html
 import pandas as pd
@@ -35,6 +41,8 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DATA_DIR = ROOT / "site" / "data"
 
 POLLS_URL = "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election"
+CANDIDATES_URL = "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election"
+MELBOURNE = ZoneInfo("Australia/Melbourne")
 USER_AGENT = "vic-election-tracker/1.0 (daily poll refresh; python-requests)"
 TIMEOUT = 30
 
@@ -342,6 +350,243 @@ def refresh_polls(data_dir: Path, meta: dict) -> bool:
     return True
 
 
+# --------------------------------------------------------------------------
+# Candidates: Wikipedia "Candidates of the 2026 Victorian state election"
+# --------------------------------------------------------------------------
+# New names are added with status "announced"; existing rows are never
+# changed or removed, so hand-checked or VEC statuses always win.
+
+SEP = "|"  # marks list-item and line-break boundaries inside a table cell
+
+# Column header / bracketed abbreviation -> party code used by the site
+WIKI_PARTIES = {
+    "labor": "ALP", "alp": "ALP",
+    "coalition": "LNP", "liberal": "LIB", "l": "LIB", "lib": "LIB",
+    "national": "NAT", "nationals": "NAT", "n": "NAT", "nat": "NAT",
+    "greens": "GRN", "grn": "GRN", "one nation": "ONP", "on": "ONP", "onp": "ONP",
+    "socialists": "VS", "victorian socialists": "VS", "vs": "VS",
+    "legalise cannabis": "LCV", "lcv": "LCV", "lc": "LCV",
+    "ajp": "AJP", "animal justice": "AJP", "family first": "FF", "ff": "FF",
+    "libertarian": "LBT", "lbt": "LBT", "dlp": "DLP", "sff": "SFF",
+    "sustainable": "SUS", "sus": "SUS", "new democrats": "ND", "nd": "ND",
+    "west": "WEST", "west party": "WEST", "socialist alliance": "SAL", "sa": "SAL",
+    "independent": "IND", "ind": "IND",
+}
+
+
+def _name_key(name: str) -> str:
+    """Compare names ignoring case, accents, punctuation and titles."""
+    s = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode().lower()
+    s = re.sub(r"^(dr|mr|mrs|ms|prof)\.?\s+", "", s)
+    return re.sub(r"[^a-z]", "", s)
+
+
+def _candidate_key(c: dict) -> tuple[str, str]:
+    return (c.get("district") or c.get("region") or "", _name_key(c.get("name", "")))
+
+
+def _same_person(a: str, b: str) -> bool:
+    """Same surname, or near-identical spelling ("Fuery"/"Fruery")."""
+    ka, kb = _name_key(a), _name_key(b)
+    if _name_key(a.split()[-1]) == _name_key(b.split()[-1]):
+        return True
+    return difflib.SequenceMatcher(None, ka, kb).ratio() >= 0.85
+
+
+def _sort_candidates(rows: list[dict]) -> list[dict]:
+    return sorted(rows, key=lambda c: (c.get("district") or "", c.get("region") or "",
+                                       c.get("ticket_position") or 0, c.get("name", "")))
+
+
+def _party_code(label: str) -> str | None:
+    label = re.sub(r"\s*candidates?$", "", clean_text(label.replace(SEP, " ")), flags=re.I)
+    return WIKI_PARTIES.get(label.strip().lower())
+
+
+def _split_names(cell) -> list[str]:
+    # Backstop for unmarked boundaries: "Jane Doe (Ind) John Roe (FF)"
+    text = re.sub(r"(?<=\))\s+(?=[A-Z])", SEP, clean_text(cell))
+    return [n for n in (clean_text(x) for x in text.split(SEP)) if n]
+
+
+def wiki_candidate_tables(html: str) -> tuple[list[str], list[tuple[str, str]]]:
+    """Return (assembly_tables, [(region_heading, council_table)]) as HTML,
+    with footnotes removed and list/line breaks marked with SEP so names in
+    one cell can be told apart after read_html flattens them."""
+    doc = lxml.html.fromstring(html)
+    for sup in doc.xpath("//sup[contains(@class, 'reference')]"):
+        sup.drop_tree()
+    for el in doc.iter("li", "br"):
+        el.tail = SEP + (el.tail or "")
+    for el in doc.iter("p"):  # some cells put each extra name in its own paragraph
+        el.text = SEP + (el.text or "")
+    assembly, council = [], []
+    h2 = h3 = ""
+    for el in doc.iter("h2", "h3", "table"):
+        if el.tag == "h2":
+            h2, h3 = clean_text(el.text_content()).lower(), ""
+        elif el.tag == "h3":
+            h3 = clean_text(el.text_content())
+        elif "wikitable" in (el.get("class") or ""):
+            table = lxml.html.tostring(el, encoding="unicode")
+            if h2.startswith("legislative assembly"):
+                assembly.append(table)
+            elif h2.startswith("legislative council") and h3:
+                council.append((h3, table))
+    return assembly, council
+
+
+def parse_assembly_table(df: pd.DataFrame, district_ids: set[str]) -> list[dict]:
+    cols = [(c, " ".join(_flatten(c))) for c in df.columns]
+    seat_col = next((c for c, label in cols if "electorate" in label.lower() or "district" in label.lower()), None)
+    if seat_col is None:
+        return []
+    rows = []
+    for _, row in df.iterrows():
+        seat = clean_text(row[seat_col])
+        if not seat:
+            continue
+        did = re.sub(r"[^a-z0-9]+", "-", seat.lower()).strip("-")
+        if did not in district_ids:
+            log.warning("Wikipedia electorate %r is not in districts.json; skipped", seat)
+            continue
+        for col, label in cols:
+            label_l = label.lower()
+            if col == seat_col or "held by" in label_l:
+                continue
+            column_party = _party_code(label) if "other" not in label_l else None
+            for entry in _split_names(row[col]):
+                # "Andrew Cook (L)", "Georgie Dragwidge (Ind)"
+                m = re.fullmatch(r"(.+?)\s*\(([^)]+)\)", entry)
+                name, tag = (m.group(1), m.group(2)) if m else (entry, None)
+                party = WIKI_PARTIES.get(tag.lower()) if tag else None
+                party = party or column_party
+                if party is None:
+                    party = "OTH"
+                rows.append({"district": did, "name": name, "party": party,
+                             "_label": tag if tag and not WIKI_PARTIES.get(tag.lower()) else None})
+    return rows
+
+
+def parse_council_table(df: pd.DataFrame, region_id: str) -> list[dict]:
+    """Council tables repeat a header row of party names, a colour row and a
+    row of ordered candidate lists, several times down the table."""
+    headers = [clean_text(c if not isinstance(c, tuple) else c[-1]) for c in df.columns]
+    rows = []
+    for _, row in df.iterrows():
+        values = [clean_text(v) for v in row.tolist()]
+        filled = [v for v in values if v]
+        if not filled:
+            continue
+        if all(re.search(r"candidates?$", v.replace(SEP, " ").strip(), re.I) for v in filled):
+            headers = values
+            continue
+        for label, cell in zip(headers, values):
+            if not label or not cell:
+                continue
+            party = _party_code(label)
+            party_label = re.sub(r"\s*candidates?$", "", label.replace(SEP, " ").strip(), flags=re.I)
+            for pos, name in enumerate(_split_names(cell), start=1):
+                rows.append({"region": region_id, "name": name, "party": party or "OTH",
+                             "ticket_position": pos, "_label": None if party else party_label})
+    return rows
+
+
+def fetch_wiki_candidates(district_ids: set[str]) -> tuple[list[dict], list[dict]]:
+    resp = requests.get(CANDIDATES_URL, headers={"User-Agent": USER_AGENT}, timeout=TIMEOUT)
+    resp.raise_for_status()
+    assembly_html, council_html = wiki_candidate_tables(resp.text)
+    if not assembly_html:
+        raise ValueError("no tables found under the 'Legislative Assembly' heading")
+
+    assembly = []
+    for table in assembly_html:
+        for df in pd.read_html(io.StringIO(table)):
+            assembly.extend(parse_assembly_table(df, district_ids))
+    council = []
+    for heading, table in council_html:
+        region_id = re.sub(r"[^a-z0-9]+", "-", heading.lower()).strip("-")
+        for df in pd.read_html(io.StringIO(table)):
+            council.extend(parse_council_table(df, region_id))
+    if not assembly:
+        raise ValueError("no Legislative Assembly candidates parsed")
+    log.info("Parsed %d assembly and %d council candidates from Wikipedia", len(assembly), len(council))
+    return assembly, council
+
+
+def refresh_wiki_candidates(data_dir: Path, meta: dict) -> bool:
+    source = meta.setdefault("sources", {}).setdefault("wikipedia_candidates", {"url": CANDIDATES_URL})
+    path = data_dir / "candidates.json"
+    try:
+        districts = (read_json(data_dir / "districts.json", {}) or {}).get("districts", [])
+        regions = (read_json(data_dir / "regions.json", {}) or {}).get("regions", [])
+        if not districts:
+            raise ValueError("districts.json has no districts to match against")
+        assembly, council = fetch_wiki_candidates({d["id"] for d in districts})
+    except Exception as exc:  # noqa: BLE001 - any failure means keep the old file
+        log.error("Wikipedia candidate fetch failed, keeping existing %s: %s", path.name, exc)
+        warn_ci(f"Wikipedia candidate fetch failed, kept existing candidates.json: {exc}")
+        source.update(status="error", message=str(exc)[:300])
+        return False
+
+    existing = read_json(path, {}) or {}
+    rows = existing.get("candidates", [])
+    known = {_candidate_key(c) for c in rows}
+    # (seat, party) -> names already recorded, to catch spelling variants of the same person
+    same_party = {}
+    for c in rows:
+        same_party.setdefault((c.get("district") or c.get("region"), c.get("party")), []).append(c["name"])
+    # Council names already on a hand-maintained ticket in regions.json count as present.
+    for r in regions:
+        for t in r.get("tickets", []):
+            for name in t.get("candidates", []):
+                known.add((r["id"], _name_key(name)))
+                same_party.setdefault((r["id"], t.get("party")), []).append(name)
+    sitting = {d["id"]: _name_key(d.get("sitting_mp", "")) for d in districts}
+    today = datetime.now(MELBOURNE).date().isoformat()
+
+    added = {"assembly": 0, "council": 0}
+    for c in assembly + council:
+        seat = c.get("district") or c["region"]
+        key = (seat, _name_key(c["name"]))
+        others = same_party.get((seat, c["party"]), [])
+        if key in known or any(_same_person(c["name"], o) for o in others):
+            continue
+        known.add(key)
+        row = {**({"district": c["district"]} if "district" in c else {"district": None, "region": c["region"]}),
+               "name": c["name"], "party": c["party"], "status": "announced"}
+        if "ticket_position" in c:
+            row["ticket_position"] = c["ticket_position"]
+        else:
+            row["ballot_position"] = None
+            row["incumbent"] = sitting.get(c["district"]) == _name_key(c["name"])
+        row.update(source="wikipedia", source_url=CANDIDATES_URL, date_added=today, updated=today)
+        notes = []
+        if c.get("_label"):
+            notes.append(f"Party on Wikipedia: {c['_label']}")
+        if others and c["party"] not in ("IND", "OTH") and "region" not in c:
+            # Two candidates for one party in one seat: the sources disagree.
+            notes.append(f"Conflicts with {', '.join(others)}, already recorded for this party here")
+            log.warning("%s: Wikipedia lists %s (%s) but %s is already recorded",
+                        seat, c["name"], c["party"], ", ".join(others))
+        if notes:
+            row["notes"] = "; ".join(notes)
+        same_party.setdefault((seat, c["party"]), []).append(c["name"])
+        rows.append(row)
+        added["council" if "region" in c else "assembly"] += 1
+
+    total = added["assembly"] + added["council"]
+    source.update(status="ok", url=CANDIDATES_URL, last_success=now_iso(),
+                  message=f"{len(assembly)} assembly and {len(council)} council names read; "
+                          f"{added['assembly']} assembly and {added['council']} council added")
+    if not total:
+        log.info("No new candidates on Wikipedia; %s left unchanged", path.name)
+        return False
+    write_json(path, {**existing, "candidates": _sort_candidates(rows)})
+    log.info("Wrote %s (%d assembly, %d council candidates added)", path.name, added["assembly"], added["council"])
+    return True
+
+
 # ==========================================================================
 # PLACEHOLDER: VEC candidate list
 # --------------------------------------------------------------------------
@@ -361,10 +606,6 @@ def refresh_polls(data_dir: Path, meta: dict) -> bool:
 # ==========================================================================
 def fetch_vec_candidates() -> list[dict] | None:
     return None
-
-
-def _candidate_key(c: dict) -> tuple[str, str]:
-    return (c.get("district", ""), re.sub(r"[^a-z]", "", c.get("name", "").lower()))
 
 
 def refresh_candidates(data_dir: Path, meta: dict) -> bool:
@@ -387,7 +628,7 @@ def refresh_candidates(data_dir: Path, meta: dict) -> bool:
     rows = {_candidate_key(c): c for c in existing.get("candidates", [])}
     for c in vec_rows:
         rows[_candidate_key(c)] = {**rows.get(_candidate_key(c), {}), **c}
-    write_json(path, {**existing, "candidates": sorted(rows.values(), key=lambda c: (c["district"], c["name"]))})
+    write_json(path, {**existing, "candidates": _sort_candidates(list(rows.values()))})
     source.update(status="ok", last_success=now_iso(), message=f"{len(vec_rows)} VEC-nominated candidates")
     log.info("Wrote %s (%d VEC rows merged)", path.name, len(vec_rows))
     return True
@@ -414,7 +655,11 @@ def main(argv=None) -> int:
     meta = read_json(meta_path, {}) or {}
     before = json.dumps(meta, sort_keys=True)
 
-    updated = [refresh_polls(data_dir, meta), refresh_candidates(data_dir, meta)]
+    updated = [
+        refresh_polls(data_dir, meta),
+        refresh_wiki_candidates(data_dir, meta),
+        refresh_candidates(data_dir, meta),
+    ]
     if any(updated):
         meta["last_updated"] = now_iso()
 

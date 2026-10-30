@@ -3,6 +3,9 @@
   "use strict";
   const { loadJSON, escapeHtml, partyBadge, partyShort, statusBadge, fmtDate, hashId, copyLink } = window.App;
 
+  // Strongest confirmation first.
+  const STATUS_RANK = ["vec_nominated", "endorsed", "reported", "announced"];
+
   let districts = [];
   let candidates = [];
   let regionsById = {};
@@ -64,7 +67,8 @@
     const wa = a.status === "withdrawn", wb = b.status === "withdrawn";
     if (wa !== wb) return wa ? 1 : -1;
     const pa = a.ballot_position ?? Infinity, pb = b.ballot_position ?? Infinity;
-    return pa - pb || a.name.localeCompare(b.name);
+    const rank = (s) => STATUS_RANK.indexOf(s) + 1 || STATUS_RANK.length + 1;
+    return pa - pb || rank(a.status) - rank(b.status) || a.name.localeCompare(b.name);
   }
 
   function renderDetail() {
