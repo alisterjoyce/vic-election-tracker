@@ -556,6 +556,77 @@
     return scored.slice(0, isPostcode ? 24 : 12).map((s) => s.it);
   }
 
+  /* ---- Main navigation: four groups, dropdowns on desktop, a menu button on phones ---- */
+  // The single source of the site's navigation; pages carry only a no-JS fallback.
+  const NAV = [
+    { label: "Overview", items: [["Home", "index.html"], ["Map", "index.html#state-map"], ["Pendulum", "pendulum.html"],
+      ["Scenarios", "pendulum.html#scenarios"], ["What changed", "changes.html"], ["Timeline", "timeline.html"]] },
+    { label: "Lower house", items: [["Seats", "lower.html"], ["Candidates", "candidate.html"], ["My seats", "myseats.html"]] },
+    { label: "Upper house", items: [["Regions", "upper.html"], ["Quota calculator", "upper.html#quota"]] },
+    { label: "About", items: [["Methodology", "about.html"], ["Data", "data/"], ["Polls", "poll.html"]] },
+  ];
+
+  function initNav() {
+    const nav = document.querySelector(".site-header .nav");
+    if (!nav) return;
+    // The current page relative to the site root ("lower.html", "data/", "" for the home page).
+    const page = decodeURIComponent(location.pathname).slice(decodeURIComponent(ROOT.pathname).length)
+      .replace(/(^|\/)index\.html$/, "$1") || "index.html";
+    const isHere = (href) => !href.includes("#") && (href === page || (href === "index.html" && page === ""));
+    nav.id = "main-nav";
+    nav.innerHTML = NAV.map((g, i) => {
+      const current = g.items.some(([, href]) => href.split("#")[0] === page || (page === "" && href.startsWith("index.html")));
+      return `<div class="nav-group${current ? " is-current" : ""}">
+          <button type="button" class="nav-top" aria-expanded="false" aria-controls="nav-menu-${i}">${escapeHtml(g.label)}<span class="nav-caret" aria-hidden="true"></span></button>
+          <ul class="nav-menu" id="nav-menu-${i}">${g.items.map(([label, href]) =>
+            `<li><a href="${new URL(href, ROOT).href}"${isHere(href) ? ' aria-current="page"' : ""}>${escapeHtml(label)}</a></li>`).join("")}</ul>
+        </div>`;
+    }).join("");
+
+    const toggle = document.createElement("button");
+    toggle.type = "button";
+    toggle.className = "icon-btn nav-toggle";
+    toggle.setAttribute("aria-controls", "main-nav");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.innerHTML = '<span class="nav-burger" aria-hidden="true"></span>Menu';
+    nav.parentNode.insertBefore(toggle, nav);
+
+    const groups = [...nav.querySelectorAll(".nav-group")];
+    const closeAll = (except) => groups.forEach((g) => {
+      if (g === except) return;
+      g.classList.remove("open");
+      g.querySelector(".nav-top").setAttribute("aria-expanded", "false");
+    });
+    const setMenu = (open) => {
+      nav.classList.toggle("open", open);
+      toggle.setAttribute("aria-expanded", String(open));
+      document.body.classList.toggle("nav-open", open);
+    };
+    groups.forEach((g) => {
+      const btn = g.querySelector(".nav-top");
+      btn.addEventListener("click", () => {
+        const open = !g.classList.contains("open");
+        closeAll(g);
+        g.classList.toggle("open", open);
+        btn.setAttribute("aria-expanded", String(open));
+        if (open) g.querySelector("a").focus({ preventScroll: true });
+      });
+    });
+    toggle.addEventListener("click", () => setMenu(!nav.classList.contains("open")));
+    document.addEventListener("click", (e) => {
+      if (!nav.contains(e.target)) closeAll();
+      if (!nav.contains(e.target) && !toggle.contains(e.target)) setMenu(false);
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "Escape") return;
+      const open = groups.find((g) => g.classList.contains("open"));
+      if (open) { closeAll(); open.querySelector(".nav-top").focus(); }
+      if (nav.classList.contains("open")) { setMenu(false); toggle.focus(); }
+    });
+    // Following a same-page link (Map, Scenarios, Quota calculator) closes the menus.
+    nav.addEventListener("click", (e) => { if (e.target.closest("a")) { closeAll(); setMenu(false); } });
+  }
+
   function initSearch() {
     const header = document.querySelector(".site-header .container");
     if (!header) return;
@@ -761,6 +832,7 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     initTheme();
+    initNav();
     initSearch();
     if (window.Chart) {
       Chart.defaults.font.family = cssVar("--font-body") || "system-ui, sans-serif";

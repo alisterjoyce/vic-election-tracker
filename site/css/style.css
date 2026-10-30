@@ -155,13 +155,35 @@ h3 { font-size: 1rem; }
   text-decoration: none; color: var(--text); margin-right: auto; white-space: nowrap;
 }
 .brand span { color: var(--accent); }
+/* Navigation (built by common.js from NAV): four groups with dropdowns; a "Menu" panel on phones */
 .nav { display: flex; gap: 2px; }
-.nav a {
-  text-decoration: none; color: var(--muted); white-space: nowrap;
-  padding: 6px 9px; border-radius: 8px; font-size: 0.92rem;
+.nav > a { text-decoration: none; color: var(--muted); padding: 6px 9px; border-radius: 8px; font-size: 0.92rem; }  /* no-JS fallback */
+.nav-group { position: relative; }
+.nav-top {
+  display: inline-flex; align-items: center; gap: 6px; border: 0; background: none; cursor: pointer;
+  font: inherit; font-size: 0.92rem; color: var(--muted); padding: 7px 10px; border-radius: 8px; white-space: nowrap;
 }
-.nav a:hover { background: var(--surface-2); color: var(--text); }
-.nav a[aria-current="page"] { background: var(--surface-2); color: var(--text); font-weight: 600; }
+.nav-top:hover, .nav-group.open .nav-top { background: var(--surface-2); color: var(--text); }
+.nav-group.is-current .nav-top { color: var(--text); font-weight: 600; }
+.nav-caret { width: 7px; height: 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-2px) rotate(45deg); opacity: 0.7; }
+.nav-group.open .nav-caret { transform: translateY(1px) rotate(-135deg); }
+.nav-menu {
+  display: none; position: absolute; top: calc(100% + 4px); left: 0; z-index: 30; min-width: 190px;
+  list-style: none; margin: 0; padding: 6px; background: var(--surface);
+  border: 1px solid var(--border); border-radius: 10px; box-shadow: 0 8px 24px rgba(16, 24, 40, 0.18);
+}
+.nav-group.open .nav-menu { display: block; }
+.nav-menu a { display: block; padding: 8px 10px; border-radius: 6px; text-decoration: none; color: var(--text); font-size: 0.92rem; white-space: nowrap; }
+.nav-menu a:hover, .nav-menu a:focus-visible { background: var(--surface-2); }
+.nav-menu a[aria-current="page"] { background: var(--surface-2); font-weight: 600; box-shadow: inset 3px 0 0 var(--accent); }
+.nav-toggle { display: none; align-items: center; gap: 8px; }
+.nav-burger, .nav-burger::before, .nav-burger::after { display: block; width: 16px; height: 2px; background: currentColor; border-radius: 1px; position: relative; }
+.nav-burger::before, .nav-burger::after { content: ""; position: absolute; left: 0; }
+.nav-burger::before { top: -5px; }
+.nav-burger::after { top: 5px; }
+.nav-toggle[aria-expanded="true"] .nav-burger { background: transparent; }
+.nav-toggle[aria-expanded="true"] .nav-burger::before { top: 0; transform: rotate(45deg); }
+.nav-toggle[aria-expanded="true"] .nav-burger::after { top: 0; transform: rotate(-45deg); }
 
 .icon-btn {
   border: 1px solid var(--border); background: var(--surface); color: var(--text);
@@ -199,11 +221,20 @@ h3 { font-size: 1rem; }
   .search { order: 4; flex: 1 1 100%; }
   .search-results { min-width: 0; }
 }
+/* Phones and narrow tablets: the four groups collapse into a "Menu" panel under the header. */
+@media (max-width: 760px) {
+  .nav-toggle { display: inline-flex; }
+  .nav { display: none; order: 5; width: 100%; flex-direction: column; gap: 4px; padding: 4px 0 8px; }
+  .nav.open { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 12px; }
+  .nav-top { pointer-events: none; padding: 8px 10px 2px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+  .nav-group.is-current .nav-top { color: var(--accent); }
+  .nav-caret { display: none; }
+  .nav-menu { display: block; position: static; min-width: 0; padding: 0; border: 0; box-shadow: none; background: none; }
+  .nav-menu a { padding: 9px 10px; }
+}
 @media (max-width: 640px) {
   .site-header { position: static; }   /* too tall to pin on a phone */
   .site-header .container { padding-top: 8px; padding-bottom: 8px; gap: 8px 12px; }
-  .nav { order: 3; width: 100%; flex-wrap: wrap; }
-  .nav a { flex: 1 0 auto; text-align: center; }
   .kd-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px 10px; }
   .kd-list li { flex-direction: column; gap: 0; }
   .kd-label, .kd-date { font-size: 0.75rem; }
@@ -649,3 +680,8 @@ select {
 .hc-foot strong { font-family: var(--font-display); color: var(--text); font-size: 24px; white-space: nowrap; }
 .hc-foot span:first-of-type { white-space: nowrap; }
 .hc-foot span:last-child { margin-left: auto; text-align: right; font-size: 15px; line-height: 1.3; max-width: 600px; }
+
+/* Targets of the nav's in-page links clear the sticky header (static on phones) */
+@media (min-width: 641px) {
+  #state-map, #sc-title, #quota-card, #tl-now, :target { scroll-margin-top: 72px; }
+}

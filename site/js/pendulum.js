@@ -241,6 +241,8 @@
       window.addEventListener("hashchange", () => { if (hashSwing() != null) setSwing(hashSwing(), { updateUrl: false }); });
       setSwing(hashSwing() ?? (average ? average.swing : 0), { updateUrl: hashSwing() != null });
       renderScenarios();
+      // The nav's "Scenarios" link: land on them once they're drawn (the pendulum above changes height).
+      if (location.hash === "#scenarios") $("sc-title").scrollIntoView();
     } catch (err) {
       App.showError($("pendulum-card"), err);
     }

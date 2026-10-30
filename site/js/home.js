@@ -265,7 +265,9 @@
     initMeasureToggle();
     const mapRoot = document.getElementById("state-map");
     if (mapRoot && window.L && App.Maps) {
-      App.Maps.homeMap(mapRoot).catch((err) => App.showError(mapRoot.querySelector("[data-map=main]"), err));
+      App.Maps.homeMap(mapRoot)
+        .then(() => { if (location.hash === "#state-map") mapRoot.scrollIntoView(); })   // the nav's "Map" link
+        .catch((err) => App.showError(mapRoot.querySelector("[data-map=main]"), err));
     } else if (mapRoot) {
       mapRoot.querySelector("[data-map=main]").innerHTML = '<p class="empty">The map library failed to load.</p>';
     }

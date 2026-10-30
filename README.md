@@ -22,6 +22,7 @@ A static tracker for the 2026 Victorian state election (polling day Saturday 28 
 - **Quota calculator** (on each region in `upper.html`): editable primary votes seeded from the latest regional poll (`council_polls.json`), live quota maths under the 2026 rules, and an adjustable exhaustion rate; shows the 5 seats filled and the margin for the last seat.
 - **My seats** (`myseats.html`): seats starred with ☆, saved in the browser's localStorage (no backend), shown side by side.
 - **About** (`about.html`): what each number means, sources and refresh times, limits, corrections and credits.
+- **Navigation:** four groups (Overview, Lower house, Upper house, About) with dropdowns on desktop and a Menu button on phones, built by `common.js`.
 - **On every page:** a key-dates strip under the header (countdowns plus a "Today:" note, from `meta.json` → `key_dates`), and a search box that matches districts, regions, candidates, suburbs and postcodes.
 - Shareable links: `lower.html#bendigo-east`, `upper.html#northern-victoria`, `candidate.html#bendigo-west/brenton-baldwin`. A district hash on the home page (`/#bendigo-east`) redirects to the lower-house page.
 - Light and dark mode follow the system setting and can be overridden with the toggle in the header.

@@ -128,11 +128,20 @@
     if (App.Quota) App.Quota.mount(document.getElementById("quota-card"), r, councilPolls.find((p) => p.regions && p.regions[r.id]));
   }
 
+  // "#northern-victoria" shows a region; "#quota" asks for a region and "#northern-victoria/quota"
+  // opens that region at its quota calculator (the nav's "Quota calculator" link).
+  let quotaMode = false;
   function onHashChange() {
-    const id = hashId();
+    const [id, sub] = hashId().split("/");
+    quotaMode = id === "quota" || sub === "quota";
     const r = regions.find((x) => x.id === id);
     renderChips(r ? r.id : "");
     renderDetail(r);
+    if (!r && id === "quota") {
+      document.getElementById("region-detail").innerHTML =
+        '<div class="card"><h2 style="margin-top:0">Quota calculator</h2><p>Choose a region above to open its quota calculator, seeded with the latest regional polling.</p></div>';
+    }
+    if (r && sub === "quota") document.getElementById("quota-card").scrollIntoView();
   }
 
   async function init() {
@@ -146,7 +155,7 @@
       htv = await loadJSON("htv").catch(() => null);
       document.getElementById("region-chips").addEventListener("click", (e) => {
         const btn = e.target.closest("button[data-id]");
-        if (btn) location.hash = btn.dataset.id;
+        if (btn) location.hash = quotaMode ? `${btn.dataset.id}/quota` : btn.dataset.id;
       });
       window.addEventListener("hashchange", onHashChange);
       onHashChange();
