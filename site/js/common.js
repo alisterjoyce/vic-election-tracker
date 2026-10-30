@@ -280,6 +280,58 @@
       `${escapeHtml(credit)} (${list.map((s) => `<a href="${escapeHtml(s.source.page)}" rel="noopener" target="_blank">${escapeHtml(s.name)}</a>`).join(", ")})`).join("; ")}.</p>`;
   }
 
+  function profileHref(seat, name) {
+    return `candidate.html#${candidateId(seat, name)}`;
+  }
+
+  // Name linked to the candidate's profile page.
+  function profileLink(seat, name, label = name) {
+    return `<a class="profile-link" href="${escapeHtml(profileHref(seat, name))}">${escapeHtml(label)}</a>`;
+  }
+
+  const isPlaceholder = (name) => /^TB[CD]$/i.test(String(name || "").trim());
+
+  // Everyone with a profile: active candidates (both houses), upper-house ticket
+  // names and current MLCs, merged by candidate id. Earlier sources win per field:
+  // tickets, then candidates.json, then the MLC list.
+  function buildPeople(cd, rd, dd) {
+    const districts = Object.fromEntries(((dd && dd.districts) || []).map((d) => [d.id, d]));
+    const regions = Object.fromEntries(((rd && rd.regions) || []).map((r) => [r.id, r]));
+    const byId = new Map();
+    const add = (seat, name, fields) => {
+      if (!name || isPlaceholder(name)) return;
+      const id = candidateId(seat, name);
+      let p = byId.get(id);
+      if (!p) {
+        const place = districts[seat] || regions[seat] || {};
+        p = { id, name, seat, house: districts[seat] ? "lower" : "upper", seatName: place.name || seat };
+        byId.set(id, p);
+      }
+      Object.entries(fields).forEach(([k, v]) => { if (v != null && p[k] == null) p[k] = v; });
+    };
+    Object.values(regions).forEach((r) => (r.tickets || []).forEach((t) => (t.candidates || []).forEach((name, i) =>
+      add(r.id, name, { party: t.party, status: t.status, ticket_position: i + 1, group: t.group, on_ticket: true, contesting: true }))));
+    ((cd && cd.candidates) || []).forEach((c) => {
+      if (c.status === "superseded") return;
+      const seat = c.district || c.region;
+      if (!districts[seat] && !regions[seat]) return;
+      add(seat, c.name, { party: c.party, status: c.status, ticket_position: c.ticket_position, incumbent: c.incumbent || null,
+        source: c.source, source_url: c.source_url, notes: c.notes || null, date_added: c.date_added, updated: c.updated, contesting: true });
+    });
+    Object.values(regions).forEach((r) => (r.mlcs || []).forEach((m) =>
+      add(r.id, m.name, { party: m.party, mlc: { party: m.party, retiring: !!m.retiring, notes: m.notes || "" } })));
+    return [...byId.values()];
+  }
+
+  let people = null;
+  function loadPeople() {
+    if (!people) {
+      people = Promise.all([loadJSON("candidates"), loadJSON("regions"), loadJSON("districts")])
+        .then(([cd, rd, dd]) => buildPeople(cd, rd, dd));
+    }
+    return people;
+  }
+
   function hashId() {
     return decodeURIComponent(location.hash.replace(/^#/, "")).trim().toLowerCase();
   }
@@ -440,12 +492,10 @@
     const items = [];
     districts.forEach((d) => items.push({ type: "District", label: d.name, sub: rName[d.region] || "", href: `lower.html#${d.id}`, key: norm(d.name), rank: 0 }));
     regions.forEach((r) => items.push({ type: "Region", label: r.name, sub: "Legislative Council", href: `upper.html#${r.id}`, key: norm(r.name), rank: 0 }));
-    ((cd && cd.candidates) || []).forEach((c) => {
-      if (c.status === "superseded" || c.status === "withdrawn") return;
-      const where = c.district ? dName[c.district] : rName[c.region];
-      if (!where) return;
-      items.push({ type: "Candidate", label: c.name, sub: `${partyName(c.party)}, ${where}`,
-        href: c.district ? `lower.html#${c.district}` : `upper.html#${c.region}`, key: norm(c.name), rank: 2 });
+    buildPeople(cd, rd, dd).forEach((p) => {
+      if (p.status === "withdrawn" && !p.mlc) return;
+      items.push({ type: p.contesting ? "Candidate" : "MLC", label: p.name, sub: `${partyName(p.party)}, ${p.seatName}`,
+        href: `candidate.html#${p.id}`, key: norm(p.name), rank: 2 });
     });
     const shareText = (s) => (s < 0.995 ? ` (${Math.round(s * 100)}% of area)` : "");
     ((ld && ld.localities) || []).forEach((l) => {
@@ -624,6 +674,7 @@
     DAY, preparePolls, smoothedSeries, statewideSwing, swingAdjusted,
     getWatchlist, setWatchlist, isWatched, toggleWatch, starButton, storageWorks,
     buildSearchIndex, searchItems,
-    candidateId, givenFirst, loadHeadshots, avatar, photoCredits, initials,
+    candidateId, givenFirst, loadHeadshots, avatar, photoCredits, initials, inkFor,
+    profileHref, profileLink, isPlaceholder, buildPeople, loadPeople,
   };
 })();

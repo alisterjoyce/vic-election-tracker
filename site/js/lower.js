@@ -199,7 +199,7 @@
             <li class="${isInactive(c) ? "is-withdrawn" : ""}">
               ${anyBallot ? `<span class="pos" title="Ballot position">${c.ballot_position ?? "–"}</span>` : ""}
               ${App.avatar(shots, d.id, c.name, c.party)}
-              <span class="name">${escapeHtml(c.name)}${c.incumbent ? ' <span class="muted small">(sitting MP)</span>' : ""}</span>
+              <span class="name">${App.profileLink(d.id, c.name)}${c.incumbent ? ' <span class="muted small">(sitting MP)</span>' : ""}</span>
               ${partyBadge(c.party)}
               ${statusBadge(c.status)}
               ${c.source_url ? `<a class="small" href="${escapeHtml(c.source_url)}" rel="noopener">source</a>` : ""}
@@ -207,13 +207,25 @@
             </li>`).join("")}
         </ul>
         <p class="muted small" style="margin-top:8px">Last checked ${escapeHtml(fmtDate(cands.map((c) => c.updated).filter(Boolean).sort().pop()))}</p>
-        ${App.photoCredits(shots, cands.map((c) => [d.id, c.name]))}`
+        ${App.photoCredits(shots, cands.map((c) => [d.id, c.name]))}
+        <details class="sharecard-wrap" id="seat-share-wrap"><summary>Share card for this seat</summary><div class="sharecard" id="seat-share"></div></details>`
         : '<p class="empty">No candidates recorded yet.</p>'}
       <section class="r22" id="r22" aria-labelledby="r22-h">
         <h3 id="r22-h">How it voted in 2022</h3>
         <p class="empty">Loading 2022 results…</p>
       </section>`;
     $("copy-link").addEventListener("click", (e) => copyLink(e.currentTarget));
+    const shareWrap = $("seat-share-wrap");
+    if (shareWrap) shareWrap.addEventListener("toggle", () => {
+      if (!shareWrap.open || shareWrap.dataset.drawn) return;
+      shareWrap.dataset.drawn = "1";
+      const running = cands.filter((c) => !isInactive(c));
+      App.ShareCard.mount($("seat-share"), {
+        draw: (canvas) => App.ShareCard.drawSeat(canvas, { seat: d, people: running, shots }),
+        filename: `${d.id}.png`,
+        title: `${d.name}: who is standing`,
+      });
+    });
     renderResults2022(d);
   }
 

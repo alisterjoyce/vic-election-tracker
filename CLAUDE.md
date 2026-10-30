@@ -9,12 +9,14 @@ site/                     # published as-is (netlify.toml: publish = "site", no 
   index.html              # home: countdown, seat counts, poll-of-polls chart, latest polls
   lower.html              # Legislative Assembly: filters, district detail, seat outlook (#district-id)
   upper.html              # Legislative Council: 8 regions, MLCs, tickets (#region-id)
+  candidate.html          # candidate profiles (#<seat id>/<name slug>) and, with no hash, the candidate directory
   myseats.html            # watchlist ("My seats"), stored in localStorage
   about.html              # about and methodology, sources, credits
   css/style.css           # all styles; design tokens on :root
   js/common.js            # shared: data loading, theme, formats, party palette, header chrome
                           #   (key-dates strip, search, footer), poll smoothing, seat-outlook maths
-  js/home.js, lower.js, upper.js, myseats.js
+  js/home.js, lower.js, upper.js, myseats.js, candidate.js
+  js/sharecard.js         # 1200x630 PNG share cards (candidate, seat) drawn on a canvas in the current theme
   data/*.json             # every file has a "_schema" key describing its fields
 scripts/refresh.py        # daily refresh (see "Data pipeline")
 scripts/build_localities.py  # rebuilds data/localities.json from Vicmap Admin polygons (run by hand; needs shapely)
@@ -108,7 +110,8 @@ Typography: **Archivo** (display: headings, brand, big numbers) and **Inter** (b
 
 ## Pages and UI conventions
 - The header (brand, nav, search, theme toggle) and the key-dates strip are rendered by `common.js` on every page. Add new pages to the nav in all HTML files.
-- Shareable URLs use the hash: `lower.html#bendigo-east`, `upper.html#northern-victoria`.
+- Shareable URLs use the hash: `lower.html#bendigo-east`, `upper.html#northern-victoria`, `candidate.html#bendigo-west/brenton-baldwin`. Link a name to its profile with `App.profileLink(seat, name)`; `App.loadPeople()` merges candidates, ticket names and MLCs into one list by candidate id (two ids for one name in different seats are never merged).
+- Share cards print the photo credit on the image. Seat pages draw theirs only when the "Share card" panel is opened.
 - `localStorage` is only for per-viewer conveniences (theme, watchlist). Wrap every access in try/catch, and the page must work without it.
 - Mobile first: 16px side gutter, no horizontal page scroll; tables scroll inside `.table-scroll`.
 

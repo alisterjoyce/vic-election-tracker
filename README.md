@@ -10,10 +10,11 @@ A static tracker for the 2026 Victorian state election (polling day Saturday 28 
   - **Betting favourite:** from `seat_odds.json`.
   - **Seat polls:** from `seat_polls.json`.
 - **Upper house** (`upper.html`): pick one of the 8 regions to see its current MLCs and 2026 tickets.
+- **Candidates** (`candidate.html`): a directory of every candidate and current MLC (filter by name, seat, house, party), and a profile for each (`candidate.html#bendigo-west/brenton-baldwin`): photo with its source credit, party, status, seat facts, sources, others in the same contest, and a downloadable share card. Seat pages have a share card too.
 - **My seats** (`myseats.html`): seats starred with ☆, saved in the browser's localStorage (no backend), shown side by side.
 - **About** (`about.html`): what each number means, sources and refresh times, limits, corrections and credits.
 - **On every page:** a key-dates strip under the header (countdowns plus a "Today:" note, from `meta.json` → `key_dates`), and a search box that matches districts, regions, candidates, suburbs and postcodes.
-- Shareable links: `lower.html#bendigo-east`, `upper.html#northern-victoria`. A district hash on the home page (`/#bendigo-east`) redirects to the lower-house page.
+- Shareable links: `lower.html#bendigo-east`, `upper.html#northern-victoria`, `candidate.html#bendigo-west/brenton-baldwin`. A district hash on the home page (`/#bendigo-east`) redirects to the lower-house page.
 - Light and dark mode follow the system setting and can be overridden with the toggle in the header.
 - The footer shows `last_updated` from `site/data/meta.json`.
 
@@ -21,9 +22,9 @@ A static tracker for the 2026 Victorian state election (polling day Saturday 28 
 
 ```
 site/                  # published by Netlify
-  index.html, lower.html, upper.html
+  index.html, lower.html, upper.html, candidate.html, myseats.html, about.html
   css/style.css
-  js/common.js, home.js, lower.js, upper.js
+  js/common.js, home.js, lower.js, upper.js, candidate.js, sharecard.js
   data/
     districts.json     # Legislative Assembly districts
     candidates.json    # lower-house candidates

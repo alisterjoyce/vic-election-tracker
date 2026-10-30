@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Candidates · Vic Election 2026</title>
+  <meta name="description" content="Candidate profiles for the 2026 Victorian state election: party, seat, status, sources and a share card.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d4ed8'/%3E%3Cpath d='M8 17l5 5 11-12' stroke='white' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Vic Election <span>2026</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="lower.html">Lower house</a>
+        <a href="upper.html">Upper house</a>
+        <a href="candidate.html" aria-current="page">Candidates</a>
+        <a href="myseats.html">My seats</a>
+        <a href="about.html">About</a>
+      </nav>
+      <button id="theme-toggle" class="icon-btn" type="button">Theme</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="sample-banner" class="banner" hidden></div>
+
+    <section id="candidate-detail" aria-live="polite" hidden></section>
+
+    <div id="directory">
+      <section class="hero">
+        <h1>Candidates</h1>
+        <p class="muted">Everyone standing for either house, plus current upper-house members. Choose a name to see their profile and share card.</p>
+      </section>
+
+      <section class="card" aria-label="Filters">
+        <div class="filters">
+          <label class="field">Name or seat
+            <input id="c-search" type="search" autocomplete="off" spellcheck="false" placeholder="e.g. Baldwin or Bendigo">
+          </label>
+          <label class="field">House
+            <select id="c-house">
+              <option value="">Both houses</option>
+              <option value="lower">Legislative Assembly</option>
+              <option value="upper">Legislative Council</option>
+            </select>
+          </label>
+          <label class="field">Party
+            <select id="c-party"><option value="">All parties</option></select>
+          </label>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="c-title">
+        <div class="card-head"><h2 id="c-title">All candidates</h2><span class="muted small" id="c-count"></span></div>
+        <ul class="people" id="c-list"><li class="empty">Loading…</li></ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p id="last-updated">Data last updated: loading…</p>
+      <p><a href="about.html">About and methodology</a> · Data: VEC, ABC, Wikipedia, Vicmap. Corrections welcome.</p>
+      <p>Candidate photos are credited to the party or campaign that published them.</p>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/sharecard.js"></script>
+  <script src="js/candidate.js"></script>
+</body>
+</html>

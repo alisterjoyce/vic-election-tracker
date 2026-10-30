@@ -7,3 +7,9 @@
   for = "/data/*"
   [headers.values]
     Cache-Control = "public, max-age=300, must-revalidate"
+
+# Candidate photos change rarely; cache them for a day.
+[[headers]]
+  for = "/photos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"

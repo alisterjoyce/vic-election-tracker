@@ -289,6 +289,35 @@ details.booth-table summary { cursor: pointer; margin-top: 12px; color: var(--ac
 .ticket-people { list-style: none; padding: 0; margin: 0; }
 .ticket-people li { display: flex; align-items: center; gap: 8px; padding: 3px 0; }
 .ticket-people .tp-pos { width: 1.2em; text-align: right; color: var(--muted); font-size: 0.85rem; }
+.profile-link { color: inherit; text-decoration: none; }
+.profile-link:hover { color: var(--accent); text-decoration: underline; }
+
+/* Candidate profile (candidate.html) */
+.profile-head { display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap; }
+.profile-photo { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 6px; max-width: 180px; text-align: center; }
+.profile-photo figcaption { overflow-wrap: anywhere; }
+.profile-intro { flex: 1 1 260px; min-width: 0; }
+.profile-intro h1 { margin: 0 0 8px; overflow-wrap: anywhere; }
+.profile-badges { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 0 0 10px; }
+.profile-contest { margin: 0 0 12px; }
+.profile-record { display: grid; grid-template-columns: max-content 1fr; gap: 4px 14px; margin: 0 0 12px; font-size: 0.9rem; }
+.profile-record dt { color: var(--muted); }
+.profile-record dd { margin: 0; overflow-wrap: anywhere; }
+.photo-about summary { cursor: pointer; color: var(--muted); font-size: 0.875rem; }
+.photo-about p { margin: 6px 0 0; }
+.field input {
+  font: inherit; font-size: 1rem; color: var(--text); background: var(--surface);
+  border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; width: 100%;
+}
+
+/* Share cards (sharecard.js): a 1200x630 PNG shown scaled down */
+.sharecard-preview { display: block; width: 100%; max-width: 600px; height: auto; border: 1px solid var(--border); border-radius: 8px; background: var(--surface-2); }
+.sharecard-actions { margin-top: 10px; }
+.sharecard-note { margin: 8px 0 0; }
+.sharecard-wrap { margin-top: 16px; }
+.sharecard-wrap > summary { cursor: pointer; font-weight: 600; }
+.sharecard-wrap > .sharecard { margin-top: 10px; }
+a.icon-btn[aria-disabled="true"] { pointer-events: none; opacity: 0.5; }
 
 /* Watchlist stars */
 .star {

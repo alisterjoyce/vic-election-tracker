@@ -45,7 +45,7 @@
                   <li>
                     ${c.ticket_position ? `<span class="pos" title="Reported ticket position">${c.ticket_position}</span>` : ""}
                     ${App.avatar(shots, r.id, c.name, c.party, { size: 32 })}
-                    <span class="name">${escapeHtml(c.name)}</span>
+                    <span class="name">${App.profileLink(r.id, c.name)}</span>
                     ${statusBadge(c.status)}
                     ${c.notes ? `<span class="note muted small">${escapeHtml(c.notes)}</span>` : ""}
                   </li>`).join("")}
@@ -80,7 +80,7 @@
             ${r.mlcs.map((m) => `
               <li>
                 ${App.avatar(shots, r.id, m.name, m.party)}
-                <span class="name">${escapeHtml(m.name)}${m.retiring ? ' <span class="badge neutral">Retiring</span>' : ""}</span>
+                <span class="name">${App.profileLink(r.id, m.name)}${m.retiring ? ' <span class="badge neutral">Retiring</span>' : ""}</span>
                 ${partyBadge(m.party)}
                 ${m.notes ? `<span class="note muted small">${escapeHtml(m.notes)}</span>` : ""}
               </li>`).join("")}
@@ -99,7 +99,7 @@
                   ${statusBadge(t.status)}
                 </div>
                 ${(t.candidates || []).length
-                  ? `<ol class="ticket-people">${t.candidates.map((c, i) => `<li><span class="tp-pos">${i + 1}.</span>${/^TB[CD]$/.test(c) ? "" : App.avatar(shots, r.id, c, t.party, { size: 28 })}<span>${escapeHtml(c)}</span></li>`).join("")}</ol>`
+                  ? `<ol class="ticket-people">${t.candidates.map((c, i) => `<li><span class="tp-pos">${i + 1}.</span>${App.isPlaceholder(c) ? `<span>${escapeHtml(c)}</span>` : `${App.avatar(shots, r.id, c, t.party, { size: 28 })}<span>${App.profileLink(r.id, c)}</span>`}</li>`).join("")}</ol>`
                   : '<p class="empty small" style="margin:0">No names confirmed.</p>'}
                 ${t.notes ? `<p class="note muted small">${escapeHtml(t.notes)}</p>` : ""}
               </div>`).join("")}
