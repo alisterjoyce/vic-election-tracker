@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What changed · Vic Election 2026</title>
+  <meta name="description" content="Every change to the tracker's data, day by day: new candidates, replaced candidates, new polls, betting moves, retirements and news.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d4ed8'/%3E%3Cpath d='M8 17l5 5 11-12' stroke='white' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Vic Election <span>2026</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="lower.html">Lower house</a>
+        <a href="upper.html">Upper house</a>
+        <a href="candidate.html">Candidates</a>
+        <a href="pendulum.html">Pendulum</a>
+        <a href="poll.html">Polls</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="changes.html" aria-current="page">Changes</a>
+        <a href="myseats.html">My seats</a>
+        <a href="about.html">About</a>
+        <a href="data/">Data</a>
+      </nav>
+      <button id="theme-toggle" class="icon-btn" type="button">Theme</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="sample-banner" class="banner" hidden></div>
+
+    <section class="hero">
+      <h1>What changed</h1>
+      <p class="muted">Every change to the tracker's data, found by comparing each daily refresh with the one before: new and replaced candidates, new polls, betting moves of 0.5 or more, retirements and news. <span id="ch-updated"></span></p>
+    </section>
+
+    <section class="card" aria-label="Filter the changes">
+      <div class="card-head">
+        <div class="chips" role="group" aria-label="Group by">
+          <button type="button" class="chip" data-by="day" aria-pressed="true">By day</button>
+          <button type="button" class="chip" data-by="week" aria-pressed="false">By week</button>
+        </div>
+        <span class="muted small" id="ch-count"></span>
+      </div>
+      <div class="chips ch-filters" id="ch-filters" role="group" aria-label="Kinds of change"></div>
+    </section>
+
+    <div id="changes"><div class="card"><p class="empty">Loading…</p></div></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p id="last-updated">Data last updated: loading…</p>
+      <p><a href="about.html">About and methodology</a> · Recorded automatically by the daily refresh. Corrections welcome.</p>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/changes.js"></script>
+</body>
+</html>

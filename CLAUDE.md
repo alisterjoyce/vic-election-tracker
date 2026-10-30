@@ -12,6 +12,8 @@ site/                     # published as-is (netlify.toml: publish = "site", no 
   candidate.html          # candidate profiles (#<seat id>/<name slug>) and, with no hash, the candidate directory
   pendulum.html           # interactive pendulum (#swing=3.2) and scenario explorer
   timeline.html           # the 2022-2026 term and election timetable (data/timeline.json)
+  changes.html            # "What changed": data/changelog.json grouped by day or week
+  data/index.html         # /data/: every published data file, its fields (from _schema), credit and licence
   poll.html               # poll detail (#<poll id>) with the pollster's trend and house effect; no hash = all polls
   myseats.html            # watchlist ("My seats"), stored in localStorage
   about.html              # about and methodology, sources, credits
@@ -21,8 +23,9 @@ site/                     # published as-is (netlify.toml: publish = "site", no 
   js/home.js, lower.js, upper.js, myseats.js, candidate.js, pendulum.js, poll.js
   js/quota.js             # upper-house quota calculator (mounted on each region in upper.html)
   js/htv.js               # how-to-vote cards: seat/region section and lower.html's "Preference watch"
-  js/timeline.js
-  js/sharecard.js         # 1200x630 PNG share cards (candidate, seat) drawn on a canvas in the current theme
+  js/timeline.js, changes.js, datafiles.js
+  js/sharecard.js         # 1200x630 PNG share cards: candidate (canvas); seat and home headline (HTML rendered with
+                          #   html-to-image 1.11.11 from cdnjs, pinned with SRI); Web Share API, else download
   data/*.json             # every file has a "_schema" key describing its fields
 scripts/refresh.py        # daily refresh (see "Data pipeline")
 scripts/build_localities.py  # rebuilds data/localities.json from Vicmap Admin polygons (run by hand; needs shapely)
@@ -54,6 +57,8 @@ Each file's `_schema` is the authoritative field list. Keep it in sync when addi
 | `seat_odds.json` | Sportsbet market per district: options, favourite, joint_favourites, partial, date_checked | hand (refresh.py tries Sportsbet; it is blocked, so the file is kept as manual) |
 | `seat_polls.json` | Single-seat polls | hand |
 | `timeline.json` | The term's events and the election timetable: date (YYYY-MM-DD or YYYY-MM), type, one line in our own words, districts/regions, source {label, url} | hand |
+| `changelog.json` | What changed at each refresh: new candidates, superseded/withdrawn names, new polls, odds moves of 0.5 or more, retirements, new-headline counts (last 120 days) | refresh.py (`refresh_changelog`, last step); `--backfill-changelog` rebuilds it from git history |
+| `changelog_state.json` | Internal: the compact view of the data at the last run, which the next run diffs against (so hand edits between runs are caught too). Not shown or listed on /data/ | refresh.py |
 | `htv.json` | How-to-vote cards registered with the VEC (from 10 Nov): seat, registered_by, party, registration, date, card_url, `order` (preference order, entered by hand from the card PDF) | refresh.py records cards; `order` and `notes` by hand and never overwritten |
 | `news.json` | Headlines per district (latest 10) and statewide (latest 25): title, outlet, published, url only | refresh.py, fully rewritten each run (seat lists keep earlier items when a search fails) |
 | `council_polls.json` | Upper-house primary vote by region (seeds the quota calculator); OTH is a pollster's combined "others", never one party | hand, from the pollster's release |
@@ -69,7 +74,7 @@ Party codes: ALP, LIB, NAT, LNP (joint Coalition), GRN, ONP, IND, ILAB (Independ
 
 ## Data pipeline and merge rules (`scripts/refresh.py`)
 
-Order each run: polls → Wikipedia candidates → ABC guide (district pages, then retiring MPs, then the A-Z reconciliation) → Sportsbet → VEC placeholder → VEC how-to-vote register → news → meta.json.
+Order each run: polls → Wikipedia candidates → ABC guide (district pages, then retiring MPs, then the A-Z reconciliation) → Sportsbet → VEC placeholder → VEC how-to-vote register → news → change log → meta.json.
 
 - **Never delete a candidate row.** Rows only change status.
 - **Wikipedia** adds names not already present as `announced` (`source: "wikipedia"`, `date_added`) and never changes existing rows.
@@ -122,7 +127,9 @@ Typography: **Archivo** (display: headings, brand, big numbers) and **Inter** (b
 ## Pages and UI conventions
 - The header (brand, nav, search, theme toggle) and the key-dates strip are rendered by `common.js` on every page. Add new pages to the nav in all HTML files.
 - Shareable URLs use the hash: `lower.html#bendigo-east`, `upper.html#northern-victoria`, `candidate.html#bendigo-west/brenton-baldwin`, `pendulum.html#swing=3.2`, `poll.html#newspoll-2026-10-22`. Poll ids are `<pollster slug>-<end date>` (refresh.py), so they survive the daily rewrite. Link a name to its profile with `App.profileLink(seat, name)`; `App.loadPeople()` merges candidates, ticket names and MLCs into one list by candidate id (two ids for one name in different seats are never merged).
-- Share cards print the photo credit on the image. Seat pages draw theirs only when the "Share card" panel is opened.
+- Share cards print the photo credit on the image. Seat pages and the home page have a "Share" button that builds the card on demand, shares it where the browser can share files, and otherwise downloads it. No server is involved.
+- Every `<table>` in `<main>` gets a "Download CSV" button from `common.js` (built from the cells' text; a cell's `data-csv` attribute overrides its text; `data-no-csv` on a table opts out; star columns are dropped).
+- Pages in subfolders (`data/index.html`) work because `common.js` resolves data files and search links against `App.ROOT`, the site root. Never list or link VEC results-feed data (`results_2026/`) on /data/.
 - `localStorage` is only for per-viewer conveniences (theme, watchlist). Wrap every access in try/catch, and the page must work without it.
 - Mobile first: 16px side gutter, no horizontal page scroll; tables scroll inside `.table-scroll`.
 

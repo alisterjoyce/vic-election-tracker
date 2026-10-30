@@ -1,10 +1,11 @@
-/* Share cards: 1200x630 PNG images for a candidate or a seat, drawn on a canvas in the
-   current theme's colours, with the candidate photo (data/headshots.json) or a
-   party-colour initials circle, and the photo credit printed on the card. */
+/* Share cards: 1200x630 PNG images in the current theme's colours, made in the browser.
+   Candidate cards are drawn on a canvas (photo or initials, photo credit printed on the card).
+   Seat and home-headline cards are built as HTML and rendered with html-to-image (pinned on cdnjs),
+   then shared with the Web Share API where the browser supports files, or downloaded. */
 (function () {
   "use strict";
   const App = window.App;
-  const { escapeHtml, partyName, partyColor, cssVar, initials, inkFor, candidateId } = App;
+  const { escapeHtml, partyName, partyColor, cssVar, initials, inkFor, candidateId, fmtDate } = App;
 
   const W = 1200, H = 630, FOOT = 64;
   const DISPLAY = '"Archivo", "Inter", system-ui, sans-serif';
@@ -163,74 +164,6 @@
     ctx.fillText(ellipsis(ctx, bits.join(" · "), maxW), x, y);
   }
 
-  /* seat: districts.json row; people: active candidates in ballot/display order */
-  async function drawSeat(canvas, { seat, people, shots }) {
-    await fontsReady();
-    const ctx = canvas.getContext("2d");
-    const holder = partyColor(seat.party) || cssVar("--p-oth");
-    const shown = people.slice(0, 7);
-    const imgs = await Promise.all(shown.map((p) => {
-      const s = shots[candidateId(seat.id, p.name)];
-      return s ? loadImage(s.files["160"]) : null;
-    }));
-    const credits = [...new Set(shown.map((p) => shots[candidateId(seat.id, p.name)]).filter(Boolean).map((s) => s.source.credit))];
-    frame(ctx, holder, "");
-
-    const x = 56;
-    kicker(ctx, "2026 Victorian state election · Legislative Assembly", x, 92);
-    const nameFit = fitText(ctx, seat.name, { weight: 800, family: DISPLAY, max: 80, min: 48, maxWidth: W - 2 * x });
-    ctx.fillStyle = cssVar("--text");
-    ctx.fillText(nameFit.lines[0], x, 92 + 16 + nameFit.size);
-
-    ctx.fillStyle = cssVar("--muted");
-    ctx.font = `500 28px ${BODY}`;
-    const m = seat.margin;
-    const sub = [`Held by ${partyName(seat.party)}`];
-    if (m && m.pct != null) sub.push(`margin ${App.fmtMargin(m.party, m.pct)}${m.vs ? ` vs ${App.partyShort(m.vs)}` : ""}`);
-    sub.push(`${people.length} candidate${people.length === 1 ? "" : "s"}`);
-    ctx.fillText(sub.join(" · "), x, 92 + 16 + nameFit.size + 50);
-
-    if (!shown.length) return;
-    const slots = shown.length + (people.length > shown.length ? 1 : 0);
-    const gap = (W - 2 * x) / Math.max(slots, 5);
-    const r = Math.min(64, gap / 2 - 14);
-    const cy = 360;
-    shown.forEach((p, i) => {
-      const cx = x + gap * i + gap / 2;
-      drawFace(ctx, { img: imgs[i], name: p.name, party: p.party, x: cx, y: cy, r, ring: 6 });
-      ctx.textAlign = "center";
-      ctx.textBaseline = "alphabetic";
-      ctx.fillStyle = cssVar("--text");
-      const surname = App.givenFirst(p.name).split(/\s+/).pop();
-      const fit = fitText(ctx, surname, { weight: 600, family: BODY, max: 22, min: 15, maxWidth: gap - 10 });
-      ctx.fillText(ellipsis(ctx, fit.lines[0], gap - 10), cx, cy + r + 38);
-      ctx.fillStyle = cssVar("--muted");
-      ctx.font = `500 18px ${BODY}`;
-      ctx.fillText(ellipsis(ctx, partyName(p.party), gap - 10), cx, cy + r + 64);
-    });
-    if (slots > shown.length) {
-      const cx = x + gap * shown.length + gap / 2;
-      ctx.fillStyle = cssVar("--surface-2");
-      ctx.beginPath();
-      ctx.arc(cx, cy, r, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.fillStyle = cssVar("--muted");
-      ctx.font = `800 ${Math.round(r * 0.6)}px ${DISPLAY}`;
-      ctx.textAlign = "center";
-      ctx.textBaseline = "middle";
-      ctx.fillText(`+${people.length - shown.length}`, cx, cy);
-    }
-    if (credits.length) {
-      ctx.textAlign = "left";
-      ctx.textBaseline = "alphabetic";
-      ctx.fillStyle = cssVar("--muted");
-      ctx.font = `500 16px ${BODY}`;
-      wrap(ctx, `Photos: ${credits.join(", ")}`, W - 2 * x).slice(0, 2)
-        .forEach((l, i) => ctx.fillText(l, x, H - FOOT - 34 + i * 20));
-    }
-    ctx.textAlign = "left";
-  }
-
   /* Preview image plus Download and Share buttons; redraws when the theme changes. */
   function mount(el, { draw, filename, title, url = location.href }) {
     el.innerHTML = `
@@ -274,5 +207,159 @@
     return render();
   }
 
-  App.ShareCard = { drawCandidate, drawSeat, mount, W, H };
+  /* ---------- HTML cards: built as DOM, rendered with html-to-image (seat and home headline) ---------- */
+  const today = () => fmtDate(App.melbourneToday());
+  const siteLink = (hash = "") => `${App.ROOT.host}${App.ROOT.pathname.replace(/\/$/, "")}/${hash}`.replace(/^\/+/, "");
+
+  // html-to-image can't read the cross-origin Google Fonts stylesheet, so build the @font-face
+  // rules ourselves (Latin subset only), with the font files inlined as data URLs.
+  let fontCss = null;
+  function embeddedFonts() {
+    if (!fontCss) {
+      fontCss = (async () => {
+        const link = [...document.querySelectorAll('link[rel="stylesheet"]')].find((l) => l.href.includes("fonts.googleapis.com"));
+        if (!link) return "";
+        const css = await (await fetch(link.href)).text();
+        const faces = [...css.matchAll(/\/\*\s*latin\s*\*\/\s*(@font-face\s*{[^}]*})/g)].map((m) => m[1]);
+        const inlined = await Promise.all(faces.map(async (face) => {
+          const url = (face.match(/url\(([^)]+)\)/) || [])[1];
+          if (!url) return "";
+          const blob = await (await fetch(url)).blob();
+          const data = await new Promise((res) => { const r = new FileReader(); r.onload = () => res(r.result); r.readAsDataURL(blob); });
+          return face.replace(url, data);
+        }));
+        return inlined.join("\n");
+      })().catch(() => "");
+    }
+    return fontCss;
+  }
+
+  async function renderHtmlCard(inner, accent) {
+    if (!window.htmlToImage) throw new Error("The image library failed to load");
+    const host = document.createElement("div");
+    host.className = "hc-host";
+    host.innerHTML = `<div class="hc-card" style="--hc-accent: var(${accent || "--accent"})">${inner}</div>`;
+    document.body.append(host);
+    try {
+      await fontsReady();
+      await Promise.all([...host.querySelectorAll("img")].map((img) => (img.decode ? img.decode().catch(() => {}) : null)));
+      const fonts = await embeddedFonts();
+      return await window.htmlToImage.toBlob(host.firstElementChild, {
+        width: W, height: H, pixelRatio: 1, backgroundColor: cssVar("--surface") || "#fff",
+        fontEmbedCSS: fonts, skipFonts: !fonts,
+      });
+    } finally {
+      host.remove();
+    }
+  }
+
+  // Native share sheet where the browser can share files; otherwise a download.
+  async function shareOrDownload(blob, { filename, title, url }) {
+    const file = new File([blob], filename, { type: "image/png" });
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      try {
+        await navigator.share({ files: [file], title, url });
+        return "Shared";
+      } catch (e) {
+        if (e.name === "AbortError") return null;
+      }
+    }
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = filename;
+    document.body.append(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+    return "Downloaded";
+  }
+
+  /* build: async () => {inner, accent, filename, title, url} */
+  function shareButton(btn, build) {
+    btn.addEventListener("click", async () => {
+      const label = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = "Making image…";
+      let done = null;
+      try {
+        const card = await build();
+        done = await shareOrDownload(await renderHtmlCard(card.inner, card.accent), card);
+      } catch (err) {
+        console.error(err);
+        done = "Couldn't make the image";
+      }
+      btn.textContent = done || label;
+      setTimeout(() => { btn.textContent = label; btn.disabled = false; }, done ? 2000 : 0);
+    });
+  }
+
+  const eager = (html) => html.replace(' loading="lazy"', "");
+
+  /* seat: districts.json row; cands: active candidates; odds: seat_odds.json row or null */
+  function seatCard({ seat, cands, shots, odds, oddsDate, classification }) {
+    const m = seat.margin;
+    const price = (party) => {
+      const o = odds && (odds.options || []).find((x) => x.party === party || (party === "LNP" && ["LIB", "NAT"].includes(x.party)));
+      return o ? o.price : Infinity;
+    };
+    const top = cands.slice().sort((a, b) => price(a.party) - price(b.party) || partyName(a.party).localeCompare(partyName(b.party))).slice(0, 5);
+    const fav = odds && (odds.favourite || (odds.joint_favourites || []).length)
+      ? (odds.favourite ? `${odds.favourite_candidate ? escapeHtml(odds.favourite_candidate) : escapeHtml(partyName(odds.favourite))} ${App.fmtPrice(odds.price)}`
+        : `${odds.joint_favourites.map((p) => escapeHtml(partyName(p))).join(" / ")} (joint)`)
+      : "No clear favourite";
+    const credits = [...new Set(top.map((c) => shots[candidateId(seat.id, c.name)]).filter(Boolean).map((s) => s.source.credit))];
+    return {
+      accent: App.partyVar(seat.party),
+      filename: `${seat.id}-${App.melbourneToday()}.png`,
+      title: `${seat.name}, Vic Election 2026`,
+      url: new URL(`lower.html#${seat.id}`, App.ROOT).href,
+      inner: `
+        <div class="hc-body">
+          <div class="hc-kicker">2026 Victorian state election · Legislative Assembly</div>
+          <div class="hc-title">${escapeHtml(seat.name)}</div>
+          <div class="hc-facts">
+            <div><span class="hc-label">Held by</span><span class="hc-value"><i style="background:var(${App.partyVar(seat.party)})"></i>${escapeHtml(partyName(seat.party))}</span>
+              <span class="hc-sub">${escapeHtml(seat.sitting_mp || "")}${seat.retiring ? " (retiring)" : ""}</span></div>
+            <div><span class="hc-label">Margin</span><span class="hc-value">${m && m.pct != null ? escapeHtml(App.fmtMargin(m.party, m.pct)) : "–"}</span>
+              <span class="hc-sub">${m && m.vs ? `vs ${escapeHtml(App.partyShort(m.vs))}` : ""}${classification ? ` · ${escapeHtml(classification)}` : ""}</span></div>
+            <div><span class="hc-label">Sportsbet favourite</span><span class="hc-value">${fav}</span>
+              <span class="hc-sub">${oddsDate ? `as at ${escapeHtml(fmtDate(oddsDate))}` : ""}</span></div>
+          </div>
+          <div class="hc-label">Leading candidates</div>
+          <div class="hc-people">${top.map((c) => `
+            <div class="hc-person">${eager(App.avatar(shots, seat.id, c.name, c.party, { size: 72 }))}
+              <span class="hc-name">${escapeHtml(c.name)}</span><span class="hc-party">${escapeHtml(partyName(c.party))}</span></div>`).join("")}</div>
+        </div>
+        <div class="hc-foot"><strong>Vic Election 2026</strong><span>${escapeHtml(siteLink(`lower.html#${seat.id}`))}</span>
+          <span>${credits.length ? `Photos: ${escapeHtml(credits.join(", "))} · ` : ""}${escapeHtml(today())}</span></div>`,
+    };
+  }
+
+  /* avg: {LNP2pp, ALP2pp, primaries: {code: %}, n}; tally: {ALP, LNP, GRN, OTH}; swing: number; days: days to go */
+  function homeCard({ avg, tally, swing, days, electionDate }) {
+    const bar = (label, n, v) => `<div class="hc-bar"><span>${label}</span><span class="hc-track"><span style="width:${(100 * n) / 88}%;background:var(${v})"></span><i style="left:${(100 * 45) / 88}%"></i></span><strong>${n}</strong></div>`;
+    const lead = avg.LNP2pp >= 50 ? ["Coalition", avg.LNP2pp] : ["Labor", avg.ALP2pp];
+    return {
+      accent: avg.LNP2pp >= 50 ? "--p-lib" : "--p-alp",
+      filename: `vic-election-2026-headline-${App.melbourneToday()}.png`,
+      title: "Vic Election 2026: where it stands",
+      url: App.ROOT.href,
+      inner: `
+        <div class="hc-body">
+          <div class="hc-kicker">2026 Victorian state election · ${escapeHtml(fmtDate(electionDate))}${days > 0 ? ` · ${days} days to go` : ""}</div>
+          <div class="hc-title">${lead[0]} ahead, ${lead[1].toFixed(1)}–${(100 - lead[1]).toFixed(1)}</div>
+          <div class="hc-facts">
+            <div><span class="hc-label">Poll of polls, 2PP</span><span class="hc-value">L/NP ${avg.LNP2pp.toFixed(1)} · Labor ${avg.ALP2pp.toFixed(1)}</span>
+              <span class="hc-sub">Smoothed average of ${avg.n} published polls</span></div>
+            <div><span class="hc-label">Primary vote</span><span class="hc-value">${Object.entries(avg.primaries).map(([k, v]) => `${escapeHtml(App.partyShort(k))} ${v.toFixed(0)}`).join(" · ")}</span>
+              <span class="hc-sub">Poll-of-polls averages</span></div>
+          </div>
+          <div class="hc-label">Seats on a uniform swing of ${escapeHtml(App.fmtSwing(swing))} to L/NP (45 for a majority)</div>
+          <div class="hc-bars">${bar("Coalition", tally.LNP, "--p-lib")}${bar("Labor", tally.ALP, "--p-alp")}${bar("Greens", tally.GRN, "--p-grn")}${tally.OTH ? bar("Others", tally.OTH, "--p-ind") : ""}</div>
+        </div>
+        <div class="hc-foot"><strong>Vic Election 2026</strong><span>${escapeHtml(siteLink())}</span><span>${escapeHtml(today())}</span></div>`,
+    };
+  }
+
+  App.ShareCard = { drawCandidate, mount, shareButton, seatCard, homeCard, W, H };
 })();

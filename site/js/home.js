@@ -202,6 +202,31 @@
     });
   }
 
+  /* ---------- Share card: poll average and the uniform-swing seat projection ---------- */
+  function headlineCard(meta, districts, pollData) {
+    const all = preparePolls(pollData);
+    const last = (fn) => { const s = smoothedSeries(all, fn); return s.length ? s[s.length - 1].y : null; };
+    const s = App.statewideSwing(meta, pollData);
+    if (!s) throw new Error("No poll average available");
+    const primaries = {};
+    ["ALP", "LNP", "ONP", "GRN"].forEach((k) => {
+      const v = last((p) => (p.primary && p.primary[k] != null ? p.primary[k] : null));
+      if (v != null) primaries[k] = v;
+    });
+    // Same rule as the pendulum: Labor-v-Coalition seats swing; other contests stay with the holder.
+    const tally = { ALP: 0, LNP: 0, GRN: 0, OTH: 0 };
+    districts.forEach((d) => {
+      const adj = App.swingAdjusted(d.margin, s);
+      const w = adj ? adj.winner : (d.margin && d.margin.party) || d.party;
+      tally[App.COALITION.includes(w) ? "LNP" : w in tally ? w : "OTH"]++;
+    });
+    return App.ShareCard.homeCard({
+      avg: { LNP2pp: s.current, ALP2pp: 100 - s.current, primaries, n: all.length },
+      tally, swing: s.swing, electionDate: meta.election_date,
+      days: App.daysBetween(App.melbourneToday(), meta.election_date),
+    });
+  }
+
   /* ---------- Latest polls table ---------- */
   function renderTable(data) {
     const el = document.getElementById("polls-table");
@@ -253,10 +278,22 @@
       polls = preparePolls(pollData);
       renderTable(pollData);
       renderChart();
+      App.ShareCard.shareButton(document.getElementById("share-home"), async () => headlineCard(meta, districtData.districts, pollData));
       document.addEventListener("themechange", renderChart);
     } catch (err) {
       window.App.showError(document.getElementById("polls-table"), err);
     }
+    Promise.all([loadJSON("changelog"), loadJSON("districts"), loadJSON("regions")]).then(([cl, dd, rd]) => {
+      const names = {};
+      dd.districts.forEach((d) => { names[d.id] = d.name; });
+      rd.regions.forEach((r) => { names[r.id] = `${r.name} Region`; });
+      const latest = (cl.entries || []).slice().sort((a, b) => b.at.localeCompare(a.at)).slice(0, 3);
+      document.getElementById("latest-changes").innerHTML = latest.length
+        ? latest.map((e) => `<li>${App.describeChange(e, names)} <span class="muted small">${escapeHtml(fmtDate(e.date))}</span></li>`).join("")
+        : '<li class="empty">No changes recorded yet.</li>';
+    }).catch(() => {
+      document.getElementById("latest-changes").innerHTML = '<li class="empty">The change log isn&#39;t available yet.</li>';
+    });
     loadJSON("news").then((n) => {
       document.getElementById("news-statewide").innerHTML = App.newsList(n.statewide, { more: 10 });
       document.getElementById("news-updated").textContent = n.updated ? `Updated ${App.fmtDateTime(n.updated)}` : "";

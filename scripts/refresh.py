@@ -16,6 +16,9 @@
 * VEC candidates: placeholder (see fetch_vec_candidates below).
 * How-to-vote cards: the VEC register (from 10 Nov 2026), recorded in htv.json;
   preference orders are entered by hand and kept.
+* Change log: compares the data with the previous run's (changelog_state.json)
+  and records new candidates, superseded names, new polls, odds moves of 0.5
+  or more, retirements and new headlines in changelog.json.
 * News: per-district Bing News RSS searches plus publishers' feeds, matched to
   seats by district or MP name; headline, outlet, date and link only (news.json).
 * meta.json: last_updated and per-source status.
@@ -33,6 +36,7 @@ import argparse
 import calendar
 import difflib
 import email.utils
+import hashlib
 import html as htmllib
 import io
 import json
@@ -1688,10 +1692,167 @@ def refresh_news(data_dir: Path, meta: dict) -> bool:
     return True
 
 
+# --------------------------------------------------------------------------
+# Change log: what changed in the data since the last run (changelog.json)
+# --------------------------------------------------------------------------
+# Each run reduces the data files to a compact "view" (candidate statuses, poll
+# ids, seat prices, retirements, news links), compares it with the view saved
+# by the previous run (changelog_state.json, i.e. the data as last committed),
+# and appends what changed. Comparing with the saved view rather than the git
+# checkout also catches hand edits (such as new Sportsbet prices) committed
+# between runs. --backfill-changelog rebuilds the log from git history.
+
+CHANGELOG_DAYS = 120
+ODDS_MOVE = 0.5
+CHANGELOG_BASE_COMMIT = "3b3b4e2"   # first commit with real (not sample) data
+CHANGELOG_SCHEMA = {
+    "description": "What changed in the tracker's data, newest first, written by scripts/refresh.py after each refresh "
+                   f"by comparing the data with the previous run. Entries older than {CHANGELOG_DAYS} days are dropped.",
+    "fields": {
+        "updated": "ISO UTC time of the last run that changed anything",
+        "entries": "[{date (Melbourne YYYY-MM-DD), at (ISO UTC), type, ...}] where type is one of: "
+                   "candidate_added {seat, name, party, status, source}; candidate_superseded {seat, name, party, by}; "
+                   "candidate_withdrawn {seat, name, party}; poll_added {id, pollster, end_date, tpp (L/NP), primary}; "
+                   f"odds_move {{seat, label, party, from, to}} (a price moving {ODDS_MOVE} or more); "
+                   "retirement {seat, name}; news {count} (new headlines collected)",
+    },
+}
+
+
+def _poll_key(p: dict) -> str:
+    return p.get("id") or f"{re.sub(r'[^a-z0-9]+', '-', p['pollster'].lower()).strip('-')}-{p['end_date']}"
+
+
+def _cand_key(c: dict) -> str:
+    return f"{c.get('district') or c.get('region')}|{_name_key(c['name'])}|{c.get('party')}"
+
+
+def data_view(load) -> dict:
+    """Compact view of the data; load(filename) returns parsed JSON or None."""
+    cd, pd_, od = load("candidates.json") or {}, load("polls.json") or {}, load("seat_odds.json") or {}
+    dd, rd, nd = load("districts.json") or {}, load("regions.json") or {}, load("news.json") or {}
+    retiring = {d["id"]: d.get("sitting_mp") or "" for d in dd.get("districts", []) if d.get("retiring")}
+    retiring.update({f"{r['id']}|{_name_key(m['name'])}": m["name"]
+                     for r in rd.get("regions", []) for m in r.get("mlcs", []) if m.get("retiring")})
+    urls = {i["url"] for i in nd.get("statewide", [])} | {i["url"] for v in nd.get("seats", {}).values() for i in v}
+    return {
+        "candidates": {_cand_key(c): c.get("status") for c in cd.get("candidates", [])},
+        "polls": sorted({_poll_key(p) for p in pd_.get("polls", [])}),
+        "odds": {s["district"]: {o["label"]: o["price"] for o in s.get("options", []) if o.get("price") is not None}
+                 for s in od.get("seats", [])},
+        "retiring": retiring,
+        "news": sorted(hashlib.sha1(u.encode()).hexdigest()[:12] for u in urls),
+    }
+
+
+def diff_views(old: dict, new: dict, load, at: datetime) -> list[dict]:
+    """Entries for what changed from view `old` to view `new` (load reads the new files, for details)."""
+    stamp = {"date": at.astimezone(MELBOURNE).date().isoformat(),
+             "at": at.astimezone(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")}
+    out = []
+    rows = {_cand_key(c): c for c in (load("candidates.json") or {}).get("candidates", [])}
+    inactive = ("superseded", "withdrawn")
+    for key, status in new["candidates"].items():
+        c, before = rows.get(key), old["candidates"].get(key)
+        if not c:
+            continue
+        seat = c.get("district") or c.get("region")
+        if before is None and status not in inactive:
+            out.append({**stamp, "type": "candidate_added", "seat": seat, "name": c["name"], "party": c.get("party"),
+                        "status": status, "source": c.get("source")})
+        elif before is not None and before != status and status in inactive:
+            out.append({**stamp, "type": f"candidate_{status}", "seat": seat, "name": c["name"], "party": c.get("party"),
+                        **({"by": c["superseded_by"]} if c.get("superseded_by") else {})})
+    polls = {_poll_key(p): p for p in (load("polls.json") or {}).get("polls", [])}
+    for pid in sorted(set(new["polls"]) - set(old["polls"])):
+        p = polls.get(pid)
+        if p:
+            out.append({**stamp, "type": "poll_added", "id": pid, "pollster": p["pollster"], "end_date": p["end_date"],
+                        "tpp": (p.get("tpp") or {}).get("LNP"), "primary": p.get("primary")})
+    seats = {s["district"]: s for s in (load("seat_odds.json") or {}).get("seats", [])}
+    for did, prices in new["odds"].items():
+        for label, price in prices.items():
+            was = old["odds"].get(did, {}).get(label)
+            if was is not None and abs(price - was) >= ODDS_MOVE - 1e-9:
+                party = next((o.get("party") for o in seats.get(did, {}).get("options", []) if o["label"] == label), None)
+                out.append({**stamp, "type": "odds_move", "seat": did, "label": label, "party": party, "from": was, "to": price})
+    for key, name in new["retiring"].items():
+        if key not in old["retiring"]:
+            out.append({**stamp, "type": "retirement", "seat": key.split("|")[0], "name": name})
+    fresh_news = len(set(new["news"]) - set(old["news"]))
+    if fresh_news and old["news"]:
+        out.append({**stamp, "type": "news", "count": fresh_news})
+    return out
+
+
+def _write_changelog(data_dir: Path, entries: list[dict], view: dict, now: datetime) -> None:
+    cutoff = (now.astimezone(MELBOURNE).date() - pd.Timedelta(days=CHANGELOG_DAYS)).isoformat()
+    entries = [e for e in entries if e["date"] >= cutoff]
+    entries.sort(key=lambda e: e["at"], reverse=True)
+    write_json(data_dir / "changelog.json", {"_schema": CHANGELOG_SCHEMA, "updated": now_iso(), "entries": entries})
+    write_json(data_dir / "changelog_state.json", {
+        "_schema": {"description": "Internal: the compact view of the data at the last refresh, which the next run compares "
+                                   "against to build changelog.json. Not for display."},
+        "view": view,
+    })
+
+
+def refresh_changelog(data_dir: Path, meta: dict) -> bool:
+    def load(name):
+        return read_json(data_dir / name, None)
+    view = data_view(load)
+    state = read_json(data_dir / "changelog_state.json", {}) or {}
+    log_data = read_json(data_dir / "changelog.json", {}) or {}
+    now = datetime.now(timezone.utc)
+    if not state.get("view"):
+        _write_changelog(data_dir, log_data.get("entries", []), view, now)
+        log.info("Change log: no earlier state; recorded the current data as the baseline")
+        return True
+    new = diff_views(state["view"], view, load, now)
+    if not new and view == state["view"]:
+        log.info("Change log: nothing changed")
+        return False
+    _write_changelog(data_dir, new + log_data.get("entries", []), view, now)
+    meta.setdefault("sources", {})["changelog"] = {"status": "ok", "last_success": now_iso(), "message": f"{len(new)} new entries"}
+    log.info("Change log: %d new entries", len(new))
+    return bool(new)
+
+
+def backfill_changelog(data_dir: Path) -> None:
+    """Rebuild changelog.json from git history: diff each commit's data with the previous one."""
+    import subprocess
+    root = Path(subprocess.check_output(["git", "rev-parse", "--show-toplevel"], cwd=data_dir, text=True).strip())
+    rel = data_dir.resolve().relative_to(root.resolve()).as_posix()
+    commits = subprocess.check_output(["git", "log", "--reverse", "--format=%H %cI", f"{CHANGELOG_BASE_COMMIT}^..HEAD", "--", rel],
+                                      cwd=root, text=True).split("\n")
+    prev, entries = None, []
+    for line in filter(None, commits):
+        sha, when = line.split(" ", 1)
+        def load(name, sha=sha):
+            try:
+                return json.loads(subprocess.check_output(["git", "show", f"{sha}:{rel}/{name}"], cwd=root,
+                                                          stderr=subprocess.DEVNULL).decode("utf-8"))
+            except (subprocess.CalledProcessError, json.JSONDecodeError):
+                return None
+        view = data_view(load)
+        if prev is not None:
+            entries = diff_views(prev, view, load, datetime.fromisoformat(when)) + entries
+        prev = view
+    def load_now(name):
+        return read_json(data_dir / name, None)
+    current = data_view(load_now)
+    if prev is not None and current != prev:   # uncommitted edits in the working tree
+        entries = diff_views(prev, current, load_now, datetime.now(timezone.utc)) + entries
+    _write_changelog(data_dir, entries, current, datetime.now(timezone.utc))
+    log.info("Change log rebuilt from %d commits: %d entries", len([c for c in commits if c]), len(entries))
+
+
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--data-dir", type=Path, default=DEFAULT_DATA_DIR,
                         help="directory holding the JSON files (default: site/data)")
+    parser.add_argument("--backfill-changelog", action="store_true",
+                        help="rebuild changelog.json from git history instead of refreshing")
     args = parser.parse_args(argv)
 
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
@@ -1702,6 +1863,10 @@ def main(argv=None) -> int:
     if not data_dir.is_dir():
         log.error("Data directory not found: %s", data_dir)
         return 1
+
+    if args.backfill_changelog:
+        backfill_changelog(data_dir)
+        return 0
 
     meta_path = data_dir / "meta.json"
     meta = read_json(meta_path, {}) or {}
@@ -1716,6 +1881,7 @@ def main(argv=None) -> int:
         refresh_htv(data_dir, meta),
         refresh_news(data_dir, meta),
     ]
+    refresh_changelog(data_dir, meta)   # last: compares everything written above with the previous run
     if any(updated):
         meta["last_updated"] = now_iso()
 

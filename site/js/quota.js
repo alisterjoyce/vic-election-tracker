@@ -152,6 +152,7 @@
       rows.forEach((r, i) => {
         const share = r.votes > 0 ? (100 * r.votes) / total : 0;
         el.querySelector(`[data-q="${i}"]`).textContent = (share / QUOTA).toFixed(2);
+        el.querySelector(`[data-s="${i}"]`).dataset.csv = String(res.seats[r.code] || 0);
         el.querySelector(`[data-s="${i}"]`).innerHTML = res.seats[r.code]
           ? `<span class="seat-dots" style="--party-color: var(${partyVar(r.code)})" aria-label="${res.seats[r.code]} seats">${"●".repeat(res.seats[r.code])}</span>` : "0";
         const f = res.final[r.code];

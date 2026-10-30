@@ -1,0 +1,4200 @@
+{
+  "_schema": {
+    "description": "What changed in the tracker's data, newest first, written by scripts/refresh.py after each refresh by comparing the data with the previous run. Entries older than 120 days are dropped.",
+    "fields": {
+      "updated": "ISO UTC time of the last run that changed anything",
+      "entries": "[{date (Melbourne YYYY-MM-DD), at (ISO UTC), type, ...}] where type is one of: candidate_added {seat, name, party, status, source}; candidate_superseded {seat, name, party, by}; candidate_withdrawn {seat, name, party}; poll_added {id, pollster, end_date, tpp (L/NP), primary}; odds_move {seat, label, party, from, to} (a price moving 0.5 or more); retirement {seat, name}; news {count} (new headlines collected)"
+    }
+  },
+  "updated": "2026-10-30T22:10:14Z",
+  "entries": [
+    {
+      "date": "2026-10-31",
+      "at": "2026-10-30T22:05:12Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Leonie Green",
+      "party": "OTH",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-31",
+      "at": "2026-10-30T22:05:12Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Ryan Parris",
+      "party": "OTH",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-31",
+      "at": "2026-10-30T22:05:12Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Andrew Rowse",
+      "party": "OTH",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-31",
+      "at": "2026-10-30T22:05:12Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Sahar Khalili",
+      "party": "OTH",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-31",
+      "at": "2026-10-30T22:05:12Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Heath McKenzie",
+      "party": "OTH",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-31",
+      "at": "2026-10-30T22:05:12Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Jacqui Morel",
+      "party": "OTH",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-31",
+      "at": "2026-10-30T22:05:12Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Clive Jackson",
+      "party": "OTH",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-31",
+      "at": "2026-10-30T22:05:12Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Phillip Broadbridge",
+      "party": "OTH",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-31",
+      "at": "2026-10-30T22:05:12Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Chris Thiery-Lai",
+      "party": "OTH",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-31",
+      "at": "2026-10-30T22:05:12Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Nigel Keenan",
+      "party": "OTH",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-31",
+      "at": "2026-10-30T22:05:12Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Andy Meddick",
+      "party": "OTH",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-31",
+      "at": "2026-10-30T22:05:12Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Peter Kelly",
+      "party": "OTH",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-31",
+      "at": "2026-10-30T22:05:12Z",
+      "type": "news",
+      "count": 13
+    },
+    {
+      "date": "2026-10-31",
+      "at": "2026-10-30T20:37:30Z",
+      "type": "poll_added",
+      "id": "roy-morgan-2026-10-09",
+      "pollster": "Roy Morgan",
+      "end_date": "2026-10-09",
+      "tpp": 55,
+      "primary": {
+        "ALP": 22.5,
+        "LNP": 26,
+        "GRN": 14,
+        "ONP": 25,
+        "IND": 7,
+        "OTH": 5.5
+      }
+    },
+    {
+      "date": "2026-10-31",
+      "at": "2026-10-30T20:37:30Z",
+      "type": "poll_added",
+      "id": "roy-morgan-2026-10-29",
+      "pollster": "Roy Morgan",
+      "end_date": "2026-10-29",
+      "tpp": 56,
+      "primary": {
+        "ALP": 22.5,
+        "LNP": 29.5,
+        "GRN": 12.5,
+        "ONP": 22,
+        "IND": 7.5,
+        "OTH": 6
+      }
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T09:10:05Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Chris Lahy",
+      "party": "OTH",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T09:10:05Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Jeff Davy",
+      "party": "OTH",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T09:10:05Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Gary Collie",
+      "party": "OTH",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T09:10:05Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Russell Bennett",
+      "party": "OTH",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T09:07:05Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Moira Deeming",
+      "party": "FF",
+      "status": "endorsed",
+      "source": null
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T06:37:20Z",
+      "type": "candidate_added",
+      "seat": "benambra",
+      "name": "Ollie Young",
+      "party": "ALP",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T06:37:20Z",
+      "type": "candidate_added",
+      "seat": "bentleigh",
+      "name": "Tony Vainoras",
+      "party": "OTH",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T06:37:20Z",
+      "type": "candidate_added",
+      "seat": "carrum",
+      "name": "Harley Mackenzie",
+      "party": "LCV",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T06:37:20Z",
+      "type": "candidate_added",
+      "seat": "evelyn",
+      "name": "Nofoao Thomas",
+      "party": "FF",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T06:37:20Z",
+      "type": "candidate_added",
+      "seat": "frankston",
+      "name": "Jeffrey Knipe",
+      "party": "LCV",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T06:37:20Z",
+      "type": "candidate_added",
+      "seat": "frankston",
+      "name": "Peter Nicholes",
+      "party": "FF",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T06:37:20Z",
+      "type": "candidate_added",
+      "seat": "gippsland-east",
+      "name": "Ricky Muir",
+      "party": "SFF",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T06:37:20Z",
+      "type": "candidate_added",
+      "seat": "greenvale",
+      "name": "Mazen John",
+      "party": "OTH",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T06:37:20Z",
+      "type": "candidate_added",
+      "seat": "laverton",
+      "name": "Jo Garcia",
+      "party": "FF",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T06:37:20Z",
+      "type": "candidate_added",
+      "seat": "laverton",
+      "name": "Suchithra Chittedi",
+      "party": "OTH",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T06:37:20Z",
+      "type": "candidate_added",
+      "seat": "lowan",
+      "name": "Lee-Ann Elmes",
+      "party": "FF",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T06:37:20Z",
+      "type": "candidate_added",
+      "seat": "mildura",
+      "name": "Stella Zigouras",
+      "party": "ALP",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T06:37:20Z",
+      "type": "candidate_added",
+      "seat": "mordialloc",
+      "name": "Lily Potucek",
+      "party": "FF",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T06:37:20Z",
+      "type": "candidate_added",
+      "seat": "nepean",
+      "name": "Surbhi Snowball",
+      "party": "ALP",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T06:37:20Z",
+      "type": "candidate_added",
+      "seat": "point-cook",
+      "name": "Keith Meure",
+      "party": "FF",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T06:37:20Z",
+      "type": "candidate_added",
+      "seat": "point-cook",
+      "name": "Kirti Alle",
+      "party": "OTH",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T06:37:20Z",
+      "type": "candidate_added",
+      "seat": "polwarth",
+      "name": "Brenton Carbins",
+      "party": "OTH",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T06:37:20Z",
+      "type": "candidate_added",
+      "seat": "preston",
+      "name": "Julio Valencia",
+      "party": "FF",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T06:37:20Z",
+      "type": "candidate_added",
+      "seat": "ringwood",
+      "name": "Elaine Huang",
+      "party": "FF",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T06:37:20Z",
+      "type": "candidate_added",
+      "seat": "shepparton",
+      "name": "Alison White",
+      "party": "FF",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T06:37:20Z",
+      "type": "candidate_added",
+      "seat": "tarneit",
+      "name": "Horizana Niyongabire",
+      "party": "FF",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T06:37:20Z",
+      "type": "candidate_added",
+      "seat": "tarneit",
+      "name": "Sindhu Sudhagani",
+      "party": "OTH",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T06:37:20Z",
+      "type": "candidate_added",
+      "seat": "thomastown",
+      "name": "Gavin Trewalla",
+      "party": "GRN",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:32:35Z",
+      "type": "candidate_superseded",
+      "seat": "sydenham",
+      "name": "Ashley Vandenburg",
+      "party": "IND",
+      "by": "Ashleigh Vandenberg"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_added",
+      "seat": "bayswater",
+      "name": "Gary Coombes",
+      "party": "FF",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_superseded",
+      "seat": "bendigo-east",
+      "name": "Owen Cosgriff",
+      "party": "VS",
+      "by": "Denali Norsen"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_superseded",
+      "seat": "bendigo-west",
+      "name": "Maree Edwards",
+      "party": "ALP",
+      "by": "Brenton Baldwin"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_superseded",
+      "seat": "broadmeadows",
+      "name": "Candace Feild",
+      "party": "AJP",
+      "by": "Rachel Unicomb"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_added",
+      "seat": "brunswick",
+      "name": "Gabe Steger",
+      "party": "ALP",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_added",
+      "seat": "brunswick",
+      "name": "Jack Amanatidis",
+      "party": "IND",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_added",
+      "seat": "eltham",
+      "name": "Jessie Weatherley",
+      "party": "ONP",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_superseded",
+      "seat": "evelyn",
+      "name": "Indah Johannes",
+      "party": "ALP",
+      "by": "Analise Sherlock"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_superseded",
+      "seat": "gippsland-south",
+      "name": "Sonny Stephens",
+      "party": "ALP",
+      "by": "Amy Barry-Macaulay"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_added",
+      "seat": "ivanhoe",
+      "name": "Wayne Hutchinson",
+      "party": "ONP",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_added",
+      "seat": "melbourne",
+      "name": "Rob McCathie",
+      "party": "LBT",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_added",
+      "seat": "melton",
+      "name": "Fiona Adin-James",
+      "party": "AJP",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_superseded",
+      "seat": "mill-park",
+      "name": "Tim Drylie",
+      "party": "GRN",
+      "by": "Binoy Zacharias"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_added",
+      "seat": "mordialloc",
+      "name": "Rachel Versteegen",
+      "party": "LBT",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_added",
+      "seat": "narre-warren-north",
+      "name": "Josh Utoyo",
+      "party": "LBT",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_added",
+      "seat": "nepean",
+      "name": "Tamara Champion",
+      "party": "AJP",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_added",
+      "seat": "niddrie",
+      "name": "Brett Patrikeos",
+      "party": "WEST",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_superseded",
+      "seat": "niddrie",
+      "name": "Elisabetta Celata",
+      "party": "WEST",
+      "by": "Brett Patrikeos"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_added",
+      "seat": "pakenham",
+      "name": "Mary-Kate Louis",
+      "party": "IND",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_superseded",
+      "seat": "preston",
+      "name": "Rachel Unicomb",
+      "party": "AJP",
+      "by": "Peita Collard"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_added",
+      "seat": "preston",
+      "name": "Zheng Chin",
+      "party": "IND",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_added",
+      "seat": "richmond",
+      "name": "Bernadette Gray",
+      "party": "LBT",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_added",
+      "seat": "ripon",
+      "name": "Bernard Quince",
+      "party": "IND",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_added",
+      "seat": "ripon",
+      "name": "Trevor Andrei",
+      "party": "IND",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_added",
+      "seat": "shepparton",
+      "name": "Lou Costa",
+      "party": "IND",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_added",
+      "seat": "sunbury",
+      "name": "Adam Bremner",
+      "party": "VS",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_added",
+      "seat": "sydenham",
+      "name": "Ashleigh Vandenberg",
+      "party": "IND",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_added",
+      "seat": "sydenham",
+      "name": "Matthew De Angelis",
+      "party": "IND",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_added",
+      "seat": "sydenham",
+      "name": "Nancy Batres-Croes",
+      "party": "FF",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_superseded",
+      "seat": "sydenham",
+      "name": "Nancy Croes",
+      "party": "FF",
+      "by": "Nancy Batres-Croes"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_added",
+      "seat": "tarneit",
+      "name": "Leah Van Keulen",
+      "party": "VS",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_added",
+      "seat": "warrandyte",
+      "name": "Rebecca Paterson",
+      "party": "ALP",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_added",
+      "seat": "williamstown",
+      "name": "Gill Gannon",
+      "party": "WEST",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "candidate_added",
+      "seat": "yan-yean",
+      "name": "Troy Cheers",
+      "party": "LBT",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "retirement",
+      "seat": "bendigo-west",
+      "name": "Maree Edwards"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "retirement",
+      "seat": "gippsland-east",
+      "name": "Tim Bull"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "retirement",
+      "seat": "ringwood",
+      "name": "Will Fowles"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T02:22:24Z",
+      "type": "retirement",
+      "seat": "shepparton",
+      "name": "Kim O'Keeffe"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Neil Davison",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Gianni Del Rosario-Makridis",
+      "party": "LCV",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Jack Corcoran",
+      "party": "SUS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "William Clow",
+      "party": "SUS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Bert Jessup",
+      "party": "SUS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Imad Hirmiz",
+      "party": "FF",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Meredith Lawrence",
+      "party": "SAL",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Peita Collard",
+      "party": "AJP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Chloe Beaton",
+      "party": "SAL",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Darren Saffin",
+      "party": "SAL",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Dorothy Lamond",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Kate White",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Wayne Taylor",
+      "party": "LCV",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Athol Thomas",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Gaelle Broad",
+      "party": "LNP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Rohan Tyler",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Brandon Hoult",
+      "party": "SUS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Tamara Champion",
+      "party": "AJP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Geoff Goddard",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Keeley Hopper",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Bettina Terry",
+      "party": "SUS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Catherine Holder",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Daniel O'Neill",
+      "party": "AJP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Zofia Pawlaczek",
+      "party": "LCV",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "April Worsley",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Kristina Kaulenas",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Dennis Bilic",
+      "party": "SUS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Roshena Campbell",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Shohre Mansouri",
+      "party": "AJP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Brett Patrikeos",
+      "party": "WEST",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Ben Nunquam",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Madeleine Wearne",
+      "party": "SUS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Peter Mitchell",
+      "party": "LCV",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Tim Gooden",
+      "party": "SAL",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Dominique Houzet",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Ian Chivers",
+      "party": "SUS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Sue Bull",
+      "party": "SAL",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Vaughan Williams",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Ross Smith",
+      "party": "SAL",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "albert-park",
+      "name": "Adrian King",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "albert-park",
+      "name": "Andrew Cook",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "albert-park",
+      "name": "Daniel O'Neill",
+      "party": "AJP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "albert-park",
+      "name": "Georgie Dragwidge",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "albert-park",
+      "name": "Tammy Lindrum",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "ashwood",
+      "name": "Hitendra Joshi",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "ashwood",
+      "name": "Steven Mitchell",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "bayswater",
+      "name": "Gary Coombs",
+      "party": "FF",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "bayswater",
+      "name": "Jess Kennedy",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "bayswater",
+      "name": "Kayte Bleakney",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "bayswater",
+      "name": "Mathew Clarke",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "bellarine",
+      "name": "Callum Whitehead",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "bellarine",
+      "name": "Mitch Pope",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "bellarine",
+      "name": "Ronan Keogh",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "bellarine",
+      "name": "Ross McRae",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "benambra",
+      "name": "Graham Parton",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "benambra",
+      "name": "Kellie Sheppard",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "bendigo-east",
+      "name": "Cheryl Hawken",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "bendigo-east",
+      "name": "Denali Norsen",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "bendigo-east",
+      "name": "Liz Wright",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "bendigo-east",
+      "name": "Michael Tolhurst",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "bendigo-east",
+      "name": "Tim Rickwood",
+      "party": "ALP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "bendigo-west",
+      "name": "Brenton Baldwin",
+      "party": "ALP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "bendigo-west",
+      "name": "David Hutchings",
+      "party": "NAT",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "bendigo-west",
+      "name": "Ellen Morgan",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "berwick",
+      "name": "Ethelyn King",
+      "party": "LBT",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "berwick",
+      "name": "Michael Piastrino",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "berwick",
+      "name": "Roshan De Silva",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "berwick",
+      "name": "Vincenzo De Paolis",
+      "party": "FF",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "box-hill",
+      "name": "Jamie Baker",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "box-hill",
+      "name": "Peter Fagg",
+      "party": "FF",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "brighton",
+      "name": "Alexander Fagan",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "brighton",
+      "name": "Anthony Hain",
+      "party": "LBT",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "brighton",
+      "name": "Bridget Mullahy",
+      "party": "ALP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "broadmeadows",
+      "name": "Baris Duzova",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "broadmeadows",
+      "name": "Ethan Keirs",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "broadmeadows",
+      "name": "Maryam Nasim",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "broadmeadows",
+      "name": "Rachel Unicomb",
+      "party": "AJP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "brunswick",
+      "name": "Adam Helman",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "brunswick",
+      "name": "India Rose",
+      "party": "AJP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "brunswick",
+      "name": "Mel Yuan",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "bulleen",
+      "name": "Greg Rublee",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "bulleen",
+      "name": "Mahdi Athari",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "bulleen",
+      "name": "Tim Dale",
+      "party": "ALP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "bulleen",
+      "name": "Tomas Lightbody",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "bundoora",
+      "name": "Bruce Whalley",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "bundoora",
+      "name": "Chloe Nicolosi",
+      "party": "AJP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "bundoora",
+      "name": "Chris Parr",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "bundoora",
+      "name": "Melissa Murphy-Webster",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "carrum",
+      "name": "Carolyn Moore",
+      "party": "AJP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "carrum",
+      "name": "Jeff Shelley",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "carrum",
+      "name": "Joshua Mathews",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "carrum",
+      "name": "Reema Ababneh",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "carrum",
+      "name": "Trevor Smith",
+      "party": "LBT",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "carrum",
+      "name": "Zoe Pegrum",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "caulfield",
+      "name": "Geneviève Gilbert",
+      "party": "FF",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "caulfield",
+      "name": "Michael Abelman",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "clarinda",
+      "name": "Caroline White",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "clarinda",
+      "name": "Conor Boyd-Eedle",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "clarinda",
+      "name": "Gavin Bain",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "clarinda",
+      "name": "John Paganis",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "clarinda",
+      "name": "Liam Roche",
+      "party": "LBT",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "cranbourne",
+      "name": "Andrew Hirst",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "cranbourne",
+      "name": "Gino Tripodi",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "cranbourne",
+      "name": "Shane Foreman",
+      "party": "FF",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "croydon",
+      "name": "Beth Grimshaw",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "croydon",
+      "name": "David Vanderwolf",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "croydon",
+      "name": "Glenn Brindley",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "dandenong",
+      "name": "Catherine D'Arcy",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "dandenong",
+      "name": "Glenda Wright",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "dandenong",
+      "name": "Jordan Forte",
+      "party": "LBT",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "dandenong",
+      "name": "William Billings",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "eildon",
+      "name": "Cindy McLeish",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "eildon",
+      "name": "Dylan Little",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "eildon",
+      "name": "Kevin Gibson",
+      "party": "ALP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "eildon",
+      "name": "Talia Gulpilil",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "eildon",
+      "name": "Tim Barber",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "eildon",
+      "name": "Tom Ward",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "eltham",
+      "name": "Jessie Weatherly",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "eltham",
+      "name": "Maeve Riches",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "eltham",
+      "name": "Steven Marasea",
+      "party": "LBT",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "essendon",
+      "name": "Ava Adams",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "essendon",
+      "name": "John Barnes",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "eureka",
+      "name": "Andy Raven",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "eureka",
+      "name": "Emma Muir",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "eureka",
+      "name": "Ian Harkness",
+      "party": "FF",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "eureka",
+      "name": "Paul Ballinger",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "euroa",
+      "name": "Karina Kelly",
+      "party": "AJP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "euroa",
+      "name": "Moussa Taouk",
+      "party": "FF",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "euroa",
+      "name": "Steve Campbell",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "euroa",
+      "name": "Zoe Lyle",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "evelyn",
+      "name": "Analise Sherlock",
+      "party": "ALP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "evelyn",
+      "name": "Daniel Killey",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "evelyn",
+      "name": "James Scanlon",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "evelyn",
+      "name": "Jan Heald",
+      "party": "AJP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "footscray",
+      "name": "Alexander Lopez",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "footscray",
+      "name": "Tim Chang",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "frankston",
+      "name": "Bree Ambry",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "frankston",
+      "name": "Julie Harman",
+      "party": "AJP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "frankston",
+      "name": "Paul Stafford",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "geelong",
+      "name": "Andy Pobjoy",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "geelong",
+      "name": "Bree Vanderpol",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "geelong",
+      "name": "John De Lorenzo",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "gippsland-east",
+      "name": "Amy Espeseth",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "gippsland-east",
+      "name": "Gemma Rendell",
+      "party": "NAT",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "gippsland-east",
+      "name": "Sonny Stephens",
+      "party": "ALP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "gippsland-east",
+      "name": "Steve Goodman",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "gippsland-south",
+      "name": "Amy Barry-Macaulay",
+      "party": "ALP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "gippsland-south",
+      "name": "Bianca Wilke",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "gippsland-south",
+      "name": "Danny O'Brien",
+      "party": "NAT",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "gippsland-south",
+      "name": "Lachie McGennisken",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "gippsland-south",
+      "name": "Phillip Schuhmann",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "glen-waverley",
+      "name": "Brad Cox",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "greenvale",
+      "name": "Chris Moore",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "greenvale",
+      "name": "Declan McGinness",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "greenvale",
+      "name": "Jim Overend",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "greenvale",
+      "name": "Rosanna Furina",
+      "party": "AJP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "hastings",
+      "name": "Michael Denman",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "hastings",
+      "name": "Peter Angelico",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "hawthorn",
+      "name": "Paul Pribilovics",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "ivanhoe",
+      "name": "Michelle Kennedy",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "ivanhoe",
+      "name": "Wayne Hutchins",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "kalkallo",
+      "name": "Eddie Dadisho",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "kalkallo",
+      "name": "Payal Tiwari",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "kalkallo",
+      "name": "Troy Steans",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "kew",
+      "name": "David Laird",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "kororoit",
+      "name": "Donna Southern",
+      "party": "WEST",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "kororoit",
+      "name": "Jack Chakoma",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "kororoit",
+      "name": "Joyce McDonald",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "kororoit",
+      "name": "Seva Melnikov",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "kororoit",
+      "name": "Vasundhara Kandpal",
+      "party": "AJP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "lara",
+      "name": "Oliver Randall",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "lara",
+      "name": "Stephen Spyros",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "laverton",
+      "name": "Ghada Noune",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "laverton",
+      "name": "Rufo Paredes",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "lowan",
+      "name": "Andrew Partridge",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "lowan",
+      "name": "Emma Kealy",
+      "party": "NAT",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "lowan",
+      "name": "Jeff Moran",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "lowan",
+      "name": "Jos Downey",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "lowan",
+      "name": "Lee Ann Elms",
+      "party": "FF",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "lowan",
+      "name": "Sue Pavlovich",
+      "party": "ALP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "macedon",
+      "name": "Catherine Wilson",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "macedon",
+      "name": "Damien Parolin",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "macedon",
+      "name": "Dom Bonanno",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "macedon",
+      "name": "Kate Kendall",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "macedon",
+      "name": "Michael Seton",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "macedon",
+      "name": "Natalie Korinfsky",
+      "party": "AJP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "malvern",
+      "name": "Christina Zigouras",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "malvern",
+      "name": "David Segal",
+      "party": "LBT",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "malvern",
+      "name": "Edward Bode",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "malvern",
+      "name": "Georgia Katsikis",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "melbourne",
+      "name": "Matthew Collins",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "melbourne",
+      "name": "Rafael Camillo",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "melbourne",
+      "name": "Rowan Tuckfield",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "melton",
+      "name": "Daire Kelly",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "melton",
+      "name": "Hayden Legro",
+      "party": "WEST",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "melton",
+      "name": "Marlene West",
+      "party": "FF",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "melton",
+      "name": "Matthew Katselis",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "mildura",
+      "name": "Ali Cupper",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "mildura",
+      "name": "Guy Cooper",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "mildura",
+      "name": "Jade Benham",
+      "party": "NAT",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "mildura",
+      "name": "Katie Clements",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "mildura",
+      "name": "Renee Nayef",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "mill-park",
+      "name": "Arthur Tsoutsoulis",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "mill-park",
+      "name": "Binoy Zacharias",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "mill-park",
+      "name": "Elizabeth Nealy",
+      "party": "ALP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "mill-park",
+      "name": "Eve Levens",
+      "party": "AJP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "mill-park",
+      "name": "Jesse Lambourn",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "monbulk",
+      "name": "Adrian Dowell",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "monbulk",
+      "name": "Alyssa Wormald",
+      "party": "AJP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "monbulk",
+      "name": "Craig Manners",
+      "party": "FF",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "monbulk",
+      "name": "Merran Blair",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "monbulk",
+      "name": "Noah Briggs",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "mordialloc",
+      "name": "Mahee Hossain",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "mordialloc",
+      "name": "Nadia Ticehurst",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "mordialloc",
+      "name": "Paul O'Halloran",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "mornington",
+      "name": "Ashli Beards",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "mornington",
+      "name": "Kerry Macdonald",
+      "party": "ALP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "morwell",
+      "name": "Casey Murphy",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "morwell",
+      "name": "Martin Cameron",
+      "party": "NAT",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "morwell",
+      "name": "Natalie Acreman",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "mulgrave",
+      "name": "Cody Rebbechi",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "mulgrave",
+      "name": "Fotini Theodossopoulou",
+      "party": "LBT",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "mulgrave",
+      "name": "Ian Cook",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "mulgrave",
+      "name": "Paul Schofield",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "murray-plains",
+      "name": "Asyiqin Sanif",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "murray-plains",
+      "name": "Christine Grundy",
+      "party": "ALP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "murray-plains",
+      "name": "Garner Smith",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "narracan",
+      "name": "Ben Lucas",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "narracan",
+      "name": "Geoff Dethlefs",
+      "party": "FF",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "narracan",
+      "name": "Jannette Langley",
+      "party": "ALP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "narracan",
+      "name": "Wayne Farnham",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "narre-warren-north",
+      "name": "Hayley Perry",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "narre-warren-north",
+      "name": "Lachlan McCracken",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "narre-warren-north",
+      "name": "Sebastian Crutchfield",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "narre-warren-north",
+      "name": "Shemane Nathanielsz",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "narre-warren-south",
+      "name": "Jill Nambu",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "narre-warren-south",
+      "name": "Lydia Denker",
+      "party": "LBT",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "narre-warren-south",
+      "name": "Norliah Peterson",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "narre-warren-south",
+      "name": "Scott Watson",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "narre-warren-south",
+      "name": "Stefan Koomen",
+      "party": "ALP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "narre-warren-south",
+      "name": "Trevor Hammond",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "nepean",
+      "name": "Kim Robbins",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "nepean",
+      "name": "Mike Brown",
+      "party": "FF",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "nepean",
+      "name": "Seth Willcocks",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "niddrie",
+      "name": "Brendan Laws",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "niddrie",
+      "name": "Jason Taverna",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "niddrie",
+      "name": "Lana Nguyen",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "niddrie",
+      "name": "Salomae Haselgrove",
+      "party": "AJP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "niddrie",
+      "name": "Samantha Byrne",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "northcote",
+      "name": "Lynda Awad",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "oakleigh",
+      "name": "Brooke Carter",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "oakleigh",
+      "name": "Hsiang Han-Hsieh",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "oakleigh",
+      "name": "Martin Jung",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "ovens-valley",
+      "name": "Ben Gilbert",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "ovens-valley",
+      "name": "Bronwyn Murphy",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "ovens-valley",
+      "name": "James Rouel",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "ovens-valley",
+      "name": "Julian Fidge",
+      "party": "LBT",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "ovens-valley",
+      "name": "Steve Manning",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "ovens-valley",
+      "name": "Tim McCurdy",
+      "party": "NAT",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "pakenham",
+      "name": "Kate Hands",
+      "party": "LBT",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "pakenham",
+      "name": "Radmila Dyson",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "pakenham",
+      "name": "Stephanie Grigg",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "pascoe-vale",
+      "name": "Andrew Forehan",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "pascoe-vale",
+      "name": "Kathrine Ashton",
+      "party": "FF",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "point-cook",
+      "name": "Cameron Reid",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "point-cook",
+      "name": "Mark Grech",
+      "party": "WEST",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "point-cook",
+      "name": "Raja Reddy",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "polwarth",
+      "name": "Anna Malcolm",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "polwarth",
+      "name": "Lula Tolley",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "polwarth",
+      "name": "Richard Riordan",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "prahran",
+      "name": "Shaun Virsu",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "preston",
+      "name": "Franco Guardiani",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "preston",
+      "name": "Hamza Al Katranji",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "preston",
+      "name": "Peita Collard",
+      "party": "AJP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "richmond",
+      "name": "Charles Aponso",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "richmond",
+      "name": "David Meyer",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "richmond",
+      "name": "Harrison Rindfleish",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "ringwood",
+      "name": "John O'Connor",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "ringwood",
+      "name": "Prue Cutts",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "ripon",
+      "name": "Donna Buxton",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "ripon",
+      "name": "Jeff Barry",
+      "party": "LBT",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "ripon",
+      "name": "Taylah Brennan-Jones",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "rowville",
+      "name": "Bradley Watt",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "rowville",
+      "name": "Dave Massey",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "rowville",
+      "name": "Scott Robson",
+      "party": "LBT",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "sandringham",
+      "name": "Anthony Blight",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "sandringham",
+      "name": "Lauren Stevenson",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "sandringham",
+      "name": "Timon Fotakis",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "shepparton",
+      "name": "Karen Hocking",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "shepparton",
+      "name": "Phillip Bryant",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "shepparton",
+      "name": "Shane Sali",
+      "party": "NAT",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "south-barwon",
+      "name": "Josh Geard",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "south-barwon",
+      "name": "Libby Pettit",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "south-barwon",
+      "name": "Madilyn Gorman",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "south-barwon",
+      "name": "Ron Nelson",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "south-west-coast",
+      "name": "Andrew Govanstone",
+      "party": "ALP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "south-west-coast",
+      "name": "Hera Sheppard",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "south-west-coast",
+      "name": "Richard Hughes",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "south-west-coast",
+      "name": "Roma Britnell",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "south-west-coast",
+      "name": "Silver Rose",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "south-west-coast",
+      "name": "Tamhas Buchan",
+      "party": "FF",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "st-albans",
+      "name": "Bao Huynh",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "st-albans",
+      "name": "John Cowell",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "st-albans",
+      "name": "Rob Dunstan",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "sunbury",
+      "name": "Elita Dabrowski",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "sunbury",
+      "name": "Lauren Granger-Brown",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "sydenham",
+      "name": "Ashley Vandenburg",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "sydenham",
+      "name": "Bruce Lancashire",
+      "party": "WEST",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "sydenham",
+      "name": "Joh Bauch",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "sydenham",
+      "name": "Maggie Jane",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "sydenham",
+      "name": "Maria Kerr",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "sydenham",
+      "name": "Nancy Croes",
+      "party": "FF",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "sydenham",
+      "name": "Nathalie Moussi",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "tarneit",
+      "name": "Leah Van Koulen",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "tarneit",
+      "name": "Maurita Rahn",
+      "party": "AJP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "tarneit",
+      "name": "Venkat Ram Upparlapalle",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "tarneit",
+      "name": "Walter Villagonzalo",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "thomastown",
+      "name": "Belinda Stojcevski",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "thomastown",
+      "name": "Nadia Anthony",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "warrandyte",
+      "name": "Caleb Schwab",
+      "party": "LBT",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "warrandyte",
+      "name": "Mark Burnside",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "warrandyte",
+      "name": "Vanessa Muradian",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "wendouree",
+      "name": "Chris Meagher",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "wendouree",
+      "name": "Ellen Burns",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "wendouree",
+      "name": "Gav Ronan",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "wendouree",
+      "name": "Melissa Collins",
+      "party": "AJP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "wendouree",
+      "name": "Ruth Byrne",
+      "party": "FF",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "wendouree",
+      "name": "Stuart Robinson",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "werribee",
+      "name": "Matthew Emerson",
+      "party": "FF",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "werribee",
+      "name": "Paul Pateras",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "williamstown",
+      "name": "Ben Hocking",
+      "party": "GRN",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "williamstown",
+      "name": "Catherine Loughnan",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "williamstown",
+      "name": "Paul Lindemann",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "williamstown",
+      "name": "Tony Briffa",
+      "party": "IND",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "yan-yean",
+      "name": "Amanda Dow",
+      "party": "LIB",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "yan-yean",
+      "name": "Andrew Bell",
+      "party": "VS",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "yan-yean",
+      "name": "Jeremy Johnson",
+      "party": "ONP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-10-30",
+      "at": "2026-10-30T01:18:52Z",
+      "type": "candidate_added",
+      "seat": "yan-yean",
+      "name": "Sinan Okatan",
+      "party": "AJP",
+      "status": "announced",
+      "source": "wikipedia"
+    }
+  ]
+}

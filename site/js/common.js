@@ -4,6 +4,9 @@
 (function () {
   "use strict";
 
+  // The site root (where index.html lives), so pages in subfolders such as data/ load the same files.
+  const ROOT = new URL("..", document.currentScript ? document.currentScript.src : location.href);
+
   // Colours are CSS variables (style.css); unlisted parties fall back to --p-oth.
   const PARTIES = {
     ALP: { name: "Labor", color: "--p-alp" },
@@ -45,7 +48,7 @@
 
   function loadJSON(name) {
     if (!cache[name]) {
-      cache[name] = fetch(`data/${name}.json`, { cache: "no-cache" }).then((r) => {
+      cache[name] = fetch(new URL(`data/${name}.json`, ROOT), { cache: "no-cache" }).then((r) => {
         if (!r.ok) throw new Error(`${name}.json: HTTP ${r.status}`);
         return r.json();
       });
@@ -578,7 +581,7 @@
       close();
       input.value = "";
       input.blur();
-      location.href = it.href;
+      location.href = new URL(it.href, ROOT).href;
     };
     const paint = () => {
       list.innerHTML = results.length ? results.map((it, i) => `
@@ -671,6 +674,91 @@
     }
   }
 
+  /* ---- "Download CSV" under every table (tables in map popups excepted) ---- */
+  // textContent, not innerText: innerText applies CSS (uppercase headers) and is empty inside closed <details>.
+  function csvCell(cell) {
+    const field = cell.querySelector("input, select");
+    const raw = cell.dataset.csv != null ? cell.dataset.csv : field ? field.value : cell.textContent;   // data-csv: explicit value
+    const text = raw.replace(/\s+/g, " ").trim();
+    return /[",\n]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
+  }
+
+  function tableToCsv(table) {
+    // Drop control columns (the My seats star) from every row, header included.
+    const first = table.tBodies[0] && table.tBodies[0].rows[0];
+    const skip = new Set(first ? [...first.cells].map((c, i) => (c.classList.contains("star-cell") ? i : -1)).filter((i) => i >= 0) : []);
+    return [...table.rows].map((row) => [...row.cells].filter((c, i) => !skip.has(i)).map(csvCell).join(",")).join("\r\n");
+  }
+
+  // Named after the nearest heading above the table, e.g. "sydenham-voting-centres-2026-10-31.csv".
+  function csvFilename(table) {
+    let heading = null;
+    for (let el = table.closest(".table-scroll, details") || table; el && !heading; el = el.parentElement) {
+      for (let sib = el.previousElementSibling; sib && !heading; sib = sib.previousElementSibling) {
+        heading = /^H[1-4]$/.test(sib.tagName) ? sib : [...sib.querySelectorAll("h1, h2, h3, h4")].pop() || null;
+      }
+      if (el.matches && el.matches("main")) break;
+    }
+    const base = slugify((heading && heading.textContent) || "table");
+    const page = slugify(document.title.split("·")[0]);
+    return `${page && !base.startsWith(page) ? `${page}-` : ""}${base}-${melbourneToday()}.csv`;
+  }
+
+  function addCsvButtons() {
+    document.querySelectorAll("main table:not([data-csv])").forEach((table) => {
+      table.dataset.csv = "1";
+      if (table.closest(".leaflet-container") || table.dataset.noCsv != null) return;
+      const bar = document.createElement("div");
+      bar.className = "csv-bar";
+      bar.innerHTML = '<button type="button" class="icon-btn csv-btn">Download CSV</button>';
+      bar.querySelector("button").addEventListener("click", () => {
+        // The byte-order mark makes Excel read the file as UTF-8.
+        const blob = new Blob(["﻿" + tableToCsv(table)], { type: "text/csv;charset=utf-8" });
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = csvFilename(table);
+        document.body.append(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+      });
+      (table.closest(".table-scroll") || table).insertAdjacentElement("afterend", bar);
+    });
+  }
+
+  let csvQueued = false;
+  new MutationObserver(() => {
+    if (csvQueued) return;
+    csvQueued = true;
+    setTimeout(() => { csvQueued = false; addCsvButtons(); }, 50);
+  }).observe(document.documentElement, { childList: true, subtree: true });
+
+  /* ---- Change log entries (data/changelog.json) as one line of HTML ---- */
+  // names: {seat id -> display name}
+  function describeChange(e, names) {
+    const seat = (id) => (id ? escapeHtml(names[id] || id) : "");
+    const seatLink = (id) => (id ? `<a href="${new URL(`${/-(metropolitan|victoria)$/.test(id) ? "upper" : "lower"}.html#${id}`, ROOT).href}">${seat(id)}</a>` : "");
+    const who = (name, party) => `${escapeHtml(name)} <span class="muted">(${escapeHtml(partyName(party))})</span>`;
+    switch (e.type) {
+      case "candidate_added":
+        return `New candidate: <a href="${new URL(`candidate.html#${candidateId(e.seat, e.name)}`, ROOT).href}">${escapeHtml(e.name)}</a> <span class="muted">(${escapeHtml(partyName(e.party))})</span> in ${seatLink(e.seat)}${e.source === "abc" ? ", from the ABC guide" : e.source === "wikipedia" ? ", from Wikipedia" : ""}`;
+      case "candidate_superseded":
+        return `${who(e.name, e.party)} replaced${e.by ? ` by ${escapeHtml(e.by)}` : ""} in ${seatLink(e.seat)}`;
+      case "candidate_withdrawn":
+        return `${who(e.name, e.party)} withdrew in ${seatLink(e.seat)}`;
+      case "poll_added":
+        return `New poll: <a href="${new URL(`poll.html#${e.id}`, ROOT).href}">${escapeHtml(e.pollster)}</a>, fieldwork to ${escapeHtml(fmtDate(e.end_date))}${e.tpp != null ? `, L/NP 2PP ${escapeHtml(e.tpp)}` : ""}`;
+      case "odds_move":
+        return `${seatLink(e.seat)}: Sportsbet price for ${escapeHtml(e.label)} ${e.to < e.from ? "shortened" : "drifted"} from ${fmtPrice(e.from)} to ${fmtPrice(e.to)}`;
+      case "retirement":
+        return `${escapeHtml(e.name || "The sitting member")} is retiring (${seatLink(e.seat)})`;
+      case "news":
+        return `${e.count} new headline${e.count === 1 ? "" : "s"} collected for seat and statewide news`;
+      default:
+        return escapeHtml(e.type);
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     initTheme();
     initSearch();
@@ -691,6 +779,7 @@
     getWatchlist, setWatchlist, isWatched, toggleWatch, starButton, storageWorks,
     buildSearchIndex, searchItems,
     candidateId, givenFirst, loadHeadshots, avatar, photoCredits, initials, inkFor, newsList,
+    ROOT, describeChange, tableToCsv,
     profileHref, profileLink, isPlaceholder, buildPeople, loadPeople,
   };
 })();

@@ -183,6 +183,7 @@
         <div class="card-actions">
           ${d.abc_url ? `<a class="icon-btn" href="${escapeHtml(d.abc_url)}" target="_blank" rel="noopener">ABC guide ↗</a>` : ""}
           <button class="icon-btn" type="button" id="copy-link">Copy link</button>
+          <button class="icon-btn" type="button" id="share-seat" title="Share or download a 1200x630 image of this seat">Share</button>
         </div>
       </div>
       <div class="facts">
@@ -209,8 +210,7 @@
             </li>`).join("")}
         </ul>
         <p class="muted small" style="margin-top:8px">Last checked ${escapeHtml(fmtDate(cands.map((c) => c.updated).filter(Boolean).sort().pop()))}</p>
-        ${App.photoCredits(shots, cands.map((c) => [d.id, c.name]))}
-        <details class="sharecard-wrap" id="seat-share-wrap"><summary>Share card for this seat</summary><div class="sharecard" id="seat-share"></div></details>`
+        ${App.photoCredits(shots, cands.map((c) => [d.id, c.name]))}`
         : '<p class="empty">No candidates recorded yet.</p>'}
       ${App.Htv ? App.Htv.section(htv, { district: d.id, margin: d.margin, parties: cands.filter((c) => !isInactive(c)).map((c) => c.party) }) : ""}
       <section class="seat-news" aria-labelledby="news-h">
@@ -223,17 +223,11 @@
         <p class="empty">Loading 2022 results…</p>
       </section>`;
     $("copy-link").addEventListener("click", (e) => copyLink(e.currentTarget));
-    const shareWrap = $("seat-share-wrap");
-    if (shareWrap) shareWrap.addEventListener("toggle", () => {
-      if (!shareWrap.open || shareWrap.dataset.drawn) return;
-      shareWrap.dataset.drawn = "1";
-      const running = cands.filter((c) => !isInactive(c));
-      App.ShareCard.mount($("seat-share"), {
-        draw: (canvas) => App.ShareCard.drawSeat(canvas, { seat: d, people: running, shots }),
-        filename: `${d.id}.png`,
-        title: `${d.name}: who is standing`,
-      });
-    });
+    App.ShareCard.shareButton($("share-seat"), async () => App.ShareCard.seatCard({
+      seat: d, cands: cands.filter((c) => !isInactive(c)), shots, classification: seatLabel(d),
+      odds: outlook.odds && (outlook.odds.seats || []).find((x) => x.district === d.id),
+      oddsDate: outlook.odds && outlook.odds.date_checked,
+    }));
     renderResults2022(d);
   }
 

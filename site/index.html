@@ -27,6 +27,7 @@
         <a href="timeline.html">Timeline</a>
         <a href="myseats.html">My seats</a>
         <a href="about.html">About</a>
+        <a href="data/">Data</a>
       </nav>
       <button id="theme-toggle" class="icon-btn" type="button">Theme</button>
     </div>
@@ -37,7 +38,8 @@
 
     <section class="hero">
       <h1>2026 Victorian state election</h1>
-      <p class="muted"><span id="election-date">Polling day</span> · <span id="countdown" class="countdown"></span></p>
+      <p class="muted"><span id="election-date">Polling day</span> · <span id="countdown" class="countdown"></span>
+        <button type="button" class="icon-btn hero-share" id="share-home" title="Share or download a 1200x630 image of the poll average and seat projection">Share</button></p>
     </section>
 
     <section class="card map-card" id="state-map" aria-labelledby="map-title">
@@ -95,6 +97,11 @@
       <div class="table-scroll" id="polls-table"><p class="empty">Loading…</p></div>
     </section>
 
+    <section class="card" aria-labelledby="changes-title">
+      <div class="card-head"><h2 id="changes-title">What changed</h2><a class="small" href="changes.html">All changes</a></div>
+      <ul class="ch-list" id="latest-changes"><li class="empty">Loading…</li></ul>
+    </section>
+
     <section class="card" aria-labelledby="news-title">
       <div class="card-head"><h2 id="news-title">Election news</h2><span class="muted small" id="news-updated"></span></div>
       <div id="news-statewide"><p class="empty">Loading…</p></div>
@@ -112,7 +119,9 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" integrity="sha384-bs/nf9FbdNouRbMiFcrcZfLXYPKiPaGVGplVbv7dLGECccEXDW+S3zjqSKR5ZEaD" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" integrity="sha384-NElt3Op+9NBMCYaef5HxeJmU4Xeard/Lku8ek6hoPTvYkQPh3zLIrJP7KiRocsxO" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.11/html-to-image.min.js" integrity="sha512-7tWCgq9tTYS/QkGVyKrtLpqAoMV9XIUxoou+sPUypsaZx56cYR/qio84fPK9EvJJtKvJEwt7vkn6je5UVzGevw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/common.js"></script>
+  <script src="js/sharecard.js"></script>
   <script src="js/maps.js"></script>
   <script src="js/home.js"></script>
 </body>

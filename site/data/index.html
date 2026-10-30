@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data downloads · Vic Election 2026</title>
+  <meta name="description" content="Download the tracker's data files: what each contains, its fields, and how you can reuse it.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d4ed8'/%3E%3Cpath d='M8 17l5 5 11-12' stroke='white' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../index.html">Vic Election <span>2026</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="../index.html">Home</a>
+        <a href="../lower.html">Lower house</a>
+        <a href="../upper.html">Upper house</a>
+        <a href="../candidate.html">Candidates</a>
+        <a href="../pendulum.html">Pendulum</a>
+        <a href="../poll.html">Polls</a>
+        <a href="../timeline.html">Timeline</a>
+        <a href="../changes.html">Changes</a>
+        <a href="../myseats.html">My seats</a>
+        <a href="../about.html">About</a>
+        <a href="./" aria-current="page">Data</a>
+      </nav>
+      <button id="theme-toggle" class="icon-btn" type="button">Theme</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="sample-banner" class="banner" hidden></div>
+
+    <section class="hero">
+      <h1>Data downloads</h1>
+      <p class="muted">Every file the tracker is built from, as JSON. Each file starts with a <code>_schema</code> block describing its fields; open "Fields" to read it here. Tables on every page also have a "Download CSV" button.</p>
+    </section>
+
+    <section class="card" aria-labelledby="licence-h">
+      <h2 id="licence-h">Licence and credit</h2>
+      <p>Unless a file says otherwise below, the data is licensed <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 (CC BY 4.0)</a>. Reuse it freely, crediting: <strong id="attribution">Vic Election 2026 tracker</strong>.</p>
+      <ul class="small">
+        <li>Electoral boundaries, districts, regions, 2022 results and the how-to-vote register come from the <a href="https://www.vec.vic.gov.au/">Victorian Electoral Commission</a>; credit the VEC.</li>
+        <li>Margins, classifications and lower-house candidate lists come from the <a href="https://www.abc.net.au/news/elections/vic/2026/guide/electorates">ABC election guide</a>; credit ABC News. The tracker stores facts only and links to the ABC's pages.</li>
+        <li>Data drawn from Wikipedia (polls, some candidates, 2022 swings) is <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>: share those parts alike.</li>
+        <li>Photos, headlines and how-to-vote cards belong to their owners and aren't covered by this licence.</li>
+        <li>Election-night results from the VEC's media feed are not offered here: that feed is covered by the VEC's own terms of use.</li>
+      </ul>
+    </section>
+
+    <section class="card" aria-labelledby="files-h">
+      <h2 id="files-h">Files</h2>
+      <div class="table-scroll"><table data-no-csv>
+        <thead><tr><th>File</th><th>Contents</th><th>Source and credit</th></tr></thead>
+        <tbody id="data-files"></tbody>
+      </table></div>
+      <p class="muted small">Most files refresh daily; see <a href="../about.html">About</a> for each source's schedule and <a href="../changes.html">What changed</a> for each refresh's changes.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p id="last-updated">Data last updated: loading…</p>
+      <p><a href="../about.html">About and methodology</a> · Data: VEC, ABC, Wikipedia, Vicmap. Corrections welcome.</p>
+    </div>
+  </footer>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/datafiles.js"></script>
+</body>
+</html>
