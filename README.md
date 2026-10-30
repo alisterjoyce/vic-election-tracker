@@ -28,7 +28,7 @@ site/                  # published by Netlify
     polls.json         # written by scripts/refresh.py
     meta.json          # last_updated, source status, sample-data flags
     seat_models.json   # MRP seat estimates (manual; YouGov Jun-Jul 2026, DemosAU slot)
-    seat_odds.json     # Sportsbet seat favourites (auto if fetchable, else manual)
+    seat_odds.json     # Sportsbet seat markets: every option and price, favourite (manual; entered from 30 Oct 2026 screenshots)
     seat_polls.json    # single-seat polls (manual; empty until one is published)
 scripts/refresh.py     # data refresh
 .github/workflows/refresh.yml

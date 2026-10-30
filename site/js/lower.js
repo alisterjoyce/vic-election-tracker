@@ -82,11 +82,18 @@
     const odds = outlook.odds;
     const seatOdds = odds && (odds.seats || []).find((x) => x.district === d.id);
     let oddsCell;
-    if (seatOdds && seatOdds.favourite) {
-      const fav = App.PARTIES[seatOdds.favourite] ? partyBadge(seatOdds.favourite) : escapeHtml(seatOdds.favourite);
+    const price = (p) => `$${Number(p).toFixed(2)}`;
+    const favLabel = (code, candidate) => (candidate ? `${escapeHtml(candidate)} (Ind)`
+      : App.PARTIES[code] ? partyBadge(code) : escapeHtml(code));
+    if (seatOdds && (seatOdds.favourite || seatOdds.joint_favourites || (seatOdds.options || []).length)) {
       const date = seatOdds.date_checked || odds.date_checked;
-      oddsCell = `${fav}${seatOdds.price != null ? ` $${Number(seatOdds.price).toFixed(2)}` : ""}
-        <span class="muted small">${escapeHtml(odds.source || "")}${date ? `, as at ${escapeHtml(fmtDate(date))}` : ""}</span>`;
+      let head;
+      if (seatOdds.favourite) head = `${favLabel(seatOdds.favourite, seatOdds.favourite_candidate)} ${price(seatOdds.price)}`;
+      else if (seatOdds.joint_favourites) head = `${seatOdds.joint_favourites.map((p) => favLabel(p)).join(" / ")} ${price(seatOdds.price)} <span class="muted small">(joint favourites)</span>`;
+      else head = '<span class="muted">favourite not visible (partial market)</span>';
+      const market = (seatOdds.options || []).map((o) => `${escapeHtml(o.label)} ${price(o.price)}`).join(" · ");
+      oddsCell = `${head} <span class="muted small">${escapeHtml(odds.source || "")}${date ? `, as at ${escapeHtml(fmtDate(date))}` : ""}</span>
+        ${market ? `<div class="muted small">${market}${seatOdds.more_options_hidden ? " · more options not shown" : ""}</div>` : ""}`;
     } else {
       oddsCell = '<span class="muted">not recorded</span>';
     }

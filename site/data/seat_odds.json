@@ -1,456 +1,2764 @@
 {
   "_schema": {
-    "description": "Sportsbet seat-market favourite per district. scripts/refresh.py tries to fetch the Sportsbet Victorian election seat markets each day; if the site is blocked or unrecognised the file is treated as manual and the last values are kept. Edit by hand when checking prices.",
+    "description": "Sportsbet 'Victorian State Election - Seat Betting' markets per district. Entered by hand from screenshots of the page taken 30 Oct 2026 (Sportsbet blocks automated fetching, so refresh.py keeps this file as manual). 'Any Other' options are recorded but never count as favourite.",
     "fields": {
       "source": "Bookmaker the prices come from",
-      "mode": "auto (last values fetched by refresh.py) | manual (entered or kept by hand)",
-      "date_checked": "YYYY-MM-DD the prices were last checked (shown as \"as at <date>\"), or null if never",
-      "seats": "[{district, favourite (party code or candidate name), price (decimal odds, e.g. 1.40), date_checked (optional per-seat override)}]"
+      "source_url": "The seat betting page",
+      "mode": "manual (entered or kept by hand) | auto (last values fetched by refresh.py)",
+      "date_checked": "YYYY-MM-DD the prices were taken (shown as 'as at <date>')",
+      "seats": "One per district: {district, favourite (party code, or null if partial or a joint favourite), price (favourite's decimal price), joint_favourites (party codes when the shortest price is shared), favourite_candidate (when the favourite is a named independent), options: [{label as shown, party code or null for 'Any Other', candidate (named independents), price}], partial (true when the shortest-priced options were cut off), more_options_hidden (true when Sportsbet folded further, longer-priced options under 'Show All'), date_checked}"
     }
   },
   "source": "Sportsbet",
   "mode": "manual",
-  "date_checked": null,
+  "date_checked": "2026-10-30",
   "seats": [
     {
       "district": "albert-park",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 1.57,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.57
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 3.75
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 5.0
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 12.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 36.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "ashwood",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.36,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.36
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 3.3
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 10.0
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 26.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 26.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "bass",
-      "favourite": null,
-      "price": null
+      "favourite": "ONP",
+      "price": 1.67,
+      "options": [
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 1.67
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 2.0
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 18.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 26.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "bayswater",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.14,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.14
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 6.0
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 7.5
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 51.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 67.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "bellarine",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 2.0,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 2.0
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 2.5
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 4.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 18.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "benambra",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.72,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.72
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 2.2
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 34.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 6.5
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "bendigo-east",
-      "favourite": null,
-      "price": null
+      "favourite": "NAT",
+      "price": 1.43,
+      "options": [
+        {
+          "label": "Nationals",
+          "party": "NAT",
+          "price": 1.43
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 2.62
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 13.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 31.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "bendigo-west",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 2.0,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 2.0
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 2.1
+        },
+        {
+          "label": "Nationals",
+          "party": "NAT",
+          "price": 6.0
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 41.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 34.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "bentleigh",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.67,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.67
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 2.25
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 11.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 23.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "berwick",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.14,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.14
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 6.0
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 8.5
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 34.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "box-hill",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.36,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.36
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 3.0
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 12.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 18.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "brighton",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.04,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.04
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 15.0
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 21.0
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 26.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 23.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "broadmeadows",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 1.12,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.12
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 6.0
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 12.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 15.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "brunswick",
-      "favourite": null,
-      "price": null
+      "favourite": "GRN",
+      "price": 1.14,
+      "options": [
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 1.14
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 4.33
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 15.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "bulleen",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.04,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.04
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 8.5
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 13.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 26.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "bundoora",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 1.33,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.33
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 4.5
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 5.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 26.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "carrum",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 2.25,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 2.25
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 2.4
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 3.5
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 34.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "caulfield",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.06,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.06
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 10.0
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 12.0
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 34.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 31.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "clarinda",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 1.53,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.53
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 3.3
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 5.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 26.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "cranbourne",
-      "favourite": null,
-      "price": null
+      "favourite": "ONP",
+      "price": 1.91,
+      "options": [
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 1.91
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 2.2
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 5.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 41.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "croydon",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.22,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.22
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 4.33
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 8.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 34.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "dandenong",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 1.11,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.11
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 5.5
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 14.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 36.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "eildon",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.3,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.3
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 3.25
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 21.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 21.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "eltham",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 2.0,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 2.0
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 2.1
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 6.5
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 34.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 34.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "essendon",
       "favourite": null,
-      "price": null
+      "price": 2.4,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 2.4
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 2.4
+        },
+        {
+          "label": "Independent (Oscar Yildiz)",
+          "party": "IND",
+          "candidate": "Oscar Yildiz",
+          "price": 6.0
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 8.0
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 14.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30",
+      "joint_favourites": [
+        "ALP",
+        "LIB"
+      ],
+      "more_options_hidden": true
     },
     {
       "district": "eureka",
-      "favourite": null,
-      "price": null
+      "favourite": "ONP",
+      "price": 1.91,
+      "options": [
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 1.91
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 3.1
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 3.5
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 18.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "euroa",
-      "favourite": null,
-      "price": null
+      "favourite": "NAT",
+      "price": 1.3,
+      "options": [
+        {
+          "label": "Nationals",
+          "party": "NAT",
+          "price": 1.3
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 3.3
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 15.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 21.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "evelyn",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.08,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.08
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 6.0
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 21.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 34.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "footscray",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 1.4,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.4
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 3.5
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 10.0
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 26.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 11.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "frankston",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 1.91,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.91
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 2.88
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 3.6
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 26.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "geelong",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 1.36,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.36
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 4.0
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 7.0
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 26.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 31.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "gippsland-east",
-      "favourite": null,
-      "price": null
+      "favourite": "NAT",
+      "price": 1.22,
+      "options": [
+        {
+          "label": "Nationals",
+          "party": "NAT",
+          "price": 1.22
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 3.5
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 26.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 46.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "gippsland-south",
-      "favourite": null,
-      "price": null
+      "favourite": "NAT",
+      "price": 1.17,
+      "options": [
+        {
+          "label": "Nationals",
+          "party": "NAT",
+          "price": 1.17
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 4.0
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 21.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 34.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "glen-waverley",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.14,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.14
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 5.0
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 12.0
+        },
+        {
+          "label": "Independent (Nicholas Siow)",
+          "party": "IND",
+          "candidate": "Nicholas Siow",
+          "price": 36.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 51.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "greenvale",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 1.67,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.67
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 3.0
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 4.5
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 34.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "hastings",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.57,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.57
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 2.63
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 7.5
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 51.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 51.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "hawthorn",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.12,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.12
+        },
+        {
+          "label": "Independent (Shima Ibuki)",
+          "party": "IND",
+          "candidate": "Shima Ibuki",
+          "price": 7.0
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 12.0
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 18.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 21.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "ivanhoe",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 1.4,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.4
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 4.5
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 6.0
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 14.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 36.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "kalkallo",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 1.2,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.2
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 4.0
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 15.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 36.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "kew",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.07,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.07
+        },
+        {
+          "label": "Independent (Sophie Torney)",
+          "party": "IND",
+          "candidate": "Sophie Torney",
+          "price": 8.0
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 20.0
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 26.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 36.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "kororoit",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 1.57,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.57
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 3.1
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 5.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 34.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "lara",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 1.28,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.28
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 3.4
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 15.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 26.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "laverton",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 1.11,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.11
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 5.0
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 21.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 36.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "lowan",
-      "favourite": null,
-      "price": null
+      "favourite": "NAT",
+      "price": 1.2,
+      "options": [
+        {
+          "label": "Nationals",
+          "party": "NAT",
+          "price": 1.2
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 3.5
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 46.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 36.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "macedon",
-      "favourite": null,
-      "price": null
+      "favourite": "ONP",
+      "price": 2.2,
+      "options": [
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 2.2
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 2.7
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 3.4
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 46.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 26.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "malvern",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.08,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.08
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 12.0
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 19.0
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 23.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 15.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "melbourne",
-      "favourite": null,
-      "price": null
+      "favourite": "GRN",
+      "price": 1.22,
+      "options": [
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 1.22
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 3.5
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 36.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 31.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "melton",
-      "favourite": null,
-      "price": null
+      "favourite": "ONP",
+      "price": 1.72,
+      "options": [
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 1.72
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 3.1
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 4.0
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 51.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 34.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "mildura",
-      "favourite": null,
-      "price": null
+      "favourite": "NAT",
+      "price": 1.45,
+      "options": [
+        {
+          "label": "Nationals",
+          "party": "NAT",
+          "price": 1.45
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 3.0
+        },
+        {
+          "label": "Independent (Ali Cupper)",
+          "party": "IND",
+          "candidate": "Ali Cupper",
+          "price": 8.0
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 36.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 26.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "mill-park",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 1.8,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.8
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 2.7
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 4.33
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 46.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "monbulk",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 2.0,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 2.0
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 2.63
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 4.5
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 15.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 21.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "mordialloc",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 2.0,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 2.0
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 2.88
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 3.3
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 23.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "mornington",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.04,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.04
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 7.0
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 34.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 34.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "morwell",
-      "favourite": null,
-      "price": null
+      "favourite": "ONP",
+      "price": 1.83,
+      "options": [
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 1.83
+        },
+        {
+          "label": "Nationals",
+          "party": "NAT",
+          "price": 2.63
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 5.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 15.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "mulgrave",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 1.72,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.72
+        },
+        {
+          "label": "Independent (Ian Cook)",
+          "party": "IND",
+          "candidate": "Ian Cook",
+          "price": 4.0
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 5.0
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 6.5
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 36.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "murray-plains",
-      "favourite": null,
-      "price": null
+      "favourite": "NAT",
+      "price": 1.1,
+      "options": [
+        {
+          "label": "Nationals",
+          "party": "NAT",
+          "price": 1.1
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 4.5
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 51.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 51.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "narracan",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.25,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.25
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 3.5
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 34.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 15.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "narre-warren-north",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 1.91,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.91
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 2.88
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 3.6
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 34.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "narre-warren-south",
       "favourite": null,
-      "price": null
+      "price": 2.25,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 2.25
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 2.25
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 3.75
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 34.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30",
+      "joint_favourites": [
+        "ALP",
+        "ONP"
+      ]
     },
     {
       "district": "nepean",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.04,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.04
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 8.0
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 34.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 26.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "niddrie",
       "favourite": null,
-      "price": null
+      "price": 1.91,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.91
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.91
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 7.5
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 51.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 67.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30",
+      "joint_favourites": [
+        "ALP",
+        "LIB"
+      ]
     },
     {
       "district": "northcote",
-      "favourite": null,
-      "price": null
+      "favourite": "GRN",
+      "price": 1.4,
+      "options": [
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 1.4
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 2.88
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 15.0
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 21.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 36.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "oakleigh",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 1.57,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.57
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 3.0
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 6.5
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 26.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 26.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "ovens-valley",
-      "favourite": null,
-      "price": null
+      "favourite": "NAT",
+      "price": 1.12,
+      "options": [
+        {
+          "label": "Nationals",
+          "party": "NAT",
+          "price": 1.12
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 4.33
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 51.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 51.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "pakenham",
-      "favourite": null,
-      "price": null
+      "favourite": "ONP",
+      "price": 1.4,
+      "options": [
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 1.4
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 3.0
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 10.0
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 51.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 36.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "pascoe-vale",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 1.53,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.53
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 2.8
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 8.5
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 21.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 36.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "point-cook",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 1.83,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.83
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 2.8
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 4.33
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 23.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "polwarth",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.5,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.5
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 3.1
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 8.5
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 18.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 23.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "prahran",
-      "favourite": null,
-      "price": null
+      "favourite": "GRN",
+      "price": 1.45,
+      "options": [
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 1.45
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 2.88
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 10.0
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 34.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 46.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "preston",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 1.36,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.36
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 3.75
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 14.0
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 18.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 15.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "richmond",
-      "favourite": null,
-      "price": null
+      "favourite": "GRN",
+      "price": 1.33,
+      "options": [
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 1.33
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 3.1
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 11.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "ringwood",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.8,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.8
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 3.0
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 6.0
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 34.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 9.5
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "ripon",
-      "favourite": null,
-      "price": null
+      "favourite": "ONP",
+      "price": 1.57,
+      "options": [
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 1.57
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 2.7
+        },
+        {
+          "label": "Nationals",
+          "party": "NAT",
+          "price": 8.5
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 15.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 67.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30",
+      "more_options_hidden": true
     },
     {
       "district": "rowville",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.28,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.28
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 4.0
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 9.5
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 23.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "sandringham",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.04,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.04
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 13.0
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 21.0
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 26.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 26.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "shepparton",
-      "favourite": null,
-      "price": null
+      "favourite": "NAT",
+      "price": 1.57,
+      "options": [
+        {
+          "label": "Nationals",
+          "party": "NAT",
+          "price": 1.57
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 2.4
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 36.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 9.5
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "south-barwon",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 2.62,
+      "options": [
+        {
+          "label": "Liberals",
+          "party": "LIB",
+          "price": 2.62
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 2.7
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 2.88
+        },
+        {
+          "label": "Independent (Ron Nelson)",
+          "party": "IND",
+          "candidate": "Ron Nelson",
+          "price": 11.0
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 51.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30",
+      "more_options_hidden": true
     },
     {
       "district": "south-west-coast",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.22,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.22
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 3.5
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 36.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 18.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "st-albans",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 1.91,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.91
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 2.5
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 4.33
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 34.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "sunbury",
-      "favourite": null,
-      "price": null
+      "favourite": "ONP",
+      "price": 1.5,
+      "options": [
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 1.5
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 4.0
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 4.33
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 51.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 51.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "sydenham",
-      "favourite": null,
-      "price": null
+      "favourite": "ONP",
+      "price": 1.67,
+      "options": [
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 1.67
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 3.3
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 4.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 36.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "tarneit",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 1.33,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.33
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 4.33
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 6.5
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 21.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "thomastown",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 1.2,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.2
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 4.5
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 9.5
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 34.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "warrandyte",
-      "favourite": null,
-      "price": null
+      "favourite": "LIB",
+      "price": 1.04,
+      "options": [
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 1.04
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 8.0
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 26.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 34.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "wendouree",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 2.0,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 2.0
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 2.2
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 5.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 26.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "werribee",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 2.2,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 2.2
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 2.7
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 4.33
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 8.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     },
     {
       "district": "williamstown",
-      "favourite": null,
-      "price": null
+      "favourite": "ALP",
+      "price": 1.67,
+      "options": [
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 1.67
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 3.75
+        },
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 7.0
+        },
+        {
+          "label": "Independent (Tony Briffa)",
+          "party": "IND",
+          "candidate": "Tony Briffa",
+          "price": 8.0
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 26.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30",
+      "more_options_hidden": true
     },
     {
       "district": "yan-yean",
-      "favourite": null,
-      "price": null
+      "favourite": "ONP",
+      "price": 1.72,
+      "options": [
+        {
+          "label": "One Nation",
+          "party": "ONP",
+          "price": 1.72
+        },
+        {
+          "label": "Liberal",
+          "party": "LIB",
+          "price": 2.37
+        },
+        {
+          "label": "Labor",
+          "party": "ALP",
+          "price": 6.0
+        },
+        {
+          "label": "Greens",
+          "party": "GRN",
+          "price": 51.0
+        },
+        {
+          "label": "Any Other",
+          "party": null,
+          "price": 51.0
+        }
+      ],
+      "partial": false,
+      "date_checked": "2026-10-30"
     }
-  ]
+  ],
+  "source_url": "https://www.sportsbet.com.au/betting/politics/vic-politics/victorian-state-election-seat-betting-10944986"
 }
