@@ -152,6 +152,15 @@
       } else {
         footer.textContent = "Data last updated: unknown";
       }
+      const rec = meta && meta.reconciliation;
+      if (rec && rec.date) {
+        const p = document.createElement("p");
+        const total = rec.tracked_all ?? (rec.totals && rec.totals.tracker);
+        p.textContent = `${Number(total).toLocaleString("en-AU")} candidates tracked, last reconciled ${fmtDate(rec.date)}`;
+        p.title = `Lower house: ${rec.totals.tracker} in the tracker, ${rec.totals.abc_list} on the ABC list; ` +
+          `${rec.only_in_tracker} only in the tracker, ${rec.only_on_abc} only on the ABC list`;
+        footer.after(p);
+      }
     }
 
     const banner = document.getElementById("sample-banner");

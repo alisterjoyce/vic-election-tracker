@@ -7,7 +7,8 @@
       "assembly_seats": "Total Legislative Assembly (lower house) seats",
       "council_seats": "Total Legislative Council (upper house) seats",
       "sample_data": "Map of dataset name -> true while that file still holds placeholder rows (drives the 'sample data' banner)",
-      "sources": "Map of source name -> {status: ok | error | placeholder, url, last_success, message}"
+      "sources": "Map of source name -> {status: ok | error | placeholder, url, last_success, message}",
+      "reconciliation": "Written by scripts/refresh.py after the ABC district pages: lower-house candidates compared with the ABC A-Z list. {date (Melbourne), scope, abc_list_url, totals: {tracker, abc_list}, tracker_by_source: {abc, wikipedia, report}, only_in_tracker, only_on_abc (missing from the tracker before this run; added), unmatched_electorates, tracked_all (active candidates in both houses, shown in the footer)}"
     }
   },
   "last_updated": "2026-10-30T01:18:52Z",

@@ -64,7 +64,14 @@ What it does:
    - ABC-listed candidates are set to `endorsed` with `source: "abc"` and the page URL. A `vec_nominated` row is never overridden.
    - **Supersede rule:** an ABC entry for a party in a seat supersedes any other row for that party there. The older row is kept, not deleted. Its status becomes `superseded`, with `superseded_by`, `superseded_on` and a note, and the script logs a warning. Independents are exempt because several can stand in one seat.
    - The [retiring MPs page](https://www.abc.net.au/news/elections/vic/2026/guide/retiring-mps) sets `retiring` for MPs and MLCs. It currently lists only MPs.
-   - It is polite to the ABC: one request per second and a descriptive User-Agent. If any page fails three times, the whole ABC step is skipped and no file changes. A full run makes about 90 requests, so it takes about a minute and a half.
+   - **Reconciliation:** after the district pages, the ABC's [A-Z candidate list](https://www.abc.net.au/news/elections/vic/2026/guide/candidates) is checked name by name and electorate by electorate. Any name not in `candidates.json` is added under the same rules, and the script logs a warning. A summary goes to `meta.json` → `reconciliation`:
+     - the date;
+     - totals for the tracker (active lower-house rows) and the ABC list;
+     - the tracker's rows by source;
+     - how many are only in the tracker, and how many were only on the ABC list.
+
+     The site footer shows "N candidates tracked, last reconciled <date>". N counts active candidates in `candidates.json` for both houses; upper-house ticket names in `regions.json` aren't included.
+   - It is polite to the ABC: one request per second and a descriptive User-Agent. If any page fails three times, the whole ABC step is skipped and no file changes. A full run makes about 91 requests, so it takes about a minute and a half.
 4. Calls `fetch_vec_candidates()`, a clearly marked **placeholder** for the VEC candidate list. It returns `None` until implemented, so this step leaves `candidates.json` alone.
 5. Updates `meta.json`: `last_updated` (only when a source refreshed successfully) and the per-source status.
 

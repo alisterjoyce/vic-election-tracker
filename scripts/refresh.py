@@ -605,6 +605,7 @@ def refresh_wiki_candidates(data_dir: Path, meta: dict) -> bool:
 ABC_GUIDE = "https://www.abc.net.au/news/elections/vic/2026/guide/"
 ABC_ELECTORATES_URL = ABC_GUIDE + "electorates"
 ABC_RETIRING_URL = ABC_GUIDE + "retiring-mps"
+ABC_AZ_URL = ABC_GUIDE + "candidates"   # A-Z list of every lower-house candidate
 ABC_USER_AGENT = ("vic-election-tracker/1.0 (static Victorian election tracker; daily refresh, "
                   "1 request/second; https://github.com/alisterjoyce/vic-election-tracker)")
 ABC_DELAY = 1.0      # seconds between requests
@@ -655,8 +656,14 @@ class PoliteSession:
         raise AbcFetchFailed(f"{url} failed {ABC_ATTEMPTS} times: {error}")
 
 
+# Party codes the ABC uses that differ from the site's
+ABC_CODES = {"sall": "SAL", "ffp": "FF", "ldp": "LBT", "twp": "WEST"}
+
+
 def _abc_party(label: str) -> str | None:
     label = clean_text(label).lower()
+    if label in ABC_CODES:
+        return ABC_CODES[label]
     if label in WIKI_PARTIES:  # abbreviations such as "AJP", "LBT", "FF"
         return WIKI_PARTIES[label]
     return next((code for word, code in ABC_PARTIES if word in label), None)
@@ -713,8 +720,29 @@ def abc_retiring_names(page: str) -> set[str]:
     return names
 
 
-def fetch_abc(district_ids: set[str]) -> tuple[dict[str, dict], set[str]]:
-    """Return ({district id: parsed page + code + url}, retiring names).
+def parse_abc_az(page: str) -> list[dict]:
+    """Rows of the A-Z candidate tables: name, party code, electorate and
+    the electorate's guide code (from its link)."""
+    doc = lxml.html.fromstring(page)
+    entries = []
+    for tr in doc.xpath("//table[contains(@class, 'eg-table')]//tr[td]"):
+        tds = tr.findall("td")
+        if len(tds) < 3:
+            continue
+        for tag in tds[0].xpath(".//span[not(contains(@class, 'familyname'))]"):
+            tag.drop_tree()   # "Sitting MP" and similar badges
+        link = tds[2].find(".//a")
+        code = re.search(r"/guide/([a-z0-9]+)/?$", link.get("href", "")) if link is not None else None
+        name = clean_text(tds[0].text_content())
+        if name:
+            entries.append({"name": name, "party_label": clean_text(tds[1].text_content()),
+                            "electorate": clean_text(tds[2].text_content()),
+                            "code": code.group(1) if code else None})
+    return entries
+
+
+def fetch_abc(district_ids: set[str]) -> tuple[dict[str, dict], set[str], list[dict]]:
+    """Return ({district id: parsed page + code + url}, retiring names, A-Z entries).
     Raises AbcFetchFailed if any page fails ABC_ATTEMPTS times."""
     web = PoliteSession()
     codes = abc_district_codes(web.get(ABC_ELECTORATES_URL), district_ids)
@@ -734,7 +762,132 @@ def fetch_abc(district_ids: set[str]) -> tuple[dict[str, dict], set[str]]:
             continue
         pages[did] = {**parsed, "code": code, "url": url}
     log.info("Parsed %d ABC district pages; %d MPs on the retiring list", len(pages), len(retiring))
-    return pages, retiring
+    az = parse_abc_az(web.get(ABC_AZ_URL))   # fetched last: reconciled after the district pages
+    log.info("Parsed %d names from the ABC A-Z candidate list", len(az))
+    return pages, retiring, az
+
+
+def _find_in_seat(seat_rows: list[dict], name: str, party: str) -> dict | None:
+    """The row for this person in a seat: same name, or a near-identical
+    spelling for the same party."""
+    key = _name_key(name)
+    return (next((c for c in seat_rows if _name_key(c["name"]) == key), None)
+            or next((c for c in seat_rows if c.get("party") == party and party not in MULTI_PER_SEAT
+                     and _same_person(c["name"], name)), None))
+
+
+def _apply_abc_entry(entry: dict, did: str, url: str, seat_rows: list[dict], rows: list[dict],
+                     sitting: dict[str, str], today: str, stats: dict) -> dict:
+    """Add or confirm one ABC-listed candidate; return its row."""
+    known_party = _abc_party(entry["party_label"])
+    party = known_party or "OTH"
+    key = _name_key(entry["name"])
+    match = _find_in_seat(seat_rows, entry["name"], party)
+    if match is not None and known_party is None:
+        party = match.get("party") or "OTH"   # never replace a known party with OTH
+    if match is None:
+        match = {"district": did, "name": entry["name"], "party": party, "status": "endorsed",
+                 "ballot_position": None, "incumbent": sitting.get(did) == key, "date_added": today}
+        rows.append(match)
+        seat_rows.append(match)
+        stats["added"] += 1
+    else:
+        stats["confirmed"] += 1
+        # Take the ABC spelling only for real variants, not accents or punctuation.
+        if _name_key(match["name"]) != key:
+            log.info("%s: name %r -> %r (ABC spelling)", did, match["name"], entry["name"])
+            match["name"] = entry["name"]
+        if match.get("party") != party:
+            log.warning("%s: %s party %s -> %s (ABC)", did, entry["name"], match.get("party"), party)
+            match["party"] = party
+        if match.get("status") not in FINAL_STATUSES:
+            match["status"] = "endorsed"
+        # Conflict/supersede notes from earlier merges are settled by the ABC listing.
+        notes = [n for n in (match.get("notes") or "").split("; ")
+                 if n and not n.startswith(("Conflicts with", "Superseded by"))]
+        if notes:
+            match["notes"] = "; ".join(notes)
+        else:
+            match.pop("notes", None)
+        match.pop("superseded_by", None)
+        match.pop("superseded_on", None)
+    match.update(source="abc", source_url=url, updated=today)
+    if known_party is None and party == "OTH" and entry["party_label"]:
+        match["notes"] = f"Party on ABC: {entry['party_label']}"
+    return match
+
+
+def _supersede(did: str, seat_rows: list[dict], abc_rows: list[dict], today: str, stats: dict) -> None:
+    """Supersede rule: the ABC entry for a party in a seat supersedes any
+    other (older) entry for that party there. Rows are kept, not deleted."""
+    abc_ids = {id(c) for c in abc_rows}
+    for party in {c["party"] for c in abc_rows} - MULTI_PER_SEAT:
+        winners = " / ".join(c["name"] for c in abc_rows if c["party"] == party)
+        for old in seat_rows:
+            if (id(old) in abc_ids or old.get("party") != party
+                    or old.get("status") in FINAL_STATUSES | {"superseded", "withdrawn"}):
+                continue
+            log.warning("%s: %s (%s, %s) superseded by ABC entry %s", did, old["name"], party, old.get("status"), winners)
+            old["status"] = "superseded"
+            old["superseded_by"] = winners
+            old["superseded_on"] = today
+            old["notes"] = "; ".join(filter(None, [old.get("notes"), f"Superseded by {winners} (ABC guide, {today})"]))
+            old["updated"] = today
+            stats["superseded"] += 1
+
+
+def _active(c: dict) -> bool:
+    return c.get("status") not in ("superseded", "withdrawn")
+
+
+def reconcile_abc_az(az_entries: list[dict], districts: list[dict], rows: list[dict],
+                     by_seat: dict[str, list[dict]], sitting: dict[str, str], today: str, stats: dict) -> dict:
+    """Add any A-Z name missing from candidates.json (same rules as the
+    district pages) and return a summary for meta.json."""
+    code_to_id = {d.get("abc_code"): d["id"] for d in districts if d.get("abc_code")}
+    ids = {d["id"] for d in districts}
+    only_on_abc, unmatched = 0, []
+    on_abc = set()   # ids of tracker rows that appear on the A-Z list
+    added_by_seat = {}
+    for entry in az_entries:
+        did = code_to_id.get(entry["code"]) or re.sub(r"[^a-z0-9]+", "-", entry["electorate"].lower()).strip("-")
+        if did not in ids:
+            unmatched.append(f"{entry['name']} ({entry['electorate']})")
+            continue
+        seat_rows = by_seat.setdefault(did, [])
+        party = _abc_party(entry["party_label"]) or "OTH"
+        row = _find_in_seat(seat_rows, entry["name"], party)
+        if row is None:
+            only_on_abc += 1
+            log.warning("%s: %s (%s) is on the ABC A-Z list but not in the tracker; added",
+                        did, entry["name"], entry["party_label"])
+            row = _apply_abc_entry(entry, did, ABC_GUIDE + (entry["code"] or ""), seat_rows, rows, sitting, today, stats)
+            added_by_seat.setdefault(did, []).append(row)
+        on_abc.add(id(row))
+    for did, new_rows in added_by_seat.items():
+        _supersede(did, by_seat[did], new_rows, today, stats)
+    if unmatched:
+        log.warning("ABC A-Z entries with an unknown electorate: %s", unmatched)
+
+    lower = [c for c in rows if c.get("district") and _active(c)]
+    only_in_tracker = [c for c in lower if id(c) not in on_abc]
+    by_source = {}
+    for c in lower:
+        by_source[c.get("source", "report")] = by_source.get(c.get("source", "report"), 0) + 1
+    summary = {
+        "date": today,
+        "scope": "Legislative Assembly",
+        "abc_list_url": ABC_AZ_URL,
+        "totals": {"tracker": len(lower), "abc_list": len(az_entries)},
+        "tracker_by_source": dict(sorted(by_source.items())),
+        "only_in_tracker": len(only_in_tracker),
+        "only_on_abc": only_on_abc,
+        "unmatched_electorates": len(unmatched),
+        "tracked_all": sum(1 for c in rows if _active(c)),
+    }
+    log.info("Reconciliation: tracker %d, ABC list %d, only in tracker %d, only on ABC %d (added)",
+             len(lower), len(az_entries), len(only_in_tracker), only_on_abc)
+    return summary
 
 
 def refresh_abc(data_dir: Path, meta: dict) -> bool:
@@ -745,7 +898,7 @@ def refresh_abc(data_dir: Path, meta: dict) -> bool:
         districts = dist_doc.get("districts", [])
         if not districts:
             raise ValueError("districts.json has no districts to match against")
-        pages, retiring_names = fetch_abc({d["id"] for d in districts})
+        pages, retiring_names, az_entries = fetch_abc({d["id"] for d in districts})
         if not pages:
             raise ValueError("no ABC district pages could be parsed")
     except Exception as exc:  # noqa: BLE001 - any failure means skip the ABC step entirely
@@ -794,64 +947,16 @@ def refresh_abc(data_dir: Path, meta: dict) -> bool:
 
     for did, page in sorted(pages.items()):
         seat_rows = by_seat.setdefault(did, [])
-        abc_rows = []
-        for entry in page["candidates"]:
-            known_party = _abc_party(entry["party_label"])
-            party = known_party or "OTH"
-            key = _name_key(entry["name"])
-            match = (next((c for c in seat_rows if _name_key(c["name"]) == key), None)
-                     or next((c for c in seat_rows if c.get("party") == party and party not in MULTI_PER_SEAT
-                              and _same_person(c["name"], entry["name"])), None))
-            if match is not None and known_party is None:
-                party = match.get("party") or "OTH"   # never replace a known party with OTH
-            if match is None:
-                match = {"district": did, "name": entry["name"], "party": party, "status": "endorsed",
-                         "ballot_position": None, "incumbent": sitting.get(did) == key, "date_added": today}
-                rows.append(match)
-                seat_rows.append(match)
-                stats["added"] += 1
-            else:
-                stats["confirmed"] += 1
-                # Take the ABC spelling only for real variants, not accents or punctuation.
-                if _name_key(match["name"]) != key:
-                    log.info("%s: name %r -> %r (ABC spelling)", did, match["name"], entry["name"])
-                    match["name"] = entry["name"]
-                if match.get("party") != party:
-                    log.warning("%s: %s party %s -> %s (ABC)", did, entry["name"], match.get("party"), party)
-                    match["party"] = party
-                if match.get("status") not in FINAL_STATUSES:
-                    match["status"] = "endorsed"
-                # Conflict/supersede notes from earlier merges are settled by the ABC listing.
-                notes = [n for n in (match.get("notes") or "").split("; ")
-                         if n and not n.startswith(("Conflicts with", "Superseded by"))]
-                if notes:
-                    match["notes"] = "; ".join(notes)
-                else:
-                    match.pop("notes", None)
-                match.pop("superseded_by", None)
-                match.pop("superseded_on", None)
-            match.update(source="abc", source_url=page["url"], updated=today)
-            if known_party is None and party == "OTH" and entry["party_label"]:
-                match["notes"] = f"Party on ABC: {entry['party_label']}"
-            abc_rows.append(match)
+        abc_rows = [_apply_abc_entry(entry, did, page["url"], seat_rows, rows, sitting, today, stats)
+                    for entry in page["candidates"]]
+        _supersede(did, seat_rows, abc_rows, today, stats)
 
-        # Supersede rule: the ABC entry for a party in a seat supersedes any
-        # other (older) entry for that party there. Rows are kept, not deleted.
-        abc_ids = {id(c) for c in abc_rows}
-        for party in {c["party"] for c in abc_rows} - MULTI_PER_SEAT:
-            winners = [c["name"] for c in abc_rows if c["party"] == party]
-            for old in seat_rows:
-                if (id(old) in abc_ids or old.get("party") != party
-                        or old.get("status") in FINAL_STATUSES | {"superseded", "withdrawn"}):
-                    continue
-                log.warning("%s: %s (%s, %s) superseded by ABC entry %s",
-                            did, old["name"], party, old.get("status"), " / ".join(winners))
-                old["status"] = "superseded"
-                old["superseded_by"] = " / ".join(winners)
-                old["superseded_on"] = today
-                old["notes"] = "; ".join(filter(None, [old.get("notes"), f"Superseded by {' / '.join(winners)} (ABC guide, {today})"]))
-                old["updated"] = today
-                stats["superseded"] += 1
+    # ---- reconciliation against the A-Z list of every ABC candidate
+    if az_entries:
+        meta["reconciliation"] = reconcile_abc_az(az_entries, districts, rows, by_seat, sitting, today, stats)
+    else:
+        log.error("ABC A-Z candidate list had no rows; reconciliation skipped")
+        warn_ci("ABC A-Z candidate list had no rows; reconciliation skipped")
 
     # ---- MLC retiring flags (only ever set to true: the page lists retirees)
     reg_doc = read_json(reg_path, {}) or {}
