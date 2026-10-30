@@ -13,6 +13,8 @@
   // Seat outlook inputs: statewide swing, MRP models, betting, seat polls.
   let outlook = { swing: null, models: null, odds: null, seatPolls: null };
   let shots = {};   // candidate id -> headshot (data/headshots.json)
+  let htv = null;   // data/htv.json (how-to-vote cards)
+  let news = null;  // data/news.json (headlines per seat)
 
   const $ = (id) => document.getElementById(id);
 
@@ -210,6 +212,12 @@
         ${App.photoCredits(shots, cands.map((c) => [d.id, c.name]))}
         <details class="sharecard-wrap" id="seat-share-wrap"><summary>Share card for this seat</summary><div class="sharecard" id="seat-share"></div></details>`
         : '<p class="empty">No candidates recorded yet.</p>'}
+      ${App.Htv ? App.Htv.section(htv, { district: d.id, margin: d.margin, parties: cands.filter((c) => !isInactive(c)).map((c) => c.party) }) : ""}
+      <section class="seat-news" aria-labelledby="news-h">
+        <h3 id="news-h">In the news</h3>
+        ${App.newsList(news && news.seats && news.seats[d.id], { more: 5 })}
+        <p class="muted small">Headlines and links only, from news searches and publishers' feeds that mention ${escapeHtml(d.name)} or its MP. Updated daily.</p>
+      </section>
       <section class="r22" id="r22" aria-labelledby="r22-h">
         <h3 id="r22-h">How it voted in 2022</h3>
         <p class="empty">Loading 2022 results…</p>
@@ -341,15 +349,19 @@
   async function init() {
     try {
       const optional = (name) => loadJSON(name).catch((err) => { console.warn(err); return null; });
-      const [dd, cd, rd, meta, pollData, models, odds, seatPolls] = await Promise.all([
+      const [dd, cd, rd, meta, pollData, models, odds, seatPolls, htvData, newsData] = await Promise.all([
         loadJSON("districts"), loadJSON("candidates"), loadJSON("regions"),
         optional("meta"), optional("polls"), optional("seat_models"), optional("seat_odds"), optional("seat_polls"),
+        optional("htv"), optional("news"),
       ]);
+      htv = htvData;
+      news = newsData;
       shots = await App.loadHeadshots();
       outlook = { swing: App.statewideSwing(meta, pollData), models, odds, seatPolls };
       districts = dd.districts.slice().sort((a, b) => a.name.localeCompare(b.name));
       candidates = cd.candidates || [];
       rd.regions.forEach((r) => { regionsById[r.id] = r; });
+      if (App.Htv && $("pref-watch")) $("pref-watch").innerHTML = App.Htv.watch(htv, districts, candidates);
 
       $("f-region").innerHTML += rd.regions.slice().sort((a, b) => a.name.localeCompare(b.name))
         .map((r) => `<option value="${escapeHtml(r.id)}">${escapeHtml(r.name)}</option>`).join("");

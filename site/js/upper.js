@@ -8,6 +8,7 @@
   let districts = [];
   let councilCandidates = [];
   let shots = {};   // candidate id -> headshot (data/headshots.json)
+  let htv = null;           // data/htv.json (how-to-vote cards)
   let councilPolls = [];   // regional upper-house polls (data/council_polls.json), newest first
 
   function ticketSort(a, b) {
@@ -113,6 +114,8 @@
 
       ${renderExtraCandidates(r)}
 
+      ${App.Htv ? `<section class="card">${App.Htv.section(htv, { region: r.id, parties: tickets.map((t) => t.party) })}</section>` : ""}
+
       <section class="card quota" id="quota-card" aria-label="Quota calculator"></section>
 
       <div class="card">
@@ -140,6 +143,7 @@
       councilCandidates = (cd.candidates || []).filter((c) => c.region && !c.district);
       shots = await App.loadHeadshots();
       councilPolls = await loadJSON("council_polls").then((d) => d.polls || []).catch(() => []);
+      htv = await loadJSON("htv").catch(() => null);
       document.getElementById("region-chips").addEventListener("click", (e) => {
         const btn = e.target.closest("button[data-id]");
         if (btn) location.hash = btn.dataset.id;

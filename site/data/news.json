@@ -1,0 +1,908 @@
+{
+  "_schema": {
+    "description": "Election news per district and statewide, refreshed daily by scripts/refresh.py from Bing News RSS searches and publishers' RSS feeds. Headline, outlet, date and link only; article text is never stored.",
+    "fields": {
+      "updated": "ISO UTC time of the last refresh",
+      "statewide": "Up to 25 latest items about the state election: [{title, outlet, published (ISO UTC), url}]",
+      "seats": "District id -> up to 10 latest items mentioning the district or its sitting MP",
+      "sources": "Source -> {status: ok | error | skipped, url, items, message}"
+    }
+  },
+  "updated": "2026-10-30T21:55:23Z",
+  "statewide": [
+    {
+      "title": "Liberal plan to scrap Treaty risks 'sending us back', Aboriginal leader warns",
+      "outlet": "ABC News",
+      "published": "2026-10-30T20:33:16Z",
+      "url": "https://www.abc.net.au/news/2026-10-31/treaty-scrap-victoria-coalition-vic-election-jess-wilson/107322868"
+    },
+    {
+      "title": "Who is Jess Wilson? The millennial Liberal leader on the cusp of history in Victoria",
+      "outlet": "The Guardian",
+      "published": "2026-10-30T07:00:00Z",
+      "url": "https://www.theguardian.com/australia-news/ng-interactive/2026/oct/31/who-is-jess-wilson-mp-victoria-election-2026-liberal-leader-profile-interview-ntwnfb"
+    },
+    {
+      "title": "Victorian Election 2026",
+      "outlet": "7NEWS Australia",
+      "published": "2026-10-29T17:01:00Z",
+      "url": "https://7news.com.au/news/vic/vic-election-2026"
+    },
+    {
+      "title": "'Muslim Votes Matter' uses electoral leverage to force a panicked $23 million Labor spending spree in Broadmeadows",
+      "outlet": "onenewsaustralia.com",
+      "published": "2026-10-29T17:01:00Z",
+      "url": "https://www.onenewsaustralia.com/muslim-votes-matter-uses-electoral-leverage-to-force-a-panicked-23-million-labor-spending-spree-in-broadmeadows/"
+    },
+    {
+      "title": "Mayor Welcomes New Support For Bellarine Link",
+      "outlet": "Mirage News",
+      "published": "2026-10-29T08:19:00Z",
+      "url": "https://www.miragenews.com/mayor-welcomes-new-support-for-bellarine-link-1768585/"
+    },
+    {
+      "title": "Check Your Enrolment For Victorian State Election",
+      "outlet": "Mirage News",
+      "published": "2026-10-29T03:53:00Z",
+      "url": "https://www.miragenews.com/check-your-enrolment-for-victorian-state-1768394/"
+    },
+    {
+      "title": "Victorian election rivals share Melbourne CBD barista after setting up headquarters next door",
+      "outlet": "The Australian",
+      "published": "2026-10-28T21:29:00Z",
+      "url": "https://www.theaustralian.com.au/commentary/victoria-ink/victorian-election-rivals-share-melbourne-cbd-barista-after-setting-up-headquarters-next-door/news-story/1925ea62df9683004405075fee074524"
+    },
+    {
+      "title": "Victorian state election: what’s at stake for treaty and Indigenous self‑determination?",
+      "outlet": "The Conversation",
+      "published": "2026-10-28T16:03:00Z",
+      "url": "https://theconversation.com/victorian-state-election-whats-at-stake-for-treaty-and-indigenous-self-determination-294873"
+    },
+    {
+      "title": "Victoria’s 2026 state election could have ‘great consequences’ for politics across Australia. What do voters need to know?",
+      "outlet": "The Guardian",
+      "published": "2026-10-28T01:54:00Z",
+      "url": "https://www.theguardian.com/australia-news/2026/oct/28/victoria-state-election-2026-vic-explained-what-do-voters-need-to-know"
+    },
+    {
+      "title": "Two key unions turn on Labor, running attack ads and pulling campaign funds a month out from Victorian election",
+      "outlet": "The Guardian",
+      "published": "2026-10-27T21:50:00Z",
+      "url": "https://www.theguardian.com/australia-news/2026/oct/28/unions-turn-on-labor-attack-ads-campaign-funds-victorian-election-exclusive"
+    },
+    {
+      "title": "Socialist Leanna Nguyen to contest St Albans",
+      "outlet": "Brimbank & North West | Star Weekly",
+      "published": "2026-10-27T17:00:00Z",
+      "url": "https://brimbanknorthwest.starweekly.com.au/news/socialist-leanna-nguyen-to-contest-st-albans/"
+    },
+    {
+      "title": "Bishops encourage Catholic voters to put faith into action at upcoming Victorian election",
+      "outlet": "Melbourne Catholic",
+      "published": "2026-10-26T20:46:00Z",
+      "url": "https://melbournecatholic.org/news/bishops-encourage-catholic-voters-to-put-faith-into-action-at-upcoming-victorian-election"
+    },
+    {
+      "title": "Victorian Election Writs Set for Melbourne Cup Day",
+      "outlet": "ozarab.media",
+      "published": "2026-10-26T11:31:00Z",
+      "url": "https://ozarab.media/victorian-election-writs-set-for-melbourne-cup-day/"
+    },
+    {
+      "title": "Victorian State Election 2026 - In Language Resources",
+      "outlet": "Mirage News",
+      "published": "2026-10-26T08:31:00Z",
+      "url": "https://www.miragenews.com/victorian-state-election-2026-in-language-1766360/"
+    },
+    {
+      "title": "Victorian state election 2026: Everything voters need to know with several changes",
+      "outlet": "7NEWS Australia on MSN",
+      "published": "2026-10-25T23:43:44Z",
+      "url": "https://www.msn.com/en-au/news/other/victorian-state-election-2026-everything-voters-need-to-know-with-several-changes/ar-AA2g4huN"
+    },
+    {
+      "title": "Coalition pledges fire truck",
+      "outlet": "gannawarratimes.com.au",
+      "published": "2026-10-25T17:00:00Z",
+      "url": "https://gannawarratimes.com.au/news/2026/10/26/coalition-pledges-fire-truck/"
+    },
+    {
+      "title": "Victorian election race gets attention from business groups demanding fiscal repair",
+      "outlet": "The Australian",
+      "published": "2026-10-25T14:15:00Z",
+      "url": "https://www.theaustralian.com.au/business/victorian-election-race-gets-attention-from-business-groups-demanding-fiscal-repair/news-story/9b3fcb3f16686d15246f60fed6109cd6"
+    },
+    {
+      "title": "Traffic and roads driving voters of Kalkallo in Victorian state election",
+      "outlet": "ABC (Australian Broadcasting Corporation) on MSN",
+      "published": "2026-10-25T11:29:38Z",
+      "url": "https://www.msn.com/en-au/news/other/traffic-and-roads-driving-voters-of-kalkallo-in-victorian-state-election/ar-AA2g2Lzq"
+    },
+    {
+      "title": "NextDC faces broader community backlash over Melbourne growth plans",
+      "outlet": "Australian Financial Review",
+      "published": "2026-10-25T09:00:00Z",
+      "url": "https://www.afr.com/companies/infrastructure/nextdc-faces-broader-community-backlash-over-melbourne-growth-plans-20261025-p6182r"
+    },
+    {
+      "title": "Steve Price: Ben Carroll’s petrol drive off is the perfect symbol of how he treats Victoria",
+      "outlet": "Herald Sun",
+      "published": "2026-10-23T05:00:00Z",
+      "url": "https://www.heraldsun.com.au/news/opinion/steve-price-ben-carroll-lives-in-an-elite-bubble-and-his-petrol-drive-off-proves-it/news-story/e5f21360bfea182af1f115f2d0721232"
+    },
+    {
+      "title": "Ben Carroll: Disagreement is fine, but abuse must stop in our politics and communities",
+      "outlet": "Herald Sun",
+      "published": "2026-10-22T08:00:00Z",
+      "url": "https://www.heraldsun.com.au/news/opinion/ben-carroll-disagreement-is-fine-but-abuse-must-stop-in-our-politics-and-communities/news-story/ecfff805cac6b7bb5f598752a764bcd3"
+    },
+    {
+      "title": "Retiring Peter Walsh accuses One Nation of treating regional Victorian voters with contempt",
+      "outlet": "The Weekly Times",
+      "published": "2026-10-21T10:59:00Z",
+      "url": "https://www.weeklytimesnow.com.au/news/victoria/retiring-peter-walsh-accuses-one-nation-of-treating-regional-victorian-voters-with-contempt/news-story/d88a73a49ab77ab607173d9b6147b34c"
+    },
+    {
+      "title": "New Henty fire shed on the agenda for State Election",
+      "outlet": "The SE Voice",
+      "published": "2026-10-20T08:11:00Z",
+      "url": "https://sevoice.com.au/new-henty-fire-shed-on-the-agenda-for-state-election/"
+    },
+    {
+      "title": "Candidate forum",
+      "outlet": "gannawarratimes.com.au",
+      "published": "2026-10-19T17:00:00Z",
+      "url": "https://gannawarratimes.com.au/news/2026/10/20/candidate-forum-2/"
+    },
+    {
+      "title": "Ben Carroll ‘rejected out of hand’ push to join ‘red shirts’",
+      "outlet": "The Australian",
+      "published": "2026-10-19T15:14:00Z",
+      "url": "https://www.theaustralian.com.au/nation/i-wasnt-going-to-have-anything-to-do-with-it-ben-carroll-on-red-shirts-rort/news-story/c72093c01a837996c888eda5cb1d83e0"
+    }
+  ],
+  "seats": {
+    "albert-park": [
+      {
+        "title": "Albert Park candidates unite to demand fast-tracked Fishermans Bend public transport links through Port Melbourne",
+        "outlet": "Herald Sun",
+        "published": "2026-10-23T10:11:00Z",
+        "url": "https://www.heraldsun.com.au/leader/inner-south/albert-park-candidates-unite-to-demand-fasttracked-fishermans-bend-public-transport-links-through-port-melbourne/news-story/100f41da6d7c7422d7bebfbdfb951abf"
+      }
+    ],
+    "ashwood": [],
+    "bass": [],
+    "bayswater": [],
+    "bellarine": [
+      {
+        "title": "Mayor Welcomes New Support For Bellarine Link",
+        "outlet": "Mirage News",
+        "published": "2026-10-29T08:19:00Z",
+        "url": "https://www.miragenews.com/mayor-welcomes-new-support-for-bellarine-link-1768585/"
+      }
+    ],
+    "benambra": [],
+    "bendigo-east": [
+      {
+        "title": "Former Victorian premier Jacinta Allan quits politics weeks after being forced from top job",
+        "outlet": "The Australian",
+        "published": "2026-08-14T11:14:00Z",
+        "url": "https://www.theaustralian.com.au/nation/politics/former-victorian-premier-jacinta-allan-quits-politics-weeks-after-being-forced-from-top-job/news-story/a2689e3760bb75c47c9793638634161d"
+      },
+      {
+        "title": "Jacinta Allan will not recontest the November election in Bendigo East",
+        "outlet": "Northern Territory News",
+        "published": "2026-08-13T21:29:00Z",
+        "url": "https://www.ntnews.com.au/news/victoria/jacinta-allan-will-not-recontest-the-next-election-for-bendigo/news-story/1ec4f44c52023ea1a71b82b25f982dda"
+      },
+      {
+        "title": "Jacinta Allan’s phantom act as Labor colleagues tip imminent resignation",
+        "outlet": "The Courier-Mail",
+        "published": "2026-08-11T05:48:00Z",
+        "url": "https://www.couriermail.com.au/news/victoria/jacinta-allans-phantom-act-as-labor-colleagues-tip-imminent-resignation/news-story/2a1411f2bdf6bf0c2c3d7ec3f0c51d08"
+      },
+      {
+        "title": "Victorian Premier Jacinta Allan timeline: Biggest moments of her 27 years in parliament",
+        "outlet": "The Daily Telegraph",
+        "published": "2026-07-28T04:59:00Z",
+        "url": "https://www.dailytelegraph.com.au/news/victoria/victorian-premier-jacinta-allan-timeline-biggest-moments-of-her-27-years-in-parliament/news-story/bd2031babd0cd554e7e50f321736bafb"
+      },
+      {
+        "title": "Jacinta Allan's political career from becoming parliament's youngest female MP, to a premiership cut short",
+        "outlet": "Australian Broadcasting Corporation",
+        "published": "2026-07-27T21:46:00Z",
+        "url": "https://www.abc.net.au/news/2026-07-28/look-back-at-jacinta-allan-political-career-victorian-premier/106827446"
+      },
+      {
+        "title": "Anthony Carbines refuses to talk about blistering attack on Labor Party bosses in media outing with Jacinta Allan",
+        "outlet": "The Courier-Mail",
+        "published": "2026-07-22T06:34:00Z",
+        "url": "https://www.couriermail.com.au/news/victoria/anthony-carbines-refuses-to-talk-about-blistering-private-attack-on-labor-party-bosses-in-media-outing-with-jacinta-allan/news-story/ed2b829f1f11614de0cea198cae51852"
+      }
+    ],
+    "bendigo-west": [
+      {
+        "title": "Maree Edwards's departure leaves Labor heartland exposed, three months from election",
+        "outlet": "Australian Broadcasting Corporation",
+        "published": "2026-08-27T19:15:00Z",
+        "url": "https://www.abc.net.au/news/2026-08-28/maree-edwards-labor-bendigo-jacinta-allan-state-election/107088088"
+      },
+      {
+        "title": "Maree Edwards praised for her ‘integrity, humility and care’ as she calls time on her political career",
+        "outlet": "The Courier-Mail",
+        "published": "2026-08-27T11:01:00Z",
+        "url": "https://www.couriermail.com.au/news/victoria/maree-edwards-praised-for-her-integrity-humility-and-care-as-she-calls-time-on-her-political-career/news-story/689fe193e6aadbba856794f6b3c10af1"
+      }
+    ],
+    "bentleigh": [
+      {
+        "title": "Victoria: Phân bổ hơn chín triệu đô la để nâng cấp các công viên và không gian xanh",
+        "outlet": "Viet Times",
+        "published": "2026-10-28T17:00:00Z",
+        "url": "https://vtimes.com.au/victoria-phan-bo-hon-chin-trieu-do-la-de-nang-cap-cac-cong-vien-va-khong-gian-xanh-4110861.html"
+      }
+    ],
+    "berwick": [],
+    "box-hill": [],
+    "brighton": [
+      {
+        "title": "James Newbury guilty of parliamentary misconduct over post warning Allan set to be electorally thumped",
+        "outlet": "Northern Territory News",
+        "published": "2026-07-23T04:58:00Z",
+        "url": "https://www.ntnews.com.au/news/victoria/james-newbury-found-guilty-of-misconduct-over-political-baseball-bats-post/news-story/8ecf32c570a4432490c56283d408fb28"
+      }
+    ],
+    "broadmeadows": [
+      {
+        "title": "'Muslim Votes Matter' uses electoral leverage to force a panicked $23 million Labor spending spree in Broadmeadows",
+        "outlet": "onenewsaustralia.com",
+        "published": "2026-10-29T17:01:00Z",
+        "url": "https://www.onenewsaustralia.com/muslim-votes-matter-uses-electoral-leverage-to-force-a-panicked-23-million-labor-spending-spree-in-broadmeadows/"
+      }
+    ],
+    "brunswick": [
+      {
+        "title": "Who's who of Victorian politics turns out for state funeral of Greens MP Tim Read: 'Mr integrity'",
+        "outlet": "Daily Mail on MSN",
+        "published": "2026-10-28T02:22:22Z",
+        "url": "https://www.msn.com/en-ae/news/other/whos-who-of-victorian-politics-turns-out-for-state-funeral-of-greens-mp-tim-read-mr-integrity/ar-AA2geAsq"
+      },
+      {
+        "title": "Multicultural Victoria ahead of the state election",
+        "outlet": "Neos Kosmos",
+        "published": "2026-10-19T07:05:00Z",
+        "url": "https://neoskosmos.com/en/2026/10/19/news/community/multicultural-victoria-ahead-of-the-state-election/"
+      },
+      {
+        "title": "Victorian Greens MP Tim Read dies after cancer battle",
+        "outlet": "Couriermail",
+        "published": "2026-09-19T14:07:00Z",
+        "url": "https://www.news.com.au/national/victoria/politics/victorian-greens-mp-tim-read-has-died-after-cancer-battle/news-story/b8349436f5784889e1531f72ec6a6559"
+      },
+      {
+        "title": "Victorian Greens MP dies of cancer",
+        "outlet": "The New Daily",
+        "published": "2026-09-19T13:30:00Z",
+        "url": "https://www.thenewdaily.com.au/news/2026/09/20/victorian-greens-mp-tim-read-dies"
+      },
+      {
+        "title": "Beloved Victorian Greens MP Tim Read dies after stage four skin cancer battle",
+        "outlet": "Northern Territory News",
+        "published": "2026-09-19T11:09:00Z",
+        "url": "https://www.ntnews.com.au/news/victoria/beloved-victorian-greens-mp-tim-read-dies-after-stage-four-skin-cancer-battle/news-story/581fde1f2b23dd01749a971c48896b3a"
+      }
+    ],
+    "bulleen": [],
+    "bundoora": [
+      {
+        "title": "Colin Brooks confirms cabinet secretly wiped $6m loan for debt-ridden Victorian Pride Centre",
+        "outlet": "The Australian",
+        "published": "2026-10-29T21:29:00Z",
+        "url": "https://www.theaustralian.com.au/nation/colin-brooks-confirms-cabinet-secretly-wiped-6m-loan-for-debtridden-victorian-pride-centre/news-story/2366818ef77231d70e6f8859e72df598"
+      },
+      {
+        "title": "BioNTech mRNA manufacturing facility opens",
+        "outlet": "India Education Diary on MSN",
+        "published": "2026-10-26T03:36:00Z",
+        "url": "https://www.msn.com/en-in/news/other/biontech-mrna-manufacturing-facility-opens/ar-AA2g6A8N"
+      },
+      {
+        "title": "Moray & Agnew brings Victorian business leaders together with Treasurer Colin Brooks",
+        "outlet": "The Greek Herald",
+        "published": "2026-10-22T17:00:00Z",
+        "url": "https://greekherald.com.au/news/moray-agnew-brings-victorian-business-leaders-together-with-treasurer-colin-brook/"
+      }
+    ],
+    "carrum": [
+      {
+        "title": "Victorian election race gets attention from business groups demanding fiscal repair",
+        "outlet": "The Australian",
+        "published": "2026-10-25T14:15:00Z",
+        "url": "https://www.theaustralian.com.au/business/victorian-election-race-gets-attention-from-business-groups-demanding-fiscal-repair/news-story/9b3fcb3f16686d15246f60fed6109cd6"
+      },
+      {
+        "title": "Senior Labor ministers at risk as internal polling points to a wipeout in Frankston line",
+        "outlet": "The Australia Today",
+        "published": "2026-10-23T02:36:00Z",
+        "url": "https://www.theaustraliatoday.com.au/senior-labor-ministers-at-risk-as-internal-polling-points-to-a-wipeout-in-frankston-line/"
+      }
+    ],
+    "caulfield": [],
+    "clarinda": [
+      {
+        "title": "John Paganis launches election campaign for seat of Clarinda",
+        "outlet": "Neos Kosmos",
+        "published": "2026-10-21T06:25:00Z",
+        "url": "https://neoskosmos.com/en/2026/10/21/news/community/john-paganis-launches-election-campaign-for-seat-of-clarinda/"
+      }
+    ],
+    "cranbourne": [
+      {
+        "title": "Cranbourne election results 2022: live count for 2026 from 28 November",
+        "outlet": "onenewsaustralia.com",
+        "published": "2026-10-13T14:36:00Z",
+        "url": "https://www.onenewsaustralia.com/cranbourne-election-results-2026/"
+      }
+    ],
+    "croydon": [
+      {
+        "title": "Victorian Liberals slapped with legal letter from spurned candidate",
+        "outlet": "The Age",
+        "published": "2026-10-22T05:56:00Z",
+        "url": "https://www.theage.com.au/politics/victoria/victorian-liberals-slapped-with-legal-letter-from-spurned-candidate-20261022-p617qu.html"
+      },
+      {
+        "title": "Victorian Liberals Dump Croydon Candidate Over Damaging Internal Legal Brawl",
+        "outlet": "streamlinefeed",
+        "published": "2026-10-12T21:47:00Z",
+        "url": "https://streamlinefeed.co.ke/news/victorian-liberals-dump-croydon-candidate-over-damaging-internal-legal-brawl"
+      },
+      {
+        "title": "Liberals replace Croydon candidate Grant Hutchinson, weeks out from Victorian election",
+        "outlet": "MSN",
+        "published": "2026-10-12T21:13:00Z",
+        "url": "https://www.msn.com/en-au/news/other/liberals-replace-croydon-candidate-grant-hutchinson-weeks-out-from-victorian-election/ar-AA2e7mQE"
+      },
+      {
+        "title": "Victorian Liberals dump Croydon candidate Grant Hutchinson weeks before state election",
+        "outlet": "The Advertiser",
+        "published": "2026-10-12T12:41:00Z",
+        "url": "https://www.adelaidenow.com.au/news/south-australia/state-election/victorian-liberals-dump-croydon-candidate-grant-hutchinson-weeks-before-state-election/news-story/f2effda3b0481a67e539d0eb529032e8"
+      },
+      {
+        "title": "Victorian Liberals disendorse Croydon candidate Grant Hutchinson weeks out from state election",
+        "outlet": "The Australian",
+        "published": "2026-10-12T03:09:00Z",
+        "url": "https://www.theaustralian.com.au/nation/victorian-liberals-disendorse-croydon-candidate-grant-hutchinson-weeks-out-from-state-election/news-story/d20c2730a7adddb6c9773414bf723612"
+      }
+    ],
+    "dandenong": [],
+    "eildon": [
+      {
+        "title": "Eildon election results 2022: live count for 2026 from 28 November",
+        "outlet": "onenewsaustralia.com",
+        "published": "2026-09-25T17:05:00Z",
+        "url": "https://www.onenewsaustralia.com/eildon-election-results-2026/"
+      }
+    ],
+    "eltham": [],
+    "essendon": [
+      {
+        "title": "AFL star John Barnes joins Pauline Hanson's One Nation as a candidate",
+        "outlet": "Daily Mail",
+        "published": "2026-08-18T21:38:00Z",
+        "url": "https://www.dailymail.com/news/article-16062957/one-nation-essendon-john-barnes.html"
+      }
+    ],
+    "eureka": [],
+    "euroa": [
+      {
+        "title": "Euroa election results 2022: live count for 2026 from 28 November",
+        "outlet": "onenewsaustralia.com",
+        "published": "2026-09-25T16:47:00Z",
+        "url": "https://www.onenewsaustralia.com/euroa-election-results-2026/"
+      },
+      {
+        "title": "Claim that millions in bushfire relief is being funnelled into government departments",
+        "outlet": "The Courier-Mail",
+        "published": "2026-07-16T12:00:00Z",
+        "url": "https://www.couriermail.com.au/news/victoria/claim-that-millions-in-bushfire-relief-is-being-funnelled-into-government-departments/news-story/3ae36d67d0e11d1d0b25356ffefaf9c7"
+      }
+    ],
+    "evelyn": [
+      {
+        "title": "Evelyn election results 2022: live count for 2026 from 28 November",
+        "outlet": "onenewsaustralia.com",
+        "published": "2026-09-25T17:05:00Z",
+        "url": "https://www.onenewsaustralia.com/evelyn-election-results-2026/"
+      }
+    ],
+    "footscray": [
+      {
+        "title": "NextDC faces broader community backlash over Melbourne growth plans",
+        "outlet": "Australian Financial Review",
+        "published": "2026-10-25T09:00:00Z",
+        "url": "https://www.afr.com/companies/infrastructure/nextdc-faces-broader-community-backlash-over-melbourne-growth-plans-20261025-p6182r"
+      },
+      {
+        "title": "Victorian Socialists election campaign launches! (with Jasmine Duff)",
+        "outlet": "redflag",
+        "published": "2026-08-30T13:54:00Z",
+        "url": "https://redflag.org.au/podcasts/victorian-socialists-election-campaign-launches-with-jasmine-duff/"
+      }
+    ],
+    "frankston": [
+      {
+        "title": "Paul Edbrooke: Bullet left on minister’s car in alleged death threat",
+        "outlet": "news.com.au",
+        "published": "2026-10-26T11:32:00Z",
+        "url": "https://www.news.com.au/national/paul-edbrooke-bullet-left-on-ministers-car-in-alleged-death-threat/news-story/a8d7e38c52d51c43cf3645648f3f87ef"
+      },
+      {
+        "title": "Bullet left on Victorian politician’s car in chilling threat",
+        "outlet": "The Sydney Morning Herald",
+        "published": "2026-10-26T11:21:00Z",
+        "url": "https://www.smh.com.au/national/bullet-left-on-victorian-politician-s-car-in-chilling-threat-20261026-p618pf.html"
+      },
+      {
+        "title": "MP claims he found bullet engraved with chilling threat on his car bonnet",
+        "outlet": "Daily Mail on MSN",
+        "published": "2026-10-26T04:05:17Z",
+        "url": "https://www.msn.com/en-ae/news/other/mp-claims-he-found-bullet-engraved-with-chilling-threat-on-his-car-bonnet/ar-AA2g5T62"
+      },
+      {
+        "title": "Labor MP Paul Edbrooke threatened with etched bullet found on car",
+        "outlet": "ABC News Australia on MSN",
+        "published": "2026-10-25T22:47:00Z",
+        "url": "https://www.msn.com/en-au/news/other/labor-mp-paul-edbrooke-threatened-with-etched-bullet-found-on-car/ar-AA2g2GYI"
+      },
+      {
+        "title": "‘That’s a death threat’: Victorian minister finds bullet etched with ‘rat’ on car",
+        "outlet": "nine.com.au on MSN",
+        "published": "2026-10-25T20:07:37Z",
+        "url": "https://www.msn.com/en-au/news/other/that-s-a-death-threat-victorian-minister-finds-bullet-etched-with-rat-on-car/ar-AA2g34p3"
+      },
+      {
+        "title": "‘Someone has been following me’: safety fears after bullet inscribed with ‘RAT’ left on Victorian minister’s car",
+        "outlet": "The Guardian",
+        "published": "2026-10-25T17:11:00Z",
+        "url": "https://www.theguardian.com/australia-news/2026/oct/26/labor-mp-paul-edbrooke-bullet-on-car-rat-ntwnfb"
+      },
+      {
+        "title": "‘A new low’: Bullet left on Paul Edbrooke’s car amid union dispute",
+        "outlet": "Herald Sun",
+        "published": "2026-10-25T11:00:00Z",
+        "url": "https://www.heraldsun.com.au/news/victoria/state-election/a-new-low-bullet-left-on-paul-edbrookes-car-amid-union-dispute/news-story/cc5a0feaaeedc37a46894450fc81aee9"
+      },
+      {
+        "title": "Senior Labor ministers at risk as internal polling points to a wipeout in Frankston line",
+        "outlet": "The Australia Today",
+        "published": "2026-10-23T02:36:00Z",
+        "url": "https://www.theaustraliatoday.com.au/senior-labor-ministers-at-risk-as-internal-polling-points-to-a-wipeout-in-frankston-line/"
+      }
+    ],
+    "geelong": [
+      {
+        "title": "Geelong MP Christine Couzens slams Liberal pledge to axe Moorabool St bus stop",
+        "outlet": "Geelong Advertiser",
+        "published": "2026-10-13T08:23:00Z",
+        "url": "https://www.geelongadvertiser.com.au/news/geelong/coalition-promises-to-axe-moorabool-st-bus-exchange-fund-market-square-business-case-in-cbd-revamp-push/news-story/d5d2cbd2cc0626395c89d505ca9fb068"
+      },
+      {
+        "title": "‘I’m a Queenslander’: Pauline Hanson refuses local promises at sold-out Geelong rally",
+        "outlet": "NT News",
+        "published": "2026-10-04T07:00:00Z",
+        "url": "https://www.ntnews.com.au/news/geelong/im-a-queenslander-pauline-hanson-refuses-local-promises-at-soldout-geelong-rally/news-story/b9cbd0092b0584ab062ecb8932ade83a"
+      }
+    ],
+    "gippsland-east": [],
+    "gippsland-south": [],
+    "glen-waverley": [
+      {
+        "title": "Potholes and parking on the minds of Glen Waverley voters as Victorian election nears",
+        "outlet": "ABC (Australian Broadcasting Corporation) on MSN",
+        "published": "2026-09-29T14:19:42Z",
+        "url": "https://www.msn.com/en-au/news/other/potholes-and-parking-on-the-minds-of-glen-waverley-voters-as-victorian-election-nears/ar-AA2de1Zo"
+      }
+    ],
+    "greenvale": [],
+    "hastings": [],
+    "hawthorn": [
+      {
+        "title": "Supreme Court orders names of John Pesutto’s secret loan guarantors to be revealed",
+        "outlet": "Herald Sun",
+        "published": "2026-10-30T10:38:00Z",
+        "url": "https://www.heraldsun.com.au/truecrimeaustralia/police-courts-victoria/supreme-court-orders-names-of-john-pesuttos-secret-loan-guarantors-to-be-revealed/news-story/f5937cb19c01e8e687184cd9f6c4078d"
+      }
+    ],
+    "ivanhoe": [
+      {
+        "title": "BioNTech mRNA manufacturing facility opens",
+        "outlet": "India Education Diary on MSN",
+        "published": "2026-10-26T03:36:00Z",
+        "url": "https://www.msn.com/en-in/money/general/biontech-mrna-manufacturing-facility-opens/ar-AA2g6A8N"
+      },
+      {
+        "title": "Anthony Carbines refuses to talk about blistering attack on Labor Party bosses in media outing with Jacinta Allan",
+        "outlet": "The Toowoomba Chronicle",
+        "published": "2026-07-22T06:34:00Z",
+        "url": "https://www.thechronicle.com.au/news/victoria/anthony-carbines-refuses-to-talk-about-blistering-private-attack-on-labor-party-bosses-in-media-outing-with-jacinta-allan/news-story/ed2b829f1f11614de0cea198cae51852"
+      }
+    ],
+    "kalkallo": [
+      {
+        "title": "Traffic and roads driving voters of Kalkallo in Victorian state election",
+        "outlet": "ABC (Australian Broadcasting Corporation) on MSN",
+        "published": "2026-10-25T11:29:38Z",
+        "url": "https://www.msn.com/en-au/news/other/traffic-and-roads-driving-voters-of-kalkallo-in-victorian-state-election/ar-AA2g2Lzq"
+      }
+    ],
+    "kew": [
+      {
+        "title": "Liberal plan to scrap Treaty risks 'sending us back', Aboriginal leader warns",
+        "outlet": "ABC News",
+        "published": "2026-10-30T20:33:16Z",
+        "url": "https://www.abc.net.au/news/2026-10-31/treaty-scrap-victoria-coalition-vic-election-jess-wilson/107322868"
+      },
+      {
+        "title": "Who is Jess Wilson? The millennial Liberal leader on the cusp of history in Victoria",
+        "outlet": "The Guardian",
+        "published": "2026-10-30T07:00:00Z",
+        "url": "https://www.theguardian.com/australia-news/ng-interactive/2026/oct/31/who-is-jess-wilson-mp-victoria-election-2026-liberal-leader-profile-interview-ntwnfb"
+      },
+      {
+        "title": "Coalition outline policy plan to try and stop abortion issue becoming an election wedge",
+        "outlet": "The Toowoomba Chronicle",
+        "published": "2026-10-15T01:04:00Z",
+        "url": "https://www.thechronicle.com.au/news/victoria/political-football-jess-wilson-slams-ben-carroll-over-30m-election-pledge-for-free-abortions/news-story/042c83e4be4c5e7b4169f27ea2833036"
+      },
+      {
+        "title": "52 questions with Jess Wilson: Toddler chaos, Macca’s runs and her pitch to lead Victoria",
+        "outlet": "The Toowoomba Chronicle",
+        "published": "2026-09-19T12:00:00Z",
+        "url": "https://www.thechronicle.com.au/news/victoria/52-questions-with-jess-wilson-toddler-chaos-maccas-runs-and-her-pitch-to-lead-victoria/news-story/33ddb943f9ee272f4fed401bf0cb603d"
+      },
+      {
+        "title": "Jess Wilson unveils $5bn Coalition plan to tackle Victoria’s pothole crisis",
+        "outlet": "Geelong Advertiser",
+        "published": "2026-07-12T22:00:00Z",
+        "url": "https://www.geelongadvertiser.com.au/news/victoria/jess-wilson-unveils-5bn-coalition-plan-to-tackle-victorias-pothole-crisis/news-story/3b50e05ce504a8118c6dadeff8909284"
+      }
+    ],
+    "kororoit": [],
+    "lara": [],
+    "laverton": [
+      {
+        "title": "Laverton election results 2022: live count for 2026 from 28 November",
+        "outlet": "onenewsaustralia.com",
+        "published": "2026-09-30T21:57:00Z",
+        "url": "https://www.onenewsaustralia.com/laverton-election-results-2026/"
+      },
+      {
+        "title": "Labor MP Sarah Connolly called out for skipping march to lift weights, do washing",
+        "outlet": "Northern Territory News",
+        "published": "2026-08-12T12:00:00Z",
+        "url": "https://www.ntnews.com.au/news/victoria/labor-mp-sarah-connolly-called-out-for-skipping-march-to-lift-weights-do-washing/news-story/78c71b9d1c3825a827de5a1dd5a36d4c"
+      }
+    ],
+    "lowan": [
+      {
+        "title": "New Henty fire shed on the agenda for State Election",
+        "outlet": "The SE Voice",
+        "published": "2026-10-20T08:11:00Z",
+        "url": "https://sevoice.com.au/new-henty-fire-shed-on-the-agenda-for-state-election/"
+      },
+      {
+        "title": "Lowan election results 2022: live count for 2026 from 28 November",
+        "outlet": "onenewsaustralia.com",
+        "published": "2026-10-06T21:36:00Z",
+        "url": "https://www.onenewsaustralia.com/lowan-election-results-2026/"
+      },
+      {
+        "title": "BC Green’s Emily Lowan to Run in Victoria-Area Riding as Rob Botterell Steps Aside",
+        "outlet": "cmsapi.theepochtimes.com",
+        "published": "2026-09-22T17:00:00Z",
+        "url": "https://cmsapi.theepochtimes.com/world/bc-greens-emily-lowan-to-run-in-victoria-area-riding-as-rob-botterell-steps-aside-6093979"
+      }
+    ],
+    "macedon": [
+      {
+        "title": "Former Macedon mayor Dom Bonanno announces state election campaign as independent candidate",
+        "outlet": "Herald Sun",
+        "published": "2026-09-22T05:52:00Z",
+        "url": "https://www.heraldsun.com.au/leader/bendigo/former-macedon-mayor-dom-bonanno-announces-state-election-campaign-as-independent-candidate/news-story/c0989f1972ee1a57330ab8cc70ad5cc9"
+      }
+    ],
+    "malvern": [
+      {
+        "title": "Victorian state election: Amelia Hamer eyes Malvern seat as party figures rally behind her candidacy",
+        "outlet": "europesays",
+        "published": "2026-09-19T12:00:00Z",
+        "url": "https://www.europesays.com/australia/100670/"
+      }
+    ],
+    "melbourne": [],
+    "melton": [],
+    "mildura": [
+      {
+        "title": "Victorian Liberal Nationals promise to bring V/Line trains back to Mildura and Horsham",
+        "outlet": "ABC (Australian Broadcasting Corporation)",
+        "published": "2026-10-18T20:42:00Z",
+        "url": "https://www.abc.net.au/news/2026-10-19/coalition-promises-to-return-passenger-train-to-wimmera-mallee/107281650"
+      }
+    ],
+    "mill-park": [
+      {
+        "title": "Liberal candidate Joel Drysdale turns defaced Victorian election signage into light-hearted message for rivals",
+        "outlet": "The Australia Today",
+        "published": "2026-10-19T09:25:00Z",
+        "url": "https://www.theaustraliatoday.com.au/liberal-candidate-joel-drysdale-turns-defaced-victorian-election-signage-into-light-hearted-message-for-rivals/"
+      },
+      {
+        "title": "Victorian ministers Harriet Shing and Lily D'Ambrosio announce retirement",
+        "outlet": "Australian Broadcasting Corporation",
+        "published": "2026-07-29T22:06:00Z",
+        "url": "https://www.abc.net.au/news/2026-07-30/victorian-mp-harriet-shing-retirement/106977588"
+      }
+    ],
+    "monbulk": [],
+    "mordialloc": [],
+    "mornington": [
+      {
+        "title": "Liberals commit $2m to Mornington to Moorooduc bike trail",
+        "outlet": "MPNEWS",
+        "published": "2026-10-28T17:00:00Z",
+        "url": "https://www.mpnews.com.au/2026/10/29/liberals-commit-2m-to-mornington-to-moorooduc-bike-trail/"
+      },
+      {
+        "title": "The Peninsula wants answers: Shout Out election forums announced",
+        "outlet": "mornpen.vic",
+        "published": "2026-09-22T17:00:00Z",
+        "url": "https://www.mornpen.vic.gov.au/The-Shire/News-media-and-publications/News-and-media-releases/The-Peninsula-wants-answers-Shout-Out-election-forums-announced"
+      }
+    ],
+    "morwell": [],
+    "mulgrave": [],
+    "murray-plains": [
+      {
+        "title": "Coalition pledges fire truck",
+        "outlet": "gannawarratimes.com.au",
+        "published": "2026-10-25T17:00:00Z",
+        "url": "https://gannawarratimes.com.au/news/2026/10/26/coalition-pledges-fire-truck/"
+      },
+      {
+        "title": "Retiring Peter Walsh accuses One Nation of treating regional Victorian voters with contempt",
+        "outlet": "The Weekly Times",
+        "published": "2026-10-21T10:59:00Z",
+        "url": "https://www.weeklytimesnow.com.au/news/victoria/retiring-peter-walsh-accuses-one-nation-of-treating-regional-victorian-voters-with-contempt/news-story/d88a73a49ab77ab607173d9b6147b34c"
+      },
+      {
+        "title": "Candidate forum",
+        "outlet": "gannawarratimes.com.au",
+        "published": "2026-10-19T17:00:00Z",
+        "url": "https://gannawarratimes.com.au/news/2026/10/20/candidate-forum-2/"
+      }
+    ],
+    "narracan": [
+      {
+        "title": "Liberal MP Wayne Farnham stakes career on $850m West Gippsland Hospital build amid regional healthcare crisis",
+        "outlet": "heraldsun.com.au",
+        "published": "2026-10-14T06:05:00Z",
+        "url": "https://www.heraldsun.com.au/news/victoria/state-election/liberal-mp-wayne-farnham-stakes-career-on-850m-west-gippsland-hospital-build-amid-regional-healthcare-crisis/news-story/f183963d37872d0640ac40493e435f0e"
+      }
+    ],
+    "narre-warren-north": [],
+    "narre-warren-south": [],
+    "nepean": [],
+    "niddrie": [
+      {
+        "title": "Steve Price: Ben Carroll’s petrol drive off is the perfect symbol of how he treats Victoria",
+        "outlet": "Herald Sun",
+        "published": "2026-10-23T05:00:00Z",
+        "url": "https://www.heraldsun.com.au/news/opinion/steve-price-ben-carroll-lives-in-an-elite-bubble-and-his-petrol-drive-off-proves-it/news-story/e5f21360bfea182af1f115f2d0721232"
+      },
+      {
+        "title": "Ben Carroll: Disagreement is fine, but abuse must stop in our politics and communities",
+        "outlet": "Herald Sun",
+        "published": "2026-10-22T08:00:00Z",
+        "url": "https://www.heraldsun.com.au/news/opinion/ben-carroll-disagreement-is-fine-but-abuse-must-stop-in-our-politics-and-communities/news-story/ecfff805cac6b7bb5f598752a764bcd3"
+      },
+      {
+        "title": "Ben Carroll ‘rejected out of hand’ push to join ‘red shirts’",
+        "outlet": "The Australian",
+        "published": "2026-10-19T15:14:00Z",
+        "url": "https://www.theaustralian.com.au/nation/i-wasnt-going-to-have-anything-to-do-with-it-ben-carroll-on-red-shirts-rort/news-story/c72093c01a837996c888eda5cb1d83e0"
+      },
+      {
+        "title": "‘Count me out’; Ben Carroll rejected Labor approach to join red shirts rort",
+        "outlet": "The Australian",
+        "published": "2026-10-18T15:50:00Z",
+        "url": "https://www.theaustralian.com.au/nation/politics/count-me-out-ben-carroll-rejected-labor-approach-to-join-red-shirts-rort/news-story/180dfb7cd144e78a975a69690c7bc891"
+      },
+      {
+        "title": "Victoria's premier faces two oppositions heading into the state election",
+        "outlet": "ABC (Australian Broadcasting Corporation)",
+        "published": "2026-10-04T04:04:00Z",
+        "url": "https://www.abc.net.au/news/2026-10-05/victorias-three-opposition-election-premier-ben-carroll/107226558"
+      },
+      {
+        "title": "Ben Carroll’s promised ‘new direction’ failing to win over Victorian voters",
+        "outlet": "The Daily Telegraph",
+        "published": "2026-09-28T07:33:00Z",
+        "url": "https://www.dailytelegraph.com.au/news/victoria/ben-carrolls-promised-new-direction-failing-to-win-over-victorian-voters/news-story/b67ec2414f9c5867909abd57f6baac15"
+      },
+      {
+        "title": "Ben Carroll’s landmark work from home laws derailed by former Labor MP",
+        "outlet": "The Courier-Mail",
+        "published": "2026-09-10T11:51:00Z",
+        "url": "https://www.couriermail.com.au/news/victoria/ben-carrolls-landmark-work-from-home-laws-derailed-by-parliamentary-vote/news-story/24a12114a3339f8fbf4b05964663b7ce"
+      },
+      {
+        "title": "Steve Price: Ben Carroll’s fingerprints all over Victoria’s biggest fails",
+        "outlet": "Adelaide Now",
+        "published": "2026-07-31T05:10:00Z",
+        "url": "https://www.adelaidenow.com.au/news/opinion/steve-price-ben-carrolls-fingerprints-all-over-victorias-biggest-fails/news-story/442edb4924120c4b535d59c13155d022"
+      },
+      {
+        "title": "Who is Ben Carroll? MP's path from checkout worker to Victoria's 50th premier",
+        "outlet": "Australian Broadcasting Corporation",
+        "published": "2026-07-27T19:53:00Z",
+        "url": "https://www.abc.net.au/news/2026-07-28/ben-carroll-new-victorian-premier-jacinta-allan-successor/106787490"
+      }
+    ],
+    "northcote": [
+      {
+        "title": "Victorian election rivals share Melbourne CBD barista after setting up headquarters next door",
+        "outlet": "The Australian",
+        "published": "2026-10-28T21:29:00Z",
+        "url": "https://www.theaustralian.com.au/commentary/victoria-ink/victorian-election-rivals-share-melbourne-cbd-barista-after-setting-up-headquarters-next-door/news-story/1925ea62df9683004405075fee074524"
+      }
+    ],
+    "oakleigh": [],
+    "ovens-valley": [
+      {
+        "title": "Labor boss reacts to lack of North East candidates for the Victorian election",
+        "outlet": "The Border Mail",
+        "published": "2026-10-16T12:00:00Z",
+        "url": "https://www.bordermail.com.au/story/9369861/labor-boss-reacts-to-lack-of-north-east-candidates-for-the-victorian-election/"
+      },
+      {
+        "title": "Split in One Nation support across the North East exposed through our survey",
+        "outlet": "The Border Mail",
+        "published": "2026-08-21T10:00:00Z",
+        "url": "https://www.bordermail.com.au/story/9333958/acm-survey-reveals-33-per-cent-one-nation-support-in-ovens-valley/"
+      }
+    ],
+    "pakenham": [],
+    "pascoe-vale": [],
+    "point-cook": [],
+    "polwarth": [],
+    "prahran": [],
+    "preston": [],
+    "richmond": [],
+    "ringwood": [
+      {
+        "title": "Ringwood election results 2022: live count for 2026 from 28 November",
+        "outlet": "onenewsaustralia.com",
+        "published": "2026-10-06T21:35:00Z",
+        "url": "https://www.onenewsaustralia.com/ringwood-election-results-2026/"
+      }
+    ],
+    "ripon": [
+      {
+        "title": "Renewables, roads and emergency services levy front-of-mind at Ripon election forum",
+        "outlet": "ABC (Australian Broadcasting Corporation) on MSN",
+        "published": "2026-10-04T13:16:52Z",
+        "url": "https://www.msn.com/en-au/news/australia/renewables-roads-and-emergency-services-levy-front-of-mind-at-ripon-election-forum/ar-AA2dywXd"
+      }
+    ],
+    "rowville": [],
+    "sandringham": [],
+    "shepparton": [
+      {
+        "title": "Greater Shepparton Secures First Cancer Centre Commitment",
+        "outlet": "Mirage News",
+        "published": "2026-10-07T05:27:00Z",
+        "url": "https://www.miragenews.com/greater-shepparton-secures-first-cancer-centre-1755885/"
+      }
+    ],
+    "south-barwon": [
+      {
+        "title": "Geelong MP Darren Cheeseman collects $60k for Melbourne stays despite attendance concerns",
+        "outlet": "ABC (Australian Broadcasting Corporation) on MSN",
+        "published": "2026-10-26T13:33:24Z",
+        "url": "https://www.msn.com/en-au/news/australia/geelong-mp-darren-cheeseman-collects-60k-for-melbourne-stays-despite-attendance-concerns/ar-AA2g6T3c"
+      }
+    ],
+    "south-west-coast": [],
+    "st-albans": [
+      {
+        "title": "Socialist Leanna Nguyen to contest St Albans",
+        "outlet": "Brimbank & North West | Star Weekly",
+        "published": "2026-10-27T17:00:00Z",
+        "url": "https://brimbanknorthwest.starweekly.com.au/news/socialist-leanna-nguyen-to-contest-st-albans/"
+      }
+    ],
+    "sunbury": [],
+    "sydenham": [
+      {
+        "title": "Natalie Hutchins seeks intervention order against former public servant Simon Vallone",
+        "outlet": "The Courier-Mail",
+        "published": "2026-08-11T12:07:00Z",
+        "url": "https://www.couriermail.com.au/news/victoria/natalie-hutchins-seeks-intervention-order-against-former-political-staffer-simon-vallone/news-story/99f087133012664db2b4bcf63e0d84a7"
+      }
+    ],
+    "tarneit": [],
+    "thomastown": [],
+    "warrandyte": [],
+    "wendouree": [],
+    "werribee": [],
+    "williamstown": [],
+    "yan-yean": [
+      {
+        "title": "Yan Yean Liberal candidate Amanda Dow’s husband taken to hospital after alleged assault",
+        "outlet": "Herald Sun",
+        "published": "2026-10-26T14:07:00Z",
+        "url": "https://www.heraldsun.com.au/news/victoria/state-election/yan-yean-liberal-candidate-amanda-dows-husband-taken-to-hospital-after-alleged-assault/news-story/e831580631fe34decc2010ad5d62dfed"
+      }
+    ]
+  },
+  "sources": {
+    "ABC News": {
+      "status": "ok",
+      "url": "https://www.abc.net.au/news/feed/51120/rss.xml",
+      "items": 25
+    },
+    "Bendigo Advertiser": {
+      "status": "ok",
+      "url": "https://www.bendigoadvertiser.com.au/rss.xml",
+      "items": 20
+    },
+    "Border Mail": {
+      "status": "ok",
+      "url": "https://www.bordermail.com.au/rss.xml",
+      "items": 20
+    },
+    "Warrnambool Standard": {
+      "status": "ok",
+      "url": "https://www.standard.net.au/rss.xml",
+      "items": 20
+    },
+    "Latrobe Valley Express": {
+      "status": "ok",
+      "url": "https://www.latrobevalleyexpress.com.au/feed/",
+      "items": 12
+    },
+    "Sunraysia Daily": {
+      "status": "ok",
+      "url": "https://www.sunraysiadaily.com.au/feed",
+      "items": 12
+    },
+    "Star Weekly": {
+      "status": "ok",
+      "url": "https://www.starweekly.com.au/feed/",
+      "items": 12
+    },
+    "Shepparton News": {
+      "status": "error",
+      "url": "https://www.sheppnews.com.au/feed/",
+      "message": "Document is empty, line 1, column 1 (<string>, line 1)"
+    },
+    "Geelong Advertiser": {
+      "status": "skipped",
+      "url": "https://www.geelongadvertiser.com.au/feed",
+      "message": "robots.txt disallows automated access"
+    },
+    "Bing News search": {
+      "status": "ok",
+      "url": "https://www.bing.com/news/search",
+      "items": 176,
+      "message": "176 searches for 88 districts"
+    },
+    "Google News": {
+      "status": "skipped",
+      "url": "https://news.google.com/rss",
+      "message": "robots.txt disallows /rss for all crawlers; Bing News search used instead"
+    }
+  }
+}

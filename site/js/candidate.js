@@ -50,6 +50,7 @@
       const d = districts[p.seat] || {};
       return [
         fact("Seat", seatLink(p), d.classification ? escapeHtml(d.classification) : ""),
+        fact("Ballot position", p.ballot_position != null ? String(p.ballot_position) : "Not drawn yet", p.ballot_position != null ? "" : "VEC draw after nominations close 9 Nov"),
         fact("Held by", d.party ? partyBadge(d.party) : "–", d.sitting_mp ? escapeHtml(d.sitting_mp) + (d.retiring ? " (retiring)" : "") : ""),
         fact("Margin", marginText(d.margin)),
         fact("Region", regions[d.region] ? `<a href="upper.html#${escapeHtml(d.region)}">${escapeHtml(regions[d.region].name)}</a>` : "–"),
@@ -61,6 +62,24 @@
       fact("Ballot group", p.group ? `Group ${escapeHtml(p.group)}` : "Not drawn yet", "VEC draw after nominations close 9 Nov"),
       fact("Current MLC", p.mlc ? `Yes, ${escapeHtml(partyName(p.mlc.party))}` : "No"),
     ].join("");
+  }
+
+  const hostOf = (url) => { try { return new URL(url).hostname.replace(/^www\./, ""); } catch (e) { return url; } };
+  const ext = (url, text) => `<a href="${escapeHtml(url)}" target="_blank" rel="noopener">${escapeHtml(text)} ↗</a>`;
+
+  // Official links only: the website the ABC guide lists for the candidate, and the seat's ABC guide page.
+  function links(p) {
+    const out = [];
+    if (p.website) {
+      const host = hostOf(p.website);
+      const social = { "facebook.com": "Facebook", "instagram.com": "Instagram", "x.com": "X", "twitter.com": "X", "linkedin.com": "LinkedIn", "tiktok.com": "TikTok" };
+      const kind = Object.entries(social).find(([h]) => host === h || host.endsWith(`.${h}`));
+      out.push([kind ? kind[1] : "Website", `${ext(p.website, kind ? p.website.replace(/^https?:\/\/(www\.)?/, "") : host)} <span class="muted small">(as listed by the ABC)</span>`]);
+    }
+    const d = p.house === "lower" ? districts[p.seat] : null;
+    if (d && d.abc_url) out.push(["ABC guide", ext(d.abc_url, `${d.name} seat guide`)]);
+    if (!out.length) return "";
+    return `<dl class="profile-record profile-links">${out.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>`;
   }
 
   function record(p) {
@@ -140,6 +159,7 @@
         </div>
         <div class="facts">${facts(p)}</div>
         ${p.status === "withdrawn" ? '<p class="banner">This candidate has withdrawn.</p>' : ""}
+        ${links(p)}
         ${record(p)}
         ${photoDetails(p)}
       </article>

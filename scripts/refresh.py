@@ -14,6 +14,10 @@
 * Sportsbet seat markets (best effort): fills seat_odds.json if the site
   can be fetched and parsed; otherwise the file is treated as manual.
 * VEC candidates: placeholder (see fetch_vec_candidates below).
+* How-to-vote cards: the VEC register (from 10 Nov 2026), recorded in htv.json;
+  preference orders are entered by hand and kept.
+* News: per-district Bing News RSS searches plus publishers' feeds, matched to
+  seats by district or MP name; headline, outlet, date and link only (news.json).
 * meta.json: last_updated and per-source status.
 
 If a fetch or parse fails, the error is logged and the existing file is kept.
@@ -28,6 +32,7 @@ from __future__ import annotations
 import argparse
 import calendar
 import difflib
+import email.utils
 import html as htmllib
 import io
 import json
@@ -887,10 +892,21 @@ def parse_abc_district(page: str) -> dict:
             out["sitting_mp"] = clean_text(strong[0].text_content())
         out["retiring"] = "retiring" in held[0].text_content().lower()
 
+    # Candidate cards: name plus the "Website" link (the party's candidate page or their own site).
+    websites = {}
+    for card in doc.xpath("//*[contains(concat(' ', @class, ' '), ' eg2-card-header ')]"):
+        name = card.xpath(".//*[contains(concat(' ', @class, ' '), ' eg2-card-name ')]")
+        link = card.xpath(".//a[contains(concat(' ', @class, ' '), ' eg2-card-link ')]/@href")
+        if name and link and link[0].startswith("http"):
+            websites[_name_key(clean_text(name[0].text_content()))] = link[0]
+
     for tr in doc.xpath("//table[contains(@class, 'eg2-ballot')]//tbody/tr"):
         cells = [clean_text(td.text_content()) for td in tr.findall("td")]
         if len(cells) >= 2 and cells[0]:
-            out["candidates"].append({"name": cells[0], "party_label": cells[1]})
+            entry = {"name": cells[0], "party_label": cells[1]}
+            if _name_key(cells[0]) in websites:
+                entry["website"] = websites[_name_key(cells[0])]
+            out["candidates"].append(entry)
     return out
 
 
@@ -998,6 +1014,8 @@ def _apply_abc_entry(entry: dict, did: str, url: str, seat_rows: list[dict], row
         match.pop("superseded_by", None)
         match.pop("superseded_on", None)
     match.update(source="abc", source_url=url, updated=today)
+    if entry.get("website"):
+        match["website"] = entry["website"]
     if known_party is None and party == "OTH" and entry["party_label"]:
         match["notes"] = f"Party on ABC: {entry['party_label']}"
     return match
@@ -1333,6 +1351,343 @@ def refresh_candidates(data_dir: Path, meta: dict) -> bool:
 
 # --------------------------------------------------------------------------
 
+# --------------------------------------------------------------------------
+# How-to-vote cards: VEC register (opens 9 am Tue 10 Nov 2026)
+# --------------------------------------------------------------------------
+# The VEC lists registered cards per district/region (heading "<Name> District"
+# or "<Name> Region", then a table of registration number, registered by, date,
+# and a link to the card PDF). The fetch records each card; the preference
+# order printed on the card is entered by hand into "order" and is kept.
+
+VEC_HTV_URL = "https://www.vec.vic.gov.au/candidates-and-parties/become-a-state-election-candidate/how-to-vote-cards"
+HTV_OPENS = "2026-11-10"
+HTV_SCHEMA = {
+    "description": "How-to-vote cards registered with the VEC for the 2026 election. scripts/refresh.py checks the VEC's "
+                   "register daily and records each card; the preference order on each card is entered by hand from the "
+                   "card PDF and is never overwritten.",
+    "fields": {
+        "status": "not_open (before registration opens) | open (register live, cards listed) | open_no_cards",
+        "registration_opens": "YYYY-MM-DD registration opens (9 am)",
+        "source_url": "The VEC how-to-vote card page",
+        "last_checked": "ISO UTC time of the last successful check",
+        "cards": "[{house: lower|upper, district or region (id), registered_by (as listed by the VEC), party (code or null), "
+                 "candidate (independents: name as listed), registration (VEC number), registered_on (YYYY-MM-DD), card_url, "
+                 "order (party codes or candidate names in the card's preference order, first to last; null until entered), notes}]",
+    },
+}
+
+
+def _vec_party(label: str) -> str | None:
+    if re.match(r"^[A-Z'\- ]+,\s", label):   # "SURNAME, Given": an individual
+        return None
+    return _abc_party(label) or _party_code(label)
+
+
+def parse_vec_htv(page: str, districts: dict[str, str], regions: dict[str, str]) -> list[dict]:
+    """Cards from a VEC register page; empty if it has no district/region tables."""
+    doc = lxml.html.fromstring(page)
+    cards = []
+    for h in doc.xpath("//h2|//h3"):
+        title = clean_text(h.text_content())
+        m = re.match(r"(.+?)\s+(District|Region)$", title)
+        if not m:
+            continue
+        house, names = ("lower", districts) if m.group(2) == "District" else ("upper", regions)
+        seat = names.get(m.group(1).lower())
+        table = h.xpath("following::table[1]")
+        if not seat or not table:
+            continue
+        for tr in table[0].xpath(".//tr[td]"):
+            cells = [clean_text(td.text_content()) for td in tr.xpath("./td")]
+            link = tr.xpath(".//a/@href")
+            if len(cells) < 3 or not cells[1]:
+                continue
+            when = parse_date_range(cells[2], date.today().year)
+            party = _vec_party(cells[1])
+            cards.append({
+                "house": house, ("district" if house == "lower" else "region"): seat,
+                "registered_by": cells[1], "party": party,
+                "candidate": cells[1] if party is None and "," in cells[1] else None,
+                "registration": cells[0], "registered_on": when[1].isoformat() if when else None,
+                "card_url": link[0] if link else None, "order": None,
+            })
+    return cards
+
+
+def refresh_htv(data_dir: Path, meta: dict) -> bool:
+    source = meta.setdefault("sources", {}).setdefault("htv", {"url": VEC_HTV_URL})
+    path = data_dir / "htv.json"
+    existing = read_json(path, {}) or {}
+    data = {"_schema": HTV_SCHEMA, "status": existing.get("status", "not_open"), "registration_opens": HTV_OPENS,
+            "source_url": VEC_HTV_URL, "last_checked": existing.get("last_checked"), "cards": existing.get("cards", [])}
+    districts = {d["name"].lower(): d["id"] for d in (read_json(data_dir / "districts.json", {}) or {}).get("districts", [])}
+    regions = {r["name"].lower(): r["id"] for r in (read_json(data_dir / "regions.json", {}) or {}).get("regions", [])}
+    today = datetime.now(MELBOURNE).date().isoformat()
+    try:
+        web = PoliteSession()
+        robots = urllib.robotparser.RobotFileParser()
+        robots.parse(web.get("https://www.vec.vic.gov.au/robots.txt").splitlines())
+        if not robots.can_fetch(ABC_USER_AGENT, VEC_HTV_URL):
+            raise ValueError("robots.txt disallows the VEC how-to-vote page")
+        page = web.get(VEC_HTV_URL)
+        cards = parse_vec_htv(page, districts, regions)
+        if not cards:
+            # The 2026 register may be its own page, linked from this one (earlier events are "archive" pages).
+            doc = lxml.html.fromstring(page)
+            for a in doc.xpath("//a[@href]"):
+                href, text = a.get("href"), clean_text(a.text_content())
+                if "2026" in text and "by-election" not in text.lower() and "how-to-vote" in href and "archive" not in href:
+                    cards = parse_vec_htv(web.get(requests.compat.urljoin(VEC_HTV_URL, href)), districts, regions)
+                    if cards:
+                        break
+    except Exception as exc:  # noqa: BLE001 - keep the existing file
+        log.error("VEC how-to-vote check failed, keeping %s: %s", path.name, exc)
+        warn_ci(f"VEC how-to-vote check failed: {exc}")
+        source.update(status="error", message=str(exc)[:300])
+        if not path.exists():
+            write_json(path, data)
+        return False
+
+    # Keep hand-entered orders and notes for cards already recorded.
+    def key(c):
+        return (c.get("district") or c.get("region"), c.get("registration"), c.get("registered_by"))
+    old = {key(c): c for c in data["cards"]}
+    merged = []
+    for c in cards:
+        prev = old.pop(key(c), {})
+        merged.append({**c, "order": prev.get("order"), **({"notes": prev["notes"]} if prev.get("notes") else {})})
+    merged.extend(old.values())   # never drop a card once recorded
+    data["cards"] = sorted(merged, key=lambda c: (c["house"], c.get("district") or c.get("region") or "", c.get("registered_by") or ""))
+    data["status"] = "open" if data["cards"] else ("not_open" if today < HTV_OPENS else "open_no_cards")
+    source.update(status="ok", url=VEC_HTV_URL, last_success=now_iso(),
+                  message=f"{len(data['cards'])} cards registered" if data["cards"] else f"No cards yet (status {data['status']})")
+    strip = lambda d: json.dumps({k: v for k, v in d.items() if k != "last_checked"}, sort_keys=True)
+    changed = strip(data) != strip(existing)
+    if changed or not path.exists():
+        data["last_checked"] = now_iso()
+        write_json(path, data)
+        log.info("Wrote %s (%s, %d cards)", path.name, data["status"], len(data["cards"]))
+    else:
+        log.info("%s unchanged (%s, %d cards)", path.name, data["status"], len(data["cards"]))
+    return changed
+
+
+# --------------------------------------------------------------------------
+# News: headlines, outlet, date and link only (never article text)
+# --------------------------------------------------------------------------
+# Per seat: a Bing News RSS search for the district or the sitting MP with
+# "Victorian election" (Google News RSS is disallowed by its robots.txt),
+# plus regional papers' and the ABC's feeds, matched to seats by district
+# or MP name. One request per second; any source that fails is skipped and
+# the seat keeps its earlier list.
+
+NEWS_PER_SEAT = 10
+NEWS_STATEWIDE = 25
+NEWS_MAX_AGE_DAYS = 120
+BING_NEWS = "https://www.bing.com/news/search"
+NEWS_FEEDS = [
+    # (outlet, feed URL, the ABC's general feed: filtered to state-election stories for the statewide list)
+    ("ABC News", "https://www.abc.net.au/news/feed/51120/rss.xml", True),
+    ("Bendigo Advertiser", "https://www.bendigoadvertiser.com.au/rss.xml", False),
+    ("Border Mail", "https://www.bordermail.com.au/rss.xml", False),
+    ("Warrnambool Standard", "https://www.standard.net.au/rss.xml", False),
+    ("Latrobe Valley Express", "https://www.latrobevalleyexpress.com.au/feed/", False),
+    ("Sunraysia Daily", "https://www.sunraysiadaily.com.au/feed", False),
+    ("Star Weekly", "https://www.starweekly.com.au/feed/", False),
+    ("Shepparton News", "https://www.sheppnews.com.au/feed/", False),
+    ("Geelong Advertiser", "https://www.geelongadvertiser.com.au/feed", False),   # robots.txt prohibits: always skipped
+]
+NEWS_SCHEMA = {
+    "description": "Election news per district and statewide, refreshed daily by scripts/refresh.py from Bing News RSS searches "
+                   "and publishers' RSS feeds. Headline, outlet, date and link only; article text is never stored.",
+    "fields": {
+        "updated": "ISO UTC time of the last refresh",
+        "statewide": f"Up to {NEWS_STATEWIDE} latest items about the state election: [{{title, outlet, published (ISO UTC), url}}]",
+        "seats": f"District id -> up to {NEWS_PER_SEAT} latest items mentioning the district or its sitting MP",
+        "sources": "Source -> {status: ok | error | skipped, url, items, message}",
+    },
+}
+ELECTION_WORDS = re.compile(r"\b(election|by-election|candidates?|preselect\w*|ballot|preferences|polling|MP|"
+                            r"Premier|Liberals?|Labor|Greens|Nationals|One Nation)\b")
+VICTORIA = re.compile(r"\b(Victoria|Victorian|Melbourne|Spring Street|VEC)\b")
+STATE_ELECTION = re.compile(r"(state election|Victorian election|Victorian (poll|campaign|voters)|"
+                            r"Ben Carroll|Jess Wilson|Warren Pickering|Spring Street)", re.I)
+
+
+def _news_title_key(title: str) -> str:
+    return re.sub(r"[^a-z0-9 ]", "", unicodedata.normalize("NFKD", title).lower()).strip()
+
+
+def _dedupe_news(items: list[dict]) -> list[dict]:
+    """Newest first; drop repeats by URL or near-identical headline."""
+    out = []
+    for it in sorted(items, key=lambda x: x.get("published") or "", reverse=True):
+        if any(it["url"] == o["url"] or difflib.SequenceMatcher(None, _news_title_key(it["title"]), _news_title_key(o["title"])).ratio() > 0.9
+               for o in out):
+            continue
+        out.append(it)
+    return out
+
+
+def _parse_rss(xml: bytes, outlet: str | None) -> list[dict]:
+    """[{title, outlet, published, url, _text}]; _text (headline + summary) is for matching only and is never stored."""
+    from lxml import etree
+    root = etree.fromstring(xml, parser=etree.XMLParser(recover=True, resolve_entities=False, no_network=True))
+    if root is None:
+        return []
+    out = []
+    for item in root.iter("item"):
+        def get(tag):
+            return (item.findtext(tag) or "").strip()
+        title, link = htmllib.unescape(clean_text(get("title"))), get("link")
+        if not title or not link:
+            continue
+        src = next((el.text for el in item if isinstance(el.tag, str) and el.tag.lower().endswith("source") and el.text), None)
+        if "bing.com/news/apiclick" in link:   # unwrap Bing's redirect to the publisher's URL
+            m = re.search(r"[?&]url=([^&]+)", link)
+            link = requests.utils.unquote(m.group(1)) if m else link
+        try:
+            published = email.utils.parsedate_to_datetime(get("pubDate"))   # RFC 822: "+1100" or "GMT"
+        except (TypeError, ValueError):
+            continue
+        published = (published if published.tzinfo else published.replace(tzinfo=timezone.utc)).astimezone(timezone.utc)
+        summary = re.sub(r"<[^>]+>", " ", htmllib.unescape(get("description")))
+        out.append({"title": title, "outlet": clean_text(src or outlet or ""),
+                    "published": published.replace(microsecond=0).isoformat().replace("+00:00", "Z"),
+                    "url": link, "_text": f"{title} {summary}"})
+    return out
+
+
+def refresh_news(data_dir: Path, meta: dict) -> bool:
+    path = data_dir / "news.json"
+    existing = read_json(path, {}) or {}
+    seats_old = existing.get("seats", {})
+    districts = (read_json(data_dir / "districts.json", {}) or {}).get("districts", [])
+    if not districts:
+        log.error("news: districts.json missing; skipped")
+        return False
+    web = PoliteSession()
+    web.session.headers["Accept"] = "application/rss+xml, application/xml;q=0.9, */*;q=0.5"
+    status, robots_cache = {}, {}
+
+    def allowed(url):
+        host = re.match(r"https?://[^/]+", url).group(0)
+        if host not in robots_cache:
+            rp = urllib.robotparser.RobotFileParser()
+            try:
+                rp.parse(fetch(host + "/robots.txt").decode("utf-8", "replace").splitlines())
+            except Exception:  # noqa: BLE001 - no readable robots.txt: don't fetch
+                rp = None
+            robots_cache[host] = rp
+        rp = robots_cache[host]
+        return bool(rp) and rp.can_fetch(ABC_USER_AGENT, url)
+
+    def fetch(url):
+        """One try, at most one request per ABC_DELAY seconds."""
+        wait = web.last + ABC_DELAY - time.monotonic()
+        if wait > 0:
+            time.sleep(wait)
+        try:
+            resp = web.session.get(url, timeout=TIMEOUT)
+            resp.raise_for_status()
+            return resp.content
+        finally:
+            web.last = time.monotonic()
+
+    cutoff = (datetime.now(timezone.utc) - pd.Timedelta(days=NEWS_MAX_AGE_DAYS)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    def fresh(items):
+        return [i for i in items if i["published"] >= cutoff]
+    def bare(items):
+        return [{k: v for k, v in i.items() if k != "_text"} for i in items]
+
+    # Publisher feeds, fetched once each.
+    feed_items, statewide = [], []
+    for outlet, url, is_abc in NEWS_FEEDS:
+        if not allowed(url):
+            status[outlet] = {"status": "skipped", "url": url, "message": "robots.txt disallows automated access"}
+            continue
+        try:
+            items = fresh(_parse_rss(fetch(url), outlet))
+            if not items:
+                raise ValueError("feed returned no recent items")
+            status[outlet] = {"status": "ok", "url": url, "items": len(items)}
+            feed_items.extend(items)
+            if is_abc:
+                statewide.extend(i for i in items if STATE_ELECTION.search(i["_text"]))
+            else:
+                statewide.extend(i for i in items if re.search(r"state election", i["_text"], re.I))
+        except Exception as exc:  # noqa: BLE001 - skip this feed
+            log.warning("news: %s feed failed: %s", outlet, exc)
+            status[outlet] = {"status": "error", "url": url, "message": str(exc)[:200]}
+
+    def bing(q):
+        url = f"{BING_NEWS}?{requests.compat.urlencode({'q': q, 'format': 'rss', 'cc': 'AU', 'setlang': 'en-AU'})}"
+        # Video pages (ABC iview) carry the page's date, not the story's.
+        return [i for i in fresh(_parse_rss(fetch(url), None)) if "iview.abc.net.au" not in i["url"]]
+
+    # Bing News: statewide searches, then two per district (stops after 5 failures in a row).
+    bing_ok = allowed(BING_NEWS + "?q=x&format=rss")
+    failures, searched, seats = 0, 0, {}
+    if bing_ok:
+        for q in ('"Victorian state election"', '"Victorian election" 2026'):
+            try:
+                statewide.extend(i for i in bing(q) if STATE_ELECTION.search(i["_text"]))
+            except Exception as exc:  # noqa: BLE001
+                log.warning("news: Bing statewide search failed: %s", exc)
+    for d in districts:
+        name, mp = d["name"], d.get("sitting_mp") or ""
+        name_re = re.compile(rf"\b{re.escape(name)}\b", re.I)
+        mp_re = re.compile(rf"\b{re.escape(mp)}\b", re.I) if mp else None
+        # Feed items: the MP's full name, or the district name in an election story.
+        found = [it for it in feed_items
+                 if (mp_re and mp_re.search(it["_text"])) or (name_re.search(it["_text"]) and ELECTION_WORDS.search(it["_text"]))]
+        searched_ok = False
+        # Two searches: the district with "Victorian election" (the result must name the district in a Victorian
+        # election story: "Richmond" or "Melbourne" alone match far too much), and the sitting MP by name.
+        district_hit = lambda t: name_re.search(t) and VICTORIA.search(t) and ELECTION_WORDS.search(t)
+        if name == "Melbourne":   # the seat shares its name with the city
+            district_hit = lambda t: re.search(r"\b(seat|electorate|district|member) (of|for) Melbourne\b", t, re.I)
+        queries = [(f'"{name}" Victorian election', district_hit)] + ([(f'"{mp}" MP Victoria', mp_re.search)] if mp else [])
+        for q, keep in queries:
+            if not bing_ok or failures >= 5:
+                break
+            try:
+                found.extend(i for i in bing(q) if keep(i["_text"]))
+                searched += 1
+                failures = 0
+                searched_ok = True
+            except Exception as exc:  # noqa: BLE001 - keep this seat's earlier items
+                log.warning("news: Bing search %r failed: %s", q, exc)
+                failures += 1
+        statewide.extend(i for i in found if STATE_ELECTION.search(i["_text"]))
+        merged = fresh(_dedupe_news(bare(found) + seats_old.get(d["id"], [])))
+        seats[d["id"]] = merged[:NEWS_PER_SEAT] if (searched_ok or found) else seats_old.get(d["id"], [])
+    status["Bing News search"] = ({"status": "ok" if searched else "error", "url": BING_NEWS, "items": searched,
+                                   "message": f"{searched} searches for {len(districts)} districts"}
+                                  if bing_ok else {"status": "skipped", "url": BING_NEWS, "message": "robots.txt disallows"})
+    status["Google News"] = {"status": "skipped", "url": "https://news.google.com/rss",
+                             "message": "robots.txt disallows /rss for all crawlers; Bing News search used instead"}
+
+    if not any(s["status"] == "ok" for s in status.values()):
+        log.error("news: every source failed; keeping %s", path.name)
+        warn_ci("News: every source failed; kept existing news.json")
+        return False
+    data = {
+        "_schema": NEWS_SCHEMA,
+        "updated": now_iso(),
+        "statewide": fresh(_dedupe_news(bare(statewide) + existing.get("statewide", [])))[:NEWS_STATEWIDE],
+        "seats": seats,
+        "sources": status,
+    }
+    write_json(path, data)
+    total = sum(len(v) for v in seats.values())
+    meta.setdefault("sources", {})["news"] = {"status": "ok", "url": BING_NEWS, "last_success": now_iso(),
+                                              "message": f"{len(data['statewide'])} statewide, {total} seat items"}
+    log.info("Wrote %s (%d statewide, %d seat items across %d seats)", path.name, len(data["statewide"]), total,
+             sum(1 for v in seats.values() if v))
+    return True
+
+
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--data-dir", type=Path, default=DEFAULT_DATA_DIR,
@@ -1358,6 +1713,8 @@ def main(argv=None) -> int:
         refresh_abc(data_dir, meta),           # after Wikipedia, so the ABC (primary) wins conflicts
         refresh_seat_odds(data_dir, meta),
         refresh_candidates(data_dir, meta),
+        refresh_htv(data_dir, meta),
+        refresh_news(data_dir, meta),
     ]
     if any(updated):
         meta["last_updated"] = now_iso()

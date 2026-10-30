@@ -320,7 +320,8 @@
       const seat = c.district || c.region;
       if (!districts[seat] && !regions[seat]) return;
       add(seat, c.name, { party: c.party, status: c.status, ticket_position: c.ticket_position, incumbent: c.incumbent || null,
-        source: c.source, source_url: c.source_url, notes: c.notes || null, date_added: c.date_added, updated: c.updated, contesting: true });
+        source: c.source, source_url: c.source_url, notes: c.notes || null, date_added: c.date_added, updated: c.updated, contesting: true,
+        website: c.website, ballot_position: c.ballot_position });
     });
     Object.values(regions).forEach((r) => (r.mlcs || []).forEach((m) =>
       add(r.id, m.name, { party: m.party, mlc: { party: m.party, retiring: !!m.retiring, notes: m.notes || "" } })));
@@ -334,6 +335,17 @@
         .then(([cd, rd, dd]) => buildPeople(cd, rd, dd));
     }
     return people;
+  }
+
+  /* ---- News (data/news.json): headline, outlet, date and link only ---- */
+  function newsList(items, { more = 0 } = {}) {
+    if (!items || !items.length) return '<p class="empty">No recent stories found.</p>';
+    const li = (it) => `<li><a href="${escapeHtml(it.url)}" target="_blank" rel="noopener">${escapeHtml(it.title)}</a>
+        <span class="muted small">${escapeHtml(it.outlet || "")}${it.outlet ? " · " : ""}${escapeHtml(fmtDate(it.published))}</span></li>`;
+    const shown = more ? items.slice(0, more) : items;
+    const rest = more ? items.slice(more) : [];
+    return `<ul class="news-list">${shown.map(li).join("")}</ul>
+      ${rest.length ? `<details class="news-more"><summary>${rest.length} more</summary><ul class="news-list">${rest.map(li).join("")}</ul></details>` : ""}`;
   }
 
   function hashId() {
@@ -678,7 +690,7 @@
     DAY, preparePolls, smoothedSeries, statewideSwing, swingAdjusted,
     getWatchlist, setWatchlist, isWatched, toggleWatch, starButton, storageWorks,
     buildSearchIndex, searchItems,
-    candidateId, givenFirst, loadHeadshots, avatar, photoCredits, initials, inkFor,
+    candidateId, givenFirst, loadHeadshots, avatar, photoCredits, initials, inkFor, newsList,
     profileHref, profileLink, isPlaceholder, buildPeople, loadPeople,
   };
 })();

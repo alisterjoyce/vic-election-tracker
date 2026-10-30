@@ -12,6 +12,7 @@
       "incumbent": "Assembly: true if this is the sitting member",
       "source": "abc (listed in the ABC guide) | wikipedia (added from Wikipedia) | absent for rows from the research report or entered by hand from a news report (cited in source_url)",
       "source_url": "Where the row came from (the ABC district page for source abc)",
+      "website": "Assembly: the candidate's website as linked from their ABC guide card (usually the party's candidate page), when listed",
       "date_added": "YYYY-MM-DD the row was added by refresh.py (Melbourne date)",
       "superseded_by": "superseded rows: name of the ABC entry that replaced this one",
       "superseded_on": "superseded rows: YYYY-MM-DD it was superseded",

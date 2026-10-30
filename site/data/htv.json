@@ -1,0 +1,17 @@
+{
+  "_schema": {
+    "description": "How-to-vote cards registered with the VEC for the 2026 election. scripts/refresh.py checks the VEC's register daily and records each card; the preference order on each card is entered by hand from the card PDF and is never overwritten.",
+    "fields": {
+      "status": "not_open (before registration opens) | open (register live, cards listed) | open_no_cards",
+      "registration_opens": "YYYY-MM-DD registration opens (9 am)",
+      "source_url": "The VEC how-to-vote card page",
+      "last_checked": "ISO UTC time of the last successful check",
+      "cards": "[{house: lower|upper, district or region (id), registered_by (as listed by the VEC), party (code or null), candidate (independents: name as listed), registration (VEC number), registered_on (YYYY-MM-DD), card_url, order (party codes or candidate names in the card's preference order, first to last; null until entered), notes}]"
+    }
+  },
+  "status": "not_open",
+  "registration_opens": "2026-11-10",
+  "source_url": "https://www.vec.vic.gov.au/candidates-and-parties/become-a-state-election-candidate/how-to-vote-cards",
+  "last_checked": "2026-10-30T21:42:23Z",
+  "cards": []
+}

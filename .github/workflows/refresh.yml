@@ -16,7 +16,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20   # ABC pages (~3 min) and news searches (~5 min) at one request a second
     steps:
       - uses: actions/checkout@v5
 

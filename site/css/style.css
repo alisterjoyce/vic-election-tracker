@@ -544,3 +544,57 @@ select {
 /* ---------- Poll pages (poll.html) ---------- */
 .poll-title { margin: 0; font-size: 1.5rem; }
 .poll-list tr.current td { background: var(--surface-2); font-weight: 600; }
+
+/* ---------- Timeline (timeline.html) ---------- */
+.timeline { list-style: none; margin: 0; padding: 0 0 0 4px; position: relative; }
+.timeline::before { content: ""; position: absolute; left: 7.4em; top: 0; bottom: 0; width: 2px; background: var(--border); }
+.tl-year h2 { margin: 18px 0 8px; font-size: 1.3rem; }
+.tl-year:first-child h2 { margin-top: 0; }
+.tl-item { display: grid; grid-template-columns: 6.6em 1fr; gap: 0 1.6em; padding: 6px 0; position: relative; }
+.tl-item::before {
+  content: ""; position: absolute; left: calc(7.4em - 5px); top: 12px; width: 12px; height: 12px; border-radius: 50%;
+  background: var(--tl-color, var(--p-oth)); border: 2px solid var(--surface);
+}
+.tl-item time { font-size: 0.85rem; color: var(--muted); padding-top: 2px; font-variant-numeric: tabular-nums; }
+.tl-body p { margin: 2px 0 0; }
+.tl-type { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 700; color: var(--tl-color, var(--muted)); }
+.tl-item.upcoming .tl-body > p:first-of-type { color: var(--muted); }
+.tl-item.upcoming::before { background: var(--surface); border-color: var(--tl-color, var(--p-oth)); }
+.tl-now { display: flex; align-items: center; gap: 8px; margin: 10px 0; color: var(--accent); font-weight: 700; font-size: 0.85rem; }
+.tl-now::before, .tl-now::after { content: ""; flex: 1; border-top: 2px dashed var(--accent); }
+.type-election { --tl-color: var(--accent); }
+.type-by-election { --tl-color: var(--p-ajp); }
+.type-leadership { --tl-color: var(--p-lib); }
+.type-retirement { --tl-color: var(--p-oth); }
+.type-defection { --tl-color: var(--p-alp); }
+.type-electoral-system { --tl-color: var(--p-nat); }
+.type-timetable { --tl-color: var(--star); }
+.tl-chip, .tl-chip[aria-pressed="true"] { border-left: 4px solid var(--tl-color); background: var(--surface); color: var(--text); border-color: var(--border); border-left-color: var(--tl-color); }
+.tl-chip[aria-pressed="false"] { opacity: 0.55; text-decoration: line-through; }
+@media (max-width: 520px) {
+  .timeline::before { left: 5px; }
+  .tl-item { grid-template-columns: 1fr; padding-left: 22px; }
+  .tl-item::before { left: 0; }
+}
+
+/* ---------- How-to-vote cards and preference watch ---------- */
+.htv { margin-top: 18px; }
+.htv-flag { display: grid; gap: 2px; padding: 10px 12px; margin: 8px 0; border-radius: 8px; border-left: 4px solid var(--accent); background: var(--surface-2); }
+.htv-flag.pending { border-left-color: var(--star); }
+.htv-order { list-style: none; display: flex; flex-wrap: wrap; gap: 4px; margin: 0; padding: 0; counter-reset: pref; }
+.htv-order li { counter-increment: pref; font-size: 0.8rem; padding: 1px 6px; border-radius: 4px; border-left: 3px solid var(--party-color); background: var(--surface-2); }
+.htv-order li::before { content: counter(pref) " "; color: var(--muted); }
+.htv-watch { list-style: none; padding: 0; margin: 0; }
+.htv-watch li { display: grid; grid-template-columns: 1fr auto; gap: 0 8px; padding: 6px 0; border-bottom: 1px solid var(--border); }
+.htv-watch li > span:last-child { grid-column: 1 / -1; font-size: 0.88rem; }
+.htv-watch li.pending > span:last-child { color: var(--muted); }
+.pref-watch h3 { margin-top: 0; }
+
+/* ---------- News lists ---------- */
+.news-list { list-style: none; padding: 0; margin: 0; }
+.news-list li { padding: 6px 0; border-bottom: 1px solid var(--border); display: grid; gap: 2px; }
+.news-list li:last-child { border-bottom: 0; }
+.news-list a { font-weight: 600; text-decoration: none; color: var(--text); }
+.news-list a:hover { text-decoration: underline; color: var(--accent); }
+.news-more summary { cursor: pointer; color: var(--muted); font-size: 0.875rem; margin-top: 6px; }
+.seat-news { margin-top: 18px; }

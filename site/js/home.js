@@ -257,6 +257,12 @@
     } catch (err) {
       window.App.showError(document.getElementById("polls-table"), err);
     }
+    loadJSON("news").then((n) => {
+      document.getElementById("news-statewide").innerHTML = App.newsList(n.statewide, { more: 10 });
+      document.getElementById("news-updated").textContent = n.updated ? `Updated ${App.fmtDateTime(n.updated)}` : "";
+    }).catch(() => {
+      document.getElementById("news-statewide").innerHTML = "<p class=\"empty\">News isn't available yet.</p>";
+    });
   }
 
   document.addEventListener("DOMContentLoaded", init);

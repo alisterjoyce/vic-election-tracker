@@ -1,0 +1,587 @@
+{
+  "_schema": {
+    "description": "The 2022-2026 parliamentary term and the election timetable, shown on timeline.html. Maintained by hand; seeded on 31 Oct 2026 from the research report and Wikipedia's 2026 Victorian state election article. One line per entry, in our own words: facts only, no commentary.",
+    "fields": {
+      "date": "YYYY-MM-DD, or YYYY-MM when only the month is known",
+      "type": "election | by-election | leadership | retirement | defection | electoral-system | timetable",
+      "text": "One line describing what happened",
+      "source": "{label, url}: where the fact comes from",
+      "districts": "Optional districts.json ids the entry is about (link to the seat pages)",
+      "regions": "Optional regions.json ids the entry is about"
+    }
+  },
+  "entries": [
+    {
+      "date": "2022-11-26",
+      "type": "election",
+      "text": "Labor re-elected for a third term with 56 of 88 seats; Coalition 28, Greens 4.",
+      "source": {
+        "label": "VEC: 2022 state election results",
+        "url": "https://www.vec.vic.gov.au/results/state-election-results/2022-state-election-results"
+      }
+    },
+    {
+      "date": "2022-12-08",
+      "type": "leadership",
+      "text": "John Pesutto elected Liberal leader, replacing Matthew Guy.",
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2023-01-28",
+      "type": "by-election",
+      "text": "Narracan supplementary election, delayed by a candidate's death: Liberal win.",
+      "districts": [
+        "narracan"
+      ],
+      "source": {
+        "label": "Wikipedia: 2023 Narracan supplementary election",
+        "url": "https://en.wikipedia.org/wiki/2023_Narracan_state_supplementary_election"
+      }
+    },
+    {
+      "date": "2023-08",
+      "type": "defection",
+      "text": "Will Fowles (Ringwood) leaves the Labor caucus; he later sits on the crossbench.",
+      "districts": [
+        "ringwood"
+      ],
+      "source": {
+        "label": "Wikipedia: Will Fowles",
+        "url": "https://en.wikipedia.org/wiki/Will_Fowles"
+      }
+    },
+    {
+      "date": "2023-08-26",
+      "type": "by-election",
+      "text": "Warrandyte by-election after Ryan Smith's resignation: Liberal hold (Labor did not run).",
+      "districts": [
+        "warrandyte"
+      ],
+      "source": {
+        "label": "Wikipedia: 2023 Warrandyte by-election",
+        "url": "https://en.wikipedia.org/wiki/2023_Warrandyte_state_by-election"
+      }
+    },
+    {
+      "date": "2023-09-27",
+      "type": "leadership",
+      "text": "Daniel Andrews resigns as Premier; Jacinta Allan elected unopposed and sworn in, with Ben Carroll as deputy.",
+      "source": {
+        "label": "Wikipedia: 2023 Labor leadership election",
+        "url": "https://en.wikipedia.org/wiki/2023_Victorian_Labor_Party_leadership_election"
+      }
+    },
+    {
+      "date": "2023-11-18",
+      "type": "by-election",
+      "text": "Mulgrave by-election after Andrews' resignation: Labor hold against independent Ian Cook (Labor 3.5% after preferences).",
+      "districts": [
+        "mulgrave"
+      ],
+      "source": {
+        "label": "Wikipedia: 2023 Mulgrave by-election",
+        "url": "https://en.wikipedia.org/wiki/2023_Mulgrave_state_by-election"
+      }
+    },
+    {
+      "date": "2024-03-13",
+      "type": "retirement",
+      "text": "Bill Tilley (Liberal, Benambra) announces he won't recontest.",
+      "districts": [
+        "benambra"
+      ],
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2024-04",
+      "type": "defection",
+      "text": "Darren Cheeseman (South Barwon) is removed from the Labor caucus and sits as Independent Labor.",
+      "districts": [
+        "south-barwon"
+      ],
+      "source": {
+        "label": "Wikipedia: Darren Cheeseman",
+        "url": "https://en.wikipedia.org/wiki/Darren_Cheeseman"
+      }
+    },
+    {
+      "date": "2024-04-23",
+      "type": "leadership",
+      "text": "Ellen Sandell becomes Greens leader, replacing Samantha Ratnam.",
+      "source": {
+        "label": "Wikipedia: Ellen Sandell",
+        "url": "https://en.wikipedia.org/wiki/Ellen_Sandell"
+      }
+    },
+    {
+      "date": "2024-11",
+      "type": "leadership",
+      "text": "Danny O'Brien replaces Peter Walsh as Nationals leader.",
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2024-11-01",
+      "type": "defection",
+      "text": "Sam Hibbins (Prahran) quits the Greens to sit as an independent; he later resigns from parliament.",
+      "districts": [
+        "prahran"
+      ],
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2024-11-26",
+      "type": "retirement",
+      "text": "Peter Walsh (Nationals, Murray Plains) announces he won't recontest.",
+      "districts": [
+        "murray-plains"
+      ],
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2024-12-27",
+      "type": "leadership",
+      "text": "Liberal spill: Brad Battin replaces John Pesutto as leader.",
+      "source": {
+        "label": "Wikipedia: 2024 Liberal leadership spill",
+        "url": "https://en.wikipedia.org/wiki/2024_Victorian_Liberal_Party_leadership_spill"
+      }
+    },
+    {
+      "date": "2025-02-08",
+      "type": "by-election",
+      "text": "Werribee by-election after Tim Pallas's resignation: Labor hold, John Lister by 0.8% (down from 10.9%).",
+      "districts": [
+        "werribee"
+      ],
+      "source": {
+        "label": "Wikipedia: 2025 Werribee by-election",
+        "url": "https://en.wikipedia.org/wiki/2025_Werribee_state_by-election"
+      }
+    },
+    {
+      "date": "2025-02-08",
+      "type": "by-election",
+      "text": "Prahran by-election after Sam Hibbins' resignation: Liberal gain from the Greens by about 1.3% (Labor did not run).",
+      "districts": [
+        "prahran"
+      ],
+      "source": {
+        "label": "Wikipedia: 2025 Prahran by-election",
+        "url": "https://en.wikipedia.org/wiki/2025_Prahran_state_by-election"
+      }
+    },
+    {
+      "date": "2025-08-06",
+      "type": "retirement",
+      "text": "David Hodgett (Liberal, Croydon) announces he won't recontest.",
+      "districts": [
+        "croydon"
+      ],
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2025-09-09",
+      "type": "retirement",
+      "text": "Michael O'Brien (Liberal, Malvern) announces he won't recontest.",
+      "districts": [
+        "malvern"
+      ],
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2025-09-14",
+      "type": "retirement",
+      "text": "Kim Wells (Liberal, Rowville) announces he won't recontest.",
+      "districts": [
+        "rowville"
+      ],
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2025-09-23",
+      "type": "retirement",
+      "text": "Jackson Taylor (Labor, Bayswater) and Steve McGhie (Labor, Melton) announce they won't recontest.",
+      "districts": [
+        "bayswater",
+        "melton"
+      ],
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2025-09-30",
+      "type": "retirement",
+      "text": "Emma Vulin (Labor, Pakenham) announces she won't recontest.",
+      "districts": [
+        "pakenham"
+      ],
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2025-10-02",
+      "type": "retirement",
+      "text": "Jordan Crugnale (Labor, Bass) announces she won't recontest.",
+      "districts": [
+        "bass"
+      ],
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2025-10-16",
+      "type": "retirement",
+      "text": "Natalie Hutchins (Labor, Sydenham) announces she won't recontest.",
+      "districts": [
+        "sydenham"
+      ],
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2025-11-18",
+      "type": "leadership",
+      "text": "Liberal spill: Jess Wilson replaces Brad Battin as leader.",
+      "source": {
+        "label": "Wikipedia: 2025 Liberal leadership spill",
+        "url": "https://en.wikipedia.org/wiki/2025_Victorian_Liberal_Party_leadership_spill"
+      }
+    },
+    {
+      "date": "2025-12",
+      "type": "electoral-system",
+      "text": "Parliament's Electoral Matters Committee recommends abolishing upper-house group voting tickets.",
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2025-12-01",
+      "type": "retirement",
+      "text": "Shaun Leane (Labor MLC, North-Eastern Metropolitan) announces he won't recontest.",
+      "regions": [
+        "north-eastern-metropolitan"
+      ],
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2026-01-05",
+      "type": "retirement",
+      "text": "Wendy Lovell (Liberal MLC, Northern Victoria) announces she won't recontest.",
+      "regions": [
+        "northern-victoria"
+      ],
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2026-01-12",
+      "type": "retirement",
+      "text": "Joe McCracken (Liberal MLC, Western Victoria) announces he won't recontest.",
+      "regions": [
+        "western-victoria"
+      ],
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2026-01-29",
+      "type": "retirement",
+      "text": "Tim Read (Greens, Brunswick) announces he won't recontest.",
+      "districts": [
+        "brunswick"
+      ],
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2026-04-10",
+      "type": "retirement",
+      "text": "Danny Pearson (Essendon), Mary-Anne Thomas (Macedon) and Gayle Tierney (Western Victoria MLC), all Labor, announce they won't recontest.",
+      "districts": [
+        "essendon",
+        "macedon"
+      ],
+      "regions": [
+        "western-victoria"
+      ],
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2026-05-02",
+      "type": "by-election",
+      "text": "Nepean by-election after Sam Groth's resignation: Liberal hold, won by Anthony Marsh.",
+      "districts": [
+        "nepean"
+      ],
+      "source": {
+        "label": "Wikipedia: 2026 Nepean by-election",
+        "url": "https://en.wikipedia.org/wiki/2026_Nepean_state_by-election"
+      }
+    },
+    {
+      "date": "2026-05-19",
+      "type": "retirement",
+      "text": "Tim Bull (Nationals, Gippsland East) announces he won't recontest.",
+      "districts": [
+        "gippsland-east"
+      ],
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2026-06-02",
+      "type": "retirement",
+      "text": "David Ettershank (Legalise Cannabis MLC, Western Metropolitan) announces he won't recontest.",
+      "regions": [
+        "western-metropolitan"
+      ],
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2026-07-17",
+      "type": "defection",
+      "text": "The Liberals disendorse Moira Deeming (Western Metropolitan MLC); she later leaves the party.",
+      "regions": [
+        "western-metropolitan"
+      ],
+      "source": {
+        "label": "ABC News, 17 Jul 2026",
+        "url": "https://www.abc.net.au/news/2026-07-17/moira-deeming-liberal-party-decision-preselection/106928954"
+      }
+    },
+    {
+      "date": "2026-07-21",
+      "type": "retirement",
+      "text": "Kim O'Keeffe (Nationals, Shepparton) announces she won't recontest.",
+      "districts": [
+        "shepparton"
+      ],
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2026-07-28",
+      "type": "leadership",
+      "text": "Jacinta Allan resigns as Premier; Ben Carroll elected Labor leader unopposed and sworn in, with Gabrielle Williams as deputy.",
+      "source": {
+        "label": "Wikipedia: 2026 Labor leadership election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_Labor_Party_leadership_election"
+      }
+    },
+    {
+      "date": "2026-07-28",
+      "type": "electoral-system",
+      "text": "Government introduces the Electoral Amendment (Miscellaneous Matters) Bill to abolish group voting tickets.",
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2026-07-30",
+      "type": "retirement",
+      "text": "Lily D'Ambrosio (Mill Park) and Harriet Shing (Eastern Victoria MLC), both Labor, announce they won't recontest.",
+      "districts": [
+        "mill-park"
+      ],
+      "regions": [
+        "eastern-victoria"
+      ],
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2026-08-03",
+      "type": "leadership",
+      "text": "Warren Pickering named One Nation's Victorian leader.",
+      "source": {
+        "label": "Roy Morgan, 20 Oct 2026",
+        "url": "https://www.roymorgan.com/findings/10361-victorian-state-voting-intention-september-2026"
+      }
+    },
+    {
+      "date": "2026-08-11",
+      "type": "electoral-system",
+      "text": "Act passes: group voting tickets abolished; voters number at least 5 boxes above or below the line.",
+      "source": {
+        "label": "VEC: 2026 Electoral Act amendments",
+        "url": "https://www.vec.vic.gov.au/about-us/legislation/electoral-act-amendments-2026"
+      }
+    },
+    {
+      "date": "2026-08-14",
+      "type": "retirement",
+      "text": "Jacinta Allan (Labor, Bendigo East) announces she won't recontest.",
+      "districts": [
+        "bendigo-east"
+      ],
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2026-08-27",
+      "type": "retirement",
+      "text": "Maree Edwards (Labor, Bendigo West) announces she won't recontest.",
+      "districts": [
+        "bendigo-west"
+      ],
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2026-09",
+      "type": "retirement",
+      "text": "Tim Read (Greens, Brunswick), who had already announced his retirement, dies.",
+      "districts": [
+        "brunswick"
+      ],
+      "source": {
+        "label": "Wikipedia: 2026 Victorian state election",
+        "url": "https://en.wikipedia.org/wiki/2026_Victorian_state_election"
+      }
+    },
+    {
+      "date": "2026-09-10",
+      "type": "defection",
+      "text": "Moira Deeming named Family First's candidate for Western Metropolitan.",
+      "regions": [
+        "western-metropolitan"
+      ],
+      "source": {
+        "label": "ABC News, 10 Sep 2026",
+        "url": "https://www.abc.net.au/news/2026-09-10/moira-deeming-joins-family-first-party/107136754"
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "type": "timetable",
+      "text": "Parliament expires and writs are issued; caretaker period begins. The electoral roll closes at 8 pm.",
+      "source": {
+        "label": "VEC: 2026 state election",
+        "url": "https://www.vec.vic.gov.au/voting/2026-state-election"
+      }
+    },
+    {
+      "date": "2026-11-04",
+      "type": "timetable",
+      "text": "Nominations and postal vote applications open (9 am).",
+      "source": {
+        "label": "VEC: 2026 state election",
+        "url": "https://www.vec.vic.gov.au/voting/2026-state-election"
+      }
+    },
+    {
+      "date": "2026-11-09",
+      "type": "timetable",
+      "text": "Nominations close at noon; ballot draw and official candidate lists follow.",
+      "source": {
+        "label": "VEC: 2026 Electoral Act amendments",
+        "url": "https://www.vec.vic.gov.au/about-us/legislation/electoral-act-amendments-2026"
+      }
+    },
+    {
+      "date": "2026-11-10",
+      "type": "timetable",
+      "text": "How-to-vote card registration opens (9 am).",
+      "source": {
+        "label": "VEC: how-to-vote cards",
+        "url": "https://www.vec.vic.gov.au/candidates-and-parties/become-a-state-election-candidate/how-to-vote-cards"
+      }
+    },
+    {
+      "date": "2026-11-18",
+      "type": "timetable",
+      "text": "Early voting opens; runs to Friday 27 November.",
+      "source": {
+        "label": "VEC: 2026 state election",
+        "url": "https://www.vec.vic.gov.au/voting/2026-state-election"
+      }
+    },
+    {
+      "date": "2026-11-25",
+      "type": "timetable",
+      "text": "Postal vote applications close at 6 pm.",
+      "source": {
+        "label": "VEC: 2026 state election",
+        "url": "https://www.vec.vic.gov.au/voting/2026-state-election"
+      }
+    },
+    {
+      "date": "2026-11-28",
+      "type": "timetable",
+      "text": "Election day; voting centres close at 6 pm.",
+      "source": {
+        "label": "VEC: 2026 state election",
+        "url": "https://www.vec.vic.gov.au/voting/2026-state-election"
+      }
+    },
+    {
+      "date": "2026-12-19",
+      "type": "timetable",
+      "text": "Last day for the return of writs.",
+      "source": {
+        "label": "Parliament of Victoria: 2026 election",
+        "url": "https://www.parliament.vic.gov.au/election"
+      }
+    }
+  ]
+}

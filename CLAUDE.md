@@ -11,6 +11,7 @@ site/                     # published as-is (netlify.toml: publish = "site", no 
   upper.html              # Legislative Council: 8 regions, MLCs, tickets (#region-id)
   candidate.html          # candidate profiles (#<seat id>/<name slug>) and, with no hash, the candidate directory
   pendulum.html           # interactive pendulum (#swing=3.2) and scenario explorer
+  timeline.html           # the 2022-2026 term and election timetable (data/timeline.json)
   poll.html               # poll detail (#<poll id>) with the pollster's trend and house effect; no hash = all polls
   myseats.html            # watchlist ("My seats"), stored in localStorage
   about.html              # about and methodology, sources, credits
@@ -19,6 +20,8 @@ site/                     # published as-is (netlify.toml: publish = "site", no 
                           #   (key-dates strip, search, footer), poll smoothing, seat-outlook maths
   js/home.js, lower.js, upper.js, myseats.js, candidate.js, pendulum.js, poll.js
   js/quota.js             # upper-house quota calculator (mounted on each region in upper.html)
+  js/htv.js               # how-to-vote cards: seat/region section and lower.html's "Preference watch"
+  js/timeline.js
   js/sharecard.js         # 1200x630 PNG share cards (candidate, seat) drawn on a canvas in the current theme
   data/*.json             # every file has a "_schema" key describing its fields
 scripts/refresh.py        # daily refresh (see "Data pipeline")
@@ -50,6 +53,9 @@ Each file's `_schema` is the authoritative field list. Keep it in sync when addi
 | `seat_models.json` | MRP seat estimates, one entry per district per model; `null` = not published | hand |
 | `seat_odds.json` | Sportsbet market per district: options, favourite, joint_favourites, partial, date_checked | hand (refresh.py tries Sportsbet; it is blocked, so the file is kept as manual) |
 | `seat_polls.json` | Single-seat polls | hand |
+| `timeline.json` | The term's events and the election timetable: date (YYYY-MM-DD or YYYY-MM), type, one line in our own words, districts/regions, source {label, url} | hand |
+| `htv.json` | How-to-vote cards registered with the VEC (from 10 Nov): seat, registered_by, party, registration, date, card_url, `order` (preference order, entered by hand from the card PDF) | refresh.py records cards; `order` and `notes` by hand and never overwritten |
+| `news.json` | Headlines per district (latest 10) and statewide (latest 25): title, outlet, published, url only | refresh.py, fully rewritten each run (seat lists keep earlier items when a search fails) |
 | `council_polls.json` | Upper-house primary vote by region (seeds the quota calculator); OTH is a pollster's combined "others", never one party | hand, from the pollster's release |
 | `geo/districts.geojson`, `geo/regions.geojson` | Simplified boundaries (keep both under 1.5 MB together) | `scripts/build_boundaries.py` (Vicmap Admin; the VEC only offers PDF/PNG maps) |
 | `results_2022/<district>.json`, `results_2022/index.json` | 2022 results by voting centre in vec-contest-v1 format, plus swings from notional 2018 | `scripts/build_results_2022.py` (one-off) |
@@ -63,7 +69,7 @@ Party codes: ALP, LIB, NAT, LNP (joint Coalition), GRN, ONP, IND, ILAB (Independ
 
 ## Data pipeline and merge rules (`scripts/refresh.py`)
 
-Order each run: polls → Wikipedia candidates → ABC guide (district pages, then retiring MPs, then the A-Z reconciliation) → Sportsbet → VEC placeholder → meta.json.
+Order each run: polls → Wikipedia candidates → ABC guide (district pages, then retiring MPs, then the A-Z reconciliation) → Sportsbet → VEC placeholder → VEC how-to-vote register → news → meta.json.
 
 - **Never delete a candidate row.** Rows only change status.
 - **Wikipedia** adds names not already present as `announced` (`source: "wikipedia"`, `date_added`) and never changes existing rows.
@@ -73,6 +79,7 @@ Order each run: polls → Wikipedia candidates → ABC guide (district pages, th
 - Name matching ignores case, accents, punctuation and titles. An accent-only difference keeps the existing spelling. An unrecognised ABC party label never replaces a known party.
 - **Reconciliation:** every name on the ABC A-Z list is checked against the tracker. Missing names are added under the same rules. A summary goes to `meta.json` → `reconciliation`.
 - **Politeness:** ABC requests are made one per second, with a descriptive User-Agent, and three tries per page. If any page fails three times, the whole ABC step is skipped and no file changes. Check robots.txt before adding any new scraped source.
+- **News:** one request per second, one try per feed or search, and a source that fails is skipped (after 5 failed searches in a row the rest are skipped). Google News RSS and the Geelong Advertiser are excluded because their robots.txt disallows us; Bing News RSS search stands in for Google. Store the headline, outlet, date and link only; article summaries are used for matching to seats and then dropped.
 - **Failure handling:** if any fetch or parse fails, log it (plus a `::warning::` in Actions), keep the existing file, and exit 0.
 
 ## Results format (vec-contest-v1)
@@ -81,7 +88,7 @@ Order each run: polls → Wikipedia candidates → ABC guide (district pages, th
 
 ## Copyright: link, never copy
 
-Never copy article text, ABC prose (candidate profiles, biographies, seat descriptions, "Held by" sentences), or any other publisher's editorial text into data files or pages. Store only facts (names, parties, numbers, dates, classifications) and **link** to the source page (e.g. `abc_url`). The same goes for images: ABC-hosted candidate photos are not published (`build_headshots.py --publish non-abc`); those candidates get the initials avatar.
+Never copy article text, ABC prose (candidate profiles, biographies, seat descriptions, "Held by" sentences), or any other publisher's editorial text into data files or pages. Store only facts (names, parties, numbers, dates, classifications) and **link** to the source page (e.g. `abc_url`). News is headlines and links only. Timeline entries and profiles are facts in our own words, with no commentary. The same goes for images: ABC-hosted candidate photos are not published (`build_headshots.py --publish non-abc`); those candidates get the initials avatar.
 
 ## Design system
 

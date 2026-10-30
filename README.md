@@ -12,6 +12,9 @@ A static tracker for the 2026 Victorian state election (polling day Saturday 28 
 - **Upper house** (`upper.html`): pick one of the 8 regions to see its current MLCs and 2026 tickets.
 - **Candidates** (`candidate.html`): a directory of every candidate and current MLC (filter by name, seat, house, party), and a profile for each (`candidate.html#bendigo-west/brenton-baldwin`): photo with its source credit, party, status, seat facts, sources, others in the same contest, and a downloadable share card. Seat pages have a share card too.
 - **Pendulum** (`pendulum.html`): all 88 seats on a two-sided ladder by notional margin, with a swing slider (−10 to +15, starting at the poll-of-polls swing) that recolours seats that fall and counts seats against the 45-seat majority line. Only Labor-v-Coalition contests swing. Below it, three scenarios (Coalition majority, Coalition relying on One Nation, Labor-Greens minority), each with the swing and 2PP range it needs, the seats that must fall and which current polls support it, recomputed from `polls.json` and `seat_odds.json` on every load.
+- **Timeline** (`timeline.html`): the 2022-2026 term from `timeline.json`: by-elections with results, leadership changes, retirements, defections, the end of group voting tickets and the election timetable, each with a date, one line and a source, filterable by type, with a "today" marker.
+- **Preferences:** each seat and region page shows its registered how-to-vote cards (`htv.json`) and flags the Liberal card in Labor-v-Greens seats and One Nation's card; the lower-house page has a statewide "Preference watch". Until registration opens on 10 Nov they read "not yet registered".
+- **News:** each seat page lists the latest 10 headlines that mention the district or its MP, and the home page lists 25 statewide (`news.json`). Headlines and links only.
 - **Polls** (`poll.html`): every poll, and a page per poll (`poll.html#newspoll-2026-10-22`) with pollster, client, fieldwork, sample, primaries, 2PP, preferred premier, approval, source link, and that pollster's trend against the other pollsters' average (its house effect).
 - **Quota calculator** (on each region in `upper.html`): editable primary votes seeded from the latest regional poll (`council_polls.json`), live quota maths under the 2026 rules, and an adjustable exhaustion rate; shows the 5 seats filled and the margin for the last seat.
 - **My seats** (`myseats.html`): seats starred with ☆, saved in the browser's localStorage (no backend), shown side by side.
@@ -38,6 +41,9 @@ site/                  # published by Netlify
     seat_odds.json     # Sportsbet seat markets: every option and price, favourite (manual; entered from 30 Oct 2026 screenshots)
     seat_polls.json    # single-seat polls (manual; empty until one is published)
     council_polls.json # upper-house primary vote by region (manual; seeds the quota calculator)
+    timeline.json      # the term's events and the election timetable (manual)
+    htv.json           # registered how-to-vote cards (refresh.py) and their preference orders (manual)
+    news.json          # headlines per seat and statewide (refresh.py)
     localities.json    # suburb/postcode -> district(s) for search (scripts/build_localities.py)
     headshots.json     # candidate photos: file, source credit, licence note (scripts/build_headshots.py)
   photos/320/, 160/    # candidate headshots (WebP)
@@ -99,7 +105,9 @@ What it does:
    - It is polite to the ABC: one request per second and a descriptive User-Agent. If any page fails three times, the whole ABC step is skipped and no file changes. A full run makes about 91 requests, so it takes about a minute and a half.
 4. Tries the Sportsbet Victorian election seat markets for `seat_odds.json`, after checking robots.txt. Sportsbet currently refuses the connection (TLS handshake failure) from scripts, so the file is treated as **manual**: the last values are kept and the site shows "as at <date>". Enter favourites and prices by hand, and set `date_checked`. The parser is generic and untested against a live response.
 5. Calls `fetch_vec_candidates()`, a clearly marked **placeholder** for the VEC candidate list. It returns `None` until implemented, so this step leaves `candidates.json` alone.
-6. Updates `meta.json`: `last_updated` (only when a source refreshed successfully) and the per-source status.
+6. Checks the [VEC's how-to-vote card register](https://www.vec.vic.gov.au/candidates-and-parties/become-a-state-election-candidate/how-to-vote-cards) and records every registered card in `htv.json` (seat, who registered it, date, PDF link). The preference order on each card is entered by hand into `order` and is never overwritten. Before 10 Nov the status is `not_open`.
+7. Collects news for `news.json`: a Bing News RSS search per district (the district plus "Victorian election", and the sitting MP), the ABC's "Just In" feed and regional papers' feeds (Bendigo Advertiser, Border Mail, Warrnambool Standard, Latrobe Valley Express, Sunraysia Daily, Star Weekly; Shepparton News when its feed works). Items are matched to seats by district or MP name, deduplicated by URL and near-identical headline, and only the headline, outlet, date and link are kept. Google News RSS and the Geelong Advertiser are skipped because their robots.txt disallows automated access.
+8. Updates `meta.json`: `last_updated` (only when a source refreshed successfully) and the per-source status.
 
 If any fetch or parse fails, the error is logged (and shown as a warning annotation in GitHub Actions), and the existing file is kept as it was.
 
