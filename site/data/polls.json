@@ -10,19 +10,1040 @@
       "tpp": "Two-party-preferred %: {ALP, LNP}"
     }
   },
-  "source": "sample",
+  "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election",
   "polls": [
-    { "start_date": "2026-01-14", "end_date": "2026-01-20", "pollster": "Sample Pollster A", "sample_size": 1050, "primary": { "ALP": 31, "LNP": 38, "GRN": 13, "OTH": 18 }, "tpp": { "ALP": 49, "LNP": 51 } },
-    { "start_date": "2026-02-10", "end_date": "2026-02-15", "pollster": "Sample Pollster B", "sample_size": 1200, "primary": { "ALP": 30, "LNP": 39, "GRN": 12, "OTH": 19 }, "tpp": { "ALP": 48, "LNP": 52 } },
-    { "start_date": "2026-03-05", "end_date": "2026-03-11", "pollster": "Sample Pollster A", "sample_size": 980, "primary": { "ALP": 32, "LNP": 37, "GRN": 13, "OTH": 18 }, "tpp": { "ALP": 50, "LNP": 50 } },
-    { "start_date": "2026-04-02", "end_date": "2026-04-08", "pollster": "Sample Pollster C", "sample_size": 1500, "primary": { "ALP": 31, "LNP": 38, "GRN": 14, "OTH": 17 }, "tpp": { "ALP": 49.5, "LNP": 50.5 } },
-    { "start_date": "2026-05-06", "end_date": "2026-05-12", "pollster": "Sample Pollster B", "sample_size": 1100, "primary": { "ALP": 30, "LNP": 40, "GRN": 12, "OTH": 18 }, "tpp": { "ALP": 47.5, "LNP": 52.5 } },
-    { "start_date": "2026-06-03", "end_date": "2026-06-09", "pollster": "Sample Pollster A", "sample_size": 1020, "primary": { "ALP": 31, "LNP": 39, "GRN": 13, "OTH": 17 }, "tpp": { "ALP": 48.5, "LNP": 51.5 } },
-    { "start_date": "2026-07-08", "end_date": "2026-07-14", "pollster": "Sample Pollster C", "sample_size": 1450, "primary": { "ALP": 32, "LNP": 38, "GRN": 13, "OTH": 17 }, "tpp": { "ALP": 49.5, "LNP": 50.5 } },
-    { "start_date": "2026-08-05", "end_date": "2026-08-10", "pollster": "Sample Pollster B", "sample_size": 1150, "primary": { "ALP": 33, "LNP": 37, "GRN": 13, "OTH": 17 }, "tpp": { "ALP": 50.5, "LNP": 49.5 } },
-    { "start_date": "2026-09-02", "end_date": "2026-09-08", "pollster": "Sample Pollster A", "sample_size": 1000, "primary": { "ALP": 32, "LNP": 38, "GRN": 14, "OTH": 16 }, "tpp": { "ALP": 50, "LNP": 50 } },
-    { "start_date": "2026-09-23", "end_date": "2026-09-28", "pollster": "Sample Pollster C", "sample_size": 1600, "primary": { "ALP": 33, "LNP": 37, "GRN": 13, "OTH": 17 }, "tpp": { "ALP": 51, "LNP": 49 } },
-    { "start_date": "2026-10-07", "end_date": "2026-10-12", "pollster": "Sample Pollster B", "sample_size": 1180, "primary": { "ALP": 32, "LNP": 38, "GRN": 13, "OTH": 17 }, "tpp": { "ALP": 50, "LNP": 50 } },
-    { "start_date": "2026-10-21", "end_date": "2026-10-26", "pollster": "Sample Pollster A", "sample_size": 1040, "primary": { "ALP": 33, "LNP": 37, "GRN": 14, "OTH": 16 }, "tpp": { "ALP": 51, "LNP": 49 } }
+    {
+      "start_date": "2026-10-15",
+      "end_date": "2026-10-22",
+      "pollster": "Newspoll",
+      "sample_size": 1017,
+      "primary": {
+        "ALP": 24,
+        "LNP": 33,
+        "GRN": 14,
+        "ONP": 20,
+        "OTH": 9
+      },
+      "tpp": {
+        "ALP": 45,
+        "LNP": 55
+      }
+    },
+    {
+      "start_date": "2026-10-06",
+      "end_date": "2026-10-10",
+      "pollster": "Resolve",
+      "sample_size": 1000,
+      "primary": {
+        "ALP": 25,
+        "LNP": 28,
+        "GRN": 15,
+        "ONP": 23,
+        "IND": 4,
+        "OTH": 5
+      }
+    },
+    {
+      "start_date": "2026-10-02",
+      "end_date": "2026-10-08",
+      "pollster": "RedBridge/Accent",
+      "sample_size": 1008,
+      "primary": {
+        "ALP": 24,
+        "LNP": 30,
+        "GRN": 16,
+        "ONP": 24,
+        "OTH": 6
+      },
+      "tpp": {
+        "ALP": 44,
+        "LNP": 56
+      }
+    },
+    {
+      "start_date": "2026-09-24",
+      "end_date": "2026-09-28",
+      "pollster": "Freshwater",
+      "sample_size": 1030,
+      "primary": {
+        "ALP": 24,
+        "LNP": 29,
+        "GRN": 14,
+        "ONP": 22,
+        "OTH": 11
+      },
+      "tpp": {
+        "ALP": 47,
+        "LNP": 53
+      }
+    },
+    {
+      "start_date": "2026-09-10",
+      "end_date": "2026-09-20",
+      "pollster": "DemosAU/Premier National",
+      "sample_size": 1020,
+      "primary": {
+        "ALP": 25,
+        "LNP": 30,
+        "GRN": 14,
+        "ONP": 20,
+        "OTH": 11
+      },
+      "tpp": {
+        "ALP": 48,
+        "LNP": 52
+      }
+    },
+    {
+      "start_date": "2026-09-01",
+      "end_date": "2026-09-14",
+      "pollster": "RedBridge/Accent",
+      "sample_size": 2371,
+      "primary": {
+        "ALP": 24,
+        "LNP": 29,
+        "GRN": 15,
+        "ONP": 25,
+        "OTH": 7
+      },
+      "tpp": {
+        "ALP": 44,
+        "LNP": 56
+      }
+    },
+    {
+      "start_date": "2026-09-13",
+      "end_date": "2026-09-13",
+      "pollster": "Resolve",
+      "sample_size": 1000,
+      "primary": {
+        "ALP": 25,
+        "LNP": 28,
+        "GRN": 12,
+        "ONP": 23,
+        "OTH": 13
+      }
+    },
+    {
+      "start_date": "2026-08-16",
+      "end_date": "2026-08-16",
+      "pollster": "Resolve",
+      "sample_size": 1000,
+      "primary": {
+        "ALP": 25,
+        "LNP": 27,
+        "GRN": 12,
+        "ONP": 23,
+        "OTH": 13
+      }
+    },
+    {
+      "start_date": "2026-08-06",
+      "end_date": "2026-08-11",
+      "pollster": "DemosAU/Premier National",
+      "sample_size": 1007,
+      "primary": {
+        "ALP": 23,
+        "LNP": 32,
+        "GRN": 13,
+        "ONP": 22,
+        "OTH": 10
+      },
+      "tpp": {
+        "ALP": 45,
+        "LNP": 55
+      }
+    },
+    {
+      "start_date": "2026-08-05",
+      "end_date": "2026-08-07",
+      "pollster": "Roy Morgan",
+      "sample_size": 2084,
+      "primary": {
+        "ALP": 26,
+        "LNP": 26,
+        "GRN": 12.5,
+        "ONP": 23.5,
+        "IND": 8,
+        "OTH": 4
+      },
+      "tpp": {
+        "ALP": 49,
+        "LNP": 51
+      }
+    },
+    {
+      "start_date": "2026-07-31",
+      "end_date": "2026-08-03",
+      "pollster": "Freshwater",
+      "sample_size": 1020,
+      "primary": {
+        "ALP": 25,
+        "LNP": 30,
+        "GRN": 14,
+        "ONP": 22,
+        "OTH": 9
+      },
+      "tpp": {
+        "ALP": 48,
+        "LNP": 52
+      }
+    },
+    {
+      "start_date": "2026-07-28",
+      "end_date": "2026-08-01",
+      "pollster": "RedBridge/Accent",
+      "sample_size": 1014,
+      "primary": {
+        "ALP": 23,
+        "LNP": 30,
+        "GRN": 14,
+        "ONP": 22,
+        "OTH": 11
+      },
+      "tpp": {
+        "ALP": 43,
+        "LNP": 57
+      }
+    },
+    {
+      "start_date": "2026-07-23",
+      "end_date": "2026-07-26",
+      "pollster": "Newspoll",
+      "sample_size": 1035,
+      "primary": {
+        "ALP": 28,
+        "LNP": 31,
+        "GRN": 13,
+        "ONP": 19,
+        "OTH": 9
+      },
+      "tpp": {
+        "ALP": 48,
+        "LNP": 52
+      }
+    },
+    {
+      "start_date": "2026-07-14",
+      "end_date": "2026-07-14",
+      "pollster": "RedBridge/Accent",
+      "sample_size": 6500,
+      "primary": {
+        "ALP": 26,
+        "LNP": 26,
+        "GRN": 12,
+        "ONP": 27,
+        "OTH": 8
+      }
+    },
+    {
+      "start_date": "2026-07-12",
+      "end_date": "2026-07-12",
+      "pollster": "Resolve",
+      "sample_size": 1000,
+      "primary": {
+        "ALP": 27,
+        "LNP": 27,
+        "GRN": 12,
+        "ONP": 22,
+        "OTH": 12
+      }
+    },
+    {
+      "start_date": "2026-06-16",
+      "end_date": "2026-07-10",
+      "pollster": "YouGov (MRP)",
+      "sample_size": 4003,
+      "primary": {
+        "ALP": 23,
+        "LNP": 26,
+        "GRN": 13,
+        "ONP": 24,
+        "OTH": 14
+      },
+      "tpp": {
+        "ALP": 46.2,
+        "LNP": 53.8
+      }
+    },
+    {
+      "start_date": "2026-05-01",
+      "end_date": "2026-06-30",
+      "pollster": "Resolve",
+      "sample_size": 1000,
+      "primary": {
+        "ALP": 26,
+        "LNP": 26,
+        "GRN": 12,
+        "ONP": 24,
+        "OTH": 12
+      }
+    },
+    {
+      "start_date": "2026-06-17",
+      "end_date": "2026-06-28",
+      "pollster": "RedBridge/Accent",
+      "sample_size": 5516,
+      "primary": {
+        "ALP": 26,
+        "LNP": 26,
+        "GRN": 13,
+        "ONP": 27,
+        "OTH": 8
+      },
+      "tpp": {
+        "ALP": 46,
+        "LNP": 54
+      }
+    },
+    {
+      "start_date": "2026-06-07",
+      "end_date": "2026-06-11",
+      "pollster": "DemosAU/Premier National",
+      "sample_size": 1056,
+      "primary": {
+        "ALP": 21,
+        "LNP": 30,
+        "GRN": 15,
+        "ONP": 23,
+        "OTH": 11
+      },
+      "tpp": {
+        "ALP": 45,
+        "LNP": 55
+      }
+    },
+    {
+      "start_date": "2026-06-05",
+      "end_date": "2026-06-08",
+      "pollster": "Freshwater",
+      "sample_size": 1034,
+      "primary": {
+        "ALP": 23,
+        "LNP": 27,
+        "GRN": 14,
+        "ONP": 25,
+        "OTH": 9
+      },
+      "tpp": {
+        "ALP": 47,
+        "LNP": 53
+      }
+    },
+    {
+      "start_date": "2026-03-01",
+      "end_date": "2026-04-30",
+      "pollster": "Resolve",
+      "sample_size": 1047,
+      "primary": {
+        "ALP": 27,
+        "LNP": 29,
+        "GRN": 10,
+        "ONP": 21,
+        "OTH": 13
+      }
+    },
+    {
+      "start_date": "2026-04-22",
+      "end_date": "2026-04-24",
+      "pollster": "Roy Morgan",
+      "sample_size": 1707,
+      "primary": {
+        "ALP": 25.5,
+        "LNP": 24,
+        "GRN": 13.5,
+        "ONP": 24.5,
+        "IND": 8.5,
+        "OTH": 4
+      },
+      "tpp": {
+        "ALP": 51,
+        "LNP": 49
+      }
+    },
+    {
+      "start_date": "2026-03-19",
+      "end_date": "2026-03-23",
+      "pollster": "Freshwater",
+      "sample_size": 1062,
+      "primary": {
+        "ALP": 27,
+        "LNP": 30,
+        "GRN": 14,
+        "ONP": 20,
+        "OTH": 9
+      },
+      "tpp": {
+        "ALP": 48,
+        "LNP": 52
+      }
+    },
+    {
+      "start_date": "2026-02-18",
+      "end_date": "2026-02-27",
+      "pollster": "RedBridge/Accent",
+      "sample_size": 2165,
+      "primary": {
+        "ALP": 25,
+        "LNP": 28,
+        "GRN": 13,
+        "ONP": 24,
+        "OTH": 10
+      },
+      "tpp": {
+        "ALP": 48,
+        "LNP": 52
+      }
+    },
+    {
+      "start_date": "2026-02-19",
+      "end_date": "2026-02-23",
+      "pollster": "Freshwater",
+      "sample_size": 1030,
+      "primary": {
+        "ALP": 28,
+        "LNP": 27,
+        "GRN": 13,
+        "ONP": 23,
+        "OTH": 9
+      },
+      "tpp": {
+        "ALP": 50,
+        "LNP": 50
+      }
+    },
+    {
+      "start_date": "2026-02-13",
+      "end_date": "2026-02-16",
+      "pollster": "Roy Morgan",
+      "sample_size": 2462,
+      "primary": {
+        "ALP": 25.5,
+        "LNP": 21.5,
+        "GRN": 13.5,
+        "ONP": 26.5,
+        "IND": 9,
+        "OTH": 4
+      },
+      "tpp": {
+        "ALP": 52,
+        "LNP": 48
+      }
+    },
+    {
+      "start_date": "2026-02-12",
+      "end_date": "2026-02-14",
+      "pollster": "Resolve",
+      "sample_size": 1100,
+      "primary": {
+        "ALP": 28,
+        "LNP": 30,
+        "GRN": 12,
+        "ONP": 11,
+        "IND": 7,
+        "OTH": 11
+      }
+    },
+    {
+      "start_date": "2026-02-01",
+      "end_date": "2026-02-10",
+      "pollster": "DemosAU/Premier National",
+      "sample_size": 1274,
+      "primary": {
+        "ALP": 23,
+        "LNP": 29,
+        "GRN": 15,
+        "ONP": 21,
+        "OTH": 12
+      },
+      "tpp": {
+        "ALP": 47,
+        "LNP": 53
+      }
+    },
+    {
+      "start_date": "2025-11-24",
+      "end_date": "2025-12-08",
+      "pollster": "RedBridge/Accent",
+      "sample_size": 1021,
+      "primary": {
+        "ALP": 31,
+        "LNP": 40,
+        "GRN": 12,
+        "IND": 6,
+        "OTH": 11
+      },
+      "tpp": {
+        "ALP": 50,
+        "LNP": 50
+      }
+    },
+    {
+      "start_date": "2025-12-07",
+      "end_date": "2025-12-07",
+      "pollster": "Resolve",
+      "sample_size": 1000,
+      "primary": {
+        "ALP": 28,
+        "LNP": 39,
+        "GRN": 12,
+        "IND": 9,
+        "OTH": 11
+      }
+    },
+    {
+      "start_date": "2025-11-21",
+      "end_date": "2025-11-24",
+      "pollster": "Freshwater",
+      "sample_size": 1220,
+      "primary": {
+        "ALP": 30,
+        "LNP": 37,
+        "GRN": 15,
+        "OTH": 18
+      },
+      "tpp": {
+        "ALP": 50,
+        "LNP": 50
+      }
+    },
+    {
+      "start_date": "2025-11-18",
+      "end_date": "2025-11-20",
+      "pollster": "Newspoll",
+      "sample_size": 1030,
+      "primary": {
+        "ALP": 28,
+        "LNP": 36,
+        "GRN": 14,
+        "OTH": 22
+      },
+      "tpp": {
+        "ALP": 49,
+        "LNP": 51
+      }
+    },
+    {
+      "start_date": "2025-11-14",
+      "end_date": "2025-11-17",
+      "pollster": "Freshwater",
+      "sample_size": 1217,
+      "primary": {
+        "ALP": 30,
+        "LNP": 37,
+        "GRN": 15,
+        "OTH": 18
+      },
+      "tpp": {
+        "ALP": 49,
+        "LNP": 51
+      }
+    },
+    {
+      "start_date": "2025-10-21",
+      "end_date": "2025-10-27",
+      "pollster": "DemosAU/Premier National",
+      "sample_size": 1016,
+      "primary": {
+        "ALP": 26,
+        "LNP": 37,
+        "GRN": 15,
+        "OTH": 22
+      },
+      "tpp": {
+        "ALP": 49,
+        "LNP": 51
+      }
+    },
+    {
+      "start_date": "2025-10-08",
+      "end_date": "2025-10-14",
+      "pollster": "RedBridge/Accent",
+      "sample_size": 1501,
+      "primary": {
+        "ALP": 32,
+        "LNP": 37,
+        "GRN": 13,
+        "OTH": 18
+      },
+      "tpp": {
+        "ALP": 52,
+        "LNP": 48
+      }
+    },
+    {
+      "start_date": "2025-10-12",
+      "end_date": "2025-10-12",
+      "pollster": "Resolve",
+      "sample_size": 1000,
+      "primary": {
+        "ALP": 30,
+        "LNP": 33,
+        "GRN": 12,
+        "IND": 10,
+        "OTH": 15
+      }
+    },
+    {
+      "start_date": "2025-09-03",
+      "end_date": "2025-09-11",
+      "pollster": "RedBridge/Accent",
+      "sample_size": 2005,
+      "primary": {
+        "ALP": 32,
+        "LNP": 37,
+        "GRN": 13,
+        "OTH": 18
+      },
+      "tpp": {
+        "ALP": 52,
+        "LNP": 48
+      }
+    },
+    {
+      "start_date": "2025-09-02",
+      "end_date": "2025-09-09",
+      "pollster": "DemosAU/Premier National",
+      "sample_size": 1327,
+      "primary": {
+        "ALP": 26,
+        "LNP": 38,
+        "GRN": 15,
+        "OTH": 21
+      },
+      "tpp": {
+        "ALP": 49,
+        "LNP": 51
+      }
+    },
+    {
+      "start_date": "2025-08-17",
+      "end_date": "2025-08-17",
+      "pollster": "Resolve",
+      "sample_size": 1000,
+      "primary": {
+        "ALP": 32,
+        "LNP": 33,
+        "GRN": 12,
+        "IND": 9,
+        "OTH": 13
+      }
+    },
+    {
+      "start_date": "2025-06-23",
+      "end_date": "2025-06-30",
+      "pollster": "Newspoll",
+      "sample_size": 1000,
+      "primary": {
+        "ALP": 35,
+        "LNP": 35,
+        "GRN": 12,
+        "OTH": 18
+      },
+      "tpp": {
+        "ALP": 53,
+        "LNP": 47
+      }
+    },
+    {
+      "start_date": "2025-06-19",
+      "end_date": "2025-06-30",
+      "pollster": "RedBridge/Accent",
+      "sample_size": 1183,
+      "primary": {
+        "ALP": 33,
+        "LNP": 38,
+        "GRN": 14,
+        "OTH": 15
+      },
+      "tpp": {
+        "ALP": 51.5,
+        "LNP": 48.5
+      }
+    },
+    {
+      "start_date": "2025-03-24",
+      "end_date": "2025-04-02",
+      "pollster": "RedBridge/Accent",
+      "sample_size": 2013,
+      "primary": {
+        "ALP": 29,
+        "LNP": 41,
+        "GRN": 13,
+        "OTH": 17
+      },
+      "tpp": {
+        "ALP": 49,
+        "LNP": 51
+      }
+    },
+    {
+      "start_date": "2025-03-30",
+      "end_date": "2025-03-30",
+      "pollster": "Resolve",
+      "sample_size": 1000,
+      "primary": {
+        "ALP": 24,
+        "LNP": 41,
+        "GRN": 14,
+        "IND": 14,
+        "OTH": 7
+      }
+    },
+    {
+      "start_date": "2025-03-17",
+      "end_date": "2025-03-21",
+      "pollster": "DemosAU/Premier National",
+      "sample_size": 1006,
+      "primary": {
+        "ALP": 25,
+        "LNP": 39,
+        "GRN": 15,
+        "OTH": 21
+      },
+      "tpp": {
+        "ALP": 48,
+        "LNP": 52
+      }
+    },
+    {
+      "start_date": "2024-12-01",
+      "end_date": "2025-01-31",
+      "pollster": "Resolve",
+      "sample_size": 1124,
+      "primary": {
+        "ALP": 22,
+        "LNP": 42,
+        "GRN": 13,
+        "IND": 17,
+        "OTH": 6
+      }
+    },
+    {
+      "start_date": "2024-11-06",
+      "end_date": "2024-11-20",
+      "pollster": "RedBridge/Accent",
+      "sample_size": 920,
+      "primary": {
+        "ALP": 30,
+        "LNP": 43,
+        "GRN": 14,
+        "OTH": 13
+      },
+      "tpp": {
+        "ALP": 49,
+        "LNP": 51
+      }
+    },
+    {
+      "start_date": "2024-11-10",
+      "end_date": "2024-11-10",
+      "pollster": "Resolve",
+      "sample_size": 1000,
+      "primary": {
+        "ALP": 28,
+        "LNP": 38,
+        "GRN": 13,
+        "IND": 14,
+        "OTH": 7
+      }
+    },
+    {
+      "start_date": "2024-09-26",
+      "end_date": "2024-10-03",
+      "pollster": "RedBridge/Accent",
+      "sample_size": 1516,
+      "primary": {
+        "ALP": 30,
+        "LNP": 40,
+        "GRN": 12,
+        "OTH": 18
+      },
+      "tpp": {
+        "ALP": 49,
+        "LNP": 51
+      }
+    },
+    {
+      "start_date": "2024-09-18",
+      "end_date": "2024-09-18",
+      "pollster": "RedBridge/Accent",
+      "sample_size": 1500,
+      "primary": {
+        "ALP": 30,
+        "LNP": 40,
+        "GRN": 12,
+        "OTH": 17
+      },
+      "tpp": {
+        "ALP": 50,
+        "LNP": 50
+      }
+    },
+    {
+      "start_date": "2024-09-07",
+      "end_date": "2024-09-07",
+      "pollster": "Resolve",
+      "sample_size": 1054,
+      "primary": {
+        "ALP": 27,
+        "LNP": 37,
+        "GRN": 14,
+        "IND": 15,
+        "OTH": 7
+      }
+    },
+    {
+      "start_date": "2024-08-06",
+      "end_date": "2024-08-29",
+      "pollster": "Wolf & Smith",
+      "sample_size": 2024,
+      "primary": {
+        "ALP": 28,
+        "LNP": 40,
+        "GRN": 14,
+        "IND": 15,
+        "OTH": 3
+      },
+      "tpp": {
+        "ALP": 48,
+        "LNP": 52
+      }
+    },
+    {
+      "start_date": "2024-08-05",
+      "end_date": "2024-08-05",
+      "pollster": "RedBridge/Accent",
+      "sample_size": 1514,
+      "primary": {
+        "ALP": 31,
+        "LNP": 40,
+        "GRN": 12,
+        "OTH": 17
+      },
+      "tpp": {
+        "ALP": 50,
+        "LNP": 50
+      }
+    },
+    {
+      "start_date": "2024-07-14",
+      "end_date": "2024-07-14",
+      "pollster": "Resolve",
+      "sample_size": 1000,
+      "primary": {
+        "ALP": 27,
+        "LNP": 37,
+        "GRN": 15,
+        "IND": 15,
+        "OTH": 6
+      }
+    },
+    {
+      "start_date": "2024-06-07",
+      "end_date": "2024-06-07",
+      "pollster": "RedBridge/Accent",
+      "sample_size": 1000,
+      "primary": {
+        "ALP": 35,
+        "LNP": 38,
+        "GRN": 14,
+        "OTH": 13
+      },
+      "tpp": {
+        "ALP": 55,
+        "LNP": 45
+      }
+    },
+    {
+      "start_date": "2024-05-19",
+      "end_date": "2024-05-19",
+      "pollster": "Resolve",
+      "sample_size": 1000,
+      "primary": {
+        "ALP": 28,
+        "LNP": 37,
+        "GRN": 13,
+        "IND": 16,
+        "OTH": 6
+      }
+    },
+    {
+      "start_date": "2024-03-24",
+      "end_date": "2024-03-24",
+      "pollster": "Resolve",
+      "sample_size": 1100,
+      "primary": {
+        "ALP": 33,
+        "LNP": 35,
+        "GRN": 13,
+        "IND": 12,
+        "OTH": 7
+      },
+      "tpp": {
+        "ALP": 54.6,
+        "LNP": 45.4
+      }
+    },
+    {
+      "start_date": "2024-03-14",
+      "end_date": "2024-03-20",
+      "pollster": "RedBridge/Accent",
+      "sample_size": 1559,
+      "primary": {
+        "ALP": 36,
+        "LNP": 38,
+        "GRN": 10,
+        "OTH": 16
+      },
+      "tpp": {
+        "ALP": 54,
+        "LNP": 46
+      }
+    },
+    {
+      "start_date": "2023-12-02",
+      "end_date": "2023-12-12",
+      "pollster": "RedBridge/Accent",
+      "sample_size": 2000,
+      "primary": {
+        "ALP": 37,
+        "GRN": 13,
+        "OTH": 14,
+        "LNP": 36
+      },
+      "tpp": {
+        "ALP": 55.9,
+        "LNP": 44.1
+      }
+    },
+    {
+      "start_date": "2023-12-03",
+      "end_date": "2023-12-03",
+      "pollster": "Resolve",
+      "sample_size": 1100,
+      "primary": {
+        "ALP": 37,
+        "GRN": 11,
+        "IND": 14,
+        "OTH": 6,
+        "LNP": 31
+      }
+    },
+    {
+      "start_date": "2023-09-01",
+      "end_date": "2023-10-31",
+      "pollster": "Resolve",
+      "sample_size": 1100,
+      "primary": {
+        "ALP": 39,
+        "GRN": 12,
+        "IND": 10,
+        "OTH": 7,
+        "LNP": 32
+      }
+    },
+    {
+      "start_date": "2023-08-31",
+      "end_date": "2023-09-14",
+      "pollster": "RedBridge/Accent",
+      "sample_size": 3001,
+      "primary": {
+        "ALP": 37,
+        "GRN": 13,
+        "OTH": 16,
+        "LNP": 34
+      },
+      "tpp": {
+        "ALP": 56.5,
+        "LNP": 43.5
+      }
+    },
+    {
+      "start_date": "2023-07-01",
+      "end_date": "2023-08-31",
+      "pollster": "Resolve",
+      "sample_size": 1100,
+      "primary": {
+        "ALP": 39,
+        "GRN": 13,
+        "IND": 13,
+        "OTH": 7,
+        "LNP": 28
+      }
+    },
+    {
+      "start_date": "2023-07-19",
+      "end_date": "2023-07-20",
+      "pollster": "Roy Morgan",
+      "sample_size": 1046,
+      "primary": {
+        "ALP": 33,
+        "GRN": 12.5,
+        "IND": 10.5,
+        "OTH": 8.5,
+        "LNP": 35.5
+      },
+      "tpp": {
+        "ALP": 53,
+        "LNP": 47
+      }
+    },
+    {
+      "start_date": "2023-05-01",
+      "end_date": "2023-06-30",
+      "pollster": "Resolve",
+      "sample_size": 1003,
+      "primary": {
+        "ALP": 41,
+        "GRN": 15,
+        "IND": 12,
+        "OTH": 6,
+        "LNP": 26
+      }
+    },
+    {
+      "start_date": "2023-05-17",
+      "end_date": "2023-05-22",
+      "pollster": "Roy Morgan",
+      "sample_size": 2095,
+      "primary": {
+        "ALP": 42,
+        "GRN": 12.5,
+        "IND": 9,
+        "OTH": 8,
+        "LNP": 28.5
+      },
+      "tpp": {
+        "ALP": 61.5,
+        "LNP": 38.5
+      }
+    },
+    {
+      "start_date": "2023-04-19",
+      "end_date": "2023-04-22",
+      "pollster": "Resolve",
+      "sample_size": 1609,
+      "primary": {
+        "ALP": 42,
+        "GRN": 10,
+        "IND": 12,
+        "OTH": 5,
+        "LNP": 30
+      }
+    },
+    {
+      "start_date": "2023-02-15",
+      "end_date": "2023-02-18",
+      "pollster": "Resolve",
+      "sample_size": 825,
+      "primary": {
+        "ALP": 41,
+        "GRN": 13,
+        "IND": 13,
+        "OTH": 4,
+        "LNP": 30
+      }
+    }
   ]
 }
