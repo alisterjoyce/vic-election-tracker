@@ -245,7 +245,7 @@
       el.innerHTML = '<h3 id="r22-h">How it voted in 2022</h3><p class="empty">2022 results are not available for this district.</p>';
       return;
     }
-    if (hashId() !== d.id || !document.getElementById("r22")) return;   // user moved on
+    if (hashId() !== d.id || !el.isConnected) return;   // user moved on
     const cand = Object.fromEntries(r.candidates.map((c) => [c.id, c]));
     const fp = r.first_preferences;
     const sw = (r.swing && r.swing.first_preferences) || {};
@@ -316,8 +316,11 @@
       </details>`;
 
     if (window.L && App.Maps) {
-      const { placed, total } = await App.Maps.boothMap($("booth-map"), d.id, r);
-      $("booth-note").textContent = `${placed} of ${total} voting centres mapped. Circles are sized by votes and coloured by the two-candidate-preferred leader; tap one for its numbers. Early, postal, absent and other declaration votes aren't tied to a place, so they're in the table below instead.`;
+      const note = $("booth-note");
+      const mapped = await App.Maps.boothMap($("booth-map"), d.id, r);
+      if (!mapped || !note.isConnected) return;   // user moved on
+      const { placed, total } = mapped;
+      note.textContent = `${placed} of ${total} voting centres mapped. Circles are sized by votes and coloured by the two-candidate-preferred leader; tap one for its numbers. Early, postal, absent and other declaration votes aren't tied to a place, so they're in the table below instead.`;
     } else {
       $("booth-map").remove();
       $("booth-note").textContent = "The map library failed to load; the voting-centre table below has every result.";

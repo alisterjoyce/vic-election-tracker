@@ -270,14 +270,18 @@
     return `<span class="avatar avatar-initials" aria-hidden="true" style="${style};font-size:${Math.round(size * 0.38)}px;background:var(${partyVar(party)});color:${inkFor(party)}">${escapeHtml(initials(name))}</span>`;
   }
 
-  // "Photos: Victorian Labor (Jane Citizen), ..." for the photos shown in a list.
+  // "Photos: Victorian Labor (Jane Citizen), ..." for the photos shown in a list. Names are the
+  // tracker's spelling (ABC is the authority), not the spelling published with the photo.
   function photoCredits(shots, people) {
-    const used = people.map(([seat, name]) => shots && shots[candidateId(seat, name)]).filter(Boolean);
+    const used = people.map(([seat, name]) => {
+      const shot = shots && shots[candidateId(seat, name)];
+      return shot && { shot, name };
+    }).filter(Boolean);
     if (!used.length) return "";
     const byCredit = {};
-    used.forEach((s) => { (byCredit[s.source.credit] = byCredit[s.source.credit] || []).push(s); });
+    used.forEach((u) => { (byCredit[u.shot.source.credit] = byCredit[u.shot.source.credit] || []).push(u); });
     return `<p class="photo-credits muted small">Photos: ${Object.entries(byCredit).map(([credit, list]) =>
-      `${escapeHtml(credit)} (${list.map((s) => `<a href="${escapeHtml(s.source.page)}" rel="noopener" target="_blank">${escapeHtml(s.name)}</a>`).join(", ")})`).join("; ")}.</p>`;
+      `${escapeHtml(credit)} (${list.map((u) => `<a href="${escapeHtml(u.shot.source.page)}" rel="noopener" target="_blank">${escapeHtml(u.name)}</a>`).join(", ")})`).join("; ")}.</p>`;
   }
 
   function profileHref(seat, name) {

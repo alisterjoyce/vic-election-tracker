@@ -27,7 +27,9 @@
   // Council candidates added to candidates.json (e.g. from Wikipedia) that
   // aren't on a ticket in regions.json, grouped by party in ticket order.
   function renderExtraCandidates(r) {
-    const rows = councilCandidates.filter((c) => c.region === r.id);
+    const onTicket = new Set((r.tickets || []).flatMap((t) => (t.candidates || []).map((n) => App.candidateId(r.id, n))));
+    const rows = councilCandidates.filter((c) => c.region === r.id && c.status !== "superseded" &&
+      !onTicket.has(App.candidateId(r.id, c.name)));
     if (!rows.length) return "";
     const byParty = {};
     rows.forEach((c) => { (byParty[c.party] = byParty[c.party] || []).push(c); });

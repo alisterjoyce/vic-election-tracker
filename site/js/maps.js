@@ -11,11 +11,15 @@
   const METRO_BOUNDS = [[-38.12, 144.62], [-37.55, 145.42]];
   const BAND_OPACITY = { "Marginal": 0.35, "Safe": 0.65, "Very Safe": 0.95 };
 
+  const geoCache = {};
   function loadGeo(name) {
-    return fetch(`data/geo/${name}.geojson`, { cache: "no-cache" }).then((r) => {
-      if (!r.ok) throw new Error(`${name}.geojson: HTTP ${r.status}`);
-      return r.json();
-    });
+    if (!geoCache[name]) {
+      geoCache[name] = fetch(`data/geo/${name}.geojson`, { cache: "no-cache" }).then((r) => {
+        if (!r.ok) throw new Error(`${name}.geojson: HTTP ${r.status}`);
+        return r.json();
+      }).catch((err) => { delete geoCache[name]; throw err; });
+    }
+    return geoCache[name];
   }
 
   function baseMap(el, opts = {}) {
@@ -209,9 +213,13 @@
     return total ? (100 * n) / total : 0;
   }
 
+  // Returns null if the container left the page while the boundaries loaded (the user
+  // switched seats): a map on a detached, zero-size container has no valid view, and
+  // Leaflet then throws when the boundary is added.
   async function boothMap(el, districtId, contest) {
-    if (boothMapInstance) { boothMapInstance.remove(); boothMapInstance = null; }
     const geo = await loadGeo("districts");
+    if (!el.isConnected) return null;
+    if (boothMapInstance) { boothMapInstance.remove(); boothMapInstance = null; }
     const feature = geo.features.find((f) => f.properties.id === districtId);
     const map = baseMap(el);
     boothMapInstance = map;

@@ -65,7 +65,8 @@
 
   function record(p) {
     const rows = [];
-    if (p.source_url) rows.push(["Listed by", `<a href="${escapeHtml(p.source_url)}" target="_blank" rel="noopener">${escapeHtml(SOURCES[p.source] || "Source")} ↗</a>`]);
+    const label = SOURCES[p.source] || (/abc\.net\.au\/news\/\d{4}-/.test(p.source_url || "") ? "ABC News report" : "Source");
+    if (p.source_url) rows.push(["Listed by", `<a href="${escapeHtml(p.source_url)}" target="_blank" rel="noopener">${escapeHtml(label)} ↗</a>`]);
     else if (p.on_ticket) rows.push(["Listed by", `The ${escapeHtml(p.seatName)} ticket list on the <a href="upper.html#${escapeHtml(p.seat)}">upper house page</a>`]);
     if (p.date_added) rows.push(["Added", escapeHtml(fmtDate(p.date_added))]);
     if (p.updated) rows.push(["Last checked", escapeHtml(fmtDate(p.updated))]);
