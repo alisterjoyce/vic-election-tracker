@@ -93,7 +93,8 @@
     }
     document.title = `${d.name} · Vic Election 2026`;
     const region = regionsById[d.region];
-    const cands = candidates.filter((c) => c.district === d.id).sort(candidateSort);
+    // Superseded rows stay in candidates.json for the record but aren't shown.
+    const cands = candidates.filter((c) => c.district === d.id && c.status !== "superseded").sort(candidateSort);
     const anyBallot = cands.some((c) => c.ballot_position != null);
 
     el.hidden = false;
