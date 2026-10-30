@@ -1,13 +1,13 @@
 {
   "_schema": {
-    "description": "Published voting-intention polls. Overwritten by scripts/refresh.py from Wikipedia. The rows below are SAMPLE values, not real polls.",
+    "description": "Published voting-intention polls, scraped from Wikipedia by scripts/refresh.py.",
     "fields": {
       "start_date": "Fieldwork start, YYYY-MM-DD (may equal end_date)",
       "end_date": "Fieldwork end, YYYY-MM-DD",
       "pollster": "Polling firm / brand",
       "sample_size": "Integer respondents, or null if not published",
-      "primary": "Map of party code -> primary vote %. Codes: ALP, LNP (Liberal + National), GRN, ONP, OTH",
-      "tpp": "Two-party-preferred %: {ALP, LNP}"
+      "primary": "Map of party code -> primary vote %. Codes: ALP, LNP (Liberal + National), GRN, ONP, IND, OTH",
+      "tpp": "Two-party-preferred %: {ALP, LNP}; omitted when the poll did not publish an ALP v L/NP figure"
     }
   },
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election",

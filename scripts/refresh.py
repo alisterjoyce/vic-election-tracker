@@ -50,7 +50,7 @@ PARTY_CODES = {
 
 MONTHS = {m.lower(): i for i, m in enumerate(calendar.month_abbr) if m}
 
-DEFAULT_POLLS_SCHEMA = {
+POLLS_SCHEMA = {
     "description": "Published voting-intention polls, scraped from Wikipedia by scripts/refresh.py.",
     "fields": {
         "start_date": "Fieldwork start, YYYY-MM-DD (may equal end_date)",
@@ -330,9 +330,9 @@ def refresh_polls(data_dir: Path, meta: dict) -> bool:
         source.update(status="error", message=str(exc)[:300])
         return False
 
-    existing = read_json(path, {}) or {}
+    # The script owns this file, so its schema always replaces whatever was there.
     write_json(path, {
-        "_schema": existing.get("_schema", DEFAULT_POLLS_SCHEMA),
+        "_schema": POLLS_SCHEMA,
         "source": POLLS_URL,
         "polls": polls,
     })
