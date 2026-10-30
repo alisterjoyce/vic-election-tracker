@@ -13,6 +13,24 @@
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election",
   "polls": [
     {
+      "start_date": "2026-10-26",
+      "end_date": "2026-10-29",
+      "pollster": "Roy Morgan",
+      "sample_size": 3610,
+      "primary": {
+        "ALP": 22.5,
+        "LNP": 29.5,
+        "GRN": 12.5,
+        "ONP": 22,
+        "IND": 7.5,
+        "OTH": 6
+      },
+      "tpp": {
+        "ALP": 44,
+        "LNP": 56
+      }
+    },
+    {
       "start_date": "2026-10-15",
       "end_date": "2026-10-22",
       "pollster": "Newspoll",
@@ -41,6 +59,24 @@
         "ONP": 23,
         "IND": 4,
         "OTH": 5
+      }
+    },
+    {
+      "start_date": "2026-10-08",
+      "end_date": "2026-10-09",
+      "pollster": "Roy Morgan",
+      "sample_size": null,
+      "primary": {
+        "ALP": 22.5,
+        "LNP": 26,
+        "GRN": 14,
+        "ONP": 25,
+        "IND": 7,
+        "OTH": 5.5
+      },
+      "tpp": {
+        "ALP": 45,
+        "LNP": 55
       }
     },
     {
