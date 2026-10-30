@@ -1,11 +1,13 @@
 /* Upper house page: pick one of the 8 regions (via #region-id), show MLCs and tickets. */
 (function () {
   "use strict";
-  const { loadJSON, escapeHtml, partyName, partyVar, partyBadge, statusBadge, hashId, copyLink } = window.App;
+  const App = window.App;
+  const { loadJSON, escapeHtml, partyName, partyVar, partyBadge, statusBadge, hashId, copyLink } = App;
 
   let regions = [];
   let districts = [];
   let councilCandidates = [];
+  let shots = {};   // candidate id -> headshot (data/headshots.json)
 
   function ticketSort(a, b) {
     const wa = a.status === "withdrawn", wb = b.status === "withdrawn";
@@ -42,6 +44,7 @@
                 ${byParty[p].sort((a, b) => (a.ticket_position || 99) - (b.ticket_position || 99)).map((c) => `
                   <li>
                     ${c.ticket_position ? `<span class="pos" title="Reported ticket position">${c.ticket_position}</span>` : ""}
+                    ${App.avatar(shots, r.id, c.name, c.party, { size: 32 })}
                     <span class="name">${escapeHtml(c.name)}</span>
                     ${statusBadge(c.status)}
                     ${c.notes ? `<span class="note muted small">${escapeHtml(c.notes)}</span>` : ""}
@@ -49,6 +52,7 @@
               </ul>
             </div>`).join("")}
         </div>
+        ${App.photoCredits(shots, rows.map((c) => [r.id, c.name]))}
       </div>`;
   }
 
@@ -75,11 +79,13 @@
           <ul class="people">
             ${r.mlcs.map((m) => `
               <li>
+                ${App.avatar(shots, r.id, m.name, m.party)}
                 <span class="name">${escapeHtml(m.name)}${m.retiring ? ' <span class="badge neutral">Retiring</span>' : ""}</span>
                 ${partyBadge(m.party)}
                 ${m.notes ? `<span class="note muted small">${escapeHtml(m.notes)}</span>` : ""}
               </li>`).join("")}
-          </ul>` : '<p class="empty">No members recorded.</p>'}
+          </ul>
+          ${App.photoCredits(shots, r.mlcs.map((m) => [r.id, m.name]))}` : '<p class="empty">No members recorded.</p>'}
       </div>
 
       <div class="card">
@@ -93,11 +99,12 @@
                   ${statusBadge(t.status)}
                 </div>
                 ${(t.candidates || []).length
-                  ? `<ol>${t.candidates.map((c) => `<li>${escapeHtml(c)}</li>`).join("")}</ol>`
+                  ? `<ol class="ticket-people">${t.candidates.map((c, i) => `<li><span class="tp-pos">${i + 1}.</span>${/^TB[CD]$/.test(c) ? "" : App.avatar(shots, r.id, c, t.party, { size: 28 })}<span>${escapeHtml(c)}</span></li>`).join("")}</ol>`
                   : '<p class="empty small" style="margin:0">No names confirmed.</p>'}
                 ${t.notes ? `<p class="note muted small">${escapeHtml(t.notes)}</p>` : ""}
               </div>`).join("")}
-          </div>` : '<p class="empty">No tickets recorded yet.</p>'}
+          </div>
+          ${App.photoCredits(shots, tickets.flatMap((t) => (t.candidates || []).map((c) => [r.id, c])))}` : '<p class="empty">No tickets recorded yet.</p>'}
         ${r.notes ? `<p class="muted small" style="margin-bottom:0">${escapeHtml(r.notes)}</p>` : ""}
       </div>
 
@@ -125,6 +132,7 @@
       regions = rd.regions.slice().sort((a, b) => a.name.localeCompare(b.name));
       districts = dd.districts;
       councilCandidates = (cd.candidates || []).filter((c) => c.region && !c.district);
+      shots = await App.loadHeadshots();
       document.getElementById("region-chips").addEventListener("click", (e) => {
         const btn = e.target.closest("button[data-id]");
         if (btn) location.hash = btn.dataset.id;

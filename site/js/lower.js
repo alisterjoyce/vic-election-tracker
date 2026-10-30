@@ -12,6 +12,7 @@
   let regionsById = {};
   // Seat outlook inputs: statewide swing, MRP models, betting, seat polls.
   let outlook = { swing: null, models: null, odds: null, seatPolls: null };
+  let shots = {};   // candidate id -> headshot (data/headshots.json)
 
   const $ = (id) => document.getElementById(id);
 
@@ -197,6 +198,7 @@
           ${cands.map((c) => `
             <li class="${isInactive(c) ? "is-withdrawn" : ""}">
               ${anyBallot ? `<span class="pos" title="Ballot position">${c.ballot_position ?? "–"}</span>` : ""}
+              ${App.avatar(shots, d.id, c.name, c.party)}
               <span class="name">${escapeHtml(c.name)}${c.incumbent ? ' <span class="muted small">(sitting MP)</span>' : ""}</span>
               ${partyBadge(c.party)}
               ${statusBadge(c.status)}
@@ -204,7 +206,8 @@
               ${c.notes ? `<span class="note muted small">${escapeHtml(c.notes)}</span>` : ""}
             </li>`).join("")}
         </ul>
-        <p class="muted small" style="margin-top:8px">Last checked ${escapeHtml(fmtDate(cands.map((c) => c.updated).filter(Boolean).sort().pop()))}</p>`
+        <p class="muted small" style="margin-top:8px">Last checked ${escapeHtml(fmtDate(cands.map((c) => c.updated).filter(Boolean).sort().pop()))}</p>
+        ${App.photoCredits(shots, cands.map((c) => [d.id, c.name]))}`
         : '<p class="empty">No candidates recorded yet.</p>'}
       <section class="r22" id="r22" aria-labelledby="r22-h">
         <h3 id="r22-h">How it voted in 2022</h3>
@@ -327,6 +330,7 @@
         loadJSON("districts"), loadJSON("candidates"), loadJSON("regions"),
         optional("meta"), optional("polls"), optional("seat_models"), optional("seat_odds"), optional("seat_polls"),
       ]);
+      shots = await App.loadHeadshots();
       outlook = { swing: App.statewideSwing(meta, pollData), models, odds, seatPolls };
       districts = dd.districts.slice().sort((a, b) => a.name.localeCompare(b.name));
       candidates = cd.candidates || [];

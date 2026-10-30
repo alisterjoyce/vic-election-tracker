@@ -278,6 +278,18 @@ details.booth-table summary { cursor: pointer; margin-top: 12px; color: var(--ac
 .defs dd { margin: 4px 0 0; }
 .prose td { white-space: normal; min-width: 140px; vertical-align: top; }
 
+/* Candidate avatars: photo, or party-colour initials */
+.avatar { flex: none; border-radius: 50%; object-fit: cover; background: var(--surface-2); }
+.avatar-initials {
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 700; letter-spacing: 0.02em;
+}
+.photo-credits { margin: 8px 0 0; }
+.people li .avatar { margin-right: 2px; }
+.ticket-people { list-style: none; padding: 0; margin: 0; }
+.ticket-people li { display: flex; align-items: center; gap: 8px; padding: 3px 0; }
+.ticket-people .tp-pos { width: 1.2em; text-align: right; color: var(--muted); font-size: 0.85rem; }
+
 /* Watchlist stars */
 .star {
   border: 0; background: none; cursor: pointer; padding: 0 2px; font-size: 1.15em; line-height: 1;

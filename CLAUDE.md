@@ -22,11 +22,14 @@ scripts/build_boundaries.py  # data/geo/{districts,regions}.geojson, topology-pr
 scripts/results_format.py    # the vec-contest-v1 results format (2022 history and 2026 election night)
 scripts/build_results_2022.py  # data/results_2022/ from VEC 2022 results by voting centre (one-off)
 scripts/vec_feed.py       # VEC media feed (XML) -> vec-contest-v1; --selftest <samples folder>
+scripts/build_headshots.py   # headshot zip -> site/photos/{320,160}/*.webp + data/headshots.json (by hand; needs Pillow)
+scripts/headshot_overrides.json  # {zip file path: candidate id | null} to resolve photos by hand
+site/photos/320/, 160/    # candidate headshots, WebP, each under 25 KB
 site/js/maps.js           # Leaflet: home choropleth with metro inset, seat-page booth map
 .github/workflows/refresh.yml   # 20:00 UTC daily + workflow_dispatch; commits site/data if changed
 ```
 
-Not committed: the research report `.md` in the repo root, source screenshots and PDFs, `.cache/` (Vicmap downloads) and `.claude/`, all via `.gitignore` except the report, which is simply never added.
+Not committed: the research report `.md` in the repo root, source screenshots and PDFs, the headshot zip (`/*.zip`), `.cache/` (Vicmap downloads) and `.claude/`, all via `.gitignore` except the report, which is simply never added.
 
 ## Data files
 
@@ -45,7 +48,10 @@ Each file's `_schema` is the authoritative field list. Keep it in sync when addi
 | `geo/districts.geojson`, `geo/regions.geojson` | Simplified boundaries (keep both under 1.5 MB together) | `scripts/build_boundaries.py` (Vicmap Admin; the VEC only offers PDF/PNG maps) |
 | `results_2022/<district>.json`, `results_2022/index.json` | 2022 results by voting centre in vec-contest-v1 format, plus swings from notional 2018 | `scripts/build_results_2022.py` (one-off) |
 | `results_2026/index.json` (+ per-district files on election night) | 2026 results in the same format; empty until 28 Nov, when the home map's Result mode switches on | `scripts/vec_feed.py` |
+| `headshots.json` | Candidate photos: id, file (320px) and files {320,160}, source {credit, page, image_url}, licence note, match, date_added | `scripts/build_headshots.py` |
 | `localities.json` | Suburb/locality and postcode → district(s) with area shares, for search | `scripts/build_localities.py` (Vicmap Admin boundaries; the VEC publishes no downloadable locality list) |
+
+Candidate ids (headshots, avatars) are `<district-or-region id>/<slug of "Given Surname">`, e.g. `bendigo-west/brenton-baldwin`; `App.candidateId(seat, name)` builds them and handles "Surname, Given". Show people with `App.avatar(shots, seat, name, party)`: the photo where `headshots.json` has one, else party-colour initials. Every list that shows photos ends with `App.photoCredits(...)` so each photo's source is credited.
 
 Party codes: ALP, LIB, NAT, LNP (joint Coalition), GRN, ONP, IND, ILAB (Independent Labor), AJP, LCV, VS, LBT, FF, SAL, ND, WEST, SFF, DLP, SUS, OTH.
 
@@ -69,7 +75,7 @@ Order each run: polls → Wikipedia candidates → ABC guide (district pages, th
 
 ## Copyright: link, never copy
 
-Never copy article text, ABC prose (candidate profiles, biographies, seat descriptions, "Held by" sentences), or any other publisher's editorial text into data files or pages. Store only facts (names, parties, numbers, dates, classifications) and **link** to the source page (e.g. `abc_url`).
+Never copy article text, ABC prose (candidate profiles, biographies, seat descriptions, "Held by" sentences), or any other publisher's editorial text into data files or pages. Store only facts (names, parties, numbers, dates, classifications) and **link** to the source page (e.g. `abc_url`). The same goes for images: ABC-hosted candidate photos are not published (`build_headshots.py --publish non-abc`); those candidates get the initials avatar.
 
 ## Design system
 

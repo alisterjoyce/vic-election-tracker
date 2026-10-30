@@ -222,6 +222,64 @@
     return null;
   }
 
+  /* ---- Candidates: ids, headshots and initials avatars ---- */
+  // "<district or region id>/<slug of Given Surname>", matching scripts/build_headshots.py.
+  function givenFirst(name) {
+    if (!name || !name.includes(",")) return name || "";
+    const [sur, ...rest] = name.split(",");
+    return `${rest.join(",").trim()} ${sur.trim()}`;
+  }
+
+  function candidateId(seat, name) {
+    return `${seat}/${slugify(givenFirst(name))}`;
+  }
+
+  let headshots = null;
+  function loadHeadshots() {
+    if (!headshots) {
+      headshots = loadJSON("headshots")
+        .then((d) => Object.fromEntries((d.headshots || []).map((h) => [h.id, h])))
+        .catch(() => ({}));
+    }
+    return headshots;
+  }
+
+  function initials(name) {
+    const parts = givenFirst(name).replace(/[^\p{L}\s'-]/gu, " ").split(/\s+/).filter(Boolean);
+    if (!parts.length) return "?";
+    return (parts[0][0] + (parts.length > 1 ? parts[parts.length - 1][0] : "")).toUpperCase();
+  }
+
+  // Black or white text, whichever reads better on the party colour.
+  function inkFor(code) {
+    const m = (partyColor(code) || "").match(/^#?([0-9a-f]{6})$/i);
+    if (!m) return "#fff";
+    const n = parseInt(m[1], 16);
+    const lum = (0.2126 * ((n >> 16) & 255) + 0.7152 * ((n >> 8) & 255) + 0.0722 * (n & 255)) / 255;
+    return lum > 0.6 ? "#111" : "#fff";
+  }
+
+  // Photo if one exists (from a loadHeadshots() map), otherwise a party-colour initials circle.
+  function avatar(shots, seat, name, party, { size = 40 } = {}) {
+    const shot = shots && shots[candidateId(seat, name)];
+    const style = `width:${size}px;height:${size}px`;
+    if (shot) {
+      const src = size > 120 ? shot.files["320"] : shot.files["160"];
+      return `<img class="avatar" src="${escapeHtml(src)}" alt="" width="${size}" height="${size}" loading="lazy" decoding="async" style="${style}" title="Photo: ${escapeHtml(shot.source.credit)}">`;
+    }
+    return `<span class="avatar avatar-initials" aria-hidden="true" style="${style};font-size:${Math.round(size * 0.38)}px;background:var(${partyVar(party)});color:${inkFor(party)}">${escapeHtml(initials(name))}</span>`;
+  }
+
+  // "Photos: Victorian Labor (Jane Citizen), ..." for the photos shown in a list.
+  function photoCredits(shots, people) {
+    const used = people.map(([seat, name]) => shots && shots[candidateId(seat, name)]).filter(Boolean);
+    if (!used.length) return "";
+    const byCredit = {};
+    used.forEach((s) => { (byCredit[s.source.credit] = byCredit[s.source.credit] || []).push(s); });
+    return `<p class="photo-credits muted small">Photos: ${Object.entries(byCredit).map(([credit, list]) =>
+      `${escapeHtml(credit)} (${list.map((s) => `<a href="${escapeHtml(s.source.page)}" rel="noopener" target="_blank">${escapeHtml(s.name)}</a>`).join(", ")})`).join("; ")}.</p>`;
+  }
+
   function hashId() {
     return decodeURIComponent(location.hash.replace(/^#/, "")).trim().toLowerCase();
   }
@@ -566,5 +624,6 @@
     DAY, preparePolls, smoothedSeries, statewideSwing, swingAdjusted,
     getWatchlist, setWatchlist, isWatched, toggleWatch, starButton, storageWorks,
     buildSearchIndex, searchItems,
+    candidateId, givenFirst, loadHeadshots, avatar, photoCredits, initials,
   };
 })();
