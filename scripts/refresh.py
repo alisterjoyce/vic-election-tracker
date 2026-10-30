@@ -11,6 +11,8 @@
   table. Candidates become "endorsed"; an ABC entry supersedes other rows
   for the same party and seat (kept, marked "superseded"). The retiring
   MPs page sets retiring flags for MPs and MLCs.
+* Sportsbet seat markets (best effort): fills seat_odds.json if the site
+  can be fetched and parsed; otherwise the file is treated as manual.
 * VEC candidates: placeholder (see fetch_vec_candidates below).
 * meta.json: last_updated and per-source status.
 
@@ -36,6 +38,7 @@ import sys
 import tempfile
 import time
 import unicodedata
+import urllib.robotparser
 from datetime import date, datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -1009,6 +1012,110 @@ def refresh_abc(data_dir: Path, meta: dict) -> bool:
     return True
 
 
+# --------------------------------------------------------------------------
+# Betting: Sportsbet Victorian election seat markets -> seat_odds.json
+# --------------------------------------------------------------------------
+# Best effort only. Sportsbet refuses the TLS handshake from non-browser
+# clients (seen from a desktop and expected from GitHub's US runners), so
+# the usual outcome is "blocked": seat_odds.json is then treated as a
+# manual file and its last values are kept. The parser below is generic
+# (it looks for embedded JSON markets named after districts) and has not
+# been tested against a live Sportsbet response.
+
+SPORTSBET_URL = "https://www.sportsbet.com.au/betting/politics/australian-politics/victorian-state-election"
+SPORTSBET_ROBOTS = "https://www.sportsbet.com.au/robots.txt"
+
+
+def _sportsbet_allowed(session: requests.Session) -> bool:
+    resp = session.get(SPORTSBET_ROBOTS, timeout=TIMEOUT)
+    resp.raise_for_status()
+    rp = urllib.robotparser.RobotFileParser()
+    rp.parse(resp.text.splitlines())
+    return rp.can_fetch(USER_AGENT, SPORTSBET_URL)
+
+
+def parse_sportsbet_markets(page: str, districts: dict[str, str]) -> dict[str, dict]:
+    """district id -> {favourite, price}. Walks JSON embedded in <script>
+    tags for objects named after a district that carry priced outcomes."""
+    found = {}
+
+    def price_of(o):
+        for k in ("price", "winPrice", "decimal", "odds"):
+            v = o.get(k)
+            if isinstance(v, dict):
+                v = v.get("winPrice") or v.get("decimal")
+            try:
+                return float(v)
+            except (TypeError, ValueError):
+                continue
+        return None
+
+    def walk(o):
+        if isinstance(o, dict):
+            name = str(o.get("name") or o.get("eventName") or "")
+            did = districts.get(re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-"))
+            outcomes = o.get("outcomes") or o.get("selections") or o.get("runners")
+            if did and isinstance(outcomes, list):
+                priced = [(price_of(x), x.get("name")) for x in outcomes if isinstance(x, dict)]
+                priced = [(p, n) for p, n in priced if p and n]
+                if priced:
+                    p, n = min(priced)
+                    found[did] = {"favourite": n, "price": p}
+            for v in o.values():
+                walk(v)
+        elif isinstance(o, list):
+            for v in o:
+                walk(v)
+
+    for script in lxml.html.fromstring(page).iter("script"):
+        text = (script.text or "").strip()
+        start = text.find("{")
+        if start < 0:
+            continue
+        try:
+            walk(json.loads(text[start:text.rfind("}") + 1]))
+        except ValueError:
+            continue
+    return found
+
+
+def refresh_seat_odds(data_dir: Path, meta: dict) -> bool:
+    source = meta.setdefault("sources", {}).setdefault("sportsbet", {"url": SPORTSBET_URL})
+    path = data_dir / "seat_odds.json"
+    doc = read_json(path, None)
+    districts = (read_json(data_dir / "districts.json", {}) or {}).get("districts", [])
+    if doc is None or not districts:
+        log.info("seat_odds.json or districts.json missing; Sportsbet step skipped")
+        return False
+    session = requests.Session()
+    session.headers["User-Agent"] = USER_AGENT
+    try:
+        if not _sportsbet_allowed(session):
+            raise PermissionError("robots.txt disallows the seat markets page")
+        resp = session.get(SPORTSBET_URL, timeout=TIMEOUT)
+        resp.raise_for_status()
+        odds = parse_sportsbet_markets(resp.text, {d["id"]: d["id"] for d in districts})
+        if not odds:
+            raise ValueError("page fetched but no seat markets recognised")
+    except Exception as exc:  # noqa: BLE001 - blocked or unrecognised: keep the manual values
+        log.info("Sportsbet unavailable (%s); seat_odds.json kept as manual", str(exc)[:200])
+        if doc.get("mode") != "manual":
+            doc["mode"] = "manual"
+            write_json(path, doc)
+        source.update(status="manual", message=f"Blocked or unrecognised ({type(exc).__name__}); manual values kept.")
+        return False
+
+    today = datetime.now(MELBOURNE).date().isoformat()
+    for seat in doc.get("seats", []):
+        if seat["district"] in odds:
+            seat.update(odds[seat["district"]])
+    doc.update(mode="auto", date_checked=today)
+    write_json(path, doc)
+    source.update(status="ok", url=SPORTSBET_URL, last_success=now_iso(), message=f"{len(odds)} seat markets")
+    log.info("Wrote %s (%d seat markets)", path.name, len(odds))
+    return True
+
+
 # ==========================================================================
 # PLACEHOLDER: VEC candidate list
 # --------------------------------------------------------------------------
@@ -1081,6 +1188,7 @@ def main(argv=None) -> int:
         refresh_polls(data_dir, meta),
         refresh_wiki_candidates(data_dir, meta),
         refresh_abc(data_dir, meta),           # after Wikipedia, so the ABC (primary) wins conflicts
+        refresh_seat_odds(data_dir, meta),
         refresh_candidates(data_dir, meta),
     ]
     if any(updated):

@@ -1,10 +1,9 @@
 /* Home page: countdown, headline seat counts, poll-of-polls chart, latest polls table. */
 (function () {
   "use strict";
-  const { loadJSON, escapeHtml, partyName, partyVar, partyColor, parseDate, fmtDate, cssVar } = window.App;
+  const { loadJSON, escapeHtml, partyName, partyVar, partyColor, parseDate, fmtDate, cssVar,
+    DAY, preparePolls, smoothedSeries } = window.App;
 
-  const DAY = 86400000;
-  const BANDWIDTH_DAYS = 21; // standard deviation of the Gaussian smoothing kernel
   const PARTY_ORDER = ["ALP", "LNP", "LIB", "NAT", "GRN", "ONP", "LCV", "IND", "OTH"];
   const byPartyOrder = (a, b) => {
     const ia = PARTY_ORDER.indexOf(a), ib = PARTY_ORDER.indexOf(b);
@@ -82,12 +81,6 @@
   }
 
   /* ---------- Poll of polls ---------- */
-  function pollTime(p) {
-    const end = parseDate(p.end_date).getTime();
-    const start = p.start_date ? parseDate(p.start_date).getTime() : end;
-    return (start + end) / 2;
-  }
-
   // Pollsters differ on whether independents are reported separately, so the
   // primary chart counts them in Other to keep that line comparable.
   function chartValue(p, key) {
@@ -105,26 +98,8 @@
     return [...keys].sort(byPartyOrder);
   }
 
-  // Centred Gaussian-kernel average, weighted by sqrt(sample size).
   function average(key) {
-    const pts = polls.filter((p) => chartValue(p, key) != null);
-    if (!pts.length) return [];
-    const out = [];
-    const bw = BANDWIDTH_DAYS * DAY;
-    const first = pts[0].t, last = pts[pts.length - 1].t;
-    const days = Math.ceil((last - first) / DAY);
-    for (let i = 0; i <= days; i++) {
-      const t = Math.min(first + i * DAY, last);
-      let w = 0, v = 0;
-      for (const p of pts) {
-        const z = (t - p.t) / bw;
-        if (Math.abs(z) > 3) continue;
-        const weight = Math.exp(-0.5 * z * z) * Math.sqrt((p.sample_size || 1000) / 1000);
-        w += weight; v += weight * chartValue(p, key);
-      }
-      if (w > 0) out.push({ x: t, y: Math.round((v / w) * 10) / 10 });
-    }
-    return out;
+    return smoothedSeries(polls, (p) => chartValue(p, key));
   }
 
   function withAlpha(color, alpha) {
@@ -265,10 +240,7 @@
       ]);
       renderCountdown(meta);
       renderSeats(meta, districtData.districts, regionData.regions);
-      polls = (pollData.polls || [])
-        .filter((p) => p.end_date)
-        .map((p) => ({ ...p, t: pollTime(p) }))
-        .sort((a, b) => a.t - b.t);
+      polls = preparePolls(pollData);
       renderTable(pollData);
       renderChart();
       document.addEventListener("themechange", renderChart);

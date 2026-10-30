@@ -294,6 +294,17 @@ select {
 .fact .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--muted); }
 .fact .value { font-weight: 600; margin-top: 2px; overflow-wrap: anywhere; }
 
+.outlook { border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; margin: 0 0 18px; }
+.outlook h3 { margin-bottom: 8px; }
+.outlook dl { margin: 0; }
+.outlook-row { display: grid; grid-template-columns: minmax(140px, 190px) 1fr; gap: 4px 12px; padding: 8px 0; border-top: 1px solid var(--border); }
+.outlook-row:first-child { border-top: 0; padding-top: 0; }
+.outlook dt { color: var(--muted); font-size: 0.85rem; font-weight: 600; }
+.outlook dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.outlook dd > div + div { margin-top: 4px; }
+.outlook-note { margin: 8px 0 0; }
+@media (max-width: 560px) { .outlook-row { grid-template-columns: 1fr; } }
+
 .people { list-style: none; padding: 0; margin: 0; }
 .people li {
   display: flex; align-items: center; gap: 10px; flex-wrap: wrap;

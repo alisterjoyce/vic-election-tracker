@@ -1,6 +1,7 @@
 /* Lower house page: filter districts, show the selected one (selected via #district-id). */
 (function () {
   "use strict";
+  const App = window.App;
   const { loadJSON, escapeHtml, partyBadge, partyShort, statusBadge, fmtDate, hashId, copyLink } = window.App;
 
   // Strongest confirmation first.
@@ -9,6 +10,8 @@
   let districts = [];
   let candidates = [];
   let regionsById = {};
+  // Seat outlook inputs: statewide swing, MRP models, betting, seat polls.
+  let outlook = { swing: null, models: null, odds: null, seatPolls: null };
 
   const $ = (id) => document.getElementById(id);
 
@@ -17,6 +20,98 @@
     if (pct < 6) return "Marginal";
     if (pct < 10) return "Fairly safe";
     return "Safe";
+  }
+
+  /* ---------- Seat outlook ---------- */
+  const COALITION = ["LNP", "LIB", "NAT"];
+  const fmt1 = (n) => Number(n).toFixed(1);
+
+  // Statewide swing to the Coalition: current poll-of-polls L/NP 2PP minus
+  // the previous election's L/NP 2PP.
+  function statewideSwing(meta, pollData) {
+    const base = meta && meta.previous_election && meta.previous_election.tpp && meta.previous_election.tpp.LNP;
+    const series = App.smoothedSeries(App.preparePolls(pollData), (p) => (p.tpp && p.tpp.LNP != null ? p.tpp.LNP : null));
+    if (base == null || !series.length) return null;
+    const current = series[series.length - 1].y;
+    return { current, base, swing: current - base, year: (meta.previous_election.date || "").slice(0, 4) };
+  }
+
+  // Uniform swing applied to a Labor-v-Coalition margin; null otherwise.
+  function swingAdjusted(m, s) {
+    if (!m || m.pct == null || !s) return null;
+    const coalitionLabel = COALITION.includes(m.vs) ? partyShort(m.vs) : partyShort(m.party);
+    if (m.party === "ALP" && COALITION.includes(m.vs)) {
+      const after = m.pct - s.swing;   // Labor's margin after the swing
+      return { before: `ALP ${fmt1(m.pct)}`, after: after >= 0 ? `ALP ${fmt1(after)}` : `${coalitionLabel} ${fmt1(-after)}` };
+    }
+    if (COALITION.includes(m.party) && m.vs === "ALP") {
+      const after = m.pct + s.swing;   // Coalition's margin after the swing
+      return { before: `${partyShort(m.party)} ${fmt1(m.pct)}`, after: after >= 0 ? `${partyShort(m.party)} ${fmt1(after)}` : `ALP ${fmt1(-after)}` };
+    }
+    return null;
+  }
+
+  function outlookRow(label, body) {
+    return `<div class="outlook-row"><dt>${escapeHtml(label)}</dt><dd>${body}</dd></div>`;
+  }
+
+  function renderOutlook(d) {
+    const s = outlook.swing;
+    const adj = swingAdjusted(d.margin, s);
+    let swingCell;
+    if (!s) swingCell = '<span class="muted">n/a (no two-party-preferred polling)</span>';
+    else if (!adj) swingCell = '<span class="muted">n/a (not a Labor-Coalition contest)</span>';
+    else {
+      const dir = s.swing >= 0 ? "L/NP" : "ALP";
+      swingCell = `<strong>${escapeHtml(adj.before)} → ${escapeHtml(adj.after)}</strong> on current polling
+        <div class="muted small">Statewide swing of ${fmt1(Math.abs(s.swing))} to ${dir}: L/NP ${fmt1(s.current)}% 2PP now vs ${fmt1(s.base)}% in ${escapeHtml(s.year)}</div>`;
+    }
+
+    const models = (outlook.models && outlook.models.models) || [];
+    const modelCell = models.length ? models.map((mod) => {
+      const e = (outlook.models.seats || []).find((x) => x.district === d.id && x.model === mod.id);
+      const name = `${escapeHtml(mod.name)} <span class="muted small">(${escapeHtml(mod.fieldwork || "")})</span>`;
+      if (!e || !e.winner) return `<div>${name}: <span class="muted">not published</span></div>`;
+      const vs = e.runner_up ? ` over ${escapeHtml(App.partyName(e.runner_up))}` : "";
+      const share = e.winner_2cp != null ? `, ${fmt1(e.winner_2cp)}% 2CP` : "";
+      const prob = e.win_probability != null ? `win probability ${fmt1(e.win_probability)}%` : '<span class="muted">win probability not published</span>';
+      const link = mod.source_url ? ` <a class="small" href="${escapeHtml(mod.source_url)}" rel="noopener" target="_blank">source</a>` : "";
+      return `<div>${name}: ${partyBadge(e.winner)}${vs}${share} · ${prob}${link}</div>`;
+    }).join("") : '<span class="muted">not published</span>';
+
+    const odds = outlook.odds;
+    const seatOdds = odds && (odds.seats || []).find((x) => x.district === d.id);
+    let oddsCell;
+    if (seatOdds && seatOdds.favourite) {
+      const fav = App.PARTIES[seatOdds.favourite] ? partyBadge(seatOdds.favourite) : escapeHtml(seatOdds.favourite);
+      const date = seatOdds.date_checked || odds.date_checked;
+      oddsCell = `${fav}${seatOdds.price != null ? ` $${Number(seatOdds.price).toFixed(2)}` : ""}
+        <span class="muted small">${escapeHtml(odds.source || "")}${date ? `, as at ${escapeHtml(fmtDate(date))}` : ""}</span>`;
+    } else {
+      oddsCell = '<span class="muted">not recorded</span>';
+    }
+
+    const polls = ((outlook.seatPolls && outlook.seatPolls.polls) || []).filter((p) => p.district === d.id)
+      .sort((a, b) => (b.end_date || "").localeCompare(a.end_date || ""));
+    const pollsCell = polls.length ? polls.map((p) => {
+      const tcp = p.tcp ? Object.entries(p.tcp).map(([k, v]) => `${escapeHtml(partyShort(k))} ${fmt1(v)}`).join(" – ") : "";
+      const prim = p.primary ? Object.entries(p.primary).map(([k, v]) => `${escapeHtml(partyShort(k))} ${v}`).join(", ") : "";
+      return `<div>${escapeHtml(p.pollster)}, ${escapeHtml(fmtDate(p.end_date))}${p.sample_size ? `, n=${p.sample_size}` : ""}:
+        ${tcp ? `<strong>2CP ${tcp}</strong>` : ""}${prim ? ` <span class="muted small">(primaries ${prim})</span>` : ""}
+        ${p.source_url ? ` <a class="small" href="${escapeHtml(p.source_url)}" rel="noopener" target="_blank">source</a>` : ""}</div>`;
+    }).join("") : '<span class="muted">none published</span>';
+
+    return `
+      <section class="outlook" aria-label="Seat outlook">
+        <h3>Seat outlook</h3>
+        <dl>
+          ${outlookRow("Swing-adjusted margin", swingCell)}
+          ${outlookRow("MRP estimates", modelCell)}
+          ${outlookRow("Betting favourite", oddsCell)}
+          ${outlookRow("Seat polls", pollsCell)}
+        </dl>
+        <p class="muted small outlook-note">The swing-adjusted figure is a uniform-swing estimate; One Nation's vote breaks uniform swing in outer-suburban and regional seats.</p>
+      </section>`;
   }
 
   // The ABC's classification ("Very Safe Labor") when we have it.
@@ -112,6 +207,7 @@
         <div class="fact"><div class="label">Margin</div><div class="value">${marginText(d.margin)}</div><div class="muted small">${escapeHtml(seatLabel(d))}</div></div>
         <div class="fact"><div class="label">Region</div><div class="value">${region ? `<a href="upper.html#${escapeHtml(region.id)}">${escapeHtml(region.name)}</a>` : escapeHtml(d.region)}${d.needs_check ? ' <span class="badge reported" title="Region allocation flagged for checking">Check</span>' : ""}</div><div class="muted small">${d.area === "regional" ? "Regional" : "Metro"}</div></div>
       </div>
+      ${renderOutlook(d)}
       ${d.notes ? `<p>${escapeHtml(d.notes)}</p>` : ""}
       ${d.region_note ? `<p class="muted small">${escapeHtml(d.region_note)}</p>` : ""}
       <h3>Candidates</h3>
@@ -145,7 +241,12 @@
 
   async function init() {
     try {
-      const [dd, cd, rd] = await Promise.all([loadJSON("districts"), loadJSON("candidates"), loadJSON("regions")]);
+      const optional = (name) => loadJSON(name).catch((err) => { console.warn(err); return null; });
+      const [dd, cd, rd, meta, pollData, models, odds, seatPolls] = await Promise.all([
+        loadJSON("districts"), loadJSON("candidates"), loadJSON("regions"),
+        optional("meta"), optional("polls"), optional("seat_models"), optional("seat_odds"), optional("seat_polls"),
+      ]);
+      outlook = { swing: statewideSwing(meta, pollData), models, odds, seatPolls };
       districts = dd.districts.slice().sort((a, b) => a.name.localeCompare(b.name));
       candidates = cd.candidates || [];
       rd.regions.forEach((r) => { regionsById[r.id] = r; });

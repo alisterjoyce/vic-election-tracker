@@ -4,6 +4,11 @@ A static tracker for the 2026 Victorian state election (polling day Saturday 28 
 
 - **Home** (`index.html`): countdown, headline seat counts, a poll-of-polls chart (Chart.js 4.4.1 from cdnjs) and a table of the latest polls.
 - **Lower house** (`lower.html`): filter districts by region and metro/regional, then pick one to see its sitting MP, margin and candidates with status badges.
+- **Seat outlook** (on each district page, under the margin cards):
+  - **Swing-adjusted margin:** the current poll-of-polls statewide 2PP swing since 2022 (`meta.json` → `previous_election`), applied uniformly to the seat margin. Shown only for Labor-v-Coalition contests.
+  - **MRP estimates:** from `seat_models.json`.
+  - **Betting favourite:** from `seat_odds.json`.
+  - **Seat polls:** from `seat_polls.json`.
 - **Upper house** (`upper.html`): pick one of the 8 regions to see its current MLCs and 2026 tickets.
 - Shareable links: `lower.html#bendigo-east`, `upper.html#northern-victoria`. A district hash on the home page (`/#bendigo-east`) redirects to the lower-house page.
 - Light and dark mode follow the system setting and can be overridden with the toggle in the header.
@@ -22,6 +27,9 @@ site/                  # published by Netlify
     regions.json       # Legislative Council regions, MLCs, tickets
     polls.json         # written by scripts/refresh.py
     meta.json          # last_updated, source status, sample-data flags
+    seat_models.json   # MRP seat estimates (manual; YouGov Jun-Jul 2026, DemosAU slot)
+    seat_odds.json     # Sportsbet seat favourites (auto if fetchable, else manual)
+    seat_polls.json    # single-seat polls (manual; empty until one is published)
 scripts/refresh.py     # data refresh
 .github/workflows/refresh.yml
 netlify.toml
@@ -72,8 +80,9 @@ What it does:
 
      The site footer shows "N candidates tracked, last reconciled <date>". N counts active candidates in `candidates.json` for both houses; upper-house ticket names in `regions.json` aren't included.
    - It is polite to the ABC: one request per second and a descriptive User-Agent. If any page fails three times, the whole ABC step is skipped and no file changes. A full run makes about 91 requests, so it takes about a minute and a half.
-4. Calls `fetch_vec_candidates()`, a clearly marked **placeholder** for the VEC candidate list. It returns `None` until implemented, so this step leaves `candidates.json` alone.
-5. Updates `meta.json`: `last_updated` (only when a source refreshed successfully) and the per-source status.
+4. Tries the Sportsbet Victorian election seat markets for `seat_odds.json`, after checking robots.txt. Sportsbet currently refuses the connection (TLS handshake failure) from scripts, so the file is treated as **manual**: the last values are kept and the site shows "as at <date>". Enter favourites and prices by hand, and set `date_checked`. The parser is generic and untested against a live response.
+5. Calls `fetch_vec_candidates()`, a clearly marked **placeholder** for the VEC candidate list. It returns `None` until implemented, so this step leaves `candidates.json` alone.
+6. Updates `meta.json`: `last_updated` (only when a source refreshed successfully) and the per-source status.
 
 If any fetch or parse fails, the error is logged (and shown as a warning annotation in GitHub Actions), and the existing file is kept as it was.
 

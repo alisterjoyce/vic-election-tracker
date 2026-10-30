@@ -1,0 +1,1446 @@
+{
+  "_schema": {
+    "description": "Seat-level model estimates (MRP), one entry per district per model. Maintained by hand; seeded 30 Oct 2026 from the pollsters' own releases (the Wikipedia polling page only lists statewide seat tallies). null = not published.",
+    "fields": {
+      "models": "[{id, name, client, fieldwork, sample_size, published, source_url, notes}]",
+      "district": "id of the district in districts.json",
+      "model": "id of the model in models",
+      "winner": "Predicted winner party code (ALP, LIB, NAT, LNP, GRN, ONP, IND) or null if not published",
+      "runner_up": "Predicted runner-up party code or null",
+      "winner_2cp": "Predicted winner's two-candidate-preferred % or null",
+      "win_probability": "Predicted probability (0-100) the winner takes the seat, or null if not published"
+    }
+  },
+  "models": [
+    {
+      "id": "yougov-mrp-2026-07",
+      "name": "YouGov MRP",
+      "client": "Common Threads",
+      "fieldwork": "16 Jun - 10 Jul 2026",
+      "sample_size": 4003,
+      "published": true,
+      "source_url": "https://actionnetwork.org/user_files/user_files/000/146/615/original/yougov-vic-mrp-treaty-report-state-voting-intetion-treaty-support.pdf",
+      "notes": "Projected winner, runner-up and winner's 2CP share from the report's per-seat table. No win probabilities published. Fieldwork predates the July 2026 Labor leadership change."
+    },
+    {
+      "id": "demosau-mrp-2026-10",
+      "name": "DemosAU MRP",
+      "client": null,
+      "fieldwork": "Oct 2026",
+      "sample_size": null,
+      "published": false,
+      "source_url": null,
+      "notes": "No Victorian seat-level DemosAU MRP found as of 30 Oct 2026 (DemosAU's October MRP was federal; its September Victorian release was a seat projection from a statewide poll, not per-seat). Entries left blank."
+    }
+  ],
+  "seats": [
+    {
+      "district": "albert-park",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "LNP",
+      "winner_2cp": 53.2,
+      "win_probability": null
+    },
+    {
+      "district": "albert-park",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "ashwood",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ALP",
+      "winner_2cp": 52.7,
+      "win_probability": null
+    },
+    {
+      "district": "ashwood",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "bass",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ONP",
+      "runner_up": "ALP",
+      "winner_2cp": 56.7,
+      "win_probability": null
+    },
+    {
+      "district": "bass",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "bayswater",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ALP",
+      "winner_2cp": 55.2,
+      "win_probability": null
+    },
+    {
+      "district": "bayswater",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "bellarine",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ALP",
+      "winner_2cp": 52.1,
+      "win_probability": null
+    },
+    {
+      "district": "bellarine",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "benambra",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "IND",
+      "winner_2cp": 58.9,
+      "win_probability": null
+    },
+    {
+      "district": "benambra",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "bendigo-east",
+      "model": "yougov-mrp-2026-07",
+      "winner": "NAT",
+      "runner_up": "ALP",
+      "winner_2cp": 57.6,
+      "win_probability": null
+    },
+    {
+      "district": "bendigo-east",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "bendigo-west",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ONP",
+      "runner_up": "ALP",
+      "winner_2cp": 51.5,
+      "win_probability": null
+    },
+    {
+      "district": "bendigo-west",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "bentleigh",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ALP",
+      "winner_2cp": 54.4,
+      "win_probability": null
+    },
+    {
+      "district": "bentleigh",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "berwick",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ALP",
+      "winner_2cp": 57.7,
+      "win_probability": null
+    },
+    {
+      "district": "berwick",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "box-hill",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ALP",
+      "winner_2cp": 51.2,
+      "win_probability": null
+    },
+    {
+      "district": "box-hill",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "brighton",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ALP",
+      "winner_2cp": 62.1,
+      "win_probability": null
+    },
+    {
+      "district": "brighton",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "broadmeadows",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "ONP",
+      "winner_2cp": 58.7,
+      "win_probability": null
+    },
+    {
+      "district": "broadmeadows",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "brunswick",
+      "model": "yougov-mrp-2026-07",
+      "winner": "GRN",
+      "runner_up": "ALP",
+      "winner_2cp": 50.8,
+      "win_probability": null
+    },
+    {
+      "district": "brunswick",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "bulleen",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ALP",
+      "winner_2cp": 60.0,
+      "win_probability": null
+    },
+    {
+      "district": "bulleen",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "bundoora",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "ONP",
+      "winner_2cp": 57.9,
+      "win_probability": null
+    },
+    {
+      "district": "bundoora",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "carrum",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ONP",
+      "runner_up": "ALP",
+      "winner_2cp": 50.7,
+      "win_probability": null
+    },
+    {
+      "district": "carrum",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "caulfield",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ALP",
+      "winner_2cp": 55.2,
+      "win_probability": null
+    },
+    {
+      "district": "caulfield",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "clarinda",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "LNP",
+      "winner_2cp": 51.6,
+      "win_probability": null
+    },
+    {
+      "district": "clarinda",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "cranbourne",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ONP",
+      "runner_up": "ALP",
+      "winner_2cp": 51.2,
+      "win_probability": null
+    },
+    {
+      "district": "cranbourne",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "croydon",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ALP",
+      "winner_2cp": 58.7,
+      "win_probability": null
+    },
+    {
+      "district": "croydon",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "dandenong",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "ONP",
+      "winner_2cp": 56.2,
+      "win_probability": null
+    },
+    {
+      "district": "dandenong",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "eildon",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ONP",
+      "winner_2cp": 55.8,
+      "win_probability": null
+    },
+    {
+      "district": "eildon",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "eltham",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "LIB",
+      "winner_2cp": 50.5,
+      "win_probability": null
+    },
+    {
+      "district": "eltham",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "essendon",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ALP",
+      "winner_2cp": 50.0,
+      "win_probability": null
+    },
+    {
+      "district": "essendon",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "eureka",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ONP",
+      "runner_up": "ALP",
+      "winner_2cp": 53.3,
+      "win_probability": null
+    },
+    {
+      "district": "eureka",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "euroa",
+      "model": "yougov-mrp-2026-07",
+      "winner": "NAT",
+      "runner_up": "ONP",
+      "winner_2cp": 51.0,
+      "win_probability": null
+    },
+    {
+      "district": "euroa",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "evelyn",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ONP",
+      "winner_2cp": 62.7,
+      "win_probability": null
+    },
+    {
+      "district": "evelyn",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "footscray",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "GRN",
+      "winner_2cp": 53.3,
+      "win_probability": null
+    },
+    {
+      "district": "footscray",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "frankston",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "ONP",
+      "winner_2cp": 51.7,
+      "win_probability": null
+    },
+    {
+      "district": "frankston",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "geelong",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "ONP",
+      "winner_2cp": 53.9,
+      "win_probability": null
+    },
+    {
+      "district": "geelong",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "gippsland-east",
+      "model": "yougov-mrp-2026-07",
+      "winner": "NAT",
+      "runner_up": "ONP",
+      "winner_2cp": 58.5,
+      "win_probability": null
+    },
+    {
+      "district": "gippsland-east",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "gippsland-south",
+      "model": "yougov-mrp-2026-07",
+      "winner": "NAT",
+      "runner_up": "ONP",
+      "winner_2cp": 57.4,
+      "win_probability": null
+    },
+    {
+      "district": "gippsland-south",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "glen-waverley",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ALP",
+      "winner_2cp": 54.6,
+      "win_probability": null
+    },
+    {
+      "district": "glen-waverley",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "greenvale",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ONP",
+      "runner_up": "ALP",
+      "winner_2cp": 52.3,
+      "win_probability": null
+    },
+    {
+      "district": "greenvale",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "hastings",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ALP",
+      "winner_2cp": 58.8,
+      "win_probability": null
+    },
+    {
+      "district": "hastings",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "hawthorn",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "IND",
+      "winner_2cp": 62.3,
+      "win_probability": null
+    },
+    {
+      "district": "hawthorn",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "ivanhoe",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "LIB",
+      "winner_2cp": 55.5,
+      "win_probability": null
+    },
+    {
+      "district": "ivanhoe",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "kalkallo",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "ONP",
+      "winner_2cp": 51.2,
+      "win_probability": null
+    },
+    {
+      "district": "kalkallo",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "kew",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "IND",
+      "winner_2cp": 67.9,
+      "win_probability": null
+    },
+    {
+      "district": "kew",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "kororoit",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ONP",
+      "runner_up": "ALP",
+      "winner_2cp": 52.5,
+      "win_probability": null
+    },
+    {
+      "district": "kororoit",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "lara",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "ONP",
+      "winner_2cp": 50.9,
+      "win_probability": null
+    },
+    {
+      "district": "lara",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "laverton",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "ONP",
+      "winner_2cp": 55.9,
+      "win_probability": null
+    },
+    {
+      "district": "laverton",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "lowan",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ONP",
+      "runner_up": "NAT",
+      "winner_2cp": 50.3,
+      "win_probability": null
+    },
+    {
+      "district": "lowan",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "macedon",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ONP",
+      "runner_up": "ALP",
+      "winner_2cp": 53.0,
+      "win_probability": null
+    },
+    {
+      "district": "macedon",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "malvern",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ALP",
+      "winner_2cp": 62.2,
+      "win_probability": null
+    },
+    {
+      "district": "malvern",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "melbourne",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "GRN",
+      "winner_2cp": 51.8,
+      "win_probability": null
+    },
+    {
+      "district": "melbourne",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "melton",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ONP",
+      "runner_up": "ALP",
+      "winner_2cp": 54.3,
+      "win_probability": null
+    },
+    {
+      "district": "melton",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "mildura",
+      "model": "yougov-mrp-2026-07",
+      "winner": "NAT",
+      "runner_up": "ONP",
+      "winner_2cp": 65.8,
+      "win_probability": null
+    },
+    {
+      "district": "mildura",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "mill-park",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ONP",
+      "runner_up": "ALP",
+      "winner_2cp": 51.3,
+      "win_probability": null
+    },
+    {
+      "district": "mill-park",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "monbulk",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ALP",
+      "winner_2cp": 55.6,
+      "win_probability": null
+    },
+    {
+      "district": "monbulk",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "mordialloc",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "LIB",
+      "winner_2cp": 50.4,
+      "win_probability": null
+    },
+    {
+      "district": "mordialloc",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "mornington",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ALP",
+      "winner_2cp": 65.5,
+      "win_probability": null
+    },
+    {
+      "district": "mornington",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "morwell",
+      "model": "yougov-mrp-2026-07",
+      "winner": "NAT",
+      "runner_up": "ONP",
+      "winner_2cp": 61.7,
+      "win_probability": null
+    },
+    {
+      "district": "morwell",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "mulgrave",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "LNP",
+      "winner_2cp": 52.7,
+      "win_probability": null
+    },
+    {
+      "district": "mulgrave",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "murray-plains",
+      "model": "yougov-mrp-2026-07",
+      "winner": "NAT",
+      "runner_up": "ONP",
+      "winner_2cp": 50.9,
+      "win_probability": null
+    },
+    {
+      "district": "murray-plains",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "narracan",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ONP",
+      "winner_2cp": 59.2,
+      "win_probability": null
+    },
+    {
+      "district": "narracan",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "narre-warren-north",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ONP",
+      "runner_up": "ALP",
+      "winner_2cp": 50.2,
+      "win_probability": null
+    },
+    {
+      "district": "narre-warren-north",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "narre-warren-south",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "ONP",
+      "winner_2cp": 51.5,
+      "win_probability": null
+    },
+    {
+      "district": "narre-warren-south",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "nepean",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ONP",
+      "winner_2cp": 60.7,
+      "win_probability": null
+    },
+    {
+      "district": "nepean",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "niddrie",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ALP",
+      "winner_2cp": 57.8,
+      "win_probability": null
+    },
+    {
+      "district": "niddrie",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "northcote",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "GRN",
+      "winner_2cp": 53.1,
+      "win_probability": null
+    },
+    {
+      "district": "northcote",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "oakleigh",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "LNP",
+      "winner_2cp": 53.7,
+      "win_probability": null
+    },
+    {
+      "district": "oakleigh",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "ovens-valley",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ONP",
+      "runner_up": "LNP",
+      "winner_2cp": 50.7,
+      "win_probability": null
+    },
+    {
+      "district": "ovens-valley",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "pakenham",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ONP",
+      "winner_2cp": 61.1,
+      "win_probability": null
+    },
+    {
+      "district": "pakenham",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "pascoe-vale",
+      "model": "yougov-mrp-2026-07",
+      "winner": "GRN",
+      "runner_up": "LIB",
+      "winner_2cp": 56.4,
+      "win_probability": null
+    },
+    {
+      "district": "pascoe-vale",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "point-cook",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "ONP",
+      "winner_2cp": 57.1,
+      "win_probability": null
+    },
+    {
+      "district": "point-cook",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "polwarth",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ALP",
+      "winner_2cp": 57.6,
+      "win_probability": null
+    },
+    {
+      "district": "polwarth",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "prahran",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "LIB",
+      "winner_2cp": 59.6,
+      "win_probability": null
+    },
+    {
+      "district": "prahran",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "preston",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "ONP",
+      "winner_2cp": 64.0,
+      "win_probability": null
+    },
+    {
+      "district": "preston",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "richmond",
+      "model": "yougov-mrp-2026-07",
+      "winner": "GRN",
+      "runner_up": "ALP",
+      "winner_2cp": 50.1,
+      "win_probability": null
+    },
+    {
+      "district": "richmond",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "ringwood",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ALP",
+      "winner_2cp": 51.8,
+      "win_probability": null
+    },
+    {
+      "district": "ringwood",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "ripon",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ONP",
+      "runner_up": "ALP",
+      "winner_2cp": 61.3,
+      "win_probability": null
+    },
+    {
+      "district": "ripon",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "rowville",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ALP",
+      "winner_2cp": 59.6,
+      "win_probability": null
+    },
+    {
+      "district": "rowville",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "sandringham",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ALP",
+      "winner_2cp": 61.8,
+      "win_probability": null
+    },
+    {
+      "district": "sandringham",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "shepparton",
+      "model": "yougov-mrp-2026-07",
+      "winner": "NAT",
+      "runner_up": "ONP",
+      "winner_2cp": 64.9,
+      "win_probability": null
+    },
+    {
+      "district": "shepparton",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "south-barwon",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "LNP",
+      "winner_2cp": 51.0,
+      "win_probability": null
+    },
+    {
+      "district": "south-barwon",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "south-west-coast",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "IND",
+      "winner_2cp": 61.0,
+      "win_probability": null
+    },
+    {
+      "district": "south-west-coast",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "st-albans",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "ONP",
+      "winner_2cp": 50.1,
+      "win_probability": null
+    },
+    {
+      "district": "st-albans",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "sunbury",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "ONP",
+      "winner_2cp": 51.6,
+      "win_probability": null
+    },
+    {
+      "district": "sunbury",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "sydenham",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ONP",
+      "runner_up": "ALP",
+      "winner_2cp": 58.8,
+      "win_probability": null
+    },
+    {
+      "district": "sydenham",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "tarneit",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "ONP",
+      "winner_2cp": 51.8,
+      "win_probability": null
+    },
+    {
+      "district": "tarneit",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "thomastown",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ONP",
+      "runner_up": "ALP",
+      "winner_2cp": 50.8,
+      "win_probability": null
+    },
+    {
+      "district": "thomastown",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "warrandyte",
+      "model": "yougov-mrp-2026-07",
+      "winner": "LIB",
+      "runner_up": "ALP",
+      "winner_2cp": 62.0,
+      "win_probability": null
+    },
+    {
+      "district": "warrandyte",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "wendouree",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "ONP",
+      "winner_2cp": 51.4,
+      "win_probability": null
+    },
+    {
+      "district": "wendouree",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "werribee",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "ONP",
+      "winner_2cp": 52.6,
+      "win_probability": null
+    },
+    {
+      "district": "werribee",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "williamstown",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ALP",
+      "runner_up": "LIB",
+      "winner_2cp": 52.6,
+      "win_probability": null
+    },
+    {
+      "district": "williamstown",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "yan-yean",
+      "model": "yougov-mrp-2026-07",
+      "winner": "ONP",
+      "runner_up": "ALP",
+      "winner_2cp": 57.7,
+      "win_probability": null
+    },
+    {
+      "district": "yan-yean",
+      "model": "demosau-mrp-2026-10",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    }
+  ]
+}

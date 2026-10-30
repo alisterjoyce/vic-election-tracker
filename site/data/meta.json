@@ -4,6 +4,7 @@
     "fields": {
       "last_updated": "ISO 8601 UTC timestamp of the last successful data refresh",
       "election_date": "Polling day, YYYY-MM-DD",
+      "previous_election": "{date, tpp: {ALP, LNP}}: statewide 2PP at the last election, used as the baseline for uniform-swing seat estimates",
       "assembly_seats": "Total Legislative Assembly (lower house) seats",
       "council_seats": "Total Legislative Council (upper house) seats",
       "sample_data": "Map of dataset name -> true while that file still holds placeholder rows (drives the 'sample data' banner)",
@@ -13,6 +14,14 @@
   },
   "last_updated": "2026-10-30T02:32:35Z",
   "election_date": "2026-11-28",
+  "previous_election": {
+    "date": "2022-11-26",
+    "tpp": {
+      "ALP": 55.0,
+      "LNP": 45.0
+    },
+    "note": "Statewide two-party-preferred at the 2022 election, the baseline for the swing-adjusted seat margins."
+  },
   "assembly_seats": 88,
   "council_seats": 40,
   "sample_data": {

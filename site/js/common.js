@@ -105,6 +105,45 @@
     return parseDate(iso).toLocaleDateString("en-AU", opts);
   }
 
+  /* ---- Poll of polls (shared by the home chart and the seat outlook) ---- */
+  const DAY = 86400000;
+  const BANDWIDTH_DAYS = 21; // standard deviation of the Gaussian smoothing kernel
+
+  // Polls sorted by fieldwork midpoint, each with a timestamp `t`.
+  function preparePolls(pollData) {
+    return ((pollData && pollData.polls) || [])
+      .filter((p) => p.end_date)
+      .map((p) => {
+        const end = parseDate(p.end_date).getTime();
+        const start = p.start_date ? parseDate(p.start_date).getTime() : end;
+        return { ...p, t: (start + end) / 2 };
+      })
+      .sort((a, b) => a.t - b.t);
+  }
+
+  // Centred Gaussian-kernel average of value(p), weighted by sqrt(sample size).
+  // Returns daily points [{x: time, y: value}] from the first to the last poll.
+  function smoothedSeries(polls, value) {
+    const pts = polls.filter((p) => value(p) != null);
+    if (!pts.length) return [];
+    const out = [];
+    const bw = BANDWIDTH_DAYS * DAY;
+    const first = pts[0].t, last = pts[pts.length - 1].t;
+    const days = Math.ceil((last - first) / DAY);
+    for (let i = 0; i <= days; i++) {
+      const t = Math.min(first + i * DAY, last);
+      let w = 0, v = 0;
+      for (const p of pts) {
+        const z = (t - p.t) / bw;
+        if (Math.abs(z) > 3) continue;
+        const weight = Math.exp(-0.5 * z * z) * Math.sqrt((p.sample_size || 1000) / 1000);
+        w += weight; v += weight * value(p);
+      }
+      if (w > 0) out.push({ x: t, y: Math.round((v / w) * 10) / 10 });
+    }
+    return out;
+  }
+
   function hashId() {
     return decodeURIComponent(location.hash.replace(/^#/, "")).trim().toLowerCase();
   }
@@ -200,5 +239,6 @@
   window.App = {
     PARTIES, STATUSES, loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, partyBadge, statusBadge,
     slugify, parseDate, fmtDate, hashId, cssVar, currentTheme, showError, copyLink,
+    DAY, preparePolls, smoothedSeries,
   };
 })();

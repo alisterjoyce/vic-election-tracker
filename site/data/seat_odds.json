@@ -1,0 +1,456 @@
+{
+  "_schema": {
+    "description": "Sportsbet seat-market favourite per district. scripts/refresh.py tries to fetch the Sportsbet Victorian election seat markets each day; if the site is blocked or unrecognised the file is treated as manual and the last values are kept. Edit by hand when checking prices.",
+    "fields": {
+      "source": "Bookmaker the prices come from",
+      "mode": "auto (last values fetched by refresh.py) | manual (entered or kept by hand)",
+      "date_checked": "YYYY-MM-DD the prices were last checked (shown as \"as at <date>\"), or null if never",
+      "seats": "[{district, favourite (party code or candidate name), price (decimal odds, e.g. 1.40), date_checked (optional per-seat override)}]"
+    }
+  },
+  "source": "Sportsbet",
+  "mode": "manual",
+  "date_checked": null,
+  "seats": [
+    {
+      "district": "albert-park",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "ashwood",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "bass",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "bayswater",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "bellarine",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "benambra",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "bendigo-east",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "bendigo-west",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "bentleigh",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "berwick",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "box-hill",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "brighton",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "broadmeadows",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "brunswick",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "bulleen",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "bundoora",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "carrum",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "caulfield",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "clarinda",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "cranbourne",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "croydon",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "dandenong",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "eildon",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "eltham",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "essendon",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "eureka",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "euroa",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "evelyn",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "footscray",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "frankston",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "geelong",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "gippsland-east",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "gippsland-south",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "glen-waverley",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "greenvale",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "hastings",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "hawthorn",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "ivanhoe",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "kalkallo",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "kew",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "kororoit",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "lara",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "laverton",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "lowan",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "macedon",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "malvern",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "melbourne",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "melton",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "mildura",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "mill-park",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "monbulk",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "mordialloc",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "mornington",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "morwell",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "mulgrave",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "murray-plains",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "narracan",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "narre-warren-north",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "narre-warren-south",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "nepean",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "niddrie",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "northcote",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "oakleigh",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "ovens-valley",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "pakenham",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "pascoe-vale",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "point-cook",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "polwarth",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "prahran",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "preston",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "richmond",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "ringwood",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "ripon",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "rowville",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "sandringham",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "shepparton",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "south-barwon",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "south-west-coast",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "st-albans",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "sunbury",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "sydenham",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "tarneit",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "thomastown",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "warrandyte",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "wendouree",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "werribee",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "williamstown",
+      "favourite": null,
+      "price": null
+    },
+    {
+      "district": "yan-yean",
+      "favourite": null,
+      "price": null
+    }
+  ]
+}

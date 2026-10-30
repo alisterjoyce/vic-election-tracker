@@ -1,0 +1,16 @@
+{
+  "_schema": {
+    "description": "Published single-seat (electorate) polls. Maintained by hand.",
+    "fields": {
+      "district": "id of the district in districts.json",
+      "pollster": "Polling firm (and client)",
+      "start_date": "Fieldwork start, YYYY-MM-DD",
+      "end_date": "Fieldwork end, YYYY-MM-DD",
+      "sample_size": "Integer respondents or null",
+      "primary": "Map of party code (or candidate) -> primary vote %",
+      "tcp": "Two-candidate-preferred: map of party code (or candidate) -> %",
+      "source_url": "Where the poll was published"
+    }
+  },
+  "polls": []
+}
