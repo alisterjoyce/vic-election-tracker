@@ -21,11 +21,23 @@
   --p-grn: #2e9e44;
   --p-onp: #e8780c;
   --p-lcv: #3d8b6d;
+  --p-vs: #8b1e3f;
+  --p-ajp: #0f8b8d;
+  --p-nd: #7b4fc9;
+  --p-west: #b07d0a;
+  --p-sal: #b03060;
+  --p-lbt: #c99a06;
+  --p-ff: #2c7da0;
+  --p-sff: #8b5a2b;
+  --p-dlp: #6e7f2e;
+  --p-sus: #2f6f4f;
+  --p-ilab: #e07a7a;
   --p-ind: #7a7f8a;
   --p-oth: #8b8f99;
 
   /* Status badges */
   --s-announced-bg: #e7ecf5;   --s-announced-fg: #374766;
+  --s-reported-bg: #fdf0d5;    --s-reported-fg: #7a4b00;
   --s-endorsed-bg: #dcefff;    --s-endorsed-fg: #0b4a85;
   --s-nominated-bg: #dcf5e3;   --s-nominated-fg: #0f6b2f;
   --s-withdrawn-bg: #f3e1e1;   --s-withdrawn-fg: #8a2b2b;
@@ -56,9 +68,21 @@
     --p-grn: #5ccf6b;
     --p-onp: #ff9f43;
     --p-lcv: #6cc3a0;
+    --p-vs: #e0607f;
+    --p-ajp: #3cc4c6;
+    --p-nd: #a98bf0;
+    --p-west: #e0b040;
+    --p-sal: #ee6f9a;
+    --p-lbt: #f2c94c;
+    --p-ff: #5bb4dc;
+    --p-sff: #c8925e;
+    --p-dlp: #a9bd5a;
+    --p-sus: #5fb08a;
+    --p-ilab: #ff9b9b;
     --p-ind: #a3a8b3;
     --p-oth: #9ba0ab;
     --s-announced-bg: #263042;   --s-announced-fg: #c3cde0;
+    --s-reported-bg: #3a2c10;    --s-reported-fg: #f1c27d;
     --s-endorsed-bg: #12304f;    --s-endorsed-fg: #9fd0ff;
     --s-nominated-bg: #133a22;   --s-nominated-fg: #93e3ad;
     --s-withdrawn-bg: #3d1d1d;   --s-withdrawn-fg: #f2a8a8;
@@ -85,9 +109,21 @@
   --p-grn: #5ccf6b;
   --p-onp: #ff9f43;
   --p-lcv: #6cc3a0;
+  --p-vs: #e0607f;
+  --p-ajp: #3cc4c6;
+  --p-nd: #a98bf0;
+  --p-west: #e0b040;
+  --p-sal: #ee6f9a;
+  --p-lbt: #f2c94c;
+  --p-ff: #5bb4dc;
+  --p-sff: #c8925e;
+  --p-dlp: #a9bd5a;
+  --p-sus: #5fb08a;
+  --p-ilab: #ff9b9b;
   --p-ind: #a3a8b3;
   --p-oth: #9ba0ab;
   --s-announced-bg: #263042;   --s-announced-fg: #c3cde0;
+  --s-reported-bg: #3a2c10;    --s-reported-fg: #f1c27d;
   --s-endorsed-bg: #12304f;    --s-endorsed-fg: #9fd0ff;
   --s-nominated-bg: #133a22;   --s-nominated-fg: #93e3ad;
   --s-withdrawn-bg: #3d1d1d;   --s-withdrawn-fg: #f2a8a8;
@@ -243,6 +279,7 @@ select {
   font-size: 0.75rem; font-weight: 600; white-space: nowrap;
 }
 .badge.announced     { background: var(--s-announced-bg); color: var(--s-announced-fg); }
+.badge.reported      { background: var(--s-reported-bg);  color: var(--s-reported-fg); }
 .badge.endorsed      { background: var(--s-endorsed-bg);  color: var(--s-endorsed-fg); }
 .badge.vec_nominated { background: var(--s-nominated-bg); color: var(--s-nominated-fg); }
 .badge.withdrawn     { background: var(--s-withdrawn-bg); color: var(--s-withdrawn-fg); }
@@ -267,6 +304,8 @@ select {
 }
 .people .name { font-weight: 600; margin-right: auto; }
 .people li.is-withdrawn .name { text-decoration: line-through; color: var(--muted); }
+.people .note { flex-basis: 100%; margin-top: -4px; }
+.ticket .note { margin: 8px 0 0; }
 
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip {

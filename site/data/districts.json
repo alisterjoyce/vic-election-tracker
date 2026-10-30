@@ -1,43 +1,1442 @@
 {
   "_schema": {
-    "description": "Legislative Assembly districts (88 in total). Rows below are a SAMPLE subset: district names and regions are real, sitting MPs and margins are placeholders to be replaced.",
+    "description": "Legislative Assembly districts (all 88). District list and regions from the VEC district and region pages (checked 2026-10-30). Sitting MPs, margins and retiring flags from the 30 Oct 2026 research report.",
     "fields": {
       "id": "URL slug, used as the #hash on lower.html (e.g. bendigo-east)",
-      "name": "District name",
-      "region": "id of the Legislative Council region in regions.json",
-      "area": "metro | regional",
+      "name": "District name as the VEC writes it",
+      "region": "id of the Legislative Council region in regions.json (from the VEC region pages)",
+      "area": "metro | regional (by region: the five metropolitan regions are metro, the three Victoria regions regional)",
       "sitting_mp": "Name of the sitting member",
-      "party": "Party code of the sitting member (ALP, LIB, NAT, GRN, IND, ...)",
-      "margin": "{party, vs, pct}: two-candidate-preferred margin in percentage points, party ahead vs runner-up",
+      "party": "Party code of the sitting member (ALP, LIB, NAT, GRN, ILAB = Independent Labor)",
+      "margin": "{party, vs, pct}: ABC notional 2PP/2CP margin in percentage points; vs LNP means Labor v Coalition",
       "retiring": "true if the sitting member is not recontesting",
-      "notes": "Optional free text"
+      "needs_check": "true where the research report flagged the region allocation as uncertain",
+      "region_note": "Optional: why needs_check is set, or how the region was resolved",
+      "notes": "Optional free text (roles, margin caveats, candidates not yet named)"
     }
   },
   "districts": [
-    { "id": "melbourne", "name": "Melbourne", "region": "northern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "GRN", "margin": { "party": "GRN", "vs": "ALP", "pct": 7.4 }, "retiring": false, "notes": "" },
-    { "id": "brunswick", "name": "Brunswick", "region": "northern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "GRN", "margin": { "party": "GRN", "vs": "ALP", "pct": 9.1 }, "retiring": false, "notes": "" },
-    { "id": "richmond", "name": "Richmond", "region": "northern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "GRN", "margin": { "party": "GRN", "vs": "ALP", "pct": 2.3 }, "retiring": false, "notes": "" },
-    { "id": "preston", "name": "Preston", "region": "northern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "ALP", "margin": { "party": "ALP", "vs": "GRN", "pct": 4.1 }, "retiring": false, "notes": "" },
-    { "id": "hawthorn", "name": "Hawthorn", "region": "southern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "LIB", "margin": { "party": "LIB", "vs": "IND", "pct": 3.6 }, "retiring": false, "notes": "" },
-    { "id": "prahran", "name": "Prahran", "region": "southern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "LIB", "margin": { "party": "LIB", "vs": "GRN", "pct": 2.8 }, "retiring": false, "notes": "" },
-    { "id": "kew", "name": "Kew", "region": "southern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "LIB", "margin": { "party": "LIB", "vs": "ALP", "pct": 6.2 }, "retiring": false, "notes": "" },
-    { "id": "footscray", "name": "Footscray", "region": "western-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "ALP", "margin": { "party": "ALP", "vs": "GRN", "pct": 5.5 }, "retiring": false, "notes": "" },
-    { "id": "werribee", "name": "Werribee", "region": "western-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "ALP", "margin": { "party": "ALP", "vs": "LIB", "pct": 3.1 }, "retiring": false, "notes": "" },
-    { "id": "williamstown", "name": "Williamstown", "region": "western-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "ALP", "margin": { "party": "ALP", "vs": "LIB", "pct": 12.4 }, "retiring": true, "notes": "" },
-    { "id": "mulgrave", "name": "Mulgrave", "region": "south-eastern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "ALP", "margin": { "party": "ALP", "vs": "IND", "pct": 4.8 }, "retiring": false, "notes": "" },
-    { "id": "frankston", "name": "Frankston", "region": "south-eastern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "ALP", "margin": { "party": "ALP", "vs": "LIB", "pct": 1.9 }, "retiring": false, "notes": "" },
-    { "id": "clarinda", "name": "Clarinda", "region": "south-eastern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "ALP", "margin": { "party": "ALP", "vs": "LIB", "pct": 14.0 }, "retiring": false, "notes": "" },
-    { "id": "warrandyte", "name": "Warrandyte", "region": "north-eastern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "LIB", "margin": { "party": "LIB", "vs": "ALP", "pct": 8.3 }, "retiring": false, "notes": "" },
-    { "id": "box-hill", "name": "Box Hill", "region": "north-eastern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "ALP", "margin": { "party": "ALP", "vs": "LIB", "pct": 2.2 }, "retiring": false, "notes": "" },
-    { "id": "ringwood", "name": "Ringwood", "region": "north-eastern-metropolitan", "area": "metro", "sitting_mp": "Sample MP", "party": "ALP", "margin": { "party": "ALP", "vs": "LIB", "pct": 1.4 }, "retiring": false, "notes": "" },
-    { "id": "bendigo-east", "name": "Bendigo East", "region": "northern-victoria", "area": "regional", "sitting_mp": "Sample MP", "party": "ALP", "margin": { "party": "ALP", "vs": "LIB", "pct": 9.0 }, "retiring": false, "notes": "" },
-    { "id": "shepparton", "name": "Shepparton", "region": "northern-victoria", "area": "regional", "sitting_mp": "Sample MP", "party": "NAT", "margin": { "party": "NAT", "vs": "IND", "pct": 5.1 }, "retiring": false, "notes": "" },
-    { "id": "benambra", "name": "Benambra", "region": "northern-victoria", "area": "regional", "sitting_mp": "Sample MP", "party": "LIB", "margin": { "party": "LIB", "vs": "IND", "pct": 4.4 }, "retiring": false, "notes": "" },
-    { "id": "geelong", "name": "Geelong", "region": "western-victoria", "area": "regional", "sitting_mp": "Sample MP", "party": "ALP", "margin": { "party": "ALP", "vs": "LIB", "pct": 10.7 }, "retiring": false, "notes": "" },
-    { "id": "ballarat-wendouree", "name": "Ballarat Wendouree", "region": "western-victoria", "area": "regional", "sitting_mp": "Sample MP", "party": "ALP", "margin": { "party": "ALP", "vs": "LIB", "pct": 7.9 }, "retiring": false, "notes": "" },
-    { "id": "lowan", "name": "Lowan", "region": "western-victoria", "area": "regional", "sitting_mp": "Sample MP", "party": "NAT", "margin": { "party": "NAT", "vs": "ALP", "pct": 23.5 }, "retiring": false, "notes": "" },
-    { "id": "morwell", "name": "Morwell", "region": "eastern-victoria", "area": "regional", "sitting_mp": "Sample MP", "party": "NAT", "margin": { "party": "NAT", "vs": "ALP", "pct": 3.3 }, "retiring": false, "notes": "" },
-    { "id": "gippsland-east", "name": "Gippsland East", "region": "eastern-victoria", "area": "regional", "sitting_mp": "Sample MP", "party": "NAT", "margin": { "party": "NAT", "vs": "ALP", "pct": 18.2 }, "retiring": false, "notes": "" },
-    { "id": "mornington", "name": "Mornington", "region": "eastern-victoria", "area": "metro", "sitting_mp": "Sample MP", "party": "LIB", "margin": { "party": "LIB", "vs": "IND", "pct": 0.9 }, "retiring": false, "notes": "" }
+    {
+      "id": "albert-park",
+      "name": "Albert Park",
+      "region": "southern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Nina Taylor",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 11.2
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "Liberal TBC (BludgerTrack has floated a Liberal gain)."
+    },
+    {
+      "id": "ashwood",
+      "name": "Ashwood",
+      "region": "southern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Matt Fregon",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 6.2
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "",
+      "region_note": "The research report listed it under North-Eastern Metropolitan; region set from the VEC Southern Metropolitan Region page."
+    },
+    {
+      "id": "bass",
+      "name": "Bass",
+      "region": "eastern-victoria",
+      "area": "regional",
+      "sitting_mp": "Jordan Crugnale",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 0.2
+      },
+      "retiring": true,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "bayswater",
+      "name": "Bayswater",
+      "region": "north-eastern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Jackson Taylor",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 4.2
+      },
+      "retiring": true,
+      "needs_check": false,
+      "notes": "A Voices of Deakin-backed independent is reported (not yet named)."
+    },
+    {
+      "id": "bellarine",
+      "name": "Bellarine",
+      "region": "western-victoria",
+      "area": "regional",
+      "sitting_mp": "Alison Marchant",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 8.5
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "benambra",
+      "name": "Benambra",
+      "region": "northern-victoria",
+      "area": "regional",
+      "sitting_mp": "Bill Tilley",
+      "party": "LIB",
+      "margin": {
+        "party": "LIB",
+        "vs": "ALP",
+        "pct": 13.3
+      },
+      "retiring": true,
+      "needs_check": false,
+      "notes": "Margin note: 0.9 v IND in 2022. One Nation target."
+    },
+    {
+      "id": "bendigo-east",
+      "name": "Bendigo East",
+      "region": "northern-victoria",
+      "area": "regional",
+      "sitting_mp": "Jacinta Allan",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 10.8
+      },
+      "retiring": true,
+      "needs_check": false,
+      "notes": "Labor replacement TBC. One Nation target."
+    },
+    {
+      "id": "bendigo-west",
+      "name": "Bendigo West",
+      "region": "northern-victoria",
+      "area": "regional",
+      "sitting_mp": "Maree Edwards",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 14.6
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "One Nation target."
+    },
+    {
+      "id": "bentleigh",
+      "name": "Bentleigh",
+      "region": "southern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Nick Staikos",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 8.0
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "berwick",
+      "name": "Berwick",
+      "region": "south-eastern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Brad Battin",
+      "party": "LIB",
+      "margin": {
+        "party": "LIB",
+        "vs": "ALP",
+        "pct": 4.7
+      },
+      "retiring": false,
+      "needs_check": true,
+      "notes": "On One Nation's reported target list.",
+      "region_note": "The research report flagged this region allocation as uncertain. The VEC South-Eastern Metropolitan Region page lists this district (checked 2026-10-30)."
+    },
+    {
+      "id": "box-hill",
+      "name": "Box Hill",
+      "region": "north-eastern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Paul Hamer",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 7.2
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "brighton",
+      "name": "Brighton",
+      "region": "southern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "James Newbury",
+      "party": "LIB",
+      "margin": {
+        "party": "LIB",
+        "vs": "ALP",
+        "pct": 5.1
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "broadmeadows",
+      "name": "Broadmeadows",
+      "region": "northern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Kathleen Matthews-Ward",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 15.5
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "brunswick",
+      "name": "Brunswick",
+      "region": "northern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Tim Read",
+      "party": "GRN",
+      "margin": {
+        "party": "GRN",
+        "vs": "ALP",
+        "pct": 13.5
+      },
+      "retiring": true,
+      "needs_check": false,
+      "notes": "Margin given as 13.5-13.7% depending on source."
+    },
+    {
+      "id": "bulleen",
+      "name": "Bulleen",
+      "region": "north-eastern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Matthew Guy",
+      "party": "LIB",
+      "margin": {
+        "party": "LIB",
+        "vs": "ALP",
+        "pct": 5.9
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "bundoora",
+      "name": "Bundoora",
+      "region": "north-eastern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Colin Brooks",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 12.7
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "carrum",
+      "name": "Carrum",
+      "region": "south-eastern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Sonya Kilkenny",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 9.8
+      },
+      "retiring": false,
+      "needs_check": true,
+      "notes": "Labor insiders reportedly expect to lose it.",
+      "region_note": "The research report flagged this region allocation as uncertain. The VEC South-Eastern Metropolitan Region page lists this district (checked 2026-10-30)."
+    },
+    {
+      "id": "caulfield",
+      "name": "Caulfield",
+      "region": "southern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "David Southwick",
+      "party": "LIB",
+      "margin": {
+        "party": "LIB",
+        "vs": "ALP",
+        "pct": 2.1
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "clarinda",
+      "name": "Clarinda",
+      "region": "south-eastern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Meng Heang Tak",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 10.2
+      },
+      "retiring": false,
+      "needs_check": true,
+      "notes": "",
+      "region_note": "The research report flagged this region allocation as uncertain. The VEC South-Eastern Metropolitan Region page lists this district (checked 2026-10-30)."
+    },
+    {
+      "id": "cranbourne",
+      "name": "Cranbourne",
+      "region": "south-eastern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Pauline Richards",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 9.0
+      },
+      "retiring": false,
+      "needs_check": true,
+      "notes": "",
+      "region_note": "The research report flagged this region allocation as uncertain. The VEC South-Eastern Metropolitan Region page lists this district (checked 2026-10-30)."
+    },
+    {
+      "id": "croydon",
+      "name": "Croydon",
+      "region": "north-eastern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "David Hodgett",
+      "party": "LIB",
+      "margin": {
+        "party": "LIB",
+        "vs": "ALP",
+        "pct": 1.4
+      },
+      "retiring": true,
+      "needs_check": false,
+      "notes": "A Voices of Deakin-backed independent is reported (not yet named).",
+      "region_note": "The research report listed it under Eastern Victoria; region set from the VEC North-Eastern Metropolitan Region page."
+    },
+    {
+      "id": "dandenong",
+      "name": "Dandenong",
+      "region": "south-eastern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Gabrielle Williams",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 18.3
+      },
+      "retiring": false,
+      "needs_check": true,
+      "notes": "Deputy Premier.",
+      "region_note": "The research report flagged this region allocation as uncertain. The VEC South-Eastern Metropolitan Region page lists this district (checked 2026-10-30)."
+    },
+    {
+      "id": "eildon",
+      "name": "Eildon",
+      "region": "northern-victoria",
+      "area": "regional",
+      "sitting_mp": "Cindy McLeish",
+      "party": "LIB",
+      "margin": {
+        "party": "LIB",
+        "vs": "ALP",
+        "pct": 7.0
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "eltham",
+      "name": "Eltham",
+      "region": "north-eastern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Vicki Ward",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 9.0
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "essendon",
+      "name": "Essendon",
+      "region": "northern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Danny Pearson",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 12.5
+      },
+      "retiring": true,
+      "needs_check": false,
+      "notes": "Sportsbet has it as a tie."
+    },
+    {
+      "id": "eureka",
+      "name": "Eureka",
+      "region": "western-victoria",
+      "area": "regional",
+      "sitting_mp": "Michaela Settle",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 7.2
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "One Nation target."
+    },
+    {
+      "id": "euroa",
+      "name": "Euroa",
+      "region": "northern-victoria",
+      "area": "regional",
+      "sitting_mp": "Annabelle Cleeland",
+      "party": "NAT",
+      "margin": {
+        "party": "NAT",
+        "vs": "ALP",
+        "pct": 9.9
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "One Nation target."
+    },
+    {
+      "id": "evelyn",
+      "name": "Evelyn",
+      "region": "eastern-victoria",
+      "area": "regional",
+      "sitting_mp": "Bridget Vallence",
+      "party": "LIB",
+      "margin": {
+        "party": "LIB",
+        "vs": "ALP",
+        "pct": 5.4
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "footscray",
+      "name": "Footscray",
+      "region": "western-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Katie Hall",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "GRN",
+        "pct": 4.2
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "One Nation candidate TBC."
+    },
+    {
+      "id": "frankston",
+      "name": "Frankston",
+      "region": "south-eastern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Paul Edbrooke",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 8.7
+      },
+      "retiring": false,
+      "needs_check": true,
+      "notes": "Labor insiders reportedly expect to lose it.",
+      "region_note": "The research report flagged this region allocation as uncertain. The VEC South-Eastern Metropolitan Region page lists this district (checked 2026-10-30)."
+    },
+    {
+      "id": "geelong",
+      "name": "Geelong",
+      "region": "western-victoria",
+      "area": "regional",
+      "sitting_mp": "Christine Couzens",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 14.7
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "gippsland-east",
+      "name": "Gippsland East",
+      "region": "eastern-victoria",
+      "area": "regional",
+      "sitting_mp": "Tim Bull",
+      "party": "NAT",
+      "margin": {
+        "party": "NAT",
+        "vs": "ALP",
+        "pct": 24.6
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "Nationals TBC. One Nation target."
+    },
+    {
+      "id": "gippsland-south",
+      "name": "Gippsland South",
+      "region": "eastern-victoria",
+      "area": "regional",
+      "sitting_mp": "Danny O'Brien",
+      "party": "NAT",
+      "margin": {
+        "party": "NAT",
+        "vs": "ALP",
+        "pct": 15.6
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "Nationals leader. One Nation target."
+    },
+    {
+      "id": "glen-waverley",
+      "name": "Glen Waverley",
+      "region": "north-eastern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "John Mullahy",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 3.3
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "greenvale",
+      "name": "Greenvale",
+      "region": "northern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Iwan Walters",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 7.1
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "hastings",
+      "name": "Hastings",
+      "region": "eastern-victoria",
+      "area": "regional",
+      "sitting_mp": "Paul Mercurio",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 1.4
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "hawthorn",
+      "name": "Hawthorn",
+      "region": "southern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "John Pesutto",
+      "party": "LIB",
+      "margin": {
+        "party": "LIB",
+        "vs": "ALP",
+        "pct": 1.7
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "ivanhoe",
+      "name": "Ivanhoe",
+      "region": "north-eastern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Anthony Carbines",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 12.8
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "kalkallo",
+      "name": "Kalkallo",
+      "region": "northern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Ros Spence",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 16.5
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "kew",
+      "name": "Kew",
+      "region": "southern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Jess Wilson",
+      "party": "LIB",
+      "margin": {
+        "party": "LIB",
+        "vs": "ALP",
+        "pct": 4.0
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "Liberal leader."
+    },
+    {
+      "id": "kororoit",
+      "name": "Kororoit",
+      "region": "western-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Luba Grigorovitch",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 14.5
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "One Nation candidate TBC."
+    },
+    {
+      "id": "lara",
+      "name": "Lara",
+      "region": "western-victoria",
+      "area": "regional",
+      "sitting_mp": "Ella George",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 15.9
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "One Nation target."
+    },
+    {
+      "id": "laverton",
+      "name": "Laverton",
+      "region": "western-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Sarah Connolly",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 18.4
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "lowan",
+      "name": "Lowan",
+      "region": "western-victoria",
+      "area": "regional",
+      "sitting_mp": "Emma Kealy",
+      "party": "NAT",
+      "margin": {
+        "party": "NAT",
+        "vs": "ALP",
+        "pct": 21.6
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "Candidates TBC."
+    },
+    {
+      "id": "macedon",
+      "name": "Macedon",
+      "region": "northern-victoria",
+      "area": "regional",
+      "sitting_mp": "Mary-Anne Thomas",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 9.5
+      },
+      "retiring": true,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "malvern",
+      "name": "Malvern",
+      "region": "southern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Michael O'Brien",
+      "party": "LIB",
+      "margin": {
+        "party": "LIB",
+        "vs": "ALP",
+        "pct": 8.1
+      },
+      "retiring": true,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "melbourne",
+      "name": "Melbourne",
+      "region": "northern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Ellen Sandell",
+      "party": "GRN",
+      "margin": {
+        "party": "GRN",
+        "vs": "ALP",
+        "pct": 10.2
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "Greens leader."
+    },
+    {
+      "id": "melton",
+      "name": "Melton",
+      "region": "western-victoria",
+      "area": "regional",
+      "sitting_mp": "Steve McGhie",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 4.6
+      },
+      "retiring": true,
+      "needs_check": false,
+      "notes": "One Nation target."
+    },
+    {
+      "id": "mildura",
+      "name": "Mildura",
+      "region": "northern-victoria",
+      "area": "regional",
+      "sitting_mp": "Jade Benham",
+      "party": "NAT",
+      "margin": {
+        "party": "NAT",
+        "vs": "IND",
+        "pct": 1.2
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "Coalition/others TBC. One Nation target."
+    },
+    {
+      "id": "mill-park",
+      "name": "Mill Park",
+      "region": "north-eastern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Lily D'Ambrosio",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 11.6
+      },
+      "retiring": true,
+      "needs_check": false,
+      "notes": "Retirement announced 30 July. Labor replacement TBC."
+    },
+    {
+      "id": "monbulk",
+      "name": "Monbulk",
+      "region": "eastern-victoria",
+      "area": "regional",
+      "sitting_mp": "Daniela De Martino",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 7.6
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "mordialloc",
+      "name": "Mordialloc",
+      "region": "south-eastern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Tim Richardson",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 8.2
+      },
+      "retiring": false,
+      "needs_check": true,
+      "notes": "",
+      "region_note": "The research report flagged this region allocation as uncertain. The VEC South-Eastern Metropolitan Region page lists this district (checked 2026-10-30)."
+    },
+    {
+      "id": "mornington",
+      "name": "Mornington",
+      "region": "eastern-victoria",
+      "area": "regional",
+      "sitting_mp": "Chris Crewther",
+      "party": "LIB",
+      "margin": {
+        "party": "LIB",
+        "vs": "IND",
+        "pct": 0.7
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "morwell",
+      "name": "Morwell",
+      "region": "eastern-victoria",
+      "area": "regional",
+      "sitting_mp": "Martin Cameron",
+      "party": "NAT",
+      "margin": {
+        "party": "NAT",
+        "vs": "ALP",
+        "pct": 4.4
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "One Nation target."
+    },
+    {
+      "id": "mulgrave",
+      "name": "Mulgrave",
+      "region": "south-eastern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Eden Foster",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LIB",
+        "pct": 10.2
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "",
+      "region_note": "The research report listed it under Southern Metropolitan; region set from the VEC South-Eastern Metropolitan Region page."
+    },
+    {
+      "id": "murray-plains",
+      "name": "Murray Plains",
+      "region": "northern-victoria",
+      "area": "regional",
+      "sitting_mp": "Peter Walsh",
+      "party": "NAT",
+      "margin": {
+        "party": "NAT",
+        "vs": "ALP",
+        "pct": 23.4
+      },
+      "retiring": true,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "narracan",
+      "name": "Narracan",
+      "region": "eastern-victoria",
+      "area": "regional",
+      "sitting_mp": "Wayne Farnham",
+      "party": "LIB",
+      "margin": {
+        "party": "LIB",
+        "vs": "IND",
+        "pct": 13.0
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "narre-warren-north",
+      "name": "Narre Warren North",
+      "region": "south-eastern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Belinda Wilson",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 8.7
+      },
+      "retiring": false,
+      "needs_check": true,
+      "notes": "",
+      "region_note": "The research report flagged this region allocation as uncertain. The VEC South-Eastern Metropolitan Region page lists this district (checked 2026-10-30)."
+    },
+    {
+      "id": "narre-warren-south",
+      "name": "Narre Warren South",
+      "region": "south-eastern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Gary Maas",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 8.3
+      },
+      "retiring": true,
+      "needs_check": true,
+      "notes": "Labor replacement TBC.",
+      "region_note": "The research report flagged this region allocation as uncertain. The VEC South-Eastern Metropolitan Region page lists this district (checked 2026-10-30)."
+    },
+    {
+      "id": "nepean",
+      "name": "Nepean",
+      "region": "eastern-victoria",
+      "area": "regional",
+      "sitting_mp": "Anthony Marsh",
+      "party": "LIB",
+      "margin": {
+        "party": "LIB",
+        "vs": "ALP",
+        "pct": 6.4
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "niddrie",
+      "name": "Niddrie",
+      "region": "western-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Ben Carroll",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 6.7
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "Premier. Liberal TBC (BludgerTrack has floated a Liberal gain here)."
+    },
+    {
+      "id": "northcote",
+      "name": "Northcote",
+      "region": "northern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Kat Theophanous",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "GRN",
+        "pct": 0.2
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "No One Nation candidate."
+    },
+    {
+      "id": "oakleigh",
+      "name": "Oakleigh",
+      "region": "southern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Steve Dimopoulos",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 13.5
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "ovens-valley",
+      "name": "Ovens Valley",
+      "region": "northern-victoria",
+      "area": "regional",
+      "sitting_mp": "Tim McCurdy",
+      "party": "NAT",
+      "margin": {
+        "party": "NAT",
+        "vs": "ALP",
+        "pct": 17.8
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "Candidates TBC."
+    },
+    {
+      "id": "pakenham",
+      "name": "Pakenham",
+      "region": "eastern-victoria",
+      "area": "regional",
+      "sitting_mp": "Emma Vulin",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 0.4
+      },
+      "retiring": true,
+      "needs_check": true,
+      "notes": "",
+      "region_note": "The research report flagged this region allocation as uncertain. The VEC Eastern Victoria Region page lists this district (checked 2026-10-30)."
+    },
+    {
+      "id": "pascoe-vale",
+      "name": "Pascoe Vale",
+      "region": "northern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Anthony Cianflone",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "GRN",
+        "pct": 2.0
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "point-cook",
+      "name": "Point Cook",
+      "region": "western-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Mathew Hilakari",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 8.3
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "polwarth",
+      "name": "Polwarth",
+      "region": "western-victoria",
+      "area": "regional",
+      "sitting_mp": "Richard Riordan",
+      "party": "LIB",
+      "margin": {
+        "party": "LIB",
+        "vs": "ALP",
+        "pct": 1.8
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "prahran",
+      "name": "Prahran",
+      "region": "southern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Rachel Westaway",
+      "party": "LIB",
+      "margin": {
+        "party": "LIB",
+        "vs": "GRN",
+        "pct": 1.3
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "preston",
+      "name": "Preston",
+      "region": "northern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Nathan Lambert",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "GRN",
+        "pct": 2.1
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "richmond",
+      "name": "Richmond",
+      "region": "northern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Gabrielle de Vietri",
+      "party": "GRN",
+      "margin": {
+        "party": "GRN",
+        "vs": "ALP",
+        "pct": 7.3
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "ringwood",
+      "name": "Ringwood",
+      "region": "north-eastern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Will Fowles",
+      "party": "ILAB",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 7.5
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "A Voices of Deakin-backed independent is reported (not yet named)."
+    },
+    {
+      "id": "ripon",
+      "name": "Ripon",
+      "region": "western-victoria",
+      "area": "regional",
+      "sitting_mp": "Martha Haylett",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 3.0
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "Ripon is the only three-cornered Coalition contest. One Nation target."
+    },
+    {
+      "id": "rowville",
+      "name": "Rowville",
+      "region": "south-eastern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Kim Wells",
+      "party": "LIB",
+      "margin": {
+        "party": "LIB",
+        "vs": "ALP",
+        "pct": 3.7
+      },
+      "retiring": true,
+      "needs_check": true,
+      "notes": "",
+      "region_note": "The research report flagged this region allocation as uncertain. The VEC South-Eastern Metropolitan Region page lists this district (checked 2026-10-30)."
+    },
+    {
+      "id": "sandringham",
+      "name": "Sandringham",
+      "region": "southern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Brad Rowswell",
+      "party": "LIB",
+      "margin": {
+        "party": "LIB",
+        "vs": "ALP",
+        "pct": 5.0
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "shepparton",
+      "name": "Shepparton",
+      "region": "northern-victoria",
+      "area": "regional",
+      "sitting_mp": "Kim O'Keeffe",
+      "party": "NAT",
+      "margin": {
+        "party": "NAT",
+        "vs": "ALP",
+        "pct": 24.3
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "south-barwon",
+      "name": "South Barwon",
+      "region": "western-victoria",
+      "area": "regional",
+      "sitting_mp": "Darren Cheeseman",
+      "party": "ILAB",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 9.8
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "south-west-coast",
+      "name": "South-West Coast",
+      "region": "western-victoria",
+      "area": "regional",
+      "sitting_mp": "Roma Britnell",
+      "party": "LIB",
+      "margin": {
+        "party": "LIB",
+        "vs": "ALP",
+        "pct": 8.0
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "Candidates TBC."
+    },
+    {
+      "id": "st-albans",
+      "name": "St Albans",
+      "region": "western-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Natalie Suleyman",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 9.6
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "sunbury",
+      "name": "Sunbury",
+      "region": "western-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Josh Bull",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 6.4
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "On One Nation's reported target list."
+    },
+    {
+      "id": "sydenham",
+      "name": "Sydenham",
+      "region": "western-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Natalie Hutchins",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 8.8
+      },
+      "retiring": true,
+      "needs_check": false,
+      "notes": "About 10 candidates reported (Tally Room)."
+    },
+    {
+      "id": "tarneit",
+      "name": "Tarneit",
+      "region": "western-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Dylan Wight",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 12.3
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "thomastown",
+      "name": "Thomastown",
+      "region": "northern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Bronwyn Halfpenny",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 15.8
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "No Greens candidate yet."
+    },
+    {
+      "id": "warrandyte",
+      "name": "Warrandyte",
+      "region": "north-eastern-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Nicole Werner",
+      "party": "LIB",
+      "margin": {
+        "party": "LIB",
+        "vs": "ALP",
+        "pct": 4.3
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "Only 3 candidates identified."
+    },
+    {
+      "id": "wendouree",
+      "name": "Wendouree",
+      "region": "western-victoria",
+      "area": "regional",
+      "sitting_mp": "Juliana Addison",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 11.9
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "werribee",
+      "name": "Werribee",
+      "region": "western-metropolitan",
+      "area": "metro",
+      "sitting_mp": "John Lister",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 10.9
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "Margin note: 0.8 at 2025 by-election."
+    },
+    {
+      "id": "williamstown",
+      "name": "Williamstown",
+      "region": "western-metropolitan",
+      "area": "metro",
+      "sitting_mp": "Melissa Horne",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 13.4
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": ""
+    },
+    {
+      "id": "yan-yean",
+      "name": "Yan Yean",
+      "region": "northern-victoria",
+      "area": "regional",
+      "sitting_mp": "Lauren Kathage",
+      "party": "ALP",
+      "margin": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 4.3
+      },
+      "retiring": false,
+      "needs_check": false,
+      "notes": "One Nation target."
+    }
   ]
 }

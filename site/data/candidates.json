@@ -1,42 +1,2636 @@
 {
   "_schema": {
-    "description": "Legislative Assembly candidates by district. Rows below are SAMPLE placeholders. scripts/refresh.py will fill VEC-nominated candidates once fetch_vec_candidates() is implemented.",
+    "description": "Legislative Assembly candidates from the 30 Oct 2026 research report. Nominations close 12 noon 9 Nov 2026; no candidate is VEC-nominated yet. scripts/refresh.py will add VEC-nominated rows once fetch_vec_candidates() is implemented.",
     "fields": {
       "district": "id of the district in districts.json",
       "name": "Candidate name",
-      "party": "Party code (ALP, LIB, NAT, GRN, ONP, LCV, IND, ...)",
-      "status": "announced | endorsed | vec_nominated | withdrawn",
+      "party": "Party code (ALP, LIB, NAT, GRN, ONP, VS, AJP, ND, WEST, SAL, LBT, FF, IND, ...)",
+      "status": "endorsed (preselected or endorsed by the party) | reported (reported or announced, not independently verified) | announced | vec_nominated | withdrawn",
       "ballot_position": "Integer position on the ballot paper once drawn by the VEC, else null",
       "incumbent": "true if this is the sitting member",
-      "source_url": "Where the status was confirmed (media release, party site, VEC)",
-      "updated": "YYYY-MM-DD the row was last checked"
+      "source_url": "First source the report cites for this district's candidates",
+      "updated": "YYYY-MM-DD the row was last checked",
+      "notes": "Optional: backing (e.g. Climate 200) or other caveats"
     }
   },
   "candidates": [
-    { "district": "melbourne", "name": "Sample MP", "party": "GRN", "status": "endorsed", "ballot_position": null, "incumbent": true, "source_url": "", "updated": "2026-10-28" },
-    { "district": "melbourne", "name": "Jane Citizen", "party": "ALP", "status": "endorsed", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
-    { "district": "melbourne", "name": "Sam Example", "party": "LIB", "status": "announced", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
-    { "district": "richmond", "name": "Sample MP", "party": "GRN", "status": "endorsed", "ballot_position": null, "incumbent": true, "source_url": "", "updated": "2026-10-28" },
-    { "district": "richmond", "name": "Alex Placeholder", "party": "ALP", "status": "endorsed", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
-    { "district": "richmond", "name": "Chris Template", "party": "IND", "status": "withdrawn", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-20" },
-    { "district": "hawthorn", "name": "Sample MP", "party": "LIB", "status": "endorsed", "ballot_position": null, "incumbent": true, "source_url": "", "updated": "2026-10-28" },
-    { "district": "hawthorn", "name": "Pat Example", "party": "IND", "status": "announced", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
-    { "district": "hawthorn", "name": "Robin Sample", "party": "ALP", "status": "announced", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
-    { "district": "werribee", "name": "Sample MP", "party": "ALP", "status": "endorsed", "ballot_position": null, "incumbent": true, "source_url": "", "updated": "2026-10-28" },
-    { "district": "werribee", "name": "Jordan Citizen", "party": "LIB", "status": "endorsed", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
-    { "district": "williamstown", "name": "Taylor Example", "party": "ALP", "status": "endorsed", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
-    { "district": "williamstown", "name": "Morgan Placeholder", "party": "GRN", "status": "announced", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
-    { "district": "frankston", "name": "Sample MP", "party": "ALP", "status": "endorsed", "ballot_position": null, "incumbent": true, "source_url": "", "updated": "2026-10-28" },
-    { "district": "frankston", "name": "Casey Template", "party": "LIB", "status": "endorsed", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
-    { "district": "frankston", "name": "Drew Sample", "party": "ONP", "status": "announced", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
-    { "district": "bendigo-east", "name": "Sample MP", "party": "ALP", "status": "vec_nominated", "ballot_position": 2, "incumbent": true, "source_url": "", "updated": "2026-10-28" },
-    { "district": "bendigo-east", "name": "Jamie Example", "party": "LIB", "status": "vec_nominated", "ballot_position": 1, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
-    { "district": "bendigo-east", "name": "Riley Citizen", "party": "GRN", "status": "vec_nominated", "ballot_position": 3, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
-    { "district": "shepparton", "name": "Sample MP", "party": "NAT", "status": "endorsed", "ballot_position": null, "incumbent": true, "source_url": "", "updated": "2026-10-28" },
-    { "district": "shepparton", "name": "Quinn Placeholder", "party": "IND", "status": "announced", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
-    { "district": "morwell", "name": "Sample MP", "party": "NAT", "status": "endorsed", "ballot_position": null, "incumbent": true, "source_url": "", "updated": "2026-10-28" },
-    { "district": "morwell", "name": "Avery Template", "party": "ALP", "status": "announced", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" },
-    { "district": "mornington", "name": "Sample MP", "party": "LIB", "status": "endorsed", "ballot_position": null, "incumbent": true, "source_url": "", "updated": "2026-10-28" },
-    { "district": "mornington", "name": "Harper Example", "party": "IND", "status": "endorsed", "ballot_position": null, "incumbent": false, "source_url": "", "updated": "2026-10-28" }
+    {
+      "district": "albert-park",
+      "name": "Colleen Bolger",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "albert-park",
+      "name": "Nina Taylor",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "albert-park",
+      "name": "Sonya Semmens",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "ashwood",
+      "name": "Jacob van der Eynden",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "ashwood",
+      "name": "Matt Fregon",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "ashwood",
+      "name": "Theo Zographos",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "ashwood",
+      "name": "Tim Randall",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "bass",
+      "name": "Chris Buckingham",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "bass",
+      "name": "Chris Jobe",
+      "party": "VS",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "bass",
+      "name": "Nikole Schellekens",
+      "party": "ONP",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "bass",
+      "name": "Rochelle Halstead",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "bass",
+      "name": "Sophie Thorn",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "bayswater",
+      "name": "Alec Ferguson",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "bayswater",
+      "name": "David Kitchen",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "bayswater",
+      "name": "Julie Buxton",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "bellarine",
+      "name": "Alison Marchant",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "bellarine",
+      "name": "Dom Williams",
+      "party": "SAL",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "benambra",
+      "name": "Alex Vangalen",
+      "party": "VS",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "benambra",
+      "name": "Evette Pepper",
+      "party": "FF",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "benambra",
+      "name": "Lachie McKeeman",
+      "party": "IND",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "benambra",
+      "name": "Mike Fuery",
+      "party": "AJP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "benambra",
+      "name": "Steve Martin",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "benambra",
+      "name": "Tim Quilty",
+      "party": "LBT",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "bendigo-east",
+      "name": "Andrew Lethlean",
+      "party": "NAT",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "bendigo-east",
+      "name": "Owen Cosgriff",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "bendigo-west",
+      "name": "Liza Shaw",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "bendigo-west",
+      "name": "Maree Edwards",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "bendigo-west",
+      "name": "Tayne Shalevski",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "bentleigh",
+      "name": "Herbert Lonsing",
+      "party": "ONP",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "bentleigh",
+      "name": "Karli McRostie",
+      "party": "GRN",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "bentleigh",
+      "name": "Liam Kruger",
+      "party": "VS",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "bentleigh",
+      "name": "Nick Staikos",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "bentleigh",
+      "name": "Tynan Putt",
+      "party": "LIB",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "berwick",
+      "name": "Brad Battin",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "berwick",
+      "name": "Nalinda Amarasiri Gunawardana",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "berwick",
+      "name": "Rana Khan",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "box-hill",
+      "name": "Aaron Qin",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "box-hill",
+      "name": "Heena Sinha Cheung",
+      "party": "IND",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "box-hill",
+      "name": "Paul Hamer",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "box-hill",
+      "name": "Sally Houguet",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "box-hill",
+      "name": "Saravina Afaj",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "brighton",
+      "name": "Ebony Bain",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "brighton",
+      "name": "James Newbury",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "brighton",
+      "name": "Jessica Smith",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "broadmeadows",
+      "name": "Candace Feild",
+      "party": "AJP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "broadmeadows",
+      "name": "Kathleen Matthews-Ward",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "broadmeadows",
+      "name": "Mutullah Can Yolbulan",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "broadmeadows",
+      "name": "Sue Bolton",
+      "party": "SAL",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "brunswick",
+      "name": "Adam Pulford",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "brunswick",
+      "name": "Gabriel Steger",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "brunswick",
+      "name": "Naomi Farmer",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "bulleen",
+      "name": "Dimitrios Tafidis",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "bulleen",
+      "name": "Matthew Guy",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "bundoora",
+      "name": "Colin Brooks",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "bundoora",
+      "name": "Nina Laitala",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "bundoora",
+      "name": "Sagar Sanyal",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "carrum",
+      "name": "Sonya Kilkenny",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "caulfield",
+      "name": "Angel Dolejsí",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "caulfield",
+      "name": "David Southwick",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "caulfield",
+      "name": "Malak Ababneh",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "caulfield",
+      "name": "Mikaela Stafrace",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "clarinda",
+      "name": "Kit Message",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "clarinda",
+      "name": "Meng Heang Tak",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "cranbourne",
+      "name": "Annalise Mercer",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "cranbourne",
+      "name": "Pauline Richards",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "cranbourne",
+      "name": "Reem Yunis",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "croydon",
+      "name": "Lini Fernando",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "croydon",
+      "name": "Richard Farr",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "croydon",
+      "name": "Toby Wooldridge",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30",
+      "notes": "Replaced the dumped Grant Hutchinson on 13 October"
+    },
+    {
+      "district": "dandenong",
+      "name": "Gabrielle Williams",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "dandenong",
+      "name": "Jack McMahon",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "eildon",
+      "name": "Chloe Bond",
+      "party": "AJP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://www.tallyroom.com.au/vic2026/eildon2026",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "eltham",
+      "name": "Paul Byrnes",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "eltham",
+      "name": "Rachel Busbridge",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "eltham",
+      "name": "Vicki Ward",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "essendon",
+      "name": "James Williams",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "essendon",
+      "name": "Katerine Theodosis",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "essendon",
+      "name": "Michal Kedem",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "essendon",
+      "name": "Oscar Yildiz",
+      "party": "IND",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "essendon",
+      "name": "Tommy Le Deux",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "eureka",
+      "name": "Michaela Settle",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "eureka",
+      "name": "Sam McColl",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "eureka",
+      "name": "Wendy Morrison",
+      "party": "AJP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "euroa",
+      "name": "Alysia Regan",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "euroa",
+      "name": "Annabelle Cleeland",
+      "party": "NAT",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "evelyn",
+      "name": "Andrew Henley",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "evelyn",
+      "name": "Bridget Vallence",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "evelyn",
+      "name": "Indah Johannes",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "footscray",
+      "name": "Elena Pereyra",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "footscray",
+      "name": "Jasmine Duff",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "footscray",
+      "name": "Jess Marsh",
+      "party": "IND",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30",
+      "notes": "Climate 200-backed"
+    },
+    {
+      "district": "footscray",
+      "name": "Katie Hall",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "footscray",
+      "name": "Minh Quan Nguyen",
+      "party": "WEST",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "frankston",
+      "name": "Andrew Cheeseman",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "frankston",
+      "name": "Chrysten Abraham",
+      "party": "IND",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "frankston",
+      "name": "Katie Goulas",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "frankston",
+      "name": "Paul Edbrooke",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "geelong",
+      "name": "Brenden Grull",
+      "party": "SAL",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "geelong",
+      "name": "Christine Couzens",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "geelong",
+      "name": "Emilie Flynn",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "gippsland-east",
+      "name": "Ash Munro",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "gippsland-south",
+      "name": "Sonny Stephens",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "gippsland-south",
+      "name": "Zave Evans",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "glen-waverley",
+      "name": "Jacky Sun",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "glen-waverley",
+      "name": "John Mullahy",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "glen-waverley",
+      "name": "Nicholas Siow",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "glen-waverley",
+      "name": "Toyo White",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "greenvale",
+      "name": "Iwan Walters",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "greenvale",
+      "name": "Kirill Smelov",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "hastings",
+      "name": "Chloe Coulson",
+      "party": "AJP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "hastings",
+      "name": "Frank Schiefler",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "hastings",
+      "name": "Isaac Willoughby",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "hastings",
+      "name": "Paul Mercurio",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "hawthorn",
+      "name": "Clive Crosby",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "hawthorn",
+      "name": "John Pesutto",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "hawthorn",
+      "name": "Kylie Rocha",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "hawthorn",
+      "name": "Shima Ibuki",
+      "party": "IND",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30",
+      "notes": "Climate 200-backed"
+    },
+    {
+      "district": "hawthorn",
+      "name": "Tess McEnearney",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "ivanhoe",
+      "name": "Anthony Carbines",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "ivanhoe",
+      "name": "Ben Milne",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "ivanhoe",
+      "name": "Nina Crawley",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "ivanhoe",
+      "name": "Oscar Lopez",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "kalkallo",
+      "name": "Courtney Millett",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "kalkallo",
+      "name": "Ros Spence",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "kew",
+      "name": "Ann Seeley",
+      "party": "FF",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "kew",
+      "name": "David Sun",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "kew",
+      "name": "Jackie Carter",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "kew",
+      "name": "Jess Wilson",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "kew",
+      "name": "Samantha Lincolne",
+      "party": "VS",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "kew",
+      "name": "Sophie Torney",
+      "party": "IND",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30",
+      "notes": "Climate 200-backed"
+    },
+    {
+      "district": "kororoit",
+      "name": "Jaz Chandok",
+      "party": "ND",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "kororoit",
+      "name": "Luba Grigorovitch",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "kororoit",
+      "name": "Rayan Hassan",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "lara",
+      "name": "Ella George",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "lara",
+      "name": "Sarah Hathway",
+      "party": "SAL",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "lara",
+      "name": "Theresa Slater",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "laverton",
+      "name": "Gurneet Soni",
+      "party": "ND",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "laverton",
+      "name": "Lucy Nguyen",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "laverton",
+      "name": "Sarah Connolly",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "laverton",
+      "name": "Shohre Mansouri",
+      "party": "AJP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "laverton",
+      "name": "Van Thanh Rudd",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "macedon",
+      "name": "Annette Death",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "macedon",
+      "name": "Marley McRae McLeod",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "malvern",
+      "name": "Amelia Hamer",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://www.tallyroom.com.au/vic2026/malvern2026",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "malvern",
+      "name": "Gavin Leonard",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://www.tallyroom.com.au/vic2026/malvern2026",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "melbourne",
+      "name": "Davydd Griffiths",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "melbourne",
+      "name": "Ellen Sandell",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "melbourne",
+      "name": "Jordan van den Lamb",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "melbourne",
+      "name": "Naomi Jones",
+      "party": "AJP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "melton",
+      "name": "Broden Borg",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "melton",
+      "name": "Fiona Adin-Jones",
+      "party": "AJP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "melton",
+      "name": "Jarrod Bingham",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "melton",
+      "name": "Jasleen Kaur",
+      "party": "ND",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "melton",
+      "name": "Veronika Levchenkova",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "mill-park",
+      "name": "Joel Drysdale",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "mill-park",
+      "name": "Tim Drylie",
+      "party": "GRN",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30",
+      "notes": "Listed, needs checking"
+    },
+    {
+      "district": "monbulk",
+      "name": "Clare Fitzmaurice",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "monbulk",
+      "name": "Daniela De Martino",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "mordialloc",
+      "name": "Alex Breskin",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "mordialloc",
+      "name": "Tim Richardson",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "mornington",
+      "name": "Adrian Maher",
+      "party": "IND",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "mornington",
+      "name": "Chris Crewther",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "mornington",
+      "name": "Gene Brownlie",
+      "party": "VS",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "mornington",
+      "name": "Kai Titcher",
+      "party": "GRN",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "mornington",
+      "name": "Melissa Goffin",
+      "party": "IND",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30",
+      "notes": "Climate 200-backed"
+    },
+    {
+      "district": "mornington",
+      "name": "Tamara Champion",
+      "party": "AJP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "morwell",
+      "name": "Rochelle Hine",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "morwell",
+      "name": "Tracie Lund",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "mulgrave",
+      "name": "Charles Tran",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "mulgrave",
+      "name": "Connor Buchanan",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "mulgrave",
+      "name": "Eden Foster",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "murray-plains",
+      "name": "Brett Hosking",
+      "party": "NAT",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "murray-plains",
+      "name": "Zoe Cook",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "narracan",
+      "name": "Alyssa Weaver",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "narracan",
+      "name": "Moss Page",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "narre-warren-north",
+      "name": "Belinda Wilson",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "narre-warren-south",
+      "name": "Bailey McCracken",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "nepean",
+      "name": "Anthony Marsh",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "nepean",
+      "name": "Darren Hercus",
+      "party": "ONP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "nepean",
+      "name": "Sianan Healy",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "niddrie",
+      "name": "Ben Carroll",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "niddrie",
+      "name": "Elisabetta Celata",
+      "party": "WEST",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "niddrie",
+      "name": "Georgia Grammenos",
+      "party": "ND",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "northcote",
+      "name": "Campbell Gome",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "northcote",
+      "name": "Jim Penman",
+      "party": "LBT",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "northcote",
+      "name": "Kat Theophanous",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "northcote",
+      "name": "Kath Larkin",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "oakleigh",
+      "name": "Rowdy Bugter",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "oakleigh",
+      "name": "Steve Dimopoulos",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "pakenham",
+      "name": "Alessandra Soliven",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "pakenham",
+      "name": "Nasser Yawari",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "pakenham",
+      "name": "Raymond French",
+      "party": "IND",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "pakenham",
+      "name": "Warren Pickering",
+      "party": "ONP",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30",
+      "notes": "State leader"
+    },
+    {
+      "district": "pascoe-vale",
+      "name": "Angelica Panopoulos",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://www.tallyroom.com.au/vic2026/pascoevale2026",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "pascoe-vale",
+      "name": "Anthony Cianflone",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://www.tallyroom.com.au/vic2026/pascoevale2026",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "pascoe-vale",
+      "name": "Jacob Andrewartha",
+      "party": "SAL",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://www.tallyroom.com.au/vic2026/pascoevale2026",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "pascoe-vale",
+      "name": "Yasemin Shamsili",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://www.tallyroom.com.au/vic2026/pascoevale2026",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "point-cook",
+      "name": "Mathew Hilakari",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "point-cook",
+      "name": "Ponraj Krishna Pandi",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "point-cook",
+      "name": "Taylor Laine",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "polwarth",
+      "name": "Hutch Hussein",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "polwarth",
+      "name": "Jesse Holden",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "prahran",
+      "name": "Angelica Di Camillo",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "prahran",
+      "name": "Clayton Doueihi",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "prahran",
+      "name": "Meghan Hopper",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "prahran",
+      "name": "Rachel Westaway",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "preston",
+      "name": "Loki Sangarya",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "preston",
+      "name": "Nathan Lambert",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "preston",
+      "name": "Rachel Unicomb",
+      "party": "AJP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "preston",
+      "name": "Serena Ashmore",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "richmond",
+      "name": "Chris Dite",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "richmond",
+      "name": "Gabrielle de Vietri",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "richmond",
+      "name": "Sarah McKenzie",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "ringwood",
+      "name": "Amy Mills",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "ringwood",
+      "name": "Jack Gardner",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "ringwood",
+      "name": "Nick McGowan",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30",
+      "notes": "Moving down from the upper house"
+    },
+    {
+      "district": "ringwood",
+      "name": "Rachel Halse",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "ripon",
+      "name": "Jo Armstrong",
+      "party": "NAT",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "ripon",
+      "name": "Martha Haylett",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "ripon",
+      "name": "Megan Read",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "ripon",
+      "name": "Tim Drylie",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "rowville",
+      "name": "Lars Hiemstra",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "rowville",
+      "name": "Max Williams",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "rowville",
+      "name": "Muhammad Shahbaz",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "sandringham",
+      "name": "Anastasia Sagris-Desmond",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "sandringham",
+      "name": "Brad Rowswell",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "shepparton",
+      "name": "Cayla Fin",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "shepparton",
+      "name": "Grace Verney",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "south-barwon",
+      "name": "Freya Hedley",
+      "party": "SAL",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "south-barwon",
+      "name": "Izzy Scherrer",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "south-barwon",
+      "name": "Rebecca Thistleton",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "st-albans",
+      "name": "Leanna Nguyen",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "st-albans",
+      "name": "Luận Walker",
+      "party": "WEST",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "st-albans",
+      "name": "Natalie Suleyman",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "st-albans",
+      "name": "Zaffer Mannan",
+      "party": "ND",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "sunbury",
+      "name": "Adam Brenner",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "sunbury",
+      "name": "Josh Bull",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "sunbury",
+      "name": "Rushi Patel",
+      "party": "ND",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "sunbury",
+      "name": "Simmone Cottom",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "sydenham",
+      "name": "Shania Khan",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "sydenham",
+      "name": "Uros Rasic",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "tarneit",
+      "name": "Andrew Elsbury",
+      "party": "WEST",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "tarneit",
+      "name": "Dylan Wight",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "tarneit",
+      "name": "Jaydeep Patel",
+      "party": "ND",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "tarneit",
+      "name": "Rifai Raheem",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "thomastown",
+      "name": "Bronwyn Halfpenny",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "thomastown",
+      "name": "Priya Reddy",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "warrandyte",
+      "name": "John Stanley",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "warrandyte",
+      "name": "Nicole Werner",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "wendouree",
+      "name": "Juliana Addison",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "werribee",
+      "name": "John Lister",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "werribee",
+      "name": "Paul Hopper",
+      "party": "WEST",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "werribee",
+      "name": "Prashant Tandon",
+      "party": "ND",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "werribee",
+      "name": "Reece Clark",
+      "party": "LIB",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "werribee",
+      "name": "Sue Munro",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "werribee",
+      "name": "Tushar Kumar",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "williamstown",
+      "name": "Gil Gannon",
+      "party": "WEST",
+      "status": "reported",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "williamstown",
+      "name": "Melissa Horne",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "williamstown",
+      "name": "Oskar Martin",
+      "party": "VS",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "yan-yean",
+      "name": "Gufran Mohammed",
+      "party": "GRN",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    },
+    {
+      "district": "yan-yean",
+      "name": "Lauren Kathage",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": true,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "updated": "2026-10-30"
+    }
   ]
 }

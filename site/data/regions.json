@@ -1,119 +1,745 @@
 {
   "_schema": {
-    "description": "Legislative Council regions (8 regions x 5 members = 40). Region names are real; MLCs and tickets below are SAMPLE placeholders. Districts in each region are derived from districts.json.",
+    "description": "Legislative Council regions (8 regions x 5 members = 40). Current MLCs and announced 2026 groups from the 30 Oct 2026 research report. Group voting tickets were abolished in 2026; 'tickets' here means each group's announced candidate order. Districts in each region come from districts.json.",
     "fields": {
       "id": "URL slug, used as the #hash on upper.html (e.g. northern-victoria)",
       "name": "Region name",
       "area": "metro | regional",
-      "mlcs": "Current members: [{name, party, notes}]",
-      "tickets": "Groups on the 2026 ballot: [{group (ballot letter or null before the draw), party, status (announced | endorsed | vec_nominated | withdrawn), candidates: [names in ticket order]}]"
+      "mlcs": "Current members: [{name, party, retiring, notes}]",
+      "tickets": "Groups on the 2026 ballot: [{group (ballot letter, null before the 9 Nov draw), party, status (endorsed | reported | vec_nominated | withdrawn), candidates: [names in ticket order; TBC/TBD where a position is unfilled], notes}]",
+      "notes": "Optional region-level notes (unnamed candidates, seats in contention)"
     }
   },
   "regions": [
     {
-      "id": "eastern-victoria", "name": "Eastern Victoria", "area": "regional",
+      "id": "eastern-victoria",
+      "name": "Eastern Victoria",
+      "area": "regional",
       "mlcs": [
-        { "name": "Sample MLC 1", "party": "ALP", "notes": "" },
-        { "name": "Sample MLC 2", "party": "ALP", "notes": "" },
-        { "name": "Sample MLC 3", "party": "LIB", "notes": "" },
-        { "name": "Sample MLC 4", "party": "NAT", "notes": "" },
-        { "name": "Sample MLC 5", "party": "OTH", "notes": "" }
+        {
+          "name": "Renee Heath",
+          "party": "LIB",
+          "retiring": false,
+          "notes": ""
+        },
+        {
+          "name": "Tom McIntosh",
+          "party": "ALP",
+          "retiring": false,
+          "notes": ""
+        },
+        {
+          "name": "Melina Bath",
+          "party": "NAT",
+          "retiring": false,
+          "notes": ""
+        },
+        {
+          "name": "Harriet Shing",
+          "party": "ALP",
+          "retiring": true,
+          "notes": ""
+        },
+        {
+          "name": "Jeff Bourman",
+          "party": "SFF",
+          "retiring": false,
+          "notes": "Plans not found."
+        }
       ],
       "tickets": [
-        { "group": null, "party": "ALP", "status": "endorsed", "candidates": ["Sample MLC 1", "Jane Citizen", "Sam Example"] },
-        { "group": null, "party": "LIB", "status": "endorsed", "candidates": ["Sample MLC 3", "Alex Placeholder"] },
-        { "group": null, "party": "GRN", "status": "announced", "candidates": ["Chris Template"] }
-      ]
-    },
-    {
-      "id": "north-eastern-metropolitan", "name": "North-Eastern Metropolitan", "area": "metro",
-      "mlcs": [
-        { "name": "Sample MLC 1", "party": "ALP", "notes": "" },
-        { "name": "Sample MLC 2", "party": "ALP", "notes": "" },
-        { "name": "Sample MLC 3", "party": "LIB", "notes": "" },
-        { "name": "Sample MLC 4", "party": "LIB", "notes": "" },
-        { "name": "Sample MLC 5", "party": "GRN", "notes": "" }
+        {
+          "group": null,
+          "party": "LNP",
+          "status": "endorsed",
+          "candidates": [
+            "Renee Heath",
+            "Melina Bath",
+            "Matt Green"
+          ],
+          "notes": "Joint Coalition ticket."
+        },
+        {
+          "group": null,
+          "party": "ALP",
+          "status": "reported",
+          "candidates": [
+            "Enver Erdogan"
+          ],
+          "notes": "Erdogan reported for #1 (unconfirmed, and contested by a local member petition)."
+        },
+        {
+          "group": null,
+          "party": "GRN",
+          "status": "endorsed",
+          "candidates": [
+            "Mat Morgan"
+          ]
+        },
+        {
+          "group": null,
+          "party": "ONP",
+          "status": "reported",
+          "candidates": [
+            "Greg Hansford"
+          ]
+        },
+        {
+          "group": null,
+          "party": "LCV",
+          "status": "endorsed",
+          "candidates": [
+            "Danielle Burridge"
+          ]
+        },
+        {
+          "group": null,
+          "party": "AJP",
+          "status": "endorsed",
+          "candidates": [
+            "Helen Jaeges"
+          ]
+        },
+        {
+          "group": null,
+          "party": "VS",
+          "status": "endorsed",
+          "candidates": [
+            "Max Forward"
+          ]
+        },
+        {
+          "group": null,
+          "party": "SUS",
+          "status": "endorsed",
+          "candidates": [
+            "Reade Smith"
+          ]
+        },
+        {
+          "group": null,
+          "party": "IND",
+          "status": "endorsed",
+          "candidates": [
+            "Antoinette Pitt"
+          ]
+        }
       ],
-      "tickets": []
+      "notes": "Roy Morgan's regional poll put One Nation on about 39% primary here, which is two quotas or more."
     },
     {
-      "id": "northern-metropolitan", "name": "Northern Metropolitan", "area": "metro",
+      "id": "north-eastern-metropolitan",
+      "name": "North-Eastern Metropolitan",
+      "area": "metro",
       "mlcs": [
-        { "name": "Sample MLC 1", "party": "ALP", "notes": "" },
-        { "name": "Sample MLC 2", "party": "ALP", "notes": "" },
-        { "name": "Sample MLC 3", "party": "GRN", "notes": "" },
-        { "name": "Sample MLC 4", "party": "LIB", "notes": "" },
-        { "name": "Sample MLC 5", "party": "OTH", "notes": "" }
+        {
+          "name": "Shaun Leane",
+          "party": "ALP",
+          "retiring": true,
+          "notes": ""
+        },
+        {
+          "name": "Richard Welch",
+          "party": "LIB",
+          "retiring": false,
+          "notes": "Replaced Matthew Bach."
+        },
+        {
+          "name": "Sonja Terpstra",
+          "party": "ALP",
+          "retiring": true,
+          "notes": ""
+        },
+        {
+          "name": "Nick McGowan",
+          "party": "LIB",
+          "retiring": false,
+          "notes": "Moving to contest Ringwood in the lower house."
+        },
+        {
+          "name": "Aiv Puglielli",
+          "party": "GRN",
+          "retiring": false,
+          "notes": ""
+        }
       ],
       "tickets": [
-        { "group": "A", "party": "GRN", "status": "vec_nominated", "candidates": ["Sample MLC 3", "Pat Example", "Robin Sample"] },
-        { "group": "B", "party": "ALP", "status": "vec_nominated", "candidates": ["Sample MLC 1", "Sample MLC 2", "Jordan Citizen"] },
-        { "group": "C", "party": "LIB", "status": "vec_nominated", "candidates": ["Sample MLC 4", "Taylor Example"] },
-        { "group": null, "party": "IND", "status": "withdrawn", "candidates": ["Morgan Placeholder"] }
-      ]
+        {
+          "group": null,
+          "party": "LIB",
+          "status": "endorsed",
+          "candidates": [
+            "Richard Welch",
+            "Deirdre Diamante",
+            "John Pyrros"
+          ]
+        },
+        {
+          "group": null,
+          "party": "GRN",
+          "status": "endorsed",
+          "candidates": [
+            "Aiv Puglielli"
+          ]
+        },
+        {
+          "group": null,
+          "party": "ONP",
+          "status": "reported",
+          "candidates": [
+            "Natalie Adams"
+          ]
+        },
+        {
+          "group": null,
+          "party": "AJP",
+          "status": "endorsed",
+          "candidates": [
+            "Chloe Nicolosi"
+          ]
+        },
+        {
+          "group": null,
+          "party": "VS",
+          "status": "endorsed",
+          "candidates": [
+            "Lucas Deviesseux",
+            "Heather Maltby"
+          ]
+        }
+      ],
+      "notes": "Labor ticket TBC."
     },
     {
-      "id": "northern-victoria", "name": "Northern Victoria", "area": "regional",
+      "id": "northern-metropolitan",
+      "name": "Northern Metropolitan",
+      "area": "metro",
       "mlcs": [
-        { "name": "Sample MLC 1", "party": "ALP", "notes": "" },
-        { "name": "Sample MLC 2", "party": "NAT", "notes": "" },
-        { "name": "Sample MLC 3", "party": "LIB", "notes": "" },
-        { "name": "Sample MLC 4", "party": "OTH", "notes": "" },
-        { "name": "Sample MLC 5", "party": "OTH", "notes": "" }
+        {
+          "name": "Sheena Watt",
+          "party": "ALP",
+          "retiring": false,
+          "notes": ""
+        },
+        {
+          "name": "Evan Mulholland",
+          "party": "LIB",
+          "retiring": false,
+          "notes": ""
+        },
+        {
+          "name": "Anasina Gray-Barberio",
+          "party": "GRN",
+          "retiring": false,
+          "notes": ""
+        },
+        {
+          "name": "Enver Erdogan",
+          "party": "ALP",
+          "retiring": false,
+          "notes": ""
+        },
+        {
+          "name": "Adem Somyurek",
+          "party": "IND",
+          "retiring": false,
+          "notes": "Ex-DLP; plans unknown."
+        }
       ],
       "tickets": [
-        { "group": null, "party": "NAT", "status": "endorsed", "candidates": ["Sample MLC 2", "Casey Template"] },
-        { "group": null, "party": "ALP", "status": "announced", "candidates": ["Sample MLC 1", "Drew Sample"] }
-      ]
-    },
-    {
-      "id": "south-eastern-metropolitan", "name": "South-Eastern Metropolitan", "area": "metro",
-      "mlcs": [
-        { "name": "Sample MLC 1", "party": "ALP", "notes": "" },
-        { "name": "Sample MLC 2", "party": "ALP", "notes": "" },
-        { "name": "Sample MLC 3", "party": "LIB", "notes": "" },
-        { "name": "Sample MLC 4", "party": "OTH", "notes": "" },
-        { "name": "Sample MLC 5", "party": "OTH", "notes": "" }
+        {
+          "group": null,
+          "party": "ALP",
+          "status": "reported",
+          "candidates": [
+            "TBC",
+            "Tom McIntosh"
+          ],
+          "notes": "Tom McIntosh reported for #2 under an Erdogan-McIntosh swap (unconfirmed)."
+        },
+        {
+          "group": null,
+          "party": "LIB",
+          "status": "endorsed",
+          "candidates": [
+            "Evan Mulholland",
+            "Bernadette Khoury"
+          ]
+        },
+        {
+          "group": null,
+          "party": "GRN",
+          "status": "endorsed",
+          "candidates": [
+            "Anasina Gray-Barberio"
+          ]
+        },
+        {
+          "group": null,
+          "party": "ONP",
+          "status": "reported",
+          "candidates": [
+            "Mark Nicholson"
+          ]
+        },
+        {
+          "group": null,
+          "party": "LCV",
+          "status": "reported",
+          "candidates": [
+            "Riley Aickin"
+          ]
+        },
+        {
+          "group": null,
+          "party": "VS",
+          "status": "endorsed",
+          "candidates": [
+            "Omar Hassan",
+            "Louisa Bassini"
+          ]
+        }
       ],
-      "tickets": []
+      "notes": "New Democrats have announced three candidates (names not listed in the report). In contention: a Greens and Socialists push on the left; One Nation for a seat."
     },
     {
-      "id": "southern-metropolitan", "name": "Southern Metropolitan", "area": "metro",
+      "id": "northern-victoria",
+      "name": "Northern Victoria",
+      "area": "regional",
       "mlcs": [
-        { "name": "Sample MLC 1", "party": "LIB", "notes": "" },
-        { "name": "Sample MLC 2", "party": "LIB", "notes": "" },
-        { "name": "Sample MLC 3", "party": "ALP", "notes": "" },
-        { "name": "Sample MLC 4", "party": "GRN", "notes": "" },
-        { "name": "Sample MLC 5", "party": "ALP", "notes": "" }
+        {
+          "name": "Wendy Lovell",
+          "party": "LIB",
+          "retiring": true,
+          "notes": ""
+        },
+        {
+          "name": "Jaclyn Symes",
+          "party": "ALP",
+          "retiring": false,
+          "notes": ""
+        },
+        {
+          "name": "Gaelle Broad",
+          "party": "NAT",
+          "retiring": false,
+          "notes": ""
+        },
+        {
+          "name": "Georgie Purcell",
+          "party": "AJP",
+          "retiring": false,
+          "notes": ""
+        },
+        {
+          "name": "Rikkie-Lee Tyrrell",
+          "party": "ONP",
+          "retiring": false,
+          "notes": ""
+        }
       ],
       "tickets": [
-        { "group": null, "party": "LIB", "status": "endorsed", "candidates": ["Sample MLC 1", "Sample MLC 2", "Quinn Placeholder"] }
-      ]
-    },
-    {
-      "id": "western-metropolitan", "name": "Western Metropolitan", "area": "metro",
-      "mlcs": [
-        { "name": "Sample MLC 1", "party": "ALP", "notes": "" },
-        { "name": "Sample MLC 2", "party": "ALP", "notes": "" },
-        { "name": "Sample MLC 3", "party": "LIB", "notes": "" },
-        { "name": "Sample MLC 4", "party": "OTH", "notes": "" },
-        { "name": "Sample MLC 5", "party": "OTH", "notes": "" }
+        {
+          "group": null,
+          "party": "LNP",
+          "status": "endorsed",
+          "candidates": [
+            "Steve Brooks",
+            "TBD",
+            "Amanda Millar"
+          ],
+          "notes": "Joint Coalition ticket; #2 to be decided."
+        },
+        {
+          "group": null,
+          "party": "GRN",
+          "status": "endorsed",
+          "candidates": [
+            "Cate Sinclair"
+          ]
+        },
+        {
+          "group": null,
+          "party": "ONP",
+          "status": "reported",
+          "candidates": [
+            "Rikkie-Lee Tyrrell"
+          ]
+        },
+        {
+          "group": null,
+          "party": "AJP",
+          "status": "endorsed",
+          "candidates": [
+            "Georgie Purcell"
+          ]
+        },
+        {
+          "group": null,
+          "party": "FF",
+          "status": "endorsed",
+          "candidates": [
+            "Michael White"
+          ]
+        }
       ],
-      "tickets": []
+      "notes": "In contention: One Nation could win two seats here; Purcell's seat is at risk."
     },
     {
-      "id": "western-victoria", "name": "Western Victoria", "area": "regional",
+      "id": "south-eastern-metropolitan",
+      "name": "South-Eastern Metropolitan",
+      "area": "metro",
       "mlcs": [
-        { "name": "Sample MLC 1", "party": "ALP", "notes": "" },
-        { "name": "Sample MLC 2", "party": "LIB", "notes": "" },
-        { "name": "Sample MLC 3", "party": "NAT", "notes": "" },
-        { "name": "Sample MLC 4", "party": "OTH", "notes": "" },
-        { "name": "Sample MLC 5", "party": "OTH", "notes": "" }
+        {
+          "name": "Lee Tarlamis",
+          "party": "ALP",
+          "retiring": false,
+          "notes": ""
+        },
+        {
+          "name": "Ann-Marie Hermans",
+          "party": "LIB",
+          "retiring": false,
+          "notes": ""
+        },
+        {
+          "name": "Michael Galea",
+          "party": "ALP",
+          "retiring": false,
+          "notes": ""
+        },
+        {
+          "name": "Rachel Payne",
+          "party": "LCV",
+          "retiring": false,
+          "notes": ""
+        },
+        {
+          "name": "David Limbrick",
+          "party": "LBT",
+          "retiring": false,
+          "notes": ""
+        }
       ],
       "tickets": [
-        { "group": null, "party": "ALP", "status": "endorsed", "candidates": ["Sample MLC 1", "Avery Template"] },
-        { "group": null, "party": "GRN", "status": "announced", "candidates": ["Harper Example"] }
-      ]
+        {
+          "group": null,
+          "party": "LIB",
+          "status": "endorsed",
+          "candidates": [
+            "Phillip Pease",
+            "Ann-Marie Hermans"
+          ]
+        },
+        {
+          "group": null,
+          "party": "GRN",
+          "status": "endorsed",
+          "candidates": [
+            "Matthew Kirwan"
+          ]
+        },
+        {
+          "group": null,
+          "party": "ONP",
+          "status": "reported",
+          "candidates": [
+            "Colleen Harkin"
+          ]
+        },
+        {
+          "group": null,
+          "party": "LCV",
+          "status": "endorsed",
+          "candidates": [
+            "Rachel Payne"
+          ],
+          "notes": "Recontesting."
+        },
+        {
+          "group": null,
+          "party": "FF",
+          "status": "endorsed",
+          "candidates": [
+            "Jane Foreman"
+          ]
+        },
+        {
+          "group": null,
+          "party": "VS",
+          "status": "endorsed",
+          "candidates": [
+            "Kelly Cvetkova",
+            "Mahee Hossain"
+          ]
+        }
+      ],
+      "notes": "Limbrick (Libertarian) not yet confirmed. In contention: Payne and Limbrick are both at risk without group voting tickets."
+    },
+    {
+      "id": "southern-metropolitan",
+      "name": "Southern Metropolitan",
+      "area": "metro",
+      "mlcs": [
+        {
+          "name": "David Davis",
+          "party": "LIB",
+          "retiring": false,
+          "notes": ""
+        },
+        {
+          "name": "John Berger",
+          "party": "ALP",
+          "retiring": false,
+          "notes": ""
+        },
+        {
+          "name": "Georgie Crozier",
+          "party": "LIB",
+          "retiring": false,
+          "notes": ""
+        },
+        {
+          "name": "Katherine Copsey",
+          "party": "GRN",
+          "retiring": false,
+          "notes": ""
+        },
+        {
+          "name": "Ryan Batchelor",
+          "party": "ALP",
+          "retiring": false,
+          "notes": ""
+        }
+      ],
+      "tickets": [
+        {
+          "group": null,
+          "party": "ALP",
+          "status": "reported",
+          "candidates": [],
+          "notes": "Top spot contested between the Right (John Berger) and the Left (Ryan Batchelor, nominated here and in North-Eastern Metropolitan)."
+        },
+        {
+          "group": null,
+          "party": "LIB",
+          "status": "endorsed",
+          "candidates": [
+            "David Davis",
+            "Georgie Crozier",
+            "Xavier Boffa"
+          ]
+        },
+        {
+          "group": null,
+          "party": "GRN",
+          "status": "endorsed",
+          "candidates": [
+            "Katherine Copsey"
+          ]
+        },
+        {
+          "group": null,
+          "party": "ONP",
+          "status": "reported",
+          "candidates": [
+            "Aaron Sanford"
+          ]
+        },
+        {
+          "group": null,
+          "party": "IND",
+          "status": "reported",
+          "candidates": [
+            "Melissa Lowe"
+          ],
+          "notes": "Community independent backed by Voices groups; earlier reported with a different party label."
+        }
+      ],
+      "notes": "In contention: Lowe's independent ticket and the second Liberal seat."
+    },
+    {
+      "id": "western-metropolitan",
+      "name": "Western Metropolitan",
+      "area": "metro",
+      "mlcs": [
+        {
+          "name": "Lizzie Blandthorn",
+          "party": "ALP",
+          "retiring": false,
+          "notes": ""
+        },
+        {
+          "name": "Moira Deeming",
+          "party": "LIB",
+          "retiring": false,
+          "notes": "Party status disputed: The Tally Room reports she resigned from the Liberal Party on 28 July 2026, but Wikipedia still lists her at #1 on the Liberal ticket. Re-check."
+        },
+        {
+          "name": "Ingrid Stitt",
+          "party": "ALP",
+          "retiring": false,
+          "notes": ""
+        },
+        {
+          "name": "David Ettershank",
+          "party": "LCV",
+          "retiring": false,
+          "notes": "Wikipedia reported he would retire (as of 2 June 2026); unconfirmed."
+        },
+        {
+          "name": "Trung Luu",
+          "party": "LIB",
+          "retiring": false,
+          "notes": ""
+        }
+      ],
+      "tickets": [
+        {
+          "group": null,
+          "party": "LIB",
+          "status": "endorsed",
+          "candidates": [
+            "Moira Deeming",
+            "Trung Luu"
+          ],
+          "notes": "Deeming at #1 needs checking (party status disputed)."
+        },
+        {
+          "group": null,
+          "party": "GRN",
+          "status": "endorsed",
+          "candidates": [
+            "Brittney Henderson"
+          ]
+        },
+        {
+          "group": null,
+          "party": "ONP",
+          "status": "reported",
+          "candidates": [
+            "Fiona Lopez"
+          ]
+        },
+        {
+          "group": null,
+          "party": "LCV",
+          "status": "endorsed",
+          "candidates": [
+            "Xavier Menta"
+          ]
+        },
+        {
+          "group": null,
+          "party": "VS",
+          "status": "endorsed",
+          "candidates": [
+            "Anneke Demanuele",
+            "Jorge Jorquera"
+          ]
+        },
+        {
+          "group": null,
+          "party": "WEST",
+          "status": "endorsed",
+          "candidates": [
+            "Joe Garra",
+            "Sahana Ramesh"
+          ]
+        }
+      ],
+      "notes": "New Democrats have announced five candidates (names not listed in the report)."
+    },
+    {
+      "id": "western-victoria",
+      "name": "Western Victoria",
+      "area": "regional",
+      "mlcs": [
+        {
+          "name": "Jacinta Ermacora",
+          "party": "ALP",
+          "retiring": false,
+          "notes": ""
+        },
+        {
+          "name": "Bev McArthur",
+          "party": "LIB",
+          "retiring": false,
+          "notes": ""
+        },
+        {
+          "name": "Gayle Tierney",
+          "party": "ALP",
+          "retiring": true,
+          "notes": ""
+        },
+        {
+          "name": "Sarah Mansfield",
+          "party": "GRN",
+          "retiring": false,
+          "notes": ""
+        },
+        {
+          "name": "Joe McCracken",
+          "party": "LIB",
+          "retiring": true,
+          "notes": ""
+        }
+      ],
+      "tickets": [
+        {
+          "group": null,
+          "party": "LIB",
+          "status": "endorsed",
+          "candidates": [
+            "Bev McArthur",
+            "Graham Watt"
+          ]
+        },
+        {
+          "group": null,
+          "party": "ALP",
+          "status": "reported",
+          "candidates": [
+            "Kate Maxfield",
+            "Jacinta Ermacora"
+          ],
+          "notes": "Dr Kate Maxfield (spelling unclear) reported at #1 or #2 alongside Ermacora; sources conflict, so the order is unconfirmed."
+        },
+        {
+          "group": null,
+          "party": "GRN",
+          "status": "endorsed",
+          "candidates": [
+            "Sarah Mansfield"
+          ]
+        },
+        {
+          "group": null,
+          "party": "ONP",
+          "status": "reported",
+          "candidates": [
+            "Chris Burson"
+          ]
+        },
+        {
+          "group": null,
+          "party": "FF",
+          "status": "endorsed",
+          "candidates": [
+            "Dianne Colbert"
+          ]
+        },
+        {
+          "group": null,
+          "party": "IND",
+          "status": "reported",
+          "candidates": [
+            "Aleta Moriarty"
+          ]
+        }
+      ],
+      "notes": ""
     }
   ]
 }

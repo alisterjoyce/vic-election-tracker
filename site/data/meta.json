@@ -10,14 +10,14 @@
       "sources": "Map of source name -> {status: ok | error | placeholder, url, last_success, message}"
     }
   },
-  "last_updated": "2026-10-30T00:47:40Z",
+  "last_updated": "2026-10-30T01:05:41Z",
   "election_date": "2026-11-28",
   "assembly_seats": 88,
   "council_seats": 40,
   "sample_data": {
-    "districts": true,
-    "candidates": true,
-    "regions": true,
+    "districts": false,
+    "candidates": false,
+    "regions": false,
     "polls": false
   },
   "sources": {

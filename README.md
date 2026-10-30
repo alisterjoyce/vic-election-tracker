@@ -29,7 +29,9 @@ netlify.toml
 
 Each JSON file has a `_schema` key that describes its fields.
 
-**Sample data:** `districts.json`, `candidates.json` and `regions.json` ship with placeholder rows. District and region names are real, but the MPs, margins and candidates are not. While `meta.json` → `sample_data.<name>` is `true`, the site shows a "sample data" banner. Set the flag to `false` once a file holds real data. `refresh.py` clears the `polls` flag itself after a successful fetch.
+**Data sources:** the district list and each district's region come from the [VEC district](https://www.vec.vic.gov.au/electoral-boundaries/state-districts) and region pages. Sitting MPs, margins, retiring flags, candidates and upper-house tickets come from a research report dated 30 October 2026. Candidate status is `endorsed` or `reported` as the report marks it. No one is VEC-nominated until nominations close at noon on 9 November. Districts with `needs_check: true` are ones whose region the report flagged as uncertain.
+
+If a file is ever reset to placeholder rows, set `meta.json` → `sample_data.<name>` to `true` to show the "sample data" banner. `refresh.py` clears the `polls` flag itself after a successful fetch.
 
 ## Run the refresh script locally
 

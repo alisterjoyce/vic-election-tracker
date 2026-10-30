@@ -44,9 +44,9 @@
           <ul class="people">
             ${r.mlcs.map((m) => `
               <li>
-                <span class="name">${escapeHtml(m.name)}</span>
+                <span class="name">${escapeHtml(m.name)}${m.retiring ? ' <span class="badge neutral">Retiring</span>' : ""}</span>
                 ${partyBadge(m.party)}
-                ${m.notes ? `<span class="muted small">${escapeHtml(m.notes)}</span>` : ""}
+                ${m.notes ? `<span class="note muted small">${escapeHtml(m.notes)}</span>` : ""}
               </li>`).join("")}
           </ul>` : '<p class="empty">No members recorded.</p>'}
       </div>
@@ -61,9 +61,13 @@
                   <strong>${t.group ? `Group ${escapeHtml(t.group)} · ` : ""}${escapeHtml(partyName(t.party))}</strong>
                   ${statusBadge(t.status)}
                 </div>
-                <ol>${(t.candidates || []).map((c) => `<li>${escapeHtml(c)}</li>`).join("")}</ol>
+                ${(t.candidates || []).length
+                  ? `<ol>${t.candidates.map((c) => `<li>${escapeHtml(c)}</li>`).join("")}</ol>`
+                  : '<p class="empty small" style="margin:0">No names confirmed.</p>'}
+                ${t.notes ? `<p class="note muted small">${escapeHtml(t.notes)}</p>` : ""}
               </div>`).join("")}
           </div>` : '<p class="empty">No tickets recorded yet.</p>'}
+        ${r.notes ? `<p class="muted small" style="margin-bottom:0">${escapeHtml(r.notes)}</p>` : ""}
       </div>
 
       <div class="card">

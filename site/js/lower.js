@@ -1,7 +1,7 @@
 /* Lower house page: filter districts, show the selected one (selected via #district-id). */
 (function () {
   "use strict";
-  const { loadJSON, escapeHtml, partyBadge, statusBadge, fmtDate, hashId, copyLink } = window.App;
+  const { loadJSON, escapeHtml, partyBadge, partyShort, statusBadge, fmtDate, hashId, copyLink } = window.App;
 
   let districts = [];
   let candidates = [];
@@ -18,7 +18,7 @@
 
   function marginText(m) {
     if (!m || m.pct == null) return "–";
-    return `${escapeHtml(m.party)} ${Number(m.pct).toFixed(1)}%${m.vs ? ` vs ${escapeHtml(m.vs)}` : ""}`;
+    return `${escapeHtml(partyShort(m.party))} ${Number(m.pct).toFixed(1)}%${m.vs ? ` vs ${escapeHtml(partyShort(m.vs))}` : ""}`;
   }
 
   function filtered() {
@@ -95,9 +95,10 @@
         <div class="fact"><div class="label">Sitting MP</div><div class="value">${escapeHtml(d.sitting_mp || "–")}${d.retiring ? ' <span class="badge neutral">Retiring</span>' : ""}</div></div>
         <div class="fact"><div class="label">Held by</div><div class="value">${partyBadge(d.party)}</div></div>
         <div class="fact"><div class="label">Margin</div><div class="value">${marginText(d.margin)}</div><div class="muted small">${escapeHtml(marginLabel(d.margin && d.margin.pct))}</div></div>
-        <div class="fact"><div class="label">Region</div><div class="value">${region ? `<a href="upper.html#${escapeHtml(region.id)}">${escapeHtml(region.name)}</a>` : escapeHtml(d.region)}</div><div class="muted small">${d.area === "regional" ? "Regional" : "Metro"}</div></div>
+        <div class="fact"><div class="label">Region</div><div class="value">${region ? `<a href="upper.html#${escapeHtml(region.id)}">${escapeHtml(region.name)}</a>` : escapeHtml(d.region)}${d.needs_check ? ' <span class="badge reported" title="Region allocation flagged for checking">Check</span>' : ""}</div><div class="muted small">${d.area === "regional" ? "Regional" : "Metro"}</div></div>
       </div>
       ${d.notes ? `<p>${escapeHtml(d.notes)}</p>` : ""}
+      ${d.region_note ? `<p class="muted small">${escapeHtml(d.region_note)}</p>` : ""}
       <h3>Candidates</h3>
       ${cands.length ? `
         <ul class="people">
@@ -108,6 +109,7 @@
               ${partyBadge(c.party)}
               ${statusBadge(c.status)}
               ${c.source_url ? `<a class="small" href="${escapeHtml(c.source_url)}" rel="noopener">source</a>` : ""}
+              ${c.notes ? `<span class="note muted small">${escapeHtml(c.notes)}</span>` : ""}
             </li>`).join("")}
         </ul>
         <p class="muted small" style="margin-top:8px">Last checked ${escapeHtml(fmtDate(cands.map((c) => c.updated).filter(Boolean).sort().pop()))}</p>`

@@ -10,12 +10,27 @@
     GRN: { name: "Greens", color: "--p-grn" },
     ONP: { name: "One Nation", color: "--p-onp" },
     LCV: { name: "Legalise Cannabis", color: "--p-lcv" },
+    VS: { name: "Victorian Socialists", color: "--p-vs" },
+    AJP: { name: "Animal Justice", color: "--p-ajp" },
+    ND: { name: "New Democrats", color: "--p-nd" },
+    WEST: { name: "West Party", color: "--p-west" },
+    SAL: { name: "Socialist Alliance", color: "--p-sal" },
+    LBT: { name: "Libertarian", color: "--p-lbt" },
+    FF: { name: "Family First", color: "--p-ff" },
+    SFF: { name: "Shooters, Fishers and Farmers", color: "--p-sff" },
+    DLP: { name: "Democratic Labour", color: "--p-dlp" },
+    SUS: { name: "Sustainable Australia", color: "--p-sus" },
+    ILAB: { name: "Independent Labor", color: "--p-ilab" },
     IND: { name: "Independent", color: "--p-ind" },
     OTH: { name: "Other", color: "--p-oth" },
   };
 
+  // Short labels where the code alone would mislead (LNP is a Queensland party).
+  const SHORT = { LNP: "L/NP", ILAB: "Ind. Labor" };
+
   const STATUSES = {
     announced: "Announced",
+    reported: "Reported",
     endorsed: "Endorsed",
     vec_nominated: "VEC-nominated",
     withdrawn: "Withdrawn",
@@ -43,6 +58,10 @@
     return (PARTIES[code] && PARTIES[code].name) || code || "Unknown";
   }
 
+  function partyShort(code) {
+    return SHORT[code] || code || "?";
+  }
+
   function partyVar(code) {
     return (PARTIES[code] && PARTIES[code].color) || "--p-oth";
   }
@@ -56,7 +75,7 @@
   }
 
   function partyBadge(code, { full = true } = {}) {
-    const label = full ? partyName(code) : code;
+    const label = full ? partyName(code) : partyShort(code);
     return `<span class="party" style="--party-color: var(${partyVar(code)})" title="${escapeHtml(partyName(code))}">${escapeHtml(label)}</span>`;
   }
 
@@ -169,7 +188,7 @@
   });
 
   window.App = {
-    PARTIES, STATUSES, loadJSON, escapeHtml, partyName, partyVar, partyColor, partyBadge, statusBadge,
+    PARTIES, STATUSES, loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, partyBadge, statusBadge,
     slugify, parseDate, fmtDate, hashId, cssVar, currentTheme, showError, copyLink,
   };
 })();
