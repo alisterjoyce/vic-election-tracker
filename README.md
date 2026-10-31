@@ -1,8 +1,8 @@
 # Vic Election 2026 Tracker
 
-A static tracker for the 2026 Victorian state election (polling day Saturday 28 November 2026). It's plain HTML, CSS and vanilla JS with no build step, hosted on Netlify. A daily GitHub Action refreshes the data.
+A static tracker for the 2026 Victorian state election (polling day Saturday 28 November 2026). It's plain HTML, CSS and vanilla JS with no build step, hosted on GitHub Pages. A daily GitHub Action refreshes the data and redeploys.
 
-**Live site: https://vic2026tracker.netlify.app**. As of 31 Oct 2026 Netlify isn't deploying new commits (the live copy dates from 30 Oct): link this repository in the Netlify site's settings, or redeploy `site/`, to publish the current version.
+**Live site: https://alisterjoyce.github.io/vic-election-tracker/**
 
 - **Home** (`index.html`): a map of all 88 districts (Leaflet, with a Melbourne inset), coloured by holder, margin band, Sportsbet favourite or (from 28 Nov) result, with a Regions view for the upper house; then the countdown, headline seat counts, a poll-of-polls chart (Chart.js 4.4.1 from cdnjs) and a table of the latest polls.
 - **Lower house** (`lower.html`): filter districts by region and metro/regional, then pick one to see its sitting MP, margin and candidates with status badges.
@@ -33,7 +33,7 @@ A static tracker for the 2026 Victorian state election (polling day Saturday 28 
 ## Layout
 
 ```
-site/                  # published by Netlify
+site/                  # published by GitHub Pages
   index.html, lower.html, upper.html, candidate.html, pendulum.html, poll.html, myseats.html, about.html
   css/style.css
   js/common.js, home.js, lower.js, upper.js, candidate.js, sharecard.js
@@ -138,8 +138,15 @@ Then visit http://localhost:8000.
 
 ## Automation
 
-`.github/workflows/refresh.yml` runs every day at 20:00 UTC (7am AEDT) and can also be run by hand from the Actions tab (`workflow_dispatch`). It installs `requirements.txt`, runs `scripts/refresh.py`, and commits and pushes `site/data` if anything changed. Netlify redeploys on each push.
+`.github/workflows/refresh.yml` runs every day at 20:00 UTC (7am AEDT) and can also be run by hand from the Actions tab (`workflow_dispatch`). It installs `requirements.txt`, runs `scripts/refresh.py`, and commits and pushes `site/data` if anything changed; its `deploy` job then publishes `site/` to GitHub Pages. Pushes made by that job's token don't start other workflows, which is why it deploys itself.
 
 ## Deploy
 
-Netlify reads `netlify.toml`: it publishes `site/` with an empty build command. Connect the GitHub repo in Netlify and it will deploy on every push to `main`.
+GitHub Pages serves the site at https://alisterjoyce.github.io/vic-election-tracker/, deployed by GitHub Actions (Settings → Pages → Source: GitHub Actions):
+
+- `.github/workflows/deploy.yml` publishes `site/` on every push to `main` (and by hand from the Actions tab).
+- `.github/workflows/refresh.yml` deploys after each daily data refresh.
+
+Pages serves the site under `/vic-election-tracker/`, so every path in the site is relative; it also works at a domain's root (a custom domain, or Netlify). To check paths, serve `site/` under a prefix locally and click around.
+
+Netlify is no longer the primary host (its free-tier credits ran out on 31 Oct 2026). `netlify.toml` is kept, so connecting the repo in Netlify still deploys `site/` with an empty build command.

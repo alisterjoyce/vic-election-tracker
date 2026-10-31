@@ -8,6 +8,8 @@ on:
 
 permissions:
   contents: write
+  pages: write      # deploy job: publish to GitHub Pages
+  id-token: write   # deploy job: authenticate the Pages deployment
 
 concurrency:
   group: refresh-data
@@ -42,3 +44,29 @@ jobs:
           fi
           git commit -m "Refresh data $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
+
+  # Publish the refreshed site to GitHub Pages. The refresh job pushes with GITHUB_TOKEN, which
+  # doesn't trigger deploy.yml, so this job deploys the new data itself.
+  deploy:
+    needs: refresh
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main   # the tip of main, including the data commit the refresh job just pushed
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

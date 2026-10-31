@@ -1,13 +1,15 @@
 # Vic Election 2026 Tracker: project conventions
 
-A static tracker for the 2026 Victorian state election (polling day Sat 28 Nov 2026). Plain HTML, CSS and vanilla JS with **no build step**, published from `site/` by Netlify. Data lives in JSON files, refreshed daily by `scripts/refresh.py` through a GitHub Action.
+A static tracker for the 2026 Victorian state election (polling day Sat 28 Nov 2026). Plain HTML, CSS and vanilla JS with **no build step**, published from `site/` by GitHub Pages. Data lives in JSON files, refreshed daily by `scripts/refresh.py` through a GitHub Action.
 
-**Live site: https://vic2026tracker.netlify.app** (Netlify). As of 31 Oct 2026 it is *not* deploying from GitHub: it still serves a snapshot from 30 Oct (no pendulum page), and no Netlify deploy status appears on commits. The repo needs linking in Netlify (Site configuration → Build & deploy → Link repository) or a manual deploy of `site/`.
+**Live site: https://alisterjoyce.github.io/vic-election-tracker/** (GitHub Pages, deployed from Actions). Netlify (https://vic2026tracker.netlify.app) was the first host; its free-tier credits ran out on 31 Oct 2026 and it is no longer the primary host. `netlify.toml` stays so the site can still be deployed there.
+
+The site is served under a base path (`/vic-election-tracker/`) on Pages and at the root elsewhere, so **never use root-absolute URLs** (`/data/...`, `/lower.html`). Pages link relatively, and `common.js` resolves data files and search links against `App.ROOT` (the folder `common.js` is served from). Test under a prefix before changing paths.
 
 ## File layout
 
 ```
-site/                     # published as-is (netlify.toml: publish = "site", no build command)
+site/                     # published as-is by GitHub Pages (also deployable to Netlify: netlify.toml publish = "site")
   index.html              # home: countdown, seat counts, poll-of-polls chart, latest polls
   lower.html              # Legislative Assembly: filters, district detail, seat outlook (#district-id)
   upper.html              # Legislative Council: 8 regions, MLCs, tickets (#region-id)
@@ -39,7 +41,8 @@ scripts/build_headshots.py   # headshot zip -> site/photos/{320,160}/*.webp + da
 scripts/headshot_overrides.json  # {zip file path: candidate id | null} to resolve photos by hand
 site/photos/320/, 160/    # candidate headshots, WebP, each under 25 KB
 site/js/maps.js           # Leaflet: home choropleth with metro inset, seat-page booth map
-.github/workflows/refresh.yml   # 20:00 UTC daily + workflow_dispatch; commits site/data if changed
+.github/workflows/refresh.yml   # 20:00 UTC daily + workflow_dispatch; commits site/data if changed, then deploys to Pages
+.github/workflows/deploy.yml    # deploys site/ to GitHub Pages on every push to main
 ```
 
 Not committed: the research report `.md` in the repo root, source screenshots and PDFs, the headshot zip (`/*.zip`), `.cache/` (Vicmap downloads) and `.claude/`, all via `.gitignore` except the report, which is simply never added.

@@ -1,3 +1,6 @@
+# Netlify is no longer the primary host: the site is published to GitHub Pages
+# (https://alisterjoyce.github.io/vic-election-tracker/) by .github/workflows/deploy.yml and refresh.yml.
+# This file is kept so the site can still be deployed to Netlify (publish site/, no build).
 [build]
   publish = "site"
   command = ""
