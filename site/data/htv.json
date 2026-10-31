@@ -1,6 +1,6 @@
 {
   "_schema": {
-    "description": "How-to-vote cards registered with the VEC for the 2026 election. scripts/refresh.py checks the VEC's register daily and records each card; the preference order on each card is entered by hand from the card PDF and is never overwritten.",
+    "description": "How-to-vote cards registered with the VEC for the 2026 election. scripts/refresh.py checks the VEC's register four times a day and records each card; the preference order on each card is entered by hand from the card PDF and is never overwritten.",
     "fields": {
       "status": "not_open (before registration opens) | open (register live, cards listed) | open_no_cards",
       "registration_opens": "YYYY-MM-DD registration opens (9 am)",

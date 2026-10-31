@@ -134,6 +134,12 @@
     return parts;
   }
 
+  // "Data updated 31 Oct 2026, 6:04 am Melbourne time" (footer and the home page's headline card).
+  function dataUpdatedText(iso) {
+    const p = melbourneParts(new Date(iso));
+    return `Data updated ${p.day} ${MONTHS[Number(p.month) - 1]} ${p.year}, ${p.hour}:${p.minute} ${(p.dayPeriod || "").toLowerCase()} Melbourne time`;
+  }
+
   // "30 Oct 2026, 1:18 pm AEDT" in Melbourne time.
   function fmtDateTime(iso) {
     const p = melbourneParts(new Date(iso));
@@ -456,6 +462,10 @@
       const dark = currentTheme() === "dark";
       btn.textContent = dark ? "☀ Light" : "☾ Dark";
       btn.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+      // The toolbar colour (theme-color) follows a theme picked here; otherwise the media queries decide.
+      if (document.documentElement.hasAttribute("data-theme")) {
+        document.querySelectorAll('meta[name="theme-color"]').forEach((m) => { m.content = cssVar("--surface") || m.content; });
+      }
     };
     label();
     btn.addEventListener("click", () => {
@@ -665,7 +675,102 @@
       if (nav.classList.contains("open")) { setMenu(false); toggle.focus(); }
     });
     // Following a same-page link (Map, Scenarios, Quota calculator) closes the menus.
-    nav.addEventListener("click", (e) => { if (e.target.closest("a")) { closeAll(); setMenu(false); } });
+    nav.addEventListener("click", (e) => { if (e.target.closest("a, .nav-install-btn")) { closeAll(); setMenu(false); } });
+    initInstall(nav);
+  }
+
+  /* ---- App: the service worker (sw.js), its update toast, and "Install app" in the menu ---- */
+  const isStandalone = () => window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+  const isIOS = () => /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  let installPrompt = null;   // Android and desktop Chromium: the deferred beforeinstallprompt event
+  const installListeners = [];
+  window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault();
+    installPrompt = e;
+    installListeners.forEach((fn) => fn());
+  });
+
+  // The last menu group (About) gets "Install app" where the browser can install the site (it fired
+  // beforeinstallprompt) and on iPhone/iPad, where it opens instructions instead. Hidden once installed.
+  function initInstall(nav) {
+    const menu = nav.querySelector(".nav-group:last-child .nav-menu");
+    if (!menu) return;
+    const li = document.createElement("li");
+    li.className = "nav-install";
+    li.innerHTML = '<button type="button" class="nav-install-btn">Install app</button>';
+    menu.append(li);
+    const update = () => { li.hidden = isStandalone() || !(installPrompt || isIOS()); };
+    update();
+    installListeners.push(update);
+    window.addEventListener("appinstalled", () => { installPrompt = null; li.hidden = true; });
+    li.querySelector("button").addEventListener("click", async () => {
+      if (installPrompt) {
+        const prompt = installPrompt;
+        installPrompt = null;
+        prompt.prompt();
+        try { await prompt.userChoice; } catch (e) { /* dismissed */ }
+        update();
+      } else if (isIOS()) {
+        showIosInstall();
+      }
+    });
+  }
+
+  function showIosInstall() {
+    let sheet = document.getElementById("ios-install");
+    if (!sheet) {
+      sheet = document.createElement("dialog");
+      sheet.id = "ios-install";
+      sheet.className = "ios-sheet";
+      sheet.setAttribute("aria-labelledby", "ios-install-title");
+      sheet.innerHTML = `<h2 id="ios-install-title">Add to your Home Screen</h2>
+        <ol>
+          <li>Tap the <b>Share</b> button <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" class="ios-share-icon"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> in Safari's toolbar.</li>
+          <li>Scroll down and tap <b>Add to Home Screen</b>.</li>
+          <li>Tap <b>Add</b>. The tracker then opens from your Home Screen like an app.</li>
+        </ol>
+        <form method="dialog"><button type="submit" class="icon-btn">Got it</button></form>`;
+      sheet.addEventListener("click", (e) => { if (e.target === sheet) sheet.close(); });   // a tap on the backdrop
+      document.body.append(sheet);
+    }
+    if (sheet.showModal) sheet.showModal(); else sheet.setAttribute("open", "");
+  }
+
+  function showUpdateToast(onTap) {
+    if (document.querySelector(".sw-toast")) return;
+    const wrap = document.createElement("div");
+    wrap.className = "sw-toast";
+    wrap.setAttribute("role", "status");
+    wrap.innerHTML = '<button type="button">Update available, tap to refresh</button>';
+    const btn = wrap.querySelector("button");
+    btn.addEventListener("click", () => { btn.disabled = true; btn.textContent = "Updating…"; onTap(); });
+    document.body.append(wrap);
+  }
+
+  // Registered after the page has loaded, so precaching never competes with the first paint.
+  function initServiceWorker() {
+    if (!("serviceWorker" in navigator) || !window.isSecureContext) return;
+    let reloadOnChange = false;   // only after "tap to refresh", never on the first install
+    navigator.serviceWorker.addEventListener("controllerchange", () => {
+      if (reloadOnChange) { reloadOnChange = false; location.reload(); }
+    });
+    const register = () => navigator.serviceWorker.register(new URL("sw.js", ROOT)).then((reg) => {
+      const offer = (worker) => showUpdateToast(() => { reloadOnChange = true; worker.postMessage({ type: "SKIP_WAITING" }); });
+      if (reg.waiting && navigator.serviceWorker.controller) offer(reg.waiting);
+      reg.addEventListener("updatefound", () => {
+        const worker = reg.installing;
+        if (!worker) return;
+        worker.addEventListener("statechange", () => {
+          if (worker.state === "installed" && navigator.serviceWorker.controller) offer(worker);
+        });
+      });
+      // An installed app can stay open for days: look for a new version whenever it comes back.
+      document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "visible") reg.update().catch(() => {});
+      });
+    }).catch((err) => console.warn("Service worker not registered:", err));
+    if (document.readyState === "complete") register();
+    else window.addEventListener("load", register, { once: true });
   }
 
   function initSearch() {
@@ -744,7 +849,7 @@
     const footer = document.getElementById("last-updated");
     if (footer) {
       if (meta && meta.last_updated) {
-        footer.innerHTML = `Data last updated <time datetime="${escapeHtml(meta.last_updated)}">${escapeHtml(fmtDateTime(meta.last_updated))}</time>`;
+        footer.innerHTML = `<time datetime="${escapeHtml(meta.last_updated)}">${escapeHtml(dataUpdatedText(meta.last_updated))}</time>`;
       } else {
         footer.textContent = "Data last updated: unknown";
       }
@@ -886,6 +991,7 @@
   }
 
   function start() {
+    initServiceWorker();
     initTheme();
     initNav();
     initSearch();
@@ -903,7 +1009,7 @@
 
   window.App = {
     PARTIES, STATUSES, COALITION, loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, partyBadge, statusBadge,
-    slugify, parseDate, fmtDate, fmtMonth, fmtDateTime, fmtPrice, fmtMargin, fmtSwing, melbourneToday, daysBetween,
+    slugify, parseDate, fmtDate, fmtMonth, fmtDateTime, dataUpdatedText, fmtPrice, fmtMargin, fmtSwing, melbourneToday, daysBetween,
     hashId, cssVar, currentTheme, showError, copyLink,
     DAY, preparePolls, smoothedSeries, statewideSwing, swingAdjusted, projectSeats, BLOCS, blocOf,
     getWatchlist, setWatchlist, isWatched, toggleWatch, starButton, storageWorks,

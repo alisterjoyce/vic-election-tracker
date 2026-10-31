@@ -1,6 +1,6 @@
 # Vic Election 2026 Tracker: project conventions
 
-A static tracker for the 2026 Victorian state election (polling day Sat 28 Nov 2026). Plain HTML, CSS and vanilla JS with **no build step**, published from `site/` by GitHub Pages. Data lives in JSON files, refreshed daily by `scripts/refresh.py` through a GitHub Action.
+A static tracker for the 2026 Victorian state election (polling day Sat 28 Nov 2026). Plain HTML, CSS and vanilla JS with **no build step**, published from `site/` by GitHub Pages. Data lives in JSON files, refreshed four times a day by `scripts/refresh.py` through a GitHub Action. The site installs as an app (see "Installable app (PWA)").
 
 **Live site: https://alisterjoyce.github.io/vic-election-tracker/** (GitHub Pages, deployed from Actions). Netlify (https://vic2026tracker.netlify.app) was the first host; its free-tier credits ran out on 31 Oct 2026 and it is no longer the primary host. `netlify.toml` stays so the site can still be deployed there.
 
@@ -31,7 +31,8 @@ site/                     # published as-is by GitHub Pages (also deployable to 
   js/sharecard.js         # 1200x630 PNG share cards: candidate (canvas); seat and home headline (HTML rendered with
                           #   html-to-image 1.11.11 from cdnjs, pinned with SRI); Web Share API, else download
   data/*.json             # every file has a "_schema" key describing its fields
-scripts/refresh.py        # daily refresh (see "Data pipeline")
+scripts/refresh.py        # the data refresh, four times a day (see "Data pipeline")
+scripts/data_changed.py   # used by refresh.yml: "changed" only if site/data differs beyond refresh times and source status
 scripts/build_localities.py  # rebuilds data/localities.json from Vicmap Admin polygons (run by hand; needs shapely)
 scripts/build_boundaries.py  # data/geo/{districts,regions}.geojson, topology-preserving simplification (needs shapely, topojson)
 scripts/results_format.py    # the vec-contest-v1 results format (2022 history and 2026 election night)
@@ -42,9 +43,12 @@ scripts/headshot_overrides.json  # {zip file path: candidate id | null} to resol
 scripts/headshot_sources.json    # headshot provenance (image URLs, other listings, match type), kept out of site/data
 scripts/build_fonts.py    # site/fonts/: Archivo and Inter, self-hosted, weight-limited and subset (by hand; needs fonttools, brotli)
 site/fonts/               # WOFF2 per family and subset (latin, latin-ext, vietnamese) plus each OFL licence
+scripts/build_icons.py    # site/icons/ app icons (by hand; needs Pillow)
+site/manifest.webmanifest, site/sw.js, site/icons/   # the installable app (see "Installable app (PWA)")
 site/photos/320/, 160/    # candidate headshots, WebP, each under 25 KB
 site/js/maps.js           # Leaflet: home choropleth with metro inset, seat-page booth map
-.github/workflows/refresh.yml   # 20:00 UTC daily + workflow_dispatch; commits site/data if changed, then deploys to Pages
+.github/workflows/refresh.yml   # 6 am, 10 am, 4 pm, 8 pm Melbourne (cron 0 19,23,5,9 UTC) + workflow_dispatch; commits
+                                #   site/data and deploys to Pages only if the data changed (scripts/data_changed.py)
 .github/workflows/deploy.yml    # deploys site/ to GitHub Pages on every push to main
 ```
 
@@ -82,6 +86,8 @@ Party codes: ALP, LIB, NAT, LNP (joint Coalition), GRN, ONP, IND, ILAB (Independ
 
 ## Data pipeline and merge rules (`scripts/refresh.py`)
 
+Runs four times a day (6 am, 10 am, 4 pm and 8 pm Melbourne time, AEDT; cron `0 19,23,5,9 * * *` in UTC, an hour earlier in Melbourne once daylight saving ends) and by hand. Every run does every step. A run commits and deploys only if `scripts/data_changed.py` finds a real change: `last_updated`, per-source status, news.json's and changelog.json's `updated` and htv.json's `last_checked` change every run and don't count. The footer and the home page's headline card show `meta.last_updated` as "Data updated <date, time> Melbourne time" (`App.dataUpdatedText`).
+
 Order each run: polls → Wikipedia candidates → ABC guide (district pages, then retiring MPs, then the A-Z reconciliation) → Sportsbet → VEC placeholder → VEC how-to-vote register → news → change log → meta.json.
 
 - **Never delete a candidate row.** Rows only change status.
@@ -90,7 +96,7 @@ Order each run: polls → Wikipedia candidates → ABC guide (district pages, th
 - **Supersede rule:** an ABC entry for a party in a seat supersedes every other active row for that party in that seat. The older row is kept with `status: "superseded"`, `superseded_by`, `superseded_on` and a note, and a warning is logged. District pages hide superseded rows.
   - Independents (IND/OTH) can field several people in one seat, so one is only superseded by a near-identical spelling of the same person: first name AND surname must closely match. A shared surname alone never counts.
 - Name matching ignores case, accents, punctuation and titles. An accent-only difference keeps the existing spelling. An unrecognised ABC party label never replaces a known party.
-- **Dead links:** a candidate website the ABC guide links to that has gone dead goes in `ABC_WEBSITE_FIXES` (refresh.py), mapped to the party's live page, so the daily refresh doesn't restore it. A dead photo source page goes in `PAGE_FIXES` (build_headshots.py). Check a "dead" link in a browser off the office network first: the office DNS filter blocks some party sites (e.g. lcvicparty.org.au), which then look dead from here.
+- **Dead links:** a candidate website the ABC guide links to that has gone dead goes in `ABC_WEBSITE_FIXES` (refresh.py), mapped to the party's live page, so the scheduled refresh doesn't restore it. A dead photo source page goes in `PAGE_FIXES` (build_headshots.py). Check a "dead" link in a browser off the office network first: the office DNS filter blocks some party sites (e.g. lcvicparty.org.au), which then look dead from here.
 - **Reconciliation:** every name on the ABC A-Z list is checked against the tracker. Missing names are added under the same rules. A summary goes to `meta.json` → `reconciliation`.
 - **Politeness:** ABC requests are made one per second, with a descriptive User-Agent, and three tries per page. If any page fails three times, the whole ABC step is skipped and no file changes. Check robots.txt before adding any new scraped source.
 - **News:** one request per second, one try per feed or search, and a source that fails is skipped (after 5 failed searches in a row the rest are skipped). Google News RSS and the Geelong Advertiser are excluded because their robots.txt disallows us; Bing News RSS search stands in for Google. Store the headline, outlet, date and link only; article summaries are used for matching to seats and then dropped.
@@ -139,7 +145,7 @@ Typography: **Archivo** (display: headings, brand, big numbers) and **Inter** (b
 - **Phone menu:** at 760px and below the nav is a fixed panel under the header (`--nav-top`, set by `common.js` when it opens) that covers the page; `html.nav-open` locks the page's scroll and dims it. It closes on a tap outside, on Escape and when a link is followed. Leaflet maps sit in `isolation: isolate` containers so their panes stay under it.
 - **Key-dates strip:** on phones it collapses to one button ("Next: 3 Nov, writs issue and roll closes 8 pm", from each event's `short` in `meta.json`) that expands to the three milestones; desktop shows the full strip.
 - In-page nav targets: `index.html#state-map` (the map), `pendulum.html#scenarios`, `upper.html#quota` (asks for a region) and `upper.html#<region>/quota` (that region's quota calculator). Pages scroll to these after rendering; `scroll-margin-top` keeps them clear of the sticky header.
-- Shareable URLs use the hash: `lower.html#bendigo-east`, `upper.html#northern-victoria`, `candidate.html#bendigo-west/brenton-baldwin`, `pendulum.html#swing=3.2`, `poll.html#newspoll-2026-10-22`. Poll ids are `<pollster slug>-<end date>` (refresh.py), so they survive the daily rewrite. Link a name to its profile with `App.profileLink(seat, name)`; `App.loadPeople()` merges candidates, ticket names and MLCs into one list by candidate id (two ids for one name in different seats are never merged).
+- Shareable URLs use the hash: `lower.html#bendigo-east`, `upper.html#northern-victoria`, `candidate.html#bendigo-west/brenton-baldwin`, `pendulum.html#swing=3.2`, `poll.html#newspoll-2026-10-22`. Poll ids are `<pollster slug>-<end date>` (refresh.py), so they survive each refresh's rewrite. Link a name to its profile with `App.profileLink(seat, name)`; `App.loadPeople()` merges candidates, ticket names and MLCs into one list by candidate id (two ids for one name in different seats are never merged).
 - Share cards print the photo credit on the image. Seat pages and the home page have a "Share" button that builds the card on demand, shares it where the browser can share files, and otherwise downloads it. No server is involved.
 - Every `<table>` in `<main>` gets a "Download CSV" button from `common.js` (built from the cells' text; a cell's `data-csv` attribute overrides its text; `data-no-csv` on a table opts out; star columns are dropped).
 - Pages in subfolders (`data/index.html`) work because `common.js` resolves data files and search links against `App.ROOT`, the site root. Never list or link VEC results-feed data (`results_2026/`) on /data/.
@@ -156,6 +162,22 @@ Lighthouse (mobile) on the home, seat, pendulum and candidate pages scores 90+ f
 - Pages paint before scripts run, so anything a script fills in must have its space reserved, or the page jumps (CLS). Each page carries empty placeholders (`#key-dates`, the header's `.search`, the `.nav-toggle` button) and CSS reserves their height; script-filled blocks (`#pref-watch`, `#region-chips`, `.pd-list`, `.tally`, the home card's `.hero-bar`s, the 2022 results, `#district-detail` when the URL has a seat hash) have `min-height`s, as does the key-dates strip at each width (45px one-line summary on phones, 112px at 641-839px where the full strip wraps, 63px wider). Measure before changing a reserved height.
 - The inline head script adds `js` (and on lower.html `has-hash`) to `<html>`; CSS scopes the phone menu and placeholders to `html.js`, so the four fallback nav links still show without JavaScript.
 - Large avatars (the profile photo) load eagerly with `fetchpriority="high"`; list avatars stay `loading="lazy"`.
+
+## Installable app (PWA)
+
+The site installs as an app ("Vic Election") on Android, desktop Chromium and iPhone, and opens offline.
+- `site/manifest.webmanifest`: `start_url` and `scope` are `./`, so it works under `/vic-election-tracker/` and at a root. `id` is `vic-election-tracker`: ids resolve against the origin, and other projects share alisterjoyce.github.io, so `./` would not be unique. `display: standalone`; `theme_color`/`background_color` are the light `--surface`/`--bg`, and each page's two `theme-color` metas (light and dark media) cover dark mode. The theme toggle overwrites them with the chosen theme's `--surface`.
+- Icons (`site/icons/`, from `scripts/build_icons.py`, Pillow): a white ballot tick on `--accent`, the favicon's mark: 192 and 512 ("any", rounded), 512 maskable (full bleed, tick inside the safe zone), 180 `apple-touch-icon`. Every page's head carries the manifest, apple-touch-icon, `theme-color` and the iOS `apple-mobile-web-app-*` metas (add them to any new page).
+- `site/sw.js` (registered by `common.js` after the page's `load` event, scope = the site root):
+  - app shell (`SHELL`: every page, `css/style.css`, every `js/*.js`, the Latin fonts, icons, manifest) precached at install, then stale-while-revalidate;
+  - `data/*.json`, boundaries and 2022 results stale-while-revalidate (pages open at once; the fresh copy arrives behind them);
+  - `data/news.json` network first;
+  - photos and the other font subsets cache first;
+  - other origins: only `cdnjs.cloudflare.com` (pinned, SRI-checked libraries) is cached; nothing else cross-origin is intercepted or cached, and paths that look like login or auth pages never are;
+  - caps: data 160 entries, media 250, libs 20, oldest first. `activate` deletes every `vet-*` cache that isn't the current version.
+- **Bump `VERSION` in `site/sw.js`** (e.g. `"v1"` to `"v2"`) whenever you change HTML, CSS or JS, or add or remove a file in `SHELL` (keep `SHELL` in step with the files: a missing file fails the install). The new worker precaches the new shell, waits, and the page shows "Update available, tap to refresh"; a tap activates it and reloads. Data refreshes need no bump. Without a bump, stale-while-revalidate still picks up changed shell files a visit later, but a page and a shared script can briefly be from different versions.
+- "Install app" is the last item in the About menu group: shown when the browser fires `beforeinstallprompt` (Android, desktop Chromium; it opens the browser's install prompt) and on iPhone/iPad (it opens a sheet: Share, then Add to Home Screen). Hidden when running installed (`display-mode: standalone` or `navigator.standalone`).
+- Share images, CSV downloads, Find my seat (geolocation) and the Leaflet maps were tested in an installed, launched copy in headless Chromium. Lighthouse 11's PWA audit (removed in Lighthouse 12) scores 100.
 
 ## Working on the project
 - Preview: `python -m http.server 8000 --directory site`.

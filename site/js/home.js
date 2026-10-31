@@ -364,6 +364,10 @@
         loadJSON("meta"), loadJSON("districts"), loadJSON("regions"), loadJSON("polls"), loadJSON("seat_odds").catch(() => null),
       ]);
       renderCountdown(meta);
+      if (meta.last_updated) {
+        document.getElementById("hero-updated").innerHTML =
+          `<time datetime="${escapeHtml(meta.last_updated)}">${escapeHtml(App.dataUpdatedText(meta.last_updated))}</time>`;
+      }
       renderHero(meta, districtData.districts, pollData, odds);
       renderWatch(districtData.districts, odds);
       renderSeats(meta, districtData.districts, regionData.regions);

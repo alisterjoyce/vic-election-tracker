@@ -199,7 +199,7 @@
       <section class="seat-news" aria-labelledby="news-h">
         <h3 id="news-h">In the news</h3>
         <div id="seat-news">${newsBlock(d)}</div>
-        <p class="muted small">Headlines and links only, from news searches and publishers' feeds that mention ${escapeHtml(d.name)} or its MP. Updated daily.</p>
+        <p class="muted small">Headlines and links only, from news searches and publishers' feeds that mention ${escapeHtml(d.name)} or its MP. Updated four times a day.</p>
       </section>
       <section class="r22" id="r22" aria-labelledby="r22-h">
         <h3 id="r22-h">How it voted in 2022</h3>

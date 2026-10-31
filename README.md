@@ -1,6 +1,6 @@
 # Vic Election 2026 Tracker
 
-A static tracker for the 2026 Victorian state election (polling day Saturday 28 November 2026). It's plain HTML, CSS and vanilla JS with no build step, hosted on GitHub Pages. A daily GitHub Action refreshes the data and redeploys.
+A static tracker for the 2026 Victorian state election (polling day Saturday 28 November 2026). It's plain HTML, CSS and vanilla JS with no build step, hosted on GitHub Pages. A GitHub Action refreshes the data four times a day and redeploys when it changes. It installs as an app on phones and desktops and works offline.
 
 **Live site: https://alisterjoyce.github.io/vic-election-tracker/**
 
@@ -55,12 +55,17 @@ site/                  # published by GitHub Pages
     headshots.json     # candidate photos: files, source credit, licence note (scripts/build_headshots.py)
   photos/320/, 160/    # candidate headshots (WebP)
   fonts/               # Archivo and Inter, self-hosted (SIL Open Font License; scripts/build_fonts.py)
+  icons/               # app icons (scripts/build_icons.py)
+  manifest.webmanifest # the installable app's manifest
+  sw.js                # service worker: offline shell, cached data, update prompt
 scripts/refresh.py     # data refresh
 scripts/build_localities.py  # rebuilds localities.json from Vicmap boundaries (by hand; needs shapely)
 scripts/build_boundaries.py  # map boundaries (by hand; needs shapely + topojson)
 scripts/build_results_2022.py  # 2022 results by voting centre (by hand, one-off)
 scripts/build_headshots.py  # headshot zip -> WebP photos + headshots.json (by hand; needs Pillow)
 scripts/build_fonts.py      # downloads, trims and subsets the web fonts into site/fonts/ (by hand; needs fonttools, brotli)
+scripts/build_icons.py      # draws the app icons into site/icons/ (by hand; needs Pillow)
+scripts/data_changed.py     # tells the refresh workflow whether the data really changed
 scripts/vec_feed.py    # converts the VEC election-night media feed to the same format; --selftest on the VEC samples
 CLAUDE.md              # project conventions: schemas, merge rules, design system, formats
 .github/workflows/refresh.yml
@@ -69,7 +74,7 @@ netlify.toml
 
 Each JSON file has a `_schema` key that describes its fields.
 
-**Data sources:** the district list and each district's region come from the [VEC district](https://www.vec.vic.gov.au/electoral-boundaries/state-districts) and region pages. Sitting MPs, margins, retiring flags, candidates and upper-house tickets were seeded from a research report dated 30 October 2026, with candidate status `endorsed` or `reported` as the report marks it. The daily refresh then adds names from Wikipedia and makes the ABC election guide the primary source for the lower house (see below). No one is VEC-nominated until nominations close at noon on 9 November. Districts with `needs_check: true` are ones whose region the report flagged as uncertain.
+**Data sources:** the district list and each district's region come from the [VEC district](https://www.vec.vic.gov.au/electoral-boundaries/state-districts) and region pages. Sitting MPs, margins, retiring flags, candidates and upper-house tickets were seeded from a research report dated 30 October 2026, with candidate status `endorsed` or `reported` as the report marks it. The scheduled refresh then adds names from Wikipedia and makes the ABC election guide the primary source for the lower house (see below). No one is VEC-nominated until nominations close at noon on 9 November. Districts with `needs_check: true` are ones whose region the report flagged as uncertain.
 
 If a file is ever reset to placeholder rows, set `meta.json` → `sample_data.<name>` to `true` to show the "sample data" banner. `refresh.py` clears the `polls` flag itself after a successful fetch.
 
@@ -139,14 +144,24 @@ Then visit http://localhost:8000.
 
 ## Automation
 
-`.github/workflows/refresh.yml` runs every day at 20:00 UTC (7am AEDT) and can also be run by hand from the Actions tab (`workflow_dispatch`). It installs `requirements.txt`, runs `scripts/refresh.py`, and commits and pushes `site/data` if anything changed; its `deploy` job then publishes `site/` to GitHub Pages. Pushes made by that job's token don't start other workflows, which is why it deploys itself.
+`.github/workflows/refresh.yml` runs four times a day, at 6 am, 10 am, 4 pm and 8 pm Melbourne time (cron `0 19,23,5,9 * * *` in UTC; AEDT, so an hour earlier in Melbourne once daylight saving ends), and can also be run by hand from the Actions tab (`workflow_dispatch`). Every run does everything: Wikipedia polls and candidates, the full ABC pass and A-Z reconciliation (one request a second), news, the Sportsbet attempt, the how-to-vote register and the change log. It commits and pushes `site/data` only if `scripts/data_changed.py` reports a real change (refresh times and source status alone don't count), and only then does its `deploy` job publish `site/` to GitHub Pages. Pushes made by that job's token don't start other workflows, which is why it deploys itself. The footer and the home page show "Data updated <time> Melbourne time".
+
+Google News isn't used: its robots.txt disallows automated access, so news comes from a Bing News search and publishers' RSS feeds.
+
+## Installable app
+
+The site is a Progressive Web App: `site/manifest.webmanifest` (relative `start_url` and `scope`, so it works under the Pages base path or at a root), icons in `site/icons/`, and a service worker, `site/sw.js`. Android and desktop Chromium offer "Install app" in the About menu; on iPhone that item explains Share, then Add to Home Screen.
+
+The service worker precaches the app shell (pages, CSS, JS, Latin fonts, icons) and serves it stale-while-revalidate, serves the JSON data stale-while-revalidate (pages open instantly, the fresh copy loads behind them), fetches `news.json` network first, caches photos, and caches only the pinned cdnjs libraries from other origins. Caches are capped, and old versions are deleted when a new worker activates.
+
+**Bumping the cache version:** change `const VERSION = "v1";` in `site/sw.js` (to `"v2"` and so on) whenever you change HTML, CSS or JS, and keep its `SHELL` list in step with the files. Installed copies then download the new shell and show "Update available, tap to refresh". Data refreshes don't need a bump.
 
 ## Deploy
 
 GitHub Pages serves the site at https://alisterjoyce.github.io/vic-election-tracker/, deployed by GitHub Actions (Settings → Pages → Source: GitHub Actions):
 
 - `.github/workflows/deploy.yml` publishes `site/` on every push to `main` (and by hand from the Actions tab).
-- `.github/workflows/refresh.yml` deploys after each daily data refresh.
+- `.github/workflows/refresh.yml` deploys after each scheduled refresh that changed the data.
 
 Pages serves the site under `/vic-election-tracker/`, so every path in the site is relative; it also works at a domain's root (a custom domain, or Netlify). To check paths, serve `site/` under a prefix locally and click around.
 

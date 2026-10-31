@@ -63,7 +63,7 @@ DEFAULT_DATA_DIR = ROOT / "site" / "data"
 POLLS_URL = "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election"
 CANDIDATES_URL = "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election"
 MELBOURNE = ZoneInfo("Australia/Melbourne")
-USER_AGENT = "vic-election-tracker/1.0 (daily poll refresh; python-requests)"
+USER_AGENT = "vic-election-tracker/1.0 (poll refresh four times a day; python-requests)"
 TIMEOUT = 30
 
 # Wikipedia column header -> party code used in polls.json
@@ -802,10 +802,10 @@ ABC_GUIDE = "https://www.abc.net.au/news/elections/vic/2026/guide/"
 ABC_ELECTORATES_URL = ABC_GUIDE + "electorates"
 ABC_RETIRING_URL = ABC_GUIDE + "retiring-mps"
 ABC_AZ_URL = ABC_GUIDE + "candidates"   # A-Z list of every lower-house candidate
-ABC_USER_AGENT = ("vic-election-tracker/1.0 (static Victorian election tracker; daily refresh, "
+ABC_USER_AGENT = ("vic-election-tracker/1.0 (static Victorian election tracker; refresh four times a day, "
                   "1 request/second; https://github.com/alisterjoyce/vic-election-tracker)")
 # Candidate websites the ABC guide links to that are dead, mapped to the party's live page (checked by hand).
-# Applied as each ABC card is read, so the daily refresh doesn't put the dead link back.
+# Applied as each ABC card is read, so the scheduled refresh doesn't put the dead link back.
 ABC_WEBSITE_FIXES = {
     "https://www.familyfirstparty.org.au/batres-croes_2026": "https://www.familyfirstparty.org.au/croes_2026",
 }
@@ -1373,7 +1373,7 @@ VEC_HTV_URL = "https://www.vec.vic.gov.au/candidates-and-parties/become-a-state-
 HTV_OPENS = "2026-11-10"
 HTV_SCHEMA = {
     "description": "How-to-vote cards registered with the VEC for the 2026 election. scripts/refresh.py checks the VEC's "
-                   "register daily and records each card; the preference order on each card is entered by hand from the "
+                   "register four times a day and records each card; the preference order on each card is entered by hand from the "
                    "card PDF and is never overwritten.",
     "fields": {
         "status": "not_open (before registration opens) | open (register live, cards listed) | open_no_cards",
@@ -1508,7 +1508,7 @@ NEWS_FEEDS = [
     ("Geelong Advertiser", "https://www.geelongadvertiser.com.au/feed", False),   # robots.txt prohibits: always skipped
 ]
 NEWS_SCHEMA = {
-    "description": "Election news per district and statewide, refreshed daily by scripts/refresh.py from Bing News RSS searches "
+    "description": "Election news per district and statewide, refreshed four times a day by scripts/refresh.py from Bing News RSS searches "
                    "and publishers' RSS feeds. Headline, outlet, date and link only; article text is never stored.",
     "fields": {
         "updated": "ISO UTC time of the last refresh",

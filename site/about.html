@@ -6,6 +6,14 @@
   <title>About and Methodology · Vic Election 2026</title>
   <meta name="description" content="How the 2026 Victorian election tracker works: what each number means, data sources and refresh times, limitations, corrections and credits.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d4ed8'/%3E%3Cpath d='M8 17l5 5 11-12' stroke='white' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#171b21" media="(prefers-color-scheme: dark)">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Vic Election">
   <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
   <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -58,7 +66,7 @@
         <dt>Candidate status</dt>
         <dd><strong>VEC-nominated</strong>: on the Victorian Electoral Commission's list after nominations close. <strong>Endorsed</strong>: preselected or endorsed by the party, or listed in the ABC guide. <strong>Reported</strong>: reported but not independently confirmed. <strong>Announced</strong>: listed on Wikipedia and added automatically. <strong>Superseded</strong>: replaced by a newer ABC entry for the same party and seat. These rows are kept in the data but hidden on the page. <strong>Withdrawn</strong>: no longer standing.</dd>
         <dt>"N candidates tracked"</dt>
-        <dd>The count of active candidates in both houses, after the daily check of every name on the ABC's A-Z candidate list. Hover over the footer line for the lower-house comparison.</dd>
+        <dd>The count of active candidates in both houses, after each refresh's check of every name on the ABC's A-Z candidate list. Hover over the footer line for the lower-house comparison.</dd>
         <dt>The map</dt>
         <dd>Districts coloured by the current holder; by margin band (the ABC's Marginal, Safe and Very Safe, shaded in the leading party's colour); by Sportsbet favourite (dashed outline for joint favourites); and, once counting starts on 28 Nov, by result. The Regions view shades each upper-house region by the party with the most current MLCs. The Melbourne inset shows the small metropolitan seats. Boundaries are simplified to about 60 m for speed.</dd>
         <dt>How it voted in 2022</dt>
@@ -70,7 +78,7 @@
         <dt>Quota calculator</dt>
         <dd>Each region elects 5 members; a quota is one-sixth of the formal vote plus one (16.7%). Since 2026 there are no group voting tickets and above-the-line voters number at least 5 boxes, so preferences go only where voters send them and some run out (exhaust). The calculator treats each party as one group: whole quotas elect members, then the lowest party is excluded, a set share of its votes exhausts (you choose it) and the rest goes to parties of the same leaning in proportion to their votes. "Others" in a poll is several small parties, so it can't win as a group. The last-seat margin is the gap between the last party elected and the runner-up when the race was decided.</dd>
         <dt>Preference watch</dt>
-        <dd>From 10 Nov, parties and candidates register how-to-vote cards with the VEC. The tracker records each registered card daily and links to it; the preference order printed on the card is entered by hand. Two decisions are flagged: where the Liberal card puts Labor and the Greens in the seven seats Labor and the Greens contest, and where One Nation sends its preferences. Voters can number the boxes however they like; cards are only a recommendation.</dd>
+        <dd>From 10 Nov, parties and candidates register how-to-vote cards with the VEC. The tracker records each registered card at every refresh and links to it; the preference order printed on the card is entered by hand. Two decisions are flagged: where the Liberal card puts Labor and the Greens in the seven seats Labor and the Greens contest, and where One Nation sends its preferences. Voters can number the boxes however they like; cards are only a recommendation.</dd>
         <dt>News</dt>
         <dd>Headlines that mention a district or its sitting MP, from a Bing News search and from publishers' own feeds, newest first. The tracker stores only the headline, outlet, date and link, never the story. Matching is automatic, so the odd unrelated story can slip in. Google News and the Geelong Advertiser aren't used because their sites ask automated tools not to collect from them.</dd>
         <dt>Downloads and reuse</dt>
@@ -86,7 +94,7 @@
 
     <section class="card" id="sources" aria-labelledby="sources-h">
       <h2 id="sources-h">Sources and refresh times</h2>
-      <p>An automated refresh runs every day at 20:00 UTC (7 am in Melbourne during daylight saving) and publishes any changes. The footer shows when the data last changed.</p>
+      <p>Data refreshes four times a day, at 6 am, 10 am, 4 pm and 8 pm Melbourne time: polls and candidates from Wikipedia, the full ABC candidate check, news, betting and how-to-vote cards. Changes are published straight away. The footer and the home page show when the data last changed, in Melbourne time.</p>
       <div class="table-scroll">
         <table>
           <thead><tr><th>Source</th><th>Used for</th><th>Refresh</th></tr></thead>

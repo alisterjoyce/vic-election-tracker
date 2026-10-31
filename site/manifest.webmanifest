@@ -1,0 +1,20 @@
+{
+  "id": "vic-election-tracker",
+  "name": "Vic Election 2026 Tracker",
+  "short_name": "Vic Election",
+  "description": "Polls, seats, candidates and results for the 2026 Victorian state election.",
+  "lang": "en-AU",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#ffffff",
+  "background_color": "#f6f7f9",
+  "categories": ["news", "politics"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

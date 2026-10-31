@@ -1,6 +1,6 @@
 {
   "_schema": {
-    "description": "Election news per district and statewide, refreshed daily by scripts/refresh.py from Bing News RSS searches and publishers' RSS feeds. Headline, outlet, date and link only; article text is never stored.",
+    "description": "Election news per district and statewide, refreshed four times a day by scripts/refresh.py from Bing News RSS searches and publishers' RSS feeds. Headline, outlet, date and link only; article text is never stored.",
     "fields": {
       "updated": "ISO UTC time of the last refresh",
       "statewide": "Up to 25 latest items about the state election: [{title, outlet, published (ISO UTC), url}]",

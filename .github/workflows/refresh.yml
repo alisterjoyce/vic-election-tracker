@@ -2,8 +2,9 @@ name: Refresh data
 
 on:
   schedule:
-    # 20:00 UTC = 7am AEDT / 6am AEST in Melbourne
-    - cron: "0 20 * * *"
+    # Four full refreshes a day: 6 am, 10 am, 4 pm and 8 pm Melbourne time (AEDT, UTC+11).
+    # When daylight saving ends (5 Apr 2027) these run an hour earlier in Melbourne.
+    - cron: "0 19,23,5,9 * * *"
   workflow_dispatch:
 
 permissions:
@@ -19,6 +20,8 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     timeout-minutes: 20   # ABC pages (~3 min) and news searches (~5 min) at one request a second
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
     steps:
       - uses: actions/checkout@v5
 
@@ -34,21 +37,26 @@ jobs:
         run: python scripts/refresh.py
 
       - name: Commit and push if data changed
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add site/data
-          if git diff --cached --quiet; then
-            echo "No data changes."
+          # Refresh times and source status change on every run; commit only when the data itself did.
+          if [ "$(python scripts/data_changed.py)" = "unchanged" ]; then
+            echo "No data changes (only refresh times and source status)."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
+          git add site/data
           git commit -m "Refresh data $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
 
   # Publish the refreshed site to GitHub Pages. The refresh job pushes with GITHUB_TOKEN, which
-  # doesn't trigger deploy.yml, so this job deploys the new data itself.
+  # doesn't trigger deploy.yml, so this job deploys the new data itself (only when it changed).
   deploy:
     needs: refresh
+    if: needs.refresh.outputs.changed == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     concurrency:
