@@ -151,4 +151,5 @@ Lighthouse (mobile) on the home, seat, pendulum and candidate pages scores 95-10
 - Preview: `python -m http.server 8000 --directory site`.
 - Test refresh.py against a copy, never the live data: `python scripts/refresh.py --data-dir <copy-of-site/data>`.
 - Commit with the repo-local identity (GitHub noreply address). The workflow's bot commits data refreshes; pull before committing.
+- **Batch related changes into fewer commits: one push per task, not per file.** Every push to `main` triggers a Pages deploy, so finish and test the whole task first, then commit it together and push once.
 - After changing refresh.py or data, run the workflow (`gh workflow run refresh.yml --ref main`) and check its log.
