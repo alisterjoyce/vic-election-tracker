@@ -263,14 +263,6 @@
     if (await redirectDistrictHash()) return;
     window.addEventListener("hashchange", redirectDistrictHash);
     initMeasureToggle();
-    const mapRoot = document.getElementById("state-map");
-    if (mapRoot && window.L && App.Maps) {
-      App.Maps.homeMap(mapRoot)
-        .then(() => { if (location.hash === "#state-map") mapRoot.scrollIntoView(); })   // the nav's "Map" link
-        .catch((err) => App.showError(mapRoot.querySelector("[data-map=main]"), err));
-    } else if (mapRoot) {
-      mapRoot.querySelector("[data-map=main]").innerHTML = '<p class="empty">The map library failed to load.</p>';
-    }
     try {
       const [meta, districtData, regionData, pollData] = await Promise.all([
         loadJSON("meta"), loadJSON("districts"), loadJSON("regions"), loadJSON("polls"),
@@ -284,6 +276,16 @@
       document.addEventListener("themechange", renderChart);
     } catch (err) {
       window.App.showError(document.getElementById("polls-table"), err);
+    }
+    const mapRoot = document.getElementById("state-map");
+    if (mapRoot && App.Maps) {
+      // Leaflet and the boundaries are big and the map is below the fold: fetch them once the figures above have painted.
+      App.afterPaint(() => App.loadLib("leaflet"))
+        .then(() => App.Maps.homeMap(mapRoot), () => {
+          mapRoot.querySelector("[data-map=main]").innerHTML = '<p class="empty">The map library failed to load.</p>';
+        })
+        .then(() => { if (location.hash === "#state-map") mapRoot.scrollIntoView(); })   // the nav's "Map" link
+        .catch((err) => App.showError(mapRoot.querySelector("[data-map=main]"), err));
     }
     Promise.all([loadJSON("changelog"), loadJSON("districts"), loadJSON("regions")]).then(([cl, dd, rd]) => {
       const names = {};

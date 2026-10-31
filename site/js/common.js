@@ -839,6 +839,43 @@
     }
   }
 
+  // Libraries a page only needs after its first paint (maps, share images), loaded on demand from
+  // cdnjs with SRI, once per page. Keeping them off the critical path lets the content paint first.
+  const LIBS = {
+    leaflet: {
+      css: ["https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css", "sha384-c6Rcwz4e4CITMbu/NBmnNS8yN2sC3cUElMEMfP3vqqKFp7GOYaaBBCqmaWBjmkjb"],
+      js: ["https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js", "sha384-NElt3Op+9NBMCYaef5HxeJmU4Xeard/Lku8ek6hoPTvYkQPh3zLIrJP7KiRocsxO"],
+    },
+    htmlToImage: {
+      js: ["https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.11/html-to-image.min.js", "sha512-7tWCgq9tTYS/QkGVyKrtLpqAoMV9XIUxoou+sPUypsaZx56cYR/qio84fPK9EvJJtKvJEwt7vkn6je5UVzGevw=="],
+    },
+  };
+  const libs = {};
+  function loadLib(name) {
+    if (!libs[name]) {
+      const add = (tag, props) => new Promise((resolve, reject) => {
+        const el = Object.assign(document.createElement(tag), props, { crossOrigin: "anonymous", referrerPolicy: "no-referrer" });
+        el.onload = resolve;
+        el.onerror = () => reject(new Error(`The ${name} library failed to load`));
+        document.head.append(el);
+      });
+      const { css, js } = LIBS[name];
+      libs[name] = Promise.all([
+        css && add("link", { rel: "stylesheet", href: css[0], integrity: css[1] }),
+        add("script", { src: js[0], integrity: js[1] }),
+      ]).catch((err) => { delete libs[name]; throw err; });
+    }
+    return libs[name];
+  }
+
+  // Runs fn once the browser has painted what's on the page now and its web fonts have arrived
+  // (for work that can wait: fetching it any sooner would hold up the fonts).
+  function afterPaint(fn) {
+    return new Promise((resolve) => requestAnimationFrame(() => setTimeout(resolve, 0)))
+      .then(() => document.fonts && document.fonts.ready)
+      .then(() => fn && fn());
+  }
+
   function start() {
     initTheme();
     initNav();
@@ -849,7 +886,7 @@
     });
   }
   document.addEventListener("DOMContentLoaded", () => {
-    // Chart.js loads after this file, so its defaults are set once every script has run.
+    // Chart.js loads after this file, so its defaults are set once every deferred script has run.
     if (window.Chart) {
       Chart.defaults.font.family = cssVar("--font-body") || "system-ui, sans-serif";
     }
@@ -863,7 +900,7 @@
     getWatchlist, setWatchlist, isWatched, toggleWatch, starButton, storageWorks,
     buildSearchIndex, searchItems,
     candidateId, givenFirst, loadHeadshots, avatar, photoCredits, initials, inkFor, newsList,
-    ROOT, describeChange, tableToCsv,
+    ROOT, describeChange, tableToCsv, loadLib, afterPaint,
     profileHref, profileLink, isPlaceholder, buildPeople, loadPeople,
   };
 

@@ -146,13 +146,14 @@
 
   async function init() {
     try {
-      const [rd, dd, cd] = await Promise.all([loadJSON("regions"), loadJSON("districts"), loadJSON("candidates")]);
+      const [rd, dd, cd, shotData, cp, htvData] = await Promise.all([loadJSON("regions"), loadJSON("districts"), loadJSON("candidates"),
+        App.loadHeadshots(), loadJSON("council_polls").then((d) => d.polls || []).catch(() => []), loadJSON("htv").catch(() => null)]);
       regions = rd.regions.slice().sort((a, b) => a.name.localeCompare(b.name));
       districts = dd.districts;
       councilCandidates = (cd.candidates || []).filter((c) => c.region && !c.district);
-      shots = await App.loadHeadshots();
-      councilPolls = await loadJSON("council_polls").then((d) => d.polls || []).catch(() => []);
-      htv = await loadJSON("htv").catch(() => null);
+      shots = shotData;
+      councilPolls = cp;
+      htv = htvData;
       document.getElementById("region-chips").addEventListener("click", (e) => {
         const btn = e.target.closest("button[data-id]");
         if (btn) location.hash = quotaMode ? `${btn.dataset.id}/quota` : btn.dataset.id;

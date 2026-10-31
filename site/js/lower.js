@@ -12,9 +12,9 @@
   let regionsById = {};
   // Seat outlook inputs: statewide swing, MRP models, betting, seat polls.
   let outlook = { swing: null, models: null, odds: null, seatPolls: null };
-  let shots = {};   // candidate id -> headshot (data/headshots.json)
+  let shots = {};   // candidate id -> headshot (data/headshots.json); filled in after the first paint
   let htv = null;   // data/htv.json (how-to-vote cards)
-  let news = null;  // data/news.json (headlines per seat)
+  let news;         // data/news.json (headlines per seat); undefined until loaded, null if it failed
 
   const $ = (id) => document.getElementById(id);
 
@@ -172,9 +172,7 @@
     }
     document.title = `${d.name} · Vic Election 2026`;
     const region = regionsById[d.region];
-    // Superseded rows stay in candidates.json for the record but aren't shown.
-    const cands = candidates.filter((c) => c.district === d.id && c.status !== "superseded").sort(candidateSort);
-    const anyBallot = cands.some((c) => c.ballot_position != null);
+    const cands = seatCands(d);
 
     el.hidden = false;
     el.innerHTML = `
@@ -196,7 +194,34 @@
       ${d.notes ? `<p>${escapeHtml(d.notes)}</p>` : ""}
       ${d.region_note ? `<p class="muted small">${escapeHtml(d.region_note)}</p>` : ""}
       <h3>Candidates</h3>
-      ${cands.length ? `
+      <div id="seat-cands">${candidatesBlock(d, cands)}</div>
+      ${App.Htv ? App.Htv.section(htv, { district: d.id, margin: d.margin, parties: cands.filter((c) => !isInactive(c)).map((c) => c.party) }) : ""}
+      <section class="seat-news" aria-labelledby="news-h">
+        <h3 id="news-h">In the news</h3>
+        <div id="seat-news">${newsBlock(d)}</div>
+        <p class="muted small">Headlines and links only, from news searches and publishers' feeds that mention ${escapeHtml(d.name)} or its MP. Updated daily.</p>
+      </section>
+      <section class="r22" id="r22" aria-labelledby="r22-h">
+        <h3 id="r22-h">How it voted in 2022</h3>
+        <p class="empty">Loading 2022 results…</p>
+      </section>`;
+    $("copy-link").addEventListener("click", (e) => copyLink(e.currentTarget));
+    App.ShareCard.shareButton($("share-seat"), async () => App.ShareCard.seatCard({
+      seat: d, cands: cands.filter((c) => !isInactive(c)), shots: await App.loadHeadshots(), classification: seatLabel(d),
+      odds: outlook.odds && (outlook.odds.seats || []).find((x) => x.district === d.id),
+      oddsDate: outlook.odds && outlook.odds.date_checked,
+    }));
+    renderResults2022(d);
+  }
+
+  function seatCands(d) {
+    // Superseded rows stay in candidates.json for the record but aren't shown.
+    return candidates.filter((c) => c.district === d.id && c.status !== "superseded").sort(candidateSort);
+  }
+
+  function candidatesBlock(d, cands) {
+    const anyBallot = cands.some((c) => c.ballot_position != null);
+    return `${cands.length ? `
         <ul class="people">
           ${cands.map((c) => `
             <li class="${isInactive(c) ? "is-withdrawn" : ""}">
@@ -211,24 +236,12 @@
         </ul>
         <p class="muted small" style="margin-top:8px">Last checked ${escapeHtml(fmtDate(cands.map((c) => c.updated).filter(Boolean).sort().pop()))}</p>
         ${App.photoCredits(shots, cands.map((c) => [d.id, c.name]))}`
-        : '<p class="empty">No candidates recorded yet.</p>'}
-      ${App.Htv ? App.Htv.section(htv, { district: d.id, margin: d.margin, parties: cands.filter((c) => !isInactive(c)).map((c) => c.party) }) : ""}
-      <section class="seat-news" aria-labelledby="news-h">
-        <h3 id="news-h">In the news</h3>
-        ${App.newsList(news && news.seats && news.seats[d.id], { more: 5 })}
-        <p class="muted small">Headlines and links only, from news searches and publishers' feeds that mention ${escapeHtml(d.name)} or its MP. Updated daily.</p>
-      </section>
-      <section class="r22" id="r22" aria-labelledby="r22-h">
-        <h3 id="r22-h">How it voted in 2022</h3>
-        <p class="empty">Loading 2022 results…</p>
-      </section>`;
-    $("copy-link").addEventListener("click", (e) => copyLink(e.currentTarget));
-    App.ShareCard.shareButton($("share-seat"), async () => App.ShareCard.seatCard({
-      seat: d, cands: cands.filter((c) => !isInactive(c)), shots, classification: seatLabel(d),
-      odds: outlook.odds && (outlook.odds.seats || []).find((x) => x.district === d.id),
-      oddsDate: outlook.odds && outlook.odds.date_checked,
-    }));
-    renderResults2022(d);
+        : '<p class="empty">No candidates recorded yet.</p>'}`;
+  }
+
+  function newsBlock(d) {
+    return news === undefined ? '<p class="muted small">Loading headlines…</p>'
+      : App.newsList(news && news.seats && news.seats[d.id], { more: 5 });
   }
 
   /* ---------- How it voted in 2022 (vec-contest-v1 format, shared with the 2026 feed) ---------- */
@@ -240,6 +253,8 @@
 
   async function renderResults2022(d) {
     const el = $("r22");
+    // The booth map is below the fold: fetch Leaflet once the seat panel has painted.
+    const leaflet = App.afterPaint(() => App.loadLib("leaflet")).catch(() => null);
     let r;
     try {
       r = await loadJSON(`results_2022/${d.id}`);
@@ -317,6 +332,8 @@
         </table></div>
       </details>`;
 
+    await leaflet;
+    if (hashId() !== d.id || !el.isConnected) return;   // user moved on
     if (window.L && App.Maps) {
       const note = $("booth-note");
       const mapped = await App.Maps.boothMap($("booth-map"), d.id, r);
@@ -340,17 +357,30 @@
     if (d) $("district-detail").scrollIntoView({ block: "nearest" });
   }
 
+  // Photos and headlines: fetched after the first paint, then swapped into the open seat's panel
+  // (avatars keep their size, so nothing moves).
+  function loadExtras() {
+    Promise.all([App.loadHeadshots(), loadJSON("news").catch((err) => { console.warn(err); return null; })]).then(([shotData, newsData]) => {
+      shots = shotData;
+      news = newsData;
+      const d = districts.find((x) => x.id === hashId());
+      if (d && $("seat-cands")) {
+        $("seat-cands").innerHTML = candidatesBlock(d, seatCands(d));
+        $("seat-news").innerHTML = newsBlock(d);
+      }
+    });
+  }
+
   async function init() {
     try {
       const optional = (name) => loadJSON(name).catch((err) => { console.warn(err); return null; });
-      const [dd, cd, rd, meta, pollData, models, odds, seatPolls, htvData, newsData] = await Promise.all([
+      // What the seat panel needs, in parallel. Photos and headlines wait until it has painted.
+      const [dd, cd, rd, meta, pollData, models, odds, seatPolls, htvData] = await Promise.all([
         loadJSON("districts"), loadJSON("candidates"), loadJSON("regions"),
         optional("meta"), optional("polls"), optional("seat_models"), optional("seat_odds"), optional("seat_polls"),
-        optional("htv"), optional("news"),
+        optional("htv"),
       ]);
       htv = htvData;
-      news = newsData;
-      shots = await App.loadHeadshots();
       outlook = { swing: App.statewideSwing(meta, pollData), models, odds, seatPolls };
       districts = dd.districts.slice().sort((a, b) => a.name.localeCompare(b.name));
       candidates = cd.candidates || [];
@@ -376,10 +406,13 @@
       });
       window.addEventListener("hashchange", onHashChange);
       onHashChange();
+      App.afterPaint(loadExtras);
     } catch (err) {
       window.App.showError($("district-list"), err);
     }
   }
 
-  document.addEventListener("DOMContentLoaded", init);
+  // Scripts are deferred, so the page is usually parsed by now: start loading the seat's data at once.
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
+  else init();
 })();

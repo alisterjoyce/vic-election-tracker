@@ -39,6 +39,9 @@ scripts/build_results_2022.py  # data/results_2022/ from VEC 2022 results by vot
 scripts/vec_feed.py       # VEC media feed (XML) -> vec-contest-v1; --selftest <samples folder>
 scripts/build_headshots.py   # headshot zip -> site/photos/{320,160}/*.webp + data/headshots.json (by hand; needs Pillow)
 scripts/headshot_overrides.json  # {zip file path: candidate id | null} to resolve photos by hand
+scripts/headshot_sources.json    # headshot provenance (image URLs, other listings, match type), kept out of site/data
+scripts/build_fonts.py    # site/fonts/: Archivo and Inter, self-hosted, weight-limited and subset (by hand; needs fonttools, brotli)
+site/fonts/               # WOFF2 per family and subset (latin, latin-ext, vietnamese) plus each OFL licence
 site/photos/320/, 160/    # candidate headshots, WebP, each under 25 KB
 site/js/maps.js           # Leaflet: home choropleth with metro inset, seat-page booth map
 .github/workflows/refresh.yml   # 20:00 UTC daily + workflow_dispatch; commits site/data if changed, then deploys to Pages
@@ -70,7 +73,7 @@ Each file's `_schema` is the authoritative field list. Keep it in sync when addi
 | `geo/districts.geojson`, `geo/regions.geojson` | Simplified boundaries (keep both under 1.5 MB together) | `scripts/build_boundaries.py` (Vicmap Admin; the VEC only offers PDF/PNG maps) |
 | `results_2022/<district>.json`, `results_2022/index.json` | 2022 results by voting centre in vec-contest-v1 format, plus swings from notional 2018 | `scripts/build_results_2022.py` (one-off) |
 | `results_2026/index.json` (+ per-district files on election night) | 2026 results in the same format; empty until 28 Nov, when the home map's Result mode switches on | `scripts/vec_feed.py` |
-| `headshots.json` | Candidate photos: id, file (320px) and files {320,160}, source {credit, page, image_url}, licence note, match, date_added | `scripts/build_headshots.py` |
+| `headshots.json` | Candidate photos: id, name, seat, files {320,160}, source {credit, page}, licence note, date_added. Only what pages show: provenance is in `scripts/headshot_sources.json` | `scripts/build_headshots.py` |
 | `localities.json` | Suburb/locality and postcode → district(s) with area shares, for search | `scripts/build_localities.py` (Vicmap Admin boundaries; the VEC publishes no downloadable locality list) |
 
 Candidate ids (headshots, avatars) are `<district-or-region id>/<slug of "Given Surname">`, e.g. `bendigo-west/brenton-baldwin`; `App.candidateId(seat, name)` builds them and handles "Surname, Given". Show people with `App.avatar(shots, seat, name, party)`: the photo where `headshots.json` has one, else party-colour initials. Every list that shows photos ends with `App.photoCredits(...)` so each photo's source is credited.
@@ -121,7 +124,7 @@ Party colours (ABC convention). Dark-mode values are lightened for contrast on d
 | Family First (FF) | `--p-ff` | `#0F3D73` | `#5E7FBF` |
 | Other (OTH and all unlisted parties) | `--p-oth` | `#7A7A7A` | `#A3A3A3` |
 
-Typography: **Archivo** (display: headings, brand, big numbers) and **Inter** (body), from Google Fonts, with system fallbacks (`system-ui, -apple-system, "Segoe UI", Roboto, sans-serif`). Every number uses tabular figures (`font-variant-numeric: tabular-nums`, set on `body`).
+Typography: **Archivo** (display: headings, brand, big numbers) and **Inter** (body), self-hosted in `site/fonts/` (`scripts/build_fonts.py`; @font-face rules at the top of `style.css`), with system fallbacks (`system-ui, -apple-system, "Segoe UI", Roboto, sans-serif`). Every number uses tabular figures (`font-variant-numeric: tabular-nums`, set on `body`).
 
 ### Number and date formats (use the helpers in `common.js`)
 - **Margins:** one decimal, e.g. `ALP 4.6`. A **swing** carries a sign: `+9.7 to L/NP`. Use `App.fmtMargin`/`App.fmtSwing`.
@@ -141,8 +144,11 @@ Typography: **Archivo** (display: headings, brand, big numbers) and **Inter** (b
 
 ## Performance and layout stability
 
-Lighthouse (mobile) on the home, seat, pendulum and candidate pages scores 95-100 for performance and 100 for accessibility. Keep it that way:
-- Every `<script>` is `defer`, and `common.js` is the first one on each page: it builds the header, search and key-dates strip as soon as it runs rather than waiting for the chart and map libraries. Third-party stylesheets (Google Fonts, Leaflet) load with `rel="preload" ... onload` plus a `<noscript>` fallback.
+Lighthouse (mobile) on the home, seat, pendulum and candidate pages scores 90+ for performance and 100 for accessibility. Lighthouse's slow-4G model counts every byte requested before the largest paint, so keep the critical path small:
+- Every `<script>` is `defer`, and `common.js` is the first one on each page: it builds the header, search and key-dates strip as soon as it runs rather than waiting for the chart and map libraries.
+- Fonts are self-hosted; each page preloads only `fonts/inter-latin.woff2` and `fonts/archivo-latin.woff2`. Don't go back to Google Fonts: its two extra origins and larger files cost the seat and profile pages several points.
+- Leaflet and html-to-image aren't in any page's HTML. `App.loadLib("leaflet" | "htmlToImage")` loads them on demand (pinned cdnjs URLs with SRI, in `common.js`). Maps start from `App.afterPaint(...)`, which waits for the first paint and the web fonts; the share button starts loading html-to-image when it is hovered or focused.
+- The seat page renders from the data it needs (districts, candidates, regions, polls, models, odds, seat polls, how-to-vote cards), then fills in photos (`headshots.json`) and headlines (`news.json`) after the first paint. Avatars keep their size, so the swap doesn't move anything.
 - Pages paint before scripts run, so anything a script fills in must have its space reserved, or the page jumps (CLS). Each page carries empty placeholders (`#key-dates`, the header's `.search`, the `.nav-toggle` button) and CSS reserves their height; script-filled blocks (`#pref-watch`, `#region-chips`, `.pd-list`, `.tally`, the 2022 results, `#district-detail` when the URL has a seat hash) have `min-height`s. Measure before changing a reserved height.
 - The inline head script adds `js` (and on lower.html `has-hash`) to `<html>`; CSS scopes the phone menu and placeholders to `html.js`, so the four fallback nav links still show without JavaScript.
 - Large avatars (the profile photo) load eagerly with `fetchpriority="high"`; list avatars stay `loading="lazy"`.

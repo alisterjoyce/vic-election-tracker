@@ -38,6 +38,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "site" / "data"
 PHOTOS = ROOT / "site" / "photos"
 OVERRIDES = Path(__file__).resolve().parent / "headshot_overrides.json"
+SOURCES = Path(__file__).resolve().parent / "headshot_sources.json"   # provenance the site doesn't load
 SIZES = (320, 160)
 MAX_BYTES = 25 * 1024
 
@@ -252,7 +253,7 @@ def main():
             old.unlink()
 
     today = date.today().isoformat()
-    records, skipped, upscaled = [], [], []
+    records, provenance, skipped, upscaled = [], {}, [], []
     for e, cand, how in matched:
         abc = "abc.net.au" in host(e.get("image_url"))
         if args.publish == "none" or (args.publish == "non-abc" and abc):
@@ -270,18 +271,17 @@ def main():
             files[str(size)] = f"photos/{size}/{stem}.webp"
         credit, page = credit_for(e)
         records.append({
-            "id": cand["id"], "name": e["candidate"], "seat": cand["id"].split("/")[0],
-            "file": files["320"], "files": files,
-            "source": {"credit": credit, "page": page, "image_url": e.get("image_url"),
-                       "listed_on": [p for p in e["sources"] if p != page]},
+            "id": cand["id"], "name": e["candidate"], "seat": cand["id"].split("/")[0], "files": files,
+            "source": {"credit": credit, "page": page},
             "licence": "No licence stated by the source. Published by the candidate's party or campaign (or the outlet credited) "
                        "for public promotion of the candidate; reproduced with attribution for election coverage. "
                        "Permission not individually obtained." if not abc else
                        "ABC News candidate photo. No licence stated; ABC content is copyright. Permission not obtained.",
-            "notes": e["notes"],
-            "match": how,
             "date_added": previous.get(cand["id"], {}).get("date_added", today),
         })
+        # Research detail the site doesn't show stays out of site/data, so every page loads less.
+        provenance[cand["id"]] = {"image_url": e.get("image_url"), "listed_on": [p for p in e["sources"] if p != page],
+                                  "notes": e["notes"], "match": how}
 
     doc = {
         "_schema": {
@@ -290,19 +290,24 @@ def main():
                 "id": "Candidate id: '<district or region id>/<slug of Given Surname>' (App.candidateId)",
                 "name": "Name as published with the photo",
                 "seat": "District or region id",
-                "file": "320px image path relative to site/",
-                "files": "{'320': path, '160': path}",
-                "source": "{credit (shown under the photo), page (where the photo was published), image_url, listed_on (other pages listing the candidate)}",
+                "files": "{'320': path, '160': path}, relative to site/",
+                "source": "{credit (shown under the photo), page (where the photo was published)}",
                 "licence": "Licence or permission note",
-                "notes": "Notes from the source index (e.g. an earlier portrait reused)",
-                "match": "exact | near (spelling differs; check) | override (resolved by hand in scripts/headshot_overrides.json)",
                 "date_added": "YYYY-MM-DD first added",
             },
+            "provenance": "Image URLs, other listings, index notes and match type are in scripts/headshot_sources.json",
         },
         "source_archive": args.zip.name,
         "headshots": sorted(records, key=lambda r: r["id"]),
     }
     (DATA / "headshots.json").write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\n")
+    SOURCES.write_text(json.dumps({
+        "_schema": {"description": "Where each published headshot came from (scripts/build_headshots.py). site/data/headshots.json has the credit the site shows.",
+                    "fields": {"image_url": "The image's own URL", "listed_on": "Other pages listing the candidate",
+                               "notes": "Notes from the source index (e.g. an earlier portrait reused)",
+                               "match": "exact | near (spelling differs; check) | override (resolved by hand in scripts/headshot_overrides.json)"}},
+        "sources": dict(sorted(provenance.items())),
+    }, ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\n")
 
     sizes = [p.stat().st_size for s in SIZES for p in (PHOTOS / str(s)).glob("*.webp")]
     print(f"{len(entries)} photos in the index; {len(matched)} matched ({sum(1 for _, _, h in matched if h == 'near')} near-spelling, "

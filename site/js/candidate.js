@@ -222,10 +222,12 @@
 
   async function init() {
     try {
-      const [dd, rd] = await Promise.all([loadJSON("districts"), loadJSON("regions")]);
+      // All four in parallel: the profile photo's URL is only known once headshots.json arrives.
+      const [dd, rd, peopleData, shotData] = await Promise.all([loadJSON("districts"), loadJSON("regions"), App.loadPeople(), App.loadHeadshots()]);
       districts = Object.fromEntries(dd.districts.map((d) => [d.id, d]));
       regions = Object.fromEntries(rd.regions.map((r) => [r.id, r]));
-      [people, shots] = await Promise.all([App.loadPeople(), App.loadHeadshots()]);
+      people = peopleData;
+      shots = shotData;
 
       const parties = [...new Set(people.map((p) => p.party))].sort((a, b) => partyName(a).localeCompare(partyName(b)));
       $("c-party").innerHTML = '<option value="">All parties</option>' +

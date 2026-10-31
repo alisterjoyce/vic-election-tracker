@@ -53,13 +53,15 @@ site/                  # published by GitHub Pages
     changelog.json     # what changed at each refresh (refresh.py), plus changelog_state.json (internal)
     index.html         # the /data/ page
     localities.json    # suburb/postcode -> district(s) for search (scripts/build_localities.py)
-    headshots.json     # candidate photos: file, source credit, licence note (scripts/build_headshots.py)
+    headshots.json     # candidate photos: files, source credit, licence note (scripts/build_headshots.py)
   photos/320/, 160/    # candidate headshots (WebP)
+  fonts/               # Archivo and Inter, self-hosted (SIL Open Font License; scripts/build_fonts.py)
 scripts/refresh.py     # data refresh
 scripts/build_localities.py  # rebuilds localities.json from Vicmap boundaries (by hand; needs shapely)
 scripts/build_boundaries.py  # map boundaries (by hand; needs shapely + topojson)
 scripts/build_results_2022.py  # 2022 results by voting centre (by hand, one-off)
 scripts/build_headshots.py  # headshot zip -> WebP photos + headshots.json (by hand; needs Pillow)
+scripts/build_fonts.py      # downloads, trims and subsets the web fonts into site/fonts/ (by hand; needs fonttools, brotli)
 scripts/vec_feed.py    # converts the VEC election-night media feed to the same format; --selftest on the VEC samples
 CLAUDE.md              # project conventions: schemas, merge rules, design system, formats
 .github/workflows/refresh.yml

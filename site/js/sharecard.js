@@ -211,31 +211,23 @@
   const today = () => fmtDate(App.melbourneToday());
   const siteLink = (hash = "") => `${App.ROOT.host}${App.ROOT.pathname.replace(/\/$/, "")}/${hash}`.replace(/^\/+/, "");
 
-  // html-to-image can't read the cross-origin Google Fonts stylesheet, so build the @font-face
-  // rules ourselves (Latin subset only), with the font files inlined as data URLs.
+  // The image needs the fonts inlined: @font-face rules for the self-hosted Latin files (css/style.css),
+  // with each file as a data URL.
+  const CARD_FONTS = [["Archivo", "600 800", "archivo-latin.woff2"], ["Inter", "400 700", "inter-latin.woff2"]];
   let fontCss = null;
   function embeddedFonts() {
     if (!fontCss) {
-      fontCss = (async () => {
-        const link = [...document.querySelectorAll('link[rel="stylesheet"]')].find((l) => l.href.includes("fonts.googleapis.com"));
-        if (!link) return "";
-        const css = await (await fetch(link.href)).text();
-        const faces = [...css.matchAll(/\/\*\s*latin\s*\*\/\s*(@font-face\s*{[^}]*})/g)].map((m) => m[1]);
-        const inlined = await Promise.all(faces.map(async (face) => {
-          const url = (face.match(/url\(([^)]+)\)/) || [])[1];
-          if (!url) return "";
-          const blob = await (await fetch(url)).blob();
-          const data = await new Promise((res) => { const r = new FileReader(); r.onload = () => res(r.result); r.readAsDataURL(blob); });
-          return face.replace(url, data);
-        }));
-        return inlined.join("\n");
-      })().catch(() => "");
+      fontCss = Promise.all(CARD_FONTS.map(async ([family, weight, file]) => {
+        const blob = await (await fetch(new URL(`fonts/${file}`, App.ROOT))).blob();
+        const data = await new Promise((res) => { const r = new FileReader(); r.onload = () => res(r.result); r.readAsDataURL(blob); });
+        return `@font-face { font-family: "${family}"; font-weight: ${weight}; font-display: block; src: url(${data}) format("woff2"); }`;
+      })).then((faces) => faces.join("\n")).catch(() => "");
     }
     return fontCss;
   }
 
   async function renderHtmlCard(inner, accent) {
-    if (!window.htmlToImage) throw new Error("The image library failed to load");
+    if (!window.htmlToImage) await App.loadLib("htmlToImage");
     const host = document.createElement("div");
     host.className = "hc-host";
     host.innerHTML = `<div class="hc-card" style="--hc-accent: var(${accent || "--accent"})">${inner}</div>`;
@@ -276,6 +268,10 @@
 
   /* build: async () => {inner, accent, filename, title, url} */
   function shareButton(btn, build) {
+    // Start fetching the image library as soon as the button is approached, before the click.
+    const warm = () => App.loadLib("htmlToImage").catch(() => {});
+    btn.addEventListener("pointerenter", warm, { once: true });
+    btn.addEventListener("focus", warm, { once: true });
     btn.addEventListener("click", async () => {
       const label = btn.textContent;
       btn.disabled = true;
