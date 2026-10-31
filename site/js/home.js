@@ -210,10 +210,8 @@
 
   function renderChart() {
     const canvas = document.getElementById("pop-chart");
-    if (!window.Chart) {
-      canvas.parentElement.innerHTML = '<p class="empty">Chart library failed to load.</p>';
-      return;
-    }
+    if (!window.Chart || !canvas) return;   // Chart.js loads after the first paint (init)
+    Chart.defaults.font.family = cssVar("--font-body") || "system-ui, sans-serif";
     const keys = seriesKeys();
     const datasets = [];
     keys.forEach((k) => {
@@ -369,11 +367,18 @@
       renderHero(meta, districtData.districts, pollData, odds);
       renderWatch(districtData.districts, odds);
       renderSeats(meta, districtData.districts, regionData.regions);
+      App.ShareCard.shareButton(document.getElementById("share-home"), async () => headlineCard(meta, districtData.districts, pollData));
+      // The headline card paints first; the polls table and the chart (Chart.js, fetched once it has
+      // painted) come after, in their own tasks.
+      await new Promise((resolve) => setTimeout(resolve, 0));
       polls = preparePolls(pollData);
       renderTable(pollData);
-      renderChart();
-      App.ShareCard.shareButton(document.getElementById("share-home"), async () => headlineCard(meta, districtData.districts, pollData));
-      document.addEventListener("themechange", renderChart);
+      App.afterPaint(() => App.loadLib("chart")).then(() => {
+        renderChart();
+        document.addEventListener("themechange", renderChart);
+      }, () => {
+        document.getElementById("pop-chart").parentElement.innerHTML = '<p class="empty">Chart library failed to load.</p>';
+      });
     } catch (err) {
       window.App.showError(document.getElementById("polls-table"), err);
     }
