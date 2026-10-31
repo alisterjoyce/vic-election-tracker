@@ -804,6 +804,11 @@ ABC_RETIRING_URL = ABC_GUIDE + "retiring-mps"
 ABC_AZ_URL = ABC_GUIDE + "candidates"   # A-Z list of every lower-house candidate
 ABC_USER_AGENT = ("vic-election-tracker/1.0 (static Victorian election tracker; daily refresh, "
                   "1 request/second; https://github.com/alisterjoyce/vic-election-tracker)")
+# Candidate websites the ABC guide links to that are dead, mapped to the party's live page (checked by hand).
+# Applied as each ABC card is read, so the daily refresh doesn't put the dead link back.
+ABC_WEBSITE_FIXES = {
+    "https://www.familyfirstparty.org.au/batres-croes_2026": "https://www.familyfirstparty.org.au/croes_2026",
+}
 ABC_DELAY = 1.0      # seconds between requests
 ABC_ATTEMPTS = 3     # tries per page before the whole ABC step is skipped
 
@@ -903,7 +908,7 @@ def parse_abc_district(page: str) -> dict:
         name = card.xpath(".//*[contains(concat(' ', @class, ' '), ' eg2-card-name ')]")
         link = card.xpath(".//a[contains(concat(' ', @class, ' '), ' eg2-card-link ')]/@href")
         if name and link and link[0].startswith("http"):
-            websites[_name_key(clean_text(name[0].text_content()))] = link[0]
+            websites[_name_key(clean_text(name[0].text_content()))] = ABC_WEBSITE_FIXES.get(link[0], link[0])
 
     for tr in doc.xpath("//table[contains(@class, 'eg2-ballot')]//tbody/tr"):
         cells = [clean_text(td.text_content()) for td in tr.findall("td")]

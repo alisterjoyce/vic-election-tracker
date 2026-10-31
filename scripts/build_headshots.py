@@ -47,6 +47,12 @@ PARTY = [("one nation", "ONP"), ("victorian socialists", "VS"), ("socialist alli
          ("green", "GRN"), ("labor", "ALP"), ("independent", "IND"), ("west", "WEST"), ("new democrats", "ND"),
          ("sustainable", "SUS"), ("shooters", "SFF"), ("democratic labour", "DLP"), ("coalition", "LNP")]
 
+# Source pages in the index that have since gone dead, mapped to a live page showing the same photo (checked by hand).
+PAGE_FIXES = {
+    # The West Party's own candidate list links to this profile, but it returns 404.
+    "https://thewestparty.org.au/local-representation/brucelancashire": "https://thewestparty.org.au/local-representation/",
+}
+
 # Source page host -> credit name (falls back to the host itself)
 CREDITS = {
     "abc.net.au": "ABC News", "vicliberal.org.au": "Liberal Party Victoria", "greens.org.au": "Australian Greens",
@@ -123,7 +129,9 @@ def parse_index(text):
                 continue
             k, v = m.group(1).strip().lower(), m.group(2).strip()
             if k == "source page":
-                e["sources"].append(v)
+                v = PAGE_FIXES.get(v, v)
+                if v not in e["sources"]:
+                    e["sources"].append(v)
             elif k == "image url":
                 e["image_url"] = v
             elif k == "candidate":
