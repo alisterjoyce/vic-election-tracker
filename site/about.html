@@ -6,25 +6,28 @@
   <title>About and Methodology · Vic Election 2026</title>
   <meta name="description" content="How the 2026 Victorian election tracker works: what each number means, data sources and refresh times, limitations, corrections and credits.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d4ed8'/%3E%3Cpath d='M8 17l5 5 11-12' stroke='white' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"></noscript>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container">
       <a class="brand" href="index.html">Vic Election <span>2026</span></a>
+      <button type="button" class="icon-btn nav-toggle" aria-controls="main-nav" aria-expanded="false"><span class="nav-burger" aria-hidden="true"></span>Menu</button>
       <nav class="nav" aria-label="Main">
         <a href="index.html">Home</a>
         <a href="lower.html">Lower house</a>
         <a href="upper.html">Upper house</a>
         <a href="about.html">About</a>
       </nav>
+      <div class="search"></div>
       <button id="theme-toggle" class="icon-btn" type="button">Theme</button>
     </div>
   </header>
+  <div class="key-dates" id="key-dates" role="region" aria-label="Key dates"></div>
 
   <main class="container prose">
     <section class="hero">
@@ -97,7 +100,7 @@
             <tr><td>VEC nominations list</td><td>Official candidates and ballot order once nominations close at noon on 9 Nov</td><td>Not yet connected</td></tr>
             <tr><td><a href="https://actionnetwork.org/user_files/user_files/000/146/615/original/yougov-vic-mrp-treaty-report-state-voting-intetion-treaty-support.pdf">YouGov MRP for Common Threads</a> (fieldwork 16 Jun to 10 Jul 2026)</td><td>MRP seat estimates</td><td>By hand when new models are published</td></tr>
             <tr><td><a href="https://www.sportsbet.com.au/betting/politics/vic-politics/victorian-state-election-seat-betting-10944986">Sportsbet seat betting</a></td><td>Betting favourite and full market per seat</td><td>By hand (as at 30 Oct 2026). Sportsbet blocks automated access</td></tr>
-            <tr><td><a href="https://opendata.maps.vic.gov.au/">Vicmap Admin</a> (locality, postcode and state district boundaries)</td><td>The map, region outlines, and suburb and postcode search</td><td>Built 30 Oct 2026 (boundaries unchanged since 2021)</td></tr>
+            <tr><td><a href="https://discover.data.vic.gov.au/dataset/vicmap-admin">Vicmap Admin</a> (locality, postcode and state district boundaries)</td><td>The map, region outlines, and suburb and postcode search</td><td>Built 30 Oct 2026 (boundaries unchanged since 2021)</td></tr>
             <tr><td><a href="https://www.vec.vic.gov.au/results/state-election-results/2022-state-election-results">VEC 2022 results by district</a>, results by voting centre and 2CP by voting centre</td><td>How it voted in 2022: first preferences, 2CP, voting-centre results</td><td>One-off (final results)</td></tr>
             <tr><td><a href="https://www.vec.vic.gov.au/electoral-boundaries/download-boundary-maps">VEC 2022 voting centre locations</a></td><td>Positions of 2022 voting centres on the booth map</td><td>One-off</td></tr>
             <tr><td><a href="https://en.wikipedia.org/wiki/Results_of_the_2022_Victorian_state_election_(Legislative_Assembly)">Wikipedia: 2022 Assembly results</a></td><td>Swings since the notional 2018 result</td><td>One-off</td></tr>
@@ -152,6 +155,6 @@
     </div>
   </footer>
 
-  <script src="js/common.js"></script>
+  <script defer src="js/common.js"></script>
 </body>
 </html>

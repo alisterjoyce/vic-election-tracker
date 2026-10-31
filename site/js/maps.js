@@ -7,7 +7,7 @@
   const App = window.App;
   const { loadJSON, escapeHtml, partyName, partyShort, partyColor, cssVar, fmtPrice } = App;
 
-  const ATTRIBUTION = 'Boundaries: <a href="https://opendata.maps.vic.gov.au/">Vicmap</a> © State of Victoria (CC BY 4.0)';
+  const ATTRIBUTION = 'Boundaries: <a href="https://discover.data.vic.gov.au/dataset/vicmap-admin">Vicmap</a> © State of Victoria (CC BY 4.0)';
   const METRO_BOUNDS = [[-38.12, 144.62], [-37.55, 145.42]];
   const BAND_OPACITY = { "Marginal": 0.35, "Safe": 0.65, "Very Safe": 0.95 };
 

@@ -2,6 +2,8 @@
 
 A static tracker for the 2026 Victorian state election (polling day Saturday 28 November 2026). It's plain HTML, CSS and vanilla JS with no build step, hosted on Netlify. A daily GitHub Action refreshes the data.
 
+**Live site: https://vic2026tracker.netlify.app**. As of 31 Oct 2026 Netlify isn't deploying new commits (the live copy dates from 30 Oct): link this repository in the Netlify site's settings, or redeploy `site/`, to publish the current version.
+
 - **Home** (`index.html`): a map of all 88 districts (Leaflet, with a Melbourne inset), coloured by holder, margin band, Sportsbet favourite or (from 28 Nov) result, with a Regions view for the upper house; then the countdown, headline seat counts, a poll-of-polls chart (Chart.js 4.4.1 from cdnjs) and a table of the latest polls.
 - **Lower house** (`lower.html`): filter districts by region and metro/regional, then pick one to see its sitting MP, margin and candidates with status badges.
 - **Seat outlook** (on each district page, under the margin cards):

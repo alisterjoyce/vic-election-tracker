@@ -268,7 +268,9 @@
     const style = `width:${size}px;height:${size}px`;
     if (shot) {
       const src = size > 120 ? shot.files["320"] : shot.files["160"];
-      return `<img class="avatar" src="${escapeHtml(src)}" alt="" width="${size}" height="${size}" loading="lazy" decoding="async" style="${style}" title="Photo: ${escapeHtml(shot.source.credit)}">`;
+      // Large photos are a profile's main image (its LCP): fetch them straight away.
+      const load = size > 120 ? 'fetchpriority="high"' : 'loading="lazy" decoding="async"';
+      return `<img class="avatar" src="${escapeHtml(src)}" alt="" width="${size}" height="${size}" ${load} style="${style}" title="Photo: ${escapeHtml(shot.source.credit)}">`;
     }
     return `<span class="avatar avatar-initials" aria-hidden="true" style="${style};font-size:${Math.round(size * 0.38)}px;background:var(${partyVar(party)});color:${inkFor(party)}">${escapeHtml(initials(name))}</span>`;
   }
@@ -459,10 +461,15 @@
     const kd = meta && meta.key_dates;
     const header = document.querySelector(".site-header");
     if (!kd || !header) return;
-    const strip = document.createElement("div");
-    strip.className = "key-dates";
-    strip.setAttribute("role", "region");
-    strip.setAttribute("aria-label", "Key dates");
+    // Pages carry an empty, height-reserved #key-dates so filling it doesn't push the page down.
+    let strip = document.getElementById("key-dates");
+    if (!strip) {
+      strip = document.createElement("div");
+      strip.className = "key-dates";
+      strip.setAttribute("role", "region");
+      strip.setAttribute("aria-label", "Key dates");
+      header.after(strip);
+    }
 
     const now = new Date();
     const today = melbourneToday(now);
@@ -492,7 +499,6 @@
         : "<strong>Today:</strong> no scheduled milestone.";
     }
     strip.innerHTML = `<div class="container"><ul class="kd-list">${items}</ul><p class="kd-today">${note}</p></div>`;
-    header.after(strip);
   }
 
   /* ---- Header search: districts, regions, candidates, localities, postcodes ---- */
@@ -583,13 +589,16 @@
         </div>`;
     }).join("");
 
-    const toggle = document.createElement("button");
-    toggle.type = "button";
-    toggle.className = "icon-btn nav-toggle";
-    toggle.setAttribute("aria-controls", "main-nav");
-    toggle.setAttribute("aria-expanded", "false");
-    toggle.innerHTML = '<span class="nav-burger" aria-hidden="true"></span>Menu';
-    nav.parentNode.insertBefore(toggle, nav);
+    let toggle = nav.parentNode.querySelector(".nav-toggle");
+    if (!toggle) {
+      toggle = document.createElement("button");
+      toggle.type = "button";
+      toggle.className = "icon-btn nav-toggle";
+      toggle.setAttribute("aria-controls", "main-nav");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.innerHTML = '<span class="nav-burger" aria-hidden="true"></span>Menu';
+      nav.parentNode.insertBefore(toggle, nav);
+    }
 
     const groups = [...nav.querySelectorAll(".nav-group")];
     const closeAll = (except) => groups.forEach((g) => {
@@ -630,7 +639,8 @@
   function initSearch() {
     const header = document.querySelector(".site-header .container");
     if (!header) return;
-    const wrap = document.createElement("div");
+    const slot = header.querySelector(".search");
+    const wrap = slot || document.createElement("div");
     wrap.className = "search";
     wrap.innerHTML = `
       <label class="sr-only" for="site-search">Search districts, regions, candidates, suburbs or postcodes</label>
@@ -638,8 +648,7 @@
         placeholder="Seat, candidate, suburb, postcode"
         role="combobox" aria-expanded="false" aria-controls="site-search-results" aria-autocomplete="list">
       <ul id="site-search-results" class="search-results" role="listbox" hidden></ul>`;
-    const toggle = document.getElementById("theme-toggle");
-    header.insertBefore(wrap, toggle || null);
+    if (!slot) header.insertBefore(wrap, document.getElementById("theme-toggle"));
 
     const input = wrap.querySelector("input");
     const list = wrap.querySelector("ul");
@@ -830,17 +839,20 @@
     }
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
+  function start() {
     initTheme();
     initNav();
     initSearch();
-    if (window.Chart) {
-      Chart.defaults.font.family = cssVar("--font-body") || "system-ui, sans-serif";
-    }
     loadJSON("meta").then(renderChrome).catch((err) => {
       console.error(err);
       renderChrome(null);
     });
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+    // Chart.js loads after this file, so its defaults are set once every script has run.
+    if (window.Chart) {
+      Chart.defaults.font.family = cssVar("--font-body") || "system-ui, sans-serif";
+    }
   });
 
   window.App = {
@@ -854,4 +866,9 @@
     ROOT, describeChange, tableToCsv,
     profileHref, profileLink, isPlaceholder, buildPeople, loadPeople,
   };
+
+  // Scripts are deferred and this one loads first, so the page is already parsed: build the header,
+  // search and key-dates strip now instead of waiting for the chart and map libraries to download.
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
+  else start();
 })();

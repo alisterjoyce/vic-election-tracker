@@ -47,6 +47,7 @@ import sys
 import tempfile
 import time
 import unicodedata
+import urllib.parse
 import urllib.robotparser
 from datetime import date, datetime, timezone
 from pathlib import Path
@@ -1514,6 +1515,9 @@ NEWS_SCHEMA = {
 ELECTION_WORDS = re.compile(r"\b(election|by-election|candidates?|preselect\w*|ballot|preferences|polling|MP|"
                             r"Premier|Liberals?|Labor|Greens|Nationals|One Nation)\b")
 VICTORIA = re.compile(r"\b(Victoria|Victorian|Melbourne|Spring Street|VEC)\b")
+NOT_VICTORIA = re.compile(r"(\bB\.?C\.?\b|British Columbia|Victoria-area|Saanich|Vancouver|\bMLAs?\b.*\bBC\b)")
+# Hosts whose links fail for readers (scraper/aggregator sites with broken HTTP/2): never stored.
+NEWS_BLOCKED_HOSTS = {"europesays.com"}
 STATE_ELECTION = re.compile(r"(state election|Victorian election|Victorian (poll|campaign|voters)|"
                             r"Ben Carroll|Jess Wilson|Warren Pickering|Spring Street)", re.I)
 
@@ -1522,10 +1526,19 @@ def _news_title_key(title: str) -> str:
     return re.sub(r"[^a-z0-9 ]", "", unicodedata.normalize("NFKD", title).lower()).strip()
 
 
+def _wrong_victoria(text: str) -> bool:
+    """Stories about Victoria in British Columbia (or Richmond BC) match district names too."""
+    return bool(NOT_VICTORIA.search(text))
+
+
 def _dedupe_news(items: list[dict]) -> list[dict]:
-    """Newest first; drop repeats by URL or near-identical headline."""
+    """Newest first; drop repeats by URL or near-identical headline, Canadian stories and blocked hosts.
+    Runs over earlier items too, so a filter added later also cleans what was already saved."""
     out = []
     for it in sorted(items, key=lambda x: x.get("published") or "", reverse=True):
+        host = re.sub(r"^www\.", "", urllib.parse.urlparse(it["url"]).netloc)
+        if host in NEWS_BLOCKED_HOSTS or _wrong_victoria(it["title"]):
+            continue
         if any(it["url"] == o["url"] or difflib.SequenceMatcher(None, _news_title_key(it["title"]), _news_title_key(o["title"])).ratio() > 0.9
                for o in out):
             continue
@@ -1611,7 +1624,7 @@ def refresh_news(data_dir: Path, meta: dict) -> bool:
             status[outlet] = {"status": "skipped", "url": url, "message": "robots.txt disallows automated access"}
             continue
         try:
-            items = fresh(_parse_rss(fetch(url), outlet))
+            items = [i for i in fresh(_parse_rss(fetch(url), outlet)) if not _wrong_victoria(i["_text"])]
             if not items:
                 raise ValueError("feed returned no recent items")
             status[outlet] = {"status": "ok", "url": url, "items": len(items)}
@@ -1627,7 +1640,8 @@ def refresh_news(data_dir: Path, meta: dict) -> bool:
     def bing(q):
         url = f"{BING_NEWS}?{requests.compat.urlencode({'q': q, 'format': 'rss', 'cc': 'AU', 'setlang': 'en-AU'})}"
         # Video pages (ABC iview) carry the page's date, not the story's.
-        return [i for i in fresh(_parse_rss(fetch(url), None)) if "iview.abc.net.au" not in i["url"]]
+        return [i for i in fresh(_parse_rss(fetch(url), None))
+                if "iview.abc.net.au" not in i["url"] and not _wrong_victoria(i["_text"])]
 
     # Bing News: statewide searches, then two per district (stops after 5 failures in a row).
     bing_ok = allowed(BING_NEWS + "?q=x&format=rss")

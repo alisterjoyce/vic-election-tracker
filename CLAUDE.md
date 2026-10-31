@@ -2,6 +2,8 @@
 
 A static tracker for the 2026 Victorian state election (polling day Sat 28 Nov 2026). Plain HTML, CSS and vanilla JS with **no build step**, published from `site/` by Netlify. Data lives in JSON files, refreshed daily by `scripts/refresh.py` through a GitHub Action.
 
+**Live site: https://vic2026tracker.netlify.app** (Netlify). As of 31 Oct 2026 it is *not* deploying from GitHub: it still serves a snapshot from 30 Oct (no pendulum page), and no Netlify deploy status appears on commits. The repo needs linking in Netlify (Site configuration → Build & deploy → Link repository) or a manual deploy of `site/`.
+
 ## File layout
 
 ```
@@ -133,6 +135,14 @@ Typography: **Archivo** (display: headings, brand, big numbers) and **Inter** (b
 - Pages in subfolders (`data/index.html`) work because `common.js` resolves data files and search links against `App.ROOT`, the site root. Never list or link VEC results-feed data (`results_2026/`) on /data/.
 - `localStorage` is only for per-viewer conveniences (theme, watchlist). Wrap every access in try/catch, and the page must work without it.
 - Mobile first: 16px side gutter, no horizontal page scroll; tables scroll inside `.table-scroll`.
+
+## Performance and layout stability
+
+Lighthouse (mobile) on the home, seat, pendulum and candidate pages scores 95-100 for performance and 100 for accessibility. Keep it that way:
+- Every `<script>` is `defer`, and `common.js` is the first one on each page: it builds the header, search and key-dates strip as soon as it runs rather than waiting for the chart and map libraries. Third-party stylesheets (Google Fonts, Leaflet) load with `rel="preload" ... onload` plus a `<noscript>` fallback.
+- Pages paint before scripts run, so anything a script fills in must have its space reserved, or the page jumps (CLS). Each page carries empty placeholders (`#key-dates`, the header's `.search`, the `.nav-toggle` button) and CSS reserves their height; script-filled blocks (`#pref-watch`, `#region-chips`, `.pd-list`, `.tally`, the 2022 results, `#district-detail` when the URL has a seat hash) have `min-height`s. Measure before changing a reserved height.
+- The inline head script adds `js` (and on lower.html `has-hash`) to `<html>`; CSS scopes the phone menu and placeholders to `html.js`, so the four fallback nav links still show without JavaScript.
+- Large avatars (the profile photo) load eagerly with `fetchpriority="high"`; list avatars stay `loading="lazy"`.
 
 ## Working on the project
 - Preview: `python -m http.server 8000 --directory site`.

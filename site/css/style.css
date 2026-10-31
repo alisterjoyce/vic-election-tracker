@@ -223,8 +223,9 @@ h3 { font-size: 1rem; }
 }
 /* Phones and narrow tablets: the four groups collapse into a "Menu" panel under the header. */
 @media (max-width: 760px) {
-  .nav-toggle { display: inline-flex; }
-  .nav { display: none; order: 5; width: 100%; flex-direction: column; gap: 4px; padding: 4px 0 8px; }
+  html.js .nav-toggle { display: inline-flex; }
+  html.js .nav { display: none; order: 5; width: 100%; flex-direction: column; gap: 4px; padding: 4px 0 8px; }
+  html:not(.js) .nav { order: 5; width: 100%; flex-wrap: wrap; }   /* no JavaScript: the four fallback links */
   .nav.open { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 12px; }
   .nav-top { pointer-events: none; padding: 8px 10px 2px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
   .nav-group.is-current .nav-top { color: var(--accent); }
@@ -684,4 +685,29 @@ select {
 /* Targets of the nav's in-page links clear the sticky header (static on phones) */
 @media (min-width: 641px) {
   #state-map, #sc-title, #quota-card, #tl-now, :target { scroll-margin-top: 72px; }
+}
+
+/* Space reserved for what common.js fills in, so the page doesn't jump once scripts run
+   (scripts are deferred, so the page paints before they do). */
+main.container { min-height: 100vh; }
+.search:empty { height: 38px; }
+html:not(.js) .search:empty { display: none; }
+html.js .key-dates { min-height: 63px; }   /* kept after filling, so a shorter strip can't pull the page up */
+.r22:has(> .empty) { min-height: 1100px; }
+#countdown { display: inline-block; min-width: 8.5em; }   /* home hero: the countdown fills in without moving the Share button */
+html.has-hash #district-detail[hidden] { display: block; min-height: 2400px; }   /* lower.html#seat: room for the seat before it renders */
+#pref-watch:empty { min-height: 520px; }
+.tally:empty { min-height: 110px; } .pd-list:empty { min-height: 1600px; }   /* pendulum.html: 88 seats */   /* lower.html: the Preference watch card, filled once the data loads */
+#region-chips:empty { min-height: 44px; }  /* upper.html: one row of region chips */
+@media (max-width: 760px) { #pref-watch:empty { min-height: 760px; } #region-chips:empty { min-height: 254px; } }
+@media (max-width: 400px) { #region-chips:empty { min-height: 341px; } }  /* seat pages: the 2022 results load after the page scrolls to the seat */
+@media (max-width: 640px) {
+  html.js .key-dates { min-height: 172px; }
+}
+@media (max-width: 640px) {
+  /* /data/: stack each file's name, contents and credit instead of three cramped columns */
+  #data-files, #data-files tr, #data-files td { display: block; width: auto; }
+  #data-files tr { padding: 10px 0; border-bottom: 1px solid var(--border); }
+  #data-files td { border: 0; padding: 2px 0; }
+  table:has(#data-files) thead { display: none; }
 }
