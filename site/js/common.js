@@ -225,6 +225,21 @@
     return null;
   }
 
+  // Seats at a uniform swing, by the pendulum's rule: Labor-v-Coalition contests swing, every other
+  // contest stays with its holder. Returns {winners: {district id: party}, tally: {bloc: seats}}.
+  const BLOCS = ["ALP", "LNP", "GRN", "ONP", "OTH"];
+  const blocOf = (p) => (COALITION.includes(p) ? "LNP" : BLOCS.includes(p) ? p : "OTH");
+  function projectSeats(districts, s) {
+    const winners = {}, tally = Object.fromEntries(BLOCS.map((b) => [b, 0]));
+    districts.forEach((d) => {
+      const adj = swingAdjusted(d.margin, s);
+      const w = adj ? adj.winner : (d.margin && d.margin.party) || d.party;
+      winners[d.id] = w;
+      tally[blocOf(w)]++;
+    });
+    return { winners, tally };
+  }
+
   /* ---- Candidates: ids, headshots and initials avatars ---- */
   // "<district or region id>/<slug of Given Surname>", matching scripts/build_headshots.py.
   function givenFirst(name) {
@@ -489,16 +504,29 @@
     const events = (kd.events || []).map((e) => ({ ...e, to: e.to || e.from }));
     const current = events.filter((e) => e.from <= today && today <= e.to)
       .sort((a, b) => daysBetween(a.from, a.to) - daysBetween(b.from, b.to))[0];
-    let note;
+    let note, line;
+    const next = events.filter((e) => e.from > today).sort((a, b) => a.from.localeCompare(b.from))[0];
+    const dayMonth = (iso) => fmtDate(iso).replace(/ \d{4}$/, "");
     if (current) {
       note = `<strong>Today:</strong> ${escapeHtml(current.text)}`;
+      const short = current.short ? current.short[0].toUpperCase() + current.short.slice(1) : current.text;
+      line = `<strong>Today:</strong> ${escapeHtml(short)}`;
+    } else if (next) {
+      note = `<strong>Today:</strong> no scheduled milestone. Next, ${escapeHtml(fmtDate(next.from))}: ${escapeHtml(next.text)}`;
+      line = `<strong>Next:</strong> ${escapeHtml(dayMonth(next.from))}, ${escapeHtml(next.short || next.text)}`;
     } else {
-      const next = events.filter((e) => e.from > today).sort((a, b) => a.from.localeCompare(b.from))[0];
-      note = next
-        ? `<strong>Today:</strong> no scheduled milestone. Next, ${escapeHtml(fmtDate(next.from))}: ${escapeHtml(next.text)}`
-        : "<strong>Today:</strong> no scheduled milestone.";
+      note = line = "<strong>Today:</strong> no scheduled milestone.";
     }
-    strip.innerHTML = `<div class="container"><ul class="kd-list">${items}</ul><p class="kd-today">${note}</p></div>`;
+    // Phones show only the summary button; it opens the full strip (CSS hides one or the other).
+    strip.innerHTML = `<div class="container">
+      <button type="button" class="kd-summary" aria-expanded="false" aria-controls="kd-full"><span class="kd-line">${line}</span><span class="kd-caret" aria-hidden="true"></span></button>
+      <div class="kd-full" id="kd-full"><ul class="kd-list">${items}</ul><p class="kd-today">${note}</p></div></div>`;
+    const btn = strip.querySelector(".kd-summary");
+    btn.addEventListener("click", () => {
+      const open = btn.getAttribute("aria-expanded") !== "true";
+      btn.setAttribute("aria-expanded", String(open));
+      strip.classList.toggle("kd-open", open);
+    });
   }
 
   /* ---- Header search: districts, regions, candidates, localities, postcodes ---- */
@@ -566,7 +594,7 @@
   // The single source of the site's navigation; pages carry only a no-JS fallback.
   const NAV = [
     { label: "Overview", items: [["Home", "index.html"], ["Map", "index.html#state-map"], ["Pendulum", "pendulum.html"],
-      ["Scenarios", "pendulum.html#scenarios"], ["What changed", "changes.html"], ["Timeline", "timeline.html"]] },
+      ["Scenarios", "pendulum.html#scenarios"], ["Timeline", "timeline.html"]] },
     { label: "Lower house", items: [["Seats", "lower.html"], ["Candidates", "candidate.html"], ["My seats", "myseats.html"]] },
     { label: "Upper house", items: [["Regions", "upper.html"], ["Quota calculator", "upper.html#quota"]] },
     { label: "About", items: [["Methodology", "about.html"], ["Data", "data/"], ["Polls", "poll.html"]] },
@@ -606,10 +634,14 @@
       g.classList.remove("open");
       g.querySelector(".nav-top").setAttribute("aria-expanded", "false");
     });
+    const header = nav.closest(".site-header");
     const setMenu = (open) => {
+      if (open && header) {
+        document.documentElement.style.setProperty("--nav-top", `${Math.max(0, Math.round(header.getBoundingClientRect().bottom))}px`);
+      }
       nav.classList.toggle("open", open);
       toggle.setAttribute("aria-expanded", String(open));
-      document.body.classList.toggle("nav-open", open);
+      document.documentElement.classList.toggle("nav-open", open);   // CSS locks the page's scroll while open
     };
     groups.forEach((g) => {
       const btn = g.querySelector(".nav-top");
@@ -813,32 +845,6 @@
     setTimeout(() => { csvQueued = false; addCsvButtons(); }, 50);
   }).observe(document.documentElement, { childList: true, subtree: true });
 
-  /* ---- Change log entries (data/changelog.json) as one line of HTML ---- */
-  // names: {seat id -> display name}
-  function describeChange(e, names) {
-    const seat = (id) => (id ? escapeHtml(names[id] || id) : "");
-    const seatLink = (id) => (id ? `<a href="${new URL(`${/-(metropolitan|victoria)$/.test(id) ? "upper" : "lower"}.html#${id}`, ROOT).href}">${seat(id)}</a>` : "");
-    const who = (name, party) => `${escapeHtml(name)} <span class="muted">(${escapeHtml(partyName(party))})</span>`;
-    switch (e.type) {
-      case "candidate_added":
-        return `New candidate: <a href="${new URL(`candidate.html#${candidateId(e.seat, e.name)}`, ROOT).href}">${escapeHtml(e.name)}</a> <span class="muted">(${escapeHtml(partyName(e.party))})</span> in ${seatLink(e.seat)}${e.source === "abc" ? ", from the ABC guide" : e.source === "wikipedia" ? ", from Wikipedia" : ""}`;
-      case "candidate_superseded":
-        return `${who(e.name, e.party)} replaced${e.by ? ` by ${escapeHtml(e.by)}` : ""} in ${seatLink(e.seat)}`;
-      case "candidate_withdrawn":
-        return `${who(e.name, e.party)} withdrew in ${seatLink(e.seat)}`;
-      case "poll_added":
-        return `New poll: <a href="${new URL(`poll.html#${e.id}`, ROOT).href}">${escapeHtml(e.pollster)}</a>, fieldwork to ${escapeHtml(fmtDate(e.end_date))}${e.tpp != null ? `, L/NP 2PP ${escapeHtml(e.tpp)}` : ""}`;
-      case "odds_move":
-        return `${seatLink(e.seat)}: Sportsbet price for ${escapeHtml(e.label)} ${e.to < e.from ? "shortened" : "drifted"} from ${fmtPrice(e.from)} to ${fmtPrice(e.to)}`;
-      case "retirement":
-        return `${escapeHtml(e.name || "The sitting member")} is retiring (${seatLink(e.seat)})`;
-      case "news":
-        return `${e.count} new headline${e.count === 1 ? "" : "s"} collected for seat and statewide news`;
-      default:
-        return escapeHtml(e.type);
-    }
-  }
-
   // Libraries a page only needs after its first paint (maps, share images), loaded on demand from
   // cdnjs with SRI, once per page. Keeping them off the critical path lets the content paint first.
   const LIBS = {
@@ -896,11 +902,11 @@
     PARTIES, STATUSES, COALITION, loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, partyBadge, statusBadge,
     slugify, parseDate, fmtDate, fmtMonth, fmtDateTime, fmtPrice, fmtMargin, fmtSwing, melbourneToday, daysBetween,
     hashId, cssVar, currentTheme, showError, copyLink,
-    DAY, preparePolls, smoothedSeries, statewideSwing, swingAdjusted,
+    DAY, preparePolls, smoothedSeries, statewideSwing, swingAdjusted, projectSeats, BLOCS, blocOf,
     getWatchlist, setWatchlist, isWatched, toggleWatch, starButton, storageWorks,
     buildSearchIndex, searchItems,
     candidateId, givenFirst, loadHeadshots, avatar, photoCredits, initials, inkFor, newsList,
-    ROOT, describeChange, tableToCsv, loadLib, afterPaint,
+    ROOT, tableToCsv, loadLib, afterPaint,
     profileHref, profileLink, isPlaceholder, buildPeople, loadPeople,
   };
 

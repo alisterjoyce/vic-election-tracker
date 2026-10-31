@@ -184,7 +184,26 @@
         + (layerKind === "districts" && mode === "odds" && odds && odds.date_checked ? `<li class="muted">Sportsbet, as at ${escapeHtml(App.fmtDate(odds.date_checked))}</li>` : "");
     }
 
-    main.fitBounds(L.geoJSON(dGeo).getBounds(), { padding: [8, 8] });
+    // Most districts are too small to see at state zoom. Desktop shows the state with a Melbourne inset;
+    // phones (no room for an inset) open on greater Melbourne, with a button for the whole state.
+    const phone = window.matchMedia("(max-width: 640px)");
+    const viewBtn = root.querySelector("[data-map-view]");
+    const stateBounds = L.geoJSON(dGeo).getBounds();
+    let showState = !phone.matches;
+    function setView() {
+      main.fitBounds(showState ? stateBounds : METRO_BOUNDS, { padding: [8, 8] });
+      if (viewBtn) {
+        viewBtn.textContent = showState ? "Show Melbourne" : "Show all Victoria";
+        viewBtn.setAttribute("aria-pressed", String(showState));
+      }
+    }
+    if (viewBtn) viewBtn.addEventListener("click", () => { showState = !showState; setView(); });
+    phone.addEventListener("change", () => {
+      showState = !phone.matches;
+      main.invalidateSize(); inset.invalidateSize();
+      setView(); inset.fitBounds(METRO_BOUNDS);
+    });
+    setView();
     inset.fitBounds(METRO_BOUNDS);
     render();
 
@@ -260,5 +279,29 @@
     return { placed: placed.length, total: contest.polling_places.length };
   }
 
-  App.Maps = { homeMap, boothMap, loadGeo };
+  /* ---------------- Find my seat: the district containing a point ---------------- */
+  // Ray casting over every ring (outer rings and holes alike), so holes come out right.
+  function inRings(rings, x, y) {
+    let inside = false;
+    for (const ring of rings) {
+      for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+        const [xi, yi] = ring[i], [xj, yj] = ring[j];
+        if ((yi > y) !== (yj > y) && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) inside = !inside;
+      }
+    }
+    return inside;
+  }
+
+  async function districtAt(lat, lon) {
+    const geo = await loadGeo("districts");
+    const hit = geo.features.find((f) => {
+      const g = f.geometry;
+      if (!g) return false;
+      const polys = g.type === "Polygon" ? [g.coordinates] : g.type === "MultiPolygon" ? g.coordinates : [];
+      return polys.some((rings) => inRings(rings, lon, lat));
+    });
+    return hit ? hit.properties.id : null;
+  }
+
+  App.Maps = { homeMap, boothMap, loadGeo, districtAt };
 })();

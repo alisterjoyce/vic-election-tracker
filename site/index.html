@@ -11,7 +11,7 @@
   <link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="home">
   <header class="site-header">
     <div class="container">
       <a class="brand" href="index.html">Vic Election <span>2026</span></a>
@@ -31,10 +31,20 @@
   <main class="container">
     <div id="sample-banner" class="banner" hidden></div>
 
-    <section class="hero">
-      <h1>2026 Victorian state election</h1>
-      <p class="muted"><span id="election-date">Polling day 28 Nov 2026</span> · <span id="countdown" class="countdown">&nbsp;</span>
-        <button type="button" class="icon-btn hero-share" id="share-home" title="Share or download a 1200x630 image of the poll average and seat projection">Share</button></p>
+    <h1 class="sr-only">2026 Victorian state election</h1>
+    <section class="card hero-card" aria-label="Where the election stands">
+      <button type="button" class="icon-btn icon-only hero-share" id="share-home" aria-label="Share an image of the poll average and seat projection" title="Share or download a 1200x630 image of the poll average and seat projection"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <p class="hero-countdown" id="countdown">Election day 28 Nov 2026</p>
+      <p class="hero-tpp"><span id="hero-tpp">&nbsp;</span> <span class="hero-tpp-label">two-party preferred, poll of polls</span></p>
+      <p class="hero-trend muted" id="hero-trend">&nbsp;</p>
+      <div class="hero-block">
+        <div class="hero-block-head"><span class="hero-block-title">Seat projection</span><a class="small" id="hero-proj-note" href="pendulum.html">Uniform swing</a></div>
+        <div class="hero-bar" id="hero-proj"></div>
+      </div>
+      <div class="hero-block">
+        <div class="hero-block-head"><span class="hero-block-title">Sportsbet favourites</span><span class="small muted" id="hero-odds-note"></span></div>
+        <div class="hero-bar" id="hero-odds"></div>
+      </div>
     </section>
 
     <section class="card map-card" id="state-map" aria-labelledby="map-title">
@@ -60,8 +70,25 @@
           <div class="map-inset-map" data-map="inset" role="region" aria-label="Inner Melbourne inset map"></div>
         </div>
       </div>
-      <ul class="seat-legend map-legend" data-map="legend"></ul>
-      <p class="muted small" style="margin:8px 0 0">Click a district for its page, or switch to Regions for the upper house. Margin shading follows the ABC's classification.</p>
+      <div class="map-actions">
+        <button type="button" class="icon-btn map-view-toggle" data-map-view aria-pressed="false">Show all Victoria</button>
+        <button type="button" class="icon-btn" id="find-seat">Find my seat</button>
+        <span class="muted small" id="find-seat-msg" role="status"></span>
+      </div>
+      <ul class="seat-legend map-legend" data-map="legend" aria-label="Map legend"></ul>
+      <p class="muted small" style="margin:8px 0 0">Tap a district for its page, or switch to Regions for the upper house. Margin shading follows the ABC's classification. "Find my seat" asks for your location once and doesn't store it.</p>
+    </section>
+
+    <section class="grid grid-2 home-panels">
+      <div class="card" aria-labelledby="watch-title">
+        <div class="card-head"><h2 id="watch-title">Seats to watch</h2><span class="muted small" id="watch-note"></span></div>
+        <ol class="watch-list" id="seats-watch"><li class="empty">Loading…</li></ol>
+      </div>
+      <div class="card" aria-labelledby="news-title">
+        <div class="card-head"><h2 id="news-title">Latest news</h2><span class="muted small" id="news-updated"></span></div>
+        <div id="news-statewide"><p class="empty">Loading…</p></div>
+        <p class="muted small" style="margin:8px 0 0">Headlines and links only. Each seat page lists its own stories; <a href="timeline.html">the term so far</a>.</p>
+      </div>
     </section>
 
     <section class="grid grid-2" aria-label="Seat counts">
@@ -92,16 +119,7 @@
       <div class="table-scroll" id="polls-table"><p class="empty">Loading…</p></div>
     </section>
 
-    <section class="card" aria-labelledby="changes-title">
-      <div class="card-head"><h2 id="changes-title">What changed</h2><a class="small" href="changes.html">All changes</a></div>
-      <ul class="ch-list" id="latest-changes"><li class="empty">Loading…</li></ul>
-    </section>
 
-    <section class="card" aria-labelledby="news-title">
-      <div class="card-head"><h2 id="news-title">Election news</h2><span class="muted small" id="news-updated"></span></div>
-      <div id="news-statewide"><p class="empty">Loading…</p></div>
-      <p class="muted small">Headlines and links only, from news searches and publishers' feeds. Each seat page lists its own stories. <a href="timeline.html">The term so far</a>.</p>
-    </section>
   </main>
 
   <footer class="site-footer">

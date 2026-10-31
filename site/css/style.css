@@ -237,24 +237,45 @@ h3 { font-size: 1rem; }
   .search { order: 4; flex: 1 1 100%; }
   .search-results { min-width: 0; }
 }
-/* Phones and narrow tablets: the four groups collapse into a "Menu" panel under the header. */
+/* Phones and narrow tablets: the four groups collapse into a "Menu" panel that slides down under the
+   header (top: --nav-top, set by common.js when it opens) and covers the page, which can't scroll meanwhile. */
 @media (max-width: 760px) {
   html.js .nav-toggle { display: inline-flex; }
-  html.js .nav { display: none; order: 5; width: 100%; flex-direction: column; gap: 4px; padding: 4px 0 8px; }
+  html.js .nav {
+    position: fixed; z-index: 50; left: 0; right: 0; top: var(--nav-top, 56px);
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-content: start; gap: 4px 12px;
+    max-height: calc(100vh - var(--nav-top, 56px)); overflow-y: auto; overscroll-behavior: contain;
+    padding: 8px var(--gutter) 16px; background: var(--surface);
+    border-bottom: 1px solid var(--border); box-shadow: 0 12px 24px rgba(16, 24, 40, 0.18);
+    visibility: hidden; opacity: 0; transform: translateY(-12px);
+    transition: transform 0.18s ease, opacity 0.18s ease, visibility 0s linear 0.18s;
+  }
+  html.js .nav.open { visibility: visible; opacity: 1; transform: none; transition: transform 0.18s ease, opacity 0.18s ease; }
+  html.nav-open, html.nav-open body { overflow: hidden; }
+  html.nav-open .site-header { z-index: 45; }   /* above the dimmer, so the panel inside it shows */
+  html.nav-open body::after {   /* dims the page; a tap on it closes the menu (common.js) */
+    content: ""; position: fixed; z-index: 40; left: 0; right: 0; bottom: 0; top: var(--nav-top, 56px); background: rgba(10, 14, 22, 0.4);
+  }
   html:not(.js) .nav { order: 5; width: 100%; flex-wrap: wrap; }   /* no JavaScript: the four fallback links */
-  .nav.open { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 12px; }
   .nav-top { pointer-events: none; padding: 8px 10px 2px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
   .nav-group.is-current .nav-top { color: var(--accent); }
   .nav-caret { display: none; }
   .nav-menu { display: block; position: static; min-width: 0; padding: 0; border: 0; box-shadow: none; background: none; }
-  .nav-menu a { padding: 9px 10px; }
+  .nav-menu a { display: flex; align-items: center; min-height: 44px; padding: 0 10px; }
+}
+@media (max-width: 760px) and (prefers-reduced-motion: reduce) {
+  html.js .nav, html.js .nav.open { transition: none; transform: none; }
 }
 @media (max-width: 640px) {
   .site-header { position: static; }   /* too tall to pin on a phone */
-  .site-header .container { padding-top: 8px; padding-bottom: 8px; gap: 8px 12px; }
+  .site-header .container { padding-top: 6px; padding-bottom: 6px; gap: 6px 10px; }
   .kd-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px 10px; }
   .kd-list li { flex-direction: column; gap: 0; }
   .kd-label, .kd-date { font-size: 0.75rem; }
+  html .key-dates .container { padding-top: 0; padding-bottom: 0; }   /* (outranks the base rule later in the file) */
+  .key-dates .kd-summary { display: flex; }   /* (the base rule comes later in the file) */
+  .kd-full { display: none; padding: 2px 0 10px; }
+  .key-dates.kd-open .kd-full { display: block; }
 }
 
 /* Key-dates strip (built by common.js) */
@@ -267,12 +288,20 @@ h3 { font-size: 1rem; }
 .kd-date { color: var(--muted); font-size: 0.8rem; }
 .kd-list li.done .kd-when { color: var(--muted); font-weight: 600; }
 .kd-today { margin: 4px 0 0; color: var(--text); }
+.kd-summary {   /* phones only: "Next: 3 Nov, writs issue..." */
+  display: none; align-items: center; gap: 8px; width: 100%; min-height: 44px; padding: 0; border: 0; background: none;
+  font: inherit; color: var(--text); text-align: left; cursor: pointer;
+}
+.kd-line { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kd-caret { flex: none; width: 8px; height: 8px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: translateY(-2px) rotate(45deg); }
+.kd-summary[aria-expanded="true"] .kd-caret { transform: translateY(2px) rotate(-135deg); }
 
 /* Maps (Leaflet, no tiles) */
 .map-controls { display: flex; flex-wrap: wrap; gap: 8px; }
 .segmented button:disabled { opacity: 0.45; cursor: not-allowed; }
 .segmented button[data-dim] { opacity: 0.55; }
-.map-wrap { position: relative; }
+.map-wrap { position: relative; isolation: isolate; }   /* Leaflet's panes (z-index 400+) stay under the header menus */
+.leaflet-container { isolation: isolate; }
 .map-main { height: 520px; border-radius: 8px; background: var(--surface-2); }
 .map-inset {
   position: absolute; top: 10px; right: 10px; width: 38%; max-width: 360px; height: 260px; z-index: 500;
@@ -284,6 +313,9 @@ h3 { font-size: 1rem; }
   letter-spacing: 0.05em; color: var(--muted); background: var(--surface); padding: 1px 6px; border-radius: 4px; pointer-events: none;
 }
 .map-legend { margin-top: 10px; }
+.map-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin-top: 10px; }
+.map-view-toggle { display: none; }
+#find-seat-msg:empty { display: none; }
 .leaflet-container { font-family: var(--font-body); background: var(--surface-2); }
 .leaflet-tooltip.map-tip, .leaflet-popup-content-wrapper, .leaflet-popup-tip, .leaflet-tooltip {
   background: var(--surface); color: var(--text); border-color: var(--border); box-shadow: var(--shadow);
@@ -292,8 +324,9 @@ h3 { font-size: 1rem; }
 .leaflet-bar a, .leaflet-control-attribution { background: var(--surface); color: var(--text); }
 .leaflet-control-attribution { font-size: 0.68rem; }
 @media (max-width: 640px) {
-  .map-main { height: 380px; }
-  .map-inset { position: relative; top: auto; right: auto; width: auto; max-width: none; height: 240px; margin-top: 10px; }
+  .map-main { height: 360px; }
+  .map-inset { display: none; }
+  .map-view-toggle { display: inline-flex; align-items: center; }
 }
 
 /* Seat page: 2022 results */
@@ -403,9 +436,48 @@ a.icon-btn { text-decoration: none; display: inline-block; }
 .grid > .card { margin-bottom: 0; }
 .stack > * + * { margin-top: 20px; }
 
-.hero { margin-bottom: 20px; }
+.hero { margin-bottom: 20px; }   /* other pages' title blocks */
 .hero p { margin: 0; }
-.countdown { font-weight: 600; color: var(--accent); }
+
+/* ---------- Home: headline card ---------- */
+.hero-card { position: relative; padding-top: 14px; margin-top: 20px; }
+.hero-card p { margin: 0; }
+.hero-share { position: absolute; top: 10px; right: 10px; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; }
+.hero-countdown { font-size: 0.92rem; padding-right: 52px; min-height: 1.5em; }
+.hero-countdown strong { color: var(--accent); }
+.hero-tpp { margin-top: 4px !important; font-family: var(--font-display); font-size: clamp(1.2rem, 4.6vw, 1.9rem); font-weight: 700; line-height: 1.2; min-height: 1.2em; }
+.tpp-side { white-space: nowrap; }
+.tpp-side b { color: var(--side); }
+.tpp-dash { color: var(--muted); font-weight: 400; }
+.hero-tpp-label { display: block; font-family: var(--font-body); font-size: 0.78rem; font-weight: 400; color: var(--muted); }
+.hero-trend { font-size: 0.9rem; min-height: 1.5em; }
+.hero-block { margin-top: 14px; }
+.hero-block-head { display: flex; justify-content: space-between; align-items: center; gap: 0 8px; flex-wrap: wrap; line-height: 22px; }   /* fixed line height: no jump when the web font arrives */
+.hero-block-title { font-weight: 600; font-size: 0.92rem; }
+.hero-bar { display: flow-root; min-height: 58px; }   /* bar plus one line of key; reserved (not just while empty) so the card never jumps */
+@media (max-width: 760px) { .hero-bar { min-height: 78px; } }   /* the key can wrap to two lines */
+@media (max-width: 374px) { .hero-bar { min-height: 100px; } }
+.hb-track { position: relative; display: flex; height: 26px; margin: 6px 0 6px; border-radius: 6px; overflow: visible; background: var(--surface-2); }
+.hb-seg { display: flex; align-items: center; justify-content: center; min-width: 0; font-size: 0.78rem; font-weight: 700; overflow: hidden; }
+.hb-seg:first-child { border-radius: 6px 0 0 6px; }
+.hb-seg:nth-last-child(2) { border-radius: 0 6px 6px 0; }
+.hb-und { background: repeating-linear-gradient(135deg, var(--surface-2) 0 5px, var(--border) 5px 7px); color: var(--text); }
+.hb-majority { position: absolute; top: -4px; bottom: -4px; width: 2px; margin-left: -1px; background: var(--text); }
+.hb-key { display: flex; flex-wrap: wrap; gap: 2px 12px; margin: 0; padding: 0; list-style: none; font-size: 0.84rem; }
+.hb-key li { display: flex; align-items: center; gap: 5px; }
+.hb-maj-key { color: var(--muted); }
+.hb-maj-mark { display: inline-block; width: 2px; height: 12px; background: var(--text); }
+
+/* ---------- Home: seats to watch ---------- */
+.watch-list { list-style: none; margin: 0; padding: 0; counter-reset: watch; }
+.watch-list li { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 40px; padding: 4px 0; border-bottom: 1px solid var(--border); }
+.watch-list li:last-child { border-bottom: 0; }
+.watch-list a { font-weight: 600; text-decoration: none; color: var(--text); }
+.watch-list a:hover { text-decoration: underline; }
+.watch-odds { display: flex; gap: 10px; flex: none; font-size: 0.86rem; color: var(--muted); }
+.watch-opt { display: inline-flex; align-items: center; gap: 4px; }
+.watch-opt b { color: var(--text); }
+.home-panels { margin-bottom: 20px; }
 
 /* ---------- Seat bars ---------- */
 .seat-bar {
@@ -648,10 +720,6 @@ select {
 .csv-bar { display: flex; justify-content: flex-end; margin: 6px 0 10px; }
 .csv-btn { font-size: 0.8rem; padding: 4px 8px; }
 
-/* ---------- What changed (changes.html, home) ---------- */
-.ch-list { list-style: none; padding: 0; margin: 0; }
-.ch-list li { padding: 5px 0; border-bottom: 1px solid var(--border); font-size: 0.92rem; }
-.ch-list li:last-child { border-bottom: 0; }
 .ch-kind h3 { font-size: 0.95rem; margin: 14px 0 4px; }
 .ch-kind:first-of-type h3 { margin-top: 4px; }
 .ch-kind details summary { cursor: pointer; color: var(--muted); font-size: 0.875rem; margin-top: 4px; }
@@ -666,7 +734,6 @@ select {
 #data-files td { white-space: normal; vertical-align: top; }
 
 /* ---------- HTML share cards (rendered off-screen at 1200x630 by html-to-image) ---------- */
-.hero-share { margin-left: 8px; vertical-align: middle; }
 .hc-host { position: fixed; left: -10000px; top: 0; pointer-events: none; }
 .hc-card {
   width: 1200px; height: 630px; box-sizing: border-box; position: relative; overflow: hidden;
@@ -710,15 +777,32 @@ main.container { min-height: 100vh; }
 html:not(.js) .search:empty { display: none; }
 html.js .key-dates { min-height: 63px; }   /* kept after filling, so a shorter strip can't pull the page up */
 .r22:has(> .empty) { min-height: 1100px; }
-#countdown { display: inline-block; min-width: 8.5em; }   /* home hero: the countdown fills in without moving the Share button */
 html.has-hash #district-detail[hidden] { display: block; min-height: 2400px; }   /* lower.html#seat: room for the seat before it renders */
 #pref-watch:empty { min-height: 520px; }
-.tally:empty { min-height: 110px; } .pd-list:empty { min-height: 1600px; }   /* pendulum.html: 88 seats */   /* lower.html: the Preference watch card, filled once the data loads */
+.tally:empty { min-height: 85px; } .pd-list:empty { min-height: 1600px; }   /* pendulum.html: 88 seats */   /* lower.html: the Preference watch card, filled once the data loads */
 #region-chips:empty { min-height: 44px; }  /* upper.html: one row of region chips */
 @media (max-width: 760px) { #pref-watch:empty { min-height: 760px; } #region-chips:empty { min-height: 254px; } }
 @media (max-width: 400px) { #region-chips:empty { min-height: 341px; } }  /* seat pages: the 2022 results load after the page scrolls to the seat */
+@media (min-width: 641px) and (max-width: 839px) { html.js .key-dates { min-height: 112px; } }   /* the full strip wraps */
 @media (max-width: 640px) {
-  html.js .key-dates { min-height: 172px; }
+  html.js .key-dates { min-height: 45px; }   /* the one-line summary */
+}
+
+/* Phones: tap targets at least 44px. The home page also takes about 15% off padding and type, so the
+   headline card and the top of the map fit on one screen. */
+@media (max-width: 640px) {
+  .icon-btn, .segmented button, .search input { min-height: 44px; }
+  .home .card { padding: 14px; margin-bottom: 14px; }
+  .home .grid { gap: 14px; }
+  .home .home-panels { margin-bottom: 14px; }
+  .home .card-head { margin-bottom: 10px; gap: 8px; }
+  .home h2 { font-size: 1.05rem; }
+  .home .small { font-size: 0.82rem; }
+  .home .chart-wrap { height: 240px; }
+  .hero-card { padding-top: 12px; margin-top: 12px; }
+  .hero-block { margin-top: 10px; }
+  .hb-key { font-size: 0.8rem; }
+  .hero-date { display: none; }   /* the countdown fits on one line; the key-dates strip has the date */
 }
 @media (max-width: 640px) {
   /* /data/: stack each file's name, contents and credit instead of three cramped columns */

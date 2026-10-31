@@ -272,10 +272,15 @@
     const warm = () => App.loadLib("htmlToImage").catch(() => {});
     btn.addEventListener("pointerenter", warm, { once: true });
     btn.addEventListener("focus", warm, { once: true });
+    // An icon button (.icon-only) keeps its icon and reports progress in its tooltip and accessible name.
+    const iconOnly = btn.classList.contains("icon-only");
+    const label = iconOnly ? btn.getAttribute("aria-label") : btn.textContent;
+    const say = (text) => {
+      if (iconOnly) { btn.setAttribute("aria-label", text); btn.title = text; } else btn.textContent = text;
+    };
     btn.addEventListener("click", async () => {
-      const label = btn.textContent;
       btn.disabled = true;
-      btn.textContent = "Making image…";
+      say("Making image…");
       let done = null;
       try {
         const card = await build();
@@ -284,8 +289,8 @@
         console.error(err);
         done = "Couldn't make the image";
       }
-      btn.textContent = done || label;
-      setTimeout(() => { btn.textContent = label; btn.disabled = false; }, done ? 2000 : 0);
+      say(done || label);
+      setTimeout(() => { say(label); btn.disabled = false; }, done ? 2000 : 0);
     });
   }
 

@@ -21,7 +21,6 @@
     ["seat_polls.json", "Single-seat polls", "Each pollster, as published."],
     ["htv.json", "How-to-vote cards registered with the VEC, and their preference orders", "Victorian Electoral Commission register; each card belongs to whoever registered it."],
     ["timeline.json", "Events of the 2022-2026 term and the election timetable", `${OURS} Each entry links its source.`],
-    ["changelog.json", "What changed in the data at each daily refresh", OURS],
     ["news.json", "Headlines per seat and statewide: title, outlet, date, link", "Headlines belong to their publishers and aren't covered by this site's licence. Links only."],
     ["headshots.json", "Candidate photo records: files, source, credit, licence", "Photos belong to the parties, campaigns and outlets credited and aren't covered by this site's licence."],
     ["meta.json", "Refresh times, source status, key dates, 2022 baseline", OURS],

@@ -4,7 +4,7 @@ A static tracker for the 2026 Victorian state election (polling day Saturday 28 
 
 **Live site: https://alisterjoyce.github.io/vic-election-tracker/**
 
-- **Home** (`index.html`): a map of all 88 districts (Leaflet, with a Melbourne inset), coloured by holder, margin band, Sportsbet favourite or (from 28 Nov) result, with a Regions view for the upper house; then the countdown, headline seat counts, a poll-of-polls chart (Chart.js 4.4.1 from cdnjs) and a table of the latest polls.
+- **Home** (`index.html`): a headline card first: the poll-of-polls 2PP and its move over the last fortnight, an 88-seat projection bar at the pendulum's uniform swing, a bar of Sportsbet favourites by party (ties and partial markets count as undecided), each with the 45-seat majority line, and the countdown. Then a map of all 88 districts (Leaflet), coloured by holder, margin band, Sportsbet favourite or (from 28 Nov) result, with a Regions view for the upper house, a party legend and a "Find my seat" button (browser location, asked for once and not stored). Desktop shows the state with a Melbourne inset; phones open on greater Melbourne with a "Show all Victoria" toggle. Below the map: the ten closest seats in the betting (favourite under 2.00) and the five latest statewide headlines, then seat counts, a poll-of-polls chart (Chart.js 4.4.1 from cdnjs) and the latest polls.
 - **Lower house** (`lower.html`): filter districts by region and metro/regional, then pick one to see its sitting MP, margin and candidates with status badges.
 - **Seat outlook** (on each district page, under the margin cards):
   - **Swing-adjusted margin:** the current poll-of-polls statewide 2PP swing since 2022 (`meta.json` → `previous_election`), applied uniformly to the seat margin. Shown only for Labor-v-Coalition contests.
@@ -16,10 +16,9 @@ A static tracker for the 2026 Victorian state election (polling day Saturday 28 
 - **Pendulum** (`pendulum.html`): all 88 seats on a two-sided ladder by notional margin, with a swing slider (−10 to +15, starting at the poll-of-polls swing) that recolours seats that fall and counts seats against the 45-seat majority line. Only Labor-v-Coalition contests swing. Below it, three scenarios (Coalition majority, Coalition relying on One Nation, Labor-Greens minority), each with the swing and 2PP range it needs, the seats that must fall and which current polls support it, recomputed from `polls.json` and `seat_odds.json` on every load.
 - **Timeline** (`timeline.html`): the 2022-2026 term from `timeline.json`: by-elections with results, leadership changes, retirements, defections, the end of group voting tickets and the election timetable, each with a date, one line and a source, filterable by type, with a "today" marker.
 - **Preferences:** each seat and region page shows its registered how-to-vote cards (`htv.json`) and flags the Liberal card in Labor-v-Greens seats and One Nation's card; the lower-house page has a statewide "Preference watch". Until registration opens on 10 Nov they read "not yet registered".
-- **What changed** (`changes.html`): every change the daily refresh found (new and replaced candidates, new polls, betting moves of 0.5 or more, retirements, news), grouped by day or week; the home page shows the latest three.
 - **Data downloads** (`data/`): each JSON file with its fields, credit and licence (CC BY 4.0 for this site's data; VEC, ABC, Wikipedia and Vicmap credited). Every table on the site has a "Download CSV" button.
 - **Share buttons:** each seat page and the home page make a 1200x630 image in the browser (seat: holder, margin, Sportsbet favourite, leading candidates; home: poll average and seat projection) and share it, or download it where sharing isn't available.
-- **News:** each seat page lists the latest 10 headlines that mention the district or its MP, and the home page lists 25 statewide (`news.json`). Headlines and links only.
+- **News:** each seat page lists the latest 10 headlines that mention the district or its MP, and the home page shows the five latest statewide (`news.json`). Headlines and links only.
 - **Polls** (`poll.html`): every poll, and a page per poll (`poll.html#newspoll-2026-10-22`) with pollster, client, fieldwork, sample, primaries, 2PP, preferred premier, approval, source link, and that pollster's trend against the other pollsters' average (its house effect).
 - **Quota calculator** (on each region in `upper.html`): editable primary votes seeded from the latest regional poll (`council_polls.json`), live quota maths under the 2026 rules, and an adjustable exhaustion rate; shows the 5 seats filled and the margin for the last seat.
 - **My seats** (`myseats.html`): seats starred with ☆, saved in the browser's localStorage (no backend), shown side by side.
@@ -50,7 +49,7 @@ site/                  # published by GitHub Pages
     timeline.json      # the term's events and the election timetable (manual)
     htv.json           # registered how-to-vote cards (refresh.py) and their preference orders (manual)
     news.json          # headlines per seat and statewide (refresh.py)
-    changelog.json     # what changed at each refresh (refresh.py), plus changelog_state.json (internal)
+    changelog.json     # internal record of what changed at each refresh (refresh.py); not shown on the site. Plus changelog_state.json
     index.html         # the /data/ page
     localities.json    # suburb/postcode -> district(s) for search (scripts/build_localities.py)
     headshots.json     # candidate photos: files, source credit, licence note (scripts/build_headshots.py)

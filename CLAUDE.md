@@ -10,13 +10,13 @@ The site is served under a base path (`/vic-election-tracker/`) on Pages and at 
 
 ```
 site/                     # published as-is by GitHub Pages (also deployable to Netlify: netlify.toml publish = "site")
-  index.html              # home: countdown, seat counts, poll-of-polls chart, latest polls
+  index.html              # home: headline card (2PP, seat projection, betting favourites, countdown), map with
+                          #   Find my seat, seats to watch, latest news, seat counts, poll-of-polls chart, latest polls
   lower.html              # Legislative Assembly: filters, district detail, seat outlook (#district-id)
   upper.html              # Legislative Council: 8 regions, MLCs, tickets (#region-id)
   candidate.html          # candidate profiles (#<seat id>/<name slug>) and, with no hash, the candidate directory
   pendulum.html           # interactive pendulum (#swing=3.2) and scenario explorer
   timeline.html           # the 2022-2026 term and election timetable (data/timeline.json)
-  changes.html            # "What changed": data/changelog.json grouped by day or week
   data/index.html         # /data/: every published data file, its fields (from _schema), credit and licence
   poll.html               # poll detail (#<poll id>) with the pollster's trend and house effect; no hash = all polls
   myseats.html            # watchlist ("My seats"), stored in localStorage
@@ -27,7 +27,7 @@ site/                     # published as-is by GitHub Pages (also deployable to 
   js/home.js, lower.js, upper.js, myseats.js, candidate.js, pendulum.js, poll.js
   js/quota.js             # upper-house quota calculator (mounted on each region in upper.html)
   js/htv.js               # how-to-vote cards: seat/region section and lower.html's "Preference watch"
-  js/timeline.js, changes.js, datafiles.js
+  js/timeline.js, datafiles.js
   js/sharecard.js         # 1200x630 PNG share cards: candidate (canvas); seat and home headline (HTML rendered with
                           #   html-to-image 1.11.11 from cdnjs, pinned with SRI); Web Share API, else download
   data/*.json             # every file has a "_schema" key describing its fields
@@ -65,7 +65,7 @@ Each file's `_schema` is the authoritative field list. Keep it in sync when addi
 | `seat_odds.json` | Sportsbet market per district: options, favourite, joint_favourites, partial, date_checked | hand (refresh.py tries Sportsbet; it is blocked, so the file is kept as manual) |
 | `seat_polls.json` | Single-seat polls | hand |
 | `timeline.json` | The term's events and the election timetable: date (YYYY-MM-DD or YYYY-MM), type, one line in our own words, districts/regions, source {label, url} | hand |
-| `changelog.json` | What changed at each refresh: new candidates, superseded/withdrawn names, new polls, odds moves of 0.5 or more, retirements, new-headline counts (last 120 days) | refresh.py (`refresh_changelog`, last step); `--backfill-changelog` rebuilds it from git history |
+| `changelog.json` | Internal record, not displayed or linked anywhere on the site (the "What changed" page was removed on 31 Oct 2026). What changed at each refresh: new candidates, superseded/withdrawn names, new polls, odds moves of 0.5 or more, retirements, new-headline counts (last 120 days) | refresh.py (`refresh_changelog`, last step); `--backfill-changelog` rebuilds it from git history |
 | `changelog_state.json` | Internal: the compact view of the data at the last run, which the next run diffs against (so hand edits between runs are caught too). Not shown or listed on /data/ | refresh.py |
 | `htv.json` | How-to-vote cards registered with the VEC (from 10 Nov): seat, registered_by, party, registration, date, card_url, `order` (preference order, entered by hand from the card PDF) | refresh.py records cards; `order` and `notes` by hand and never overwritten |
 | `news.json` | Headlines per district (latest 10) and statewide (latest 25): title, outlet, published, url only | refresh.py, fully rewritten each run (seat lists keep earlier items when a search fails) |
@@ -135,6 +135,9 @@ Typography: **Archivo** (display: headings, brand, big numbers) and **Inter** (b
 
 ## Pages and UI conventions
 - The header (brand, nav, search, theme toggle) and the key-dates strip are rendered by `common.js` on every page. The navigation is the `NAV` list in `common.js`: four groups (Overview, Lower house, Upper house, About), dropdowns on desktop and a "Menu" panel at 760px and below. Add new pages there; each HTML file keeps only a four-link `<nav class="nav">` fallback for when JavaScript doesn't run.
+- **Home headline card:** the seat projection comes from `App.projectSeats(districts, App.statewideSwing(...))`, the pendulum's rule (Labor-v-Coalition seats swing, every other contest stays with its holder), so the home page, its share card and the pendulum agree. The betting bar counts a seat as undecided when Sportsbet has joint favourites, a partial market or none.
+- **Phone menu:** at 760px and below the nav is a fixed panel under the header (`--nav-top`, set by `common.js` when it opens) that covers the page; `html.nav-open` locks the page's scroll and dims it. It closes on a tap outside, on Escape and when a link is followed. Leaflet maps sit in `isolation: isolate` containers so their panes stay under it.
+- **Key-dates strip:** on phones it collapses to one button ("Next: 3 Nov, writs issue and roll closes 8 pm", from each event's `short` in `meta.json`) that expands to the three milestones; desktop shows the full strip.
 - In-page nav targets: `index.html#state-map` (the map), `pendulum.html#scenarios`, `upper.html#quota` (asks for a region) and `upper.html#<region>/quota` (that region's quota calculator). Pages scroll to these after rendering; `scroll-margin-top` keeps them clear of the sticky header.
 - Shareable URLs use the hash: `lower.html#bendigo-east`, `upper.html#northern-victoria`, `candidate.html#bendigo-west/brenton-baldwin`, `pendulum.html#swing=3.2`, `poll.html#newspoll-2026-10-22`. Poll ids are `<pollster slug>-<end date>` (refresh.py), so they survive the daily rewrite. Link a name to its profile with `App.profileLink(seat, name)`; `App.loadPeople()` merges candidates, ticket names and MLCs into one list by candidate id (two ids for one name in different seats are never merged).
 - Share cards print the photo credit on the image. Seat pages and the home page have a "Share" button that builds the card on demand, shares it where the browser can share files, and otherwise downloads it. No server is involved.
@@ -150,7 +153,7 @@ Lighthouse (mobile) on the home, seat, pendulum and candidate pages scores 90+ f
 - Fonts are self-hosted; each page preloads only `fonts/inter-latin.woff2` and `fonts/archivo-latin.woff2`. Don't go back to Google Fonts: its two extra origins and larger files cost the seat and profile pages several points.
 - Leaflet and html-to-image aren't in any page's HTML. `App.loadLib("leaflet" | "htmlToImage")` loads them on demand (pinned cdnjs URLs with SRI, in `common.js`). Maps start from `App.afterPaint(...)`, which waits for the first paint and the web fonts; the share button starts loading html-to-image when it is hovered or focused.
 - The seat page renders from the data it needs (districts, candidates, regions, polls, models, odds, seat polls, how-to-vote cards), then fills in photos (`headshots.json`) and headlines (`news.json`) after the first paint. Avatars keep their size, so the swap doesn't move anything.
-- Pages paint before scripts run, so anything a script fills in must have its space reserved, or the page jumps (CLS). Each page carries empty placeholders (`#key-dates`, the header's `.search`, the `.nav-toggle` button) and CSS reserves their height; script-filled blocks (`#pref-watch`, `#region-chips`, `.pd-list`, `.tally`, the 2022 results, `#district-detail` when the URL has a seat hash) have `min-height`s. Measure before changing a reserved height.
+- Pages paint before scripts run, so anything a script fills in must have its space reserved, or the page jumps (CLS). Each page carries empty placeholders (`#key-dates`, the header's `.search`, the `.nav-toggle` button) and CSS reserves their height; script-filled blocks (`#pref-watch`, `#region-chips`, `.pd-list`, `.tally`, the home card's `.hero-bar`s, the 2022 results, `#district-detail` when the URL has a seat hash) have `min-height`s, as does the key-dates strip at each width (45px one-line summary on phones, 112px at 641-839px where the full strip wraps, 63px wider). Measure before changing a reserved height.
 - The inline head script adds `js` (and on lower.html `has-hash`) to `<html>`; CSS scopes the phone menu and placeholders to `html.js`, so the four fallback nav links still show without JavaScript.
 - Large avatars (the profile photo) load eagerly with `fetchpriority="high"`; list avatars stay `loading="lazy"`.
 
