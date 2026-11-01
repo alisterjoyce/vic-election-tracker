@@ -13,7 +13,7 @@
       "reconciliation": "Written by scripts/refresh.py after the ABC district pages: lower-house candidates compared with the ABC A-Z list. {date (Melbourne), scope, abc_list_url, totals: {tracker, abc_list}, tracker_by_source: {abc, wikipedia, report}, only_in_tracker, only_on_abc (missing from the tracker before this run; added), unmatched_electorates, tracked_all (active candidates in both houses, shown in the footer)}"
     }
   },
-  "last_updated": "2026-11-01T09:36:22Z",
+  "last_updated": "2026-11-01T19:34:18Z",
   "election_date": "2026-11-28",
   "previous_election": {
     "date": "2022-11-26",
@@ -103,7 +103,7 @@
     "polls": {
       "status": "ok",
       "url": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election",
-      "last_success": "2026-11-01T09:29:42Z",
+      "last_success": "2026-11-01T19:27:36Z",
       "message": "70 polls"
     },
     "vec_candidates": {
@@ -115,13 +115,13 @@
     "wikipedia_candidates": {
       "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
       "status": "ok",
-      "last_success": "2026-11-01T09:29:43Z",
-      "message": "547 assembly and 118 council names read; 0 assembly and 5 council added"
+      "last_success": "2026-11-01T19:27:37Z",
+      "message": "547 assembly and 118 council names read; 0 assembly and 0 council added"
     },
     "abc_guide": {
       "url": "https://www.abc.net.au/news/elections/vic/2026/guide/electorates",
       "status": "ok",
-      "last_success": "2026-11-01T09:32:08Z",
+      "last_success": "2026-11-01T19:30:01Z",
       "message": "88 district pages, 0 districts updated; 0 candidates added, 579 confirmed, 0 superseded"
     },
     "sportsbet": {
@@ -132,23 +132,23 @@
     "htv": {
       "url": "https://www.vec.vic.gov.au/candidates-and-parties/become-a-state-election-candidate/how-to-vote-cards",
       "status": "ok",
-      "last_success": "2026-11-01T09:32:11Z",
+      "last_success": "2026-11-01T19:30:05Z",
       "message": "No cards yet (status not_open)"
     },
     "news": {
       "status": "ok",
       "url": "https://www.bing.com/news/search",
-      "last_success": "2026-11-01T09:36:22Z",
+      "last_success": "2026-11-01T19:34:18Z",
       "message": "25 statewide, 118 seat items"
     },
     "changelog": {
       "status": "ok",
-      "last_success": "2026-11-01T09:36:22Z",
-      "message": "7 new entries"
+      "last_success": "2026-11-01T19:34:18Z",
+      "message": "1 new entries"
     }
   },
   "reconciliation": {
-    "date": "2026-11-01",
+    "date": "2026-11-02",
     "scope": "Legislative Assembly",
     "abc_list_url": "https://www.abc.net.au/news/elections/vic/2026/guide/candidates",
     "totals": {

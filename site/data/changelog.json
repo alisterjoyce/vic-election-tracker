@@ -6,8 +6,14 @@
       "entries": "[{date (Melbourne YYYY-MM-DD), at (ISO UTC), type, ...}] where type is one of: candidate_added {seat, name, party, status, source}; candidate_superseded {seat, name, party, by}; candidate_withdrawn {seat, name, party}; poll_added {id, pollster, end_date, tpp (L/NP), primary}; odds_move {seat, label, party, from, to} (a price moving 0.5 or more); retirement {seat, name}; news {count} (new headlines collected)"
     }
   },
-  "updated": "2026-11-01T09:36:22Z",
+  "updated": "2026-11-01T19:34:18Z",
   "entries": [
+    {
+      "date": "2026-11-02",
+      "at": "2026-11-01T19:34:18Z",
+      "type": "news",
+      "count": 3
+    },
     {
       "date": "2026-11-01",
       "at": "2026-11-01T09:36:22Z",
