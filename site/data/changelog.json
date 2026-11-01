@@ -6,8 +6,24 @@
       "entries": "[{date (Melbourne YYYY-MM-DD), at (ISO UTC), type, ...}] where type is one of: candidate_added {seat, name, party, status, source}; candidate_superseded {seat, name, party, by}; candidate_withdrawn {seat, name, party}; poll_added {id, pollster, end_date, tpp (L/NP), primary}; odds_move {seat, label, party, from, to} (a price moving 0.5 or more); retirement {seat, name}; news {count} (new headlines collected)"
     }
   },
-  "updated": "2026-11-01T19:34:18Z",
+  "updated": "2026-11-01T23:30:25Z",
   "entries": [
+    {
+      "date": "2026-11-02",
+      "at": "2026-11-01T23:30:25Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Ryan Batchelor",
+      "party": "ALP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-11-02",
+      "at": "2026-11-01T23:30:25Z",
+      "type": "news",
+      "count": 2
+    },
     {
       "date": "2026-11-02",
       "at": "2026-11-01T19:34:18Z",
