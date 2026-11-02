@@ -8,8 +8,20 @@
       "sources": "Source -> {status: ok | error | skipped, url, items, message}"
     }
   },
-  "updated": "2026-11-01T23:30:25Z",
+  "updated": "2026-11-02T05:54:55Z",
   "statewide": [
+    {
+      "title": "Wyndham North Police Station to be reopened",
+      "outlet": "Star Weekly",
+      "published": "2026-11-01T16:20:00Z",
+      "url": "https://starweekly.com.au/news/2026/11/02/wyndham-north-police-station-to-be-reopened/"
+    },
+    {
+      "title": "Labor promises free dental clinic for Shepparton",
+      "outlet": "Shepparton News",
+      "published": "2026-11-01T16:01:00Z",
+      "url": "https://www.sheppnews.com.au/news/labor-promises-free-dental-clinic-for-shepparton/"
+    },
     {
       "title": "‘Something must change’: Surging Geelong family violence sparks urgent state election funding push",
       "outlet": "Geelong Advertiser",
@@ -147,18 +159,6 @@
       "outlet": "Melbourne Catholic",
       "published": "2026-10-26T20:46:00Z",
       "url": "https://melbournecatholic.org/news/bishops-encourage-catholic-voters-to-put-faith-into-action-at-upcoming-victorian-election"
-    },
-    {
-      "title": "Victorian Election Writs Set for Melbourne Cup Day",
-      "outlet": "ozarab.media",
-      "published": "2026-10-26T11:31:00Z",
-      "url": "https://ozarab.media/victorian-election-writs-set-for-melbourne-cup-day/"
-    },
-    {
-      "title": "Victorian State Election 2026 - In Language Resources",
-      "outlet": "Mirage News",
-      "published": "2026-10-26T08:31:00Z",
-      "url": "https://www.miragenews.com/victorian-state-election-2026-in-language-1766360/"
     }
   ],
   "seats": {
@@ -282,7 +282,14 @@
       }
     ],
     "berwick": [],
-    "box-hill": [],
+    "box-hill": [
+      {
+        "title": "Works set to begin on Gunns Gully interchange",
+        "outlet": "Star Weekly",
+        "published": "2026-11-01T17:40:00Z",
+        "url": "https://starweekly.com.au/news/2026/11/02/works-set-to-begin-on-gunns-gully-interchange/"
+      }
+    ],
     "brighton": [
       {
         "title": "James Newbury guilty of parliamentary misconduct over post warning Allan set to be electorally thumped",
@@ -355,7 +362,7 @@
         "title": "BioNTech mRNA manufacturing facility opens",
         "outlet": "India Education Diary on MSN",
         "published": "2026-10-26T03:36:00Z",
-        "url": "https://www.msn.com/en-in/money/general/biontech-mrna-manufacturing-facility-opens/ar-AA2g6A8N"
+        "url": "https://www.msn.com/en-in/news/other/biontech-mrna-manufacturing-facility-opens/ar-AA2g6A8N"
       },
       {
         "title": "Moray & Agnew brings Victorian business leaders together with Treasurer Colin Brooks",
@@ -424,7 +431,7 @@
         "title": "Liberals replace Croydon candidate Grant Hutchinson, weeks out from Victorian election",
         "outlet": "MSN",
         "published": "2026-10-12T21:13:00Z",
-        "url": "https://www.msn.com/en-au/news/other/liberals-replace-croydon-candidate-grant-hutchinson-weeks-out-from-victorian-election/ar-AA2e7mQE"
+        "url": "https://www.msn.com/en-au/news/australia/liberals-replace-croydon-candidate-grant-hutchinson-weeks-out-from-victorian-election/ar-AA2e7mQE"
       },
       {
         "title": "Victorian Liberals dump Croydon candidate Grant Hutchinson weeks before state election",
@@ -516,6 +523,12 @@
     ],
     "frankston": [
       {
+        "title": "Bullet ‘threat’ to MP investigated",
+        "outlet": "Bayside News",
+        "published": "2026-11-01T16:01:00Z",
+        "url": "https://baysidenews.com.au/2026/11/02/bullet-threat-to-mp-investigated/"
+      },
+      {
         "title": "Paul Edbrooke: Bullet left on minister’s car in alleged death threat",
         "outlet": "news.com.au",
         "published": "2026-10-26T11:32:00Z",
@@ -568,12 +581,6 @@
         "outlet": "Herald Sun",
         "published": "2026-10-25T11:00:00Z",
         "url": "https://www.heraldsun.com.au/news/victoria/state-election/a-new-low-bullet-left-on-paul-edbrookes-car-amid-union-dispute/news-story/cc5a0feaaeedc37a46894450fc81aee9"
-      },
-      {
-        "title": "Senior Labor ministers at risk as internal polling points to a wipeout in Frankston line",
-        "outlet": "The Australia Today",
-        "published": "2026-10-23T02:36:00Z",
-        "url": "https://www.theaustraliatoday.com.au/senior-labor-ministers-at-risk-as-internal-polling-points-to-a-wipeout-in-frankston-line/"
       }
     ],
     "geelong": [
@@ -621,7 +628,7 @@
         "title": "BioNTech mRNA manufacturing facility opens",
         "outlet": "India Education Diary on MSN",
         "published": "2026-10-26T03:36:00Z",
-        "url": "https://www.msn.com/en-in/money/general/biontech-mrna-manufacturing-facility-opens/ar-AA2g6A8N"
+        "url": "https://www.msn.com/en-in/news/other/biontech-mrna-manufacturing-facility-opens/ar-AA2g6A8N"
       },
       {
         "title": "Anthony Carbines refuses to talk about blistering attack on Labor Party bosses in media outing with Jacinta Allan",
@@ -631,6 +638,12 @@
       }
     ],
     "kalkallo": [
+      {
+        "title": "Northern Metropolitan candidate Riley Aickin",
+        "outlet": "Star Weekly",
+        "published": "2026-11-01T17:02:00Z",
+        "url": "https://starweekly.com.au/news/2026/11/02/northern-metropolitan-candidate-riley-aickin/"
+      },
       {
         "title": "Traffic and roads driving voters of Kalkallo in Victorian state election",
         "outlet": "ABC (Australian Broadcasting Corporation) on MSN",
@@ -677,9 +690,9 @@
       },
       {
         "title": "Coalition outline policy plan to try and stop abortion issue becoming an election wedge",
-        "outlet": "The Toowoomba Chronicle",
+        "outlet": "The Courier-Mail",
         "published": "2026-10-15T01:04:00Z",
-        "url": "https://www.thechronicle.com.au/news/victoria/political-football-jess-wilson-slams-ben-carroll-over-30m-election-pledge-for-free-abortions/news-story/042c83e4be4c5e7b4169f27ea2833036"
+        "url": "https://www.couriermail.com.au/news/victoria/political-football-jess-wilson-slams-ben-carroll-over-30m-election-pledge-for-free-abortions/news-story/042c83e4be4c5e7b4169f27ea2833036"
       },
       {
         "title": "Kew election results 2022: live count for 2026 from 28 November",
@@ -689,9 +702,9 @@
       },
       {
         "title": "52 questions with Jess Wilson: Toddler chaos, Macca’s runs and her pitch to lead Victoria",
-        "outlet": "The Toowoomba Chronicle",
+        "outlet": "The Courier-Mail",
         "published": "2026-09-19T12:00:00Z",
-        "url": "https://www.thechronicle.com.au/news/victoria/52-questions-with-jess-wilson-toddler-chaos-maccas-runs-and-her-pitch-to-lead-victoria/news-story/33ddb943f9ee272f4fed401bf0cb603d"
+        "url": "https://www.couriermail.com.au/news/victoria/52-questions-with-jess-wilson-toddler-chaos-maccas-runs-and-her-pitch-to-lead-victoria/news-story/33ddb943f9ee272f4fed401bf0cb603d"
       },
       {
         "title": "Jess Wilson unveils $5bn Coalition plan to tackle Victoria’s pothole crisis",
@@ -745,7 +758,14 @@
       }
     ],
     "malvern": [],
-    "melbourne": [],
+    "melbourne": [
+      {
+        "title": "Labor allegedly used threats and inflated costs to dictate Airport Rail Link",
+        "outlet": "ABC News",
+        "published": "2026-11-02T01:29:59Z",
+        "url": "https://www.abc.net.au/news/2026-11-02/melbourne-airport-rail-link-royal-commission/107335408"
+      }
+    ],
     "melton": [],
     "mildura": [
       {
@@ -902,6 +922,12 @@
     ],
     "oakleigh": [
       {
+        "title": "Funding pledges and political pitches take centre stage at Oakleigh Glendi",
+        "outlet": "The Greek Herald",
+        "published": "2026-11-01T16:01:00Z",
+        "url": "https://greekherald.com.au/news/funding-pledges-and-political-pitches-take-centre-stage-at-oakleigh-glendi/"
+      },
+      {
         "title": "Local sports clubs tackle road safety in TAC’s expanded program",
         "outlet": "Star Weekly",
         "published": "2026-10-30T07:03:00Z",
@@ -928,7 +954,14 @@
     "polwarth": [],
     "prahran": [],
     "preston": [],
-    "richmond": [],
+    "richmond": [
+      {
+        "title": "Northern Metropolitan candidate Riley Aickin",
+        "outlet": "Star Weekly",
+        "published": "2026-11-01T17:02:00Z",
+        "url": "https://starweekly.com.au/news/2026/11/02/northern-metropolitan-candidate-riley-aickin/"
+      }
+    ],
     "ringwood": [
       {
         "title": "Ringwood election results 2022: live count for 2026 from 28 November",
@@ -948,6 +981,12 @@
     "rowville": [],
     "sandringham": [],
     "shepparton": [
+      {
+        "title": "Labor promises free dental clinic for Shepparton",
+        "outlet": "Shepparton News",
+        "published": "2026-11-01T16:01:00Z",
+        "url": "https://www.sheppnews.com.au/news/labor-promises-free-dental-clinic-for-shepparton/"
+      },
       {
         "title": "Greater Shepparton Secures First Cancer Centre Commitment",
         "outlet": "Mirage News",
@@ -995,7 +1034,14 @@
         "url": "https://www.theindiansun.com.au/2026/10/19/dylan-wight-mp-joins-west-melbourne-durga-utsav-2026-celebrations/"
       }
     ],
-    "thomastown": [],
+    "thomastown": [
+      {
+        "title": "Thomastown candidate Priya Reddy",
+        "outlet": "Star Weekly",
+        "published": "2026-11-01T17:59:00Z",
+        "url": "https://starweekly.com.au/news/2026/11/02/thomastown-candidate-priya-reddy/"
+      }
+    ],
     "warrandyte": [],
     "wendouree": [],
     "werribee": [],
