@@ -11,7 +11,7 @@
 
   const $ = (id) => document.getElementById(id);
   const surname = (p) => App.givenFirst(p.name).split(/\s+/).pop();
-  const SOURCES = { abc: "ABC election guide", wikipedia: "Wikipedia" };
+  const SOURCES = { abc: "ABC election guide", wikipedia: "Wikipedia", electiontracker: "Party page (found via electiontracker.au)" };
   const ISSUES = "https://github.com/alisterjoyce/vic-election-tracker/issues";
 
   function seatLink(p) {

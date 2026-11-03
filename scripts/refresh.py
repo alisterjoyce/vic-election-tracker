@@ -1315,6 +1315,20 @@ def fetch_electiontracker(web: "PoliteSession") -> list[dict]:
              "status": r.get("status") or ""} for r in rows if r.get("name")]
 
 
+def _short_name_match(seat_rows: list[dict], name: str, party: str) -> bool:
+    """Same party and surname, and first names that agree on their first three letters ("Lachie" and
+    "Lachlan" McKeeman). Only for the report: a short name is the same candidacy, not a missing one."""
+    parts = name.split()
+    if len(parts) < 2:
+        return False
+    first, last = _name_key(parts[0])[:3], _name_key(parts[-1])
+    for c in seat_rows:
+        cp = (c.get("name") or "").split()
+        if len(cp) >= 2 and c.get("party") == party and _name_key(cp[-1]) == last and _name_key(cp[0])[:3] == first:
+            return True
+    return False
+
+
 def refresh_electiontracker(data_dir: Path, meta: dict) -> bool:
     source = meta.setdefault("sources", {}).setdefault("electiontracker", {"url": ET_CANDIDATES_URL})
     try:
@@ -1349,7 +1363,8 @@ def refresh_electiontracker(data_dir: Path, meta: dict) -> bool:
             continue
         if r["party"] == "OTH" and r["party_slug"]:
             unmapped.add(r["party_slug"])
-        if _find_in_seat(by_seat.get(r["contest"], []), r["name"], r["party"]) is None:
+        if _find_in_seat(by_seat.get(r["contest"], []), r["name"], r["party"]) is None and not _short_name_match(
+                by_seat.get(r["contest"], []), r["name"], r["party"]):
             entry = {"contest": r["contest"], "chamber": r["chamber"], "name": r["name"],
                      "party": r["party"], "status": r["status"]}
             if any(_name_key(n) == _name_key(r["name"]) for n in mlcs.get(r["contest"], [])):

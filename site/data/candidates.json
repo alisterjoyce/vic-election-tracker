@@ -10,7 +10,7 @@
       "ballot_position": "Assembly: integer position on the ballot paper once drawn by the VEC, else null",
       "ticket_position": "Council rows only: position in the party's group as reported",
       "incumbent": "Assembly: true if this is the sitting member",
-      "source": "abc (listed in the ABC guide) | wikipedia (added from Wikipedia) | absent for rows from the research report or entered by hand from a news report (cited in source_url)",
+      "source": "abc (listed in the ABC guide) | wikipedia (added from Wikipedia) | electiontracker (found through electiontracker.au's reconciliation report and added by hand; source_url is the party or campaign page it cites) | absent for rows from the research report or entered by hand from a news report (cited in source_url)",
       "source_url": "Where the row came from (the ABC district page for source abc)",
       "website": "Assembly: the candidate's website as linked from their ABC guide card (usually the party's candidate page), when listed",
       "date_added": "YYYY-MM-DD the row was added by refresh.py (Melbourne date)",
@@ -21,6 +21,19 @@
     }
   },
   "candidates": [
+    {
+      "district": null,
+      "region": "eastern-victoria",
+      "name": "Clay Esler",
+      "party": "ONP",
+      "status": "endorsed",
+      "ticket_position": null,
+      "source": "electiontracker",
+      "source_url": "https://vic.onenation.org.au/clay-esler",
+      "notes": "Found via electiontracker.au; endorsement on the party's page",
+      "date_added": "2026-11-04",
+      "updated": "2026-11-04"
+    },
     {
       "district": null,
       "region": "eastern-victoria",
@@ -56,6 +69,19 @@
       "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
       "date_added": "2026-11-01",
       "updated": "2026-11-01"
+    },
+    {
+      "district": null,
+      "region": "north-eastern-metropolitan",
+      "name": "Maxwell Gratton",
+      "party": "ONP",
+      "status": "endorsed",
+      "ticket_position": null,
+      "source": "electiontracker",
+      "source_url": "https://vic.onenation.org.au/maxwell-gratton",
+      "notes": "Found via electiontracker.au; endorsement on the party's page",
+      "date_added": "2026-11-04",
+      "updated": "2026-11-04"
     },
     {
       "district": null,
@@ -154,6 +180,19 @@
       "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
       "date_added": "2026-10-30",
       "updated": "2026-10-30"
+    },
+    {
+      "district": null,
+      "region": "northern-metropolitan",
+      "name": "Shankar Dharel",
+      "party": "LIB",
+      "status": "endorsed",
+      "ticket_position": null,
+      "source": "electiontracker",
+      "source_url": "https://vicliberal.org.au/team/shankar-dharel",
+      "notes": "Found via electiontracker.au; endorsement on the party's page",
+      "date_added": "2026-11-04",
+      "updated": "2026-11-04"
     },
     {
       "district": null,
@@ -584,6 +623,32 @@
       "date_added": "2026-10-31",
       "updated": "2026-10-31",
       "notes": "Party on Wikipedia: Democrats"
+    },
+    {
+      "district": null,
+      "region": "western-metropolitan",
+      "name": "Allan Doensen",
+      "party": "ONP",
+      "status": "endorsed",
+      "ticket_position": null,
+      "source": "electiontracker",
+      "source_url": "https://vic.onenation.org.au/allan-doensen",
+      "notes": "Found via electiontracker.au; endorsement on the party's page",
+      "date_added": "2026-11-04",
+      "updated": "2026-11-04"
+    },
+    {
+      "district": null,
+      "region": "western-metropolitan",
+      "name": "Satish Patel",
+      "party": "LIB",
+      "status": "endorsed",
+      "ticket_position": null,
+      "source": "electiontracker",
+      "source_url": "https://vicliberal.org.au/team/satish-patel",
+      "notes": "Found via electiontracker.au; endorsement on the party's page",
+      "date_added": "2026-11-04",
+      "updated": "2026-11-04"
     },
     {
       "district": null,
