@@ -8,13 +8,25 @@
       "sources": "Source -> {status: ok | error | skipped, url, items, message}"
     }
   },
-  "updated": "2026-11-03T05:47:05Z",
+  "updated": "2026-11-03T09:50:53Z",
   "statewide": [
     {
+      "title": "Hear Ky you should vote for them",
+      "outlet": "Shepparton News",
+      "published": "2026-11-02T16:00:00Z",
+      "url": "https://www.sheppnews.com.au/news/hear-ky-you-should-vote-for-them/"
+    },
+    {
       "title": "Premier Ben Carroll fights for survival as Victorian election campaign officially begins",
-      "outlet": "Couriermail",
+      "outlet": "news.com.au",
       "published": "2026-11-02T15:37:00Z",
       "url": "https://www.news.com.au/national/victoria/politics/premier-ben-carroll-fights-for-survival-as-victorian-election-campaign-officially-begins/news-story/af6cdb72c49cd35aa65cb5a61bd5c069"
+    },
+    {
+      "title": "Greater mental health support promise",
+      "outlet": "Star Weekly",
+      "published": "2026-11-02T07:00:00Z",
+      "url": "https://starweekly.com.au/news/2026/11/02/greater-mental-health-support-promise/"
     },
     {
       "title": "Wyndham North Police Station to be reopened",
@@ -147,18 +159,6 @@
       "outlet": "The Guardian",
       "published": "2026-10-27T21:50:00Z",
       "url": "https://www.theguardian.com/australia-news/2026/oct/28/unions-turn-on-labor-attack-ads-campaign-funds-victorian-election-exclusive"
-    },
-    {
-      "title": "Socialist Leanna Nguyen to contest St Albans",
-      "outlet": "Brimbank & North West | Star Weekly",
-      "published": "2026-10-27T17:00:00Z",
-      "url": "https://brimbanknorthwest.starweekly.com.au/news/socialist-leanna-nguyen-to-contest-st-albans/"
-    },
-    {
-      "title": "Two councillors step aside ahead of election",
-      "outlet": "Phillip Island & San Remo Advertiser",
-      "published": "2026-10-27T11:09:00Z",
-      "url": "https://www.pisra.com.au/two-councillors-step-aside-ahead-of-election/"
     }
   ],
   "seats": {
@@ -312,9 +312,9 @@
     "brighton": [
       {
         "title": "James Newbury guilty of parliamentary misconduct over post warning Allan set to be electorally thumped",
-        "outlet": "The Toowoomba Chronicle",
+        "outlet": "Northern Territory News",
         "published": "2026-07-23T04:58:00Z",
-        "url": "https://www.thechronicle.com.au/news/victoria/james-newbury-found-guilty-of-misconduct-over-political-baseball-bats-post/news-story/8ecf32c570a4432490c56283d408fb28"
+        "url": "https://www.ntnews.com.au/news/victoria/james-newbury-found-guilty-of-misconduct-over-political-baseball-bats-post/news-story/8ecf32c570a4432490c56283d408fb28"
       }
     ],
     "broadmeadows": [
@@ -340,9 +340,9 @@
       },
       {
         "title": "Victorian Greens MP Tim Read dies after cancer battle",
-        "outlet": "The Courier-Mail",
+        "outlet": "Couriermail",
         "published": "2026-09-19T14:07:00Z",
-        "url": "https://www.couriermail.com.au/business/work/leaders-companies/victorian-greens-mp-tim-read-has-died-after-cancer-battle/news-story/b8349436f5784889e1531f72ec6a6559"
+        "url": "https://www.news.com.au/national/victoria/politics/victorian-greens-mp-tim-read-has-died-after-cancer-battle/news-story/b8349436f5784889e1531f72ec6a6559"
       },
       {
         "title": "Victorian Greens MP dies of cancer",
@@ -733,9 +733,9 @@
       },
       {
         "title": "52 questions with Jess Wilson: Toddler chaos, Macca’s runs and her pitch to lead Victoria",
-        "outlet": "Northern Territory News",
+        "outlet": "The Courier-Mail",
         "published": "2026-09-19T12:00:00Z",
-        "url": "https://www.ntnews.com.au/news/victoria/52-questions-with-jess-wilson-toddler-chaos-maccas-runs-and-her-pitch-to-lead-victoria/news-story/33ddb943f9ee272f4fed401bf0cb603d"
+        "url": "https://www.couriermail.com.au/news/victoria/52-questions-with-jess-wilson-toddler-chaos-maccas-runs-and-her-pitch-to-lead-victoria/news-story/33ddb943f9ee272f4fed401bf0cb603d"
       },
       {
         "title": "Who is Jess Wilson? The 36-year-old set to make history at the Victorian state election",
@@ -864,6 +864,12 @@
     "mulgrave": [],
     "murray-plains": [
       {
+        "title": "Hear Ky you should vote for them",
+        "outlet": "Shepparton News",
+        "published": "2026-11-02T16:00:00Z",
+        "url": "https://www.sheppnews.com.au/news/hear-ky-you-should-vote-for-them/"
+      },
+      {
         "title": "Coalition pledges fire truck",
         "outlet": "gannawarratimes.com.au",
         "published": "2026-10-25T22:00:00Z",
@@ -896,7 +902,7 @@
     "niddrie": [
       {
         "title": "Premier Ben Carroll fights for survival as Victorian election campaign officially begins",
-        "outlet": "Couriermail",
+        "outlet": "news.com.au",
         "published": "2026-11-02T15:37:00Z",
         "url": "https://www.news.com.au/national/victoria/politics/premier-ben-carroll-fights-for-survival-as-victorian-election-campaign-officially-begins/news-story/af6cdb72c49cd35aa65cb5a61bd5c069"
       },
