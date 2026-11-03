@@ -137,13 +137,13 @@
   // "Data updated 31 Oct 2026, 6:04 am Melbourne time" (footer and the home page's headline card).
   function dataUpdatedText(iso) {
     const p = melbourneParts(new Date(iso));
-    return `Data updated ${p.day} ${MONTHS[Number(p.month) - 1]} ${p.year}, ${p.hour}:${p.minute} ${(p.dayPeriod || "").toLowerCase()} Melbourne time`;
+    return `Data updated ${Number(p.day)} ${MONTHS[Number(p.month) - 1]} ${p.year}, ${p.hour}:${p.minute} ${(p.dayPeriod || "").toLowerCase()} Melbourne time`;
   }
 
   // "30 Oct 2026, 1:18 pm AEDT" in Melbourne time.
   function fmtDateTime(iso) {
     const p = melbourneParts(new Date(iso));
-    return `${p.day} ${MONTHS[Number(p.month) - 1]} ${p.year}, ${p.hour}:${p.minute} ${(p.dayPeriod || "").toLowerCase()} ${p.timeZoneName || ""}`.trim();
+    return `${Number(p.day)} ${MONTHS[Number(p.month) - 1]} ${p.year}, ${p.hour}:${p.minute} ${(p.dayPeriod || "").toLowerCase()} ${p.timeZoneName || ""}`.trim();
   }
 
   // Today's date in Melbourne as "YYYY-MM-DD".
@@ -736,15 +736,29 @@
     if (sheet.showModal) sheet.showModal(); else sheet.setAttribute("open", "");
   }
 
-  function showUpdateToast(onTap) {
+  function showUpdateToast(onTap, text = "Update available, tap to refresh") {
     if (document.querySelector(".sw-toast")) return;
     const wrap = document.createElement("div");
     wrap.className = "sw-toast";
     wrap.setAttribute("role", "status");
-    wrap.innerHTML = '<button type="button">Update available, tap to refresh</button>';
+    wrap.innerHTML = `<button type="button">${escapeHtml(text)}</button>`;
     const btn = wrap.querySelector("button");
     btn.addEventListener("click", () => { btn.disabled = true; btn.textContent = "Updating…"; onTap(); });
     document.body.append(wrap);
+  }
+
+  // A page left open (or an app sent to the background) comes back to a refresh that happened meanwhile:
+  // after 5 minutes away, check meta.json and offer a reload if the data is newer than what's shown.
+  let shownUpdate = null;   // meta.last_updated as rendered in the footer
+  function watchForNewData() {
+    let hiddenAt = 0;
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "hidden") { hiddenAt = Date.now(); return; }
+      if (!shownUpdate || Date.now() - hiddenAt < 5 * 60 * 1000) return;
+      fetch(new URL("data/meta.json", ROOT), { cache: "no-cache" }).then((r) => r.json()).then((m) => {
+        if (m.last_updated && m.last_updated > shownUpdate) showUpdateToast(() => location.reload(), "New data available, tap to refresh");
+      }).catch(() => {});
+    });
   }
 
   // Registered after the page has loaded, so precaching never competes with the first paint.
@@ -768,6 +782,7 @@
       document.addEventListener("visibilitychange", () => {
         if (document.visibilityState === "visible") reg.update().catch(() => {});
       });
+      watchForNewData();
     }).catch((err) => console.warn("Service worker not registered:", err));
     if (document.readyState === "complete") register();
     else window.addEventListener("load", register, { once: true });
@@ -850,6 +865,7 @@
     if (footer) {
       if (meta && meta.last_updated) {
         footer.innerHTML = `<time datetime="${escapeHtml(meta.last_updated)}">${escapeHtml(dataUpdatedText(meta.last_updated))}</time>`;
+        shownUpdate = meta.last_updated;
       } else {
         footer.textContent = "Data last updated: unknown";
       }

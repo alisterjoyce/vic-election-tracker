@@ -3,9 +3,11 @@
    - App shell (pages, CSS, JS, Latin fonts, icons): precached at install, then served from the cache
      and refreshed in the background (stale-while-revalidate), so a deploy reaches the next visit
      even without a version bump.
-   - Data (data/*.json, boundaries, 2022 results): stale-while-revalidate, so pages open instantly
-     with the last data and the fresh copy is fetched behind them.
-   - News (data/news.json): network first, falling back to the cached copy offline.
+   - Data (data/*.json, boundaries, 2022 results): stale-while-revalidate with a short max age
+     (DATA_MAX_AGE). A copy fetched in the last few minutes is served at once and refreshed behind
+     the page; an older one (any launch after a gap) waits for the network, falling back to the
+     cached copy after NETWORK_TIMEOUT or offline. So the app never opens on days-old data.
+   - News (data/news.json): network first, with the same fallback.
    - Photos and the other font subsets: cache first.
    - Other origins: only the pinned cdnjs libraries (Leaflet, Chart.js, html-to-image) are cached.
      Every other cross-origin request (and anything that looks like a login or auth page) passes
@@ -14,7 +16,7 @@
    Bump VERSION when the shell list changes or to make every installed copy refresh at once: the new
    worker precaches, the page offers "Update available, tap to refresh", and old caches are deleted
    when it activates. */
-const VERSION = "v1";
+const VERSION = "v2";
 const PREFIX = "vet-";
 const CACHES = {
   shell: `${PREFIX}shell-${VERSION}`,
@@ -23,6 +25,9 @@ const CACHES = {
   libs: `${PREFIX}libs-${VERSION}`,
 };
 const LIMITS = { data: 160, media: 250, libs: 20 };   // entries; oldest go first
+const DATA_MAX_AGE = 5 * 60 * 1000;   // a cached data file younger than this is served without waiting
+const NETWORK_TIMEOUT = 4000;         // how long a stale data file waits for the network before the cache
+const FETCHED_AT = "x-sw-fetched-at"; // stamped on cached data responses
 
 const SHELL = [
   "./", "index.html", "lower.html", "upper.html", "candidate.html", "pendulum.html", "poll.html",
@@ -67,8 +72,13 @@ async function trim(cacheName, max) {
 
 const cacheable = (res) => res && res.ok && (res.type === "basic" || res.type === "cors");
 
-async function put(cacheName, request, response) {
+async function put(cacheName, request, response, stamp = false) {
   if (!cacheable(response)) return;
+  if (stamp) {   // remember when this copy was fetched (see fresh())
+    const headers = new Headers(response.headers);
+    headers.set(FETCHED_AT, String(Date.now()));
+    response = new Response(await response.blob(), { status: response.status, statusText: response.statusText, headers });
+  }
   const cache = await caches.open(cacheName);
   await cache.put(request, response);
   const key = Object.keys(CACHES).find((k) => CACHES[k] === cacheName);
@@ -88,15 +98,23 @@ async function staleWhileRevalidate(event, cacheName, fallback) {
   return res || (fallback && (await caches.match(fallback))) || Response.error();
 }
 
-async function networkFirst(event, cacheName) {
+// Data: a copy younger than maxAge is served at once (and refreshed behind the page); otherwise
+// wait for the network, falling back to the cached copy after NETWORK_TIMEOUT or offline.
+async function fresh(event, maxAge) {
   const { request } = event;
-  try {
-    const res = await fetch(request);
-    event.waitUntil(put(cacheName, request, res.clone()));
+  const cached = await caches.match(request);
+  const network = fetch(request).then((res) => {
+    event.waitUntil(put(CACHES.data, request, res.clone(), true));
     return res;
-  } catch (e) {
-    return (await caches.match(request)) || Response.error();
-  }
+  });
+  const settled = network.catch(() => null);
+  const age = cached ? Date.now() - Number(cached.headers.get(FETCHED_AT) || 0) : Infinity;
+  if (cached && age < maxAge) { event.waitUntil(settled); return cached; }
+  const timeout = new Promise((resolve) => setTimeout(() => resolve(null), cached ? NETWORK_TIMEOUT : 30000));
+  const res = await Promise.race([settled, timeout]);
+  if (res) return res;
+  event.waitUntil(settled);   // keep updating the cache for next time
+  return cached || Response.error();
 }
 
 async function cacheFirst(event, cacheName) {
@@ -120,8 +138,8 @@ self.addEventListener("fetch", (event) => {
   if (!url.href.startsWith(BASE)) return;   // outside the app's scope
   const path = url.href.slice(BASE.length).split("?")[0];
 
-  if (path === "data/news.json") return event.respondWith(networkFirst(event, CACHES.data));
-  if (path.startsWith("data/") && /\.(json|geojson)$/.test(path)) return event.respondWith(staleWhileRevalidate(event, CACHES.data));
+  if (path === "data/news.json") return event.respondWith(fresh(event, 0));
+  if (path.startsWith("data/") && /\.(json|geojson)$/.test(path)) return event.respondWith(fresh(event, DATA_MAX_AGE));
   if (path.startsWith("photos/") || (path.startsWith("fonts/") && !SHELL.includes(path))) return event.respondWith(cacheFirst(event, CACHES.media));
   // Pages and the rest of the shell. An uncached page offline falls back to the home page.
   if (request.mode === "navigate") return event.respondWith(staleWhileRevalidate(event, CACHES.shell, new URL("index.html", BASE).href));

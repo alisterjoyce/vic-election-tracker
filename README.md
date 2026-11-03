@@ -144,7 +144,7 @@ Then visit http://localhost:8000.
 
 ## Automation
 
-`.github/workflows/refresh.yml` runs four times a day, at 6 am, 10 am, 4 pm and 8 pm Melbourne time (cron `0 19,23,5,9 * * *` in UTC; AEDT, so an hour earlier in Melbourne once daylight saving ends), and can also be run by hand from the Actions tab (`workflow_dispatch`). Every run does everything: Wikipedia polls and candidates, the full ABC pass and A-Z reconciliation (one request a second), news, the Sportsbet attempt, the how-to-vote register and the change log. It commits and pushes `site/data` only if `scripts/data_changed.py` reports a real change (refresh times and source status alone don't count), and only then does its `deploy` job publish `site/` to GitHub Pages. Pushes made by that job's token don't start other workflows, which is why it deploys itself. The footer and the home page show "Data updated <time> Melbourne time".
+`.github/workflows/refresh.yml` runs four times a day, at 6 am, 10 am, 4 pm and 8 pm Melbourne time (cron `0 19,23,5,9 * * *` in UTC; AEDT, so an hour earlier in Melbourne once daylight saving ends), and can also be run by hand from the Actions tab (`workflow_dispatch`). Every run does everything: Wikipedia polls and candidates, the full ABC pass and A-Z reconciliation (one request a second), news, the Sportsbet attempt, the how-to-vote register and the change log. It commits and pushes `site/data` when `scripts/data_changed.py` reports a change, which includes the new `last_updated` stamp of any successful run (per-source status alone doesn't count), and then its `deploy` job publishes `site/` to GitHub Pages. Pushes made by that job's token don't start other workflows, which is why it deploys itself. The footer and the home page show "Data updated <time> Melbourne time".
 
 Google News isn't used: its robots.txt disallows automated access, so news comes from a Bing News search and publishers' RSS feeds.
 
@@ -152,9 +152,9 @@ Google News isn't used: its robots.txt disallows automated access, so news comes
 
 The site is a Progressive Web App: `site/manifest.webmanifest` (relative `start_url` and `scope`, so it works under the Pages base path or at a root), icons in `site/icons/`, and a service worker, `site/sw.js`. Android and desktop Chromium offer "Install app" in the About menu; on iPhone that item explains Share, then Add to Home Screen.
 
-The service worker precaches the app shell (pages, CSS, JS, Latin fonts, icons) and serves it stale-while-revalidate, serves the JSON data stale-while-revalidate (pages open instantly, the fresh copy loads behind them), fetches `news.json` network first, caches photos, and caches only the pinned cdnjs libraries from other origins. Caches are capped, and old versions are deleted when a new worker activates.
+The service worker precaches the app shell (pages, CSS, JS, Latin fonts, icons) and serves it stale-while-revalidate, serves JSON data from its cache only if it was fetched in the last 5 minutes (refreshing it behind the page), and otherwise fetches it first, falling back to the cache after 4 seconds or offline, so the app never opens on old data, fetches `news.json` network first, caches photos, and caches only the pinned cdnjs libraries from other origins. Caches are capped, and old versions are deleted when a new worker activates.
 
-**Bumping the cache version:** change `const VERSION = "v1";` in `site/sw.js` (to `"v2"` and so on) whenever you change HTML, CSS or JS, and keep its `SHELL` list in step with the files. Installed copies then download the new shell and show "Update available, tap to refresh". Data refreshes don't need a bump.
+**Bumping the cache version:** change `const VERSION = "v2";` in `site/sw.js` (to `"v3"` and so on) whenever you change HTML, CSS or JS, and keep its `SHELL` list in step with the files. Installed copies then download the new shell and show "Update available, tap to refresh". Data refreshes don't need a bump.
 
 ## Deploy
 

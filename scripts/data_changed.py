@@ -1,10 +1,12 @@
 """Print "changed" if site/data differs from the last commit in anything beyond refresh bookkeeping,
-else "unchanged". The refresh workflow commits (and deploys) only on "changed", so a run that only
-re-stamps times doesn't make a commit.
+else "unchanged". The refresh workflow commits (and deploys) only on "changed", so a run in which
+every source failed (only status messages moved) doesn't make a commit.
 
-Bookkeeping that doesn't count: meta.json's last_updated and per-source status, news.json's updated
-time and per-feed status, changelog.json's updated time and htv.json's last_checked. Any other
-difference, or a file that can't be compared, counts as a change (so a real update is never lost).
+Bookkeeping that doesn't count: meta.json's per-source status, news.json's updated time and per-feed
+status, changelog.json's updated time and htv.json's last_checked. meta.json's last_updated does count:
+refresh.py sets it on every successful run and the site shows it ("Data updated ..."), so every
+successful run is committed and deployed. A run where every source failed leaves it alone and isn't.
+Any other difference, or a file that can't be compared, counts as a change (so a real update is never lost).
 
 Usage: python scripts/data_changed.py [--data-dir site/data]
 """
@@ -16,7 +18,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 VOLATILE = {   # top-level keys that change on every successful run
-    "meta.json": {"last_updated", "sources"},
+    "meta.json": {"sources"},
     "news.json": {"updated", "sources"},
     "changelog.json": {"updated"},
     "htv.json": {"last_checked"},
