@@ -5,12 +5,14 @@
       "last_updated": "ISO 8601 UTC timestamp of the last successful data refresh",
       "election_date": "Polling day, YYYY-MM-DD",
       "previous_election": "{date, tpp: {ALP, LNP}}: statewide 2PP at the last election, used as the baseline for uniform-swing seat estimates",
-      "key_dates": "Key-dates strip: {countdowns: [{label, at (ISO with offset), today (text on the day), after (text once passed)}], events: [{from, to (optional, inclusive), text, short (a few words for the one-line strip on phones)}]}; the narrowest event covering today is shown as 'Today:'",
+      "key_dates": "Key-dates strip: {countdowns: [{label, at (ISO with offset), today (text on the day), after (text once passed)}], events: [{from, to (optional, inclusive), text, short (a few words for the one-line strip on phones), ongoing (optional: a stretch between milestones, e.g. counting continues)}]}. The full strip shows 'Today:' (the narrowest event covering today) and 'Next,' (the next milestone). The phone line shows 'Today:' only on a milestone's first day, otherwise 'Next: <date>, <short>'; ongoing events are never a milestone",
       "assembly_seats": "Total Legislative Assembly (lower house) seats",
       "council_seats": "Total Legislative Council (upper house) seats",
       "sample_data": "Map of dataset name -> true while that file still holds placeholder rows (drives the 'sample data' banner)",
       "sources": "Map of source name -> {status: ok | error | placeholder, url, last_success, message}",
-      "reconciliation": "Written by scripts/refresh.py after the ABC district pages: lower-house candidates compared with the ABC A-Z list. {date (Melbourne), scope, abc_list_url, totals: {tracker, abc_list}, tracker_by_source: {abc, wikipedia, report}, only_in_tracker, only_on_abc (missing from the tracker before this run; added), unmatched_electorates, tracked_all (active candidates in both houses, shown in the footer)}"
+      "reconciliation": "Written by scripts/refresh.py after the ABC district pages: lower-house candidates compared with the ABC A-Z list. {date (Melbourne), scope, abc_list_url, totals: {tracker, abc_list}, tracker_by_source: {abc, wikipedia, report}, only_in_tracker, only_on_abc (missing from the tracker before this run; added), unmatched_electorates, tracked_all (active candidates in both houses, shown in the footer)}",
+      "nominations": "Nominations badge on the home page: {opens, closes (ISO with offset; by hand), official (count of VEC-nominated candidates, both houses), official_at (when that count was taken)}; official/official_at are written by refresh.py once the VEC nominations file is loaded, and stay null until then",
+      "reconciliation_electiontracker": "Written by scripts/refresh.py after the ABC step: candidacies listed by electiontracker.au (open data, CC BY 4.0) compared with candidates.json and regions.json tickets. {date (Melbourne), source, data_url, credit, totals: {listed, active, missing_from_tracker}, missing_from_tracker: [{contest, chamber, name, party, status, note?}]}. Report only: names are never added from it, and only name, party, contest and status are read"
     }
   },
   "last_updated": "2026-11-03T22:46:22Z",
@@ -63,15 +65,21 @@
       },
       {
         "from": "2026-11-10",
+        "text": "Postal voting opens: the VEC starts posting ballot packs. Candidate lists are final and how-to-vote card registration opens at 9 am.",
+        "short": "postal voting opens; candidate lists final"
+      },
+      {
+        "from": "2026-11-11",
         "to": "2026-11-17",
-        "text": "Candidate lists are final; how-to-vote card registration opened on 10 Nov.",
-        "short": "candidate lists final; how-to-vote cards registering"
+        "text": "Candidate lists are final; postal votes are going out and how-to-vote cards are being registered.",
+        "short": "postal votes going out; how-to-vote cards registering",
+        "ongoing": true
       },
       {
         "from": "2026-11-18",
         "to": "2026-11-27",
-        "text": "Early voting is open at early voting centres.",
-        "short": "early voting open"
+        "text": "Early voting is open at early voting centres (from 18 Nov) until 6 pm Friday 27 Nov.",
+        "short": "early voting opens"
       },
       {
         "from": "2026-11-25",
@@ -85,9 +93,27 @@
       },
       {
         "from": "2026-11-29",
-        "to": "2026-12-19",
-        "text": "Counting and preference distributions continue; writs are returned by 19 Dec.",
-        "short": "counting continues; writs returned by 19 Dec"
+        "to": "2026-12-03",
+        "text": "Counting continues; postal votes are still arriving.",
+        "short": "counting continues",
+        "ongoing": true
+      },
+      {
+        "from": "2026-12-04",
+        "text": "Last day postal votes can be admitted to the count.",
+        "short": "last day postal votes can be admitted to the count"
+      },
+      {
+        "from": "2026-12-05",
+        "to": "2026-12-18",
+        "text": "Counting and preference distributions continue.",
+        "short": "counting and preference distributions continue",
+        "ongoing": true
+      },
+      {
+        "from": "2026-12-19",
+        "text": "Latest date for the return of writs.",
+        "short": "latest return of writs"
       }
     ]
   },
@@ -164,5 +190,11 @@
     "only_on_abc": 0,
     "unmatched_electorates": 0,
     "tracked_all": 656
+  },
+  "nominations": {
+    "opens": "2026-11-04T09:00:00+11:00",
+    "closes": "2026-11-09T12:00:00+11:00",
+    "official": null,
+    "official_at": null
   }
 }

@@ -11,6 +11,9 @@
   table. Candidates become "endorsed"; an ABC entry supersedes other rows
   for the same party and seat (kept, marked "superseded"). The retiring
   MPs page sets retiring flags for MPs and MLCs.
+* electiontracker.au (second reconciliation source, report only): its open
+  candidates.json (CC BY 4.0) compared with candidates.json; names it lists
+  that the tracker doesn't have go to meta.json and the log, never added.
 * Sportsbet seat markets (best effort): fills seat_odds.json if the site
   can be fetched and parsed; otherwise the file is treated as manual.
 * VEC candidates: placeholder (see fetch_vec_candidates below).
@@ -1275,6 +1278,102 @@ def parse_sportsbet_markets(page: str, districts: dict[str, str]) -> dict[str, d
     return found
 
 
+# --------------------------------------------------------------------------
+# electiontracker.au: a second reconciliation source (report only)
+# --------------------------------------------------------------------------
+# Its open data (CC BY 4.0, credit "electiontracker.au") lists announced,
+# endorsed and nominated candidacies for both houses. Its robots.txt allows
+# crawling and asks for the JSON under /data/ rather than the HTML, so the run
+# reads one file, politely. Only each entry's name, party, contest and status
+# are used; its text (backgrounds, occupations) is never read into our data.
+# Candidates it lists that the tracker doesn't have are reported in
+# meta.json -> reconciliation_electiontracker and the log, not added: the ABC
+# stays the source that adds names.
+ET_SITE = "https://electiontracker.au"
+ET_CANDIDATES_URL = ET_SITE + "/data/vic2026/candidates.json"
+ET_PAGE_URL = ET_SITE + "/elections/vic/2026"
+ET_PARTIES = {
+    "labor": "ALP", "liberal": "LIB", "nationals": "NAT", "greens": "GRN", "one-nation": "ONP",
+    "independent": "IND", "animal-justice": "AJP", "legalise-cannabis": "LCV", "victorian-socialists": "VS",
+    "libertarian": "LBT", "family-first": "FF", "socialist-alliance": "SAL", "west-party": "WEST",
+    "new-democrats": "ND", "shooters-fishers-farmers": "SFF", "democratic-labour": "DLP",
+    "sustainable-australia": "SUS", "liberal-national": "LNP", "independent-labor": "ILAB",
+}
+ET_ACTIVE = {"announced", "endorsed", "nominated"}
+
+
+def fetch_electiontracker(web: "PoliteSession") -> list[dict]:
+    """Their candidacies as {name, party, contest, chamber, status}; nothing else is kept."""
+    rp = urllib.robotparser.RobotFileParser()
+    rp.parse(web.get(ET_SITE + "/robots.txt").splitlines())
+    if not rp.can_fetch(ABC_USER_AGENT, ET_CANDIDATES_URL):
+        raise PermissionError("robots.txt disallows " + ET_CANDIDATES_URL)
+    data = json.loads(web.get(ET_CANDIDATES_URL))
+    rows = data.get("candidates", []) if isinstance(data, dict) else data
+    return [{"name": str(r.get("name") or "").strip(), "party": ET_PARTIES.get(r.get("party") or "", "OTH"),
+             "party_slug": r.get("party") or "", "contest": r.get("contest") or "", "chamber": r.get("chamber") or "",
+             "status": r.get("status") or ""} for r in rows if r.get("name")]
+
+
+def refresh_electiontracker(data_dir: Path, meta: dict) -> bool:
+    source = meta.setdefault("sources", {}).setdefault("electiontracker", {"url": ET_CANDIDATES_URL})
+    try:
+        cands = (read_json(data_dir / "candidates.json", {}) or {}).get("candidates", [])
+        districts = {d["id"] for d in (read_json(data_dir / "districts.json", {}) or {}).get("districts", [])}
+        region_rows = (read_json(data_dir / "regions.json", {}) or {}).get("regions", [])
+        regions = {r["id"] for r in region_rows}
+        if not cands or not districts:
+            raise ValueError("candidates.json or districts.json is empty")
+        theirs = fetch_electiontracker(PoliteSession())
+        if not theirs:
+            raise ValueError("electiontracker.au listed no candidates")
+    except Exception as exc:  # noqa: BLE001 - report-only source: log, keep going
+        log.error("electiontracker.au reconciliation skipped: %s", exc)
+        warn_ci(f"electiontracker.au reconciliation skipped: {exc}")
+        source.update(status="error", message=str(exc)[:300])
+        return False
+
+    by_seat: dict[str, list[dict]] = {}
+    for c in cands:   # every row, whatever its status: a withdrawn or superseded name isn't "missing"
+        by_seat.setdefault(c.get("district") or c.get("region") or "", []).append(c)
+    mlcs = {}
+    for r in region_rows:   # upper-house ticket names live in regions.json, and count as candidates too
+        for t in r.get("tickets") or []:
+            by_seat.setdefault(r["id"], []).extend({"name": n, "party": t.get("party")} for n in t.get("candidates") or [])
+        mlcs[r["id"]] = [m["name"] for m in r.get("mlcs") or []]
+    missing, unknown_contests, unmapped = [], set(), set()
+    active = [r for r in theirs if r["status"] in ET_ACTIVE]
+    for r in active:
+        if r["contest"] not in districts | regions:
+            unknown_contests.add(r["contest"])
+            continue
+        if r["party"] == "OTH" and r["party_slug"]:
+            unmapped.add(r["party_slug"])
+        if _find_in_seat(by_seat.get(r["contest"], []), r["name"], r["party"]) is None:
+            entry = {"contest": r["contest"], "chamber": r["chamber"], "name": r["name"],
+                     "party": r["party"], "status": r["status"]}
+            if any(_name_key(n) == _name_key(r["name"]) for n in mlcs.get(r["contest"], [])):
+                entry["note"] = "sitting MLC, not on a tracked ticket"
+            missing.append(entry)
+    for m in missing:
+        log.warning("%s: %s (%s, %s) is on electiontracker.au but not in the tracker",
+                    m["contest"], m["name"], m["party"], m["status"])
+    if unknown_contests:
+        log.warning("electiontracker.au contests not in districts.json or regions.json: %s", sorted(unknown_contests))
+    if unmapped:
+        log.warning("electiontracker.au party slugs with no code here (counted as OTH): %s", sorted(unmapped))
+    meta["reconciliation_electiontracker"] = {
+        "date": datetime.now(MELBOURNE).date().isoformat(),
+        "source": ET_PAGE_URL, "data_url": ET_CANDIDATES_URL, "credit": "electiontracker.au (CC BY 4.0)",
+        "totals": {"listed": len(theirs), "active": len(active), "missing_from_tracker": len(missing)},
+        "missing_from_tracker": sorted(missing, key=lambda m: (m["chamber"], m["contest"], m["name"])),
+    }
+    source.update(status="ok", url=ET_CANDIDATES_URL, last_success=now_iso(),
+                  message=f"{len(active)} active candidacies; {len(missing)} not in the tracker")
+    log.info("electiontracker.au: %d listed, %d active, %d not in the tracker", len(theirs), len(active), len(missing))
+    return True
+
+
 def refresh_seat_odds(data_dir: Path, meta: dict) -> bool:
     source = meta.setdefault("sources", {}).setdefault("sportsbet", {"url": SPORTSBET_URL})
     path = data_dir / "seat_odds.json"
@@ -1353,8 +1452,13 @@ def refresh_candidates(data_dir: Path, meta: dict) -> bool:
     rows = {_candidate_key(c): c for c in existing.get("candidates", [])}
     for c in vec_rows:
         rows[_candidate_key(c)] = {**rows.get(_candidate_key(c), {}), **c}
-    write_json(path, {**existing, "candidates": _sort_candidates(list(rows.values()))})
+    merged = _sort_candidates(list(rows.values()))
+    write_json(path, {**existing, "candidates": merged})
     source.update(status="ok", last_success=now_iso(), message=f"{len(vec_rows)} VEC-nominated candidates")
+    # The home page's nominations badge switches to "Official candidates" with this count.
+    nominations = meta.setdefault("nominations", {})
+    nominations["official"] = sum(1 for c in merged if c.get("status") == "vec_nominated")
+    nominations["official_at"] = now_iso()
     log.info("Wrote %s (%d VEC rows merged)", path.name, len(vec_rows))
     return True
 
@@ -1895,6 +1999,7 @@ def main(argv=None) -> int:
         refresh_polls(data_dir, meta),
         refresh_wiki_candidates(data_dir, meta),
         refresh_abc(data_dir, meta),           # after Wikipedia, so the ABC (primary) wins conflicts
+        refresh_electiontracker(data_dir, meta),   # report only: compared after the ABC has added its names
         refresh_seat_odds(data_dir, meta),
         refresh_candidates(data_dir, meta),
         refresh_htv(data_dir, meta),

@@ -51,6 +51,35 @@
       : `Election held ${escapeHtml(fmtDate(meta.election_date))}`;
   }
 
+  // Nominations badge: open (until noon Mon 9 Nov), closed, then "Official candidates" with the VEC's
+  // count once refresh.py has loaded the nominations file (meta.nominations.official).
+  function melbourneMoment(iso) {
+    const parts = {};
+    new Intl.DateTimeFormat("en-AU", { timeZone: "Australia/Melbourne", weekday: "short", day: "numeric", month: "short",
+      hour: "numeric", minute: "2-digit", hour12: true }).formatToParts(new Date(iso)).forEach((p) => { parts[p.type] = p.value; });
+    const time = parts.hour === "12" && parts.minute === "00" && /pm/i.test(parts.dayPeriod || "") ? "noon"
+      : `${parts.hour}${parts.minute === "00" ? "" : `:${parts.minute}`} ${(parts.dayPeriod || "").toLowerCase()}`;
+    return `${time} ${parts.weekday} ${Number(parts.day)} ${parts.month}`;
+  }
+
+  function renderNominations(meta) {
+    const el = document.getElementById("hero-nominations");
+    const n = meta.nominations || {};
+    if (!el || !n.closes) return;
+    const now = Date.now();
+    let html;
+    if (n.official != null) {
+      html = `<span class="hero-badge is-official"><span class="hero-badge-dot"></span>Official candidates <b>${Number(n.official).toLocaleString("en-AU")}</b> <span class="hero-badge-src">VEC</span></span>`;
+    } else if (n.opens && now < Date.parse(n.opens)) {
+      html = `<span class="hero-badge"><span class="hero-badge-dot"></span>Nominations open ${escapeHtml(melbourneMoment(n.opens))}</span>`;
+    } else if (now < Date.parse(n.closes)) {
+      html = `<span class="hero-badge is-open"><span class="hero-badge-dot"></span>Nominations open until ${escapeHtml(melbourneMoment(n.closes))}</span>`;
+    } else {
+      html = '<span class="hero-badge"><span class="hero-badge-dot"></span>Nominations closed; official candidate list due from the VEC</span>';
+    }
+    el.innerHTML = html;
+  }
+
   // One 88-seat bar: blocs largest first from the left, so the leader's block meets the majority line.
   function heroBar(counts, what) {
     const order = Object.keys(counts).filter((b) => b !== "UND" && counts[b] > 0).sort((a, b) => counts[b] - counts[a]);
@@ -364,6 +393,7 @@
         loadJSON("meta"), loadJSON("districts"), loadJSON("regions"), loadJSON("polls"), loadJSON("seat_odds").catch(() => null),
       ]);
       renderCountdown(meta);
+      renderNominations(meta);
       if (meta.last_updated) {
         document.getElementById("hero-updated").innerHTML =
           `<time datetime="${escapeHtml(meta.last_updated)}">${escapeHtml(App.dataUpdatedText(meta.last_updated))}</time>`;

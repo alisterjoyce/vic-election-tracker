@@ -511,22 +511,23 @@
     }).join("");
 
     // What happens today: the narrowest event covering today, else the next one.
+    // Today: the narrowest event covering today. Next: the next milestone (events marked "ongoing" are
+    // stretches between milestones, e.g. counting, and never count as one).
     const events = (kd.events || []).map((e) => ({ ...e, to: e.to || e.from }));
     const current = events.filter((e) => e.from <= today && today <= e.to)
       .sort((a, b) => daysBetween(a.from, a.to) - daysBetween(b.from, b.to))[0];
-    let note, line;
-    const next = events.filter((e) => e.from > today).sort((a, b) => a.from.localeCompare(b.from))[0];
+    const milestones = events.filter((e) => !e.ongoing).sort((a, b) => a.from.localeCompare(b.from));
+    const startsToday = milestones.find((e) => e.from === today);
+    const next = milestones.find((e) => e.from > today);
     const dayMonth = (iso) => fmtDate(iso).replace(/ \d{4}$/, "");
-    if (current) {
-      note = `<strong>Today:</strong> ${escapeHtml(current.text)}`;
-      const short = current.short ? current.short[0].toUpperCase() + current.short.slice(1) : current.text;
-      line = `<strong>Today:</strong> ${escapeHtml(short)}`;
-    } else if (next) {
-      note = `<strong>Today:</strong> no scheduled milestone. Next, ${escapeHtml(fmtDate(next.from))}: ${escapeHtml(next.text)}`;
-      line = `<strong>Next:</strong> ${escapeHtml(dayMonth(next.from))}, ${escapeHtml(next.short || next.text)}`;
-    } else {
-      note = line = "<strong>Today:</strong> no scheduled milestone.";
-    }
+    const cap = (s) => s[0].toUpperCase() + s.slice(1);
+    const nextNote = next ? ` <strong>Next,</strong> ${escapeHtml(fmtDate(next.from))}: ${escapeHtml(next.text)}` : "";
+    const note = (current ? `<strong>Today:</strong> ${escapeHtml(current.text)}` : "<strong>Today:</strong> no scheduled milestone.") + nextNote;
+    // The phone line: "Today:" on a milestone's own day, otherwise what's next.
+    const line = startsToday ? `<strong>Today:</strong> ${escapeHtml(cap(startsToday.short || startsToday.text))}`
+      : next ? `<strong>Next:</strong> ${escapeHtml(dayMonth(next.from))}, ${escapeHtml(next.short || next.text)}`
+      : current ? `<strong>Today:</strong> ${escapeHtml(cap(current.short || current.text))}`
+      : "<strong>Today:</strong> no scheduled milestone.";
     // Phones show only the summary button; it opens the full strip (CSS hides one or the other).
     strip.innerHTML = `<div class="container">
       <button type="button" class="kd-summary" aria-expanded="false" aria-controls="kd-full"><span class="kd-line">${line}</span><span class="kd-caret" aria-hidden="true"></span></button>
