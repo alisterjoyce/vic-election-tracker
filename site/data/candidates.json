@@ -24,27 +24,28 @@
     {
       "district": null,
       "region": "eastern-victoria",
-      "name": "Clay Esler",
+      "name": "Neil Davison",
       "party": "ONP",
-      "status": "endorsed",
+      "status": "announced",
       "ticket_position": null,
-      "source": "electiontracker",
-      "source_url": "https://vic.onenation.org.au/clay-esler",
-      "notes": "Found via electiontracker.au; endorsement on the party's page",
-      "date_added": "2026-11-04",
-      "updated": "2026-11-04"
+      "source": "wikipedia",
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "date_added": "2026-10-30",
+      "updated": "2026-11-05",
+      "notes": "Wikipedia lists him #1, but One Nation's own candidates page (23 Oct 2026) names Clay Esler as lead candidate; position cleared on 2026-11-05"
     },
     {
       "district": null,
       "region": "eastern-victoria",
-      "name": "Neil Davison",
+      "name": "Clay Esler",
       "party": "ONP",
-      "status": "announced",
+      "status": "endorsed",
       "ticket_position": 1,
-      "source": "wikipedia",
-      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
-      "date_added": "2026-10-30",
-      "updated": "2026-10-30"
+      "source": "electiontracker",
+      "source_url": "https://vic.onenation.org.au/clay-esler",
+      "notes": "Found via electiontracker.au; endorsement on the party's page; One Nation's candidates page (archived 23 Oct 2026: https://web.archive.org/web/20261023040032/https://vic.onenation.org.au/candidates) names him the party's lead candidate for Eastern Victoria, after Greg Hansford withdrew",
+      "date_added": "2026-11-04",
+      "updated": "2026-11-05"
     },
     {
       "district": null,
@@ -872,12 +873,13 @@
       "region": "western-metropolitan",
       "name": "Brett Patrikeos",
       "party": "WEST",
-      "status": "announced",
+      "status": "not_standing",
       "ticket_position": 3,
       "source": "wikipedia",
       "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
       "date_added": "2026-10-30",
-      "updated": "2026-10-30"
+      "updated": "2026-11-05",
+      "notes": "Not standing for Western Metropolitan Region: The West Party's candidate page lists him for Niddrie, where the ABC lists him, and names only Joe Garra and Sahana Ramesh for the upper house here. Kept so the Wikipedia refresh doesn't re-add it (checked 2026-11-05)"
     },
     {
       "district": null,

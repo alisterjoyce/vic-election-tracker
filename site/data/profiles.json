@@ -12663,6 +12663,67 @@
       "profile_updated": "2026-11-04",
       "links": {}
     },
+    "eastern-victoria/clay-esler": {
+      "name": "Clay Esler",
+      "summary": {
+        "text": "Clay Esler is a One Nation candidate for Eastern Victoria Region in the Legislative Council at the 2026 election. An October 2026 copy of One Nation Victoria's candidates page called him the party's lead candidate in the region and named his issues as accountable government, community safety, affordable energy and jobs in regional areas, but gave no other biography. A local paper reported at the start of October that the party was choosing a new candidate for first place on its Eastern Victoria ticket after its original lead candidate withdrew, while Wikipedia's 2026 list names only Neil Davison for One Nation in the region.",
+        "src": [1, 2, 3],
+        "unverified": true,
+        "note": "Ticket position: One Nation's candidates page (archived 23 Oct 2026) calls him the lead candidate for Eastern Victoria, but the tracker's ticket and Wikipedia put Neil Davison first. His own party page refuses scripts and has no archived copy, so it could not be read."
+      },
+      "born": null,
+      "lives": null,
+      "occupation": null,
+      "prior_roles": [],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Accountable government",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Community safety",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Affordable energy",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Jobs in regional Victoria",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "party_page": "https://vic.onenation.org.au/clay-esler"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://web.archive.org/web/20261023040032/https://vic.onenation.org.au/candidates",
+          "title": "Candidates, One Nation Victoria (archived copy, October 2026)",
+          "accessed": "2026-11-05"
+        },
+        {
+          "id": 2,
+          "url": "https://lilydale.mailcommunity.com.au/news/2026/10/01/one-nations-eastern-victoria-candidate-greg-hansford-withdraws-due-to-serious-health-concern/",
+          "title": "One Nation's Eastern Victoria candidate Greg Hansford withdraws, Lilydale Star Mail (October 2026)",
+          "accessed": "2026-11-05"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-05"
+        }
+      ],
+      "profile_updated": "2026-11-05"
+    },
     "eastern-victoria/danielle-burridge": {
       "name": "Danielle Burridge",
       "summary": {
@@ -13381,6 +13442,94 @@
         }
       ],
       "profile_updated": "2026-11-04"
+    },
+    "eastern-victoria/matt-green": {
+      "name": "Matt Green",
+      "summary": {
+        "text": "Matt Green is a Liberal candidate for Eastern Victoria Region in the Legislative Council at the 2026 election, third on the joint Liberal and National ticket behind Renee Heath and Melina Bath. He works as a senior electorate officer for Wayne Farnham, the Liberal member for Narracan, and his preselection did not change that job, according to the Warragul & Drouin Gazette. His party page says he grew up in Bunyip and now lives in Warragul.",
+        "src": [1, 2, 3]
+      },
+      "born": null,
+      "lives": {
+        "place": "Warragul",
+        "src": [1, 2]
+      },
+      "occupation": {
+        "text": "Senior electorate officer to Wayne Farnham MP (Member for Narracan)",
+        "src": [2]
+      },
+      "prior_roles": [
+        {
+          "role": "Senior electorate officer to the Member for Narracan, Wayne Farnham",
+          "kind": "staffer",
+          "organisation": "Office of Wayne Farnham MP",
+          "from": null,
+          "to": null,
+          "src": [2]
+        }
+      ],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Careful scrutiny of legislation and committee work in the upper house",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Better value for taxpayers' money in government services",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Industry, innovation and technological change in government",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Cost of living and fuel prices, which he says voters raise most",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Housing, education and safety for young families, and concern about state debt and crime",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "party_page": "https://vicliberal.org.au/team/matt-green",
+        "facebook": "https://www.facebook.com/MattGreeneasternvic",
+        "instagram": "https://www.instagram.com/MattGreeneasternvic"
+      },
+      "contact": {
+        "email": {
+          "value": "matt.green@vic.liberal.org.au",
+          "kind": "campaign",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://vicliberal.org.au/team/matt-green",
+          "title": "Matt Green, Liberal Victoria",
+          "accessed": "2026-11-05"
+        },
+        {
+          "id": 2,
+          "url": "https://www.thegazette.com.au/legislation-a-focus-for-green/",
+          "title": "Legislation a focus for Green, The Warragul & Drouin Gazette (April 2026)",
+          "accessed": "2026-11-05"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-05"
+        }
+      ],
+      "profile_updated": "2026-11-05"
     },
     "eastern-victoria/max-forward": {
       "name": "Max Forward",
@@ -37610,6 +37759,65 @@
       ],
       "profile_updated": "2026-11-04"
     },
+    "north-eastern-metropolitan/john-pyrros": {
+      "name": "John Pyrros",
+      "summary": {
+        "text": "John Pyrros is a Liberal candidate for North-Eastern Metropolitan Region in the Legislative Council at the 2026 election; Wikipedia's 2026 list puts him third on the Liberal ticket, after Richard Welch and Deirdre Diamante. His party page describes about ten years of work spanning law, media and international policy, including senior corporate affairs jobs and time representing Australia overseas, and says his family has a background in manufacturing. It gives no further detail of employers or dates.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Corporate affairs, with experience in law, media and international policy",
+        "src": [1]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Safer streets",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Sensible housing policy",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Responsible management of the state's economy",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "party_page": "https://vicliberal.org.au/team/john-pyrros",
+        "website": "https://www.johnpyrros.com.au"
+      },
+      "contact": {
+        "email": {
+          "value": "john.pyrros@vic.liberal.org.au",
+          "kind": "campaign",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://vicliberal.org.au/team/john-pyrros",
+          "title": "John Pyrros, Liberal Victoria",
+          "accessed": "2026-11-05"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-05"
+        }
+      ],
+      "profile_updated": "2026-11-05"
+    },
     "north-eastern-metropolitan/leonie-green": {
       "name": "Leonie Green",
       "summary": {
@@ -37839,6 +38047,99 @@
         }
       ],
       "profile_updated": "2026-11-04"
+    },
+    "north-eastern-metropolitan/maxwell-gratton": {
+      "name": "Maxwell Gratton",
+      "summary": {
+        "text": "Maxwell Gratton is standing for One Nation in North-Eastern Metropolitan Region for the Legislative Council at the 2026 election; his party page gives no ticket position, and the party's candidates page names Natalie Adams as its lead candidate in the region. According to his One Nation page, he has been chief executive of four organisations in sport, business and the arts, now runs a management consulting business, holds an MBA and lives in Ivanhoe, where he grew up. The page says he joined One Nation after many years of involvement in politics. Wikipedia's 2026 list did not include him as at early November 2026.",
+        "src": [1, 2, 3]
+      },
+      "born": null,
+      "lives": {
+        "place": "Ivanhoe",
+        "src": [1]
+      },
+      "occupation": {
+        "text": "Management consultant (runs a management consulting and professional services business)",
+        "src": [1]
+      },
+      "prior_roles": [
+        {
+          "role": "Chief executive officer (four appointments, in sport, business and the arts)",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1]
+        },
+        {
+          "role": "Volunteer in his local Catholic parish",
+          "kind": "community",
+          "from": null,
+          "to": null,
+          "src": [1]
+        }
+      ],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Cost of living",
+          "quoted": false,
+          "src": [1, 2]
+        },
+        {
+          "text": "Government debt",
+          "quoted": false,
+          "src": [1, 2]
+        },
+        {
+          "text": "Community safety",
+          "quoted": false,
+          "src": [1, 2]
+        },
+        {
+          "text": "Holding the government to account",
+          "quoted": false,
+          "src": [1, 2]
+        }
+      ],
+      "links": {
+        "party_page": "https://vic.onenation.org.au/maxwell-gratton"
+      },
+      "contact": {
+        "email": {
+          "value": "maxwell.gratton@vic.onenation.org.au",
+          "kind": "campaign",
+          "src": [1]
+        },
+        "phone": {
+          "value": "03 9072 0626",
+          "kind": "party office",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://web.archive.org/web/20261013124718/https://vic.onenation.org.au/maxwell-gratton",
+          "title": "Maxwell Gratton for North-East Metro, One Nation Victoria (archived copy, October 2026)",
+          "accessed": "2026-11-05"
+        },
+        {
+          "id": 2,
+          "url": "https://web.archive.org/web/20261023040032/https://vic.onenation.org.au/candidates",
+          "title": "Candidates, One Nation Victoria (archived copy, October 2026)",
+          "accessed": "2026-11-05"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-05"
+        }
+      ],
+      "profile_updated": "2026-11-05"
     },
     "north-eastern-metropolitan/natalie-adams": {
       "name": "Natalie Adams",
@@ -39310,6 +39611,79 @@
       ],
       "profile_updated": "2026-11-04"
     },
+    "northern-metropolitan/darren-saffin": {
+      "name": "Darren Saffin",
+      "summary": {
+        "text": "Darren Saffin is the third Socialist Alliance candidate for Northern Metropolitan Region in the Legislative Council at the 2026 election, after Meredith Lawrence and Chloe Beaton. His party page describes him as a worker in media communications who has taken part in local activism in Merri-bek for around ten years, including the campaign for a new high school in Coburg, a push for accessible tram stops on Sydney Road, and the Save Public Housing Collective's efforts to save the 44 public housing towers.",
+        "src": [1, 2, 3]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Media communications worker",
+        "src": [1]
+      },
+      "prior_roles": [
+        {
+          "role": "Member, Save Public Housing Collective",
+          "kind": "community",
+          "from": null,
+          "to": null,
+          "src": [1]
+        },
+        {
+          "role": "Campaigner, High School 4 Coburg campaign",
+          "kind": "community",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1]
+        }
+      ],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Keeping the public housing towers and their communities",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Accessible tram stops on Sydney Road",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "A fairer local community in Merri-bek",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "party_page": "https://socialist-alliance.org/candidates/darren-saffin-northern-metropolitan"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://socialist-alliance.org/candidates/darren-saffin-northern-metropolitan",
+          "title": "Darren Saffin for Northern Metropolitan, Socialist Alliance",
+          "accessed": "2026-11-05"
+        },
+        {
+          "id": 2,
+          "url": "https://socialist-alliance.org/elections/fighting-people-not-billionaires-2026-victorian-state-election",
+          "title": "Fighting for People, NOT the Billionaires - 2026 Victorian State Election, Socialist Alliance",
+          "accessed": "2026-11-05"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-05"
+        }
+      ],
+      "profile_updated": "2026-11-05"
+    },
     "northern-metropolitan/evan-mulholland": {
       "name": "Evan Mulholland",
       "summary": {
@@ -39977,6 +40351,61 @@
       ],
       "profile_updated": "2026-11-04"
     },
+    "northern-metropolitan/shankar-dharel": {
+      "name": "Shankar Dharel",
+      "summary": {
+        "text": "Shankar Dharel is a Liberal candidate for Northern Metropolitan Region in the Legislative Council at the 2026 election. His party page describes him as a solicitor in civil law practice whose family migrated to Australia from Nepal, but does not give his place on the Liberal ticket. Wikipedia's 2026 list names only Evan Mulholland and Bernadette Khoury for the Liberals in this region.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Solicitor (civil law)",
+        "src": [1]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Lower costs for families and businesses",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Safety in Melbourne's northern suburbs, backing the party's pledge of 3,000 more police and PSOs back at train stations",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "party_page": "https://vicliberal.org.au/team/shankar-dharel",
+        "website": "https://www.shankardharel.com.au",
+        "facebook": "https://www.facebook.com/ShankarDharelNMR"
+      },
+      "contact": {
+        "email": {
+          "value": "shankar.dharel@vic.liberal.org.au",
+          "kind": "campaign",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://vicliberal.org.au/team/shankar-dharel",
+          "title": "Shankar Dharel, Liberal Victoria",
+          "accessed": "2026-11-05"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-05"
+        }
+      ],
+      "profile_updated": "2026-11-05"
+    },
     "northern-metropolitan/tom-mcintosh": {
       "name": "Tom McIntosh",
       "summary": {
@@ -40085,6 +40514,150 @@
         }
       ],
       "profile_updated": "2026-11-04"
+    },
+    "northern-victoria/amanda-millar": {
+      "name": "Amanda Millar",
+      "summary": {
+        "text": "Amanda Millar is a Liberal candidate for Northern Victoria Region in the Legislative Council at the 2026 election, listed third on the joint Liberal and National ticket in Wikipedia's 2026 candidate list. She was a Liberal member for Northern Victoria from August 2013, when she filled the vacancy left by Donna Petrovich, until November 2014, after missing re-election from third place on the Coalition ticket. She later stood for Macedon in 2018 and was third on the Coalition's Northern Victoria ticket in 2022, losing both times. Before Parliament she was a manager at Jones Lang LaSalle and then worked in human resources at the University of Melbourne.",
+        "src": [1, 2, 3, 4, 5, 6, 7]
+      },
+      "born": {
+        "year": 1967,
+        "src": [2]
+      },
+      "lives": null,
+      "occupation": {
+        "text": "Strategist; formerly in human resources and employer-side workplace relations",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Member for Northern Victoria Region",
+          "kind": "mp",
+          "organisation": "Legislative Council",
+          "from": 2013,
+          "to": 2014,
+          "src": [2]
+        },
+        {
+          "role": "Principal Adviser, Human Resources",
+          "kind": "other",
+          "organisation": "Melbourne School of Engineering, University of Melbourne",
+          "from": 2012,
+          "to": 2013,
+          "src": [2]
+        },
+        {
+          "role": "Human Resources Consultant",
+          "kind": "other",
+          "organisation": "University of Melbourne",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [2]
+        },
+        {
+          "role": "Manager",
+          "kind": "business",
+          "organisation": "Jones Lang LaSalle",
+          "from": 1991,
+          "to": 2003,
+          "src": [2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2014 Victorian state",
+          "seat": "Northern Victoria Region",
+          "party": "LIB",
+          "result": "Lost",
+          "src": [4, 5]
+        },
+        {
+          "election": "2018 Victorian state",
+          "seat": "Macedon",
+          "party": "LIB",
+          "result": "Lost",
+          "src": [6]
+        },
+        {
+          "election": "2022 Victorian state",
+          "seat": "Northern Victoria Region",
+          "party": "LIB",
+          "result": "Lost",
+          "src": [7]
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "A stronger voice for regional communities against what her party page calls a Melbourne-focused government agenda",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Rebuilding the Liberal Party's strength in Northern Victoria",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "party_page": "https://vicliberal.org.au/team/amanda-millar",
+        "website": "https://www.amandamillar.com.au",
+        "wikipedia": "https://en.wikipedia.org/wiki/Amanda_Millar"
+      },
+      "contact": {
+        "email": {
+          "value": "amanda.millar@vic.liberal.org.au",
+          "kind": "campaign",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://vicliberal.org.au/team/amanda-millar",
+          "title": "Amanda Millar, Liberal Victoria",
+          "accessed": "2026-11-05"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Amanda_Millar",
+          "title": "Amanda Millar, Wikipedia",
+          "accessed": "2026-11-05"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-05"
+        },
+        {
+          "id": 4,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2014_Victorian_state_election",
+          "title": "Candidates of the 2014 Victorian state election, Wikipedia",
+          "accessed": "2026-11-05"
+        },
+        {
+          "id": 5,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2014_Victorian_state_election_(Legislative_Council)",
+          "title": "Results of the 2014 Victorian state election (Legislative Council), Wikipedia",
+          "accessed": "2026-11-05"
+        },
+        {
+          "id": 6,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2018_Victorian_state_election",
+          "title": "Candidates of the 2018 Victorian state election, Wikipedia",
+          "accessed": "2026-11-05"
+        },
+        {
+          "id": 7,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2022_Victorian_state_election",
+          "title": "Candidates of the 2022 Victorian state election, Wikipedia",
+          "accessed": "2026-11-05"
+        }
+      ],
+      "profile_updated": "2026-11-05"
     },
     "northern-victoria/athol-thomas": {
       "name": "Athol Thomas",
