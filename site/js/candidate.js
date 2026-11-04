@@ -180,6 +180,8 @@
             <thead><tr><th>Election</th><th>Seat</th><th>Party</th><th>Result</th></tr></thead>
             <tbody>${runs.map((r) => `<tr><td>${escapeHtml(r.election)}</td><td>${escapeHtml(r.seat)}</td><td>${escapeHtml(partyName(r.party))}</td><td>${escapeHtml(RESULT[r.result] || r.result || "")}${refs(r.src)}${unverified(r)}</td></tr>`).join("")}</tbody>
           </table></div>` : ""}
+        ${(pr.legal_and_integrity || []).length ? `<h3>Legal and integrity matters</h3><ul class="bio-list">${pr.legal_and_integrity.slice().sort((a, b) => (b.year || 0) - (a.year || 0)).map((x) => `<li>${x.year ? `<strong>${x.year}:</strong> ` : ""}${escapeHtml(x.text)} <span class="muted">Outcome: ${escapeHtml(x.outcome)}</span>${refs(x.src)}${unverified(x)}</li>`).join("")}</ul>
+          <p class="muted small">Formal findings, charges, court cases and disciplinary action concerning the candidate's own conduct, as the sources report them, with their outcome. Allegations alone and political criticism aren't listed.</p>` : ""}
         ${(pr.priorities || []).length ? `<h3>Priorities</h3><ul class="bio-list">${pr.priorities.slice(0, 5).map((x) => `<li>${x.quoted ? `“${escapeHtml(x.text)}”` : escapeHtml(x.text)}${refs(x.src)}</li>`).join("")}</ul>
           <p class="muted small">Quoted lines are the candidate's own words; the rest are our summary of what they've said.</p>` : ""}
         ${links.length ? `<h3>Links</h3><ul class="bio-links">${links.map(([k, label]) => `<li><a href="${escapeHtml(pr.links[k])}" target="_blank" rel="noopener">${label} ↗</a></li>`).join("")}</ul>` : ""}

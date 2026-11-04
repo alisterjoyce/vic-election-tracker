@@ -34,6 +34,7 @@ FACTS = {"born": "year", "lives": "place", "occupation": "text", "faction": "nam
 ROLE_KINDS = {"mp", "minister", "shadow", "councillor", "mayor", "staffer", "union", "business", "party",
               "public-service", "community", "other"}
 RESULTS = {"Won", "Lost", "Retained", "Withdrew", "Unknown"}
+MATTER_KINDS = {"court", "police", "ombudsman", "ibac", "parliament", "party", "fine", "institution"}
 LINK_KEYS = {"website", "party_page", "abc", "wikipedia", "parliament", "facebook", "instagram", "x", "linkedin"}
 UA = "vic-election-tracker/1.0 (profile copy check; +https://alisterjoyce.github.io/vic-election-tracker/)"
 CACHE = Path(__file__).resolve().parent.parent / ".cache" / "profile_check"   # git-ignored; pages fetched once a day
@@ -122,6 +123,12 @@ def check(cid, p, known, errors):
         if not (r.get("election") and r.get("seat") and r.get("party")) or r.get("result") not in RESULTS:
             err(f"previous_candidacies[{i}]: needs election, seat, party and result in {sorted(RESULTS)}")
         src(f"previous_candidacies[{i}]", r)
+    for i, r in enumerate(p.get("legal_and_integrity") or []):
+        if not r.get("text") or r.get("kind") not in MATTER_KINDS or not r.get("outcome"):
+            err(f"legal_and_integrity[{i}]: needs text, outcome and kind in {sorted(MATTER_KINDS)}")
+        if r.get("year") is not None and not isinstance(r["year"], int):
+            err(f"legal_and_integrity[{i}].year must be a year or null")
+        src(f"legal_and_integrity[{i}]", r)
     pri = p.get("priorities") or []
     if len(pri) > 5:
         err("more than 5 priorities")
@@ -156,6 +163,7 @@ def check(cid, p, known, errors):
 def own_words(cid, p, errors, n=8):
     """Flag any n-word run copied from the profile's Wikipedia or Parliament page."""
     ours = " ".join([(p.get("summary") or {}).get("text", "")] + [x.get("text", "") for x in p.get("priorities") or [] if not x.get("quoted")]
+                    + [f"{x.get('text', '')} {x.get('outcome', '')}" for x in p.get("legal_and_integrity") or []]
 )   # role titles are facts (e.g. "Minister for Sport"), so they aren't checked
     mine = words(ours)
     grams = {" ".join(mine[i:i + n]) for i in range(len(mine) - n + 1)}

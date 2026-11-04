@@ -10,6 +10,7 @@
       "prior_roles": "[{role, kind (mp | minister | shadow | councillor | mayor | staffer | union | business | party | public-service | community | other), organisation?, from (year), to (year, or null if current), ended (optional true: the role has ended but no source gives the year; to stays null), src, unverified?, note?}]",
       "previous_candidacies": "[{election (e.g. '2022 Victorian state'), seat, party (code), result (Won | Lost | Retained | Withdrew | Unknown), src, unverified?, note?}]",
       "faction": "{name, src, unverified?, note?} or null: only if reported by a mainstream news outlet or Wikipedia, citing that source",
+      "legal_and_integrity": "[{year (or null), text, outcome, kind (court | police | ombudsman | ibac | parliament | party | fine | institution), src, unverified?, note?}]: formal findings, charges, court cases, fines and disciplinary action about the candidate's own conduct, or facts about it confirmed by the institution concerned; always with the outcome. Never allegations alone, criticism or matters from childhood",
       "priorities": "[{text, quoted (true: the candidate's own words, under 15 words; false: our paraphrase), src}]: up to 5",
       "links": "{website, party_page, abc, wikipedia, parliament, facebook, instagram, x, linkedin}: official pages and the candidate's own public accounts only; omit any that don't exist",
       "contact": "{email: {value, kind (campaign | electorate office | party), src}, phone: {value, kind (party office | electorate office | campaign), src}}: published office or campaign contacts only; never personal numbers or addresses",
@@ -1203,6 +1204,15 @@
         }
       ],
       "faction": null,
+      "legal_and_integrity": [
+        {
+          "year": 2010,
+          "text": "Suspended from the Labor Party for two years after not voting for the Labor candidate for mayor on her council.",
+          "outcome": "Two-year suspension.",
+          "kind": "party",
+          "src": [2]
+        }
+      ],
       "priorities": [
         {
           "text": "Social justice, inclusion and diversity",
@@ -1416,6 +1426,29 @@
         }
       ],
       "faction": null,
+      "legal_and_integrity": [
+        {
+          "year": 2014,
+          "text": "The Victorian Ombudsman investigated his 2011 decision as Planning Minister to rezone farmland at Ventnor, Phillip Island.",
+          "outcome": "The Ombudsman held him responsible for the rezoning and found he had withheld documents the investigation asked for.",
+          "kind": "ombudsman",
+          "src": [2]
+        },
+        {
+          "year": 2017,
+          "text": "He referred himself to IBAC after reports of a dinner with a man police had alleged in court was a senior organised crime figure.",
+          "outcome": "IBAC said it had no power to investigate.",
+          "kind": "ibac",
+          "src": [2]
+        },
+        {
+          "year": 2022,
+          "text": "Fined for breaching face mask rules at an event in Parliament House, with four other Coalition MPs.",
+          "outcome": "$100 fine.",
+          "kind": "fine",
+          "src": [2]
+        }
+      ],
       "priorities": [],
       "links": {
         "parliament": "https://www.parliament.vic.gov.au/members/matthew-guy/",
@@ -2164,6 +2197,15 @@
         }
       ],
       "faction": null,
+      "legal_and_integrity": [
+        {
+          "year": 2012,
+          "text": "His website described him as an adjunct professor at RMIT and as holding a Monash graduate diploma.",
+          "outcome": "Both universities said he did not hold those qualifications; the claims were removed from the website.",
+          "kind": "institution",
+          "src": [2]
+        }
+      ],
       "priorities": [
         {
           "text": "Schools that teach the skills people will need in future",
@@ -3068,6 +3110,15 @@
         }
       ],
       "faction": null,
+      "legal_and_integrity": [
+        {
+          "year": 2022,
+          "text": "Fined for breaching face mask rules at an event in Parliament House, with four other Coalition MPs.",
+          "outcome": "$100 fine.",
+          "kind": "fine",
+          "src": [2]
+        }
+      ],
       "priorities": [
         {
           "text": "Speaking up for rural and regional Victorians",
@@ -3216,6 +3267,15 @@
         }
       ],
       "faction": null,
+      "legal_and_integrity": [
+        {
+          "year": 2023,
+          "text": "Removed as Secretary of the Parliamentary Liberal Party after the party-room meeting on Moira Deeming's expulsion, for which she had produced three versions of the minutes, one of them leaked to the media.",
+          "outcome": "Removed from the post in May 2023.",
+          "kind": "party",
+          "src": [2]
+        }
+      ],
       "priorities": [
         {
           "text": "Cutting state debt",
@@ -5323,6 +5383,22 @@
         "name": "Liberal moderate",
         "src": [2]
       },
+      "legal_and_integrity": [
+        {
+          "year": 2024,
+          "text": "Sued for defamation by Moira Deeming and two others over statements he made as Liberal leader in 2023.",
+          "outcome": "He settled two of the cases in May 2024 with an apology; in December 2024 the Federal Court found he had defamed Deeming and awarded her $300,000 damages.",
+          "kind": "court",
+          "src": [2]
+        },
+        {
+          "year": 2025,
+          "text": "Ordered by the Federal Court to pay $2.3 million of Deeming's legal costs, and served with a bankruptcy notice when they went unpaid.",
+          "outcome": "The Victorian Liberal Party agreed in June 2025 to lend him $1.5 million so he would not be declared bankrupt.",
+          "kind": "court",
+          "src": [2]
+        }
+      ],
       "priorities": [
         {
           "text": "Integrity, transparency and honesty in government decisions",
@@ -6567,6 +6643,15 @@
         }
       ],
       "faction": null,
+      "legal_and_integrity": [
+        {
+          "year": 2018,
+          "text": "Referred to the Victorian Ombudsman over newspaper advertising paid from her parliamentary allowance during the election caretaker period.",
+          "outcome": "Responsibility was placed with a newspaper staff member; no action was taken against her.",
+          "kind": "ombudsman",
+          "src": [2]
+        }
+      ],
       "priorities": [
         {
           "text": "Has backed stronger climate action than her federal party leadership",
@@ -10223,6 +10308,29 @@
         }
       ],
       "faction": null,
+      "legal_and_integrity": [
+        {
+          "year": 2014,
+          "text": "A farm services company sued him for damages in the County Court, alleging misleading and unconscionable conduct.",
+          "outcome": "He settled the claim later in 2014.",
+          "kind": "court",
+          "src": [2]
+        },
+        {
+          "year": 2014,
+          "text": "A former Nationals staffer brought harassment and bullying proceedings against him in the Magistrates' Court.",
+          "outcome": "Settled confidentially; the settlement was paid by the Department of Parliamentary Services.",
+          "kind": "court",
+          "src": [2]
+        },
+        {
+          "year": 2018,
+          "text": "Charged by Victoria Police with fraud offences dating from his time as a real estate agent; he stood down from the shadow ministry.",
+          "outcome": "Dismissed by the County Court in April 2021 for insufficient evidence, after the prosecution's main witness admitted falsifying the document.",
+          "kind": "police",
+          "src": [2]
+        }
+      ],
       "priorities": [
         {
           "text": "A voice in Parliament for regional Victorians and farmers",
@@ -11102,6 +11210,15 @@
         }
       ],
       "faction": null,
+      "legal_and_integrity": [
+        {
+          "year": 2023,
+          "text": "Suspended from Parliament for posting a photo on social media of a climate protest inside Parliament.",
+          "outcome": "Suspended without pay.",
+          "kind": "parliament",
+          "src": [2]
+        }
+      ],
       "priorities": [
         {
           "text": "Renters' rights and public housing",
@@ -12420,6 +12537,15 @@
         "unverified": true,
         "note": "Wikipedia describes him as a member of the Kennett faction, a grouping from the 1990s; it does not say whether that still applies."
       },
+      "legal_and_integrity": [
+        {
+          "year": 2022,
+          "text": "Fined for breaching face mask rules at an event in Parliament House, with four other Coalition MPs.",
+          "outcome": "$100 fine.",
+          "kind": "fine",
+          "src": [2]
+        }
+      ],
       "priorities": [],
       "links": {
         "parliament": "https://www.parliament.vic.gov.au/members/david-davis/",
@@ -13004,6 +13130,15 @@
         }
       ],
       "faction": null,
+      "legal_and_integrity": [
+        {
+          "year": null,
+          "text": "A Victorian Ombudsman investigation into Brimbank City Council found that, as a councillor, she had improperly used her position, including directing that funding for a reserve be withdrawn after she lost a 2008 preselection, and that her account to the Ombudsman was an attempt to mislead.",
+          "outcome": "No action followed from the Local Government Inspectorate; the report contributed to the council's dismissal in 2009.",
+          "kind": "ombudsman",
+          "src": [2]
+        }
+      ],
       "priorities": [
         {
           "text": "Opportunities for multicultural communities",
@@ -14046,6 +14181,22 @@
         }
       ],
       "faction": null,
+      "legal_and_integrity": [
+        {
+          "year": 2023,
+          "text": "The Liberal party room suspended her for nine months in March 2023 over a rally she helped organise, then expelled her.",
+          "outcome": "Expelled by a party-room vote of 19 to 11 in May 2023; readmitted in December 2024.",
+          "kind": "party",
+          "src": [2]
+        },
+        {
+          "year": 2024,
+          "text": "Sued then Liberal leader John Pesutto for defamation over his statements about her.",
+          "outcome": "The Federal Court found in her favour in December 2024 and awarded her $300,000 damages.",
+          "kind": "court",
+          "src": [2]
+        }
+      ],
       "priorities": [
         {
           "text": "Laws that weigh individual rights and responsibilities equally",
