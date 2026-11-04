@@ -1,6 +1,6 @@
 """List the candidates in some districts or regions who don't have a profile yet.
 
-Candidates are every active row in site/data/candidates.json (not withdrawn or superseded) plus every
+Candidates are every active row in site/data/candidates.json (not withdrawn, superseded or not_standing) plus every
 name on a regions.json ticket, keyed by candidate id ('<seat>/<slug of Given Surname>', the same id
 as App.candidateId and build_headshots.py). Profiles are site/data/profiles.json.
 
@@ -17,7 +17,7 @@ import unicodedata
 from pathlib import Path
 
 DATA = Path(__file__).resolve().parent.parent / "site" / "data"
-INACTIVE = {"withdrawn", "superseded"}
+INACTIVE = {"withdrawn", "superseded", "not_standing"}
 PLACEHOLDER = re.compile(r"^TB[CD]$", re.I)   # ticket slots not yet filled (App.isPlaceholder)
 
 

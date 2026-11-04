@@ -83,7 +83,7 @@
     const cards = (htv && htv.cards) || [];
     const left = districts.filter((d) => d.margin && LEFT_PAIR.includes(d.margin.party) && LEFT_PAIR.includes(d.margin.vs))
       .sort((a, b) => a.name.localeCompare(b.name));
-    const onpSeats = new Set(candidates.filter((c) => c.district && c.party === "ONP" && c.status !== "superseded" && c.status !== "withdrawn").map((c) => c.district));
+    const onpSeats = new Set(candidates.filter((c) => c.district && c.party === "ONP" && c.status !== "superseded" && c.status !== "withdrawn" && c.status !== "not_standing").map((c) => c.district));
     const onpCards = cards.filter((c) => c.party === "ONP" && c.house === "lower");
     const entered = onpCards.filter((c) => c.order);
     const coalitionFirst = entered.filter((c) => { const l = rank(c.order, "LNP"), a = rank(c.order, "ALP"); return l >= 0 && (a < 0 || l < a); }).length;

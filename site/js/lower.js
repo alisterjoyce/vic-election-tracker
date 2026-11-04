@@ -147,7 +147,7 @@
       </table>`;
   }
 
-  const isInactive = (c) => c.status === "withdrawn" || c.status === "superseded";
+  const isInactive = (c) => c.status === "withdrawn" || c.status === "superseded" || c.status === "not_standing";
 
   function candidateSort(a, b) {
     const wa = isInactive(a), wb = isInactive(b);
@@ -216,7 +216,7 @@
 
   function seatCands(d) {
     // Superseded rows stay in candidates.json for the record but aren't shown.
-    return candidates.filter((c) => c.district === d.id && c.status !== "superseded").sort(candidateSort);
+    return candidates.filter((c) => c.district === d.id && c.status !== "superseded" && c.status !== "not_standing").sort(candidateSort);
   }
 
   function candidatesBlock(d, cands) {

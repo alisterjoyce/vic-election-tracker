@@ -1052,7 +1052,7 @@ def _supersede(did: str, seat_rows: list[dict], abc_rows: list[dict], today: str
 
     def replaceable(old: dict, party: str) -> bool:
         return (id(old) not in abc_ids and old.get("party") == party
-                and old.get("status") not in FINAL_STATUSES | {"superseded", "withdrawn"})
+                and old.get("status") not in FINAL_STATUSES | {"superseded", "withdrawn", "not_standing"})
 
     for party in {c["party"] for c in abc_rows}:
         if party in MULTI_PER_SEAT:
@@ -1070,7 +1070,7 @@ def _supersede(did: str, seat_rows: list[dict], abc_rows: list[dict], today: str
 
 
 def _active(c: dict) -> bool:
-    return c.get("status") not in ("superseded", "withdrawn")
+    return c.get("status") not in ("superseded", "withdrawn", "not_standing")
 
 
 def reconcile_abc_az(az_entries: list[dict], districts: list[dict], rows: list[dict],
@@ -1350,7 +1350,7 @@ def refresh_electiontracker(data_dir: Path, meta: dict) -> bool:
         return False
 
     by_seat: dict[str, list[dict]] = {}
-    for c in cands:   # every row, whatever its status: a withdrawn or superseded name isn't "missing"
+    for c in cands:   # every row, whatever its status: a withdrawn, superseded or not_standing name isn't "missing"
         by_seat.setdefault(c.get("district") or c.get("region") or "", []).append(c)
     mlcs = {}
     for r in region_rows:   # upper-house ticket names live in regions.json, and count as candidates too
@@ -1852,7 +1852,7 @@ CHANGELOG_SCHEMA = {
         "updated": "ISO UTC time of the last run that changed anything",
         "entries": "[{date (Melbourne YYYY-MM-DD), at (ISO UTC), type, ...}] where type is one of: "
                    "candidate_added {seat, name, party, status, source}; candidate_superseded {seat, name, party, by}; "
-                   "candidate_withdrawn {seat, name, party}; poll_added {id, pollster, end_date, tpp (L/NP), primary}; "
+                   "candidate_withdrawn {seat, name, party}; candidate_not_standing {seat, name, party}; poll_added {id, pollster, end_date, tpp (L/NP), primary}; "
                    f"odds_move {{seat, label, party, from, to}} (a price moving {ODDS_MOVE} or more); "
                    "retirement {seat, name}; news {count} (new headlines collected)",
     },
@@ -1891,7 +1891,7 @@ def diff_views(old: dict, new: dict, load, at: datetime) -> list[dict]:
              "at": at.astimezone(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")}
     out = []
     rows = {_cand_key(c): c for c in (load("candidates.json") or {}).get("candidates", [])}
-    inactive = ("superseded", "withdrawn")
+    inactive = ("superseded", "withdrawn", "not_standing")
     for key, status in new["candidates"].items():
         c, before = rows.get(key), old["candidates"].get(key)
         if not c:

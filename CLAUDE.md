@@ -93,7 +93,7 @@ Runs four times a day (6 am, 10 am, 4 pm and 8 pm Melbourne time, AEDT; cron `0 
 
 Order each run: polls → Wikipedia candidates → ABC guide (district pages, then retiring MPs, then the A-Z reconciliation) → electiontracker.au check → Sportsbet → VEC placeholder → VEC how-to-vote register → news → change log → meta.json.
 
-- **Never delete a candidate row.** Rows only change status.
+- **Never delete a candidate row.** Rows only change status. A row that was never a 2026 candidacy (e.g. a 2022 candidate carried into the seed: the eight New Democrats rows found on 4 Nov 2026 appeared only in the ABC's 2022 results tables) gets `status: "not_standing"` and a note saying how it was checked; pages and scripts hide it like a superseded row, and its profile, if any, is removed.
 - **Wikipedia** adds names not already present as `announced` (`source: "wikipedia"`, `date_added`) and never changes existing rows.
 - **ABC guide is the primary lower-house source.** ABC-listed candidates become `endorsed` (`source: "abc"`, ABC page URL). A `vec_nominated` row is never overridden.
 - **Supersede rule:** an ABC entry for a party in a seat supersedes every other active row for that party in that seat. The older row is kept with `status: "superseded"`, `superseded_by`, `superseded_on` and a note, and a warning is logged. District pages hide superseded rows.

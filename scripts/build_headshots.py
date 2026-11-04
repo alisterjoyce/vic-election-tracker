@@ -152,7 +152,7 @@ def candidate_pool():
     districts = json.loads((DATA / "districts.json").read_text(encoding="utf-8"))["districts"]
     pool = {}
     for c in cands:
-        if c.get("status") in ("superseded", "withdrawn"):
+        if c.get("status") in ("superseded", "withdrawn", "not_standing"):
             continue
         seat = c.get("district") or c.get("region")
         pool.setdefault(seat, []).append({"id": candidate_id(seat, c["name"]), "name": c["name"], "party": c["party"]})

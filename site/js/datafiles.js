@@ -71,7 +71,7 @@
     try {
       const [people, pd] = await Promise.all([App.loadPeople(), App.loadJSON("profiles")]);
       const profiles = pd.profiles || {};
-      const active = people.filter((p) => p.contesting && !["withdrawn", "superseded"].includes(p.status));
+      const active = people.filter((p) => p.contesting && !["withdrawn", "superseded", "not_standing"].includes(p.status));
       const row = (label, list) => {
         const n = list.filter((p) => profiles[p.id]).length;
         return `<tr><td>${label}</td><td class="num">${n.toLocaleString("en-AU")}</td><td class="num">${list.length.toLocaleString("en-AU")}</td><td class="num">${list.length ? Math.round((100 * n) / list.length) : 0}%</td></tr>`;

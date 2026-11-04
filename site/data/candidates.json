@@ -6,7 +6,7 @@
       "region": "Legislative Council rows only: id of the region in regions.json",
       "name": "Candidate name",
       "party": "Party code (ALP, LIB, NAT, LNP, GRN, ONP, VS, AJP, ND, WEST, SAL, LBT, FF, LCV, SUS, DLP, SFF, IND, OTH)",
-      "status": "endorsed (preselected or endorsed by the party, or listed in the ABC guide) | reported (reported, not independently verified) | announced (listed on Wikipedia, added automatically) | vec_nominated | withdrawn | superseded (replaced by an ABC entry for the same party and seat)",
+      "status": "endorsed (preselected or endorsed by the party, or listed in the ABC guide) | reported (reported, not independently verified) | announced (listed on Wikipedia, added automatically) | vec_nominated | withdrawn | superseded (replaced by an ABC entry for the same party and seat) | not_standing (not a 2026 candidate: a row entered in error, e.g. a 2022 candidate carried into the seed; kept with a note saying why, hidden like superseded rows)",
       "ballot_position": "Assembly: integer position on the ballot paper once drawn by the VEC, else null",
       "ticket_position": "Council rows only: position in the party's group as reported",
       "incumbent": "Assembly: true if this is the sitting member",
@@ -4260,11 +4260,12 @@
       "district": "kororoit",
       "name": "Jaz Chandok",
       "party": "ND",
-      "status": "reported",
+      "status": "not_standing",
       "ballot_position": null,
       "incumbent": false,
       "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
-      "updated": "2026-10-30"
+      "updated": "2026-11-04",
+      "notes": "A 2022 New Democrats candidate carried into the 30 Oct 2026 seed. Not on the ABC's 2026 seat guide (only in its 2022 results table), Wikipedia's 2026 candidate list or electiontracker.au, none of which lists any New Democrats candidate for 2026. Checked 2026-11-04."
     },
     {
       "district": "kororoit",
@@ -4420,11 +4421,12 @@
       "district": "laverton",
       "name": "Gurneet Soni",
       "party": "ND",
-      "status": "reported",
+      "status": "not_standing",
       "ballot_position": null,
       "incumbent": false,
       "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
-      "updated": "2026-10-30"
+      "updated": "2026-11-04",
+      "notes": "A 2022 New Democrats candidate carried into the 30 Oct 2026 seed. Not on the ABC's 2026 seat guide (only in its 2022 results table), Wikipedia's 2026 candidate list or electiontracker.au, none of which lists any New Democrats candidate for 2026. Checked 2026-11-04."
     },
     {
       "district": "laverton",
@@ -4933,11 +4935,12 @@
       "district": "melton",
       "name": "Jasleen Kaur",
       "party": "ND",
-      "status": "reported",
+      "status": "not_standing",
       "ballot_position": null,
       "incumbent": false,
       "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
-      "updated": "2026-10-30"
+      "updated": "2026-11-04",
+      "notes": "A 2022 New Democrats candidate carried into the 30 Oct 2026 seed. Not on the ABC's 2026 seat guide (only in its 2022 results table), Wikipedia's 2026 candidate list or electiontracker.au, none of which lists any New Democrats candidate for 2026. Checked 2026-11-04."
     },
     {
       "district": "melton",
@@ -6028,11 +6031,12 @@
       "district": "niddrie",
       "name": "Georgia Grammenos",
       "party": "ND",
-      "status": "reported",
+      "status": "not_standing",
       "ballot_position": null,
       "incumbent": false,
       "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
-      "updated": "2026-10-30"
+      "updated": "2026-11-04",
+      "notes": "A 2022 New Democrats candidate carried into the 30 Oct 2026 seed. Not on the ABC's 2026 seat guide (only in its 2022 results table), Wikipedia's 2026 candidate list or electiontracker.au, none of which lists any New Democrats candidate for 2026. Checked 2026-11-04."
     },
     {
       "district": "niddrie",
@@ -7570,11 +7574,12 @@
       "district": "st-albans",
       "name": "Zaffer Mannan",
       "party": "ND",
-      "status": "reported",
+      "status": "not_standing",
       "ballot_position": null,
       "incumbent": false,
       "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
-      "updated": "2026-10-30"
+      "updated": "2026-11-04",
+      "notes": "A 2022 New Democrats candidate carried into the 30 Oct 2026 seed. Not on the ABC's 2026 seat guide (only in its 2022 results table), Wikipedia's 2026 candidate list or electiontracker.au, none of which lists any New Democrats candidate for 2026. Checked 2026-11-04."
     },
     {
       "district": "sunbury",
@@ -7630,11 +7635,12 @@
       "district": "sunbury",
       "name": "Rushi Patel",
       "party": "ND",
-      "status": "reported",
+      "status": "not_standing",
       "ballot_position": null,
       "incumbent": false,
       "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
-      "updated": "2026-10-30"
+      "updated": "2026-11-04",
+      "notes": "A 2022 New Democrats candidate carried into the 30 Oct 2026 seed. Not on the ABC's 2026 seat guide (only in its 2022 results table), Wikipedia's 2026 candidate list or electiontracker.au, none of which lists any New Democrats candidate for 2026. Checked 2026-11-04."
     },
     {
       "district": "sunbury",
@@ -7845,11 +7851,12 @@
       "district": "tarneit",
       "name": "Jaydeep Patel",
       "party": "ND",
-      "status": "reported",
+      "status": "not_standing",
       "ballot_position": null,
       "incumbent": false,
       "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
-      "updated": "2026-10-30"
+      "updated": "2026-11-04",
+      "notes": "A 2022 New Democrats candidate carried into the 30 Oct 2026 seed. Not on the ABC's 2026 seat guide (only in its 2022 results table), Wikipedia's 2026 candidate list or electiontracker.au, none of which lists any New Democrats candidate for 2026. Checked 2026-11-04."
     },
     {
       "district": "tarneit",
@@ -8212,11 +8219,12 @@
       "district": "werribee",
       "name": "Prashant Tandon",
       "party": "ND",
-      "status": "reported",
+      "status": "not_standing",
       "ballot_position": null,
       "incumbent": false,
       "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
-      "updated": "2026-10-30"
+      "updated": "2026-11-04",
+      "notes": "A 2022 New Democrats candidate carried into the 30 Oct 2026 seed. Not on the ABC's 2026 seat guide (only in its 2022 results table), Wikipedia's 2026 candidate list or electiontracker.au, none of which lists any New Democrats candidate for 2026. Checked 2026-11-04."
     },
     {
       "district": "werribee",

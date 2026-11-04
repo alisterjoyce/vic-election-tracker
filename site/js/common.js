@@ -42,6 +42,7 @@
     vec_nominated: "VEC-nominated",
     withdrawn: "Withdrawn",
     superseded: "Superseded",
+    not_standing: "Not standing",
   };
 
   const cache = {};
@@ -342,7 +343,7 @@
     Object.values(regions).forEach((r) => (r.tickets || []).forEach((t) => (t.candidates || []).forEach((name, i) =>
       add(r.id, name, { party: t.party, status: t.status, ticket_position: i + 1, group: t.group, on_ticket: true, contesting: true }))));
     ((cd && cd.candidates) || []).forEach((c) => {
-      if (c.status === "superseded") return;
+      if (c.status === "superseded" || c.status === "not_standing") return;
       const seat = c.district || c.region;
       if (!districts[seat] && !regions[seat]) return;
       add(seat, c.name, { party: c.party, status: c.status, ticket_position: c.ticket_position, incumbent: c.incumbent || null,
