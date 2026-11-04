@@ -8,8 +8,14 @@
       "sources": "Source -> {status: ok | error | skipped, url, items, message}"
     }
   },
-  "updated": "2026-11-04T22:05:27Z",
+  "updated": "2026-11-04T22:35:05Z",
   "statewide": [
+    {
+      "title": "Victorian election candidate finds bullet hole in campaign sign",
+      "outlet": "ABC News",
+      "published": "2026-11-04T22:02:33Z",
+      "url": "https://www.abc.net.au/news/2026-11-05/political-sign-shot-with-bullet-victorian-election/107348202"
+    },
     {
       "title": "Muslim Votes Matter softens anti-Labor stance ahead of Victorian election in bid to defeat One Nation in at-risk seats",
       "outlet": "The Guardian",
@@ -153,12 +159,6 @@
       "outlet": "onenewsaustralia.com",
       "published": "2026-10-29T18:54:00Z",
       "url": "https://www.onenewsaustralia.com/muslim-votes-matter-uses-electoral-leverage-to-force-a-panicked-23-million-labor-spending-spree-in-broadmeadows/"
-    },
-    {
-      "title": "Mayor Welcomes New Support For Bellarine Link",
-      "outlet": "Mirage News",
-      "published": "2026-10-29T08:19:00Z",
-      "url": "https://www.miragenews.com/mayor-welcomes-new-support-for-bellarine-link-1768585/"
     }
   ],
   "seats": {
@@ -540,7 +540,7 @@
       {
         "title": "Euroa election results 2022: live count for 2026 from 28 November",
         "outlet": "onenewsaustralia.com",
-        "published": "2026-09-25T16:47:00Z",
+        "published": "2026-11-03T15:31:00Z",
         "url": "https://www.onenewsaustralia.com/euroa-election-results-2026/"
       },
       {
@@ -977,9 +977,9 @@
       },
       {
         "title": "Victorian Premier Ben Carroll settles bill after forgetting to pay at petrol pump",
-        "outlet": "ABC (Australian Broadcasting Corporation)",
-        "published": "2026-10-20T20:07:00Z",
-        "url": "https://www.abc.net.au/news/2026-10-21/vic-premier-ben-carroll-forgot-to-pay-for-fuel/107291426"
+        "outlet": "ABC (Australian Broadcasting Corporation) on MSN",
+        "published": "2026-10-20T20:07:08Z",
+        "url": "https://www.msn.com/en-au/news/other/victorian-premier-ben-carroll-settles-bill-after-forgetting-to-pay-at-petrol-pump/ar-AA2fGKyO"
       },
       {
         "title": "Ben Carroll ‘rejected out of hand’ push to join ‘red shirts’",
@@ -1185,7 +1185,7 @@
     "ABC News": {
       "status": "ok",
       "url": "https://www.abc.net.au/news/feed/51120/rss.xml",
-      "items": 25
+      "items": 24
     },
     "Bendigo Advertiser": {
       "status": "ok",
