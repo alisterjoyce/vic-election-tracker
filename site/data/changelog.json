@@ -6,8 +6,144 @@
       "entries": "[{date (Melbourne YYYY-MM-DD), at (ISO UTC), type, ...}] where type is one of: candidate_added {seat, name, party, status, source}; candidate_superseded {seat, name, party, by}; candidate_withdrawn {seat, name, party}; candidate_not_standing {seat, name, party}; poll_added {id, pollster, end_date, tpp (L/NP), primary}; odds_move {seat, label, party, from, to} (a price moving 0.5 or more); retirement {seat, name}; news {count} (new headlines collected)"
     }
   },
-  "updated": "2026-11-04T10:32:30Z",
+  "updated": "2026-11-04T11:26:40Z",
   "entries": [
+    {
+      "date": "2026-11-04",
+      "at": "2026-11-04T11:26:40Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Inge Meldgaard",
+      "party": "SUS",
+      "status": "endorsed",
+      "source": null
+    },
+    {
+      "date": "2026-11-04",
+      "at": "2026-11-04T11:26:40Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Jessica McAuliffe",
+      "party": "AJP",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-11-04",
+      "at": "2026-11-04T11:26:40Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Alex van der End",
+      "party": "FF",
+      "status": "endorsed",
+      "source": null
+    },
+    {
+      "date": "2026-11-04",
+      "at": "2026-11-04T11:26:40Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Heather Tilling",
+      "party": "SUS",
+      "status": "endorsed",
+      "source": null
+    },
+    {
+      "date": "2026-11-04",
+      "at": "2026-11-04T11:26:40Z",
+      "type": "candidate_not_standing",
+      "seat": "northern-metropolitan",
+      "name": "Peita Collard",
+      "party": "AJP"
+    },
+    {
+      "date": "2026-11-04",
+      "at": "2026-11-04T11:26:40Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Cheryl Blacker",
+      "party": "SUS",
+      "status": "endorsed",
+      "source": null
+    },
+    {
+      "date": "2026-11-04",
+      "at": "2026-11-04T11:26:40Z",
+      "type": "candidate_not_standing",
+      "seat": "south-eastern-metropolitan",
+      "name": "Tamara Champion",
+      "party": "AJP"
+    },
+    {
+      "date": "2026-11-04",
+      "at": "2026-11-04T11:26:40Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Ann-Marie Brady",
+      "party": "SUS",
+      "status": "endorsed",
+      "source": null
+    },
+    {
+      "date": "2026-11-04",
+      "at": "2026-11-04T11:26:40Z",
+      "type": "candidate_not_standing",
+      "seat": "southern-metropolitan",
+      "name": "Daniel O'Neill",
+      "party": "AJP"
+    },
+    {
+      "date": "2026-11-04",
+      "at": "2026-11-04T11:26:40Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Linda Baird",
+      "party": "SUS",
+      "status": "endorsed",
+      "source": null
+    },
+    {
+      "date": "2026-11-04",
+      "at": "2026-11-04T11:26:40Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Philip Broadbridge",
+      "party": "OTH",
+      "status": "announced",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-11-04",
+      "at": "2026-11-04T11:26:40Z",
+      "type": "candidate_not_standing",
+      "seat": "western-metropolitan",
+      "name": "Shohre Mansouri",
+      "party": "AJP"
+    },
+    {
+      "date": "2026-11-04",
+      "at": "2026-11-04T11:26:40Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Susan Davies",
+      "party": "SUS",
+      "status": "endorsed",
+      "source": null
+    },
+    {
+      "date": "2026-11-04",
+      "at": "2026-11-04T11:26:40Z",
+      "type": "candidate_not_standing",
+      "seat": "mornington",
+      "name": "Tamara Champion",
+      "party": "AJP"
+    },
+    {
+      "date": "2026-11-04",
+      "at": "2026-11-04T11:26:40Z",
+      "type": "news",
+      "count": 1
+    },
     {
       "date": "2026-11-04",
       "at": "2026-11-04T10:32:30Z",
