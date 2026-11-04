@@ -8,6 +8,7 @@
   let shots = {};       // candidate id -> headshot (data/headshots.json)
   let districts = {};   // id -> districts.json row
   let regions = {};     // id -> regions.json row
+  let profiles = {};    // candidate id -> researched profile (data/profiles.json)
 
   const $ = (id) => document.getElementById(id);
   const surname = (p) => App.givenFirst(p.name).split(/\s+/).pop();
@@ -139,6 +140,56 @@
       </div>`;
   }
 
+  /* ---------- Researched profile (data/profiles.json) ---------- */
+  const ROLE_ORDER = (a, b) => (b.to == null) - (a.to == null) || (b.from || 0) - (a.from || 0);
+  const LINKS = [["website", "Website"], ["party_page", "Party page"], ["parliament", "Parliament of Victoria"], ["abc", "ABC"],
+    ["wikipedia", "Wikipedia"], ["facebook", "Facebook"], ["instagram", "Instagram"], ["x", "X"], ["linkedin", "LinkedIn"]];
+  const RESULT = { Won: "Won", Retained: "Won", Lost: "Lost", Withdrew: "Withdrew", Unknown: "Result not found" };
+
+  // [1,2] -> superscript links to the sources list
+  const refs = (src) => (src && src.length
+    ? `<sup class="refs">${src.map((n) => `<a href="#src-${encodeURIComponent(n)}" aria-label="Source ${escapeHtml(String(n))}">${escapeHtml(String(n))}</a>`).join(" ")}</sup>` : "");
+  const unverified = (f) => (f && f.unverified
+    ? ` <span class="badge reported" title="${escapeHtml(f.note || "A source says this but we haven't confirmed it")}">Unverified</span>${f.note ? ` <span class="muted small">${escapeHtml(f.note)}</span>` : ""}` : "");
+  const years = (r) => (r.from || r.to ? ` <span class="muted">(${r.from || "?"}–${r.to == null ? "present" : r.to})</span>` : "");
+
+  function profileCard(p) {
+    const pr = profiles[p.id];
+    if (!pr) return "";
+    const facts = [
+      ["Born", pr.born && pr.born.year, pr.born],
+      ["Lives in", pr.lives && pr.lives.place, pr.lives],
+      ["Occupation", pr.occupation && pr.occupation.text, pr.occupation],
+      ["Faction", pr.faction && pr.faction.name, pr.faction],
+    ].filter(([, v]) => v != null && v !== "");
+    const roles = (pr.prior_roles || []).slice().sort(ROLE_ORDER);
+    const runs = (pr.previous_candidacies || []).slice().sort((a, b) => String(b.election).localeCompare(String(a.election)));
+    const links = LINKS.filter(([k]) => pr.links && pr.links[k]);
+    const contact = pr.contact || {};
+    const sources = pr.sources || [];
+    return `
+      <section class="card profile-bio" aria-labelledby="bio-h">
+        <div class="card-head"><h2 id="bio-h">Profile</h2><span class="muted small">Updated ${escapeHtml(fmtDate(pr.profile_updated))}</span></div>
+        ${pr.summary ? `<p class="bio-summary">${escapeHtml(pr.summary.text)}${refs(pr.summary.src)}</p>` : ""}
+        ${facts.length ? `<dl class="profile-record">${facts.map(([k, v, f]) => `<dt>${k}</dt><dd>${escapeHtml(String(v))}${refs(f.src)}${unverified(f)}</dd>`).join("")}</dl>` : ""}
+        ${roles.length ? `<h3>Roles</h3><ul class="bio-list">${roles.map((r) => `<li>${escapeHtml(r.role)}${r.organisation ? `, ${escapeHtml(r.organisation)}` : ""}${years(r)}${refs(r.src)}${unverified(r)}</li>`).join("")}</ul>` : ""}
+        ${runs.length ? `<h3>Previous candidacies</h3>
+          <div class="table-scroll"><table data-no-csv>
+            <thead><tr><th>Election</th><th>Seat</th><th>Party</th><th>Result</th></tr></thead>
+            <tbody>${runs.map((r) => `<tr><td>${escapeHtml(r.election)}</td><td>${escapeHtml(r.seat)}</td><td>${escapeHtml(partyName(r.party))}</td><td>${escapeHtml(RESULT[r.result] || r.result || "")}${refs(r.src)}${unverified(r)}</td></tr>`).join("")}</tbody>
+          </table></div>` : ""}
+        ${(pr.priorities || []).length ? `<h3>Priorities</h3><ul class="bio-list">${pr.priorities.slice(0, 5).map((x) => `<li>${x.quoted ? `“${escapeHtml(x.text)}”` : escapeHtml(x.text)}${refs(x.src)}</li>`).join("")}</ul>
+          <p class="muted small">Quoted lines are the candidate's own words; the rest are our summary of what they've said.</p>` : ""}
+        ${links.length ? `<h3>Links</h3><ul class="bio-links">${links.map(([k, label]) => `<li><a href="${escapeHtml(pr.links[k])}" target="_blank" rel="noopener">${label} ↗</a></li>`).join("")}</ul>` : ""}
+        ${contact.email || contact.phone ? `<h3>Contact</h3><dl class="profile-record">
+          ${contact.email ? `<dt>Email</dt><dd><a href="mailto:${escapeHtml(contact.email.value)}">${escapeHtml(contact.email.value)}</a> <span class="muted small">${escapeHtml(contact.email.kind || "")}</span>${refs(contact.email.src)}</dd>` : ""}
+          ${contact.phone ? `<dt>Phone</dt><dd><a href="tel:${escapeHtml(contact.phone.value.replace(/[^\d+]/g, ""))}">${escapeHtml(contact.phone.value)}</a> <span class="muted small">${escapeHtml(contact.phone.kind || "")}</span>${refs(contact.phone.src)}</dd>` : ""}
+        </dl>` : ""}
+        ${sources.length ? `<h3>Sources</h3><ol class="bio-sources">${sources.map((s) => `<li id="src-${escapeHtml(String(s.id))}" value="${Number(s.id) || ""}"><a href="${escapeHtml(s.url)}" target="_blank" rel="noopener">${escapeHtml(s.title || s.url)}</a> <span class="muted small">accessed ${escapeHtml(fmtDate(s.accessed))}</span></li>`).join("")}</ol>` : ""}
+        <p class="muted small">Researched from public sources and written in our own words. Spot an error? <a href="${ISSUES}">Open an issue</a>.</p>
+      </section>`;
+  }
+
   function renderProfile(p) {
     const el = $("candidate-detail");
     document.title = `${p.name} · Vic Election 2026`;
@@ -163,6 +214,8 @@
         ${record(p)}
         ${photoDetails(p)}
       </article>
+
+      ${profileCard(p)}
 
       <section class="card" aria-labelledby="share-h">
         <h2 id="share-h">Share card</h2>
@@ -204,8 +257,11 @@
       </li>`).join("") : '<li class="empty">No matches.</li>';
   }
 
-  function onHashChange() {
+  async function onHashChange() {
     const id = hashId();
+    if (id && !Object.keys(profiles).length) {   // the directory was opened first
+      profiles = await loadJSON("profiles").then((d) => d.profiles || {}).catch(() => ({}));
+    }
     const p = people.find((x) => x.id === id);
     $("directory").hidden = !!p;
     $("candidate-detail").hidden = !p && !id;
@@ -222,8 +278,11 @@
 
   async function init() {
     try {
-      // All four in parallel: the profile photo's URL is only known once headshots.json arrives.
-      const [dd, rd, peopleData, shotData] = await Promise.all([loadJSON("districts"), loadJSON("regions"), App.loadPeople(), App.loadHeadshots()]);
+      // All in parallel: the profile photo's URL is only known once headshots.json arrives. Researched
+      // profiles load with them (only on a profile's page), so the page renders once, without a jump.
+      const [dd, rd, peopleData, shotData, profileData] = await Promise.all([loadJSON("districts"), loadJSON("regions"), App.loadPeople(),
+        App.loadHeadshots(), hashId() ? loadJSON("profiles").catch(() => null) : null]);
+      profiles = (profileData && profileData.profiles) || {};
       districts = Object.fromEntries(dd.districts.map((d) => [d.id, d]));
       regions = Object.fromEntries(rd.regions.map((r) => [r.id, r]));
       people = peopleData;

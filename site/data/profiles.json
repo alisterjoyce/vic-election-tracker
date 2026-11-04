@@ -1,0 +1,1716 @@
+{
+  "_schema": {
+    "description": "Candidate profiles, keyed by candidate id ('<district or region id>/<slug of Given Surname>', App.candidateId: the seat the person is contesting). Researched by hand from public sources and written in our own words: facts only, no commentary, nothing guessed. Every fact cites one or more entries in its profile's sources list by number. Anything a source states but we couldn't confirm carries unverified: true and a note. Rules: CLAUDE.md, 'Candidate profiles'.",
+    "fields": {
+      "name": "The candidate's name as the tracker lists it",
+      "summary": "{text, src}: 2-4 sentences in our own words; never text copied from a source",
+      "born": "{year, src, unverified?, note?} or null: year of birth only, and only if published (e.g. Wikipedia, Parliament of Victoria)",
+      "lives": "{place, src, unverified?, note?} or null: suburb or town only, and only if the candidate has stated it publicly",
+      "occupation": "{text, src, unverified?, note?} or null: current or most recent occupation outside politics, or 'Member of Parliament'",
+      "prior_roles": "[{role, kind (mp | minister | shadow | councillor | mayor | staffer | union | business | party | public-service | community | other), organisation?, from (year), to (year, or null if current), src, unverified?, note?}]",
+      "previous_candidacies": "[{election (e.g. '2022 Victorian state'), seat, party (code), result (Won | Lost | Retained | Withdrew | Unknown), src, unverified?, note?}]",
+      "faction": "{name, src, unverified?, note?} or null: only if reported by a mainstream news outlet or Wikipedia, citing that source",
+      "priorities": "[{text, quoted (true: the candidate's own words, under 15 words; false: our paraphrase), src}]: up to 5",
+      "links": "{website, party_page, abc, wikipedia, parliament, facebook, instagram, x, linkedin}: official pages and the candidate's own public accounts only; omit any that don't exist",
+      "contact": "{email: {value, kind (campaign | electorate office | party), src}, phone: {value, kind (party office | electorate office | campaign), src}}: published office or campaign contacts only; never personal numbers or addresses",
+      "sources": "[{id (number), url, title, accessed (YYYY-MM-DD)}]: every page a fact comes from",
+      "profile_updated": "YYYY-MM-DD when the profile was last researched"
+    }
+  },
+  "profiles": {
+    "albert-park/nina-taylor": {
+      "name": "Nina Taylor",
+      "summary": {
+        "text": "Nina Taylor is the Labor member for Albert Park in the Legislative Assembly, first elected to that seat in 2022. From 2018 to 2022 she sat in the Legislative Council for Southern Metropolitan Region, where she was Government Whip. She has been Cabinet Secretary since August 2026 and is recontesting Albert Park in 2026.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": {
+        "place": "Southbank",
+        "src": [2]
+      },
+      "occupation": {
+        "text": "Union organiser (Community and Public Sector Union); earlier a school teacher",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Member for Albert Park",
+          "kind": "mp",
+          "organisation": "Legislative Assembly",
+          "from": 2022,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Cabinet Secretary",
+          "kind": "other",
+          "organisation": "Victorian Government",
+          "from": 2026,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Parliamentary Secretary for Education",
+          "kind": "other",
+          "from": 2024,
+          "to": 2026,
+          "src": [1, 2]
+        },
+        {
+          "role": "Parliamentary Secretary for Justice",
+          "kind": "other",
+          "from": 2023,
+          "to": 2024,
+          "src": [1, 2]
+        },
+        {
+          "role": "Parliamentary Secretary for Training and Skills",
+          "kind": "other",
+          "from": 2022,
+          "to": 2023,
+          "src": [1, 2]
+        },
+        {
+          "role": "Parliamentary Secretary for Health",
+          "kind": "other",
+          "from": 2022,
+          "to": 2022,
+          "src": [1, 2]
+        },
+        {
+          "role": "Member for Southern Metropolitan Region",
+          "kind": "mp",
+          "organisation": "Legislative Council",
+          "from": 2018,
+          "to": 2022,
+          "src": [1, 2]
+        },
+        {
+          "role": "Government Whip in the Legislative Council",
+          "kind": "other",
+          "from": 2020,
+          "to": 2022,
+          "src": [1, 2]
+        },
+        {
+          "role": "Councillor, Tucker Ward",
+          "kind": "councillor",
+          "organisation": "City of Glen Eira",
+          "from": 2016,
+          "to": 2018,
+          "src": [1, 2]
+        },
+        {
+          "role": "Union organiser",
+          "kind": "union",
+          "organisation": "Community and Public Sector Union",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2016 Glen Eira City Council",
+          "seat": "Tucker Ward",
+          "party": "ALP",
+          "result": "Won",
+          "src": [2],
+          "unverified": true,
+          "note": "Wikipedia doesn't say what label she stood under at this council election; the code is her party membership."
+        },
+        {
+          "election": "2018 Victorian state",
+          "seat": "Southern Metropolitan Region (Legislative Council)",
+          "party": "ALP",
+          "result": "Won",
+          "src": [2]
+        },
+        {
+          "election": "2022 Victorian state",
+          "seat": "Albert Park",
+          "party": "ALP",
+          "result": "Won",
+          "src": [1, 2]
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Clean and affordable energy",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Better transport choices across several modes",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Safe, climate-ready housing for everyone",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Fair access to education and training pathways",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "parliament": "https://www.parliament.vic.gov.au/members/nina-taylor/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Nina_Taylor",
+        "website": "https://ninataylormp.com.au/",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/albe"
+      },
+      "contact": {
+        "email": {
+          "value": "nina.taylor@parliament.vic.gov.au",
+          "kind": "electorate office",
+          "src": [1]
+        },
+        "phone": {
+          "value": "03 9646 7173",
+          "kind": "electorate office",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.parliament.vic.gov.au/members/nina-taylor/",
+          "title": "Nina Taylor, Parliament of Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Nina_Taylor",
+          "title": "Nina Taylor, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "ashwood/matt-fregon": {
+      "name": "Matt Fregon",
+      "summary": {
+        "text": "Matt Fregon is a Labor MP who won Mount Waverley in 2018 and has represented Ashwood since that district was created in 2022. He has been Deputy Speaker of the Legislative Assembly since December 2022. He is standing again in Ashwood in 2026.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Owner and manager of a small IT business",
+        "src": [2]
+      },
+      "prior_roles": [
+        {
+          "role": "Member for Ashwood",
+          "kind": "mp",
+          "organisation": "Legislative Assembly",
+          "from": 2022,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Deputy Speaker of the Legislative Assembly",
+          "kind": "other",
+          "from": 2022,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Member for Mount Waverley",
+          "kind": "mp",
+          "organisation": "Legislative Assembly",
+          "from": 2018,
+          "to": 2022,
+          "src": [1, 2]
+        },
+        {
+          "role": "Deputy Government Whip in the Assembly",
+          "kind": "other",
+          "from": 2020,
+          "to": 2022,
+          "src": [1]
+        },
+        {
+          "role": "Owner and manager, IT firm",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "src": [2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2018 Victorian state",
+          "seat": "Mount Waverley",
+          "party": "ALP",
+          "result": "Won",
+          "src": [1, 2]
+        },
+        {
+          "election": "2022 Victorian state",
+          "seat": "Ashwood",
+          "party": "ALP",
+          "result": "Won",
+          "src": [2]
+        }
+      ],
+      "faction": null,
+      "priorities": [],
+      "links": {
+        "parliament": "https://www.parliament.vic.gov.au/members/matt-fregon/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Matt_Fregon",
+        "website": "https://www.mattfregon.com.au/",
+        "facebook": "https://www.facebook.com/MattFregonMP",
+        "x": "https://twitter.com/mjfregon",
+        "instagram": "https://www.instagram.com/mattfregonmp",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/ashw"
+      },
+      "contact": {
+        "email": {
+          "value": "matt.fregon@parliament.vic.gov.au",
+          "kind": "electorate office",
+          "src": [1]
+        },
+        "phone": {
+          "value": "03 9561 0511",
+          "kind": "electorate office",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.parliament.vic.gov.au/members/matt-fregon/",
+          "title": "Matt Fregon, Parliament of Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Matt_Fregon",
+          "title": "Matt Fregon, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "bellarine/alison-marchant": {
+      "name": "Alison Marchant",
+      "summary": {
+        "text": "Alison Marchant has been the Labor member for Bellarine since the 2022 election, when she succeeded the retiring Lisa Neville. Raised on a farm at Leopold, she taught in primary schools and campaigned against fracking before entering Parliament. She is seeking re-election in Bellarine in 2026.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Primary school teacher; later an electorate officer",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Member for Bellarine",
+          "kind": "mp",
+          "organisation": "Legislative Assembly",
+          "from": 2022,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Acting Speaker",
+          "kind": "other",
+          "organisation": "Legislative Assembly",
+          "from": 2024,
+          "to": 2026,
+          "src": [1]
+        },
+        {
+          "role": "Electorate officer to Richard Marles",
+          "kind": "staffer",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Anti-fracking community campaigner",
+          "kind": "community",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2022 Victorian state",
+          "seat": "Bellarine",
+          "party": "ALP",
+          "result": "Won",
+          "src": [1, 2]
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Putting the community at the centre of government decisions",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "parliament": "https://www.parliament.vic.gov.au/members/alison-marchant/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Alison_Marchant",
+        "facebook": "https://www.facebook.com/alisonmarchantmp/",
+        "instagram": "https://www.instagram.com/alisonmarchantmp/",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/bell",
+        "website": "https://www.viclabor.org.au/our-team/alison-marchant"
+      },
+      "contact": {
+        "email": {
+          "value": "alison.marchant@parliament.vic.gov.au",
+          "kind": "electorate office",
+          "src": [1]
+        },
+        "phone": {
+          "value": "03 5250 1987",
+          "kind": "electorate office",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.parliament.vic.gov.au/members/alison-marchant/",
+          "title": "Alison Marchant, Parliament of Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Alison_Marchant",
+          "title": "Alison Marchant, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "bentleigh/nick-staikos": {
+      "name": "Nick Staikos",
+      "summary": {
+        "text": "Nick Staikos has held Bentleigh for Labor since 2014. He became a minister in December 2024 and since August 2026 has held the housing, building and precincts portfolio along with homelessness and seniors. He is recontesting Bentleigh in 2026.",
+        "src": [1, 2]
+      },
+      "born": {
+        "year": 1986,
+        "src": [2]
+      },
+      "lives": null,
+      "occupation": {
+        "text": "Staffer to state and federal MPs",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Member for Bentleigh",
+          "kind": "mp",
+          "organisation": "Legislative Assembly",
+          "from": 2014,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for the Suburban Rail Loop",
+          "kind": "minister",
+          "from": 2026,
+          "to": 2026,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Seniors",
+          "kind": "minister",
+          "from": 2026,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Housing and Building",
+          "kind": "minister",
+          "from": 2026,
+          "to": 2026,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Homelessness",
+          "kind": "minister",
+          "from": 2026,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Local Government",
+          "kind": "minister",
+          "from": 2024,
+          "to": 2026,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Consumer Affairs",
+          "kind": "minister",
+          "from": 2024,
+          "to": 2026,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Housing, Building and Precincts",
+          "kind": "minister",
+          "from": 2026,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Parliamentary Secretary to the Premier",
+          "kind": "other",
+          "from": 2022,
+          "to": 2024,
+          "src": [1, 2]
+        },
+        {
+          "role": "Parliamentary Secretary for Multicultural Affairs",
+          "kind": "other",
+          "from": 2023,
+          "to": 2024,
+          "src": [1, 2]
+        },
+        {
+          "role": "Parliamentary Secretary to the Treasurer",
+          "kind": "other",
+          "from": 2020,
+          "to": 2022,
+          "src": [1, 2]
+        },
+        {
+          "role": "Deputy Government Whip in the Assembly",
+          "kind": "other",
+          "from": 2019,
+          "to": 2020,
+          "src": [1, 2]
+        },
+        {
+          "role": "Councillor",
+          "kind": "councillor",
+          "organisation": "City of Glen Eira",
+          "from": 2005,
+          "to": 2009,
+          "src": [1, 2]
+        },
+        {
+          "role": "Electorate staffer to state and federal MPs",
+          "kind": "staffer",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2005 Glen Eira City Council",
+          "seat": "Glen Eira",
+          "party": "ALP",
+          "result": "Won",
+          "src": [2],
+          "unverified": true,
+          "note": "Wikipedia doesn't say what label he stood under at this council election; the code is his party membership."
+        },
+        {
+          "election": "2008 Glen Eira City Council",
+          "seat": "Glen Eira",
+          "party": "ALP",
+          "result": "Retained",
+          "src": [2],
+          "unverified": true,
+          "note": "Wikipedia doesn't say what label he stood under at this council election; the code is his party membership."
+        },
+        {
+          "election": "2014 Victorian state",
+          "seat": "Bentleigh",
+          "party": "ALP",
+          "result": "Won",
+          "src": [1, 2]
+        },
+        {
+          "election": "2018 Victorian state",
+          "seat": "Bentleigh",
+          "party": "ALP",
+          "result": "Retained",
+          "src": [2]
+        },
+        {
+          "election": "2022 Victorian state",
+          "seat": "Bentleigh",
+          "party": "ALP",
+          "result": "Retained",
+          "src": [1, 2]
+        }
+      ],
+      "faction": {
+        "name": "Labor Left",
+        "src": [2],
+        "note": "Wikipedia says he moved from Labor Right to Labor Left soon after the 2022 election."
+      },
+      "priorities": [
+        {
+          "text": "Properly funded local schools",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Up-to-date facilities for local sports clubs",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Safe, dependable roads and public transport",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Easy access to local health services",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Education and training that lead to secure jobs",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "parliament": "https://www.parliament.vic.gov.au/members/nick-staikos/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Nick_Staikos",
+        "website": "https://nickstaikos.com.au/",
+        "facebook": "https://www.facebook.com/NickforBentleigh",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/bent"
+      },
+      "contact": {
+        "email": {
+          "value": "nick.staikos@parliament.vic.gov.au",
+          "kind": "electorate office",
+          "src": [1]
+        },
+        "phone": {
+          "value": "03 9579 7222",
+          "kind": "electorate office",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.parliament.vic.gov.au/members/nick-staikos/",
+          "title": "Nick Staikos, Parliament of Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Nick_Staikos",
+          "title": "Nick Staikos, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "berwick/brad-battin": {
+      "name": "Brad Battin",
+      "summary": {
+        "text": "Brad Battin is the Liberal member for Berwick, which he has held since 2022 after representing Gembrook from 2010 until that seat was abolished. He was Leader of the Liberal Party and Leader of the Opposition from December 2024 until a party-room spill in November 2025. He has since been shadow minister for police and corrections, and is standing again in Berwick in 2026.",
+        "src": [1, 2]
+      },
+      "born": {
+        "year": 1975,
+        "src": [2]
+      },
+      "lives": null,
+      "occupation": {
+        "text": "Police officer, then owner of a bakery franchise",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Member for Berwick",
+          "kind": "mp",
+          "organisation": "Legislative Assembly",
+          "from": 2022,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Member for Gembrook",
+          "kind": "mp",
+          "organisation": "Legislative Assembly",
+          "from": 2010,
+          "to": 2022,
+          "src": [2]
+        },
+        {
+          "role": "Shadow Minister for Police and Corrections",
+          "kind": "shadow",
+          "from": 2025,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Leader of the Opposition",
+          "kind": "party",
+          "from": 2024,
+          "to": 2025,
+          "src": [1, 2]
+        },
+        {
+          "role": "Shadow Minister for Sport",
+          "kind": "shadow",
+          "from": 2026,
+          "to": null,
+          "src": [1]
+        },
+        {
+          "role": "Leader of the Victorian Liberal Party",
+          "kind": "party",
+          "from": 2024,
+          "to": 2025,
+          "src": [1, 2]
+        },
+        {
+          "role": "Shadow Minister for Police",
+          "kind": "shadow",
+          "from": 2021,
+          "to": 2025,
+          "src": [1, 2]
+        },
+        {
+          "role": "Shadow Minister for Corrections",
+          "kind": "shadow",
+          "from": 2021,
+          "to": 2025,
+          "src": [1, 2]
+        },
+        {
+          "role": "Shadow Minister for Emergency Services",
+          "kind": "shadow",
+          "from": 2014,
+          "to": 2020,
+          "src": [1, 2]
+        },
+        {
+          "role": "Shadow Minister for Environment",
+          "kind": "shadow",
+          "from": 2014,
+          "to": 2017,
+          "src": [1, 2]
+        },
+        {
+          "role": "Parliamentary Secretary for the Environment",
+          "kind": "other",
+          "from": 2013,
+          "to": 2014,
+          "src": [1]
+        },
+        {
+          "role": "Owner, Bakers Delight franchise in Wheelers Hill",
+          "kind": "business",
+          "from": 2007,
+          "to": 2010,
+          "src": [1, 2]
+        },
+        {
+          "role": "Police officer (Senior Constable)",
+          "kind": "public-service",
+          "organisation": "Victoria Police",
+          "from": 2001,
+          "to": 2007,
+          "src": [1, 2]
+        },
+        {
+          "role": "President, Clematis CFA brigade",
+          "kind": "community",
+          "organisation": "Country Fire Authority",
+          "from": null,
+          "to": null,
+          "src": [2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2010 Victorian state",
+          "seat": "Gembrook",
+          "party": "LIB",
+          "result": "Won",
+          "src": [2]
+        },
+        {
+          "election": "2014 Victorian state",
+          "seat": "Gembrook",
+          "party": "LIB",
+          "result": "Retained",
+          "src": [2]
+        },
+        {
+          "election": "2018 Victorian state",
+          "seat": "Gembrook",
+          "party": "LIB",
+          "result": "Retained",
+          "src": [2]
+        },
+        {
+          "election": "2022 Victorian state",
+          "seat": "Berwick",
+          "party": "LIB",
+          "result": "Won",
+          "src": [2]
+        }
+      ],
+      "faction": {
+        "name": "Liberal conservative",
+        "src": [2],
+        "unverified": true,
+        "note": "Wikipedia says he is regarded as factionally conservative, but also reports that he has rejected that label."
+      },
+      "priorities": [
+        {
+          "text": "Community safety and preventing crime",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Support for vulnerable people",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Youth justice",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Emergency services",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Smaller government",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "parliament": "https://www.parliament.vic.gov.au/members/brad-battin/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Brad_Battin",
+        "website": "https://www.bradbattin.com.au/",
+        "facebook": "https://www.facebook.com/BradBattinMP",
+        "x": "https://twitter.com/BradBattinMP",
+        "instagram": "https://www.instagram.com/BradBattinMP",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/berw",
+        "party_page": "https://vicliberal.org.au/team/brad-battin"
+      },
+      "contact": {
+        "email": {
+          "value": "brad.battin@parliament.vic.gov.au",
+          "kind": "electorate office",
+          "src": [1]
+        },
+        "phone": {
+          "value": "03 5953 0216",
+          "kind": "electorate office",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.parliament.vic.gov.au/members/brad-battin/",
+          "title": "Brad Battin, Parliament of Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Brad_Battin",
+          "title": "Brad Battin, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "box-hill/paul-hamer": {
+      "name": "Paul Hamer",
+      "summary": {
+        "text": "Paul Hamer won Box Hill for Labor in 2018 and has held it since. He joined cabinet in April 2026 and has been Minister for Roads and Road Safety since August 2026. He is recontesting Box Hill in 2026.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Civil engineer",
+        "src": [2]
+      },
+      "prior_roles": [
+        {
+          "role": "Member for Box Hill",
+          "kind": "mp",
+          "organisation": "Legislative Assembly",
+          "from": 2018,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Roads and Road Safety",
+          "kind": "minister",
+          "from": 2026,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Local Government",
+          "kind": "minister",
+          "from": 2026,
+          "to": 2026,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Corrections",
+          "kind": "minister",
+          "from": 2026,
+          "to": 2026,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Youth Justice",
+          "kind": "minister",
+          "from": 2026,
+          "to": 2026,
+          "src": [1, 2]
+        },
+        {
+          "role": "Parliamentary Secretary for Jobs",
+          "kind": "other",
+          "from": 2024,
+          "to": 2026,
+          "src": [1]
+        },
+        {
+          "role": "Parliamentary Secretary for Economic Growth",
+          "kind": "other",
+          "from": 2024,
+          "to": 2024,
+          "src": [1]
+        },
+        {
+          "role": "Parliamentary Secretary for Economic Development",
+          "kind": "other",
+          "from": 2023,
+          "to": 2024,
+          "src": [1]
+        },
+        {
+          "role": "Acting Speaker",
+          "kind": "other",
+          "organisation": "Legislative Assembly",
+          "from": 2023,
+          "to": 2026,
+          "src": [1]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2018 Victorian state",
+          "seat": "Box Hill",
+          "party": "ALP",
+          "result": "Won",
+          "src": [1, 2]
+        },
+        {
+          "election": "2022 Victorian state",
+          "seat": "Box Hill",
+          "party": "ALP",
+          "result": "Retained",
+          "src": [1, 2]
+        }
+      ],
+      "faction": null,
+      "priorities": [],
+      "links": {
+        "parliament": "https://www.parliament.vic.gov.au/members/paul-hamer/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Paul_Hamer",
+        "website": "https://paulhamermp.com.au/",
+        "facebook": "https://www.facebook.com/PaulHamerMP",
+        "x": "https://twitter.com/paulhamermp",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/boxh"
+      },
+      "contact": {
+        "email": {
+          "value": "Paul.Hamer@parliament.vic.gov.au",
+          "kind": "electorate office",
+          "src": [1]
+        },
+        "phone": {
+          "value": "03 9898 6606",
+          "kind": "electorate office",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.parliament.vic.gov.au/members/paul-hamer/",
+          "title": "Paul Hamer, Parliament of Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Paul_Hamer",
+          "title": "Paul Hamer, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "brighton/james-newbury": {
+      "name": "James Newbury",
+      "summary": {
+        "text": "James Newbury has been the Liberal member for Brighton since 2018. He was Shadow Treasurer from January to October 2025 and is now Shadow Attorney-General and Manager of Opposition Business. He is seeking re-election in Brighton in 2026.",
+        "src": [1, 2]
+      },
+      "born": {
+        "year": 1978,
+        "src": [2]
+      },
+      "lives": null,
+      "occupation": {
+        "text": "Company secretary in financial services and political adviser",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Member for Brighton",
+          "kind": "mp",
+          "organisation": "Legislative Assembly",
+          "from": 2018,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Shadow Attorney-General",
+          "kind": "shadow",
+          "from": 2025,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Manager of Opposition Business",
+          "kind": "party",
+          "from": 2025,
+          "to": null,
+          "src": [1]
+        },
+        {
+          "role": "Shadow Special Minister of State",
+          "kind": "shadow",
+          "from": 2025,
+          "to": null,
+          "src": [1]
+        },
+        {
+          "role": "Shadow Treasurer",
+          "kind": "shadow",
+          "from": 2025,
+          "to": 2025,
+          "src": [1, 2]
+        },
+        {
+          "role": "Shadow Minister for Equality",
+          "kind": "shadow",
+          "from": 2021,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Manager of Opposition Business",
+          "kind": "party",
+          "from": 2022,
+          "to": 2025,
+          "src": [1, 2]
+        },
+        {
+          "role": "Shadow Minister for Planning",
+          "kind": "shadow",
+          "from": 2023,
+          "to": 2025,
+          "src": [1]
+        },
+        {
+          "role": "Shadow Minister for Environment and Climate Change",
+          "kind": "shadow",
+          "from": 2022,
+          "to": 2025,
+          "src": [1, 2],
+          "unverified": true,
+          "note": "Parliament gives the start as February 2022; Wikipedia gives September 2021."
+        },
+        {
+          "role": "Senior adviser to Premier Denis Napthine",
+          "kind": "staffer",
+          "from": null,
+          "to": null,
+          "src": [2]
+        },
+        {
+          "role": "Group company secretary, financial services",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "src": [1]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2018 Victorian state",
+          "seat": "Brighton",
+          "party": "LIB",
+          "result": "Won",
+          "src": [1, 2]
+        },
+        {
+          "election": "2022 Victorian state",
+          "seat": "Brighton",
+          "party": "LIB",
+          "result": "Retained",
+          "src": [2]
+        }
+      ],
+      "faction": {
+        "name": "Liberal moderate",
+        "src": [2],
+        "unverified": true,
+        "note": "Wikipedia calls him a moderate but also describes him as a close ally of a conservative-aligned group in the party."
+      },
+      "priorities": [
+        {
+          "text": "Keeping Brighton's local character",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Opposing unsuitable development",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Protecting the area from crime",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Looking after the natural environment",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "A fair share of services and infrastructure for the area",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "parliament": "https://www.parliament.vic.gov.au/members/james-newbury/",
+        "wikipedia": "https://en.wikipedia.org/wiki/James_Newbury",
+        "website": "https://www.jamesnewbury.com.au",
+        "facebook": "https://www.facebook.com/newbury3186",
+        "x": "https://twitter.com/newbury3186",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/brig",
+        "party_page": "https://vicliberal.org.au/team/james-newbury"
+      },
+      "contact": {
+        "email": {
+          "value": "James.Newbury@parliament.vic.gov.au",
+          "kind": "electorate office",
+          "src": [1]
+        },
+        "phone": {
+          "value": "03 9592 1900",
+          "kind": "electorate office",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.parliament.vic.gov.au/members/james-newbury/",
+          "title": "James Newbury, Parliament of Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/James_Newbury",
+          "title": "James Newbury, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "broadmeadows/kathleen-matthews-ward": {
+      "name": "Kathleen Matthews-Ward",
+      "summary": {
+        "text": "Kathleen Matthews-Ward has held Broadmeadows for Labor since 2022, when she succeeded the retiring Frank McGuire. She was earlier a City of Moreland councillor from 2004 to 2012 and worked as a policy adviser. She is recontesting Broadmeadows in 2026.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Policy adviser on disability, ageing and carers",
+        "src": [1]
+      },
+      "prior_roles": [
+        {
+          "role": "Member for Broadmeadows",
+          "kind": "mp",
+          "organisation": "Legislative Assembly",
+          "from": 2022,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Councillor, North-East Ward",
+          "kind": "councillor",
+          "organisation": "City of Moreland",
+          "from": 2004,
+          "to": 2012,
+          "src": [1, 2]
+        },
+        {
+          "role": "Policy adviser (disability, ageing, carers and volunteers)",
+          "kind": "other",
+          "from": null,
+          "to": null,
+          "src": [1]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2022 Victorian state",
+          "seat": "Broadmeadows",
+          "party": "ALP",
+          "result": "Won",
+          "src": [1, 2]
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Social justice, inclusion and diversity",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "parliament": "https://www.parliament.vic.gov.au/members/kathleen-matthews-ward/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Kathleen_Matthews-Ward",
+        "facebook": "https://www.facebook.com/kathleenmatthewsward",
+        "instagram": "https://www.instagram.com/kathleenmatthewsward",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/broa",
+        "website": "https://www.viclabor.org.au/our-team/kathleen-matthews-ward"
+      },
+      "contact": {
+        "email": {
+          "value": "kathleen.matthews-ward@parliament.vic.gov.au",
+          "kind": "electorate office",
+          "src": [1]
+        },
+        "phone": {
+          "value": "03 9300 3851",
+          "kind": "electorate office",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.parliament.vic.gov.au/members/kathleen-matthews-ward/",
+          "title": "Kathleen Matthews-Ward, Parliament of Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Kathleen_Matthews-Ward",
+          "title": "Kathleen Matthews-Ward, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "bulleen/matthew-guy": {
+      "name": "Matthew Guy",
+      "summary": {
+        "text": "Matthew Guy is the Liberal member for Bulleen, which he has held since 2014 after eight years in the Legislative Council for Northern Metropolitan Region. He was Minister for Planning from 2010 to 2014 and led the Liberal Party in opposition twice, from 2014 to 2018 and from 2021 to 2022. He is now Shadow Minister for Public Transport and is standing again in Bulleen in 2026.",
+        "src": [1, 2]
+      },
+      "born": {
+        "year": 1974,
+        "src": [2]
+      },
+      "lives": {
+        "place": "Templestowe",
+        "src": [2],
+        "note": "Wikipedia gives this as of 2022."
+      },
+      "occupation": {
+        "text": "Political staffer and government relations manager",
+        "src": [2]
+      },
+      "prior_roles": [
+        {
+          "role": "Member for Bulleen",
+          "kind": "mp",
+          "organisation": "Legislative Assembly",
+          "from": 2014,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Member for Northern Metropolitan Region",
+          "kind": "mp",
+          "organisation": "Legislative Council",
+          "from": 2006,
+          "to": 2014,
+          "src": [1, 2]
+        },
+        {
+          "role": "Shadow Minister for Transition to Government",
+          "kind": "shadow",
+          "from": 2025,
+          "to": 2025,
+          "src": [1, 2]
+        },
+        {
+          "role": "Shadow Minister for Ports and Freight",
+          "kind": "shadow",
+          "from": 2025,
+          "to": null,
+          "src": [1]
+        },
+        {
+          "role": "Shadow Minister for Public Transport",
+          "kind": "shadow",
+          "from": 2023,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Leader of the Opposition",
+          "kind": "party",
+          "from": 2021,
+          "to": 2022,
+          "src": [1, 2]
+        },
+        {
+          "role": "Leader of the Opposition",
+          "kind": "party",
+          "from": 2014,
+          "to": 2018,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Planning",
+          "kind": "minister",
+          "from": 2010,
+          "to": 2014,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Multicultural Affairs and Citizenship",
+          "kind": "minister",
+          "from": 2014,
+          "to": 2014,
+          "src": [1, 2]
+        },
+        {
+          "role": "Shadow Minister for Planning",
+          "kind": "shadow",
+          "from": 2006,
+          "to": 2010,
+          "src": [1, 2]
+        },
+        {
+          "role": "Government relations manager",
+          "kind": "public-service",
+          "organisation": "Australian Securities and Investments Commission",
+          "from": 2004,
+          "to": null,
+          "src": [2],
+          "unverified": true,
+          "note": "Wikipedia gives the start year only."
+        },
+        {
+          "role": "Marketing and communications manager",
+          "kind": "business",
+          "organisation": "Victorian Farmers Federation",
+          "from": 2003,
+          "to": 2004,
+          "src": [2]
+        },
+        {
+          "role": "Chief of staff to Denis Napthine (Opposition Leader)",
+          "kind": "staffer",
+          "from": 1999,
+          "to": 2002,
+          "src": [2]
+        },
+        {
+          "role": "Director of research, office of Premier Jeff Kennett",
+          "kind": "staffer",
+          "from": 1997,
+          "to": 1999,
+          "src": [2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2002 Victorian state",
+          "seat": "Yan Yean",
+          "party": "LIB",
+          "result": "Lost",
+          "src": [2]
+        },
+        {
+          "election": "2006 Victorian state",
+          "seat": "Northern Metropolitan Region (Legislative Council)",
+          "party": "LIB",
+          "result": "Won",
+          "src": [2]
+        },
+        {
+          "election": "2010 Victorian state",
+          "seat": "Northern Metropolitan Region (Legislative Council)",
+          "party": "LIB",
+          "result": "Retained",
+          "src": [2]
+        },
+        {
+          "election": "2014 Victorian state",
+          "seat": "Bulleen",
+          "party": "LIB",
+          "result": "Won",
+          "src": [1, 2]
+        },
+        {
+          "election": "2018 Victorian state",
+          "seat": "Bulleen",
+          "party": "LIB",
+          "result": "Retained",
+          "src": [1, 2]
+        },
+        {
+          "election": "2022 Victorian state",
+          "seat": "Bulleen",
+          "party": "LIB",
+          "result": "Retained",
+          "src": [1, 2]
+        }
+      ],
+      "faction": null,
+      "priorities": [],
+      "links": {
+        "parliament": "https://www.parliament.vic.gov.au/members/matthew-guy/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Matthew_Guy",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/bull",
+        "party_page": "https://vicliberal.org.au/team/matt-guy"
+      },
+      "contact": {
+        "email": {
+          "value": "matthew.guy@parliament.vic.gov.au",
+          "kind": "electorate office",
+          "src": [1]
+        },
+        "phone": {
+          "value": "03 9850 7983",
+          "kind": "electorate office",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.parliament.vic.gov.au/members/matthew-guy/",
+          "title": "Matthew Guy, Parliament of Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Matthew_Guy",
+          "title": "Matthew Guy, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "bundoora/colin-brooks": {
+      "name": "Colin Brooks",
+      "summary": {
+        "text": "Colin Brooks has represented Bundoora for Labor since 2006. He was Speaker of the Legislative Assembly from 2017 to 2022, then joined the ministry, and has been Treasurer and Minister for Industrial Relations since August 2026. He is recontesting Bundoora in 2026.",
+        "src": [1, 2]
+      },
+      "born": {
+        "year": 1970,
+        "src": [2]
+      },
+      "lives": null,
+      "occupation": {
+        "text": "Electrician",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Member for Bundoora",
+          "kind": "mp",
+          "organisation": "Legislative Assembly",
+          "from": 2006,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Treasurer",
+          "kind": "minister",
+          "from": 2026,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Industrial Relations",
+          "kind": "minister",
+          "from": 2026,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Skills and TAFE",
+          "kind": "minister",
+          "from": 2026,
+          "to": 2026,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Defence Industry",
+          "kind": "minister",
+          "from": 2026,
+          "to": 2026,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Industry and Advanced Manufacturing",
+          "kind": "minister",
+          "from": 2024,
+          "to": 2026,
+          "src": [1, 2],
+          "unverified": true,
+          "note": "Parliament gives the start as December 2024; Wikipedia gives October 2023."
+        },
+        {
+          "role": "Minister for Creative Industries",
+          "kind": "minister",
+          "from": 2023,
+          "to": 2026,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Development Victoria and Minister for Precincts",
+          "kind": "minister",
+          "from": 2023,
+          "to": 2024,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Housing",
+          "kind": "minister",
+          "from": 2022,
+          "to": 2023,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Multicultural Affairs",
+          "kind": "minister",
+          "from": 2022,
+          "to": 2023,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Child Protection and Family Services",
+          "kind": "minister",
+          "from": 2022,
+          "to": 2022,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Disability, Ageing and Carers",
+          "kind": "minister",
+          "from": 2022,
+          "to": 2022,
+          "src": [1, 2]
+        },
+        {
+          "role": "Speaker of the Legislative Assembly",
+          "kind": "other",
+          "from": 2017,
+          "to": 2022,
+          "src": [1, 2]
+        },
+        {
+          "role": "Parliamentary Secretary to the Premier",
+          "kind": "other",
+          "from": 2014,
+          "to": 2017,
+          "src": [1]
+        },
+        {
+          "role": "Mayor",
+          "kind": "mayor",
+          "organisation": "City of Banyule",
+          "from": 2001,
+          "to": 2002,
+          "src": [2]
+        },
+        {
+          "role": "Mayor",
+          "kind": "mayor",
+          "organisation": "City of Banyule",
+          "from": 1998,
+          "to": 1999,
+          "src": [2]
+        },
+        {
+          "role": "Councillor",
+          "kind": "councillor",
+          "organisation": "City of Banyule",
+          "from": 1997,
+          "to": 2005,
+          "src": [1, 2]
+        },
+        {
+          "role": "Electorate officer",
+          "kind": "staffer",
+          "from": 1996,
+          "to": null,
+          "src": [1, 2],
+          "unverified": true,
+          "note": "Wikipedia gives the start year only."
+        },
+        {
+          "role": "Electrician",
+          "kind": "other",
+          "from": 1990,
+          "to": 1996,
+          "src": [1, 2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2006 Victorian state",
+          "seat": "Bundoora",
+          "party": "ALP",
+          "result": "Won",
+          "src": [1, 2]
+        },
+        {
+          "election": "2010 Victorian state",
+          "seat": "Bundoora",
+          "party": "ALP",
+          "result": "Retained",
+          "src": [2]
+        },
+        {
+          "election": "2014 Victorian state",
+          "seat": "Bundoora",
+          "party": "ALP",
+          "result": "Retained",
+          "src": [2]
+        },
+        {
+          "election": "2018 Victorian state",
+          "seat": "Bundoora",
+          "party": "ALP",
+          "result": "Retained",
+          "src": [2]
+        },
+        {
+          "election": "2022 Victorian state",
+          "seat": "Bundoora",
+          "party": "ALP",
+          "result": "Retained",
+          "src": [2]
+        }
+      ],
+      "faction": {
+        "name": "Labor Right",
+        "src": [2]
+      },
+      "priorities": [
+        {
+          "text": "Keeping people healthy and safe",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Access to good jobs and a sound education",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Upgrades to public transport and roads",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "More jobs in renewable energy to address climate change",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Education from kindergarten through to TAFE and university",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "parliament": "https://www.parliament.vic.gov.au/members/colin-brooks/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Colin_Brooks",
+        "x": "https://twitter.com/ColinBrooksMP",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/bund",
+        "website": "https://www.viclabor.org.au/our-team/colin-brooks"
+      },
+      "contact": {
+        "email": {
+          "value": "colin.brooks@parliament.vic.gov.au",
+          "kind": "electorate office",
+          "src": [1]
+        },
+        "phone": {
+          "value": "03 9467 5657",
+          "kind": "electorate office",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.parliament.vic.gov.au/members/colin-brooks/",
+          "title": "Colin Brooks, Parliament of Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Colin_Brooks",
+          "title": "Colin Brooks, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    }
+  }
+}

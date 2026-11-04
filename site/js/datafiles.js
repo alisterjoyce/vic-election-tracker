@@ -23,6 +23,7 @@
     ["timeline.json", "Events of the 2022-2026 term and the election timetable", `${OURS} Each entry links its source.`],
     ["news.json", "Headlines per seat and statewide: title, outlet, date, link", "Headlines belong to their publishers and aren't covered by this site's licence. Links only."],
     ["headshots.json", "Candidate photo records: files, source, credit, licence", "Photos belong to the parties, campaigns and outlets credited and aren't covered by this site's licence."],
+    ["profiles.json", "Researched candidate profiles: summary, roles, past candidacies, priorities, links, and a source for every fact", `${OURS} Facts are drawn from the sources listed in each profile, including Wikipedia (${WIKI}) and the Parliament of Victoria.`],
     ["meta.json", "Refresh times, source status, key dates, 2022 baseline", OURS],
     ["localities.json", "Suburbs and postcodes to districts, with area shares", VICMAP],
     ["geo/districts.geojson", "District boundaries, simplified", VICMAP],
@@ -63,5 +64,26 @@
     }));
   }
 
-  document.addEventListener("DOMContentLoaded", render);
+  // How many active candidates (both houses) have a researched profile.
+  async function renderProfileCount() {
+    const el = document.getElementById("profile-count");
+    if (!el) return;
+    try {
+      const [people, pd] = await Promise.all([App.loadPeople(), App.loadJSON("profiles")]);
+      const profiles = pd.profiles || {};
+      const active = people.filter((p) => p.contesting && !["withdrawn", "superseded"].includes(p.status));
+      const row = (label, list) => {
+        const n = list.filter((p) => profiles[p.id]).length;
+        return `<tr><td>${label}</td><td class="num">${n.toLocaleString("en-AU")}</td><td class="num">${list.length.toLocaleString("en-AU")}</td><td class="num">${list.length ? Math.round((100 * n) / list.length) : 0}%</td></tr>`;
+      };
+      el.innerHTML = `<div class="table-scroll"><table data-no-csv>
+          <thead><tr><th>Candidates</th><th class="num">Profiled</th><th class="num">Active</th><th class="num">Complete</th></tr></thead>
+          <tbody>${row("Legislative Assembly", active.filter((p) => p.house === "lower"))}${row("Legislative Council", active.filter((p) => p.house === "upper"))}${row("Both houses", active)}</tbody>
+        </table></div>`;
+    } catch (err) {
+      el.innerHTML = '<p class="empty">Profile counts aren\'t available.</p>';
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => { render(); renderProfileCount(); });
 })();
