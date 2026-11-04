@@ -3264,6 +3264,198 @@
       ],
       "profile_updated": "2026-11-04"
     },
+    "cranbourne/andrew-hirst": {
+      "name": "Andrew Hirst",
+      "summary": {
+        "text": "Andrew Hirst is the One Nation candidate for Cranbourne at the 2026 Victorian election. The ABC's guide says he has been a teacher for more than ten years and runs a small business in education. One Nation's candidate page could not be read for this profile, and no other source we could use had published more about him by early November 2026.",
+        "src": [1]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Teacher; runs a small education business",
+        "src": [1]
+      },
+      "prior_roles": [
+        {
+          "role": "Owner, small education business",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/cran",
+        "party_page": "https://vic.onenation.org.au/andrew-hirst"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/cran",
+          "title": "Cranbourne: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
+    },
+    "cranbourne/annalise-mercer": {
+      "name": "Annalise Mercer",
+      "summary": {
+        "text": "Annalise Mercer is the Greens candidate for Cranbourne at the 2026 Victorian election. She is a psychiatric nurse and small business owner, volunteers with the emergency services, and has worked as a park ranger. She says becoming a parent is what led her to stand.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Psychiatric nurse; small business owner",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Park ranger",
+          "kind": "public-service",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1, 2]
+        },
+        {
+          "role": "Emergency services volunteer",
+          "kind": "community",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Business owner",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        }
+      ],
+      "priorities": [
+        {
+          "text": "Affordable housing and better public transport",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Health services to keep pace with population growth",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Safer communities and more green space",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/cran",
+        "party_page": "https://greens.org.au/vic/person/annalise-mercer"
+      },
+      "contact": {
+        "email": {
+          "value": "annalise.mercer@vic.greens.org.au",
+          "kind": "campaign",
+          "src": [2]
+        },
+        "phone": {
+          "value": "(03) 9912 2992",
+          "kind": "party office",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/cran",
+          "title": "Cranbourne: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://greens.org.au/vic/person/annalise-mercer",
+          "title": "Annalise Mercer, Candidate for Cranbourne, Victorian Greens",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
+    },
+    "cranbourne/gino-tripodi": {
+      "name": "Gino Tripodi",
+      "summary": {
+        "text": "Gino Tripodi is the Liberal candidate for Cranbourne at the 2026 Victorian election. The son of Italian migrants who ran a greengrocery, he started a fresh produce transport business at 18 and still runs it, carrying farmers' goods to market around Melbourne and eastern Victoria. His family's fruit shop, where he had worked, closed in 2020.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Owner, fresh fruit and vegetable transport business",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Owner, fresh fruit and vegetable transport business",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Worked in the family fruit shop",
+          "kind": "business",
+          "from": null,
+          "to": 2020,
+          "src": [1]
+        }
+      ],
+      "priorities": [
+        {
+          "text": "Tackling crime, including the party's plan for 3,000 more police and 200 more PSOs",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Lower costs for local families and businesses",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/cran",
+        "party_page": "https://vicliberal.org.au/team/gino-tripodi",
+        "website": "https://www.ginotripodi.com.au",
+        "facebook": "https://www.facebook.com/GinoTripodiCranbourne"
+      },
+      "contact": {
+        "email": {
+          "value": "gino.tripodi@vic.liberal.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/cran",
+          "title": "Cranbourne: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://vicliberal.org.au/team/gino-tripodi",
+          "title": "Gino Tripodi, Liberal for Cranbourne, Liberal Victoria",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
+    },
     "cranbourne/pauline-richards": {
       "name": "Pauline Richards",
       "summary": {
@@ -3381,6 +3573,61 @@
         }
       ],
       "profile_updated": "2026-11-04"
+    },
+    "cranbourne/shane-foreman": {
+      "name": "Shane Foreman",
+      "summary": {
+        "text": "Shane Foreman is the Family First candidate for Cranbourne at the 2026 Victorian election. He is a teacher at a Cranbourne faith-based school and, according to the party, has lived in the area for about ten years. He stood for Family First in the federal seat of Holt in 2025, taking 5.2 per cent of the first-preference vote.",
+        "src": [1, 2, 3]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Teacher at a faith-based school in Cranbourne",
+        "src": [1, 2]
+      },
+      "previous_candidacies": [
+        {
+          "election": "2025 Australian federal",
+          "seat": "Holt",
+          "party": "FF",
+          "result": "Lost",
+          "src": [1, 3]
+        }
+      ],
+      "priorities": [
+        {
+          "text": "Policies that put families and communities first, around family, faith, freedom and life",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/cran",
+        "party_page": "https://www.familyfirstparty.org.au/foreman_2026"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/cran",
+          "title": "Cranbourne: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.familyfirstparty.org.au/foreman_2026",
+          "title": "Shane Foreman, Candidate for Cranbourne, Family First",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2025_Australian_federal_election_in_Victoria",
+          "title": "Results of the 2025 Australian federal election in Victoria, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
     },
     "dandenong/gabrielle-williams": {
       "name": "Gabrielle Williams",
@@ -17311,6 +17558,298 @@
       ],
       "profile_updated": "2026-11-04"
     },
+    "wendouree/chris-meagher": {
+      "name": "Chris Meagher",
+      "summary": {
+        "text": "Chris Meagher is the Victorian Socialists candidate for Wendouree at the 2026 Victorian election. He leads ICT projects at Grampians Health, having earlier worked in IT support for a UK healthcare analytics company, and calls himself a Ballarat local and a unionist. He has volunteered with the NSW SES and Rural Fire Service and now with a CFA brigade.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": {
+        "place": "Ballarat",
+        "src": [2]
+      },
+      "occupation": {
+        "text": "ICT project lead, Grampians Health",
+        "src": [1]
+      },
+      "prior_roles": [
+        {
+          "role": "ICT project lead",
+          "kind": "public-service",
+          "organisation": "Grampians Health",
+          "from": null,
+          "to": null,
+          "src": [1]
+        },
+        {
+          "role": "IT support engineer and supervisor",
+          "kind": "business",
+          "organisation": "UK-based healthcare analytics firm",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1]
+        },
+        {
+          "role": "Volunteer (11 years)",
+          "kind": "community",
+          "organisation": "NSW State Emergency Service",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [2]
+        },
+        {
+          "role": "Volunteer (9 years)",
+          "kind": "community",
+          "organisation": "NSW Rural Fire Service",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [2]
+        },
+        {
+          "role": "Volunteer, local CFA brigade",
+          "kind": "community",
+          "from": null,
+          "to": null,
+          "src": [2]
+        }
+      ],
+      "priorities": [
+        {
+          "text": "Force investors with empty properties to either house people or sell.",
+          "quoted": true,
+          "src": [2]
+        },
+        {
+          "text": "Urgently cut and freeze rents.",
+          "quoted": true,
+          "src": [2]
+        },
+        {
+          "text": "Minimum quality standards for all rentals, strictly enforced",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "A large public housing building program",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Planning for Ballarat's growth, with better public and active transport",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/wend",
+        "party_page": "https://www.victoriansocialists.org.au/candidates/chris-meagher"
+      },
+      "contact": {
+        "email": {
+          "value": "chris.meagher@victoriansocialists.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/wend",
+          "title": "Wendouree: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.victoriansocialists.org.au/candidates/chris-meagher",
+          "title": "Chris Meagher, Victorian Socialists",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
+    },
+    "wendouree/ellen-burns": {
+      "name": "Ellen Burns",
+      "summary": {
+        "text": "Ellen Burns is the Greens candidate for Wendouree at the 2026 Victorian election, her second run for the seat after 2022, when she won 10.4 per cent of the first-preference vote. She describes herself as a local mother, sustainability educator and food security advocate, and is behind two local ventures, Smart Living Ballarat and The Hidden Orchard.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Sustainability educator; runs Smart Living Ballarat and The Hidden Orchard",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Runs Smart Living Ballarat",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Runs The Hidden Orchard",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2022 Victorian state",
+          "seat": "Wendouree",
+          "party": "GRN",
+          "result": "Lost",
+          "src": [1]
+        }
+      ],
+      "priorities": [
+        {
+          "text": "we deserve leadership that takes the serious issues seriously",
+          "quoted": true,
+          "src": [2]
+        },
+        {
+          "text": "Action on climate and on housing",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Resilient communities with secure food supplies",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Better public transport and relief from the cost of living",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/wend",
+        "party_page": "https://greens.org.au/vic/person/ellen-burns",
+        "facebook": "https://www.facebook.com/EllenBurnsGreens",
+        "instagram": "https://www.instagram.com/ellenburns_ballarat"
+      },
+      "contact": {
+        "email": {
+          "value": "ellen.burns@vic.greens.org.au",
+          "kind": "campaign",
+          "src": [2]
+        },
+        "phone": {
+          "value": "(03) 9912 2992",
+          "kind": "party office",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/wend",
+          "title": "Wendouree: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://greens.org.au/vic/person/ellen-burns",
+          "title": "Ellen Burns, Candidate for Wendouree, Victorian Greens",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
+    },
+    "wendouree/gav-ronan": {
+      "name": "Gav Ronan",
+      "summary": {
+        "text": "Gav (Gavin) Ronan is the Liberal candidate for Wendouree at the 2026 Victorian election. He grew up on his family's farm near Ballarat, worked in IT, accounting and business management, and spent ten years as owner of a Great Ocean Road lodge walk before starting a tourism business in Ballarat. He also runs the family farm.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Business owner (tourism); farmer",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Owner, tourism business in Ballarat",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Owner, lodge walk on the Great Ocean Road",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1]
+        },
+        {
+          "role": "IT consultant",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1]
+        }
+      ],
+      "priorities": [
+        {
+          "text": "Safer communities",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "A stronger local economy and lower living costs",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "A fair share of infrastructure spending for regional Victoria",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/wend",
+        "party_page": "https://vicliberal.org.au/team/gav-ronan",
+        "website": "https://www.gavronan.com.au",
+        "facebook": "https://www.facebook.com/GavinRonanWendouree"
+      },
+      "contact": {
+        "email": {
+          "value": "gavin.ronan@vic.liberal.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/wend",
+          "title": "Wendouree: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://vicliberal.org.au/team/gav-ronan",
+          "title": "Gav Ronan, Liberal for Wendouree, Liberal Victoria",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
+    },
     "wendouree/juliana-addison": {
       "name": "Juliana Addison",
       "summary": {
@@ -17479,6 +18018,219 @@
         }
       ],
       "profile_updated": "2026-11-04"
+    },
+    "wendouree/melissa-collins": {
+      "name": "Melissa Collins",
+      "summary": {
+        "text": "Melissa Collins is the Animal Justice Party candidate for Wendouree at the 2026 Victorian election. A clinical neuropsychologist who grew up in Sydney, she now lives in regional Victoria, works on habitat restoration with her local Landcare group, and co-founded the Ballarat Good Karma Network. The party says she led a formal community objection to a battery storage project planned for Mount Doran.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Clinical neuropsychologist",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Co-founder, Ballarat Good Karma Network",
+          "kind": "community",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Member, local Landcare group",
+          "kind": "community",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        }
+      ],
+      "priorities": [
+        {
+          "text": "Phasing out factory farming and tougher penalties for animal cruelty",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Affordable vet care for low-income households and funding for wildlife rescue",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Urgent climate action and stronger environmental protections",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Responses to family violence, and more affordable housing that accepts pets",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Universal healthcare and better access to mental health services",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/wend",
+        "party_page": "https://vic.animaljusticeparty.org/melissa-collins"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/wend",
+          "title": "Wendouree: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://vic.animaljusticeparty.org/melissa-collins",
+          "title": "Melissa Collins for Wendouree, Animal Justice Party Victoria",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
+    },
+    "wendouree/ruth-byrne": {
+      "name": "Ruth Byrne",
+      "summary": {
+        "text": "Ruth Byrne is standing for Family First in Wendouree at the 2026 Victorian election. A registered teacher who taught music and Christian studies at Ballarat Christian College, she now works full time as a minister of the Rise Christian Church, Delacombe, and was ordained in 2008. She came to the Ballarat area from Western Australia in 2011, where she and her husband had run a concreting business.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Minister, Rise Christian Church; registered teacher",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Minister",
+          "kind": "community",
+          "organisation": "Rise Christian Church, Delacombe",
+          "from": null,
+          "to": null,
+          "src": [2]
+        },
+        {
+          "role": "Teacher, Director of Music and Director of Christian Studies",
+          "kind": "other",
+          "organisation": "Ballarat Christian College",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1, 2]
+        },
+        {
+          "role": "Co-owner, concreting business (Western Australia)",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1, 2]
+        },
+        {
+          "role": "Founder, ministry supporting women and children in the sex industry",
+          "kind": "community",
+          "from": 2013,
+          "to": null,
+          "src": [2]
+        }
+      ],
+      "priorities": [
+        {
+          "text": "Education and support for strong families",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Freedom of speech and of religion",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Protection of human life",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Responsible economic policy as a path out of poverty",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/wend",
+        "party_page": "https://www.familyfirstparty.org.au/byrne_2026"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/wend",
+          "title": "Wendouree: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.familyfirstparty.org.au/byrne_2026",
+          "title": "Ruth Byrne, Candidate for Wendouree, Family First",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
+    },
+    "wendouree/stuart-robinson": {
+      "name": "Stuart Robinson",
+      "summary": {
+        "text": "Stuart Robinson is the One Nation candidate for Wendouree at the 2026 Victorian election. According to the ABC's guide he still works the family farm at Clunes where he grew up, has lived in Soldiers Hill for over 30 years, and was a general manager in a family business and a property manager before he retired. One Nation's candidate page could not be read for this profile.",
+        "src": [1]
+      },
+      "born": null,
+      "lives": {
+        "place": "Soldiers Hill",
+        "src": [1]
+      },
+      "occupation": {
+        "text": "Farmer (family farm at Clunes); retired general manager and property manager",
+        "src": [1]
+      },
+      "prior_roles": [
+        {
+          "role": "General manager, family business",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1]
+        },
+        {
+          "role": "Property manager",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/wend",
+        "party_page": "https://vic.onenation.org.au/stuart-robinson"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/wend",
+          "title": "Wendouree: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
     },
     "werribee/john-lister": {
       "name": "John Lister",
