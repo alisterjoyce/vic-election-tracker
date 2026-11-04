@@ -57,8 +57,12 @@
         <dd>A smoothed average of every published statewide poll. Each poll is weighted by the square root of its sample size and by distance in time (a Gaussian kernel with a three-week standard deviation). Dots are individual polls. Independents are counted in "Other" because pollsters report them differently.</dd>
         <dt>Swing-adjusted margin</dt>
         <dd>The current poll-of-polls Coalition two-party-preferred vote minus its 2022 result (45.0%) gives a statewide swing, shown with a sign (for example +9.7 to L/NP). That swing is applied uniformly to the seat's margin: "ALP 4.6 → L/NP 4.4 on current polling". It's only calculated for Labor-versus-Coalition seats. Uniform swing is a rough guide, and One Nation's vote breaks it in outer-suburban and regional seats.</dd>
-        <dt>MRP estimates</dt>
-        <dd>Seat-level projections from multilevel regression and post-stratification models. The tracker shows the projected winner, runner-up and winner's two-candidate share where the pollster published them, and "not published" otherwise. YouGov did not publish win probabilities.</dd>
+        <dt>Forecasts</dt>
+        <dd>Each seat's outlook lists every model's call side by side, each with its date, so you can see where they disagree:
+          <strong><a href="https://www.aeforecasts.com/forecast/2026vic/regular">Australian Election Forecasts (aeforecasts.com)</a></strong>, a simulation model that gives each candidate a probability of winning, a first-preference range (the model's 90% range, 5th to 95th percentile, around its median) and the likeliest final two-candidate pairings; it's refreshed four times a day;
+          the <strong>YouGov MRP</strong> (multilevel regression and post-stratification) call, with the projected runner-up and two-candidate share it published;
+          <strong>RedBridge's seat model</strong>, which so far has published statewide totals only, not seat ratings;
+          and the <strong>Sportsbet favourite</strong>. A line above them says whether the calls agree. The home page's "Models" bar adds up Australian Election Forecasts' win probabilities into expected seats per party (a 60% chance counts as 0.6 of a seat), with RedBridge's totals beneath it, and the map can be coloured by its predicted winner, shaded by how likely the win is. The models are other people's work: they're shown with credit and links, and the tracker doesn't adjust them.</dd>
         <dt>Betting favourite</dt>
         <dd>The shortest-priced option in Sportsbet's seat market, as decimal odds (1.72 returns $1.72 per $1, stake included), with the date the prices were taken. When two options share the shortest price they're shown as joint favourites. "Any Other" is never counted as the favourite. Odds reflect where money is being bet, not a probability of winning. <span class="muted">For information only, not betting advice. Gambler's Help: 1800 858 858.</span></dd>
         <dt>Seat polls</dt>
@@ -94,7 +98,7 @@
 
     <section class="card" id="sources" aria-labelledby="sources-h">
       <h2 id="sources-h">Sources and refresh times</h2>
-      <p>Data refreshes four times a day, at 6 am, 10 am, 4 pm and 8 pm Melbourne time: polls and candidates from Wikipedia, the full ABC candidate check, news, betting and how-to-vote cards. Changes are published straight away. The footer and the home page show when the data last changed, in Melbourne time.</p>
+      <p>Data refreshes four times a day, at 6 am, 10 am, 4 pm and 8 pm Melbourne time: polls and candidates from Wikipedia, the full ABC candidate check, seat forecasts, news, betting and how-to-vote cards. Changes are published straight away. The footer and the home page show when the data last changed, in Melbourne time.</p>
       <div class="table-scroll">
         <table>
           <thead><tr><th>Source</th><th>Used for</th><th>Refresh</th></tr></thead>
@@ -106,6 +110,8 @@
             <tr><td><a href="https://electiontracker.au/elections/vic/2026">electiontracker.au</a> (open data, CC BY 4.0)</td><td>A second check of the candidate list, both houses: names it lists that the tracker doesn't have are reported for checking, not added. Only names, parties and status are used</td><td>Four times a day</td></tr>
             <tr><td>VEC nominations list</td><td>Official candidates and ballot order once nominations close at noon on 9 Nov</td><td>Not yet connected</td></tr>
             <tr><td><a href="https://actionnetwork.org/user_files/user_files/000/146/615/original/yougov-vic-mrp-treaty-report-state-voting-intetion-treaty-support.pdf">YouGov MRP for Common Threads</a> (fieldwork 16 Jun to 10 Jul 2026)</td><td>MRP seat estimates</td><td>By hand when new models are published</td></tr>
+            <tr><td><a href="https://www.aeforecasts.com/forecast/2026vic/regular">Australian Election Forecasts (aeforecasts.com)</a></td><td>Forecast win probabilities, first-preference ranges and 2CP scenarios per candidate; the home page's expected seats and the map's Forecast colouring</td><td>Four times a day (the model's own date is shown with it)</td></tr>
+            <tr><td><a href="https://www.linkedin.com/posts/kosmos-samaras-80bb9978_what-the-latest-victorian-newspoll-numbers-activity-7520224020676386816-mTuv">RedBridge Group seat model</a> (published 26 Oct 2026, run on the latest Newspoll's primaries: Labor 24, Coalition 33, One Nation 20, Greens 14, Others 9)</td><td>Projected seat totals: Coalition 59, Labor 25, Greens 4, One Nation 0, six toss-ups</td><td>By hand. Each refresh checks RedBridge's site for a newer Victorian release and flags it</td></tr>
             <tr><td><a href="https://www.sportsbet.com.au/betting/politics/vic-politics/victorian-state-election-seat-betting-10944986">Sportsbet seat betting</a></td><td>Betting favourite and full market per seat</td><td>By hand (as at 30 Oct 2026). Sportsbet blocks automated access</td></tr>
             <tr><td><a href="https://discover.data.vic.gov.au/dataset/vicmap-admin">Vicmap Admin</a> (locality, postcode and state district boundaries)</td><td>The map, region outlines, and suburb and postcode search</td><td>Built 30 Oct 2026 (boundaries unchanged since 2021)</td></tr>
             <tr><td><a href="https://www.vec.vic.gov.au/results/state-election-results/2022-state-election-results">VEC 2022 results by district</a>, results by voting centre and 2CP by voting centre</td><td>How it voted in 2022: first preferences, 2CP, voting-centre results</td><td>One-off (final results)</td></tr>
@@ -129,7 +135,7 @@
         <li><strong>No candidate is confirmed until the VEC publishes the nominations list</strong> after noon on 9 Nov 2026. Until then, every name is endorsed, reported or announced, and late independents are likely.</li>
         <li><strong>Upper-house tickets are incomplete.</strong> Labor's tickets weren't final when the data was seeded, and some group orders are reported rather than confirmed.</li>
         <li><strong>Betting markets may be partial.</strong> Some Sportsbet markets fold longer-priced options under "Show All"; those seats are marked "more options not shown". Prices change constantly, and the tracker shows the date they were taken.</li>
-        <li><strong>Models disagree, and polls age.</strong> The YouGov MRP fieldwork predates the July 2026 Labor leadership change. No DemosAU Victorian seat-level MRP was found.</li>
+        <li><strong>Models disagree, and polls age.</strong> The YouGov MRP fieldwork predates the July 2026 Labor leadership change. No DemosAU Victorian seat-level MRP was found. RedBridge's model is statewide totals only: its six toss-up seats aren't named in the tracker. A forecast's win probability is the model's, not a certainty.</li>
         <li><strong>Uniform swing is a simplification</strong>, especially with One Nation polling around 20%.</li>
         <li><strong>Suburb search is by area, not address.</strong> Use the VEC to confirm the district for a particular address.</li>
         <li><strong>Some facts are disputed in the sources</strong>, for example an MLC's party status. These are flagged in the notes on the relevant page.</li>
@@ -149,7 +155,7 @@
         <li>Opinion polls and candidate lists compiled by <a href="https://en.wikipedia.org/">Wikipedia</a> contributors (CC BY-SA 4.0).</li>
         <li>Boundary data: Vicmap Admin, © State of Victoria (Department of Energy, Environment and Climate Action), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</li>
         <li>Candidate photos: published by each candidate's party or campaign (a few by the local paper credited with the photo), reproduced with attribution for election coverage. No licence was stated and permission was not individually sought; the source is named and linked beneath each photo. Candidates without a photo show their initials in party colours. To have a photo removed or replaced, <a href="https://github.com/alisterjoyce/vic-election-tracker/issues">open an issue</a>.</li>
-        <li>MRP estimates: YouGov for Common Threads. Betting prices: Sportsbet.</li>
+        <li>MRP estimates: YouGov for Common Threads. Seat forecasts: <a href="https://www.aeforecasts.com/forecast/2026vic/regular">Australian Election Forecasts (aeforecasts.com)</a>. Seat projection totals: <a href="https://www.linkedin.com/posts/kosmos-samaras-80bb9978_what-the-latest-victorian-newspoll-numbers-activity-7520224020676386816-mTuv">RedBridge Group</a>. Betting prices: Sportsbet.</li>
         <li>Built with <a href="https://www.chartjs.org/">Chart.js</a> and <a href="https://leafletjs.com/">Leaflet</a>. Fonts: Archivo and Inter, under the SIL Open Font License (<a href="fonts/OFL-Archivo.txt">Archivo licence</a>, <a href="fonts/OFL-Inter.txt">Inter licence</a>), served from this site.</li>
       </ul>
     </section>

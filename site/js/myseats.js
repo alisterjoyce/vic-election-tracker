@@ -19,7 +19,7 @@
   }
 
   function mrp(models, id) {
-    const m = models && (models.models || []).find((x) => x.published);
+    const m = models && (models.models || []).find((x) => x.published && x.kind === "mrp");
     const e = m && (models.seats || []).find((x) => x.district === id && x.model === m.id);
     return e && e.winner ? partyBadge(e.winner, { full: false }) : '<span class="muted">not published</span>';
   }
@@ -36,7 +36,7 @@
       return;
     }
     const oddsDate = data.odds && data.odds.date_checked ? ` (as at ${escapeHtml(App.fmtDate(data.odds.date_checked))})` : "";
-    const mrpModel = data.models && (data.models.models || []).find((x) => x.published);
+    const mrpModel = data.models && (data.models.models || []).find((x) => x.published && x.kind === "mrp");
     el.innerHTML = `
       <table>
         <thead><tr>

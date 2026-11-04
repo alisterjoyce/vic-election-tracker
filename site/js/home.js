@@ -81,14 +81,15 @@
   }
 
   // One 88-seat bar: blocs largest first from the left, so the leader's block meets the majority line.
-  function heroBar(counts, what) {
+  // `fmt` formats a count (expected seats from a model are fractional: one decimal in the key, whole seats on the bar).
+  function heroBar(counts, what, fmt = String) {
     const order = Object.keys(counts).filter((b) => b !== "UND" && counts[b] > 0).sort((a, b) => counts[b] - counts[a]);
     if (counts.UND) order.push("UND");
     const fill = (b) => (b === "UND" ? "" : `background:var(${partyVar(BLOC_CODE[b])});color:${App.inkFor(BLOC_CODE[b])}`);
-    const segs = order.map((b) => `<span class="hb-seg${b === "UND" ? " hb-und" : ""}" style="flex:${counts[b]} 0 0;${fill(b)}">${counts[b] >= 5 ? counts[b] : ""}</span>`).join("");
-    const key = order.map((b) => `<li><span class="swatch${b === "UND" ? " hb-und" : ""}" style="${fill(b)}"></span>${BLOC_NAMES[b]} <b>${counts[b]}</b></li>`).join("");
+    const segs = order.map((b) => `<span class="hb-seg${b === "UND" ? " hb-und" : ""}" style="flex:${counts[b]} 0 0;${fill(b)}">${counts[b] >= 5 ? Math.round(counts[b]) : ""}</span>`).join("");
+    const key = order.map((b) => `<li><span class="swatch${b === "UND" ? " hb-und" : ""}" style="${fill(b)}"></span>${BLOC_NAMES[b]} <b>${fmt(counts[b])}</b></li>`).join("");
     const lead = order[0] && order[0] !== "UND" && counts[order[0]] >= MAJORITY ? `${BLOC_NAMES[order[0]]} majority` : "No majority";
-    return `<div class="hb-track" role="img" aria-label="${escapeHtml(`${what}: ${order.map((b) => `${BLOC_NAMES[b]} ${counts[b]}`).join(", ")}. ${lead}; ${MAJORITY} seats needed.`)}">
+    return `<div class="hb-track" role="img" aria-label="${escapeHtml(`${what}: ${order.map((b) => `${BLOC_NAMES[b]} ${fmt(counts[b])}`).join(", ")}. ${lead}; ${MAJORITY} seats needed.`)}">
         ${segs}<span class="hb-majority" style="left:${(100 * MAJORITY) / SEATS}%"></span></div>
       <ul class="hb-key">${key}<li class="hb-maj-key"><span class="hb-maj-mark"></span>${MAJORITY} for a majority</li></ul>`;
   }
@@ -127,6 +128,27 @@
     });
     document.getElementById("hero-odds").innerHTML = heroBar(counts, "Sportsbet favourites");
     document.getElementById("hero-odds-note").textContent = odds && odds.date_checked ? `as at ${fmtDate(odds.date_checked)}` : "";
+  }
+
+  // Models: Australian Election Forecasts' expected seats (the sum of its win probabilities), RedBridge's totals beneath.
+  function renderModels(doc) {
+    const models = (doc && doc.models) || [];
+    const aef = models.find((m) => m.kind === "forecast" && m.published && m.expected_seats);
+    const el = document.getElementById("hero-models");
+    // The header's credit link is in the page itself (no shift when this fills in); the model's date goes on the line beneath.
+    const lines = [];
+    if (aef) {
+      el.innerHTML = heroBar(aef.expected_seats, "Expected seats, Australian Election Forecasts", (n) => Number(n).toFixed(1));
+      lines.push(`Expected seats (sum of win chances), model of ${escapeHtml(fmtDate(aef.model_date))}.`);
+    } else el.innerHTML = '<p class="empty">No forecast model loaded.</p>';
+    const rb = models.find((m) => m.kind === "projection" && m.published && m.totals);
+    if (rb) {
+      const t = rb.totals;
+      const parts = ["LNP", "ALP", "GRN", "ONP"].filter((b) => t[b] != null).map((b) => `${BLOC_NAMES[b]} ${t[b]}`);
+      if (t.toss_up) parts.push(`${t.toss_up} toss-ups`);
+      lines.push(`<a href="${escapeHtml(rb.source_url)}" rel="noopener" target="_blank">${escapeHtml(rb.name)}</a>, ${escapeHtml(fmtDate(rb.published_date))}: ${escapeHtml(parts.join(" · "))}`);
+    }
+    document.getElementById("hero-models-rb").innerHTML = lines.join(" ");
   }
 
   /* ---------- Seats to watch: the closest betting contests ---------- */
@@ -399,6 +421,10 @@
           `<time datetime="${escapeHtml(meta.last_updated)}">${escapeHtml(App.dataUpdatedText(meta.last_updated))}</time>`;
       }
       renderHero(meta, districtData.districts, pollData, odds);
+      // seat_models.json is the biggest of these (about 20 KB gzipped): fetched once the card has painted. Its space is reserved.
+      App.afterPaint(() => loadJSON("seat_models")).then(renderModels, () => {
+        document.getElementById("hero-models").innerHTML = '<p class="empty">Models failed to load.</p>';
+      });
       renderWatch(districtData.districts, odds);
       renderSeats(meta, districtData.districts, regionData.regions);
       App.ShareCard.shareButton(document.getElementById("share-home"), async () => headlineCard(meta, districtData.districts, pollData));

@@ -16,6 +16,13 @@
   that the tracker doesn't have go to meta.json and the log, never added.
 * Sportsbet seat markets (best effort): fills seat_odds.json if the site
   can be fetched and parsed; otherwise the file is treated as manual.
+* Australian Election Forecasts (aeforecasts.com): the 2026 Victorian
+  forecast's JSON (one request per run) gives, per district and candidate,
+  win probability, first-preference 5th/50th/95th percentiles and the
+  two-candidate-preferred scenarios; written to seat_models.json (model
+  "aeforecasts") whenever the model changes.
+* RedBridge seat model: entered by hand in seat_models.json; each run checks
+  RedBridge's sitemaps for a newer Victorian release and logs a warning.
 * VEC candidates: placeholder (see fetch_vec_candidates below).
 * How-to-vote cards: the VEC register (from 10 Nov 2026), recorded in htv.json;
   preference orders are entered by hand and kept.
@@ -80,6 +87,20 @@ PARTY_CODES = {
 }
 
 MONTHS = {m.lower(): i for i, m in enumerate(calendar.month_abbr) if m}
+
+# Australian Election Forecasts: its site is a single-page app reading this JSON (robots.txt allows everything).
+AEF_SUMMARY_URL = "https://www.aeforecasts.com/forecast-api/election-summary/2026vic/regular"
+AEF_PAGE_URL = "https://www.aeforecasts.com/forecast/2026vic/regular"
+AEF_CREDIT = "Australian Election Forecasts (aeforecasts.com)"
+AEF_PARTIES = {0: "ALP", 1: "LIB", 2: "GRN", 3: "IND", 4: "ONP", 5: "OTH", 6: "OTH", 7: "NAT",
+               -1: "OTH", -2: "IND", -3: "OTH"}   # model index -> our code; -1 others, -2/-3 an "emerging" independent/party
+AEF_PERCENTILES = (5.0, 50.0, 95.0)   # stored as fp/share [low, central, high]: the model's 90% range and median
+AEF_MIN_SCENARIO = 1.0               # keep 2CP pairings with at least this % chance
+
+# RedBridge publishes its Victorian seat model on LinkedIn and in the press, not reliably on its site; the
+# check below looks for any newer Victorian release in the site's sitemaps (robots.txt allows everything).
+REDBRIDGE_SITEMAPS = ("https://redbridgegroup.com.au/post-sitemap.xml", "https://redbridgegroup.com.au/page-sitemap.xml")
+REDBRIDGE_RELEASE = re.compile(r"vic|victoria|seat|projection|model|mrp|blog-media", re.I)
 
 POLLS_SCHEMA = {
     "description": "Published voting-intention polls, scraped from Wikipedia by scripts/refresh.py.",
@@ -1428,6 +1449,147 @@ def refresh_seat_odds(data_dir: Path, meta: dict) -> bool:
     return True
 
 
+# --------------------------------------------------------------------------
+# Seat models: Australian Election Forecasts (automatic), RedBridge (watch only)
+# --------------------------------------------------------------------------
+
+def _seat_key(name: str) -> str:
+    return re.sub(r"[^a-z]", "", unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode().lower())
+
+
+def parse_aeforecasts(doc: dict, districts: list[dict]) -> tuple[dict, list[dict]]:
+    """The model entry and one seat entry per district from AEF's election-summary JSON."""
+    r = doc["report"]
+    names = {i: n for i, n in r["partyName"]}
+    pct = [float(x) for x in r["voteTotalThresholds"]]
+    idx = [min(range(len(pct)), key=lambda i: abs(pct[i] - p)) for p in AEF_PERCENTILES]
+    if [round(pct[i]) for i in idx] != [round(p) for p in AEF_PERCENTILES]:
+        raise ValueError(f"unexpected percentile levels {pct}")
+    band = lambda b: [round(float(b[i]), 1) for i in idx]
+    code = lambda p: AEF_PARTIES.get(p, "OTH")
+    by_name = {_seat_key(d["name"]): d["id"] for d in districts}
+    seats, expected, unmatched = [], {}, []
+    for i, seat_name in enumerate(r["seatNames"]):
+        did = by_name.get(_seat_key(seat_name))
+        if not did:
+            unmatched.append(seat_name)
+            continue
+        win = {p: float(v) for p, v in r["seatPartyWinFrequencies"][i]}
+        fp = {p: b for p, b in r["seatFpBands"][i]}
+        named = {p: n for p, n in r["seatCandidateNames"][i]}
+        candidates = [{"name": n, "party": code(p), "win_probability": round(win.get(p, 0.0), 1),
+                       **({"fp": band(fp[p])} if p in fp else {})} for p, n in named.items()]
+        others = []
+        for p in sorted(set(win) | set(fp)):
+            if p in named or (win.get(p, 0) < 0.05 and (p not in fp or band(fp[p])[2] == 0)):
+                continue
+            label = {-1: "Others", -2: "An emerging independent", -3: "An emerging party"}.get(p, f"{names.get(p, 'Other')} (no candidate named)")
+            others.append({"label": label, "party": code(p), "win_probability": round(win.get(p, 0.0), 1),
+                           **({"fp": band(fp[p])} if p in fp else {})})
+        for p, v in win.items():
+            b = {"LIB": "LNP", "NAT": "LNP"}.get(code(p), code(p))
+            b = b if b in ("ALP", "LNP", "GRN", "ONP") else "OTH"
+            expected[b] = expected.get(b, 0.0) + v / 100
+        ranked = sorted(candidates + others, key=lambda c: -c["win_probability"])
+        two_cp = []
+        if not r["seatHideTcps"][i]:
+            shares = {tuple(k): b for k, b in r["seatTcpBands"][i]}
+            for (a, b), prob in r["seatTcpScenarios"][i]:
+                if prob * 100 >= AEF_MIN_SCENARIO:
+                    two_cp.append({"parties": [code(a), code(b)], "probability": round(prob * 100, 1),
+                                   **({"share": band(shares[(a, b)])} if (a, b) in shares else {})})
+            two_cp.sort(key=lambda s: -s["probability"])
+        seats.append({"district": did, "model": "aeforecasts", "winner": ranked[0]["party"],
+                      "winner_name": ranked[0].get("name"),
+                      "runner_up": next((c["party"] for c in ranked[1:] if c["party"] != ranked[0]["party"]), None),
+                      "winner_2cp": None, "win_probability": ranked[0]["win_probability"],
+                      "candidates": sorted(candidates, key=lambda c: -c["win_probability"]),
+                      "others": others, "two_cp": two_cp})
+    if unmatched or len(seats) != len(districts):
+        raise ValueError(f"{len(seats)} of {len(districts)} districts matched; unmatched: {unmatched[:5]}")
+    model = {
+        "id": "aeforecasts", "source": "aeforecasts", "kind": "forecast", "name": "Australian Election Forecasts",
+        "credit": AEF_CREDIT, "client": None, "fieldwork": None, "sample_size": None, "published": True,
+        "model_date": doc.get("date") or r.get("reportDate"), "label": doc.get("label") or r.get("reportLabel"),
+        "source_url": AEF_PAGE_URL, "data_url": AEF_SUMMARY_URL, "fp_percentiles": list(AEF_PERCENTILES),
+        "expected_seats": {k: round(v, 1) for k, v in sorted(expected.items(), key=lambda kv: -kv[1])},
+        "notes": "Win probabilities and first-preference ranges per candidate, from the model's simulations. fp and share are "
+                 "[5th percentile, median, 95th percentile]; two_cp lists the final pairings with at least "
+                 f"{AEF_MIN_SCENARIO:g}% chance, share being the first party's 2CP %. 'An emerging independent/party' is the "
+                 "model's allowance for a strong candidate not yet named.",
+    }
+    return model, seats
+
+
+def refresh_aeforecasts(data_dir: Path, meta: dict) -> bool:
+    source = meta.setdefault("sources", {}).setdefault("aeforecasts", {"url": AEF_SUMMARY_URL})
+    path = data_dir / "seat_models.json"
+    try:
+        doc = read_json(path, None)
+        districts = (read_json(data_dir / "districts.json", {}) or {}).get("districts", [])
+        if doc is None or not districts:
+            raise ValueError("seat_models.json or districts.json missing")
+        resp = requests.get(AEF_SUMMARY_URL, headers={"User-Agent": USER_AGENT}, timeout=TIMEOUT)
+        resp.raise_for_status()
+        model, seats = parse_aeforecasts(resp.json(), districts)
+    except Exception as exc:  # noqa: BLE001 - keep the existing file
+        log.error("Australian Election Forecasts fetch failed, keeping existing %s: %s", path.name, exc)
+        warn_ci(f"aeforecasts.com fetch failed, kept existing seat_models.json: {exc}")
+        source.update(status="error", message=str(exc)[:300])
+        return False
+
+    models = [m for m in doc.get("models", []) if m.get("id") != "aeforecasts"]
+    old_model = next((m for m in doc.get("models", []) if m.get("id") == "aeforecasts"), None)
+    old_seats = [s for s in doc.get("seats", []) if s.get("model") == "aeforecasts"]
+    source.update(status="ok", url=AEF_SUMMARY_URL, last_success=now_iso(),
+                  message=f"Model of {model['model_date']} ({model['label']}), {len(seats)} districts")
+    if old_model == model and old_seats == seats:
+        log.info("Australian Election Forecasts unchanged (model of %s)", model["model_date"])
+        return False
+    doc["models"] = models + [model]
+    doc["seats"] = sorted([s for s in doc.get("seats", []) if s.get("model") != "aeforecasts"] + seats,
+                          key=lambda s: (s["district"], s["model"]))
+    write_json(path, doc)
+    log.info("Wrote %s: Australian Election Forecasts model of %s (%s)", path.name, model["model_date"], model["label"])
+    return True
+
+
+def check_redbridge(data_dir: Path, meta: dict) -> bool:
+    """Warn when RedBridge's site shows a Victorian release newer than the model held. Never changes data."""
+    source = meta.setdefault("sources", {}).setdefault("redbridge", {"url": REDBRIDGE_SITEMAPS[0]})
+    held = next((m for m in (read_json(data_dir / "seat_models.json", {}) or {}).get("models", [])
+                 if m.get("source") == "redbridge-model"), None)
+    if not held or not held.get("published_date"):
+        source.update(status="error", message="No RedBridge model in seat_models.json to compare with")
+        return False
+    newer = []
+    try:
+        session = requests.Session()
+        session.headers["User-Agent"] = USER_AGENT
+        for i, url in enumerate(REDBRIDGE_SITEMAPS):
+            if i:
+                time.sleep(1)
+            resp = session.get(url, timeout=TIMEOUT)
+            resp.raise_for_status()
+            for loc, lastmod in re.findall(r"<loc>([^<]+)</loc>\s*<lastmod>([^<]+)</lastmod>", resp.text):
+                if lastmod[:10] > held["published_date"] and REDBRIDGE_RELEASE.search(loc):
+                    newer.append({"url": loc, "lastmod": lastmod[:10]})
+    except Exception as exc:  # noqa: BLE001 - watch only
+        log.warning("RedBridge release check failed: %s", exc)
+        source.update(status="error", message=str(exc)[:300])
+        return False
+    for n in newer:
+        log.warning("RedBridge: %s changed on %s, after the seat model held (%s); check for a newer Victorian release",
+                    n["url"], n["lastmod"], held["published_date"])
+        warn_ci(f"RedBridge may have a newer release: {n['url']} ({n['lastmod']}); seat_models.json holds {held['published_date']}")
+    source.update(status="ok", last_success=now_iso(), newer=newer,
+                  message=(f"{len(newer)} page(s) newer than the model held ({held['published_date']})" if newer
+                           else f"Nothing newer than the model held ({held['published_date']})"))
+    if not newer:
+        log.info("RedBridge: nothing newer than the seat model held (%s)", held["published_date"])
+    return False
+
+
 # ==========================================================================
 # PLACEHOLDER: VEC candidate list
 # --------------------------------------------------------------------------
@@ -2018,6 +2180,8 @@ def main(argv=None) -> int:
         refresh_abc(data_dir, meta),           # after Wikipedia, so the ABC (primary) wins conflicts
         refresh_electiontracker(data_dir, meta),   # report only: compared after the ABC has added its names
         refresh_seat_odds(data_dir, meta),
+        refresh_aeforecasts(data_dir, meta),
+        check_redbridge(data_dir, meta),       # watch only: logs a warning if RedBridge has a newer release
         refresh_candidates(data_dir, meta),
         refresh_htv(data_dir, meta),
         refresh_news(data_dir, meta),

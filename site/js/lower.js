@@ -32,6 +32,73 @@
     return `<div class="outlook-row"><dt>${escapeHtml(label)}</dt><dd>${body}</dd></div>`;
   }
 
+  // One line per model, each with its date, then the betting favourite, so disagreements show at a glance.
+  function forecastsCell(d, seatOdds, odds) {
+    const doc = outlook.models || {};
+    const models = doc.models || [];
+    const entry = (m) => (doc.seats || []).find((x) => x.district === d.id && x.model === m.id);
+    const pct = (n) => `${fmt1(n)}%`;
+    const calls = [];   // [label, party] for the agreement line
+    const lines = [];
+    const line = (label, body) => lines.push(`<li><span class="fc-src">${label}</span> ${body}</li>`);
+
+    const aef = models.find((m) => m.kind === "forecast" && m.published);
+    if (aef) {
+      const e = entry(aef);
+      const label = `${App.modelLink(aef)} <span class="muted small">(model of ${escapeHtml(fmtDate(aef.model_date))})</span>`;
+      if (!e || !e.winner) line(label, '<span class="muted">no forecast for this seat</span>');
+      else {
+        calls.push(["Australian Election Forecasts", e.winner]);
+        const rivals = [...(e.candidates || []), ...(e.others || [])].filter((c) => c.win_probability >= 1 && c.name !== e.winner_name)
+          .sort((a, b) => b.win_probability - a.win_probability).slice(0, 3)
+          .map((c) => `${escapeHtml(partyShort(c.party))}${c.name ? "" : ` (${escapeHtml(c.label.replace(/^An? /, ""))})`} ${pct(c.win_probability)}`).join(", ");
+        const fpRows = (e.candidates || []).map((c) => `<tr><td>${escapeHtml(c.name)}</td><td>${partyBadge(c.party, { full: false })}</td>
+          <td class="num">${pct(c.win_probability)}</td><td class="num">${c.fp ? `${fmt1(c.fp[1])} <span class="muted small">(${fmt1(c.fp[0])}–${fmt1(c.fp[2])})</span>` : "–"}</td></tr>`).join("");
+        const tcp = (e.two_cp || []).slice(0, 4).map((s) => `<li>${escapeHtml(partyShort(s.parties[0]))} v ${escapeHtml(partyShort(s.parties[1]))}: ${pct(s.probability)} chance${s.share
+          ? `; ${escapeHtml(partyShort(s.parties[0]))} ${fmt1(s.share[1])} <span class="muted small">(${fmt1(s.share[0])}–${fmt1(s.share[2])})</span>` : ""}</li>`).join("");
+        line(label, `${partyBadge(e.winner)} ${escapeHtml(e.winner_name || "")} <strong>${pct(e.win_probability)}</strong>
+          ${rivals ? `<span class="muted small">· then ${rivals}</span>` : ""}
+          <details class="fc-detail"><summary>First preferences and 2CP scenarios</summary>
+            <div class="table-scroll"><table data-no-csv><thead><tr><th>Candidate</th><th>Party</th><th class="num">Win</th><th class="num">First pref. % (90% range)</th></tr></thead><tbody>${fpRows}</tbody></table></div>
+            ${tcp ? `<p class="small" style="margin:6px 0 2px">Likeliest final pairings (2CP %, 90% range):</p><ul class="small fc-tcp">${tcp}</ul>` : ""}
+          </details>`);
+      }
+    }
+
+    models.filter((m) => m.kind === "mrp" && m.published).forEach((m) => {
+      const e = entry(m);
+      const label = `<a href="${escapeHtml(m.source_url || "#")}" rel="noopener" target="_blank">${escapeHtml(m.name)}</a> <span class="muted small">(${escapeHtml(m.fieldwork || "")})</span>`;
+      if (!e || !e.winner) { line(label, '<span class="muted">no call for this seat</span>'); return; }
+      calls.push([m.name, e.winner]);
+      line(label, `${partyBadge(e.winner)}${e.runner_up ? ` over ${escapeHtml(App.partyName(e.runner_up))}` : ""}${e.winner_2cp != null ? `, ${fmt1(e.winner_2cp)}% 2CP` : ""}`);
+    });
+
+    const rb = models.find((m) => m.kind === "projection" && m.published);
+    if (rb) {
+      const e = entry(rb);
+      const label = `<a href="${escapeHtml(rb.source_url)}" rel="noopener" target="_blank">${escapeHtml(rb.name)}</a> <span class="muted small">(${escapeHtml(fmtDate(rb.published_date))})</span>`;
+      if (e && e.winner) { calls.push([rb.name, e.winner]); line(label, partyBadge(e.winner)); }
+      else if ((rb.toss_ups || []).includes(d.id)) line(label, "<strong>Toss-up</strong>");
+      else line(label, '<span class="muted">no seat rating published (statewide totals only)</span>');
+    }
+
+    if (seatOdds && seatOdds.favourite && !seatOdds.partial) {
+      calls.push(["Sportsbet", seatOdds.favourite]);
+      line(`Sportsbet favourite <span class="muted small">(${escapeHtml(fmtDate(seatOdds.date_checked || odds.date_checked))})</span>`,
+        `${partyBadge(seatOdds.favourite)} ${App.fmtPrice(seatOdds.price)}`);
+    } else if (seatOdds && seatOdds.joint_favourites) {
+      line("Sportsbet favourite", `${seatOdds.joint_favourites.map((p) => partyBadge(p)).join(" / ")} <span class="muted small">(joint)</span>`);
+    } else line("Sportsbet favourite", '<span class="muted">no clear favourite</span>');
+
+    const blocs = [...new Set(calls.map(([, p]) => App.blocOf(p)))];
+    const parties = [...new Set(calls.map(([, p]) => p))];
+    const agreed = parties.length === 1 ? App.partyName(parties[0]) : blocs[0] === "LNP" ? "the Coalition" : App.partyName(calls[0][1]);
+    const verdict = calls.length < 2 ? ""
+      : blocs.length === 1 ? `<p class="fc-verdict small">All ${calls.length} calls agree: ${escapeHtml(agreed)}</p>`
+      : `<p class="fc-verdict fc-split small"><strong>Forecasts disagree:</strong> ${calls.map(([n, p]) => `${escapeHtml(n)} ${escapeHtml(partyShort(p))}`).join(" · ")}</p>`;
+    return lines.length ? `${verdict}<ul class="fc-list">${lines.join("")}</ul>` : '<span class="muted">none published</span>';
+  }
+
   function renderOutlook(d) {
     const s = outlook.swing;
     const adj = App.swingAdjusted(d.margin, s);
@@ -43,20 +110,9 @@
         <div class="muted small">Statewide swing to L/NP ${App.fmtSwing(s.swing)}: L/NP ${fmt1(s.current)}% 2PP now vs ${fmt1(s.base)}% in ${escapeHtml(s.year)}</div>`;
     }
 
-    const models = (outlook.models && outlook.models.models) || [];
-    const modelCell = models.length ? models.map((mod) => {
-      const e = (outlook.models.seats || []).find((x) => x.district === d.id && x.model === mod.id);
-      const name = `${escapeHtml(mod.name)} <span class="muted small">(${escapeHtml(mod.fieldwork || "")})</span>`;
-      if (!e || !e.winner) return `<div>${name}: <span class="muted">not published</span></div>`;
-      const vs = e.runner_up ? ` over ${escapeHtml(App.partyName(e.runner_up))}` : "";
-      const share = e.winner_2cp != null ? `, ${fmt1(e.winner_2cp)}% 2CP` : "";
-      const prob = e.win_probability != null ? `win probability ${fmt1(e.win_probability)}%` : '<span class="muted">win probability not published</span>';
-      const link = mod.source_url ? ` <a class="small" href="${escapeHtml(mod.source_url)}" rel="noopener" target="_blank">source</a>` : "";
-      return `<div>${name}: ${partyBadge(e.winner)}${vs}${share} · ${prob}${link}</div>`;
-    }).join("") : '<span class="muted">not published</span>';
-
     const odds = outlook.odds;
     const seatOdds = odds && (odds.seats || []).find((x) => x.district === d.id);
+    const forecastCell = forecastsCell(d, seatOdds, odds);
     let oddsCell;
     const price = App.fmtPrice;
     const favLabel = (code, candidate) => (candidate ? `${escapeHtml(candidate)} (Ind)`
@@ -89,7 +145,7 @@
         <h3>Seat outlook</h3>
         <dl>
           ${outlookRow("Swing-adjusted margin", swingCell)}
-          ${outlookRow("MRP estimates", modelCell)}
+          ${outlookRow("Forecasts", forecastCell)}
           ${outlookRow("Betting favourite", oddsCell)}
           ${outlookRow("Seat polls", pollsCell)}
         </dl>

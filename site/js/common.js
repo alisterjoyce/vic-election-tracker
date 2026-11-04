@@ -236,6 +236,8 @@
   // contest stays with its holder. Returns {winners: {district id: party}, tally: {bloc: seats}}.
   const BLOCS = ["ALP", "LNP", "GRN", "ONP", "OTH"];
   const blocOf = (p) => (COALITION.includes(p) ? "LNP" : BLOCS.includes(p) ? p : "OTH");
+  // A seat model's credit, linked to its page: "Australian Election Forecasts (aeforecasts.com)" wherever it's shown.
+  const modelLink = (m) => `<a href="${escapeHtml(m.source_url || "#")}" rel="noopener" target="_blank">${escapeHtml(m.credit || m.name)}</a>`;
   function projectSeats(districts, s) {
     const winners = {}, tally = Object.fromEntries(BLOCS.map((b) => [b, 0]));
     districts.forEach((d) => {
@@ -1029,7 +1031,7 @@
     PARTIES, STATUSES, COALITION, loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, partyBadge, statusBadge,
     slugify, parseDate, fmtDate, fmtMonth, fmtDateTime, dataUpdatedText, fmtPrice, fmtMargin, fmtSwing, melbourneToday, daysBetween,
     hashId, cssVar, currentTheme, showError, copyLink,
-    DAY, preparePolls, smoothedSeries, statewideSwing, swingAdjusted, projectSeats, BLOCS, blocOf,
+    DAY, preparePolls, smoothedSeries, statewideSwing, swingAdjusted, projectSeats, BLOCS, blocOf, modelLink,
     getWatchlist, setWatchlist, isWatched, toggleWatch, starButton, storageWorks,
     buildSearchIndex, searchItems,
     candidateId, givenFirst, loadHeadshots, avatar, photoCredits, initials, inkFor, newsList,

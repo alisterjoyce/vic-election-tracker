@@ -322,6 +322,10 @@ h3 { font-size: 1rem; }
 
 /* Maps (Leaflet, no tiles) */
 .map-controls { display: flex; flex-wrap: wrap; gap: 8px; }
+@media (max-width: 640px) {   /* five colour modes: the group spans the card and its buttons share the width */
+  .map-controls .segmented[aria-label="Colour districts by"] { display: flex; width: 100%; }
+  .map-controls .segmented[aria-label="Colour districts by"] button { flex: 1 1 0; min-width: 0; padding: 6px 2px; font-size: 0.82rem; line-height: 1.2; }
+}
 .segmented button:disabled { opacity: 0.45; cursor: not-allowed; }
 .segmented button[data-dim] { opacity: 0.55; }
 .map-wrap { position: relative; isolation: isolate; }   /* Leaflet's panes (z-index 400+) stay under the header menus */
@@ -512,6 +516,12 @@ a.icon-btn { text-decoration: none; display: inline-block; }
 .hb-key li { display: flex; align-items: center; gap: 5px; }
 .hb-maj-key { color: var(--muted); }
 .hb-maj-mark { display: inline-block; width: 2px; height: 12px; background: var(--text); }
+/* Models: filled after the first paint, so its heights are reserved as measured (5 Nov 2026) at each width */
+.hero-rb { margin: 2px 0 0 !important; line-height: 1.5; min-height: 3em; }   /* model date and RedBridge totals: 2 lines */
+@media (max-width: 560px) { .hero-rb { min-height: 4.5em; } }   /* 3 lines */
+@media (max-width: 400px) { .hero-rb { min-height: 6em; } }     /* 4 lines */
+@media (max-width: 760px) { #hero-models { min-height: 80px; } }
+@media (max-width: 400px) { #hero-models { min-height: 100px; } }   /* its key wraps to three lines */
 .hero-updated { margin-top: 10px !important; font-size: 0.8rem; line-height: 1.5; min-height: 1.5em; }
 
 /* ---------- Home: seats to watch ---------- */
@@ -605,6 +615,17 @@ select {
 .outlook dd > div + div { margin-top: 4px; }
 .outlook-note { margin: 8px 0 0; }
 @media (max-width: 560px) { .outlook-row { grid-template-columns: 1fr; } }
+/* Forecasts row: one line per model, an agreement line above */
+.fc-list { list-style: none; margin: 0; padding: 0; }
+.fc-list > li { padding: 3px 0; }
+.fc-src { color: var(--muted); font-size: 0.85rem; }
+.fc-src::after { content: ":"; }
+.fc-verdict { margin: 0 0 4px; }
+.fc-split { background: var(--warn-bg); color: var(--warn-text); border-radius: 6px; padding: 4px 8px; display: inline-block; }
+.fc-detail { margin-top: 4px; }
+.fc-detail summary { cursor: pointer; font-size: 0.85rem; color: var(--accent); }
+.fc-detail table { font-size: 0.85rem; margin-top: 6px; }
+.fc-tcp { margin: 0; padding-left: 18px; }
 
 .people { list-style: none; padding: 0; margin: 0; }
 .people li {

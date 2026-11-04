@@ -70,6 +70,22 @@
         return items;
       },
     },
+    forecast: {
+      label: "Forecast (aeforecasts.com)",
+      // The predicted winner's colour, deeper the likelier: a third (a three-way race) is pale, 90% and over is full.
+      style: (d, ctx) => {
+        const e = ctx.forecast[d.id];
+        if (!e || !e.winner) return { code: null, opacity: 0.15, text: "no forecast" };
+        const p = e.win_probability;
+        return { code: e.winner, opacity: Math.round((0.2 + 0.75 * Math.min(1, Math.max(0, (p - 33) / 57))) * 100) / 100,
+                 text: `${e.winner_name ? `${e.winner_name}, ` : ""}${partyName(e.winner)} ${Number(p).toFixed(1)}% to win` };
+      },
+      legend: (ds, ctx) => {
+        const codes = [...new Set(ds.map((d) => ctx.forecast[d.id] && ctx.forecast[d.id].winner).filter(Boolean))];
+        return [...codes.map((p) => ({ code: p, text: partyName(p) })),
+          ...[["under 50% to win", 0.35], ["50-75%", 0.6], ["over 75%", 0.9]].map(([t, o]) => ({ code: "OTH", opacity: o, text: t, neutral: true }))];
+      },
+    },
     result: {
       label: "Result",
       style: (d, ctx) => {
@@ -94,15 +110,17 @@
     const insetEl = root.querySelector("[data-map=inset]");
     const legendEl = root.querySelector("[data-map=legend]");
     const optional = (n) => loadJSON(n).catch(() => null);
-    const [dGeo, rGeo, dd, rd, odds, res2026] = await Promise.all([
+    const [dGeo, rGeo, dd, rd, odds, res2026, models] = await Promise.all([
       loadGeo("districts"), loadGeo("regions"), loadJSON("districts"), loadJSON("regions"),
-      optional("seat_odds"), optional("results_2026/index"),
+      optional("seat_odds"), optional("results_2026/index"), optional("seat_models"),
     ]);
+    const aef = models && (models.models || []).find((m) => m.kind === "forecast" && m.published);
     const districts = Object.fromEntries(dd.districts.map((d) => [d.id, d]));
     const regions = Object.fromEntries(rd.regions.map((r) => [r.id, r]));
     const ctx = {
       odds: Object.fromEntries(((odds && odds.seats) || []).map((s) => [s.district, s])),
       results: res2026 && res2026.districts && Object.keys(res2026.districts).length ? res2026.districts : null,
+      forecast: Object.fromEntries(((models && models.seats) || []).filter((s) => aef && s.model === aef.id).map((s) => [s.district, s])),
     };
     let mode = "holder";
     let layerKind = "districts";
@@ -181,7 +199,8 @@
         items = MODES[mode].legend(Object.values(districts), ctx);
       }
       legendEl.innerHTML = items.map((it) => `<li><span class="swatch" style="background:${it.code ? `var(${App.partyVar(it.code)})` : "var(--border)"};opacity:${it.opacity ?? 0.85}"></span>${escapeHtml(it.text)}</li>`).join("")
-        + (layerKind === "districts" && mode === "odds" && odds && odds.date_checked ? `<li class="muted">Sportsbet, as at ${escapeHtml(App.fmtDate(odds.date_checked))}</li>` : "");
+        + (layerKind === "districts" && mode === "odds" && odds && odds.date_checked ? `<li class="muted">Sportsbet, as at ${escapeHtml(App.fmtDate(odds.date_checked))}</li>` : "")
+        + (layerKind === "districts" && mode === "forecast" && aef ? `<li class="muted"><span>${App.modelLink(aef)}, model of ${escapeHtml(App.fmtDate(aef.model_date))}</span></li>` : "");
     }
 
     // Most districts are too small to see at state zoom. Desktop shows the state with a Melbourne inset;
