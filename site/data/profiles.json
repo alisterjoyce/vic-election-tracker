@@ -748,6 +748,68 @@
       "profile_updated": "2026-11-04",
       "faction": null
     },
+    "benambra/alex-vangalen": {
+      "name": "Alex Vangalen",
+      "summary": {
+        "text": "Alex Vangalen is the Victorian Socialists candidate for Benambra at the 2026 Victorian election. He has lived around Wodonga for about 30 years and works as a behaviour support practitioner with people with disability, and he belongs to the Australian Services Union. He holds degrees in psychological science and pharmacy.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": {
+        "place": "Wodonga",
+        "src": [2]
+      },
+      "occupation": {
+        "text": "Behaviour support practitioner",
+        "src": [1, 2]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "More public investment in transport, health care and public housing in Benambra",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Tackling housing shortages and the cost of living",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "We need public services that prioritise people, not the pockets of big business.",
+          "quoted": true,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/bena",
+        "party_page": "https://www.victoriansocialists.org.au/candidates/alex-vangalen"
+      },
+      "contact": {
+        "email": {
+          "value": "alex.vangalen@victoriansocialists.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/bena",
+          "title": "Benambra: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.victoriansocialists.org.au/candidates/alex-vangalen",
+          "title": "Alex Vangalen, Victorian Socialists",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
     "benambra/evette-pepper": {
       "name": "Evette Pepper",
       "summary": {
@@ -930,6 +992,145 @@
       ],
       "profile_updated": "2026-11-04"
     },
+    "benambra/kellie-sheppard": {
+      "name": "Kellie Sheppard",
+      "summary": {
+        "text": "Kellie Sheppard is the One Nation candidate for Benambra at the 2026 Victorian election. According to the ABC, she owns a small business and a hobby farm, and has previously worked as a writer and journalist and led a national health charity as its director. One Nation's candidate page could not be read for this profile.",
+        "src": [1]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Small business owner",
+        "src": [1]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/bena",
+        "party_page": "https://vic.onenation.org.au/kellie-sheppard"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/bena",
+          "title": "Benambra: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "benambra/lachie-mckeeman": {
+      "name": "Lachie McKeeman",
+      "summary": {
+        "text": "Dr Lachie McKeeman is a general practitioner in Wodonga and an independent candidate for Benambra at the 2026 Victorian election, backed by the Community for Benambra group. Based in the state's north-east since 2013, he volunteers with the CFA brigade at Wooragee and has campaigned publicly for a new Albury-Wodonga hospital.",
+        "src": [1, 2, 3]
+      },
+      "born": null,
+      "lives": {
+        "place": "Wooragee",
+        "src": [2, 3]
+      },
+      "occupation": {
+        "text": "General practitioner (rural generalist doctor)",
+        "src": [1, 2, 3]
+      },
+      "prior_roles": [
+        {
+          "role": "Practice Principal",
+          "kind": "business",
+          "organisation": "Federation Clinic, Wodonga",
+          "from": 2020,
+          "to": null,
+          "src": [3]
+        },
+        {
+          "role": "Volunteer firefighter",
+          "kind": "community",
+          "organisation": "Wooragee CFA brigade",
+          "from": null,
+          "to": null,
+          "src": [1, 2, 3]
+        },
+        {
+          "role": "Secretary",
+          "kind": "community",
+          "organisation": "Border Medical Association",
+          "from": null,
+          "to": null,
+          "src": [1, 2, 3],
+          "unverified": true,
+          "note": "His campaign site lists this as a current role; the ABC describes him as a former secretary."
+        },
+        {
+          "role": "Co-President",
+          "kind": "community",
+          "organisation": "Yackandandah Football Netball Club",
+          "from": null,
+          "to": null,
+          "src": [3]
+        }
+      ],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Securing a greenfield hospital and expanding our workforce.",
+          "quoted": true,
+          "src": [2]
+        },
+        {
+          "text": "Safe roads should be a basic standard, not an election promise.",
+          "quoted": true,
+          "src": [2]
+        },
+        {
+          "text": "Make it easier to build homes in regional Victoria.",
+          "quoted": true,
+          "src": [2]
+        },
+        {
+          "text": "Getting big money out of politics and stronger integrity in government",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Keeping Wodonga Golf Course as green space",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/bena",
+        "website": "https://drlachiemckeeman.com.au",
+        "facebook": "https://www.facebook.com/profile.php?id=61588291500069",
+        "instagram": "https://www.instagram.com/dr.lachiemckeeman/",
+        "linkedin": "https://www.linkedin.com/in/lachlan-mckeeman-746a2627a/"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/bena",
+          "title": "Benambra: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://drlachiemckeeman.com.au",
+          "title": "Dr Lachie McKeeman, Independent for Benambra (campaign site)",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://drlachiemckeeman.com.au/about",
+          "title": "About Dr Lachlan McKeeman (campaign site)",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
     "benambra/mike-fuery": {
       "name": "Mike Fuery",
       "summary": {
@@ -1047,6 +1248,211 @@
           "id": 2,
           "url": "https://www.viclabor.org.au/our-team/ollie-young",
           "title": "Ollie Young, candidate for Benambra, Victorian Labor",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "benambra/steve-martin": {
+      "name": "Steve Martin",
+      "summary": {
+        "text": "Steve Martin is the Liberal candidate for Benambra at the 2026 Victorian election. An engineer who studied at the University of New South Wales and La Trobe University, he is an engineering manager with the Nordcon land development firm and lives in Wodonga. He was the Liberal candidate for the federal seat of Indi in 2019, which the independent Helen Haines won.",
+        "src": [1, 2, 3]
+      },
+      "born": null,
+      "lives": {
+        "place": "Wodonga",
+        "src": [2]
+      },
+      "occupation": {
+        "text": "Engineering manager (Nordcon)",
+        "src": [1, 2]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [
+        {
+          "election": "2019 federal",
+          "seat": "Indi",
+          "party": "LIB",
+          "result": "Lost",
+          "src": [1, 3]
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "More beds and expanded health services in the Albury Wodonga Health redevelopment",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Saving Wodonga Golf Course",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Upgrading local roads",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Lower housing taxes so local families can buy or build a first home",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/bena",
+        "party_page": "https://vicliberal.org.au/team/steve-martin",
+        "website": "https://www.stevemartin.com.au",
+        "facebook": "https://www.facebook.com/SteveMartinBenambra",
+        "instagram": "https://www.instagram.com/SteveMartinBenambra"
+      },
+      "contact": {
+        "email": {
+          "value": "steve.martin@vic.liberal.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/bena",
+          "title": "Benambra: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://vicliberal.org.au/team/steve-martin",
+          "title": "Steve Martin, Liberal for Benambra, Victorian Liberals",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2019_Australian_federal_election_in_Victoria",
+          "title": "Results of the 2019 Australian federal election in Victoria, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "benambra/tim-quilty": {
+      "name": "Tim Quilty",
+      "summary": {
+        "text": "Tim Quilty is the Libertarian candidate for Benambra at the 2026 Victorian election. An accountant and former farmer, he sat in the Legislative Council for Northern Victoria Region from 2018 to 2022 for the Liberal Democrats (since renamed the Libertarians), losing his seat in 2022. Before that he was a City of Wodonga councillor, and he has lived in Wodonga since 2011.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": {
+        "place": "Wodonga",
+        "src": [1]
+      },
+      "occupation": {
+        "text": "Accountant",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Member for Northern Victoria Region",
+          "kind": "mp",
+          "organisation": "Legislative Council",
+          "from": 2018,
+          "to": 2022,
+          "src": [1, 2]
+        },
+        {
+          "role": "Councillor",
+          "kind": "councillor",
+          "organisation": "City of Wodonga",
+          "from": 2016,
+          "to": 2018,
+          "src": [1, 2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2004 federal",
+          "seat": "Eden-Monaro",
+          "party": "OTH",
+          "result": "Lost",
+          "src": [2],
+          "unverified": true,
+          "note": "Stood for the Outdoor Recreation Party. The source says they stood but doesn't give the result; recorded as lost because they weren't elected for this seat."
+        },
+        {
+          "election": "2007 federal",
+          "seat": "Eden-Monaro",
+          "party": "LBT",
+          "result": "Lost",
+          "src": [2],
+          "unverified": true,
+          "note": "Stood for the Liberal Democrats. The source says they stood but doesn't give the result; recorded as lost because they weren't elected for this seat."
+        },
+        {
+          "election": "2010 federal",
+          "seat": "Riverina",
+          "party": "LBT",
+          "result": "Lost",
+          "src": [2],
+          "unverified": true,
+          "note": "Stood for the Liberal Democrats. The source says they stood but doesn't give the result; recorded as lost because they weren't elected for this seat."
+        },
+        {
+          "election": "2016 federal",
+          "seat": "Indi",
+          "party": "LBT",
+          "result": "Lost",
+          "src": [2],
+          "unverified": true,
+          "note": "Stood for the Liberal Democrats. The source says they stood but doesn't give the result; recorded as lost because they weren't elected for this seat."
+        },
+        {
+          "election": "2018 Victorian state",
+          "seat": "Northern Victoria Region",
+          "party": "LBT",
+          "result": "Won",
+          "src": [2]
+        },
+        {
+          "election": "2022 Victorian state",
+          "seat": "Northern Victoria Region",
+          "party": "LBT",
+          "result": "Lost",
+          "src": [2]
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Used his first speech in 2019 to argue that regional Victoria and New South Wales should form a new state",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Opposed extending the government's pandemic lockdown powers while an MP",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/bena",
+        "wikipedia": "https://en.wikipedia.org/wiki/Tim_Quilty",
+        "facebook": "https://www.facebook.com/TimQuilty4NorthernVic",
+        "x": "https://x.com/TimQMLCNorthVic",
+        "website": "https://www.facebook.com/TimQuilty4NorthernVic"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/bena",
+          "title": "Benambra: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Tim_Quilty",
+          "title": "Tim Quilty, Wikipedia",
           "accessed": "2026-11-04"
         }
       ],
@@ -11464,6 +11870,391 @@
           "id": 2,
           "url": "https://en.wikipedia.org/wiki/Ellen_Sandell",
           "title": "Ellen Sandell, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "melton/broden-borg": {
+      "name": "Broden Borg",
+      "summary": {
+        "text": "Broden Borg is the Labor candidate for Melton at the 2026 Victorian election, for the seat being vacated by retiring Labor MP Steve McGhie. He is a teacher who grew up in Melton, was brought up by his grandparents and went to Melton Secondary College.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Teacher",
+        "src": [1, 2]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Continuing local projects in schools, accessible health care and roads",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/melt",
+        "party_page": "https://www.viclabor.org.au/our-team/broden-borg",
+        "facebook": "https://www.facebook.com/brodenformelton",
+        "instagram": "https://instagram.com/brodenformelton/",
+        "website": "https://www.viclabor.org.au/our-team/broden-borg"
+      },
+      "contact": {
+        "email": {
+          "value": "Broden.Borg@vic.alp.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/melt",
+          "title": "Melton: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.viclabor.org.au/our-team/broden-borg",
+          "title": "Broden Borg, Candidate for Melton, Victorian Labor",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "melton/fiona-adin-james": {
+      "name": "Fiona Adin-James",
+      "summary": {
+        "text": "Fiona Adin-James is the Animal Justice Party candidate for Melton at the 2026 Victorian election. A crisis counsellor, she has worked in community services since 1990, including disability advocacy, community gardens and programs for older people. She stood for the party in Melton in 2022 and in the federal seat of Hawke in 2025.",
+        "src": [1, 2, 3, 4]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Crisis counsellor",
+        "src": [1, 2]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [
+        {
+          "election": "2022 Victorian state",
+          "seat": "Melton",
+          "party": "AJP",
+          "result": "Lost",
+          "src": [1, 3]
+        },
+        {
+          "election": "2025 federal",
+          "seat": "Hawke",
+          "party": "AJP",
+          "result": "Lost",
+          "src": [1, 4]
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Stronger legal protection for wildlife, including nature corridors in planning decisions",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Making shade and shelter compulsory for farm animals",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Reform of mental health and disability services, led by people with lived experience",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Crisis support for women with children",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/melt",
+        "party_page": "https://vic.animaljusticeparty.org/fiona-adinjames"
+      },
+      "contact": {
+        "email": {
+          "value": "fiona.adinjames.ajp@gmail.com",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/melt",
+          "title": "Melton: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://vic.animaljusticeparty.org/fiona-adinjames",
+          "title": "Fiona Adin-James for Melton, Animal Justice Party Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2022_Victorian_state_election_(Legislative_Assembly)",
+          "title": "Results of the 2022 Victorian state election (Legislative Assembly), Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 4,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2025_Australian_federal_election_in_Victoria",
+          "title": "Results of the 2025 Australian federal election in Victoria, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "melton/jarrod-bingham": {
+      "name": "Jarrod Bingham",
+      "summary": {
+        "text": "Jarrod Bingham is the Liberal candidate for Melton at the 2026 Victorian election. A volunteer firefighter who runs a snake-catching business, he has lived in Bacchus Marsh for over 20 years. He has run four times before, each time as an independent: for Melton in the 2018 and 2022 state polls, and for the federal seats of Gorton (2019) and Hawke (2022).",
+        "src": [1, 2, 3, 4, 5, 6]
+      },
+      "born": null,
+      "lives": {
+        "place": "Bacchus Marsh",
+        "src": [1]
+      },
+      "occupation": {
+        "text": "Snake catcher (runs a snake-catching business)",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Volunteer firefighter",
+          "kind": "community",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2018 Victorian state",
+          "seat": "Melton",
+          "party": "IND",
+          "result": "Lost",
+          "src": [1, 3]
+        },
+        {
+          "election": "2019 federal",
+          "seat": "Gorton",
+          "party": "IND",
+          "result": "Lost",
+          "src": [1, 4]
+        },
+        {
+          "election": "2022 federal",
+          "seat": "Hawke",
+          "party": "IND",
+          "result": "Lost",
+          "src": [1, 5]
+        },
+        {
+          "election": "2022 Victorian state",
+          "seat": "Melton",
+          "party": "IND",
+          "result": "Lost",
+          "src": [1, 6]
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Less crime and safer streets in Melton",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Lower cost of living for families",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Better transport and less traffic",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/melt",
+        "party_page": "https://vicliberal.org.au/team/jarrod-bingham",
+        "website": "https://www.jarrodbingham.com.au",
+        "facebook": "https://www.facebook.com/JarrodBinghamMelton"
+      },
+      "contact": {
+        "email": {
+          "value": "jarrod.bingham@vic.liberal.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/melt",
+          "title": "Melton: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://vicliberal.org.au/team/jarrod-bingham",
+          "title": "Jarrod Bingham, Liberal for Melton, Victorian Liberals",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2018_Victorian_state_election_(Legislative_Assembly)",
+          "title": "Results of the 2018 Victorian state election (Legislative Assembly), Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 4,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2019_Australian_federal_election_in_Victoria",
+          "title": "Results of the 2019 Australian federal election in Victoria, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 5,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2022_Australian_federal_election_in_Victoria",
+          "title": "Results of the 2022 Australian federal election in Victoria, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 6,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2022_Victorian_state_election_(Legislative_Assembly)",
+          "title": "Results of the 2022 Victorian state election (Legislative Assembly), Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "melton/marlene-west": {
+      "name": "Marlene West",
+      "summary": {
+        "text": "Marlene West is the Family First candidate for Melton at the 2026 Victorian election. Raised in Tasmania, she is a registered nurse who completed a nursing degree in 1996 and later a graduate diploma in mental health, and has nursed in Victoria and Queensland. She also holds a Certificate of Ministry from Charis Bible College.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Registered nurse and mental health nurse",
+        "src": [1, 2]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Supports Family First's Christian values and wants a greater say in local politics",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/melt",
+        "party_page": "https://www.familyfirstparty.org.au/west_2026"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/melt",
+          "title": "Melton: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.familyfirstparty.org.au/west_2026",
+          "title": "Marlene West, Family First Party Australia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "melton/veronika-levchenkova": {
+      "name": "Veronika Levchenkova",
+      "summary": {
+        "text": "Veronika Levchenkova is the Greens candidate for Melton at the 2026 Victorian election. She describes herself as a mother of four, a carer for an elderly parent and a community organiser involved in local clubs, environment groups and parents' programs. She stood for the Greens in Coolibah Ward at the 2024 City of Melton election.",
+        "src": [1, 2, 3]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": null,
+      "prior_roles": [],
+      "previous_candidacies": [
+        {
+          "election": "2024 Victorian local (City of Melton)",
+          "seat": "Coolibah Ward",
+          "party": "GRN",
+          "result": "Lost",
+          "src": [2, 3]
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Affordable housing and fairer rents",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Lower energy bills",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Safer communities and protecting the environment",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "puts families, community and the environment ahead of corporate interests",
+          "quoted": true,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/melt",
+        "party_page": "https://greens.org.au/vic/person/veronika-levchenkova"
+      },
+      "contact": {
+        "email": {
+          "value": "veronika.levchenkova@vic.greens.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/melt",
+          "title": "Melton: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://greens.org.au/vic/person/veronika-levchenkova",
+          "title": "Veronika Levchenkova, Candidate for Melton, Victorian Greens",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2024_Victorian_local_elections_in_Western_Melbourne",
+          "title": "Results of the 2024 Victorian local elections in Western Melbourne, Wikipedia",
           "accessed": "2026-11-04"
         }
       ],
