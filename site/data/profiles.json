@@ -7,7 +7,7 @@
       "born": "{year, src, unverified?, note?} or null: year of birth only, and only if published (e.g. Wikipedia, Parliament of Victoria)",
       "lives": "{place, src, unverified?, note?} or null: suburb or town only, and only if the candidate has stated it publicly",
       "occupation": "{text, src, unverified?, note?} or null: current or most recent occupation outside politics, or 'Member of Parliament'",
-      "prior_roles": "[{role, kind (mp | minister | shadow | councillor | mayor | staffer | union | business | party | public-service | community | other), organisation?, from (year), to (year, or null if current), src, unverified?, note?}]",
+      "prior_roles": "[{role, kind (mp | minister | shadow | councillor | mayor | staffer | union | business | party | public-service | community | other), organisation?, from (year), to (year, or null if current), ended (optional true: the role has ended but no source gives the year; to stays null), src, unverified?, note?}]",
       "previous_candidacies": "[{election (e.g. '2022 Victorian state'), seat, party (code), result (Won | Lost | Retained | Withdrew | Unknown), src, unverified?, note?}]",
       "faction": "{name, src, unverified?, note?} or null: only if reported by a mainstream news outlet or Wikipedia, citing that source",
       "priorities": "[{text, quoted (true: the candidate's own words, under 15 words; false: our paraphrase), src}]: up to 5",
@@ -1707,6 +1707,1622 @@
           "id": 2,
           "url": "https://en.wikipedia.org/wiki/Colin_Brooks",
           "title": "Colin Brooks, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "morwell/martin-cameron": {
+      "name": "Martin Cameron",
+      "summary": {
+        "text": "Martin Cameron is the Nationals MP for Morwell, a seat he won at the 2022 state election when Russell Northe retired. He has been a shadow assistant minister for energy affordability and for small business, and became the Nationals' whip in the Assembly in 2026. He is recontesting Morwell in 2026.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Plumber and gasfitter",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Member for Morwell",
+          "kind": "mp",
+          "organisation": "Legislative Assembly",
+          "from": 2022,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Nationals Whip in the Legislative Assembly",
+          "kind": "party",
+          "from": 2026,
+          "to": null,
+          "src": [1]
+        },
+        {
+          "role": "Acting Speaker",
+          "kind": "other",
+          "from": 2026,
+          "to": null,
+          "src": [1]
+        },
+        {
+          "role": "Shadow Assistant Minister for Small Business",
+          "kind": "shadow",
+          "from": 2025,
+          "to": null,
+          "src": [1],
+          "note": "Titled Small Business (Regional) between October 2025 and February 2026."
+        },
+        {
+          "role": "Shadow Assistant Minister for Energy Affordability",
+          "kind": "shadow",
+          "from": 2025,
+          "to": null,
+          "src": [1]
+        },
+        {
+          "role": "Shadow parliamentary secretary for energy and for small business",
+          "kind": "shadow",
+          "from": 2022,
+          "to": 2025,
+          "src": [1]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2022 Victorian state",
+          "seat": "Morwell",
+          "party": "NAT",
+          "result": "Won",
+          "src": [1, 2]
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Job security and support for local industries as the Latrobe Valley goes through economic transition",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Making sure nobody is left behind as the region changes",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Good health care and schools",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Community safety",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Better roads and public transport",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "parliament": "https://www.parliament.vic.gov.au/members/martin-cameron/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Martin_Cameron_(Victorian_politician)",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/morw"
+      },
+      "contact": {
+        "email": {
+          "value": "martin.cameron@parliament.vic.gov.au",
+          "kind": "electorate office",
+          "src": [1]
+        },
+        "phone": {
+          "value": "03 5133 9088",
+          "kind": "electorate office",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.parliament.vic.gov.au/members/martin-cameron/",
+          "title": "Martin Cameron, Parliament of Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Martin_Cameron_(Victorian_politician)",
+          "title": "Martin Cameron (Victorian politician), Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "mulgrave/eden-foster": {
+      "name": "Eden Foster",
+      "summary": {
+        "text": "Eden Foster is the Labor MP for Mulgrave, elected at the November 2023 by-election that followed Daniel Andrews' resignation. Before that she was a Greater Dandenong councillor from 2020 and the city's mayor from 2022. She is running again in Mulgrave in 2026.",
+        "src": [1, 2]
+      },
+      "born": {
+        "year": 1981,
+        "src": [2]
+      },
+      "lives": null,
+      "occupation": {
+        "text": "School psychologist",
+        "src": [2]
+      },
+      "prior_roles": [
+        {
+          "role": "Member for Mulgrave",
+          "kind": "mp",
+          "organisation": "Legislative Assembly",
+          "from": 2023,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Mayor of Greater Dandenong",
+          "kind": "mayor",
+          "organisation": "City of Greater Dandenong",
+          "from": 2022,
+          "to": 2023,
+          "src": [2]
+        },
+        {
+          "role": "Councillor, Yarraman Ward",
+          "kind": "councillor",
+          "organisation": "City of Greater Dandenong",
+          "from": 2020,
+          "to": 2023,
+          "src": [2]
+        },
+        {
+          "role": "Member, Integrity and Oversight Committee",
+          "kind": "other",
+          "from": null,
+          "to": null,
+          "src": [2]
+        },
+        {
+          "role": "Psychologist at a North Melbourne Catholic school",
+          "kind": "other",
+          "from": null,
+          "to": 2023,
+          "src": [2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2020 Greater Dandenong City Council",
+          "seat": "Yarraman Ward",
+          "party": "ALP",
+          "result": "Won",
+          "src": [2],
+          "unverified": true,
+          "note": "Wikipedia doesn't say what label she stood under at this council election; the code is her party membership."
+        },
+        {
+          "election": "2023 Mulgrave state by-election",
+          "seat": "Mulgrave",
+          "party": "ALP",
+          "result": "Won",
+          "src": [1, 2]
+        }
+      ],
+      "faction": null,
+      "priorities": [],
+      "links": {
+        "parliament": "https://www.parliament.vic.gov.au/members/eden-foster/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Eden_Foster",
+        "facebook": "https://www.facebook.com/edenfostermulgrave",
+        "instagram": "https://www.instagram.com/edenfostermulgrave",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/mulg",
+        "website": "https://www.viclabor.org.au/our-team/eden-foster"
+      },
+      "contact": {
+        "email": {
+          "value": "eden.foster@parliament.vic.gov.au",
+          "kind": "electorate office",
+          "src": [1]
+        },
+        "phone": {
+          "value": "03 9548 5644",
+          "kind": "electorate office",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.parliament.vic.gov.au/members/eden-foster/",
+          "title": "Eden Foster, Parliament of Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Eden_Foster",
+          "title": "Eden Foster, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "narracan/wayne-farnham": {
+      "name": "Wayne Farnham",
+      "summary": {
+        "text": "Wayne Farnham is the Liberal MP for Narracan. He won the seat at a supplementary election in January 2023, which was held separately because the Nationals candidate died during the 2022 campaign. He has held shadow assistant minister roles in planning, housing and building, and is seeking re-election in Narracan in 2026.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Construction company owner",
+        "src": [2]
+      },
+      "prior_roles": [
+        {
+          "role": "Member for Narracan",
+          "kind": "mp",
+          "organisation": "Legislative Assembly",
+          "from": 2023,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Acting Speaker",
+          "kind": "other",
+          "from": 2023,
+          "to": null,
+          "src": [1]
+        },
+        {
+          "role": "Shadow Assistant Minister to the Opposition Leader (Regional)",
+          "kind": "shadow",
+          "from": 2026,
+          "to": null,
+          "src": [1]
+        },
+        {
+          "role": "Shadow Assistant Minister for Planning",
+          "kind": "shadow",
+          "from": 2026,
+          "to": null,
+          "src": [1]
+        },
+        {
+          "role": "Shadow Assistant Minister for Housing and Building",
+          "kind": "shadow",
+          "from": 2026,
+          "to": null,
+          "src": [1]
+        },
+        {
+          "role": "Shadow Assistant Minister for Building and Housing Affordability",
+          "kind": "shadow",
+          "from": 2025,
+          "to": 2026,
+          "src": [1]
+        },
+        {
+          "role": "Shadow Assistant Minister to the Opposition Leader",
+          "kind": "shadow",
+          "from": 2025,
+          "to": 2026,
+          "src": [1]
+        },
+        {
+          "role": "Shadow Assistant Minister for Planning and the Building Industry",
+          "kind": "shadow",
+          "from": 2025,
+          "to": 2025,
+          "src": [1]
+        },
+        {
+          "role": "Shadow parliamentary secretary to the Opposition Leader",
+          "kind": "shadow",
+          "from": 2023,
+          "to": 2025,
+          "src": [1]
+        },
+        {
+          "role": "Deputy Chair, Electoral Matters Committee",
+          "kind": "other",
+          "from": null,
+          "to": null,
+          "src": [2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2023 Narracan supplementary election",
+          "seat": "Narracan",
+          "party": "LIB",
+          "result": "Won",
+          "src": [1, 2]
+        }
+      ],
+      "faction": null,
+      "priorities": [],
+      "links": {
+        "parliament": "https://www.parliament.vic.gov.au/members/wayne-farnham/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Wayne_Farnham",
+        "website": "https://www.waynefarnham.com.au",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/narr",
+        "party_page": "https://vicliberal.org.au/team/wayne-farnham"
+      },
+      "contact": {
+        "email": {
+          "value": "wayne.farnham@parliament.vic.gov.au",
+          "kind": "electorate office",
+          "src": [1]
+        },
+        "phone": {
+          "value": "03 5623 1960",
+          "kind": "electorate office",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.parliament.vic.gov.au/members/wayne-farnham/",
+          "title": "Wayne Farnham, Parliament of Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Wayne_Farnham",
+          "title": "Wayne Farnham, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "narre-warren-north/belinda-wilson": {
+      "name": "Belinda Wilson",
+      "summary": {
+        "text": "Belinda Wilson is the Labor MP for Narre Warren North, which she won at the 2022 state election after Luke Donnellan retired. She has been Deputy Government Whip in the Assembly since February 2023. She is recontesting Narre Warren North in 2026.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Electorate officer; also worked in business",
+        "src": [2]
+      },
+      "prior_roles": [
+        {
+          "role": "Member for Narre Warren North",
+          "kind": "mp",
+          "organisation": "Legislative Assembly",
+          "from": 2022,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Deputy Government Whip, Legislative Assembly",
+          "kind": "party",
+          "from": 2023,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Electorate officer for federal MP Josh Burns",
+          "kind": "staffer",
+          "from": null,
+          "to": null,
+          "src": [2]
+        },
+        {
+          "role": "School council member",
+          "kind": "community",
+          "from": null,
+          "to": null,
+          "src": [1]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2022 Victorian state",
+          "seat": "Narre Warren North",
+          "party": "ALP",
+          "result": "Won",
+          "src": [1, 2]
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Good local schools for every family",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Local jobs",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Health care, including mental health",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Public transport",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Progress on treaty and truth-telling with Victoria's First Nations people",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "parliament": "https://www.parliament.vic.gov.au/members/belinda-wilson/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Belinda_Wilson",
+        "website": "https://www.belindawilson.com.au",
+        "facebook": "https://www.facebook.com/belindawilsonvic",
+        "instagram": "https://www.instagram.com/belindawilsonvic",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/nano"
+      },
+      "contact": {
+        "email": {
+          "value": "belinda.wilson@parliament.vic.gov.au",
+          "kind": "electorate office",
+          "src": [1]
+        },
+        "phone": {
+          "value": "03 9706 0566",
+          "kind": "electorate office",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.parliament.vic.gov.au/members/belinda-wilson/",
+          "title": "Belinda Wilson, Parliament of Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Belinda_Wilson",
+          "title": "Belinda Wilson, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "nepean/anthony-marsh": {
+      "name": "Anthony Marsh",
+      "summary": {
+        "text": "Anthony Marsh is the Liberal MP for Nepean, elected at the May 2026 by-election held after Sam Groth resigned. He was a Mornington Peninsula Shire councillor from 2020 and served as mayor twice. He is standing in Nepean again at the 2026 election.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Aerospace engineer and former RAAF officer; founded a drone-mapping business",
+        "src": [2]
+      },
+      "prior_roles": [
+        {
+          "role": "Member for Nepean",
+          "kind": "mp",
+          "organisation": "Legislative Assembly",
+          "from": 2026,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Mayor of Mornington Peninsula Shire",
+          "kind": "mayor",
+          "organisation": "Mornington Peninsula Shire",
+          "from": 2024,
+          "to": 2026,
+          "src": [2]
+        },
+        {
+          "role": "Mayor of Mornington Peninsula Shire",
+          "kind": "mayor",
+          "organisation": "Mornington Peninsula Shire",
+          "from": 2021,
+          "to": 2022,
+          "src": [2]
+        },
+        {
+          "role": "Councillor, Briars ward",
+          "kind": "councillor",
+          "organisation": "Mornington Peninsula Shire",
+          "from": 2020,
+          "to": 2026,
+          "src": [2]
+        },
+        {
+          "role": "Officer and aerospace engineer",
+          "kind": "other",
+          "organisation": "Royal Australian Air Force",
+          "from": null,
+          "to": null,
+          "src": [2]
+        },
+        {
+          "role": "Founder of a drone-mapping business",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "src": [2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2020 Mornington Peninsula Shire Council",
+          "seat": "Briars ward",
+          "party": "IND",
+          "result": "Won",
+          "src": [2],
+          "unverified": true,
+          "note": "Marsh was not a party member at the time (he joined the Liberal Party in 2026) and Wikipedia gives no label for this council election."
+        },
+        {
+          "election": "2024 Mornington Peninsula Shire Council",
+          "seat": "Briars ward",
+          "party": "IND",
+          "result": "Retained",
+          "src": [2],
+          "unverified": true,
+          "note": "Marsh was not a party member at the time (he joined the Liberal Party in 2026) and Wikipedia gives no label for this council election."
+        },
+        {
+          "election": "2026 Nepean state by-election",
+          "seat": "Nepean",
+          "party": "LIB",
+          "result": "Won",
+          "src": [1, 2]
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Rebuilding Rosebud Hospital",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Road and housing funding for the Mornington Peninsula",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Rebuilding Flinders Pier",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "parliament": "https://www.parliament.vic.gov.au/members/anthony-marsh/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Anthony_Marsh",
+        "website": "https://www.anthonymarsh.com.au",
+        "facebook": "https://www.facebook.com/AnthonyMarshNepean",
+        "instagram": "https://www.instagram.com/AnthonyMarshNepean",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/nepe",
+        "party_page": "https://vicliberal.org.au/team/anthony-marsh"
+      },
+      "contact": {
+        "email": {
+          "value": "anthony.marsh@parliament.vic.gov.au",
+          "kind": "electorate office",
+          "src": [1]
+        },
+        "phone": {
+          "value": "03 5986 6661",
+          "kind": "electorate office",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.parliament.vic.gov.au/members/anthony-marsh/",
+          "title": "Anthony Marsh, Parliament of Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Anthony_Marsh",
+          "title": "Anthony Marsh, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "niddrie/ben-carroll": {
+      "name": "Ben Carroll",
+      "summary": {
+        "text": "Ben Carroll is the Labor Premier of Victoria, having become party leader and premier in July 2026 when Jacinta Allan stood down. He has held Niddrie since a 2012 by-election and served in cabinet from 2017, including as Deputy Premier from 2023 and in the public transport, roads and education portfolios. He is recontesting Niddrie in 2026.",
+        "src": [1, 2]
+      },
+      "born": {
+        "year": 1975,
+        "src": [2]
+      },
+      "lives": null,
+      "occupation": {
+        "text": "Lawyer",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Premier of Victoria",
+          "kind": "minister",
+          "from": 2026,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Leader of the Victorian Labor Party",
+          "kind": "party",
+          "from": 2026,
+          "to": null,
+          "src": [2]
+        },
+        {
+          "role": "Deputy Premier",
+          "kind": "minister",
+          "from": 2023,
+          "to": 2026,
+          "src": [1, 2]
+        },
+        {
+          "role": "Deputy Leader of the Victorian Labor Party",
+          "kind": "party",
+          "from": 2023,
+          "to": 2026,
+          "src": [2]
+        },
+        {
+          "role": "Minister for Education",
+          "kind": "minister",
+          "from": 2023,
+          "to": 2026,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for WorkSafe and the TAC",
+          "kind": "minister",
+          "from": 2024,
+          "to": 2026,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Medical Research",
+          "kind": "minister",
+          "from": 2023,
+          "to": 2026,
+          "src": [1, 2],
+          "note": "Held from October 2023 to December 2024 and again from April to August 2026."
+        },
+        {
+          "role": "Minister for Public Transport",
+          "kind": "minister",
+          "from": 2020,
+          "to": 2023,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Industry and Innovation, Manufacturing Sovereignty and Employment",
+          "kind": "minister",
+          "from": 2022,
+          "to": 2023,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Roads and Road Safety",
+          "kind": "minister",
+          "from": 2020,
+          "to": 2022,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Business Precincts; Industry Support and Recovery",
+          "kind": "minister",
+          "from": 2022,
+          "to": 2022,
+          "src": [1]
+        },
+        {
+          "role": "Minister for Corrections, Youth Justice, Crime Prevention and Victim Support",
+          "kind": "minister",
+          "from": 2018,
+          "to": 2020,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Industry and Employment",
+          "kind": "minister",
+          "from": 2017,
+          "to": 2018,
+          "src": [1, 2]
+        },
+        {
+          "role": "Parliamentary Secretary for Justice",
+          "kind": "other",
+          "from": 2014,
+          "to": 2017,
+          "src": [1, 2]
+        },
+        {
+          "role": "Opposition parliamentary secretary for roads and public transport",
+          "kind": "shadow",
+          "from": 2013,
+          "to": 2014,
+          "src": [1]
+        },
+        {
+          "role": "Member for Niddrie",
+          "kind": "mp",
+          "organisation": "Legislative Assembly",
+          "from": 2012,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Adviser to Premier Steve Bracks",
+          "kind": "staffer",
+          "from": 2000,
+          "to": 2004,
+          "src": [2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2012 Niddrie state by-election",
+          "seat": "Niddrie",
+          "party": "ALP",
+          "result": "Won",
+          "src": [1, 2]
+        },
+        {
+          "election": "2014 Victorian state",
+          "seat": "Niddrie",
+          "party": "ALP",
+          "result": "Retained",
+          "src": [2]
+        },
+        {
+          "election": "2018 Victorian state",
+          "seat": "Niddrie",
+          "party": "ALP",
+          "result": "Retained",
+          "src": [2]
+        },
+        {
+          "election": "2022 Victorian state",
+          "seat": "Niddrie",
+          "party": "ALP",
+          "result": "Retained",
+          "src": [2]
+        }
+      ],
+      "faction": {
+        "name": "Labor Right",
+        "src": [2]
+      },
+      "priorities": [
+        {
+          "text": "Access to education that improves people's prospects, from early childhood through adult learning",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Better transport options",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "A strong local economy in Niddrie",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Mental health and wellbeing support services",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Action on climate change and growth in renewable-energy jobs",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "parliament": "https://www.parliament.vic.gov.au/members/ben-carroll/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Ben_Carroll",
+        "facebook": "https://facebook.com/BenCarrollMP",
+        "x": "https://twitter.com/BenCarrollMP",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/nidd",
+        "website": "https://www.viclabor.org.au/our-team/ben-carroll"
+      },
+      "contact": {
+        "email": {
+          "value": "ben.carroll@parliament.vic.gov.au",
+          "kind": "electorate office",
+          "src": [1]
+        },
+        "phone": {
+          "value": "03 9379 5879",
+          "kind": "electorate office",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.parliament.vic.gov.au/members/ben-carroll/",
+          "title": "Ben Carroll, Parliament of Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Ben_Carroll",
+          "title": "Ben Carroll, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "northcote/kat-theophanous": {
+      "name": "Kat Theophanous",
+      "summary": {
+        "text": "Kat Theophanous is the Labor MP for Northcote, which she took from the Greens at the 2018 state election and held in 2022. She was Parliamentary Secretary for Women's Health from 2022 and has been Parliamentary Secretary to the Premier since August 2026. She is recontesting Northcote in 2026.",
+        "src": [1, 2]
+      },
+      "born": {
+        "year": 1986,
+        "src": [2]
+      },
+      "lives": null,
+      "occupation": {
+        "text": "Ministerial adviser",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Member for Northcote",
+          "kind": "mp",
+          "organisation": "Legislative Assembly",
+          "from": 2018,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Parliamentary Secretary to the Premier",
+          "kind": "other",
+          "from": 2026,
+          "to": null,
+          "src": [1]
+        },
+        {
+          "role": "Parliamentary Secretary for Women's Health",
+          "kind": "other",
+          "from": 2022,
+          "to": 2026,
+          "src": [1, 2]
+        },
+        {
+          "role": "Parliamentary Secretary for Renters",
+          "kind": "other",
+          "from": 2024,
+          "to": 2026,
+          "src": [1]
+        },
+        {
+          "role": "Adviser to Fiona Richardson, then Northcote MP and women's minister",
+          "kind": "staffer",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Government relations and corporate affairs at SBS",
+          "kind": "other",
+          "from": null,
+          "to": null,
+          "src": [2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2018 Victorian state",
+          "seat": "Northcote",
+          "party": "ALP",
+          "result": "Won",
+          "src": [1, 2]
+        },
+        {
+          "election": "2022 Victorian state",
+          "seat": "Northcote",
+          "party": "ALP",
+          "result": "Retained",
+          "src": [2]
+        }
+      ],
+      "faction": {
+        "name": "Labor Right",
+        "src": [2]
+      },
+      "priorities": [
+        {
+          "text": "Managing Northcote's growth while keeping open space and adding services",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Affordable housing and action on homelessness",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Public education, modern transport and health including mental health",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Gender equality and social justice",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Climate action and sustainable growth",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "parliament": "https://www.parliament.vic.gov.au/members/kat-theophanous/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Kat_Theophanous",
+        "website": "https://www.kattheophanous.com.au/",
+        "facebook": "https://www.facebook.com/KatTheoMP",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/nort"
+      },
+      "contact": {
+        "email": {
+          "value": "Kat.Theophanous@parliament.vic.gov.au",
+          "kind": "electorate office",
+          "src": [1]
+        },
+        "phone": {
+          "value": "03 9481 5777",
+          "kind": "electorate office",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.parliament.vic.gov.au/members/kat-theophanous/",
+          "title": "Kat Theophanous, Parliament of Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Kat_Theophanous",
+          "title": "Kat Theophanous, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "oakleigh/steve-dimopoulos": {
+      "name": "Steve Dimopoulos",
+      "summary": {
+        "text": "Steve Dimopoulos has been the Labor MP for Oakleigh since 2014 and a minister since 2022. His portfolios have included tourism, sport and major events, creative industries and the environment, and since August 2026 he has been Minister for WorkSafe and the TAC, Sport, and Equality. He is a former Mayor of Monash and is recontesting Oakleigh in 2026.",
+        "src": [1, 2]
+      },
+      "born": {
+        "year": 1972,
+        "src": [2]
+      },
+      "lives": null,
+      "occupation": {
+        "text": "Public servant and café owner",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Minister for Sport",
+          "kind": "minister",
+          "from": 2026,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Equality",
+          "kind": "minister",
+          "from": 2026,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for WorkSafe and the TAC",
+          "kind": "minister",
+          "from": 2026,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Member for Oakleigh",
+          "kind": "mp",
+          "organisation": "Legislative Assembly",
+          "from": 2014,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Economic Growth and Jobs",
+          "kind": "minister",
+          "from": 2026,
+          "to": 2026,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Sport and Major Events",
+          "kind": "minister",
+          "from": 2026,
+          "to": 2026,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Tourism, Sport and Major Events",
+          "kind": "minister",
+          "from": 2022,
+          "to": 2026,
+          "src": [1, 2]
+        },
+        {
+          "role": "Parliamentary Secretary to the Premier",
+          "kind": "other",
+          "from": 2020,
+          "to": 2022,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Environment",
+          "kind": "minister",
+          "from": 2023,
+          "to": 2026,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Outdoor Recreation",
+          "kind": "minister",
+          "from": 2023,
+          "to": 2026,
+          "src": [1, 2]
+        },
+        {
+          "role": "Minister for Creative Industries",
+          "kind": "minister",
+          "from": 2022,
+          "to": 2023,
+          "src": [1, 2]
+        },
+        {
+          "role": "Parliamentary Secretary for Mental Health",
+          "kind": "other",
+          "from": 2020,
+          "to": 2022,
+          "src": [1, 2]
+        },
+        {
+          "role": "Parliamentary Secretary to the Treasurer",
+          "kind": "other",
+          "from": 2018,
+          "to": 2020,
+          "src": [1, 2]
+        },
+        {
+          "role": "Councillor",
+          "kind": "councillor",
+          "organisation": "City of Monash",
+          "from": 2003,
+          "to": 2014,
+          "src": [1, 2]
+        },
+        {
+          "role": "Mayor of Monash",
+          "kind": "mayor",
+          "organisation": "City of Monash",
+          "from": 2005,
+          "to": null,
+          "src": [1, 2],
+          "unverified": true,
+          "note": "Wikipedia says he became mayor in 2005; neither source says when the mayoral term ended, so this is not a current role.",
+          "ended": true
+        },
+        {
+          "role": "Assistant director, Department of Justice and Regulation",
+          "kind": "public-service",
+          "from": 2011,
+          "to": null,
+          "src": [1, 2],
+          "unverified": true,
+          "note": "Wikipedia gives the start year only; he left before entering Parliament in 2014.",
+          "ended": true
+        },
+        {
+          "role": "Manager, policy and programs, Victorian Multicultural Commission",
+          "kind": "public-service",
+          "from": 2003,
+          "to": 2010,
+          "src": [1, 2]
+        },
+        {
+          "role": "Owner of a café in Oakleigh",
+          "kind": "business",
+          "from": 2002,
+          "to": 2005,
+          "src": [1, 2]
+        },
+        {
+          "role": "Electorate officer for federal MP Simon Crean",
+          "kind": "staffer",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2003 Monash City Council",
+          "seat": "Huntingdale Ward",
+          "party": "ALP",
+          "result": "Won",
+          "src": [2],
+          "unverified": true,
+          "note": "Wikipedia doesn't say what label he stood under at this council election; the code is his party membership."
+        },
+        {
+          "election": "2005 Monash City Council",
+          "seat": "Oakleigh Ward",
+          "party": "ALP",
+          "result": "Retained",
+          "src": [2],
+          "unverified": true,
+          "note": "Wikipedia doesn't say what label he stood under at this council election; the code is his party membership."
+        },
+        {
+          "election": "2008 Monash City Council",
+          "seat": "Oakleigh Ward",
+          "party": "ALP",
+          "result": "Retained",
+          "src": [2],
+          "unverified": true,
+          "note": "Wikipedia doesn't say what label he stood under at this council election; the code is his party membership."
+        },
+        {
+          "election": "2012 Monash City Council",
+          "seat": "Oakleigh Ward",
+          "party": "ALP",
+          "result": "Retained",
+          "src": [2],
+          "unverified": true,
+          "note": "Wikipedia doesn't say what label he stood under at this council election; the code is his party membership."
+        },
+        {
+          "election": "2014 Victorian state",
+          "seat": "Oakleigh",
+          "party": "ALP",
+          "result": "Won",
+          "src": [1, 2]
+        },
+        {
+          "election": "2018 Victorian state",
+          "seat": "Oakleigh",
+          "party": "ALP",
+          "result": "Retained",
+          "src": [2]
+        },
+        {
+          "election": "2022 Victorian state",
+          "seat": "Oakleigh",
+          "party": "ALP",
+          "result": "Retained",
+          "src": [1, 2]
+        }
+      ],
+      "faction": {
+        "name": "Labor Left",
+        "src": [2],
+        "note": "Wikipedia says he was first in Labor Action and moved to Labor Left after the 2022 election."
+      },
+      "priorities": [
+        {
+          "text": "Better schools, hospitals, housing and transport to tackle disadvantage",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Economic growth and more jobs",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Keeping Victoria a leading host of sport and major events",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "parliament": "https://www.parliament.vic.gov.au/members/steve-dimopoulos/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Steve_Dimopoulos",
+        "website": "https://www.stevedimopoulos.com.au/",
+        "facebook": "https://www.facebook.com/DimoforOakleigh",
+        "x": "https://twitter.com/Steve_Dimo",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/oakl"
+      },
+      "contact": {
+        "email": {
+          "value": "steve.dimopoulos@parliament.vic.gov.au",
+          "kind": "electorate office",
+          "src": [1]
+        },
+        "phone": {
+          "value": "03 9568 2456",
+          "kind": "electorate office",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.parliament.vic.gov.au/members/steve-dimopoulos/",
+          "title": "Steve Dimopoulos, Parliament of Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Steve_Dimopoulos",
+          "title": "Steve Dimopoulos, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "ovens-valley/tim-mccurdy": {
+      "name": "Tim McCurdy",
+      "summary": {
+        "text": "Tim McCurdy is a Nationals MP who won Murray Valley in 2010 and has represented Ovens Valley since 2014. He left the shadow ministry in 2018 after being charged with fraud, charges a County Court judge dismissed in 2021, and returned to the frontbench after the 2022 election. He is now shadow minister for liquor and gaming, racing and veterans' affairs, and is recontesting Ovens Valley in 2026.",
+        "src": [1, 2]
+      },
+      "born": {
+        "year": 1963,
+        "src": [2]
+      },
+      "lives": null,
+      "occupation": {
+        "text": "Dairy farmer and real estate agent",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Shadow Minister for Liquor and Gaming",
+          "kind": "shadow",
+          "from": 2025,
+          "to": null,
+          "src": [1, 2],
+          "note": "Titled Gaming and Liquor from January 2025 to June 2026."
+        },
+        {
+          "role": "Member for Ovens Valley",
+          "kind": "mp",
+          "organisation": "Legislative Assembly",
+          "from": 2014,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Shadow Minister for Racing",
+          "kind": "shadow",
+          "from": 2026,
+          "to": null,
+          "src": [1]
+        },
+        {
+          "role": "Member for Murray Valley",
+          "kind": "mp",
+          "organisation": "Legislative Assembly",
+          "from": 2010,
+          "to": 2014,
+          "src": [1, 2]
+        },
+        {
+          "role": "Shadow Minister for Veterans' Affairs",
+          "kind": "shadow",
+          "from": 2026,
+          "to": null,
+          "src": [1]
+        },
+        {
+          "role": "Shadow Minister for Water",
+          "kind": "shadow",
+          "from": 2022,
+          "to": 2026,
+          "src": [1, 2]
+        },
+        {
+          "role": "Shadow Minister for Consumer Affairs",
+          "kind": "shadow",
+          "from": 2022,
+          "to": 2026,
+          "src": [1, 2]
+        },
+        {
+          "role": "Nationals Whip in the Legislative Assembly",
+          "kind": "party",
+          "from": 2022,
+          "to": 2022,
+          "src": [1]
+        },
+        {
+          "role": "Shadow Assistant Minister for Regional Health and for Ambulance Services",
+          "kind": "shadow",
+          "from": 2022,
+          "to": 2022,
+          "src": [1]
+        },
+        {
+          "role": "Nationals Party Secretary",
+          "kind": "party",
+          "from": 2014,
+          "to": 2022,
+          "src": [1],
+          "note": "Also held from June 2013 to March 2014."
+        },
+        {
+          "role": "Shadow Minister for Veterans and for Sport",
+          "kind": "shadow",
+          "from": 2016,
+          "to": 2018,
+          "src": [1, 2]
+        },
+        {
+          "role": "Shadow Minister for Gaming and Liquor Regulation",
+          "kind": "shadow",
+          "from": 2016,
+          "to": 2018,
+          "src": [1, 2]
+        },
+        {
+          "role": "Shadow Minister for Regional Development",
+          "kind": "shadow",
+          "from": 2016,
+          "to": 2016,
+          "src": [1]
+        },
+        {
+          "role": "Shadow parliamentary secretary, country schools and recreation",
+          "kind": "shadow",
+          "from": 2015,
+          "to": 2016,
+          "src": [1]
+        },
+        {
+          "role": "Parliamentary Secretary for Tourism and Trade",
+          "kind": "other",
+          "from": 2014,
+          "to": 2014,
+          "src": [1]
+        },
+        {
+          "role": "Real estate agent",
+          "kind": "business",
+          "from": null,
+          "to": 2010,
+          "src": [1, 2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2010 Victorian state",
+          "seat": "Murray Valley",
+          "party": "NAT",
+          "result": "Won",
+          "src": [1, 2]
+        },
+        {
+          "election": "2014 Victorian state",
+          "seat": "Ovens Valley",
+          "party": "NAT",
+          "result": "Won",
+          "src": [1, 2]
+        },
+        {
+          "election": "2018 Victorian state",
+          "seat": "Ovens Valley",
+          "party": "NAT",
+          "result": "Retained",
+          "src": [1, 2]
+        },
+        {
+          "election": "2022 Victorian state",
+          "seat": "Ovens Valley",
+          "party": "NAT",
+          "result": "Retained",
+          "src": [1, 2]
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "A voice in Parliament for regional Victorians and farmers",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Fair funding for regional areas",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Better roads and transport in country areas",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Helping more locals buy a home",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "The same education, sport and job opportunities for regional people as for those in the city",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "parliament": "https://www.parliament.vic.gov.au/members/tim-mccurdy/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Tim_McCurdy",
+        "website": "https://www.timmccurdy.com.au",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/oven"
+      },
+      "contact": {
+        "email": {
+          "value": "tim.mccurdy@parliament.vic.gov.au",
+          "kind": "electorate office",
+          "src": [1]
+        },
+        "phone": {
+          "value": "03 5721 6155",
+          "kind": "electorate office",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.parliament.vic.gov.au/members/tim-mccurdy/",
+          "title": "Tim McCurdy, Parliament of Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Tim_McCurdy",
+          "title": "Tim McCurdy, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "pascoe-vale/anthony-cianflone": {
+      "name": "Anthony Cianflone",
+      "summary": {
+        "text": "Anthony Cianflone has been the Labor MP for Pascoe Vale since the 2022 state election, succeeding Lizzie Blandthorn when she moved to the Legislative Council. He grew up in Coburg and has been Parliamentary Secretary for Community Safety since April 2026. He is recontesting Pascoe Vale in 2026.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": {
+        "place": "Pascoe Vale",
+        "src": [1, 2]
+      },
+      "occupation": null,
+      "prior_roles": [
+        {
+          "role": "Member for Pascoe Vale",
+          "kind": "mp",
+          "organisation": "Legislative Assembly",
+          "from": 2022,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Parliamentary Secretary for Community Safety",
+          "kind": "other",
+          "from": 2026,
+          "to": null,
+          "src": [1]
+        },
+        {
+          "role": "Chair, Robinson Reserve Neighbourhood House",
+          "kind": "community",
+          "from": null,
+          "to": null,
+          "src": [1, 2],
+          "note": "A former role; neither source gives the years."
+        },
+        {
+          "role": "Founding member, oxYgen Youth Hub in Coburg",
+          "kind": "community",
+          "from": null,
+          "to": null,
+          "src": [2],
+          "note": "Neither source gives the years."
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2022 Victorian state",
+          "seat": "Pascoe Vale",
+          "party": "ALP",
+          "result": "Won",
+          "src": [1, 2]
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Jobs, kindergartens and schools",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Transport and the environment",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Social justice and cost-of-living relief",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "parliament": "https://www.parliament.vic.gov.au/members/anthony-cianflone/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Anthony_Cianflone",
+        "website": "https://www.anthonycianflonemp.com.au",
+        "facebook": "https://www.facebook.com/AnthonyCianfloneLaborforPascoeVale/",
+        "x": "https://twitter.com/AnthonyC4PV",
+        "instagram": "https://www.instagram.com/anthonycianflonemp/",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/pasc"
+      },
+      "contact": {
+        "email": {
+          "value": "anthony.cianflone@parliament.vic.gov.au",
+          "kind": "electorate office",
+          "src": [1]
+        },
+        "phone": {
+          "value": "03 9354 9935",
+          "kind": "electorate office",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.parliament.vic.gov.au/members/anthony-cianflone/",
+          "title": "Anthony Cianflone, Parliament of Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Anthony_Cianflone",
+          "title": "Anthony Cianflone, Wikipedia",
           "accessed": "2026-11-04"
         }
       ],

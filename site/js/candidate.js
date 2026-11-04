@@ -141,7 +141,8 @@
   }
 
   /* ---------- Researched profile (data/profiles.json) ---------- */
-  const ROLE_ORDER = (a, b) => (b.to == null) - (a.to == null) || (b.from || 0) - (a.from || 0);
+  const current = (r) => r.to == null && !r.ended;
+  const ROLE_ORDER = (a, b) => current(b) - current(a) || (b.from || 0) - (a.from || 0);
   const LINKS = [["website", "Website"], ["party_page", "Party page"], ["parliament", "Parliament of Victoria"], ["abc", "ABC"],
     ["wikipedia", "Wikipedia"], ["facebook", "Facebook"], ["instagram", "Instagram"], ["x", "X"], ["linkedin", "LinkedIn"]];
   const RESULT = { Won: "Won", Retained: "Won", Lost: "Lost", Withdrew: "Withdrew", Unknown: "Result not found" };
@@ -151,7 +152,8 @@
     ? `<sup class="refs">${src.map((n) => `<a href="#src-${encodeURIComponent(n)}" aria-label="Source ${escapeHtml(String(n))}">${escapeHtml(String(n))}</a>`).join(" ")}</sup>` : "");
   const unverified = (f) => (f && f.unverified
     ? ` <span class="badge reported" title="${escapeHtml(f.note || "A source says this but we haven't confirmed it")}">Unverified</span>${f.note ? ` <span class="muted small">${escapeHtml(f.note)}</span>` : ""}` : "");
-  const years = (r) => (r.from || r.to ? ` <span class="muted">(${r.from || "?"}–${r.to == null ? "present" : r.to})</span>` : "");
+  // to: null is a current role, unless ended: true (it has ended; no source gives the year)
+  const years = (r) => (r.from || r.to ? ` <span class="muted">(${r.from || "?"}–${r.to != null ? r.to : r.ended ? "?" : "present"})</span>` : "");
 
   function profileCard(p) {
     const pr = profiles[p.id];

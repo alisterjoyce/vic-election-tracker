@@ -110,6 +110,10 @@ def check(cid, p, known, errors):
     for i, r in enumerate(p.get("prior_roles") or []):
         if not r.get("role") or r.get("kind") not in ROLE_KINDS:
             err(f"prior_roles[{i}]: needs role and kind in {sorted(ROLE_KINDS)}")
+        if "ended" in r and not isinstance(r["ended"], bool):
+            err(f"prior_roles[{i}].ended must be true or false")
+        if r.get("ended") and r.get("to") is not None:
+            err(f"prior_roles[{i}]: ended is only for a role with no known end year (to: null)")
         for y in ("from", "to"):
             if r.get(y) is not None and not isinstance(r[y], int):
                 err(f"prior_roles[{i}].{y} must be a year or null")
@@ -152,7 +156,7 @@ def check(cid, p, known, errors):
 def own_words(cid, p, errors, n=8):
     """Flag any n-word run copied from the profile's Wikipedia or Parliament page."""
     ours = " ".join([(p.get("summary") or {}).get("text", "")] + [x.get("text", "") for x in p.get("priorities") or [] if not x.get("quoted")]
-                    + [r.get("role", "") for r in p.get("prior_roles") or []])
+)   # role titles are facts (e.g. "Minister for Sport"), so they aren't checked
     mine = words(ours)
     grams = {" ".join(mine[i:i + n]) for i in range(len(mine) - n + 1)}
     links = p.get("links") or {}
