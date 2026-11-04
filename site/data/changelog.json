@@ -3,11 +3,81 @@
     "description": "What changed in the tracker's data, newest first, written by scripts/refresh.py after each refresh by comparing the data with the previous run. Entries older than 120 days are dropped.",
     "fields": {
       "updated": "ISO UTC time of the last run that changed anything",
-      "entries": "[{date (Melbourne YYYY-MM-DD), at (ISO UTC), type, ...}] where type is one of: candidate_added {seat, name, party, status, source}; candidate_superseded {seat, name, party, by}; candidate_withdrawn {seat, name, party}; poll_added {id, pollster, end_date, tpp (L/NP), primary}; odds_move {seat, label, party, from, to} (a price moving 0.5 or more); retirement {seat, name}; news {count} (new headlines collected)"
+      "entries": "[{date (Melbourne YYYY-MM-DD), at (ISO UTC), type, ...}] where type is one of: candidate_added {seat, name, party, status, source}; candidate_superseded {seat, name, party, by}; candidate_withdrawn {seat, name, party}; candidate_not_standing {seat, name, party}; poll_added {id, pollster, end_date, tpp (L/NP), primary}; odds_move {seat, label, party, from, to} (a price moving 0.5 or more); retirement {seat, name}; news {count} (new headlines collected)"
     }
   },
-  "updated": "2026-11-04T10:19:25Z",
+  "updated": "2026-11-04T10:32:30Z",
   "entries": [
+    {
+      "date": "2026-11-04",
+      "at": "2026-11-04T10:32:30Z",
+      "type": "candidate_not_standing",
+      "seat": "kororoit",
+      "name": "Jaz Chandok",
+      "party": "ND"
+    },
+    {
+      "date": "2026-11-04",
+      "at": "2026-11-04T10:32:30Z",
+      "type": "candidate_not_standing",
+      "seat": "laverton",
+      "name": "Gurneet Soni",
+      "party": "ND"
+    },
+    {
+      "date": "2026-11-04",
+      "at": "2026-11-04T10:32:30Z",
+      "type": "candidate_not_standing",
+      "seat": "melton",
+      "name": "Jasleen Kaur",
+      "party": "ND"
+    },
+    {
+      "date": "2026-11-04",
+      "at": "2026-11-04T10:32:30Z",
+      "type": "candidate_not_standing",
+      "seat": "niddrie",
+      "name": "Georgia Grammenos",
+      "party": "ND"
+    },
+    {
+      "date": "2026-11-04",
+      "at": "2026-11-04T10:32:30Z",
+      "type": "candidate_not_standing",
+      "seat": "st-albans",
+      "name": "Zaffer Mannan",
+      "party": "ND"
+    },
+    {
+      "date": "2026-11-04",
+      "at": "2026-11-04T10:32:30Z",
+      "type": "candidate_not_standing",
+      "seat": "sunbury",
+      "name": "Rushi Patel",
+      "party": "ND"
+    },
+    {
+      "date": "2026-11-04",
+      "at": "2026-11-04T10:32:30Z",
+      "type": "candidate_not_standing",
+      "seat": "tarneit",
+      "name": "Jaydeep Patel",
+      "party": "ND"
+    },
+    {
+      "date": "2026-11-04",
+      "at": "2026-11-04T10:32:30Z",
+      "type": "candidate_not_standing",
+      "seat": "werribee",
+      "name": "Prashant Tandon",
+      "party": "ND"
+    },
+    {
+      "date": "2026-11-04",
+      "at": "2026-11-04T10:32:30Z",
+      "type": "news",
+      "count": 2
+    },
     {
       "date": "2026-11-04",
       "at": "2026-11-04T10:19:25Z",
