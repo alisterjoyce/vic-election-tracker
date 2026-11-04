@@ -6,8 +6,207 @@
       "entries": "[{date (Melbourne YYYY-MM-DD), at (ISO UTC), type, ...}] where type is one of: candidate_added {seat, name, party, status, source}; candidate_superseded {seat, name, party, by}; candidate_withdrawn {seat, name, party}; candidate_not_standing {seat, name, party}; poll_added {id, pollster, end_date, tpp (L/NP), primary}; odds_move {seat, label, party, from, to} (a price moving 0.5 or more); retirement {seat, name}; news {count} (new headlines collected)"
     }
   },
-  "updated": "2026-11-04T22:35:06Z",
+  "updated": "2026-11-04T23:37:41Z",
   "entries": [
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-04T23:37:41Z",
+      "type": "candidate_added",
+      "seat": "bellarine",
+      "name": "Guy Manuell",
+      "party": "FF",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-04T23:37:41Z",
+      "type": "candidate_added",
+      "seat": "bendigo-west",
+      "name": "Debra Tranter",
+      "party": "AJP",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-04T23:37:41Z",
+      "type": "candidate_added",
+      "seat": "berwick",
+      "name": "Scott Dowling",
+      "party": "OTH",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-04T23:37:41Z",
+      "type": "candidate_added",
+      "seat": "eltham",
+      "name": "Louise Brooksby",
+      "party": "AJP",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-04T23:37:41Z",
+      "type": "candidate_added",
+      "seat": "footscray",
+      "name": "Andualem Felate",
+      "party": "OTH",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-04T23:37:41Z",
+      "type": "candidate_added",
+      "seat": "gippsland-east",
+      "name": "Alison Waters",
+      "party": "FF",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-04T23:37:41Z",
+      "type": "candidate_added",
+      "seat": "glen-waverley",
+      "name": "Anna Dobie",
+      "party": "FF",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-04T23:37:41Z",
+      "type": "candidate_added",
+      "seat": "hawthorn",
+      "name": "Adam Nicoll",
+      "party": "FF",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-04T23:37:41Z",
+      "type": "candidate_added",
+      "seat": "ivanhoe",
+      "name": "Renuka Casonato",
+      "party": "FF",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-04T23:37:41Z",
+      "type": "candidate_added",
+      "seat": "kororoit",
+      "name": "Divya Pidi",
+      "party": "OTH",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-04T23:37:41Z",
+      "type": "candidate_added",
+      "seat": "lara",
+      "name": "Vincent Colla",
+      "party": "FF",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-04T23:37:41Z",
+      "type": "candidate_added",
+      "seat": "mordialloc",
+      "name": "Lily Potecuk",
+      "party": "FF",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-04T23:37:41Z",
+      "type": "candidate_superseded",
+      "seat": "mordialloc",
+      "name": "Lily Potucek",
+      "party": "FF",
+      "by": "Lily Potecuk"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-04T23:37:41Z",
+      "type": "candidate_added",
+      "seat": "morwell",
+      "name": "Brendan Clarke",
+      "party": "FF",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-04T23:37:41Z",
+      "type": "candidate_added",
+      "seat": "niddrie",
+      "name": "Karthik Chittedi",
+      "party": "OTH",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-04T23:37:41Z",
+      "type": "candidate_added",
+      "seat": "oakleigh",
+      "name": "Matthew Grinter",
+      "party": "FF",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-04T23:37:41Z",
+      "type": "candidate_added",
+      "seat": "prahran",
+      "name": "George Leeton",
+      "party": "IND",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-04T23:37:41Z",
+      "type": "candidate_added",
+      "seat": "ripon",
+      "name": "Krzysztof Wojtkowski",
+      "party": "SFF",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-04T23:37:41Z",
+      "type": "candidate_added",
+      "seat": "st-albans",
+      "name": "Davinder Kaur",
+      "party": "OTH",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-04T23:37:41Z",
+      "type": "candidate_added",
+      "seat": "thomastown",
+      "name": "Gavin Trewella",
+      "party": "GRN",
+      "status": "endorsed",
+      "source": "abc"
+    },
     {
       "date": "2026-11-05",
       "at": "2026-11-04T22:35:06Z",
