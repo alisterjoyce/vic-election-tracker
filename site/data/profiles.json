@@ -22932,6 +22932,128 @@
       ],
       "profile_updated": "2026-11-04"
     },
+    "melbourne/davydd-griffiths": {
+      "name": "Davydd Griffiths",
+      "summary": {
+        "text": "Davydd Griffiths, a City of Melbourne councillor since 2020, is Labor's candidate for Melbourne at the 2026 Victorian election. He led Labor's councillor ticket at the 2020 and 2024 council elections and won a seat both times. His earlier work includes teaching, advising on education and health policy, and owning hospitality venues in the city's west; the ABC says he arrived in Melbourne in 1993.",
+        "src": [1, 2, 3, 4]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Former teacher and small business owner",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Councillor",
+          "kind": "councillor",
+          "organisation": "City of Melbourne",
+          "from": 2020,
+          "to": null,
+          "src": [1, 3, 4]
+        },
+        {
+          "role": "Teacher",
+          "kind": "other",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1, 2]
+        },
+        {
+          "role": "Education and health policy adviser",
+          "kind": "other",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1]
+        },
+        {
+          "role": "Owner of hospitality venues in Melbourne's west",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2020 Melbourne City Council",
+          "seat": "Councillors (City of Melbourne)",
+          "party": "ALP",
+          "result": "Won",
+          "src": [3]
+        },
+        {
+          "election": "2024 Melbourne City Council",
+          "seat": "Councillors (City of Melbourne)",
+          "party": "ALP",
+          "result": "Won",
+          "src": [4]
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Support for renters",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "High-quality health care",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Better public schools",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/melb",
+        "party_page": "https://www.viclabor.org.au/our-team/davydd-griffiths",
+        "facebook": "https://www.facebook.com/DavyddGriffithsMelbourne",
+        "instagram": "https://www.instagram.com/davyddgriffithsmelbourne/",
+        "website": "https://www.viclabor.org.au/our-team/davydd-griffiths"
+      },
+      "contact": {
+        "email": {
+          "value": "Davydd.Griffiths@vic.alp.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/melb",
+          "title": "Melbourne: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.viclabor.org.au/our-team/davydd-griffiths",
+          "title": "Davydd Griffiths, Labor Candidates, Victorian Labor",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/2020_Melbourne_City_Council_election",
+          "title": "2020 Melbourne City Council election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 4,
+          "url": "https://en.wikipedia.org/wiki/2024_Melbourne_City_Council_election",
+          "title": "2024 Melbourne City Council election, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
     "melbourne/ellen-sandell": {
       "name": "Ellen Sandell",
       "summary": {
@@ -23105,6 +23227,565 @@
           "id": 2,
           "url": "https://en.wikipedia.org/wiki/Ellen_Sandell",
           "title": "Ellen Sandell, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "melbourne/jordan-van-den-lamb": {
+      "name": "Jordan van den Lamb",
+      "summary": {
+        "text": "Jordan van den Lamb, a housing activist known online as Purple Pingers, is the Victorian Socialists candidate for Melbourne at the 2026 Victorian election. His videos exposing poor rental conditions drew wide attention, and he runs shitrentals.org, a site where tenants report bad rentals. He led the party's Victorian Senate ticket at the 2025 federal election; he studied law and now works in the public service, where he serves as a delegate for the Community and Public Sector Union.",
+        "src": [1, 2, 3]
+      },
+      "born": {
+        "year": 1995,
+        "src": [3]
+      },
+      "lives": null,
+      "occupation": {
+        "text": "Public servant",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Delegate",
+          "kind": "union",
+          "organisation": "Community and Public Sector Union",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Founder, Shit Rentals database",
+          "kind": "community",
+          "from": 2023,
+          "to": null,
+          "src": [2, 3]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2025 Australian federal (Senate)",
+          "seat": "Victoria",
+          "party": "VS",
+          "result": "Lost",
+          "src": [1, 3, 4],
+          "note": "First on the Victorian Socialists Senate ticket, which won 1.5% of the vote."
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Taking action against owners who leave homes empty or rent out unsafe, overpriced housing",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Cutting politicians' salaries and taxing the very wealthy to fund housing, schools, hospitals and transport",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Ending the extra votes businesses and landlords get in City of Melbourne elections",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Defending bulk-billed health care and public institutions such as the State Library",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/melb",
+        "party_page": "https://www.victoriansocialists.org.au/candidates/jordan-van-den-lamb",
+        "wikipedia": "https://en.wikipedia.org/wiki/Jordan_van_den_Lamb",
+        "facebook": "https://www.facebook.com/purplepingers",
+        "instagram": "https://www.instagram.com/purplepingers/",
+        "x": "https://x.com/purplepingers"
+      },
+      "contact": {
+        "email": {
+          "value": "jordan.vdl@victoriansocialists.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/melb",
+          "title": "Melbourne: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.victoriansocialists.org.au/candidates/jordan-van-den-lamb",
+          "title": "Jordan van den Lamb, Victorian Socialists",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Jordan_van_den_Lamb",
+          "title": "Jordan van den Lamb, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 4,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2025_Australian_federal_election",
+          "title": "Candidates of the 2025 Australian federal election, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "melbourne/matthew-collins": {
+      "name": "Matthew Collins",
+      "summary": {
+        "text": "Matthew Collins is One Nation's candidate for Melbourne at the 2026 Victorian election. His ABC listing gives just two facts: a career in sales, and a small business of his own locally that he describes as successful. One Nation's candidate page could not be read for this profile, and no other biography had been published as at early November 2026.",
+        "src": [1]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Sales; small business",
+        "src": [1]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/melb",
+        "party_page": "https://vic.onenation.org.au/matthew-collins"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/melb",
+          "title": "Melbourne: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "melbourne/naomi-jones": {
+      "name": "Naomi Jones",
+      "summary": {
+        "text": "Naomi Jones is standing for the Animal Justice Party in Melbourne at the 2026 Victorian election. She holds a master's degree in design communication and diplomas in interior design and dental technology. Once a graphic and interior designer, she is now a dental technician and the director and practice manager of a dental practice, and is studying law at Deakin University. Her party page says she has volunteered with animal rescue groups for about 30 years and has also helped people who are homeless.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Dental technician, practice manager and director of a dental practice",
+        "src": [1]
+      },
+      "prior_roles": [
+        {
+          "role": "Graphic and interior designer",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1]
+        },
+        {
+          "role": "Director and practice manager",
+          "kind": "business",
+          "organisation": "Dental practice",
+          "from": null,
+          "to": null,
+          "src": [1]
+        },
+        {
+          "role": "Volunteer with animal rescue organisations",
+          "kind": "community",
+          "from": null,
+          "to": null,
+          "src": [2]
+        }
+      ],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Stronger animal protection laws, covering breeding, racing, farming, testing, fur and wildlife",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Continued government funding for supported accommodation services for people experiencing homelessness",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Practical support for people affected by domestic violence and for their pets",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Better access, cycling infrastructure and traffic flow in and around the CBD",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/melb",
+        "party_page": "https://vic.animaljusticeparty.org/naomi-jones"
+      },
+      "contact": {
+        "email": {
+          "value": "naomi.jones.ajp@gmail.com",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/melb",
+          "title": "Melbourne: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://vic.animaljusticeparty.org/naomi-jones",
+          "title": "Naomi Jones for Melbourne, Animal Justice Party Victoria",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "melbourne/rafael-camillo": {
+      "name": "Rafael Camillo",
+      "summary": {
+        "text": "Rafael Camillo is the Liberal candidate for Melbourne at the 2026 Victorian election. Originally from Brazil, he came to Melbourne as an international student close to 20 years ago and has lived in the CBD for many years. He chaired the residents' group Residents 3000 before winning a City of Melbourne council seat in 2024, where he heads the safety and cleaning portfolio.",
+        "src": [1, 2, 3]
+      },
+      "born": null,
+      "lives": {
+        "place": "Melbourne CBD",
+        "src": [1, 2]
+      },
+      "occupation": {
+        "text": "City of Melbourne councillor",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Councillor",
+          "kind": "councillor",
+          "organisation": "City of Melbourne",
+          "from": 2024,
+          "to": null,
+          "src": [1, 2, 3]
+        },
+        {
+          "role": "Portfolio lead, safety and cleaning; deputy portfolio lead, infrastructure",
+          "kind": "councillor",
+          "organisation": "City of Melbourne",
+          "from": null,
+          "to": null,
+          "src": [1]
+        },
+        {
+          "role": "President",
+          "kind": "community",
+          "organisation": "Residents 3000",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1, 2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2024 Melbourne City Council",
+          "seat": "Councillors (City of Melbourne)",
+          "party": "OTH",
+          "result": "Won",
+          "src": [3],
+          "note": "Headed the Team Morgan councillor ticket."
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "A safer city with less crime",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Lower living costs",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Speaking up for the city's residents and traders",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/melb",
+        "party_page": "https://vicliberal.org.au/team/rafael-camillo",
+        "website": "https://www.rafaelcamillo.com.au",
+        "facebook": "https://www.facebook.com/Rafa4Melbourne",
+        "instagram": "https://www.instagram.com/Rafa4Melbourne"
+      },
+      "contact": {
+        "email": {
+          "value": "rafael.camillo@vic.liberal.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/melb",
+          "title": "Melbourne: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://vicliberal.org.au/team/rafael-camillo",
+          "title": "Rafael Camillo, Liberal for Melbourne, Liberal Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/2024_Melbourne_City_Council_election",
+          "title": "2024 Melbourne City Council election, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "melbourne/rob-mccathie": {
+      "name": "Rob McCathie",
+      "summary": {
+        "text": "Rob McCathie is the Libertarian candidate for Melbourne at the 2026 Victorian election and is the party's registered officer with the Victorian Electoral Commission. He has worked in IT for his whole career, administering computer systems and consulting for small and medium businesses. At the 2022 state election he stood for the upper house in Eastern Victoria Region for the Liberal Democrats, the party's former name. The party's own 2026 candidates page did not list him as at early November.",
+        "src": [1, 2, 3, 9]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "IT systems administrator and consultant",
+        "src": [1]
+      },
+      "prior_roles": [
+        {
+          "role": "VEC Registered Officer",
+          "kind": "party",
+          "organisation": "Libertarian Party (Victoria)",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2018 Victorian state (Legislative Council)",
+          "seat": "Eastern Victoria Region",
+          "party": "LBT",
+          "result": "Lost",
+          "src": [4],
+          "unverified": true,
+          "note": "Wikipedia lists a Rob McCathie second on the Liberal Democrats ticket, which won no seat; the ABC says he has stood three times before but names only 2022, so this match is by name and party."
+        },
+        {
+          "election": "2022 Australian federal",
+          "seat": "Macnamara",
+          "party": "LBT",
+          "result": "Lost",
+          "src": [5, 6],
+          "unverified": true,
+          "note": "Wikipedia lists a Rob McCathie as the Liberal Democrats candidate (2.1% of the primary vote); no source we read confirms it is the same person."
+        },
+        {
+          "election": "2022 Victorian state (Legislative Council)",
+          "seat": "Eastern Victoria Region",
+          "party": "LBT",
+          "result": "Lost",
+          "src": [1, 3],
+          "note": "First on the Liberal Democrats ticket, which won no seat in the region."
+        },
+        {
+          "election": "2025 Australian federal",
+          "seat": "Gorton",
+          "party": "LBT",
+          "result": "Lost",
+          "src": [7, 8],
+          "unverified": true,
+          "note": "Wikipedia lists a Rob McCathie as the Libertarian candidate (1.2% of the primary vote); no source we read confirms it is the same person. With this one, Wikipedia's lists give four earlier candidacies, where the ABC says three."
+        }
+      ],
+      "faction": null,
+      "priorities": [],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/melb"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/melb",
+          "title": "Melbourne: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.vic.libertarians.org.au/executive",
+          "title": "Executive, Libertarian Party Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2022_Victorian_state_election",
+          "title": "Candidates of the 2022 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 4,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2018_Victorian_state_election",
+          "title": "Candidates of the 2018 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 5,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2022_Australian_federal_election",
+          "title": "Candidates of the 2022 Australian federal election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 6,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2022_Australian_federal_election_in_Victoria",
+          "title": "Results of the 2022 Australian federal election in Victoria, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 7,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2025_Australian_federal_election",
+          "title": "Candidates of the 2025 Australian federal election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 8,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2025_Australian_federal_election_in_Victoria",
+          "title": "Results of the 2025 Australian federal election in Victoria, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 9,
+          "url": "https://www.vic.libertarians.org.au/election26",
+          "title": "2026 State Election candidates, Libertarian Party Victoria",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "melbourne/rowan-tuckfield": {
+      "name": "Rowan Tuckfield",
+      "summary": {
+        "text": "Rowan Tuckfield is running as an independent for Melbourne at the 2026 Victorian election. An economics graduate who majored in accounting, he spent about 20 years in finance and served on the Premier's Infrastructure Planning Council late in the 1990s. He later lived in New York for 17 years, where he ran a coffee business, and says he is funding his campaign himself without donations.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": {
+        "place": "South Yarra",
+        "src": [2]
+      },
+      "occupation": {
+        "text": "Businessman; formerly in finance",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Member, Premier's Infrastructure Planning Council",
+          "kind": "public-service",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1, 2]
+        },
+        {
+          "role": "Independent financial expert, State Water Policy White Paper",
+          "kind": "public-service",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [2]
+        },
+        {
+          "role": "Owner of a coffee business in New York",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1, 2]
+        },
+        {
+          "role": "Lender to refugee-owned small businesses at a not-for-profit",
+          "kind": "community",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [2]
+        }
+      ],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "I want our $15 billion back and the people responsible punished.",
+          "quoted": true,
+          "src": [2]
+        },
+        {
+          "text": "Halting demolition of public housing towers, phasing out Airbnb-style short stays and offering five-year leases",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Reassessing the Suburban Rail Loop and dropping the Airport Rail Link",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Help with insurance and rent for live music venues and historic pubs",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Public reporting of how many police are on frontline duty",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/melb",
+        "website": "https://rowantuckfield.vote/"
+      },
+      "contact": {
+        "email": {
+          "value": "contact@rowantuckfield.vote",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/melb",
+          "title": "Melbourne: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://rowantuckfield.vote/",
+          "title": "Rowan Tuckfield for Melbourne (campaign website)",
           "accessed": "2026-11-04"
         }
       ],
@@ -48398,6 +49079,70 @@
       ],
       "profile_updated": "2026-11-04"
     },
+    "thomastown/belinda-stojcevski": {
+      "name": "Belinda Stojcevski",
+      "summary": {
+        "text": "Belinda Stojcevski is the Liberal candidate for Thomastown at the 2026 Victorian election. A small business owner from Lalor, she has owned hairdressing salons since the age of 21. Her party page says she wants infrastructure and services to keep up with the area's growth.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": {
+        "place": "Lalor",
+        "src": [2]
+      },
+      "occupation": {
+        "text": "Small business owner (hairdressing salons)",
+        "src": [1, 2]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Safer streets",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Better local services and infrastructure that keeps pace with growth",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "More help for people who are being left behind",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/thom",
+        "party_page": "https://vicliberal.org.au/team/belinda-stojcevksi",
+        "website": "https://www.belindastojcevski.com.au",
+        "facebook": "https://www.facebook.com/BelindaStojcevskiThomastown"
+      },
+      "contact": {
+        "email": {
+          "value": "belinda.stojcevski@vic.liberal.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/thom",
+          "title": "Thomastown: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://vicliberal.org.au/team/belinda-stojcevksi",
+          "title": "Belinda Stojcevski, Liberal for Thomastown, Liberal Victoria",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
     "thomastown/bronwyn-halfpenny": {
       "name": "Bronwyn Halfpenny",
       "summary": {
@@ -48578,6 +49323,169 @@
           "id": 2,
           "url": "https://en.wikipedia.org/wiki/Bronwyn_Halfpenny",
           "title": "Bronwyn Halfpenny, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "thomastown/gavin-trewalla": {
+      "name": "Gavin Trewalla",
+      "summary": {
+        "text": "Gavin Trewalla is the Greens candidate for Thomastown at the 2026 Victorian election; the party's own page spells his surname Trewella. A field ecologist and researcher who holds a Charles Darwin University doctorate in wildlife management, he does casual work for an environmental consultancy on building projects across Melbourne. He says he has lived in Thomastown for most of his life.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Field ecologist and researcher (casual, environmental consultancy)",
+        "src": [1, 2]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "I'm running to revitalize the outer north",
+          "quoted": true,
+          "src": [2]
+        },
+        {
+          "text": "Public grocery stores, cutting stamp duty, rent caps and building public housing",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Returning energy supply to public ownership",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Stopping AI data centres",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Funding for arts, culture and environmental projects",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/thom",
+        "party_page": "https://greens.org.au/vic/person/gavin-trewella"
+      },
+      "contact": {
+        "email": {
+          "value": "gavin.trewella@vic.greens.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/thom",
+          "title": "Thomastown: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://greens.org.au/vic/person/gavin-trewella",
+          "title": "Gavin Trewella, Candidate for Thomastown, Australian Greens",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "thomastown/nadia-anthony": {
+      "name": "Nadia Anthony",
+      "summary": {
+        "text": "Nadia Anthony is One Nation's candidate for Thomastown at the 2026 Victorian election. A counsellor by occupation, she moved from Mauritius to study in 2007, the ABC reports; she says her counselling has included people out of work and from many cultures, and that she takes part in church and community life locally. One Nation's candidate page could not be read for this profile.",
+        "src": [1]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Counsellor",
+        "src": [1]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/thom",
+        "party_page": "https://vic.onenation.org.au/nadia-anthony"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/thom",
+          "title": "Thomastown: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "thomastown/priya-reddy": {
+      "name": "Priya Reddy",
+      "summary": {
+        "text": "Priya Reddy is the Victorian Socialists candidate for Thomastown at the 2026 Victorian election. She works as a veterinary nurse while studying to become a teacher, and says she grew up in the area's culturally diverse community as the child of Indo-Fijian migrants. She has campaigned on Palestine, refugee rights and environmental issues.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Veterinary nurse; teaching student",
+        "src": [1, 2]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "More funding for the Northern Hospital and better conditions for its staff",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Opposing the planned waste incinerator at Wollert",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Fully funded public schools and better working conditions for teachers",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Spending on health, education and housing rather than weapons",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/thom",
+        "party_page": "https://www.victoriansocialists.org.au/candidates/priya-reddy"
+      },
+      "contact": {
+        "email": {
+          "value": "priya.reddy@victoriansocialists.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/thom",
+          "title": "Thomastown: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.victoriansocialists.org.au/candidates/priya-reddy",
+          "title": "Priya Reddy, Victorian Socialists",
           "accessed": "2026-11-04"
         }
       ],
