@@ -813,6 +813,116 @@
       "profile_updated": "2026-11-04",
       "faction": null
     },
+    "bendigo-west/david-hutchings": {
+      "name": "David Hutchings",
+      "summary": {
+        "text": "David Hutchings is the Nationals candidate for Bendigo West at the 2026 Victorian election. A chartered accountant who came to Australia from the United Kingdom in the early 1990s, he has worked as an auditor in regional Victoria and says he spent most of almost three decades as a partner in a Bendigo firm. He is also a Country Fire Authority volunteer with the Lockwood and Bendigo brigades.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": {
+        "place": "Bendigo",
+        "src": [2]
+      },
+      "occupation": {
+        "text": "Chartered accountant and auditor",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Partner, local accounting firm",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [2],
+          "note": "His party page puts most of nearly 30 years as a chartered accountant as a partner in a local firm; it names neither the firm nor the years."
+        },
+        {
+          "role": "Volunteer firefighter (Lockwood and Bendigo brigades)",
+          "kind": "community",
+          "organisation": "Country Fire Authority",
+          "from": null,
+          "to": null,
+          "src": [1, 2],
+          "note": "The ABC says almost 15 years of CFA volunteering; his party page says close to 30 years."
+        }
+      ],
+      "priorities": [
+        {
+          "text": "Bendigo West deserves someone who knows it from the inside",
+          "quoted": true,
+          "src": [2]
+        },
+        {
+          "text": "Tighter state budgeting, less waste and paying down debt",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Repairing deteriorating local roads",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Tackling crime and keeping local services from being cut back",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "A fair share of state funding for the region",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/bewe",
+        "party_page": "https://vic.nationals.org.au/davidhutchings/"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/bewe",
+          "title": "Bendigo West: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://vic.nationals.org.au/davidhutchings/",
+          "title": "David Hutchings, Candidate for Bendigo West, The Nationals Victoria",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
+    },
+    "bendigo-west/ellen-morgan": {
+      "name": "Ellen Morgan",
+      "summary": {
+        "text": "Ellen Morgan is the One Nation candidate for Bendigo West at the 2026 Victorian election. The ABC's guide says she has worked in youth justice and the community services sector, and that she credits that work with shaping her advocacy around Bendigo. Her One Nation candidate page refused automated requests, and no other source we could read had published more about her as at early November 2026.",
+        "src": [1]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Community services and youth justice worker",
+        "src": [1]
+      },
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/bewe",
+        "party_page": "https://vic.onenation.org.au/ellen-morgan"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/bewe",
+          "title": "Bendigo West: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
+    },
     "bendigo-west/liza-shaw": {
       "name": "Liza Shaw",
       "summary": {
@@ -880,6 +990,84 @@
           "id": 2,
           "url": "https://greens.org.au/vic/person/liza-shaw",
           "title": "Liza Shaw, Candidate for Bendigo West, Victorian Greens",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
+    },
+    "bendigo-west/tayne-shalevski": {
+      "name": "Tayne Shalevski",
+      "summary": {
+        "text": "Tayne Shalevski is the Victorian Socialists candidate for Bendigo West at the 2026 Victorian election. He works as a building company foreman, has done construction work around regional Victoria, and says he grew up in the electorate and lives there now. In March 2026 he contested a Lockwood Ward by-election for the City of Greater Bendigo, receiving 5.1 per cent of first preferences.",
+        "src": [1, 2, 3]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Building company foreman",
+        "src": [1, 2]
+      },
+      "previous_candidacies": [
+        {
+          "election": "March 2026 City of Greater Bendigo Lockwood Ward by-election",
+          "seat": "Lockwood Ward",
+          "party": "VS",
+          "result": "Lost",
+          "src": [1, 3]
+        }
+      ],
+      "priorities": [
+        {
+          "text": "a future where society is organised for the working class, by the working class",
+          "quoted": true,
+          "src": [2]
+        },
+        {
+          "text": "Holding developers, property investors, the big banks and supermarket chains to account for rising inequality",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Opposing racism and campaigning in solidarity with Palestinians",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Being a radical voice for working people in regional Victoria",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/bewe",
+        "party_page": "https://www.victoriansocialists.org.au/candidates/tayne-shalevski",
+        "instagram": "https://www.instagram.com/tayne_vicsocialist/"
+      },
+      "contact": {
+        "email": {
+          "value": "tayne.shalevski@victoriansocialists.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/bewe",
+          "title": "Bendigo West: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.victoriansocialists.org.au/candidates/tayne-shalevski",
+          "title": "Tayne Shalevski, Victorian Socialists",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2024_Victorian_local_elections_in_Loddon_Mallee",
+          "title": "Results of the 2024 Victorian local elections in Loddon Mallee, Wikipedia",
           "accessed": "2026-11-04"
         }
       ],
@@ -4809,6 +4997,388 @@
         }
       ],
       "profile_updated": "2026-11-04"
+    },
+    "eltham/jessie-weatherley": {
+      "name": "Jessie Weatherley",
+      "summary": {
+        "text": "Jessie Weatherley is the One Nation candidate for Eltham at the 2026 Victorian election. She runs her own marketing consultancy, where she is creative director, after earlier senior corporate roles, and has served as president of a local school council. Her party page lists crime, parents' say in schooling, aged care and state spending as her focus.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": {
+        "place": "Eltham",
+        "src": [1],
+        "note": "The ABC says she has lived in Eltham for 12 years; her party page says 20 years in the local area."
+      },
+      "occupation": {
+        "text": "Owner and creative director, marketing consultancy",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Senior corporate leadership roles",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [2]
+        },
+        {
+          "role": "School council member and president",
+          "kind": "community",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [2]
+        },
+        {
+          "role": "Member",
+          "kind": "community",
+          "organisation": "Hurstbridge RSL",
+          "from": null,
+          "to": null,
+          "src": [2]
+        }
+      ],
+      "priorities": [
+        {
+          "text": "Reducing crime so people feel safe at home and in public",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "A greater say for parents in what schools teach, with a focus on literacy and numeracy",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Aged care that treats older people with dignity",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Accountable, transparent state spending and lower debt",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Being part of the solution to local problems rather than only complaining about them",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/elth",
+        "party_page": "https://vic.onenation.org.au/candidate/jessie-weatherley"
+      },
+      "contact": {
+        "email": {
+          "value": "eltham@vic.onenation.org.au",
+          "kind": "campaign",
+          "src": [2]
+        },
+        "phone": {
+          "value": "03 9072 0626",
+          "kind": "party office",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/elth",
+          "title": "Eltham: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://vic.onenation.org.au/candidate/jessie-weatherley",
+          "title": "Jessie Weatherley, One Nation Victoria",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
+    },
+    "eltham/maeve-riches": {
+      "name": "Maeve Riches",
+      "summary": {
+        "text": "Maeve Riches is the Victorian Socialists candidate for Eltham at the 2026 Victorian election. She describes herself as a renter, a student and a hospitality worker who belongs to the United Workers Union. She says she became active through the climate movement and has since campaigned on LGBTQIA+ rights, refugees, Palestine and opposition to the far right.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Hospitality worker and student",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Member",
+          "kind": "union",
+          "organisation": "United Workers Union",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        }
+      ],
+      "priorities": [
+        {
+          "text": "a society that puts people before profit",
+          "quoted": true,
+          "src": [2]
+        },
+        {
+          "text": "Properly funded public services and affordable, adequate housing",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Redirecting money from fossil fuel subsidies and AUKUS",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Easing cost-of-living pressure on working people",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/elth",
+        "party_page": "https://www.victoriansocialists.org.au/candidates/maeve-riches"
+      },
+      "contact": {
+        "email": {
+          "value": "maeve.riches@victoriansocialists.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/elth",
+          "title": "Eltham: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.victoriansocialists.org.au/candidates/maeve-riches",
+          "title": "Maeve Riches, Victorian Socialists",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
+    },
+    "eltham/paul-byrnes": {
+      "name": "Paul Byrnes",
+      "summary": {
+        "text": "Paul Byrnes is the Liberal candidate for Eltham at the 2026 Victorian election. He works as a lawyer for the Commonwealth on national security and emergency management, and was earlier an adviser to former Liberal MPs Matthew Bach and Mary Wooldridge. He grew up in Eltham North and has a long involvement with Scouts Victoria.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Commonwealth public service lawyer",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Adviser to Matthew Bach",
+          "kind": "staffer",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1]
+        },
+        {
+          "role": "Adviser to Mary Wooldridge",
+          "kind": "staffer",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1]
+        },
+        {
+          "role": "Volunteer",
+          "kind": "community",
+          "organisation": "Scouts Victoria",
+          "from": null,
+          "to": null,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/elth",
+        "party_page": "https://vicliberal.org.au/team/paul-byrnes",
+        "website": "https://www.paul-byrnes.com.au",
+        "facebook": "https://www.facebook.com/PaulByrnesEltham"
+      },
+      "contact": {
+        "email": {
+          "value": "paul.byrnes@vic.liberal.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/elth",
+          "title": "Eltham: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://vicliberal.org.au/team/paul-byrnes",
+          "title": "Paul Byrnes, Liberal for Eltham, Liberal Party of Australia (Victorian Division)",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
+    },
+    "eltham/rachel-busbridge": {
+      "name": "Rachel Busbridge",
+      "summary": {
+        "text": "Rachel Busbridge is the Greens candidate for Eltham at the 2026 Victorian election. She lectures in sociology at a university, is an environmental advocate and says she has been a union advocate for staff and students. She moved to Eltham in 2019.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": {
+        "place": "Eltham",
+        "src": [1, 2]
+      },
+      "occupation": {
+        "text": "University sociology lecturer",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Union advocate for university staff and students",
+          "kind": "union",
+          "from": null,
+          "to": null,
+          "src": [2]
+        }
+      ],
+      "priorities": [
+        {
+          "text": "Climate action, including protecting Eltham's tree canopy and wildlife",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Getting the community ready for higher bushfire risk",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "More investment in public and active transport",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Better-funded schools and health care as the area grows",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Representation built on integrity, evidence and listening to residents",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/elth",
+        "party_page": "https://greens.org.au/vic/person/rachel-busbridge",
+        "instagram": "https://www.instagram.com/rachelbusbridgegreens/"
+      },
+      "contact": {
+        "email": {
+          "value": "rachel.busbridge@vic.greens.org.au",
+          "kind": "campaign",
+          "src": [2]
+        },
+        "phone": {
+          "value": "(03) 9912 2992",
+          "kind": "party office",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/elth",
+          "title": "Eltham: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://greens.org.au/vic/person/rachel-busbridge",
+          "title": "Rachel Busbridge, Candidate for Eltham, Australian Greens",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
+    },
+    "eltham/steven-marasea": {
+      "name": "Steven Marasea",
+      "summary": {
+        "text": "Steven Marasea is the Libertarian candidate for Eltham at the 2026 Victorian election. He is a registered builder in a family business and says he has lived in Eltham with his family for a decade, having grown up in nearby Templestowe. His party profile centres on less bureaucracy, lower taxes and smaller government.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": {
+        "place": "Eltham",
+        "src": [1, 2]
+      },
+      "occupation": {
+        "text": "Registered builder (family business)",
+        "src": [1, 2]
+      },
+      "priorities": [
+        {
+          "text": "Cutting red tape that holds up builders and small businesses",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Lower taxes and smaller government",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Parents' freedom to raise their children as they choose",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/elth",
+        "party_page": "https://www.vic.libertarians.org.au/election26",
+        "facebook": "https://www.facebook.com/ElthamVicLibertarian",
+        "website": "https://www.facebook.com/ElthamVicLibertarian"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/elth",
+          "title": "Eltham: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.vic.libertarians.org.au/election26",
+          "title": "Our 2026 state election candidates, Libertarians Victoria",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
     },
     "eltham/vicki-ward": {
       "name": "Vicki Ward",
@@ -10407,6 +10977,105 @@
       "profile_updated": "2026-11-04",
       "faction": null
     },
+    "monbulk/alyssa-wormald": {
+      "name": "Alyssa Wormald",
+      "summary": {
+        "text": "Alyssa Wormald is the Animal Justice Party candidate for Monbulk at the 2026 Victorian election, having stood for the party in Bayswater in 2022. A long-time wildlife campaigner, she founded the Australian Native Parrot Protection Association and is president of the Victorian Kangaroo Alliance. She works in university administration and, with her sister, runs a small business making vegan, eco-friendly burial shrouds.",
+        "src": [1, 2, 3]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "University administration; co-owner of an eco burial products business",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Founder and inaugural director",
+          "kind": "community",
+          "organisation": "Australian Native Parrot Protection Association",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "President",
+          "kind": "community",
+          "organisation": "Victorian Kangaroo Alliance Inc.",
+          "from": null,
+          "to": null,
+          "src": [2]
+        },
+        {
+          "role": "Co-founder",
+          "kind": "business",
+          "organisation": "Heaven and Earth Eco Burial Products",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Campaigner",
+          "kind": "community",
+          "organisation": "Coalition Against Duck Shooting",
+          "from": null,
+          "to": null,
+          "src": [2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2022 Victorian state",
+          "seat": "Bayswater",
+          "party": "AJP",
+          "result": "Lost",
+          "src": [1, 3]
+        }
+      ],
+      "priorities": [
+        {
+          "text": "Ending the lethal control of native parrots and kangaroos",
+          "quoted": false,
+          "src": [1, 2]
+        },
+        {
+          "text": "Opposing duck shooting",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Opposing the proposed Montrose Quarry expansion",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/monb",
+        "party_page": "https://vic.animaljusticeparty.org/alyssa-wormald"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/monb",
+          "title": "Monbulk: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://vic.animaljusticeparty.org/alyssa-wormald",
+          "title": "Alyssa Wormald for Monbulk, Animal Justice Party Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2022_Victorian_state_election_(Legislative_Assembly)",
+          "title": "Results of the 2022 Victorian state election (Legislative Assembly), Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
+    },
     "monbulk/clare-fitzmaurice": {
       "name": "Clare Fitzmaurice",
       "summary": {
@@ -10488,6 +11157,126 @@
           "id": 2,
           "url": "https://vicliberal.org.au/team/clare-fitzmaurice",
           "title": "Clare Fitzmaurice, Liberal for Monbulk, Liberal Victoria",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
+    },
+    "monbulk/craig-manners": {
+      "name": "Craig Manners",
+      "summary": {
+        "text": "Craig Manners is the Family First candidate for Monbulk at the 2026 Victorian election. He is chief executive of Orbus Ministries Australia, a charity working with communities in Malawi, and has spent more than 40 years in finance, mining supply and charity management. He stood for Family First in Aston at the 2025 federal election, polling 2.7 per cent, and has been a Senate candidate for the party.",
+        "src": [1, 2, 3]
+      },
+      "born": null,
+      "lives": {
+        "place": "Upper Ferntree Gully",
+        "src": [2]
+      },
+      "occupation": {
+        "text": "CEO, Orbus Ministries Australia Inc.",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Chief executive officer",
+          "kind": "community",
+          "organisation": "Orbus Ministries Australia Inc.",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Senior Client Advisor",
+          "kind": "business",
+          "organisation": "HSBC",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [2]
+        },
+        {
+          "role": "Small business manager supplying the mining and drilling industries",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2025 Australian federal",
+          "seat": "Aston",
+          "party": "FF",
+          "result": "Lost",
+          "src": [1, 3]
+        },
+        {
+          "election": "Australian Senate election (year not stated)",
+          "seat": "Senate (Victoria)",
+          "party": "FF",
+          "result": "Unknown",
+          "src": [1, 4],
+          "unverified": true,
+          "note": "The ABC says he has stood for the Senate for Family First but gives no year. Wikipedia lists a Craig Manners third on Family First's Victorian Senate ticket in 2016 (the earlier Family First Party); not confirmed to be him."
+        }
+      ],
+      "priorities": [
+        {
+          "text": "Lower cost of living and much lower taxes",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "An inquiry into corruption in the unions and the Labor Party",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Tougher action on crime, including graffiti",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Deregulating housing and land",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Refocusing schools on core subjects",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/monb",
+        "party_page": "https://www.familyfirstparty.org.au/manners_2026"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/monb",
+          "title": "Monbulk: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.familyfirstparty.org.au/manners_2026",
+          "title": "Craig Manners, Candidate for Monbulk, Family First Party Australia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2025_Australian_federal_election_in_Victoria",
+          "title": "Results of the 2025 Australian federal election in Victoria, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 4,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2016_Australian_federal_election",
+          "title": "Candidates of the 2016 Australian federal election, Wikipedia",
           "accessed": "2026-11-04"
         }
       ],

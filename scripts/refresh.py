@@ -811,6 +811,8 @@ ABC_USER_AGENT = ("vic-election-tracker/1.0 (static Victorian election tracker; 
 # Applied as each ABC card is read, so the scheduled refresh doesn't put the dead link back.
 ABC_WEBSITE_FIXES = {
     "https://www.familyfirstparty.org.au/batres-croes_2026": "https://www.familyfirstparty.org.au/croes_2026",
+    # Redirects to another candidate's page (Shane Sali, Shepparton); his own page is /davidhutchings/.
+    "https://vic.nationals.org.au/candidates-david-hutchings/": "https://vic.nationals.org.au/davidhutchings/",
 }
 ABC_DELAY = 1.0      # seconds between requests
 ABC_ATTEMPTS = 3     # tries per page before the whole ABC step is skipped
