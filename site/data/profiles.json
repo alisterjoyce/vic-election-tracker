@@ -20334,6 +20334,67 @@
       "profile_updated": "2026-11-04",
       "links": {}
     },
+    "north-eastern-metropolitan/heather-maltby": {
+      "name": "Heather Maltby",
+      "summary": {
+        "text": "Heather Maltby is second on the Victorian Socialists ticket for North-Eastern Metropolitan Region in the Legislative Council at the 2026 election, behind Lucas Deviesseux. On her party page she says she rents in Box Hill and works as a maths tutor for secondary students. Her stated concerns include pensions and childcare costs, rents and the condition of rental homes, and Australia's links with Israel over the war in Gaza.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": {
+        "place": "Box Hill",
+        "src": [1]
+      },
+      "occupation": {
+        "text": "Maths tutor for high school students",
+        "src": [1]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "We need to double the pension and make childcare free.",
+          "quoted": true,
+          "src": [1]
+        },
+        {
+          "text": "We need to freeze rents and hold landlords accountable",
+          "quoted": true,
+          "src": [1]
+        },
+        {
+          "text": "Wants Australia to stop supplying military intelligence and weapon components to Israel",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "party_page": "https://www.victoriansocialists.org.au/candidates/heather-maltby"
+      },
+      "contact": {
+        "email": {
+          "value": "heather.maltby@victoriansocialists.org.au",
+          "kind": "campaign",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.victoriansocialists.org.au/candidates/heather-maltby",
+          "title": "Heather Maltby, Victorian Socialists",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
     "north-eastern-metropolitan/jack-corcoran": {
       "name": "Jack Corcoran",
       "summary": {
@@ -21065,6 +21126,54 @@
       ],
       "profile_updated": "2026-11-04"
     },
+    "north-eastern-metropolitan/william-clow": {
+      "name": "William Clow",
+      "summary": {
+        "text": "William Clow is a Sustainable Australia Party candidate for North-Eastern Metropolitan Region in the Legislative Council at the 2026 election. Wikipedia lists him second on the party's ticket, but the party's own page for the region names Heather Tilling as its number two and places him third. He was also second on the party's ticket for the same region in 2022. Neither the party nor any other source had published a biography of him as at early November 2026.",
+        "src": [1, 2, 3],
+        "unverified": true,
+        "note": "Ticket position: Wikipedia lists him second; the party's candidate page lists him third, behind Heather Tilling."
+      },
+      "born": null,
+      "lives": null,
+      "occupation": null,
+      "prior_roles": [],
+      "previous_candidacies": [
+        {
+          "election": "2022 Victorian state",
+          "seat": "North-Eastern Metropolitan Region",
+          "party": "SUS",
+          "result": "Lost",
+          "src": [3]
+        }
+      ],
+      "faction": null,
+      "priorities": [],
+      "links": {
+        "party_page": "https://www.sustainableaustralia.org.au/2026_victorian_election_north_eastern_metropolitan_region_candidates"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.sustainableaustralia.org.au/2026_victorian_election_north_eastern_metropolitan_region_candidates",
+          "title": "2026 Victorian Election: North-Eastern Metropolitan Region candidates, Sustainable Australia Party",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2022_Victorian_state_election_(Legislative_Council)",
+          "title": "Results of the 2022 Victorian state election (Legislative Council), Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
     "northcote/kat-theophanous": {
       "name": "Kat Theophanous",
       "summary": {
@@ -21365,6 +21474,234 @@
       ],
       "profile_updated": "2026-11-04"
     },
+    "northern-metropolitan/andrew-rowse": {
+      "name": "Andrew Rowse",
+      "summary": {
+        "text": "Andrew Rowse, a City of Melbourne councillor since 2024, leads the Australian Democrats ticket in Northern Metropolitan Region for the upper house at the 2026 election. He joined the Democrats in October 2026, after his election to the council. An engineer by training, he founded a startup developing robotic rehabilitation technology for stroke survivors and later ran programs at the University of Melbourne's Melbourne Entrepreneurial Centre.",
+        "src": [1, 2, 3, 4, 5]
+      },
+      "born": null,
+      "lives": {
+        "place": "North Melbourne",
+        "src": [3, 4]
+      },
+      "occupation": {
+        "text": "Engineer and former university startup program director",
+        "src": [3, 4]
+      },
+      "prior_roles": [
+        {
+          "role": "Councillor",
+          "kind": "councillor",
+          "organisation": "City of Melbourne",
+          "from": 2024,
+          "to": null,
+          "src": [3, 5]
+        },
+        {
+          "role": "Portfolio lead, Innovation and Education",
+          "kind": "councillor",
+          "organisation": "City of Melbourne",
+          "from": null,
+          "to": null,
+          "src": [2, 3]
+        },
+        {
+          "role": "Director of Programs",
+          "kind": "other",
+          "organisation": "Melbourne Entrepreneurial Centre, University of Melbourne",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [3, 4]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2024 Victorian local government",
+          "seat": "City of Melbourne",
+          "party": "OTH",
+          "result": "Won",
+          "src": [3, 5],
+          "unverified": true,
+          "note": "No source gives the ticket or label he stood under in 2024; he joined the Democrats in October 2026."
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Decisions based on evidence rather than ideology, with more accountability",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Long-term planning and less needless red tape",
+          "quoted": false,
+          "src": [2, 3]
+        },
+        {
+          "text": "Growing Melbourne's startup and research sector",
+          "quoted": false,
+          "src": [3, 4]
+        }
+      ],
+      "links": {
+        "party_page": "https://vic.democrats.org.au/candidates/andrew-rowse"
+      },
+      "contact": {
+        "email": {
+          "value": "NorthMetro@vic.democrats.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://vic.democrats.org.au/candidates/andrew-rowse",
+          "title": "Andrew Rowse, Northern Metropolitan Region candidate, Australian Democrats (Victoria)",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://vic.democrats.org.au/representatives/andrew-rowse/",
+          "title": "Andrew Rowse, Councillor, City of Melbourne, Australian Democrats (Victoria)",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 4,
+          "url": "https://vic.democrats.org.au/posts/meet-councillor-andrew-rowse/",
+          "title": "Meet Councillor Andrew Rowse, Australian Democrats (Victoria)",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 5,
+          "url": "https://en.wikipedia.org/wiki/List_of_Australian_Democrats_elected_representatives",
+          "title": "List of Australian Democrats elected representatives, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "northern-metropolitan/bert-jessup": {
+      "name": "Bert Jessup",
+      "summary": {
+        "text": "Bert Jessup leads the Sustainable Australia Party ticket for Northern Metropolitan Region in the Legislative Council at the 2026 election, after standing for the party in Western Metropolitan Region in 2022 and for the Senate in 2025. Born in Footscray and now living in Travancore, he is a former mayor of the City of Footscray and has led two local groups, Friends of the Maribyrnong Valley and the Footscray Lions Club, as president. His career has included running an automotive services business, senior executive roles in insurance and health, project management and HR consulting.",
+        "src": [1, 2, 3, 4]
+      },
+      "born": null,
+      "lives": {
+        "place": "Travancore",
+        "src": [2]
+      },
+      "occupation": null,
+      "prior_roles": [
+        {
+          "role": "Mayor",
+          "kind": "mayor",
+          "organisation": "City of Footscray",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [2]
+        },
+        {
+          "role": "President",
+          "kind": "community",
+          "organisation": "Friends of the Maribyrnong Valley",
+          "from": null,
+          "to": null,
+          "src": [2],
+          "unverified": true,
+          "note": "The party page gives no years and doesn't say whether the role is current."
+        },
+        {
+          "role": "President",
+          "kind": "community",
+          "organisation": "Lions Club of Footscray",
+          "from": null,
+          "to": null,
+          "src": [2],
+          "unverified": true,
+          "note": "The party page gives no years and doesn't say whether the role is current."
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2022 Victorian state",
+          "seat": "Western Metropolitan Region",
+          "party": "SUS",
+          "result": "Lost",
+          "src": [3]
+        },
+        {
+          "election": "2025 Australian federal (Senate)",
+          "seat": "Victoria",
+          "party": "SUS",
+          "result": "Lost",
+          "src": [4]
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Affordable social housing, especially for older women",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Better public transport",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "More recycling of resources",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Protecting native plants, animals and their ecosystems",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "party_page": "https://www.sustainableaustralia.org.au/2026_victorian_election_northern_metropolitan_region_candidates"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.sustainableaustralia.org.au/2026_victorian_election_northern_metropolitan_region_candidates",
+          "title": "2026 Victorian Election: Northern Metropolitan Region candidates, Sustainable Australia Party",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2022_Victorian_state_election_(Legislative_Council)",
+          "title": "Results of the 2022 Victorian state election (Legislative Council), Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 4,
+          "url": "https://en.wikipedia.org/wiki/2025_Australian_Senate_election",
+          "title": "2025 Australian Senate election, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
     "northern-metropolitan/evan-mulholland": {
       "name": "Evan Mulholland",
       "summary": {
@@ -21521,6 +21858,446 @@
           "id": 2,
           "url": "https://en.wikipedia.org/wiki/Evan_Mulholland",
           "title": "Evan Mulholland, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "northern-metropolitan/imad-hirmiz": {
+      "name": "Imad Hirmiz",
+      "summary": {
+        "text": "Imad Hirmiz is the Family First Party's lead candidate for Northern Metropolitan Region in the Legislative Council at the 2026 election, the same place he held on the party's ticket for the region in 2022. On his party page he describes himself as a husband and a father of four who wants families and communities at the centre of government policy. The page gives no details of his work or background.",
+        "src": [1, 2, 3]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": null,
+      "prior_roles": [],
+      "previous_candidacies": [
+        {
+          "election": "2022 Victorian state",
+          "seat": "Northern Metropolitan Region",
+          "party": "FF",
+          "result": "Lost",
+          "src": [3]
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "strong families are the foundation of a strong and healthy society",
+          "quoted": true,
+          "src": [2]
+        },
+        {
+          "text": "Opposes abortion on demand and euthanasia",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Protecting people's freedom to practise their religion",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Sound budget management and help for small businesses",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "party_page": "https://www.familyfirstparty.org.au/hirmiz_vic_2026"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.familyfirstparty.org.au/hirmiz_vic_2026",
+          "title": "Imad Hirmiz, Legislative Council Candidate for Victoria, Family First",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2022_Victorian_state_election_(Legislative_Council)",
+          "title": "Results of the 2022 Victorian state election (Legislative Council), Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "northern-metropolitan/mark-nicholson": {
+      "name": "Mark Nicholson",
+      "summary": {
+        "text": "Mark Nicholson is One Nation's lead candidate for Northern Metropolitan Region in the Legislative Council at the 2026 election, announced by the party in August 2026. He co-founded the animation studio Stepmates Studios, which makes the satirical web series Pauline Hanson's Please Explain, and with his business partner earlier created the 7mate sitcom Regular Old Bogan. He has said he earned an honours law degree at Monash University, and he is a former criminal lawyer.",
+        "src": [1, 2, 3]
+      },
+      "born": null,
+      "lives": {
+        "place": "Abbotsford",
+        "src": [2],
+        "unverified": true,
+        "note": "Stated in Wikipedia's article without a cited source."
+      },
+      "occupation": {
+        "text": "Filmmaker and animator",
+        "src": [2, 3]
+      },
+      "prior_roles": [
+        {
+          "role": "Co-founder",
+          "kind": "business",
+          "organisation": "Stepmates Studios",
+          "from": null,
+          "to": null,
+          "src": [2, 3]
+        },
+        {
+          "role": "Criminal lawyer",
+          "kind": "other",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [2]
+        }
+      ],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Mark_Nicholson_(filmmaker)"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Mark_Nicholson_(filmmaker)",
+          "title": "Mark Nicholson (filmmaker), Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://www.theguardian.com/australia-news/2026/aug/03/one-nation-candidates-victoria-state-election-2026-ntwnfb",
+          "title": "One Nation names eight Victorian election candidates, The Guardian (August 2026)",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "northern-metropolitan/meredith-lawrence": {
+      "name": "Meredith Lawrence",
+      "summary": {
+        "text": "Meredith Lawrence leads the Socialist Alliance ticket for Northern Metropolitan Region in the Legislative Council at the 2026 election, ahead of Chloe Beaton and Darren Saffin. The party describes her as a socialist activist since her school years and as a Jewish anti-Zionist who takes part in the Palestine solidarity movement. Her working life has been in community services for decades, including with refugees and Muslim communities in the region.",
+        "src": [1, 2, 3]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Community services worker",
+        "src": [2]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [],
+      "links": {
+        "party_page": "https://socialist-alliance.org/candidates/meredith-lawrence-northern-metropolitan"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://socialist-alliance.org/candidates/meredith-lawrence-northern-metropolitan",
+          "title": "Meredith Lawrence for Northern Metropolitan, Socialist Alliance",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://socialist-alliance.org/elections/fighting-people-not-billionaires-2026-victorian-state-election",
+          "title": "Fighting for People, NOT the Billionaires: 2026 Victorian State Election, Socialist Alliance",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "northern-metropolitan/omar-hassan": {
+      "name": "Omar Hassan",
+      "summary": {
+        "text": "Omar Hassan leads the Victorian Socialists ticket for Northern Metropolitan Region in the Legislative Council at the 2026 election. A teacher in Melbourne's outer north and the son of Lebanese migrants, he describes himself as a lifelong trade unionist and an organiser in protest movements for more than 20 years, most recently Palestine solidarity. He stood for the party in Broadmeadows at the 2022 state election and in Scullin at the 2025 federal election, and co-hosts The Party Line podcast.",
+        "src": [1, 2, 3, 4, 5]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Teacher",
+        "src": [1]
+      },
+      "prior_roles": [
+        {
+          "role": "Co-host, The Party Line podcast",
+          "kind": "other",
+          "from": 2025,
+          "to": null,
+          "src": [5]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2022 Victorian state",
+          "seat": "Broadmeadows",
+          "party": "VS",
+          "result": "Lost",
+          "src": [3]
+        },
+        {
+          "election": "2025 Australian federal",
+          "seat": "Scullin",
+          "party": "VS",
+          "result": "Lost",
+          "src": [4]
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "I will fight on every front for a better world",
+          "quoted": true,
+          "src": [1]
+        },
+        {
+          "text": "Better funding for Victoria's public schools",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Public ownership of power, transport and aged care rather than privatisation",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Opposes Israel's war in Gaza",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "party_page": "https://www.victoriansocialists.org.au/candidates/omar-hassan",
+        "instagram": "https://www.instagram.com/omarhassan_vs/"
+      },
+      "contact": {
+        "email": {
+          "value": "omar.hassan@victoriansocialists.org.au",
+          "kind": "campaign",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.victoriansocialists.org.au/candidates/omar-hassan",
+          "title": "Omar Hassan, Victorian Socialists",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2022_Victorian_state_election_(Legislative_Assembly)",
+          "title": "Results of the 2022 Victorian state election (Legislative Assembly), Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 4,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2025_Australian_federal_election_in_Victoria",
+          "title": "Results of the 2025 Australian federal election in Victoria, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 5,
+          "url": "https://en.wikipedia.org/wiki/Jordan_van_den_Lamb",
+          "title": "Jordan van den Lamb, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "northern-metropolitan/peita-collard": {
+      "name": "Peita Collard",
+      "summary": {
+        "text": "Peita Collard is listed on Wikipedia as the Animal Justice Party's lead Legislative Council candidate for Northern Metropolitan Region at the 2026 election. The party page Wikipedia cites for this now presents her as the party's candidate for the lower-house seat of Preston, where the ABC also lists her, and the party's candidate list showed no Northern Metropolitan entry in early November 2026. A therapist in private practice, she grew up in Brisbane, moved to Melbourne to work in theatre and later founded an independent theatre company.",
+        "src": [1, 2, 3, 4],
+        "unverified": true,
+        "note": "Wikipedia lists her first for Northern Metropolitan Region, citing a party page that now names only Preston; the party's candidate list doesn't show her for the region."
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Therapist in private practice",
+        "src": [2]
+      },
+      "prior_roles": [
+        {
+          "role": "Founder and leader of an independent theatre company",
+          "kind": "other",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [2, 4]
+        }
+      ],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Crisis housing that accepts pets, for people leaving family violence",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "More support for wildlife carers, rescue groups and council animal officers",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Ending recreational hunting, horse and greyhound racing and unnecessary culling",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Phasing out factory farming and animal testing",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "party_page": "https://vic.animaljusticeparty.org/peita-collard"
+      },
+      "contact": {
+        "email": {
+          "value": "peita.collard.ajp@gmail.com",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://vic.animaljusticeparty.org/peita-collard",
+          "title": "Peita Collard for Preston, Animal Justice Party Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://vic.animaljusticeparty.org/candidates",
+          "title": "Candidates, Animal Justice Party Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 4,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/pres",
+          "title": "Preston: VIC Election 2026, ABC News",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "northern-metropolitan/riley-aickin": {
+      "name": "Riley Aickin",
+      "summary": {
+        "text": "Legalise Cannabis Victoria has named Riley Aickin as its candidate for Northern Metropolitan Region in the Legislative Council at the 2026 election. According to the party, he lives in Newport, his job is sustainability lead and key account manager, and he is a medicinal cannabis patient. He is also taking a foundational legal studies certificate alongside his work.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": {
+        "place": "Newport",
+        "src": [2]
+      },
+      "occupation": {
+        "text": "Sustainability lead and key account manager",
+        "src": [2]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [
+        {
+          "election": "2025 Australian federal",
+          "seat": "Holt",
+          "party": "LCV",
+          "result": "Lost",
+          "src": [3],
+          "unverified": true,
+          "note": "Wikipedia's results list a Legalise Cannabis candidate of this name in Holt; no source links that candidacy to this candidate."
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "we need a smarter, more compassionate approach to drugs",
+          "quoted": true,
+          "src": [2]
+        },
+        {
+          "text": "Cheaper access to prescribed medicinal cannabis",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Roadside drug tests that measure impairment rather than any trace of a drug",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Legal cannabis for adults, including home growing and non-profit clubs",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Hemp as a home-grown building material and Victorian industry",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {},
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://web.archive.org/web/20261004225647/https://www.lcvicparty.org.au/riley_aickin_candidate_for_northern_metropolitan",
+          "title": "Riley Aickin, Candidate for Northern Metropolitan, Legalise Cannabis Victoria (Wayback Machine copy, October 2026)",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2025_Australian_federal_election_in_Victoria",
+          "title": "Results of the 2025 Australian federal election in Victoria, Wikipedia",
           "accessed": "2026-11-04"
         }
       ],
