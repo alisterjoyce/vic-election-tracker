@@ -3574,6 +3574,88 @@
       ],
       "profile_updated": "2026-11-04"
     },
+    "cranbourne/reem-yunis": {
+      "name": "Reem Yunis",
+      "summary": {
+        "text": "Reem Yunis is the Victorian Socialists candidate for Cranbourne at the 2026 Victorian election. She has taught maths, science and chemistry in high schools for 26 years and describes herself as Palestinian-Australian. She previously ran for the party at the 2024 Dunkley federal by-election, receiving 1.7 per cent of first preferences.",
+        "src": [1, 2, 3]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "High school teacher (maths, science and chemistry)",
+        "src": [1, 2]
+      },
+      "previous_candidacies": [
+        {
+          "election": "2024 Dunkley federal by-election",
+          "seat": "Dunkley",
+          "party": "VS",
+          "result": "Lost",
+          "src": [3]
+        }
+      ],
+      "priorities": [
+        {
+          "text": "We need a government that stands up for workers",
+          "quoted": true,
+          "src": [2]
+        },
+        {
+          "text": "Spending on childcare, schools and hospitals rather than on weapons and war",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Returning privatised public services to public ownership",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Relief from rising grocery and rental costs",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "A government stand against the war in Gaza and for Palestinian justice",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/cran",
+        "party_page": "https://www.victoriansocialists.org.au/candidates/reem-yunis"
+      },
+      "contact": {
+        "email": {
+          "value": "reem.yunis@victoriansocialists.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/cran",
+          "title": "Cranbourne: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.victoriansocialists.org.au/candidates/reem-yunis",
+          "title": "Reem Yunis, Victorian Socialists",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/2024_Dunkley_by-election",
+          "title": "2024 Dunkley by-election, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
+    },
     "cranbourne/shane-foreman": {
       "name": "Shane Foreman",
       "summary": {
@@ -5608,6 +5690,245 @@
       ],
       "profile_updated": "2026-11-04"
     },
+    "eureka/andy-raven": {
+      "name": "Andy Raven",
+      "summary": {
+        "text": "Andy Raven is the Victorian Socialists candidate for Eureka at the 2026 Victorian election. He has lived in and around Buninyong all his life and has been involved in organising Free Palestine Ballarat and Say No to Racism rallies. His campaign centres on housing security, wages and rents.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": {
+        "place": "Buninyong",
+        "src": [1, 2]
+      },
+      "occupation": null,
+      "prior_roles": [
+        {
+          "role": "Rally organiser (Free Palestine Ballarat, Say No to Racism)",
+          "kind": "community",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        }
+      ],
+      "priorities": [
+        {
+          "text": "people deserve secure housing and a living wage",
+          "quoted": true,
+          "src": [2]
+        },
+        {
+          "text": "Every job should have a liveable wage.",
+          "quoted": true,
+          "src": [2]
+        },
+        {
+          "text": "Shifting power back to working-class people",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Curbing rent rises that burden tenants and force local shops to close",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/eure",
+        "party_page": "https://www.victoriansocialists.org.au/candidates/andy-raven"
+      },
+      "contact": {
+        "email": {
+          "value": "andy.raven@victoriansocialists.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/eure",
+          "title": "Eureka: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.victoriansocialists.org.au/candidates/andy-raven",
+          "title": "Andy Raven, Victorian Socialists",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
+    },
+    "eureka/emma-muir": {
+      "name": "Emma Muir",
+      "summary": {
+        "text": "Emma Muir is the Liberal candidate for Eureka at the 2026 Victorian election. She and her husband farm at Myrniong, and she is the founder of the Moorabool and Central Highlands Power Alliance, a community group opposed to the Western Renewables Link transmission project. The party says she has a background in small business, communications and advocacy, and that she was Moorabool's Citizen of the Year in 2024.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": {
+        "place": "Myrniong",
+        "src": [2]
+      },
+      "occupation": {
+        "text": "Farmer and small business owner",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Founder",
+          "kind": "community",
+          "organisation": "Moorabool and Central Highlands Power Alliance",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Farmer, family farm at Myrniong",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        }
+      ],
+      "priorities": [
+        {
+          "text": "Safer communities",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Better local infrastructure",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Lower living costs",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "A say for local communities on major infrastructure decisions",
+          "quoted": false,
+          "src": [1, 2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/eure",
+        "party_page": "https://vicliberal.org.au/team/emma-muir",
+        "website": "https://www.emmamuir.com.au",
+        "facebook": "https://www.facebook.com/EmmaMuirEureka"
+      },
+      "contact": {
+        "email": {
+          "value": "emma.muir@vic.liberal.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/eure",
+          "title": "Eureka: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://vicliberal.org.au/team/emma-muir",
+          "title": "Emma Muir, Liberal for Eureka, Liberal Victoria",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
+    },
+    "eureka/ian-harkness": {
+      "name": "Ian Harkness",
+      "summary": {
+        "text": "Ian Harkness is the Family First candidate for Eureka at the 2026 Victorian election. Raised in Victoria and now settled in Ballarat, he has a long list of practical jobs behind him, from motor mechanics, building and farm work to spray painting and caring for people with severe disabilities. He ran for Family First in Wendouree at the 2022 state election and in Ballarat at the 2025 federal election.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": {
+        "place": "Ballarat",
+        "src": [2]
+      },
+      "occupation": {
+        "text": "Trades, farm and customer service work; disability carer",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Carer for people with severe disabilities",
+          "kind": "other",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1, 2]
+        },
+        {
+          "role": "Volunteer in remote Australia and Papua New Guinea",
+          "kind": "community",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [2]
+        },
+        {
+          "role": "Food bank volunteer",
+          "kind": "community",
+          "from": null,
+          "to": null,
+          "src": [2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2022 Victorian state",
+          "seat": "Wendouree",
+          "party": "FF",
+          "result": "Lost",
+          "src": [1]
+        },
+        {
+          "election": "2025 federal",
+          "seat": "Ballarat",
+          "party": "FF",
+          "result": "Lost",
+          "src": [1]
+        }
+      ],
+      "priorities": [
+        {
+          "text": "Stronger families and support for people who are vulnerable",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/eure",
+        "party_page": "https://www.familyfirstparty.org.au/harkness_2026"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/eure",
+          "title": "Eureka: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.familyfirstparty.org.au/harkness_2026",
+          "title": "Ian Harkness, Family First Party Australia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
+    },
     "eureka/michaela-settle": {
       "name": "Michaela Settle",
       "summary": {
@@ -5793,6 +6114,254 @@
         }
       ],
       "profile_updated": "2026-11-04"
+    },
+    "eureka/paul-ballinger": {
+      "name": "Paul Ballinger",
+      "summary": {
+        "text": "Paul Ballinger is the One Nation candidate for Eureka at the 2026 Victorian election. Born and raised in Ballarat, he is a director of a mortgage broking business in the city, after earlier work in construction as a carpenter, joiner and site supervisor. He has also run small businesses, among them a video hire shop and a newsagency.",
+        "src": [1]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Director of a mortgage brokerage",
+        "src": [1]
+      },
+      "prior_roles": [
+        {
+          "role": "Director, mortgage brokerage",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "src": [1]
+        },
+        {
+          "role": "Carpenter, joiner and construction supervisor",
+          "kind": "other",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1]
+        },
+        {
+          "role": "Owner of small businesses, including a video hire shop and a newsagency",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/eure",
+        "party_page": "https://vic.onenation.org.au/paul-ballinger"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/eure",
+          "title": "Eureka: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
+    },
+    "eureka/sam-mccoll": {
+      "name": "Sam McColl",
+      "summary": {
+        "text": "Sam McColl is the Greens candidate for Eureka at the 2026 Victorian election. Raised in Ararat and now based in Ballarat, he works as a Triple Zero communications officer, rents his home, and is a St John volunteer who serves as a regional manager as well as a first responder. The Greens also ran him in Eureka at the 2022 state election and in Mallee at the 2022 federal election.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": {
+        "place": "Ballarat",
+        "src": [1]
+      },
+      "occupation": {
+        "text": "Triple Zero communications officer",
+        "src": [1]
+      },
+      "prior_roles": [
+        {
+          "role": "Volunteer first responder and regional manager",
+          "kind": "community",
+          "organisation": "St John",
+          "from": null,
+          "to": null,
+          "src": [1]
+        },
+        {
+          "role": "Worker in local not-for-profit arts organisations",
+          "kind": "community",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2022 Victorian state",
+          "seat": "Eureka",
+          "party": "GRN",
+          "result": "Lost",
+          "src": [1]
+        },
+        {
+          "election": "2022 federal",
+          "seat": "Mallee",
+          "party": "GRN",
+          "result": "Lost",
+          "src": [1]
+        }
+      ],
+      "priorities": [
+        {
+          "text": "Housing, health and climate justice in regional Victoria",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Easing living costs and housing pressure and improving access to services in Eureka",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "A local member who consults people and involves them in decisions",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/eure",
+        "party_page": "https://greens.org.au/vic/person/sam-mccoll",
+        "facebook": "https://www.facebook.com/sammccollgreens",
+        "instagram": "https://www.instagram.com/sammccollgreens/"
+      },
+      "contact": {
+        "email": {
+          "value": "sam.mccoll@vic.greens.org.au",
+          "kind": "campaign",
+          "src": [2]
+        },
+        "phone": {
+          "value": "(03) 9912 2992",
+          "kind": "party office",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/eure",
+          "title": "Eureka: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://greens.org.au/vic/person/sam-mccoll",
+          "title": "Sam McColl, Australian Greens (Victoria)",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
+    },
+    "eureka/wendy-morrison": {
+      "name": "Wendy Morrison",
+      "summary": {
+        "text": "Wendy Morrison is the Animal Justice Party candidate for Eureka at the 2026 Victorian election, her third state campaign for the party after Buninyong in 2018 and Eureka in 2022. Schooled in Ballarat, she has worked in retail, as a cook and tour host on coach tours around Australia, and in hospitality and office jobs, and is a qualified yoga teacher. Her party page says she has been a member for about 13 years.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": {
+        "place": "Ballarat",
+        "src": [2]
+      },
+      "occupation": {
+        "text": "Retail, hospitality and office administration work; qualified yoga teacher",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Camp cook and tour host",
+          "kind": "other",
+          "organisation": "Coach touring companies",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1, 2]
+        },
+        {
+          "role": "Member",
+          "kind": "party",
+          "organisation": "Animal Justice Party",
+          "from": null,
+          "to": null,
+          "src": [2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2018 Victorian state",
+          "seat": "Buninyong",
+          "party": "AJP",
+          "result": "Lost",
+          "src": [1, 2]
+        },
+        {
+          "election": "2022 Victorian state",
+          "seat": "Eureka",
+          "party": "AJP",
+          "result": "Lost",
+          "src": [1, 2]
+        }
+      ],
+      "priorities": [
+        {
+          "text": "Ending the breeding of animals for farming, experiments, racing and entertainment",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "A fair transition for workers into sustainable industries",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Growing plant-based farming and food production and eco-tourism",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/eure",
+        "party_page": "https://vic.animaljusticeparty.org/wendy-morrison"
+      },
+      "contact": {
+        "email": {
+          "value": "wendy.morrison.ajp@gmail.com",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/eure",
+          "title": "Eureka: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://vic.animaljusticeparty.org/wendy-morrison",
+          "title": "Wendy Morrison for Eureka, Animal Justice Party Victoria",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
     },
     "euroa/annabelle-cleeland": {
       "name": "Annabelle Cleeland",
@@ -6285,6 +6854,195 @@
       ],
       "profile_updated": "2026-11-04"
     },
+    "frankston/julie-harman": {
+      "name": "Julie Harman",
+      "summary": {
+        "text": "Dr Julie Harman is the Animal Justice Party candidate for Frankston at the 2026 Victorian election. A registered nurse before she studied medicine, she worked in Melbourne hospitals, in Indigenous health on Thursday Island and overseas as a Médecins Sans Frontières volunteer, and graduated as a doctor in 2016. For about six years she has worked as a doctor with the Australian Defence Force's recruitment team.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Medical doctor (occupational medicine)",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Doctor, recruitment team",
+          "kind": "public-service",
+          "organisation": "Australian Defence Force",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Doctor in occupational medicine",
+          "kind": "public-service",
+          "organisation": "Victoria Police",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [2]
+        },
+        {
+          "role": "Hospital doctor (Box Hill, Maroondah and Angliss hospitals)",
+          "kind": "other",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [2]
+        },
+        {
+          "role": "Registered nurse (Alfred, Box Hill and Monash hospitals)",
+          "kind": "other",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1, 2]
+        },
+        {
+          "role": "Indigenous health care worker, Thursday Island",
+          "kind": "other",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1, 2]
+        },
+        {
+          "role": "Volunteer",
+          "kind": "community",
+          "organisation": "Médecins Sans Frontières",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1, 2]
+        }
+      ],
+      "priorities": [
+        {
+          "text": "An end to factory farming, with investment in plant-based proteins",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Protecting parks and open space from overdevelopment",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Tougher laws on recycling and pollution",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "More funding for education, mental health and public housing",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "More training jobs, small business growth and tourism in Frankston",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/fran",
+        "party_page": "https://vic.animaljusticeparty.org/julie-harman"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/fran",
+          "title": "Frankston: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://vic.animaljusticeparty.org/julie-harman",
+          "title": "Dr Julie Harman for Frankston, Animal Justice Party Victoria",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
+    },
+    "frankston/katie-goulas": {
+      "name": "Katie Goulas",
+      "summary": {
+        "text": "Katie Goulas is the Greens candidate for Frankston at the 2026 Victorian election. She works in retail, is studying for a master's degree in justice and criminology, and volunteers as an advocate for children held in youth detention. She says she is standing on housing, health, community safety and climate.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Retail worker; postgraduate student in justice and criminology",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Volunteer advocate for children in youth detention",
+          "kind": "community",
+          "from": null,
+          "to": null,
+          "src": [2]
+        }
+      ],
+      "priorities": [
+        {
+          "text": "Affordable housing",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Better health services",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Safer communities",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Strong action on climate change and sustainable living",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/fran",
+        "party_page": "https://greens.org.au/vic/person/katie-goulas",
+        "instagram": "https://www.instagram.com/katiegoulasgreens/"
+      },
+      "contact": {
+        "email": {
+          "value": "katie.goulas@vic.greens.org.au",
+          "kind": "campaign",
+          "src": [2]
+        },
+        "phone": {
+          "value": "(03) 9912 2992",
+          "kind": "party office",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/fran",
+          "title": "Frankston: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://greens.org.au/vic/person/katie-goulas",
+          "title": "Katie Goulas, Australian Greens (Victoria)",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
+    },
     "frankston/paul-edbrooke": {
       "name": "Paul Edbrooke",
       "summary": {
@@ -6427,6 +7185,96 @@
         }
       ],
       "profile_updated": "2026-11-04"
+    },
+    "frankston/peter-nicholes": {
+      "name": "Peter Nicholes",
+      "summary": {
+        "text": "Peter Nicholes is the Family First candidate for Frankston at the 2026 Victorian election. A full-time pastor who has lived in Frankston for more than 37 years, he earlier worked as a physical education teacher and gym manager, and is on the leadership team of the Crosslink Christian Network. He ran for Family First in Dunkley at the 2025 federal election.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Pastor",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Member of the leadership team",
+          "kind": "community",
+          "organisation": "Crosslink Christian Network",
+          "from": null,
+          "to": null,
+          "src": [2]
+        },
+        {
+          "role": "Youth street outreach volunteer",
+          "kind": "community",
+          "organisation": "Street Peace",
+          "from": null,
+          "to": null,
+          "src": [2]
+        },
+        {
+          "role": "Physical education teacher and gym manager",
+          "kind": "other",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1, 2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2025 federal",
+          "seat": "Dunkley",
+          "party": "FF",
+          "result": "Lost",
+          "src": [1]
+        }
+      ],
+      "priorities": [
+        {
+          "text": "Protecting free speech, especially for parents",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "The family as the basis of society, and parents' right to raise children without undue state interference",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Giving young people identity and purpose as a way to reduce youth crime",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Bringing Australia's many cultures together as one nation",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/fran",
+        "party_page": "https://www.familyfirstparty.org.au/nicholes_2026"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/fran",
+          "title": "Frankston: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.familyfirstparty.org.au/nicholes_2026",
+          "title": "Peter Nicholes, Family First Party Australia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04",
+      "faction": null
     },
     "geelong/christine-couzens": {
       "name": "Christine Couzens",
