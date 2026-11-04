@@ -160,25 +160,36 @@ def check(cid, p, known, errors):
         err("contains a full date of birth or other full date in text: store the year only")
 
 
-def own_words(cid, p, errors, n=8):
-    """Flag any n-word run copied from the profile's Wikipedia or Parliament page."""
+def own_words(cid, p, errors, n=8, warnings=None):
+    """Flag any n-word run copied from a page the profile cites (Wikipedia, Parliament, the ABC, party and
+    campaign pages). Wikipedia and Parliament pages must be readable; a page elsewhere that refuses scripts
+    is a warning, not a failure."""
     ours = " ".join([(p.get("summary") or {}).get("text", "")] + [x.get("text", "") for x in p.get("priorities") or [] if not x.get("quoted")]
                     + [f"{x.get('text', '')} {x.get('outcome', '')}" for x in p.get("legal_and_integrity") or []]
 )   # role titles are facts (e.g. "Minister for Sport"), so they aren't checked
     mine = words(ours)
     grams = {" ".join(mine[i:i + n]) for i in range(len(mine) - n + 1)}
     links = p.get("links") or {}
+    pages = [s.get("url") for s in p.get("sources") or []] + [links.get("wikipedia"), links.get("parliament")]
     urls = []
-    if links.get("wikipedia"):
-        title = urllib.parse.unquote(links["wikipedia"].rsplit("/", 1)[-1])
-        urls.append("https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&titles=" + urllib.parse.quote(title))
-    if links.get("parliament"):
-        urls.append(links["parliament"])
+    for u in pages:
+        if not u:
+            continue
+        if "wikipedia.org/wiki/" in u:
+            title = urllib.parse.unquote(u.split("/wiki/", 1)[1].split("#")[0])
+            u = "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&titles=" + urllib.parse.quote(title)
+        if u not in urls:
+            urls.append(u)
     for u in urls:
+        must = "wikipedia.org" in u or "parliament.vic.gov.au" in u
         try:
             theirs = words(fetch_text(u))
         except Exception as exc:  # noqa: BLE001
-            errors.append(f"{cid}: couldn't fetch {u} for the copy check: {exc}")
+            msg = f"{cid}: couldn't fetch {u} for the copy check: {exc}"
+            if must or warnings is None:
+                errors.append(msg)
+            else:
+                warnings.append(msg)
             continue
         source = " ".join(theirs)
         for g in sorted(grams):
@@ -189,18 +200,20 @@ def own_words(cid, p, errors, n=8):
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("file", nargs="?", help="a batch file of {candidate id: profile} (default: site/data/profiles.json)")
-    ap.add_argument("--overlap", action="store_true", help="also check for wording copied from Wikipedia and Parliament pages")
+    ap.add_argument("--overlap", action="store_true", help="also check for wording copied from any page the profile cites")
     args = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
     data = json.loads(Path(args.file).read_text(encoding="utf-8")) if args.file else load("profiles")
     profiles = data.get("profiles", data) if isinstance(data, dict) else {}
     profiles = {k: v for k, v in profiles.items() if not k.startswith("_")}
     known = {cid for seat in candidates_by_seat().values() for cid in seat}
-    errors = []
+    errors, warnings = [], []
     for cid, p in profiles.items():
         check(cid, p, known, errors)
         if args.overlap:
-            own_words(cid, p, errors)
+            own_words(cid, p, errors, warnings=warnings)
+    for w in warnings:
+        print("WARN", w)
     for e in errors:
         print("FAIL", e)
     print(f"{len(profiles)} profiles checked, {len(errors)} problems")
