@@ -111,6 +111,18 @@
     {
       "district": null,
       "region": "north-eastern-metropolitan",
+      "name": "Chloe Nicolosi",
+      "party": "AJP",
+      "status": "not_standing",
+      "ticket_position": 1,
+      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "notes": "Not standing for North-Eastern Metropolitan Region: the party's own page and candidate list name Chloe Nicolosi for the Assembly seat of Bundoora, where the ABC lists them; Wikipedia's upper-house listing cites an earlier version of that page. Kept so the Wikipedia refresh doesn't re-add it (checked 2026-11-04); was the AJP ticket in regions.json until 2026-11-04",
+      "date_added": "2026-11-04",
+      "updated": "2026-11-04"
+    },
+    {
+      "district": null,
+      "region": "north-eastern-metropolitan",
       "name": "Gianni Del Rosario-Makridis",
       "party": "LCV",
       "status": "announced",
@@ -286,12 +298,13 @@
       "region": "northern-metropolitan",
       "name": "Peita Collard",
       "party": "AJP",
-      "status": "announced",
+      "status": "not_standing",
       "ticket_position": 1,
       "source": "wikipedia",
       "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
       "date_added": "2026-10-30",
-      "updated": "2026-10-30"
+      "updated": "2026-11-04",
+      "notes": "Not standing for Northern Metropolitan Region: the party's own page and candidate list name Peita Collard for the Assembly seat of Preston, where the ABC lists them; Wikipedia's upper-house listing cites an earlier version of that page. Kept so the Wikipedia refresh doesn't re-add it (checked 2026-11-04)"
     },
     {
       "district": null,
@@ -533,12 +546,13 @@
       "region": "south-eastern-metropolitan",
       "name": "Tamara Champion",
       "party": "AJP",
-      "status": "announced",
+      "status": "not_standing",
       "ticket_position": 1,
       "source": "wikipedia",
       "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
       "date_added": "2026-10-30",
-      "updated": "2026-10-30"
+      "updated": "2026-11-04",
+      "notes": "Not standing for South-Eastern Metropolitan Region: the party's own page and candidate list name Tamara Champion for the Assembly seat of Nepean, where the ABC lists them; Wikipedia's upper-house listing cites an earlier version of that page. Kept so the Wikipedia refresh doesn't re-add it (checked 2026-11-04)"
     },
     {
       "district": null,
@@ -656,12 +670,13 @@
       "region": "southern-metropolitan",
       "name": "Daniel O'Neill",
       "party": "AJP",
-      "status": "announced",
+      "status": "not_standing",
       "ticket_position": 1,
       "source": "wikipedia",
       "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
       "date_added": "2026-10-30",
-      "updated": "2026-10-30"
+      "updated": "2026-11-04",
+      "notes": "Not standing for Southern Metropolitan Region: the party's own page and candidate list name Daniel O'Neill for the Assembly seat of Albert Park, where the ABC lists them; Wikipedia's upper-house listing cites an earlier version of that page. Kept so the Wikipedia refresh doesn't re-add it (checked 2026-11-04)"
     },
     {
       "district": null,
@@ -819,12 +834,13 @@
       "region": "western-metropolitan",
       "name": "Shohre Mansouri",
       "party": "AJP",
-      "status": "announced",
+      "status": "not_standing",
       "ticket_position": 1,
       "source": "wikipedia",
       "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
       "date_added": "2026-10-30",
-      "updated": "2026-10-30"
+      "updated": "2026-11-04",
+      "notes": "Not standing for Western Metropolitan Region: the party's own page and candidate list name Shohre Mansouri for the Assembly seat of Laverton, where the ABC lists them; Wikipedia's upper-house listing cites an earlier version of that page. Kept so the Wikipedia refresh doesn't re-add it (checked 2026-11-04)"
     },
     {
       "district": null,
@@ -838,6 +854,18 @@
       "date_added": "2026-10-31",
       "updated": "2026-10-31",
       "notes": "Party on Wikipedia: Democrats"
+    },
+    {
+      "district": null,
+      "region": "western-metropolitan",
+      "name": "Susan Davies",
+      "party": "SUS",
+      "status": "endorsed",
+      "ticket_position": 2,
+      "source_url": "https://www.sustainableaustralia.org.au/2026_victorian_election_western_metropolitan_region_candidates",
+      "notes": "#2 on the party's Western Metropolitan page (added by hand)",
+      "date_added": "2026-11-04",
+      "updated": "2026-11-04"
     },
     {
       "district": null,
@@ -5514,11 +5542,12 @@
       "district": "mornington",
       "name": "Tamara Champion",
       "party": "AJP",
-      "status": "endorsed",
+      "status": "not_standing",
       "ballot_position": null,
       "incumbent": false,
       "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
-      "updated": "2026-10-30"
+      "updated": "2026-11-04",
+      "notes": "Not standing for Mornington: her party page and the ABC list her for Nepean (checked 2026-11-04)"
     },
     {
       "district": "morwell",

@@ -19,6 +19,93 @@
     }
   },
   "profiles": {
+    "albert-park/daniel-o-neill": {
+      "name": "Daniel O'Neill",
+      "summary": {
+        "text": "Daniel O'Neill is the Animal Justice Party's candidate for Albert Park at the 2026 Victorian election. An equity, diversity and inclusion consultant, he grew up in Sydney, has worked for more than 25 years across universities, government, business and charities, and became an authorised marriage celebrant in 2018. Wikipedia lists him first on the party's Southern Metropolitan Region upper-house ticket, citing a party page that presented him that way in July 2026 but has named him for Albert Park since late September.",
+        "src": [1, 2, 3, 4]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Equity, diversity and inclusion consultant",
+        "src": [1]
+      },
+      "prior_roles": [
+        {
+          "role": "Authorised marriage celebrant",
+          "kind": "other",
+          "from": 2018,
+          "to": null,
+          "src": [1],
+          "unverified": true,
+          "note": "The party page says he became a celebrant in 2018; it does not say whether he still practises."
+        },
+        {
+          "role": "Participant, Environmental Leadership Program",
+          "kind": "community",
+          "organisation": "City of Port Phillip",
+          "from": 2025,
+          "to": 2025,
+          "src": [1]
+        }
+      ],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Animal welfare to be weighed in every law, policy and public decision",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Stronger protection for native wildlife, including the dingo",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Humane, evidence-based control of introduced species",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Rewilding urban habitat and waterways for pollinators and other wildlife",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/albe",
+        "party_page": "https://vic.animaljusticeparty.org/daniel-oneill"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://vic.animaljusticeparty.org/daniel-oneill",
+          "title": "Daniel O'Neill for Albert Park, Animal Justice Party Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://web.archive.org/web/20260713231820/https://vic.animaljusticeparty.org/daniel-oneill",
+          "title": "Daniel O'Neill for Southern Metro, Animal Justice Party Victoria (Wayback Machine copy, July 2026)",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 4,
+          "url": "https://vic.animaljusticeparty.org/candidates",
+          "title": "Our Election Candidates, Animal Justice Party Victoria",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
     "albert-park/nina-taylor": {
       "name": "Nina Taylor",
       "summary": {
@@ -3768,6 +3855,114 @@
           "id": 2,
           "url": "https://en.wikipedia.org/wiki/Matthew_Guy",
           "title": "Matthew Guy, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "bundoora/chloe-nicolosi": {
+      "name": "Chloe Nicolosi",
+      "summary": {
+        "text": "Chloe Nicolosi is the Animal Justice Party's candidate for Bundoora at the 2026 Victorian election. She works as a corporate analyst in emerging technologies, is studying for a Juris Doctor, and was named Zoos Victoria's Young Advocate of the Year in 2013. In mid-2026 the party presented her as its North-Eastern Metropolitan Region upper-house candidate, and Wikipedia still lists her there, but by November the party's pages named her only for Bundoora.",
+        "src": [1, 2, 3, 4]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Corporate analyst working with emerging technologies",
+        "src": [2, 3]
+      },
+      "prior_roles": [
+        {
+          "role": "Volunteer paralegal",
+          "kind": "community",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [3],
+          "unverified": true,
+          "note": "The party page says she has had this experience but gives no years or organisation."
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2025 Australian federal",
+          "seat": "McEwen",
+          "party": "AJP",
+          "result": "Lost",
+          "src": [5],
+          "unverified": true,
+          "note": "Wikipedia lists a Chloe Nicolosi as the Animal Justice candidate for McEwen; same name and party, but no source links that candidacy to her directly."
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "End live animal exports",
+          "quoted": false,
+          "src": [2, 3]
+        },
+        {
+          "text": "Phase out factory farming, for animal welfare and to cut emissions",
+          "quoted": false,
+          "src": [2, 3]
+        },
+        {
+          "text": "Public investment in cultivated meat and precision fermentation",
+          "quoted": false,
+          "src": [3]
+        },
+        {
+          "text": "More affordable housing, including limits on negative gearing",
+          "quoted": false,
+          "src": [3]
+        },
+        {
+          "text": "End 1080 baiting and recreational hunting to protect native wildlife",
+          "quoted": false,
+          "src": [3]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/bund",
+        "party_page": "https://vic.animaljusticeparty.org/chloe-nicolosi"
+      },
+      "contact": {
+        "email": {
+          "value": "chloe.nicolosi.ajp@gmail.com",
+          "kind": "campaign",
+          "src": [3]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://web.archive.org/web/20260616091937/https://vic.animaljusticeparty.org/chloe-nicolosi",
+          "title": "Chloe Nicolosi for North Eastern Metro, Animal Justice Party Victoria (archived June 2026)",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://vic.animaljusticeparty.org/chloe-nicolosi",
+          "title": "Chloe Nicolosi for Bundoora, Animal Justice Party Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 4,
+          "url": "https://vic.animaljusticeparty.org/candidates",
+          "title": "Our Election Candidates, Animal Justice Party Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 5,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2025_Australian_federal_election",
+          "title": "Candidates of the 2025 Australian federal election, Wikipedia",
           "accessed": "2026-11-04"
         }
       ],
@@ -13029,6 +13224,108 @@
       ],
       "profile_updated": "2026-11-04"
     },
+    "laverton/shohre-mansouri": {
+      "name": "Shohre Mansouri",
+      "summary": {
+        "text": "Shohre Mansouri is the Animal Justice Party's candidate for Laverton at the 2026 Victorian election, as her party page and Wikipedia list her. A software engineer who has lived in Melbourne for about 20 years, she set up a charity in 2012 to help disadvantaged children get an education and ran it for six years, according to the party. An earlier listing of her on the party's Western Metropolitan Region upper-house ticket no longer appears on Wikipedia.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Software engineer",
+        "src": [1]
+      },
+      "prior_roles": [
+        {
+          "role": "Founder and leader",
+          "kind": "community",
+          "organisation": "Charity supporting education for disadvantaged children (not named)",
+          "from": 2012,
+          "to": null,
+          "ended": true,
+          "src": [1],
+          "note": "The party says she led it for six years and still mentors its team."
+        },
+        {
+          "role": "Founding member",
+          "kind": "community",
+          "organisation": "Friends of Braybrook Park",
+          "from": null,
+          "to": null,
+          "src": [1]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2022 Victorian state",
+          "seat": "Footscray",
+          "party": "AJP",
+          "result": "Lost",
+          "src": [4],
+          "unverified": true,
+          "note": "Wikipedia lists the Animal Justice candidate as Shohre Mansouri Jajaee; same party and part of Melbourne, but no source we read says it is the same person."
+        },
+        {
+          "election": "2025 Werribee state by-election",
+          "seat": "Werribee",
+          "party": "AJP",
+          "result": "Lost",
+          "src": [3],
+          "unverified": true,
+          "note": "Wikipedia lists the Animal Justice candidate as Shohre Mansouri Jajaee; same party and part of Melbourne, but no source we read says it is the same person. Wikipedia describes that candidate as a software engineer and charity worker, which fits her party biography."
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Ending the exploitation of animals and stronger animal protection laws",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Climate action and protecting local ecosystems and biodiversity",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Food security through sustainable, community-led farming and food growing",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/lave",
+        "party_page": "https://vic.animaljusticeparty.org/shohre-mansouri"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://vic.animaljusticeparty.org/shohre-mansouri",
+          "title": "Shohre Mansouri for Laverton, Animal Justice Party Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/2025_Werribee_state_by-election",
+          "title": "2025 Werribee state by-election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 4,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2022_Victorian_state_election_(Legislative_Assembly)",
+          "title": "Results of the 2022 Victorian state election (Legislative Assembly), Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
     "lowan/emma-kealy": {
       "name": "Emma Kealy",
       "summary": {
@@ -19244,6 +19541,71 @@
       ],
       "profile_updated": "2026-11-04"
     },
+    "nepean/tamara-champion": {
+      "name": "Tamara Champion",
+      "summary": {
+        "text": "Tamara Champion is the Animal Justice Party's candidate for Nepean at the 2026 Victorian election, as her party page and the ABC both list her. An environmental scientist from the Mornington Peninsula with a Deakin University degree, she has spent about ten years on bushland restoration work. Wikipedia lists her first on the party's South-Eastern Metropolitan Region upper-house ticket, citing an earlier version of the same party page.",
+        "src": [1, 2, 3]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Environmental scientist",
+        "src": [1]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Stronger legal protection for animals and an end to needless suffering",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Looking after the Mornington Peninsula's bushland, wildlife and threatened ecosystems",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Treating community wellbeing and a healthy environment as linked goals",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/nepe",
+        "party_page": "https://vic.animaljusticeparty.org/tamara-champion"
+      },
+      "contact": {
+        "email": {
+          "value": "tamara.champion.ajp@gmail.com",
+          "kind": "campaign",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://vic.animaljusticeparty.org/tamara-champion",
+          "title": "Tamara Champion for Nepean, Animal Justice Party Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/nepe",
+          "title": "Nepean, Victorian election 2026, ABC News",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
     "niddrie/ben-carroll": {
       "name": "Ben Carroll",
       "summary": {
@@ -19988,115 +20350,6 @@
           "id": 2,
           "url": "https://en.wikipedia.org/wiki/Aiv_Puglielli",
           "title": "Aiv Puglielli, Wikipedia",
-          "accessed": "2026-11-04"
-        }
-      ],
-      "profile_updated": "2026-11-04"
-    },
-    "north-eastern-metropolitan/chloe-nicolosi": {
-      "name": "Chloe Nicolosi",
-      "summary": {
-        "text": "Chloe Nicolosi is an Animal Justice Party candidate who works as a corporate analyst in emerging technologies and is studying for a Juris Doctor. Wikipedia lists her first on the party's North-Eastern Metropolitan Region ticket for the Legislative Council in 2026, and the party's page named her for that region in June 2026. By November the same page presented her as the party's candidate for the Assembly seat of Bundoora instead, and its candidate list showed no North-Eastern Metropolitan entry. Zoos Victoria named her its Young Advocate of the Year in 2013.",
-        "src": [1, 2, 3, 4],
-        "unverified": true,
-        "note": "Wikipedia still lists her as the AJP's lead upper-house candidate for North-Eastern Metropolitan, but the party's own pages now name her only for Bundoora; whether she remains on an upper-house ticket is unconfirmed."
-      },
-      "born": null,
-      "lives": null,
-      "occupation": {
-        "text": "Corporate analyst working with emerging technologies",
-        "src": [2, 3]
-      },
-      "prior_roles": [
-        {
-          "role": "Volunteer paralegal",
-          "kind": "community",
-          "from": null,
-          "to": null,
-          "ended": true,
-          "src": [3],
-          "unverified": true,
-          "note": "The party page says she has had this experience but gives no years or organisation."
-        }
-      ],
-      "previous_candidacies": [
-        {
-          "election": "2025 Australian federal",
-          "seat": "McEwen",
-          "party": "AJP",
-          "result": "Lost",
-          "src": [5],
-          "unverified": true,
-          "note": "Wikipedia lists a Chloe Nicolosi as the Animal Justice candidate for McEwen; same name and party, but no source links that candidacy to her directly."
-        }
-      ],
-      "faction": null,
-      "priorities": [
-        {
-          "text": "End live animal exports",
-          "quoted": false,
-          "src": [2, 3]
-        },
-        {
-          "text": "Phase out factory farming, for animal welfare and to cut emissions",
-          "quoted": false,
-          "src": [2, 3]
-        },
-        {
-          "text": "Public investment in cultivated meat and precision fermentation",
-          "quoted": false,
-          "src": [3]
-        },
-        {
-          "text": "More affordable housing, including limits on negative gearing",
-          "quoted": false,
-          "src": [3]
-        },
-        {
-          "text": "End 1080 baiting and recreational hunting to protect native wildlife",
-          "quoted": false,
-          "src": [3]
-        }
-      ],
-      "links": {
-        "party_page": "https://vic.animaljusticeparty.org/chloe-nicolosi"
-      },
-      "contact": {
-        "email": {
-          "value": "chloe.nicolosi.ajp@gmail.com",
-          "kind": "campaign",
-          "src": [3]
-        }
-      },
-      "sources": [
-        {
-          "id": 1,
-          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
-          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
-          "accessed": "2026-11-04"
-        },
-        {
-          "id": 2,
-          "url": "https://web.archive.org/web/20260616091937/https://vic.animaljusticeparty.org/chloe-nicolosi",
-          "title": "Chloe Nicolosi for North Eastern Metro, Animal Justice Party Victoria (archived June 2026)",
-          "accessed": "2026-11-04"
-        },
-        {
-          "id": 3,
-          "url": "https://vic.animaljusticeparty.org/chloe-nicolosi",
-          "title": "Chloe Nicolosi for Bundoora, Animal Justice Party Victoria",
-          "accessed": "2026-11-04"
-        },
-        {
-          "id": 4,
-          "url": "https://vic.animaljusticeparty.org/candidates",
-          "title": "Our Election Candidates, Animal Justice Party Victoria",
-          "accessed": "2026-11-04"
-        },
-        {
-          "id": 5,
-          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2025_Australian_federal_election",
-          "title": "Candidates of the 2025 Australian federal election, Wikipedia",
           "accessed": "2026-11-04"
         }
       ],
@@ -22343,92 +22596,6 @@
           "id": 5,
           "url": "https://en.wikipedia.org/wiki/Jordan_van_den_Lamb",
           "title": "Jordan van den Lamb, Wikipedia",
-          "accessed": "2026-11-04"
-        }
-      ],
-      "profile_updated": "2026-11-04"
-    },
-    "northern-metropolitan/peita-collard": {
-      "name": "Peita Collard",
-      "summary": {
-        "text": "Peita Collard is listed on Wikipedia as the Animal Justice Party's lead Legislative Council candidate for Northern Metropolitan Region at the 2026 election. The party page Wikipedia cites for this now presents her as the party's candidate for the lower-house seat of Preston, where the ABC also lists her, and the party's candidate list showed no Northern Metropolitan entry in early November 2026. A therapist in private practice, she grew up in Brisbane, moved to Melbourne to work in theatre and later founded an independent theatre company.",
-        "src": [1, 2, 3, 4],
-        "unverified": true,
-        "note": "Wikipedia lists her first for Northern Metropolitan Region, citing a party page that now names only Preston; the party's candidate list doesn't show her for the region."
-      },
-      "born": null,
-      "lives": null,
-      "occupation": {
-        "text": "Therapist in private practice",
-        "src": [2]
-      },
-      "prior_roles": [
-        {
-          "role": "Founder and leader of an independent theatre company",
-          "kind": "other",
-          "from": null,
-          "to": null,
-          "ended": true,
-          "src": [2, 4]
-        }
-      ],
-      "previous_candidacies": [],
-      "faction": null,
-      "priorities": [
-        {
-          "text": "Crisis housing that accepts pets, for people leaving family violence",
-          "quoted": false,
-          "src": [2]
-        },
-        {
-          "text": "More support for wildlife carers, rescue groups and council animal officers",
-          "quoted": false,
-          "src": [2]
-        },
-        {
-          "text": "Ending recreational hunting, horse and greyhound racing and unnecessary culling",
-          "quoted": false,
-          "src": [2]
-        },
-        {
-          "text": "Phasing out factory farming and animal testing",
-          "quoted": false,
-          "src": [2]
-        }
-      ],
-      "links": {
-        "party_page": "https://vic.animaljusticeparty.org/peita-collard"
-      },
-      "contact": {
-        "email": {
-          "value": "peita.collard.ajp@gmail.com",
-          "kind": "campaign",
-          "src": [2]
-        }
-      },
-      "sources": [
-        {
-          "id": 1,
-          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
-          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
-          "accessed": "2026-11-04"
-        },
-        {
-          "id": 2,
-          "url": "https://vic.animaljusticeparty.org/peita-collard",
-          "title": "Peita Collard for Preston, Animal Justice Party Victoria",
-          "accessed": "2026-11-04"
-        },
-        {
-          "id": 3,
-          "url": "https://vic.animaljusticeparty.org/candidates",
-          "title": "Candidates, Animal Justice Party Victoria",
-          "accessed": "2026-11-04"
-        },
-        {
-          "id": 4,
-          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/pres",
-          "title": "Preston: VIC Election 2026, ABC News",
           "accessed": "2026-11-04"
         }
       ],
@@ -25670,6 +25837,91 @@
       ],
       "profile_updated": "2026-11-04"
     },
+    "preston/peita-collard": {
+      "name": "Peita Collard",
+      "summary": {
+        "text": "Peita Collard is the Animal Justice Party's candidate for Preston at the 2026 Victorian election, where the ABC also lists her. A therapist in private practice, she grew up in Brisbane, moved to Melbourne to work in theatre and later founded an independent theatre company. Wikipedia lists her as the party's lead upper-house candidate for Northern Metropolitan Region, citing a party page that now names only Preston.",
+        "src": [1, 2, 3, 4]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Therapist in private practice",
+        "src": [2]
+      },
+      "prior_roles": [
+        {
+          "role": "Founder and leader of an independent theatre company",
+          "kind": "other",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [2, 4]
+        }
+      ],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Crisis housing that accepts pets, for people leaving family violence",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "More support for wildlife carers, rescue groups and council animal officers",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Ending recreational hunting, horse and greyhound racing and unnecessary culling",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Phasing out factory farming and animal testing",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/pres",
+        "party_page": "https://vic.animaljusticeparty.org/peita-collard"
+      },
+      "contact": {
+        "email": {
+          "value": "peita.collard.ajp@gmail.com",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://vic.animaljusticeparty.org/peita-collard",
+          "title": "Peita Collard for Preston, Animal Justice Party Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://vic.animaljusticeparty.org/candidates",
+          "title": "Candidates, Animal Justice Party Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 4,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/pres",
+          "title": "Preston: VIC Election 2026, ABC News",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
     "richmond/gabrielle-de-vietri": {
       "name": "Gabrielle de Vietri",
       "summary": {
@@ -28745,72 +28997,6 @@
       ],
       "profile_updated": "2026-11-04"
     },
-    "south-eastern-metropolitan/tamara-champion": {
-      "name": "Tamara Champion",
-      "summary": {
-        "text": "Tamara Champion is an environmental scientist from the Mornington Peninsula standing for the Animal Justice Party in 2026. Wikipedia lists her first on the party's South-Eastern Metropolitan Region ticket for the Legislative Council, citing a party page headed South East Metro. That page now presents her as the party's candidate for the Assembly seat of Nepean, and the ABC's Nepean guide lists her there too. She has a Deakin University environmental science degree and has spent about ten years on bushland restoration work.",
-        "src": [1, 2, 3],
-        "unverified": true,
-        "note": "Sources disagree on her contest: Wikipedia lists her for South-Eastern Metropolitan Region (upper house); the party page it cites and the ABC now list her for Nepean (lower house)."
-      },
-      "born": null,
-      "lives": null,
-      "occupation": {
-        "text": "Environmental scientist",
-        "src": [1]
-      },
-      "prior_roles": [],
-      "previous_candidacies": [],
-      "faction": null,
-      "priorities": [
-        {
-          "text": "Stronger legal protection for animals and an end to needless suffering",
-          "quoted": false,
-          "src": [1]
-        },
-        {
-          "text": "Looking after the Mornington Peninsula's bushland, wildlife and threatened ecosystems",
-          "quoted": false,
-          "src": [1]
-        },
-        {
-          "text": "Treating community wellbeing and a healthy environment as linked goals",
-          "quoted": false,
-          "src": [1]
-        }
-      ],
-      "links": {
-        "party_page": "https://vic.animaljusticeparty.org/tamara-champion"
-      },
-      "contact": {
-        "email": {
-          "value": "tamara.champion.ajp@gmail.com",
-          "kind": "campaign",
-          "src": [1]
-        }
-      },
-      "sources": [
-        {
-          "id": 1,
-          "url": "https://vic.animaljusticeparty.org/tamara-champion",
-          "title": "Tamara Champion for Nepean, Animal Justice Party Victoria",
-          "accessed": "2026-11-04"
-        },
-        {
-          "id": 2,
-          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
-          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
-          "accessed": "2026-11-04"
-        },
-        {
-          "id": 3,
-          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/nepe",
-          "title": "Nepean, Victorian election 2026, ABC News",
-          "accessed": "2026-11-04"
-        }
-      ],
-      "profile_updated": "2026-11-04"
-    },
     "south-eastern-metropolitan/will-vandermeer": {
       "name": "Will Vandermeer",
       "summary": {
@@ -29451,94 +29637,6 @@
           "id": 4,
           "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2014_Victorian_state_election",
           "title": "Candidates of the 2014 Victorian state election, Wikipedia",
-          "accessed": "2026-11-04"
-        }
-      ],
-      "profile_updated": "2026-11-04"
-    },
-    "southern-metropolitan/daniel-o-neill": {
-      "name": "Daniel O'Neill",
-      "summary": {
-        "text": "Daniel O'Neill is an equity, diversity and inclusion consultant standing for the Animal Justice Party at the 2026 election. Wikipedia lists him first on the party's Southern Metropolitan Region ticket for the Legislative Council, citing a party page that in July 2026 presented him as the Southern Metro candidate; since late September that page and the party's candidate list name him as its candidate for the Assembly seat of Albert Park instead. His party profile says he grew up in Sydney, has worked for over 25 years across universities, government, business and charities, and became an authorised marriage celebrant in 2018.",
-        "src": [1, 2, 3, 4],
-        "unverified": true,
-        "note": "Wikipedia lists him as #1 for Southern Metropolitan, but the party's current page and candidate list present him only as the Albert Park candidate; the party had not published its upper-house ticket for this region as at early November 2026."
-      },
-      "born": null,
-      "lives": null,
-      "occupation": {
-        "text": "Equity, diversity and inclusion consultant",
-        "src": [1]
-      },
-      "prior_roles": [
-        {
-          "role": "Authorised marriage celebrant",
-          "kind": "other",
-          "from": 2018,
-          "to": null,
-          "src": [1],
-          "unverified": true,
-          "note": "The party page says he became a celebrant in 2018; it does not say whether he still practises."
-        },
-        {
-          "role": "Participant, Environmental Leadership Program",
-          "kind": "community",
-          "organisation": "City of Port Phillip",
-          "from": 2025,
-          "to": 2025,
-          "src": [1]
-        }
-      ],
-      "previous_candidacies": [],
-      "faction": null,
-      "priorities": [
-        {
-          "text": "Animal welfare to be weighed in every law, policy and public decision",
-          "quoted": false,
-          "src": [1]
-        },
-        {
-          "text": "Stronger protection for native wildlife, including the dingo",
-          "quoted": false,
-          "src": [1]
-        },
-        {
-          "text": "Humane, evidence-based control of introduced species",
-          "quoted": false,
-          "src": [1]
-        },
-        {
-          "text": "Rewilding urban habitat and waterways for pollinators and other wildlife",
-          "quoted": false,
-          "src": [1]
-        }
-      ],
-      "links": {
-        "party_page": "https://vic.animaljusticeparty.org/daniel-oneill"
-      },
-      "sources": [
-        {
-          "id": 1,
-          "url": "https://vic.animaljusticeparty.org/daniel-oneill",
-          "title": "Daniel O'Neill for Albert Park, Animal Justice Party Victoria",
-          "accessed": "2026-11-04"
-        },
-        {
-          "id": 2,
-          "url": "https://web.archive.org/web/20260713231820/https://vic.animaljusticeparty.org/daniel-oneill",
-          "title": "Daniel O'Neill for Southern Metro, Animal Justice Party Victoria (Wayback Machine copy, July 2026)",
-          "accessed": "2026-11-04"
-        },
-        {
-          "id": 3,
-          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
-          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
-          "accessed": "2026-11-04"
-        },
-        {
-          "id": 4,
-          "url": "https://vic.animaljusticeparty.org/candidates",
-          "title": "Our Election Candidates, Animal Justice Party Victoria",
           "accessed": "2026-11-04"
         }
       ],
@@ -33825,6 +33923,477 @@
       ],
       "profile_updated": "2026-11-04"
     },
+    "western-metropolitan/anneke-demanuele": {
+      "name": "Anneke Demanuele",
+      "summary": {
+        "text": "Anneke Demanuele leads the Victorian Socialists' ticket for Western Metropolitan Region in the 2026 Legislative Council election, with Jorge Jorquera second. On her party page she says she rents in Maribyrnong, grew up in a working-class family in a regional area and joined the socialist movement in 2014. She writes that she has helped organise protests for refugee rights, against far-right groups and, in 2020, a large march during the bushfire crisis.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": {
+        "place": "Maribyrnong",
+        "src": [1],
+        "unverified": true,
+        "note": "She says she is a renter in Maribyrnong, which could mean the suburb or the wider City of Maribyrnong."
+      },
+      "occupation": null,
+      "prior_roles": [],
+      "previous_candidacies": [
+        {
+          "election": "2024 Merri-bek City Council",
+          "seat": "Brunswick West Ward",
+          "party": "VS",
+          "result": "Lost",
+          "src": [3],
+          "unverified": true,
+          "note": "Wikipedia lists a Victorian Socialists candidate named Anneke Demanuele; same name and party, but no source we read says it is her."
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "I want to be a voice for working-class people",
+          "quoted": true,
+          "src": [1]
+        },
+        {
+          "text": "Building more public housing instead of demolishing it",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Real pay rises and lighter workloads for nurses, teachers, doctors and other public sector workers",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Support for parents squeezed by low wages, high prices and a lack of childcare",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "party_page": "https://www.victoriansocialists.org.au/candidates/anneke-demanuele",
+        "instagram": "https://www.instagram.com/annekedemanuele/"
+      },
+      "contact": {
+        "email": {
+          "value": "anneke.demanuele@victoriansocialists.org.au",
+          "kind": "campaign",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.victoriansocialists.org.au/candidates/anneke-demanuele",
+          "title": "Anneke Demanuele, Victorian Socialists",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2024_Victorian_local_elections_in_Northern_Melbourne",
+          "title": "Results of the 2024 Victorian local elections in Northern Melbourne, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "western-metropolitan/brittney-henderson": {
+      "name": "Brittney Henderson",
+      "summary": {
+        "text": "Brittney Henderson, a Wiradjuri and Bunurong person raised in Melbourne's west, leads the Greens' ticket for Western Metropolitan Region in the 2026 Legislative Council election. National Indigenous Times reported the preselection in September 2025, when Henderson was 24. Henderson's work has been with Aboriginal community-controlled organisations and other not-for-profit groups; Henderson also chairs Deadly Sports Plus, an Aboriginal-led first aid and training service, and worked on the Greens' 2025 federal campaign in Fraser.",
+        "src": [1, 2, 3]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Works with not-for-profits and Aboriginal Community Controlled Organisations on policy and governance",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Chair",
+          "kind": "community",
+          "organisation": "Deadly Sports Plus",
+          "from": null,
+          "to": null,
+          "src": [2]
+        },
+        {
+          "role": "Campaign worker, Greens campaign in Fraser",
+          "kind": "party",
+          "organisation": "Australian Greens",
+          "from": 2025,
+          "to": 2025,
+          "src": [2]
+        }
+      ],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "First Nations justice is everyone's business",
+          "quoted": true,
+          "src": [1]
+        },
+        {
+          "text": "Tackling inequality across the state and in Melbourne's west, social justice and climate",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Completing the Western Grasslands Reserve, with Traditional Owners leading its management",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "More community services and organisations for young people in the west, including queer Aboriginal youth",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "party_page": "https://greens.org.au/vic/person/brittney-henderson",
+        "instagram": "https://www.instagram.com/britt_on_the_ballot/"
+      },
+      "contact": {
+        "email": {
+          "value": "brittney.henderson@vic.greens.org.au",
+          "kind": "campaign",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://greens.org.au/vic/person/brittney-henderson",
+          "title": "Brittney Henderson, Lead Candidate for Western Metropolitan, Victorian Greens",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://nit.com.au/20-09-2025/20353/exclusive-24-year-old-wiradjuri-bunurong-candidate-brittney-henderson-announced-greens-upper-house-pre-selection-for-2026-polls",
+          "title": "Exclusive: Wiradjuri Bunurong candidate Brittney Henderson to lead Greens ticket for Western Metropolitan in Vic election, National Indigenous Times",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "western-metropolitan/chris-thiery-lai": {
+      "name": "Chris Thiery-Lai",
+      "summary": {
+        "text": "Chris Thiery-Lai leads the Australian Democrats' ticket for Western Metropolitan Region in the 2026 Legislative Council election, with Nigel Keenan second. His party page describes him as a former banker who now stays at home to care for his child, and a University of Melbourne graduate in finance and economics who was a queer officer as a student. It says he has lived in Victoria for more than ten years.",
+        "src": [1, 2, 3]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Stay-at-home parent; former banker",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Banker",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1]
+        },
+        {
+          "role": "Queer Officer (student role)",
+          "kind": "other",
+          "organisation": "University of Melbourne",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1]
+        }
+      ],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Better public transport links and fairer access to services across the west",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Closer scrutiny of government and more open public finances",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Housing affordability and the cost of living",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Equality policies that remove barriers for LGBTIQA+ and migrant families",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "party_page": "https://vic.democrats.org.au/candidates/chris-thiery-lai"
+      },
+      "contact": {
+        "email": {
+          "value": "WestMetro@vic.democrats.org.au",
+          "kind": "campaign",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://vic.democrats.org.au/candidates/chris-thiery-lai",
+          "title": "Chris Thiery-Lai, Australian Democrats (Victoria)",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://vic.democrats.org.au/candidates/",
+          "title": "Our candidates, Australian Democrats (Victoria)",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "western-metropolitan/dennis-bilic": {
+      "name": "Dennis Bilic",
+      "summary": {
+        "text": "Dennis Bilic is the lead Sustainable Australia Party candidate for Western Metropolitan Region in the 2026 Legislative Council election; the party names Susan Davies as its second candidate. The party says he grew up in Melbourne's western suburbs, now lives in the city's north-west and works as an independent management consultant. He has a commerce degree and a Swinburne University master's degree in strategic foresight, and has written a children's book about sustainability.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Independent management consultant",
+        "src": [1]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [
+        {
+          "election": "2022 Victorian state (Legislative Council)",
+          "seat": "Western Metropolitan Region",
+          "party": "SUS",
+          "result": "Lost",
+          "src": [3],
+          "unverified": true,
+          "note": "Wikipedia lists a Dennis Bilic second on the Sustainable Australia ticket for this region; same region too, but no source we read says it is him."
+        },
+        {
+          "election": "2025 Prahran state by-election",
+          "seat": "Prahran",
+          "party": "SUS",
+          "result": "Lost",
+          "src": [4],
+          "unverified": true,
+          "note": "Wikipedia lists a Sustainable Australia candidate named Dennis Bilic; same name and party, but no source we read says it is him."
+        },
+        {
+          "election": "2025 federal (Senate)",
+          "seat": "Tasmania",
+          "party": "SUS",
+          "result": "Lost",
+          "src": [5],
+          "unverified": true,
+          "note": "Wikipedia lists a Dennis Bilic first on the Sustainable Australia Senate ticket in Tasmania; same name and party, but no source we read says it is him."
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Making housing affordable",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Cleaning corruption out of politics",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Shielding neighbourhoods from overdevelopment that doesn't fit",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Education, a healthy environment and a shift to clean energy",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "party_page": "https://www.sustainableaustralia.org.au/2026_victorian_election_western_metropolitan_region_candidates"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.sustainableaustralia.org.au/2026_victorian_election_western_metropolitan_region_candidates",
+          "title": "2026 Victorian Election - Western Metropolitan Region candidates, Sustainable Australia Party",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2022_Victorian_state_election_(Legislative_Council)",
+          "title": "Results of the 2022 Victorian state election (Legislative Council), Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 4,
+          "url": "https://en.wikipedia.org/wiki/2025_Prahran_state_by-election",
+          "title": "2025 Prahran state by-election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 5,
+          "url": "https://en.wikipedia.org/wiki/2025_Australian_Senate_election",
+          "title": "2025 Australian Senate election, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "western-metropolitan/fiona-lopez": {
+      "name": "Fiona Lopez",
+      "summary": {
+        "text": "Fiona Lopez heads One Nation's ticket for Western Metropolitan Region in the 2026 Legislative Council election, according to Wikipedia's candidate list, which cites a Herald Sun report from August 2026 on the party's upper-house candidates. One Nation Victoria's website and the Herald Sun both refused our requests, and no other source we could read had published a biography of her as at early November 2026.",
+        "src": [1]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": null,
+      "prior_roles": [],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [],
+      "links": {},
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "western-metropolitan/joe-garra": {
+      "name": "Joe Garra",
+      "summary": {
+        "text": "Joe Garra is a Werribee doctor who heads The West Party's ticket for Western Metropolitan Region in the 2026 Legislative Council election, and he says he was one of the party's founding members. Born in Williamstown and raised in Altona North, he has practised in Werribee since 1988, and The Age describes him as an obstetrician. His first political campaign, in 2017, opposed a planned youth detention centre at Werribee South, and he later stood as an independent in Werribee in 2018 and in Point Cook in 2022.",
+        "src": [1, 2, 3, 4]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Doctor (obstetrician)",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Founding member",
+          "kind": "party",
+          "organisation": "The West Party",
+          "from": null,
+          "to": null,
+          "src": [1]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2018 Victorian state",
+          "seat": "Werribee",
+          "party": "IND",
+          "result": "Lost",
+          "src": [4, 5]
+        },
+        {
+          "election": "2022 Victorian state",
+          "seat": "Point Cook",
+          "party": "IND",
+          "result": "Lost",
+          "src": [4, 6]
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Local, community-based representation for people in Melbourne's western suburbs",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "party_page": "https://thewestparty.org.au/local-representation/joegarra/"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://thewestparty.org.au/local-representation/joegarra/",
+          "title": "Dr Joe Garra, Upper House Western Metropolitan Region, The West Party",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.theage.com.au/politics/victoria/for-decades-labor-has-owned-melbourne-s-west-a-new-party-plans-to-change-that-20251204-p5nkyo.html",
+          "title": "For decades, Labor has owned Melbourne's west. A new party plans to change that, The Age",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 4,
+          "url": "https://en.wikipedia.org/wiki/The_West_Party",
+          "title": "The West Party, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 5,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2018_Victorian_state_election_(Legislative_Assembly)",
+          "title": "Results of the 2018 Victorian state election (Legislative Assembly), Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 6,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2022_Victorian_state_election_(Legislative_Assembly)",
+          "title": "Results of the 2022 Victorian state election (Legislative Assembly), Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
     "western-metropolitan/moira-deeming": {
       "name": "Moira Deeming",
       "summary": {
@@ -33977,6 +34546,230 @@
           "id": 2,
           "url": "https://en.wikipedia.org/wiki/Moira_Deeming",
           "title": "Moira Deeming, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "western-metropolitan/nigel-keenan": {
+      "name": "Nigel Keenan",
+      "summary": {
+        "text": "Nigel Keenan is second on the Australian Democrats' ticket for Western Metropolitan Region in the 2026 Legislative Council election, behind Chris Thiery-Lai. On his party page he says he has lived in Melbourne's western suburbs for a long time and works in insurance, where he is also a workplace union organiser. He first belonged to the Democrats from the 1990s until the early 2000s, and has recently rejoined the party.",
+        "src": [1, 2, 3]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Insurance worker and workplace union organiser",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Workplace union organiser",
+          "kind": "union",
+          "from": null,
+          "to": null,
+          "src": [1]
+        },
+        {
+          "role": "Committee member",
+          "kind": "community",
+          "organisation": "Victorian Spiritualist Union",
+          "from": null,
+          "to": null,
+          "src": [1]
+        },
+        {
+          "role": "Member",
+          "kind": "party",
+          "organisation": "Australian Democrats",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1],
+          "note": "He says he was a member from the 1990s into the early 2000s; he has since rejoined."
+        }
+      ],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Tougher anti-corruption laws",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "More openness in how government decisions are made",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Transport, services and infrastructure that keep up with growth in the western suburbs",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "party_page": "https://vic.democrats.org.au/candidates/nigel-keenan"
+      },
+      "contact": {
+        "email": {
+          "value": "WestMetro@vic.democrats.org.au",
+          "kind": "campaign",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://vic.democrats.org.au/candidates/nigel-keenan",
+          "title": "Nigel Keenan, Australian Democrats (Victoria)",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://vic.democrats.org.au/candidates/",
+          "title": "Our candidates, Australian Democrats (Victoria)",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "western-metropolitan/roshena-campbell": {
+      "name": "Roshena Campbell",
+      "summary": {
+        "text": "Roshena Campbell, a barrister and Deputy Lord Mayor of Melbourne, heads the Liberal ticket for Western Metropolitan Region in the 2026 Legislative Council election. The party's state executive chose her in August 2026 to replace Moira Deeming, whose preselection had been revoked, and placed her ahead of the sitting MLC Trung Luu. She has been a City of Melbourne councillor since 2020 and was the Liberal candidate at the 2023 Aston federal by-election, which Labor won.",
+        "src": [1, 2, 3, 4]
+      },
+      "born": null,
+      "lives": {
+        "place": "Brunswick",
+        "src": [3],
+        "unverified": true,
+        "note": "Wikipedia says she lives in Brunswick, citing a 2023 report; the ABC's 2026 report says only that she does not live in the region."
+      },
+      "occupation": {
+        "text": "Barrister",
+        "src": [1, 3]
+      },
+      "prior_roles": [
+        {
+          "role": "Deputy Lord Mayor of Melbourne",
+          "kind": "mayor",
+          "organisation": "City of Melbourne",
+          "from": 2024,
+          "to": null,
+          "src": [2, 3]
+        },
+        {
+          "role": "Councillor",
+          "kind": "councillor",
+          "organisation": "City of Melbourne",
+          "from": 2020,
+          "to": null,
+          "src": [3]
+        },
+        {
+          "role": "Commercial and public law barrister",
+          "kind": "business",
+          "from": 2016,
+          "to": null,
+          "src": [3]
+        },
+        {
+          "role": "Lawyer",
+          "kind": "business",
+          "organisation": "Corrs Chambers Westgarth",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [3]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2020 Melbourne City Council",
+          "seat": "Councillor",
+          "party": "OTH",
+          "result": "Won",
+          "src": [3],
+          "note": "Elected as part of Sally Capp's team (Team Sally Capp)."
+        },
+        {
+          "election": "2023 Aston federal by-election",
+          "seat": "Aston",
+          "party": "LIB",
+          "result": "Lost",
+          "src": [2, 3]
+        },
+        {
+          "election": "2024 Melbourne City Council",
+          "seat": "Deputy Lord Mayor",
+          "party": "OTH",
+          "result": "Won",
+          "src": [3],
+          "note": "Running mate of Nicholas Reece on the Team Nick Reece ticket."
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Bringing crime down",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Easing the cost of living for families and businesses",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Delivering a state government that works for the west",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "party_page": "https://vicliberal.org.au/team/roshena-campbell",
+        "website": "https://www.roshenacampbell.com.au",
+        "wikipedia": "https://en.wikipedia.org/wiki/Roshena_Campbell"
+      },
+      "contact": {
+        "email": {
+          "value": "roshena.campbell@vic.liberal.org.au",
+          "kind": "campaign",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://vicliberal.org.au/team/roshena-campbell",
+          "title": "Roshena Campbell, Liberal for Western Metropolitan Region, Liberal Victoria",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.abc.net.au/news/2026-08-07/liberal-party-deputy-melbourne-mayor-roshena-campbell/107008954",
+          "title": "Liberal Party selects Roshena Campbell to replace Moira Deeming on Victorian state election ballot, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Roshena_Campbell",
+          "title": "Roshena Campbell, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 4,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
           "accessed": "2026-11-04"
         }
       ],
@@ -34144,6 +34937,95 @@
           "id": 2,
           "url": "https://en.wikipedia.org/wiki/Trung_Luu",
           "title": "Trung Luu, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "western-metropolitan/xavier-menta": {
+      "name": "Xavier Menta",
+      "summary": {
+        "text": "Xavier Menta leads the Legalise Cannabis Victoria ticket for Western Metropolitan Region in the 2026 Legislative Council election. His party page says he grew up in Melbourne's west, studied sport science at Victoria University and later horticulture. It says a serious injury at work, followed by discrimination over his use of prescribed medicinal cannabis, led him to change careers and take up advocacy, and that he has joined local campaigns on buses, data centres and waste incinerators.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Community organiser and cannabis advocate",
+        "src": [1]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [
+        {
+          "election": "2025 Werribee state by-election",
+          "seat": "Werribee",
+          "party": "LCV",
+          "result": "Lost",
+          "src": [3],
+          "unverified": true,
+          "note": "Wikipedia lists a Legalise Cannabis candidate named Xavier Menta (a horticulturist); same name, party and area, but no source we read says it is him."
+        },
+        {
+          "election": "2025 federal",
+          "seat": "Gorton",
+          "party": "LCV",
+          "result": "Lost",
+          "src": [4],
+          "unverified": true,
+          "note": "Wikipedia lists a Legalise Cannabis candidate named Xavier Menta for Gorton; same name, party and area, but no source we read says it is him."
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Using industrial hemp in modular homes to help meet housing targets and create local jobs",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "State investment in hemp research and local manufacturing",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Ending the stigma faced by medicinal cannabis patients",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Opposing AI data centres and waste-to-energy incinerators in the west, and better bus services",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "party_page": "https://www.lcvicparty.org.au/xavier_menta_candidate_for_western_metropolitan",
+        "facebook": "https://www.facebook.com/LCPXavierMenta",
+        "instagram": "https://www.instagram.com/xavier.menta.lcv/"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://web.archive.org/web/20261016030505/https://www.lcvicparty.org.au/xavier_menta_candidate_for_western_metropolitan",
+          "title": "Xavier Menta - Candidate for Western Metropolitan, Legalise Cannabis Victoria (Wayback Machine copy, Oct 2026)",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+          "title": "Candidates of the 2026 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/2025_Werribee_state_by-election",
+          "title": "2025 Werribee state by-election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 4,
+          "url": "https://en.wikipedia.org/wiki/Results_of_the_2025_Australian_federal_election_in_Victoria",
+          "title": "Results of the 2025 Australian federal election in Victoria, Wikipedia",
           "accessed": "2026-11-04"
         }
       ],
