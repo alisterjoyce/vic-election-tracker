@@ -19,6 +19,267 @@
     }
   },
   "profiles": {
+    "albert-park/adrian-king": {
+      "name": "Adrian King",
+      "summary": {
+        "text": "Adrian King is an independent candidate for Albert Park at the 2026 Victorian election. He says he turns around struggling organisations for a living, has lived locally for 15 years and became an Australian citizen in 2016. He ran in the 2024 council elections, a race his website places in Port Phillip's Port Melbourne ward while the ABC names Melbourne City Council.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Fixes broken organisations (his own description)",
+        "src": [1, 2]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [
+        {
+          "election": "2024 Port Phillip City Council",
+          "seat": "Port Melbourne Ward",
+          "party": "IND",
+          "result": "Unknown",
+          "src": [1, 2],
+          "unverified": true,
+          "note": "His website says he ran in the Port Melbourne ward; the ABC says Melbourne City Council. No source gives his label or the result."
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Rebuilding Victoria Police and bringing back local high-street policing to cut drug-related crime",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Cutting 20,000 public service jobs to return $1,000 a year to each working Victorian",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "A royal commission into Victoria Police command, the judiciary and IBAC",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Restoring Albert Park Reserve and limiting the Grand Prix's impact to four months a year",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Secure housing for people with chronic mental illness",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/albe",
+        "website": "https://votecommunity.com.au",
+        "instagram": "https://www.instagram.com/vote_1_adrian_king/"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/albe",
+          "title": "Albert Park: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://votecommunity.com.au",
+          "title": "Adrian King, Independent Candidate",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "albert-park/andrew-cook": {
+      "name": "Andrew Cook",
+      "summary": {
+        "text": "Andrew Cook is the Liberal candidate for Albert Park at the 2026 Victorian election. The party describes him as a married father and a businessman of over five decades' experience, and says his family has long ties to the area. Neither the party nor the ABC gives further detail of his career.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Businessman",
+        "src": [1, 2]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Reducing crime, including the party's pledge of 3,000 more police and tougher bail laws",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Growing the economy and easing cost-of-living pressure",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/albe",
+        "party_page": "https://vicliberal.org.au/team/andrew-cook",
+        "website": "https://www.andrewcook.com.au",
+        "facebook": "https://www.facebook.com/AndrewCookAlbertPark",
+        "instagram": "https://www.instagram.com/AndrewCookAlbertPark"
+      },
+      "contact": {
+        "email": {
+          "value": "andrew.cook@vic.liberal.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/albe",
+          "title": "Albert Park: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://vicliberal.org.au/team/andrew-cook",
+          "title": "Andrew Cook, Liberal for Albert Park, Liberal Victoria",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "albert-park/colleen-bolger": {
+      "name": "Colleen Bolger",
+      "summary": {
+        "text": "Colleen Bolger is the Victorian Socialists candidate for Albert Park at the 2026 Victorian election. She is a lawyer acting for people with asbestos-related and other work-caused diseases, a union delegate, and has campaigned against the mandatory detention of refugees for over 20 years. She has stood for the party several times, most recently in the Warrandyte by-election of 2023.",
+        "src": [1, 2, 3]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Lawyer",
+        "src": [1, 2, 3]
+      },
+      "prior_roles": [
+        {
+          "role": "Delegate",
+          "kind": "union",
+          "organisation": "Australian Services Union",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2018 Victorian state (Legislative Council)",
+          "seat": "Northern Metropolitan",
+          "party": "VS",
+          "result": "Lost",
+          "src": [1, 4]
+        },
+        {
+          "election": "2022 federal",
+          "seat": "Melbourne",
+          "party": "VS",
+          "result": "Lost",
+          "src": [1, 5]
+        },
+        {
+          "election": "2022 Victorian state",
+          "seat": "Melbourne",
+          "party": "VS",
+          "result": "Lost",
+          "src": [1, 6]
+        },
+        {
+          "election": "2023 Warrandyte by-election",
+          "seat": "Warrandyte",
+          "party": "VS",
+          "result": "Lost",
+          "src": [1, 3]
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Pay rises that keep up with inflation",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "A big public housing building program and caps on rents",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Taxing corporate profits to pay for public services",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Taking on big business to act on climate change",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Opposing racism and the scapegoating of migrants",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/albe",
+        "party_page": "https://www.victoriansocialists.org.au/candidates/colleen-bolger"
+      },
+      "contact": {
+        "email": {
+          "value": "colleen.bolger@victoriansocialists.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/albe",
+          "title": "Albert Park: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.victoriansocialists.org.au/candidates/colleen-bolger",
+          "title": "Colleen Bolger, Victorian Socialists",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/2023_Warrandyte_state_by-election",
+          "title": "2023 Warrandyte state by-election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 4,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2018_Victorian_state_election",
+          "title": "Candidates of the 2018 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 5,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2022_Australian_federal_election",
+          "title": "Candidates of the 2022 Australian federal election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 6,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2022_Victorian_state_election",
+          "title": "Candidates of the 2022 Victorian state election, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
     "albert-park/daniel-o-neill": {
       "name": "Daniel O'Neill",
       "summary": {
@@ -101,6 +362,93 @@
           "id": 4,
           "url": "https://vic.animaljusticeparty.org/candidates",
           "title": "Our Election Candidates, Animal Justice Party Victoria",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "albert-park/georgie-dragwidge": {
+      "name": "Georgie Dragwidge",
+      "summary": {
+        "text": "Georgie Dragwidge is an independent candidate for Albert Park at the 2026 Victorian election. For about 15 years she has run two businesses at the South Melbourne Market, and she is a single mother whose parents migrated from Greece. She also stood as an independent in Albert Park in 2022, taking close to 6 per cent of the primary vote.",
+        "src": [1, 2, 3]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Small business owner, South Melbourne Market",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Business owner",
+          "kind": "business",
+          "organisation": "South Melbourne Market",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2022 Victorian state",
+          "seat": "Albert Park",
+          "party": "IND",
+          "result": "Lost",
+          "src": [1, 3]
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Safety at home and on the streets through planned, funded police, justice and welfare services",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "A bigger say for small business in policy",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Integrity in politics, with properly funded anti-corruption bodies",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Consulting the electorate on major votes in Parliament",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Climate action and protecting Albert Park Reserve, local parks and beaches",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/albe",
+        "website": "https://www.georgie4albertpark.com.au",
+        "facebook": "https://www.facebook.com/georgie4AlbertPark/",
+        "instagram": "https://www.instagram.com/georgie4albertpark"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/albe",
+          "title": "Albert Park: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.georgie4albertpark.com.au",
+          "title": "Georgie Dragwidge, independent for Albert Park",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2022_Victorian_state_election",
+          "title": "Candidates of the 2022 Victorian state election, Wikipedia",
           "accessed": "2026-11-04"
         }
       ],
@@ -275,6 +623,167 @@
           "id": 2,
           "url": "https://en.wikipedia.org/wiki/Nina_Taylor",
           "title": "Nina Taylor, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "albert-park/sonya-semmens": {
+      "name": "Sonya Semmens",
+      "summary": {
+        "text": "Sonya Semmens is the Greens candidate for Albert Park at the 2026 Victorian election. Raised in Dandenong, she has spent most of her working life in the not-for-profit sector, in Australian charities and overseas aid agencies, and has also been an educator and run a small business. She stood for the Greens in the federal seats of Higgins in 2022 and Macnamara in 2025.",
+        "src": [1, 2, 3, 4]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "NGO consultant",
+        "src": [1]
+      },
+      "prior_roles": [
+        {
+          "role": "Educator",
+          "kind": "other",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1]
+        },
+        {
+          "role": "Small business owner",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2022 federal",
+          "seat": "Higgins",
+          "party": "GRN",
+          "result": "Lost",
+          "src": [1, 3]
+        },
+        {
+          "election": "2025 federal",
+          "seat": "Macnamara",
+          "party": "GRN",
+          "result": "Lost",
+          "src": [1, 4]
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "ensure no one experiences homelessness in a country as wealthy as Australia",
+          "quoted": true,
+          "src": [2]
+        },
+        {
+          "text": "Better security for renters facing insecure housing",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Fairness, so that everyone gets a go",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/albe",
+        "party_page": "https://greens.org.au/vic/person/sonya-semmens",
+        "facebook": "https://www.facebook.com/SonyaSemmensGreens/",
+        "instagram": "https://www.instagram.com/sonya_semmens/"
+      },
+      "contact": {
+        "email": {
+          "value": "sonya.semmens@vic.greens.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/albe",
+          "title": "Albert Park: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://greens.org.au/vic/person/sonya-semmens",
+          "title": "Sonya Semmens, Candidate for Albert Park, Australian Greens",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2022_Australian_federal_election",
+          "title": "Candidates of the 2022 Australian federal election, Wikipedia",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 4,
+          "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2025_Australian_federal_election",
+          "title": "Candidates of the 2025 Australian federal election, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "albert-park/tammy-lindrum": {
+      "name": "Tammy Lindrum",
+      "summary": {
+        "text": "Tammy Lindrum is One Nation's candidate for Albert Park at the 2026 Victorian election. A registered nurse who has also worked in pharmaceutical sales management and marketing, she is the founder of the Women's Billiards and Snooker Network. She is related to the billiards champion Walter Lindrum, though the ABC calls her his daughter while Wikipedia's article on him calls her his great-niece and god-daughter.",
+        "src": [1, 2],
+        "unverified": true,
+        "note": "The ABC calls her Walter Lindrum's daughter; Wikipedia's article on him calls her his great-niece and god-daughter."
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Registered nurse",
+        "src": [1]
+      },
+      "prior_roles": [
+        {
+          "role": "Sales management and marketing",
+          "kind": "business",
+          "organisation": "Pharmaceutical industry",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1]
+        },
+        {
+          "role": "Founder",
+          "kind": "community",
+          "organisation": "Women's Billiards and Snooker Network",
+          "from": null,
+          "to": null,
+          "src": [1]
+        }
+      ],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/albe",
+        "party_page": "https://vic.onenation.org.au/tammy-lindrum"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/albe",
+          "title": "Albert Park: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://en.wikipedia.org/wiki/Walter_Lindrum",
+          "title": "Walter Lindrum, Wikipedia",
           "accessed": "2026-11-04"
         }
       ],
@@ -40037,6 +40546,188 @@
       ],
       "profile_updated": "2026-11-04"
     },
+    "williamstown/ben-hocking": {
+      "name": "Ben Hocking",
+      "summary": {
+        "text": "Ben Hocking is the Greens candidate for Williamstown at the 2026 Victorian election. His job is in surveillance, a field where he also acts as a union delegate, and he was previously a journalist. He describes himself as a long-time local and says he decided to stand over planning decisions and public transport in the area.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Works in the surveillance industry",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "Union delegate",
+          "kind": "union",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        },
+        {
+          "role": "Journalist",
+          "kind": "other",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1, 2]
+        }
+      ],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "A stronger anti-corruption body and more transparency in politics",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Workers' rights",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "More GPs and better funding for the local hospital",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Better train services for the area",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Public education, the local environment and social justice",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/will",
+        "party_page": "https://greens.org.au/vic/person/ben-hocking",
+        "facebook": "https://www.facebook.com/BenHockingGreens",
+        "instagram": "https://www.instagram.com/ben.hocking.greens"
+      },
+      "contact": {
+        "email": {
+          "value": "ben.hocking@vic.greens.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/will",
+          "title": "Williamstown: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://greens.org.au/vic/person/ben-hocking",
+          "title": "Ben Hocking, Candidate for Williamstown, Australian Greens",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "williamstown/catherine-loughnan": {
+      "name": "Catherine Loughnan",
+      "summary": {
+        "text": "Catherine Loughnan is One Nation's candidate for Williamstown at the 2026 Victorian election. According to the ABC she has been in business for close to 40 years, now in transport and logistics, has owned small businesses and has been a resident of Melbourne's west for 45 years. One Nation's candidate page could not be read for this profile.",
+        "src": [1]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Works in logistics and transport",
+        "src": [1]
+      },
+      "prior_roles": [
+        {
+          "role": "Small business owner",
+          "kind": "business",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1]
+        }
+      ],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/will",
+        "party_page": "https://vic.onenation.org.au/catherine-loughnan"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/will",
+          "title": "Williamstown: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "williamstown/gill-gannon": {
+      "name": "Gill Gannon",
+      "summary": {
+        "text": "Gill Gannon is the West Party candidate for Williamstown at the 2026 Victorian election. She runs an interior decorating business, is president of the Newport Traders Association and says she led the local campaign against closing Champion Road. She says she has lived, worked and brought up her family in Melbourne's inner west.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Interior decorating business owner",
+        "src": [1, 2]
+      },
+      "prior_roles": [
+        {
+          "role": "President",
+          "kind": "community",
+          "organisation": "Newport Traders Association",
+          "from": null,
+          "to": null,
+          "src": [1, 2]
+        }
+      ],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Keeping Champion Road open",
+          "quoted": false,
+          "src": [1, 2]
+        },
+        {
+          "text": "Making sure state decisions take account of the people of the west",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/will",
+        "party_page": "https://thewestparty.org.au/local-representation/gill-gannon/"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/will",
+          "title": "Williamstown: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://thewestparty.org.au/local-representation/gill-gannon/",
+          "title": "Gill Gannon, The West Party for Williamstown",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
     "williamstown/melissa-horne": {
       "name": "Melissa Horne",
       "summary": {
@@ -40242,6 +40933,357 @@
           "id": 2,
           "url": "https://en.wikipedia.org/wiki/Melissa_Horne",
           "title": "Melissa Horne, Wikipedia",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "williamstown/oskar-martin": {
+      "name": "Oskar Martin",
+      "summary": {
+        "text": "Oskar Martin is the Victorian Socialists candidate for Williamstown at the 2026 Victorian election. A Bundjalung and Kamilaroi man born in Broken Hill, he moved to Williamstown while in primary school. He works in university research, is a member of the National Tertiary Education Union and has campaigned for Aboriginal and Palestinian rights.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Research assistant",
+        "src": [1, 2],
+        "unverified": true,
+        "note": "The party page says he is a research assistant in the Aboriginal History Archive at Victoria University; the ABC says he works in mental health research at the University of Melbourne."
+      },
+      "prior_roles": [
+        {
+          "role": "Member",
+          "kind": "union",
+          "organisation": "National Tertiary Education Union",
+          "from": null,
+          "to": null,
+          "src": [1]
+        }
+      ],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Land rights and an end to Aboriginal deaths in custody and high incarceration rates",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Secure housing and welfare payments people can live on",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Free, publicly owned health and education services",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "put people before profits",
+          "quoted": true,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/will",
+        "party_page": "https://www.victoriansocialists.org.au/candidates/oskar-martin",
+        "instagram": "https://www.instagram.com/blaktrot/"
+      },
+      "contact": {
+        "email": {
+          "value": "oskar.martin@victoriansocialists.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/will",
+          "title": "Williamstown: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://www.victoriansocialists.org.au/candidates/oskar-martin",
+          "title": "Oskar Martin, Victorian Socialists",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "williamstown/paul-lindemann": {
+      "name": "Paul Lindemann",
+      "summary": {
+        "text": "Paul Lindemann is the Liberal candidate for Williamstown at the 2026 Victorian election. He grew up in Altona, has spent his life in Melbourne's west and has run a business in the area for more than two decades. The party's page also points to his involvement in local sport and community groups.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Local business owner",
+        "src": [1, 2]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Safer communities",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Better local infrastructure",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Lower living costs",
+          "quoted": false,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/will",
+        "party_page": "https://vicliberal.org.au/team/paul-lindemann",
+        "website": "https://www.paullindemann.com.au",
+        "facebook": "https://www.facebook.com/PaulLindemannWilliamstown"
+      },
+      "contact": {
+        "email": {
+          "value": "paul.lindemann@vic.liberal.org.au",
+          "kind": "campaign",
+          "src": [2]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/will",
+          "title": "Williamstown: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://vicliberal.org.au/team/paul-lindemann",
+          "title": "Paul Lindemann, Liberal for Williamstown, Liberal Victoria",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "profile_updated": "2026-11-04"
+    },
+    "williamstown/tony-briffa": {
+      "name": "Tony Briffa",
+      "summary": {
+        "text": "Tony Briffa is standing as an independent for Williamstown at the 2026 Victorian election. Born in Altona, Briffa was elected to Hobsons Bay City Council in 2008 and served as deputy mayor and then mayor, a term that Wikipedia says made her the first openly intersex mayor known anywhere. Her working life has included jobs with Defence and the federal police, and she has long advocated for intersex people's rights.",
+        "src": [1, 2, 3]
+      },
+      "born": {
+        "year": 1970,
+        "src": [3]
+      },
+      "lives": null,
+      "occupation": {
+        "text": "Has worked for the Department of Defence, the Australian Federal Police and Ambulance Victoria's aviation provider",
+        "src": [1, 2, 3]
+      },
+      "prior_roles": [
+        {
+          "role": "Convenor",
+          "kind": "community",
+          "organisation": "Hobsons Bay Residents Association",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [2]
+        },
+        {
+          "role": "Councillor",
+          "kind": "councillor",
+          "organisation": "Hobsons Bay City Council",
+          "from": 2008,
+          "to": 2014,
+          "src": [2, 3]
+        },
+        {
+          "role": "Deputy Mayor",
+          "kind": "mayor",
+          "organisation": "Hobsons Bay City Council",
+          "from": 2009,
+          "to": 2011,
+          "src": [3]
+        },
+        {
+          "role": "Mayor",
+          "kind": "mayor",
+          "organisation": "Hobsons Bay City Council",
+          "from": 2011,
+          "to": 2012,
+          "src": [2, 3]
+        },
+        {
+          "role": "Councillor",
+          "kind": "councillor",
+          "organisation": "Hobsons Bay City Council",
+          "from": 2016,
+          "to": null,
+          "ended": true,
+          "src": [1, 2, 3]
+        },
+        {
+          "role": "Mayor (second term)",
+          "kind": "mayor",
+          "organisation": "Hobsons Bay City Council",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1],
+          "unverified": true,
+          "note": "The ABC says Briffa had two separate year-long terms as mayor; no source gives the year of the second."
+        },
+        {
+          "role": "Justice of the Peace",
+          "kind": "other",
+          "from": 2005,
+          "to": null,
+          "src": [2]
+        },
+        {
+          "role": "Bail justice",
+          "kind": "other",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1, 2]
+        },
+        {
+          "role": "Honorary Fellow",
+          "kind": "other",
+          "organisation": "Victoria University",
+          "from": null,
+          "to": null,
+          "src": [2]
+        },
+        {
+          "role": "President",
+          "kind": "community",
+          "organisation": "Intersex Peer Support Australia",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [3]
+        },
+        {
+          "role": "Co-executive director",
+          "kind": "community",
+          "organisation": "InterAction for Health and Human Rights",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [3]
+        },
+        {
+          "role": "Co-chair",
+          "kind": "public-service",
+          "organisation": "Victorian Government Intersex Expert Advisory Group",
+          "from": null,
+          "to": null,
+          "src": [3]
+        }
+      ],
+      "previous_candidacies": [
+        {
+          "election": "2008 Hobsons Bay City Council",
+          "seat": "Hobsons Bay City Council",
+          "party": "IND",
+          "result": "Won",
+          "src": [2],
+          "unverified": true,
+          "note": "No source gives the label Briffa stood under; recorded as independent, as Briffa says she belongs to no party."
+        },
+        {
+          "election": "2012 Hobsons Bay City Council",
+          "seat": "Hobsons Bay City Council",
+          "party": "IND",
+          "result": "Won",
+          "src": [2],
+          "unverified": true,
+          "note": "No source gives the label Briffa stood under; recorded as independent, as Briffa says she belongs to no party."
+        },
+        {
+          "election": "2016 Hobsons Bay City Council",
+          "seat": "Hobsons Bay City Council",
+          "party": "IND",
+          "result": "Won",
+          "src": [2, 3],
+          "unverified": true,
+          "note": "No source gives the label Briffa stood under; recorded as independent, as Briffa says she belongs to no party."
+        },
+        {
+          "election": "2020 Hobsons Bay City Council",
+          "seat": "Hobsons Bay City Council",
+          "party": "IND",
+          "result": "Won",
+          "src": [2],
+          "unverified": true,
+          "note": "No source gives the label Briffa stood under; recorded as independent, as Briffa says she belongs to no party."
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "I'll push to strengthen anti corruption bodies",
+          "quoted": true,
+          "src": [2]
+        },
+        {
+          "text": "Holding regular online and public meetings to decide how to vote in Parliament",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "More police with stronger powers, backed by the courts",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Keeping taxes, charges and household bills down without cutting front-line services",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Climate change is real and requires action now.",
+          "quoted": true,
+          "src": [2]
+        }
+      ],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/will",
+        "website": "https://briffaindependent.com.au",
+        "wikipedia": "https://en.wikipedia.org/wiki/Tony_Briffa_(politician)",
+        "facebook": "https://www.facebook.com/VoteBriffa/",
+        "instagram": "https://www.instagram.com/briffaindependent"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/will",
+          "title": "Williamstown: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://briffaindependent.com.au",
+          "title": "Tony Briffa, Independent for Williamstown District",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": 3,
+          "url": "https://en.wikipedia.org/wiki/Tony_Briffa_(politician)",
+          "title": "Tony Briffa (politician), Wikipedia",
           "accessed": "2026-11-04"
         }
       ],
