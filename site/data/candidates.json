@@ -2667,7 +2667,8 @@
       "source": "abc",
       "source_url": "https://www.abc.net.au/news/elections/vic/2026/guide/clar",
       "date_added": "2026-10-30",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "website": "https://www.facebook.com/LIAM.ROCHE.LDP"
     },
     {
       "district": "clarinda",
@@ -2705,6 +2706,18 @@
       "updated": "2026-11-05",
       "source": "abc",
       "website": "https://greens.org.au/vic/person/annalise-mercer"
+    },
+    {
+      "district": "cranbourne",
+      "name": "Craig Baird",
+      "party": "LBT",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "date_added": "2026-11-05",
+      "source": "abc",
+      "source_url": "https://www.abc.net.au/news/elections/vic/2026/guide/cran",
+      "updated": "2026-11-05"
     },
     {
       "district": "cranbourne",
@@ -3290,10 +3303,10 @@
       "status": "endorsed",
       "ballot_position": null,
       "incumbent": false,
-      "source": "wikipedia",
-      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "source": "abc",
+      "source_url": "https://www.abc.net.au/news/elections/vic/2026/guide/euro",
       "date_added": "2026-11-04",
-      "updated": "2026-11-04",
+      "updated": "2026-11-05",
       "website": "https://www.viclabor.org.au/our-team/julian-kelly",
       "notes": "Confirmed as Labor's Euroa candidate on the party's own page (checked 2026-11-04); not yet on the ABC guide"
     },
@@ -3737,6 +3750,19 @@
       "date_added": "2026-10-30",
       "updated": "2026-11-05",
       "website": "https://vic.onenation.org.au/john-de-lorenzo"
+    },
+    {
+      "district": "geelong",
+      "name": "Pippa Macpherson",
+      "party": "AJP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "date_added": "2026-11-05",
+      "source": "abc",
+      "source_url": "https://www.abc.net.au/news/elections/vic/2026/guide/geel",
+      "updated": "2026-11-05",
+      "website": "https://vic.animaljusticeparty.org/pippa_macpherson"
     },
     {
       "district": "gippsland-east",
@@ -5044,6 +5070,19 @@
       "website": "https://greens.org.au/vic/person/georgia-katsikis"
     },
     {
+      "district": "malvern",
+      "name": "Peter Martin",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "date_added": "2026-11-05",
+      "source": "abc",
+      "source_url": "https://www.abc.net.au/news/elections/vic/2026/guide/malv",
+      "updated": "2026-11-05",
+      "website": "https://www.viclabor.org.au/our-team/peter-martin"
+    },
+    {
       "district": "melbourne",
       "name": "Davydd Griffiths",
       "party": "ALP",
@@ -5525,28 +5564,29 @@
       "district": "mordialloc",
       "name": "Lily Potecuk",
       "party": "FF",
-      "status": "endorsed",
+      "status": "superseded",
       "ballot_position": null,
       "incumbent": false,
       "date_added": "2026-11-05",
       "source": "abc",
       "source_url": "https://www.abc.net.au/news/elections/vic/2026/guide/mord",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "superseded_by": "Lily Potucek",
+      "superseded_on": "2026-11-05",
+      "notes": "Superseded by Lily Potucek (ABC guide, 2026-11-05)"
     },
     {
       "district": "mordialloc",
       "name": "Lily Potucek",
       "party": "FF",
-      "status": "superseded",
+      "status": "endorsed",
       "ballot_position": null,
       "incumbent": false,
       "date_added": "2026-10-30",
       "source": "abc",
       "source_url": "https://www.abc.net.au/news/elections/vic/2026/guide/mord",
       "updated": "2026-11-05",
-      "superseded_by": "Lily Potecuk",
-      "superseded_on": "2026-11-05",
-      "notes": "Superseded by Lily Potecuk (ABC guide, 2026-11-05)"
+      "website": "https://www.familyfirstparty.org.au/potucek_2026"
     },
     {
       "district": "mordialloc",
@@ -6581,6 +6621,19 @@
     },
     {
       "district": "ovens-valley",
+      "name": "Jennifer Smith",
+      "party": "ALP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "date_added": "2026-11-05",
+      "source": "abc",
+      "source_url": "https://www.abc.net.au/news/elections/vic/2026/guide/oven",
+      "updated": "2026-11-05",
+      "website": "https://www.viclabor.org.au/our-team/jennifer-smith"
+    },
+    {
+      "district": "ovens-valley",
       "name": "Julian Fidge",
       "party": "LBT",
       "status": "endorsed",
@@ -6604,6 +6657,19 @@
       "date_added": "2026-10-30",
       "updated": "2026-11-05",
       "website": "https://www.facebook.com/profile.php?id=61592824994649"
+    },
+    {
+      "district": "ovens-valley",
+      "name": "Sue Litchfield",
+      "party": "AJP",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "date_added": "2026-11-05",
+      "source": "abc",
+      "source_url": "https://www.abc.net.au/news/elections/vic/2026/guide/oven",
+      "updated": "2026-11-05",
+      "website": "https://vic.animaljusticeparty.org/sue_litchfield"
     },
     {
       "district": "ovens-valley",
@@ -7529,7 +7595,8 @@
       "source": "abc",
       "source_url": "https://www.abc.net.au/news/elections/vic/2026/guide/rowv",
       "date_added": "2026-10-30",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "website": "https://www.facebook.com/profile.php?id=61590107622947"
     },
     {
       "district": "sandringham",
@@ -8211,7 +8278,8 @@
       "date_added": "2026-10-30",
       "source": "abc",
       "source_url": "https://www.abc.net.au/news/elections/vic/2026/guide/tarn",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "website": "https://www.familyfirstparty.org.au/niyongabire_2026"
     },
     {
       "district": "tarneit",
@@ -8603,6 +8671,19 @@
       "updated": "2026-11-05",
       "source": "abc",
       "website": "https://vicliberal.org.au/team/reece-clark"
+    },
+    {
+      "district": "werribee",
+      "name": "Sandhya Kayagurla",
+      "party": "OTH",
+      "status": "endorsed",
+      "ballot_position": null,
+      "incumbent": false,
+      "date_added": "2026-11-05",
+      "source": "abc",
+      "source_url": "https://www.abc.net.au/news/elections/vic/2026/guide/werr",
+      "updated": "2026-11-05",
+      "notes": "Party on ABC: The Republican"
     },
     {
       "district": "werribee",

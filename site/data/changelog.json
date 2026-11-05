@@ -6,8 +6,83 @@
       "entries": "[{date (Melbourne YYYY-MM-DD), at (ISO UTC), type, ...}] where type is one of: candidate_added {seat, name, party, status, source}; candidate_superseded {seat, name, party, by}; candidate_withdrawn {seat, name, party}; candidate_not_standing {seat, name, party}; poll_added {id, pollster, end_date, tpp (L/NP), primary}; odds_move {seat, label, party, from, to} (a price moving 0.5 or more); retirement {seat, name}; news {count} (new headlines collected)"
     }
   },
-  "updated": "2026-11-05T05:54:07Z",
+  "updated": "2026-11-05T09:53:13Z",
   "entries": [
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-05T09:53:13Z",
+      "type": "candidate_added",
+      "seat": "cranbourne",
+      "name": "Craig Baird",
+      "party": "LBT",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-05T09:53:13Z",
+      "type": "candidate_added",
+      "seat": "geelong",
+      "name": "Pippa Macpherson",
+      "party": "AJP",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-05T09:53:13Z",
+      "type": "candidate_added",
+      "seat": "malvern",
+      "name": "Peter Martin",
+      "party": "ALP",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-05T09:53:13Z",
+      "type": "candidate_superseded",
+      "seat": "mordialloc",
+      "name": "Lily Potecuk",
+      "party": "FF",
+      "by": "Lily Potucek"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-05T09:53:13Z",
+      "type": "candidate_added",
+      "seat": "ovens-valley",
+      "name": "Jennifer Smith",
+      "party": "ALP",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-05T09:53:13Z",
+      "type": "candidate_added",
+      "seat": "ovens-valley",
+      "name": "Sue Litchfield",
+      "party": "AJP",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-05T09:53:13Z",
+      "type": "candidate_added",
+      "seat": "werribee",
+      "name": "Sandhya Kayagurla",
+      "party": "OTH",
+      "status": "endorsed",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-05",
+      "at": "2026-11-05T09:53:13Z",
+      "type": "news",
+      "count": 3
+    },
     {
       "date": "2026-11-05",
       "at": "2026-11-05T05:54:07Z",
