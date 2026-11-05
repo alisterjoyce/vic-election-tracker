@@ -5,7 +5,7 @@
       "id": "URL slug, used as the #hash on upper.html (e.g. northern-victoria)",
       "name": "Region name",
       "area": "metro | regional",
-      "mlcs": "Current members: [{name, party, retiring, retiring_source, notes}]. retiring_source (optional) is set when the flag came from electiontracker.au's retirements list: {name, url, publisher, title, published, kind, via, added}",
+      "mlcs": "Current members: [{name, party, retiring, retiring_source, notes}]. retiring_source (optional) is set when the flag came from electiontracker.au's retirements list: {name, url, publisher, title, published, kind (official | mainstream, set by refresh.py; hand when a person checked a source the rule doesn't accept), via, added}",
       "tickets": "Groups on the 2026 ballot: [{group (ballot letter, null before the 9 Nov draw), party, status (endorsed | reported | vec_nominated | withdrawn), candidates: [names in ticket order; TBC/TBD where a position is unfilled], notes}]",
       "notes": "Optional region-level notes (unnamed candidates, seats in contention)"
     }
@@ -581,8 +581,18 @@
         {
           "name": "David Ettershank",
           "party": "LCV",
-          "retiring": false,
-          "notes": "Wikipedia reported he would retire (as of 2 June 2026); unconfirmed."
+          "retiring": true,
+          "notes": "Not recontesting: announced 2 Jun 2026. Xavier Menta leads the Legalise Cannabis ticket for this region.",
+          "retiring_source": {
+            "name": "David Ettershank",
+            "url": "https://www.cannabiz.com.au/legalise-cannabis-victoria-mp-david-ettershank-confirms-political-exit/",
+            "publisher": "Cannabis Australia (Cannabiz)",
+            "title": "Legalise Cannabis Victoria MP David Ettershank confirms political exit",
+            "published": "2026-06-02",
+            "kind": "hand",
+            "via": "Australian Election Tracker (OZE), electiontracker.au; checked by hand",
+            "added": "2026-11-06"
+          }
         },
         {
           "name": "Trung Luu",
