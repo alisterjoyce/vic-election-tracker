@@ -23,9 +23,12 @@
   "aeforecasts") whenever the model changes.
 * RedBridge seat model: entered by hand in seat_models.json; each run checks
   RedBridge's sitemaps for a newer Victorian release and logs a warning.
-* Profiles (check only): warns about any profiles.json entry whose candidacy
-  is no longer active, e.g. after the ABC respells a name, with a hint where
-  to move it. Profiles are never moved automatically.
+* Profiles: when the ABC respells a name (the row renamed in place, or
+  superseded by the new spelling), the person's profile and headshot move to
+  the new candidate id if the seat and party match and the names are
+  near-identical (the independents' rule); each move is logged as "profile
+  moved" and added to the Actions run summary. A check then warns about any
+  profile still without an active candidacy, with a hint where to move it.
 * VEC candidates: placeholder (see fetch_vec_candidates below).
 * How-to-vote cards: the VEC register (from 10 Nov 2026), recorded in htv.json;
   preference orders are entered by hand and kept.
@@ -1037,6 +1040,8 @@ def _apply_abc_entry(entry: dict, did: str, url: str, seat_rows: list[dict], row
         # Take the ABC spelling only for real variants, not accents or punctuation.
         if _name_key(match["name"]) != key:
             log.info("%s: name %r -> %r (ABC spelling)", did, match["name"], entry["name"])
+            stats.setdefault("respelled", []).append({"seat": did, "old": match["name"], "old_party": match.get("party"),
+                                                      "new": entry["name"], "new_party": party})
             match["name"] = entry["name"]
         if match.get("party") != party:
             log.warning("%s: %s party %s -> %s (ABC)", did, entry["name"], match.get("party"), party)
@@ -1067,6 +1072,11 @@ def _supersede(did: str, seat_rows: list[dict], abc_rows: list[dict], today: str
 
     def mark(old: dict, winners: str) -> None:
         log.warning("%s: %s (%s, %s) superseded by ABC entry %s", did, old["name"], old.get("party"), old.get("status"), winners)
+        # A respelling of the same person: carry_profiles() may move their profile and photo to the new row.
+        new = next((c for c in abc_rows if c.get("party") == old.get("party") and _near_identical(old["name"], c["name"])), None)
+        if new is not None:
+            stats.setdefault("respelled", []).append({"seat": did, "old": old["name"], "old_party": old.get("party"),
+                                                      "new": new["name"], "new_party": new.get("party")})
         old["status"] = "superseded"
         old["superseded_by"] = winners
         old["superseded_on"] = today
@@ -1229,6 +1239,7 @@ def refresh_abc(data_dir: Path, meta: dict) -> bool:
     write_json(cand_path, {**cand_doc, "candidates": _sort_candidates(rows)})
     if reg_changed:
         write_json(reg_path, reg_doc)
+    carry_profiles(data_dir, stats.get("respelled", []), meta)
     source.update(status="ok", url=ABC_ELECTORATES_URL, last_success=now_iso(),
                   message=(f"{len(pages)} district pages, {stats['district_changes']} districts updated; "
                            f"{stats['added']} candidates added, "
@@ -1555,6 +1566,86 @@ def refresh_aeforecasts(data_dir: Path, meta: dict) -> bool:
     write_json(path, doc)
     log.info("Wrote %s: Australian Election Forecasts model of %s (%s)", path.name, model["model_date"], model["label"])
     return True
+
+
+def run_summary(markdown: str) -> None:
+    """Add a line to the GitHub Actions run summary (no-op elsewhere)."""
+    path = os.environ.get("GITHUB_STEP_SUMMARY")
+    if path:
+        with open(path, "a", encoding="utf-8") as f:
+            f.write(markdown + "\n")
+
+
+def write_profiles(path: Path, doc: dict) -> None:
+    """profiles.json in its usual layout: indent 2, each src list on one line (as written by hand and by merge.py)."""
+    text = json.dumps(doc, indent=2, ensure_ascii=False)
+    text = re.sub(r"\[\s*(\d+(?:,\s*\d+)*)\s*\]", lambda m: "[" + ", ".join(re.findall(r"\d+", m.group(1))) + "]", text)
+    fd, tmp = tempfile.mkstemp(dir=path.parent, prefix=f".{path.name}.", suffix=".tmp")
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8", newline="\n") as f:
+            f.write(text + "\n")
+        os.replace(tmp, path)
+    except BaseException:
+        Path(tmp).unlink(missing_ok=True)
+        raise
+
+
+def carry_profiles(data_dir: Path, respelled: list[dict], meta: dict) -> list[dict]:
+    """When the ABC respells a name (the old row renamed in place, or superseded by the new spelling), move the
+    person's profile and headshot to the new candidate id, but only if the seat and party match and the names are
+    near-identical (_near_identical: first names near-identical AND surnames near-identical, the rule used for
+    independents). Anything else is left for check_profiles() to warn about. Returns the moves made."""
+    from profile_seats import candidate_id   # same folder (scripts/)
+    source = meta.setdefault("sources", {}).setdefault("profiles", {})
+    moves = []
+    if not respelled:
+        source["moved"] = []
+        return moves
+    prof_path, shot_path = data_dir / "profiles.json", data_dir / "headshots.json"
+    prof_doc = read_json(prof_path, {}) or {}
+    shot_doc = read_json(shot_path, {}) or {}
+    profiles = prof_doc.get("profiles", {})
+    shots = shot_doc.get("headshots", [])
+    shot_ids = {h.get("id") for h in shots}
+    for ev in respelled:
+        seat, old, new = ev["seat"], ev["old"], ev["new"]
+        old_id, new_id = candidate_id(seat, old), candidate_id(seat, new)
+        if old_id == new_id or (old_id not in profiles and old_id not in shot_ids):
+            continue   # same id (accents, punctuation) or nothing to carry
+        if ev["old_party"] != ev["new_party"] or not _near_identical(old, new):
+            log.warning("%s: %s -> %s doesn't meet the match rule (party %s/%s); profile and photo not moved",
+                        seat, old, new, ev["old_party"], ev["new_party"])
+            continue
+        moved = []
+        if old_id in profiles:
+            if new_id in profiles:
+                log.warning("%s: %s already has a profile; %s's was not moved", seat, new_id, old_id)
+            else:
+                p = profiles.pop(old_id)
+                p["name"] = new
+                if isinstance(p.get("summary"), dict) and p["summary"].get("text"):
+                    p["summary"]["text"] = p["summary"]["text"].replace(old, new)
+                profiles[new_id] = p
+                moved.append("profile")
+        for h in shots:
+            if h.get("id") == old_id:
+                if new_id in shot_ids:
+                    log.warning("%s: %s already has a photo; %s's was not moved", seat, new_id, old_id)
+                else:
+                    h["id"] = new_id   # the files keep their names; pages find photos by id
+                    moved.append("headshot")
+        if moved:
+            move = {"seat": seat, "from": old_id, "to": new_id, "old_name": old, "new_name": new, "moved": moved}
+            moves.append(move)
+            log.info("profile moved: %s -> %s (%s; ABC respelled %r as %r)", old_id, new_id, " and ".join(moved), old, new)
+            run_summary(f"- profile moved: `{old_id}` → `{new_id}` ({' and '.join(moved)}; ABC respelled {old} as {new})")
+    if any("profile" in m["moved"] for m in moves):
+        prof_doc["profiles"] = dict(sorted(profiles.items()))
+        write_profiles(prof_path, prof_doc)
+    if any("headshot" in m["moved"] for m in moves):
+        shot_path.write_text(json.dumps(shot_doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\n")   # build_headshots.py's layout
+    source["moved"] = moves
+    return moves
 
 
 def check_profiles(data_dir: Path, meta: dict) -> bool:
