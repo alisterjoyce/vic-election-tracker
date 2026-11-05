@@ -37,18 +37,18 @@ def candidate_id(seat, name):
     return f"{seat}/{slug(given_first(name))}"
 
 
-def load(name):
-    return json.loads((DATA / f"{name}.json").read_text(encoding="utf-8"))
+def load(name, data_dir=DATA):
+    return json.loads((Path(data_dir) / f"{name}.json").read_text(encoding="utf-8"))
 
 
-def candidates_by_seat():
-    """{seat id: {candidate id: (name, party)}} for every active candidacy."""
+def candidates_by_seat(data_dir=DATA):
+    """{seat id: {candidate id: (name, party)}} for every active candidacy (refresh.py passes its own data folder)."""
     seats = {}
-    for c in load("candidates")["candidates"]:
+    for c in load("candidates", data_dir)["candidates"]:
         seat = c.get("district") or c.get("region")
         if seat and c.get("status") not in INACTIVE and not PLACEHOLDER.match(c["name"].strip()):
             seats.setdefault(seat, {})[candidate_id(seat, c["name"])] = (c["name"], c.get("party") or "")
-    for r in load("regions")["regions"]:
+    for r in load("regions", data_dir)["regions"]:
         for t in r.get("tickets") or []:
             if t.get("status") in INACTIVE:
                 continue

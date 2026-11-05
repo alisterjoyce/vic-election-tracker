@@ -23,6 +23,9 @@
   "aeforecasts") whenever the model changes.
 * RedBridge seat model: entered by hand in seat_models.json; each run checks
   RedBridge's sitemaps for a newer Victorian release and logs a warning.
+* Profiles (check only): warns about any profiles.json entry whose candidacy
+  is no longer active, e.g. after the ABC respells a name, with a hint where
+  to move it. Profiles are never moved automatically.
 * VEC candidates: placeholder (see fetch_vec_candidates below).
 * How-to-vote cards: the VEC register (from 10 Nov 2026), recorded in htv.json;
   preference orders are entered by hand and kept.
@@ -1554,6 +1557,49 @@ def refresh_aeforecasts(data_dir: Path, meta: dict) -> bool:
     return True
 
 
+def check_profiles(data_dir: Path, meta: dict) -> bool:
+    """Warn about profiles whose candidacy is no longer active (e.g. the ABC respelled a name, so the old row was
+    superseded and the profile is stranded under the old id). Never changes data: move or remove the profile by hand."""
+    source = meta.setdefault("sources", {}).setdefault("profiles", {})
+    try:
+        from profile_seats import candidate_id, candidates_by_seat   # same folder (scripts/)
+        profiles = (read_json(data_dir / "profiles.json", {}) or {}).get("profiles", {})
+        active = {cid for seat in candidates_by_seat(data_dir).values() for cid in seat}
+        rows = (read_json(data_dir / "candidates.json", {}) or {}).get("candidates", [])
+    except Exception as exc:  # noqa: BLE001 - a check only
+        log.warning("Profile check skipped: %s", exc)
+        source.update(status="error", message=str(exc)[:300])
+        return False
+    by_id = {}
+    for c in rows:
+        seat = c.get("district") or c.get("region")
+        if seat:
+            by_id.setdefault(candidate_id(seat, c["name"]), c)
+    stranded = []
+    for cid in sorted(set(profiles) - active):
+        row = by_id.get(cid) or {}
+        seat = cid.split("/")[0]
+        if row.get("status") == "superseded" and row.get("superseded_by"):
+            new = candidate_id(seat, row["superseded_by"].split(" / ")[0])
+            hint = (f"superseded by {row['superseded_by']}: {new} already has a profile, so remove this one" if new in profiles
+                    else f"superseded by {row['superseded_by']}: move the profile to {new}")
+        elif row.get("status"):
+            hint = f"row is {row['status']}: move or remove the profile"
+        else:   # the row may have been renamed in place: look for a near-identical id in the same seat
+            near = difflib.get_close_matches(cid, [a for a in active if a.startswith(seat + "/")], n=1, cutoff=0.85)
+            hint = (f"probably respelled: move the profile to {near[0]}" if near and near[0] not in profiles
+                    else f"probably respelled as {near[0]}, which already has a profile: remove this one" if near
+                    else "no candidate row has this id: check the spelling")
+        stranded.append({"id": cid, "hint": hint})
+        log.warning("Profile %s no longer matches an active candidacy (%s)", cid, hint)
+        warn_ci(f"Profile {cid} no longer matches an active candidacy ({hint})")
+    source.update(status="ok", last_success=now_iso(), stranded=stranded,
+                  message=f"{len(profiles)} profiles; {len(stranded)} without an active candidacy")
+    if not stranded:
+        log.info("Profiles: all %d match an active candidacy", len(profiles))
+    return False
+
+
 def check_redbridge(data_dir: Path, meta: dict) -> bool:
     """Warn when RedBridge's site shows a Victorian release newer than the model held. Never changes data."""
     source = meta.setdefault("sources", {}).setdefault("redbridge", {"url": REDBRIDGE_SITEMAPS[0]})
@@ -2185,6 +2231,7 @@ def main(argv=None) -> int:
         refresh_candidates(data_dir, meta),
         refresh_htv(data_dir, meta),
         refresh_news(data_dir, meta),
+        check_profiles(data_dir, meta),        # watch only: warns when a respelled or withdrawn name strands a profile
     ]
     refresh_changelog(data_dir, meta)   # last: compares everything written above with the previous run
     if any(updated):
