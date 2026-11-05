@@ -25,6 +25,8 @@
     ["news.json", "Headlines per seat and statewide: title, outlet, date, link", "Headlines belong to their publishers and aren't covered by this site's licence. Links only."],
     ["headshots.json", "Candidate photo records: files, source, credit, licence", "Photos belong to the parties, campaigns and outlets credited and aren't covered by this site's licence."],
     ["profiles.json", "Researched candidate profiles: summary, roles, past candidacies, priorities, links, and a source for every fact", `${OURS} Facts are drawn from the sources listed in each profile, including Wikipedia (${WIKI}) and the Parliament of Victoria.`],
+    ["policies.json", "Party policy ledger: each major party's published position on 15 issues, with a source for every claim",
+      '<a href="https://electiontracker.au/elections/vic/2026/data">Australian Election Tracker (OZE), electiontracker.au</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, copied at each refresh. A ledger of published claims, not a rating; keep its caveat with any reuse. Cite as: Australian Election Tracker (OZE), Victorian state election 2026 candidate ledger, electiontracker.au, accessed (date).'],
     ["meta.json", "Refresh times, source status, key dates, 2022 baseline", OURS],
     ["localities.json", "Suburbs and postcodes to districts, with area shares", VICMAP],
     ["geo/districts.geojson", "District boundaries, simplified", VICMAP],

@@ -1198,7 +1198,9 @@ def refresh_abc(data_dir: Path, meta: dict) -> bool:
         if page.get("sitting_mp") and _name_key(page["sitting_mp"]) != _name_key(d.get("sitting_mp", "")):
             log.warning("%s: sitting member %r -> %r (ABC)", d["id"], d.get("sitting_mp"), page["sitting_mp"])
             d["sitting_mp"] = page["sitting_mp"]
-        retiring = bool(page.get("retiring")) or _name_key(d.get("sitting_mp", "")) in retiring_keys
+        held = d.get("retiring_source") or {}   # set from electiontracker.au's list (refresh_et_retirements)
+        retiring = (bool(page.get("retiring")) or _name_key(d.get("sitting_mp", "")) in retiring_keys
+                    or bool(held) and _name_key(held.get("name", "")) == _name_key(d.get("sitting_mp", "")))
         if retiring != d.get("retiring"):
             log.info("%s: retiring %s -> %s (ABC)", d["id"], d.get("retiring"), retiring)
             d["retiring"] = retiring
@@ -1423,6 +1425,274 @@ def refresh_electiontracker(data_dir: Path, meta: dict) -> bool:
     source.update(status="ok", url=ET_CANDIDATES_URL, last_success=now_iso(),
                   message=f"{len(active)} active candidacies; {len(missing)} not in the tracker")
     log.info("electiontracker.au: %d listed, %d active, %d not in the tracker", len(theirs), len(active), len(missing))
+    return True
+
+
+# ---- electiontracker.au: retirements --------------------------------------
+# retirements.json lists MPs and MLCs who have said they won't recontest, each with one source. Any it lists
+# that we don't flag as retiring are reported (meta.json -> reconciliation_electiontracker_retirements and the
+# log). The flag is set only when that source is a party or Parliament page or a mainstream outlet (by the
+# source URL's domain); anything else (local papers, social posts, an MP's own site, trade sites) is reported
+# for a person to check. A flag set this way carries retiring_source, which the ABC step respects (it would
+# otherwise reset a district's flag to what the ABC says each run).
+ET_RETIREMENTS_URL = ET_SITE + "/data/vic2026/retirements.json"
+ET_CREDIT = "Australian Election Tracker (OZE), electiontracker.au"
+ET_OFFICIAL_DOMAINS = {   # Parliament and the parties' own sites
+    "parliament.vic.gov.au", "viclabor.com.au", "alp.org.au", "vic.liberal.org.au", "liberal.org.au",
+    "vic.nationals.org.au", "nationals.org.au", "greens.org.au", "onenation.org.au", "lcvicparty.org.au",
+    "legalisecannabis.org.au", "animaljustice.org.au", "animaljusticeparty.org", "victoriansocialists.org.au",
+    "familyfirst.org.au", "libertarians.org.au", "sff.org.au", "dlp.org.au",
+}
+ET_MAINSTREAM_DOMAINS = {   # mainstream news outlets
+    "abc.net.au", "theage.com.au", "smh.com.au", "heraldsun.com.au", "theaustralian.com.au", "afr.com",
+    "theguardian.com", "skynews.com.au", "sbs.com.au", "9news.com.au", "7news.com.au", "10play.com.au",
+    "news.com.au", "aap.com.au",
+}
+
+
+def _et_source_kind(url: str) -> str | None:
+    """'official' (party or Parliament), 'mainstream' (news outlet) or None, by the URL's domain."""
+    host = (urllib.parse.urlsplit(url or "").hostname or "").lower()
+    in_set = lambda domains: any(host == d or host.endswith("." + d) for d in domains)
+    return "official" if in_set(ET_OFFICIAL_DOMAINS) else "mainstream" if in_set(ET_MAINSTREAM_DOMAINS) else None
+
+
+def _et_json(web: "PoliteSession", rp, url: str):
+    if not rp.can_fetch(ABC_USER_AGENT, url):
+        raise PermissionError("robots.txt disallows " + url)
+    return json.loads(web.get(url))
+
+
+def _et_robots(web: "PoliteSession"):
+    rp = urllib.robotparser.RobotFileParser()
+    rp.parse(web.get(ET_SITE + "/robots.txt").splitlines())
+    return rp
+
+
+def _same_person(a: str, b: str) -> bool:
+    """Same name ignoring case, accents and punctuation, or the same surname with first names agreeing on
+    their first three letters (Tim/Timothy)."""
+    if _name_key(a) == _name_key(b):
+        return True
+    pa, pb = (a or "").split(), (b or "").split()
+    return (len(pa) >= 2 and len(pb) >= 2 and _name_key(pa[-1]) == _name_key(pb[-1])
+            and _name_key(pa[0])[:3] == _name_key(pb[0])[:3])
+
+
+def refresh_et_retirements(data_dir: Path, meta: dict) -> bool:
+    source = meta.setdefault("sources", {}).setdefault("electiontracker_retirements", {"url": ET_RETIREMENTS_URL})
+    dist_path, reg_path = data_dir / "districts.json", data_dir / "regions.json"
+    try:
+        dist_doc, reg_doc = read_json(dist_path, {}) or {}, read_json(reg_path, {}) or {}
+        if not dist_doc.get("districts") or not reg_doc.get("regions"):
+            raise ValueError("districts.json or regions.json is empty")
+        web = PoliteSession()
+        listed = _et_json(web, _et_robots(web), ET_RETIREMENTS_URL)
+        listed = listed.get("retirements", []) if isinstance(listed, dict) else listed
+        if not listed:
+            raise ValueError("electiontracker.au listed no retirements")
+    except Exception as exc:  # noqa: BLE001 - keep the files, report, keep going
+        log.error("electiontracker.au retirements check skipped: %s", exc)
+        warn_ci(f"electiontracker.au retirements check skipped: {exc}")
+        source.update(status="error", message=str(exc)[:300])
+        return False
+
+    today = datetime.now(MELBOURNE).date().isoformat()
+    districts = {d["id"]: d for d in dist_doc["districts"]}
+    regions = {r["id"]: r for r in reg_doc["regions"]}
+    reported, unmatched, set_now, theirs = [], [], [], set()
+    dist_changed = reg_changed = False
+    for e in listed:
+        name, seat, role = str(e.get("name") or "").strip(), e.get("seat") or "", e.get("role") or ""
+        src = e.get("source") or {}
+        kind = _et_source_kind(src.get("url"))
+        if role == "MLA":
+            d = districts.get(seat)
+            target = d if d and _same_person(d.get("sitting_mp", ""), name) else None
+            holder = target
+        elif role == "MLC":
+            target = next((m for rid in [seat, *regions] for m in (regions.get(rid) or {}).get("mlcs", [])
+                           if _same_person(m.get("name", ""), name)), None)
+            holder = target
+        else:
+            target = holder = None
+        if target is None:
+            unmatched.append({"role": role, "seat": seat, "name": name, "source_url": src.get("url")})
+            continue
+        theirs.add(("MLA", seat) if role == "MLA" else ("MLC", _name_key(target["name"])))
+        if target.get("retiring"):
+            continue
+        entry = {"role": role, "seat": seat, "name": name, "party": ET_PARTIES.get(e.get("party") or "", "OTH"),
+                 "announced": e.get("announced"),
+                 "source": {k: src.get(k) for k in ("url", "publisher", "title", "published") if src.get(k)}}
+        if kind:
+            holder["retiring"] = True
+            holder["retiring_source"] = {"name": name, **entry["source"], "kind": kind,
+                                         "via": ET_CREDIT, "added": today}
+            entry["action"] = f"flag set ({kind} source)"
+            set_now.append(entry)
+            dist_changed |= role == "MLA"
+            reg_changed |= role == "MLC"
+            log.warning("%s: %s now retiring (electiontracker.au; %s: %s)", seat, name, src.get("publisher"), src.get("url"))
+        else:
+            entry["action"] = "report only: the source isn't a party or Parliament page or a mainstream outlet"
+            reported.append(entry)
+            log.warning("%s: %s is listed as retiring on electiontracker.au but not here (source %s: %s); "
+                        "check it and set the flag by hand", seat, name, src.get("publisher"), src.get("url"))
+            warn_ci(f"{seat}: {name} listed as retiring on electiontracker.au, not here; source {src.get('url')}")
+    for u in unmatched:
+        log.warning("electiontracker.au retirement not matched to a sitting member: %s %s (%s)", u["role"], u["name"], u["seat"])
+    tracker_only = sorted(
+        [{"role": "MLA", "seat": d["id"], "name": d.get("sitting_mp")} for d in districts.values()
+         if d.get("retiring") and ("MLA", d["id"]) not in theirs]
+        + [{"role": "MLC", "seat": r["id"], "name": m["name"]} for r in regions.values() for m in r.get("mlcs", [])
+           if m.get("retiring") and ("MLC", _name_key(m["name"])) not in theirs], key=lambda x: (x["role"], x["seat"]))
+    from_et = sorted(
+        [{"role": "MLA", "seat": d["id"], "name": d.get("sitting_mp"), "source": d["retiring_source"]}
+         for d in districts.values() if d.get("retiring_source")]
+        + [{"role": "MLC", "seat": r["id"], "name": m["name"], "source": m["retiring_source"]}
+           for r in regions.values() for m in r.get("mlcs", []) if m.get("retiring_source")],
+        key=lambda x: (x["role"], x["seat"]))
+    if dist_changed:
+        write_json(dist_path, dist_doc)
+    if reg_changed:
+        write_json(reg_path, reg_doc)
+    meta["reconciliation_electiontracker_retirements"] = {
+        "date": today, "data_url": ET_RETIREMENTS_URL, "credit": ET_CREDIT + " (CC BY 4.0)",
+        "rule": "Flags are set from their list only when the source is a party or Parliament page or a mainstream "
+                "news outlet; other sources are reported here for checking by hand.",
+        "totals": {"listed": len(listed), "set_this_run": len(set_now), "report_only": len(reported),
+                   "unmatched": len(unmatched), "flagged_here_not_listed": len(tracker_only)},
+        "not_flagged_here": reported,
+        "set_this_run": set_now,
+        "flags_from_electiontracker": from_et,
+        "unmatched": unmatched,
+        "flagged_here_not_listed": tracker_only,
+    }
+    source.update(status="ok", url=ET_RETIREMENTS_URL, last_success=now_iso(),
+                  message=f"{len(listed)} listed; {len(set_now)} flags set; {len(reported)} to check by hand")
+    log.info("electiontracker.au retirements: %d listed, %d flags set, %d to check, %d unmatched",
+             len(listed), len(set_now), len(reported), len(unmatched))
+    return True
+
+
+# ---- electiontracker.au: policies -----------------------------------------
+# policies.json (a party-by-issue ledger of sourced claims) and issues.json (the 15 issues) are copied each
+# run into site/data/policies.json for the Policies page, with their caveat carried through as they ask.
+# Only the fields the page shows are kept. Rewritten only when the content changes (their build stamp alone
+# doesn't count).
+ET_POLICIES_URL = ET_SITE + "/data/vic2026/policies.json"
+ET_ISSUES_URL = ET_SITE + "/data/vic2026/issues.json"
+ET_MATRIX_PAGE = ET_SITE + "/elections/vic/2026/parties/matrix"
+ET_DATA_PAGE = ET_SITE + "/elections/vic/2026/data"
+POLICIES_SCHEMA = {
+    "description": "Party policy ledger for the 2026 Victorian election, copied each run from electiontracker.au "
+                   "(policies.json and issues.json, CC BY 4.0) by scripts/refresh.py. A ledger of published, "
+                   "individually sourced claims, not a rating. The statements and issue summaries are "
+                   "electiontracker.au's, reused under CC BY 4.0; the caveat is carried through as they ask.",
+    "fields": {
+        "credit": "who to credit, the licence and the citation",
+        "generated": "electiontracker.au's build time for the copy held here (ISO 8601)",
+        "copied": "date this content was copied (changes only when the content does)",
+        "caveat": "electiontracker.au's caveat, shown with the matrix",
+        "parties": "matrix columns, each party separately: [{slug, label}]",
+        "combined_parties": "matrix columns with the Liberal-Nationals Coalition combined: [{slug, label}]",
+        "default_view": "'combined' or 'separate'",
+        "coalitions": "[{id, label, short_label, parties, issues: [{issue, scope (coalition_shared | mixed | "
+                      "party_specific), shared_policy_id, representative_party, note}]}]: which party's record "
+                      "stands for the Coalition on each issue in the combined view",
+        "issues": "[{slug, name, summary, jurisdiction_note, state_role}]",
+        "policies": "[{party, issue, headline, claims: [{id, statement, kind (pledge | position | costed_measure | "
+                    "opposition_to), source {url, publisher, title, published, accessed}, fiscal {amount_display, "
+                    "timeframe, financing, pbo_status, pbo_ref}}]}]",
+    },
+}
+
+
+def build_policies_doc(pol: dict, iss: dict, prev: dict | None) -> dict:
+    """Our copy of their two files. Raises ValueError if they don't hang together."""
+    issues = [{k: i.get(k) for k in ("slug", "name", "summary", "jurisdiction_note", "state_role") if i.get(k)}
+              for i in iss.get("issues", [])]
+    slugs = {i["slug"] for i in issues if i.get("slug") and i.get("name")}
+    parties = [{"slug": p["slug"], "label": p["label"]} for p in pol.get("matrix_parties", []) if p.get("slug")]
+    party_slugs = {p["slug"] for p in parties}
+    records = pol.get("policies") or []
+    if len(slugs) < 5 or len(parties) < 3 or len(records) < 10:
+        raise ValueError(f"too little data: {len(slugs)} issues, {len(parties)} parties, {len(records)} records")
+    if not pol.get("caveat"):
+        raise ValueError("policies.json has no caveat")
+    policies = []
+    for r in records:
+        if r.get("issue") not in slugs or r.get("party") not in party_slugs:
+            log.warning("electiontracker.au policy record for %s/%s isn't in the matrix; skipped", r.get("party"), r.get("issue"))
+            continue
+        claims = []
+        for c in r.get("claims") or []:
+            src = c.get("source") or {}
+            if not (c.get("statement") and src.get("url")):
+                continue   # every claim we show links to its source
+            claim = {"id": c.get("id"), "statement": c["statement"], "kind": c.get("kind"),
+                     "source": {k: src[k] for k in ("url", "publisher", "title", "published", "accessed") if src.get(k)}}
+            f = c.get("fiscal") or {}
+            fiscal = {k: f[k] for k in ("amount_display", "timeframe", "financing", "pbo_status") if f.get(k)}
+            if (f.get("pbo_ref") or {}).get("url"):
+                fiscal["pbo_ref"] = {k: f["pbo_ref"][k] for k in ("url", "publisher", "title") if f["pbo_ref"].get(k)}
+            if fiscal:
+                claim["fiscal"] = fiscal
+            claims.append(claim)
+        if claims:
+            policies.append({"party": r["party"], "issue": r["issue"], "headline": r.get("headline") or "", "claims": claims})
+    coalitions = []
+    for c in pol.get("coalitions") or []:
+        coalitions.append({k: c.get(k) for k in ("id", "label", "short_label", "parties") if c.get(k)} | {
+            "issues": [{k: i[k] for k in ("issue", "scope", "shared_policy_id", "representative_party", "note") if i.get(k)}
+                       for i in c.get("issues") or [] if i.get("issue") in slugs]})
+    doc = {
+        "_schema": POLICIES_SCHEMA,
+        "credit": {"name": "Australian Election Tracker (OZE)", "url": ET_MATRIX_PAGE, "data_page": ET_DATA_PAGE,
+                   "data_urls": [ET_POLICIES_URL, ET_ISSUES_URL], "licence": "CC BY 4.0",
+                   "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+                   "citation": "Australian Election Tracker (OZE), Victorian state election 2026 candidate ledger, "
+                               "electiontracker.au"},
+        "generated": pol.get("generated"),
+        "copied": datetime.now(MELBOURNE).date().isoformat(),
+        "caveat": pol["caveat"],
+        "parties": parties,
+        "combined_parties": [{"slug": p["slug"], "label": p["label"]} for p in pol.get("combined_matrix_parties") or []
+                             if p.get("slug")],
+        "default_view": pol.get("default_view") or "combined",
+        "coalitions": coalitions,
+        "issues": [i for i in issues if i.get("slug") in slugs],
+        "policies": policies,
+    }
+    if prev and {k: v for k, v in prev.items() if k not in ("generated", "copied")} == \
+            {k: v for k, v in doc.items() if k not in ("generated", "copied")}:
+        return prev
+    return doc
+
+
+def refresh_et_policies(data_dir: Path, meta: dict) -> bool:
+    source = meta.setdefault("sources", {}).setdefault("electiontracker_policies", {"url": ET_POLICIES_URL})
+    path = data_dir / "policies.json"
+    try:
+        web = PoliteSession()
+        rp = _et_robots(web)
+        pol, iss = _et_json(web, rp, ET_POLICIES_URL), _et_json(web, rp, ET_ISSUES_URL)
+        prev = read_json(path, None)
+        doc = build_policies_doc(pol, iss, prev)
+    except Exception as exc:  # noqa: BLE001 - keep the file, report, keep going
+        log.error("electiontracker.au policies step skipped: %s", exc)
+        warn_ci(f"electiontracker.au policies step skipped: {exc}")
+        source.update(status="error", message=str(exc)[:300])
+        return False
+    claims = sum(len(p["claims"]) for p in doc["policies"])
+    source.update(status="ok", url=ET_POLICIES_URL, last_success=now_iso(),
+                  message=f"{len(doc['policies'])} party-issue records, {claims} sourced claims")
+    if doc is prev:
+        log.info("electiontracker.au policies unchanged (%d records)", len(doc["policies"]))
+        return True
+    write_json(path, doc)
+    log.info("electiontracker.au policies: %d records, %d claims, %d issues", len(doc["policies"]), claims, len(doc["issues"]))
     return True
 
 
@@ -2316,6 +2586,8 @@ def main(argv=None) -> int:
         refresh_wiki_candidates(data_dir, meta),
         refresh_abc(data_dir, meta),           # after Wikipedia, so the ABC (primary) wins conflicts
         refresh_electiontracker(data_dir, meta),   # report only: compared after the ABC has added its names
+        refresh_et_retirements(data_dir, meta),    # after the ABC, whose flags it adds to
+        refresh_et_policies(data_dir, meta),
         refresh_seat_odds(data_dir, meta),
         refresh_aeforecasts(data_dir, meta),
         check_redbridge(data_dir, meta),       # watch only: logs a warning if RedBridge has a newer release

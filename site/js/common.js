@@ -617,7 +617,7 @@
       ["Scenarios", "pendulum.html#scenarios"], ["Timeline", "timeline.html"]] },
     { label: "Lower house", items: [["Seats", "lower.html"], ["Candidates", "candidate.html"], ["My seats", "myseats.html"]] },
     { label: "Upper house", items: [["Regions", "upper.html"], ["Quota calculator", "upper.html#quota"]] },
-    { label: "About", items: [["Methodology", "about.html"], ["Data", "data/"], ["Polls", "poll.html"]] },
+    { label: "About", items: [["Methodology", "about.html"], ["Data", "data/"], ["Polls", "poll.html"], ["Policies", "policies.html"]] },
   ];
 
   function initNav() {

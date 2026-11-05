@@ -910,3 +910,38 @@ html.has-hash #district-detail[hidden] { display: block; min-height: 2400px; }  
 .qb-one { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: var(--text); opacity: 0.6; }
 .qb-num { text-align: right; }
 .region-count { border-top: 1px solid var(--border); margin-top: 8px; }
+
+/* ---------- Policies (policies.html) ---------- */
+.pol-note { border-left: 4px solid var(--accent); }
+.pol-note p:last-child { margin-bottom: 0; }
+.pol-note-h { font-size: 1.05rem; margin: 0 0 6px; }
+.pol-caveat { font-size: 0.92rem; }
+.pol-scroll { min-height: 640px; }
+.pol-table { border-collapse: separate; border-spacing: 0; min-width: 760px; width: 100%; table-layout: fixed; }
+.pol-table th, .pol-table td { vertical-align: top; text-align: left; padding: 8px; border-bottom: 1px solid var(--border); white-space: normal; }
+.pol-table thead th:first-child, .pol-table .pol-issue {
+  position: sticky; left: 0; z-index: 1; background: var(--surface); width: 132px;
+}
+.pol-table thead th:first-child { z-index: 2; }
+.pol-party { border-top: 4px solid var(--party-color, var(--p-oth)); font-family: var(--font-display, inherit); }
+.pol-table .pol-issue { font-weight: 600; font-size: 0.9rem; text-transform: none; letter-spacing: 0; color: var(--text); }
+.pol-cell { font-size: 0.88rem; line-height: 1.35; }
+.pol-link { display: block; color: inherit; text-decoration: none; border-radius: 6px; padding: 4px; margin: -4px; }
+.pol-link:hover, .pol-link:focus-visible { background: var(--surface-2); }
+.pol-link:hover .pol-n, .pol-link:focus-visible .pol-n { color: var(--accent); text-decoration: underline; }
+.pol-head { display: block; }
+.pol-head + .pol-head { margin-top: 4px; }
+.pol-n { display: block; margin-top: 4px; }
+.pol-cell.is-selected .pol-link { background: var(--surface-2); box-shadow: inset 0 0 0 2px var(--accent); }
+.pol-record { border-left: 4px solid var(--party-color, var(--p-oth)); padding-left: 12px; margin: 16px 0; }
+.pol-record h3 { margin: 0 0 8px; font-size: 1rem; }
+.pol-claims { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.pol-claim { border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+.pol-claim:last-child { border-bottom: 0; }
+.pol-claim p { margin: 4px 0 0; }
+.pol-kind { font-size: 0.75rem; }
+.pol-src a { overflow-wrap: anywhere; }
+@media (max-width: 640px) {
+  .pol-table { min-width: 680px; }
+  .pol-table thead th:first-child, .pol-table .pol-issue { width: 104px; }
+}

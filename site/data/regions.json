@@ -5,7 +5,7 @@
       "id": "URL slug, used as the #hash on upper.html (e.g. northern-victoria)",
       "name": "Region name",
       "area": "metro | regional",
-      "mlcs": "Current members: [{name, party, retiring, notes}]",
+      "mlcs": "Current members: [{name, party, retiring, retiring_source, notes}]. retiring_source (optional) is set when the flag came from electiontracker.au's retirements list: {name, url, publisher, title, published, kind, via, added}",
       "tickets": "Groups on the 2026 ballot: [{group (ballot letter, null before the 9 Nov draw), party, status (endorsed | reported | vec_nominated | withdrawn), candidates: [names in ticket order; TBC/TBD where a position is unfilled], notes}]",
       "notes": "Optional region-level notes (unnamed candidates, seats in contention)"
     }

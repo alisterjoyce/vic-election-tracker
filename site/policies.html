@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Policies · Vic Election 2026</title>
+  <meta name="description" content="Party positions on 15 issues for the 2026 Victorian election, each with a link to its source: a ledger of published claims from Australian Election Tracker (OZE), not a rating.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d4ed8'/%3E%3Cpath d='M8 17l5 5 11-12' stroke='white' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#171b21" media="(prefers-color-scheme: dark)">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Vic Election">
+  <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Vic Election <span>2026</span></a>
+      <button type="button" class="icon-btn nav-toggle" aria-controls="main-nav" aria-expanded="false"><span class="nav-burger" aria-hidden="true"></span>Menu</button>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="lower.html">Lower house</a>
+        <a href="upper.html">Upper house</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="search"></div>
+      <button id="theme-toggle" class="icon-btn" type="button">Theme</button>
+    </div>
+  </header>
+  <div class="key-dates" id="key-dates" role="region" aria-label="Key dates"></div>
+
+  <main class="container">
+    <div id="sample-banner" class="banner" hidden></div>
+
+    <section class="hero">
+      <h1>Party policies</h1>
+      <p class="muted">What the parties have said they will do on 15 issues, from <a href="https://electiontracker.au/elections/vic/2026/parties/matrix" rel="noopener">Australian Election Tracker</a>'s ledger. Every position links to the manifesto, release, Hansard record or costing it comes from. Pick a cell to see the claims behind it.</p>
+    </section>
+
+    <section class="card pol-note" aria-labelledby="pol-note-h">
+      <h2 id="pol-note-h" class="pol-note-h">A ledger of published claims, not a rating</h2>
+      <p>This page records what each party has published. It doesn't score, rank or fact-check the policies, and a longer or shorter entry says nothing about a party's merits.</p>
+      <p id="pol-caveat" class="pol-caveat"></p>
+    </section>
+
+    <section class="card" aria-labelledby="pol-matrix-h">
+      <div class="card-head">
+        <h2 id="pol-matrix-h">Positions by issue</h2>
+        <div class="segmented" role="group" aria-label="Liberal and Nationals">
+          <button type="button" data-view="combined" aria-pressed="true">Coalition combined</button>
+          <button type="button" data-view="separate" aria-pressed="false">Liberal and Nationals</button>
+        </div>
+      </div>
+      <p class="muted small" id="pol-view-note"></p>
+      <div class="table-scroll pol-scroll" id="pol-matrix"><p class="empty">Loading…</p></div>
+    </section>
+
+    <section class="card" id="pol-detail" aria-live="polite" hidden></section>
+
+    <section class="card pol-credit" aria-labelledby="pol-credit-h">
+      <h2 id="pol-credit-h">Source and licence</h2>
+      <div id="pol-credit"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p id="last-updated">Data last updated: loading…</p>
+      <p><a href="about.html">About and methodology</a> · Policy ledger: <a href="https://electiontracker.au/elections/vic/2026/data" rel="noopener">Australian Election Tracker (OZE), electiontracker.au</a>, CC BY 4.0.</p>
+    </div>
+  </footer>
+
+  <script defer src="js/common.js"></script>
+  <script defer src="js/policies.js"></script>
+</body>
+</html>
