@@ -8,13 +8,25 @@
       "sources": "Source -> {status: ok | error | skipped, url, items, message}"
     }
   },
-  "updated": "2026-11-05T01:06:27Z",
+  "updated": "2026-11-05T05:54:06Z",
   "statewide": [
     {
       "title": "Victorian election candidate finds bullet holes in campaign sign",
       "outlet": "ABC News",
       "published": "2026-11-04T22:02:33Z",
       "url": "https://www.abc.net.au/news/2026-11-05/political-sign-shot-with-bullets-victorian-election/107348202"
+    },
+    {
+      "title": "“Australia Embraces Cultural and Religious Freedom: Dr. Shahbaz Chaudhry, Labor Candidate”",
+      "outlet": "SBS",
+      "published": "2026-11-04T15:59:00Z",
+      "url": "https://www.sbs.com.au/language/urdu/en/podcast-episode/australia-embraces-cultural-and-religious-freedom-dr-shahbaz-chaudhry-labor-candidate/q0bs3wsus"
+    },
+    {
+      "title": "One Nation launches its campaign in Shepparton",
+      "outlet": "The Age",
+      "published": "2026-11-04T14:54:00Z",
+      "url": "https://www.theage.com.au/national/victoria/one-nation-launches-its-campaign-in-shepparton-20261105-p61bpi.html"
     },
     {
       "title": "Muslim Votes Matter softens anti-Labor stance ahead of Victorian election in bid to defeat One Nation in at-risk seats",
@@ -147,18 +159,6 @@
       "outlet": "The Australian",
       "published": "2026-10-30T06:01:00Z",
       "url": "https://www.theaustralian.com.au/inquirer/victorian-election-2026-fear-and-loathing-in-diminished-state/news-story/ec29d1f8771ce06c8298bfaa1fa81a88"
-    },
-    {
-      "title": "Liberals Pledge To Reopen Police Station",
-      "outlet": "Wyndham TV",
-      "published": "2026-10-30T01:34:00Z",
-      "url": "https://www.wyndhamtv.com.au/liberals-pledge-to-reopen-police-station/"
-    },
-    {
-      "title": "'Muslim Votes Matter' uses electoral leverage to force a panicked $23 million Labor spending spree in Broadmeadows",
-      "outlet": "onenewsaustralia.com",
-      "published": "2026-10-29T18:54:00Z",
-      "url": "https://www.onenewsaustralia.com/muslim-votes-matter-uses-electoral-leverage-to-force-a-panicked-23-million-labor-spending-spree-in-broadmeadows/"
     }
   ],
   "seats": {
@@ -353,9 +353,9 @@
       },
       {
         "title": "Victorian Greens MP Tim Read dies after cancer battle",
-        "outlet": "The Courier-Mail",
+        "outlet": "Couriermail",
         "published": "2026-09-19T14:07:00Z",
-        "url": "https://www.couriermail.com.au/business/work/leaders-companies/victorian-greens-mp-tim-read-has-died-after-cancer-battle/news-story/b8349436f5784889e1531f72ec6a6559"
+        "url": "https://www.news.com.au/national/victoria/politics/victorian-greens-mp-tim-read-has-died-after-cancer-battle/news-story/b8349436f5784889e1531f72ec6a6559"
       },
       {
         "title": "Victorian Greens MP dies of cancer",
@@ -586,6 +586,12 @@
     ],
     "frankston": [
       {
+        "title": "Deadline: Bullet threat against MP Paul Edbrooke echoes intimidation of Victoria Police corruption detective",
+        "outlet": "Herald Sun",
+        "published": "2026-11-04T17:00:00Z",
+        "url": "https://www.heraldsun.com.au/news/victoria/deadline/deadline-bullet-threat-against-mp-paul-edbrooke-echoes-intimidation-of-victoria-police-corruption-detective/news-story/19b630a3aba10507d52bb959f3eff45a"
+      },
+      {
         "title": "Recovering Public Lands and Environments After Emergencies",
         "outlet": "Mirage News",
         "published": "2026-11-02T01:51:00Z",
@@ -638,12 +644,6 @@
         "outlet": "The Guardian",
         "published": "2026-10-25T17:11:00Z",
         "url": "https://www.theguardian.com/australia-news/2026/oct/26/labor-mp-paul-edbrooke-bullet-on-car-rat-ntwnfb"
-      },
-      {
-        "title": "Victorian minister Paul Edbrooke reports threat to police after bullet left on his car",
-        "outlet": "news24.com.au",
-        "published": "2026-10-25T15:04:00Z",
-        "url": "https://www.news24.com.au/politics/australian-politics/victorian-minister-paul-edbrooke-reports-threat-to-police-after-bullet-left-on-his-car/news-story/2f27852d068ddac3632e49acce689060"
       }
     ],
     "geelong": [
@@ -765,9 +765,9 @@
       },
       {
         "title": "52 questions with Jess Wilson: Toddler chaos, Macca’s runs and her pitch to lead Victoria",
-        "outlet": "The Courier-Mail",
+        "outlet": "Northern Territory News",
         "published": "2026-09-19T12:00:00Z",
-        "url": "https://www.couriermail.com.au/news/victoria/52-questions-with-jess-wilson-toddler-chaos-maccas-runs-and-her-pitch-to-lead-victoria/news-story/33ddb943f9ee272f4fed401bf0cb603d"
+        "url": "https://www.ntnews.com.au/news/victoria/52-questions-with-jess-wilson-toddler-chaos-maccas-runs-and-her-pitch-to-lead-victoria/news-story/33ddb943f9ee272f4fed401bf0cb603d"
       },
       {
         "title": "Who is Jess Wilson? The 36-year-old set to make history at the Victorian state election",
@@ -900,7 +900,14 @@
       }
     ],
     "morwell": [],
-    "mulgrave": [],
+    "mulgrave": [
+      {
+        "title": "Former premier Dan Andrews sells Mulgrave family home for $1.75m",
+        "outlet": "The Australian",
+        "published": "2026-11-04T20:37:00Z",
+        "url": "https://www.theaustralian.com.au/commentary/victoria-ink/former-premier-dan-andrews-sells-mulgrave-family-home-for-175m/news-story/cabbf5635117ec4a0b47da61a8a94362"
+      }
+    ],
     "murray-plains": [
       {
         "title": "Hear Ky you should vote for them",
@@ -1079,9 +1086,22 @@
         "url": "https://www.msn.com/en-au/news/australia/renewables-roads-and-emergency-services-levy-front-of-mind-at-ripon-election-forum/ar-AA2dywXd"
       }
     ],
-    "rowville": [],
+    "rowville": [
+      {
+        "title": "“Australia Embraces Cultural and Religious Freedom: Dr. Shahbaz Chaudhry, Labor Candidate”",
+        "outlet": "SBS",
+        "published": "2026-11-04T15:59:00Z",
+        "url": "https://www.sbs.com.au/language/urdu/en/podcast-episode/australia-embraces-cultural-and-religious-freedom-dr-shahbaz-chaudhry-labor-candidate/q0bs3wsus"
+      }
+    ],
     "sandringham": [],
     "shepparton": [
+      {
+        "title": "One Nation launches its campaign in Shepparton",
+        "outlet": "The Age",
+        "published": "2026-11-04T14:54:00Z",
+        "url": "https://www.theage.com.au/national/victoria/one-nation-launches-its-campaign-in-shepparton-20261105-p61bpi.html"
+      },
       {
         "title": "Council Welcomes River Road, Kialla Election Commitment",
         "outlet": "Mirage News",
@@ -1191,7 +1211,7 @@
     "ABC News": {
       "status": "ok",
       "url": "https://www.abc.net.au/news/feed/51120/rss.xml",
-      "items": 24
+      "items": 25
     },
     "Bendigo Advertiser": {
       "status": "ok",
