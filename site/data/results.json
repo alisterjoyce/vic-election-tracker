@@ -1,0 +1,37 @@
+{
+  "_schema": {
+    "description": "2026 Legislative Assembly results from the VEC's public results website, read every 5 minutes on election night by scripts/results.py. 'Called' is this site's projection (see call_rule), not the VEC's; a seat the VEC has declared is called by the VEC. Source: Victorian Electoral Commission.",
+    "fields": {
+      "source": "{name, url}: the VEC results pages this was read from",
+      "profile": "Which URL-map profile produced it ('2026'; '2022' only in tests)",
+      "counting_starts": "When counting begins (ISO, Melbourne time)",
+      "updated": "When this file last changed (UTC)",
+      "vec_updated": "The latest 'last updated' time shown on any VEC page read (raw text as published)",
+      "call_rule": "{buffer_pct_of_enrolment, buffer_min_votes, turnout_default, text}",
+      "tally": "{called: {bloc: seats}, leading: {bloc: seats}, undecided, counted_seats, majority}; blocs ALP, LNP, GRN, ONP, OTH",
+      "districts": "{district id: {name, url, vec_updated, fetched, enrolment, formal, informal, total, counted_pct (of enrolment), centres_counted, centres_total, declared, elected {name, party}, candidates [{id, name, party, party_name, votes, pct}], tcp [{id, name, party, votes, pct}] or null, tcp_basis (2cp | distribution), leader {id, name, party, basis}, margin_votes, uncounted_estimate, status (called | leading | undecided), called_by (vec | site | null), holder (party before the election), changes_hands, swing_2cp (leader's 2CP change since 2022, same pair only)}}"
+    }
+  },
+  "source": {
+    "name": "Victorian Electoral Commission",
+    "url": null
+  },
+  "profile": "2026",
+  "counting_starts": "2026-11-28T18:00:00+11:00",
+  "updated": "2026-11-05T02:25:46Z",
+  "vec_updated": null,
+  "call_rule": {
+    "buffer_pct_of_enrolment": 1.0,
+    "buffer_min_votes": 250,
+    "turnout_default": 0.89,
+    "text": "Called by this site when the leader's two-candidate-preferred margin is larger than the estimated uncounted vote plus a buffer (the larger of 250 votes and 1% of enrolment), so the trailing candidate couldn't catch up even with every remaining vote. Uncounted = enrolment x the seat's 2022 turnout - votes counted. A seat the VEC has declared is called by the VEC."
+  },
+  "tally": {
+    "called": {},
+    "leading": {},
+    "undecided": 88,
+    "counted_seats": 0,
+    "majority": 45
+  },
+  "districts": {}
+}

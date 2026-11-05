@@ -1,0 +1,16 @@
+{
+  "_schema": {
+    "description": "2026 Legislative Council results by region from the VEC's public results website (scripts/results.py). Quota = formal votes / (positions + 1) + 1, rounded down, unless the VEC publishes one. Source: Victorian Electoral Commission.",
+    "fields": {
+      "updated": "When this file last changed (UTC)",
+      "regions": "{region id: {name, url, vec_updated, fetched, enrolment, formal, informal, total, counted_pct, positions, quota, quota_source (vec | computed), elected [names], groups [{group, name, party, votes, pct, quotas, ticket_votes, candidates [{name, votes}]}], ungrouped [{name, party, votes, pct, quotas}]}}"
+    }
+  },
+  "source": {
+    "name": "Victorian Electoral Commission",
+    "url": null
+  },
+  "profile": "2026",
+  "updated": "2026-11-05T02:25:46Z",
+  "regions": {}
+}

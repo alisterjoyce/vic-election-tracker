@@ -10,6 +10,7 @@
   let shots = {};   // candidate id -> headshot (data/headshots.json)
   let htv = null;           // data/htv.json (how-to-vote cards)
   let councilPolls = [];   // regional upper-house polls (data/council_polls.json), newest first
+  let resultsLc = null;    // data/results_lc.json: the 2026 count by region (scripts/results.py), null if missing
 
   function ticketSort(a, b) {
     const wa = a.status === "withdrawn", wb = b.status === "withdrawn";
@@ -60,6 +61,26 @@
       </div>`;
   }
 
+  // The 2026 count for the region (results_lc.json): quotas filled per group on first preferences, credited to the VEC.
+  function regionCount(r) {
+    const c = resultsLc && resultsLc.regions && resultsLc.regions[r.id];
+    if (!resultsLc) return "";
+    if (!c || !c.total) {
+      return `<p class="r26-wait small"><strong>2026 count:</strong> counting begins 6 pm Sat 28 Nov. Figures from the
+        <a href="https://www.vec.vic.gov.au/results" rel="noopener" target="_blank">Victorian Electoral Commission</a> will appear here.</p>`;
+    }
+    const groups = c.groups.filter((g) => g.quotas >= 0.05);
+    return `<section class="region-count" aria-labelledby="rc-h">
+      <h3 id="rc-h">2026 count: quotas filled</h3>
+      <p class="muted small" style="margin-top:0">${c.counted_pct.toFixed(1)}% of enrolment counted · ${c.formal.toLocaleString("en-AU")} formal votes ·
+        quota ${c.quota.toLocaleString("en-AU")} (${c.quota_source === "vec" ? "as published by the VEC" : "formal votes ÷ 6, plus 1"})${c.elected.length
+        ? ` · elected: ${c.elected.map((n) => escapeHtml(n)).join(", ")}` : ""}</p>
+      ${App.quotaBars(groups)}
+      <p class="muted small">A group with a full quota (the first tick) wins a seat on its own; the rest are decided by preferences. First preferences only, before the distribution.
+        Source: <a href="${escapeHtml(c.url)}" rel="noopener" target="_blank">Victorian Electoral Commission</a>${c.vec_updated ? `, updated ${escapeHtml(c.vec_updated)}` : ""}.</p>
+    </section>`;
+  }
+
   function renderDetail(r) {
     const el = document.getElementById("region-detail");
     if (!r) {
@@ -78,6 +99,7 @@
           <button class="icon-btn" type="button" id="copy-link">Copy link</button>
         </div>
         <p class="muted small" style="margin-top:0">${r.area === "regional" ? "Regional" : "Metropolitan"} region · 5 members</p>
+        ${regionCount(r)}
         <h3>Current MLCs</h3>
         ${(r.mlcs || []).length ? `
           <ul class="people">
@@ -146,8 +168,10 @@
 
   async function init() {
     try {
-      const [rd, dd, cd, shotData, cp, htvData] = await Promise.all([loadJSON("regions"), loadJSON("districts"), loadJSON("candidates"),
-        App.loadHeadshots(), loadJSON("council_polls").then((d) => d.polls || []).catch(() => []), loadJSON("htv").catch(() => null)]);
+      const [rd, dd, cd, shotData, cp, htvData, lcData] = await Promise.all([loadJSON("regions"), loadJSON("districts"), loadJSON("candidates"),
+        App.loadHeadshots(), loadJSON("council_polls").then((d) => d.polls || []).catch(() => []), loadJSON("htv").catch(() => null),
+        loadJSON("results_lc").catch(() => null)]);
+      resultsLc = lcData;
       regions = rd.regions.slice().sort((a, b) => a.name.localeCompare(b.name));
       districts = dd.districts;
       councilCandidates = (cd.candidates || []).filter((c) => c.region && !c.district);

@@ -22,6 +22,7 @@ A static tracker for the 2026 Victorian state election (polling day Saturday 28 
 - **Polls** (`poll.html`): every poll, and a page per poll (`poll.html#newspoll-2026-10-22`) with pollster, client, fieldwork, sample, primaries, 2PP, preferred premier, approval, source link, and that pollster's trend against the other pollsters' average (its house effect).
 - **Quota calculator** (on each region in `upper.html`): editable primary votes seeded from the latest regional poll (`council_polls.json`), live quota maths under the 2026 rules, and an adjustable exhaustion rate; shows the 5 seats filled and the margin for the last seat.
 - **My seats** (`myseats.html`): seats starred with ☆, saved in the browser's localStorage (no backend), shown side by side.
+- **Results** (`results.html`, from 6 pm on 28 Nov): the seat tally (called, leading, undecided) against the 45-seat line, seats changing hands, every seat with its leader, 2CP share, swing and count progress, and upper-house quotas filled by region. Each seat page gets a 2026 panel (count progress, candidate votes, the booth map coloured by 2CP leader) and each region page a quotas-filled panel. "Called" is this site's projection, labelled as such; the VEC is credited on every view. The "Results" menu item appears once counting starts.
 - **About** (`about.html`): what each number means, sources and refresh times, limits, corrections and credits.
 - **Navigation:** four groups (Overview, Lower house, Upper house, About) with dropdowns on desktop and a Menu button on phones, built by `common.js`.
 - **On every page:** a key-dates strip under the header (countdowns plus a "Today:" note, from `meta.json` → `key_dates`), and a search box that matches districts, regions, candidates, suburbs and postcodes.
@@ -148,6 +149,29 @@ Then visit http://localhost:8000.
 `.github/workflows/refresh.yml` runs four times a day, at 6 am, 10 am, 4 pm and 8 pm Melbourne time (cron `0 19,23,5,9 * * *` in UTC; AEDT, so an hour earlier in Melbourne once daylight saving ends), and can also be run by hand from the Actions tab (`workflow_dispatch`). Every run does everything: Wikipedia polls and candidates, the full ABC pass and A-Z reconciliation (one request a second), news, the Sportsbet attempt, the how-to-vote register and the change log. It commits and pushes `site/data` when `scripts/data_changed.py` reports a change, which includes the new `last_updated` stamp of any successful run (per-source status alone doesn't count), and then its `deploy` job publishes `site/` to GitHub Pages. Pushes made by that job's token don't start other workflows, which is why it deploys itself. The footer and the home page show "Data updated <time> Melbourne time".
 
 Google News isn't used: its robots.txt disallows automated access, so news comes from a Bing News search and publishers' RSS feeds.
+
+## Election night
+
+Results come from the Victorian Electoral Commission's public results pages (the media feed wasn't available), read by `scripts/results.py` into `site/data/results.json`, `site/data/results_lc.json` and `site/data/results_2026/`.
+
+1. **Fill the URL map.** When the VEC publishes its 2026 results pages (expected after nominations close on 9 Nov, with an election-night trial on 25 Nov), open `scripts/results_urls.json` and set the `2026` profile's `base` to the address of the VEC's "2026 State election results" page. The page patterns (`district_page`, `district_vc_page`, `district_tcp_page`, `region_page`) follow the 2022 site; change them if 2026 differs, or put a single odd page in `overrides` (`"district:bass": "<url>"`). Check with:
+
+   ```bash
+   python scripts/results.py --check-urls
+   ```
+
+2. **Turn the schedule on.** In `.github/workflows/results.yml`, uncomment the `schedule:` block (`cron: "*/5 * * * *"`) and push. It reads the pages every 5 minutes (one request a second; a district's voting-centre pages only when its main page changed), commits only when the results change, and deploys. Run it by hand from the Actions tab at any time (`workflow_dispatch`), for example during the 25 Nov trial. Comment the schedule out again when the count is final.
+
+3. **Test without the 2026 pages** by reading the final 2022 pages into a copy of the data:
+
+   ```bash
+   python scripts/results.py --profile 2022 --data-dir /tmp/data-copy
+   python scripts/results.py --selftest-samples "website samples and summary (complete set)" --data-dir /tmp/data-copy
+   ```
+
+   The second command checks the output against the VEC's 2026 sample XML (kept out of the repo). Serve `site/` with the copied data to look at the Results page.
+
+A seat is "called by this site" when the leader's two-candidate-preferred margin is larger than the estimated uncounted vote plus a buffer (the larger of 250 votes and 1% of enrolment); a seat the VEC has declared is marked as the VEC's. See `about.html#results`.
 
 ## Installable app
 

@@ -7,7 +7,8 @@
      (DATA_MAX_AGE). A copy fetched in the last few minutes is served at once and refreshed behind
      the page; an older one (any launch after a gap) waits for the network, falling back to the
      cached copy after NETWORK_TIMEOUT or offline. So the app never opens on days-old data.
-   - News (data/news.json): network first, with the same fallback.
+   - News (data/news.json) and election-night results (data/results*.json, data/results_2026/): network first,
+     with the same fallback, so a count that changes every 5 minutes is never served from the cache first.
    - Photos and the other font subsets: cache first.
    - Other origins: only the pinned cdnjs libraries (Leaflet, Chart.js, html-to-image) are cached.
      Every other cross-origin request (and anything that looks like a login or auth page) passes
@@ -16,7 +17,7 @@
    Bump VERSION when the shell list changes or to make every installed copy refresh at once: the new
    worker precaches, the page offers "Update available, tap to refresh", and old caches are deleted
    when it activates. */
-const VERSION = "v9";
+const VERSION = "v10";
 const PREFIX = "vet-";
 const CACHES = {
   shell: `${PREFIX}shell-${VERSION}`,
@@ -31,11 +32,11 @@ const FETCHED_AT = "x-sw-fetched-at"; // stamped on cached data responses
 
 const SHELL = [
   "./", "index.html", "lower.html", "upper.html", "candidate.html", "pendulum.html", "poll.html",
-  "timeline.html", "myseats.html", "about.html", "data/",
+  "timeline.html", "myseats.html", "about.html", "results.html", "data/",
   "css/style.css",
   "js/common.js", "js/home.js", "js/lower.js", "js/upper.js", "js/candidate.js", "js/pendulum.js",
   "js/poll.js", "js/timeline.js", "js/myseats.js", "js/datafiles.js", "js/maps.js", "js/sharecard.js",
-  "js/htv.js", "js/quota.js",
+  "js/htv.js", "js/quota.js", "js/results.js",
   "fonts/inter-latin.woff2", "fonts/archivo-latin.woff2",
   "icons/icon-192.png", "icons/icon-512.png", "icons/icon-maskable-512.png", "icons/apple-touch-icon.png",
   "manifest.webmanifest",
@@ -138,7 +139,9 @@ self.addEventListener("fetch", (event) => {
   if (!url.href.startsWith(BASE)) return;   // outside the app's scope
   const path = url.href.slice(BASE.length).split("?")[0];
 
-  if (path === "data/news.json") return event.respondWith(fresh(event, 0));
+  if (path === "data/news.json" || /^data\/results(_lc)?\.json$/.test(path) || path.startsWith("data/results_2026/")) {
+    return event.respondWith(fresh(event, 0));
+  }
   if (path.startsWith("data/") && /\.(json|geojson)$/.test(path)) return event.respondWith(fresh(event, DATA_MAX_AGE));
   if (path.startsWith("photos/") || (path.startsWith("fonts/") && !SHELL.includes(path))) return event.respondWith(cacheFirst(event, CACHES.media));
   // Pages and the rest of the shell. An uncached page offline falls back to the home page.

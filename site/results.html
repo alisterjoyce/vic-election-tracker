@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Results · Vic Election 2026</title>
+  <meta name="description" content="2026 Victorian state election results as the count comes in: seats called, leading and undecided, seats changing hands, swings, and upper-house quotas, from the Victorian Electoral Commission.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d4ed8'/%3E%3Cpath d='M8 17l5 5 11-12' stroke='white' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#171b21" media="(prefers-color-scheme: dark)">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Vic Election">
+  <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Vic Election <span>2026</span></a>
+      <button type="button" class="icon-btn nav-toggle" aria-controls="main-nav" aria-expanded="false"><span class="nav-burger" aria-hidden="true"></span>Menu</button>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="lower.html">Lower house</a>
+        <a href="upper.html">Upper house</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="search"></div>
+      <button id="theme-toggle" class="icon-btn" type="button">Theme</button>
+    </div>
+  </header>
+  <div class="key-dates" id="key-dates" role="region" aria-label="Key dates"></div>
+
+  <main class="container">
+    <div id="sample-banner" class="banner" hidden></div>
+
+    <section class="hero">
+      <h1>Results</h1>
+      <p class="muted">The 2026 count as the Victorian Electoral Commission publishes it, refreshed every 5 minutes.</p>
+    </section>
+
+    <section class="card res-head" aria-labelledby="tally-h">
+      <div class="card-head"><h2 id="tally-h">Legislative Assembly</h2><span class="small muted" id="res-updated"></span></div>
+      <div id="res-tally"><p class="empty">Loading…</p></div>
+      <p class="muted small" id="res-rule"></p>
+    </section>
+
+    <section class="card" aria-labelledby="changes-h" id="res-changes-card" hidden>
+      <div class="card-head"><h2 id="changes-h">Seats changing hands</h2><span class="small muted" id="res-changes-count"></span></div>
+      <div id="res-changes"></div>
+    </section>
+
+    <section class="card" aria-labelledby="seats-h" id="res-seats-card" hidden>
+      <div class="card-head"><h2 id="seats-h">Every seat</h2>
+        <label class="small">Show <select id="res-filter">
+          <option value="">all seats</option><option value="called">called</option><option value="leading">leading</option>
+          <option value="undecided">undecided</option><option value="changes">changing hands</option></select></label></div>
+      <div class="table-scroll" id="res-seats"></div>
+    </section>
+
+    <section class="card" aria-labelledby="lc-h" id="res-lc-card" hidden>
+      <div class="card-head"><h2 id="lc-h">Legislative Council</h2><span class="small muted">Quotas filled on first preferences</span></div>
+      <div id="res-lc"></div>
+    </section>
+
+    <p class="muted small" id="res-credit">Source: <a href="https://www.vec.vic.gov.au/results" rel="noopener" target="_blank">Victorian Electoral Commission</a>. Calls marked "called by this site" are this site's projection, not the VEC's.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p id="last-updated">Data last updated: loading…</p>
+      <p><a href="about.html#results">How results are called</a> · Results source: Victorian Electoral Commission. Corrections welcome.</p>
+    </div>
+  </footer>
+
+  <script defer src="js/common.js"></script>
+  <script defer src="js/results.js"></script>
+</body>
+</html>

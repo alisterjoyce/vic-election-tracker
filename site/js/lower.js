@@ -15,6 +15,7 @@
   let shots = {};   // candidate id -> headshot (data/headshots.json); filled in after the first paint
   let htv = null;   // data/htv.json (how-to-vote cards)
   let news;         // data/news.json (headlines per seat); undefined until loaded, null if it failed
+  let results = null;   // data/results.json: the 2026 count (scripts/results.py), null if missing
 
   const $ = (id) => document.getElementById(id);
 
@@ -229,6 +230,7 @@
     document.title = `${d.name} · Vic Election 2026`;
     const region = regionsById[d.region];
     const cands = seatCands(d);
+    const live = liveResult(d);
 
     el.hidden = false;
     el.innerHTML = `
@@ -246,6 +248,7 @@
         <div class="fact"><div class="label">Margin</div><div class="value">${marginText(d.margin)}</div><div class="muted small">${escapeHtml(seatLabel(d))}</div></div>
         <div class="fact"><div class="label">Region</div><div class="value">${region ? `<a href="upper.html#${escapeHtml(region.id)}">${escapeHtml(region.name)}</a>` : escapeHtml(d.region)}${d.needs_check ? ' <span class="badge reported" title="Region allocation flagged for checking">Check</span>' : ""}</div><div class="muted small">${d.area === "regional" ? "Regional" : "Metro"}</div></div>
       </div>
+      ${resultsSlot(d, live)}
       ${renderOutlook(d)}
       ${d.notes ? `<p>${escapeHtml(d.notes)}</p>` : ""}
       ${d.region_note ? `<p class="muted small">${escapeHtml(d.region_note)}</p>` : ""}
@@ -267,7 +270,8 @@
       odds: outlook.odds && (outlook.odds.seats || []).find((x) => x.district === d.id),
       oddsDate: outlook.odds && outlook.odds.date_checked,
     }));
-    renderResults2022(d);
+    if (live) renderContest(d, { key: "r26", file: `results_2026/${d.id}`, title: "2026 results", live, intro: intro2026 });
+    renderContest(d, { key: "r22", file: `results_2022/${d.id}`, title: "How it voted in 2022", intro: intro2022 });
   }
 
   function seatCands(d) {
@@ -300,22 +304,80 @@
       : App.newsList(news && news.seats && news.seats[d.id], { more: 5 });
   }
 
-  /* ---------- How it voted in 2022 (vec-contest-v1 format, shared with the 2026 feed) ---------- */
+  /* ---------- 2026 results (scripts/results.py) ---------- */
+  // The seat's entry in results.json once votes are being counted, else null.
+  function liveResult(d) {
+    const r = results && results.districts && results.districts[d.id];
+    return r && r.total ? r : null;
+  }
+
+  function resultsSlot(d, live) {
+    if (live) {
+      return `<section class="r26" id="r26" aria-labelledby="r26-h">
+        <h3 id="r26-h">2026 results</h3><p class="empty">Loading 2026 results…</p></section>`;
+    }
+    if (!results) return "";
+    return `<p class="r26-wait small"><strong>2026 results:</strong> counting begins 6 pm Sat 28 Nov. Figures from the
+      <a href="https://www.vec.vic.gov.au/results" rel="noopener" target="_blank">Victorian Electoral Commission</a> will appear here as they're counted.</p>`;
+  }
+
+  function statusLine(live) {
+    const leader = live.leader;
+    if (!leader) return '<span class="muted">No votes counted yet.</span>';
+    const who = `${partyBadge(leader.party)} ${escapeHtml(leader.name)}`;
+    if (live.called_by === "vec") return `<span class="call call-vec">Declared by the VEC</span> ${who}`;
+    if (live.status === "called") {
+      return `<span class="call call-site">Called by this site</span> ${who}
+        <span class="muted small">(this site's projection, not the VEC's: the ${escapeHtml(leader.basis === "distribution" ? "preference count" : "2CP")} margin of
+        ${live.margin_votes.toLocaleString("en-AU")} is more than the ~${(live.uncounted_estimate || 0).toLocaleString("en-AU")} votes left to count plus a safety buffer)</span>`;
+    }
+    return `<span class="call call-lead">Leading</span> ${who} <span class="muted small">${leader.basis === "first preferences"
+      ? "on first preferences (no two-candidate count yet)"
+      : `by ${(live.margin_votes || 0).toLocaleString("en-AU")} votes on the ${leader.basis === "distribution" ? "preference count" : "2CP count"}, with ~${(live.uncounted_estimate || 0).toLocaleString("en-AU")} still to count`}</span>`;
+  }
+
+  function intro2026(r) {
+    const live = liveResult({ id: r.contest.district }) || {};
+    const counted = live.counted_pct || 0;
+    const centres = live.centres_total ? `${live.centres_counted} of ${live.centres_total} voting centres reporting` : "";
+    const swing = live.swing_2cp != null && live.leader
+      ? ` · 2CP swing to ${escapeHtml(App.partyShort(live.leader.party))} since 2022: ${App.fmtSwing(live.swing_2cp)}` : "";
+    return `<p class="r26-status">${statusLine(live)}</p>
+      <div class="count-progress" role="img" aria-label="${counted.toFixed(1)}% of enrolment counted">
+        <span style="width:${Math.min(100, counted)}%"></span></div>
+      <p class="muted small" style="margin-top:4px">${counted.toFixed(1)}% of enrolment counted${centres ? ` · ${centres}` : ""}${swing}.
+        Source: <a href="${escapeHtml(live.url || r.event.source)}" rel="noopener" target="_blank">Victorian Electoral Commission</a>${
+        live.vec_updated ? `, updated ${escapeHtml(live.vec_updated)}` : ""}. Refreshed every 5 minutes.
+        ${live.holder && live.changes_hands ? `<strong>${escapeHtml(App.partyName(live.holder))} hold the seat; on these figures it would change hands.</strong>` : ""}</p>`;
+  }
+
+  function intro2022(r) {
+    return `<p class="muted small" style="margin-top:0">${r.event.name && !/^State Election 2022/.test(r.event.name)
+        ? `${escapeHtml(r.event.name)} (${escapeHtml(App.fmtDate(r.event.date))}), held after the November 2022 poll failed; results from the`
+        : "Final 2022 results from the"} <a href="${escapeHtml(r.event.source)}" rel="noopener" target="_blank">VEC</a>.
+        Swings compare with the notional 2018 result on today's boundaries (<a href="${escapeHtml((r.swing && r.swing.source) || "#")}" rel="noopener" target="_blank">Wikipedia</a>).</p>`;
+  }
+
+  /* ---------- Contest panels: 2026 live and 2022 history (vec-contest-v1 format) ---------- */
   const pct = (n, total) => (total ? (100 * n) / total : 0);
   const swingSpan = (v) => (v == null ? "" :
     ` <span class="small ${v >= 0 ? "swing-up" : "swing-down"}" title="Swing since the notional 2018 result">${App.fmtSwing(v)}</span>`);
   const TYPE_LABELS = { Ordinary: "Voting centres", EVCEarly: "Early voting centres", MobileVotingEarly: "Mobile voting",
     Early: "Early votes", Postal: "Postal", Absent: "Absent", MarkedAsVoted: "Marked as voted", Provisional: "Provisional" };
 
-  async function renderResults2022(d) {
-    const el = $("r22");
+  // One contest panel for 2026 (live, results_2026/) and 2022 (history, results_2022/): same vec-contest-v1 format.
+  // opts: {key ("r26" | "r22"), file, title, intro(r) -> html, live (results.json entry, 2026 only)}
+  async function renderContest(d, opts) {
+    const { key } = opts;
+    const el = $(key);
+    if (!el) return;
     // The booth map is below the fold: fetch Leaflet once the seat panel has painted.
     const leaflet = App.afterPaint(() => App.loadLib("leaflet")).catch(() => null);
     let r;
     try {
-      r = await loadJSON(`results_2022/${d.id}`);
+      r = await loadJSON(opts.file);
     } catch (err) {
-      el.innerHTML = '<h3 id="r22-h">How it voted in 2022</h3><p class="empty">2022 results are not available for this district.</p>';
+      el.innerHTML = `<h3 id="${key}-h">${escapeHtml(opts.title)}</h3><p class="empty">${key === "r26" ? "2026 results" : "2022 results"} are not available for this district${key === "r26" ? " yet" : ""}.</p>`;
       return;
     }
     if (hashId() !== d.id || !el.isConnected) return;   // user moved on
@@ -344,11 +406,8 @@
     }
 
     el.innerHTML = `
-      <h3 id="r22-h">How it voted in 2022</h3>
-      <p class="muted small" style="margin-top:0">${r.event.name && !/^State Election 2022/.test(r.event.name)
-        ? `${escapeHtml(r.event.name)} (${escapeHtml(App.fmtDate(r.event.date))}), held after the November 2022 poll failed; results from the`
-        : "Final 2022 results from the"} <a href="${escapeHtml(r.event.source)}" rel="noopener" target="_blank">VEC</a>.
-        Swings compare with the notional 2018 result on today's boundaries (<a href="${escapeHtml((r.swing && r.swing.source) || "#")}" rel="noopener" target="_blank">Wikipedia</a>).</p>
+      <h3 id="${key}-h">${escapeHtml(opts.title)}</h3>
+      ${opts.intro(r)}
       <h4>First preferences</h4>
       <ul class="vote-bars">
         ${fpRows.map(([id, v]) => {
@@ -367,8 +426,8 @@
         <p>${headEntries.map(([id, v]) => `${label(cand[id])} <strong>${pct(v, headTotal).toFixed(1)}%</strong>${swingSpan(tsw[id])}`).join(" · ")}</p>
         ${notes.map((n) => `<p class="muted small">${n}</p>`).join("")}` : ""}
       <h4>Voting centres</h4>
-      <div class="booth-map" id="booth-map"></div>
-      <p class="muted small" id="booth-note"></p>
+      <div class="booth-map" id="${key}-booth-map"></div>
+      <p class="muted small" id="${key}-booth-note"></p>
       ${byType.length ? `
         <div class="table-scroll"><table>
           <thead><tr><th>Vote type (2CP)</th>${tcpEntries.map(([id]) => `<th class="num">${escapeHtml(App.partyShort(cand[id].party))}</th>`).join("")}<th class="num">Votes</th></tr></thead>
@@ -391,14 +450,14 @@
     await leaflet;
     if (hashId() !== d.id || !el.isConnected) return;   // user moved on
     if (window.L && App.Maps) {
-      const note = $("booth-note");
-      const mapped = await App.Maps.boothMap($("booth-map"), d.id, r);
+      const note = $(`${key}-booth-note`);
+      const mapped = await App.Maps.boothMap($(`${key}-booth-map`), d.id, r);
       if (!mapped || !note.isConnected) return;   // user moved on
       const { placed, total } = mapped;
-      note.textContent = `${placed} of ${total} voting centres mapped. Circles are sized by votes and coloured by the two-candidate-preferred leader; tap one for its numbers. Early, postal, absent and other declaration votes aren't tied to a place, so they're in the table below instead.`;
+      note.textContent = `${placed} of ${total} voting centres mapped${key === "r26" ? " (at their 2022 locations; new centres are listed in the table only). Grey circles haven't reported yet" : ""}. Circles are sized by votes and coloured by the two-candidate-preferred leader; tap one for its numbers. Early, postal, absent and other declaration votes aren't tied to a place, so they're in the table below instead.`;
     } else {
-      $("booth-map").remove();
-      $("booth-note").textContent = "The map library failed to load; the voting-centre table below has every result.";
+      $(`${key}-booth-map`).remove();
+      $(`${key}-booth-note`).textContent = "The map library failed to load; the voting-centre table below has every result.";
     }
   }
 
@@ -431,12 +490,13 @@
     try {
       const optional = (name) => loadJSON(name).catch((err) => { console.warn(err); return null; });
       // What the seat panel needs, in parallel. Photos and headlines wait until it has painted.
-      const [dd, cd, rd, meta, pollData, models, odds, seatPolls, htvData] = await Promise.all([
+      const [dd, cd, rd, meta, pollData, models, odds, seatPolls, htvData, resultData] = await Promise.all([
         loadJSON("districts"), loadJSON("candidates"), loadJSON("regions"),
         optional("meta"), optional("polls"), optional("seat_models"), optional("seat_odds"), optional("seat_polls"),
-        optional("htv"),
+        optional("htv"), optional("results"),
       ]);
       htv = htvData;
+      results = resultData;
       outlook = { swing: App.statewideSwing(meta, pollData), models, odds, seatPolls };
       districts = dd.districts.slice().sort((a, b) => a.name.localeCompare(b.name));
       candidates = cd.candidates || [];

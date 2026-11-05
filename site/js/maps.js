@@ -245,7 +245,7 @@
   }
 
   /* ---------------- Seat page: booth map ---------------- */
-  let boothMapInstance = null;
+  const boothMaps = new Map();   // container element -> its Leaflet map (a seat page can show 2026 and 2022 side by side)
 
   function share(n, total) {
     return total ? (100 * n) / total : 0;
@@ -257,10 +257,12 @@
   async function boothMap(el, districtId, contest) {
     const geo = await loadGeo("districts");
     if (!el.isConnected) return null;
-    if (boothMapInstance) { boothMapInstance.remove(); boothMapInstance = null; }
+    for (const [box, m] of boothMaps) {   // maps whose container left the page (another seat) or is being redrawn
+      if (box === el || !box.isConnected) { m.remove(); boothMaps.delete(box); }
+    }
     const feature = geo.features.find((f) => f.properties.id === districtId);
     const map = baseMap(el);
-    boothMapInstance = map;
+    boothMaps.set(el, map);
     const cand = Object.fromEntries(contest.candidates.map((c) => [c.id, c]));
     const placed = contest.polling_places.filter((p) => p.lat != null && p.lon != null);
 

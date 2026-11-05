@@ -1,0 +1,38 @@
+{
+  "_readme": [
+    "URL map for scripts/results.py: where the VEC's public results pages are. Each profile lists the page address patterns;",
+    "{base} is the profile's base, {slug} the district or region name lower-cased and hyphenated as the VEC writes it",
+    "(e.g. 'albert-park', 'eastern-victoria'). 'overrides' maps a district or region id to a full URL when one page doesn't",
+    "follow the pattern. The 2026 profile's base is null until the VEC publishes its 2026 results pages (expected after",
+    "nominations close on 9 Nov; election-night trial on 25 Nov): fill in 'base' (and any changed pattern) from the VEC's",
+    "'2026 State election results' page, then run 'python scripts/results.py --check-urls' to confirm every page answers.",
+    "The 2022 profile points at the final 2022 pages and is used to test the parser ('--profile 2022 --data-dir <copy>')."
+  ],
+  "active": "2026",
+  "profiles": {
+    "2026": {
+      "event": "2026 State Election",
+      "election_date": "2026-11-28",
+      "counting_starts": "2026-11-28T18:00:00+11:00",
+      "base": null,
+      "index_page": "{base}",
+      "district_page": "{base}/results-by-district/{slug}-district-results",
+      "district_vc_page": "{base}/results-by-district/{slug}-district-results/{slug}-district-results-by-voting-centre",
+      "district_tcp_page": "{base}/results-by-district/{slug}-district-results/{slug}-2cp-results-by-voting-centre",
+      "region_page": "{base}/results-by-region/{slug}-region-results",
+      "overrides": {}
+    },
+    "2022": {
+      "event": "2022 State Election",
+      "election_date": "2022-11-26",
+      "counting_starts": "2022-11-26T18:00:00+11:00",
+      "base": "https://www.vec.vic.gov.au/results/state-election-results/2022-state-election-results",
+      "index_page": "{base}",
+      "district_page": "{base}/results-by-district/{slug}-district-results",
+      "district_vc_page": "{base}/results-by-district/{slug}-district-results/{slug}-district-results-by-voting-centre",
+      "district_tcp_page": "{base}/results-by-district/{slug}-district-results/{slug}-2cp-results-by-voting-centre",
+      "region_page": "{base}/results-by-region/{slug}-region-results",
+      "overrides": {}
+    }
+  }
+}

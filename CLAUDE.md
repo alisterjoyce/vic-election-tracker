@@ -19,12 +19,13 @@ site/                     # published as-is by GitHub Pages (also deployable to 
   timeline.html           # the 2022-2026 term and election timetable (data/timeline.json)
   data/index.html         # /data/: every published data file, its fields (from _schema), credit and licence
   poll.html               # poll detail (#<poll id>) with the pollster's trend and house effect; no hash = all polls
+  results.html            # election-night results: seat tally against 45, seats changing hands, every seat, upper-house quotas
   myseats.html            # watchlist ("My seats"), stored in localStorage
   about.html              # about and methodology, sources, credits
   css/style.css           # all styles; design tokens on :root
   js/common.js            # shared: data loading, theme, formats, party palette, header chrome
                           #   (key-dates strip, search, footer), poll smoothing, seat-outlook maths
-  js/home.js, lower.js, upper.js, myseats.js, candidate.js, pendulum.js, poll.js
+  js/home.js, lower.js, upper.js, myseats.js, candidate.js, pendulum.js, poll.js, results.js
   js/quota.js             # upper-house quota calculator (mounted on each region in upper.html)
   js/htv.js               # how-to-vote cards: seat/region section and lower.html's "Preference watch"
   js/timeline.js, datafiles.js
@@ -39,7 +40,9 @@ scripts/build_localities.py  # rebuilds data/localities.json from Vicmap Admin p
 scripts/build_boundaries.py  # data/geo/{districts,regions}.geojson, topology-preserving simplification (needs shapely, topojson)
 scripts/results_format.py    # the vec-contest-v1 results format (2022 history and 2026 election night)
 scripts/build_results_2022.py  # data/results_2022/ from VEC 2022 results by voting centre (one-off)
-scripts/vec_feed.py       # VEC media feed (XML) -> vec-contest-v1; --selftest <samples folder>
+scripts/vec_feed.py       # VEC media feed (XML) -> vec-contest-v1; --selftest <samples folder> (feed access was declined; kept for the format)
+scripts/results.py        # election night: the VEC's public results pages -> results.json, results_lc.json, results_2026/ (see "Election-night results")
+scripts/results_urls.json # results.py's URL map: the 2026 page addresses (filled in once the VEC publishes them) and the 2022 test profile
 scripts/build_headshots.py   # headshot zip -> site/photos/{320,160}/*.webp + data/headshots.json (by hand; needs Pillow)
 scripts/headshot_overrides.json  # {zip file path: candidate id | null} to resolve photos by hand
 scripts/headshot_sources.json    # headshot provenance (image URLs, other listings, match type), kept out of site/data
@@ -52,6 +55,7 @@ site/js/maps.js           # Leaflet: home choropleth with metro inset, seat-page
 .github/workflows/refresh.yml   # 6 am, 10 am, 4 pm, 8 pm Melbourne (cron 0 19,23,5,9 UTC) + workflow_dispatch; commits
                                 #   site/data and deploys to Pages only if the data changed (scripts/data_changed.py)
 .github/workflows/deploy.yml    # deploys site/ to GitHub Pages on every push to main
+.github/workflows/results.yml   # election night: results.py every 5 minutes (schedule commented out until it's needed) + workflow_dispatch
 ```
 
 Not committed: the research report `.md` in the repo root, source screenshots and PDFs, the headshot zip (`/*.zip`), `.cache/` (Vicmap downloads) and `.claude/`, all via `.gitignore` except the report, which is simply never added.
@@ -78,7 +82,9 @@ Each file's `_schema` is the authoritative field list. Keep it in sync when addi
 | `council_polls.json` | Upper-house primary vote by region (seeds the quota calculator); OTH is a pollster's combined "others", never one party | hand, from the pollster's release |
 | `geo/districts.geojson`, `geo/regions.geojson` | Simplified boundaries (keep both under 1.5 MB together) | `scripts/build_boundaries.py` (Vicmap Admin; the VEC only offers PDF/PNG maps) |
 | `results_2022/<district>.json`, `results_2022/index.json` | 2022 results by voting centre in vec-contest-v1 format, plus swings from notional 2018 | `scripts/build_results_2022.py` (one-off) |
-| `results_2026/index.json` (+ per-district files on election night) | 2026 results in the same format; empty until 28 Nov, when the home map's Result mode switches on | `scripts/vec_feed.py` |
+| `results.json` | 2026 Assembly count per district: candidates' first preferences, 2CP, count progress, this site's call (called / leading / undecided), holder, changes_hands, 2CP swing; the seat tally against 45. Empty until counting starts | `scripts/results.py` (VEC results website) |
+| `results_lc.json` | 2026 Council count per region: group and candidate first preferences, quota, quotas filled, elected | `scripts/results.py` |
+| `results_2026/<district>.json`, `results_2026/index.json` | Each district in vec-contest-v1 (with voting centres) for the seat page's 2026 panel and booth map; the index drives the home map's Result mode. `_fetch.json` is results.py's bookkeeping (page hashes), not data | `scripts/results.py` |
 | `profiles.json` | Researched candidate profiles keyed by candidate id: summary, born (year), lives, occupation, prior roles, previous candidacies, faction, priorities, links, contact, a source for every fact (see "Candidate profiles") | hand (research) |
 | `headshots.json` | Candidate photos: id, name, seat, files {320,160}, source {credit, page}, licence note, date_added. Only what pages show: provenance is in `scripts/headshot_sources.json` | `scripts/build_headshots.py` |
 | `localities.json` | Suburb/locality and postcode → district(s) with area shares, for search | `scripts/build_localities.py` (Vicmap Admin boundaries; the VEC publishes no downloadable locality list) |
@@ -130,6 +136,17 @@ Fields (the file's `_schema` is authoritative): `summary`, `born`, `lives`, `occ
 - Set `profile_updated` whenever a profile is researched; sources keep their own `accessed` dates.
 - Lot 1 (4 Nov 2026): every sitting MP and MLC who is recontesting, from Wikipedia and their Parliament of Victoria page (`https://www.parliament.vic.gov.au/members/<slug>/`; the members API is `/api/search/members?member-status=current&pageSize=100&page=N`). Sitting MPs' contact details are their electorate office's, as Parliament publishes them.
 
+## Election-night results (`scripts/results.py`)
+
+The VEC declined media-feed access; its public results website carries the same first-preference and 2CP figures at the same update frequency. `results.py` reads, per district, the main results page, the first preferences by voting centre and the 2CP by voting centre, and per region the region page (2022 addresses, which 2026 is expected to follow: `.../results-by-district/<id>-district-results`, `.../<id>-district-results-by-voting-centre`, `.../<id>-2cp-results-by-voting-centre`, `.../results-by-region/<id>-region-results`).
+- **Filling the URL map** (`scripts/results_urls.json`): when the VEC publishes its 2026 results pages (expected after nominations close on 9 Nov; election-night trial on 25 Nov), set the 2026 profile's `base` to the "2026 State election results" page's address and adjust any pattern that differs; put a one-off page in `overrides` as `"district:<id>"` or `"region:<id>"`. Then `python scripts/results.py --check-urls` must report every page answering. During the 25 Nov trial, run the workflow by hand and check the log and the Results page.
+- **Turning the schedule on:** uncomment the `schedule` block in `.github/workflows/results.yml` (cron `*/5 * * * *`) on election day, and comment it out again when the count is final. `workflow_dispatch` runs it by hand any time. The Results nav item and the seat and region panels switch on by themselves once `results.json` has votes.
+- **Politeness:** one request a second, a descriptive User-Agent, conditional requests where the server sends ETag/Last-Modified (the VEC sends neither: `Cache-Control: no-store`), and a district's two voting-centre pages are fetched only when its main page changed (a hash of the page's `<main>` text, kept in `results_2026/_fetch.json`). Each page takes ~1.4 s (they are ~150 KB): a run where nothing changed reads 96 pages in ~2 minutes; one where every seat changed reads ~270 in ~7, so on a busy night updates arrive every ~7 minutes rather than 5 (runs queue, never overlap; the job times out at 15).
+- **Tolerance:** a page that fails or doesn't parse is logged (and a `::warning::`) and skipped; the district keeps its previous figures. Parsers look for headings and column labels, not positions. The 2022 Narracan page doesn't exist (that election failed), which the test exercises.
+- **Call rule** (this site's projection, labelled so everywhere): called when the leader's 2CP margin exceeds the estimated uncounted vote (enrolment x the seat's 2022 turnout - counted) plus max(250 votes, 1% of enrolment); declared seats are the VEC's call. Constants at the top of results.py.
+- **Testing:** `python scripts/results.py --profile 2022 --data-dir <copy of site/data>` reads the final 2022 pages end to end (it refuses to write to site/data); then `--selftest-samples "website samples and summary (complete set)" --data-dir <same copy>` checks the website-derived files against the VEC's 2026 sample XML (contest, candidate and voting-centre keys; upper-house group fields; party names). Serve the copy to look at the pages. Booth coordinates come from `results_2022/` by voting-centre name.
+- Don't list results files on /data/ (as before for results_2026/): they're the VEC's figures, credited on every results view.
+
 ## Results format (vec-contest-v1)
 
 2022 history and 2026 election night use one JSON shape that mirrors the VEC media feed (AEC mediafeed/EML), so `maps.js`'s booth map and the seat-page result panels read both. The format is defined in `scripts/results_format.py`, which also maps feed elements to JSON keys. Don't add fields to one source only; add them to the format, both builders, and `vec_feed.py --selftest`, which checks that the keys match `results_2022`. The VEC feed and its sample files are covered by the VEC's terms of use, so keep them out of the repo (the samples folder is git-ignored).
@@ -173,6 +190,7 @@ Typography: **Archivo** (display: headings, brand, big numbers) and **Inter** (b
 - **Phone menu:** at 760px and below the nav is a fixed panel under the header (`--nav-top`, set by `common.js` when it opens) that covers the page; `html.nav-open` locks the page's scroll and dims it. It closes on a tap outside, on Escape and when a link is followed. Leaflet maps sit in `isolation: isolate` containers so their panes stay under it.
 - **Key-dates strip:** on phones it collapses to one button that expands to the three milestones; desktop shows the full strip. The phone line says "Today: <short>" on a milestone's first day and otherwise "Next: <d Mon>, <short>" for the next milestone; the full strip says "Today:" (the narrowest event covering today) then "Next, <date>:". Events in `meta.json` → `key_dates.events` have `from`, optional `to`, `text` and `short`; stretches between milestones (postal votes going out, counting continues) carry `ongoing: true` and are never a "Next". Give each milestone its own start date, so no two compete for one day.
 - **Nominations badge** (home headline card): `meta.json` → `nominations` {opens, closes, official, official_at}. Before `closes` it reads "Nominations open until noon Mon 9 Nov"; after, "Nominations closed; official candidate list due from the VEC"; once `official` is set it reads "Official candidates <n> VEC". refresh.py sets `official` (the count of `vec_nominated` rows) when `fetch_vec_candidates()` loads the VEC's list, which is still a placeholder: implement it after nominations close on 9 Nov, or set `official` by hand.
+- **Results nav item:** "Results" (Overview group) is hidden until `results.json` has votes in it (checked after the first paint); results.html itself shows "Counting begins 6 pm Sat 28 Nov" until then, as do the seat and region pages' 2026 slots.
 - In-page nav targets: `index.html#state-map` (the map), `pendulum.html#scenarios`, `upper.html#quota` (asks for a region) and `upper.html#<region>/quota` (that region's quota calculator). Pages scroll to these after rendering; `scroll-margin-top` keeps them clear of the sticky header.
 - Shareable URLs use the hash: `lower.html#bendigo-east`, `upper.html#northern-victoria`, `candidate.html#bendigo-west/brenton-baldwin`, `pendulum.html#swing=3.2`, `poll.html#newspoll-2026-10-22`. Poll ids are `<pollster slug>-<end date>` (refresh.py), so they survive each refresh's rewrite. Link a name to its profile with `App.profileLink(seat, name)`; `App.loadPeople()` merges candidates, ticket names and MLCs into one list by candidate id (two ids for one name in different seats are never merged).
 - Share cards print the photo credit on the image. Seat pages and the home page have a "Share" button that builds the card on demand, shares it where the browser can share files, and otherwise downloads it. No server is involved.
@@ -205,7 +223,7 @@ The site installs as an app ("Vic Election") on Android, desktop Chromium and iP
   - photos and the other font subsets cache first;
   - other origins: only `cdnjs.cloudflare.com` (pinned, SRI-checked libraries) is cached; nothing else cross-origin is intercepted or cached, and paths that look like login or auth pages never are;
   - caps: data 160 entries, media 250, libs 20, oldest first. `activate` deletes every `vet-*` cache that isn't the current version.
-- **Bump `VERSION` in `site/sw.js`** (now `"v9"`; e.g. to `"v10"`) whenever you change HTML, CSS or JS, or add or remove a file in `SHELL` (keep `SHELL` in step with the files: a missing file fails the install). The new worker precaches the new shell, waits, and the page shows "Update available, tap to refresh"; a tap activates it and reloads. Data refreshes need no bump. Without a bump, stale-while-revalidate still picks up changed shell files a visit later, but a page and a shared script can briefly be from different versions.
+- **Bump `VERSION` in `site/sw.js`** (now `"v10"`; e.g. to `"v11"`) whenever you change HTML, CSS or JS, or add or remove a file in `SHELL` (keep `SHELL` in step with the files: a missing file fails the install). The new worker precaches the new shell, waits, and the page shows "Update available, tap to refresh"; a tap activates it and reloads. Data refreshes need no bump. Without a bump, stale-while-revalidate still picks up changed shell files a visit later, but a page and a shared script can briefly be from different versions.
 - "Install app" is the last item in the About menu group: shown when the browser fires `beforeinstallprompt` (Android, desktop Chromium; it opens the browser's install prompt) and on iPhone/iPad (it opens a sheet: Share, then Add to Home Screen). Hidden when running installed (`display-mode: standalone` or `navigator.standalone`).
 - Share images, CSV downloads, Find my seat (geolocation) and the Leaflet maps were tested in an installed, launched copy in headless Chromium. Lighthouse 11's PWA audit (removed in Lighthouse 12) scores 100.
 

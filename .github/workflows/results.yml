@@ -1,0 +1,83 @@
+name: Election-night results
+
+# Reads the VEC's public results pages (scripts/results.py) and publishes results.json, results_lc.json and
+# results_2026/ when they change. Before turning the schedule on, fill the 2026 'base' in scripts/results_urls.json
+# and check every page answers: python scripts/results.py --check-urls
+on:
+  # Every 5 minutes from election night. Uncomment to turn it on (GitHub may start scheduled runs a few minutes
+  # late at busy times); comment it out again once the count is final.
+  # schedule:
+  #   - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write      # deploy job: publish to GitHub Pages
+  id-token: write   # deploy job: authenticate the Pages deployment
+
+concurrency:
+  group: results
+  cancel-in-progress: false   # a slow run finishes; the next scheduled one waits
+
+jobs:
+  results:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15   # ~1.4 s a page (VEC pages are ~150 KB): ~2 min when nothing changed, ~7 min when every seat did
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install requirements
+        run: pip install -r requirements.txt
+
+      - name: Read the VEC results pages
+        run: python scripts/results.py
+
+      - name: Commit and push if the results changed
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data/results.json site/data/results_lc.json site/data/results_2026
+          # _fetch.json (page hashes) changes with any page; commit only when the results themselves did.
+          if git diff --cached --quiet -- site/data/results.json site/data/results_lc.json ':(glob)site/data/results_2026/[!_]*'; then
+            echo "No results changes."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            git reset -q
+            exit 0
+          fi
+          git commit -m "Results $(date -u +'%Y-%m-%d %H:%M UTC')"
+          # The four-a-day data refresh may have pushed meanwhile: rebase onto it (different files) and retry.
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    needs: results
+    if: needs.results.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main   # the tip of main, including the results commit just pushed
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

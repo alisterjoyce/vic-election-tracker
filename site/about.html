@@ -96,6 +96,22 @@
       </dl>
     </section>
 
+    <section class="card" id="results" aria-labelledby="results-h">
+      <h2 id="results-h">Election-night results</h2>
+      <p>From 6 pm on Saturday 28 November the tracker reads the <a href="https://www.vec.vic.gov.au/results">Victorian Electoral Commission's results pages</a> every 5 minutes: each district's first preferences, its two-candidate-preferred (2CP) count and the figures for every voting centre, and each region's upper-house first preferences. All the figures are the VEC's; the tracker adds three things of its own, each labelled as such.</p>
+      <dl class="defs">
+        <dt>Called by this site</dt>
+        <dd>A seat is called when the leading candidate's 2CP margin, in votes, is larger than the votes still to be counted plus a safety buffer. The trailing candidate couldn't catch up even if every remaining vote went their way. Votes still to count are estimated as the seat's enrolment times its 2022 turnout, minus the votes counted so far; the buffer is the larger of 250 votes and 1% of enrolment, to allow for rechecks and for the chance that the VEC's indicative 2CP count is between the wrong two candidates. This is the tracker's projection, not the VEC's. A seat the VEC has declared is marked "Declared (VEC)".</dd>
+        <dt>Leading and undecided</dt>
+        <dd>"Leading" means votes are in but the seat isn't called: the leader is the 2CP leader, or the first-preference leader before the 2CP count starts. "Undecided" means no votes have been counted yet.</dd>
+        <dt>Swing and seats changing hands</dt>
+        <dd>The 2CP swing compares the leader's 2CP share with their party's 2022 share in the same seat, and is shown only when the two parties in the count are the same two as in 2022. A seat is "changing hands" when its leader is from a different party from the one that holds it.</dd>
+        <dt>Upper-house quotas</dt>
+        <dd>A region elects five members, so a group with one-sixth of the formal vote plus one (a quota) wins a seat on its own. The region pages show each group's quotas filled on first preferences; the rest of the seats are decided by preferences, which the VEC distributes after election night.</dd>
+      </dl>
+      <p class="muted small">Voting-centre circles on the seat maps use the 2022 locations; centres that are new in 2026 are listed in the table but not mapped.</p>
+    </section>
+
     <section class="card" id="sources" aria-labelledby="sources-h">
       <h2 id="sources-h">Sources and refresh times</h2>
       <p>Data refreshes four times a day, at 6 am, 10 am, 4 pm and 8 pm Melbourne time: polls and candidates from Wikipedia, the full ABC candidate check, seat forecasts, news, betting and how-to-vote cards. Changes are published straight away. The footer and the home page show when the data last changed, in Melbourne time.</p>
@@ -117,7 +133,7 @@
             <tr><td><a href="https://www.vec.vic.gov.au/results/state-election-results/2022-state-election-results">VEC 2022 results by district</a>, results by voting centre and 2CP by voting centre</td><td>How it voted in 2022: first preferences, 2CP, voting-centre results</td><td>One-off (final results)</td></tr>
             <tr><td><a href="https://www.vec.vic.gov.au/electoral-boundaries/download-boundary-maps">VEC 2022 voting centre locations</a></td><td>Positions of 2022 voting centres on the booth map</td><td>One-off</td></tr>
             <tr><td><a href="https://en.wikipedia.org/wiki/Results_of_the_2022_Victorian_state_election_(Legislative_Assembly)">Wikipedia: 2022 Assembly results</a></td><td>Swings since the notional 2018 result</td><td>One-off</td></tr>
-            <tr><td>VEC results media feed</td><td>Election-night results (2026), in the same format as the 2022 booth data</td><td>Live from 28 Nov 2026 (requires the VEC's terms of use)</td></tr>
+            <tr><td><a href="https://www.vec.vic.gov.au/results">VEC results website</a> (2026 district, voting-centre, 2CP and region pages)</td><td>Election-night results: the Results page, each seat's and region's 2026 count, and the map's Result colouring</td><td>Every 5 minutes from 6 pm on 28 Nov 2026</td></tr>
             <tr><td>Party and campaign websites (candidate pages)</td><td>Candidate photos. Each photo's source is credited beneath it and linked</td><td>By hand (collected 30 Oct 2026)</td></tr>
             <tr><td><a href="https://www.vec.vic.gov.au/candidates-and-parties/become-a-state-election-candidate/how-to-vote-cards">VEC how-to-vote card register</a></td><td>Registered how-to-vote cards for each seat and region (preference orders entered by hand from the cards)</td><td>Four times a day from 10 Nov 2026</td></tr>
             <tr><td>Bing News search; feeds from the ABC, Bendigo Advertiser, Border Mail, Warrnambool Standard, Latrobe Valley Express, Sunraysia Daily, Star Weekly and Shepparton News</td><td>Headlines and links for each seat and the statewide news list</td><td>Four times a day</td></tr>

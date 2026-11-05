@@ -236,6 +236,12 @@
   // contest stays with its holder. Returns {winners: {district id: party}, tally: {bloc: seats}}.
   const BLOCS = ["ALP", "LNP", "GRN", "ONP", "OTH"];
   const blocOf = (p) => (COALITION.includes(p) ? "LNP" : BLOCS.includes(p) ? p : "OTH");
+  // Upper-house groups' quotas filled: one bar each, a full quota at the first tick (half way), two at the end.
+  function quotaBars(groups) {
+    return `<ul class="quota-bars">${groups.map((g) => `<li><span class="qb-name">${escapeHtml(g.name || partyName(g.party))}</span>
+      <span class="qb-track"><span class="qb-fill" style="width:${Math.min(100, 50 * g.quotas)}%;background:var(${partyVar(g.party)})"></span><span class="qb-one" title="One quota"></span></span>
+      <span class="qb-num">${Number(g.quotas).toFixed(2)}</span></li>`).join("")}</ul>`;
+  }
   // A seat model's credit, linked to its page: "Australian Election Forecasts (aeforecasts.com)" wherever it's shown.
   const modelLink = (m) => `<a href="${escapeHtml(m.source_url || "#")}" rel="noopener" target="_blank">${escapeHtml(m.credit || m.name)}</a>`;
   function projectSeats(districts, s) {
@@ -607,7 +613,7 @@
   /* ---- Main navigation: four groups, dropdowns on desktop, a menu button on phones ---- */
   // The single source of the site's navigation; pages carry only a no-JS fallback.
   const NAV = [
-    { label: "Overview", items: [["Home", "index.html"], ["Map", "index.html#state-map"], ["Pendulum", "pendulum.html"],
+    { label: "Overview", items: [["Home", "index.html"], ["Results", "results.html"], ["Map", "index.html#state-map"], ["Pendulum", "pendulum.html"],
       ["Scenarios", "pendulum.html#scenarios"], ["Timeline", "timeline.html"]] },
     { label: "Lower house", items: [["Seats", "lower.html"], ["Candidates", "candidate.html"], ["My seats", "myseats.html"]] },
     { label: "Upper house", items: [["Regions", "upper.html"], ["Quota calculator", "upper.html#quota"]] },
@@ -630,6 +636,8 @@
             `<li><a href="${new URL(href, ROOT).href}"${isHere(href) ? ' aria-current="page"' : ""}>${escapeHtml(label)}</a></li>`).join("")}</ul>
         </div>`;
     }).join("");
+
+    initResultsNav(nav, page);
 
     let toggle = nav.parentNode.querySelector(".nav-toggle");
     if (!toggle) {
@@ -681,6 +689,18 @@
     // Following a same-page link (Map, Scenarios, Quota calculator) closes the menus.
     nav.addEventListener("click", (e) => { if (e.target.closest("a, .nav-install-btn")) { closeAll(); setMenu(false); } });
     initInstall(nav);
+  }
+
+  // "Results" stays out of the menu until results.json has votes in it (scripts/results.py, from 6 pm on 28 Nov),
+  // except on the results page itself. Checked after the first paint, so it costs the page nothing.
+  function initResultsNav(nav, page) {
+    const link = [...nav.querySelectorAll("a")].find((a) => /results\.html$/.test(a.getAttribute("href") || ""));
+    if (!link || page === "results.html") return;
+    const li = link.closest("li");
+    li.hidden = true;
+    afterPaint(() => loadJSON("results")).then((r) => {
+      if (Object.values((r && r.districts) || {}).some((d) => d.total)) li.hidden = false;
+    }, () => {});
   }
 
   /* ---- App: the service worker (sw.js), its update toast, and "Install app" in the menu ---- */
@@ -1031,7 +1051,7 @@
     PARTIES, STATUSES, COALITION, loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, partyBadge, statusBadge,
     slugify, parseDate, fmtDate, fmtMonth, fmtDateTime, dataUpdatedText, fmtPrice, fmtMargin, fmtSwing, melbourneToday, daysBetween,
     hashId, cssVar, currentTheme, showError, copyLink,
-    DAY, preparePolls, smoothedSeries, statewideSwing, swingAdjusted, projectSeats, BLOCS, blocOf, modelLink,
+    DAY, preparePolls, smoothedSeries, statewideSwing, swingAdjusted, projectSeats, BLOCS, blocOf, modelLink, quotaBars,
     getWatchlist, setWatchlist, isWatched, toggleWatch, starButton, storageWorks,
     buildSearchIndex, searchItems,
     candidateId, givenFirst, loadHeadshots, avatar, photoCredits, initials, inkFor, newsList,
