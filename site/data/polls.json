@@ -19,6 +19,22 @@
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election",
   "polls": [
     {
+      "id": "lighthouse-growth-intelligence-centre-2026-11-01",
+      "start_date": "2026-10-19",
+      "end_date": "2026-11-01",
+      "pollster": "Lighthouse/Growth Intelligence Centre",
+      "client": "Herald Sun",
+      "sample_size": 1289,
+      "source_url": "https://www.heraldsun.com.au/news/victoria/state-election/lighthouse-tracking-poll-shows-labors-primary-vote-has-fallen-to-22-per-cent/news-story/22ac78198c0126ec49c43c627992970c",
+      "primary": {
+        "ALP": 22,
+        "LNP": 31,
+        "GRN": 14,
+        "ONP": 23,
+        "OTH": 10
+      }
+    },
+    {
       "id": "roy-morgan-2026-10-29",
       "start_date": "2026-10-26",
       "end_date": "2026-10-29",

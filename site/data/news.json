@@ -8,8 +8,14 @@
       "sources": "Source -> {status: ok | error | skipped, url, items, message}"
     }
   },
-  "updated": "2026-11-06T00:36:15Z",
+  "updated": "2026-11-06T05:52:47Z",
   "statewide": [
+    {
+      "title": "Victorian election parties outline major policy commitments",
+      "outlet": "Ticker News",
+      "published": "2026-11-05T14:09:00Z",
+      "url": "https://tickernews.co/victorian-election-parties-outline-major-policy-commitments/"
+    },
     {
       "title": "The Victorian election - a race for the ages, or a win by default?",
       "outlet": "Crikey",
@@ -83,6 +89,12 @@
       "url": "https://www.theguardian.com/australia-news/2026/nov/04/cpsu-public-servants-union-refuses-to-back-labor-at-victorian-election"
     },
     {
+      "title": "Victorian election hot seats: One Nation candidate says coaching girls ‘like trying to herd chickens’",
+      "outlet": "The Age",
+      "published": "2026-11-03T10:48:00Z",
+      "url": "https://www.theage.com.au/politics/victoria/victorian-election-hot-seats-in-melbourne-s-east-disenchantment-is-the-common-thread-20261104-p61ao4.html"
+    },
+    {
       "title": "Premier Ben Carroll fights for survival as Victorian election campaign officially begins",
       "outlet": "news.com.au",
       "published": "2026-11-03T05:36:00Z",
@@ -96,9 +108,9 @@
     },
     {
       "title": "Hear Ky you should vote for them",
-      "outlet": "Kyabram Free Press",
+      "outlet": "Shepparton News",
       "published": "2026-11-02T16:00:00Z",
-      "url": "https://www.kyfreepress.com.au/news/hear-ky-you-should-vote-for-them/"
+      "url": "https://www.sheppnews.com.au/news/hear-ky-you-should-vote-for-them/"
     },
     {
       "title": "Greater mental health support promise",
@@ -147,18 +159,6 @@
       "outlet": "ABC News",
       "published": "2026-10-31T20:11:42Z",
       "url": "https://www.abc.net.au/news/2026-11-01/victorian-election-pledges-one-month-countdown/107332070"
-    },
-    {
-      "title": "Backing a horse in Victoria's election is no simple task",
-      "outlet": "ABC News",
-      "published": "2026-10-31T20:09:20Z",
-      "url": "https://www.abc.net.au/news/2026-11-01/victorian-election-labor-liberal-tough-battle/107331376"
-    },
-    {
-      "title": "Liberal plan to scrap Treaty risks 'sending us back', Aboriginal leader warns",
-      "outlet": "ABC News",
-      "published": "2026-10-30T20:33:16Z",
-      "url": "https://www.abc.net.au/news/2026-10-31/treaty-scrap-victoria-coalition-vic-election-jess-wilson/107322868"
     }
   ],
   "seats": {
@@ -793,9 +793,9 @@
       },
       {
         "title": "Labor MP Sarah Connolly called out for skipping march to lift weights, do washing",
-        "outlet": "Northern Territory News",
+        "outlet": "The Courier-Mail",
         "published": "2026-08-12T12:00:00Z",
-        "url": "https://www.ntnews.com.au/news/victoria/labor-mp-sarah-connolly-called-out-for-skipping-march-to-lift-weights-do-washing/news-story/78c71b9d1c3825a827de5a1dd5a36d4c"
+        "url": "https://www.couriermail.com.au/news/victoria/labor-mp-sarah-connolly-called-out-for-skipping-march-to-lift-weights-do-washing/news-story/78c71b9d1c3825a827de5a1dd5a36d4c"
       }
     ],
     "lowan": [
@@ -923,9 +923,9 @@
     "murray-plains": [
       {
         "title": "Hear Ky you should vote for them",
-        "outlet": "Kyabram Free Press",
+        "outlet": "Shepparton News",
         "published": "2026-11-02T16:00:00Z",
-        "url": "https://www.kyfreepress.com.au/news/hear-ky-you-should-vote-for-them/"
+        "url": "https://www.sheppnews.com.au/news/hear-ky-you-should-vote-for-them/"
       },
       {
         "title": "Coalition pledges fire truck",
@@ -1127,6 +1127,12 @@
         "url": "https://www.sheppadviser.com.au/door-bells-election-forum/"
       },
       {
+        "title": "Victorian election hot seats: One Nation candidate says coaching girls ‘like trying to herd chickens’",
+        "outlet": "The Age",
+        "published": "2026-11-03T10:48:00Z",
+        "url": "https://www.theage.com.au/politics/victoria/victorian-election-hot-seats-in-melbourne-s-east-disenchantment-is-the-common-thread-20261104-p61ao4.html"
+      },
+      {
         "title": "Labor promises free dental clinic for Shepparton",
         "outlet": "Shepparton News",
         "published": "2026-11-01T16:01:00Z",
@@ -1230,7 +1236,7 @@
     "ABC News": {
       "status": "ok",
       "url": "https://www.abc.net.au/news/feed/51120/rss.xml",
-      "items": 24
+      "items": 25
     },
     "Bendigo Advertiser": {
       "status": "ok",
