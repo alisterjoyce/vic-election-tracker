@@ -840,6 +840,8 @@ ABC_WEBSITE_FIXES = {
     "https://www.familyfirstparty.org.au/batres-croes_2026": "https://www.familyfirstparty.org.au/croes_2026",
     # Redirects to another candidate's page (Shane Sali, Shepparton); his own page is /davidhutchings/.
     "https://vic.nationals.org.au/candidates-david-hutchings/": "https://vic.nationals.org.au/davidhutchings/",
+    # One Nation moved its candidate pages under /candidate/ and corrected the spelling (Wilkie).
+    "https://vic.onenation.org.au/bianca-wilke": "https://vic.onenation.org.au/candidate/bianca-wilkie",
 }
 ABC_DELAY = 1.0      # seconds between requests
 ABC_ATTEMPTS = 3     # tries per page before the whole ABC step is skipped
@@ -1469,7 +1471,7 @@ def _et_robots(web: "PoliteSession"):
     return rp
 
 
-def _same_person(a: str, b: str) -> bool:
+def _et_same_person(a: str, b: str) -> bool:
     """Same name ignoring case, accents and punctuation, or the same surname with first names agreeing on
     their first three letters (Tim/Timothy)."""
     if _name_key(a) == _name_key(b):
@@ -1508,11 +1510,11 @@ def refresh_et_retirements(data_dir: Path, meta: dict) -> bool:
         kind = _et_source_kind(src.get("url"))
         if role == "MLA":
             d = districts.get(seat)
-            target = d if d and _same_person(d.get("sitting_mp", ""), name) else None
+            target = d if d and _et_same_person(d.get("sitting_mp", ""), name) else None
             holder = target
         elif role == "MLC":
             target = next((m for rid in [seat, *regions] for m in (regions.get(rid) or {}).get("mlcs", [])
-                           if _same_person(m.get("name", ""), name)), None)
+                           if _et_same_person(m.get("name", ""), name)), None)
             holder = target
         else:
             target = holder = None

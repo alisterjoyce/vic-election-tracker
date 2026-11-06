@@ -469,7 +469,7 @@
     if (!btn) return;
     const label = () => {
       const dark = currentTheme() === "dark";
-      btn.textContent = dark ? "☀ Light" : "☾ Dark";
+      btn.innerHTML = `<span aria-hidden="true">${dark ? "☀" : "☾"}</span><span class="theme-word"> ${dark ? "Light" : "Dark"}</span>`;
       btn.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
       // The toolbar colour (theme-color) follows a theme picked here; otherwise the media queries decide.
       if (document.documentElement.hasAttribute("data-theme")) {
@@ -564,10 +564,11 @@
     const rName = Object.fromEntries(regions.map((r) => [r.id, r.name]));
     const items = [];
     districts.forEach((d) => items.push({ type: "District", label: d.name, sub: rName[d.region] || "", href: `lower.html#${d.id}`, key: norm(d.name), rank: 0 }));
-    regions.forEach((r) => items.push({ type: "Region", label: r.name, sub: "Legislative Council", href: `upper.html#${r.id}`, key: norm(r.name), rank: 0 }));
+    regions.forEach((r) => items.push({ type: "Region", label: r.name, sub: "Legislative Council region", href: `upper.html#${r.id}`, key: norm(r.name), rank: 0 }));
     buildPeople(cd, rd, dd).forEach((p) => {
       if (p.status === "withdrawn" && !p.mlc) return;
-      items.push({ type: p.contesting ? "Candidate" : "MLC", label: p.name, sub: `${partyName(p.party)}, ${p.seatName}`,
+      items.push({ type: p.contesting ? "Candidate" : "MLC", label: p.name,
+        sub: `${p.contesting ? "" : "MLC, "}${partyName(p.party)}, ${p.seatName}`, party: p.party,
         href: `candidate.html#${p.id}`, key: norm(p.name), rank: 2 });
     });
     const shareText = (s) => (s < 0.995 ? ` (${Math.round(s * 100)}% of area)` : "");
@@ -587,7 +588,7 @@
     return items;
   }
 
-  function searchItems(items, query) {
+  function searchItems(items, query, limit) {
     const q = norm(query);
     if (!q) return [];
     const isPostcode = /^\d{3,4}$/.test(q);
@@ -607,7 +608,7 @@
     }
     scored.sort((a, b) => a.score - b.score || a.it.label.localeCompare(b.it.label));
     // A postcode can cover a dozen or more suburbs; show them all.
-    return scored.slice(0, isPostcode ? 24 : 12).map((s) => s.it);
+    return scored.slice(0, limit || (isPostcode ? 24 : 12)).map((s) => s.it);
   }
 
   /* ---- Main navigation: four groups, dropdowns on desktop, a menu button on phones ---- */
@@ -812,58 +813,128 @@
     else window.addEventListener("load", register, { once: true });
   }
 
+  const SEARCH_ICON = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>';
+  // Result groups, in the order the dropdown shows them, with how many of each to show.
+  const SEARCH_GROUPS = [
+    { name: "Seats", types: ["District", "Region"], max: 6 },
+    { name: "Candidates", types: ["Candidate", "MLC"], max: 8 },
+    { name: "Suburbs", types: ["Suburb"], max: 8 },
+    { name: "Postcodes", types: ["Postcode"], max: 8 },
+  ];
+
+  // The search box: in the home page's headline card (#hero-search), elsewhere in the header. On the home page
+  // the header keeps a compact button that brings the same box into view and focuses it.
   function initSearch() {
     const header = document.querySelector(".site-header .container");
     if (!header) return;
-    const slot = header.querySelector(".search");
-    const wrap = slot || document.createElement("div");
-    wrap.className = "search";
+    const heroSlot = document.getElementById("hero-search");
+    const headSlot = header.querySelector(".search");
+    let wrap = heroSlot;
+    if (!wrap) {
+      wrap = headSlot || document.createElement("div");
+      if (!headSlot) header.insertBefore(wrap, document.getElementById("theme-toggle"));
+    }
+    wrap.classList.add("search");
+    wrap.setAttribute("role", "search");
     wrap.innerHTML = `
-      <label class="sr-only" for="site-search">Search districts, regions, candidates, suburbs or postcodes</label>
-      <input id="site-search" type="search" autocomplete="off" spellcheck="false"
-        placeholder="Seat, candidate, suburb, postcode"
+      <label class="sr-only" for="site-search">Search a seat, candidate, suburb or postcode</label>
+      <span class="search-icon">${SEARCH_ICON}</span>
+      <input id="site-search" type="search" autocomplete="off" spellcheck="false" enterkeyhint="go"
+        placeholder="Search a seat, candidate, suburb or postcode"
         role="combobox" aria-expanded="false" aria-controls="site-search-results" aria-autocomplete="list">
-      <ul id="site-search-results" class="search-results" role="listbox" hidden></ul>`;
-    if (!slot) header.insertBefore(wrap, document.getElementById("theme-toggle"));
+      <kbd class="search-kbd" aria-hidden="true" title="Press / to search">/</kbd>
+      <button type="button" class="search-clear" aria-label="Clear search" hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+      <ul id="site-search-results" class="search-results" role="listbox" aria-label="Search results" hidden></ul>`;
 
     const input = wrap.querySelector("input");
     const list = wrap.querySelector("ul");
+    const clear = wrap.querySelector(".search-clear");
     let results = [];
     let active = -1;
 
-    const close = () => { list.hidden = true; input.setAttribute("aria-expanded", "false"); active = -1; };
+    const focusSearch = () => {
+      if (heroSlot) {
+        const r = wrap.getBoundingClientRect();
+        if (r.top < 0 || r.bottom > innerHeight) wrap.scrollIntoView({ block: "center" });
+      }
+      input.focus({ preventScroll: !!heroSlot });
+      input.select();
+    };
+    if (heroSlot && headSlot) {   // home page: the header's compact button opens the hero's search
+      headSlot.classList.add("search-compact");
+      headSlot.innerHTML = `<button type="button" class="icon-btn search-open" aria-label="Search a seat, candidate, suburb or postcode" aria-controls="site-search">${SEARCH_ICON}</button>`;
+      headSlot.querySelector("button").addEventListener("click", focusSearch);
+    }
+
+    const setText = (has) => { clear.hidden = !has; wrap.classList.toggle("has-text", has); };
+    const close = () => {
+      list.hidden = true;
+      input.setAttribute("aria-expanded", "false");
+      input.removeAttribute("aria-activedescendant");
+      active = -1;
+    };
     const go = (it) => {
       if (!it) return;
       close();
       input.value = "";
+      setText(false);
       input.blur();
       location.href = new URL(it.href, ROOT).href;
     };
-    const paint = () => {
-      list.innerHTML = results.length ? results.map((it, i) => `
-        <li id="sr-${i}" role="option" aria-selected="${i === active}" class="${i === active ? "active" : ""}" data-i="${i}">
-          <span class="sr-type">${escapeHtml(it.type)}</span>
-          <span class="sr-label">${escapeHtml(it.label)}</span>
+    const option = (it, i) => {
+      const dot = it.party ? `<span class="sr-dot" style="background:var(${partyVar(it.party)})" title="${escapeHtml(partyName(it.party))}"></span>` : "";
+      return `<li id="sr-${i}" role="option" aria-selected="${i === active}" class="${i === active ? "active" : ""}" data-i="${i}">
+          <span class="sr-label">${dot}${escapeHtml(it.label)}</span>
           <span class="sr-sub">${escapeHtml(it.sub)}</span>
-        </li>`).join("") : '<li class="sr-empty" role="option" aria-disabled="true">No matches</li>';
+        </li>`;
+    };
+    const paint = () => {
+      if (!results.length) {
+        list.innerHTML = '<li class="sr-empty" role="option" aria-disabled="true">No matches</li>';
+      } else {
+        let i = 0;
+        list.innerHTML = SEARCH_GROUPS.map((g) => {
+          const items = results.filter((it) => g.types.includes(it.type));
+          if (!items.length) return "";
+          return `<li class="sr-group" role="presentation">${g.name}</li>` + items.map((it) => option(it, i++)).join("");
+        }).join("");
+      }
       list.hidden = false;
       input.setAttribute("aria-expanded", "true");
-      if (active >= 0) input.setAttribute("aria-activedescendant", `sr-${active}`);
-      else input.removeAttribute("aria-activedescendant");
+      if (active >= 0) {
+        input.setAttribute("aria-activedescendant", `sr-${active}`);
+        const li = list.querySelector(`#sr-${active}`);
+        if (li) li.scrollIntoView({ block: "nearest" });
+      } else {
+        input.removeAttribute("aria-activedescendant");
+      }
     };
+    // The scored matches, grouped (Seats, Candidates, Suburbs, Postcodes) so the arrow keys follow the list's order.
+    const grouped = (matches) => SEARCH_GROUPS.flatMap((g) => matches.filter((it) => g.types.includes(it.type)).slice(0, g.max));
 
     input.addEventListener("focus", () => { buildSearchIndex(); }, { once: true });
     input.addEventListener("input", async () => {
       const q = input.value;
+      setText(!!q);
       if (!q.trim()) { close(); return; }
       const items = await buildSearchIndex();
       if (input.value !== q) return;   // a newer keystroke is in flight
-      results = searchItems(items, q);
+      results = grouped(searchItems(items, q, 60));
       active = results.length ? 0 : -1;
       paint();
     });
     input.addEventListener("keydown", (e) => {
-      if (list.hidden) return;
+      if (e.key === "Escape") {
+        e.preventDefault();
+        if (!list.hidden) close();
+        else if (input.value) { input.value = ""; setText(false); }
+        else input.blur();
+        return;
+      }
+      if (list.hidden) {
+        if (e.key === "ArrowDown" && input.value.trim()) { e.preventDefault(); input.dispatchEvent(new Event("input")); }
+        return;
+      }
       if (e.key === "ArrowDown" || e.key === "ArrowUp") {
         e.preventDefault();
         if (!results.length) return;
@@ -872,15 +943,27 @@
       } else if (e.key === "Enter") {
         e.preventDefault();
         go(results[active] || results[0]);
-      } else if (e.key === "Escape") {
-        close();
       }
+    });
+    clear.addEventListener("click", () => {
+      input.value = "";
+      setText(false);
+      close();
+      input.focus();
     });
     list.addEventListener("mousedown", (e) => {
       const li = e.target.closest("li[data-i]");
       if (li) { e.preventDefault(); go(results[Number(li.dataset.i)]); }
     });
     document.addEventListener("click", (e) => { if (!wrap.contains(e.target)) close(); });
+    // "/" anywhere outside a text field focuses the search.
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "/" || e.ctrlKey || e.metaKey || e.altKey || e.defaultPrevented) return;
+      const t = e.target;
+      if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+      e.preventDefault();
+      focusSearch();
+    });
   }
 
   /* ---- Footer + sample banner ---- */

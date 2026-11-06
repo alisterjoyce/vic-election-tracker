@@ -25,6 +25,10 @@
   --border: #dde2ea;
   --accent: #1d4ed8;
   --accent-text: #ffffff;
+  --search-h: 48px;
+  --search-bg: var(--surface);
+  --search-ring: rgba(29, 78, 216, 0.28);
+  --search-shadow: 0 2px 10px rgba(29, 78, 216, 0.14);
   --star: #C98A00;
   --warn-bg: #fff5d6;
   --warn-text: #6b4e00;
@@ -70,6 +74,9 @@
     --border: #2b323c;
     --accent: #7aa2ff;
     --accent-text: #0f1216;
+  --search-bg: var(--surface-2);
+  --search-ring: rgba(122, 162, 255, 0.4);
+  --search-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
     --star: #F5C04A;
     --warn-bg: #3a3014;
     --warn-text: #f3d77c;
@@ -105,6 +112,9 @@
   --border: #2b323c;
   --accent: #7aa2ff;
   --accent-text: #0f1216;
+  --search-bg: var(--surface-2);
+  --search-ring: rgba(122, 162, 255, 0.4);
+  --search-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
   --star: #F5C04A;
   --warn-bg: #3a3014;
   --warn-text: #f3d77c;
@@ -230,34 +240,73 @@ h3 { font-size: 1rem; }
 }
 .icon-btn:hover { background: var(--surface-2); }
 
-/* Search (built by common.js) */
-.search { position: relative; flex: 0 1 280px; min-width: 0; }
+/* Search (built by common.js): the most prominent control on every page. In the home page's headline card
+   (#hero-search, with a compact button in the header); in the header everywhere else. */
+.search { position: relative; flex: 1 1 160px; max-width: 400px; min-width: 0; }   /* grows into the header's free space */
+.search-icon {
+  position: absolute; left: 14px; top: 0; height: var(--search-h); display: flex; align-items: center;
+  color: var(--accent); pointer-events: none;
+}
 .search input {
-  width: 100%; font: inherit; font-size: 0.92rem; color: var(--text); background: var(--surface-2);
-  border: 1px solid var(--border); border-radius: 8px; padding: 7px 10px;
+  display: block; width: 100%; height: var(--search-h); margin: 0; font: inherit; font-size: 1rem; color: var(--text);
+  background: var(--search-bg); border: 2px solid var(--accent); border-radius: 12px;
+  padding: 0 46px 0 44px; box-shadow: var(--search-shadow); -webkit-appearance: none; appearance: none;
 }
-.search input:focus { outline: 2px solid var(--accent); outline-offset: 0; background: var(--surface); }
+.search input::placeholder { color: var(--muted); opacity: 1; }
+.search input::-webkit-search-cancel-button, .search input::-webkit-search-decoration { -webkit-appearance: none; appearance: none; }
+.search input:focus { outline: none; box-shadow: 0 0 0 4px var(--search-ring), var(--search-shadow); }
+.search-clear {
+  position: absolute; right: 6px; top: calc((var(--search-h) - 40px) / 2); width: 40px; height: 40px;
+  display: inline-flex; align-items: center; justify-content: center; padding: 0;
+  border: 0; border-radius: 8px; background: none; color: var(--muted); cursor: pointer;
+}
+.search-clear:hover, .search-clear:focus-visible { background: var(--surface-2); color: var(--text); }
+.search-clear[hidden] { display: none; }
+.search-kbd {
+  position: absolute; right: 12px; top: calc((var(--search-h) - 24px) / 2); min-width: 24px; height: 24px;
+  display: inline-flex; align-items: center; justify-content: center; padding: 0 6px;
+  font: 600 0.8rem var(--font-body); color: var(--muted); background: var(--surface-2);
+  border: 1px solid var(--border); border-radius: 6px; pointer-events: none;
+}
+.search.has-text .search-kbd, .search:focus-within .search-kbd { display: none; }
+@media (hover: none), (max-width: 900px) { .search-kbd { display: none; } }
 .search-results {
-  position: absolute; z-index: 20; top: calc(100% + 4px); left: 0; right: 0; min-width: 280px;
-  max-height: 70vh; overflow-y: auto; margin: 0; padding: 4px; list-style: none;
-  background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.18);
+  position: absolute; z-index: 20; top: calc(100% + 6px); left: 0; right: 0; min-width: 300px;
+  max-height: min(70vh, 520px); overflow-y: auto; margin: 0; padding: 4px 6px 6px; list-style: none;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(16, 24, 40, 0.2);
 }
-.search-results li {
-  display: grid; grid-template-columns: auto 1fr; gap: 0 8px; align-items: baseline;
-  padding: 7px 8px; border-radius: 6px; cursor: pointer;
+.search-results li { display: block; padding: 7px 10px; border-radius: 8px; cursor: pointer; }
+.search-results li.active, .search-results li[data-i]:hover { background: var(--surface-2); box-shadow: inset 3px 0 0 var(--accent); }
+.search-results .sr-group {
+  padding: 10px 10px 4px; cursor: default; font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.05em; color: var(--muted);
 }
-.search-results li.active, .search-results li:hover { background: var(--surface-2); }
-.search-results .sr-type {
-  grid-row: span 2; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
-  color: var(--muted); min-width: 64px;
+.search-results .sr-group:first-child { padding-top: 6px; }
+.search-results .sr-label { display: block; font-weight: 600; overflow-wrap: anywhere; }
+.search-results .sr-sub { display: block; font-size: 0.82rem; color: var(--muted); }
+.search-results .sr-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; vertical-align: 1px; }
+.search-results .sr-empty { color: var(--muted); cursor: default; }
+/* The home page: the box opens the headline card; the header keeps a compact button for it */
+.search-hero { margin: 0 0 16px; }
+.search.search-hero { max-width: none; }   /* full width in the headline card */
+.search.search-compact { flex: 0 0 auto; }
+.search-open { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; color: var(--accent); border-color: var(--accent); }
+.home .hero-share { top: calc(var(--search-h) + 26px); }
+/* Narrow phones: the home header holds brand, Menu, the search button and the theme toggle on one row,
+   so the toggle drops its word (its aria-label still says what it does) */
+@media (max-width: 420px) {
+  html .site-header .container { column-gap: 6px; }
+  .brand { font-size: 1rem; }
+  .nav-toggle { padding-left: 8px; padding-right: 8px; }
+  .home .theme-word { display: none; }
+  .home #theme-toggle { min-width: 44px; padding-left: 0; padding-right: 0; }
 }
-.search-results .sr-label { font-weight: 600; overflow-wrap: anywhere; }
-.search-results .sr-sub { font-size: 0.82rem; color: var(--muted); }
-.search-results .sr-empty { color: var(--muted); cursor: default; display: block; }
 
 @media (max-width: 900px) {
-  .search { order: 4; flex: 1 1 100%; }
+  .search { order: 4; flex: 1 1 100%; max-width: none; margin-bottom: 4px; }
+  .search.search-compact { order: 0; flex: 0 0 auto; margin-bottom: 0; }
+  .search-hero { margin-bottom: 14px; }
   .search-results { min-width: 0; }
 }
 /* Phones and narrow tablets: the four groups collapse into a "Menu" panel that slides down under the
@@ -291,6 +340,7 @@ h3 { font-size: 1rem; }
   html.js .nav, html.js .nav.open { transition: none; transform: none; }
 }
 @media (max-width: 640px) {
+  :root { --search-h: 52px; }
   .site-header { position: static; }   /* too tall to pin on a phone */
   .site-header .container { padding-top: 6px; padding-bottom: 6px; gap: 6px 10px; }
   .kd-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px 10px; }
@@ -840,7 +890,10 @@ select {
 /* Space reserved for what common.js fills in, so the page doesn't jump once scripts run
    (scripts are deferred, so the page paints before they do). */
 main.container { min-height: 100vh; }
-.search:empty { height: 38px; }
+.search:empty { height: var(--search-h); }
+.search.search-compact:empty { width: 44px; height: 44px; }
+.search-hero:empty { height: var(--search-h); }
+html:not(.js) .search-hero:empty { display: none; }
 html:not(.js) .search:empty { display: none; }
 html.js .key-dates { min-height: 63px; }   /* kept after filling, so a shorter strip can't pull the page up */
 .r22:has(> .empty) { min-height: 1100px; }

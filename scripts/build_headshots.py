@@ -51,6 +51,8 @@ PARTY = [("one nation", "ONP"), ("victorian socialists", "VS"), ("socialist alli
 PAGE_FIXES = {
     # The West Party's own candidate list links to this profile, but it returns 404.
     "https://thewestparty.org.au/local-representation/brucelancashire": "https://thewestparty.org.au/local-representation/",
+    # One Nation moved its candidate pages under /candidate/ (the old address returns 404).
+    "https://vic.onenation.org.au/bianca-wilke": "https://vic.onenation.org.au/candidate/bianca-wilkie",
 }
 
 # Source page host -> credit name (falls back to the host itself)

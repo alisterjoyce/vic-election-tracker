@@ -20852,22 +20852,53 @@
     "gippsland-south/bianca-wilke": {
       "name": "Bianca Wilke",
       "summary": {
-        "text": "Bianca Wilke is One Nation's candidate for Gippsland South at the 2026 Victorian election. The ABC's candidate notes say her working life has spanned emergency medical services, nursing and community liaison, that she holds degrees in paramedicine and nursing as well as one in specialist community care, and that she is now studying for a Juris Doctor. One Nation's page for her could not be read because the site refuses automated requests.",
-        "src": [1]
+        "text": "Bianca Wilke is One Nation's candidate for Gippsland South at the 2026 Victorian election; her party's page and local news coverage spell her surname Wilkie, while the ABC guide, which this tracker follows for lower-house names, spells it Wilke. She has worked for about 11 years in ambulance and emergency health care in Gippsland, much of that time around Yarram, and the Council of Ambulance Authorities included her in its 2026 Women in Ambulance honours. She has degrees in paramedicine, nursing and specialist community care and is studying for a Juris Doctor.",
+        "src": [1, 2, 3]
       },
       "born": null,
-      "lives": null,
+      "lives": {
+        "place": "Cowwarr",
+        "src": [3]
+      },
       "occupation": {
-        "text": "Emergency medical services, nursing and community liaison",
-        "src": [1]
+        "text": "Paramedic and emergency health care worker",
+        "src": [2, 3]
       },
       "prior_roles": [],
       "previous_candidacies": [],
       "faction": null,
-      "priorities": [],
+      "priorities": [
+        {
+          "text": "Return more state money to rural and regional communities through services, infrastructure and economic growth",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Safer regional towns",
+          "quoted": false,
+          "src": [2]
+        },
+        {
+          "text": "Accountable, transparent government whose spending delivers results for local communities",
+          "quoted": false,
+          "src": [3]
+        },
+        {
+          "text": "Bring a regional voice to State Parliament, visiting every community in the electorate during the campaign",
+          "quoted": false,
+          "src": [3]
+        }
+      ],
       "links": {
-        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/giso",
-        "party_page": "https://vic.onenation.org.au/bianca-wilke"
+        "party_page": "https://vic.onenation.org.au/candidate/bianca-wilkie",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/giso"
+      },
+      "contact": {
+        "phone": {
+          "value": "03 9072 0625",
+          "kind": "party office",
+          "src": [2]
+        }
       },
       "sources": [
         {
@@ -20875,9 +20906,21 @@
           "url": "https://www.abc.net.au/news/elections/vic/2026/guide/giso",
           "title": "Gippsland South: 2026 Victorian election guide, ABC News",
           "accessed": "2026-11-04"
+        },
+        {
+          "id": 2,
+          "url": "https://vic.onenation.org.au/candidate/bianca-wilkie",
+          "title": "Bianca Wilkie, One Nation Victoria",
+          "accessed": "2026-11-06"
+        },
+        {
+          "id": 3,
+          "url": "https://www.sgst.com.au/one-nation-unveils-gippsland-south-candidate/",
+          "title": "One Nation unveils Gippsland South candidate, South Gippsland Sentinel-Times, 1 Sep 2026",
+          "accessed": "2026-11-06"
         }
       ],
-      "profile_updated": "2026-11-04"
+      "profile_updated": "2026-11-06"
     },
     "gippsland-south/danny-o-brien": {
       "name": "Danny O'Brien",
@@ -32113,10 +32156,10 @@
       "profile_updated": "2026-11-04",
       "faction": null
     },
-    "mordialloc/lily-potecuk": {
-      "name": "Lily Potecuk",
+    "mordialloc/lily-potucek": {
+      "name": "Lily Potucek",
       "summary": {
-        "text": "Lily Potecuk is the Family First candidate for Mordialloc at the 2026 Victorian election; the party's own website spells her surname Potucek. On the party's website she says she is a Melbourne-born nurse who also holds a business degree, and that she and her husband have four children. The ABC's guide lists her without a biography.",
+        "text": "Lily Potucek is the Family First candidate for Mordialloc at the 2026 Victorian election; the ABC guide first listed her as Potecuk and now uses the party's spelling. On the party's website she says she is a Melbourne-born nurse who also holds a business degree, and that she and her husband have four children. The ABC's guide lists her without a biography.",
         "src": [1, 2]
       },
       "born": null,
@@ -38384,6 +38427,39 @@
         }
       ],
       "profile_updated": "2026-11-04"
+    },
+    "north-eastern-metropolitan/james-gan": {
+      "name": "James Gan",
+      "summary": {
+        "text": "James Gan is a Labor candidate for the Legislative Council's North-Eastern Metropolitan Region at the 2026 Victorian election. Victorian Labor's page for him names the region but gives no position on the ticket and no biography, and no other published source about him was found.",
+        "src": [1]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": null,
+      "prior_roles": [],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [],
+      "links": {
+        "party_page": "https://www.viclabor.org.au/our-team/james-gan"
+      },
+      "contact": {
+        "email": {
+          "value": "james.gan@vic.alp.org.au",
+          "kind": "campaign",
+          "src": [1]
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.viclabor.org.au/our-team/james-gan",
+          "title": "James Gan, Victorian Labor candidates",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "profile_updated": "2026-11-06"
     },
     "north-eastern-metropolitan/john-pyrros": {
       "name": "John Pyrros",

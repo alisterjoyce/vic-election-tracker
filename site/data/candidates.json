@@ -86,13 +86,14 @@
     },
     {
       "district": null,
-      "region": "eastern-victoria",
-      "name": "Jessica McAullife",
-      "party": "AJP",
+      "region": "north-eastern-metropolitan",
+      "name": "James Gan",
+      "party": "ALP",
       "status": "announced",
-      "ticket_position": 2,
-      "source": "wikipedia",
-      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
+      "ticket_position": null,
+      "source": "electiontracker",
+      "source_url": "https://www.viclabor.org.au/our-team/james-gan",
+      "notes": "Found via electiontracker.au; Victorian Labor's candidate page names him for North-Eastern Metropolitan, with no ticket position",
       "date_added": "2026-11-06",
       "updated": "2026-11-06"
     },
@@ -882,18 +883,6 @@
     {
       "district": null,
       "region": "western-metropolitan",
-      "name": "Alan Doensen",
-      "party": "ONP",
-      "status": "announced",
-      "ticket_position": 2,
-      "source": "wikipedia",
-      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
-      "date_added": "2026-11-06",
-      "updated": "2026-11-06"
-    },
-    {
-      "district": null,
-      "region": "western-metropolitan",
       "name": "Nigel Keenan",
       "party": "OTH",
       "status": "announced",
@@ -1349,21 +1338,6 @@
     },
     {
       "district": "bayswater",
-      "name": "Gary Coombs",
-      "party": "FF",
-      "status": "superseded",
-      "ballot_position": null,
-      "incumbent": false,
-      "source": "wikipedia",
-      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
-      "date_added": "2026-11-06",
-      "updated": "2026-11-06",
-      "notes": "Conflicts with Gary Coombes, already recorded for this party here; Superseded by Gary Coombes (ABC guide, 2026-11-06)",
-      "superseded_by": "Gary Coombes",
-      "superseded_on": "2026-11-06"
-    },
-    {
-      "district": "bayswater",
       "name": "Jess Kennedy",
       "party": "GRN",
       "status": "endorsed",
@@ -1562,21 +1536,6 @@
       "updated": "2026-11-06",
       "source": "abc",
       "website": "https://drlachiemckeeman.com.au"
-    },
-    {
-      "district": "benambra",
-      "name": "Mike Fruery",
-      "party": "AJP",
-      "status": "superseded",
-      "ballot_position": null,
-      "incumbent": false,
-      "source": "wikipedia",
-      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
-      "date_added": "2026-11-06",
-      "updated": "2026-11-06",
-      "notes": "Conflicts with Mike Fuery, already recorded for this party here; Superseded by Mike Fuery (ABC guide, 2026-11-06)",
-      "superseded_by": "Mike Fuery",
-      "superseded_on": "2026-11-06"
     },
     {
       "district": "benambra",
@@ -3103,21 +3062,6 @@
     },
     {
       "district": "eltham",
-      "name": "Jessie Weatherly",
-      "party": "ONP",
-      "status": "superseded",
-      "ballot_position": null,
-      "incumbent": false,
-      "source": "wikipedia",
-      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
-      "date_added": "2026-11-06",
-      "updated": "2026-11-06",
-      "notes": "Conflicts with Jessie Weatherley, already recorded for this party here; Superseded by Jessie Weatherley (ABC guide, 2026-11-06)",
-      "superseded_by": "Jessie Weatherley",
-      "superseded_on": "2026-11-06"
-    },
-    {
-      "district": "eltham",
       "name": "Louise Brooksby",
       "party": "AJP",
       "status": "endorsed",
@@ -3970,7 +3914,8 @@
       "source_url": "https://www.abc.net.au/news/elections/vic/2026/guide/giso",
       "date_added": "2026-10-30",
       "updated": "2026-11-06",
-      "website": "https://vic.onenation.org.au/bianca-wilke"
+      "website": "https://vic.onenation.org.au/candidate/bianca-wilkie",
+      "notes": "One Nation's page and local news spell the surname Wilkie; the ABC guide (the tracker's lower-house source) spells it Wilke"
     },
     {
       "district": "gippsland-south",
@@ -4432,21 +4377,6 @@
       "source": "abc",
       "source_url": "https://www.abc.net.au/news/elections/vic/2026/guide/ivan",
       "updated": "2026-11-06"
-    },
-    {
-      "district": "ivanhoe",
-      "name": "Wayne Hutchins",
-      "party": "ONP",
-      "status": "superseded",
-      "ballot_position": null,
-      "incumbent": false,
-      "source": "wikipedia",
-      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
-      "date_added": "2026-11-06",
-      "updated": "2026-11-06",
-      "notes": "Conflicts with Wayne Hutchinson, already recorded for this party here; Superseded by Wayne Hutchinson (ABC guide, 2026-11-06)",
-      "superseded_by": "Wayne Hutchinson",
-      "superseded_on": "2026-11-06"
     },
     {
       "district": "ivanhoe",
@@ -4975,21 +4905,6 @@
     },
     {
       "district": "lowan",
-      "name": "Lee Ann Elms",
-      "party": "FF",
-      "status": "superseded",
-      "ballot_position": null,
-      "incumbent": false,
-      "source": "wikipedia",
-      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
-      "date_added": "2026-11-06",
-      "updated": "2026-11-06",
-      "notes": "Conflicts with Lee-Ann Elmes, already recorded for this party here; Superseded by Lee-Ann Elmes (ABC guide, 2026-11-06)",
-      "superseded_by": "Lee-Ann Elmes",
-      "superseded_on": "2026-11-06"
-    },
-    {
-      "district": "lowan",
       "name": "Lee-Ann Elmes",
       "party": "FF",
       "status": "endorsed",
@@ -5340,21 +5255,6 @@
       "updated": "2026-11-06",
       "source": "abc",
       "website": "https://vic.animaljusticeparty.org/fiona-adinjames"
-    },
-    {
-      "district": "melton",
-      "name": "Fiona Adin-Jones",
-      "party": "AJP",
-      "status": "superseded",
-      "ballot_position": null,
-      "incumbent": false,
-      "source": "wikipedia",
-      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
-      "date_added": "2026-11-06",
-      "updated": "2026-11-06",
-      "notes": "Conflicts with Fiona Adin-James, already recorded for this party here; Superseded by Fiona Adin-James (ABC guide, 2026-11-06)",
-      "superseded_by": "Fiona Adin-James",
-      "superseded_on": "2026-11-06"
     },
     {
       "district": "melton",
@@ -8445,21 +8345,6 @@
     },
     {
       "district": "tarneit",
-      "name": "Leah Van Koulen",
-      "party": "VS",
-      "status": "superseded",
-      "ballot_position": null,
-      "incumbent": false,
-      "source": "wikipedia",
-      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
-      "date_added": "2026-11-06",
-      "updated": "2026-11-06",
-      "notes": "Conflicts with Leah Van Keulen, already recorded for this party here; Superseded by Leah Van Keulen (ABC guide, 2026-11-06)",
-      "superseded_by": "Leah Van Keulen",
-      "superseded_on": "2026-11-06"
-    },
-    {
-      "district": "tarneit",
       "name": "Maurita Rahn",
       "party": "AJP",
       "status": "endorsed",
@@ -8547,21 +8432,6 @@
       "updated": "2026-11-06",
       "source": "abc",
       "website": "https://www.viclabor.org.au/our-team/bronwyn-halfpenny"
-    },
-    {
-      "district": "thomastown",
-      "name": "Gavin Trewalla",
-      "party": "GRN",
-      "status": "superseded",
-      "ballot_position": null,
-      "incumbent": false,
-      "source": "wikipedia",
-      "source_url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
-      "date_added": "2026-11-06",
-      "updated": "2026-11-06",
-      "notes": "Conflicts with Gavin Trewella, already recorded for this party here; Superseded by Gavin Trewella (ABC guide, 2026-11-06)",
-      "superseded_by": "Gavin Trewella",
-      "superseded_on": "2026-11-06"
     },
     {
       "district": "thomastown",
