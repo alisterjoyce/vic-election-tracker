@@ -8,13 +8,31 @@
       "sources": "Source -> {status: ok | error | skipped, url, items, message}"
     }
   },
-  "updated": "2026-11-06T19:48:37Z",
+  "updated": "2026-11-06T23:32:52Z",
   "statewide": [
+    {
+      "title": "Victoria's Liberals unveil plan designed to end tobacco wars",
+      "outlet": "ABC News",
+      "published": "2026-11-06T22:25:26Z",
+      "url": "https://www.abc.net.au/news/2026-11-07/victorian-liberals-unveil-plan-designed-to-end-tobacco-wars/107358958"
+    },
+    {
+      "title": "State park funds hit a grind",
+      "outlet": "Sunraysia Daily",
+      "published": "2026-11-06T21:04:38Z",
+      "url": "https://sunraysiadaily.com.au/news/2026/11/07/state-park-funds-hit-a-grind/"
+    },
     {
       "title": "CUPPER BOWS OUT Family, work first says ex-MP",
       "outlet": "Sunraysia Daily",
       "published": "2026-11-06T19:02:38Z",
       "url": "https://sunraysiadaily.com.au/news/2026/11/07/cupper-bows-out-family-work-first-says-ex-mp/"
+    },
+    {
+      "title": "Voters in Berwick concerned with crime and safety heading into Victorian election",
+      "outlet": "ABC (Australian Broadcasting Corporation) on MSN",
+      "published": "2026-11-06T12:10:00Z",
+      "url": "https://www.msn.com/en-au/news/australia/voters-in-berwick-concerned-with-crime-and-safety-heading-into-victorian-election/ar-AA2gVcN5"
     },
     {
       "title": "Victorian election minus three weeks",
@@ -141,24 +159,6 @@
       "outlet": "Shepparton News",
       "published": "2026-11-02T22:45:00Z",
       "url": "https://www.sheppnews.com.au/news/election-season-begins-for-largest-ever-victorian-election/"
-    },
-    {
-      "title": "Hear Ky you should vote for them",
-      "outlet": "Kyabram Free Press",
-      "published": "2026-11-02T16:00:00Z",
-      "url": "https://www.kyfreepress.com.au/news/hear-ky-you-should-vote-for-them/"
-    },
-    {
-      "title": "Greater mental health support promise",
-      "outlet": "Star Weekly",
-      "published": "2026-11-02T07:00:00Z",
-      "url": "https://starweekly.com.au/news/2026/11/02/greater-mental-health-support-promise/"
-    },
-    {
-      "title": "Ben Carroll’s ‘new direction’ for Victoria is towards the big end of town",
-      "outlet": "Red Flag",
-      "published": "2026-11-02T02:50:00Z",
-      "url": "https://redflag.org.au/article/ben-carrolls-new-direction-for-victoria-is-towards-the-big-end-of-town/"
     }
   ],
   "seats": {
@@ -313,6 +313,18 @@
       }
     ],
     "berwick": [
+      {
+        "title": "Voters in Melbourne's south-east concerned by crime and community safety",
+        "outlet": "ABC News",
+        "published": "2026-11-06T20:09:43Z",
+        "url": "https://www.abc.net.au/news/2026-11-07/berwick-crime-and-community-safety-vic-election/107332046"
+      },
+      {
+        "title": "Voters in Berwick concerned with crime and safety heading into Victorian election",
+        "outlet": "ABC (Australian Broadcasting Corporation) on MSN",
+        "published": "2026-11-06T12:10:00Z",
+        "url": "https://www.msn.com/en-au/news/australia/voters-in-berwick-concerned-with-crime-and-safety-heading-into-victorian-election/ar-AA2gVcN5"
+      },
       {
         "title": "From Pakistan to Australian politics: Rana Shahzad Khan’s journey and the Victorian state election",
         "outlet": "SBS",
@@ -728,6 +740,12 @@
     ],
     "kew": [
       {
+        "title": "Victoria's Liberals unveil plan designed to end tobacco wars",
+        "outlet": "ABC News",
+        "published": "2026-11-06T22:25:26Z",
+        "url": "https://www.abc.net.au/news/2026-11-07/victorian-liberals-unveil-plan-designed-to-end-tobacco-wars/107358958"
+      },
+      {
         "title": "Jess Wilson’s bus bingle symbolic of Victoria’s rocky road",
         "outlet": "Australian Financial Review",
         "published": "2026-11-06T09:36:00Z",
@@ -780,12 +798,6 @@
         "outlet": "news.com.au",
         "published": "2026-10-22T13:21:00Z",
         "url": "https://www.news.com.au/finance/money/spending/victorias-39bn-covid-response-exposed-as-auditor-reveals-hundreds-of-millions-in-waste/news-story/aa700027e300846ac493313612df1ba6"
-      },
-      {
-        "title": "Coalition outline policy plan to try and stop abortion issue becoming an election wedge",
-        "outlet": "The Courier-Mail",
-        "published": "2026-10-15T01:04:00Z",
-        "url": "https://www.couriermail.com.au/news/victoria/political-football-jess-wilson-slams-ben-carroll-over-30m-election-pledge-for-free-abortions/news-story/042c83e4be4c5e7b4169f27ea2833036"
       }
     ],
     "kororoit": [],
@@ -941,9 +953,9 @@
     "murray-plains": [
       {
         "title": "Hear Ky you should vote for them",
-        "outlet": "Kyabram Free Press",
+        "outlet": "Shepparton News",
         "published": "2026-11-02T16:00:00Z",
-        "url": "https://www.kyfreepress.com.au/news/hear-ky-you-should-vote-for-them/"
+        "url": "https://www.sheppnews.com.au/news/hear-ky-you-should-vote-for-them/"
       },
       {
         "title": "Coalition pledges fire truck",
