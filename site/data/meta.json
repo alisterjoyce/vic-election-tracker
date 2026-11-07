@@ -15,7 +15,7 @@
       "reconciliation_electiontracker": "Written by scripts/refresh.py after the ABC step: candidacies listed by electiontracker.au (open data, CC BY 4.0) compared with candidates.json and regions.json tickets. {date (Melbourne), source, data_url, credit, totals: {listed, active, missing_from_tracker}, missing_from_tracker: [{contest, chamber, name, party, status, note?}]}. Report only: names are never added from it, and only name, party, contest and status are read"
     }
   },
-  "last_updated": "2026-11-06T23:32:52Z",
+  "last_updated": "2026-11-07T05:43:01Z",
   "election_date": "2026-11-28",
   "previous_election": {
     "date": "2022-11-26",
@@ -129,7 +129,7 @@
     "polls": {
       "status": "ok",
       "url": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election",
-      "last_success": "2026-11-06T23:25:48Z",
+      "last_success": "2026-11-07T05:36:06Z",
       "message": "71 polls"
     },
     "vec_candidates": {
@@ -141,13 +141,13 @@
     "wikipedia_candidates": {
       "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
       "status": "ok",
-      "last_success": "2026-11-06T23:25:49Z",
-      "message": "557 assembly and 125 council names read; 0 assembly and 0 council added"
+      "last_success": "2026-11-07T05:36:06Z",
+      "message": "558 assembly and 125 council names read; 1 assembly and 0 council added"
     },
     "abc_guide": {
       "url": "https://www.abc.net.au/news/elections/vic/2026/guide/electorates",
       "status": "ok",
-      "last_success": "2026-11-06T23:28:27Z",
+      "last_success": "2026-11-07T05:38:47Z",
       "message": "88 district pages, 0 districts updated; 0 candidates added, 602 confirmed, 0 superseded"
     },
     "sportsbet": {
@@ -158,42 +158,42 @@
     "htv": {
       "url": "https://www.vec.vic.gov.au/candidates-and-parties/become-a-state-election-candidate/how-to-vote-cards",
       "status": "ok",
-      "last_success": "2026-11-06T23:28:40Z",
+      "last_success": "2026-11-07T05:38:57Z",
       "message": "No cards yet (status not_open)"
     },
     "news": {
       "status": "ok",
       "url": "https://www.bing.com/news/search",
-      "last_success": "2026-11-06T23:32:52Z",
-      "message": "25 statewide, 160 seat items"
+      "last_success": "2026-11-07T05:43:01Z",
+      "message": "25 statewide, 161 seat items"
     },
     "changelog": {
       "status": "ok",
-      "last_success": "2026-11-06T23:32:52Z",
-      "message": "1 new entries"
+      "last_success": "2026-11-07T05:43:01Z",
+      "message": "2 new entries"
     },
     "electiontracker": {
       "url": "https://electiontracker.au/data/vic2026/candidates.json",
       "status": "ok",
-      "last_success": "2026-11-06T23:28:29Z",
+      "last_success": "2026-11-07T05:38:49Z",
       "message": "562 active candidacies; 0 not in the tracker"
     },
     "aeforecasts": {
       "url": "https://www.aeforecasts.com/forecast-api/election-summary/2026vic/regular",
       "status": "ok",
-      "last_success": "2026-11-06T23:28:33Z",
+      "last_success": "2026-11-07T05:38:52Z",
       "message": "Model of 2026-10-30T11:19:30Z (Morgan 44-56), 88 districts"
     },
     "redbridge": {
       "url": "https://redbridgegroup.com.au/post-sitemap.xml",
       "status": "ok",
-      "last_success": "2026-11-06T23:28:37Z",
+      "last_success": "2026-11-07T05:38:55Z",
       "newer": [],
       "message": "Nothing newer than the model held (2026-10-26)"
     },
     "profiles": {
       "status": "ok",
-      "last_success": "2026-11-06T23:32:52Z",
+      "last_success": "2026-11-07T05:43:01Z",
       "stranded": [],
       "message": "732 profiles; 0 without an active candidacy",
       "moved": []
@@ -201,13 +201,13 @@
     "electiontracker_retirements": {
       "url": "https://electiontracker.au/data/vic2026/retirements.json",
       "status": "ok",
-      "last_success": "2026-11-06T23:28:30Z",
+      "last_success": "2026-11-07T05:38:50Z",
       "message": "26 listed; 0 flags set; 0 to check by hand"
     },
     "electiontracker_policies": {
       "url": "https://electiontracker.au/data/vic2026/policies.json",
       "status": "ok",
-      "last_success": "2026-11-06T23:28:33Z",
+      "last_success": "2026-11-07T05:38:52Z",
       "message": "74 party-issue records, 345 sourced claims"
     }
   },
@@ -216,17 +216,17 @@
     "scope": "Legislative Assembly",
     "abc_list_url": "https://www.abc.net.au/news/elections/vic/2026/guide/candidates",
     "totals": {
-      "tracker": 606,
+      "tracker": 607,
       "abc_list": 602
     },
     "tracker_by_source": {
       "abc": 604,
-      "wikipedia": 2
+      "wikipedia": 3
     },
-    "only_in_tracker": 4,
+    "only_in_tracker": 5,
     "only_on_abc": 0,
     "unmatched_electorates": 0,
-    "tracked_all": 681
+    "tracked_all": 682
   },
   "nominations": {
     "opens": "2026-11-04T09:00:00+11:00",
