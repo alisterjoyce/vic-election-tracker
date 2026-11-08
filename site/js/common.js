@@ -204,6 +204,40 @@
     return out;
   }
 
+  // Polls that set a new high or low for a party when they came out. polls: preparePolls output; keys: party
+  // codes; value(p, key): the figure or null. Polls are taken in order of fieldwork end. A record needs at least
+  // RECORD_MIN_PRIOR earlier polls with that party (so the first few polls of the term don't all count), and a
+  // tie doesn't set one. Returns Map poll id -> [{key, kind: "high" | "low", value, prev, prevPoll, current, n}]:
+  // prev/prevPoll are the record it broke; current is true while no later poll has gone past it; n is how
+  // many polls carry that party's figure.
+  const RECORD_MIN_PRIOR = 5;
+  function pollRecords(polls, keys, value) {
+    const order = [...polls].sort((a, b) => (a.end_date < b.end_date ? -1 : a.end_date > b.end_date ? 1 : a.t - b.t));
+    const out = new Map();
+    keys.forEach((key) => {
+      let lo = null, hi = null, n = 0;
+      const found = [];
+      order.forEach((p) => {
+        const v = value(p, key);
+        if (v == null || isNaN(v)) return;
+        if (n >= RECORD_MIN_PRIOR) {
+          if (v < lo.v) found.push({ poll: p, key, kind: "low", value: v, prev: lo.v, prevPoll: lo.p });
+          if (v > hi.v) found.push({ poll: p, key, kind: "high", value: v, prev: hi.v, prevPoll: hi.p });
+        }
+        if (!lo || v < lo.v) lo = { v, p };
+        if (!hi || v > hi.v) hi = { v, p };
+        n++;
+      });
+      found.forEach((r) => {
+        r.current = r.poll === (r.kind === "low" ? lo.p : hi.p);
+        r.n = n;
+        if (!out.has(r.poll.id)) out.set(r.poll.id, []);
+        out.get(r.poll.id).push(r);
+      });
+    });
+    return out;
+  }
+
   /* ---- Seat outlook maths (district page and My seats) ---- */
   // Statewide swing to the Coalition: current poll-of-polls L/NP 2PP minus
   // the previous election's L/NP 2PP.
@@ -1134,7 +1168,7 @@
     PARTIES, STATUSES, COALITION, loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, partyBadge, statusBadge,
     slugify, parseDate, fmtDate, fmtMonth, fmtDateTime, dataUpdatedText, fmtPrice, fmtMargin, fmtSwing, melbourneToday, daysBetween,
     hashId, cssVar, currentTheme, showError, copyLink,
-    DAY, preparePolls, smoothedSeries, statewideSwing, swingAdjusted, projectSeats, BLOCS, blocOf, modelLink, quotaBars,
+    DAY, preparePolls, smoothedSeries, pollRecords, statewideSwing, swingAdjusted, projectSeats, BLOCS, blocOf, modelLink, quotaBars,
     getWatchlist, setWatchlist, isWatched, toggleWatch, starButton, storageWorks,
     buildSearchIndex, searchItems,
     candidateId, givenFirst, loadHeadshots, avatar, photoCredits, initials, inkFor, newsList,

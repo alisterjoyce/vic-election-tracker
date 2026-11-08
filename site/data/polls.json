@@ -1,6 +1,6 @@
 {
   "_schema": {
-    "description": "Published voting-intention polls, scraped from Wikipedia by scripts/refresh.py.",
+    "description": "Published voting-intention polls, scraped from Wikipedia by scripts/refresh.py, plus any entered by hand in scripts/polls_manual.json that Wikipedia hasn't listed yet (those carry 'via').",
     "fields": {
       "id": "Stable id: <pollster slug>-<end_date>, with -2, -3 for repeats (used by poll.html#<id>)",
       "start_date": "Fieldwork start, YYYY-MM-DD (may equal end_date)",
@@ -13,11 +13,89 @@
       "tpp": "Two-party-preferred %: {ALP, LNP}; omitted when the poll did not publish an ALP v L/NP figure",
       "tpp3": "Optional three-party-preferred %: {ALP, LNP, ONP}",
       "preferred_premier": "Optional: {matchup, leaders: {surname: %}, undecided: %}",
-      "approval": "Optional: {matchup, leaders: {surname: {positive, negative, undecided, net}}} (net = positive - negative, as published)"
+      "approval": "Optional: {matchup, leaders: {surname: {positive, negative, undecided, net}}} (net = positive - negative, as published)",
+      "preferred_premier_alt": "Optional: a second preferred-premier measure from the same poll (e.g. a three-way question), shaped like preferred_premier",
+      "via": "Only on polls entered by hand (scripts/polls_manual.json): {label, url} of the report the figures came from",
+      "added": "Only on polls entered by hand: the date they were entered",
+      "supplemented": "Optional {fields, label, url}: fields of a Wikipedia-listed poll filled from scripts/polls_manual.json, and where they came from"
     }
   },
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election",
   "polls": [
+    {
+      "id": "demosau-premier-national-2026-11-05",
+      "start_date": "2026-10-30",
+      "end_date": "2026-11-05",
+      "pollster": "DemosAU/Premier National",
+      "client": "Herald Sun",
+      "sample_size": 1562,
+      "source_url": "https://www.heraldsun.com.au/news/victoria/state-election/coalition-surges-to-5644-lead-as-victorian-labor-faces-catastrophic-state-election-wipeout/news-story/cfd77a95d33cd90b152b633f1f4642cb",
+      "primary": {
+        "ALP": 18,
+        "LNP": 33,
+        "GRN": 17,
+        "ONP": 21,
+        "OTH": 11
+      },
+      "tpp": {
+        "ALP": 44,
+        "LNP": 56
+      },
+      "preferred_premier": {
+        "matchup": "Carroll vs Wilson",
+        "leaders": {
+          "Wilson": 48,
+          "Carroll": 30
+        }
+      },
+      "preferred_premier_alt": {
+        "matchup": "Carroll vs Wilson vs Pickering",
+        "leaders": {
+          "Wilson": 36,
+          "Carroll": 28,
+          "Pickering": 19
+        }
+      },
+      "approval": {
+        "matchup": "Positive / neutral / negative ratings",
+        "leaders": {
+          "Carroll": {
+            "positive": 17,
+            "negative": 47,
+            "undecided": 36,
+            "net": -30
+          },
+          "Wilson": {
+            "positive": 38,
+            "negative": 25,
+            "undecided": 37,
+            "net": 13
+          },
+          "Pickering": {
+            "positive": 23,
+            "negative": 43,
+            "undecided": 34,
+            "net": -20
+          },
+          "Sandell": {
+            "positive": 18,
+            "negative": 38,
+            "undecided": 44,
+            "net": -20
+          }
+        }
+      },
+      "supplemented": {
+        "fields": [
+          "client",
+          "preferred_premier",
+          "preferred_premier_alt",
+          "approval"
+        ],
+        "label": "The Poll Bludger, 9 Nov 2026 (reporting the Herald Sun)",
+        "url": "https://www.pollbludger.net/2026/11/09/demosau-labor-18-coalition-33-one-nation-21-in-victoria/"
+      }
+    },
     {
       "id": "lighthouse-growth-intelligence-centre-2026-11-01",
       "start_date": "2026-10-19",

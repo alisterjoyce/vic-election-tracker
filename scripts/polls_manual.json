@@ -1,0 +1,40 @@
+{
+  "_schema": {
+    "description": "Polls entered by hand, in polls.json's shape (see its _schema), for polls Wikipedia hasn't listed yet. refresh.py (merge_manual_polls) adds each one to polls.json until Wikipedia has a poll from the same pollster ending within two days of it; from then on Wikipedia's figures win and this entry only fills fields Wikipedia's row lacks (e.g. a second preferred-premier measure). Remove an entry once Wikipedia carries everything in it. 'via' names where the figures were taken from.",
+    "fields": {
+      "polls": "[poll objects: id, start_date, end_date, pollster, client, sample_size, source_url, primary, tpp, preferred_premier, preferred_premier_alt, approval, via {label, url}, added]"
+    }
+  },
+  "polls": [
+    {
+      "id": "demosau-premier-national-2026-11-05",
+      "start_date": "2026-10-30",
+      "end_date": "2026-11-05",
+      "pollster": "DemosAU/Premier National",
+      "client": "Herald Sun",
+      "sample_size": 1562,
+      "source_url": "https://www.pollbludger.net/2026/11/09/demosau-labor-18-coalition-33-one-nation-21-in-victoria/",
+      "primary": {"ALP": 18, "LNP": 33, "GRN": 17, "ONP": 21, "OTH": 11},
+      "tpp": {"ALP": 44, "LNP": 56},
+      "preferred_premier": {
+        "matchup": "Carroll vs Wilson",
+        "leaders": {"Wilson": 48, "Carroll": 30}
+      },
+      "preferred_premier_alt": {
+        "matchup": "Carroll vs Wilson vs Pickering",
+        "leaders": {"Wilson": 36, "Carroll": 28, "Pickering": 19}
+      },
+      "approval": {
+        "matchup": "Positive / neutral / negative ratings",
+        "leaders": {
+          "Carroll": {"positive": 17, "negative": 47, "undecided": 36, "net": -30},
+          "Wilson": {"positive": 38, "negative": 25, "undecided": 37, "net": 13},
+          "Pickering": {"positive": 23, "negative": 43, "undecided": 34, "net": -20},
+          "Sandell": {"positive": 18, "negative": 38, "undecided": 44, "net": -20}
+        }
+      },
+      "via": {"label": "The Poll Bludger, 9 Nov 2026 (reporting the Herald Sun)", "url": "https://www.pollbludger.net/2026/11/09/demosau-labor-18-coalition-33-one-nation-21-in-victoria/"},
+      "added": "2026-11-09"
+    }
+  ]
+}

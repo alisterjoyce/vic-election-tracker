@@ -109,7 +109,7 @@ REDBRIDGE_SITEMAPS = ("https://redbridgegroup.com.au/post-sitemap.xml", "https:/
 REDBRIDGE_RELEASE = re.compile(r"vic|victoria|seat|projection|model|mrp|blog-media", re.I)
 
 POLLS_SCHEMA = {
-    "description": "Published voting-intention polls, scraped from Wikipedia by scripts/refresh.py.",
+    "description": "Published voting-intention polls, scraped from Wikipedia by scripts/refresh.py, plus any entered by hand in scripts/polls_manual.json that Wikipedia hasn't listed yet (those carry 'via').",
     "fields": {
         "id": "Stable id: <pollster slug>-<end_date>, with -2, -3 for repeats (used by poll.html#<id>)",
         "start_date": "Fieldwork start, YYYY-MM-DD (may equal end_date)",
@@ -123,8 +123,15 @@ POLLS_SCHEMA = {
         "tpp3": "Optional three-party-preferred %: {ALP, LNP, ONP}",
         "preferred_premier": "Optional: {matchup, leaders: {surname: %}, undecided: %}",
         "approval": "Optional: {matchup, leaders: {surname: {positive, negative, undecided, net}}} (net = positive - negative, as published)",
+        "preferred_premier_alt": "Optional: a second preferred-premier measure from the same poll (e.g. a three-way question), shaped like preferred_premier",
+        "via": "Only on polls entered by hand (scripts/polls_manual.json): {label, url} of the report the figures came from",
+        "added": "Only on polls entered by hand: the date they were entered",
+        "supplemented": "Optional {fields, label, url}: fields of a Wikipedia-listed poll filled from scripts/polls_manual.json, and where they came from",
     },
 }
+
+# Polls entered by hand while Wikipedia hasn't listed them yet (merge_manual_polls).
+MANUAL_POLLS = Path(__file__).resolve().parent / "polls_manual.json"
 
 log = logging.getLogger("refresh")
 
@@ -556,6 +563,7 @@ def refresh_polls(data_dir: Path, meta: dict) -> bool:
         source.update(status="error", message=str(exc)[:300])
         return False
 
+    polls = merge_manual_polls(polls, (read_json(MANUAL_POLLS, {}) or {}).get("polls", []))
     # The script owns this file, so its schema always replaces whatever was there.
     write_json(path, {
         "_schema": POLLS_SCHEMA,
@@ -566,6 +574,38 @@ def refresh_polls(data_dir: Path, meta: dict) -> bool:
     meta.setdefault("sample_data", {})["polls"] = False
     log.info("Wrote %s (%d polls)", path.name, len(polls))
     return True
+
+
+def merge_manual_polls(polls: list[dict], manual: list[dict]) -> list[dict]:
+    """Add hand-entered polls Wikipedia hasn't listed. One Wikipedia lists (same pollster, fieldwork ending within
+    two days) keeps Wikipedia's figures and only gains the fields its row lacks; the log says the hand entry can go."""
+    out = list(polls)
+    for m in manual:
+        if not (m.get("pollster") and m.get("end_date") and m.get("primary")):
+            log.warning("polls_manual.json: entry %r lacks pollster, end_date or primary; skipped", m.get("id"))
+            continue
+        end = date.fromisoformat(m["end_date"])
+        match = next((p for p in out if _name_key(p.get("pollster", "")) == _name_key(m["pollster"])
+                      and abs((date.fromisoformat(p["end_date"]) - end).days) <= 2), None)
+        if match is None:
+            entry = {k: v for k, v in m.items()}
+            base, n = entry.get("id") or f"{re.sub(r'[^a-z0-9]+', '-', m['pollster'].lower()).strip('-')}-{m['end_date']}", 2
+            entry["id"] = base
+            while any(p["id"] == entry["id"] for p in out):
+                entry["id"] = f"{base}-{n}"
+                n += 1
+            out.append(entry)
+            log.info("Poll entered by hand added: %s (not on Wikipedia yet)", entry["id"])
+        else:
+            filled = [k for k in m if k not in ("id", "via", "added") and match.get(k) is None]
+            for k in filled:
+                match[k] = m[k]
+            if filled and m.get("via"):
+                match["supplemented"] = {"fields": filled, **m["via"]}
+            log.info("Poll entered by hand %s is now on Wikipedia as %s%s; remove it from polls_manual.json once nothing "
+                     "is filled from it", m.get("id"), match["id"], f" (filled: {', '.join(filled)})" if filled else "")
+    out.sort(key=lambda p: (p["end_date"], p.get("start_date") or "", p["pollster"]), reverse=True)
+    return out
 
 
 # --------------------------------------------------------------------------

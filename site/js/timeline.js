@@ -6,7 +6,7 @@
 
   const TYPES = {
     election: "Election", "by-election": "By-election", leadership: "Leadership", retirement: "Retirement",
-    defection: "Defection", "electoral-system": "Voting rules", timetable: "Timetable",
+    defection: "Defection", "electoral-system": "Voting rules", timetable: "Timetable", campaign: "Campaign",
   };
   let entries = [], districts = {}, regions = {}, active = new Set(Object.keys(TYPES));
   const $ = (id) => document.getElementById(id);

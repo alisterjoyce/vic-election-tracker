@@ -259,11 +259,16 @@
     return `rgba(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}, ${alpha})`;
   }
 
+  // Parties whose highs and lows are marked (Other mixes different groupings from poll to poll, so not it).
+  const RECORD_KEYS = ["ALP", "LNP", "GRN", "ONP"];
+
   function renderChart() {
     const canvas = document.getElementById("pop-chart");
     if (!window.Chart || !canvas) return;   // Chart.js loads after the first paint (init)
     Chart.defaults.font.family = cssVar("--font-body") || "system-ui, sans-serif";
     const keys = seriesKeys();
+    const records = App.pollRecords(polls, keys.filter((k) => RECORD_KEYS.includes(k)), chartValue);
+    const ink = cssVar("--text");
     const datasets = [];
     keys.forEach((k) => {
       const color = partyColor(k);
@@ -272,12 +277,17 @@
         borderColor: color, backgroundColor: color, borderWidth: 2.5,
         pointRadius: 0, pointHoverRadius: 4,
       });
+      const data = polls.filter((p) => chartValue(p, k) != null)
+        .map((p) => ({ x: p.t, y: chartValue(p, k), poll: p, record: (records.get(p.id) || []).find((r) => r.key === k) }));
+      // A poll that set a new high or low for this party is drawn larger, solid and outlined.
       datasets.push({
-        type: "scatter", label: `${partyName(k)} polls`,
-        data: polls.filter((p) => chartValue(p, k) != null)
-          .map((p) => ({ x: p.t, y: chartValue(p, k), poll: p })),
-        backgroundColor: withAlpha(color, 0.35), borderColor: "transparent",
-        pointRadius: 3.5, pointHoverRadius: 5,
+        type: "scatter", label: `${partyName(k)} polls`, data,
+        backgroundColor: data.map((d) => (d.record ? color : withAlpha(color, 0.35))),
+        borderColor: data.map((d) => (d.record ? ink : "transparent")),
+        borderWidth: data.map((d) => (d.record ? 1.5 : 0)),
+        pointStyle: data.map((d) => (d.record ? (d.record.kind === "high" ? "triangle" : "rectRot") : "circle")),
+        pointRadius: data.map((d) => (d.record ? 6 : 3.5)),
+        pointHoverRadius: data.map((d) => (d.record ? 7.5 : 5)),
       });
     });
 
@@ -330,8 +340,10 @@
               title: (items) => items.length ? fmtDate(new Date(items[0].parsed.x)) : "",
               label: (ctx) => {
                 const poll = ctx.raw && ctx.raw.poll;
+                const rec = ctx.raw && ctx.raw.record;
                 return poll
                   ? `${poll.pollster}: ${ctx.dataset.label.replace(/ polls$/, "")} ${ctx.parsed.y}%`
+                    + (rec ? ` (new ${rec.kind}${rec.current ? ", still the record" : ""})` : "")
                   : `${ctx.dataset.label} average: ${ctx.parsed.y}%`;
               },
             },

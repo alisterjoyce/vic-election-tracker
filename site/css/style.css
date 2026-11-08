@@ -652,6 +652,11 @@ select {
 /* ---------- District / region detail ---------- */
 .facts { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr)); margin: 12px 0 18px; }
 .fact { background: var(--surface-2); border-radius: 8px; padding: 10px 12px; }
+/* Poll page: records this poll set (poll.js recordNotes) */
+.poll-records { list-style: none; margin: 0 0 16px; padding: 0; display: grid; gap: 8px; }
+.poll-record { border-left: 4px solid var(--party-color, var(--accent)); background: var(--surface-2); border-radius: 0 8px 8px 0; padding: 8px 12px; }
+.poll-record strong { display: block; }
+.poll-record .small { color: var(--muted); }
 .fact .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--muted); }
 .fact .value { font-weight: 600; margin-top: 2px; overflow-wrap: anywhere; }
 
@@ -803,6 +808,7 @@ select {
 .type-defection { --tl-color: var(--p-alp); }
 .type-electoral-system { --tl-color: var(--p-nat); }
 .type-timetable { --tl-color: var(--star); }
+.type-campaign { --tl-color: var(--p-ind); }
 .tl-chip, .tl-chip[aria-pressed="true"] { border-left: 4px solid var(--tl-color); background: var(--surface); color: var(--text); border-color: var(--border); border-left-color: var(--tl-color); }
 .tl-chip[aria-pressed="false"] { opacity: 0.55; text-decoration: line-through; }
 @media (max-width: 520px) {

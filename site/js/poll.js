@@ -6,7 +6,9 @@
   const { loadJSON, escapeHtml, partyName, partyVar, partyColor, cssVar, fmtDate, hashId, copyLink } = App;
 
   // Leaders named in Wikipedia's leadership tables -> party (for bar colours).
-  const LEADER_PARTY = { Carroll: "ALP", Allan: "ALP", Andrews: "ALP", Wilson: "LIB", Battin: "LIB", Pesutto: "LIB", Guy: "LIB", Pickering: "ONP" };
+  const LEADER_PARTY = { Carroll: "ALP", Allan: "ALP", Andrews: "ALP", Wilson: "LIB", Battin: "LIB", Pesutto: "LIB", Guy: "LIB", Pickering: "ONP", Sandell: "GRN" };
+  // Records shown on a poll's page: new highs and lows for these parties' primaries, and the Coalition's 2PP.
+  const RECORD_NAMES = { ALP: "Labor", LNP: "Coalition", GRN: "Greens", ONP: "One Nation" };
   const MEASURES = [
     { key: "tpp.LNP", label: "L/NP 2PP", party: "LNP" },
     { key: "tpp.ALP", label: "Labor 2PP", party: "ALP" },
@@ -107,6 +109,27 @@
     });
   }
 
+  // "Lowest Labor primary recorded" and the like, for a poll that set a new high or low when it came out.
+  function recordNotes(p) {
+    const val = (part) => (x, k) => (x[part] && x[part][k] != null && !isNaN(x[part][k]) ? x[part][k] : null);
+    const recs = [
+      ...(App.pollRecords(polls, Object.keys(RECORD_NAMES), val("primary")).get(p.id) || []).map((r) => ({ ...r, what: "primary" })),
+      ...(App.pollRecords(polls, ["LNP"], val("tpp")).get(p.id) || []).map((r) => ({ ...r, what: "two-party-preferred vote" })),
+    ];
+    if (!recs.length) return "";
+    const since = App.fmtMonth(App.parseDate(polls[0].end_date));
+    return `<ul class="poll-records">${recs.map((r) => {
+      const word = r.kind === "low" ? "Lowest" : "Highest";
+      const head = r.current ? `${word} ${RECORD_NAMES[r.key]} ${r.what} recorded`
+        : `New ${r.kind} for the ${RECORD_NAMES[r.key]} ${r.what} when it came out`;
+      const prev = `the previous ${r.kind} was ${r.prev}% (<a href="poll.html#${escapeHtml(r.prevPoll.id)}">${escapeHtml(r.prevPoll.pollster)}, ${escapeHtml(fmtDate(r.prevPoll.end_date))}</a>)`;
+      const tail = r.current ? `${r.kind === "low" ? "the lowest" : "the highest"} of the ${r.n} polls tracked since ${escapeHtml(since)}`
+        : "a later poll has since gone further";
+      return `<li class="poll-record poll-record-${r.kind}" style="--party-color: var(${partyVar(r.key)})"><strong>${escapeHtml(head)}</strong>
+        <span class="small">${r.value}%; ${prev}; ${tail}.</span></li>`;
+    }).join("")}</ul>`;
+  }
+
   function renderDetail(p) {
     document.title = `${p.pollster} poll, ${fmtDate(p.end_date)} · Vic Election 2026`;
     const prim = Object.entries(p.primary || {}).sort((a, b) => b[1] - a[1]).map(([k, v]) => [partyName(k), k, v]);
@@ -131,12 +154,16 @@
           <div class="fact"><div class="label">Fieldwork</div><div class="value">${escapeHtml(fieldwork(p))}</div></div>
           <div class="fact"><div class="label">Sample</div><div class="value">${p.sample_size ? p.sample_size.toLocaleString("en-AU") : "Not published"}</div></div>
         </div>
+        ${recordNotes(p)}
         ${prim.length ? `<h3>Primary vote</h3>${bars(prim, maxPrim)}` : ""}
         ${p.tpp ? `<h3>Two-party preferred</h3>${splitBar([["Labor", "ALP", p.tpp.ALP], ["L/NP", "LNP", p.tpp.LNP]])}` : '<p class="muted small">No ALP v L/NP two-party figure published.</p>'}
         ${p.tpp3 ? `<h3>Three-party preferred</h3>${splitBar([["Labor", "ALP", p.tpp3.ALP], ["L/NP", "LNP", p.tpp3.LNP], ["One Nation", "ONP", p.tpp3.ONP]])}` : ""}
         ${pp ? `<h3>Preferred premier <span class="muted small">${escapeHtml(pp.matchup || "")}</span></h3>
           ${bars([...Object.entries(pp.leaders).map(([n, v]) => [n, LEADER_PARTY[n] || "OTH", v]),
                   ...(pp.undecided != null ? [["Undecided", "OTH", pp.undecided]] : [])], 100)}` : ""}
+        ${p.preferred_premier_alt ? `<h3>Preferred premier <span class="muted small">${escapeHtml(p.preferred_premier_alt.matchup || "")}</span></h3>
+          ${bars([...Object.entries(p.preferred_premier_alt.leaders).map(([n, v]) => [n, LEADER_PARTY[n] || "OTH", v]),
+                  ...(p.preferred_premier_alt.undecided != null ? [["Undecided", "OTH", p.preferred_premier_alt.undecided]] : [])], 100)}` : ""}
         ${ap ? `<h3>Leader approval <span class="muted small">${escapeHtml(ap.matchup || "")}</span></h3>
           <div class="table-scroll"><table>
             <thead><tr><th>Leader</th><th class="num">Approve</th><th class="num">Disapprove</th><th class="num">Undecided</th><th class="num">Net</th></tr></thead>
@@ -145,7 +172,10 @@
               <td class="num">${r.net == null ? "–" : `${r.net > 0 ? "+" : r.net < 0 ? "−" : ""}${Math.abs(r.net)}`}</td></tr>`).join("")}</tbody>
           </table></div>` : ""}
         ${!pp && !ap ? '<p class="muted small">No preferred-premier or approval figures published with this poll.</p>' : ""}
-        <p class="muted small">${p.source_url ? `Source: <a href="${escapeHtml(p.source_url)}" target="_blank" rel="noopener">${escapeHtml(host)}</a>, via ` : "Via "}<a href="https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election">Wikipedia's poll tables</a>.</p>
+        <p class="muted small">${p.source_url ? `Source: <a href="${escapeHtml(p.source_url)}" target="_blank" rel="noopener">${escapeHtml(host)}</a>, ` : ""}${p.via
+          ? `entered by hand from <a href="${escapeHtml(p.via.url)}" target="_blank" rel="noopener">${escapeHtml(p.via.label)}</a> until Wikipedia lists it.`
+          : `via <a href="https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election">Wikipedia's poll tables</a>.`}${p.supplemented
+          ? ` ${escapeHtml(SUPPLEMENT_LABEL(p.supplemented.fields))} from <a href="${escapeHtml(p.supplemented.url)}" target="_blank" rel="noopener">${escapeHtml(p.supplemented.label)}</a>.` : ""}</p>
       </article>
 
       <section class="card" aria-labelledby="trend-h">
@@ -165,6 +195,15 @@
       renderTrend(p);
     }));
     renderTrend(p);
+  }
+
+  // "Client, preferred premier and leader ratings" for the fields filled from a hand-entered poll.
+  function SUPPLEMENT_LABEL(fields) {
+    const names = { client: "client", preferred_premier: "preferred premier", preferred_premier_alt: "preferred premier",
+      approval: "leader ratings", tpp: "two-party figures", tpp3: "three-party figures", sample_size: "sample size" };
+    const list = [...new Set(fields.map((f) => names[f] || f.replace(/_/g, " ")))];
+    const text = list.length > 1 ? `${list.slice(0, -1).join(", ")} and ${list[list.length - 1]}` : list[0];
+    return text.charAt(0).toUpperCase() + text.slice(1);
   }
 
   function pollTable(list, current) {

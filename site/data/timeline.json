@@ -3,7 +3,7 @@
     "description": "The 2022-2026 parliamentary term and the election timetable, shown on timeline.html. Maintained by hand; seeded on 31 Oct 2026 from the research report and Wikipedia's 2026 Victorian state election article. One line per entry, in our own words: facts only, no commentary.",
     "fields": {
       "date": "YYYY-MM-DD, or YYYY-MM when only the month is known",
-      "type": "election | by-election | leadership | retirement | defection | electoral-system | timetable",
+      "type": "election | by-election | leadership | retirement | defection | electoral-system | timetable | campaign",
       "text": "One line describing what happened",
       "source": "{label, url}: where the fact comes from",
       "districts": "Optional districts.json ids the entry is about (link to the seat pages)",
@@ -554,6 +554,15 @@
       "source": {
         "label": "VEC: voting options",
         "url": "https://www.vec.vic.gov.au/voting/2026-state-election/voting-options"
+      }
+    },
+    {
+      "date": "2026-11-17",
+      "type": "campaign",
+      "text": "Four-way leaders' debate at 7:30 pm, the News24/Herald Sun People's Forum: Carroll, Wilson, Sandell and Pickering take questions from 100 undecided voters.",
+      "source": {
+        "label": "TV Central: News24/Herald Sun People's Forum",
+        "url": "https://www.tvcentral.com.au/other-news/sky-news-australia/news24-herald-sun-peoples-forum-victorian-four-leader-debate/"
       }
     },
     {
