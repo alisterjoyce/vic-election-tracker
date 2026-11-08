@@ -789,6 +789,84 @@
       ],
       "profile_updated": "2026-11-04"
     },
+    "ashwood/enid-uwimana": {
+      "name": "Enid Uwimana",
+      "summary": {
+        "text": "Enid Uwimana is the Family First candidate for Ashwood at the 2026 Victorian election. On her party page she says she moved to Australia in 2014 to study at Deakin University, completing a Doctorate of Business Administration there in 2018 after a master's degree in audit management at Birmingham City University. Before that she worked in Rwanda for the Rwanda Revenue Authority and as director of internal audit at the National Bank of Rwanda, and she is president of the Rwandan Community Abroad in Victoria.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Auditor; formerly director of internal audit, National Bank of Rwanda",
+        "src": [1]
+      },
+      "prior_roles": [
+        {
+          "role": "President",
+          "kind": "community",
+          "organisation": "Rwandan Community Abroad in Victoria",
+          "from": null,
+          "to": null,
+          "src": [1]
+        },
+        {
+          "role": "Director, Internal Audit Department",
+          "kind": "public-service",
+          "organisation": "National Bank of Rwanda",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1]
+        },
+        {
+          "role": "Tax auditor, later internal audit manager",
+          "kind": "public-service",
+          "organisation": "Rwanda Revenue Authority",
+          "from": null,
+          "to": null,
+          "ended": true,
+          "src": [1]
+        }
+      ],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Protect human life from conception to natural death",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Support marriage and the family",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Empower individuals, families and communities to settle local matters themselves",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "party_page": "https://www.familyfirstparty.org.au/uwimana_2026"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.familyfirstparty.org.au/uwimana_2026",
+          "title": "Dr. Enid Uwimana, Family First Party Australia",
+          "accessed": "2026-11-09"
+        },
+        {
+          "id": 2,
+          "url": "https://vec.vic.gov.au/electoral-boundaries/state-districts/ashwood-district/nominations",
+          "title": "Ashwood District candidates, Victorian Electoral Commission",
+          "accessed": "2026-11-09"
+        }
+      ],
+      "profile_updated": "2026-11-09"
+    },
     "ashwood/hitendra-joshi": {
       "name": "Hitendra Joshi",
       "summary": {
@@ -7768,6 +7846,60 @@
       ],
       "profile_updated": "2026-11-05"
     },
+    "brunswick/john-margelis": {
+      "name": "John Margelis",
+      "summary": {
+        "text": "John Margelis is the Liberal candidate for Brunswick at the 2026 Victorian election. The Victorian Liberals describe him as a small-business owner whose business provides medical supplies to aged-care providers and radiology practices.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Small-business owner (medical supplies for aged care and radiology)",
+        "src": [1]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "A safer Brunswick, under the Liberals' plan for 3,000 more police",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Lower costs for residents and small businesses",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "party_page": "https://vicliberal.org.au/team/john-margelis",
+        "website": "https://www.johnmargelis.com.au"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://vicliberal.org.au/team/john-margelis",
+          "title": "John Margelis, Liberal for Brunswick, Victorian Liberals",
+          "accessed": "2026-11-09"
+        },
+        {
+          "id": 2,
+          "url": "https://vec.vic.gov.au/electoral-boundaries/state-districts/brunswick-district/nominations",
+          "title": "Brunswick District candidates, Victorian Electoral Commission",
+          "accessed": "2026-11-09"
+        }
+      ],
+      "profile_updated": "2026-11-09",
+      "contact": {
+        "email": {
+          "value": "john.margelis@vic.liberal.org.au",
+          "kind": "campaign",
+          "src": [1]
+        }
+      }
+    },
     "brunswick/mel-yuan": {
       "name": "Mel Yuan",
       "summary": {
@@ -11477,6 +11609,66 @@
       ],
       "profile_updated": "2026-11-04",
       "faction": null
+    },
+    "cranbourne/craig-baird": {
+      "name": "Craig Baird",
+      "summary": {
+        "text": "Craig Baird is the Libertarian candidate for Cranbourne at the 2026 Victorian election. According to his party's candidate page, he is a software developer whose work has ranged from hospital systems to video games, now leading a team at an education technology start-up, and he has lived in Cranbourne for about four years.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": {
+        "place": "Cranbourne",
+        "src": [1]
+      },
+      "occupation": {
+        "text": "Software developer; team leader at an education technology start-up",
+        "src": [1]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Better road maintenance, including fixing potholes",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Upgraded stormwater drainage to reduce local flooding",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Careful spending and a leaner, more accountable state government",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Individual freedom and civil liberties",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "party_page": "https://www.vic.libertarians.org.au/election26#craigbaird",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/cran"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.vic.libertarians.org.au/election26#craigbaird",
+          "title": "Election 2026, Libertarians Victoria",
+          "accessed": "2026-11-09"
+        },
+        {
+          "id": 2,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/cran",
+          "title": "Cranbourne: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-09"
+        }
+      ],
+      "profile_updated": "2026-11-09"
     },
     "cranbourne/gino-tripodi": {
       "name": "Gino Tripodi",
@@ -20231,6 +20423,75 @@
       ],
       "profile_updated": "2026-11-04"
     },
+    "geelong/pippa-macpherson": {
+      "name": "Pippa Macpherson",
+      "summary": {
+        "text": "Pippa Macpherson is the Animal Justice Party candidate for Geelong at the 2026 Victorian election. Her party's page describes her as a qualified chef who has lived in Geelong all her life and plays local football and cricket. She took part in the YMCA's Victorian Youth Parliament in 2026, which the page says led her to stand.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": {
+        "place": "Geelong",
+        "src": [1]
+      },
+      "occupation": {
+        "text": "Chef",
+        "src": [1]
+      },
+      "prior_roles": [
+        {
+          "role": "Participant, Victorian Youth Parliament",
+          "kind": "community",
+          "organisation": "YMCA Victoria",
+          "from": 2026,
+          "to": 2026,
+          "src": [1]
+        }
+      ],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "End duck hunting, brumby culling by shooting, and greyhound racing",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Stronger protection for native wildlife, including closing loopholes in Authority to Control Wildlife permits",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "More young people and women in Parliament",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Protecting the environment",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "party_page": "https://vic.animaljusticeparty.org/pippa_macpherson",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/geel"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://vic.animaljusticeparty.org/pippa_macpherson",
+          "title": "Pippa Macpherson for Geelong, Animal Justice Party Victoria",
+          "accessed": "2026-11-09"
+        },
+        {
+          "id": 2,
+          "url": "https://vec.vic.gov.au/electoral-boundaries/state-districts/geelong-district/nominations",
+          "title": "Geelong District candidates, Victorian Electoral Commission",
+          "accessed": "2026-11-09"
+        }
+      ],
+      "profile_updated": "2026-11-09"
+    },
     "gippsland-east/alison-waters": {
       "name": "Alison Waters",
       "born": null,
@@ -28838,6 +29099,46 @@
         }
       ],
       "profile_updated": "2026-11-05"
+    },
+    "malvern/peter-martin": {
+      "name": "Peter Martin",
+      "summary": {
+        "text": "Peter Martin is the Labor candidate for Malvern at the 2026 Victorian election, nominated with the Victorian Electoral Commission. Victorian Labor's page for him gives his candidacy and a campaign email but no biography, and no other published source about him was found.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": null,
+      "prior_roles": [],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [],
+      "links": {
+        "party_page": "https://www.viclabor.org.au/our-team/peter-martin",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/malv"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.viclabor.org.au/our-team/peter-martin",
+          "title": "Peter Martin, Victorian Labor candidates",
+          "accessed": "2026-11-09"
+        },
+        {
+          "id": 2,
+          "url": "https://vec.vic.gov.au/electoral-boundaries/state-districts/malvern-district/nominations",
+          "title": "Malvern District candidates, Victorian Electoral Commission",
+          "accessed": "2026-11-09"
+        }
+      ],
+      "profile_updated": "2026-11-09",
+      "contact": {
+        "email": {
+          "value": "Peter.Martin@vic.alp.org.au",
+          "kind": "campaign",
+          "src": [1]
+        }
+      }
     },
     "melbourne/davydd-griffiths": {
       "name": "Davydd Griffiths",
@@ -38520,6 +38821,73 @@
       ],
       "profile_updated": "2026-11-05"
     },
+    "north-eastern-metropolitan/kane-afford": {
+      "name": "Kane Afford",
+      "summary": {
+        "text": "Kane Afford is a One Nation candidate for the Legislative Council's North-Eastern Metropolitan Region at the 2026 Victorian election. One Nation's page describes him as a real estate professional who has worked in property management and in settling new developments, and who comes from a small-business family.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": {
+        "place": "Gowanbrae",
+        "src": [2],
+        "note": "The suburb given on his nomination, as the VEC lists it"
+      },
+      "occupation": {
+        "text": "Real estate professional (property management and new-development settlements)",
+        "src": [1]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Plan ahead for the homes, infrastructure and services a growing state needs",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "A managed federal migration program so population growth doesn't outpace infrastructure",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Support for working families and small businesses facing rising costs",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Personal responsibility and reward for effort",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "party_page": "https://vic.onenation.org.au/candidate/kane-afford"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://vic.onenation.org.au/candidate/kane-afford",
+          "title": "Kane Afford, One Nation Victoria",
+          "accessed": "2026-11-09"
+        },
+        {
+          "id": 2,
+          "url": "https://vec.vic.gov.au/electoral-boundaries/state-regions/north-eastern-metropolitan-region/nominations",
+          "title": "North-Eastern Metropolitan Region candidates, Victorian Electoral Commission",
+          "accessed": "2026-11-09"
+        }
+      ],
+      "profile_updated": "2026-11-09",
+      "contact": {
+        "phone": {
+          "value": "03 9072 0631",
+          "kind": "party office",
+          "src": [1]
+        }
+      }
+    },
     "north-eastern-metropolitan/leonie-green": {
       "name": "Leonie Green",
       "summary": {
@@ -43565,6 +43933,46 @@
       ],
       "profile_updated": "2026-11-05"
     },
+    "ovens-valley/jennifer-smith": {
+      "name": "Jennifer Smith",
+      "summary": {
+        "text": "Jennifer Smith is the Labor candidate for Ovens Valley at the 2026 Victorian election, nominated with the Victorian Electoral Commission. Victorian Labor's page for her gives her candidacy and a campaign email but no biography, and no other published source about her was found.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": null,
+      "prior_roles": [],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [],
+      "links": {
+        "party_page": "https://www.viclabor.org.au/our-team/jennifer-smith",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/oven"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.viclabor.org.au/our-team/jennifer-smith",
+          "title": "Jennifer Smith, Victorian Labor candidates",
+          "accessed": "2026-11-09"
+        },
+        {
+          "id": 2,
+          "url": "https://vec.vic.gov.au/electoral-boundaries/state-districts/ovens-valley-district/nominations",
+          "title": "Ovens Valley District candidates, Victorian Electoral Commission",
+          "accessed": "2026-11-09"
+        }
+      ],
+      "profile_updated": "2026-11-09",
+      "contact": {
+        "email": {
+          "value": "Jennifer.Smith@vic.alp.org.au",
+          "kind": "campaign",
+          "src": [1]
+        }
+      }
+    },
     "ovens-valley/julian-fidge": {
       "name": "Julian Fidge",
       "summary": {
@@ -43783,6 +44191,77 @@
         }
       ],
       "profile_updated": "2026-11-05"
+    },
+    "ovens-valley/sue-litchfield": {
+      "name": "Sue Litchfield",
+      "summary": {
+        "text": "Sue Litchfield is the Animal Justice Party candidate for Ovens Valley at the 2026 Victorian election. She is a support worker and longtime animal advocate who, her party says, volunteered with Choose Cruelty Free for 20 years and takes part in campaigns against horse racing and duck shooting. She stood for the party in Clarinda at the 2022 state election.",
+        "src": [1, 2, 3]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": {
+        "text": "Support worker",
+        "src": [1]
+      },
+      "prior_roles": [],
+      "previous_candidacies": [
+        {
+          "election": "2022 Victorian state",
+          "seat": "Clarinda",
+          "party": "AJP",
+          "result": "Lost",
+          "src": [1, 3]
+        }
+      ],
+      "faction": null,
+      "priorities": [
+        {
+          "text": "Stop animals being exploited in entertainment, sport and farming for food",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Give animal welfare far more weight in government decisions",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Protect wildlife and the environment, including from discarded fishing line and litter",
+          "quoted": false,
+          "src": [1]
+        },
+        {
+          "text": "Social justice, equality and inclusion, including for LGBTQIA+ people",
+          "quoted": false,
+          "src": [1]
+        }
+      ],
+      "links": {
+        "party_page": "https://vic.animaljusticeparty.org/sue_litchfield",
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/oven"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://vic.animaljusticeparty.org/sue_litchfield",
+          "title": "Sue Litchfield for Ovens Valley, Animal Justice Party Victoria",
+          "accessed": "2026-11-09"
+        },
+        {
+          "id": 2,
+          "url": "https://vec.vic.gov.au/electoral-boundaries/state-districts/ovens-valley-district/nominations",
+          "title": "Ovens Valley District candidates, Victorian Electoral Commission",
+          "accessed": "2026-11-09"
+        },
+        {
+          "id": 3,
+          "url": "https://www.vec.vic.gov.au/results/state-election-results/2022-state-election-results/results-by-district/clarinda-district-results",
+          "title": "Clarinda District results, 2022 State election, Victorian Electoral Commission",
+          "accessed": "2026-11-09"
+        }
+      ],
+      "profile_updated": "2026-11-09"
     },
     "ovens-valley/tim-mccurdy": {
       "name": "Tim McCurdy",
@@ -54534,6 +55013,56 @@
       ],
       "profile_updated": "2026-11-04"
     },
+    "southern-metropolitan/jess-ness": {
+      "name": "Jess Ness",
+      "summary": {
+        "text": "Jess Ness is nominated for the Legislative Council's Southern Metropolitan Region at the 2026 Victorian election, second in the independent group led by Melissa Lowe. A Jess Ness stood as a Voices-endorsed independent for the federal seat of Deakin in 2025; no source found confirms that this is the same person.",
+        "src": [1, 2, 3]
+      },
+      "born": null,
+      "lives": {
+        "place": "Blackburn North",
+        "src": [1],
+        "note": "The suburb given on her nomination, as the VEC lists it"
+      },
+      "occupation": null,
+      "prior_roles": [],
+      "previous_candidacies": [
+        {
+          "election": "2025 federal",
+          "seat": "Deakin",
+          "party": "IND",
+          "result": "Lost",
+          "src": [2, 3],
+          "unverified": true,
+          "note": "Same name; no source found links this candidacy to the 2026 nomination."
+        }
+      ],
+      "faction": null,
+      "priorities": [],
+      "links": {},
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://vec.vic.gov.au/electoral-boundaries/state-regions/southern-metropolitan-region/nominations",
+          "title": "Southern Metropolitan Region candidates, Victorian Electoral Commission",
+          "accessed": "2026-11-09"
+        },
+        {
+          "id": 2,
+          "url": "https://lilydale.mailcommunity.com.au/news/2025/01/15/jess-ness-announced-as-independent-deakin-candidate/",
+          "title": "Jess Ness announced as independent Deakin candidate, Lilydale Star Mail, 15 Jan 2025",
+          "accessed": "2026-11-09"
+        },
+        {
+          "id": 3,
+          "url": "https://results.aec.gov.au/31496/Website/HouseDivisionPage-31496-209.htm",
+          "title": "Deakin, VIC: first preferences, 2025 federal election, AEC Tally Room",
+          "accessed": "2026-11-09"
+        }
+      ],
+      "profile_updated": "2026-11-09"
+    },
     "southern-metropolitan/katherine-copsey": {
       "name": "Katherine Copsey",
       "summary": {
@@ -59586,6 +60115,45 @@
         }
       ],
       "profile_updated": "2026-11-04"
+    },
+    "werribee/sandhya-kayagurla": {
+      "name": "Sandhya Kayagurla",
+      "summary": {
+        "text": "Sandhya Kayagurla is the candidate of The Republican, a party registered in Victoria, for Werribee at the 2026 Victorian election. The ABC guide and the Victorian Electoral Commission's nominations list record the candidacy; no biography has been published.",
+        "src": [1, 2]
+      },
+      "born": null,
+      "lives": null,
+      "occupation": null,
+      "prior_roles": [],
+      "previous_candidacies": [],
+      "faction": null,
+      "priorities": [],
+      "links": {
+        "abc": "https://www.abc.net.au/news/elections/vic/2026/guide/werr"
+      },
+      "sources": [
+        {
+          "id": 1,
+          "url": "https://www.abc.net.au/news/elections/vic/2026/guide/werr",
+          "title": "Werribee: 2026 Victorian election guide, ABC News",
+          "accessed": "2026-11-09"
+        },
+        {
+          "id": 2,
+          "url": "https://vec.vic.gov.au/electoral-boundaries/state-districts/werribee-district/nominations",
+          "title": "Werribee District candidates, Victorian Electoral Commission",
+          "accessed": "2026-11-09"
+        }
+      ],
+      "profile_updated": "2026-11-09",
+      "contact": {
+        "email": {
+          "value": "info@therepublican.org.au",
+          "kind": "party",
+          "src": [2]
+        }
+      }
     },
     "werribee/sue-munro": {
       "name": "Sue Munro",
