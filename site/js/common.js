@@ -458,7 +458,7 @@
       </div>`;
     return `<div class="ballot-paper bp-upper">
       <p class="bp-head">Legislative Council · ${escapeHtml(entry.name)} Region</p>
-      <div class="bp-groups">${groups.map((g) => col(g.group, g.label || "", g.party || "OTH", g.members)).join("")}
+      <div class="bp-groups">${groups.map((g) => col(g.group, g.label || "(group with no name)", g.party || "OTH", g.members)).join("")}
         ${loose.length ? col("", "Ungrouped", "IND", loose) : ""}</div>
       <p class="muted small">Groups in ballot order (A first), each with its candidates in their order on the ballot; ungrouped candidates last.</p>
       ${src}</div>`;

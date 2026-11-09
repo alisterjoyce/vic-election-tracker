@@ -20,6 +20,7 @@ published. By hand:
 from __future__ import annotations
 
 import argparse
+import collections
 import difflib
 import io
 import json
@@ -220,10 +221,13 @@ def parse_page(html: str, house: str) -> dict:
             cell = (tr.xpath(".//*[contains(@class,'party-name')]") or tr.xpath("./td"))[0]
             label = clean(cell.text_content())
             m = re.match(r"^([A-Z]{1,2})\.\s*(.*)$", label)
-            if m:
+            if m:   # 2022: "A. Victorian Socialists"
                 group = {"group": m.group(1), "label": clean(m.group(2)) or None}
-            else:
-                group = {"group": None, "label": label or None}   # "Ungrouped"
+            elif label.lower().startswith("ungrouped"):
+                group = {"group": None, "label": "Ungrouped"}
+            else:   # 2026: the name alone, groups in ballot order (A, B, ...); "Unnamed-1" is a group with no name
+                group = {"group": _letter(sum(1 for g in groups if g["group"])),
+                         "label": None if label.lower().startswith("unnamed") else (label or None)}
             groups.append(group)
             continue
         if "candidate-row" not in cls or tr.xpath("./th"):
@@ -245,6 +249,20 @@ def parse_page(html: str, house: str) -> dict:
                       "group": group["group"] if group else None,
                       "group_label": group["label"] if group else None})
     return {"drawn": drawn and bool(cands), "candidates": cands, "groups": groups}
+
+
+def group_party(label: str | None, member_parties: list[str]) -> str:
+    """A group's party code: from its own name ("Liberal / The Nationals" is a joint L/NP group); when the name
+    doesn't say ("Labour DLP") or there is none, the code most of its members carry (independents: IND)."""
+    code = party_code(label) if label else "OTH"
+    if code == "OTH" and member_parties:
+        code = collections.Counter(member_parties).most_common(1)[0][0]
+    return code
+
+
+def _letter(i: int) -> str:
+    """Group letters in ballot order: A..Z, then AA, AB, ..."""
+    return chr(65 + i) if i < 26 else chr(64 + i // 26) + chr(65 + i % 26)
 
 
 def fetch_nominations(districts: list[dict], regions: list[dict], user_agent: str,
@@ -308,7 +326,9 @@ def fetch_nominations(districts: list[dict], regions: list[dict], user_agent: st
                      "ballot_drawn": parsed["drawn"], "candidates": rows}
             if house == "region":
                 entry["groups"] = [{"group": g["group"], "label": g["label"],
-                                    "party": party_code(*[r["party_label"] for r in rows if r.get("group") == g["group"]] or [g["label"]])
+                                    # the group's own name first ("Liberal / The Nationals" is a joint L/NP group), else
+                                    # its members' parties (a group with no name is independents: IND)
+                                    "party": group_party(g["label"], [r["party"] for r in rows if r.get("group") == g["group"]])
                                     if g["group"] else None,
                                     "candidates": [r["name"] for r in rows if r.get("group") == g["group"]]}
                                    for g in parsed["groups"] if g["group"]]
