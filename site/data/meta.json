@@ -15,7 +15,7 @@
       "reconciliation_electiontracker": "Written by scripts/refresh.py after the ABC step: candidacies listed by electiontracker.au (open data, CC BY 4.0) compared with candidates.json and regions.json tickets. {date (Melbourne), source, data_url, credit, totals: {listed, active, missing_from_tracker}, missing_from_tracker: [{contest, chamber, name, party, status, note?}]}. Report only: names are never added from it, and only name, party, contest and status are read"
     }
   },
-  "last_updated": "2026-11-09T06:46:48Z",
+  "last_updated": "2026-11-09T06:59:57Z",
   "election_date": "2026-11-28",
   "previous_election": {
     "date": "2022-11-26",
@@ -134,28 +134,28 @@
     "polls": {
       "status": "ok",
       "url": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election",
-      "last_success": "2026-11-09T05:51:22Z",
+      "last_success": "2026-11-09T06:49:08Z",
       "message": "72 polls"
     },
     "vec_candidates": {
       "status": "ok",
       "url": "https://www.vec.vic.gov.au/voting/2026-state-election",
-      "last_success": "2026-11-09T06:46:48Z",
-      "message": "1037 candidates (734 Assembly, 303 Council); ballot order not yet published; 736 matched, 301 new, 6 withdrawn, 5 moved seat (first load, by hand)",
+      "last_success": "2026-11-09T06:55:49Z",
+      "message": "1037 candidates (734 Assembly, 303 Council); ballot order not yet published; 1037 matched, 0 new, 0 withdrawn, 62 change(s) since the last check",
       "ballot_drawn": false,
-      "changes": 0
+      "changes": 62
     },
     "wikipedia_candidates": {
       "url": "https://en.wikipedia.org/wiki/Candidates_of_the_2026_Victorian_state_election",
       "status": "ok",
-      "last_success": "2026-11-09T05:51:22Z",
-      "message": "557 assembly and 125 council names read; 0 assembly and 0 council added"
+      "last_success": "2026-11-09T06:49:08Z",
+      "message": "557 assembly and 160 council names read; 0 assembly and 0 council added"
     },
     "abc_guide": {
       "url": "https://www.abc.net.au/news/elections/vic/2026/guide/electorates",
       "status": "ok",
-      "last_success": "2026-11-09T05:53:53Z",
-      "message": "88 district pages, 0 districts updated; 105 candidates added, 597 confirmed, 7 superseded"
+      "last_success": "2026-11-09T06:51:40Z",
+      "message": "88 district pages, 0 districts updated; 0 candidates added, 8 not on the VEC's list (not added), 690 confirmed, 0 superseded"
     },
     "sportsbet": {
       "url": "https://www.sportsbet.com.au/betting/politics/australian-politics/victorian-state-election",
@@ -165,138 +165,64 @@
     "htv": {
       "url": "https://www.vec.vic.gov.au/candidates-and-parties/become-a-state-election-candidate/how-to-vote-cards",
       "status": "ok",
-      "last_success": "2026-11-09T05:54:06Z",
+      "last_success": "2026-11-09T06:55:52Z",
       "message": "No cards yet (status not_open)"
     },
     "news": {
       "status": "ok",
       "url": "https://www.bing.com/news/search",
-      "last_success": "2026-11-09T05:58:09Z",
+      "last_success": "2026-11-09T06:59:57Z",
       "message": "25 statewide, 168 seat items"
     },
     "changelog": {
       "status": "ok",
-      "last_success": "2026-11-09T05:58:09Z",
-      "message": "118 new entries"
+      "last_success": "2026-11-09T06:59:57Z",
+      "message": "318 new entries"
     },
     "electiontracker": {
       "url": "https://electiontracker.au/data/vic2026/candidates.json",
       "status": "ok",
-      "last_success": "2026-11-09T05:53:54Z",
-      "message": "569 active candidacies; 1 not in the tracker"
+      "last_success": "2026-11-09T06:51:41Z",
+      "message": "569 active candidacies; 0 not in the tracker"
     },
     "aeforecasts": {
       "url": "https://www.aeforecasts.com/forecast-api/election-summary/2026vic/regular",
       "status": "ok",
-      "last_success": "2026-11-09T05:53:58Z",
+      "last_success": "2026-11-09T06:51:46Z",
       "message": "Model of 2026-11-09T04:13:42Z (DemosAU 44-56), 88 districts"
     },
     "redbridge": {
       "url": "https://redbridgegroup.com.au/post-sitemap.xml",
       "status": "ok",
-      "last_success": "2026-11-09T05:54:03Z",
+      "last_success": "2026-11-09T06:51:52Z",
       "newer": [],
       "message": "Nothing newer than the model held (2026-10-26)"
     },
     "profiles": {
       "status": "ok",
-      "last_success": "2026-11-09T05:58:09Z",
-      "stranded": [
-        {
-          "id": "bentleigh/karli-mcrostie",
-          "hint": "superseded by Claire Proctor: move the profile to bentleigh/claire-proctor"
-        },
-        {
-          "id": "evelyn/nofoao-thomas",
-          "hint": "superseded by Michelle O'Brien: move the profile to evelyn/michelle-o-brien"
-        },
-        {
-          "id": "ivanhoe/oscar-lopez",
-          "hint": "superseded by Oscar Lopez Rios: move the profile to ivanhoe/oscar-lopez-rios"
-        },
-        {
-          "id": "lara/vincent-colla",
-          "hint": "superseded by Tina Uwizeyimana: move the profile to lara/tina-uwizeyimana"
-        },
-        {
-          "id": "laverton/shohre-mansouri",
-          "hint": "superseded by Shohre Mansouri Jajaee: move the profile to laverton/shohre-mansouri-jajaee"
-        },
-        {
-          "id": "melbourne/matthew-collins",
-          "hint": "superseded by Phillip Courtis: move the profile to melbourne/phillip-courtis"
-        },
-        {
-          "id": "pascoe-vale/andrew-forehan",
-          "hint": "superseded by Rosemary Ganci: move the profile to pascoe-vale/rosemary-ganci"
-        }
-      ],
-      "message": "742 profiles; 7 without an active candidacy",
-      "moved": [
-        {
-          "seat": "box-hill",
-          "from": "box-hill/heena-sinha-cheung",
-          "to": "box-hill/heena-cheung",
-          "old_name": "Heena Sinha Cheung",
-          "new_name": "Heena Cheung",
-          "moved": [
-            "profile"
-          ]
-        },
-        {
-          "seat": "gippsland-south",
-          "from": "gippsland-south/bianca-wilke",
-          "to": "gippsland-south/bianca-wilkie",
-          "old_name": "Bianca Wilke",
-          "new_name": "Bianca Wilkie",
-          "moved": [
-            "profile",
-            "headshot"
-          ]
-        },
-        {
-          "seat": "ivanhoe",
-          "from": "ivanhoe/renuka-casonato",
-          "to": "ivanhoe/ren-casonato",
-          "old_name": "Renuka Casonato",
-          "new_name": "Ren Casonato",
-          "moved": [
-            "profile"
-          ]
-        },
-        {
-          "seat": "lara",
-          "from": "lara/stephen-spyros",
-          "to": "lara/steven-spyros",
-          "old_name": "Stephen Spyros",
-          "new_name": "Steven Spyros",
-          "moved": [
-            "profile",
-            "headshot"
-          ]
-        },
-        {
-          "seat": "narre-warren-north",
-          "from": "narre-warren-north/josh-utoyo",
-          "to": "narre-warren-north/joshua-utoyo",
-          "old_name": "Josh Utoyo",
-          "new_name": "Joshua Utoyo",
-          "moved": [
-            "profile"
-          ]
-        }
+      "last_success": "2026-11-09T06:59:57Z",
+      "stranded": [],
+      "message": "742 profiles; 0 without an active candidacy; 6 of candidates who withdrew or didn't nominate (kept)",
+      "moved": [],
+      "withdrawn": [
+        "bentleigh/karli-mcrostie",
+        "melbourne/matthew-collins",
+        "mildura/ali-cupper",
+        "pakenham/mary-kate-louis",
+        "pascoe-vale/andrew-forehan",
+        "sydenham/matthew-de-angelis"
       ]
     },
     "electiontracker_retirements": {
       "url": "https://electiontracker.au/data/vic2026/retirements.json",
       "status": "ok",
-      "last_success": "2026-11-09T05:53:55Z",
+      "last_success": "2026-11-09T06:51:42Z",
       "message": "26 listed; 0 flags set; 0 to check by hand"
     },
     "electiontracker_policies": {
       "url": "https://electiontracker.au/data/vic2026/policies.json",
       "status": "ok",
-      "last_success": "2026-11-09T05:53:57Z",
+      "last_success": "2026-11-09T06:51:45Z",
       "message": "74 party-issue records, 345 sourced claims"
     }
   },
@@ -305,14 +231,15 @@
     "scope": "Legislative Assembly",
     "abc_list_url": "https://www.abc.net.au/news/elections/vic/2026/guide/candidates",
     "totals": {
-      "tracker": 705,
+      "tracker": 734,
       "abc_list": 994
     },
     "tracker_by_source": {
-      "abc": 704,
-      "wikipedia": 1
+      "abc": 594,
+      "vec": 137,
+      "wikipedia": 3
     },
-    "only_in_tracker": 7,
+    "only_in_tracker": 42,
     "only_on_abc": 4,
     "unmatched_electorates": 296,
     "tracked_all": 1037
@@ -331,17 +258,9 @@
     "totals": {
       "listed": 616,
       "active": 569,
-      "missing_from_tracker": 1
+      "missing_from_tracker": 0
     },
-    "missing_from_tracker": [
-      {
-        "contest": "sunbury",
-        "chamber": "assembly",
-        "name": "Geoff Vine",
-        "party": "WEST",
-        "status": "nominated"
-      }
-    ]
+    "missing_from_tracker": []
   },
   "reconciliation_electiontracker_retirements": {
     "date": "2026-11-09",
@@ -353,11 +272,41 @@
       "set_this_run": 0,
       "report_only": 0,
       "unmatched": 0,
-      "flagged_here_not_listed": 1
+      "flagged_here_not_listed": 3
     },
     "not_flagged_here": [],
     "set_this_run": [],
     "flags_from_electiontracker": [
+      {
+        "role": "MLA",
+        "seat": "south-barwon",
+        "name": "Darren Cheeseman",
+        "source": {
+          "name": "Darren Cheeseman",
+          "url": "https://www.vec.vic.gov.au/electoral-boundaries/state-districts/south-barwon-district/nominations",
+          "publisher": "Victorian Electoral Commission",
+          "title": "Candidates for South Barwon (nominations closed 9 Nov 2026)",
+          "published": "2026-11-09",
+          "kind": "official",
+          "via": "vec",
+          "added": "2026-11-09"
+        }
+      },
+      {
+        "role": "MLC",
+        "seat": "northern-metropolitan",
+        "name": "Adem Somyurek",
+        "source": {
+          "name": "Adem Somyurek",
+          "url": "https://www.vec.vic.gov.au/electoral-boundaries/state-regions/northern-metropolitan-region/nominations",
+          "publisher": "Victorian Electoral Commission",
+          "title": "Candidates for Northern Metropolitan Region (nominations closed 9 Nov 2026)",
+          "published": "2026-11-09",
+          "kind": "official",
+          "via": "vec",
+          "added": "2026-11-09"
+        }
+      },
       {
         "role": "MLC",
         "seat": "western-metropolitan",
@@ -380,6 +329,16 @@
         "role": "MLA",
         "seat": "ringwood",
         "name": "Will Fowles"
+      },
+      {
+        "role": "MLA",
+        "seat": "south-barwon",
+        "name": "Darren Cheeseman"
+      },
+      {
+        "role": "MLC",
+        "seat": "northern-metropolitan",
+        "name": "Adem Somyurek"
       }
     ]
   },

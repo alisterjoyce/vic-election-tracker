@@ -6,8 +6,3156 @@
       "entries": "[{date (Melbourne YYYY-MM-DD), at (ISO UTC), type, ...}] where type is one of: candidate_added {seat, name, party, status, source}; candidate_superseded {seat, name, party, by}; candidate_withdrawn {seat, name, party}; candidate_not_standing {seat, name, party}; poll_added {id, pollster, end_date, tpp (L/NP), primary}; odds_move {seat, label, party, from, to} (a price moving 0.5 or more); retirement {seat, name}; news {count} (new headlines collected)"
     }
   },
-  "updated": "2026-11-09T05:58:09Z",
+  "updated": "2026-11-09T06:59:57Z",
   "entries": [
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Ant Pitt",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Barry Besanko",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Daniel Hamman",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Danielle Burridge",
+      "party": "LCV",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Denise Ryan",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Devon Starbuck",
+      "party": "LCV",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Enver Erdogan",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Helen Chauhan",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Helen Jeges",
+      "party": "AJP",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Ian Rogers",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Jeff Bourman",
+      "party": "SFF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "John De Wacht",
+      "party": "ONP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Kate Coxall",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Kerrie-Anne Muir",
+      "party": "SFF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Khalif White",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Leticia Quintana",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Mat Morgan",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Matt Green",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Max Forward",
+      "party": "VS",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Melina Bath",
+      "party": "NAT",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Oliver Jobe",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Philip Keith Geoffrey Waters",
+      "party": "AJP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Phillip Watt",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Reade Smith",
+      "party": "SUS",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Renee Heath",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Richard Clark",
+      "party": "NAT",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Ryan Mather",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Xero Turnbull",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_withdrawn",
+      "seat": "eastern-victoria",
+      "name": "Jessica McAuliffe",
+      "party": "AJP"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Aiv Puglielli",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Ashley Beruldsen",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Brenton Van Der Ende",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Cary De Wit",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "David Solly",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Deirdre Diamante",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Donna Mackinnon",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Heather Maltby",
+      "party": "VS",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Jae Ho Hwang",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Jeremy Ngoh",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "John Pyrros",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Liezl Shnookal",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Lucas Deviesseux",
+      "party": "VS",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Maree Simmons",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Matt Ford",
+      "party": "LBT",
+      "status": "vec_nominated",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Mohamud Hersi",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Natalie Adams",
+      "party": "ONP",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Peter Gallagher",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Peter Plaucs",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Rana Javed",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Richard Welch",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Sophia Sun",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Sue Leidler",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Thomas Forrest",
+      "party": "LCV",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Wai Man Raymond Chow",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Yeung Yee Big Lily Chow",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Abir Dandach",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Anasina Gray-Barberio",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Anastasia Drapaniotis",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Andrew Deeming",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Anna Regina Galluzzo",
+      "party": "ONP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Bassima Hawli",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Bella Beiraghi",
+      "party": "VS",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Belle Gibson",
+      "party": "VS",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Bernadette Khoury",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Beth Couch",
+      "party": "SUS",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Catherine Robertson",
+      "party": "VS",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Dan Cairnes",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Daryl Budgeon",
+      "party": "SUS",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Evan Mulholland",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Hannah Thomas",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "James Fung",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "John Kavanagh",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "King River Wind",
+      "party": "LCV",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Louisa Bassini",
+      "party": "VS",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Mark Briers",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Mark Nicholson",
+      "party": "ONP",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Morgan Peach",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Omar Hassan",
+      "party": "VS",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Peter Byrne",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Peter Razos",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Praveen Kumar Komaragiri",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Riley Aickin",
+      "party": "LCV",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Sahar Khalili-Naghadeh",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Sainab Sheikh",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Sam Drummond",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Selin Gungormus",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Sheena Watt",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Tara Burnett",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Tim Sheehan",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Tom McIntosh",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "Usman Ghani",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Alex Green",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Amanda Millar",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Brad Hearn",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Cate Sinclair",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Chad Muller",
+      "party": "NAT",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Chae Van Dorssen",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Chris McCormack",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Ethan Constantinou",
+      "party": "SFF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Ev Keetelaar",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Gaelle Broad",
+      "party": "NAT",
+      "status": "vec_nominated",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Geoff Ashby",
+      "party": "SFF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Georgie Purcell",
+      "party": "AJP",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Greg Olsen",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Helen Robinson",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Jaclyn Symes",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Jana Sarantis",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Laurie Levy",
+      "party": "AJP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Lucas Maddock",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Luke Sorensen",
+      "party": "ONP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Mitch Bridges",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Natasha Gayfer",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Nick McHugh",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Rikkie-Lee Tyrrell",
+      "party": "ONP",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Samantha Bright",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Scott Williams",
+      "party": "LCV",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Sophie De Wit",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Steve Brooks",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Wil Mikelsons",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Amelia Kent",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Andrew Zmegac",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Ann-Marie Hermans",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Colleen Harkin",
+      "party": "ONP",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Gregory Denham",
+      "party": "LCV",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Jayden Hardy",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Kelly Cvetkova",
+      "party": "VS",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Leanne Wilde",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Lee Tarlamis",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Leo Panetta",
+      "party": "ONP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Louisa Willoughby",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Marcus Fernandez",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Matthew Kirwan",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Michael Galea",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Milton Wilde",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Moti Ram",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Phillip Pease",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Rachel Payne",
+      "party": "LCV",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Salini Vipinkumar",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Samantha Von Hagt",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Scott Fenner",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Scott Marsh",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Soheang Pak",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Susantha Abeysinghe",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Thanh Van Tran",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Aaron Sanford",
+      "party": "ONP",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Ben Howman",
+      "party": "LCV",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "David Davis",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Gavin Douch",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Georgie Crozier",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Jamie Bell",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Jane Foreman",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Jasmine Perera",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Jeffrey Kissubi",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "John Berger",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Joshua Weaver",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Karla Zmegac",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Katherine Copsey",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Kim Samiotis",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Louise Crawford",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Melissa Lowe",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Paul Dean",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Philip Cole",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Rachel Iampolski",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Tom Paton",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Virginia Wills",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Xavier Boffa",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Anneke Demanuele",
+      "party": "VS",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Arlene Smith",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Brittney Henderson",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Chana Berson",
+      "party": "LCV",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Chris Neil",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Cuc Lam",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Daniel Maduok Geng",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Dean Maloney",
+      "party": "VS",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Ebony Heins",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Ella Sjodin",
+      "party": "VS",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Fiona Lopez",
+      "party": "ONP",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Francine Ikirezi",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Geetha Pathanjalimanoharar",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Ingrid Stitt",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Isabella McRae McLeod",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Joe Garra",
+      "party": "WEST",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Jorge Jorquera",
+      "party": "VS",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Kim Travers",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Lizzie Blandthorn",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Lucy Kelly",
+      "party": "VS",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Mark Emerson",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Mark Royal",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Niall Harden",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Pavitra Kulkarni",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Raj Saini",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Rakesh Raizada",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Sahana Ramesh",
+      "party": "WEST",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Sara Ibrahim",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Sarabjit Kaur",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Shubhangi Kulkarni",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Shwetha Narayanan",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Trung Luu",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Xavier Menta",
+      "party": "LCV",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Zalak Shah",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Philip Farrelly",
+      "party": "WEST",
+      "status": "vec_nominated",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Akwinder Kaur",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Aleisha Smith",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Aleta Moriarty",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Alice Davy",
+      "party": "LCV",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Anne Moloney",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Belinda Coates",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Ben Collyer",
+      "party": "SFF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Bev McArthur",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Brendan William Thomas",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Chris Burson",
+      "party": "ONP",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Costa Di Biase",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Dianne Colbert",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Ellie Read",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Eve Fisher",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Fiona Mackenzie",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Graham Watt",
+      "party": "LIB",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Heaven Van Asperen",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Jacinta Ermacora",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Jason Oosthuizen",
+      "party": "ONP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Jennifer Bowden",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Kaitlyn Handreck",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Kate Maxfield",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Ken Vickers",
+      "party": "SFF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Melody Steed",
+      "party": "NAT",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Paul Barker",
+      "party": "LBT",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Phill Schiemer",
+      "party": "LBT",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Robert Letts",
+      "party": "NAT",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Sam Anwari",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Sarah Mansfield",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": null
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Senthil Veerappagounder",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Sindhu Sama",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Steve Veale",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Timothy Denton",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Timothy Gooden",
+      "party": "SAL",
+      "status": "vec_nominated",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "albert-park",
+      "name": "Adrian William King",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_withdrawn",
+      "seat": "albert-park",
+      "name": "Daniel O'Neill",
+      "party": "AJP"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "albert-park",
+      "name": "Tam Lindrum",
+      "party": "ONP",
+      "status": "vec_nominated",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "ashwood",
+      "name": "Hitendra K. Joshi",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "bass",
+      "name": "Ben Cauneac",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "bayswater",
+      "name": "Naomi Hubbard",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "bellarine",
+      "name": "Kate Lockhart",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "benambra",
+      "name": "Oliver Young",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_withdrawn",
+      "seat": "bentleigh",
+      "name": "Karli McRostie",
+      "party": "GRN"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "box-hill",
+      "name": "Sue-Ellen McGrath",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "brunswick",
+      "name": "Melissa Yuan",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "caulfield",
+      "name": "Yaakov Ziv Shroot",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "croydon",
+      "name": "Nathan Schwab",
+      "party": "LBT",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "dandenong",
+      "name": "Arshad Ali Khan",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "essendon",
+      "name": "Anab Mohamud",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "essendon",
+      "name": "Kat Theodosis",
+      "party": "ALP",
+      "status": "vec_nominated",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eureka",
+      "name": "Belinda Zivkovic",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eureka",
+      "name": "Ian Maxwell Harkness",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "eureka",
+      "name": "Steven Venditti-Taylor",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_withdrawn",
+      "seat": "evelyn",
+      "name": "Nofoao Thomas",
+      "party": "FF"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "footscray",
+      "name": "Daniel Lewis",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "footscray",
+      "name": "Daryle Calder",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "footscray",
+      "name": "Kristina Hess",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "frankston",
+      "name": "Jeff Knipe",
+      "party": "LCV",
+      "status": "vec_nominated",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "glen-waverley",
+      "name": "Segar Nadarajah",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_withdrawn",
+      "seat": "lara",
+      "name": "Vincent Colla",
+      "party": "FF"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_withdrawn",
+      "seat": "melbourne",
+      "name": "Matthew Collins",
+      "party": "ONP"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_withdrawn",
+      "seat": "mildura",
+      "name": "Ali Cupper",
+      "party": "IND"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "mildura",
+      "name": "Joselyne Ntahomvukiye",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "mill-park",
+      "name": "Aidan McLindon",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "morwell",
+      "name": "Ross McPhee",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "mulgrave",
+      "name": "Paul J Schofield",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "niddrie",
+      "name": "Domenic Mete",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "niddrie",
+      "name": "Karthik Reddy Chittedi",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northcote",
+      "name": "Clive Pilley",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "northcote",
+      "name": "Hannah Kafel",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "ovens-valley",
+      "name": "Benjamin Gilbert",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "pakenham",
+      "name": "Jesse Hamalainen",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_withdrawn",
+      "seat": "pakenham",
+      "name": "Mary-Kate Louis",
+      "party": "IND"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_withdrawn",
+      "seat": "pascoe-vale",
+      "name": "Andrew Forehan",
+      "party": "ONP"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "pascoe-vale",
+      "name": "Rosemarie Pauline Ganci",
+      "party": "ONP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "point-cook",
+      "name": "Paul Kelly",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "polwarth",
+      "name": "Vince Colla",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "prahran",
+      "name": "G. Daniel O'Neill",
+      "party": "AJP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "prahran",
+      "name": "George Leeton Watts",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_withdrawn",
+      "seat": "preston",
+      "name": "Peita Collard",
+      "party": "AJP"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "preston",
+      "name": "Simon Dower",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "preston",
+      "name": "William Fowles",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "richmond",
+      "name": "Jack Pead-Philipson",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "ripon",
+      "name": "Ronald Skruzny",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "ripon",
+      "name": "Trevor Scott Andrei",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "rowville",
+      "name": "David Massey",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "rowville",
+      "name": "Fiona Dobrzynski",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "shepparton",
+      "name": "Faith Murphy-Ginger",
+      "party": "AJP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "shepparton",
+      "name": "Johnson Varkey",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "south-barwon",
+      "name": "Alan Barron",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "st-albans",
+      "name": "Alex Hakizimana",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "st-albans",
+      "name": "Kerry Janten",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "st-albans",
+      "name": "Thuc Bao Huynh",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "sunbury",
+      "name": "Bhasker Reddy Bethi",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "sunbury",
+      "name": "Elmer Batres",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "sunbury",
+      "name": "Geoff Vine",
+      "party": "WEST",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "sunbury",
+      "name": "John Stafford",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "sunbury",
+      "name": "Rohanna Mohr",
+      "party": "AJP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "sunbury",
+      "name": "Steve Jack Medcraft",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "sydenham",
+      "name": "Brandon Sinclair",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "sydenham",
+      "name": "Bruce Poon",
+      "party": "AJP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_withdrawn",
+      "seat": "sydenham",
+      "name": "Matthew De Angelis",
+      "party": "IND"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "sydenham",
+      "name": "Nancy G Croes",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "tarneit",
+      "name": "A. Raheem Rifai",
+      "party": "GRN",
+      "status": "vec_nominated",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "tarneit",
+      "name": "Aijaz Moinuddin",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "tarneit",
+      "name": "Rahima Ibrahim Ahmed",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "tarneit",
+      "name": "SM Zaberul Islam",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "thomastown",
+      "name": "Rob Rancie",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "werribee",
+      "name": "Jeremy Orchard",
+      "party": "DLP",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "werribee",
+      "name": "Matt Emerson",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": "abc"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "werribee",
+      "name": "Monica Sharma Raizada",
+      "party": "IND",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "williamstown",
+      "name": "Bruce O'Regan",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "williamstown",
+      "name": "Sagar Reddy Yarra",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "candidate_added",
+      "seat": "yan-yean",
+      "name": "James Hall",
+      "party": "FF",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "retirement",
+      "seat": "south-barwon",
+      "name": "Darren Cheeseman"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "retirement",
+      "seat": "northern-metropolitan",
+      "name": "Adem Somyurek"
+    },
+    {
+      "date": "2026-11-09",
+      "at": "2026-11-09T06:59:57Z",
+      "type": "news",
+      "count": 1
+    },
     {
       "date": "2026-11-09",
       "at": "2026-11-09T05:58:09Z",
