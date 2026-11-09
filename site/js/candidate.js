@@ -181,7 +181,7 @@
     return `
       <section class="card profile-bio" aria-labelledby="bio-h">
         <div class="card-head"><h2 id="bio-h">Profile</h2><span class="muted small">Updated ${escapeHtml(fmtDate(pr.profile_updated))}</span></div>
-        ${pr.summary ? `<p class="bio-summary">${escapeHtml(pr.summary.text)}${refs(pr.summary.src)}</p>` : ""}
+        ${pr.summary ? `<p class="bio-summary">${escapeHtml(pr.summary.text)}${refs(pr.summary.src)}${unverified(pr.summary)}</p>` : ""}
         ${facts.length ? `<dl class="profile-record">${facts.map(([k, v, f]) => `<dt>${k}</dt><dd>${escapeHtml(String(v))}${refs(f.src)}${unverified(f)}</dd>`).join("")}</dl>` : ""}
         ${roles.length ? `<h3>Roles</h3><ul class="bio-list">${roles.map((r) => `<li>${escapeHtml(r.role)}${r.organisation ? `, ${escapeHtml(r.organisation)}` : ""}${years(r)}${refs(r.src)}${unverified(r)}</li>`).join("")}</ul>` : ""}
         ${runs.length ? `<h3>Previous candidacies</h3>

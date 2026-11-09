@@ -14710,7 +14710,7 @@
       "district": "south-west-coast",
       "name": "Silver Rose",
       "party": "GRN",
-      "status": "withdrawn",
+      "status": "superseded",
       "ballot_position": null,
       "incumbent": false,
       "source": "abc",
@@ -14720,8 +14720,9 @@
       "website": "https://greens.org.au/vic/person/silver-rose",
       "ballot_name": "ROSE, Silver",
       "vec_url": "https://www.vec.vic.gov.au/electoral-boundaries/state-districts/south-west-coast-district/nominations",
-      "withdrawn_on": "2026-11-09",
-      "notes": "removed from the VEC's list of nominations (2026-11-09)"
+      "notes": "The VEC corrected the name from ROSE, Silver to WATTS, Silver Rose when it published the ballot draw (9 Nov 2026); same person, row kept for the record",
+      "superseded_by": "Silver Rose Watts",
+      "superseded_on": "2026-11-09"
     },
     {
       "district": "south-west-coast",
@@ -14735,7 +14736,10 @@
       "ballot_name": "WATTS, Silver Rose",
       "ballot_position": 4,
       "vec_url": "https://www.vec.vic.gov.au/electoral-boundaries/state-districts/south-west-coast-district/nominations",
-      "updated": "2026-11-09"
+      "updated": "2026-11-09",
+      "former_names": [
+        "Silver Rose"
+      ]
     },
     {
       "district": "south-west-coast",

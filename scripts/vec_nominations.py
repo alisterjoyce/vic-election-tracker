@@ -383,7 +383,9 @@ def diff_nominations(old: dict | None, new: dict, today: str) -> list[dict]:
             came = [after[k] for k in after if k not in before]
             for c in list(came):   # a respelling shows up as one name gone and a near-identical one added
                 twin = next((g for g in gone if difflib.SequenceMatcher(
-                    None, g["ballot_name"].lower(), c["ballot_name"].lower()).ratio() >= 0.8), None)
+                    None, g["ballot_name"].lower(), c["ballot_name"].lower()).ratio() >= 0.8
+                    or (g["party"] == c["party"] and len(_tokens(g["ballot_name"])) >= 2
+                        and _tokens(g["ballot_name"]) <= _tokens(c["ballot_name"]))), None)
                 if twin:
                     out.append({"date": today, "kind": "renamed", "contest": cid, "name": c["ballot_name"],
                                 "detail": f"was {twin['ballot_name']}"})
@@ -459,7 +461,9 @@ def score(v: dict, name: str, party: str | None) -> tuple[int, str]:
             s, why = 88, f"goes by a later given name ({display_name(v['ballot_name'])})"
         else:
             s, why = 75, f"first name differs ({first} / {gw[0] if gw else '-'})"
-    elif len(parts) >= 2 and _tokens(name) <= _tokens(f"{given} {sur}") and _tokens(name) & _tokens(sur):
+    elif len(parts) >= 2 and _tokens(name) <= _tokens(f"{given} {sur}") and (
+            _tokens(name) & _tokens(sur) or (party == v["party"] and v["party"] not in ("IND", "OTH"))):
+        # also a party's candidate whose old surname is now a given name ("Silver Rose" -> WATTS, Silver Rose)
         s, why = 88, f"the VEC's name has more parts ({display_name(v['ballot_name'])})"
     elif len(parts) >= 2 and gw and _first_near(first, gw[0]) and difflib.SequenceMatcher(
             None, _key(parts[-1]), _key(sur.split()[-1])).ratio() >= 0.85:
