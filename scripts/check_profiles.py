@@ -7,7 +7,9 @@ Checks every profile in site/data/profiles.json (or a batch file of {candidate i
   - each source has a url, title and accessed date (YYYY-MM-DD); every source is cited;
   - summary is 2-4 sentences; at most 5 priorities; quoted priorities under 15 words;
   - born is a year only; no full dates of birth anywhere;
-  - links and source urls are https.
+  - links and source urls are https;
+  - (site/data/profiles.json only) the per-seat copies the candidate page reads, data/profiles/<seat>.json, match
+    it: after editing profiles.json, run python scripts/profiles_split.py.
 With --overlap it also fetches each profile's Wikipedia and Parliament of Victoria pages (one request
 a second) and flags any run of 8 or more words copied from them, so text stays in our own words.
 
@@ -216,6 +218,12 @@ def main():
         check(cid, p, known, errors)
         if args.overlap:
             own_words(cid, p, errors, warnings=warnings)
+    if not args.file:
+        from profiles_split import check_split   # same folder (scripts/)
+        stale = check_split(doc=data)
+        if stale:
+            errors.append(f"data/profiles/ is out of date with profiles.json ({len(stale)} files: {', '.join(stale[:5])}"
+                          f"{' ...' if len(stale) > 5 else ''}): run python scripts/profiles_split.py")
     for w in warnings:
         print("WARN", w)
     for e in errors:

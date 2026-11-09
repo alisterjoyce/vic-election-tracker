@@ -15,9 +15,9 @@
     const blocs = Object.keys(BLOC_NAMES).map((b) => ({ b, called: (t.called || {})[b] || 0, leading: (t.leading || {})[b] || 0 }))
       .filter((x) => x.called + x.leading > 0).sort((a, b) => (b.called + b.leading) - (a.called + a.leading));
     const segs = blocs.map((x) => {
-      const style = `background:var(${App.partyVar(BLOC_CODE[x.b])});color:${App.inkFor(BLOC_CODE[x.b])}`;
+      const style = `background:var(${App.partyVar(BLOC_CODE[x.b])});color:${App.inkVar(BLOC_CODE[x.b])}`;
       return `${x.called ? `<span class="hb-seg" style="flex:${x.called} 0 0;${style}" title="${BLOC_NAMES[x.b]}: ${x.called} called">${x.called >= 4 ? x.called : ""}</span>` : ""}`
-        + `${x.leading ? `<span class="hb-seg hb-lead" style="flex:${x.leading} 0 0;${style}" title="${BLOC_NAMES[x.b]}: ${x.leading} leading">${x.leading >= 4 ? x.leading : ""}</span>` : ""}`;
+        + `${x.leading ? `<span class="hb-seg hb-lead" style="flex:${x.leading} 0 0;${style}" title="${BLOC_NAMES[x.b]}: ${x.leading} leading"></span>` : ""}`;
     }).join("") + (t.undecided ? `<span class="hb-seg hb-und" style="flex:${t.undecided} 0 0" title="${t.undecided} undecided"></span>` : "");
     const lead = blocs[0];
     const verdict = lead && lead.called >= MAJORITY ? `${BLOC_NAMES[lead.b]} has won a majority on these calls`

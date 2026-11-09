@@ -161,7 +161,7 @@
       const last = res.last;
       out.innerHTML = `
         <div class="seat-row" role="img" aria-label="${escapeHtml(res.order.map(label).join(", "))}">
-          ${res.order.map((c, i) => `<span class="seat-chip" style="background:var(${partyVar(c)});color:${App.inkFor(c)}" title="Seat ${i + 1}: ${escapeHtml(label(c))}">${i + 1}</span>`).join("")}
+          ${res.order.map((c, i) => `<span class="seat-chip" style="background:var(${partyVar(c)});color:${App.inkVar(c)}" title="Seat ${i + 1}: ${escapeHtml(label(c))}">${i + 1}</span>`).join("")}
         </div>
         <p>${res.order.length ? Object.entries(res.seats).filter(([, n]) => n).sort((a, b) => b[1] - a[1])
           .map(([c, n]) => `${escapeHtml(label(c))} ${n}`).join(", ") : "No seats filled."}</p>

@@ -8,12 +8,21 @@
   let shots = {};       // candidate id -> headshot (data/headshots.json)
   let districts = {};   // id -> districts.json row
   let regions = {};     // id -> regions.json row
-  let profiles = {};    // candidate id -> researched profile (data/profiles.json)
+  let profiles = {};    // candidate id -> researched profile, for the seats loaded so far (data/profiles/<seat>.json)
 
   const $ = (id) => document.getElementById(id);
   const surname = (p) => App.givenFirst(p.name).split(/\s+/).pop();
   const SOURCES = { abc: "ABC election guide", wikipedia: "Wikipedia", electiontracker: "Party page (found via electiontracker.au)" };
   const ISSUES = "https://github.com/alisterjoyce/vic-election-tracker/issues";
+
+  // One seat's researched profiles: data/profiles/<seat>.json, split from profiles.json by scripts/profiles_split.py,
+  // so a profile page downloads ~10 KB rather than every profile (~370 KB compressed). No file (a seat with no
+  // profiles yet) means none.
+  const seatOf = (id) => String(id || "").split("/")[0];
+  function loadSeatProfiles(seat) {
+    if (!/^[a-z0-9-]+$/.test(seat)) return Promise.resolve({});
+    return loadJSON(`profiles/${seat}`).then((d) => d.profiles || {}).catch(() => ({}));
+  }
 
   function seatLink(p) {
     return p.house === "lower"
@@ -149,7 +158,7 @@
       </div>`;
   }
 
-  /* ---------- Researched profile (data/profiles.json) ---------- */
+  /* ---------- Researched profile (data/profiles/<seat>.json) ---------- */
   const current = (r) => r.to == null && !r.ended;
   const ROLE_ORDER = (a, b) => current(b) - current(a) || (b.from || 0) - (a.from || 0);
   const LINKS = [["website", "Website"], ["party_page", "Party page"], ["parliament", "Parliament of Victoria"], ["abc", "ABC"],
@@ -262,7 +271,9 @@
       (!q || p.name.toLowerCase().includes(q) || p.seatName.toLowerCase().includes(q)));
   }
 
+  let directoryShown = false;   // the directory (1,000+ rows) is built only once it is shown, not under a profile
   function renderDirectory() {
+    directoryShown = true;
     const rows = directoryRows().sort((a, b) => surname(a).localeCompare(surname(b)) || a.name.localeCompare(b.name));
     $("c-count").textContent = `${rows.length.toLocaleString("en-AU")} ${rows.length === 1 ? "person" : "people"}`;
     $("c-list").innerHTML = rows.length ? rows.map((p) => `
@@ -276,9 +287,6 @@
 
   async function onHashChange() {
     const id = hashId();
-    if (id && !Object.keys(profiles).length) {   // the directory was opened first
-      profiles = await loadJSON("profiles").then((d) => d.profiles || {}).catch(() => ({}));
-    }
     let p = people.find((x) => x.id === id);
     if (!p && id) {   // an older link: the VEC's spelling replaced the name, so the id changed (former_names)
       const now = people.find((x) => (x.former_names || []).some((n) => App.candidateId(x.seat, n) === id));
@@ -287,7 +295,9 @@
         p = now;
       }
     }
+    if (p) Object.assign(profiles, await loadSeatProfiles(p.seat));   // already loaded by init() when opened with this hash
     $("directory").hidden = !!p;
+    if (!p && !directoryShown) renderDirectory();
     $("candidate-detail").hidden = !p && !id;
     if (p) {
       renderProfile(p);
@@ -302,11 +312,11 @@
 
   async function init() {
     try {
-      // All in parallel: the profile photo's URL is only known once headshots.json arrives. Researched
+      // All in parallel: the profile photo's URL is only known once headshots.json arrives. The seat's researched
       // profiles load with them (only on a profile's page), so the page renders once, without a jump.
       const [dd, rd, peopleData, shotData, profileData] = await Promise.all([loadJSON("districts"), loadJSON("regions"), App.loadPeople(),
-        App.loadHeadshots(), hashId() ? loadJSON("profiles").catch(() => null) : null]);
-      profiles = (profileData && profileData.profiles) || {};
+        App.loadHeadshots(), hashId() ? loadSeatProfiles(seatOf(hashId())) : null]);
+      profiles = profileData || {};
       districts = Object.fromEntries(dd.districts.map((d) => [d.id, d]));
       regions = Object.fromEntries(rd.regions.map((r) => [r.id, r]));
       people = peopleData;
@@ -316,7 +326,6 @@
       $("c-party").innerHTML = '<option value="">All parties</option>' +
         parties.map((c) => `<option value="${escapeHtml(c)}">${escapeHtml(partyName(c))}</option>`).join("");
       ["c-search", "c-house", "c-party"].forEach((id) => $(id).addEventListener("input", renderDirectory));
-      renderDirectory();
       window.addEventListener("hashchange", onHashChange);
       onHashChange();
     } catch (err) {

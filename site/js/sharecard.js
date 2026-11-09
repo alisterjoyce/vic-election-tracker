@@ -202,9 +202,21 @@
         await navigator.share({ files: [new File([blob], filename, { type: "image/png" })], title, url });
       } catch (e) { /* cancelled */ }
     });
-    const onTheme = () => { if (el.isConnected) render(); else document.removeEventListener("themechange", onTheme); };
+    // Drawn once the card is near the screen and the page has painted: it sits below the profile, and drawing
+    // takes ~150 ms of main thread on a phone, which would otherwise hold up the page's first paint.
+    let drawn = null;
+    const go = () => drawn || (drawn = App.afterPaint(render));
+    const onTheme = () => {
+      if (!el.isConnected) document.removeEventListener("themechange", onTheme);
+      else if (drawn) render();
+    };
     document.addEventListener("themechange", onTheme);
-    return render();
+    if (!("IntersectionObserver" in window)) return go();
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some((e) => e.isIntersecting)) { io.disconnect(); go(); }
+    }, { rootMargin: "600px 0px" });
+    io.observe(el);
+    return Promise.resolve();
   }
 
   /* ---------- HTML cards: built as DOM, rendered with html-to-image (seat and home headline) ---------- */

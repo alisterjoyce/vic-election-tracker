@@ -55,6 +55,8 @@ site/                  # published by GitHub Pages
     index.html         # the /data/ page
     localities.json    # suburb/postcode -> district(s) for search (scripts/build_localities.py)
     headshots.json     # candidate photos: files, source credit, licence note (scripts/build_headshots.py)
+    profiles.json      # researched candidate profiles, a source for every fact (by hand; rules in CLAUDE.md)
+    profiles/          # the same split by seat, <seat id>.json, plus index.json: what the candidate page loads (scripts/profiles_split.py)
   photos/320/, 160/    # candidate headshots (WebP)
   fonts/               # Archivo and Inter, self-hosted (SIL Open Font License; scripts/build_fonts.py)
   icons/               # app icons (scripts/build_icons.py)
@@ -126,8 +128,9 @@ What it does:
 6. Reads the VEC's official candidate list (`scripts/vec_nominations.py`): the spreadsheet of nominated candidates and every district and region nominations page, one request a second (names, parties, ballot positions and Council groups only). It runs on the evening refresh, and on every refresh until the ballot order is published (`--vec-check` runs it any time). The list is written to `vec_nominations.json` and applied: matching candidates become `vec_nominated` with their ballot position and the VEC's spelling (profiles and photos follow a respelling), names the tracker lacked are added, and anyone not on the list is marked `withdrawn` ("did not nominate"). Region tickets follow the VEC's groups. Every change since the previous check (a correction, a removal, a ballot position moving) is logged as a warning. `meta.json` → `nominations.official` gets the total, and the home page's badge reads "Official candidates: N (VEC)". After the list is loaded, the Wikipedia and ABC steps no longer add candidates.
 7. Checks the [VEC's how-to-vote card register](https://www.vec.vic.gov.au/candidates-and-parties/become-a-state-election-candidate/how-to-vote-cards) and records every registered card in `htv.json` (seat, who registered it, date, PDF link). The preference order on each card is entered by hand into `order` and is never overwritten. Before 10 Nov the status is `not_open`.
 8. Collects news for `news.json`: a Bing News RSS search per district (the district plus "Victorian election", and the sitting MP), the ABC's "Just In" feed and regional papers' feeds (Bendigo Advertiser, Border Mail, Warrnambool Standard, Latrobe Valley Express, Sunraysia Daily, Star Weekly; Shepparton News when its feed works). Items are matched to seats by district or MP name, deduplicated by URL and near-identical headline, and only the headline, outlet, date and link are kept. Google News RSS and the Geelong Advertiser are skipped because their robots.txt disallows automated access.
-9. Builds the change log: compares the data with the previous run's (`changelog_state.json`) and adds new candidates, superseded names, new polls, Sportsbet moves of 0.5 or more, retirements and the count of new headlines to `changelog.json`. `python scripts/refresh.py --backfill-changelog` rebuilds it from git history.
-10. Updates `meta.json`: `last_updated` (only when a source refreshed successfully) and the per-source status.
+9. Regenerates `site/data/profiles/` from `profiles.json` if the two differ (`scripts/profiles_split.py`), so a profile edited by hand reaches the candidate page.
+10. Builds the change log: compares the data with the previous run's (`changelog_state.json`) and adds new candidates, superseded names, new polls, Sportsbet moves of 0.5 or more, retirements and the count of new headlines to `changelog.json`. `python scripts/refresh.py --backfill-changelog` rebuilds it from git history.
+11. Updates `meta.json`: `last_updated` (only when a source refreshed successfully) and the per-source status.
 
 If any fetch or parse fails, the error is logged (and shown as a warning annotation in GitHub Actions), and the existing file is kept as it was.
 

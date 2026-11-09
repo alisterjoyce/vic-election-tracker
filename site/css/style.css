@@ -50,6 +50,22 @@
   --p-ff: #0F3D73;
   --p-oth: #7A7A7A;
 
+  /* Text on a party colour (bar labels, initials, seat chips): black or white, whichever contrasts more
+     (WCAG; every pair is 4.5:1 or better). Keep in step with the palette above and the dark blocks below. */
+  --ink-alp: #000;
+  --ink-lib: #fff;
+  --ink-lnp: var(--ink-lib);
+  --ink-nat: #fff;
+  --ink-grn: #000;
+  --ink-onp: #000;
+  --ink-ind: #fff;
+  --ink-ajp: #fff;
+  --ink-lcv: #000;
+  --ink-vs: #fff;
+  --ink-lbt: #000;
+  --ink-ff: #fff;
+  --ink-oth: #000;
+
   /* Status badges */
   --s-announced-bg: #e7ecf5;   --s-announced-fg: #374766;
   --s-reported-bg: #fdf0d5;    --s-reported-fg: #7a4b00;
@@ -94,6 +110,8 @@
     --p-lbt: #F7D44A;
     --p-ff: #5E7FBF;
     --p-oth: #A3A3A3;
+    --ink-alp: #000; --ink-lib: #000; --ink-nat: #000; --ink-grn: #000; --ink-onp: #000; --ink-ind: #000;
+    --ink-ajp: #000; --ink-lcv: #000; --ink-vs: #000; --ink-lbt: #000; --ink-ff: #000; --ink-oth: #000;
     --s-announced-bg: #263042;   --s-announced-fg: #c3cde0;
     --s-reported-bg: #3a2c10;    --s-reported-fg: #f1c27d;
     --s-endorsed-bg: #12304f;    --s-endorsed-fg: #9fd0ff;
@@ -132,6 +150,8 @@
   --p-lbt: #F7D44A;
   --p-ff: #5E7FBF;
   --p-oth: #A3A3A3;
+  --ink-alp: #000; --ink-lib: #000; --ink-nat: #000; --ink-grn: #000; --ink-onp: #000; --ink-ind: #000;
+  --ink-ajp: #000; --ink-lcv: #000; --ink-vs: #000; --ink-lbt: #000; --ink-ff: #000; --ink-oth: #000;
   --s-announced-bg: #263042;   --s-announced-fg: #c3cde0;
   --s-reported-bg: #3a2c10;    --s-reported-fg: #f1c27d;
   --s-endorsed-bg: #12304f;    --s-endorsed-fg: #9fd0ff;
@@ -355,7 +375,7 @@ h3 { font-size: 1rem; }
 /* Key-dates strip (built by common.js) */
 .key-dates { background: var(--surface-2); border-bottom: 1px solid var(--border); font-size: 0.86rem; }
 .key-dates .container { padding-top: 8px; padding-bottom: 8px; }
-.kd-list { display: flex; flex-wrap: wrap; gap: 6px 22px; list-style: none; margin: 0; padding: 0; }
+.kd-list { display: flex; flex-wrap: wrap; gap: 6px 16px; list-style: none; margin: 0; padding: 0; }   /* 16px: the three milestones fit one row from 840px */
 .kd-list li { display: flex; align-items: baseline; gap: 6px; }
 .kd-label { color: var(--muted); }
 .kd-when { font-family: var(--font-display); font-weight: 700; color: var(--text); }
@@ -543,7 +563,7 @@ a.icon-btn { text-decoration: none; display: inline-block; }
 .hero-badge.is-open .hero-badge-dot { background: var(--accent); }
 .hero-badge.is-official { background: var(--s-nominated-bg); color: var(--s-nominated-fg); border-color: transparent; }
 .hero-badge.is-official .hero-badge-dot { background: currentColor; }
-.hero-badge-src { font-weight: 400; opacity: 0.8; }
+.hero-badge-src { font-weight: 400; }   /* no opacity: it took the text below AA on the green badge */
 .hero-tpp { margin-top: 4px !important; font-family: var(--font-display); font-size: clamp(1.2rem, 4.6vw, 1.9rem); font-weight: 700; line-height: 1.2; min-height: 1.2em; }
 .tpp-side { white-space: nowrap; }
 .tpp-side b { color: var(--side); }
@@ -745,6 +765,7 @@ select {
 .pd-m { width: 3.2em; flex: none; text-align: right; font-variant-numeric: tabular-nums; }
 .pd-n { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .pd-tag { flex: none; font-size: 0.75rem; opacity: 0.85; }
+.pd-seat.falls .pd-tag { opacity: 1; }   /* full ink on a party colour (AA) */
 .pd-line { display: flex; align-items: center; gap: 6px; color: var(--accent); font-size: 0.75rem; font-weight: 600; margin: 4px 0; }
 .pd-line::before, .pd-line::after { content: ""; flex: 1; border-top: 2px dashed var(--accent); }
 .scenarios { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
@@ -928,7 +949,15 @@ main.container { min-height: 100vh; }
 .search-hero:empty { height: var(--search-h); }
 html:not(.js) .search-hero:empty { display: none; }
 html:not(.js) .search:empty { display: none; }
-html.js .key-dates { min-height: 63px; }   /* kept after filling, so a shorter strip can't pull the page up */
+/* The key-dates strip: the milestones row plus the "Today: ... Next, ..." note, whose length changes daily. Each
+   height is the tallest the strip gets at that width over the whole timetable (measured 10 Nov 2026 for every day
+   to 19 Dec): kept after filling, so the strip neither pushes the page down nor pulls it up. On a day whose note is
+   shorter, the content sits in the middle, so the spare room reads as padding rather than a gap. */
+html.js .key-dates { min-height: 84px; }   /* 960px and wider: the milestones and two lines of note */
+@media (min-width: 641px) {
+  html.js .key-dates { display: flex; flex-direction: column; justify-content: center; }
+  html.js .key-dates > .container { width: 100%; }   /* auto margins in a flex column would shrink it to fit */
+}
 .r22:has(> .empty) { min-height: 1100px; }
 html.has-hash #district-detail[hidden] { display: block; min-height: 2400px; }   /* lower.html#seat: room for the seat before it renders */
 #pref-watch:empty { min-height: 520px; }
@@ -936,7 +965,8 @@ html.has-hash #district-detail[hidden] { display: block; min-height: 2400px; }  
 #region-chips:empty { min-height: 44px; }  /* upper.html: one row of region chips */
 @media (max-width: 760px) { #pref-watch:empty { min-height: 760px; } #region-chips:empty { min-height: 254px; } }
 @media (max-width: 400px) { #region-chips:empty { min-height: 341px; } }  /* seat pages: the 2022 results load after the page scrolls to the seat */
-@media (min-width: 641px) and (max-width: 839px) { html.js .key-dates { min-height: 112px; } }   /* the full strip wraps */
+@media (min-width: 840px) and (max-width: 959px) { html.js .key-dates { min-height: 105px; } }   /* a long note runs to three lines */
+@media (min-width: 641px) and (max-width: 839px) { html.js .key-dates { min-height: 133px; } }   /* the milestones wrap too */
 @media (max-width: 640px) {
   html.js .key-dates { min-height: 45px; }   /* the one-line summary */
 }

@@ -1,6 +1,6 @@
 {
   "_schema": {
-    "description": "Candidate profiles, keyed by candidate id ('<district or region id>/<slug of Given Surname>', App.candidateId: the seat the person is contesting). Researched by hand from public sources and written in our own words: facts only, no commentary, nothing guessed. Every fact cites one or more entries in its profile's sources list by number. Anything a source states but we couldn't confirm carries unverified: true and a note. Rules: CLAUDE.md, 'Candidate profiles'.",
+    "description": "Candidate profiles, keyed by candidate id ('<district or region id>/<slug of Given Surname>', App.candidateId: the seat the person is contesting). Researched by hand from public sources and written in our own words: facts only, no commentary, nothing guessed. Every fact cites one or more entries in its profile's sources list by number. Anything a source states but we couldn't confirm carries unverified: true and a note. Rules: CLAUDE.md, 'Candidate profiles'. Pages don't load this file: scripts/profiles_split.py splits it by seat into profiles/<seat id>.json (what the candidate page reads) and profiles/index.json (every profiled id).",
     "fields": {
       "name": "The candidate's name as the tracker lists it",
       "summary": "{text, src}: 2-4 sentences in our own words; never text copied from a source",

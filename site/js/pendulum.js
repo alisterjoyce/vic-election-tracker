@@ -56,7 +56,7 @@
     const title = `${seat.name}: ${contest}, margin ${seat.pct.toFixed(1)}` +
       (seat.swung ? (falls ? `. Falls to ${partyName(w)}` : "") : ". Not a Labor-v-Coalition contest, so not swung");
     return `<li><a class="pd-seat${falls ? " falls" : ""}${seat.swung ? "" : " fixed"}" href="lower.html#${escapeHtml(seat.id)}"
-        style="--party-color: var(${partyVar(w)}); ${falls ? `color:${App.inkFor(w)}` : ""}" title="${escapeHtml(title)}">
+        style="--party-color: var(${partyVar(w)}); ${falls ? `color:${App.inkVar(w)}` : ""}" title="${escapeHtml(title)}">
         <span class="pd-m">${seat.pct.toFixed(1)}</span>
         <span class="pd-n">${escapeHtml(seat.name)}</span>
         ${falls ? `<span class="pd-tag">→ ${escapeHtml(App.partyShort(w))}</span>` : seat.swung ? "" : `<span class="pd-tag">v ${escapeHtml(App.partyShort(seat.vs))}</span>`}

@@ -25,7 +25,7 @@
     ["timeline.json", "Events of the 2022-2026 term and the election timetable", `${OURS} Each entry links its source.`],
     ["news.json", "Headlines per seat and statewide: title, outlet, date, link", "Headlines belong to their publishers and aren't covered by this site's licence. Links only."],
     ["headshots.json", "Candidate photo records: files, source, credit, licence", "Photos belong to the parties, campaigns and outlets credited and aren't covered by this site's licence."],
-    ["profiles.json", "Researched candidate profiles: summary, roles, past candidacies, priorities, links, and a source for every fact", `${OURS} Facts are drawn from the sources listed in each profile, including Wikipedia (${WIKI}) and the Parliament of Victoria.`],
+    ["profiles.json", "Researched candidate profiles: summary, roles, past candidacies, priorities, links, and a source for every fact. The same profiles split by seat: profiles/<seat id>.json (e.g. profiles/bendigo-west.json), listed in profiles/index.json", `${OURS} Facts are drawn from the sources listed in each profile, including Wikipedia (${WIKI}) and the Parliament of Victoria.`],
     ["policies.json", "Party policy ledger: each major party's published position on 15 issues, with a source for every claim",
       '<a href="https://electiontracker.au/elections/vic/2026/data">Australian Election Tracker (OZE), electiontracker.au</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, copied at each refresh. A ledger of published claims, not a rating; keep its caveat with any reuse. Cite as: Australian Election Tracker (OZE), Victorian state election 2026 candidate ledger, electiontracker.au, accessed (date).'],
     ["meta.json", "Refresh times, source status, key dates, 2022 baseline", OURS],
@@ -73,11 +73,11 @@
     const el = document.getElementById("profile-count");
     if (!el) return;
     try {
-      const [people, pd] = await Promise.all([App.loadPeople(), App.loadJSON("profiles")]);
-      const profiles = pd.profiles || {};
+      const [people, pd] = await Promise.all([App.loadPeople(), App.loadJSON("profiles/index")]);   // the ids only, not the 2.8 MB file
+      const profiles = new Set(pd.ids || []);
       const active = people.filter((p) => p.contesting && !["withdrawn", "superseded", "not_standing"].includes(p.status));
       const row = (label, list) => {
-        const n = list.filter((p) => profiles[p.id]).length;
+        const n = list.filter((p) => profiles.has(p.id)).length;
         return `<tr><td>${label}</td><td class="num">${n.toLocaleString("en-AU")}</td><td class="num">${list.length.toLocaleString("en-AU")}</td><td class="num">${list.length ? Math.round((100 * n) / list.length) : 0}%</td></tr>`;
       };
       el.innerHTML = `<div class="table-scroll"><table data-no-csv>

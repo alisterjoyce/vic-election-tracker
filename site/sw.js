@@ -3,7 +3,7 @@
    - App shell (pages, CSS, JS, Latin fonts, icons): precached at install, then served from the cache
      and refreshed in the background (stale-while-revalidate), so a deploy reaches the next visit
      even without a version bump.
-   - Data (data/*.json, boundaries, 2022 results): stale-while-revalidate with a short max age
+   - Data (data/*.json, data/profiles/<seat>.json, boundaries, 2022 results): stale-while-revalidate with a short max age
      (DATA_MAX_AGE). A copy fetched in the last few minutes is served at once and refreshed behind
      the page; an older one (any launch after a gap) waits for the network, falling back to the
      cached copy after NETWORK_TIMEOUT or offline. So the app never opens on days-old data.
@@ -17,7 +17,7 @@
    Bump VERSION when the shell list changes or to make every installed copy refresh at once: the new
    worker precaches, the page offers "Update available, tap to refresh", and old caches are deleted
    when it activates. */
-const VERSION = "v15";
+const VERSION = "v16";
 const PREFIX = "vet-";
 const CACHES = {
   shell: `${PREFIX}shell-${VERSION}`,

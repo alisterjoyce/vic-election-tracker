@@ -317,13 +317,21 @@
     return (parts[0][0] + (parts.length > 1 ? parts[parts.length - 1][0] : "")).toUpperCase();
   }
 
-  // Black or white text, whichever reads better on the party colour.
+  // Text on a party colour: black or white, whichever contrasts more (WCAG AA for every party, light and dark).
+  // inkVar is for the page (a CSS variable, so it follows the theme toggle: --ink-* in style.css);
+  // inkFor is the current theme's colour itself, for canvas.
+  function inkVar(code) {
+    return `var(${partyVar(code).replace("--p-", "--ink-")})`;
+  }
   function inkFor(code) {
+    const set = getComputedStyle(document.documentElement).getPropertyValue(partyVar(code).replace("--p-", "--ink-")).trim();
+    if (set) return set;
     const m = (partyColor(code) || "").match(/^#?([0-9a-f]{6})$/i);
     if (!m) return "#fff";
     const n = parseInt(m[1], 16);
-    const lum = (0.2126 * ((n >> 16) & 255) + 0.7152 * ((n >> 8) & 255) + 0.0722 * (n & 255)) / 255;
-    return lum > 0.5 ? "#111" : "#fff";
+    const lin = (c) => (c / 255 <= 0.04045 ? c / 255 / 12.92 : ((c / 255 + 0.055) / 1.055) ** 2.4);
+    const lum = 0.2126 * lin((n >> 16) & 255) + 0.7152 * lin((n >> 8) & 255) + 0.0722 * lin(n & 255);
+    return lum > 0.179 ? "#000" : "#fff";   // 0.179: where black and white contrast equally
   }
 
   // Photo if one exists (from a loadHeadshots() map), otherwise a party-colour initials circle.
@@ -336,7 +344,7 @@
       const load = size > 120 ? 'fetchpriority="high"' : 'loading="lazy" decoding="async"';
       return `<img class="avatar" src="${escapeHtml(src)}" alt="" width="${size}" height="${size}" ${load} style="${style}" title="Photo: ${escapeHtml(shot.source.credit)}">`;
     }
-    return `<span class="avatar avatar-initials" aria-hidden="true" style="${style};font-size:${Math.round(size * 0.38)}px;background:var(${partyVar(party)});color:${inkFor(party)}">${escapeHtml(initials(name))}</span>`;
+    return `<span class="avatar avatar-initials" aria-hidden="true" style="${style};font-size:${Math.round(size * 0.38)}px;background:var(${partyVar(party)});color:${inkVar(party)}">${escapeHtml(initials(name))}</span>`;
   }
 
   // "Photos: Victorian Labor (Jane Citizen), ..." for the photos shown in a list. Names are the
@@ -1229,7 +1237,7 @@
     DAY, preparePolls, smoothedSeries, pollRecords, statewideSwing, swingAdjusted, projectSeats, BLOCS, blocOf, modelLink, quotaBars,
     getWatchlist, setWatchlist, isWatched, toggleWatch, starButton, storageWorks,
     buildSearchIndex, searchItems,
-    candidateId, givenFirst, loadHeadshots, avatar, photoCredits, initials, inkFor, newsList,
+    candidateId, givenFirst, loadHeadshots, avatar, photoCredits, initials, inkFor, inkVar, newsList,
     ROOT, tableToCsv, loadLib, afterPaint,
     profileHref, profileLink, isPlaceholder, buildPeople, loadPeople, ballotPaper,
   };

@@ -1925,7 +1925,8 @@ def run_summary(markdown: str) -> None:
 
 
 def write_profiles(path: Path, doc: dict) -> None:
-    """profiles.json in its usual layout: indent 2, each src list on one line (as written by hand and by merge.py)."""
+    """profiles.json in its usual layout: indent 2, each src list on one line (as written by hand and by merge.py),
+    then the per-seat files the candidate page reads (data/profiles/<seat>.json, scripts/profiles_split.py)."""
     text = json.dumps(doc, indent=2, ensure_ascii=False)
     text = re.sub(r"\[\s*(\d+(?:,\s*\d+)*)\s*\]", lambda m: "[" + ", ".join(re.findall(r"\d+", m.group(1))) + "]", text)
     fd, tmp = tempfile.mkstemp(dir=path.parent, prefix=f".{path.name}.", suffix=".tmp")
@@ -1936,6 +1937,23 @@ def write_profiles(path: Path, doc: dict) -> None:
     except BaseException:
         Path(tmp).unlink(missing_ok=True)
         raise
+    from profiles_split import write_split   # same folder (scripts/)
+    write_split(path.parent, doc)
+
+
+def sync_profile_files(data_dir: Path, meta: dict) -> bool:
+    """Regenerate data/profiles/<seat>.json from profiles.json when they differ (a profile edited by hand and
+    committed without running scripts/profiles_split.py). Returns True if any file changed."""
+    try:
+        from profiles_split import write_split   # same folder (scripts/)
+        changed = write_split(data_dir)
+    except Exception as exc:  # noqa: BLE001 - keep the existing files
+        log.warning("Per-seat profile files not regenerated: %s", exc)
+        warn_ci(f"Per-seat profile files not regenerated: {exc}")
+        return False
+    if changed:
+        log.info("Per-seat profile files regenerated from profiles.json: %s", ", ".join(changed))
+    return bool(changed)
 
 
 def carry_profiles(data_dir: Path, respelled: list[dict], meta: dict) -> list[dict]:
@@ -2706,6 +2724,7 @@ def main(argv=None) -> int:
         refresh_htv(data_dir, meta),
         refresh_news(data_dir, meta),
         check_profiles(data_dir, meta),        # watch only: warns when a respelled or withdrawn name strands a profile
+        sync_profile_files(data_dir, meta),    # data/profiles/<seat>.json, the candidate page's copy of profiles.json
     ]
     refresh_changelog(data_dir, meta)   # last: compares everything written above with the previous run
     if any(updated):

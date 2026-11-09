@@ -85,7 +85,7 @@
   function heroBar(counts, what, fmt = String) {
     const order = Object.keys(counts).filter((b) => b !== "UND" && counts[b] > 0).sort((a, b) => counts[b] - counts[a]);
     if (counts.UND) order.push("UND");
-    const fill = (b) => (b === "UND" ? "" : `background:var(${partyVar(BLOC_CODE[b])});color:${App.inkFor(BLOC_CODE[b])}`);
+    const fill = (b) => (b === "UND" ? "" : `background:var(${partyVar(BLOC_CODE[b])});color:${App.inkVar(BLOC_CODE[b])}`);
     const segs = order.map((b) => `<span class="hb-seg${b === "UND" ? " hb-und" : ""}" style="flex:${counts[b]} 0 0;${fill(b)}">${counts[b] >= 5 ? Math.round(counts[b]) : ""}</span>`).join("");
     const key = order.map((b) => `<li><span class="swatch${b === "UND" ? " hb-und" : ""}" style="${fill(b)}"></span>${BLOC_NAMES[b]} <b>${fmt(counts[b])}</b></li>`).join("");
     const lead = order[0] && order[0] !== "UND" && counts[order[0]] >= MAJORITY ? `${BLOC_NAMES[order[0]]} majority` : "No majority";
