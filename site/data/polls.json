@@ -23,6 +23,46 @@
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election",
   "polls": [
     {
+      "id": "resolve-2026-11-07",
+      "start_date": "2026-11-02",
+      "end_date": "2026-11-07",
+      "pollster": "Resolve",
+      "client": "The Age",
+      "sample_size": 1000,
+      "source_url": "https://www.theage.com.au/politics/victoria/half-of-victorians-open-to-a-one-nation-coalition-as-carroll-faces-labor-wipeout-20261109-p61cjv.html",
+      "primary": {
+        "ALP": 22,
+        "LNP": 30,
+        "GRN": 13,
+        "ONP": 23,
+        "IND": 6,
+        "OTH": 7
+      },
+      "preferred_premier": {
+        "matchup": "Carroll vs Wilson vs Pickering",
+        "leaders": {
+          "Carroll": 21,
+          "Wilson": 35,
+          "Pickering": 15
+        },
+        "undecided": 29
+      },
+      "approval": {
+        "matchup": "Carroll vs Wilson vs Pickering",
+        "leaders": {
+          "Carroll": {
+            "net": -16
+          },
+          "Wilson": {
+            "net": 24
+          },
+          "Pickering": {
+            "net": 9
+          }
+        }
+      }
+    },
+    {
       "id": "demosau-premier-national-2026-11-05",
       "start_date": "2026-10-30",
       "end_date": "2026-11-05",
