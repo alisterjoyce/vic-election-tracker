@@ -42,11 +42,13 @@
         "LNP": 56
       },
       "preferred_premier": {
-        "matchup": "Carroll vs Wilson",
+        "matchup": "Carroll vs Wilson vs Pickering",
         "leaders": {
-          "Wilson": 48,
-          "Carroll": 30
-        }
+          "Carroll": 28,
+          "Wilson": 36,
+          "Pickering": 19
+        },
+        "undecided": 17
       },
       "preferred_premier_alt": {
         "matchup": "Carroll vs Wilson vs Pickering",
@@ -88,7 +90,6 @@
       "supplemented": {
         "fields": [
           "client",
-          "preferred_premier",
           "preferred_premier_alt",
           "approval"
         ],

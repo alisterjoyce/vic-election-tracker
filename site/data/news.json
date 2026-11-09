@@ -8,13 +8,25 @@
       "sources": "Source -> {status: ok | error | skipped, url, items, message}"
     }
   },
-  "updated": "2026-11-09T06:59:56Z",
+  "updated": "2026-11-09T09:57:41Z",
   "statewide": [
+    {
+      "title": "'Lottery of democracy': minor party candidate tops ballot for state election",
+      "outlet": "Warrnambool Standard",
+      "published": "2026-11-09T06:30:00Z",
+      "url": "https://www.standard.net.au/story/9385037/roma-britnell-pledges-124m-for-south-west-coast-projects/?src=rss"
+    },
     {
       "title": "Victorian election 2026: Concern and scepticism among Labor MPs as new poll shows party trailing One Nation",
       "outlet": "The Guardian",
       "published": "2026-11-08T21:40:00Z",
       "url": "https://www.theguardian.com/australia-news/2026/nov/09/victoria-election-2026-labor-mps-new-opinion-poll-one-nation-ntwnfb"
+    },
+    {
+      "title": "Exiled MP Will Fowles launches bid for safe Labor seat of Preston",
+      "outlet": "Herald Sun",
+      "published": "2026-11-08T21:00:00Z",
+      "url": "https://www.heraldsun.com.au/news/victoria/state-election/exiled-mp-will-fowles-launches-bid-for-safe-labor-seat-of-preston/news-story/5b84796a05d0e73320f04208635fce75"
     },
     {
       "title": "Candidates For Bayside Seats In 2026 Victorian Election",
@@ -33,6 +45,12 @@
       "outlet": "Crikey",
       "published": "2026-11-08T16:00:00Z",
       "url": "https://www.crikey.com.au/2026/11/09/victorian-state-election-2026-liberal-party-preferences-one-nation-labor-greens/"
+    },
+    {
+      "title": "Donkey double for Animal Justice Party hopeful as election spots decided",
+      "outlet": "The Border Mail",
+      "published": "2026-11-08T16:00:00Z",
+      "url": "https://www.bordermail.com.au/story/9388577/benambra-ballot-draw-mike-fuery-lands-top-spot-again-for-vic-poll/"
     },
     {
       "title": "The Coalition plans to scrap Victoria’s treaty with First Peoples if it wins the election - but is that what voters want?",
@@ -141,24 +159,6 @@
       "outlet": "Star Weekly",
       "published": "2026-11-05T18:52:00Z",
       "url": "https://starweekly.com.au/news/2026/11/06/hospital-site-sale-slammed/"
-    },
-    {
-      "title": "Precinct sale plan blasted",
-      "outlet": "Star Weekly",
-      "published": "2026-11-05T18:13:00Z",
-      "url": "https://starweekly.com.au/news/2026/11/06/precinct-sale-plan-blasted/"
-    },
-    {
-      "title": "The Victorian election - a race for the ages, or a win by default?",
-      "outlet": "Crikey",
-      "published": "2026-11-05T13:48:00Z",
-      "url": "https://www.crikey.com.au/2026/11/06/victorian-election-race-carroll-pickering-sandell-wilson/"
-    },
-    {
-      "title": "Victorian election: high costs and unkept promises could flip Melbourne’s Labor heartland to One Nation",
-      "outlet": "The Guardian",
-      "published": "2026-11-05T06:00:00Z",
-      "url": "https://www.theguardian.com/australia-news/2026/nov/06/victoria-election-melbourne-labor-heartland-one-nation-ntwnfb"
     }
   ],
   "seats": {
@@ -209,6 +209,12 @@
       }
     ],
     "benambra": [
+      {
+        "title": "Donkey double for Animal Justice Party hopeful as election spots decided",
+        "outlet": "Border Mail",
+        "published": "2026-11-09T07:30:00Z",
+        "url": "https://www.bordermail.com.au/story/9388577/benambra-ballot-draw-mike-fuery-lands-top-spot-again-for-vic-poll/?src=rss"
+      },
       {
         "title": "From the pickleball court to courting votes, meet Labor's hope for Benambra",
         "outlet": "Border Mail",
@@ -994,10 +1000,16 @@
     ],
     "murray-plains": [
       {
+        "title": "Murray Plains ballot order revealed",
+        "outlet": "Riverine Herald",
+        "published": "2026-11-08T22:06:00Z",
+        "url": "https://www.riverineherald.com.au/news/murray-plains-ballot-order-revealed/"
+      },
+      {
         "title": "Hear Ky you should vote for them",
-        "outlet": "Shepparton News",
+        "outlet": "Kyabram Free Press",
         "published": "2026-11-02T16:00:00Z",
-        "url": "https://www.sheppnews.com.au/news/hear-ky-you-should-vote-for-them/"
+        "url": "https://www.kyfreepress.com.au/news/hear-ky-you-should-vote-for-them/"
       },
       {
         "title": "Coalition pledges fire truck",
@@ -1121,6 +1133,12 @@
     ],
     "ovens-valley": [
       {
+        "title": "Donkey double for Animal Justice Party hopeful as election spots decided",
+        "outlet": "Border Mail",
+        "published": "2026-11-09T07:30:00Z",
+        "url": "https://www.bordermail.com.au/story/9388577/benambra-ballot-draw-mike-fuery-lands-top-spot-again-for-vic-poll/?src=rss"
+      },
+      {
         "title": "Labor boss reacts to lack of North East candidates for the Victorian election",
         "outlet": "The Border Mail",
         "published": "2026-10-16T12:00:00Z",
@@ -1134,6 +1152,12 @@
       }
     ],
     "pakenham": [
+      {
+        "title": "One Nation poised to win first Victorian lower house seat amid Pakenham poll surge",
+        "outlet": "Herald Sun",
+        "published": "2026-11-08T19:24:00Z",
+        "url": "https://www.heraldsun.com.au/news/victoria/state-election/one-nation-poised-to-win-first-victorian-lower-house-seat-amid-pakenham-poll-surge/news-story/0ee84fdba88eed1dda2f35b5f3c60135"
+      },
       {
         "title": "One Nation targets angry outer voters to disrupt Victorian election and Jess Wilson’s drive for power",
         "outlet": "The Australian",
@@ -1162,6 +1186,12 @@
       }
     ],
     "ringwood": [
+      {
+        "title": "Exiled MP Will Fowles launches bid for safe Labor seat of Preston",
+        "outlet": "Herald Sun",
+        "published": "2026-11-08T21:00:00Z",
+        "url": "https://www.heraldsun.com.au/news/victoria/state-election/exiled-mp-will-fowles-launches-bid-for-safe-labor-seat-of-preston/news-story/5b84796a05d0e73320f04208635fce75"
+      },
       {
         "title": "Ringwood election results 2022: live count for 2026 from 28 November",
         "outlet": "onenewsaustralia.com",
@@ -1235,6 +1265,12 @@
     "south-west-coast": [],
     "st-albans": [
       {
+        "title": "Funding secured for Churchill Reserve",
+        "outlet": "Star Weekly",
+        "published": "2026-11-08T16:45:00Z",
+        "url": "https://starweekly.com.au/news/2026/11/09/funding-secured-for-churchill-reserve/"
+      },
+      {
         "title": "Hanson Addresses The West",
         "outlet": "Wyndham TV",
         "published": "2026-11-02T02:35:00Z",
@@ -1248,6 +1284,12 @@
       }
     ],
     "sunbury": [
+      {
+        "title": "Vineyard Road overpass duplication committed",
+        "outlet": "Star Weekly",
+        "published": "2026-11-08T16:57:00Z",
+        "url": "https://starweekly.com.au/news/2026/11/09/vineyard-road-overpass-duplication-committed/"
+      },
       {
         "title": "Expanded dental care slated for Sunbury",
         "outlet": "Star Weekly",
