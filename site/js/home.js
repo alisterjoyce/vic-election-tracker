@@ -69,7 +69,7 @@
     const now = Date.now();
     let html;
     if (n.official != null) {
-      html = `<span class="hero-badge is-official"><span class="hero-badge-dot"></span>Official candidates <b>${Number(n.official).toLocaleString("en-AU")}</b> <span class="hero-badge-src">VEC</span></span>`;
+      html = `<span class="hero-badge is-official"><span class="hero-badge-dot"></span>Official candidates: <b>${Number(n.official).toLocaleString("en-AU")}</b> <span class="hero-badge-src">(VEC)</span></span>`;
     } else if (n.opens && now < Date.parse(n.opens)) {
       html = `<span class="hero-badge"><span class="hero-badge-dot"></span>Nominations open ${escapeHtml(melbourneMoment(n.opens))}</span>`;
     } else if (now < Date.parse(n.closes)) {

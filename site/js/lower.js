@@ -15,6 +15,7 @@
   let shots = {};   // candidate id -> headshot (data/headshots.json); filled in after the first paint
   let htv = null;   // data/htv.json (how-to-vote cards)
   let news;         // data/news.json (headlines per seat); undefined until loaded, null if it failed
+  let vec;          // data/vec_nominations.json (the VEC's list, for the ballot paper); undefined until loaded
   let results = null;   // data/results.json: the 2026 count (scripts/results.py), null if missing
 
   const $ = (id) => document.getElementById(id);
@@ -254,6 +255,10 @@
       ${d.region_note ? `<p class="muted small">${escapeHtml(d.region_note)}</p>` : ""}
       <h3>Candidates</h3>
       <div id="seat-cands">${candidatesBlock(d, cands)}</div>
+      <section class="seat-ballot" id="ballot-order" aria-labelledby="ballot-h">
+        <h3 id="ballot-h">Ballot paper</h3>
+        <div id="seat-ballot" style="min-height:${ballotHeight(cands)}px">${ballotBlock(d)}</div>
+      </section>
       ${App.Htv ? App.Htv.section(htv, { district: d.id, margin: d.margin, parties: cands.filter((c) => !isInactive(c)).map((c) => c.party) }) : ""}
       <section class="seat-news" aria-labelledby="news-h">
         <h3 id="news-h">In the news</h3>
@@ -275,8 +280,18 @@
   }
 
   function seatCands(d) {
-    // Superseded rows stay in candidates.json for the record but aren't shown.
-    return candidates.filter((c) => c.district === d.id && c.status !== "superseded" && c.status !== "not_standing").sort(candidateSort);
+    // Superseded, withdrawn and not-standing rows stay in candidates.json for the record but aren't shown
+    // (a candidate who didn't nominate is "withdrawn").
+    return candidates.filter((c) => c.district === d.id && !isInactive(c)).sort(candidateSort);
+  }
+
+  // The VEC's ballot paper for the seat (common.js ballotPaper), filled in after the first paint. Its height is
+  // reserved from the number of candidates so nothing below it moves.
+  const ballotHeight = (cands) => (vec === undefined ? 92 + 50 * Math.max(cands.length, 1) : 0);
+  function ballotBlock(d) {
+    if (vec === undefined) return `<p class="muted small">Loading the VEC's ballot paper…</p>`;
+    const entry = vec && vec.districts && vec.districts[d.id];
+    return entry ? App.ballotPaper(entry, "lower") : `<p class="empty">The VEC's list of candidates isn't loaded yet.</p>`;
   }
 
   function candidatesBlock(d, cands) {
@@ -475,13 +490,17 @@
   // Photos and headlines: fetched after the first paint, then swapped into the open seat's panel
   // (avatars keep their size, so nothing moves).
   function loadExtras() {
-    Promise.all([App.loadHeadshots(), loadJSON("news").catch((err) => { console.warn(err); return null; })]).then(([shotData, newsData]) => {
+    Promise.all([App.loadHeadshots(), loadJSON("news").catch((err) => { console.warn(err); return null; }),
+      loadJSON("vec_nominations").catch((err) => { console.warn(err); return null; })]).then(([shotData, newsData, vecData]) => {
       shots = shotData;
       news = newsData;
+      vec = vecData;
       const d = districts.find((x) => x.id === hashId());
       if (d && $("seat-cands")) {
         $("seat-cands").innerHTML = candidatesBlock(d, seatCands(d));
         $("seat-news").innerHTML = newsBlock(d);
+        $("seat-ballot").innerHTML = ballotBlock(d);
+        $("seat-ballot").style.minHeight = "";
       }
     });
   }

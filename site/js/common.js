@@ -390,7 +390,8 @@
       if (!districts[seat] && !regions[seat]) return;
       add(seat, c.name, { party: c.party, status: c.status, ticket_position: c.ticket_position, incumbent: c.incumbent || null,
         source: c.source, source_url: c.source_url, notes: c.notes || null, date_added: c.date_added, updated: c.updated, contesting: true,
-        website: c.website, ballot_position: c.ballot_position });
+        website: c.website, ballot_position: c.ballot_position, ballot_name: c.ballot_name, group: c.group,
+        party_name: c.party_name, former_names: c.former_names, moved_to: c.moved_to });
     });
     Object.values(regions).forEach((r) => (r.mlcs || []).forEach((m) =>
       add(r.id, m.name, { party: m.party, mlc: { party: m.party, retiring: !!m.retiring, notes: m.notes || "" } })));
@@ -404,6 +405,63 @@
         .then(([cd, rd, dd]) => buildPeople(cd, rd, dd));
     }
     return people;
+  }
+
+  /* ---- Ballot paper (data/vec_nominations.json: the VEC's official list) ---- */
+  // "SURNAME, Given" as the ballot prints it, surname in capitals.
+  function ballotNameHtml(b) {
+    const i = String(b).indexOf(",");
+    return i < 0 ? `<span class="bp-sur">${escapeHtml(b)}</span>`
+      : `<span class="bp-sur">${escapeHtml(b.slice(0, i))}</span>, ${escapeHtml(b.slice(i + 1).trim())}`;
+  }
+
+  const bpLink = (c) => (c.id ? `<a class="bp-name" href="candidate.html#${escapeHtml(c.id)}">${ballotNameHtml(c.ballot_name)}</a>`
+    : `<span class="bp-name">${ballotNameHtml(c.ballot_name)}</span>`);
+  const bpParty = (c) => `<span class="bp-party">${escapeHtml(c.party_label || (c.party === "IND" ? "Independent" : ""))}</span>`;
+
+  // The seat's or region's ballot paper, in the VEC's order once the 9 Nov draw is published (before that, the
+  // order the candidates nominated, clearly labelled). entry: vec_nominations.json → districts[id] or regions[id].
+  function ballotPaper(entry, house) {
+    if (!entry || !(entry.candidates || []).length) return "";
+    const drawn = !!entry.ballot_drawn;
+    const src = `<p class="muted small bp-src">Source: <a href="${escapeHtml(entry.url)}" target="_blank" rel="noopener">Victorian Electoral Commission</a>,
+      nominations closed noon Mon 9 Nov 2026. ${entry.candidates.length} candidates${house === "upper" ? ` for ${entry.vacancies || 5} vacancies` : ""}.</p>`;
+    const pending = `<p class="bp-note">The VEC drew the ballot order at 4 pm on Mon 9 Nov; it will show here once the VEC publishes it.
+      Until then the candidates are listed in the order they nominated, which is not the ballot order.</p>`;
+    const byNom = (a, b) => (a.nominated || 0) - (b.nominated || 0);
+    if (house === "lower") {
+      const cands = entry.candidates.slice().sort(drawn ? (a, b) => a.ballot_position - b.ballot_position : byNom);
+      return `<div class="ballot-paper${drawn ? "" : " is-pending"}">
+        <p class="bp-head">Legislative Assembly · ${escapeHtml(entry.name)} District</p>
+        ${drawn ? "" : pending}
+        <ol class="bp-list">${cands.map((c) => `<li style="--party-color: var(${partyVar(c.party)})">
+          <span class="bp-pos" aria-label="${drawn ? `Ballot position ${c.ballot_position}` : ""}">${drawn ? c.ballot_position : ""}</span>
+          <span class="bp-box" aria-hidden="true"></span>
+          <span class="bp-who">${bpLink(c)}${bpParty(c)}</span></li>`).join("")}</ol>
+        ${src}</div>`;
+    }
+    if (!drawn) {
+      const cands = entry.candidates.slice().sort(byNom);
+      return `<div class="ballot-paper bp-upper is-pending">
+        <p class="bp-head">Legislative Council · ${escapeHtml(entry.name)} Region</p>
+        ${pending.replace("ballot order", "group letters and order")}
+        <ul class="bp-list bp-cols">${cands.map((c) => `<li style="--party-color: var(${partyVar(c.party)})">
+          <span class="bp-who">${bpLink(c)}${bpParty(c)}</span></li>`).join("")}</ul>
+        ${src}</div>`;
+    }
+    const groups = (entry.groups || []).map((g) => ({ ...g, members: entry.candidates.filter((c) => c.group === g.group) }));
+    const loose = entry.candidates.filter((c) => !c.group);
+    const col = (letter, label, party, members) => `<div class="bp-group" style="--party-color: var(${partyVar(party)})">
+        <div class="bp-ghead">${letter ? `<span class="bp-letter">${escapeHtml(letter)}</span>` : ""}<span class="bp-glabel">${escapeHtml(label || "")}</span></div>
+        <ol class="bp-list">${members.map((c) => `<li style="--party-color: var(${partyVar(c.party)})">
+          <span class="bp-box" aria-hidden="true"></span><span class="bp-who">${bpLink(c)}${letter && c.party_label && c.party_label !== label ? bpParty(c) : (letter ? "" : bpParty(c))}</span></li>`).join("")}</ol>
+      </div>`;
+    return `<div class="ballot-paper bp-upper">
+      <p class="bp-head">Legislative Council · ${escapeHtml(entry.name)} Region</p>
+      <div class="bp-groups">${groups.map((g) => col(g.group, g.label || "", g.party || "OTH", g.members)).join("")}
+        ${loose.length ? col("", "Ungrouped", "IND", loose) : ""}</div>
+      <p class="muted small">Groups in ballot order (A first), each with its candidates in their order on the ballot; ungrouped candidates last.</p>
+      ${src}</div>`;
   }
 
   /* ---- News (data/news.json): headline, outlet, date and link only ---- */
@@ -1173,7 +1231,7 @@
     buildSearchIndex, searchItems,
     candidateId, givenFirst, loadHeadshots, avatar, photoCredits, initials, inkFor, newsList,
     ROOT, tableToCsv, loadLib, afterPaint,
-    profileHref, profileLink, isPlaceholder, buildPeople, loadPeople,
+    profileHref, profileLink, isPlaceholder, buildPeople, loadPeople, ballotPaper,
   };
 
   // Scripts are deferred and this one loads first, so the page is already parsed: build the header,

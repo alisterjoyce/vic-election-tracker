@@ -39,10 +39,16 @@
     ].join(" ");
   }
 
+  // A person who nominated for another seat than the one first reported (vec_nominations.py sets moved_to).
+  const movedTo = (p) => (p.moved_to ? people.find((x) => x.id === p.moved_to) : null);
+
   function contestLine(p) {
     if (!p.contesting) return `Member of the Legislative Council for ${seatLink(p)}. Not on a 2026 ticket in the tracker.`;
     if (p.house === "lower") return `Candidate for ${seatLink(p)}, Legislative Assembly`;
-    const pos = p.ticket_position ? `No. ${p.ticket_position} on the ${escapeHtml(partyName(p.party))} ticket for ` : "Candidate for ";
+    // Once the VEC publishes the draw, the group letter; before it, a reported ticket place (not for the VEC's
+    // provisional order).
+    const pos = p.group ? `Group ${escapeHtml(p.group)}${p.ticket_position ? `, No. ${p.ticket_position},` : ""} for `
+      : p.ticket_position && p.status !== "vec_nominated" ? `No. ${p.ticket_position} on the ${escapeHtml(partyName(p.party))} ticket for ` : "Candidate for ";
     return `${pos}${seatLink(p)}, Legislative Council`;
   }
 
@@ -51,7 +57,8 @@
       const d = districts[p.seat] || {};
       return [
         fact("Seat", seatLink(p), d.classification ? escapeHtml(d.classification) : ""),
-        fact("Ballot position", p.ballot_position != null ? String(p.ballot_position) : "Not drawn yet", p.ballot_position != null ? "" : "VEC draw after nominations close 9 Nov"),
+        fact("Ballot position", p.ballot_position != null ? String(p.ballot_position) : "Not published yet",
+          p.ballot_position != null ? (p.ballot_name ? `On the ballot as ${escapeHtml(p.ballot_name)}` : "") : "VEC ballot draw, 4 pm Mon 9 Nov"),
         fact("Held by", d.party ? partyBadge(d.party) : "–", d.sitting_mp ? escapeHtml(d.sitting_mp) + (d.retiring ? " (retiring)" : "") : ""),
         fact("Margin", marginText(d.margin)),
         fact("Region", regions[d.region] ? `<a href="upper.html#${escapeHtml(d.region)}">${escapeHtml(regions[d.region].name)}</a>` : "–"),
@@ -59,7 +66,9 @@
     }
     return [
       fact("Region", seatLink(p), "5 members"),
-      fact("Ticket position", p.ticket_position ? String(p.ticket_position) : "–", p.on_ticket ? "" : "As reported"),
+      p.group ? fact("Group", `Group ${escapeHtml(p.group)}`, p.ticket_position ? `No. ${p.ticket_position} in the group` : "")
+        : fact("Ticket position", p.ticket_position ? String(p.ticket_position) : "–",
+          p.status === "vec_nominated" ? "Group order not published yet" : p.on_ticket ? "" : "As reported"),
       fact("Ballot group", p.group ? `Group ${escapeHtml(p.group)}` : "Not drawn yet", "VEC draw after nominations close 9 Nov"),
       fact("Current MLC", p.mlc ? `Yes, ${escapeHtml(partyName(p.mlc.party))}` : "No"),
     ].join("");
@@ -213,7 +222,11 @@
           </div>
         </div>
         <div class="facts">${facts(p)}</div>
-        ${p.status === "withdrawn" ? '<p class="banner">This candidate has withdrawn.</p>' : ""}
+        ${p.status === "withdrawn" ? `<p class="banner">${movedTo(p)
+          ? `Nominated for ${escapeHtml(movedTo(p).seatName)} instead: see <a href="#${escapeHtml(movedTo(p).id)}">their page for that seat</a>.`
+          : /did not nominate/.test(p.notes || "")
+            ? "Not a candidate: this person did not nominate here by the close of nominations (noon Mon 9 Nov 2026), so isn't on the VEC's list."
+            : "This candidate has withdrawn."}</p>` : ""}
         ${links(p)}
         ${record(p)}
         ${photoDetails(p)}
@@ -266,7 +279,14 @@
     if (id && !Object.keys(profiles).length) {   // the directory was opened first
       profiles = await loadJSON("profiles").then((d) => d.profiles || {}).catch(() => ({}));
     }
-    const p = people.find((x) => x.id === id);
+    let p = people.find((x) => x.id === id);
+    if (!p && id) {   // an older link: the VEC's spelling replaced the name, so the id changed (former_names)
+      const now = people.find((x) => (x.former_names || []).some((n) => App.candidateId(x.seat, n) === id));
+      if (now) {
+        history.replaceState(null, "", `#${now.id}`);
+        p = now;
+      }
+    }
     $("directory").hidden = !!p;
     $("candidate-detail").hidden = !p && !id;
     if (p) {

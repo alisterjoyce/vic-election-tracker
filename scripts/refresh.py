@@ -29,7 +29,10 @@
   near-identical (the independents' rule); each move is logged as "profile
   moved" and added to the Actions run summary. A check then warns about any
   profile still without an active candidacy, with a hint where to move it.
-* VEC candidates: placeholder (see fetch_vec_candidates below).
+* VEC candidates (scripts/vec_nominations.py): the official list, read from the
+  VEC's nominations pages and spreadsheet on the evening refresh (and every run
+  until the ballot order is out); candidates.json and regions.json follow it,
+  and any change since the last check is flagged.
 * How-to-vote cards: the VEC register (from 10 Nov 2026), recorded in htv.json;
   preference orders are entered by hand and kept.
 * Change log: compares the data with the previous run's (changelog_state.json)
@@ -808,6 +811,8 @@ def refresh_wiki_candidates(data_dir: Path, meta: dict) -> bool:
     same_party = {}
     for c in rows:
         same_party.setdefault((c.get("district") or c.get("region"), c.get("party")), []).append(c["name"])
+        for n in c.get("former_names") or []:   # spellings the VEC's list replaced
+            known.add((c.get("district") or c.get("region"), _name_key(n)))
     # Council names already on a hand-maintained ticket in regions.json count as present.
     for r in regions:
         for t in r.get("tickets", []):
@@ -816,6 +821,7 @@ def refresh_wiki_candidates(data_dir: Path, meta: dict) -> bool:
                 same_party.setdefault((r["id"], t.get("party")), []).append(name)
     sitting = {d["id"]: _name_key(d.get("sitting_mp", "")) for d in districts}
     today = datetime.now(MELBOURNE).date().isoformat()
+    locked = vec_locked(data_dir)   # the VEC's list is final: nobody else can be added
 
     added = {"assembly": 0, "council": 0}
     for c in assembly + council:
@@ -824,6 +830,10 @@ def refresh_wiki_candidates(data_dir: Path, meta: dict) -> bool:
         others = same_party.get((seat, c["party"]), [])
         similar = _near_identical if c["party"] in MULTI_PER_SEAT else _same_person
         if key in known or any(similar(c["name"], o) for o in others):
+            continue
+        if locked:
+            log.info("%s: Wikipedia lists %s (%s), who isn't on the VEC's list of nominations; not added",
+                     seat, c["name"], c["party"])
             continue
         known.add(key)
         row = {**({"district": c["district"]} if "district" in c else {"district": None, "region": c["region"]}),
@@ -1059,18 +1069,39 @@ def _find_in_seat(seat_rows: list[dict], name: str, party: str) -> dict | None:
     key = _name_key(name)
     similar = _near_identical if party in MULTI_PER_SEAT else _same_person
     return (next((c for c in seat_rows if _name_key(c["name"]) == key), None)
+            or next((c for c in seat_rows if key in {_name_key(n) for n in c.get("former_names") or []}), None)
             or next((c for c in seat_rows if c.get("party") == party and similar(c["name"], name)), None))
 
 
 def _apply_abc_entry(entry: dict, did: str, url: str, seat_rows: list[dict], rows: list[dict],
-                     sitting: dict[str, str], today: str, stats: dict) -> dict:
-    """Add or confirm one ABC-listed candidate; return its row."""
+                     sitting: dict[str, str], today: str, stats: dict, locked: bool = False) -> dict | None:
+    """Add or confirm one ABC-listed candidate; return its row. Once the VEC's list is loaded (locked), a name
+    that isn't on it isn't added (None), and a VEC-nominated row keeps the VEC's name, party and source: only the
+    website and the checked date are taken from the ABC."""
     known_party = _abc_party(entry["party_label"])
     party = known_party or "OTH"
     key = _name_key(entry["name"])
     match = _find_in_seat(seat_rows, entry["name"], party)
     if match is not None and known_party is None:
         party = match.get("party") or "OTH"   # never replace a known party with OTH
+    if locked and (match is None or match.get("status") != "vec_nominated"):
+        surname = _name_key(entry["name"].split()[-1]) if entry["name"].split() else ""
+        same = [c["name"] for c in seat_rows if c.get("status") == "vec_nominated"
+                and surname and surname in {_name_key(w) for w in re.split(r"[\s-]+", c["name"])}]
+        if same:   # the ABC's shorter form of a name on the VEC's list ("Kovi Shroot" for Yaakov Ziv Shroot)
+            log.info("%s: the ABC lists %s (%s); the VEC's list has %s: kept the VEC's", did, entry["name"],
+                     entry["party_label"], ", ".join(same))
+            return None
+        log.warning("%s: the ABC lists %s (%s), who isn't on the VEC's list of nominations; not added",
+                    did, entry["name"], entry["party_label"])
+        stats["not_on_vec"] = stats.get("not_on_vec", 0) + 1
+        return None
+    if match is not None and match.get("status") == "vec_nominated":
+        stats["confirmed"] += 1
+        if entry.get("website"):
+            match["website"] = entry["website"]
+        match["updated"] = today
+        return match
     if match is None:
         match = {"district": did, "name": entry["name"], "party": party, "status": "endorsed",
                  "ballot_position": None, "incumbent": sitting.get(did) == key, "date_added": today}
@@ -1150,7 +1181,8 @@ def _active(c: dict) -> bool:
 
 
 def reconcile_abc_az(az_entries: list[dict], districts: list[dict], rows: list[dict],
-                     by_seat: dict[str, list[dict]], sitting: dict[str, str], today: str, stats: dict) -> dict:
+                     by_seat: dict[str, list[dict]], sitting: dict[str, str], today: str, stats: dict,
+                     locked: bool = False) -> dict:
     """Add any A-Z name missing from candidates.json (same rules as the
     district pages) and return a summary for meta.json."""
     code_to_id = {d.get("abc_code"): d["id"] for d in districts if d.get("abc_code")}
@@ -1170,7 +1202,9 @@ def reconcile_abc_az(az_entries: list[dict], districts: list[dict], rows: list[d
             only_on_abc += 1
             log.warning("%s: %s (%s) is on the ABC A-Z list but not in the tracker; added",
                         did, entry["name"], entry["party_label"])
-            row = _apply_abc_entry(entry, did, ABC_GUIDE + (entry["code"] or ""), seat_rows, rows, sitting, today, stats)
+            row = _apply_abc_entry(entry, did, ABC_GUIDE + (entry["code"] or ""), seat_rows, rows, sitting, today, stats, locked)
+            if row is None:
+                continue
             added_by_seat.setdefault(did, []).append(row)
         on_abc.add(id(row))
     for did, new_rows in added_by_seat.items():
@@ -1249,7 +1283,8 @@ def refresh_abc(data_dir: Path, meta: dict) -> bool:
         if json.dumps(d, sort_keys=True) != before:
             stats["district_changes"] += 1
 
-    # ---- candidates: ABC is primary for the lower house
+    # ---- candidates: ABC is primary for the lower house (until the VEC's list is loaded)
+    locked = vec_locked(data_dir)
     by_seat = {}
     for c in rows:
         if c.get("district"):
@@ -1258,13 +1293,13 @@ def refresh_abc(data_dir: Path, meta: dict) -> bool:
 
     for did, page in sorted(pages.items()):
         seat_rows = by_seat.setdefault(did, [])
-        abc_rows = [_apply_abc_entry(entry, did, page["url"], seat_rows, rows, sitting, today, stats)
-                    for entry in page["candidates"]]
+        abc_rows = [r for r in (_apply_abc_entry(entry, did, page["url"], seat_rows, rows, sitting, today, stats, locked)
+                                for entry in page["candidates"]) if r is not None]
         _supersede(did, seat_rows, abc_rows, today, stats)
 
     # ---- reconciliation against the A-Z list of every ABC candidate
     if az_entries:
-        meta["reconciliation"] = reconcile_abc_az(az_entries, districts, rows, by_seat, sitting, today, stats)
+        meta["reconciliation"] = reconcile_abc_az(az_entries, districts, rows, by_seat, sitting, today, stats, locked)
     else:
         log.error("ABC A-Z candidate list had no rows; reconciliation skipped")
         warn_ci("ABC A-Z candidate list had no rows; reconciliation skipped")
@@ -1287,6 +1322,7 @@ def refresh_abc(data_dir: Path, meta: dict) -> bool:
     source.update(status="ok", url=ABC_ELECTORATES_URL, last_success=now_iso(),
                   message=(f"{len(pages)} district pages, {stats['district_changes']} districts updated; "
                            f"{stats['added']} candidates added, "
+                           + (f"{stats['not_on_vec']} not on the VEC's list (not added), " if stats.get("not_on_vec") else "") +
                            f"{stats['confirmed']} confirmed, {stats['superseded']} superseded"))
     log.info("ABC guide: %s", source["message"])
     return True
@@ -1906,7 +1942,8 @@ def carry_profiles(data_dir: Path, respelled: list[dict], meta: dict) -> list[di
     """When the ABC respells a name (the old row renamed in place, or superseded by the new spelling), move the
     person's profile and headshot to the new candidate id, but only if the seat and party match and the names are
     near-identical (_near_identical: first names near-identical AND surnames near-identical, the rule used for
-    independents). Anything else is left for check_profiles() to warn about. Returns the moves made."""
+    independents). Anything else is left for check_profiles() to warn about. An event marked "reviewed" (the VEC
+    step's matches, which apply their own rule and list doubtful ones for review) skips the rule. Returns the moves made."""
     from profile_seats import candidate_id   # same folder (scripts/)
     source = meta.setdefault("sources", {}).setdefault("profiles", {})
     moves = []
@@ -1921,10 +1958,10 @@ def carry_profiles(data_dir: Path, respelled: list[dict], meta: dict) -> list[di
     shot_ids = {h.get("id") for h in shots}
     for ev in respelled:
         seat, old, new = ev["seat"], ev["old"], ev["new"]
-        old_id, new_id = candidate_id(seat, old), candidate_id(seat, new)
+        old_id, new_id = candidate_id(seat, old), candidate_id(ev.get("new_seat") or seat, new)   # new_seat: moved seats (VEC)
         if old_id == new_id or (old_id not in profiles and old_id not in shot_ids):
             continue   # same id (accents, punctuation) or nothing to carry
-        if ev["old_party"] != ev["new_party"] or not _near_identical(old, new):
+        if not ev.get("reviewed") and (ev["old_party"] != ev["new_party"] or not _near_identical(old, new)):
             log.warning("%s: %s -> %s doesn't meet the match rule (party %s/%s); profile and photo not moved",
                         seat, old, new, ev["old_party"], ev["new_party"])
             continue
@@ -1949,8 +1986,9 @@ def carry_profiles(data_dir: Path, respelled: list[dict], meta: dict) -> list[di
         if moved:
             move = {"seat": seat, "from": old_id, "to": new_id, "old_name": old, "new_name": new, "moved": moved}
             moves.append(move)
-            log.info("profile moved: %s -> %s (%s; ABC respelled %r as %r)", old_id, new_id, " and ".join(moved), old, new)
-            run_summary(f"- profile moved: `{old_id}` → `{new_id}` ({' and '.join(moved)}; ABC respelled {old} as {new})")
+            who = "VEC" if ev.get("reviewed") else "ABC"
+            log.info("profile moved: %s -> %s (%s; %s respelled %r as %r)", old_id, new_id, " and ".join(moved), who, old, new)
+            run_summary(f"- profile moved: `{old_id}` → `{new_id}` ({' and '.join(moved)}; {who} respelled {old} as {new})")
     if any("profile" in m["moved"] for m in moves):
         prof_doc["profiles"] = dict(sorted(profiles.items()))
         write_profiles(prof_path, prof_doc)
@@ -1978,10 +2016,13 @@ def check_profiles(data_dir: Path, meta: dict) -> bool:
         seat = c.get("district") or c.get("region")
         if seat:
             by_id.setdefault(candidate_id(seat, c["name"]), c)
-    stranded = []
+    stranded, withdrawn = [], []
     for cid in sorted(set(profiles) - active):
         row = by_id.get(cid) or {}
         seat = cid.split("/")[0]
+        if row.get("status") == "withdrawn":
+            withdrawn.append(cid)   # kept on purpose: the person's page says they withdrew (or didn't nominate)
+            continue
         if row.get("status") == "superseded" and row.get("superseded_by"):
             new = candidate_id(seat, row["superseded_by"].split(" / ")[0])
             hint = (f"superseded by {row['superseded_by']}: {new} already has a profile, so remove this one" if new in profiles
@@ -1996,8 +2037,9 @@ def check_profiles(data_dir: Path, meta: dict) -> bool:
         stranded.append({"id": cid, "hint": hint})
         log.warning("Profile %s no longer matches an active candidacy (%s)", cid, hint)
         warn_ci(f"Profile {cid} no longer matches an active candidacy ({hint})")
-    source.update(status="ok", last_success=now_iso(), stranded=stranded,
-                  message=f"{len(profiles)} profiles; {len(stranded)} without an active candidacy")
+    source.update(status="ok", last_success=now_iso(), stranded=stranded, withdrawn=withdrawn,
+                  message=(f"{len(profiles)} profiles; {len(stranded)} without an active candidacy"
+                           + (f"; {len(withdrawn)} of candidates who withdrew or didn't nominate (kept)" if withdrawn else "")))
     if not stranded:
         log.info("Profiles: all %d match an active candidacy", len(profiles))
     return False
@@ -2040,58 +2082,83 @@ def check_redbridge(data_dir: Path, meta: dict) -> bool:
 
 
 # ==========================================================================
-# PLACEHOLDER: VEC candidate list
+# VEC candidate list (scripts/vec_nominations.py)
 # --------------------------------------------------------------------------
-# The Victorian Electoral Commission publishes the list of nominated
-# candidates (with ballot-paper order) after nominations close and the
-# ballot draw is held. Its format for 2026 isn't known yet, so this
-# function is a stub.
-#
-# To implement: fetch the VEC list, then return a list of dicts in the
-# candidates.json shape, e.g.
-#     {"district": "bendigo-east", "name": "...", "party": "ALP",
-#      "status": "vec_nominated", "ballot_position": 1, "incumbent": False,
-#      "source_url": "<VEC page>", "updated": "2026-11-13"}
-# District ids must match districts.json (lower-case, hyphenated).
-#
-# While it returns None, candidates.json is left untouched.
+# Nominations closed at noon on Mon 9 Nov 2026 and the ballot draw was at 4 pm. The VEC's list is final: after it
+# is loaded (site/data/vec_nominations.json), it decides who is standing. Every candidate on it is a
+# "vec_nominated" row with its ballot position (and, in the Council, group letter and place in the group); a row it
+# doesn't list is "withdrawn" ("did not nominate"); the Wikipedia and ABC steps no longer add rows or respell
+# VEC-nominated ones. The check reads the spreadsheet and all 96 nominations pages (~2.5 minutes), so it runs on
+# the evening refresh (8 pm Melbourne) and on every refresh until the ballot order is published, and by hand with
+# --vec-check. Any change from the previous list (a correction, a candidate removed, a respelling, a ballot
+# position moving) is logged as a warning, flagged in the Actions run and kept in vec_nominations.json → changes.
 # ==========================================================================
-def fetch_vec_candidates() -> list[dict] | None:
-    return None
+VEC_EVENING_HOUR = 19     # the 8 pm AEDT refresh (cron 9 UTC) starts after 19:00 Melbourne time
 
 
-def refresh_candidates(data_dir: Path, meta: dict) -> bool:
+def vec_locked(data_dir: Path) -> bool:
+    """True once the VEC's list is loaded: other sources may no longer add candidates."""
+    doc = read_json(data_dir / "vec_nominations.json")
+    return bool(doc and doc.get("districts"))
+
+
+def refresh_vec_nominations(data_dir: Path, meta: dict, force: bool = False) -> bool:
+    import vec_nominations as vn   # same folder (scripts/)
     source = meta.setdefault("sources", {}).setdefault("vec_candidates", {})
-    path = data_dir / "candidates.json"
+    source["url"] = vn.STATE_PAGE
+    path = data_dir / "vec_nominations.json"
+    old = read_json(path)
+    hour = datetime.now(MELBOURNE).hour
+    if not (force or os.environ.get("VEC_CHECK") or not old or not old.get("ballot_drawn") or hour >= VEC_EVENING_HOUR):
+        log.info("VEC candidate check runs on the evening refresh (ballot order already held)")
+        return False
+    today = datetime.now(MELBOURNE).date().isoformat()
     try:
-        vec_rows = fetch_vec_candidates()
-    except Exception as exc:  # noqa: BLE001
-        log.error("VEC candidate fetch failed, keeping existing %s: %s", path.name, exc)
-        warn_ci(f"VEC candidate fetch failed, kept existing candidates.json: {exc}")
+        districts = (read_json(data_dir / "districts.json", {}) or {}).get("districts", [])
+        regions = (read_json(data_dir / "regions.json", {}) or {}).get("regions", [])
+        doc = vn.fetch_nominations(districts, regions, ABC_USER_AGENT)
+    except Exception as exc:  # noqa: BLE001 - keep everything as it was
+        log.error("VEC candidate check failed, keeping existing files: %s", exc)
+        warn_ci(f"VEC candidate check failed, kept existing files: {exc}")
         source.update(status="error", message=str(exc)[:300])
         return False
-    if vec_rows is None:
-        log.info("VEC candidate import is a placeholder; %s left unchanged", path.name)
-        source.update(status="placeholder", message="VEC candidate import not implemented yet.")
-        return False
-
-    # Upsert VEC rows over the hand-maintained list (announced/endorsed rows stay).
-    existing = read_json(path, {}) or {}
-    rows = {_candidate_key(c): c for c in existing.get("candidates", [])}
-    for c in vec_rows:
-        rows[_candidate_key(c)] = {**rows.get(_candidate_key(c), {}), **c}
-    merged = _sort_candidates(list(rows.values()))
-    write_json(path, {**existing, "candidates": merged})
-    source.update(status="ok", last_success=now_iso(), message=f"{len(vec_rows)} VEC-nominated candidates")
-    # The home page's nominations badge switches to "Official candidates" with this count.
+    changes = vn.diff_nominations(old, doc, today)
+    for ch in changes:
+        text = f"VEC {ch['contest']}: {ch['kind']}{' ' + ch['name'] if ch['name'] else ''} ({ch['detail']})"
+        if ch["kind"] == "drawn":
+            log.info(text)
+        else:
+            log.warning(text)
+            warn_ci(text)
+            run_summary(f"- {text}")
+    doc["changes"] = (changes + (old or {}).get("changes", []))[:200]
+    overrides = (read_json(vn.OVERRIDES, {}) or {}).get("overrides", {})
+    report = vn.apply_nominations(doc, data_dir, today, overrides, meta)
+    vn.write_doc(path, doc)
+    for line in report["review"]:
+        log.warning("VEC match to review: %s", line)
+    for ev in report["new"]:
+        log.info("VEC: new candidate %s (%s, %s)", ev["name"], ev["party"], ev["seat"])
+    for ev in report["withdrawn"]:
+        log.warning("VEC: %s (%s, %s) is not on the list; marked withdrawn", ev["name"], ev["party"], ev["seat"])
     nominations = meta.setdefault("nominations", {})
-    nominations["official"] = sum(1 for c in merged if c.get("status") == "vec_nominated")
-    nominations["official_at"] = now_iso()
-    log.info("Wrote %s (%d VEC rows merged)", path.name, len(vec_rows))
+    if nominations.get("official") != doc["totals"]["candidates"]:
+        nominations["official_at"] = now_iso()
+    nominations["official"] = doc["totals"]["candidates"]
+    meta["vec_counts"] = vn.counts_for_meta(doc)
+    if meta.get("reconciliation"):   # the footer's "N candidates tracked": active rows, now the VEC's list
+        rows = (read_json(data_dir / "candidates.json", {}) or {}).get("candidates", [])
+        meta["reconciliation"]["tracked_all"] = sum(1 for c in rows if _active(c))
+    source.update(status="ok", last_success=now_iso(), ballot_drawn=doc["ballot_drawn"],
+                  changes=len(changes),
+                  message=(f"{doc['totals']['candidates']} candidates ({doc['totals']['assembly']} Assembly, "
+                           f"{doc['totals']['council']} Council); ballot order {'published' if doc['ballot_drawn'] else 'not yet published'}; "
+                           f"{report['matched']} matched, {len(report['new'])} new, {len(report['withdrawn'])} withdrawn, "
+                           f"{len(changes)} change(s) since the last check"))
+    log.info("VEC: %s", source["message"])
     return True
 
 
-# --------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------
 # How-to-vote cards: VEC register (opens 9 am Tue 10 Nov 2026)
@@ -2602,6 +2669,8 @@ def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--data-dir", type=Path, default=DEFAULT_DATA_DIR,
                         help="directory holding the JSON files (default: site/data)")
+    parser.add_argument("--vec-check", action="store_true",
+                        help="read the VEC's candidate list now, whatever the time (it normally runs on the evening refresh)")
     parser.add_argument("--backfill-changelog", action="store_true",
                         help="rebuild changelog.json from git history instead of refreshing")
     args = parser.parse_args(argv)
@@ -2633,7 +2702,7 @@ def main(argv=None) -> int:
         refresh_seat_odds(data_dir, meta),
         refresh_aeforecasts(data_dir, meta),
         check_redbridge(data_dir, meta),       # watch only: logs a warning if RedBridge has a newer release
-        refresh_candidates(data_dir, meta),
+        refresh_vec_nominations(data_dir, meta, args.vec_check),   # after Wikipedia and the ABC: the VEC's list is final
         refresh_htv(data_dir, meta),
         refresh_news(data_dir, meta),
         check_profiles(data_dir, meta),        # watch only: warns when a respelled or withdrawn name strands a profile

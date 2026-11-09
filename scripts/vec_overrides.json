@@ -1,0 +1,12 @@
+{
+  "_schema": {
+    "description": "Decisions made by hand when scripts/vec_nominations.py matches the VEC's candidate list to the tracker. Key: '<district or region id>|<name exactly as on the VEC list>'. Value: the tracker name that is the same person, or null when the VEC name is a different person (a new row). Only needed where the automatic rules (same name; same first name and surname; near-identical spelling; same party and surname) get it wrong. Once a row is matched it carries ballot_name, so later runs don't need the entry.",
+    "notes": "Why each entry was made, keyed the same way"
+  },
+  "overrides": {
+    "greenvale|YOHANNA, Mazen": "Mazen John"
+  },
+  "notes": {
+    "greenvale|YOHANNA, Mazen": "The Citizens Party's Greenvale page (vic.citizensparty.org.au/mazen-john) now redirects to /mazen-yohanna and names Mazen Yohanna; same person, checked 9 Nov 2026"
+  }
+}

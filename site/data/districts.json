@@ -1490,12 +1490,22 @@
         "vs": "LNP",
         "pct": 9.8
       },
-      "retiring": false,
+      "retiring": true,
       "needs_check": false,
       "notes": "",
       "abc_code": "soba",
       "abc_url": "https://www.abc.net.au/news/elections/vic/2026/guide/soba",
-      "classification": "Safe Labor"
+      "classification": "Safe Labor",
+      "retiring_source": {
+        "name": "Darren Cheeseman",
+        "url": "https://www.vec.vic.gov.au/electoral-boundaries/state-districts/south-barwon-district/nominations",
+        "publisher": "Victorian Electoral Commission",
+        "title": "Candidates for South Barwon (nominations closed 9 Nov 2026)",
+        "published": "2026-11-09",
+        "kind": "official",
+        "via": "vec",
+        "added": "2026-11-09"
+      }
     },
     {
       "id": "south-west-coast",

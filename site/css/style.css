@@ -838,6 +838,33 @@ select {
 .news-list a:hover { text-decoration: underline; color: var(--accent); }
 .news-more summary { cursor: pointer; color: var(--muted); font-size: 0.875rem; margin-top: 6px; }
 .seat-news { margin-top: 18px; }
+/* Ballot paper (common.js ballotPaper): the VEC's official list, seat page and region page */
+.seat-ballot { margin-top: 18px; }
+.ballot-paper { border: 1px solid var(--border); border-radius: 8px; background: var(--surface); padding: 12px 14px; max-width: 560px; }
+.ballot-paper.bp-upper { max-width: none; }
+.bp-head { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.8rem; color: var(--muted); margin: 0 0 8px; }
+.bp-note { background: var(--surface-2); border-radius: 6px; padding: 8px 10px; font-size: 0.875rem; margin: 0 0 10px; }
+.bp-list { list-style: none; margin: 0; padding: 0; }
+.bp-list li { display: flex; align-items: center; gap: 10px; padding: 6px 0; min-height: 44px; border-top: 1px solid var(--border); }
+.bp-list li:first-child { border-top: 0; }
+.bp-pos { width: 1.5em; flex: none; text-align: right; color: var(--muted); font-size: 0.85rem; }
+.bp-box { width: 26px; height: 26px; flex: none; border: 2px solid var(--text); border-radius: 2px; background: var(--bg); }
+.ballot-paper.is-pending .bp-pos, .ballot-paper.is-pending .bp-box { display: none; }
+.bp-who { display: flex; flex-direction: column; min-width: 0; }
+.bp-name { color: var(--text); text-decoration: none; overflow-wrap: anywhere; }
+.bp-name:hover, .bp-name:focus-visible { text-decoration: underline; }
+.bp-sur { font-weight: 700; letter-spacing: 0.02em; }
+.bp-party { font-size: 0.8rem; color: var(--muted); border-left: 3px solid var(--party-color, var(--p-oth)); padding-left: 6px; margin-top: 2px; }
+.bp-party:empty { display: none; }
+.bp-cols { columns: 2 240px; column-gap: 20px; }
+.bp-cols li { break-inside: avoid; }
+.bp-groups { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr)); margin-bottom: 8px; }
+.bp-group { border: 1px solid var(--border); border-top: 4px solid var(--party-color, var(--p-oth)); border-radius: 6px; padding: 8px 10px; }
+.bp-ghead { display: flex; gap: 8px; align-items: baseline; margin-bottom: 4px; }
+.bp-letter { font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; line-height: 1; }
+.bp-glabel { font-size: 0.85rem; font-weight: 600; }
+.bp-group .bp-box { width: 20px; height: 20px; }
+.bp-src { margin: 8px 0 0; }
 
 /* ---------- CSV download (added under every table by common.js) ---------- */
 .csv-bar { display: flex; justify-content: flex-end; margin: 6px 0 10px; }

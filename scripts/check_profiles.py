@@ -1,7 +1,8 @@
 """Check candidate profiles against the rules in CLAUDE.md ("Candidate profiles").
 
 Checks every profile in site/data/profiles.json (or a batch file of {candidate id: profile}):
-  - known candidate id (an active candidacy in candidates.json or a regions.json ticket);
+  - known candidate id (an active candidacy in candidates.json or a regions.json ticket, or a withdrawn row, whose
+    profile is kept);
   - fields and types match the _schema; every fact has src numbers that exist in its sources;
   - each source has a url, title and accessed date (YYYY-MM-DD); every source is cited;
   - summary is 2-4 sentences; at most 5 priorities; quoted priorities under 15 words;
@@ -28,7 +29,7 @@ import urllib.request
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from profile_seats import candidates_by_seat, load   # noqa: E402
+from profile_seats import candidate_id, candidates_by_seat, load   # noqa: E402
 
 FACTS = {"born": "year", "lives": "place", "occupation": "text", "faction": "name"}
 ROLE_KINDS = {"mp", "minister", "shadow", "councillor", "mayor", "staffer", "union", "business", "party",
@@ -207,6 +208,9 @@ def main():
     profiles = data.get("profiles", data) if isinstance(data, dict) else {}
     profiles = {k: v for k, v in profiles.items() if not k.startswith("_")}
     known = {cid for seat in candidates_by_seat().values() for cid in seat}
+    # Profiles of people who withdrew or didn't nominate are kept on purpose (their page says so).
+    known |= {candidate_id(c.get("district") or c.get("region"), c["name"]) for c in load("candidates")["candidates"]
+              if c.get("status") == "withdrawn" and (c.get("district") or c.get("region"))}
     errors, warnings = [], []
     for cid, p in profiles.items():
         check(cid, p, known, errors)

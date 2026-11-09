@@ -12,7 +12,8 @@
   const VICMAP = 'Vicmap Admin, © State of Victoria (Department of Energy, Environment and Climate Action), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.';
   const FILES = [
     ["districts.json", "88 Legislative Assembly districts: region, sitting MP, notional margin, classification, retiring", "District list and regions: Victorian Electoral Commission. Margins and classifications: ABC election guide."],
-    ["candidates.json", "Candidates for both houses: party, status, ballot or ticket position, source, website", `ABC election guide; Wikipedia (${WIKI}); party announcements.`],
+    ["candidates.json", "Candidates for both houses: party, status, ballot or ticket position, source, website", `Victorian Electoral Commission (the official list, from 9 Nov 2026); ABC election guide; Wikipedia (${WIKI}); party announcements.`],
+    ["vec_nominations.json", "The VEC's official list of candidates: name as on the ballot, party, ballot position, Council group and place in it, and changes since nominations closed", '<a href="https://www.vec.vic.gov.au/voting/2026-state-election">Victorian Electoral Commission</a>, nominations pages and spreadsheet of candidates (names and parties only; no contact details are kept).'],
     ["regions.json", "8 Legislative Council regions: current MLCs and 2026 tickets", "Victorian Electoral Commission (regions); party announcements and news reports (tickets)."],
     ["polls.json", "Statewide polls: primaries, 2PP, 3PP, preferred premier, approval, client, source link", `Wikipedia's poll tables (${WIKI}), compiled from each pollster's release (linked per poll).`],
     ["council_polls.json", "Upper-house primary vote by region", "Roy Morgan (linked in the file)."],

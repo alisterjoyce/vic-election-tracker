@@ -11,15 +11,21 @@
   let htv = null;           // data/htv.json (how-to-vote cards)
   let councilPolls = [];   // regional upper-house polls (data/council_polls.json), newest first
   let resultsLc = null;    // data/results_lc.json: the 2026 count by region (scripts/results.py), null if missing
+  let vec = null;          // data/vec_nominations.json: the VEC's official list (ballot paper), null if missing
 
   function ticketSort(a, b) {
     const wa = a.status === "withdrawn", wb = b.status === "withdrawn";
     if (wa !== wb) return wa ? 1 : -1;
+    if (!!a.ungrouped !== !!b.ungrouped) return a.ungrouped ? 1 : -1;   // ungrouped candidates come last on the ballot
     // Drawn groups (A, B, ... AA) first in ballot order, then undrawn by party.
     if (a.group && b.group) return a.group.length - b.group.length || a.group.localeCompare(b.group);
     if (a.group || b.group) return a.group ? -1 : 1;
     return partyName(a.party).localeCompare(partyName(b.party));
   }
+
+  // A ticket's heading: the party, or for a group without a registered party (and ungrouped candidates) the
+  // name the VEC prints.
+  const ticketLabel = (t) => ((t.party === "OTH" || t.ungrouped) && t.label ? t.label : partyName(t.party));
 
   function renderChips(current) {
     document.getElementById("region-chips").innerHTML = regions.map((r) =>
@@ -31,7 +37,7 @@
   // aren't on a ticket in regions.json, grouped by party in ticket order.
   function renderExtraCandidates(r) {
     const onTicket = new Set((r.tickets || []).flatMap((t) => (t.candidates || []).map((n) => App.candidateId(r.id, n))));
-    const rows = councilCandidates.filter((c) => c.region === r.id && c.status !== "superseded" && c.status !== "not_standing" &&
+    const rows = councilCandidates.filter((c) => c.region === r.id && !["superseded", "not_standing", "withdrawn"].includes(c.status) &&
       !onTicket.has(App.candidateId(r.id, c.name)));
     if (!rows.length) return "";
     const byParty = {};
@@ -90,7 +96,8 @@
     }
     document.title = `${r.name} Region · Vic Election 2026`;
     const inRegion = districts.filter((d) => d.region === r.id).sort((a, b) => a.name.localeCompare(b.name));
-    const tickets = (r.tickets || []).slice().sort(ticketSort);
+    // Withdrawn tickets stay in regions.json for the record but aren't shown.
+    const tickets = (r.tickets || []).filter((t) => t.status !== "withdrawn").sort(ticketSort);
 
     el.innerHTML = `
       <div class="card">
@@ -121,7 +128,7 @@
             ${tickets.map((t) => `
               <div class="ticket${t.status === "withdrawn" ? " is-withdrawn" : ""}" style="--party-color: var(${partyVar(t.party)})">
                 <div class="ticket-head">
-                  <strong>${t.group ? `Group ${escapeHtml(t.group)} · ` : ""}${escapeHtml(partyName(t.party))}</strong>
+                  <strong>${t.group ? `Group ${escapeHtml(t.group)} · ` : t.ungrouped ? "Ungrouped · " : ""}${escapeHtml(ticketLabel(t))}</strong>
                   ${statusBadge(t.status)}
                 </div>
                 ${(t.candidates || []).length
@@ -131,8 +138,16 @@
               </div>`).join("")}
           </div>
           ${App.photoCredits(shots, tickets.flatMap((t) => (t.candidates || []).map((c) => [r.id, c])))}` : '<p class="empty">No tickets recorded yet.</p>'}
+        ${tickets.some((t) => t.order_official === false) ? `<p class="muted small">From the VEC's list of nominations. The VEC drew the
+          groups' letters and order at 4 pm on Mon 9 Nov and hasn't published them yet: until it does, each party's names are in the order
+          reported before nominations closed, then the other nominees in the order they nominated.</p>` : ""}
         ${r.notes ? `<p class="muted small" style="margin-bottom:0">${escapeHtml(r.notes)}</p>` : ""}
       </div>
+
+      ${vec && vec.regions && vec.regions[r.id] ? `<section class="card" id="ballot-order" aria-labelledby="ballot-h">
+        <h2 id="ballot-h">Ballot paper</h2>
+        ${App.ballotPaper(vec.regions[r.id], "upper")}
+      </section>` : ""}
 
       ${renderExtraCandidates(r)}
 
@@ -171,6 +186,7 @@
       const [rd, dd, cd, shotData, cp, htvData, lcData] = await Promise.all([loadJSON("regions"), loadJSON("districts"), loadJSON("candidates"),
         App.loadHeadshots(), loadJSON("council_polls").then((d) => d.polls || []).catch(() => []), loadJSON("htv").catch(() => null),
         loadJSON("results_lc").catch(() => null)]);
+      vec = await loadJSON("vec_nominations").catch(() => null);
       resultsLc = lcData;
       regions = rd.regions.slice().sort((a, b) => a.name.localeCompare(b.name));
       districts = dd.districts;

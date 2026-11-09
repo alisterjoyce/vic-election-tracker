@@ -6,7 +6,7 @@
       "name": "Region name",
       "area": "metro | regional",
       "mlcs": "Current members: [{name, party, retiring, retiring_source, notes}]. retiring_source (optional) is set when the flag came from electiontracker.au's retirements list: {name, url, publisher, title, published, kind (official | mainstream, set by refresh.py; hand when a person checked a source the rule doesn't accept), via, added}",
-      "tickets": "Groups on the 2026 ballot: [{group (ballot letter, null before the 9 Nov draw), party, status (endorsed | reported | vec_nominated | withdrawn), candidates: [names in ticket order; TBC/TBD where a position is unfilled], notes}]",
+      "tickets": "Groups on the 2026 ballot: [{group (ballot letter; null before the VEC publishes the 9 Nov draw, and for ungrouped candidates), party, label (the group's name as the VEC prints it), status (vec_nominated from 9 Nov; earlier endorsed | reported | withdrawn), order_official (true once the order is the VEC's ballot order; false while it is the order reported before the draw), ungrouped (true: a candidate in no group, listed after the groups), candidates: [names in order; TBC/TBD where a position was unfilled], notes}]",
       "notes": "Optional region-level notes (unnamed candidates, seats in contention)"
     }
   },
@@ -51,30 +51,133 @@
         {
           "group": null,
           "party": "LNP",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
             "Renee Heath",
             "Melina Bath",
-            "Matt Green"
-          ],
-          "notes": "Joint Coalition ticket."
+            "Matt Green",
+            "Richard Clark",
+            "Barry Besanko"
+          ]
         },
         {
           "group": null,
           "party": "ALP",
-          "status": "reported",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
-            "Enver Erdogan"
-          ],
-          "notes": "Erdogan reported for #1 (unconfirmed, and contested by a local member petition)."
+            "Enver Erdogan",
+            "Ryan Mather",
+            "Leticia Quintana",
+            "Ian Rogers",
+            "Denise Ryan"
+          ]
         },
         {
           "group": null,
           "party": "GRN",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
-            "Mat Morgan"
+            "Mat Morgan",
+            "Helen Chauhan",
+            "Oliver Jobe",
+            "Xero Turnbull",
+            "Phillip Watt"
           ]
+        },
+        {
+          "group": null,
+          "party": "LCV",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Danielle Burridge",
+            "Devon Starbuck"
+          ]
+        },
+        {
+          "group": null,
+          "party": "AJP",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Helen Jeges",
+            "Philip Keith Geoffrey Waters"
+          ]
+        },
+        {
+          "group": null,
+          "party": "VS",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Max Forward",
+            "Dylan Edwards"
+          ]
+        },
+        {
+          "group": null,
+          "party": "SUS",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Reade Smith",
+            "Inge Meldgaard"
+          ]
+        },
+        {
+          "group": null,
+          "party": "IND",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Ant Pitt"
+          ]
+        },
+        {
+          "group": null,
+          "party": "IND",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Kate Coxall"
+          ]
+        },
+        {
+          "group": null,
+          "party": "SFF",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Jeff Bourman",
+            "Kerrie-Anne Muir"
+          ],
+          "label": "Shooters, Fishers and Farmers Party Victoria"
+        },
+        {
+          "group": null,
+          "party": "ONP",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Neil Davison",
+            "John De Wacht",
+            "Clay Esler"
+          ],
+          "label": "One Nation Victoria"
+        },
+        {
+          "group": null,
+          "party": "DLP",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Daniel Hamman",
+            "Khalif White"
+          ],
+          "label": "Labour DLP"
         },
         {
           "group": null,
@@ -84,47 +187,6 @@
             "Greg Hansford"
           ],
           "notes": "Greg Hansford withdrew in Oct 2026 for health reasons (Lilydale Star Mail, 1 Oct 2026; Wikipedia lists the withdrawal). One Nation's other names here are listed separately"
-        },
-        {
-          "group": null,
-          "party": "LCV",
-          "status": "endorsed",
-          "candidates": [
-            "Danielle Burridge"
-          ]
-        },
-        {
-          "group": null,
-          "party": "AJP",
-          "status": "endorsed",
-          "candidates": [
-            "Helen Jeges"
-          ],
-          "notes": "Helen Jeges was spelt Helen Jaeges here until 2026-11-04"
-        },
-        {
-          "group": null,
-          "party": "VS",
-          "status": "endorsed",
-          "candidates": [
-            "Max Forward"
-          ]
-        },
-        {
-          "group": null,
-          "party": "SUS",
-          "status": "endorsed",
-          "candidates": [
-            "Reade Smith"
-          ]
-        },
-        {
-          "group": null,
-          "party": "IND",
-          "status": "endorsed",
-          "candidates": [
-            "Antoinette Pitt"
-          ]
         }
       ],
       "notes": "Roy Morgan's regional poll put One Nation on about 39% primary here, which is two quotas or more."
@@ -169,40 +231,154 @@
         {
           "group": null,
           "party": "LIB",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
             "Richard Welch",
             "Deirdre Diamante",
-            "John Pyrros"
+            "John Pyrros",
+            "Sue Leidler",
+            "David Solly"
           ]
         },
         {
           "group": null,
           "party": "GRN",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
-            "Aiv Puglielli"
+            "Aiv Puglielli",
+            "Peter Gallagher",
+            "Mohamud Hersi",
+            "Liezl Shnookal",
+            "Sophia Sun"
           ]
         },
         {
           "group": null,
           "party": "ONP",
-          "status": "reported",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
-            "Natalie Adams"
+            "Natalie Adams",
+            "Kane Afford",
+            "Maxwell Gratton"
           ]
         },
         {
           "group": null,
           "party": "VS",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
             "Lucas Deviesseux",
             "Heather Maltby"
           ]
+        },
+        {
+          "group": null,
+          "party": "LCV",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Gianni Del Rosario-Makridis",
+            "Thomas Forrest"
+          ],
+          "label": "Legalise Cannabis Victoria"
+        },
+        {
+          "group": null,
+          "party": "ALP",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Ryan Batchelor",
+            "James Gan",
+            "Rana Javed",
+            "Donna Mackinnon",
+            "Maree Simmons"
+          ],
+          "label": "Australian Labor Party"
+        },
+        {
+          "group": null,
+          "party": "FF",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Jeremy Ngoh",
+            "Alex van der End"
+          ],
+          "label": "Family First"
+        },
+        {
+          "group": null,
+          "party": "SUS",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "William Clow",
+            "Jack Corcoran",
+            "Heather Tilling"
+          ],
+          "label": "Affordable Housing Now – Sustainable Australia Party"
+        },
+        {
+          "group": null,
+          "party": "DLP",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Cary De Wit",
+            "Brenton Van Der Ende",
+            "Ashley Beruldsen",
+            "Peter Plaucs",
+            "Jae Ho Hwang"
+          ],
+          "label": "Labour DLP"
+        },
+        {
+          "group": null,
+          "party": "OTH",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Leonie Green",
+            "Ryan Parris"
+          ],
+          "label": "Australian Democrats"
+        },
+        {
+          "group": null,
+          "party": "IND",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Wai Man Raymond Chow"
+          ]
+        },
+        {
+          "group": null,
+          "party": "IND",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Yeung Yee Big Lily Chow"
+          ]
+        },
+        {
+          "group": null,
+          "party": "LBT",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Matt Ford",
+            "David Schwab"
+          ],
+          "label": "Libertarian (formerly Liberal Democrats)"
         }
       ],
-      "notes": "Labor ticket TBC."
+      "notes": ""
     },
     {
       "id": "northern-metropolitan",
@@ -236,65 +412,215 @@
         {
           "name": "Adem Somyurek",
           "party": "IND",
-          "retiring": false,
-          "notes": "Ex-DLP; plans unknown."
+          "retiring": true,
+          "notes": "Ex-DLP; plans unknown.",
+          "retiring_source": {
+            "name": "Adem Somyurek",
+            "url": "https://www.vec.vic.gov.au/electoral-boundaries/state-regions/northern-metropolitan-region/nominations",
+            "publisher": "Victorian Electoral Commission",
+            "title": "Candidates for Northern Metropolitan Region (nominations closed 9 Nov 2026)",
+            "published": "2026-11-09",
+            "kind": "official",
+            "via": "vec",
+            "added": "2026-11-09"
+          }
         }
       ],
       "tickets": [
         {
           "group": null,
           "party": "ALP",
-          "status": "reported",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
-            "TBC",
-            "Tom McIntosh"
-          ],
-          "notes": "Tom McIntosh reported for #2 under an Erdogan-McIntosh swap (unconfirmed)."
+            "Tom McIntosh",
+            "Dan Cairnes",
+            "Praveen Kumar Komaragiri",
+            "Sainab Sheikh",
+            "Sheena Watt"
+          ]
         },
         {
           "group": null,
           "party": "LIB",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
             "Evan Mulholland",
-            "Bernadette Khoury"
+            "Bernadette Khoury",
+            "Mark Briers",
+            "Shankar Dharel",
+            "Usman Ghani"
           ]
         },
         {
           "group": null,
           "party": "GRN",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
-            "Anasina Gray-Barberio"
+            "Anasina Gray-Barberio",
+            "Tara Burnett",
+            "Sam Drummond",
+            "Tim Sheehan",
+            "Hannah Thomas"
           ]
         },
         {
           "group": null,
           "party": "ONP",
-          "status": "reported",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
-            "Mark Nicholson"
+            "Mark Nicholson",
+            "Anna Regina Galluzzo"
           ]
         },
         {
           "group": null,
           "party": "LCV",
-          "status": "reported",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
-            "Riley Aickin"
+            "Riley Aickin",
+            "King River Wind"
           ]
         },
         {
           "group": null,
           "party": "VS",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
             "Omar Hassan",
-            "Louisa Bassini"
+            "Louisa Bassini",
+            "Bella Beiraghi",
+            "Belle Gibson",
+            "Catherine Robertson"
           ]
+        },
+        {
+          "group": null,
+          "party": "IND",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Morgan Peach"
+          ]
+        },
+        {
+          "group": null,
+          "party": "IND",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Peter Byrne"
+          ]
+        },
+        {
+          "group": null,
+          "party": "IND",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Bassima Hawli"
+          ]
+        },
+        {
+          "group": null,
+          "party": "IND",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Selin Gungormus"
+          ]
+        },
+        {
+          "group": null,
+          "party": "IND",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Anastasia Drapaniotis"
+          ]
+        },
+        {
+          "group": null,
+          "party": "IND",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Abir Dandach"
+          ]
+        },
+        {
+          "group": null,
+          "party": "FF",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Andrew Deeming",
+            "Imad Hirmiz"
+          ],
+          "label": "Family First"
+        },
+        {
+          "group": null,
+          "party": "SUS",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Daryl Budgeon",
+            "Beth Couch",
+            "Bert Jessup"
+          ],
+          "label": "Affordable Housing Now – Sustainable Australia Party"
+        },
+        {
+          "group": null,
+          "party": "SAL",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Chloe Beaton",
+            "Meredith Lawrence",
+            "Darren Saffin"
+          ],
+          "label": "Socialist Alliance"
+        },
+        {
+          "group": null,
+          "party": "DLP",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "James Fung",
+            "John Kavanagh"
+          ],
+          "label": "Labour DLP"
+        },
+        {
+          "group": null,
+          "party": "IND",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Peter Razos"
+          ]
+        },
+        {
+          "group": null,
+          "party": "OTH",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Sahar Khalili-Naghadeh",
+            "Andrew Rowse"
+          ],
+          "label": "Australian Democrats"
         }
       ],
-      "notes": "New Democrats have announced three candidates (names not listed in the report). In contention: a Greens and Socialists push on the left; One Nation for a seat."
+      "notes": "In contention: a Greens and Socialists push on the left; One Nation for a seat."
     },
     {
       "id": "northern-victoria",
@@ -336,46 +662,166 @@
         {
           "group": null,
           "party": "LNP",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
             "Steve Brooks",
-            "TBD",
-            "Amanda Millar"
-          ],
-          "notes": "Joint Coalition ticket; #2 to be decided."
+            "Amanda Millar",
+            "Gaelle Broad",
+            "Chad Muller",
+            "Brad Hearn"
+          ]
         },
         {
           "group": null,
           "party": "GRN",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
-            "Cate Sinclair"
+            "Cate Sinclair",
+            "Samantha Bright",
+            "Lucas Maddock",
+            "Wil Mikelsons",
+            "Helen Robinson"
           ]
         },
         {
           "group": null,
           "party": "ONP",
-          "status": "reported",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
-            "Rikkie-Lee Tyrrell"
+            "Rikkie-Lee Tyrrell",
+            "Luke Sorensen",
+            "Athol Thomas"
           ]
         },
         {
           "group": null,
           "party": "AJP",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
-            "Georgie Purcell"
+            "Georgie Purcell",
+            "Laurie Levy"
           ]
         },
         {
           "group": null,
           "party": "FF",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
-            "Chris McCormack"
+            "Chris McCormack",
+            "Ev Keetelaar"
+          ]
+        },
+        {
+          "group": null,
+          "party": "IND",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Nick McHugh"
+          ]
+        },
+        {
+          "group": null,
+          "party": "VS",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Dorothy Lamond",
+            "Rohan Tyler"
           ],
-          "notes": "Chris McCormack replaced Michael White as the party's Northern Victoria lead candidate: Family First's Victorian 2026 page listed White in Sep 2026 and McCormack from Oct 2026 (checked 2026-11-04)"
+          "label": "Victorian Socialists"
+        },
+        {
+          "group": null,
+          "party": "IND",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Kate White"
+          ]
+        },
+        {
+          "group": null,
+          "party": "LCV",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Wayne Taylor",
+            "Scott Williams"
+          ],
+          "label": "Legalise Cannabis Victoria"
+        },
+        {
+          "group": null,
+          "party": "SFF",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Geoff Ashby",
+            "Ethan Constantinou"
+          ],
+          "label": "Shooters, Fishers and Farmers Party Victoria"
+        },
+        {
+          "group": null,
+          "party": "ALP",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Mitch Bridges",
+            "Natasha Gayfer",
+            "Greg Olsen",
+            "Jana Sarantis",
+            "Jaclyn Symes"
+          ],
+          "label": "Australian Labor Party"
+        },
+        {
+          "group": null,
+          "party": "SUS",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Cheryl Blacker",
+            "Paul Read"
+          ],
+          "label": "Affordable Housing Now – Sustainable Australia Party"
+        },
+        {
+          "group": null,
+          "party": "OTH",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Jeff Davy",
+            "Chris Lahy"
+          ],
+          "label": "Citizens Party"
+        },
+        {
+          "group": null,
+          "party": "DLP",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Sophie De Wit",
+            "Chae Van Dorssen"
+          ],
+          "label": "Labour DLP"
+        },
+        {
+          "group": null,
+          "party": "IND",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Alex Green"
+          ]
         }
       ],
       "notes": "In contention: One Nation could win two seats here; Purcell's seat is at risk."
@@ -420,49 +866,151 @@
         {
           "group": null,
           "party": "LIB",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
             "Phillip Pease",
-            "Ann-Marie Hermans"
+            "Ann-Marie Hermans",
+            "Scott Fenner",
+            "Marcus Fernandez",
+            "Salini Vipinkumar"
           ]
         },
         {
           "group": null,
           "party": "GRN",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
-            "Matthew Kirwan"
+            "Matthew Kirwan",
+            "Jayden Hardy",
+            "Amelia Kent",
+            "Samantha Von Hagt",
+            "Louisa Willoughby"
           ]
         },
         {
           "group": null,
           "party": "ONP",
-          "status": "reported",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
-            "Colleen Harkin"
+            "Colleen Harkin",
+            "Geoff Goddard",
+            "Leo Panetta"
           ]
         },
         {
           "group": null,
           "party": "LCV",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
-            "Rachel Payne"
-          ],
-          "notes": "Recontesting."
+            "Rachel Payne",
+            "Gregory Denham"
+          ]
         },
         {
           "group": null,
           "party": "VS",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
             "Kelly Cvetkova",
             "Keeley Hopper"
+          ]
+        },
+        {
+          "group": null,
+          "party": "IND",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Susantha Abeysinghe"
+          ]
+        },
+        {
+          "group": null,
+          "party": "ALP",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Michael Galea",
+            "Soheang Pak",
+            "Moti Ram",
+            "Lee Tarlamis",
+            "Thanh Van Tran"
           ],
-          "notes": "Keeley Hopper is #2, as the party's pages and Wikipedia list her; Mahee Hossain, listed here until 2026-11-04, is the party's candidate for Mordialloc"
+          "label": "Australian Labor Party"
+        },
+        {
+          "group": null,
+          "party": "SUS",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Ann-Marie Brady",
+            "Brandon Hoult"
+          ],
+          "label": "Affordable Housing Now – Sustainable Australia Party"
+        },
+        {
+          "group": null,
+          "party": "OTH",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Russell Bennett",
+            "Gary Collie"
+          ],
+          "label": "Citizens Party"
+        },
+        {
+          "group": null,
+          "party": "OTH",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Milton Wilde",
+            "Leanne Wilde"
+          ],
+          "label": "Christian Alliance Party – Reform AU"
+        },
+        {
+          "group": null,
+          "party": "DLP",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Scott Marsh",
+            "Andrew Zmegac"
+          ],
+          "label": "Labour DLP"
+        },
+        {
+          "group": null,
+          "party": "OTH",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Heath McKenzie",
+            "Jacqui Morel"
+          ],
+          "label": "Australian Democrats"
+        },
+        {
+          "group": null,
+          "party": "LBT",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "David Limbrick",
+            "Will Vandermeer"
+          ],
+          "label": "Libertarian (formerly Liberal Democrats)"
         }
       ],
-      "notes": "Limbrick (Libertarian) not yet confirmed. In contention: Payne and Limbrick are both at risk without group voting tickets."
+      "notes": "In contention: Payne and Limbrick are both at risk without group voting tickets."
     },
     {
       "id": "southern-metropolitan",
@@ -503,55 +1051,128 @@
       "tickets": [
         {
           "group": null,
-          "party": "ALP",
-          "status": "reported",
-          "candidates": [],
-          "notes": "Top spot contested between the Right (John Berger) and the Left (Ryan Batchelor, nominated here and in North-Eastern Metropolitan)."
-        },
-        {
-          "group": null,
           "party": "LIB",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
             "David Davis",
             "Georgie Crozier",
-            "Xavier Boffa"
+            "Xavier Boffa",
+            "Jamie Bell",
+            "Jasmine Perera"
           ]
         },
         {
           "group": null,
           "party": "GRN",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
-            "Katherine Copsey"
+            "Katherine Copsey",
+            "Rachel Iampolski",
+            "Jeffrey Kissubi",
+            "Kim Samiotis",
+            "Joshua Weaver"
           ]
         },
         {
           "group": null,
           "party": "ONP",
-          "status": "reported",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
-            "Aaron Sanford"
+            "Aaron Sanford",
+            "Kristina Kaulenas"
           ]
         },
         {
           "group": null,
           "party": "IND",
-          "status": "reported",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
             "Melissa Lowe",
             "Jess Ness"
-          ],
-          "notes": "Community independent backed by Voices groups; earlier reported with a different party label. Jess Ness second (VEC nominations list, 9 Nov 2026; Wikipedia agrees)."
+          ]
         },
         {
           "group": null,
           "party": "FF",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
-            "Jane Foreman"
+            "Jane Foreman",
+            "Tom Paton"
+          ]
+        },
+        {
+          "group": null,
+          "party": "VS",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Catherine Holder",
+            "April Worsley"
           ],
-          "notes": "Family First's Victorian 2026 page lists Jane Foreman for Southern Metropolitan Region (moved from South-Eastern Metropolitan, where Wikipedia's list places her, on 2026-11-04)"
+          "label": "Victorian Socialists"
+        },
+        {
+          "group": null,
+          "party": "LCV",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Ben Howman",
+            "Zofia Pawlaczek"
+          ],
+          "label": "Legalise Cannabis Victoria"
+        },
+        {
+          "group": null,
+          "party": "ALP",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "John Berger",
+            "Philip Cole",
+            "Louise Crawford",
+            "Gavin Douch",
+            "Virginia Wills"
+          ],
+          "label": "Australian Labor Party"
+        },
+        {
+          "group": null,
+          "party": "SUS",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Linda Baird",
+            "Bettina Terry"
+          ],
+          "label": "Affordable Housing Now – Sustainable Australia Party"
+        },
+        {
+          "group": null,
+          "party": "DLP",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Paul Dean",
+            "Karla Zmegac"
+          ],
+          "label": "Labour DLP"
+        },
+        {
+          "group": null,
+          "party": "OTH",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Clive Jackson",
+            "Philip Broadbridge"
+          ],
+          "label": "Australian Democrats"
         }
       ],
       "notes": "In contention: Lowe's independent ticket and the second Liberal seat."
@@ -606,66 +1227,157 @@
         {
           "group": null,
           "party": "LIB",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
             "Roshena Campbell",
-            "Trung Luu"
-          ],
-          "notes": "Roshena Campbell replaced Moira Deeming at #1 after Deeming was disendorsed on 17 Jul 2026 (ABC News, 7 Aug 2026)."
+            "Trung Luu",
+            "Daniel Maduok Geng",
+            "Shwetha Narayanan",
+            "Satish Patel"
+          ]
         },
         {
           "group": null,
           "party": "FF",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
-            "Moira Deeming"
-          ],
-          "notes": "Former Liberal MLC, named as Family First's Western Metropolitan candidate (ABC News, 10 Sep 2026)."
+            "Moira Deeming",
+            "Mark Emerson",
+            "Francine Ikirezi",
+            "Pavitra Kulkarni",
+            "Chris Neil"
+          ]
         },
         {
           "group": null,
           "party": "GRN",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
-            "Brittney Henderson"
+            "Brittney Henderson",
+            "Niall Harden",
+            "Ebony Heins",
+            "Isabella McRae McLeod",
+            "Geetha Pathanjalimanoharar"
           ]
         },
         {
           "group": null,
           "party": "ONP",
-          "status": "reported",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
-            "Fiona Lopez"
+            "Fiona Lopez",
+            "Allan Doensen"
           ]
         },
         {
           "group": null,
           "party": "LCV",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
-            "Xavier Menta"
+            "Xavier Menta",
+            "Chana Berson"
           ]
         },
         {
           "group": null,
           "party": "VS",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
             "Anneke Demanuele",
-            "Jorge Jorquera"
+            "Jorge Jorquera",
+            "Lucy Kelly",
+            "Dean Maloney",
+            "Ella Sjodin"
           ]
         },
         {
           "group": null,
           "party": "WEST",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
             "Joe Garra",
-            "Sahana Ramesh"
+            "Sahana Ramesh",
+            "Philip Farrelly"
+          ]
+        },
+        {
+          "group": null,
+          "party": "ALP",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Lizzie Blandthorn",
+            "Sara Ibrahim",
+            "Cuc Lam",
+            "Ingrid Stitt",
+            "Kim Travers"
+          ],
+          "label": "Australian Labor Party"
+        },
+        {
+          "group": null,
+          "party": "SUS",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Dennis Bilic",
+            "Susan Davies"
+          ],
+          "label": "Affordable Housing Now – Sustainable Australia Party"
+        },
+        {
+          "group": null,
+          "party": "DLP",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Mark Royal",
+            "Arlene Smith"
+          ],
+          "label": "Labour DLP"
+        },
+        {
+          "group": null,
+          "party": "OTH",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Shubhangi Kulkarni",
+            "Raj Saini",
+            "Sarabjit Kaur",
+            "Zalak Shah"
+          ],
+          "label": "The Republican"
+        },
+        {
+          "group": null,
+          "party": "OTH",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Chris Thiery-Lai",
+            "Nigel Keenan"
+          ],
+          "label": "Australian Democrats"
+        },
+        {
+          "group": null,
+          "party": "IND",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Rakesh Raizada"
           ]
         }
       ],
-      "notes": "New Democrats have announced five candidates (names not listed in the report)."
+      "notes": ""
     },
     {
       "id": "western-victoria",
@@ -707,52 +1419,199 @@
         {
           "group": null,
           "party": "LIB",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
             "Bev McArthur",
-            "Graham Watt"
+            "Graham Watt",
+            "Ellie Read"
           ]
         },
         {
           "group": null,
           "party": "ALP",
-          "status": "reported",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
             "Kate Maxfield",
-            "Jacinta Ermacora"
-          ],
-          "notes": "The Standard (Oct 2026) reports Dr Kate Maxfield at #1, replacing the retiring Gayle Tierney, and Jacinta Ermacora moved to #2. Not yet on Wikipedia's 2026 list."
+            "Jacinta Ermacora",
+            "Sam Anwari",
+            "Kaitlyn Handreck",
+            "Fiona Mackenzie"
+          ]
         },
         {
           "group": null,
           "party": "GRN",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
-            "Sarah Mansfield"
+            "Sarah Mansfield",
+            "Belinda Coates",
+            "Aleisha Smith",
+            "Heaven Van Asperen",
+            "Steve Veale"
           ]
         },
         {
           "group": null,
           "party": "ONP",
-          "status": "reported",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
-            "Chris Burson"
+            "Chris Burson",
+            "Jason Oosthuizen",
+            "Vaughan Williams"
           ]
         },
         {
           "group": null,
           "party": "FF",
-          "status": "endorsed",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
-            "Dianne Colbert"
+            "Dianne Colbert",
+            "Anne Moloney",
+            "Brendan William Thomas",
+            "Senthil Veerappagounder"
           ]
         },
         {
           "group": null,
           "party": "IND",
-          "status": "reported",
+          "status": "vec_nominated",
+          "order_official": false,
           "candidates": [
             "Aleta Moriarty"
+          ]
+        },
+        {
+          "group": null,
+          "party": "NAT",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Robert Letts",
+            "Melody Steed"
+          ],
+          "label": "The Nationals"
+        },
+        {
+          "group": null,
+          "party": "VS",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Dominique Houzet",
+            "Ben Nunquam"
+          ],
+          "label": "Victorian Socialists"
+        },
+        {
+          "group": null,
+          "party": "LCV",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Alice Davy",
+            "Peter Mitchell"
+          ],
+          "label": "Legalise Cannabis Victoria"
+        },
+        {
+          "group": null,
+          "party": "SFF",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Ben Collyer",
+            "Ken Vickers"
+          ],
+          "label": "Shooters, Fishers and Farmers Party Victoria"
+        },
+        {
+          "group": null,
+          "party": "SUS",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Ian Chivers",
+            "Madeleine Wearne"
+          ],
+          "label": "Affordable Housing Now – Sustainable Australia Party"
+        },
+        {
+          "group": null,
+          "party": "IND",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Timothy Denton"
+          ]
+        },
+        {
+          "group": null,
+          "party": "SAL",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Sue Bull",
+            "Timothy Gooden",
+            "Ross Smith"
+          ],
+          "label": "Socialist Alliance"
+        },
+        {
+          "group": null,
+          "party": "DLP",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Jennifer Bowden",
+            "Costa Di Biase"
+          ],
+          "label": "Labour DLP"
+        },
+        {
+          "group": null,
+          "party": "OTH",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Akwinder Kaur",
+            "Sindhu Sama"
+          ],
+          "label": "The Republican"
+        },
+        {
+          "group": null,
+          "party": "OTH",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Peter Kelly",
+            "Andy Meddick"
+          ],
+          "label": "Australian Democrats"
+        },
+        {
+          "group": null,
+          "party": "LBT",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Paul Barker",
+            "Phill Schiemer"
+          ],
+          "label": "Libertarian (formerly Liberal Democrats)"
+        },
+        {
+          "group": null,
+          "party": "IND",
+          "status": "vec_nominated",
+          "order_official": false,
+          "candidates": [
+            "Eve Fisher"
           ]
         }
       ],
