@@ -82,8 +82,8 @@
       "fieldwork": null,
       "sample_size": null,
       "published": true,
-      "model_date": "2026-11-09T11:19:13Z",
-      "label": "ResolvePM + final candidate lists",
+      "model_date": "2026-11-10T04:26:25Z",
+      "label": "Pakenham poll + increase leader viability",
       "source_url": "https://www.aeforecasts.com/forecast/2026vic/regular",
       "data_url": "https://www.aeforecasts.com/forecast-api/election-summary/2026vic/regular",
       "fp_percentiles": [
@@ -92,8 +92,8 @@
         95.0
       ],
       "expected_seats": {
-        "LNP": 49.1,
-        "ALP": 21.8,
+        "LNP": 49.0,
+        "ALP": 21.9,
         "ONP": 10.1,
         "GRN": 5.6,
         "OTH": 1.4
@@ -116,7 +116,7 @@
           "party": "LIB",
           "win_probability": 42.3,
           "fp": [
-            16.3,
+            16.4,
             31.7,
             43.8
           ]
@@ -134,7 +134,7 @@
         {
           "name": "Sonya Semmens",
           "party": "GRN",
-          "win_probability": 20.7,
+          "win_probability": 20.6,
           "fp": [
             13.1,
             22.2,
@@ -146,9 +146,9 @@
           "party": "ONP",
           "win_probability": 4.0,
           "fp": [
-            5.5,
+            5.4,
             11.9,
-            27.0
+            26.9
           ]
         }
       ],
@@ -194,7 +194,7 @@
           "share": [
             41.9,
             51.3,
-            60.5
+            60.6
           ]
         },
         {
@@ -202,7 +202,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 35.8,
+          "probability": 35.9,
           "share": [
             44.3,
             51.9,
@@ -226,7 +226,7 @@
             "ALP",
             "ONP"
           ],
-          "probability": 4.9,
+          "probability": 4.8,
           "share": [
             40.2,
             50.8,
@@ -240,8 +240,8 @@
           ],
           "probability": 2.6,
           "share": [
-            43.6,
-            54.4,
+            43.7,
+            54.5,
             63.7
           ]
         },
@@ -254,7 +254,7 @@
           "share": [
             35.5,
             46.6,
-            57.1
+            57.0
           ]
         }
       ]
@@ -282,16 +282,16 @@
       "winner_name": "Theo Zographos",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 75.5,
+      "win_probability": 75.6,
       "candidates": [
         {
           "name": "Theo Zographos",
           "party": "LIB",
-          "win_probability": 75.5,
+          "win_probability": 75.6,
           "fp": [
             21.7,
             37.1,
-            50.0
+            50.1
           ]
         },
         {
@@ -299,7 +299,7 @@
           "party": "ALP",
           "win_probability": 17.7,
           "fp": [
-            9.7,
+            9.8,
             23.5,
             36.4
           ]
@@ -307,11 +307,11 @@
         {
           "name": "Steven Mitchell",
           "party": "ONP",
-          "win_probability": 3.3,
+          "win_probability": 3.2,
           "fp": [
             4.9,
-            11.5,
-            27.1
+            11.4,
+            26.9
           ]
         },
         {
@@ -363,7 +363,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 65.8,
+          "probability": 66.0,
           "share": [
             37.0,
             45.8,
@@ -375,11 +375,11 @@
             "LIB",
             "GRN"
           ],
-          "probability": 19.1,
+          "probability": 19.0,
           "share": [
-            48.6,
+            48.7,
             59.4,
-            69.0
+            69.1
           ]
         },
         {
@@ -387,11 +387,11 @@
             "LIB",
             "ONP"
           ],
-          "probability": 6.4,
+          "probability": 6.3,
           "share": [
-            46.0,
-            58.7,
-            69.6
+            46.1,
+            58.8,
+            69.7
           ]
         },
         {
@@ -403,7 +403,7 @@
           "share": [
             38.1,
             49.0,
-            61.5
+            61.6
           ]
         },
         {
@@ -415,7 +415,7 @@
           "share": [
             36.8,
             50.0,
-            62.5
+            62.6
           ]
         }
       ]
@@ -443,26 +443,26 @@
       "winner_name": "Rochelle Halstead",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 66.4,
+      "win_probability": 66.8,
       "candidates": [
         {
           "name": "Rochelle Halstead",
           "party": "LIB",
-          "win_probability": 66.4,
+          "win_probability": 66.8,
           "fp": [
-            13.9,
-            31.9,
-            46.5
+            14.0,
+            32.0,
+            46.6
           ]
         },
         {
           "name": "Nikole Schellekens",
           "party": "ONP",
-          "win_probability": 29.1,
+          "win_probability": 28.6,
           "fp": [
-            12.7,
-            25.8,
-            44.2
+            12.6,
+            25.7,
+            44.0
           ]
         },
         {
@@ -471,7 +471,7 @@
           "win_probability": 4.4,
           "fp": [
             9.8,
-            23.3,
+            23.4,
             35.0
           ]
         },
@@ -514,10 +514,10 @@
             "ALP",
             "LIB"
           ],
-          "probability": 41.8,
+          "probability": 42.3,
           "share": [
             31.0,
-            38.6,
+            38.5,
             47.1
           ]
         },
@@ -526,10 +526,10 @@
             "LIB",
             "ONP"
           ],
-          "probability": 33.0,
+          "probability": 32.8,
           "share": [
-            40.7,
-            54.7,
+            40.8,
+            54.8,
             66.0
           ]
         },
@@ -538,9 +538,9 @@
             "ALP",
             "ONP"
           ],
-          "probability": 23.7,
+          "probability": 23.4,
           "share": [
-            32.8,
+            32.9,
             43.7,
             54.2
           ]
@@ -552,7 +552,7 @@
           ],
           "probability": 1.1,
           "share": [
-            51.1,
+            51.2,
             62.0,
             71.2
           ]
@@ -582,14 +582,14 @@
       "winner_name": "David Kitchen",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 78.1,
+      "win_probability": 78.3,
       "candidates": [
         {
           "name": "David Kitchen",
           "party": "LIB",
-          "win_probability": 78.1,
+          "win_probability": 78.3,
           "fp": [
-            16.9,
+            17.0,
             35.0,
             48.6
           ]
@@ -597,11 +597,11 @@
         {
           "name": "Kayte Bleakney",
           "party": "ONP",
-          "win_probability": 12.3,
+          "win_probability": 12.1,
           "fp": [
-            8.7,
-            19.1,
-            35.8
+            8.6,
+            19.0,
+            35.7
           ]
         },
         {
@@ -609,7 +609,7 @@
           "party": "ALP",
           "win_probability": 8.6,
           "fp": [
-            10.3,
+            10.4,
             24.7,
             36.9
           ]
@@ -663,7 +663,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 64.0,
+          "probability": 64.4,
           "share": [
             34.4,
             42.5,
@@ -675,11 +675,11 @@
             "LIB",
             "ONP"
           ],
-          "probability": 19.9,
+          "probability": 19.7,
           "share": [
-            43.7,
+            43.8,
             57.2,
-            68.6
+            68.7
           ]
         },
         {
@@ -687,9 +687,9 @@
             "ALP",
             "ONP"
           ],
-          "probability": 12.2,
+          "probability": 12.0,
           "share": [
-            35.0,
+            35.1,
             46.1,
             58.3
           ]
@@ -701,8 +701,8 @@
           ],
           "probability": 2.4,
           "share": [
-            50.6,
-            62.2,
+            50.7,
+            62.3,
             71.8
           ]
         }
@@ -731,14 +731,14 @@
       "winner_name": "Callum Whitehead",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 41.1,
+      "win_probability": 41.3,
       "candidates": [
         {
           "name": "Callum Whitehead",
           "party": "LIB",
-          "win_probability": 41.1,
+          "win_probability": 41.3,
           "fp": [
-            9.2,
+            9.3,
             26.9,
             40.8
           ]
@@ -746,9 +746,9 @@
         {
           "name": "Alison Marchant",
           "party": "ALP",
-          "win_probability": 33.8,
+          "win_probability": 33.9,
           "fp": [
-            11.9,
+            12.0,
             26.8,
             39.0
           ]
@@ -756,11 +756,11 @@
         {
           "name": "Ross McRae",
           "party": "ONP",
-          "win_probability": 21.3,
+          "win_probability": 21.0,
           "fp": [
             9.6,
-            21.2,
-            38.6
+            21.1,
+            38.4
           ]
         },
         {
@@ -812,7 +812,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 50.5,
+          "probability": 50.9,
           "share": [
             41.6,
             49.1,
@@ -824,9 +824,9 @@
             "ALP",
             "ONP"
           ],
-          "probability": 28.3,
+          "probability": 28.0,
           "share": [
-            36.9,
+            37.0,
             48.6,
             59.8
           ]
@@ -836,11 +836,11 @@
             "LIB",
             "ONP"
           ],
-          "probability": 11.7,
+          "probability": 11.6,
           "share": [
-            40.4,
+            40.5,
             53.7,
-            63.8
+            63.9
           ]
         },
         {
@@ -852,7 +852,7 @@
           "share": [
             45.4,
             55.4,
-            65.0
+            65.1
           ]
         },
         {
@@ -863,8 +863,8 @@
           "probability": 1.3,
           "share": [
             29.8,
-            41.8,
-            53.1
+            41.9,
+            53.2
           ]
         }
       ]
@@ -892,26 +892,26 @@
       "winner_name": "Steve Martin",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 89.7,
+      "win_probability": 89.9,
       "candidates": [
         {
           "name": "Steve Martin",
           "party": "LIB",
-          "win_probability": 89.7,
+          "win_probability": 89.9,
           "fp": [
-            27.3,
-            45.2,
-            58.1
+            27.5,
+            45.3,
+            58.2
           ]
         },
         {
           "name": "Kellie Sheppard",
           "party": "ONP",
-          "win_probability": 8.3,
+          "win_probability": 8.1,
           "fp": [
             10.1,
-            21.4,
-            38.9
+            21.3,
+            38.7
           ]
         },
         {
@@ -930,7 +930,7 @@
           "win_probability": 0.2,
           "fp": [
             0.2,
-            4.4,
+            4.5,
             18.8
           ]
         },
@@ -973,11 +973,11 @@
             "LIB",
             "ONP"
           ],
-          "probability": 66.8,
+          "probability": 66.4,
           "share": [
-            45.1,
+            45.2,
             62.4,
-            73.9
+            74.0
           ]
         },
         {
@@ -985,11 +985,11 @@
             "LIB",
             "IND"
           ],
-          "probability": 21.8,
+          "probability": 22.1,
           "share": [
             48.6,
             62.6,
-            72.5
+            72.6
           ]
         },
         {
@@ -997,10 +997,10 @@
             "ALP",
             "LIB"
           ],
-          "probability": 5.8,
+          "probability": 5.9,
           "share": [
-            30.3,
-            37.2,
+            30.2,
+            37.1,
             46.1
           ]
         },
@@ -1012,7 +1012,7 @@
           "probability": 3.6,
           "share": [
             60.3,
-            71.3,
+            71.4,
             79.2
           ]
         }
@@ -1041,32 +1041,32 @@
       "winner_name": "Andrew Lethlean",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 43.1,
+      "win_probability": 43.5,
       "candidates": [
         {
           "name": "Andrew Lethlean",
           "party": "NAT",
-          "win_probability": 43.1,
+          "win_probability": 43.5,
           "fp": [
-            6.1,
-            25.5,
+            6.2,
+            25.6,
             40.8
           ]
         },
         {
           "name": "Cheryl Hawken",
           "party": "ONP",
-          "win_probability": 27.5,
+          "win_probability": 27.1,
           "fp": [
             11.1,
-            23.2,
-            41.2
+            23.1,
+            41.0
           ]
         },
         {
           "name": "Tim Rickwood",
           "party": "ALP",
-          "win_probability": 26.6,
+          "win_probability": 26.7,
           "fp": [
             11.7,
             27.4,
@@ -1079,7 +1079,7 @@
           "win_probability": 0.3,
           "fp": [
             5.2,
-            10.0,
+            9.9,
             15.5
           ]
         }
@@ -1111,7 +1111,7 @@
           "win_probability": 0.0,
           "fp": [
             2.4,
-            10.2,
+            10.3,
             29.3
           ]
         }
@@ -1122,7 +1122,7 @@
             "ALP",
             "NAT"
           ],
-          "probability": 44.5,
+          "probability": 45.0,
           "share": [
             39.1,
             47.0,
@@ -1134,9 +1134,9 @@
             "ALP",
             "ONP"
           ],
-          "probability": 36.0,
+          "probability": 35.6,
           "share": [
-            35.9,
+            36.0,
             48.1,
             59.7
           ]
@@ -1148,9 +1148,9 @@
           ],
           "probability": 13.8,
           "share": [
-            35.8,
+            35.7,
             46.6,
-            60.8
+            60.7
           ]
         },
         {
@@ -1160,7 +1160,7 @@
           ],
           "probability": 1.4,
           "share": [
-            33.0,
+            32.9,
             42.8,
             53.6
           ]
@@ -1172,8 +1172,8 @@
           ],
           "probability": 1.2,
           "share": [
-            42.5,
-            57.5,
+            42.7,
+            57.6,
             75.2
           ]
         }
@@ -1202,36 +1202,36 @@
       "winner_name": "Brenton Baldwin",
       "runner_up": "NAT",
       "winner_2cp": null,
-      "win_probability": 51.1,
+      "win_probability": 51.2,
       "candidates": [
         {
           "name": "Brenton Baldwin",
           "party": "ALP",
-          "win_probability": 51.1,
+          "win_probability": 51.2,
           "fp": [
             15.0,
-            29.8,
+            29.9,
             42.6
           ]
         },
         {
           "name": "David Hutchings",
           "party": "NAT",
-          "win_probability": 28.9,
+          "win_probability": 29.0,
           "fp": [
-            7.6,
-            25.0,
-            39.4
+            7.7,
+            25.1,
+            39.5
           ]
         },
         {
           "name": "Ellen Morgan",
           "party": "ONP",
-          "win_probability": 19.3,
+          "win_probability": 19.0,
           "fp": [
-            9.9,
-            21.2,
-            38.7
+            9.8,
+            21.1,
+            38.5
           ]
         },
         {
@@ -1273,11 +1273,11 @@
             "ALP",
             "NAT"
           ],
-          "probability": 51.2,
+          "probability": 51.6,
           "share": [
             43.2,
             51.2,
-            59.4
+            59.5
           ]
         },
         {
@@ -1285,9 +1285,9 @@
             "ALP",
             "ONP"
           ],
-          "probability": 35.7,
+          "probability": 35.3,
           "share": [
-            38.4,
+            38.5,
             51.0,
             62.5
           ]
@@ -1297,11 +1297,11 @@
             "ONP",
             "NAT"
           ],
-          "probability": 8.1,
+          "probability": 8.0,
           "share": [
             36.5,
             46.4,
-            59.9
+            59.8
           ]
         },
         {
@@ -1311,7 +1311,7 @@
           ],
           "probability": 3.0,
           "share": [
-            35.4,
+            35.3,
             44.9,
             55.1
           ]
@@ -1348,7 +1348,7 @@
           "party": "LIB",
           "win_probability": 70.6,
           "fp": [
-            23.2,
+            23.3,
             37.5,
             49.3
           ]
@@ -1366,11 +1366,11 @@
         {
           "name": "Herbert Lonsing",
           "party": "ONP",
-          "win_probability": 3.0,
+          "win_probability": 2.9,
           "fp": [
             5.2,
-            12.5,
-            27.1
+            12.4,
+            27.0
           ]
         },
         {
@@ -1380,7 +1380,7 @@
           "fp": [
             6.8,
             11.8,
-            19.0
+            18.9
           ]
         }
       ],
@@ -1412,7 +1412,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 88.0,
+          "probability": 88.2,
           "share": [
             38.5,
             46.8,
@@ -1424,11 +1424,11 @@
             "ALP",
             "ONP"
           ],
-          "probability": 4.7,
+          "probability": 4.6,
           "share": [
-            38.3,
-            49.2,
-            61.3
+            38.4,
+            49.3,
+            61.4
           ]
         },
         {
@@ -1438,7 +1438,7 @@
           ],
           "probability": 3.6,
           "share": [
-            49.0,
+            49.1,
             59.9,
             69.0
           ]
@@ -1448,10 +1448,10 @@
             "LIB",
             "ONP"
           ],
-          "probability": 3.5,
+          "probability": 3.4,
           "share": [
-            45.9,
-            57.9,
+            46.0,
+            58.0,
             68.9
           ]
         }
@@ -1480,14 +1480,14 @@
       "winner_name": "Brad Battin",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 84.1,
+      "win_probability": 84.3,
       "candidates": [
         {
           "name": "Brad Battin",
           "party": "LIB",
-          "win_probability": 84.1,
+          "win_probability": 84.3,
           "fp": [
-            17.6,
+            17.7,
             37.0,
             51.9
           ]
@@ -1495,11 +1495,11 @@
         {
           "name": "Michael Piastrino",
           "party": "ONP",
-          "win_probability": 12.2,
+          "win_probability": 12.0,
           "fp": [
-            8.5,
-            19.1,
-            35.9
+            8.4,
+            19.0,
+            35.7
           ]
         },
         {
@@ -1508,7 +1508,7 @@
           "win_probability": 2.6,
           "fp": [
             8.1,
-            20.5,
+            20.6,
             32.3
           ]
         },
@@ -1561,7 +1561,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 53.9,
+          "probability": 54.3,
           "share": [
             28.4,
             36.0,
@@ -1573,11 +1573,11 @@
             "LIB",
             "ONP"
           ],
-          "probability": 26.4,
+          "probability": 26.2,
           "share": [
-            44.5,
-            58.3,
-            70.0
+            44.6,
+            58.4,
+            70.1
           ]
         },
         {
@@ -1585,11 +1585,11 @@
             "ALP",
             "ONP"
           ],
-          "probability": 9.8,
+          "probability": 9.7,
           "share": [
-            34.1,
+            34.2,
             44.9,
-            56.2
+            56.3
           ]
         },
         {
@@ -1597,7 +1597,7 @@
             "LIB",
             "GRN"
           ],
-          "probability": 7.9,
+          "probability": 8.0,
           "share": [
             51.1,
             62.7,
@@ -1629,14 +1629,14 @@
       "winner_name": "Sally Houguet",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 69.9,
+      "win_probability": 70.0,
       "candidates": [
         {
           "name": "Sally Houguet",
           "party": "LIB",
-          "win_probability": 69.9,
+          "win_probability": 70.0,
           "fp": [
-            18.6,
+            18.7,
             34.9,
             47.6
           ]
@@ -1646,19 +1646,19 @@
           "party": "ALP",
           "win_probability": 21.4,
           "fp": [
-            10.7,
-            25.0,
+            10.8,
+            25.1,
             37.5
           ]
         },
         {
           "name": "Jamie Baker",
           "party": "ONP",
-          "win_probability": 4.0,
+          "win_probability": 3.9,
           "fp": [
             5.2,
-            11.9,
-            27.0
+            11.8,
+            26.9
           ]
         },
         {
@@ -1710,7 +1710,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 66.5,
+          "probability": 66.7,
           "share": [
             38.8,
             46.8,
@@ -1722,10 +1722,10 @@
             "LIB",
             "GRN"
           ],
-          "probability": 19.9,
+          "probability": 19.8,
           "share": [
             46.2,
-            56.6,
+            56.7,
             66.1
           ]
         },
@@ -1734,7 +1734,7 @@
             "ALP",
             "ONP"
           ],
-          "probability": 5.5,
+          "probability": 5.4,
           "share": [
             38.5,
             49.6,
@@ -1746,7 +1746,7 @@
             "LIB",
             "ONP"
           ],
-          "probability": 4.9,
+          "probability": 4.8,
           "share": [
             44.2,
             57.0,
@@ -1761,8 +1761,8 @@
           "probability": 1.1,
           "share": [
             47.0,
-            56.4,
-            65.9
+            56.5,
+            66.0
           ]
         }
       ]
@@ -1797,7 +1797,7 @@
           "party": "LIB",
           "win_probability": 96.0,
           "fp": [
-            31.7,
+            31.8,
             48.2,
             59.6
           ]
@@ -1805,11 +1805,11 @@
         {
           "name": "Alexander Fagan",
           "party": "ONP",
-          "win_probability": 1.7,
+          "win_probability": 1.6,
           "fp": [
             5.4,
             12.1,
-            27.1
+            26.9
           ]
         },
         {
@@ -1818,7 +1818,7 @@
           "win_probability": 0.6,
           "fp": [
             9.1,
-            16.2,
+            16.1,
             25.0
           ]
         },
@@ -1871,7 +1871,7 @@
             "LIB",
             "GRN"
           ],
-          "probability": 62.3,
+          "probability": 62.4,
           "share": [
             55.4,
             65.5,
@@ -1883,10 +1883,10 @@
             "LIB",
             "ONP"
           ],
-          "probability": 18.9,
+          "probability": 18.7,
           "share": [
-            48.1,
-            63.3,
+            48.2,
+            63.4,
             73.3
           ]
         },
@@ -1895,7 +1895,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 15.2,
+          "probability": 15.3,
           "share": [
             30.0,
             36.9,
@@ -1911,7 +1911,7 @@
           "share": [
             37.6,
             50.0,
-            69.0
+            69.1
           ]
         }
       ]
@@ -1939,16 +1939,16 @@
       "winner_name": "Kathleen Matthews-Ward",
       "runner_up": "LIB",
       "winner_2cp": null,
-      "win_probability": 64.5,
+      "win_probability": 64.7,
       "candidates": [
         {
           "name": "Kathleen Matthews-Ward",
           "party": "ALP",
-          "win_probability": 64.5,
+          "win_probability": 64.7,
           "fp": [
-            13.6,
-            32.6,
-            47.2
+            13.7,
+            32.7,
+            47.3
           ]
         },
         {
@@ -1956,19 +1956,19 @@
           "party": "LIB",
           "win_probability": 20.7,
           "fp": [
-            4.9,
+            5.0,
             23.6,
-            40.6
+            40.7
           ]
         },
         {
           "name": "Ethan Keirs",
           "party": "ONP",
-          "win_probability": 13.3,
+          "win_probability": 13.1,
           "fp": [
             8.9,
-            19.1,
-            35.9
+            19.0,
+            35.7
           ]
         },
         {
@@ -2010,7 +2010,7 @@
           "fp": [
             2.9,
             11.5,
-            31.1
+            31.2
           ]
         }
       ],
@@ -2020,7 +2020,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 53.2,
+          "probability": 53.6,
           "share": [
             43.7,
             54.4,
@@ -2032,11 +2032,11 @@
             "ALP",
             "ONP"
           ],
-          "probability": 33.8,
+          "probability": 33.5,
           "share": [
             39.7,
             54.2,
-            66.8
+            66.9
           ]
         },
         {
@@ -2044,10 +2044,10 @@
             "LIB",
             "ONP"
           ],
-          "probability": 7.7,
+          "probability": 7.6,
           "share": [
-            40.0,
-            55.1,
+            40.1,
+            55.2,
             66.8
           ]
         },
@@ -2070,7 +2070,7 @@
           ],
           "probability": 1.3,
           "share": [
-            47.0,
+            47.2,
             59.7,
             71.5
           ]
@@ -2129,7 +2129,7 @@
           "fp": [
             5.6,
             12.1,
-            21.5
+            21.4
           ]
         },
         {
@@ -2170,7 +2170,7 @@
           "win_probability": 0.0,
           "fp": [
             2.4,
-            10.0,
+            10.1,
             26.3
           ]
         }
@@ -2181,7 +2181,7 @@
             "ALP",
             "GRN"
           ],
-          "probability": 56.2,
+          "probability": 56.3,
           "share": [
             31.9,
             43.0,
@@ -2193,7 +2193,7 @@
             "LIB",
             "GRN"
           ],
-          "probability": 27.5,
+          "probability": 27.7,
           "share": [
             26.9,
             34.1,
@@ -2205,11 +2205,11 @@
             "GRN",
             "ONP"
           ],
-          "probability": 13.8,
+          "probability": 13.5,
           "share": [
             56.3,
-            67.6,
-            76.4
+            67.7,
+            76.5
           ]
         },
         {
@@ -2221,7 +2221,7 @@
           "share": [
             36.3,
             49.4,
-            66.9
+            67.0
           ]
         }
       ]
@@ -2256,9 +2256,9 @@
           "party": "LIB",
           "win_probability": 96.4,
           "fp": [
-            29.8,
-            46.4,
-            58.2
+            29.9,
+            46.5,
+            58.3
           ]
         },
         {
@@ -2267,8 +2267,8 @@
           "win_probability": 1.9,
           "fp": [
             5.2,
-            12.5,
-            27.0
+            12.4,
+            26.9
           ]
         },
         {
@@ -2288,7 +2288,7 @@
           "fp": [
             5.4,
             16.8,
-            27.2
+            27.3
           ]
         }
       ],
@@ -2319,7 +2319,7 @@
           "win_probability": 0.0,
           "fp": [
             2.4,
-            9.5,
+            9.6,
             25.1
           ]
         }
@@ -2330,7 +2330,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 52.7,
+          "probability": 52.8,
           "share": [
             27.6,
             34.1,
@@ -2342,7 +2342,7 @@
             "LIB",
             "GRN"
           ],
-          "probability": 26.7,
+          "probability": 26.8,
           "share": [
             55.6,
             65.7,
@@ -2354,10 +2354,10 @@
             "LIB",
             "ONP"
           ],
-          "probability": 17.2,
+          "probability": 17.0,
           "share": [
             48.8,
-            63.2,
+            63.3,
             73.5
           ]
         },
@@ -2398,12 +2398,12 @@
       "winner_name": "Colin Brooks",
       "runner_up": "LIB",
       "winner_2cp": null,
-      "win_probability": 51.0,
+      "win_probability": 51.1,
       "candidates": [
         {
           "name": "Colin Brooks",
           "party": "ALP",
-          "win_probability": 51.0,
+          "win_probability": 51.1,
           "fp": [
             17.1,
             30.7,
@@ -2413,27 +2413,27 @@
         {
           "name": "Chris Parr",
           "party": "LIB",
-          "win_probability": 31.9,
+          "win_probability": 32.0,
           "fp": [
-            6.8,
-            24.3,
-            37.9
+            6.9,
+            24.4,
+            38.0
           ]
         },
         {
           "name": "Bruce Whalley",
           "party": "ONP",
-          "win_probability": 14.2,
+          "win_probability": 14.0,
           "fp": [
             8.4,
-            19.1,
-            35.8
+            19.0,
+            35.6
           ]
         },
         {
           "name": "Nina Laitala",
           "party": "GRN",
-          "win_probability": 2.1,
+          "win_probability": 2.0,
           "fp": [
             8.0,
             13.8,
@@ -2479,7 +2479,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 54.6,
+          "probability": 55.0,
           "share": [
             42.7,
             50.2,
@@ -2491,9 +2491,9 @@
             "ALP",
             "ONP"
           ],
-          "probability": 32.3,
+          "probability": 32.0,
           "share": [
-            40.1,
+            40.2,
             52.3,
             63.2
           ]
@@ -2517,7 +2517,7 @@
           ],
           "probability": 3.8,
           "share": [
-            40.2,
+            40.3,
             53.2,
             62.5
           ]
@@ -2542,8 +2542,8 @@
           "probability": 1.2,
           "share": [
             32.7,
-            44.6,
-            55.1
+            44.7,
+            55.0
           ]
         }
       ]
@@ -2571,14 +2571,14 @@
       "winner_name": "Jeff Shelley",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 46.8,
+      "win_probability": 47.0,
       "candidates": [
         {
           "name": "Jeff Shelley",
           "party": "LIB",
-          "win_probability": 46.8,
+          "win_probability": 47.0,
           "fp": [
-            7.5,
+            7.6,
             26.1,
             40.6
           ]
@@ -2588,7 +2588,7 @@
           "party": "ALP",
           "win_probability": 40.0,
           "fp": [
-            20.2,
+            20.3,
             33.6,
             45.1
           ]
@@ -2596,11 +2596,11 @@
         {
           "name": "Joshua Mathews",
           "party": "ONP",
-          "win_probability": 12.9,
+          "win_probability": 12.8,
           "fp": [
             8.6,
-            19.1,
-            35.8
+            19.0,
+            35.7
           ]
         },
         {
@@ -2642,7 +2642,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 63.1,
+          "probability": 63.6,
           "share": [
             38.9,
             47.4,
@@ -2654,7 +2654,7 @@
             "ALP",
             "ONP"
           ],
-          "probability": 31.8,
+          "probability": 31.4,
           "share": [
             40.0,
             52.4,
@@ -2668,8 +2668,8 @@
           ],
           "probability": 3.8,
           "share": [
-            41.7,
-            54.4,
+            41.8,
+            54.5,
             64.7
           ]
         }
@@ -2705,19 +2705,19 @@
           "party": "LIB",
           "win_probability": 95.5,
           "fp": [
-            31.8,
+            31.9,
             46.4,
-            57.3
+            57.4
           ]
         },
         {
           "name": "Michael Abelman",
           "party": "ONP",
-          "win_probability": 1.7,
+          "win_probability": 1.6,
           "fp": [
             5.3,
-            11.8,
-            27.1
+            11.7,
+            27.0
           ]
         },
         {
@@ -2725,7 +2725,7 @@
           "party": "GRN",
           "win_probability": 1.0,
           "fp": [
-            10.0,
+            9.9,
             17.5,
             27.3
           ]
@@ -2736,7 +2736,7 @@
           "win_probability": 0.4,
           "fp": [
             1.0,
-            12.0,
+            12.1,
             24.4
           ]
         }
@@ -2779,7 +2779,7 @@
             "LIB",
             "GRN"
           ],
-          "probability": 61.3,
+          "probability": 61.4,
           "share": [
             53.5,
             63.2,
@@ -2791,7 +2791,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 21.1,
+          "probability": 21.2,
           "share": [
             32.7,
             39.6,
@@ -2803,9 +2803,9 @@
             "LIB",
             "ONP"
           ],
-          "probability": 14.5,
+          "probability": 14.4,
           "share": [
-            47.4,
+            47.5,
             61.8,
             71.8
           ]
@@ -2847,36 +2847,36 @@
       "winner_name": "Meng Heang Tak",
       "runner_up": "LIB",
       "winner_2cp": null,
-      "win_probability": 53.3,
+      "win_probability": 53.4,
       "candidates": [
         {
           "name": "Meng Heang Tak",
           "party": "ALP",
-          "win_probability": 53.3,
+          "win_probability": 53.4,
           "fp": [
             19.8,
-            33.0,
+            33.1,
             44.5
           ]
         },
         {
           "name": "John Paganis",
           "party": "LIB",
-          "win_probability": 32.9,
+          "win_probability": 33.1,
           "fp": [
-            9.8,
-            26.3,
+            9.9,
+            26.4,
             39.7
           ]
         },
         {
           "name": "Gavin Bain",
           "party": "ONP",
-          "win_probability": 12.9,
+          "win_probability": 12.6,
           "fp": [
             8.7,
-            19.1,
-            35.8
+            19.0,
+            35.6
           ]
         },
         {
@@ -2928,7 +2928,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 64.3,
+          "probability": 64.7,
           "share": [
             42.4,
             50.6,
@@ -2940,11 +2940,11 @@
             "ALP",
             "ONP"
           ],
-          "probability": 29.4,
+          "probability": 29.1,
           "share": [
-            39.6,
-            51.9,
-            63.2
+            39.7,
+            52.0,
+            63.3
           ]
         },
         {
@@ -2955,8 +2955,8 @@
           "probability": 4.4,
           "share": [
             42.0,
-            54.1,
-            63.9
+            54.2,
+            64.0
           ]
         }
       ]
@@ -2984,15 +2984,15 @@
       "winner_name": "Gino Tripodi",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 46.9,
+      "win_probability": 47.1,
       "candidates": [
         {
           "name": "Gino Tripodi",
           "party": "LIB",
-          "win_probability": 46.9,
+          "win_probability": 47.1,
           "fp": [
-            9.7,
-            27.8,
+            9.9,
+            27.9,
             41.8
           ]
         },
@@ -3002,18 +3002,18 @@
           "win_probability": 40.7,
           "fp": [
             20.5,
-            34.0,
+            34.1,
             46.4
           ]
         },
         {
           "name": "Andrew Hirst",
           "party": "ONP",
-          "win_probability": 12.4,
+          "win_probability": 12.2,
           "fp": [
             8.8,
-            19.1,
-            35.9
+            19.0,
+            35.7
           ]
         },
         {
@@ -3021,7 +3021,7 @@
           "party": "GRN",
           "win_probability": 0.0,
           "fp": [
-            3.8,
+            3.7,
             6.8,
             11.4
           ]
@@ -3045,7 +3045,7 @@
           "fp": [
             2.6,
             9.8,
-            24.8
+            24.9
           ]
         }
       ],
@@ -3055,7 +3055,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 67.1,
+          "probability": 67.5,
           "share": [
             39.9,
             48.2,
@@ -3067,11 +3067,11 @@
             "ALP",
             "ONP"
           ],
-          "probability": 27.5,
+          "probability": 27.2,
           "share": [
-            39.1,
-            51.9,
-            63.7
+            39.2,
+            52.0,
+            63.8
           ]
         },
         {
@@ -3082,7 +3082,7 @@
           "probability": 4.8,
           "share": [
             41.8,
-            54.5,
+            54.6,
             64.7
           ]
         }
@@ -3111,26 +3111,26 @@
       "winner_name": "Toby Wooldridge",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 85.7,
+      "win_probability": 85.9,
       "candidates": [
         {
           "name": "Toby Wooldridge",
           "party": "LIB",
-          "win_probability": 85.7,
+          "win_probability": 85.9,
           "fp": [
-            21.3,
-            37.4,
-            50.4
+            21.4,
+            37.5,
+            50.5
           ]
         },
         {
           "name": "Glenn Brindley",
           "party": "ONP",
-          "win_probability": 10.5,
+          "win_probability": 10.3,
           "fp": [
             8.2,
-            19.1,
-            35.8
+            19.0,
+            35.6
           ]
         },
         {
@@ -3159,7 +3159,7 @@
           "win_probability": 0.1,
           "fp": [
             5.8,
-            10.6,
+            10.5,
             17.0
           ]
         }
@@ -3182,7 +3182,7 @@
           "fp": [
             1.6,
             4.6,
-            15.5
+            15.6
           ]
         }
       ],
@@ -3192,7 +3192,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 52.3,
+          "probability": 52.7,
           "share": [
             33.5,
             40.7,
@@ -3204,10 +3204,10 @@
             "LIB",
             "ONP"
           ],
-          "probability": 30.5,
+          "probability": 30.3,
           "share": [
-            44.5,
-            58.4,
+            44.6,
+            58.5,
             69.6
           ]
         },
@@ -3228,10 +3228,10 @@
             "ALP",
             "ONP"
           ],
-          "probability": 6.9,
+          "probability": 6.8,
           "share": [
-            33.5,
-            44.1,
+            33.6,
+            44.2,
             54.4
           ]
         },
@@ -3240,10 +3240,10 @@
             "LIB",
             "IND"
           ],
-          "probability": 2.4,
+          "probability": 2.5,
           "share": [
             42.0,
-            55.5,
+            55.6,
             66.1
           ]
         }
@@ -3272,12 +3272,12 @@
       "winner_name": "Gabrielle Williams",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 87.5,
+      "win_probability": 87.6,
       "candidates": [
         {
           "name": "Gabrielle Williams",
           "party": "ALP",
-          "win_probability": 87.5,
+          "win_probability": 87.6,
           "fp": [
             27.3,
             41.9,
@@ -3287,20 +3287,20 @@
         {
           "name": "Glenda Wright",
           "party": "ONP",
-          "win_probability": 7.1,
+          "win_probability": 7.0,
           "fp": [
-            8.7,
-            19.1,
-            35.8
+            8.6,
+            19.0,
+            35.7
           ]
         },
         {
           "name": "William Billings",
           "party": "LIB",
-          "win_probability": 4.8,
+          "win_probability": 4.9,
           "fp": [
-            2.2,
-            17.9,
+            2.3,
+            18.0,
             32.0
           ]
         },
@@ -3311,7 +3311,7 @@
           "fp": [
             5.0,
             9.1,
-            14.4
+            14.3
           ]
         }
       ],
@@ -3342,7 +3342,7 @@
           "win_probability": 0.0,
           "fp": [
             2.3,
-            9.2,
+            9.3,
             24.1
           ]
         }
@@ -3353,10 +3353,10 @@
             "ALP",
             "ONP"
           ],
-          "probability": 50.8,
+          "probability": 50.4,
           "share": [
             44.9,
-            59.1,
+            59.2,
             69.9
           ]
         },
@@ -3365,7 +3365,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 45.5,
+          "probability": 45.9,
           "share": [
             48.1,
             57.4,
@@ -3379,9 +3379,9 @@
           ],
           "probability": 1.5,
           "share": [
-            52.3,
+            52.4,
             64.6,
-            74.1
+            74.2
           ]
         }
       ]
@@ -3409,26 +3409,26 @@
       "winner_name": "Cindy McLeish",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 73.8,
+      "win_probability": 74.2,
       "candidates": [
         {
           "name": "Cindy McLeish",
           "party": "LIB",
-          "win_probability": 73.8,
+          "win_probability": 74.2,
           "fp": [
-            17.5,
-            36.7,
+            17.6,
+            36.8,
             52.0
           ]
         },
         {
           "name": "Tim Barber",
           "party": "ONP",
-          "win_probability": 23.4,
+          "win_probability": 23.0,
           "fp": [
             12.3,
-            25.8,
-            44.4
+            25.7,
+            44.2
           ]
         },
         {
@@ -3436,9 +3436,9 @@
           "party": "ALP",
           "win_probability": 0.7,
           "fp": [
-            1.0,
+            1.1,
             13.6,
-            26.0
+            26.1
           ]
         },
         {
@@ -3490,11 +3490,11 @@
             "LIB",
             "ONP"
           ],
-          "probability": 61.0,
+          "probability": 60.8,
           "share": [
-            40.5,
-            56.4,
-            68.7
+            40.7,
+            56.5,
+            68.8
           ]
         },
         {
@@ -3502,7 +3502,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 18.3,
+          "probability": 18.5,
           "share": [
             29.9,
             36.7,
@@ -3514,10 +3514,10 @@
             "LIB",
             "GRN"
           ],
-          "probability": 8.7,
+          "probability": 8.8,
           "share": [
-            53.5,
-            64.0,
+            53.6,
+            64.1,
             72.7
           ]
         },
@@ -3526,9 +3526,9 @@
             "ALP",
             "ONP"
           ],
-          "probability": 7.9,
+          "probability": 7.7,
           "share": [
-            28.9,
+            29.0,
             40.7,
             51.0
           ]
@@ -3552,9 +3552,9 @@
           ],
           "probability": 1.3,
           "share": [
-            38.2,
-            54.1,
-            72.8
+            38.3,
+            54.2,
+            72.9
           ]
         }
       ]
@@ -3582,15 +3582,15 @@
       "winner_name": "Paul Byrnes",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 61.1,
+      "win_probability": 61.3,
       "candidates": [
         {
           "name": "Paul Byrnes",
           "party": "LIB",
-          "win_probability": 61.1,
+          "win_probability": 61.3,
           "fp": [
-            16.6,
-            32.6,
+            16.7,
+            32.7,
             45.7
           ]
         },
@@ -3601,23 +3601,23 @@
           "fp": [
             11.7,
             25.6,
-            37.7
+            37.8
           ]
         },
         {
           "name": "Jessie Weatherley",
           "party": "ONP",
-          "win_probability": 13.0,
+          "win_probability": 12.7,
           "fp": [
             8.1,
-            19.0,
-            35.8
+            18.9,
+            35.7
           ]
         },
         {
           "name": "Rachel Busbridge",
           "party": "GRN",
-          "win_probability": 1.4,
+          "win_probability": 1.3,
           "fp": [
             8.1,
             13.7,
@@ -3653,7 +3653,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 61.0,
+          "probability": 61.3,
           "share": [
             39.7,
             47.5,
@@ -3665,10 +3665,10 @@
             "ALP",
             "ONP"
           ],
-          "probability": 15.3,
+          "probability": 15.1,
           "share": [
-            36.7,
-            47.6,
+            36.8,
+            47.7,
             59.0
           ]
         },
@@ -3677,10 +3677,10 @@
             "LIB",
             "ONP"
           ],
-          "probability": 13.0,
+          "probability": 12.8,
           "share": [
             43.0,
-            55.5,
+            55.6,
             65.9
           ]
         },
@@ -3692,8 +3692,8 @@
           "probability": 9.8,
           "share": [
             46.7,
-            57.0,
-            66.4
+            57.1,
+            66.5
           ]
         }
       ]
@@ -3736,9 +3736,9 @@
         {
           "name": "Kat Theodosis",
           "party": "ALP",
-          "win_probability": 32.8,
+          "win_probability": 32.9,
           "fp": [
-            7.4,
+            7.5,
             22.6,
             35.5
           ]
@@ -3756,11 +3756,11 @@
         {
           "name": "John Barnes",
           "party": "ONP",
-          "win_probability": 3.8,
+          "win_probability": 3.7,
           "fp": [
             5.1,
-            12.0,
-            27.0
+            11.9,
+            26.9
           ]
         },
         {
@@ -3770,7 +3770,7 @@
           "fp": [
             6.0,
             13.7,
-            23.3
+            23.2
           ]
         }
       ],
@@ -3812,7 +3812,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 52.9,
+          "probability": 53.1,
           "share": [
             43.0,
             50.6,
@@ -3863,7 +3863,7 @@
           "probability": 4.8,
           "share": [
             44.1,
-            56.3,
+            56.4,
             66.4
           ]
         },
@@ -3872,9 +3872,9 @@
             "ALP",
             "ONP"
           ],
-          "probability": 4.7,
+          "probability": 4.6,
           "share": [
-            38.2,
+            38.3,
             49.4,
             60.7
           ]
@@ -3884,9 +3884,9 @@
             "IND",
             "ONP"
           ],
-          "probability": 2.1,
+          "probability": 2.0,
           "share": [
-            44.8,
+            44.9,
             61.6,
             74.7
           ]
@@ -3916,36 +3916,36 @@
       "winner_name": "Emma Muir",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 52.9,
+      "win_probability": 53.1,
       "candidates": [
         {
           "name": "Emma Muir",
           "party": "LIB",
-          "win_probability": 52.9,
+          "win_probability": 53.1,
           "fp": [
-            8.7,
-            27.8,
-            42.6
+            8.8,
+            27.9,
+            42.7
           ]
         },
         {
           "name": "Michaela Settle",
           "party": "ALP",
-          "win_probability": 22.6,
+          "win_probability": 22.7,
           "fp": [
-            9.6,
+            9.7,
             25.1,
-            38.3
+            38.4
           ]
         },
         {
           "name": "Paul Ballinger",
           "party": "ONP",
-          "win_probability": 21.5,
+          "win_probability": 21.2,
           "fp": [
-            9.9,
-            21.3,
-            38.6
+            9.8,
+            21.1,
+            38.4
           ]
         },
         {
@@ -3987,7 +3987,7 @@
           "fp": [
             2.6,
             10.9,
-            28.2
+            28.3
           ]
         }
       ],
@@ -3997,7 +3997,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 48.5,
+          "probability": 48.9,
           "share": [
             38.6,
             46.5,
@@ -4009,11 +4009,11 @@
             "ALP",
             "ONP"
           ],
-          "probability": 26.0,
+          "probability": 25.8,
           "share": [
-            36.2,
+            36.3,
             48.1,
-            60.2
+            60.3
           ]
         },
         {
@@ -4021,11 +4021,11 @@
             "LIB",
             "ONP"
           ],
-          "probability": 15.9,
+          "probability": 15.8,
           "share": [
-            40.6,
+            40.7,
             54.3,
-            64.9
+            65.0
           ]
         },
         {
@@ -4036,7 +4036,7 @@
           "probability": 4.9,
           "share": [
             46.8,
-            57.3,
+            57.4,
             67.1
           ]
         },
@@ -4047,9 +4047,9 @@
           ],
           "probability": 1.5,
           "share": [
-            28.3,
+            28.5,
             41.5,
-            53.4
+            53.5
           ]
         }
       ]
@@ -4077,26 +4077,26 @@
       "winner_name": "Annabelle Cleeland",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 59.5,
+      "win_probability": 60.0,
       "candidates": [
         {
           "name": "Annabelle Cleeland",
           "party": "NAT",
-          "win_probability": 59.5,
+          "win_probability": 60.0,
           "fp": [
-            10.0,
-            29.1,
+            10.2,
+            29.2,
             44.7
           ]
         },
         {
           "name": "Steve Campbell",
           "party": "ONP",
-          "win_probability": 33.3,
+          "win_probability": 32.8,
           "fp": [
-            12.7,
-            25.8,
-            44.2
+            12.6,
+            25.7,
+            44.0
           ]
         },
         {
@@ -4137,7 +4137,7 @@
           "win_probability": 0.0,
           "fp": [
             2.1,
-            8.2,
+            8.3,
             22.8
           ]
         }
@@ -4148,7 +4148,7 @@
             "ALP",
             "NAT"
           ],
-          "probability": 47.9,
+          "probability": 48.4,
           "share": [
             27.1,
             34.1,
@@ -4160,10 +4160,10 @@
             "ALP",
             "ONP"
           ],
-          "probability": 36.1,
+          "probability": 35.6,
           "share": [
             34.6,
-            44.8,
+            44.9,
             55.0
           ]
         },
@@ -4175,8 +4175,8 @@
           "probability": 15.7,
           "share": [
             35.8,
-            45.8,
-            58.0
+            45.7,
+            57.9
           ]
         }
       ]
@@ -4204,26 +4204,26 @@
       "winner_name": "Bridget Vallence",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 93.3,
+      "win_probability": 93.5,
       "candidates": [
         {
           "name": "Bridget Vallence",
           "party": "LIB",
-          "win_probability": 93.3,
+          "win_probability": 93.5,
           "fp": [
-            27.5,
+            27.6,
             44.4,
-            57.3
+            57.4
           ]
         },
         {
           "name": "Daniel Killey",
           "party": "ONP",
-          "win_probability": 6.4,
+          "win_probability": 6.2,
           "fp": [
             8.5,
-            19.1,
-            35.8
+            19.0,
+            35.6
           ]
         },
         {
@@ -4231,15 +4231,15 @@
           "party": "ALP",
           "win_probability": 0.2,
           "fp": [
-            3.1,
+            3.2,
             15.5,
-            26.6
+            26.7
           ]
         },
         {
           "name": "Andrew Henley",
           "party": "GRN",
-          "win_probability": 0.1,
+          "win_probability": 0.0,
           "fp": [
             6.0,
             10.4,
@@ -4275,11 +4275,11 @@
             "LIB",
             "ONP"
           ],
-          "probability": 45.4,
+          "probability": 45.1,
           "share": [
-            46.6,
-            61.9,
-            72.9
+            46.7,
+            62.0,
+            73.0
           ]
         },
         {
@@ -4287,10 +4287,10 @@
             "ALP",
             "LIB"
           ],
-          "probability": 40.1,
+          "probability": 40.4,
           "share": [
             27.7,
-            34.5,
+            34.4,
             42.4
           ]
         },
@@ -4299,7 +4299,7 @@
             "LIB",
             "GRN"
           ],
-          "probability": 11.9,
+          "probability": 12.0,
           "share": [
             57.2,
             67.2,
@@ -4313,8 +4313,8 @@
           ],
           "probability": 2.1,
           "share": [
-            30.9,
-            41.6,
+            31.0,
+            41.7,
             51.3
           ]
         }
@@ -4343,12 +4343,12 @@
       "winner_name": "Katie Hall",
       "runner_up": "GRN",
       "winner_2cp": null,
-      "win_probability": 56.6,
+      "win_probability": 56.8,
       "candidates": [
         {
           "name": "Katie Hall",
           "party": "ALP",
-          "win_probability": 56.6,
+          "win_probability": 56.8,
           "fp": [
             8.9,
             26.7,
@@ -4362,7 +4362,7 @@
           "fp": [
             12.8,
             22.9,
-            34.9
+            34.8
           ]
         },
         {
@@ -4378,11 +4378,11 @@
         {
           "name": "Alexander Lopez",
           "party": "ONP",
-          "win_probability": 4.3,
+          "win_probability": 4.2,
           "fp": [
             5.3,
-            11.6,
-            27.0
+            11.5,
+            26.9
           ]
         },
         {
@@ -4423,8 +4423,8 @@
           "win_probability": 0.0,
           "fp": [
             2.3,
-            7.5,
-            24.5
+            7.6,
+            24.6
           ]
         }
       ],
@@ -4437,7 +4437,7 @@
           "probability": 31.6,
           "share": [
             44.8,
-            55.7,
+            55.8,
             65.3
           ]
         },
@@ -4458,7 +4458,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 20.8,
+          "probability": 21.0,
           "share": [
             55.6,
             64.5,
@@ -4470,9 +4470,9 @@
             "ALP",
             "ONP"
           ],
-          "probability": 10.6,
+          "probability": 10.5,
           "share": [
-            43.2,
+            43.3,
             55.2,
             66.0
           ]
@@ -4526,22 +4526,22 @@
       "winner_name": "Bree Ambry",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 53.1,
+      "win_probability": 53.3,
       "candidates": [
         {
           "name": "Bree Ambry",
           "party": "LIB",
-          "win_probability": 53.1,
+          "win_probability": 53.3,
           "fp": [
-            8.2,
+            8.3,
             27.3,
-            41.6
+            41.7
           ]
         },
         {
           "name": "Paul Edbrooke",
           "party": "ALP",
-          "win_probability": 25.2,
+          "win_probability": 25.3,
           "fp": [
             9.6,
             24.9,
@@ -4551,11 +4551,11 @@
         {
           "name": "Paul Stafford",
           "party": "ONP",
-          "win_probability": 17.6,
+          "win_probability": 17.3,
           "fp": [
             8.7,
-            19.0,
-            35.8
+            18.9,
+            35.6
           ]
         },
         {
@@ -4565,7 +4565,7 @@
           "fp": [
             8.0,
             13.7,
-            21.0
+            20.9
           ]
         }
       ],
@@ -4607,7 +4607,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 49.9,
+          "probability": 50.2,
           "share": [
             39.3,
             47.0,
@@ -4619,7 +4619,7 @@
             "ALP",
             "ONP"
           ],
-          "probability": 22.5,
+          "probability": 22.3,
           "share": [
             37.6,
             49.4,
@@ -4631,11 +4631,11 @@
             "LIB",
             "ONP"
           ],
-          "probability": 11.0,
+          "probability": 10.9,
           "share": [
-            40.7,
-            54.2,
-            64.3
+            40.8,
+            54.3,
+            64.4
           ]
         },
         {
@@ -4646,8 +4646,8 @@
           "probability": 10.4,
           "share": [
             44.9,
-            55.0,
-            64.4
+            55.1,
+            64.5
           ]
         },
         {
@@ -4658,7 +4658,7 @@
           "probability": 3.0,
           "share": [
             30.8,
-            43.5,
+            43.6,
             55.4
           ]
         },
@@ -4669,9 +4669,9 @@
           ],
           "probability": 1.6,
           "share": [
-            45.6,
+            45.5,
             55.7,
-            65.2
+            65.1
           ]
         }
       ]
@@ -4699,26 +4699,26 @@
       "winner_name": "Chris Couzens",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 62.3,
+      "win_probability": 62.5,
       "candidates": [
         {
           "name": "Chris Couzens",
           "party": "ALP",
-          "win_probability": 62.3,
+          "win_probability": 62.5,
           "fp": [
             14.7,
-            30.1,
+            30.2,
             43.5
           ]
         },
         {
           "name": "John De Lorenzo",
           "party": "ONP",
-          "win_probability": 18.9,
+          "win_probability": 18.6,
           "fp": [
-            9.5,
-            21.2,
-            38.5
+            9.4,
+            21.1,
+            38.3
           ]
         },
         {
@@ -4726,9 +4726,9 @@
           "party": "LIB",
           "win_probability": 14.5,
           "fp": [
-            3.8,
-            21.5,
-            35.9
+            3.9,
+            21.6,
+            36.0
           ]
         },
         {
@@ -4760,7 +4760,7 @@
           "fp": [
             2.4,
             9.2,
-            23.8
+            23.9
           ]
         }
       ],
@@ -4770,11 +4770,11 @@
             "ALP",
             "ONP"
           ],
-          "probability": 41.4,
+          "probability": 41.1,
           "share": [
             40.0,
             52.8,
-            64.2
+            64.3
           ]
         },
         {
@@ -4782,7 +4782,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 38.3,
+          "probability": 38.7,
           "share": [
             46.0,
             54.2,
@@ -4797,7 +4797,7 @@
           "probability": 7.1,
           "share": [
             41.5,
-            50.6,
+            50.7,
             60.7
           ]
         },
@@ -4806,11 +4806,11 @@
             "ALP",
             "GRN"
           ],
-          "probability": 5.1,
+          "probability": 5.2,
           "share": [
             48.3,
             58.1,
-            67.5
+            67.6
           ]
         },
         {
@@ -4820,8 +4820,8 @@
           ],
           "probability": 4.8,
           "share": [
-            39.2,
-            52.5,
+            39.3,
+            52.6,
             62.2
           ]
         },
@@ -4830,11 +4830,11 @@
             "GRN",
             "ONP"
           ],
-          "probability": 3.1,
+          "probability": 3.0,
           "share": [
-            32.8,
+            32.9,
             44.8,
-            55.4
+            55.5
           ]
         }
       ]
@@ -4869,7 +4869,7 @@
           "party": "NAT",
           "win_probability": 97.9,
           "fp": [
-            42.6,
+            42.7,
             59.5,
             71.5
           ]
@@ -4880,8 +4880,8 @@
           "win_probability": 2.1,
           "fp": [
             8.7,
-            19.4,
-            36.3
+            19.3,
+            36.1
           ]
         },
         {
@@ -4890,8 +4890,8 @@
           "win_probability": 0.0,
           "fp": [
             0.2,
-            2.5,
-            12.2
+            2.6,
+            12.3
           ]
         },
         {
@@ -4923,7 +4923,7 @@
           "fp": [
             2.2,
             7.9,
-            21.0
+            21.1
           ]
         }
       ],
@@ -4933,11 +4933,11 @@
             "ONP",
             "NAT"
           ],
-          "probability": 86.6,
+          "probability": 86.4,
           "share": [
-            18.3,
-            28.5,
-            45.8
+            18.2,
+            28.4,
+            45.6
           ]
         },
         {
@@ -4945,7 +4945,7 @@
             "GRN",
             "NAT"
           ],
-          "probability": 9.1,
+          "probability": 9.2,
           "share": [
             15.2,
             21.4,
@@ -4989,26 +4989,26 @@
       "winner_name": "Danny O'Brien",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 82.5,
+      "win_probability": 82.9,
       "candidates": [
         {
           "name": "Danny O'Brien",
           "party": "NAT",
-          "win_probability": 82.5,
+          "win_probability": 82.9,
           "fp": [
-            25.1,
-            43.8,
+            25.3,
+            43.9,
             58.9
           ]
         },
         {
           "name": "Bianca Wilkie",
           "party": "ONP",
-          "win_probability": 15.4,
+          "win_probability": 15.1,
           "fp": [
-            12.6,
-            25.8,
-            44.3
+            12.5,
+            25.7,
+            44.1
           ]
         },
         {
@@ -5026,7 +5026,7 @@
           "party": "GRN",
           "win_probability": 0.0,
           "fp": [
-            4.1,
+            4.2,
             8.8,
             14.2
           ]
@@ -5050,7 +5050,7 @@
           "fp": [
             0.0,
             0.0,
-            16.0
+            16.1
           ]
         },
         {
@@ -5060,7 +5060,7 @@
           "fp": [
             2.5,
             11.6,
-            26.7
+            26.8
           ]
         }
       ],
@@ -5070,11 +5070,11 @@
             "ONP",
             "NAT"
           ],
-          "probability": 84.3,
+          "probability": 84.1,
           "share": [
-            26.7,
-            39.8,
-            57.8
+            26.6,
+            39.6,
+            57.6
           ]
         },
         {
@@ -5082,7 +5082,7 @@
             "GRN",
             "NAT"
           ],
-          "probability": 6.3,
+          "probability": 6.4,
           "share": [
             21.7,
             29.6,
@@ -5094,9 +5094,9 @@
             "ALP",
             "NAT"
           ],
-          "probability": 4.3,
+          "probability": 4.4,
           "share": [
-            24.9,
+            24.8,
             31.8,
             41.4
           ]
@@ -5109,8 +5109,8 @@
           "probability": 2.7,
           "share": [
             35.2,
-            48.1,
-            64.3
+            48.0,
+            64.2
           ]
         },
         {
@@ -5118,11 +5118,11 @@
             "IND",
             "ONP"
           ],
-          "probability": 1.2,
+          "probability": 1.1,
           "share": [
             38.6,
-            54.5,
-            75.6
+            54.6,
+            75.8
           ]
         }
       ]
@@ -5150,15 +5150,15 @@
       "winner_name": "Jacky Sun",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 83.1,
+      "win_probability": 83.2,
       "candidates": [
         {
           "name": "Jacky Sun",
           "party": "LIB",
-          "win_probability": 83.1,
+          "win_probability": 83.2,
           "fp": [
             24.3,
-            40.8,
+            40.9,
             54.9
           ]
         },
@@ -5168,18 +5168,18 @@
           "win_probability": 14.2,
           "fp": [
             9.8,
-            24.7,
+            24.8,
             39.0
           ]
         },
         {
           "name": "Brad Cox",
           "party": "ONP",
-          "win_probability": 2.5,
+          "win_probability": 2.4,
           "fp": [
             5.3,
-            12.6,
-            27.1
+            12.5,
+            26.9
           ]
         },
         {
@@ -5211,7 +5211,7 @@
           "fp": [
             2.2,
             8.3,
-            21.7
+            21.8
           ]
         }
       ],
@@ -5221,23 +5221,11 @@
             "ALP",
             "LIB"
           ],
-          "probability": 78.1,
+          "probability": 78.2,
           "share": [
             33.5,
             43.4,
             54.8
-          ]
-        },
-        {
-          "parties": [
-            "LIB",
-            "ONP"
-          ],
-          "probability": 9.4,
-          "share": [
-            47.9,
-            61.6,
-            73.4
           ]
         },
         {
@@ -5250,6 +5238,18 @@
             53.3,
             64.8,
             74.3
+          ]
+        },
+        {
+          "parties": [
+            "LIB",
+            "ONP"
+          ],
+          "probability": 9.3,
+          "share": [
+            48.0,
+            61.7,
+            73.4
           ]
         },
         {
@@ -5289,24 +5289,24 @@
       "winner_name": "Jim Overend",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 46.4,
+      "win_probability": 46.6,
       "candidates": [
         {
           "name": "Jim Overend",
           "party": "LIB",
-          "win_probability": 46.4,
+          "win_probability": 46.6,
           "fp": [
-            4.9,
-            26.3,
-            43.6
+            5.0,
+            26.4,
+            43.7
           ]
         },
         {
           "name": "Iwan Walters",
           "party": "ALP",
-          "win_probability": 39.0,
+          "win_probability": 39.1,
           "fp": [
-            14.1,
+            14.2,
             31.6,
             47.5
           ]
@@ -5314,11 +5314,11 @@
         {
           "name": "Chris Moore",
           "party": "ONP",
-          "win_probability": 13.2,
+          "win_probability": 12.9,
           "fp": [
             8.9,
-            19.1,
-            35.8
+            19.0,
+            35.7
           ]
         },
         {
@@ -5360,7 +5360,7 @@
           "fp": [
             2.8,
             11.3,
-            32.4
+            32.5
           ]
         }
       ],
@@ -5370,7 +5370,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 57.6,
+          "probability": 58.0,
           "share": [
             36.0,
             47.1,
@@ -5382,11 +5382,11 @@
             "ALP",
             "ONP"
           ],
-          "probability": 29.8,
+          "probability": 29.5,
           "share": [
-            38.9,
+            39.0,
             53.4,
-            67.2
+            67.3
           ]
         },
         {
@@ -5397,7 +5397,7 @@
           "probability": 8.6,
           "share": [
             41.4,
-            55.9,
+            56.0,
             68.4
           ]
         }
@@ -5426,26 +5426,26 @@
       "winner_name": "Frank Schiefler",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 78.7,
+      "win_probability": 78.9,
       "candidates": [
         {
           "name": "Frank Schiefler",
           "party": "LIB",
-          "win_probability": 78.7,
+          "win_probability": 78.9,
           "fp": [
-            18.2,
+            18.3,
             35.3,
-            48.5
+            48.6
           ]
         },
         {
           "name": "Peter Angelico",
           "party": "ONP",
-          "win_probability": 12.1,
+          "win_probability": 11.9,
           "fp": [
             8.6,
-            19.2,
-            36.0
+            19.1,
+            35.8
           ]
         },
         {
@@ -5464,7 +5464,7 @@
           "win_probability": 0.2,
           "fp": [
             6.3,
-            11.1,
+            11.0,
             17.0
           ]
         }
@@ -5507,9 +5507,9 @@
             "ALP",
             "LIB"
           ],
-          "probability": 61.2,
+          "probability": 61.5,
           "share": [
-            35.5,
+            35.4,
             43.0,
             51.4
           ]
@@ -5519,10 +5519,10 @@
             "LIB",
             "ONP"
           ],
-          "probability": 20.4,
+          "probability": 20.2,
           "share": [
             43.7,
-            57.1,
+            57.2,
             68.0
           ]
         },
@@ -5531,7 +5531,7 @@
             "ALP",
             "ONP"
           ],
-          "probability": 11.2,
+          "probability": 11.0,
           "share": [
             35.2,
             45.8,
@@ -5545,7 +5545,7 @@
           ],
           "probability": 5.5,
           "share": [
-            50.9,
+            51.0,
             61.4,
             70.3
           ]
@@ -5582,8 +5582,8 @@
           "party": "LIB",
           "win_probability": 92.9,
           "fp": [
-            34.1,
-            49.3,
+            34.2,
+            49.4,
             59.8
           ]
         },
@@ -5602,9 +5602,9 @@
           "party": "ONP",
           "win_probability": 1.2,
           "fp": [
-            5.4,
-            12.4,
-            27.0
+            5.3,
+            12.3,
+            26.9
           ]
         },
         {
@@ -5613,7 +5613,7 @@
           "win_probability": 0.3,
           "fp": [
             0.1,
-            4.3,
+            4.4,
             17.5
           ]
         },
@@ -5646,7 +5646,7 @@
           "fp": [
             1.4,
             3.6,
-            10.5
+            10.6
           ]
         }
       ],
@@ -5656,7 +5656,7 @@
             "LIB",
             "IND"
           ],
-          "probability": 35.0,
+          "probability": 35.2,
           "share": [
             41.4,
             59.3,
@@ -5670,8 +5670,8 @@
           ],
           "probability": 34.5,
           "share": [
-            60.2,
-            69.4,
+            60.3,
+            69.5,
             76.7
           ]
         },
@@ -5680,9 +5680,9 @@
             "LIB",
             "ONP"
           ],
-          "probability": 21.5,
+          "probability": 21.3,
           "share": [
-            50.2,
+            50.3,
             65.8,
             75.2
           ]
@@ -5724,14 +5724,14 @@
       "winner_name": "Anthony Carbines",
       "runner_up": "LIB",
       "winner_2cp": null,
-      "win_probability": 37.5,
+      "win_probability": 37.7,
       "candidates": [
         {
           "name": "Anthony Carbines",
           "party": "ALP",
-          "win_probability": 37.5,
+          "win_probability": 37.7,
           "fp": [
-            9.3,
+            9.4,
             23.7,
             36.5
           ]
@@ -5739,30 +5739,30 @@
         {
           "name": "Oscar Lopez",
           "party": "LIB",
-          "win_probability": 34.2,
+          "win_probability": 34.4,
           "fp": [
-            11.6,
-            27.5,
+            11.7,
+            27.6,
             40.3
           ]
         },
         {
           "name": "Wayne Hutchinson",
           "party": "ONP",
-          "win_probability": 15.7,
+          "win_probability": 15.5,
           "fp": [
-            7.6,
-            18.0,
-            35.8
+            7.5,
+            17.9,
+            35.6
           ]
         },
         {
           "name": "Nina Crawley",
           "party": "GRN",
-          "win_probability": 11.2,
+          "win_probability": 11.1,
           "fp": [
             9.8,
-            17.5,
+            17.4,
             30.5
           ]
         },
@@ -5815,7 +5815,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 37.4,
+          "probability": 37.8,
           "share": [
             44.1,
             51.7,
@@ -5831,7 +5831,7 @@
           "share": [
             41.7,
             51.3,
-            60.8
+            60.9
           ]
         },
         {
@@ -5839,11 +5839,11 @@
             "ALP",
             "ONP"
           ],
-          "probability": 21.2,
+          "probability": 20.9,
           "share": [
-            38.1,
-            49.4,
-            60.4
+            38.2,
+            49.5,
+            60.5
           ]
         },
         {
@@ -5855,7 +5855,7 @@
           "share": [
             41.3,
             53.6,
-            63.0
+            63.1
           ]
         },
         {
@@ -5875,11 +5875,11 @@
             "GRN",
             "ONP"
           ],
-          "probability": 2.4,
+          "probability": 2.3,
           "share": [
-            33.2,
+            33.3,
             44.8,
-            54.1
+            54.2
           ]
         }
       ]
@@ -5907,36 +5907,36 @@
       "winner_name": "Ros Spence",
       "runner_up": "LIB",
       "winner_2cp": null,
-      "win_probability": 79.4,
+      "win_probability": 79.5,
       "candidates": [
         {
           "name": "Ros Spence",
           "party": "ALP",
-          "win_probability": 79.4,
+          "win_probability": 79.5,
           "fp": [
             25.6,
             40.6,
-            51.8
+            51.9
           ]
         },
         {
           "name": "Eddie Dadisho",
           "party": "LIB",
-          "win_probability": 11.0,
+          "win_probability": 11.1,
           "fp": [
-            4.2,
+            4.3,
             21.5,
-            35.7
+            35.8
           ]
         },
         {
           "name": "Troy Steans",
           "party": "ONP",
-          "win_probability": 9.0,
+          "win_probability": 8.9,
           "fp": [
-            8.8,
-            19.0,
-            35.8
+            8.7,
+            18.9,
+            35.7
           ]
         },
         {
@@ -5988,7 +5988,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 54.9,
+          "probability": 55.3,
           "share": [
             46.0,
             55.0,
@@ -6000,11 +6000,11 @@
             "ALP",
             "ONP"
           ],
-          "probability": 42.0,
+          "probability": 41.6,
           "share": [
-            42.7,
+            42.8,
             56.7,
-            67.7
+            67.8
           ]
         },
         {
@@ -6014,7 +6014,7 @@
           ],
           "probability": 1.5,
           "share": [
-            38.9,
+            39.0,
             53.5,
             63.6
           ]
@@ -6044,14 +6044,14 @@
       "winner_name": "Jess Wilson",
       "runner_up": "IND",
       "winner_2cp": null,
-      "win_probability": 93.9,
+      "win_probability": 94.0,
       "candidates": [
         {
           "name": "Jess Wilson",
           "party": "LIB",
-          "win_probability": 93.9,
+          "win_probability": 94.0,
           "fp": [
-            33.7,
+            33.8,
             48.9,
             59.7
           ]
@@ -6061,7 +6061,7 @@
           "party": "IND",
           "win_probability": 4.3,
           "fp": [
-            3.7,
+            3.8,
             12.4,
             28.9
           ]
@@ -6072,8 +6072,8 @@
           "win_probability": 1.3,
           "fp": [
             5.2,
-            12.6,
-            27.0
+            12.5,
+            26.9
           ]
         },
         {
@@ -6082,7 +6082,7 @@
           "win_probability": 0.2,
           "fp": [
             0.1,
-            4.7,
+            4.8,
             17.6
           ]
         },
@@ -6135,11 +6135,11 @@
             "LIB",
             "IND"
           ],
-          "probability": 44.8,
+          "probability": 45.0,
           "share": [
-            46.5,
+            46.6,
             61.3,
-            70.8
+            70.9
           ]
         },
         {
@@ -6147,11 +6147,11 @@
             "LIB",
             "ONP"
           ],
-          "probability": 24.6,
+          "probability": 24.3,
           "share": [
-            50.2,
-            66.3,
-            75.9
+            50.3,
+            66.4,
+            76.0
           ]
         },
         {
@@ -6162,7 +6162,7 @@
           "probability": 20.1,
           "share": [
             61.2,
-            70.6,
+            70.7,
             77.7
           ]
         },
@@ -6171,7 +6171,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 9.6,
+          "probability": 9.7,
           "share": [
             32.9,
             39.2,
@@ -6203,15 +6203,15 @@
       "winner_name": "Luba Grigorovitch",
       "runner_up": "LIB",
       "winner_2cp": null,
-      "win_probability": 60.8,
+      "win_probability": 61.0,
       "candidates": [
         {
           "name": "Luba Grigorovitch",
           "party": "ALP",
-          "win_probability": 60.8,
+          "win_probability": 61.0,
           "fp": [
             13.3,
-            31.0,
+            31.1,
             44.7
           ]
         },
@@ -6220,19 +6220,19 @@
           "party": "LIB",
           "win_probability": 25.5,
           "fp": [
-            10.9,
+            11.0,
             27.5,
-            43.0
+            43.1
           ]
         },
         {
           "name": "Seva Melnikov",
           "party": "ONP",
-          "win_probability": 13.4,
+          "win_probability": 13.2,
           "fp": [
             8.9,
-            19.1,
-            35.8
+            19.0,
+            35.7
           ]
         },
         {
@@ -6274,7 +6274,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 62.1,
+          "probability": 62.5,
           "share": [
             44.0,
             54.0,
@@ -6286,10 +6286,10 @@
             "ALP",
             "ONP"
           ],
-          "probability": 24.6,
+          "probability": 24.4,
           "share": [
-            38.1,
-            51.3,
+            38.2,
+            51.4,
             63.3
           ]
         },
@@ -6298,11 +6298,11 @@
             "LIB",
             "ONP"
           ],
-          "probability": 11.2,
+          "probability": 11.1,
           "share": [
-            41.2,
-            55.7,
-            67.2
+            41.3,
+            55.8,
+            67.3
           ]
         },
         {
@@ -6312,9 +6312,9 @@
           ],
           "probability": 1.2,
           "share": [
-            48.4,
+            48.3,
             60.6,
-            70.3
+            70.5
           ]
         }
       ]
@@ -6342,12 +6342,12 @@
       "winner_name": "Ella George",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 84.1,
+      "win_probability": 84.2,
       "candidates": [
         {
           "name": "Ella George",
           "party": "ALP",
-          "win_probability": 84.1,
+          "win_probability": 84.2,
           "fp": [
             24.3,
             38.8,
@@ -6357,11 +6357,11 @@
         {
           "name": "Stephen Spyros",
           "party": "ONP",
-          "win_probability": 10.9,
+          "win_probability": 10.8,
           "fp": [
             9.9,
-            21.3,
-            38.6
+            21.1,
+            38.4
           ]
         },
         {
@@ -6369,7 +6369,7 @@
           "party": "LIB",
           "win_probability": 4.6,
           "fp": [
-            1.7,
+            1.8,
             16.0,
             30.2
           ]
@@ -6413,9 +6413,9 @@
             "ALP",
             "ONP"
           ],
-          "probability": 59.7,
+          "probability": 59.3,
           "share": [
-            43.4,
+            43.5,
             57.7,
             67.9
           ]
@@ -6425,10 +6425,10 @@
             "ALP",
             "LIB"
           ],
-          "probability": 34.2,
+          "probability": 34.6,
           "share": [
             47.9,
-            56.1,
+            56.2,
             64.0
           ]
         },
@@ -6441,7 +6441,7 @@
           "share": [
             51.3,
             62.5,
-            71.2
+            71.3
           ]
         }
       ]
@@ -6469,26 +6469,26 @@
       "winner_name": "Sarah Connolly",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 78.3,
+      "win_probability": 78.5,
       "candidates": [
         {
           "name": "Sarah Connolly",
           "party": "ALP",
-          "win_probability": 78.3,
+          "win_probability": 78.5,
           "fp": [
-            17.4,
-            33.5,
+            17.5,
+            33.6,
             45.5
           ]
         },
         {
           "name": "Rufo Paredes",
           "party": "ONP",
-          "win_probability": 14.4,
+          "win_probability": 14.2,
           "fp": [
-            9.0,
-            19.1,
-            35.8
+            8.9,
+            19.0,
+            35.7
           ]
         },
         {
@@ -6496,8 +6496,8 @@
           "party": "LIB",
           "win_probability": 6.7,
           "fp": [
-            8.3,
-            23.3,
+            8.4,
+            23.4,
             36.1
           ]
         },
@@ -6540,7 +6540,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 57.4,
+          "probability": 57.8,
           "share": [
             50.3,
             58.9,
@@ -6552,11 +6552,11 @@
             "ALP",
             "ONP"
           ],
-          "probability": 34.7,
+          "probability": 34.4,
           "share": [
-            39.8,
-            52.8,
-            64.1
+            39.9,
+            52.9,
+            64.2
           ]
         },
         {
@@ -6566,7 +6566,7 @@
           ],
           "probability": 4.7,
           "share": [
-            39.0,
+            39.1,
             53.1,
             64.2
           ]
@@ -6590,7 +6590,7 @@
           ],
           "probability": 1.0,
           "share": [
-            47.6,
+            47.5,
             59.2,
             69.2
           ]
@@ -6620,26 +6620,26 @@
       "winner_name": "Emma Kealy",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 84.6,
+      "win_probability": 84.9,
       "candidates": [
         {
           "name": "Emma Kealy",
           "party": "NAT",
-          "win_probability": 84.6,
+          "win_probability": 84.9,
           "fp": [
-            26.5,
-            45.9,
-            61.3
+            26.6,
+            46.0,
+            61.4
           ]
         },
         {
           "name": "Andrew Partridge",
           "party": "ONP",
-          "win_probability": 14.0,
+          "win_probability": 13.7,
           "fp": [
-            12.7,
-            25.8,
-            44.3
+            12.6,
+            25.7,
+            44.1
           ]
         },
         {
@@ -6648,8 +6648,8 @@
           "win_probability": 0.0,
           "fp": [
             0.4,
-            3.5,
-            14.3
+            3.6,
+            14.4
           ]
         },
         {
@@ -6681,7 +6681,7 @@
           "fp": [
             0.0,
             0.0,
-            15.2
+            15.3
           ]
         },
         {
@@ -6691,7 +6691,7 @@
           "fp": [
             2.9,
             12.8,
-            30.7
+            30.8
           ]
         }
       ],
@@ -6701,11 +6701,11 @@
             "ONP",
             "NAT"
           ],
-          "probability": 89.7,
+          "probability": 89.5,
           "share": [
             24.9,
-            38.4,
-            57.1
+            38.3,
+            57.0
           ]
         },
         {
@@ -6727,9 +6727,9 @@
           ],
           "probability": 2.7,
           "share": [
-            21.8,
+            21.7,
             27.7,
-            36.9
+            37.0
           ]
         },
         {
@@ -6741,7 +6741,7 @@
           "share": [
             33.0,
             46.2,
-            62.8
+            62.9
           ]
         }
       ]
@@ -6769,15 +6769,15 @@
       "winner_name": "Kate Kendall",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 61.8,
+      "win_probability": 61.9,
       "candidates": [
         {
           "name": "Kate Kendall",
           "party": "LIB",
-          "win_probability": 61.8,
+          "win_probability": 61.9,
           "fp": [
-            15.5,
-            31.6,
+            15.6,
+            31.7,
             44.5
           ]
         },
@@ -6786,19 +6786,19 @@
           "party": "ALP",
           "win_probability": 23.6,
           "fp": [
-            8.4,
-            22.7,
+            8.5,
+            22.8,
             34.9
           ]
         },
         {
           "name": "Damien Parolin",
           "party": "ONP",
-          "win_probability": 9.4,
+          "win_probability": 9.2,
           "fp": [
-            6.8,
-            15.7,
-            31.4
+            6.7,
+            15.6,
+            31.3
           ]
         },
         {
@@ -6850,7 +6850,7 @@
           "fp": [
             2.1,
             7.0,
-            24.7
+            24.8
           ]
         }
       ],
@@ -6860,7 +6860,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 58.7,
+          "probability": 59.0,
           "share": [
             40.1,
             47.8,
@@ -6884,9 +6884,9 @@
             "LIB",
             "ONP"
           ],
-          "probability": 11.6,
+          "probability": 11.5,
           "share": [
-            42.9,
+            43.0,
             55.9,
             66.5
           ]
@@ -6896,11 +6896,11 @@
             "ALP",
             "ONP"
           ],
-          "probability": 10.1,
+          "probability": 10.0,
           "share": [
-            37.0,
-            47.9,
-            59.4
+            37.1,
+            48.0,
+            59.5
           ]
         },
         {
@@ -6922,7 +6922,7 @@
           ],
           "probability": 1.0,
           "share": [
-            34.9,
+            35.0,
             45.2,
             56.1
           ]
@@ -6959,7 +6959,7 @@
           "party": "LIB",
           "win_probability": 97.9,
           "fp": [
-            36.2,
+            36.3,
             50.4,
             61.0
           ]
@@ -6971,7 +6971,7 @@
           "fp": [
             4.7,
             11.0,
-            27.0
+            26.9
           ]
         },
         {
@@ -6989,7 +6989,7 @@
           "party": "GRN",
           "win_probability": 0.2,
           "fp": [
-            8.2,
+            8.1,
             15.2,
             25.3
           ]
@@ -7035,7 +7035,7 @@
           ],
           "probability": 51.5,
           "share": [
-            57.7,
+            57.8,
             67.3,
             74.9
           ]
@@ -7045,11 +7045,11 @@
             "LIB",
             "ONP"
           ],
-          "probability": 21.3,
+          "probability": 21.1,
           "share": [
-            50.9,
+            51.0,
             65.5,
-            74.9
+            75.0
           ]
         },
         {
@@ -7057,7 +7057,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 19.6,
+          "probability": 19.7,
           "share": [
             28.2,
             35.2,
@@ -7069,7 +7069,7 @@
             "LIB",
             "IND"
           ],
-          "probability": 7.2,
+          "probability": 7.3,
           "share": [
             47.3,
             60.2,
@@ -7129,7 +7129,7 @@
           "win_probability": 1.5,
           "fp": [
             3.0,
-            18.7,
+            18.8,
             31.7
           ]
         },
@@ -7138,9 +7138,9 @@
           "party": "ONP",
           "win_probability": 1.1,
           "fp": [
-            5.6,
+            5.5,
             11.8,
-            21.2
+            21.1
           ]
         }
       ],
@@ -7148,7 +7148,7 @@
         {
           "label": "An emerging party",
           "party": "OTH",
-          "win_probability": 0.1,
+          "win_probability": 0.0,
           "fp": [
             0.0,
             0.0,
@@ -7172,7 +7172,7 @@
           "fp": [
             2.5,
             10.2,
-            26.4
+            26.5
           ]
         }
       ],
@@ -7182,7 +7182,7 @@
             "LIB",
             "GRN"
           ],
-          "probability": 49.0,
+          "probability": 49.2,
           "share": [
             31.7,
             40.0,
@@ -7206,11 +7206,11 @@
             "GRN",
             "ONP"
           ],
-          "probability": 7.4,
+          "probability": 7.3,
           "share": [
             43.6,
-            63.6,
-            73.1
+            63.7,
+            73.2
           ]
         },
         {
@@ -7220,7 +7220,7 @@
           ],
           "probability": 1.2,
           "share": [
-            55.8,
+            55.9,
             64.5,
             71.4
           ]
@@ -7234,7 +7234,7 @@
           "share": [
             43.5,
             53.8,
-            64.2
+            64.1
           ]
         },
         {
@@ -7246,7 +7246,7 @@
           "share": [
             41.0,
             53.4,
-            70.3
+            70.2
           ]
         }
       ]
@@ -7274,16 +7274,16 @@
       "winner_name": "Jarrod Bingham",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 61.3,
+      "win_probability": 61.5,
       "candidates": [
         {
           "name": "Jarrod Bingham",
           "party": "LIB",
-          "win_probability": 61.3,
+          "win_probability": 61.5,
           "fp": [
-            7.3,
-            28.6,
-            43.7
+            7.4,
+            28.7,
+            43.8
           ]
         },
         {
@@ -7299,11 +7299,11 @@
         {
           "name": "Matthew Katselis",
           "party": "ONP",
-          "win_probability": 16.2,
+          "win_probability": 16.0,
           "fp": [
-            8.9,
+            8.8,
             19.0,
-            35.8
+            35.6
           ]
         },
         {
@@ -7331,7 +7331,7 @@
         {
           "label": "An emerging independent",
           "party": "IND",
-          "win_probability": 1.3,
+          "win_probability": 1.4,
           "fp": [
             0.0,
             0.0,
@@ -7345,7 +7345,7 @@
           "fp": [
             3.3,
             13.6,
-            38.1
+            38.2
           ]
         }
       ],
@@ -7355,7 +7355,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 59.8,
+          "probability": 60.2,
           "share": [
             35.6,
             44.5,
@@ -7367,11 +7367,11 @@
             "ALP",
             "ONP"
           ],
-          "probability": 23.7,
+          "probability": 23.4,
           "share": [
-            36.9,
-            49.4,
-            63.0
+            37.0,
+            49.5,
+            63.1
           ]
         },
         {
@@ -7379,11 +7379,11 @@
             "LIB",
             "ONP"
           ],
-          "probability": 11.9,
+          "probability": 11.8,
           "share": [
-            39.9,
+            40.0,
             55.6,
-            67.3
+            67.4
           ]
         },
         {
@@ -7423,26 +7423,26 @@
       "winner_name": "Jade Benham",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 87.4,
+      "win_probability": 87.6,
       "candidates": [
         {
           "name": "Jade Benham",
           "party": "NAT",
-          "win_probability": 87.4,
+          "win_probability": 87.6,
           "fp": [
-            21.0,
-            39.8,
-            54.9
+            21.1,
+            39.9,
+            55.0
           ]
         },
         {
           "name": "Guy Cooper",
           "party": "ONP",
-          "win_probability": 12.1,
+          "win_probability": 11.9,
           "fp": [
             10.1,
-            21.4,
-            38.8
+            21.3,
+            38.6
           ]
         },
         {
@@ -7494,11 +7494,11 @@
             "ONP",
             "NAT"
           ],
-          "probability": 67.2,
+          "probability": 67.0,
           "share": [
             27.3,
-            39.5,
-            56.1
+            39.4,
+            56.0
           ]
         },
         {
@@ -7506,11 +7506,11 @@
             "ALP",
             "NAT"
           ],
-          "probability": 23.7,
+          "probability": 23.9,
           "share": [
             23.4,
             30.1,
-            38.5
+            38.4
           ]
         },
         {
@@ -7518,7 +7518,7 @@
             "GRN",
             "NAT"
           ],
-          "probability": 5.2,
+          "probability": 5.3,
           "share": [
             24.1,
             33.7,
@@ -7530,9 +7530,9 @@
             "ALP",
             "ONP"
           ],
-          "probability": 3.3,
+          "probability": 3.2,
           "share": [
-            27.9,
+            28.0,
             41.6,
             53.2
           ]
@@ -7562,15 +7562,15 @@
       "winner_name": "Joel Drysdale",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 45.8,
+      "win_probability": 45.9,
       "candidates": [
         {
           "name": "Joel Drysdale",
           "party": "LIB",
-          "win_probability": 45.8,
+          "win_probability": 45.9,
           "fp": [
-            6.3,
-            26.4,
+            6.5,
+            26.5,
             42.9
           ]
         },
@@ -7587,11 +7587,11 @@
         {
           "name": "Arthur Tsoutsoulis",
           "party": "ONP",
-          "win_probability": 11.5,
+          "win_probability": 11.3,
           "fp": [
             8.7,
-            19.1,
-            35.8
+            19.0,
+            35.7
           ]
         },
         {
@@ -7601,7 +7601,7 @@
           "fp": [
             4.6,
             8.4,
-            13.4
+            13.3
           ]
         }
       ],
@@ -7632,8 +7632,8 @@
           "win_probability": 0.0,
           "fp": [
             2.3,
-            9.2,
-            24.0
+            9.3,
+            24.1
           ]
         }
       ],
@@ -7643,9 +7643,9 @@
             "ALP",
             "LIB"
           ],
-          "probability": 61.3,
+          "probability": 61.7,
           "share": [
-            36.6,
+            36.5,
             47.3,
             58.5
           ]
@@ -7655,11 +7655,11 @@
             "ALP",
             "ONP"
           ],
-          "probability": 30.8,
+          "probability": 30.5,
           "share": [
             39.9,
             53.9,
-            67.0
+            67.1
           ]
         },
         {
@@ -7667,11 +7667,11 @@
             "LIB",
             "ONP"
           ],
-          "probability": 5.6,
+          "probability": 5.5,
           "share": [
             42.9,
             55.8,
-            67.1
+            67.2
           ]
         }
       ]
@@ -7699,22 +7699,22 @@
       "winner_name": "Clare Fitzmaurice",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 53.9,
+      "win_probability": 54.1,
       "candidates": [
         {
           "name": "Clare Fitzmaurice",
           "party": "LIB",
-          "win_probability": 53.9,
+          "win_probability": 54.1,
           "fp": [
-            12.1,
-            29.5,
+            12.2,
+            29.6,
             43.0
           ]
         },
         {
           "name": "Daniela De Martino",
           "party": "ALP",
-          "win_probability": 24.6,
+          "win_probability": 24.7,
           "fp": [
             8.7,
             23.2,
@@ -7724,11 +7724,11 @@
         {
           "name": "Adrian Dowell",
           "party": "ONP",
-          "win_probability": 15.5,
+          "win_probability": 15.2,
           "fp": [
             9.2,
-            19.0,
-            35.8
+            18.9,
+            35.7
           ]
         },
         {
@@ -7737,7 +7737,7 @@
           "win_probability": 5.9,
           "fp": [
             10.4,
-            17.1,
+            17.0,
             25.4
           ]
         }
@@ -7770,7 +7770,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 44.4,
+          "probability": 44.7,
           "share": [
             40.6,
             48.1,
@@ -7782,7 +7782,7 @@
             "LIB",
             "GRN"
           ],
-          "probability": 21.4,
+          "probability": 21.5,
           "share": [
             44.6,
             54.5,
@@ -7794,9 +7794,9 @@
             "ALP",
             "ONP"
           ],
-          "probability": 16.6,
+          "probability": 16.4,
           "share": [
-            38.0,
+            38.1,
             49.3,
             60.4
           ]
@@ -7806,10 +7806,10 @@
             "LIB",
             "ONP"
           ],
-          "probability": 11.0,
+          "probability": 10.9,
           "share": [
-            41.6,
-            54.1,
+            41.7,
+            54.2,
             64.0
           ]
         },
@@ -7818,9 +7818,9 @@
             "GRN",
             "ONP"
           ],
-          "probability": 4.5,
+          "probability": 4.4,
           "share": [
-            32.8,
+            32.9,
             44.7,
             54.7
           ]
@@ -7834,7 +7834,7 @@
           "share": [
             47.7,
             56.7,
-            65.0
+            65.1
           ]
         }
       ]
@@ -7862,22 +7862,22 @@
       "winner_name": "Paul O'Halloran",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 53.1,
+      "win_probability": 53.4,
       "candidates": [
         {
           "name": "Paul O'Halloran",
           "party": "LIB",
-          "win_probability": 53.1,
+          "win_probability": 53.4,
           "fp": [
-            10.1,
-            28.3,
-            42.4
+            10.2,
+            28.4,
+            42.5
           ]
         },
         {
           "name": "Tim Richardson",
           "party": "ALP",
-          "win_probability": 30.7,
+          "win_probability": 30.8,
           "fp": [
             14.1,
             28.4,
@@ -7887,11 +7887,11 @@
         {
           "name": "Nadia Ticehurst",
           "party": "ONP",
-          "win_probability": 15.1,
+          "win_probability": 14.9,
           "fp": [
             8.6,
-            19.1,
-            35.8
+            19.0,
+            35.6
           ]
         },
         {
@@ -7923,7 +7923,7 @@
           "fp": [
             2.5,
             9.5,
-            27.3
+            27.4
           ]
         }
       ],
@@ -7933,7 +7933,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 61.3,
+          "probability": 61.7,
           "share": [
             39.1,
             47.2,
@@ -7945,9 +7945,9 @@
             "ALP",
             "ONP"
           ],
-          "probability": 24.5,
+          "probability": 24.2,
           "share": [
-            38.2,
+            38.3,
             50.0,
             61.5
           ]
@@ -7957,11 +7957,11 @@
             "LIB",
             "ONP"
           ],
-          "probability": 8.4,
+          "probability": 8.3,
           "share": [
             42.0,
             54.7,
-            65.1
+            65.2
           ]
         },
         {
@@ -7971,9 +7971,9 @@
           ],
           "probability": 3.9,
           "share": [
-            45.6,
+            45.7,
             56.0,
-            66.0
+            66.1
           ]
         }
       ]
@@ -8001,14 +8001,14 @@
       "winner_name": "Chris Crewther",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 94.8,
+      "win_probability": 94.9,
       "candidates": [
         {
           "name": "Chris Crewther",
           "party": "LIB",
-          "win_probability": 94.8,
+          "win_probability": 94.9,
           "fp": [
-            32.2,
+            32.3,
             48.4,
             60.4
           ]
@@ -8016,11 +8016,11 @@
         {
           "name": "Ashli Beards",
           "party": "ONP",
-          "win_probability": 4.5,
+          "win_probability": 4.4,
           "fp": [
             9.0,
-            19.2,
-            36.0
+            19.1,
+            35.8
           ]
         },
         {
@@ -8049,7 +8049,7 @@
           "win_probability": 0.0,
           "fp": [
             4.9,
-            9.2,
+            9.1,
             15.1
           ]
         }
@@ -8092,10 +8092,10 @@
             "LIB",
             "ONP"
           ],
-          "probability": 60.4,
+          "probability": 60.0,
           "share": [
-            48.4,
-            65.0,
+            48.5,
+            65.1,
             75.4
           ]
         },
@@ -8104,7 +8104,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 15.9,
+          "probability": 16.1,
           "share": [
             28.4,
             34.8,
@@ -8116,11 +8116,11 @@
             "LIB",
             "IND"
           ],
-          "probability": 11.5,
+          "probability": 11.6,
           "share": [
             51.8,
             64.1,
-            73.0
+            73.1
           ]
         },
         {
@@ -8128,9 +8128,9 @@
             "LIB",
             "GRN"
           ],
-          "probability": 10.6,
+          "probability": 10.7,
           "share": [
-            62.4,
+            62.5,
             71.6,
             78.9
           ]
@@ -8160,26 +8160,26 @@
       "winner_name": "Martin Cameron",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 46.6,
+      "win_probability": 47.0,
       "candidates": [
         {
           "name": "Martin Cameron",
           "party": "NAT",
-          "win_probability": 46.6,
+          "win_probability": 47.0,
           "fp": [
             2.4,
-            22.8,
-            41.4
+            22.9,
+            41.5
           ]
         },
         {
           "name": "Casey Murphy",
           "party": "ONP",
-          "win_probability": 35.4,
+          "win_probability": 35.0,
           "fp": [
             12.1,
-            24.9,
-            43.1
+            24.8,
+            42.9
           ]
         },
         {
@@ -8221,7 +8221,7 @@
           "fp": [
             5.2,
             17.9,
-            34.1
+            34.2
           ]
         }
       ],
@@ -8231,9 +8231,9 @@
             "ALP",
             "ONP"
           ],
-          "probability": 46.0,
+          "probability": 45.6,
           "share": [
-            34.1,
+            34.2,
             47.2,
             61.0
           ]
@@ -8243,11 +8243,11 @@
             "ALP",
             "NAT"
           ],
-          "probability": 34.5,
+          "probability": 34.9,
           "share": [
             27.4,
             37.1,
-            48.1
+            48.2
           ]
         },
         {
@@ -8257,9 +8257,9 @@
           ],
           "probability": 18.5,
           "share": [
-            34.1,
+            34.0,
             46.2,
-            60.8
+            60.7
           ]
         }
       ]
@@ -8287,24 +8287,24 @@
       "winner_name": "Charles Tran",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 44.6,
+      "win_probability": 44.7,
       "candidates": [
         {
           "name": "Charles Tran",
           "party": "LIB",
-          "win_probability": 44.6,
+          "win_probability": 44.7,
           "fp": [
-            4.5,
-            22.6,
-            37.0
+            4.6,
+            22.7,
+            37.1
           ]
         },
         {
           "name": "Eden Foster",
           "party": "ALP",
-          "win_probability": 40.4,
+          "win_probability": 40.3,
           "fp": [
-            24.3,
+            24.4,
             36.1,
             47.2
           ]
@@ -8315,18 +8315,18 @@
           "win_probability": 11.8,
           "fp": [
             3.1,
-            12.2,
+            12.3,
             32.5
           ]
         },
         {
           "name": "Cody Rebbechi",
           "party": "ONP",
-          "win_probability": 3.1,
+          "win_probability": 3.0,
           "fp": [
             5.4,
-            12.7,
-            27.1
+            12.6,
+            27.0
           ]
         },
         {
@@ -8336,7 +8336,7 @@
           "fp": [
             3.3,
             6.5,
-            11.7
+            11.6
           ]
         }
       ],
@@ -8358,7 +8358,7 @@
           "fp": [
             1.8,
             4.9,
-            17.8
+            17.9
           ]
         }
       ],
@@ -8368,7 +8368,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 59.9,
+          "probability": 60.1,
           "share": [
             38.0,
             46.6,
@@ -8392,10 +8392,10 @@
             "ALP",
             "ONP"
           ],
-          "probability": 15.4,
+          "probability": 15.2,
           "share": [
             44.0,
-            56.6,
+            56.7,
             67.9
           ]
         },
@@ -8436,26 +8436,26 @@
       "winner_name": "Brett Hosking",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 91.6,
+      "win_probability": 91.8,
       "candidates": [
         {
           "name": "Brett Hosking",
           "party": "NAT",
-          "win_probability": 91.6,
+          "win_probability": 91.8,
           "fp": [
-            34.7,
-            52.8,
-            66.9
+            34.9,
+            52.9,
+            67.0
           ]
         },
         {
           "name": "Garner Smith",
           "party": "ONP",
-          "win_probability": 8.4,
+          "win_probability": 8.1,
           "fp": [
-            12.7,
-            25.8,
-            44.3
+            12.6,
+            25.7,
+            44.1
           ]
         },
         {
@@ -8497,7 +8497,7 @@
           "fp": [
             2.7,
             9.4,
-            23.2
+            23.3
           ]
         }
       ],
@@ -8507,11 +8507,11 @@
             "ONP",
             "NAT"
           ],
-          "probability": 94.9,
+          "probability": 94.8,
           "share": [
-            21.9,
-            34.9,
-            53.5
+            21.8,
+            34.7,
+            53.3
           ]
         },
         {
@@ -8519,11 +8519,11 @@
             "ALP",
             "NAT"
           ],
-          "probability": 3.3,
+          "probability": 3.4,
           "share": [
             18.8,
             25.1,
-            35.2
+            35.1
           ]
         },
         {
@@ -8563,26 +8563,26 @@
       "winner_name": "Wayne Farnham",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 84.1,
+      "win_probability": 84.4,
       "candidates": [
         {
           "name": "Wayne Farnham",
           "party": "LIB",
-          "win_probability": 84.1,
+          "win_probability": 84.4,
           "fp": [
-            24.9,
-            42.6,
-            55.5
+            25.0,
+            42.7,
+            55.6
           ]
         },
         {
           "name": "Ben Lucas",
           "party": "ONP",
-          "win_probability": 15.4,
+          "win_probability": 15.1,
           "fp": [
-            12.1,
-            24.4,
-            42.7
+            12.0,
+            24.3,
+            42.5
           ]
         },
         {
@@ -8634,11 +8634,11 @@
             "LIB",
             "ONP"
           ],
-          "probability": 69.4,
+          "probability": 69.1,
           "share": [
-            40.9,
-            58.5,
-            70.0
+            41.0,
+            58.6,
+            70.1
           ]
         },
         {
@@ -8646,9 +8646,9 @@
             "LIB",
             "GRN"
           ],
-          "probability": 27.1,
+          "probability": 27.4,
           "share": [
-            55.2,
+            55.3,
             65.2,
             73.1
           ]
@@ -8658,10 +8658,10 @@
             "GRN",
             "ONP"
           ],
-          "probability": 1.7,
+          "probability": 1.6,
           "share": [
-            22.3,
-            34.4,
+            22.4,
+            34.5,
             47.9
           ]
         }
@@ -8705,21 +8705,21 @@
         {
           "name": "Shemane Nathanielsz",
           "party": "LIB",
-          "win_probability": 40.6,
+          "win_probability": 40.8,
           "fp": [
-            6.3,
-            25.0,
-            39.7
+            6.4,
+            25.1,
+            39.8
           ]
         },
         {
           "name": "Sebastian Crutchfield",
           "party": "ONP",
-          "win_probability": 12.0,
+          "win_probability": 11.9,
           "fp": [
-            8.8,
-            19.1,
-            35.8
+            8.7,
+            19.0,
+            35.7
           ]
         },
         {
@@ -8751,7 +8751,7 @@
           "fp": [
             2.7,
             10.3,
-            26.1
+            26.2
           ]
         }
       ],
@@ -8761,7 +8761,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 61.7,
+          "probability": 62.1,
           "share": [
             39.9,
             48.5,
@@ -8773,10 +8773,10 @@
             "ALP",
             "ONP"
           ],
-          "probability": 34.1,
+          "probability": 33.8,
           "share": [
-            40.4,
-            53.6,
+            40.5,
+            53.7,
             65.4
           ]
         },
@@ -8785,11 +8785,11 @@
             "LIB",
             "ONP"
           ],
-          "probability": 3.2,
+          "probability": 3.1,
           "share": [
-            41.2,
+            41.3,
             54.3,
-            64.1
+            64.2
           ]
         }
       ]
@@ -8817,15 +8817,15 @@
       "winner_name": "Norliah Peterson",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 50.2,
+      "win_probability": 50.4,
       "candidates": [
         {
           "name": "Norliah Peterson",
           "party": "LIB",
-          "win_probability": 50.2,
+          "win_probability": 50.4,
           "fp": [
-            7.8,
-            26.7,
+            7.9,
+            26.8,
             41.4
           ]
         },
@@ -8834,7 +8834,7 @@
           "party": "ALP",
           "win_probability": 36.8,
           "fp": [
-            20.8,
+            20.9,
             34.1,
             46.3
           ]
@@ -8842,11 +8842,11 @@
         {
           "name": "Trevor Hammond",
           "party": "ONP",
-          "win_probability": 12.3,
+          "win_probability": 12.1,
           "fp": [
-            8.8,
-            19.0,
-            35.8
+            8.7,
+            18.9,
+            35.7
           ]
         },
         {
@@ -8888,7 +8888,7 @@
           "fp": [
             2.4,
             9.6,
-            24.7
+            24.8
           ]
         }
       ],
@@ -8898,10 +8898,10 @@
             "ALP",
             "LIB"
           ],
-          "probability": 64.4,
+          "probability": 64.8,
           "share": [
             38.2,
-            46.8,
+            46.9,
             55.8
           ]
         },
@@ -8910,7 +8910,7 @@
             "ALP",
             "ONP"
           ],
-          "probability": 30.1,
+          "probability": 29.8,
           "share": [
             39.9,
             52.5,
@@ -8924,9 +8924,9 @@
           ],
           "probability": 3.8,
           "share": [
-            42.1,
+            42.2,
             54.7,
-            64.8
+            64.9
           ]
         }
       ]
@@ -8954,26 +8954,26 @@
       "winner_name": "Anthony Marsh",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 91.1,
+      "win_probability": 91.3,
       "candidates": [
         {
           "name": "Anthony Marsh",
           "party": "LIB",
-          "win_probability": 91.1,
+          "win_probability": 91.3,
           "fp": [
-            25.3,
-            42.4,
-            55.7
+            25.4,
+            42.5,
+            55.8
           ]
         },
         {
           "name": "Darren Hercus",
           "party": "ONP",
-          "win_probability": 7.7,
+          "win_probability": 7.5,
           "fp": [
-            8.5,
-            19.2,
-            36.0
+            8.4,
+            19.1,
+            35.8
           ]
         },
         {
@@ -8982,7 +8982,7 @@
           "win_probability": 0.6,
           "fp": [
             1.1,
-            6.4,
+            6.5,
             14.0
           ]
         },
@@ -8991,7 +8991,7 @@
           "party": "ALP",
           "win_probability": 0.3,
           "fp": [
-            2.5,
+            2.6,
             14.5,
             25.7
           ]
@@ -9002,8 +9002,8 @@
           "win_probability": 0.0,
           "fp": [
             4.6,
-            8.8,
-            14.3
+            8.7,
+            14.2
           ]
         }
       ],
@@ -9045,11 +9045,11 @@
             "LIB",
             "ONP"
           ],
-          "probability": 49.0,
+          "probability": 48.7,
           "share": [
-            46.0,
-            61.5,
-            72.9
+            46.1,
+            61.6,
+            73.0
           ]
         },
         {
@@ -9057,7 +9057,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 34.5,
+          "probability": 34.7,
           "share": [
             27.1,
             34.1,
@@ -9072,8 +9072,8 @@
           "probability": 7.1,
           "share": [
             57.5,
-            68.1,
-            76.2
+            68.2,
+            76.3
           ]
         },
         {
@@ -9097,7 +9097,7 @@
           "share": [
             30.3,
             41.7,
-            51.6
+            51.7
           ]
         }
       ]
@@ -9125,15 +9125,15 @@
       "winner_name": "Samantha Byrne",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 65.8,
+      "win_probability": 66.1,
       "candidates": [
         {
           "name": "Samantha Byrne",
           "party": "LIB",
-          "win_probability": 65.8,
+          "win_probability": 66.1,
           "fp": [
-            13.5,
-            31.4,
+            13.6,
+            31.5,
             44.8
           ]
         },
@@ -9150,11 +9150,11 @@
         {
           "name": "Jason Taverna",
           "party": "ONP",
-          "win_probability": 14.6,
+          "win_probability": 14.3,
           "fp": [
-            8.7,
-            19.1,
-            35.9
+            8.6,
+            19.0,
+            35.7
           ]
         },
         {
@@ -9196,7 +9196,7 @@
           "fp": [
             2.8,
             11.0,
-            28.6
+            28.7
           ]
         }
       ],
@@ -9206,7 +9206,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 65.5,
+          "probability": 65.8,
           "share": [
             38.1,
             45.7,
@@ -9218,10 +9218,10 @@
             "ALP",
             "ONP"
           ],
-          "probability": 17.8,
+          "probability": 17.6,
           "share": [
-            36.3,
-            47.5,
+            36.4,
+            47.6,
             59.6
           ]
         },
@@ -9230,11 +9230,11 @@
             "LIB",
             "ONP"
           ],
-          "probability": 13.6,
+          "probability": 13.5,
           "share": [
-            42.1,
-            55.5,
-            66.1
+            42.2,
+            55.6,
+            66.2
           ]
         },
         {
@@ -9246,7 +9246,7 @@
           "share": [
             47.3,
             58.7,
-            68.7
+            68.8
           ]
         }
       ]
@@ -9274,12 +9274,12 @@
       "winner_name": "Campbell Gome",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 72.3,
+      "win_probability": 72.2,
       "candidates": [
         {
           "name": "Campbell Gome",
           "party": "GRN",
-          "win_probability": 72.3,
+          "win_probability": 72.2,
           "fp": [
             22.1,
             36.1,
@@ -9289,9 +9289,9 @@
         {
           "name": "Kat Theophanous",
           "party": "ALP",
-          "win_probability": 24.7,
+          "win_probability": 24.8,
           "fp": [
-            3.8,
+            3.9,
             23.0,
             40.2
           ]
@@ -9302,8 +9302,8 @@
           "win_probability": 1.5,
           "fp": [
             5.6,
-            12.1,
-            22.7
+            12.0,
+            22.6
           ]
         },
         {
@@ -9343,7 +9343,7 @@
           "party": "OTH",
           "win_probability": 0.0,
           "fp": [
-            2.8,
+            2.9,
             11.5,
             30.0
           ]
@@ -9355,11 +9355,11 @@
             "ALP",
             "GRN"
           ],
-          "probability": 54.7,
+          "probability": 54.8,
           "share": [
-            34.9,
-            47.9,
-            59.7
+            35.0,
+            48.0,
+            59.8
           ]
         },
         {
@@ -9379,11 +9379,11 @@
             "GRN",
             "ONP"
           ],
-          "probability": 9.9,
+          "probability": 9.7,
           "share": [
             45.8,
             64.5,
-            74.9
+            75.0
           ]
         },
         {
@@ -9393,7 +9393,7 @@
           ],
           "probability": 2.6,
           "share": [
-            43.2,
+            43.3,
             55.7,
             65.9
           ]
@@ -9407,7 +9407,7 @@
           "share": [
             37.8,
             51.7,
-            69.8
+            69.9
           ]
         },
         {
@@ -9447,22 +9447,22 @@
       "winner_name": "Steve Dimopoulos",
       "runner_up": "LIB",
       "winner_2cp": null,
-      "win_probability": 52.3,
+      "win_probability": 52.4,
       "candidates": [
         {
           "name": "Steve Dimopoulos",
           "party": "ALP",
-          "win_probability": 52.3,
+          "win_probability": 52.4,
           "fp": [
-            15.5,
+            15.6,
             28.9,
-            41.1
+            41.2
           ]
         },
         {
           "name": "Martin Jung",
           "party": "LIB",
-          "win_probability": 37.1,
+          "win_probability": 37.2,
           "fp": [
             18.1,
             32.1,
@@ -9482,11 +9482,11 @@
         {
           "name": "Brooke Carter",
           "party": "ONP",
-          "win_probability": 3.6,
+          "win_probability": 3.5,
           "fp": [
             5.3,
-            11.7,
-            27.1
+            11.6,
+            26.9
           ]
         }
       ],
@@ -9508,7 +9508,7 @@
           "fp": [
             1.7,
             6.4,
-            16.5
+            16.6
           ]
         }
       ],
@@ -9518,7 +9518,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 68.1,
+          "probability": 68.3,
           "share": [
             44.1,
             51.9,
@@ -9532,8 +9532,8 @@
           ],
           "probability": 18.7,
           "share": [
-            42.8,
-            52.1,
+            42.9,
+            52.2,
             61.4
           ]
         },
@@ -9542,9 +9542,9 @@
             "ALP",
             "ONP"
           ],
-          "probability": 7.3,
+          "probability": 7.2,
           "share": [
-            40.6,
+            40.7,
             51.8,
             63.0
           ]
@@ -9568,9 +9568,9 @@
           ],
           "probability": 1.9,
           "share": [
-            43.5,
-            55.0,
-            64.3
+            43.6,
+            55.1,
+            64.4
           ]
         }
       ]
@@ -9598,26 +9598,26 @@
       "winner_name": "Tim McCurdy",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 86.8,
+      "win_probability": 87.1,
       "candidates": [
         {
           "name": "Tim McCurdy",
           "party": "NAT",
-          "win_probability": 86.8,
+          "win_probability": 87.1,
           "fp": [
-            29.8,
-            46.9,
+            29.9,
+            47.0,
             60.2
           ]
         },
         {
           "name": "James Rouel",
           "party": "ONP",
-          "win_probability": 12.8,
+          "win_probability": 12.5,
           "fp": [
-            12.6,
-            25.8,
-            44.2
+            12.5,
+            25.7,
+            44.0
           ]
         },
         {
@@ -9636,7 +9636,7 @@
           "win_probability": 0.0,
           "fp": [
             0.3,
-            2.9,
+            3.0,
             12.7
           ]
         },
@@ -9679,11 +9679,11 @@
             "ONP",
             "NAT"
           ],
-          "probability": 88.2,
+          "probability": 88.0,
           "share": [
             25.6,
-            38.3,
-            56.9
+            38.2,
+            56.7
           ]
         },
         {
@@ -9691,11 +9691,11 @@
             "IND",
             "NAT"
           ],
-          "probability": 6.5,
+          "probability": 6.6,
           "share": [
-            25.6,
-            35.2,
-            50.0
+            25.5,
+            35.1,
+            49.9
           ]
         },
         {
@@ -9707,7 +9707,7 @@
           "share": [
             19.7,
             26.4,
-            35.9
+            35.8
           ]
         },
         {
@@ -9747,46 +9747,46 @@
       "winner_name": "Radmila Dyson",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 87.4,
+      "win_probability": 68.9,
       "candidates": [
         {
           "name": "Radmila Dyson",
           "party": "LIB",
-          "win_probability": 87.4,
+          "win_probability": 68.9,
           "fp": [
-            16.2,
-            38.7,
-            52.9
+            10.5,
+            32.1,
+            47.7
           ]
         },
         {
           "name": "Warren Pickering",
           "party": "ONP",
-          "win_probability": 7.6,
+          "win_probability": 26.6,
           "fp": [
-            6.9,
-            15.0,
-            30.3
+            12.9,
+            24.0,
+            39.9
           ]
         },
         {
           "name": "Alessandra Soliven",
           "party": "ALP",
-          "win_probability": 2.3,
+          "win_probability": 2.6,
           "fp": [
-            1.3,
-            17.3,
-            30.5
+            0.8,
+            15.0,
+            28.5
           ]
         },
         {
           "name": "Nasser Yawari",
           "party": "GRN",
-          "win_probability": 0.9,
+          "win_probability": 0.4,
           "fp": [
-            4.8,
-            8.9,
-            14.2
+            5.8,
+            9.7,
+            14.5
           ]
         }
       ],
@@ -9804,7 +9804,7 @@
         {
           "label": "An emerging independent",
           "party": "IND",
-          "win_probability": 1.7,
+          "win_probability": 1.5,
           "fp": [
             0.0,
             0.0,
@@ -9816,35 +9816,47 @@
           "party": "OTH",
           "win_probability": 0.0,
           "fp": [
-            4.0,
-            16.2,
-            46.6
+            3.8,
+            15.5,
+            42.3
           ]
         }
       ],
       "two_cp": [
         {
           "parties": [
-            "ALP",
-            "LIB"
+            "LIB",
+            "ONP"
           ],
-          "probability": 50.5,
+          "probability": 54.1,
           "share": [
-            30.4,
-            38.5,
-            48.0
+            39.6,
+            55.8,
+            67.9
           ]
         },
         {
           "parties": [
-            "LIB",
+            "ALP",
+            "LIB"
+          ],
+          "probability": 23.8,
+          "share": [
+            31.8,
+            39.5,
+            48.2
+          ]
+        },
+        {
+          "parties": [
+            "ALP",
             "ONP"
           ],
-          "probability": 26.9,
+          "probability": 11.7,
           "share": [
-            43.6,
-            60.5,
-            72.2
+            31.7,
+            43.5,
+            55.0
           ]
         },
         {
@@ -9852,35 +9864,11 @@
             "LIB",
             "GRN"
           ],
-          "probability": 14.1,
+          "probability": 4.8,
           "share": [
-            51.1,
-            64.2,
-            73.6
-          ]
-        },
-        {
-          "parties": [
-            "ALP",
-            "ONP"
-          ],
-          "probability": 3.6,
-          "share": [
-            33.2,
-            45.4,
-            58.7
-          ]
-        },
-        {
-          "parties": [
-            "IND",
-            "LIB"
-          ],
-          "probability": 2.2,
-          "share": [
-            38.6,
-            51.3,
-            67.0
+            51.0,
+            62.4,
+            71.8
           ]
         },
         {
@@ -9888,11 +9876,23 @@
             "GRN",
             "ONP"
           ],
-          "probability": 1.6,
+          "probability": 2.9,
           "share": [
-            25.1,
-            41.3,
-            56.6
+            22.2,
+            36.0,
+            50.6
+          ]
+        },
+        {
+          "parties": [
+            "IND",
+            "LIB"
+          ],
+          "probability": 1.2,
+          "share": [
+            40.2,
+            52.1,
+            64.8
           ]
         }
       ]
@@ -9935,31 +9935,31 @@
         {
           "name": "Anthony Cianflone",
           "party": "ALP",
-          "win_probability": 37.7,
+          "win_probability": 37.9,
           "fp": [
             5.3,
-            22.8,
+            22.9,
             37.7
           ]
         },
         {
           "name": "Rosemarie Pauline Ganci",
           "party": "ONP",
-          "win_probability": 15.2,
+          "win_probability": 14.9,
           "fp": [
             9.1,
-            17.6,
-            35.8
+            17.5,
+            35.6
           ]
         },
         {
           "name": "Rohit Taggar",
           "party": "LIB",
-          "win_probability": 8.2,
+          "win_probability": 8.3,
           "fp": [
-            4.8,
+            4.9,
             20.5,
-            33.0
+            33.1
           ]
         }
       ],
@@ -9991,7 +9991,7 @@
             "LIB",
             "GRN"
           ],
-          "probability": 32.8,
+          "probability": 33.0,
           "share": [
             37.4,
             45.7,
@@ -10003,7 +10003,7 @@
             "ALP",
             "GRN"
           ],
-          "probability": 19.2,
+          "probability": 19.3,
           "share": [
             43.0,
             53.8,
@@ -10015,9 +10015,9 @@
             "GRN",
             "ONP"
           ],
-          "probability": 17.0,
+          "probability": 16.7,
           "share": [
-            36.9,
+            37.0,
             49.3,
             63.6
           ]
@@ -10027,11 +10027,11 @@
             "ALP",
             "ONP"
           ],
-          "probability": 15.7,
+          "probability": 15.6,
           "share": [
-            41.8,
+            41.9,
             52.9,
-            62.6
+            62.7
           ]
         },
         {
@@ -10039,7 +10039,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 13.0,
+          "probability": 13.1,
           "share": [
             55.8,
             63.3,
@@ -10083,16 +10083,16 @@
       "winner_name": "Raja Reddy",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 47.2,
+      "win_probability": 47.4,
       "candidates": [
         {
           "name": "Raja Reddy",
           "party": "LIB",
-          "win_probability": 47.2,
+          "win_probability": 47.4,
           "fp": [
-            8.5,
-            27.5,
-            41.8
+            8.6,
+            27.6,
+            41.9
           ]
         },
         {
@@ -10102,17 +10102,17 @@
           "fp": [
             14.6,
             30.0,
-            43.1
+            43.2
           ]
         },
         {
           "name": "Cameron Reid",
           "party": "ONP",
-          "win_probability": 14.9,
+          "win_probability": 14.6,
           "fp": [
             9.0,
-            19.1,
-            35.8
+            19.0,
+            35.6
           ]
         },
         {
@@ -10154,7 +10154,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 62.3,
+          "probability": 62.7,
           "share": [
             39.9,
             48.3,
@@ -10166,11 +10166,11 @@
             "ALP",
             "ONP"
           ],
-          "probability": 26.2,
+          "probability": 25.9,
           "share": [
             38.0,
-            50.8,
-            63.1
+            50.9,
+            63.2
           ]
         },
         {
@@ -10178,11 +10178,11 @@
             "LIB",
             "ONP"
           ],
-          "probability": 8.6,
+          "probability": 8.5,
           "share": [
-            40.4,
-            54.7,
-            65.4
+            40.5,
+            54.8,
+            65.5
           ]
         },
         {
@@ -10192,9 +10192,9 @@
           ],
           "probability": 1.4,
           "share": [
-            46.4,
+            46.5,
             57.4,
-            67.7
+            67.8
           ]
         }
       ]
@@ -10222,26 +10222,26 @@
       "winner_name": "Richard Riordan",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 68.2,
+      "win_probability": 68.7,
       "candidates": [
         {
           "name": "Richard Riordan",
           "party": "LIB",
-          "win_probability": 68.2,
+          "win_probability": 68.7,
           "fp": [
-            15.7,
-            33.9,
-            48.1
+            15.8,
+            34.0,
+            48.2
           ]
         },
         {
           "name": "Anna Malcolm",
           "party": "ONP",
-          "win_probability": 27.7,
+          "win_probability": 27.3,
           "fp": [
-            11.6,
-            25.8,
-            44.3
+            11.5,
+            25.7,
+            44.1
           ]
         },
         {
@@ -10250,7 +10250,7 @@
           "win_probability": 2.3,
           "fp": [
             10.0,
-            16.6,
+            16.5,
             25.8
           ]
         },
@@ -10260,7 +10260,7 @@
           "win_probability": 1.7,
           "fp": [
             1.4,
-            13.9,
+            14.0,
             26.7
           ]
         }
@@ -10283,7 +10283,7 @@
           "fp": [
             2.0,
             7.6,
-            20.3
+            20.4
           ]
         }
       ],
@@ -10293,11 +10293,11 @@
             "LIB",
             "ONP"
           ],
-          "probability": 46.1,
+          "probability": 45.9,
           "share": [
-            39.6,
-            54.3,
-            65.4
+            39.7,
+            54.4,
+            65.5
           ]
         },
         {
@@ -10305,11 +10305,11 @@
             "LIB",
             "GRN"
           ],
-          "probability": 23.4,
+          "probability": 23.6,
           "share": [
             48.2,
-            58.4,
-            67.3
+            58.5,
+            67.4
           ]
         },
         {
@@ -10317,7 +10317,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 14.6,
+          "probability": 14.8,
           "share": [
             34.5,
             41.0,
@@ -10329,9 +10329,9 @@
             "ALP",
             "ONP"
           ],
-          "probability": 9.9,
+          "probability": 9.8,
           "share": [
-            31.0,
+            31.1,
             42.8,
             52.8
           ]
@@ -10341,10 +10341,10 @@
             "GRN",
             "ONP"
           ],
-          "probability": 5.6,
+          "probability": 5.5,
           "share": [
-            29.0,
-            40.3,
+            29.1,
+            40.4,
             50.5
           ]
         }
@@ -10388,21 +10388,21 @@
         {
           "name": "Rachel Westaway",
           "party": "LIB",
-          "win_probability": 22.8,
+          "win_probability": 22.9,
           "fp": [
-            11.8,
-            30.2,
-            43.3
+            11.9,
+            30.3,
+            43.4
           ]
         },
         {
           "name": "Shaun Virsu",
           "party": "ONP",
-          "win_probability": 2.1,
+          "win_probability": 2.0,
           "fp": [
             5.1,
-            11.0,
-            20.5
+            10.9,
+            20.4
           ]
         },
         {
@@ -10454,7 +10454,7 @@
             "LIB",
             "GRN"
           ],
-          "probability": 86.7,
+          "probability": 86.8,
           "share": [
             33.1,
             45.3,
@@ -10478,10 +10478,10 @@
             "GRN",
             "ONP"
           ],
-          "probability": 3.9,
+          "probability": 3.8,
           "share": [
             37.6,
-            59.1,
+            59.0,
             75.5
           ]
         },
@@ -10522,12 +10522,12 @@
       "winner_name": "Nathan Lambert",
       "runner_up": "GRN",
       "winner_2cp": null,
-      "win_probability": 63.9,
+      "win_probability": 64.1,
       "candidates": [
         {
           "name": "Nathan Lambert",
           "party": "ALP",
-          "win_probability": 63.9,
+          "win_probability": 64.1,
           "fp": [
             9.7,
             27.8,
@@ -10537,10 +10537,10 @@
         {
           "name": "Loki Sangarya",
           "party": "GRN",
-          "win_probability": 19.5,
+          "win_probability": 19.4,
           "fp": [
             11.8,
-            19.4,
+            19.3,
             27.8
           ]
         },
@@ -10549,7 +10549,7 @@
           "party": "LIB",
           "win_probability": 7.8,
           "fp": [
-            3.3,
+            3.4,
             20.8,
             33.4
           ]
@@ -10557,11 +10557,11 @@
         {
           "name": "Franco Guardiani",
           "party": "ONP",
-          "win_probability": 5.9,
+          "win_probability": 5.8,
           "fp": [
             6.3,
             13.6,
-            27.0
+            26.9
           ]
         }
       ],
@@ -10579,7 +10579,7 @@
         {
           "label": "An emerging independent",
           "party": "IND",
-          "win_probability": 2.7,
+          "win_probability": 2.8,
           "fp": [
             0.0,
             0.0,
@@ -10603,7 +10603,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 38.5,
+          "probability": 38.8,
           "share": [
             53.3,
             60.9,
@@ -10639,7 +10639,7 @@
             "ALP",
             "ONP"
           ],
-          "probability": 9.9,
+          "probability": 9.8,
           "share": [
             43.8,
             55.2,
@@ -10651,7 +10651,7 @@
             "GRN",
             "ONP"
           ],
-          "probability": 7.1,
+          "probability": 7.0,
           "share": [
             37.7,
             50.6,
@@ -10732,9 +10732,9 @@
           "party": "ONP",
           "win_probability": 1.3,
           "fp": [
-            5.5,
-            11.7,
-            21.0
+            5.4,
+            11.6,
+            20.9
           ]
         }
       ],
@@ -10788,7 +10788,7 @@
             "LIB",
             "GRN"
           ],
-          "probability": 44.2,
+          "probability": 44.3,
           "share": [
             32.5,
             40.6,
@@ -10800,11 +10800,11 @@
             "GRN",
             "ONP"
           ],
-          "probability": 6.1,
+          "probability": 5.9,
           "share": [
             41.9,
-            62.8,
-            72.3
+            62.9,
+            72.4
           ]
         },
         {
@@ -10826,9 +10826,9 @@
           ],
           "probability": 1.6,
           "share": [
-            43.8,
+            43.7,
             53.9,
-            64.1
+            64.0
           ]
         }
       ]
@@ -10856,16 +10856,16 @@
       "winner_name": "Nick McGowan",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 54.9,
+      "win_probability": 55.1,
       "candidates": [
         {
           "name": "Nick McGowan",
           "party": "LIB",
-          "win_probability": 54.9,
+          "win_probability": 55.1,
           "fp": [
-            11.7,
-            29.5,
-            43.9
+            11.8,
+            29.6,
+            44.0
           ]
         },
         {
@@ -10881,11 +10881,11 @@
         {
           "name": "John O'Connor",
           "party": "ONP",
-          "win_probability": 15.2,
+          "win_probability": 14.9,
           "fp": [
             8.0,
-            19.0,
-            35.8
+            18.9,
+            35.7
           ]
         },
         {
@@ -10937,7 +10937,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 41.3,
+          "probability": 41.6,
           "share": [
             39.3,
             47.4,
@@ -10949,9 +10949,9 @@
             "ALP",
             "ONP"
           ],
-          "probability": 16.7,
+          "probability": 16.5,
           "share": [
-            36.8,
+            36.9,
             48.4,
             60.3
           ]
@@ -10973,9 +10973,9 @@
             "LIB",
             "ONP"
           ],
-          "probability": 15.1,
+          "probability": 15.0,
           "share": [
-            42.3,
+            42.4,
             55.1,
             65.7
           ]
@@ -10985,10 +10985,10 @@
             "LIB",
             "IND"
           ],
-          "probability": 4.4,
+          "probability": 4.5,
           "share": [
             33.0,
-            45.7,
+            45.8,
             58.3
           ]
         },
@@ -10997,9 +10997,9 @@
             "ALP",
             "IND"
           ],
-          "probability": 2.1,
+          "probability": 2.2,
           "share": [
-            31.7,
+            31.6,
             43.8,
             56.0
           ]
@@ -11009,11 +11009,11 @@
             "IND",
             "ONP"
           ],
-          "probability": 1.8,
+          "probability": 1.7,
           "share": [
-            40.2,
+            40.4,
             55.4,
-            68.7
+            68.6
           ]
         },
         {
@@ -11023,7 +11023,7 @@
           ],
           "probability": 1.4,
           "share": [
-            31.7,
+            31.8,
             43.2,
             53.1
           ]
@@ -11035,9 +11035,9 @@
           ],
           "probability": 1.0,
           "share": [
-            48.4,
+            48.5,
             57.4,
-            66.6
+            66.5
           ]
         }
       ]
@@ -11065,34 +11065,34 @@
       "winner_name": "Megan Read",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 41.9,
+      "win_probability": 42.2,
       "candidates": [
         {
           "name": "Megan Read",
           "party": "LIB",
-          "win_probability": 41.9,
+          "win_probability": 42.2,
           "fp": [
-            4.7,
-            18.2,
-            32.9
+            4.8,
+            18.3,
+            33.0
           ]
         },
         {
           "name": "Donna Buxton",
           "party": "ONP",
-          "win_probability": 32.2,
+          "win_probability": 31.8,
           "fp": [
-            12.6,
-            25.7,
-            44.2
+            12.5,
+            25.6,
+            44.0
           ]
         },
         {
           "name": "Martha Haylett",
           "party": "ALP",
-          "win_probability": 12.9,
+          "win_probability": 13.0,
           "fp": [
-            7.3,
+            7.4,
             23.7,
             36.8
           ]
@@ -11100,9 +11100,9 @@
         {
           "name": "Jo Armstrong",
           "party": "NAT",
-          "win_probability": 10.6,
+          "win_probability": 10.7,
           "fp": [
-            1.6,
+            1.7,
             8.4,
             22.3
           ]
@@ -11156,7 +11156,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 29.7,
+          "probability": 30.1,
           "share": [
             39.5,
             46.3,
@@ -11168,7 +11168,7 @@
             "ALP",
             "ONP"
           ],
-          "probability": 27.6,
+          "probability": 27.3,
           "share": [
             32.7,
             44.4,
@@ -11180,11 +11180,11 @@
             "LIB",
             "ONP"
           ],
-          "probability": 24.3,
+          "probability": 24.2,
           "share": [
-            38.9,
+            39.0,
             53.9,
-            64.9
+            65.0
           ]
         },
         {
@@ -11192,7 +11192,7 @@
             "ALP",
             "NAT"
           ],
-          "probability": 7.2,
+          "probability": 7.3,
           "share": [
             39.7,
             46.4,
@@ -11208,7 +11208,7 @@
           "share": [
             35.1,
             46.0,
-            61.2
+            61.1
           ]
         },
         {
@@ -11218,9 +11218,9 @@
           ],
           "probability": 1.5,
           "share": [
-            39.4,
-            55.5,
-            72.5
+            39.5,
+            55.6,
+            72.6
           ]
         }
       ]
@@ -11248,26 +11248,26 @@
       "winner_name": "Max Williams",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 84.3,
+      "win_probability": 84.5,
       "candidates": [
         {
           "name": "Max Williams",
           "party": "LIB",
-          "win_probability": 84.3,
+          "win_probability": 84.5,
           "fp": [
-            18.8,
-            36.5,
-            50.2
+            18.9,
+            36.6,
+            50.3
           ]
         },
         {
           "name": "Bradley Watt",
           "party": "ONP",
-          "win_probability": 11.7,
+          "win_probability": 11.5,
           "fp": [
             8.8,
-            19.1,
-            35.8
+            19.0,
+            35.6
           ]
         },
         {
@@ -11319,7 +11319,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 62.1,
+          "probability": 62.5,
           "share": [
             32.6,
             39.8,
@@ -11331,10 +11331,10 @@
             "LIB",
             "ONP"
           ],
-          "probability": 22.5,
+          "probability": 22.3,
           "share": [
             44.3,
-            57.8,
+            57.9,
             69.1
           ]
         },
@@ -11343,9 +11343,9 @@
             "ALP",
             "ONP"
           ],
-          "probability": 10.2,
+          "probability": 10.0,
           "share": [
-            34.5,
+            34.6,
             45.3,
             55.8
           ]
@@ -11387,26 +11387,26 @@
       "winner_name": "Brad Rowswell",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 98.5,
+      "win_probability": 98.6,
       "candidates": [
         {
           "name": "Brad Rowswell",
           "party": "LIB",
-          "win_probability": 98.5,
+          "win_probability": 98.6,
           "fp": [
-            38.3,
-            52.3,
+            38.4,
+            52.4,
             63.1
           ]
         },
         {
           "name": "Anthony Blight",
           "party": "ONP",
-          "win_probability": 1.0,
+          "win_probability": 0.9,
           "fp": [
-            5.7,
+            5.6,
             12.3,
-            27.0
+            26.9
           ]
         },
         {
@@ -11416,7 +11416,7 @@
           "fp": [
             10.1,
             16.9,
-            25.9
+            25.8
           ]
         },
         {
@@ -11460,7 +11460,7 @@
           ],
           "probability": 58.0,
           "share": [
-            57.4,
+            57.5,
             67.1,
             74.9
           ]
@@ -11470,7 +11470,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 25.5,
+          "probability": 25.7,
           "share": [
             28.7,
             36.1,
@@ -11482,9 +11482,9 @@
             "LIB",
             "ONP"
           ],
-          "probability": 16.0,
+          "probability": 15.8,
           "share": [
-            50.4,
+            50.5,
             65.1,
             74.7
           ]
@@ -11514,12 +11514,12 @@
       "winner_name": "Shane Sali",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 84.7,
+      "win_probability": 84.9,
       "candidates": [
         {
           "name": "Shane Sali",
           "party": "NAT",
-          "win_probability": 84.7,
+          "win_probability": 84.9,
           "fp": [
             20.5,
             38.2,
@@ -11529,11 +11529,11 @@
         {
           "name": "Phillip Bryant",
           "party": "ONP",
-          "win_probability": 13.0,
+          "win_probability": 12.8,
           "fp": [
-            10.1,
-            21.4,
-            38.8
+            10.0,
+            21.3,
+            38.6
           ]
         },
         {
@@ -11553,7 +11553,7 @@
           "fp": [
             0.6,
             13.4,
-            24.9
+            25.0
           ]
         },
         {
@@ -11581,7 +11581,7 @@
         {
           "label": "An emerging independent",
           "party": "IND",
-          "win_probability": 0.3,
+          "win_probability": 0.4,
           "fp": [
             0.0,
             0.0,
@@ -11595,7 +11595,7 @@
           "fp": [
             3.0,
             11.3,
-            31.3
+            31.4
           ]
         }
       ],
@@ -11605,11 +11605,11 @@
             "ONP",
             "NAT"
           ],
-          "probability": 61.0,
+          "probability": 60.7,
           "share": [
-            28.8,
-            40.6,
-            56.6
+            28.7,
+            40.5,
+            56.5
           ]
         },
         {
@@ -11617,10 +11617,10 @@
             "ALP",
             "NAT"
           ],
-          "probability": 21.8,
+          "probability": 22.1,
           "share": [
             24.8,
-            31.6,
+            31.5,
             39.8
           ]
         },
@@ -11629,11 +11629,11 @@
             "IND",
             "NAT"
           ],
-          "probability": 10.4,
+          "probability": 10.5,
           "share": [
-            29.9,
+            29.8,
             40.9,
-            53.8
+            53.7
           ]
         },
         {
@@ -11641,11 +11641,11 @@
             "ALP",
             "ONP"
           ],
-          "probability": 3.6,
+          "probability": 3.5,
           "share": [
-            28.3,
+            28.4,
             41.3,
-            52.2
+            52.3
           ]
         },
         {
@@ -11685,16 +11685,16 @@
       "winner_name": "Libby Pettit",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 45.9,
+      "win_probability": 46.1,
       "candidates": [
         {
           "name": "Libby Pettit",
           "party": "LIB",
-          "win_probability": 45.9,
+          "win_probability": 46.1,
           "fp": [
-            8.9,
-            27.2,
-            42.2
+            9.0,
+            27.3,
+            42.3
           ]
         },
         {
@@ -11704,17 +11704,17 @@
           "fp": [
             10.1,
             24.9,
-            38.4
+            38.5
           ]
         },
         {
           "name": "Josh Geard",
           "party": "ONP",
-          "win_probability": 19.8,
+          "win_probability": 19.5,
           "fp": [
-            9.3,
-            21.2,
-            38.6
+            9.2,
+            21.1,
+            38.4
           ]
         },
         {
@@ -11730,7 +11730,7 @@
         {
           "name": "Izzy Scherrer",
           "party": "GRN",
-          "win_probability": 0.6,
+          "win_probability": 0.5,
           "fp": [
             5.6,
             11.4,
@@ -11756,7 +11756,7 @@
           "fp": [
             1.5,
             4.4,
-            15.0
+            15.1
           ]
         }
       ],
@@ -11766,7 +11766,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 45.0,
+          "probability": 45.4,
           "share": [
             39.2,
             47.6,
@@ -11778,11 +11778,11 @@
             "ALP",
             "ONP"
           ],
-          "probability": 25.5,
+          "probability": 25.2,
           "share": [
             36.7,
             48.5,
-            60.7
+            60.8
           ]
         },
         {
@@ -11790,10 +11790,10 @@
             "LIB",
             "ONP"
           ],
-          "probability": 14.8,
+          "probability": 14.7,
           "share": [
-            41.5,
-            54.5,
+            41.6,
+            54.6,
             65.3
           ]
         },
@@ -11828,7 +11828,7 @@
           ],
           "probability": 3.1,
           "share": [
-            32.2,
+            32.1,
             43.9,
             56.8
           ]
@@ -11840,9 +11840,9 @@
           ],
           "probability": 2.6,
           "share": [
-            40.2,
-            55.8,
-            68.0
+            40.3,
+            55.9,
+            68.1
           ]
         }
       ]
@@ -11870,26 +11870,26 @@
       "winner_name": "Roma Britnell",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 93.2,
+      "win_probability": 93.4,
       "candidates": [
         {
           "name": "Roma Britnell",
           "party": "LIB",
-          "win_probability": 93.2,
+          "win_probability": 93.4,
           "fp": [
-            30.9,
+            31.0,
             47.6,
-            60.3
+            60.4
           ]
         },
         {
           "name": "Richard Hughes",
           "party": "ONP",
-          "win_probability": 6.7,
+          "win_probability": 6.5,
           "fp": [
-            10.3,
-            21.4,
-            38.7
+            10.2,
+            21.3,
+            38.5
           ]
         },
         {
@@ -11941,10 +11941,10 @@
             "LIB",
             "ONP"
           ],
-          "probability": 67.0,
+          "probability": 66.7,
           "share": [
-            46.4,
-            63.6,
+            46.5,
+            63.7,
             74.8
           ]
         },
@@ -11953,9 +11953,9 @@
             "ALP",
             "LIB"
           ],
-          "probability": 23.3,
+          "probability": 23.6,
           "share": [
-            28.6,
+            28.5,
             35.0,
             42.8
           ]
@@ -11965,11 +11965,11 @@
             "LIB",
             "GRN"
           ],
-          "probability": 8.4,
+          "probability": 8.5,
           "share": [
-            61.1,
+            61.2,
             70.5,
-            77.9
+            78.0
           ]
         }
       ]
@@ -11997,14 +11997,14 @@
       "winner_name": "Rob Dunstan",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 51.7,
+      "win_probability": 51.9,
       "candidates": [
         {
           "name": "Rob Dunstan",
           "party": "LIB",
-          "win_probability": 51.7,
+          "win_probability": 51.9,
           "fp": [
-            9.2,
+            9.3,
             29.0,
             44.7
           ]
@@ -12012,7 +12012,7 @@
         {
           "name": "Natalie Suleyman",
           "party": "ALP",
-          "win_probability": 33.9,
+          "win_probability": 34.0,
           "fp": [
             12.6,
             28.9,
@@ -12022,11 +12022,11 @@
         {
           "name": "John Cowell",
           "party": "ONP",
-          "win_probability": 13.1,
+          "win_probability": 12.9,
           "fp": [
-            8.9,
-            19.1,
-            35.7
+            8.8,
+            19.0,
+            35.6
           ]
         },
         {
@@ -12078,7 +12078,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 60.9,
+          "probability": 61.3,
           "share": [
             36.9,
             47.3,
@@ -12090,9 +12090,9 @@
             "ALP",
             "ONP"
           ],
-          "probability": 23.1,
+          "probability": 22.8,
           "share": [
-            37.6,
+            37.7,
             51.3,
             64.8
           ]
@@ -12102,9 +12102,9 @@
             "LIB",
             "ONP"
           ],
-          "probability": 12.1,
+          "probability": 12.0,
           "share": [
-            42.5,
+            42.6,
             56.2,
             68.0
           ]
@@ -12146,14 +12146,14 @@
       "winner_name": "Simmone Cottom",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 68.6,
+      "win_probability": 68.8,
       "candidates": [
         {
           "name": "Simmone Cottom",
           "party": "LIB",
-          "win_probability": 68.6,
+          "win_probability": 68.8,
           "fp": [
-            11.9,
+            12.0,
             32.1,
             47.3
           ]
@@ -12164,18 +12164,18 @@
           "win_probability": 16.1,
           "fp": [
             9.9,
-            26.1,
+            26.2,
             40.2
           ]
         },
         {
           "name": "Elita Dabrowski",
           "party": "ONP",
-          "win_probability": 14.0,
+          "win_probability": 13.8,
           "fp": [
-            8.8,
-            19.1,
-            35.8
+            8.7,
+            19.0,
+            35.7
           ]
         },
         {
@@ -12216,8 +12216,8 @@
           "win_probability": 0.0,
           "fp": [
             2.9,
-            11.7,
-            31.9
+            11.8,
+            32.0
           ]
         }
       ],
@@ -12227,7 +12227,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 61.3,
+          "probability": 61.6,
           "share": [
             34.4,
             43.7,
@@ -12239,10 +12239,10 @@
             "LIB",
             "ONP"
           ],
-          "probability": 17.5,
+          "probability": 17.4,
           "share": [
-            42.5,
-            56.7,
+            42.6,
+            56.8,
             68.8
           ]
         },
@@ -12251,10 +12251,10 @@
             "ALP",
             "ONP"
           ],
-          "probability": 17.2,
+          "probability": 17.0,
           "share": [
-            36.0,
-            48.1,
+            36.1,
+            48.2,
             61.7
           ]
         },
@@ -12295,36 +12295,36 @@
       "winner_name": "Nathalie Moussi",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 60.2,
+      "win_probability": 60.4,
       "candidates": [
         {
           "name": "Nathalie Moussi",
           "party": "LIB",
-          "win_probability": 60.2,
+          "win_probability": 60.4,
           "fp": [
             12.7,
-            31.4,
+            31.5,
             45.6
           ]
         },
         {
           "name": "Uros Rasic",
           "party": "ALP",
-          "win_probability": 25.9,
+          "win_probability": 26.0,
           "fp": [
             12.5,
-            27.9,
+            28.0,
             42.5
           ]
         },
         {
           "name": "Joh Bauch",
           "party": "ONP",
-          "win_probability": 13.1,
+          "win_probability": 12.9,
           "fp": [
-            8.8,
-            19.1,
-            35.7
+            8.7,
+            19.0,
+            35.6
           ]
         },
         {
@@ -12376,7 +12376,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 64.7,
+          "probability": 65.0,
           "share": [
             37.4,
             46.6,
@@ -12388,7 +12388,7 @@
             "ALP",
             "ONP"
           ],
-          "probability": 18.2,
+          "probability": 17.9,
           "share": [
             36.4,
             49.0,
@@ -12400,9 +12400,9 @@
             "LIB",
             "ONP"
           ],
-          "probability": 14.7,
+          "probability": 14.5,
           "share": [
-            42.5,
+            42.6,
             56.3,
             67.5
           ]
@@ -12444,14 +12444,14 @@
       "winner_name": "Dylan Wight",
       "runner_up": "LIB",
       "winner_2cp": null,
-      "win_probability": 63.8,
+      "win_probability": 64.0,
       "candidates": [
         {
           "name": "Dylan Wight",
           "party": "ALP",
-          "win_probability": 63.8,
+          "win_probability": 64.0,
           "fp": [
-            18.1,
+            18.2,
             34.0,
             45.9
           ]
@@ -12459,9 +12459,9 @@
         {
           "name": "Venkat Ram Upparlapalle",
           "party": "LIB",
-          "win_probability": 21.9,
+          "win_probability": 22.0,
           "fp": [
-            6.6,
+            6.7,
             24.3,
             38.6
           ]
@@ -12469,11 +12469,11 @@
         {
           "name": "Walter Villagonzalo OAM",
           "party": "ONP",
-          "win_probability": 13.4,
+          "win_probability": 13.2,
           "fp": [
-            8.8,
-            19.1,
-            35.8
+            8.7,
+            19.0,
+            35.6
           ]
         },
         {
@@ -12515,7 +12515,7 @@
           "fp": [
             2.9,
             11.5,
-            29.3
+            29.4
           ]
         }
       ],
@@ -12525,7 +12525,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 58.7,
+          "probability": 59.1,
           "share": [
             44.5,
             52.5,
@@ -12537,7 +12537,7 @@
             "ALP",
             "ONP"
           ],
-          "probability": 33.7,
+          "probability": 33.3,
           "share": [
             39.7,
             53.2,
@@ -12549,11 +12549,11 @@
             "LIB",
             "ONP"
           ],
-          "probability": 5.0,
+          "probability": 4.9,
           "share": [
-            39.9,
-            53.9,
-            64.1
+            40.0,
+            54.0,
+            64.2
           ]
         }
       ]
@@ -12581,15 +12581,15 @@
       "winner_name": "Bronwyn Halfpenny",
       "runner_up": "LIB",
       "winner_2cp": null,
-      "win_probability": 67.7,
+      "win_probability": 67.8,
       "candidates": [
         {
           "name": "Bronwyn Halfpenny",
           "party": "ALP",
-          "win_probability": 67.7,
+          "win_probability": 67.8,
           "fp": [
-            21.5,
-            39.0,
+            21.6,
+            39.1,
             52.9
           ]
         },
@@ -12598,7 +12598,7 @@
           "party": "LIB",
           "win_probability": 24.1,
           "fp": [
-            7.7,
+            7.8,
             25.6,
             42.8
           ]
@@ -12606,11 +12606,11 @@
         {
           "name": "Nadia Anthony",
           "party": "ONP",
-          "win_probability": 8.2,
+          "win_probability": 8.0,
           "fp": [
             8.8,
-            19.1,
-            35.7
+            19.0,
+            35.6
           ]
         },
         {
@@ -12652,11 +12652,11 @@
             "ALP",
             "LIB"
           ],
-          "probability": 63.0,
+          "probability": 63.4,
           "share": [
             41.3,
             53.3,
-            65.0
+            65.1
           ]
         },
         {
@@ -12664,10 +12664,10 @@
             "ALP",
             "ONP"
           ],
-          "probability": 32.3,
+          "probability": 32.0,
           "share": [
             41.7,
-            56.4,
+            56.5,
             69.0
           ]
         },
@@ -12678,7 +12678,7 @@
           ],
           "probability": 4.1,
           "share": [
-            43.4,
+            43.5,
             56.3,
             68.0
           ]
@@ -12708,26 +12708,26 @@
       "winner_name": "Nicole Werner",
       "runner_up": "ONP",
       "winner_2cp": null,
-      "win_probability": 93.0,
+      "win_probability": 93.1,
       "candidates": [
         {
           "name": "Nicole Werner",
           "party": "LIB",
-          "win_probability": 93.0,
+          "win_probability": 93.1,
           "fp": [
-            27.5,
-            43.7,
+            27.6,
+            43.8,
             56.3
           ]
         },
         {
           "name": "Mark Burnside",
           "party": "ONP",
-          "win_probability": 6.3,
+          "win_probability": 6.2,
           "fp": [
             8.3,
-            19.1,
-            35.7
+            19.0,
+            35.6
           ]
         },
         {
@@ -12737,7 +12737,7 @@
           "fp": [
             4.7,
             17.1,
-            28.3
+            28.4
           ]
         },
         {
@@ -12745,8 +12745,8 @@
           "party": "GRN",
           "win_probability": 0.1,
           "fp": [
-            7.3,
-            12.4,
+            7.2,
+            12.3,
             19.3
           ]
         }
@@ -12769,7 +12769,7 @@
           "fp": [
             1.5,
             5.8,
-            15.5
+            15.6
           ]
         }
       ],
@@ -12779,7 +12779,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 44.0,
+          "probability": 44.4,
           "share": [
             29.4,
             36.4,
@@ -12791,10 +12791,10 @@
             "LIB",
             "ONP"
           ],
-          "probability": 36.6,
+          "probability": 36.3,
           "share": [
-            46.4,
-            60.9,
+            46.5,
+            61.0,
             71.7
           ]
         },
@@ -12815,9 +12815,9 @@
             "ALP",
             "ONP"
           ],
-          "probability": 2.9,
+          "probability": 2.8,
           "share": [
-            31.8,
+            31.9,
             42.3,
             52.5
           ]
@@ -12847,36 +12847,36 @@
       "winner_name": "Juliana Addison",
       "runner_up": "LIB",
       "winner_2cp": null,
-      "win_probability": 46.7,
+      "win_probability": 46.9,
       "candidates": [
         {
           "name": "Juliana Addison",
           "party": "ALP",
-          "win_probability": 46.7,
+          "win_probability": 46.9,
           "fp": [
             13.2,
-            28.4,
-            41.5
+            28.5,
+            41.6
           ]
         },
         {
           "name": "Gav Ronan",
           "party": "LIB",
-          "win_probability": 33.8,
+          "win_probability": 33.9,
           "fp": [
-            11.6,
-            28.2,
+            11.7,
+            28.3,
             42.2
           ]
         },
         {
           "name": "Stuart Robinson",
           "party": "ONP",
-          "win_probability": 19.0,
+          "win_probability": 18.7,
           "fp": [
-            9.7,
-            21.2,
-            38.7
+            9.6,
+            21.1,
+            38.5
           ]
         },
         {
@@ -12907,8 +12907,8 @@
           "win_probability": 0.0,
           "fp": [
             2.2,
-            8.4,
-            21.7
+            8.5,
+            21.8
           ]
         }
       ],
@@ -12918,7 +12918,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 56.2,
+          "probability": 56.6,
           "share": [
             43.1,
             51.4,
@@ -12930,10 +12930,10 @@
             "ALP",
             "ONP"
           ],
-          "probability": 27.5,
+          "probability": 27.2,
           "share": [
-            37.1,
-            49.0,
+            37.2,
+            49.1,
             61.0
           ]
         },
@@ -12942,9 +12942,9 @@
             "LIB",
             "ONP"
           ],
-          "probability": 12.9,
+          "probability": 12.8,
           "share": [
-            41.1,
+            41.2,
             54.3,
             64.9
           ]
@@ -12956,8 +12956,8 @@
           ],
           "probability": 2.6,
           "share": [
-            47.0,
-            57.4,
+            47.1,
+            57.5,
             67.1
           ]
         }
@@ -12986,16 +12986,16 @@
       "winner_name": "Reece Clark",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 44.9,
+      "win_probability": 45.1,
       "candidates": [
         {
           "name": "Reece Clark",
           "party": "LIB",
-          "win_probability": 44.9,
+          "win_probability": 45.1,
           "fp": [
-            6.1,
-            26.2,
-            41.8
+            6.2,
+            26.3,
+            41.9
           ]
         },
         {
@@ -13004,18 +13004,18 @@
           "win_probability": 29.0,
           "fp": [
             12.1,
-            28.0,
+            28.1,
             42.1
           ]
         },
         {
           "name": "Paul Pateras",
           "party": "ONP",
-          "win_probability": 14.3,
+          "win_probability": 14.1,
           "fp": [
             8.8,
-            19.1,
-            35.8
+            19.0,
+            35.6
           ]
         },
         {
@@ -13077,7 +13077,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 52.1,
+          "probability": 52.5,
           "share": [
             38.2,
             47.2,
@@ -13089,7 +13089,7 @@
             "ALP",
             "ONP"
           ],
-          "probability": 23.2,
+          "probability": 22.9,
           "share": [
             37.8,
             50.2,
@@ -13101,9 +13101,9 @@
             "LIB",
             "ONP"
           ],
-          "probability": 9.0,
+          "probability": 8.9,
           "share": [
-            42.0,
+            42.1,
             55.1,
             66.3
           ]
@@ -13139,7 +13139,7 @@
           ],
           "probability": 3.6,
           "share": [
-            42.2,
+            42.4,
             59.1,
             72.2
           ]
@@ -13169,12 +13169,12 @@
       "winner_name": "Melissa Horne",
       "runner_up": "LIB",
       "winner_2cp": null,
-      "win_probability": 45.0,
+      "win_probability": 45.1,
       "candidates": [
         {
           "name": "Melissa Horne",
           "party": "ALP",
-          "win_probability": 45.0,
+          "win_probability": 45.1,
           "fp": [
             9.3,
             24.5,
@@ -13188,7 +13188,7 @@
           "fp": [
             13.8,
             30.0,
-            43.3
+            43.4
           ]
         },
         {
@@ -13197,28 +13197,28 @@
           "win_probability": 10.4,
           "fp": [
             1.4,
-            7.4,
+            7.3,
             28.9
           ]
         },
         {
           "name": "Catherine Loughnan",
           "party": "ONP",
-          "win_probability": 4.4,
+          "win_probability": 4.3,
           "fp": [
             5.2,
             11.9,
-            27.1
+            26.9
           ]
         },
         {
           "name": "Ben Hocking",
           "party": "GRN",
-          "win_probability": 4.1,
+          "win_probability": 4.0,
           "fp": [
             7.8,
             15.0,
-            24.7
+            24.6
           ]
         }
       ],
@@ -13250,11 +13250,11 @@
             "ALP",
             "LIB"
           ],
-          "probability": 55.7,
+          "probability": 56.0,
           "share": [
             44.1,
             52.4,
-            60.8
+            60.9
           ]
         },
         {
@@ -13266,7 +13266,7 @@
           "share": [
             44.6,
             55.2,
-            64.6
+            64.7
           ]
         },
         {
@@ -13274,10 +13274,10 @@
             "ALP",
             "ONP"
           ],
-          "probability": 7.0,
+          "probability": 6.9,
           "share": [
             39.4,
-            51.3,
+            51.4,
             62.7
           ]
         },
@@ -13286,7 +13286,7 @@
             "LIB",
             "IND"
           ],
-          "probability": 6.6,
+          "probability": 6.7,
           "share": [
             30.1,
             43.1,
@@ -13300,7 +13300,7 @@
           ],
           "probability": 5.0,
           "share": [
-            29.2,
+            29.1,
             42.7,
             56.1
           ]
@@ -13312,8 +13312,8 @@
           ],
           "probability": 4.2,
           "share": [
-            43.8,
-            55.8,
+            43.9,
+            55.9,
             65.9
           ]
         },
@@ -13327,18 +13327,6 @@
             48.5,
             58.1,
             66.9
-          ]
-        },
-        {
-          "parties": [
-            "IND",
-            "ONP"
-          ],
-          "probability": 1.0,
-          "share": [
-            43.5,
-            59.0,
-            73.0
           ]
         }
       ]
@@ -13366,15 +13354,15 @@
       "winner_name": "Amanda Dow",
       "runner_up": "ALP",
       "winner_2cp": null,
-      "win_probability": 70.3,
+      "win_probability": 70.5,
       "candidates": [
         {
           "name": "Amanda Dow",
           "party": "LIB",
-          "win_probability": 70.3,
+          "win_probability": 70.5,
           "fp": [
-            14.5,
-            33.6,
+            14.6,
+            33.7,
             48.3
           ]
         },
@@ -13383,7 +13371,7 @@
           "party": "ALP",
           "win_probability": 18.0,
           "fp": [
-            13.3,
+            13.4,
             27.8,
             42.5
           ]
@@ -13391,11 +13379,11 @@
         {
           "name": "Jeremy Johnson",
           "party": "ONP",
-          "win_probability": 11.6,
+          "win_probability": 11.4,
           "fp": [
-            8.8,
-            19.0,
-            35.8
+            8.7,
+            18.9,
+            35.6
           ]
         },
         {
@@ -13437,7 +13425,7 @@
             "ALP",
             "LIB"
           ],
-          "probability": 67.8,
+          "probability": 68.1,
           "share": [
             33.9,
             43.8,
@@ -13449,10 +13437,10 @@
             "ALP",
             "ONP"
           ],
-          "probability": 16.2,
+          "probability": 16.0,
           "share": [
             36.7,
-            48.7,
+            48.8,
             62.8
           ]
         },
@@ -13461,11 +13449,11 @@
             "LIB",
             "ONP"
           ],
-          "probability": 14.6,
+          "probability": 14.5,
           "share": [
-            43.9,
+            44.0,
             57.3,
-            69.1
+            69.2
           ]
         },
         {
@@ -13475,9 +13463,9 @@
           ],
           "probability": 1.1,
           "share": [
-            50.3,
-            62.9,
-            73.5
+            50.4,
+            63.0,
+            73.6
           ]
         }
       ]
