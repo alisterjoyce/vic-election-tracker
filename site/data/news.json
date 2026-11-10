@@ -8,8 +8,14 @@
       "sources": "Source -> {status: ok | error | skipped, url, items, message}"
     }
   },
-  "updated": "2026-11-10T19:47:30Z",
+  "updated": "2026-11-10T23:30:58Z",
   "statewide": [
+    {
+      "title": "Live: Greens blast Labor over preferences ahead of Victorian election battle",
+      "outlet": "ABC News",
+      "published": "2026-11-10T23:03:40Z",
+      "url": "https://www.abc.net.au/news/2026-11-11/victoria-election-blog-november-11/107371790"
+    },
     {
       "title": "Victorian polling centre closures a 'kick in the teeth', say voters",
       "outlet": "ABC News",
@@ -17,10 +23,10 @@
       "url": "https://www.abc.net.au/news/2026-11-11/polling-centre-closing-central-victoria-state-election-voting/107367046"
     },
     {
-      "title": "Search every candidate running in your electorate for the upcoming Victorian election",
-      "outlet": "Herald Sun",
-      "published": "2026-11-10T07:00:00Z",
-      "url": "https://www.heraldsun.com.au/news/victoria/state-election/search-every-candidate-running-in-your-electorate-for-the-upcoming-victorian-election/news-story/8cca38e142c977fe66502114ed3f17c7"
+      "title": "Victorian election: Resolve Strategic and Pakenham seat poll",
+      "outlet": "The Poll Bludger",
+      "published": "2026-11-10T11:48:00Z",
+      "url": "https://www.pollbludger.net/2026/11/10/victorian-election-resolve-strategic-and-pakenham-seat-poll/"
     },
     {
       "title": "Eight to contest Lowan at this month’s state election",
@@ -29,16 +35,28 @@
       "url": "https://sevoice.com.au/eight-to-contest-lowan-at-this-months-state-election/"
     },
     {
-      "title": "Victorian election: Resolve Strategic and Pakenham seat poll",
-      "outlet": "The Poll Bludger",
-      "published": "2026-11-10T06:54:00Z",
-      "url": "https://www.pollbludger.net/2026/11/10/victorian-election-resolve-strategic-and-pakenham-seat-poll/"
+      "title": "Search every candidate running in your electorate for the upcoming Victorian election",
+      "outlet": "Herald Sun",
+      "published": "2026-11-10T07:00:00Z",
+      "url": "https://www.heraldsun.com.au/news/victoria/state-election/search-every-candidate-running-in-your-electorate-for-the-upcoming-victorian-election/news-story/8cca38e142c977fe66502114ed3f17c7"
     },
     {
       "title": "Victorian One Nation candidate dumped over Hitler comments",
       "outlet": "ABC News",
       "published": "2026-11-10T06:02:17Z",
       "url": "https://www.abc.net.au/news/2026-11-10/vic-one-nation-preston-candidate-guardiani-dumped/107368834"
+    },
+    {
+      "title": "Is progressive Victoria about to vote for One Nation? - Full Story podcast",
+      "outlet": "The Guardian",
+      "published": "2026-11-10T06:00:00Z",
+      "url": "https://www.theguardian.com/australia-news/audio/2026/nov/10/is-progressive-victoria-about-to-vote-for-one-nation-full-story-podcast"
+    },
+    {
+      "title": "Nominations close for Nepean state election candidates",
+      "outlet": "MPNEWS",
+      "published": "2026-11-10T02:00:00Z",
+      "url": "https://www.mpnews.com.au/2026/11/11/nominations-close-for-nepean-state-election-candidates/"
     },
     {
       "title": "Suzanna Sheed backs Lou Costa",
@@ -141,24 +159,6 @@
       "outlet": "WAtoday",
       "published": "2026-11-08T10:30:00Z",
       "url": "https://www.watoday.com.au/politics/victoria/i-am-hungry-pesutto-tipped-for-frontbench-return-20261109-p61cc9.html"
-    },
-    {
-      "title": "Safety a top priority for Vic premier after food delivery driver stabbing",
-      "outlet": "ABC News",
-      "published": "2026-11-08T02:03:22Z",
-      "url": "https://www.abc.net.au/news/2026-11-08/delivery-driver-death-jianming-feng/107360706"
-    },
-    {
-      "title": "Victorian election 2026: where One Nation, Labor, the Liberals and Greens stand on Net Zero, bail, the Treaty and the fire levy",
-      "outlet": "onenewsaustralia.com",
-      "published": "2026-11-07T22:04:00Z",
-      "url": "https://www.onenewsaustralia.com/vic-policy-matrix-2026/"
-    },
-    {
-      "title": "Benham’s riverfront pledge",
-      "outlet": "Sunraysia Daily",
-      "published": "2026-11-07T22:00:52Z",
-      "url": "https://sunraysiadaily.com.au/news/2026/11/08/benhams-riverfront-pledge/"
     }
   ],
   "seats": {
@@ -1050,6 +1050,12 @@
     ],
     "murray-plains": [
       {
+        "title": "Family First announce Murray Plains candidate",
+        "outlet": "gannawarratimes.com.au",
+        "published": "2026-11-10T02:00:00Z",
+        "url": "https://gannawarratimes.com.au/news/2026/11/11/family-first-announce-murray-plains-candidate/"
+      },
+      {
         "title": "Ballot order decided",
         "outlet": "gannawarratimes.com.au",
         "published": "2026-11-09T16:00:00Z",
@@ -1096,7 +1102,14 @@
     ],
     "narre-warren-north": [],
     "narre-warren-south": [],
-    "nepean": [],
+    "nepean": [
+      {
+        "title": "Nominations close for Nepean state election candidates",
+        "outlet": "MPNEWS",
+        "published": "2026-11-10T02:00:00Z",
+        "url": "https://www.mpnews.com.au/2026/11/11/nominations-close-for-nepean-state-election-candidates/"
+      }
+    ],
     "niddrie": [
       {
         "title": "Safety a top priority for Vic premier after food delivery driver stabbing",
@@ -1217,7 +1230,7 @@
       {
         "title": "Victorian election: Resolve Strategic and Pakenham seat poll",
         "outlet": "The Poll Bludger",
-        "published": "2026-11-10T06:54:00Z",
+        "published": "2026-11-10T11:48:00Z",
         "url": "https://www.pollbludger.net/2026/11/10/victorian-election-resolve-strategic-and-pakenham-seat-poll/"
       },
       {
@@ -1231,6 +1244,12 @@
         "outlet": "The Australian",
         "published": "2026-11-06T13:35:00Z",
         "url": "https://www.theaustralian.com.au/nation/politics/one-nation-targets-angry-outer-voters-to-disrupt-victorian-election-and-jess-wilsons-drive-for-power/news-story/8767a8bb00db2fb793903e51dc846464"
+      },
+      {
+        "title": "Victorian State Voting Intention: One Nation and L-NP Coalition set to win key seats of Bass, Hastings, Morwell and Pakenham",
+        "outlet": "Roy Morgan Research",
+        "published": "2026-10-26T17:00:00Z",
+        "url": "https://www.roymorgan.com/findings/10371-victorian-state-voting-intention-eastern-victoria-seats-october-2026"
       },
       {
         "title": "Pakenham election results 2022: live count for 2026 from 28 November",
