@@ -8,8 +8,14 @@
       "sources": "Source -> {status: ok | error | skipped, url, items, message}"
     }
   },
-  "updated": "2026-11-10T05:47:30Z",
+  "updated": "2026-11-10T09:55:06Z",
   "statewide": [
+    {
+      "title": "Victorian One Nation candidate dumped over Hitler comments",
+      "outlet": "ABC News",
+      "published": "2026-11-10T06:02:17Z",
+      "url": "https://www.abc.net.au/news/2026-11-10/vic-one-nation-preston-candidate-guardiani-dumped/107368834"
+    },
     {
       "title": "One Nation dumps Victorian election candidate who praised Adolf Hitler as ‘GOAT’",
       "outlet": "The Guardian",
@@ -39,6 +45,12 @@
       "outlet": "gannawarratimes.com.au",
       "published": "2026-11-09T16:00:00Z",
       "url": "https://gannawarratimes.com.au/news/2026/11/10/ballot-order-decided/"
+    },
+    {
+      "title": "Shepparton candidates locked in for state election",
+      "outlet": "Shepparton News",
+      "published": "2026-11-09T16:00:00Z",
+      "url": "https://www.sheppnews.com.au/news/shepparton-candidates-locked-in-for-state-election/"
     },
     {
       "title": "Exiled MP Will Fowles launches bid for safe Labor seat of Preston",
@@ -132,9 +144,9 @@
     },
     {
       "title": "Jess Wilson: ‘I will end the tobacco wars in this state’",
-      "outlet": "Herald Sun",
+      "outlet": "Geelong Advertiser",
       "published": "2026-11-07T07:59:00Z",
-      "url": "https://www.heraldsun.com.au/news/victoria/state-election/jess-wilson-i-will-end-the-tobacco-wars-in-this-state/news-story/123d1a16df87cdc8f577a755810a8737"
+      "url": "https://www.geelongadvertiser.com.au/news/victoria/state-election/jess-wilson-i-will-end-the-tobacco-wars-in-this-state/news-story/123d1a16df87cdc8f577a755810a8737"
     },
     {
       "title": "Victoria's Liberals unveil plan designed to end tobacco wars",
@@ -147,18 +159,6 @@
       "outlet": "Sunraysia Daily",
       "published": "2026-11-06T21:04:38Z",
       "url": "https://sunraysiadaily.com.au/news/2026/11/07/state-park-funds-hit-a-grind/"
-    },
-    {
-      "title": "CUPPER BOWS OUT Family, work first says ex-MP",
-      "outlet": "Sunraysia Daily",
-      "published": "2026-11-06T19:02:38Z",
-      "url": "https://sunraysiadaily.com.au/news/2026/11/07/cupper-bows-out-family-work-first-says-ex-mp/"
-    },
-    {
-      "title": "One Nation targets angry outer voters to disrupt Victorian election and Jess Wilson’s drive for power",
-      "outlet": "The Australian",
-      "published": "2026-11-06T13:35:00Z",
-      "url": "https://www.theaustralian.com.au/nation/politics/one-nation-targets-angry-outer-voters-to-disrupt-victorian-election-and-jess-wilsons-drive-for-power/news-story/8767a8bb00db2fb793903e51dc846464"
     }
   ],
   "seats": {
@@ -742,6 +742,12 @@
     ],
     "hawthorn": [
       {
+        "title": "Victorian election hot seats: Ousted Labor MP Will Fowles set to run again in new electorate",
+        "outlet": "The Age",
+        "published": "2026-11-09T10:27:00Z",
+        "url": "https://www.theage.com.au/politics/victoria/i-am-hungry-pesutto-tipped-for-frontbench-return-20261109-p61cc9.html"
+      },
+      {
         "title": "‘I am hungry’: Pesutto tipped for frontbench return",
         "outlet": "WAtoday",
         "published": "2026-11-08T10:30:00Z",
@@ -791,9 +797,9 @@
       },
       {
         "title": "Jess Wilson: ‘I will end the tobacco wars in this state’",
-        "outlet": "Herald Sun",
+        "outlet": "Geelong Advertiser",
         "published": "2026-11-07T07:59:00Z",
-        "url": "https://www.heraldsun.com.au/news/victoria/state-election/jess-wilson-i-will-end-the-tobacco-wars-in-this-state/news-story/123d1a16df87cdc8f577a755810a8737"
+        "url": "https://www.geelongadvertiser.com.au/news/victoria/state-election/jess-wilson-i-will-end-the-tobacco-wars-in-this-state/news-story/123d1a16df87cdc8f577a755810a8737"
       },
       {
         "title": "Victoria's Liberals unveil plan designed to end tobacco wars",
@@ -897,7 +903,7 @@
     "malvern": [],
     "melbourne": [
       {
-        "title": "Greens attack on Labor to begin in Melbourne heartland",
+        "title": "Greens set sights on former seat of Lidia Thorpe",
         "outlet": "ABC News",
         "published": "2026-11-10T05:01:42Z",
         "url": "https://www.abc.net.au/news/2026-11-10/greens-target-labor-heartland-northcote-victoria-state-election/107323772"
@@ -928,6 +934,12 @@
       }
     ],
     "melton": [
+      {
+        "title": "Solar powering schools",
+        "outlet": "Star Weekly",
+        "published": "2026-11-09T17:17:00Z",
+        "url": "https://starweekly.com.au/news/2026/11/10/solar-powering-schools/"
+      },
       {
         "title": "Melton rail parking pressure rises before Victorian election",
         "outlet": "ozarab",
@@ -1039,9 +1051,9 @@
       },
       {
         "title": "Hear Ky you should vote for them",
-        "outlet": "Shepparton News",
+        "outlet": "Kyabram Free Press",
         "published": "2026-11-02T16:00:00Z",
-        "url": "https://www.sheppnews.com.au/news/hear-ky-you-should-vote-for-them/"
+        "url": "https://www.kyfreepress.com.au/news/hear-ky-you-should-vote-for-them/"
       },
       {
         "title": "Coalition pledges fire truck",
@@ -1228,10 +1240,22 @@
     "prahran": [],
     "preston": [
       {
+        "title": "One Nation Victoria dumps Preston candidate Franco Guardiani over Hitler comments",
+        "outlet": "ABC (Australian Broadcasting Corporation)",
+        "published": "2026-11-09T22:02:00Z",
+        "url": "https://www.abc.net.au/news/2026-11-10/vic-one-nation-preston-candidate-guardiani-dumped/107368834"
+      },
+      {
         "title": "One Nation dumps Victorian election candidate who praised Adolf Hitler as ‘GOAT’",
         "outlet": "The Guardian",
         "published": "2026-11-09T19:33:00Z",
         "url": "https://www.theguardian.com/australia-news/2026/nov/10/one-nation-dumps-franco-guardiani-praised-hitler-victoria-elections-ntwnfb"
+      },
+      {
+        "title": "One Nation dumps candidate days before election over 'appalling' Hitler social media post - but he'll still appear on the ballot",
+        "outlet": "Daily Mail",
+        "published": "2026-11-09T16:00:00Z",
+        "url": "https://www.dailymail.com/news/article-16279993/one-nation-franco-guardiani-hitler-comments-preston-victoria.html"
       }
     ],
     "richmond": [
@@ -1280,6 +1304,12 @@
     ],
     "sandringham": [],
     "shepparton": [
+      {
+        "title": "Shepparton candidates locked in for state election",
+        "outlet": "Shepparton News",
+        "published": "2026-11-09T16:00:00Z",
+        "url": "https://www.sheppnews.com.au/news/shepparton-candidates-locked-in-for-state-election/"
+      },
       {
         "title": "One Nation launches its campaign in Shepparton",
         "outlet": "The Age",
@@ -1397,7 +1427,14 @@
       }
     ],
     "warrandyte": [],
-    "wendouree": [],
+    "wendouree": [
+      {
+        "title": "Wendouree election results 2022: live count for 2026 from 28 November",
+        "outlet": "onenewsaustralia.com",
+        "published": "2026-09-25T16:21:00Z",
+        "url": "https://www.onenewsaustralia.com/wendouree-election-results-2026/"
+      }
+    ],
     "werribee": [
       {
         "title": "Precinct sale plan blasted",
