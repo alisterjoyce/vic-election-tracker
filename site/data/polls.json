@@ -23,6 +23,35 @@
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election",
   "polls": [
     {
+      "id": "redbridge-accent-2026-11-10",
+      "start_date": "2026-11-03",
+      "end_date": "2026-11-10",
+      "pollster": "RedBridge/Accent",
+      "client": "Australian Financial Review",
+      "sample_size": 1008,
+      "source_url": "https://www.afr.com/politics/victorian-coalition-position-strengthens-labor-reduced-to-rump-in-new-poll-20261111-p61d0z",
+      "primary": {
+        "ALP": 23,
+        "LNP": 31,
+        "GRN": 15,
+        "ONP": 22,
+        "OTH": 9
+      },
+      "tpp": {
+        "ALP": 43,
+        "LNP": 57
+      },
+      "preferred_premier": {
+        "matchup": "Carroll vs Wilson vs Pickering",
+        "leaders": {
+          "Carroll": 18,
+          "Wilson": 29,
+          "Pickering": 11
+        },
+        "undecided": 42
+      }
+    },
+    {
       "id": "resolve-2026-11-07",
       "start_date": "2026-11-02",
       "end_date": "2026-11-07",
