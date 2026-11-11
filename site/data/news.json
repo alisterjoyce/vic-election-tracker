@@ -8,13 +8,25 @@
       "sources": "Source -> {status: ok | error | skipped, url, items, message}"
     }
   },
-  "updated": "2026-11-11T19:53:43Z",
+  "updated": "2026-11-11T23:46:02Z",
   "statewide": [
     {
       "title": "Why Victorian voters aren't seeing more leader debates",
       "outlet": "ABC News",
       "published": "2026-11-11T18:11:03Z",
       "url": "https://www.abc.net.au/news/2026-11-12/victorian-election-campaign-missing-leader-debates/107374014"
+    },
+    {
+      "title": "Victorian election live: Liberal Party apologises after dumping candidate over anti-Aboriginal comments",
+      "outlet": "ABC (Australian Broadcasting Corporation)",
+      "published": "2026-11-11T14:49:00Z",
+      "url": "https://www.abc.net.au/news/2026-11-12/victoria-election-blog/107374690"
+    },
+    {
+      "title": "Jess Wilson dumps Liberal candidate Paul Lindemann over racist posts in major Victoria election vetting failure",
+      "outlet": "onenewsaustralia.com",
+      "published": "2026-11-11T11:38:00Z",
+      "url": "https://www.onenewsaustralia.com/jess-wilson-dumps-liberal-candidate-paul-lindemann-over-racist-posts-in-major-victoria-election-vetting-failure/"
     },
     {
       "title": "Victorian election early voting starts November 18. Here's what you need to know",
@@ -147,18 +159,6 @@
       "outlet": "The Guardian",
       "published": "2026-11-08T21:40:00Z",
       "url": "https://www.theguardian.com/australia-news/2026/nov/09/victoria-election-2026-labor-mps-new-opinion-poll-one-nation-ntwnfb"
-    },
-    {
-      "title": "How to vote in the Victorian election now the ballot has changed",
-      "outlet": "Beat Magazine",
-      "published": "2026-11-08T18:52:00Z",
-      "url": "https://beat.com.au/how-to-vote-in-the-victorian-election-now-the-ballot-has-changed/"
-    },
-    {
-      "title": "This Victorian election, the Liberals’ preference deal is the only one that matters",
-      "outlet": "Crikey",
-      "published": "2026-11-08T17:27:00Z",
-      "url": "https://www.crikey.com.au/2026/11/09/victorian-state-election-2026-liberal-party-preferences-one-nation-labor-greens/"
     }
   ],
   "seats": {
@@ -255,9 +255,9 @@
       },
       {
         "title": "Lawyers for Daniel Andrews, Jacinta Allan front long-awaited Big Build royal commission",
-        "outlet": "Herald Sun",
-        "published": "2026-11-09T07:45:00Z",
-        "url": "https://www.heraldsun.com.au/news/victoria/lawyers-for-daniel-andrews-jacinta-allan-front-longawaited-big-build-royal-commission/news-story/3eebd43dc3f8ab15e99ee3d54a8c4963"
+        "outlet": "Geelong Advertiser",
+        "published": "2026-11-09T12:00:00Z",
+        "url": "https://www.geelongadvertiser.com.au/news/victoria/lawyers-for-daniel-andrews-jacinta-allan-front-longawaited-big-build-royal-commission/news-story/3eebd43dc3f8ab15e99ee3d54a8c4963"
       },
       {
         "title": "Criticism of One Nation cartoon of ex-Victorian premier Jacinta Allan",
@@ -395,9 +395,9 @@
       },
       {
         "title": "Victorian Greens MP Tim Read dies after cancer battle",
-        "outlet": "The Courier-Mail",
+        "outlet": "The Daily Telegraph",
         "published": "2026-09-19T14:07:00Z",
-        "url": "https://www.couriermail.com.au/business/work/leaders-companies/victorian-greens-mp-tim-read-has-died-after-cancer-battle/news-story/b8349436f5784889e1531f72ec6a6559"
+        "url": "https://www.dailytelegraph.com.au/business/work/leaders-companies/victorian-greens-mp-tim-read-has-died-after-cancer-battle/news-story/b8349436f5784889e1531f72ec6a6559"
       },
       {
         "title": "Victorian Greens MP dies of cancer",
@@ -708,6 +708,18 @@
     ],
     "geelong": [
       {
+        "title": "Geelong to Melbourne train trips cut by 10 minutes under $420m Labor pledge",
+        "outlet": "Geelong Advertiser",
+        "published": "2026-11-11T10:00:00Z",
+        "url": "https://www.geelongadvertiser.com.au/news/geelong/geelong-to-melbourne-train-trips-cut-by-10-minutes-under-420m-labor-pledge/news-story/d55d9c3d116bee9c0c64e9d7ed2d61a8"
+      },
+      {
+        "title": "Geelong mayor urges election candidates to back regional tennis centre",
+        "outlet": "theindiansun",
+        "published": "2026-11-11T02:00:00Z",
+        "url": "https://www.theindiansun.com.au/2026/11/12/geelong-mayor-urges-election-candidates-to-back-regional-tennis-centre/"
+      },
+      {
         "title": "Man accused of attacking One Nation supporter appears in court",
         "outlet": "ABC News",
         "published": "2026-11-10T04:35:44Z",
@@ -783,6 +795,12 @@
         "outlet": "Herald Sun",
         "published": "2026-10-30T10:38:00Z",
         "url": "https://www.heraldsun.com.au/truecrimeaustralia/police-courts-victoria/supreme-court-orders-names-of-john-pesuttos-secret-loan-guarantors-to-be-revealed/news-story/f5937cb19c01e8e687184cd9f6c4078d"
+      },
+      {
+        "title": "John Pesutto slams ‘desperate’ Vic gov’s planning process",
+        "outlet": "Couriermail",
+        "published": "2026-10-14T16:03:00Z",
+        "url": "https://www.news.com.au/finance/real-estate/john-pesutto-slams-desperate-vic-govs-planning-process/news-story/e33a2e46d43d3fd4e1589d6bf387c4c1"
       }
     ],
     "ivanhoe": [
@@ -1308,7 +1326,7 @@
       {
         "title": "Polwarth election results 2022: live count for 2026 from 28 November",
         "outlet": "onenewsaustralia.com",
-        "published": "2026-11-07T21:41:00Z",
+        "published": "2026-11-09T16:00:00Z",
         "url": "https://www.onenewsaustralia.com/polwarth-election-results-2026/"
       }
     ],
@@ -1316,7 +1334,7 @@
       {
         "title": "Victorian Liberals do preference deal with One Nation as Labor snubs Greens in key inner-city seat",
         "outlet": "The Guardian",
-        "published": "2026-11-09T16:00:00Z",
+        "published": "2026-11-09T20:11:00Z",
         "url": "https://www.theguardian.com/australia-news/2026/nov/10/coalition-one-nation-preference-deal-victorian-election-labor-greens-ntwnfb"
       }
     ],
@@ -1545,16 +1563,28 @@
     ],
     "williamstown": [
       {
-        "title": "Victorian Liberals dump Williamstown candidate over offensive comments",
+        "title": "Live: Vic Liberals apologise after dumping candidate over anti-Aboriginal comments",
         "outlet": "ABC News",
-        "published": "2026-11-11T08:23:35Z",
-        "url": "https://www.abc.net.au/news/2026-11-11/victorian-liberals-dump-williamstown-candidate-paul-lindemann/107375112"
+        "published": "2026-11-11T22:49:56Z",
+        "url": "https://www.abc.net.au/news/2026-11-12/victoria-election-blog/107374690"
       },
       {
         "title": "Victorian Liberal Party dumps Williamstown candidate Paul Lindemann after alleged ‘offensive’ comments",
         "outlet": "news.com.au",
-        "published": "2026-11-10T22:20:00Z",
+        "published": "2026-11-11T12:20:00Z",
         "url": "https://www.news.com.au/national/victoria/politics/victorian-liberal-party-dumps-williamstown-candidate-paul-lindemann-after-alleged-offensive-comments/news-story/8893a39d14134bddde0371375f728afd"
+      },
+      {
+        "title": "Jess Wilson dumps Liberal candidate Paul Lindemann over racist posts in major Victoria election vetting failure",
+        "outlet": "onenewsaustralia.com",
+        "published": "2026-11-11T11:38:00Z",
+        "url": "https://www.onenewsaustralia.com/jess-wilson-dumps-liberal-candidate-paul-lindemann-over-racist-posts-in-major-victoria-election-vetting-failure/"
+      },
+      {
+        "title": "Victorian Liberals dump Williamstown candidate over offensive comments",
+        "outlet": "ABC News",
+        "published": "2026-11-11T08:23:35Z",
+        "url": "https://www.abc.net.au/news/2026-11-11/victorian-liberals-dump-williamstown-candidate-paul-lindemann/107375112"
       },
       {
         "title": "Datacentre giant accused of using AI while lobbying for Victorian minister’s support for hyperscale factory",
