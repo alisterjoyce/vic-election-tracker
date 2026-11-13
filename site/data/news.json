@@ -8,8 +8,14 @@
       "sources": "Source -> {status: ok | error | skipped, url, items, message}"
     }
   },
-  "updated": "2026-11-13T09:57:17Z",
+  "updated": "2026-11-13T19:48:50Z",
   "statewide": [
+    {
+      "title": "Geelong Advertiser 2026 Victorian election survey",
+      "outlet": "Geelong Advertiser",
+      "published": "2026-11-13T09:53:00Z",
+      "url": "https://www.geelongadvertiser.com.au/news/geelong/geelong-advertiser-2026-victorian-election-survey/news-story/c2f756ed0818eaf491f1eee6df57fc28"
+    },
     {
       "title": "Live: Victorian election campaign rolls on as parties appeal to regions",
       "outlet": "ABC News",
@@ -23,16 +29,16 @@
       "url": "https://sunraysiadaily.com.au/news/2026/11/13/candidates-confront-key-issues/"
     },
     {
-      "title": "Geelong Advertiser 2026 Victorian election survey",
-      "outlet": "Geelong Advertiser",
-      "published": "2026-11-12T18:51:00Z",
-      "url": "https://www.geelongadvertiser.com.au/news/geelong/geelong-advertiser-2026-victorian-election-survey/news-story/c2f756ed0818eaf491f1eee6df57fc28"
-    },
-    {
       "title": "Nominations close for Hastings state election candidates",
       "outlet": "MPNEWS",
       "published": "2026-11-12T16:00:00Z",
       "url": "https://www.mpnews.com.au/2026/11/13/nominations-close-for-hastings-state-election-candidates/"
+    },
+    {
+      "title": "State election candidates",
+      "outlet": "Star Weekly",
+      "published": "2026-11-12T14:36:00Z",
+      "url": "https://starweekly.com.au/news/2026/11/13/state-election-candidates/"
     },
     {
       "title": "'Pretty poor job': Benambra voters offer blunt assessment of issues facing Wodonga, performance of current Labor government",
@@ -153,12 +159,6 @@
       "outlet": "ABC News",
       "published": "2026-11-10T06:02:17Z",
       "url": "https://www.abc.net.au/news/2026-11-10/vic-one-nation-preston-candidate-guardiani-dumped/107368834"
-    },
-    {
-      "title": "Is progressive Victoria about to vote for One Nation? - Full Story podcast",
-      "outlet": "The Guardian",
-      "published": "2026-11-10T06:00:00Z",
-      "url": "https://www.theguardian.com/australia-news/audio/2026/nov/10/is-progressive-victoria-about-to-vote-for-one-nation-full-story-podcast"
     }
   ],
   "seats": {
@@ -626,12 +626,6 @@
         "outlet": "onenewsaustralia.com",
         "published": "2026-11-10T18:18:00Z",
         "url": "https://www.onenewsaustralia.com/euroa-election-results-2026/"
-      },
-      {
-        "title": "Claim that millions in bushfire relief is being funnelled into government departments",
-        "outlet": "The Courier-Mail",
-        "published": "2026-07-16T12:00:00Z",
-        "url": "https://www.couriermail.com.au/news/victoria/claim-that-millions-in-bushfire-relief-is-being-funnelled-into-government-departments/news-story/3ae36d67d0e11d1d0b25356ffefaf9c7"
       }
     ],
     "evelyn": [
@@ -738,16 +732,16 @@
     ],
     "geelong": [
       {
+        "title": "Geelong Advertiser 2026 Victorian election survey",
+        "outlet": "Geelong Advertiser",
+        "published": "2026-11-13T09:53:00Z",
+        "url": "https://www.geelongadvertiser.com.au/news/geelong/geelong-advertiser-2026-victorian-election-survey/news-story/c2f756ed0818eaf491f1eee6df57fc28"
+      },
+      {
         "title": "Geelong mother says she is living in city of broken election promises",
         "outlet": "ABC News",
         "published": "2026-11-12T19:04:38Z",
         "url": "https://www.abc.net.au/news/2026-11-13/geelong-city-of-broken-promises-victoria/107376226"
-      },
-      {
-        "title": "Geelong Advertiser 2026 Victorian election survey",
-        "outlet": "Geelong Advertiser",
-        "published": "2026-11-12T18:51:00Z",
-        "url": "https://www.geelongadvertiser.com.au/news/geelong/geelong-advertiser-2026-victorian-election-survey/news-story/c2f756ed0818eaf491f1eee6df57fc28"
       },
       {
         "title": "Geelong mayor urges election candidates to back regional tennis centre",
@@ -906,9 +900,9 @@
       },
       {
         "title": "Jess Wilson: ‘I will end the tobacco wars in this state’",
-        "outlet": "Geelong Advertiser",
+        "outlet": "Herald Sun",
         "published": "2026-11-07T07:59:00Z",
-        "url": "https://www.geelongadvertiser.com.au/news/victoria/state-election/jess-wilson-i-will-end-the-tobacco-wars-in-this-state/news-story/123d1a16df87cdc8f577a755810a8737"
+        "url": "https://www.heraldsun.com.au/news/victoria/state-election/jess-wilson-i-will-end-the-tobacco-wars-in-this-state/news-story/123d1a16df87cdc8f577a755810a8737"
       },
       {
         "title": "Victoria's Liberals unveil plan designed to end tobacco wars",
@@ -1017,6 +1011,12 @@
     ],
     "malvern": [],
     "melbourne": [
+      {
+        "title": "Review puts Altona North station a step closer",
+        "outlet": "Star Weekly",
+        "published": "2026-11-12T17:06:00Z",
+        "url": "https://starweekly.com.au/news/2026/11/13/review-puts-altona-north-station-a-step-closer/"
+      },
       {
         "title": "Six upper house candidates chasing Bendigo votes call Melbourne home",
         "outlet": "Bendigo Advertiser",
@@ -1472,16 +1472,16 @@
     ],
     "ripon": [
       {
+        "title": "Victorian Labor MP accuses council of mismanaging Maryborough pool redevelopment",
+        "outlet": "ABC (Australian Broadcasting Corporation) on MSN",
+        "published": "2026-11-13T05:44:00Z",
+        "url": "https://www.msn.com/en-au/news/other/victorian-labor-mp-accuses-council-of-mismanaging-maryborough-pool-redevelopment/ar-AA2hl15j"
+      },
+      {
         "title": "Victorian Labor MP 'sick to death' of council approach to new Maryborough pool",
         "outlet": "ABC News",
         "published": "2026-11-13T02:44:20Z",
         "url": "https://www.abc.net.au/news/2026-11-13/ripon-mp-accuses-central-goldfields-council-of-mismanaging-pool/107379626"
-      },
-      {
-        "title": "Victorian Labor MP accuses council of mismanaging Maryborough pool redevelopment",
-        "outlet": "ABC (Australian Broadcasting Corporation) on MSN",
-        "published": "2026-11-12T18:44:20Z",
-        "url": "https://www.msn.com/en-au/news/other/victorian-labor-mp-accuses-council-of-mismanaging-maryborough-pool-redevelopment/ar-AA2hl15j"
       },
       {
         "title": "Renewables, roads and emergency services levy front-of-mind at Ripon election forum",
@@ -1586,6 +1586,18 @@
     ],
     "sunbury": [
       {
+        "title": "Smoother travels promised",
+        "outlet": "Star Weekly",
+        "published": "2026-11-12T14:44:00Z",
+        "url": "https://starweekly.com.au/news/2026/11/13/smoother-travels-promised/"
+      },
+      {
+        "title": "State election candidates",
+        "outlet": "Star Weekly",
+        "published": "2026-11-12T14:36:00Z",
+        "url": "https://starweekly.com.au/news/2026/11/13/state-election-candidates/"
+      },
+      {
         "title": "Vineyard Road overpass duplication committed",
         "outlet": "Star Weekly",
         "published": "2026-11-08T16:57:00Z",
@@ -1619,6 +1631,12 @@
       }
     ],
     "tarneit": [
+      {
+        "title": "Tarneit prepares to vote",
+        "outlet": "Star Weekly",
+        "published": "2026-11-12T15:49:00Z",
+        "url": "https://starweekly.com.au/news/2026/11/13/tarneit-prepares-to-vote/"
+      },
       {
         "title": "Liberals Pledge To Reopen Police Station",
         "outlet": "Wyndham TV",
@@ -1664,6 +1682,12 @@
       }
     ],
     "williamstown": [
+      {
+        "title": "Review puts Altona North station a step closer",
+        "outlet": "Star Weekly",
+        "published": "2026-11-12T17:06:00Z",
+        "url": "https://starweekly.com.au/news/2026/11/13/review-puts-altona-north-station-a-step-closer/"
+      },
       {
         "title": "Live: Vic Liberals apologise after dumping candidate over anti-Aboriginal comments",
         "outlet": "ABC News",

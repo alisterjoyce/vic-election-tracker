@@ -23,6 +23,33 @@
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election",
   "polls": [
     {
+      "id": "lighthouse-growth-intelligence-centre-2026-11-13",
+      "start_date": "2026-11-13",
+      "end_date": "2026-11-13",
+      "pollster": "Lighthouse/Growth Intelligence Centre",
+      "client": "Herald Sun",
+      "sample_size": 1351,
+      "source_url": "https://www.heraldsun.com.au/news/victoria/state-election/time-for-a-change-coalition-extends-lead-over-labor-as-premier-ben-carroll-faces-losing-his-seat/news-story/5b54bdde2fb1c75512f1ab7a4a448fc3",
+      "primary": {
+        "ALP": 21,
+        "LNP": 32,
+        "GRN": 14,
+        "ONP": 23,
+        "OTH": 10
+      },
+      "approval": {
+        "matchup": "Carroll vs Wilson vs Pickering",
+        "leaders": {
+          "Carroll": {
+            "net": -19
+          },
+          "Wilson": {
+            "net": 17
+          }
+        }
+      }
+    },
+    {
       "id": "redbridge-accent-2026-11-10",
       "start_date": "2026-11-03",
       "end_date": "2026-11-10",
