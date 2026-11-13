@@ -6,8 +6,324 @@
       "entries": "[{date (Melbourne YYYY-MM-DD), at (ISO UTC), type, ...}] where type is one of: candidate_added {seat, name, party, status, source}; candidate_superseded {seat, name, party, by}; candidate_withdrawn {seat, name, party}; candidate_not_standing {seat, name, party}; poll_added {id, pollster, end_date, tpp (L/NP), primary}; odds_move {seat, label, party, from, to} (a price moving 0.5 or more); retirement {seat, name}; news {count} (new headlines collected)"
     }
   },
-  "updated": "2026-11-13T05:54:37Z",
+  "updated": "2026-11-13T09:57:18Z",
   "entries": [
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Khalif White",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "eastern-victoria",
+      "name": "Daniel Hamman",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Cary De Wit",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Brenton Van Der Ende",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Peter Plaucs",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Ashley Beruldsen",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "north-eastern-metropolitan",
+      "name": "Jae Ho Hwang",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "John Kavanagh",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "northern-metropolitan",
+      "name": "James Fung",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Chae Van Dorssen",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "northern-victoria",
+      "name": "Sophie De Wit",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Andrew Zmegac",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "south-eastern-metropolitan",
+      "name": "Scott Marsh",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Karla Zmegac",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "southern-metropolitan",
+      "name": "Paul Dean",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Mark Royal",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "western-metropolitan",
+      "name": "Arlene Smith",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Costa Di Biase",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "western-victoria",
+      "name": "Jennifer Bowden",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "bayswater",
+      "name": "Naomi Hubbard",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "box-hill",
+      "name": "Sue-Ellen McGrath",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "glen-waverley",
+      "name": "Segar Nadarajah",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "morwell",
+      "name": "Ross McPhee",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "niddrie",
+      "name": "Domenic Mete",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "pakenham",
+      "name": "Jesse Hamalainen",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "point-cook",
+      "name": "Paul Kelly",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "ringwood",
+      "name": "Christopher William Norton",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "ripon",
+      "name": "Ronald Skruzny",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "sunbury",
+      "name": "John Stafford",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "sydenham",
+      "name": "Brandon Sinclair",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "candidate_added",
+      "seat": "werribee",
+      "name": "Jeremy Orchard",
+      "party": "OTH",
+      "status": "vec_nominated",
+      "source": "vec"
+    },
+    {
+      "date": "2026-11-13",
+      "at": "2026-11-13T09:57:18Z",
+      "type": "news",
+      "count": 4
+    },
     {
       "date": "2026-11-13",
       "at": "2026-11-13T05:54:37Z",
