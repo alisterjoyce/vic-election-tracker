@@ -8,8 +8,26 @@
       "sources": "Source -> {status: ok | error | skipped, url, items, message}"
     }
   },
-  "updated": "2026-11-14T19:38:41Z",
+  "updated": "2026-11-14T23:30:26Z",
   "statewide": [
+    {
+      "title": "Young Victorian voters torn between disillusionment, optimism",
+      "outlet": "ABC News",
+      "published": "2026-11-14T21:06:42Z",
+      "url": "https://www.abc.net.au/news/2026-11-15/victorian-election-disillusionment-optimism-young-voters/107319232"
+    },
+    {
+      "title": "The Victorian election is being called consequential, but is it tackling the big issues?",
+      "outlet": "ABC (Australian Broadcasting Corporation)",
+      "published": "2026-11-14T12:06:00Z",
+      "url": "https://www.abc.net.au/news/2026-11-15/victorian-election-big-issues-crime-rate-focus-mental-health/107384002"
+    },
+    {
+      "title": "Promise for Coburn Primary School",
+      "outlet": "Star Weekly",
+      "published": "2026-11-14T07:00:00Z",
+      "url": "https://starweekly.com.au/news/2026/11/14/promise-for-coburn-primary-school/"
+    },
     {
       "title": "Your guide to minor parties in the 2026 Victorian state election",
       "outlet": "ABC News",
@@ -23,9 +41,9 @@
       "url": "https://sunraysiadaily.com.au/news/2026/11/14/push-to-revive-historic-mallee-rally/"
     },
     {
-      "title": "Jess Wilson targets key marginal seat of South Barwon in state election push",
+      "title": "Victorian Labor pledges $1.7bn in school upgrades amid mounting state debt warnings",
       "outlet": "The Australian",
-      "published": "2026-11-13T16:28:00Z",
+      "published": "2026-11-13T17:20:00Z",
       "url": "https://www.theaustralian.com.au/nation/victoria/jess-wilson-targets-key-marginal-seat-of-south-barwon-in-state-election-push/news-story/67dafdc7fab4a561f08af351c1015b0f"
     },
     {
@@ -83,6 +101,12 @@
       "url": "https://www.victoriannews.com.au/politics/state-politics-victoria/meet-jess-wilsons-father/"
     },
     {
+      "title": "Five reasons the Victorian election will be closer than you think",
+      "outlet": "Australian Financial Review",
+      "published": "2026-11-12T05:46:00Z",
+      "url": "https://www.afr.com/politics/five-reasons-the-victorian-election-will-be-closer-than-you-think-20261112-p61d7m"
+    },
+    {
       "title": "Jess Wilson fights back questions over why disendorsed candidate remained on the voting ticket despite earlier controversies",
       "outlet": "news24.com.au",
       "published": "2026-11-12T05:31:00Z",
@@ -135,30 +159,6 @@
       "outlet": "The Guardian",
       "published": "2026-11-11T05:59:00Z",
       "url": "https://www.theguardian.com/australia-news/2026/nov/12/one-nation-candidates-say-they-are-funding-their-own-victorian-election-campaigns-as-party-keeps-purse-shut-ntwnfb"
-    },
-    {
-      "title": "Early voting in Victoria opens next week - here's what to know",
-      "outlet": "ABC News",
-      "published": "2026-11-11T05:33:43Z",
-      "url": "https://www.abc.net.au/news/2026-11-11/victorian-election-early-voting-postal-voting-november-28/107242694"
-    },
-    {
-      "title": "Victorian Election 2026",
-      "outlet": "7NEWS Australia",
-      "published": "2026-11-10T23:13:00Z",
-      "url": "https://7news.com.au/news/vic/vic-election-2026"
-    },
-    {
-      "title": "Live: Greens blast Labor over preferences ahead of Victorian election battle",
-      "outlet": "ABC News",
-      "published": "2026-11-10T23:03:40Z",
-      "url": "https://www.abc.net.au/news/2026-11-11/victoria-election-blog-november-11/107371790"
-    },
-    {
-      "title": "Victorian polling centre closures a 'kick in the teeth', say voters",
-      "outlet": "ABC News",
-      "published": "2026-11-10T19:36:15Z",
-      "url": "https://www.abc.net.au/news/2026-11-11/polling-centre-closing-central-victoria-state-election-voting/107367046"
     }
   ],
   "seats": {
@@ -732,9 +732,9 @@
     ],
     "geelong": [
       {
-        "title": "Jess Wilson targets key marginal seat of South Barwon in state election push",
+        "title": "Victorian Labor pledges $1.7bn in school upgrades amid mounting state debt warnings",
         "outlet": "The Australian",
-        "published": "2026-11-13T16:28:00Z",
+        "published": "2026-11-13T17:20:00Z",
         "url": "https://www.theaustralian.com.au/nation/victoria/jess-wilson-targets-key-marginal-seat-of-south-barwon-in-state-election-push/news-story/67dafdc7fab4a561f08af351c1015b0f"
       },
       {
@@ -1079,6 +1079,12 @@
       }
     ],
     "melton": [
+      {
+        "title": "Promise for Coburn Primary School",
+        "outlet": "Star Weekly",
+        "published": "2026-11-14T07:00:00Z",
+        "url": "https://starweekly.com.au/news/2026/11/14/promise-for-coburn-primary-school/"
+      },
       {
         "title": "V/Line service boost commitment",
         "outlet": "Star Weekly",
@@ -1447,7 +1453,14 @@
         "url": "https://www.greenleft.org.au/2026/1462/analysis/socialist-alliance-candidate-says-one-nation-can-be-combatted"
       }
     ],
-    "point-cook": [],
+    "point-cook": [
+      {
+        "title": "Point Cook gets ready to vote",
+        "outlet": "Star Weekly",
+        "published": "2026-11-14T10:01:00Z",
+        "url": "https://starweekly.com.au/news/2026/11/14/point-cook-gets-ready-to-vote/"
+      }
+    ],
     "polwarth": [
       {
         "title": "Polwarth election results 2022: live count for 2026 from 28 November",
@@ -1717,6 +1730,12 @@
     ],
     "werribee": [
       {
+        "title": "Point Cook gets ready to vote",
+        "outlet": "Star Weekly",
+        "published": "2026-11-14T10:01:00Z",
+        "url": "https://starweekly.com.au/news/2026/11/14/point-cook-gets-ready-to-vote/"
+      },
+      {
         "title": "Cancer Care Pressure On Labor, One Nation",
         "outlet": "Wyndham TV",
         "published": "2026-11-10T16:00:00Z",
@@ -1832,9 +1851,9 @@
       "items": 12
     },
     "Star Weekly": {
-      "status": "error",
+      "status": "ok",
       "url": "https://www.starweekly.com.au/feed/",
-      "message": "502 Server Error: Bad Gateway for url: https://starweekly.com.au/feed/"
+      "items": 12
     },
     "Shepparton News": {
       "status": "error",

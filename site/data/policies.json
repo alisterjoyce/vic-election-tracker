@@ -26,8 +26,8 @@
     "licence_url": "https://creativecommons.org/licenses/by/4.0/",
     "citation": "Australian Election Tracker (OZE), Victorian state election 2026 candidate ledger, electiontracker.au"
   },
-  "generated": "2026-11-12T21:17:56.061Z",
-  "copied": "2026-11-13",
+  "generated": "2026-11-14T21:16:51.647Z",
+  "copied": "2026-11-15",
   "caveat": "Policy cells show only positions with an individually sourced public record (manifesto, press release, Hansard, or Parliamentary Budget Office costing). An empty cell means no sourced position is in the ledger yet — not that a party has no view, and not an editorial judgement of importance.",
   "parties": [
     {
@@ -1752,6 +1752,23 @@
           "fiscal": {
             "amount_display": "more than $2.1 billion",
             "financing": "taxpayer",
+            "pbo_status": "uncosted"
+          }
+        },
+        {
+          "id": "labor-edu-school-upgrades-2026-11",
+          "statement": "A re-elected Carroll Labor Government says it will invest more than $1.17 billion to upgrade 228 public schools and plan upgrades at 16 more, plus $500 million for upgrades at non-government schools: $350 million for Catholic schools and $150 million for other low-fee independent schools, including a $30 million grant round for Islamic schools.",
+          "kind": "pledge",
+          "source": {
+            "url": "https://www.viclabor.org.au/news/labor-will-upgrade-hundreds-of-local-schools",
+            "publisher": "Victorian Labor",
+            "title": "Labor Will Upgrade Hundreds of Local Schools",
+            "published": "2026-11-14",
+            "accessed": "2026-11-15"
+          },
+          "fiscal": {
+            "amount_display": "more than $1.17 billion (public) plus $500 million (non-government)",
+            "financing": "unspecified",
             "pbo_status": "uncosted"
           }
         }
