@@ -8,7 +8,7 @@
       "sources": "Source -> {status: ok | error | skipped, url, items, message}"
     }
   },
-  "updated": "2026-11-14T09:44:41Z",
+  "updated": "2026-11-14T19:38:41Z",
   "statewide": [
     {
       "title": "Your guide to minor parties in the 2026 Victorian state election",
@@ -303,9 +303,9 @@
       },
       {
         "title": "Jacinta Allan will not recontest the November election in Bendigo East",
-        "outlet": "Northern Territory News",
-        "published": "2026-08-13T21:29:00Z",
-        "url": "https://www.ntnews.com.au/news/victoria/jacinta-allan-will-not-recontest-the-next-election-for-bendigo/news-story/1ec4f44c52023ea1a71b82b25f982dda"
+        "outlet": "Adelaide Now",
+        "published": "2026-08-14T11:14:00Z",
+        "url": "https://www.adelaidenow.com.au/news/victoria/jacinta-allan-will-not-recontest-the-next-election-for-bendigo/news-story/1ec4f44c52023ea1a71b82b25f982dda"
       },
       {
         "title": "Jacinta Allan’s phantom act as Labor colleagues tip imminent resignation",
@@ -425,9 +425,9 @@
       },
       {
         "title": "Victorian Greens MP Tim Read dies after cancer battle",
-        "outlet": "The Daily Telegraph",
+        "outlet": "The Courier-Mail",
         "published": "2026-09-19T14:07:00Z",
-        "url": "https://www.dailytelegraph.com.au/business/work/leaders-companies/victorian-greens-mp-tim-read-has-died-after-cancer-battle/news-story/b8349436f5784889e1531f72ec6a6559"
+        "url": "https://www.couriermail.com.au/business/work/leaders-companies/victorian-greens-mp-tim-read-has-died-after-cancer-battle/news-story/b8349436f5784889e1531f72ec6a6559"
       },
       {
         "title": "Victorian Greens MP dies of cancer",
@@ -1106,6 +1106,12 @@
     ],
     "mildura": [
       {
+        "title": "Community first",
+        "outlet": "Sunraysia Daily",
+        "published": "2026-11-14T14:47:32Z",
+        "url": "https://sunraysiadaily.com.au/news/2026/11/15/community-first/"
+      },
+      {
         "title": "Crime concerned",
         "outlet": "Sunraysia Daily",
         "published": "2026-11-14T01:02:31Z",
@@ -1158,12 +1164,6 @@
         "outlet": "Sunraysia Daily",
         "published": "2026-11-02T20:02:01Z",
         "url": "https://sunraysiadaily.com.au/news/2026/11/03/benhams-bridge-pledge/"
-      },
-      {
-        "title": "Benham commits to new ambo station",
-        "outlet": "Sunraysia Daily",
-        "published": "2026-11-01T02:00:22Z",
-        "url": "https://sunraysiadaily.com.au/news/2026/11/01/benham-commits-to-new-ambo-station/"
       }
     ],
     "mill-park": [
@@ -1437,7 +1437,7 @@
       {
         "title": "‘Rage baiting’: Labor and Greens clash over Pascoe Vale MP’s abortion social media post",
         "outlet": "Herald Sun",
-        "published": "2026-11-13T13:47:00Z",
+        "published": "2026-11-14T03:46:00Z",
         "url": "https://www.heraldsun.com.au/news/victoria/state-election/rage-baiting-labor-and-greens-clash-over-pascoe-vale-mps-abortion-social-media-post/news-story/9ecc46b482e101a90d17b707a1af7239"
       },
       {
@@ -1832,9 +1832,9 @@
       "items": 12
     },
     "Star Weekly": {
-      "status": "ok",
+      "status": "error",
       "url": "https://www.starweekly.com.au/feed/",
-      "items": 12
+      "message": "502 Server Error: Bad Gateway for url: https://starweekly.com.au/feed/"
     },
     "Shepparton News": {
       "status": "error",
