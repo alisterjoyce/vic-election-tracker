@@ -8,13 +8,19 @@
       "sources": "Source -> {status: ok | error | skipped, url, items, message}"
     }
   },
-  "updated": "2026-11-15T05:48:52Z",
+  "updated": "2026-11-15T09:44:42Z",
   "statewide": [
     {
       "title": "Rival promises as parties rally at Victorian election campaign launches",
       "outlet": "ABC News",
       "published": "2026-11-15T04:42:10Z",
       "url": "https://www.abc.net.au/news/2026-11-15/labor-liberal-coalition-campaign-launches-health-youth-crime/107387220"
+    },
+    {
+      "title": "Ben Carroll and Jess Wilson launch Victorian election campaigns with health and crime pledges",
+      "outlet": "The Cairns Post",
+      "published": "2026-11-14T21:42:00Z",
+      "url": "https://www.cairnspost.com.au/news/victoria/ben-carroll-and-jess-wilson-launch-victorian-election-campaigns-with-health-and-crime-pledges/news-story/03ec991631d8f4ffff4dec8b279083f1"
     },
     {
       "title": "Young Victorian voters torn between disillusionment, optimism",
@@ -153,12 +159,6 @@
       "outlet": "onenewsaustralia.com",
       "published": "2026-11-11T11:38:00Z",
       "url": "https://www.onenewsaustralia.com/jess-wilson-dumps-liberal-candidate-paul-lindemann-over-racist-posts-in-major-victoria-election-vetting-failure/"
-    },
-    {
-      "title": "Victorian election early voting starts November 18. Here's what you need to know",
-      "outlet": "ABC (Australian Broadcasting Corporation) on MSN",
-      "published": "2026-11-11T08:33:00Z",
-      "url": "https://www.msn.com/en-au/news/australia/victorian-election-early-voting-starts-november-18-heres-what-you-need-to-know/ar-AA2hbPZn"
     }
   ],
   "seats": {
@@ -391,9 +391,9 @@
       },
       {
         "title": "James Newbury guilty of parliamentary misconduct over post warning Allan set to be electorally thumped",
-        "outlet": "The Toowoomba Chronicle",
+        "outlet": "Northern Territory News",
         "published": "2026-07-23T04:58:00Z",
-        "url": "https://www.thechronicle.com.au/news/victoria/james-newbury-found-guilty-of-misconduct-over-political-baseball-bats-post/news-story/8ecf32c570a4432490c56283d408fb28"
+        "url": "https://www.ntnews.com.au/news/victoria/james-newbury-found-guilty-of-misconduct-over-political-baseball-bats-post/news-story/8ecf32c570a4432490c56283d408fb28"
       }
     ],
     "broadmeadows": [
@@ -405,6 +405,12 @@
       }
     ],
     "brunswick": [
+      {
+        "title": "Candidates face off over the future of Brunswick",
+        "outlet": "Brunswick Voice",
+        "published": "2026-11-15T00:11:00Z",
+        "url": "https://brunswickvoice.com.au/brunswick-candidates-trade-blows-over-planning-copy/"
+      },
       {
         "title": "'Mr Integrity': beloved MP honoured at state service",
         "outlet": "Australian Associated Press on MSN",
@@ -493,6 +499,12 @@
         "outlet": "heraldsun.com.au",
         "published": "2026-08-07T12:00:00Z",
         "url": "https://www.heraldsun.com.au/news/victoria/sonya-kilkenny-admits-oversight-on-development-decision-near-her-investment-home/news-story/593059d63ccfc1e0f257e7acbbef7c1a"
+      },
+      {
+        "title": "Victoria’s Attorney-General Sonya Kilkenny criticised for ‘disappointing’ silence in refusing to respond to call for law changes",
+        "outlet": "The Toowoomba Chronicle",
+        "published": "2026-08-05T12:00:00Z",
+        "url": "https://www.thechronicle.com.au/news/victoria/victorias-attorneygeneral-sonya-kilkenny-criticised-for-disappointing-silence-in-refusing-to-respond-to-call-for-law-changes/news-story/0804b527b82b4ae49b997410e97afda0"
       }
     ],
     "caulfield": [
@@ -1874,8 +1886,8 @@
     "Bing News search": {
       "status": "ok",
       "url": "https://www.bing.com/news/search",
-      "items": 175,
-      "message": "175 searches for 88 districts"
+      "items": 176,
+      "message": "176 searches for 88 districts"
     },
     "Google News": {
       "status": "skipped",
