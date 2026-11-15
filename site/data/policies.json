@@ -26,8 +26,8 @@
     "licence_url": "https://creativecommons.org/licenses/by/4.0/",
     "citation": "Australian Election Tracker (OZE), Victorian state election 2026 candidate ledger, electiontracker.au"
   },
-  "generated": "2026-11-14T21:16:51.647Z",
-  "copied": "2026-11-15",
+  "generated": "2026-11-15T21:36:13.000Z",
+  "copied": "2026-11-16",
   "caveat": "Policy cells show only positions with an individually sourced public record (manifesto, press release, Hansard, or Parliamentary Budget Office costing). An empty cell means no sourced position is in the ledger yet — not that a party has no view, and not an editorial judgement of importance.",
   "parties": [
     {
@@ -2189,6 +2189,24 @@
             "financing": "taxpayer",
             "pbo_status": "uncosted"
           }
+        },
+        {
+          "id": "labor-health-planned-surgery-2026-11",
+          "statement": "A re-elected Carroll Labor Government says it will invest $1.17 billion to deliver 100,000 extra planned surgeries, all in public hospitals through more High-Intensity Theatre lists (including evening and weekend sessions), with 30 per cent in regional Victoria, plus more than $195 million for 500,000 additional specialist appointments. Labor says this will halve the planned surgery waiting list.",
+          "kind": "pledge",
+          "source": {
+            "url": "https://www.viclabor.org.au/news/100-000-more-public-surgeries-in-public-hospitals",
+            "publisher": "Victorian Labor",
+            "title": "100,000 More Public Surgeries - In Public Hospitals",
+            "published": "2026-11-15",
+            "accessed": "2026-11-16"
+          },
+          "fiscal": {
+            "amount_display": "$1.17 billion plus more than $195 million",
+            "timeframe": "Not specified",
+            "financing": "taxpayer",
+            "pbo_status": "uncosted"
+          }
         }
       ]
     },
@@ -2716,6 +2734,30 @@
             "title": "Our Plan to Deliver for Victorians",
             "accessed": "2026-10-05"
           }
+        },
+        {
+          "id": "liberal-crime-youth-bootcamp-2026-11",
+          "statement": "A Liberal and Nationals government says it will establish a bootcamp for young offenders at the former Dhurringile Prison, modelled on Queensland's Circuit Breaker program, with a compulsory daily routine of physical activity, farm work, cleaning, maintenance, cooking, laundry, education and skills programs. Courts would be able to send offenders aged 14 to 17 there as an alternative to a community corrections order or other custodial sentence.",
+          "kind": "pledge",
+          "source": {
+            "url": "https://vicliberal.org.au/media-releases/tough-new-bootcamp-to-get-young-offenders-on-the-right-path",
+            "publisher": "Victorian Liberal Party (joint Liberal–Nationals statement)",
+            "title": "Tough new bootcamp to get young offenders on the right path",
+            "published": "2026-11-15",
+            "accessed": "2026-11-16"
+          }
+        },
+        {
+          "id": "liberal-crime-celestes-law-2026-11",
+          "statement": "A Liberal and Nationals government says \"Celeste's Law\" will implement all Victorian Law Reform Commission stalking recommendations, extend family violence courtroom protections such as pre-recorded evidence to other stalking victims, trial offender-pays 24/7 GPS monitoring of high-risk stalkers under intervention orders, mandate specialist stalking training for police, and strengthen digital stalking laws, overseen by a Department of Justice taskforce and funded from its $100 million Safer Communities Fund.",
+          "kind": "pledge",
+          "source": {
+            "url": "https://vicliberal.org.au/media-releases/2026-11-15-celestes-law-to-strengthen-protections-for-stalking-victims",
+            "publisher": "Victorian Liberal Party (joint Liberal–Nationals statement)",
+            "title": "Celeste's Law to strengthen protections for stalking victims",
+            "published": "2026-11-16",
+            "accessed": "2026-11-16"
+          }
         }
       ]
     },
@@ -3189,6 +3231,18 @@
             "title": "Labor's health promises cannot be trusted",
             "published": "2026-10-25",
             "accessed": "2026-10-26"
+          }
+        },
+        {
+          "id": "liberal-health-surgerysooner-2026-11",
+          "statement": "The Coalition says its SurgerySooner plan will halve Victoria's elective surgery waiting list by using additional capacity within the health system, including the private system, and that this plan and its other health commitments are offset by more than $26 billion in savings.",
+          "kind": "pledge",
+          "source": {
+            "url": "https://vicliberal.org.au/media-releases/labors-desperate-surgery-promise-cannot-be-trusted",
+            "publisher": "Victorian Liberal Party (joint Liberal–Nationals statement)",
+            "title": "Labor's desperate surgery promise cannot be trusted",
+            "published": "2026-11-16",
+            "accessed": "2026-11-16"
           }
         }
       ]
