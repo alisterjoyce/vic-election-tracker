@@ -169,16 +169,8 @@
         },
         "undecided": 17
       },
-      "preferred_premier_alt": {
-        "matchup": "Carroll vs Wilson vs Pickering",
-        "leaders": {
-          "Wilson": 36,
-          "Carroll": 28,
-          "Pickering": 19
-        }
-      },
       "approval": {
-        "matchup": "Positive / neutral / negative ratings",
+        "matchup": "Carroll vs Wilson vs Pickering",
         "leaders": {
           "Carroll": {
             "positive": 17,
@@ -197,20 +189,21 @@
             "negative": 43,
             "undecided": 34,
             "net": -20
-          },
-          "Sandell": {
-            "positive": 18,
-            "negative": 38,
-            "undecided": 44,
-            "net": -20
           }
+        }
+      },
+      "preferred_premier_alt": {
+        "matchup": "Carroll vs Wilson vs Pickering",
+        "leaders": {
+          "Wilson": 36,
+          "Carroll": 28,
+          "Pickering": 19
         }
       },
       "supplemented": {
         "fields": [
           "client",
-          "preferred_premier_alt",
-          "approval"
+          "preferred_premier_alt"
         ],
         "label": "The Poll Bludger, 9 Nov 2026 (reporting the Herald Sun)",
         "url": "https://www.pollbludger.net/2026/11/09/demosau-labor-18-coalition-33-one-nation-21-in-victoria/"
