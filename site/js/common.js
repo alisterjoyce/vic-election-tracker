@@ -929,10 +929,10 @@
   // Result groups, in the order the dropdown shows them, with how many of each to show.
   const SEARCH_GROUPS = [
     { name: "Seats", types: ["District", "Region"], max: 6 },
-    { name: "Your ballot", types: ["Ballot"], max: 2 },
     { name: "Candidates", types: ["Candidate", "MLC"], max: 8 },
     { name: "Suburbs", types: ["Suburb"], max: 8 },
     { name: "Postcodes", types: ["Postcode"], max: 8 },
+    { name: "Your ballot", types: ["Ballot"], max: 2 },   // last, so Enter still goes to the first seat, suburb or postcode
   ];
 
   // The search box: in the home page's headline card (#hero-search), elsewhere in the header. On the home page
