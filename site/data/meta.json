@@ -28,16 +28,16 @@
   "key_dates": {
     "countdowns": [
       {
-        "label": "Nominations close",
-        "at": "2026-11-09T12:00:00+11:00",
-        "today": "today, noon",
-        "after": "closed"
-      },
-      {
         "label": "Early voting opens",
         "at": "2026-11-18T08:00:00+11:00",
         "today": "today",
         "after": "open"
+      },
+      {
+        "label": "Postal applications close",
+        "at": "2026-11-25T18:00:00+11:00",
+        "today": "today, 6 pm",
+        "after": "closed"
       },
       {
         "label": "Election day",
@@ -88,7 +88,7 @@
       },
       {
         "from": "2026-11-25",
-        "text": "Early voting is open; postal vote applications close at 6 pm.",
+        "text": "Early voting is open; postal vote applications close at 6 pm (Wed 25 Nov).",
         "short": "postal vote applications close 6 pm"
       },
       {

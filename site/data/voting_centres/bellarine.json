@@ -1,0 +1,203 @@
+{
+  "district": "bellarine",
+  "name": "Bellarine",
+  "early": [
+    {
+      "name": "Bellarine - EVC 1",
+      "venue": "Ocean Grove Neighbourhood House (EVC)",
+      "address": "1 John Dory Drive",
+      "suburb": "Ocean Grove",
+      "postcode": "3226",
+      "access": "AWA",
+      "lat": -38.261133,
+      "lon": 144.538707
+    },
+    {
+      "name": "Bellarine - EVC 2",
+      "venue": "St James Anglican Church Hall (EVC)",
+      "address": "47-55 Collins Street",
+      "suburb": "Drysdale",
+      "postcode": "3222",
+      "access": "LNWA",
+      "lat": -38.169802,
+      "lon": 144.573739
+    },
+    {
+      "name": "Geelong - EVC 1",
+      "venue": "Eastern Hub Geelong (EVC)",
+      "address": "285A McKillop Street",
+      "suburb": "East Geelong",
+      "postcode": "3219",
+      "access": "IWA",
+      "lat": -38.159872,
+      "lon": 144.381027,
+      "joint": true,
+      "host": "geelong"
+    },
+    {
+      "name": "Geelong - EVC 3",
+      "venue": "The Guild Hall (EVC)",
+      "address": "33A Myers Street",
+      "suburb": "Geelong",
+      "postcode": "3220",
+      "access": "IWA",
+      "lat": -38.150246,
+      "lon": 144.3554,
+      "joint": true,
+      "host": "geelong"
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Barwon Heads",
+      "venue": "Barwon Heads Primary School",
+      "address": "3A Golf Links Road",
+      "suburb": "Barwon Heads",
+      "postcode": "3227",
+      "access": "AWA",
+      "lat": -38.281514,
+      "lon": 144.487084
+    },
+    {
+      "name": "Clifton Springs",
+      "venue": "Clifton Springs Primary School",
+      "address": "118 Jetty Road",
+      "suburb": "Clifton Springs",
+      "postcode": "3222",
+      "access": "AWA",
+      "lat": -38.165723,
+      "lon": 144.553698
+    },
+    {
+      "name": "Collendina",
+      "venue": "Bellarine Church of Christ",
+      "address": "17 Tareeda Way",
+      "suburb": "Ocean Grove",
+      "postcode": "3226",
+      "access": "AWA",
+      "lat": -38.257766,
+      "lon": 144.55041
+    },
+    {
+      "name": "Drysdale",
+      "venue": "St James Anglican Church Hall",
+      "address": "47-55 Collins Street",
+      "suburb": "Drysdale",
+      "postcode": "3222",
+      "access": "LNWA",
+      "lat": -38.169815,
+      "lon": 144.573763
+    },
+    {
+      "name": "Drysdale Central",
+      "venue": "SpringDale Neighborhood Centre",
+      "address": "17 High Street",
+      "suburb": "Drysdale",
+      "postcode": "3222",
+      "access": "AWA",
+      "lat": -38.173911,
+      "lon": 144.569957
+    },
+    {
+      "name": "Gateway",
+      "venue": "Reside Church",
+      "address": "175 Moolap Station Road",
+      "suburb": "Moolap",
+      "postcode": "3224",
+      "access": "AWA",
+      "lat": -38.18191,
+      "lon": 144.419756,
+      "joint": true
+    },
+    {
+      "name": "Indented Head",
+      "venue": "Indented Head Community Hall",
+      "address": "326A The Esplanade",
+      "suburb": "Indented Head",
+      "postcode": "3223",
+      "access": "LNWA",
+      "lat": -38.142369,
+      "lon": 144.713181
+    },
+    {
+      "name": "Leopold",
+      "venue": "LINC Stadium (Leopold Primary School)",
+      "address": "1 Kensington Road",
+      "suburb": "Leopold",
+      "postcode": "3224",
+      "access": "AWA",
+      "lat": -38.188072,
+      "lon": 144.464428
+    },
+    {
+      "name": "Leopold East",
+      "venue": "Leopold Community and Learning Centre",
+      "address": "31-39 Kensington Road, (access via Level 1)",
+      "suburb": "Leopold",
+      "postcode": "3224",
+      "access": "IWA",
+      "lat": -38.186187,
+      "lon": 144.464784
+    },
+    {
+      "name": "Ocean Grove",
+      "venue": "Ocean Grove Primary School",
+      "address": "1-23 Draper Street",
+      "suburb": "Ocean Grove",
+      "postcode": "3226",
+      "access": "LNWA",
+      "lat": -38.264185,
+      "lon": 144.522555
+    },
+    {
+      "name": "Point Lonsdale",
+      "venue": "Point Lonsdale Primary School",
+      "address": "29 Bowen Road",
+      "suburb": "Point Lonsdale",
+      "postcode": "3225",
+      "access": "LNWA",
+      "lat": -38.273863,
+      "lon": 144.621345
+    },
+    {
+      "name": "Queenscliff",
+      "venue": "Queenscliff Primary School",
+      "address": "20 Stevens Street, (access via Stokes Street)",
+      "suburb": "Queenscliff",
+      "postcode": "3225",
+      "access": "AWA",
+      "lat": -38.267332,
+      "lon": 144.655597
+    },
+    {
+      "name": "St Leonards",
+      "venue": "St Leonards Memorial Hall",
+      "address": "1342 Murradoc Road",
+      "suburb": "St Leonards",
+      "postcode": "3223",
+      "access": "AWA",
+      "lat": -38.172273,
+      "lon": 144.714938
+    },
+    {
+      "name": "Surfside",
+      "venue": "Ocean Grove Neighbourhood House",
+      "address": "1 John Dory Drive",
+      "suburb": "Ocean Grove",
+      "postcode": "3226",
+      "access": "AWA",
+      "lat": -38.261121,
+      "lon": 144.538693
+    },
+    {
+      "name": "Wallington",
+      "venue": "Wallington Primary School",
+      "address": "608-610 Wallington Road, (access via Orchard Crescent)",
+      "suburb": "Wallington",
+      "postcode": "3222",
+      "access": "AWA",
+      "lat": -38.219368,
+      "lon": 144.506014
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "district": "melbourne",
+  "name": "Melbourne",
+  "early": [
+    {
+      "name": "Brunswick - EVC 2",
+      "venue": "Carlton Scout Hall (EVC)",
+      "address": "12 Shakespeare Street",
+      "suburb": "Carlton North",
+      "postcode": "3054",
+      "access": "LNWA",
+      "lat": -37.787901,
+      "lon": 144.969887,
+      "joint": true,
+      "host": "brunswick"
+    },
+    {
+      "name": "Essendon - EVC 1",
+      "venue": "St Brendan's Parish Hall (EVC)",
+      "address": "20 Church Street",
+      "suburb": "Flemington",
+      "postcode": "3031",
+      "access": "AWA",
+      "lat": -37.783857,
+      "lon": 144.932651,
+      "joint": true,
+      "host": "essendon"
+    },
+    {
+      "name": "Melbourne - EVC 1",
+      "venue": "Drill Hall (EVC)",
+      "address": "26 Therry Street, (access via Victoria Street)",
+      "suburb": "Melbourne",
+      "postcode": "3000",
+      "access": "AWA",
+      "lat": -37.806486,
+      "lon": 144.960501
+    },
+    {
+      "name": "Melbourne - EVC 2",
+      "venue": "Melbourne Town Hall (EVC)",
+      "address": "90-130 Swanston Street",
+      "suburb": "Melbourne",
+      "postcode": "3000",
+      "access": "AWA",
+      "lat": -37.815037,
+      "lon": 144.966519,
+      "joint": true
+    },
+    {
+      "name": "Melbourne - EVC 3",
+      "venue": "Flinders Street Voting Centre (EVC)",
+      "address": "340 Flinders Street",
+      "suburb": "Melbourne",
+      "postcode": "3000",
+      "access": "IWA",
+      "lat": -37.818517,
+      "lon": 144.963365,
+      "joint": true
+    },
+    {
+      "name": "Melbourne - EVC 4",
+      "venue": "Panarcadian Association - Loco Hall (EVC)",
+      "address": "570 Victoria Street",
+      "suburb": "North Melbourne",
+      "postcode": "3051",
+      "access": "AWA",
+      "lat": -37.804762,
+      "lon": 144.947033
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Abbotsford",
+      "venue": "Collingwood Masonic Centre",
+      "address": "141 Gipps Street",
+      "suburb": "Abbotsford",
+      "postcode": "3067",
+      "access": "AWA",
+      "lat": -37.805104,
+      "lon": 144.992711,
+      "joint": true
+    },
+    {
+      "name": "Carlton Central",
+      "venue": "Carlton North Primary School",
+      "address": "60 Lee Street, (access via O'Grady Street)",
+      "suburb": "Carlton North",
+      "postcode": "3054",
+      "access": "LNWA",
+      "lat": -37.790642,
+      "lon": 144.972708,
+      "joint": true
+    },
+    {
+      "name": "Carlton Gardens",
+      "venue": "Academy of Mary Immaculate",
+      "address": "88 Nicholson Street",
+      "suburb": "Fitzroy",
+      "postcode": "3065",
+      "access": "AWA",
+      "lat": -37.803494,
+      "lon": 144.974165,
+      "joint": true
+    },
+    {
+      "name": "Carlton North",
+      "venue": "Carlton Scout Hall",
+      "address": "12 Shakespeare Street",
+      "suburb": "Carlton North",
+      "postcode": "3054",
+      "access": "LNWA",
+      "lat": -37.78789,
+      "lon": 144.969884,
+      "joint": true
+    },
+    {
+      "name": "Collingwood",
+      "venue": "Collingwood English Language School",
+      "address": "19 Cambridge Street",
+      "suburb": "Collingwood",
+      "postcode": "3066",
+      "access": "LNWA",
+      "lat": -37.80768,
+      "lon": 144.984781,
+      "joint": true
+    },
+    {
+      "name": "Docklands",
+      "venue": "Library at the Dock",
+      "address": "107 Victoria Harbour Promenade",
+      "suburb": "Docklands",
+      "postcode": "3008",
+      "access": "AWA",
+      "lat": -37.82037,
+      "lon": 144.94022
+    },
+    {
+      "name": "Hotham Hill",
+      "venue": "North Melbourne Community Centre",
+      "address": "49-53 Buncle Street",
+      "suburb": "North Melbourne",
+      "postcode": "3051",
+      "access": "LNWA",
+      "lat": -37.793315,
+      "lon": 144.94047
+    },
+    {
+      "name": "Kensington",
+      "venue": "Kensington Primary School",
+      "address": "62-74 McCracken Street",
+      "suburb": "Kensington",
+      "postcode": "3031",
+      "access": "AWA",
+      "lat": -37.792958,
+      "lon": 144.927605,
+      "joint": true
+    },
+    {
+      "name": "Melbourne",
+      "venue": "Flinders Street Voting Centre",
+      "address": "340 Flinders Street",
+      "suburb": "Melbourne",
+      "postcode": "3000",
+      "access": "IWA",
+      "lat": -37.818517,
+      "lon": 144.963361,
+      "joint": true
+    },
+    {
+      "name": "Melbourne Central",
+      "venue": "Melbourne Town Hall - Swanston Hall",
+      "address": "90-130 Swanston Street",
+      "suburb": "Melbourne",
+      "postcode": "3000",
+      "access": "AWA",
+      "lat": -37.815045,
+      "lon": 144.966512
+    },
+    {
+      "name": "North Melbourne",
+      "venue": "North Melbourne Primary School",
+      "address": "200-214 Errol Street, (access via Murphy Street)",
+      "suburb": "North Melbourne",
+      "postcode": "3501",
+      "access": "AWA",
+      "lat": -37.798137,
+      "lon": 144.951146
+    },
+    {
+      "name": "North Melbourne East",
+      "venue": "Panarcadian Association - Loco Hall",
+      "address": "570 Victoria Street",
+      "suburb": "North Melbourne",
+      "postcode": "3051",
+      "access": "AWA",
+      "lat": -37.804757,
+      "lon": 144.947034
+    },
+    {
+      "name": "Parkville",
+      "venue": "University High School - Performance Centre",
+      "address": "77 Story Street",
+      "suburb": "Parkville",
+      "postcode": "3052",
+      "access": "AWA",
+      "lat": -37.796912,
+      "lon": 144.955777
+    },
+    {
+      "name": "Queen Victoria",
+      "venue": "Drill Hall",
+      "address": "26 Therry Street, (access via Victoria Street)",
+      "suburb": "Melbourne",
+      "postcode": "3000",
+      "access": "AWA",
+      "lat": -37.806493,
+      "lon": 144.96048
+    },
+    {
+      "name": "South Kensington",
+      "venue": "Holy Rosary School (Kensington)",
+      "address": "37 Gower Street",
+      "suburb": "Kensington",
+      "postcode": "3031",
+      "access": "LNWA",
+      "lat": -37.795259,
+      "lon": 144.92882
+    }
+  ]
+}

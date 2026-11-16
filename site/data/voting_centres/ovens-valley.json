@@ -1,0 +1,361 @@
+{
+  "district": "ovens-valley",
+  "name": "Ovens Valley",
+  "early": [
+    {
+      "name": "Ovens Valley - EVC 1",
+      "venue": "Victory Church Wangaratta (EVC)",
+      "address": "38-42 Ryan Avenue",
+      "suburb": "Wangaratta",
+      "postcode": "3677",
+      "access": "LNWA",
+      "lat": -36.363026,
+      "lon": 146.318884
+    },
+    {
+      "name": "Shepparton - EVC 3",
+      "venue": "1st North Shepparton Scout Hall (EVC)",
+      "address": "90 Packham Street",
+      "suburb": "Shepparton",
+      "postcode": "3630",
+      "access": "AWA",
+      "lat": -36.355583,
+      "lon": 145.392338,
+      "joint": true,
+      "host": "shepparton"
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Appin",
+      "venue": "Appin Park Primary School",
+      "address": "149 Appin Street",
+      "suburb": "Wangaratta",
+      "postcode": "3677",
+      "access": "LNWA",
+      "lat": -36.34301,
+      "lon": 146.300689
+    },
+    {
+      "name": "Bright South",
+      "venue": "Alpine Events Centre - The Pavilion",
+      "address": "Pioneer Park Recreation Reserve, Coronation Avenue",
+      "suburb": "Bright",
+      "postcode": "3741",
+      "access": "IWA",
+      "lat": -36.738076,
+      "lon": 146.970065
+    },
+    {
+      "name": "Bundalong",
+      "venue": "Bundalong Hall",
+      "address": "17 Pyke Street",
+      "suburb": "Bundalong",
+      "postcode": "3730",
+      "access": "IWA",
+      "lat": -36.037295,
+      "lon": 146.172849
+    },
+    {
+      "name": "Cobram",
+      "venue": "Cobram Civic Centre",
+      "address": "14-20 Punt Road",
+      "suburb": "Cobram",
+      "postcode": "3644",
+      "access": "AWA",
+      "lat": -35.918801,
+      "lon": 145.651577
+    },
+    {
+      "name": "Dederang",
+      "venue": "Dederang Multi-Purpose Building",
+      "address": "4454 Kiewa Valley Highway",
+      "suburb": "Dederang",
+      "postcode": "3691",
+      "access": "LNWA",
+      "lat": -36.47572,
+      "lon": 147.021686
+    },
+    {
+      "name": "Eldorado",
+      "venue": "Eldorado Memorial Hall",
+      "address": "94 Main Street",
+      "suburb": "Eldorado",
+      "postcode": "3746",
+      "access": "LNWA",
+      "lat": -36.308144,
+      "lon": 146.520155
+    },
+    {
+      "name": "Everton",
+      "venue": "Everton Public Hall",
+      "address": "2161 Great Alpine Road",
+      "suburb": "Everton",
+      "postcode": "3678",
+      "access": "AWA",
+      "lat": -36.435843,
+      "lon": 146.544605
+    },
+    {
+      "name": "Gapsted",
+      "venue": "Gapsted Public Hall",
+      "address": "3722 Great Alpine Road",
+      "suburb": "Gapsted",
+      "postcode": "3737",
+      "access": "LNWA",
+      "lat": -36.508098,
+      "lon": 146.676288
+    },
+    {
+      "name": "Glenrowan",
+      "venue": "Glenrowan Primary School",
+      "address": "40 Beaconsfield Parade",
+      "suburb": "Glenrowan",
+      "postcode": "3675",
+      "access": "LNWA",
+      "lat": -36.460183,
+      "lon": 146.221992
+    },
+    {
+      "name": "Harrietville",
+      "venue": "Harrietville Community Hall",
+      "address": "210 Great Alpine Road",
+      "suburb": "Harrietville",
+      "postcode": "3741",
+      "access": "AWA",
+      "lat": -36.891774,
+      "lon": 147.063898
+    },
+    {
+      "name": "Invergordon",
+      "venue": "Invergordon Recreation Reserve Public Hall",
+      "address": "5A Batey Drive",
+      "suburb": "Invergordon",
+      "postcode": "3636",
+      "access": "LNWA",
+      "lat": -36.149848,
+      "lon": 145.610598
+    },
+    {
+      "name": "Katamatite",
+      "venue": "Katamatite Sports and Community Hub",
+      "address": "Moore Street",
+      "suburb": "Katamatite",
+      "postcode": "3649",
+      "access": "IWA",
+      "lat": -36.07623,
+      "lon": 145.6909
+    },
+    {
+      "name": "Milawa",
+      "venue": "Milawa Primary School",
+      "address": "133 Milawa-Bobinawarrah Road",
+      "suburb": "Milawa",
+      "postcode": "3678",
+      "access": "LNWA",
+      "lat": -36.444041,
+      "lon": 146.432472
+    },
+    {
+      "name": "Moyhu",
+      "venue": "Moyhu Primary School",
+      "address": "2799 Wangaratta-Whitfield Road",
+      "suburb": "Moyhu",
+      "postcode": "3732",
+      "access": "LNWA",
+      "lat": -36.593792,
+      "lon": 146.383141
+    },
+    {
+      "name": "Mt Beauty",
+      "venue": "Mount Beauty Community Centre",
+      "address": "21 Kiewa Crescent",
+      "suburb": "Mount Beauty",
+      "postcode": "3699",
+      "access": "LNWA",
+      "lat": -36.742939,
+      "lon": 147.170647
+    },
+    {
+      "name": "Mudgegonga",
+      "venue": "Mudgegonga Hall",
+      "address": "1395 Myrtleford-Yackandandah Road",
+      "suburb": "Mudgegonga",
+      "postcode": "3737",
+      "access": "AWA",
+      "lat": -36.493218,
+      "lon": 146.829699
+    },
+    {
+      "name": "Myrtleford",
+      "venue": "Myrtleford Uniting Church Hall",
+      "address": "1 Albert Street",
+      "suburb": "Myrtleford",
+      "postcode": "3737",
+      "access": "AWA",
+      "lat": -36.562817,
+      "lon": 146.727444
+    },
+    {
+      "name": "Porepunkah",
+      "venue": "Porepunkah Primary School",
+      "address": "2 Martley Street",
+      "suburb": "Porepunkah",
+      "postcode": "3740",
+      "access": "AWA",
+      "lat": -36.698977,
+      "lon": 146.911447
+    },
+    {
+      "name": "Running Creek",
+      "venue": "St Albans Parish Hall",
+      "address": "5426 Kiewa Valley Highway",
+      "suburb": "Running Creek",
+      "postcode": "3691",
+      "access": "LNWA",
+      "lat": -36.546774,
+      "lon": 147.059102
+    },
+    {
+      "name": "Springhurst",
+      "venue": "Springhurst Primary School",
+      "address": "121 Anzac Road",
+      "suburb": "Springhurst",
+      "postcode": "3682",
+      "access": "LNWA",
+      "lat": -36.184671,
+      "lon": 146.467388
+    },
+    {
+      "name": "St James",
+      "venue": "St James Town Hall",
+      "address": "24 St James Road",
+      "suburb": "St James",
+      "postcode": "3727",
+      "access": "AWA",
+      "lat": -36.269709,
+      "lon": 145.895778
+    },
+    {
+      "name": "Tarrawingee",
+      "venue": "Tarrawingee Hall",
+      "address": "1114 Great Alpine Road",
+      "suburb": "Tarrawingee",
+      "postcode": "3678",
+      "access": "LNWA",
+      "lat": -36.391073,
+      "lon": 146.445793
+    },
+    {
+      "name": "Tawonga",
+      "venue": "Tawonga Primary School",
+      "address": "91 Kiewa Valley Highway",
+      "suburb": "Tawonga",
+      "postcode": "3697",
+      "access": "LNWA",
+      "lat": -36.69125,
+      "lon": 147.143465
+    },
+    {
+      "name": "Tungamah",
+      "venue": "Tungamah Football Netball Club",
+      "address": "28 Devenish Road",
+      "suburb": "Tungamah",
+      "postcode": "3728",
+      "access": "AWA",
+      "lat": -36.168564,
+      "lon": 145.877381
+    },
+    {
+      "name": "Wandiligong",
+      "venue": "Wandiligong Primary School",
+      "address": "119 School Road",
+      "suburb": "Wandiligong",
+      "postcode": "3744",
+      "access": "AWA",
+      "lat": -36.768874,
+      "lon": 146.982746
+    },
+    {
+      "name": "Wangaratta East",
+      "venue": "Victory Church Wangaratta",
+      "address": "38-42 Ryan Avenue",
+      "suburb": "Wangaratta",
+      "postcode": "3677",
+      "access": "LNWA",
+      "lat": -36.36301,
+      "lon": 146.318878
+    },
+    {
+      "name": "Wangaratta West",
+      "venue": "Wangaratta West Primary School",
+      "address": "47-49 Phillipson Street",
+      "suburb": "Wangaratta",
+      "postcode": "3677",
+      "access": "IWA",
+      "lat": -36.353541,
+      "lon": 146.30498
+    },
+    {
+      "name": "Whitfield",
+      "venue": "Whitfield District Primary School",
+      "address": "6182 Mansfield-Whitfield Road",
+      "suburb": "Whitfield",
+      "postcode": "3733",
+      "access": "AWA",
+      "lat": -36.765386,
+      "lon": 146.412749
+    },
+    {
+      "name": "Whorouly",
+      "venue": "Whorouly Primary School",
+      "address": "18 Church Street",
+      "suburb": "Whorouly",
+      "postcode": "3735",
+      "access": "LNWA",
+      "lat": -36.505803,
+      "lon": 146.58628
+    },
+    {
+      "name": "Yarrawonga",
+      "venue": "Yarrawonga Secondary College - ECA Centre",
+      "address": "2-24 Pinniger Street",
+      "suburb": "Yarrawonga",
+      "postcode": "3730",
+      "access": "AWA",
+      "lat": -36.021957,
+      "lon": 146.007804
+    },
+    {
+      "name": "Yarrawonga Central",
+      "venue": "Sacred Heart College (Yarrawonga)",
+      "address": "Coghill Street",
+      "suburb": "Yarrawonga",
+      "postcode": "3730",
+      "access": "IWA",
+      "lat": -36.010186,
+      "lon": 146.009809
+    },
+    {
+      "name": "Yarroweyah",
+      "venue": "Yarroweyah Public Hall",
+      "address": "4426 Murray Valley Highway",
+      "suburb": "Yarroweyah",
+      "postcode": "3644",
+      "access": "IWA",
+      "lat": -35.925348,
+      "lon": 145.560665,
+      "joint": true
+    },
+    {
+      "name": "Yarrunga",
+      "venue": "Our Lady's Primary School (Wangaratta)",
+      "address": "52-60 White Street",
+      "suburb": "Wangaratta",
+      "postcode": "3677",
+      "access": "IWA",
+      "lat": -36.371992,
+      "lon": 146.320257
+    }
+  ]
+}

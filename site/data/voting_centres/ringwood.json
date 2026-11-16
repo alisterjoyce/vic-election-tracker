@@ -1,0 +1,313 @@
+{
+  "district": "ringwood",
+  "name": "Ringwood",
+  "early": [
+    {
+      "name": "Box Hill - EVC 3",
+      "venue": "Blackburn North Scout Hall (EVC)",
+      "address": "10 Koonung Road",
+      "suburb": "Blackburn North",
+      "postcode": "3130",
+      "access": "LNWA",
+      "lat": -37.801198,
+      "lon": 145.153625,
+      "joint": true,
+      "host": "box-hill"
+    },
+    {
+      "name": "Glen Waverley - EVC 3",
+      "venue": "1st Tally Ho Scout Hall (EVC)",
+      "address": "148 Mahoneys Road",
+      "suburb": "Forest Hill",
+      "postcode": "3131",
+      "access": "LNWA",
+      "lat": -37.843688,
+      "lon": 145.164089,
+      "joint": true,
+      "host": "glen-waverley"
+    },
+    {
+      "name": "Ringwood - EVC 1",
+      "venue": "4th Ringwood Scout Hall (EVC)",
+      "address": "17 Mines Road",
+      "suburb": "Ringwood East",
+      "postcode": "3135",
+      "access": "LNWA",
+      "lat": -37.808418,
+      "lon": 145.244605
+    },
+    {
+      "name": "Ringwood - EVC 2",
+      "venue": "1st Heatherdale Scout Hall (EVC)",
+      "address": "34 Purches Street",
+      "suburb": "Mitcham",
+      "postcode": "3132",
+      "access": "LNWA",
+      "lat": -37.823805,
+      "lon": 145.208644
+    },
+    {
+      "name": "Ringwood - EVC 3",
+      "venue": "1st Vermont Scout Hall (EVC)",
+      "address": "483-485 Canterbury Road",
+      "suburb": "Vermont",
+      "postcode": "3133",
+      "access": "LNWA",
+      "lat": -37.835735,
+      "lon": 145.196057,
+      "joint": true
+    },
+    {
+      "name": "Warrandyte - EVC 2",
+      "venue": "Ringwood Bowls Club (EVC)",
+      "address": "2-12 Loughnan Road, (access via Loughnan Place)",
+      "suburb": "Ringwood",
+      "postcode": "3134",
+      "access": "AWA",
+      "lat": -37.804233,
+      "lon": 145.228591,
+      "joint": true,
+      "host": "warrandyte"
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Antonio Park",
+      "venue": "Antonio Park Primary School",
+      "address": "631-639 Whitehorse Road",
+      "suburb": "Mitcham",
+      "postcode": "3132",
+      "access": "AWA",
+      "lat": -37.81621,
+      "lon": 145.205626
+    },
+    {
+      "name": "Blackburn",
+      "venue": "The Avenue Uniting Church",
+      "address": "44 Blackburn Road",
+      "suburb": "Blackburn",
+      "postcode": "3130",
+      "access": "LNWA",
+      "lat": -37.823003,
+      "lon": 145.152018,
+      "joint": true
+    },
+    {
+      "name": "Blackburn Lake",
+      "venue": "Blackburn Lake Primary School",
+      "address": "12-14 Florence Street",
+      "suburb": "Blackburn",
+      "postcode": "3130",
+      "access": "AWA",
+      "lat": -37.827015,
+      "lon": 145.166336
+    },
+    {
+      "name": "Blackburn North",
+      "venue": "Blackburn Primary School",
+      "address": "185 Surrey Road",
+      "suburb": "Blackburn",
+      "postcode": "3130",
+      "access": "IWA",
+      "lat": -37.816565,
+      "lon": 145.156593,
+      "joint": true
+    },
+    {
+      "name": "Eastwood",
+      "venue": "Eastwood Primary School",
+      "address": "49A Alexandra Road, (access via Bondi Street)",
+      "suburb": "Ringwood East",
+      "postcode": "3135",
+      "access": "IWA",
+      "lat": -37.816425,
+      "lon": 145.253888
+    },
+    {
+      "name": "Heathmont",
+      "venue": "Heathmont Uniting Church",
+      "address": "Community Lifestyle Centre, 89 Canterbury Road",
+      "suburb": "Heathmont",
+      "postcode": "3135",
+      "access": "LNWA",
+      "lat": -37.826915,
+      "lon": 145.247023
+    },
+    {
+      "name": "Heathmont East",
+      "venue": "Heathmont East Primary School",
+      "address": "Corner Armstrong Road and Louis Street, (access via Armstrong Road)",
+      "suburb": "Heathmont",
+      "postcode": "3135",
+      "access": "LNWA",
+      "lat": -37.830225,
+      "lon": 145.255995
+    },
+    {
+      "name": "Heathmont West",
+      "venue": "Heathmont College",
+      "address": "8 Waters Grove",
+      "suburb": "Heathmont",
+      "postcode": "3135",
+      "access": "AWA",
+      "lat": -37.838496,
+      "lon": 145.23391
+    },
+    {
+      "name": "Loughnan",
+      "venue": "Ringwood Bowls Club",
+      "address": "2-12 Loughnan Road, (access via Loughnan Place)",
+      "suburb": "Ringwood",
+      "postcode": "3134",
+      "access": "AWA",
+      "lat": -37.804224,
+      "lon": 145.228585,
+      "joint": true
+    },
+    {
+      "name": "Mitcham",
+      "venue": "Whitehorse Uniting Church - Mitcham",
+      "address": "81 Doncaster East Road",
+      "suburb": "Mitcham",
+      "postcode": "3132",
+      "access": "LNWA",
+      "lat": -37.815251,
+      "lon": 145.196274
+    },
+    {
+      "name": "Mitcham East",
+      "venue": "1st Heatherdale Scout Hall",
+      "address": "34 Purches Street",
+      "suburb": "Mitcham",
+      "postcode": "3132",
+      "access": "LNWA",
+      "lat": -37.8238,
+      "lon": 145.208639
+    },
+    {
+      "name": "Mitcham South",
+      "venue": "Rangeview Primary School",
+      "address": "27 Churinga Avenue, (access via Gate 1)",
+      "suburb": "Mitcham",
+      "postcode": "3132",
+      "access": "AWA",
+      "lat": -37.829645,
+      "lon": 145.206252
+    },
+    {
+      "name": "Norwood",
+      "venue": "Norwood Secondary College",
+      "address": "9 Byron Street",
+      "suburb": "Ringwood",
+      "postcode": "3134",
+      "access": "LNWA",
+      "lat": -37.800205,
+      "lon": 145.237651,
+      "joint": true
+    },
+    {
+      "name": "Nunawading",
+      "venue": "1st Nunawading Scout Hall",
+      "address": "1 Mark Place",
+      "suburb": "Nunawading",
+      "postcode": "3131",
+      "access": "IWA",
+      "lat": -37.814547,
+      "lon": 145.173628
+    },
+    {
+      "name": "Nunawading East",
+      "venue": "Mullauna Secondary College",
+      "address": "456 Springfield Road",
+      "suburb": "Mitcham",
+      "postcode": "3132",
+      "access": "IWA",
+      "lat": -37.806913,
+      "lon": 145.190117,
+      "joint": true
+    },
+    {
+      "name": "Nunawading South",
+      "venue": "Mount Pleasant Road Primary School",
+      "address": "105 Mount Pleasant Road",
+      "suburb": "Nunawading",
+      "postcode": "3131",
+      "access": "AWA",
+      "lat": -37.828427,
+      "lon": 145.180036
+    },
+    {
+      "name": "Ringwood",
+      "venue": "Mullum Mullum Anglican Church (St Paul's)",
+      "address": "40 Warrandyte Road",
+      "suburb": "Ringwood",
+      "postcode": "3134",
+      "access": "AWA",
+      "lat": -37.809708,
+      "lon": 145.230758,
+      "joint": true
+    },
+    {
+      "name": "Ringwood East",
+      "venue": "4th Ringwood Scout Hall",
+      "address": "17 Mines Road",
+      "suburb": "Ringwood East",
+      "postcode": "3135",
+      "access": "LNWA",
+      "lat": -37.808426,
+      "lon": 145.244605
+    },
+    {
+      "name": "Ringwood South",
+      "venue": "Maroondah Federation Estate",
+      "address": "32 Greenwood Avenue",
+      "suburb": "Ringwood",
+      "postcode": "3134",
+      "access": "IWA",
+      "lat": -37.81963,
+      "lon": 145.229967
+    },
+    {
+      "name": "Southwood",
+      "venue": "Great Ryrie Primary School",
+      "address": "51A Great Ryrie Street",
+      "suburb": "Heathmont",
+      "postcode": "3135",
+      "access": "AWA",
+      "lat": -37.824258,
+      "lon": 145.237499
+    },
+    {
+      "name": "Tinternvale",
+      "venue": "Tinternvale Primary School",
+      "address": "19 Tintern Avenue",
+      "suburb": "Ringwood East",
+      "postcode": "3135",
+      "access": "IWA",
+      "lat": -37.818462,
+      "lon": 145.265392,
+      "joint": true
+    },
+    {
+      "name": "Vermont North",
+      "venue": "1st Vermont Scout Hall",
+      "address": "483-485 Canterbury Road",
+      "suburb": "Vermont",
+      "postcode": "3133",
+      "access": "LNWA",
+      "lat": -37.83574,
+      "lon": 145.19606,
+      "joint": true
+    },
+    {
+      "name": "Wakefield",
+      "venue": "Whitehorse Primary School",
+      "address": "70-86 Junction Road, (access via corner Wakefield Street and Susanne Avenue)",
+      "suburb": "Blackburn North",
+      "postcode": "3130",
+      "access": "IWA",
+      "lat": -37.808353,
+      "lon": 145.167719
+    }
+  ]
+}

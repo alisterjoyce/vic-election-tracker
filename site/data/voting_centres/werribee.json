@@ -1,0 +1,215 @@
+{
+  "district": "werribee",
+  "name": "Werribee",
+  "early": [
+    {
+      "name": "Tarneit - EVC 1",
+      "venue": "1st Hoppers Crossing Scout Hall (EVC)",
+      "address": "133 Powell Drive",
+      "suburb": "Hoppers Crossing",
+      "postcode": "3029",
+      "access": "AWA",
+      "lat": -37.885088,
+      "lon": 144.690859,
+      "joint": true,
+      "host": "tarneit"
+    },
+    {
+      "name": "Werribee - EVC 1",
+      "venue": "1st Werribee Scout Hall (EVC)",
+      "address": "31 College Road",
+      "suburb": "Werribee",
+      "postcode": "3030",
+      "access": "LNWA",
+      "lat": -37.907314,
+      "lon": 144.665746,
+      "joint": true
+    },
+    {
+      "name": "Werribee - EVC 2",
+      "venue": "1st Iramoo Scout Hall (EVC)",
+      "address": "66 Honour Avenue",
+      "suburb": "Wyndham Vale",
+      "postcode": "3024",
+      "access": "LNWA",
+      "lat": -37.89674,
+      "lon": 144.622948
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Galvin Park",
+      "venue": "Wyndham Central College",
+      "address": "101 Shaws Road, (access via Market Road extension)",
+      "suburb": "Werribee",
+      "postcode": "3030",
+      "access": "LNWA",
+      "lat": -37.888073,
+      "lon": 144.65303
+    },
+    {
+      "name": "Glenorden",
+      "venue": "Wyndham Park Primary School",
+      "address": "59-77 Kookaburra Avenue, (access via Gate 1)",
+      "suburb": "Werribee",
+      "postcode": "3030",
+      "access": "AWA",
+      "lat": -37.884909,
+      "lon": 144.67656,
+      "joint": true
+    },
+    {
+      "name": "Iramoo",
+      "venue": "Iramoo Primary School",
+      "address": "261-269 McGrath Road, access via Westbourn Drive (Gate 5)",
+      "suburb": "Wyndham Vale",
+      "postcode": "3024",
+      "access": "LNWA",
+      "lat": -37.895454,
+      "lon": 144.627056
+    },
+    {
+      "name": "Little River",
+      "venue": "Little River Primary School",
+      "address": "Rothwell Street",
+      "suburb": "Little River",
+      "postcode": "3211",
+      "access": "AWA",
+      "lat": -37.964703,
+      "lon": 144.501064,
+      "joint": true
+    },
+    {
+      "name": "Lollypop Creek",
+      "venue": "Lollypop Creek Primary School",
+      "address": "114 Shipwright Parade",
+      "suburb": "Werribee",
+      "postcode": "3030",
+      "access": "LNWA",
+      "lat": -37.911024,
+      "lon": 144.613579
+    },
+    {
+      "name": "Mambourin East",
+      "venue": "Laa Yulta Primary School",
+      "address": "10 Elementary Road",
+      "suburb": "Mambourin",
+      "postcode": "3024",
+      "access": "AWA",
+      "lat": -37.8851,
+      "lon": 144.595736
+    },
+    {
+      "name": "Manor Lakes",
+      "venue": "Manor Lakes P-12 Specialist College",
+      "address": "2-50 Minindee Road, Access via Howqua Way (Gate 24)",
+      "suburb": "Wyndham Vale",
+      "postcode": "3024",
+      "access": "LNWA",
+      "lat": -37.874232,
+      "lon": 144.605652
+    },
+    {
+      "name": "Manorvale",
+      "venue": "Manorvale Primary School",
+      "address": "232-246 Greaves Street North",
+      "suburb": "Werribee",
+      "postcode": "3030",
+      "access": "LNWA",
+      "lat": -37.893643,
+      "lon": 144.643386
+    },
+    {
+      "name": "Ngarri",
+      "venue": "Ngarri Primary School",
+      "address": "70 Holyoake Parade",
+      "suburb": "Manor Lakes",
+      "postcode": "3024",
+      "access": "AWA",
+      "lat": -37.866839,
+      "lon": 144.584244
+    },
+    {
+      "name": "Riverbend",
+      "venue": "Riverbend Primary School",
+      "address": "1 Communal Road, access via Tathra Road (Gate 3)",
+      "suburb": "Wyndham Vale",
+      "postcode": "3024",
+      "access": "AWA",
+      "lat": -37.875093,
+      "lon": 144.625897
+    },
+    {
+      "name": "Riverwalk",
+      "venue": "Riverwalk Primary School",
+      "address": "56 Timbarra Drive, (access via Gate 2)",
+      "suburb": "Werribee",
+      "postcode": "3030",
+      "access": "AWA",
+      "lat": -37.921418,
+      "lon": 144.6395
+    },
+    {
+      "name": "Thomas Chirnside",
+      "venue": "Thomas Chirnside Primary School",
+      "address": "85-95 Walls Road, (access via Racecourse Road)",
+      "suburb": "Werribee",
+      "postcode": "3030",
+      "access": "AWA",
+      "lat": -37.902961,
+      "lon": 144.638846
+    },
+    {
+      "name": "Werribee",
+      "venue": "Werribee Secondary College",
+      "address": "45 Duncans Road, (access via Gate 1)",
+      "suburb": "Werribee",
+      "postcode": "3030",
+      "access": "AWA",
+      "lat": -37.905566,
+      "lon": 144.669113,
+      "joint": true
+    },
+    {
+      "name": "Werribee Central",
+      "venue": "Werribee Primary School",
+      "address": "2 Deutgam Street, (access via Gate 1)",
+      "suburb": "Werribee",
+      "postcode": "3030",
+      "access": "AWA",
+      "lat": -37.906894,
+      "lon": 144.658757
+    },
+    {
+      "name": "Werribee South",
+      "venue": "1st Werribee Scout Hall",
+      "address": "31 College Road",
+      "suburb": "Werribee",
+      "postcode": "3030",
+      "access": "LNWA",
+      "lat": -37.907293,
+      "lon": 144.66574
+    },
+    {
+      "name": "Westgrove",
+      "venue": "Westgrove Primary School",
+      "address": "37A Thames Boulevard, (access via Red Gate)",
+      "suburb": "Werribee",
+      "postcode": "3030",
+      "access": "LNWA",
+      "lat": -37.878505,
+      "lon": 144.659625,
+      "joint": true
+    },
+    {
+      "name": "Wyndham Vale",
+      "venue": "1st Iramoo Scout Hall",
+      "address": "66 Honour Avenue",
+      "suburb": "Wyndham Vale",
+      "postcode": "3024",
+      "access": "LNWA",
+      "lat": -37.896736,
+      "lon": 144.622966
+    }
+  ]
+}

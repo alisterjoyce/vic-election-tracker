@@ -1,0 +1,174 @@
+{
+  "district": "point-cook",
+  "name": "Point Cook",
+  "early": [
+    {
+      "name": "Laverton - EVC 2",
+      "venue": "Little Boundary Road Voting Centre (EVC)",
+      "address": "Unit 2/1-11 Little Boundary Road",
+      "suburb": "Laverton North",
+      "postcode": "3026",
+      "access": "IWA",
+      "lat": -37.823316,
+      "lon": 144.822938,
+      "joint": true,
+      "host": "laverton"
+    },
+    {
+      "name": "Point Cook - EVC 1",
+      "venue": "Point Cook Soccer Club Pavillion (EVC)",
+      "address": "Saltwater Promenade",
+      "suburb": "Point Cook",
+      "postcode": "3030",
+      "access": "IWA",
+      "lat": -37.908055,
+      "lon": 144.757401
+    },
+    {
+      "name": "Point Cook - EVC 2",
+      "venue": "Christ the Lord Slovak Lutheran Church (EVC)",
+      "address": "74 Point Cook Road",
+      "suburb": "Seabrook",
+      "postcode": "3028",
+      "access": "LNWA",
+      "lat": -37.876947,
+      "lon": 144.757738
+    },
+    {
+      "name": "Williamstown - EVC 3",
+      "venue": "Altona Hockey Club Pavilion (EVC)",
+      "address": "JK Grant Reserve, 1 Sugar Gum Drive",
+      "suburb": "Altona",
+      "postcode": "3018",
+      "access": "IWA",
+      "lat": -37.862139,
+      "lon": 144.826839,
+      "joint": true,
+      "host": "williamstown"
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Alamanda",
+      "venue": "Alamanda K-9 College",
+      "address": "86-100 Alamanda Boulevard",
+      "suburb": "Point Cook",
+      "postcode": "3030",
+      "access": "AWA",
+      "lat": -37.908236,
+      "lon": 144.741491
+    },
+    {
+      "name": "Altona Bay",
+      "venue": "Altona Green Primary School",
+      "address": "240 Victoria Street",
+      "suburb": "Altona Meadows",
+      "postcode": "3028",
+      "access": "IWA",
+      "lat": -37.886814,
+      "lon": 144.784951
+    },
+    {
+      "name": "Altona Meadows",
+      "venue": "Altona Meadows Primary School",
+      "address": "78-88 Alma Avenue",
+      "suburb": "Altona Meadows",
+      "postcode": "3028",
+      "access": "LNWA",
+      "lat": -37.868719,
+      "lon": 144.779703
+    },
+    {
+      "name": "Altona Meadows CC",
+      "venue": "Altona Meadows Community Centre",
+      "address": "28 Trafalgar Avenue",
+      "suburb": "Altona Meadows",
+      "postcode": "3028",
+      "access": "IWA",
+      "lat": -37.877607,
+      "lon": 144.783139
+    },
+    {
+      "name": "Boardwalk",
+      "venue": "Carranballac P-9 College - Boardwalk Campus",
+      "address": "100 Dunnings Road, (access via Gate 5)",
+      "suburb": "Point Cook",
+      "postcode": "3030",
+      "access": "LNWA",
+      "lat": -37.885367,
+      "lon": 144.741847
+    },
+    {
+      "name": "Featherbrook",
+      "venue": "Featherbrook P-9 College",
+      "address": "281 Boardwalk Boulevard",
+      "suburb": "Point Cook",
+      "postcode": "3030",
+      "access": "AWA",
+      "lat": -37.90053,
+      "lon": 144.727588
+    },
+    {
+      "name": "Homestead",
+      "venue": "Homestead Senior Secondary College",
+      "address": "9 Coaching Parade",
+      "suburb": "Point Cook",
+      "postcode": "3030",
+      "access": "AWA",
+      "lat": -37.91517,
+      "lon": 144.768822
+    },
+    {
+      "name": "Jamieson Way",
+      "venue": "Carranballac P-9 College - Jamieson Way Campus",
+      "address": "85 Jamieson Way",
+      "suburb": "Point Cook",
+      "postcode": "3030",
+      "access": "LNWA",
+      "lat": -37.895122,
+      "lon": 144.745753
+    },
+    {
+      "name": "Point Cook",
+      "venue": "Point Cook Soccer Club Pavilion",
+      "address": "Saltwater Promenade",
+      "suburb": "Point Cook",
+      "postcode": "3030",
+      "access": "IWA",
+      "lat": -37.908063,
+      "lon": 144.7574
+    },
+    {
+      "name": "Point Cook North",
+      "venue": "Point Cook P-9 College",
+      "address": "18-50 Ponsford Drive, (access via Tom Roberts Parade)",
+      "suburb": "Point Cook",
+      "postcode": "3030",
+      "access": "AWA",
+      "lat": -37.893259,
+      "lon": 144.726126
+    },
+    {
+      "name": "Seabrook",
+      "venue": "Christ the Lord Slovak Lutheran Church",
+      "address": "74 Point Cook Road",
+      "suburb": "Seabrook",
+      "postcode": "3028",
+      "access": "AWA",
+      "lat": -37.876941,
+      "lon": 144.757741
+    },
+    {
+      "name": "Werribee",
+      "venue": "Werribee Secondary College",
+      "address": "45 Duncans Road, (access via Gate 1)",
+      "suburb": "Werribee",
+      "postcode": "3030",
+      "access": "AWA",
+      "lat": -37.905566,
+      "lon": 144.669113,
+      "joint": true,
+      "host": "werribee"
+    }
+  ]
+}

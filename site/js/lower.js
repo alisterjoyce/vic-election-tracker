@@ -260,6 +260,14 @@
         <h3 id="ballot-h">Ballot paper</h3>
         <div id="seat-ballot" style="min-height:${ballotHeight(cands)}px">${ballotBlock(d)}</div>
       </section>
+      <section class="seat-vote" id="where-to-vote" aria-labelledby="wtv-h">
+        <h3 id="wtv-h">Where to vote</h3>
+        <p class="small wtv-times">${VOTE_TIMES}</p>
+        <details class="wtv-list" id="wtv-early"><summary>Early voting centres <span class="muted" data-count></span></summary><div class="wtv-body"><p class="muted small">Loading…</p></div></details>
+        <details class="wtv-list" id="wtv-day"><summary>Election-day voting centres <span class="muted" data-count></span></summary><div class="wtv-body"><p class="muted small">Loading…</p></div></details>
+        <p class="muted small wtv-src">From the VEC's <a href="https://www.vec.vic.gov.au/voting/2026-state-election/voting-locations" target="_blank" rel="noopener">voting locations</a>
+          (© Victorian Electoral Commission, CC BY 4.0). Pins on the voting-centre map below mark them. Check the VEC's list before you go.</p>
+      </section>
       <details class="compare" id="compare">
         <summary><h3 id="compare-h">Compare candidates</h3><span class="muted small">Party, occupation, roles and stated priorities side by side</span></summary>
         <div id="compare-body"><p class="muted small">Loading profiles…</p></div>
@@ -280,6 +288,7 @@
       odds: outlook.odds && (outlook.odds.seats || []).find((x) => x.district === d.id),
       oddsDate: outlook.odds && outlook.odds.date_checked,
     }));
+    renderWhereToVote(d);
     // The comparison loads the seat's profiles (data/profiles/<seat>.json) only when it is opened.
     $("compare").addEventListener("toggle", (e) => { if (e.currentTarget.open) renderCompare(d); });
     if (live) renderContest(d, { key: "r26", file: `results_2026/${d.id}`, title: "2026 results", live, intro: intro2026 });
@@ -299,6 +308,35 @@
     if (vec === undefined) return `<p class="muted small">Loading the VEC's ballot paper…</p>`;
     const entry = vec && vec.districts && vec.districts[d.id];
     return entry ? App.ballotPaper(entry, "lower") : `<p class="empty">The VEC's list of candidates isn't loaded yet.</p>`;
+  }
+
+  /* ---------- Where to vote: data/voting_centres/<district>.json (scripts/vec_voting.py) ---------- */
+  // The VEC's dates and hours (voting options page, checked 16 Nov 2026); the section's height doesn't depend on the data.
+  const VOTE_TIMES = "<strong>Early voting:</strong> Wed 18 to Fri 27 Nov, 9 am to 6 pm (closed Sun 22 Nov). "
+    + "<strong>Election day:</strong> Sat 28 Nov, 8 am to 6 pm. <strong>Postal vote applications</strong> close 6 pm Wed 25 Nov.";
+  const ACCESS = { IWA: "Independent wheelchair access", AWA: "Assisted wheelchair access", LNWA: "Limited or no wheelchair access" };
+  const centresFor = (id) => loadJSON(`voting_centres/${id}`);
+  const dayMonth = (iso) => fmtDate(iso).replace(/ \d{4}$/, "");
+  const hoursText = (hours) => (hours || []).map((h) => `${h.days ? `${escapeHtml(h.days)}, ` : ""}${escapeHtml(dayMonth(h.from))}${
+    h.to && h.to !== h.from ? `–${escapeHtml(dayMonth(h.to))}` : ""} ${escapeHtml(h.open || "")}–${escapeHtml(h.close || "")}${h.note ? ` (${escapeHtml(h.note)})` : ""}`).join("; ");
+
+  async function renderWhereToVote(d) {
+    let doc = null;
+    try { doc = await centresFor(d.id); } catch (err) { console.warn(err); }
+    const sec = $("where-to-vote");
+    if (hashId() !== d.id || !sec || !sec.isConnected) return;
+    const names = Object.fromEntries(districts.map((x) => [x.id, x.name]));
+    const item = (c) => `<li><strong>${escapeHtml(String(c.venue || c.name).replace(/\s*\(EVC\)$/, ""))}</strong>
+        <span class="muted small">${escapeHtml([c.address, [c.suburb, c.postcode].filter(Boolean).join(" ")].filter(Boolean).join(", "))}</span>
+        <span class="small">${escapeHtml(ACCESS[c.access] || c.access || "")}${c.host ? ` · shared, run by ${escapeHtml(names[c.host] || c.host)} District`
+          : c.joint ? " · shared with a neighbouring district" : ""}${c.hours ? ` · ${hoursText(c.hours)}` : ""}${c.lat == null ? ' · <span class="muted">not on the map</span>' : ""}</span></li>`;
+    [["wtv-early", "early"], ["wtv-day", "election_day"]].forEach(([id, kind]) => {
+      const box = $(id);
+      const list = (doc && doc[kind]) || [];
+      box.querySelector("[data-count]").textContent = doc ? `(${list.length})` : "";
+      box.querySelector(".wtv-body").innerHTML = !doc ? "<p class=\"empty\">The VEC's voting centres aren't loaded yet.</p>"
+        : list.length ? `<ul class="wtv-centres">${list.map(item).join("")}</ul>` : '<p class="empty">None listed by the VEC.</p>';
+    });
   }
 
   /* ---------- Compare candidates: one column per candidate in ballot order, from their researched profiles ---------- */
@@ -518,10 +556,13 @@
     if (hashId() !== d.id || !el.isConnected) return;   // user moved on
     if (window.L && App.Maps) {
       const note = $(`${key}-booth-note`);
-      const mapped = await App.Maps.boothMap($(`${key}-booth-map`), d.id, r);
+      const centres = await centresFor(d.id).catch(() => null);
+      if (hashId() !== d.id || !note.isConnected) return;
+      const mapped = await App.Maps.boothMap($(`${key}-booth-map`), d.id, r, centres);
       if (!mapped || !note.isConnected) return;   // user moved on
       const { placed, total } = mapped;
-      note.textContent = `${placed} of ${total} voting centres mapped${key === "r26" ? " (at their 2022 locations; new centres are listed in the table only). Grey circles haven't reported yet" : ""}. Circles are sized by votes and coloured by the two-candidate-preferred leader; tap one for its numbers. Early, postal, absent and other declaration votes aren't tied to a place, so they're in the table below instead.`;
+      note.textContent = `${placed} of ${total} voting centres mapped${key === "r26" ? " (at their 2022 locations; new centres are listed in the table only). Grey circles haven't reported yet" : ""}. Circles are sized by votes and coloured by the two-candidate-preferred leader; tap one for its numbers. Early, postal, absent and other declaration votes aren't tied to a place, so they're in the table below instead.${
+        mapped.pins ? ` Pins mark the ${mapped.pins} places to vote in 2026 (VEC): square for an early voting centre, round for election day; tap one for its address.` : ""}`;
     } else {
       $(`${key}-booth-map`).remove();
       $(`${key}-booth-note`).textContent = "The map library failed to load; the voting-centre table below has every result.";

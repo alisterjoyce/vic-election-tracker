@@ -1,0 +1,246 @@
+{
+  "district": "bulleen",
+  "name": "Bulleen",
+  "early": [
+    {
+      "name": "Bulleen - EVC 1",
+      "venue": "3rd Templestowe Scout Hall (EVC)",
+      "address": "4 Duncan Street",
+      "suburb": "Templestowe Lower",
+      "postcode": "3107",
+      "access": "AWA",
+      "lat": -37.754419,
+      "lon": 145.115457
+    },
+    {
+      "name": "Bulleen - EVC 2",
+      "venue": "Manningham Uniting Church and Community Centre (EVC)",
+      "address": "109 Wood Street",
+      "suburb": "Templestowe",
+      "postcode": "3106",
+      "access": "IWA",
+      "lat": -37.755693,
+      "lon": 145.129512
+    },
+    {
+      "name": "Bulleen - EVC 3",
+      "venue": "3rd Doncaster East Scout Hall (EVC)",
+      "address": "Zerbes Reserve, (access via Saxonwood Drive)",
+      "suburb": "Doncaster East",
+      "postcode": "3109",
+      "access": "AWA",
+      "lat": -37.779188,
+      "lon": 145.1625,
+      "joint": true
+    },
+    {
+      "name": "Warrandyte - EVC 1",
+      "venue": "Doncaster Rovers Soccer Club (EVC)",
+      "address": "117 Andersons Creek Road",
+      "suburb": "Doncaster East",
+      "postcode": "3109",
+      "access": "AWA",
+      "lat": -37.766029,
+      "lon": 145.171908,
+      "joint": true,
+      "host": "warrandyte"
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Anderson Park",
+      "venue": "Doncaster Rovers Soccer Club",
+      "address": "117 Andersons Creek Road",
+      "suburb": "Doncaster East",
+      "postcode": "3109",
+      "access": "AWA",
+      "lat": -37.766022,
+      "lon": 145.171845,
+      "joint": true
+    },
+    {
+      "name": "Bulleen",
+      "venue": "Bulleen Heights School - Primary Campus",
+      "address": "49-61 Pleasant Road",
+      "suburb": "Bulleen",
+      "postcode": "3105",
+      "access": "IWA",
+      "lat": -37.763194,
+      "lon": 145.095207
+    },
+    {
+      "name": "Doncaster",
+      "venue": "Doncaster Primary School",
+      "address": "2-12 Council Street, (access via Hummel Way)",
+      "suburb": "Doncaster",
+      "postcode": "3108",
+      "access": "AWA",
+      "lat": -37.786154,
+      "lon": 145.130962
+    },
+    {
+      "name": "Doncaster Central",
+      "venue": "Doncaster Secondary College",
+      "address": "123 Church Road, (access via Ibis Street)",
+      "suburb": "Doncaster",
+      "postcode": "3108",
+      "access": "LNWA",
+      "lat": -37.785454,
+      "lon": 145.137784
+    },
+    {
+      "name": "Doncaster East",
+      "venue": "East Doncaster Secondary College",
+      "address": "20 George Street",
+      "suburb": "Doncaster East",
+      "postcode": "3109",
+      "access": "IWA",
+      "lat": -37.781982,
+      "lon": 145.157777,
+      "joint": true
+    },
+    {
+      "name": "Doncaster Gardens",
+      "venue": "Doncaster Gardens Primary School",
+      "address": "20 Sandhurst Avenue, (access via Dehnert Street)",
+      "suburb": "Doncaster East",
+      "postcode": "3109",
+      "access": "AWA",
+      "lat": -37.782676,
+      "lon": 145.148925,
+      "joint": true
+    },
+    {
+      "name": "Doncaster South",
+      "venue": "Birralee Primary School",
+      "address": "8-26 Heyington Avenue",
+      "suburb": "Doncaster",
+      "postcode": "3108",
+      "access": "LNWA",
+      "lat": -37.793408,
+      "lon": 145.113214
+    },
+    {
+      "name": "Lower Templestowe",
+      "venue": "Bulleen Heights School - Secondary Campus",
+      "address": "221 Manningham Road",
+      "suburb": "Templestowe Lower",
+      "postcode": "3107",
+      "access": "AWA",
+      "lat": -37.772336,
+      "lon": 145.105194
+    },
+    {
+      "name": "Manningham",
+      "venue": "St Clement of Rome Primary School",
+      "address": "9-21 Egan Drive",
+      "suburb": "Bulleen",
+      "postcode": "3105",
+      "access": "LNWA",
+      "lat": -37.767725,
+      "lon": 145.090978
+    },
+    {
+      "name": "Saxonwood",
+      "venue": "3rd Doncaster East Scout Hall",
+      "address": "Zerbes Reserve, (access via Saxonwood Drive)",
+      "suburb": "Doncaster East",
+      "postcode": "3109",
+      "access": "AWA",
+      "lat": -37.779203,
+      "lon": 145.162496,
+      "joint": true
+    },
+    {
+      "name": "Serpell",
+      "venue": "Serpell Primary School",
+      "address": "13 Tuckers Road, (access via Burleigh Drive)",
+      "suburb": "Templestowe",
+      "postcode": "3106",
+      "access": "LNWA",
+      "lat": -37.769787,
+      "lon": 145.153833
+    },
+    {
+      "name": "St Gregory's",
+      "venue": "St Gregory the Great Primary School",
+      "address": "396 Manningham Road, (access via Williamsons Road Service Road)",
+      "suburb": "Doncaster",
+      "postcode": "3108",
+      "access": "AWA",
+      "lat": -37.78035,
+      "lon": 145.123213
+    },
+    {
+      "name": "Templestowe",
+      "venue": "Manningham Templestowe Leisure Centre",
+      "address": "3 Anderson Street",
+      "suburb": "Templestowe",
+      "postcode": "3106",
+      "access": "IWA",
+      "lat": -37.758492,
+      "lon": 145.129931
+    },
+    {
+      "name": "Templestowe Heights",
+      "venue": "Templestowe Heights Primary School",
+      "address": "276-300 High Street",
+      "suburb": "Templestowe Lower",
+      "postcode": "3107",
+      "access": "AWA",
+      "lat": -37.766149,
+      "lon": 145.119897
+    },
+    {
+      "name": "Templestowe Lower",
+      "venue": "3rd Templestowe Scout Hall",
+      "address": "4 Duncan Street",
+      "suburb": "Templestowe Lower",
+      "postcode": "3107",
+      "access": "AWA",
+      "lat": -37.754415,
+      "lon": 145.115457
+    },
+    {
+      "name": "Templestowe Park",
+      "venue": "Templestowe Park Primary School",
+      "address": "399-409 Church Road",
+      "suburb": "Templestowe",
+      "postcode": "3106",
+      "access": "LNWA",
+      "lat": -37.756341,
+      "lon": 145.14334
+    },
+    {
+      "name": "Templestowe Valley",
+      "venue": "Templestowe Valley Primary School",
+      "address": "15 Birchwood Avenue, (access via Cavendish Drive)",
+      "suburb": "Templestowe Lower",
+      "postcode": "3107",
+      "access": "AWA",
+      "lat": -37.759833,
+      "lon": 145.111052
+    },
+    {
+      "name": "Templestowe West",
+      "venue": "Manningham Uniting Church and Community Centre",
+      "address": "109 Wood Street",
+      "suburb": "Templestowe",
+      "postcode": "3106",
+      "access": "IWA",
+      "lat": -37.755697,
+      "lon": 145.129513
+    },
+    {
+      "name": "The Pines",
+      "venue": "Deep Creek Anglican Church Hall",
+      "address": "460 Blackburn Road",
+      "suburb": "Doncaster East",
+      "postcode": "3109",
+      "access": "AWA",
+      "lat": -37.766407,
+      "lon": 145.166204,
+      "joint": true
+    }
+  ]
+}

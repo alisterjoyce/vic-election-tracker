@@ -1,0 +1,217 @@
+{
+  "district": "richmond",
+  "name": "Richmond",
+  "early": [
+    {
+      "name": "Melbourne - EVC 2",
+      "venue": "Melbourne Town Hall (EVC)",
+      "address": "90-130 Swanston Street",
+      "suburb": "Melbourne",
+      "postcode": "3000",
+      "access": "AWA",
+      "lat": -37.815037,
+      "lon": 144.966519,
+      "joint": true,
+      "host": "melbourne"
+    },
+    {
+      "name": "Richmond - EVC 1",
+      "venue": "Richmond Library Theatrette (EVC)",
+      "address": "415 Church Street",
+      "suburb": "Richmond",
+      "postcode": "3121",
+      "access": "AWA",
+      "lat": -37.825264,
+      "lon": 144.998118
+    },
+    {
+      "name": "Richmond - EVC 2",
+      "venue": "Collingwood Masonic Centre (EVC)",
+      "address": "141 Gipps Street",
+      "suburb": "Abbotsford",
+      "postcode": "3067",
+      "access": "AWA",
+      "lat": -37.80511,
+      "lon": 144.992713
+    },
+    {
+      "name": "Richmond - EVC 3",
+      "venue": "Victoria Street Richmond Voting Centre (EVC)",
+      "address": "300 Victoria Street",
+      "suburb": "Richmond",
+      "postcode": "3121",
+      "access": "LNWA",
+      "lat": -37.810718,
+      "lon": 145.001505
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Abbotsford",
+      "venue": "Collingwood Masonic Centre",
+      "address": "141 Gipps Street",
+      "suburb": "Abbotsford",
+      "postcode": "3067",
+      "access": "AWA",
+      "lat": -37.805104,
+      "lon": 144.992711,
+      "joint": true
+    },
+    {
+      "name": "Atherton Gardens",
+      "venue": "Saint Mark's Anglican Church",
+      "address": "250 George Street",
+      "suburb": "Fitzroy",
+      "postcode": "3065",
+      "access": "LNWA",
+      "lat": -37.801788,
+      "lon": 144.981466
+    },
+    {
+      "name": "Carlton Central",
+      "venue": "Carlton North Primary School",
+      "address": "60 Lee Street, (access via O'Grady Street)",
+      "suburb": "Carlton North",
+      "postcode": "3054",
+      "access": "LNWA",
+      "lat": -37.790642,
+      "lon": 144.972708,
+      "joint": true
+    },
+    {
+      "name": "Carlton Gardens",
+      "venue": "Academy of Mary Immaculate",
+      "address": "88 Nicholson Street",
+      "suburb": "Fitzroy",
+      "postcode": "3065",
+      "access": "AWA",
+      "lat": -37.803494,
+      "lon": 144.974165,
+      "joint": true
+    },
+    {
+      "name": "Clifton Hill",
+      "venue": "Spensley Street Primary School",
+      "address": "193 Spensley Street",
+      "suburb": "Clifton Hill",
+      "postcode": "3068",
+      "access": "IWA",
+      "lat": -37.786804,
+      "lon": 145.003496
+    },
+    {
+      "name": "Collingwood",
+      "venue": "Collingwood English Language School",
+      "address": "19 Cambridge Street",
+      "suburb": "Collingwood",
+      "postcode": "3066",
+      "access": "LNWA",
+      "lat": -37.80768,
+      "lon": 144.984781,
+      "joint": true
+    },
+    {
+      "name": "Collingwood North",
+      "venue": "Clifton Hill Primary School",
+      "address": "185 Gold Street",
+      "suburb": "Clifton Hill",
+      "postcode": "3068",
+      "access": "IWA",
+      "lat": -37.792562,
+      "lon": 144.990147
+    },
+    {
+      "name": "East Abbotsford",
+      "venue": "Abbotsford Convent",
+      "address": "1 St Heliers Street",
+      "suburb": "Abbotsford",
+      "postcode": "3067",
+      "access": "LNWA",
+      "lat": -37.802419,
+      "lon": 145.004284
+    },
+    {
+      "name": "Fitzroy",
+      "venue": "Fitzroy Primary School",
+      "address": "319 George Street, (access via Napier Street)",
+      "suburb": "Fitzroy",
+      "postcode": "3065",
+      "access": "AWA",
+      "lat": -37.799687,
+      "lon": 144.980419,
+      "joint": true
+    },
+    {
+      "name": "Hawthorn",
+      "venue": "Hawthorn West Primary School",
+      "address": "16 Burwood Road, (access via Wood Street)",
+      "suburb": "Hawthorn",
+      "postcode": "3122",
+      "access": "AWA",
+      "lat": -37.819912,
+      "lon": 145.018565,
+      "joint": true,
+      "host": "hawthorn"
+    },
+    {
+      "name": "Richmond",
+      "venue": "Richmond Library Theatrette",
+      "address": "415 Church Street",
+      "suburb": "Richmond",
+      "postcode": "3121",
+      "access": "AWA",
+      "lat": -37.825262,
+      "lon": 144.998114
+    },
+    {
+      "name": "Richmond Central",
+      "venue": "Yarra Primary School",
+      "address": "68-76 Davidson Street Richmond, (access via Kent Street)",
+      "suburb": "Richmond",
+      "postcode": "3121",
+      "access": "AWA",
+      "lat": -37.815203,
+      "lon": 145.007428
+    },
+    {
+      "name": "Richmond East",
+      "venue": "St Ignatius' Church - Richmond Catholic Parish",
+      "address": "326 Church Street, (access via The Vaucluse)",
+      "suburb": "Richmond",
+      "postcode": "3121",
+      "access": "AWA",
+      "lat": -37.821663,
+      "lon": 144.997701
+    },
+    {
+      "name": "Richmond North 106",
+      "venue": "Community Hall 106",
+      "address": "106 Elizabeth Street, (access via Lennox Street)",
+      "suburb": "Richmond",
+      "postcode": "3121",
+      "access": "AWA",
+      "lat": -37.812216,
+      "lon": 144.995747
+    },
+    {
+      "name": "Richmond South",
+      "venue": "Richmond Primary School",
+      "address": "85 Brighton Street, (access via Barkly Avenue)",
+      "suburb": "Richmond",
+      "postcode": "3121",
+      "access": "AWA",
+      "lat": -37.829452,
+      "lon": 144.999558
+    },
+    {
+      "name": "Richmond West",
+      "venue": "Victoria Street Richmond Voting Centre",
+      "address": "300 Victoria Street",
+      "suburb": "Richmond",
+      "postcode": "3121",
+      "access": "LNWA",
+      "lat": -37.810713,
+      "lon": 145.001504
+    }
+  ]
+}

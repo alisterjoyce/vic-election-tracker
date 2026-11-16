@@ -1,0 +1,388 @@
+{
+  "district": "murray-plains",
+  "name": "Murray Plains",
+  "early": [
+    {
+      "name": "Murray Plains - EVC 1",
+      "venue": "St Mary's Catholic Church Echuca (EVC)",
+      "address": "224 Anstruther Street",
+      "suburb": "Echuca",
+      "postcode": "3564",
+      "access": "IWA",
+      "lat": -36.12609,
+      "lon": 144.750131
+    },
+    {
+      "name": "Murray Plains - EVC 2",
+      "venue": "Stradbroke Hall (EVC)",
+      "address": "159 Stradbroke Avenue",
+      "suburb": "Swan Hill",
+      "postcode": "3585",
+      "access": "AWA",
+      "lat": -35.343487,
+      "lon": 143.550744
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Bamawm Extension",
+      "venue": "Bamawm Extension Public Hall",
+      "address": "15 Bamawm Road",
+      "suburb": "Bamawm Extension",
+      "postcode": "3564",
+      "access": "LNWA",
+      "lat": -36.200531,
+      "lon": 144.617446
+    },
+    {
+      "name": "Beverford",
+      "venue": "Beverford District Primary School",
+      "address": "20 School Road",
+      "suburb": "Beverford",
+      "postcode": "3590",
+      "access": "LNWA",
+      "lat": -35.232799,
+      "lon": 143.478569
+    },
+    {
+      "name": "Boort",
+      "venue": "Boort Resource and Information Centre (BRIC)",
+      "address": "119-121 Godfrey Street",
+      "suburb": "Boort",
+      "postcode": "3537",
+      "access": "AWA",
+      "lat": -36.116618,
+      "lon": 143.726633
+    },
+    {
+      "name": "Calivil",
+      "venue": "Calivil Public Hall",
+      "address": "529 Prairie West Road",
+      "suburb": "Calivil",
+      "postcode": "3573",
+      "access": "LNWA",
+      "lat": -36.298836,
+      "lon": 144.072173
+    },
+    {
+      "name": "Cohuna",
+      "venue": "Cohuna Memorial Public Hall",
+      "address": "21 King Edward Street, (access via Market Street)",
+      "suburb": "Cohuna",
+      "postcode": "3568",
+      "access": "AWA",
+      "lat": -35.810869,
+      "lon": 144.221504
+    },
+    {
+      "name": "Dingwall",
+      "venue": "Dingwall Hall",
+      "address": "Boort-Kerang Road, (between Bott Road and Zanella Road)",
+      "suburb": "Dingwall",
+      "postcode": "3579",
+      "access": "LNWA",
+      "lat": -35.809821,
+      "lon": 143.842512
+    },
+    {
+      "name": "Echuca East",
+      "venue": "Echuca East Primary School",
+      "address": "21-31 Eyre Street, (access via Sutton Street)",
+      "suburb": "Echuca",
+      "postcode": "3564",
+      "access": "LNWA",
+      "lat": -36.134447,
+      "lon": 144.760532
+    },
+    {
+      "name": "Echuca North",
+      "venue": "St Mary's Catholic Church Echuca",
+      "address": "224 Anstruther Street",
+      "suburb": "Echuca",
+      "postcode": "3564",
+      "access": "IWA",
+      "lat": -36.126086,
+      "lon": 144.750123
+    },
+    {
+      "name": "Echuca South",
+      "venue": "Echuca Twin Rivers Specialist School",
+      "address": "66 Wilkinson Drive, (access via Coliban Street)",
+      "suburb": "Echuca",
+      "postcode": "3564",
+      "access": "IWA",
+      "lat": -36.136264,
+      "lon": 144.726552
+    },
+    {
+      "name": "Gunbower",
+      "venue": "Gunbower Memorial Hall",
+      "address": "11 Main Street (Murray Valley Highway)",
+      "suburb": "Gunbower",
+      "postcode": "3566",
+      "access": "AWA",
+      "lat": -35.956693,
+      "lon": 144.370004
+    },
+    {
+      "name": "Kerang",
+      "venue": "Kerang Memorial Hall",
+      "address": "4 Nolan Street",
+      "suburb": "Kerang",
+      "postcode": "3579",
+      "access": "IWA",
+      "lat": -35.734555,
+      "lon": 143.917298
+    },
+    {
+      "name": "Kerang North",
+      "venue": "Kerang Technical High School - Thornley Hall",
+      "address": "48 Murray Street",
+      "suburb": "Kerang",
+      "postcode": "3579",
+      "access": "IWA",
+      "lat": -35.726178,
+      "lon": 143.914432
+    },
+    {
+      "name": "Koondrook",
+      "venue": "Barook Senior Citizens Rooms",
+      "address": "2 Station Street",
+      "suburb": "Koondrook",
+      "postcode": "3580",
+      "access": "AWA",
+      "lat": -35.641255,
+      "lon": 144.130408
+    },
+    {
+      "name": "Koyuga",
+      "venue": "Koyuga Public Hall",
+      "address": "961 O'Dea Road",
+      "suburb": "Koyuga",
+      "postcode": "3622",
+      "access": "LNWA",
+      "lat": -36.218813,
+      "lon": 144.891853
+    },
+    {
+      "name": "Ky Valley",
+      "venue": "Kyvalley Public Hall",
+      "address": "Corner Scobie Road and Sinclair Road",
+      "suburb": "Kyvalley",
+      "postcode": "3621",
+      "access": "IWA",
+      "lat": -36.283861,
+      "lon": 145.005885
+    },
+    {
+      "name": "Kyabram",
+      "venue": "Kyabram P-12 College",
+      "address": "77 Fischer Street",
+      "suburb": "Kyabram",
+      "postcode": "3620",
+      "access": "LNWA",
+      "lat": -36.317905,
+      "lon": 145.056287
+    },
+    {
+      "name": "Lake Boga",
+      "venue": "Lake Boga Community Centre",
+      "address": "21 Lalbert Road, (access via Cemetery Road)",
+      "suburb": "Lake Boga",
+      "postcode": "3584",
+      "access": "IWA",
+      "lat": -35.465007,
+      "lon": 143.630243
+    },
+    {
+      "name": "Lake Charm",
+      "venue": "Lake Charm Hall",
+      "address": "1893 Murray Valley Highway",
+      "suburb": "Lake Charm",
+      "postcode": "3581",
+      "access": "AWA",
+      "lat": -35.608891,
+      "lon": 143.802439
+    },
+    {
+      "name": "Lancaster",
+      "venue": "Lancaster Primary School",
+      "address": "8 Weller Road",
+      "suburb": "Lancaster",
+      "postcode": "3620",
+      "access": "LNWA",
+      "lat": -36.313345,
+      "lon": 145.132175
+    },
+    {
+      "name": "Leitchville",
+      "venue": "Leitchville Primary School",
+      "address": "2-4 Hawken Street",
+      "suburb": "Leitchville",
+      "postcode": "3567",
+      "access": "LNWA",
+      "lat": -35.908791,
+      "lon": 144.302285
+    },
+    {
+      "name": "Lockington",
+      "venue": "Lockington Community Centre",
+      "address": "Shakespeare Crescent, (access via Barton Street)",
+      "suburb": "Lockington",
+      "postcode": "3563",
+      "access": "LNWA",
+      "lat": -36.268896,
+      "lon": 144.537046
+    },
+    {
+      "name": "Murrabit",
+      "venue": "Murrabit Group School",
+      "address": "61 Browning Avenue",
+      "suburb": "Murrabit",
+      "postcode": "3579",
+      "access": "IWA",
+      "lat": -35.528061,
+      "lon": 143.950324
+    },
+    {
+      "name": "Nanneella",
+      "venue": "Nanneella Estate Primary School",
+      "address": "159 Bennett Road",
+      "suburb": "Nanneella",
+      "postcode": "3561",
+      "access": "AWA",
+      "lat": -36.312752,
+      "lon": 144.777998
+    },
+    {
+      "name": "Nyah",
+      "venue": "Nyah Memorial Hall",
+      "address": "71 Stradbroke Avenue",
+      "suburb": "Nyah",
+      "postcode": "3594",
+      "access": "LNWA",
+      "lat": -35.173234,
+      "lon": 143.377141
+    },
+    {
+      "name": "Pyramid Hill",
+      "venue": "Pyramid Hill Memorial Hall",
+      "address": "32 Kelly Street",
+      "suburb": "Pyramid Hill",
+      "postcode": "3575",
+      "access": "LNWA",
+      "lat": -36.053809,
+      "lon": 144.11487
+    },
+    {
+      "name": "Quambatook",
+      "venue": "Quambatook Memorial Hall",
+      "address": "59 Guthrie Street",
+      "suburb": "Quambatook",
+      "postcode": "3540",
+      "access": "LNWA",
+      "lat": -35.849217,
+      "lon": 143.520903
+    },
+    {
+      "name": "Rochester",
+      "venue": "Rochester Uniting Church",
+      "address": "1 Hart Street, (access via Elizabeth Street)",
+      "suburb": "Rochester",
+      "postcode": "3561",
+      "access": "LNWA",
+      "lat": -36.358613,
+      "lon": 144.701904
+    },
+    {
+      "name": "Swan Hill",
+      "venue": "Swan Hill Anglican Function Centre",
+      "address": "46 Splatt Street",
+      "suburb": "Swan Hill",
+      "postcode": "3585",
+      "access": "IWA",
+      "lat": -35.339722,
+      "lon": 143.556702
+    },
+    {
+      "name": "Swan Hill South",
+      "venue": "Stradbroke Hall",
+      "address": "159 Stradbroke Avenue",
+      "suburb": "Swan Hill",
+      "postcode": "3585",
+      "access": "AWA",
+      "lat": -35.343452,
+      "lon": 143.550773
+    },
+    {
+      "name": "Swan Hill West",
+      "venue": "Swan Hill Primary School",
+      "address": "123 Gray Street",
+      "suburb": "Swan Hill",
+      "postcode": "3585",
+      "access": "AWA",
+      "lat": -35.346435,
+      "lon": 143.543703
+    },
+    {
+      "name": "Tongala",
+      "venue": "Tongala Shire Hall",
+      "address": "92-96 Mangan Street",
+      "suburb": "Tongala",
+      "postcode": "3621",
+      "access": "AWA",
+      "lat": -36.250193,
+      "lon": 144.949837
+    },
+    {
+      "name": "Torrumbarry",
+      "venue": "Torrumbarry Public Hall",
+      "address": "2620 Murray Valley Highway",
+      "suburb": "Torrumbarry",
+      "postcode": "3562",
+      "access": "LNWA",
+      "lat": -36.028512,
+      "lon": 144.514584
+    },
+    {
+      "name": "Ultima",
+      "venue": "Ultima Community Hall",
+      "address": "13 Dillon Street",
+      "suburb": "Ultima",
+      "postcode": "3544",
+      "access": "AWA",
+      "lat": -35.470565,
+      "lon": 143.267763
+    },
+    {
+      "name": "Undera",
+      "venue": "Undera Primary School",
+      "address": "45 Anderson Street",
+      "suburb": "Undera",
+      "postcode": "3629",
+      "access": "LNWA",
+      "lat": -36.276234,
+      "lon": 145.219285
+    },
+    {
+      "name": "Woorinen",
+      "venue": "Woorinen District Primary School",
+      "address": "49 Palmer Street",
+      "suburb": "Woorinen South",
+      "postcode": "3589",
+      "access": "AWA",
+      "lat": -35.29037,
+      "lon": 143.453937
+    },
+    {
+      "name": "Wyuna",
+      "venue": "Wyuna Memorial Hall",
+      "address": "20 Alfred Road",
+      "suburb": "Wyuna",
+      "postcode": "3620",
+      "access": "LNWA",
+      "lat": -36.197357,
+      "lon": 145.060787
+    }
+  ]
+}

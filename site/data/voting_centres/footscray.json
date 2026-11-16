@@ -1,0 +1,215 @@
+{
+  "district": "footscray",
+  "name": "Footscray",
+  "early": [
+    {
+      "name": "Footscray - EVC 1",
+      "venue": "5th Footscray Scout Hall (EVC)",
+      "address": "1A Bellairs Avenue",
+      "suburb": "Seddon",
+      "postcode": "3011",
+      "access": "AWA",
+      "lat": -37.808601,
+      "lon": 144.89639
+    },
+    {
+      "name": "Footscray - EVC 2",
+      "venue": "Footscray Community Arts Centre (EVC)",
+      "address": "45 Moreland Street",
+      "suburb": "Footscray",
+      "postcode": "3011",
+      "access": "AWA",
+      "lat": -37.802822,
+      "lon": 144.907008
+    },
+    {
+      "name": "Laverton - EVC 1",
+      "venue": "1st Sunshine Scout Hall (EVC)",
+      "address": "23 Nixon Street",
+      "suburb": "Sunshine",
+      "postcode": "3020",
+      "access": "AWA",
+      "lat": -37.787683,
+      "lon": 144.844403,
+      "joint": true,
+      "host": "laverton"
+    },
+    {
+      "name": "Niddrie - EVC 1",
+      "venue": "1st Milleara Scout Hall (EVC)",
+      "address": "1B Doyle Street",
+      "suburb": "Avondale Heights",
+      "postcode": "3034",
+      "access": "IWA",
+      "lat": -37.762889,
+      "lon": 144.859919,
+      "joint": true,
+      "host": "niddrie"
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Footscray",
+      "venue": "Footscray High School - Barkly Campus",
+      "address": "298 Barkly Street",
+      "suburb": "Footscray",
+      "postcode": "3011",
+      "access": "LNWA",
+      "lat": -37.799091,
+      "lon": 144.894693
+    },
+    {
+      "name": "Footscray Central",
+      "venue": "5th Footscray Scout Hall",
+      "address": "1A Bellairs Avenue",
+      "suburb": "Seddon",
+      "postcode": "3011",
+      "access": "AWA",
+      "lat": -37.808555,
+      "lon": 144.896455
+    },
+    {
+      "name": "Footscray East",
+      "venue": "Footscray Community Arts Centre",
+      "address": "45 Moreland Street",
+      "suburb": "Footscray",
+      "postcode": "3011",
+      "access": "AWA",
+      "lat": -37.802819,
+      "lon": 144.90701
+    },
+    {
+      "name": "Gaudion Reserve",
+      "venue": "2nd Footscray Scout Hall",
+      "address": "684 Barkly Street",
+      "suburb": "West Footscray",
+      "postcode": "3012",
+      "access": "LNWA",
+      "lat": -37.796363,
+      "lon": 144.868873
+    },
+    {
+      "name": "Hansen Reserve",
+      "venue": "Kingsville Kindergarten",
+      "address": "35A Roberts Street",
+      "suburb": "West Footscray",
+      "postcode": "3012",
+      "access": "LNWA",
+      "lat": -37.804257,
+      "lon": 144.871107
+    },
+    {
+      "name": "Hyde",
+      "venue": "Footscray City Primary School",
+      "address": "10 Hyde Street",
+      "suburb": "Footscray",
+      "postcode": "3011",
+      "access": "AWA",
+      "lat": -37.806409,
+      "lon": 144.89884
+    },
+    {
+      "name": "Kingsville",
+      "venue": "Kingsville Primary School",
+      "address": "58 Bishop Street, (access via Gate 3)",
+      "suburb": "Yarraville",
+      "postcode": "3013",
+      "access": "AWA",
+      "lat": -37.812592,
+      "lon": 144.874739
+    },
+    {
+      "name": "Kingsville South",
+      "venue": "Wembley Primary School",
+      "address": "32 St Leonards Avenue",
+      "suburb": "Yarraville",
+      "postcode": "3013",
+      "access": "AWA",
+      "lat": -37.821172,
+      "lon": 144.875325,
+      "joint": true
+    },
+    {
+      "name": "Maidstone",
+      "venue": "Footscray North Primary School",
+      "address": "14 Rosamond Road",
+      "suburb": "Footscray",
+      "postcode": "3011",
+      "access": "IWA",
+      "lat": -37.787214,
+      "lon": 144.883456
+    },
+    {
+      "name": "Maidstone West",
+      "venue": "Maidstone Child and Family Centre",
+      "address": "23-25 Burns Street, (access via Sonley Street)",
+      "suburb": "Maidstone",
+      "postcode": "3012",
+      "access": "AWA",
+      "lat": -37.787014,
+      "lon": 144.872828
+    },
+    {
+      "name": "Maribyrnong River",
+      "venue": "St Margaret's Primary School (Maribyrnong)",
+      "address": "67 The Esplanade",
+      "suburb": "Maribyrnong",
+      "postcode": "3032",
+      "access": "AWA",
+      "lat": -37.766665,
+      "lon": 144.891904
+    },
+    {
+      "name": "Seddon",
+      "venue": "Seddon Uniting Church Hall",
+      "address": "71 Gamon Street",
+      "suburb": "Seddon",
+      "postcode": "3013",
+      "access": "LNWA",
+      "lat": -37.809549,
+      "lon": 144.890008
+    },
+    {
+      "name": "Tottenham North",
+      "venue": "Western English Language School - Braybrook Campus",
+      "address": "46 South Road",
+      "suburb": "Braybrook",
+      "postcode": "3019",
+      "access": "AWA",
+      "lat": -37.791531,
+      "lon": 144.854074,
+      "joint": true
+    },
+    {
+      "name": "West Footscray",
+      "venue": "Footscray West Primary School",
+      "address": "17 Argyle Street, Eagle Building",
+      "suburb": "West Footscray",
+      "postcode": "3012",
+      "access": "AWA",
+      "lat": -37.794595,
+      "lon": 144.875257
+    },
+    {
+      "name": "Yarraville",
+      "venue": "Yarraville Community Centre",
+      "address": "59 Francis Street",
+      "suburb": "Yarraville",
+      "postcode": "3013",
+      "access": "LNWA",
+      "lat": -37.821545,
+      "lon": 144.893,
+      "joint": true
+    },
+    {
+      "name": "Yarraville Central",
+      "venue": "Yarraville Senior Citizens Centre",
+      "address": "48 Fehon Sreet",
+      "suburb": "Yarraville",
+      "postcode": "3013",
+      "access": "AWA",
+      "lat": -37.817043,
+      "lon": 144.88719
+    }
+  ]
+}

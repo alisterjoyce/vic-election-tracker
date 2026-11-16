@@ -1,0 +1,307 @@
+{
+  "district": "clarinda",
+  "name": "Clarinda",
+  "early": [
+    {
+      "name": "Bentleigh - EVC 1",
+      "venue": "7th Cheltenham Scout Hall (EVC)",
+      "address": "73 Argus Street",
+      "suburb": "Cheltenham",
+      "postcode": "3192",
+      "access": "LNWA",
+      "lat": -37.959291,
+      "lon": 145.067682,
+      "joint": true,
+      "host": "bentleigh"
+    },
+    {
+      "name": "Clarinda - EVC 1",
+      "venue": "Dingley Scout Hall (EVC)",
+      "address": "65 Centre Dandenong Road",
+      "suburb": "Dingley Village",
+      "postcode": "3172",
+      "access": "IWA",
+      "lat": -37.984563,
+      "lon": 145.135546,
+      "joint": true
+    },
+    {
+      "name": "Dandenong - EVC 1",
+      "venue": "Moodemere Scout Hall (EVC)",
+      "address": "Aenone Avenue",
+      "suburb": "Noble Park",
+      "postcode": "3174",
+      "access": "AWA",
+      "lat": -37.978017,
+      "lon": 145.167869,
+      "joint": true,
+      "host": "dandenong"
+    },
+    {
+      "name": "Mordialloc - EVC 1",
+      "venue": "Allan McLean Hall (EVC)",
+      "address": "37 Albert Street",
+      "suburb": "Mordialloc",
+      "postcode": "3195",
+      "access": "IWA",
+      "lat": -38.004197,
+      "lon": 145.086305,
+      "joint": true,
+      "host": "mordialloc"
+    },
+    {
+      "name": "Oakleigh - EVC 2",
+      "venue": "Wirringga Scout Hall (EVC)",
+      "address": "Davies Reserve, (access via Talbot Avenue)",
+      "suburb": "Oakleigh South",
+      "postcode": "3167",
+      "access": "AWA",
+      "lat": -37.921082,
+      "lon": 145.103884,
+      "joint": true,
+      "host": "oakleigh"
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Cheltenham East",
+      "venue": "Cheltenham East Primary School",
+      "address": "44 Silver Street",
+      "suburb": "Cheltenham",
+      "postcode": "3192",
+      "access": "LNWA",
+      "lat": -37.964983,
+      "lon": 145.068239,
+      "joint": true
+    },
+    {
+      "name": "Cheltenham North",
+      "venue": "Cheltenham Secondary College",
+      "address": "73 Bernard Street",
+      "suburb": "Cheltenham",
+      "postcode": "3192",
+      "access": "AWA",
+      "lat": -37.953951,
+      "lon": 145.068579,
+      "joint": true
+    },
+    {
+      "name": "Cheltenham South",
+      "venue": "Cheltenham East Community Hall",
+      "address": "39 Follett Road",
+      "suburb": "Cheltenham",
+      "postcode": "3192",
+      "access": "LNWA",
+      "lat": -37.970883,
+      "lon": 145.071003
+    },
+    {
+      "name": "Clarinda",
+      "venue": "Clarinda Primary School",
+      "address": "1166 Centre Road, (access via Crawford Road)",
+      "suburb": "Clarinda",
+      "postcode": "3169",
+      "access": "IWA",
+      "lat": -37.926704,
+      "lon": 145.102011,
+      "joint": true
+    },
+    {
+      "name": "Clarinda South",
+      "venue": "Sundowner Community Centre",
+      "address": "24 Sundowner Avenue",
+      "suburb": "Clarinda",
+      "postcode": "3169",
+      "access": "IWA",
+      "lat": -37.943563,
+      "lon": 145.107569
+    },
+    {
+      "name": "Clayton South",
+      "venue": "Clayton South Primary School",
+      "address": "539 Clayton Road, (access via Narrumburn Road)",
+      "suburb": "Clayton South",
+      "postcode": "3169",
+      "access": "LNWA",
+      "lat": -37.941127,
+      "lon": 145.115896
+    },
+    {
+      "name": "Coomoora",
+      "venue": "Keysborough Primary School",
+      "address": "31-53 Coomoora Road",
+      "suburb": "Springvale South",
+      "postcode": "3172",
+      "access": "AWA",
+      "lat": -37.982441,
+      "lon": 145.152737
+    },
+    {
+      "name": "Dingley",
+      "venue": "Christ Church Dingley",
+      "address": "387-405 Old Dandenong Road",
+      "suburb": "Dingley Village",
+      "postcode": "3172",
+      "access": "AWA",
+      "lat": -37.972756,
+      "lon": 145.11887
+    },
+    {
+      "name": "Dingley Village",
+      "venue": "Dingley Scout Hall",
+      "address": "65 Centre Dandenong Road",
+      "suburb": "Dingley Village",
+      "postcode": "3172",
+      "access": "IWA",
+      "lat": -37.984571,
+      "lon": 145.135532
+    },
+    {
+      "name": "Heatherhill",
+      "venue": "Heatherhill Primary School",
+      "address": "959-973 Heatherton Road",
+      "suburb": "Springvale",
+      "postcode": "3171",
+      "access": "AWA",
+      "lat": -37.962938,
+      "lon": 145.158071,
+      "joint": true
+    },
+    {
+      "name": "Heatherton North",
+      "venue": "St Andrew's Primary School (Clayton South)",
+      "address": "96 Bunney Road",
+      "suburb": "Clayton South",
+      "postcode": "3169",
+      "access": "AWA",
+      "lat": -37.934697,
+      "lon": 145.106804
+    },
+    {
+      "name": "Keysborough",
+      "venue": "Keysborough Scout Hall",
+      "address": "Rowley Allan Reserve, 358 Cheltenham Road",
+      "suburb": "Keysborough",
+      "postcode": "3173",
+      "access": "AWA",
+      "lat": -37.993524,
+      "lon": 145.165602,
+      "joint": true
+    },
+    {
+      "name": "Keysborough Park",
+      "venue": "Keysborough Community Hub",
+      "address": "10 Villiers Road",
+      "suburb": "Keysborough",
+      "postcode": "3173",
+      "access": "IWA",
+      "lat": -37.998227,
+      "lon": 145.161028,
+      "joint": true
+    },
+    {
+      "name": "Kingston Heath",
+      "venue": "Kingston Heath Primary School",
+      "address": "25 Farm Road",
+      "suburb": "Cheltenham",
+      "postcode": "3192",
+      "access": "IWA",
+      "lat": -37.962901,
+      "lon": 145.079498
+    },
+    {
+      "name": "Mentone",
+      "venue": "Mentone Primary School",
+      "address": "6 Childers Street",
+      "suburb": "Mentone",
+      "postcode": "3194",
+      "access": "AWA",
+      "lat": -37.982798,
+      "lon": 145.067864,
+      "joint": true
+    },
+    {
+      "name": "Mentone North",
+      "venue": "Mentone Scout Hall",
+      "address": "38 Levanto Street, (access via Chicquita Circuit)",
+      "suburb": "Mentone",
+      "postcode": "3194",
+      "access": "LNWA",
+      "lat": -37.97875,
+      "lon": 145.075564
+    },
+    {
+      "name": "Mentone Park",
+      "venue": "Mentone Park Primary School",
+      "address": "1-7 Broome Avenue",
+      "suburb": "Mentone",
+      "postcode": "3194",
+      "access": "AWA",
+      "lat": -37.98016,
+      "lon": 145.083182
+    },
+    {
+      "name": "Moodemere",
+      "venue": "Moodemere Scout Hall",
+      "address": "Aenone Avenue",
+      "suburb": "Noble Park",
+      "postcode": "3174",
+      "access": "AWA",
+      "lat": -37.978024,
+      "lon": 145.167892,
+      "joint": true
+    },
+    {
+      "name": "Southvale",
+      "venue": "Keysborough College - Banksia Campus",
+      "address": "8-20 Janine Road, (access via Noble Street)",
+      "suburb": "Springvale South",
+      "postcode": "3172",
+      "access": "AWA",
+      "lat": -37.96833,
+      "lon": 145.160821
+    },
+    {
+      "name": "Spring Valley",
+      "venue": "Spring Parks Primary School - Valley Campus",
+      "address": "27-39 Clarke Road",
+      "suburb": "Springvale South",
+      "postcode": "3172",
+      "access": "AWA",
+      "lat": -37.963793,
+      "lon": 145.139004
+    },
+    {
+      "name": "Springvale South",
+      "venue": "Athol Road Primary School - West Campus",
+      "address": "159-167 Athol Road",
+      "suburb": "Springvale South",
+      "postcode": "3172",
+      "access": "IWA",
+      "lat": -37.971187,
+      "lon": 145.150699
+    },
+    {
+      "name": "Springvale West",
+      "venue": "Spring Parks Primary School - West Campus",
+      "address": "24 Erica Street, (access via Egan Street)",
+      "suburb": "Springvale",
+      "postcode": "3171",
+      "access": "AWA",
+      "lat": -37.958322,
+      "lon": 145.139568,
+      "joint": true
+    },
+    {
+      "name": "Westall",
+      "venue": "Westall Secondary College",
+      "address": "88 Rosebank Avenue, (access via Gate 3)",
+      "suburb": "Clayton South",
+      "postcode": "3169",
+      "access": "AWA",
+      "lat": -37.940052,
+      "lon": 145.135829,
+      "joint": true
+    }
+  ]
+}

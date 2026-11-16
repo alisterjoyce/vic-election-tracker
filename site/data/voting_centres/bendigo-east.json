@@ -1,0 +1,327 @@
+{
+  "district": "bendigo-east",
+  "name": "Bendigo East",
+  "early": [
+    {
+      "name": "Bendigo East - EVC 1",
+      "venue": "Bendigo East Public Hall (EVC)",
+      "address": "35 Lansell Street",
+      "suburb": "East Bendigo",
+      "postcode": "3550",
+      "access": "LNWA",
+      "lat": -36.754802,
+      "lon": 144.294703,
+      "joint": true
+    },
+    {
+      "name": "Bendigo East - EVC 2",
+      "venue": "Eaglehawk Presbyterian Church (EVC)",
+      "address": "75 Victoria Street",
+      "suburb": "Eaglehawk",
+      "postcode": "3556",
+      "access": "AWA",
+      "lat": -36.718304,
+      "lon": 144.254279,
+      "joint": true
+    },
+    {
+      "name": "Bendigo West - EVC 2",
+      "venue": "St Pauls Cathedral Hall (EVC)",
+      "address": "6 Myers Street",
+      "suburb": "Bendigo",
+      "postcode": "3550",
+      "access": "IWA",
+      "lat": -36.762091,
+      "lon": 144.282989,
+      "joint": true,
+      "host": "bendigo-west"
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Axedale",
+      "venue": "Axedale Public Hall",
+      "address": "94 High Street",
+      "suburb": "Axedale",
+      "postcode": "3551",
+      "access": "LNWA",
+      "lat": -36.787395,
+      "lon": 144.502649
+    },
+    {
+      "name": "Bendigo Central",
+      "venue": "St Pauls Cathedral Hall",
+      "address": "6 Myers Street",
+      "suburb": "Bendigo",
+      "postcode": "3550",
+      "access": "IWA",
+      "lat": -36.762045,
+      "lon": 144.282741,
+      "joint": true
+    },
+    {
+      "name": "Bendigo East",
+      "venue": "Bendigo East Public Hall",
+      "address": "35 Lansell Street",
+      "suburb": "East Bendigo",
+      "postcode": "3550",
+      "access": "LNWA",
+      "lat": -36.754824,
+      "lon": 144.294709
+    },
+    {
+      "name": "Comet Hill",
+      "venue": "Lightning Reef Primary School",
+      "address": "74 Holmes Road",
+      "suburb": "North Bendigo",
+      "postcode": "3550",
+      "access": "LNWA",
+      "lat": -36.736738,
+      "lon": 144.268126,
+      "joint": true
+    },
+    {
+      "name": "Dingee",
+      "venue": "Dingee Memorial Hall",
+      "address": "26 Mack Street",
+      "suburb": "Dingee",
+      "postcode": "3571",
+      "access": "LNWA",
+      "lat": -36.367997,
+      "lon": 144.232027
+    },
+    {
+      "name": "Eaglehawk",
+      "venue": "Eaglehawk Presbyterian Church",
+      "address": "75 Victoria Street",
+      "suburb": "Eaglehawk",
+      "postcode": "3556",
+      "access": "AWA",
+      "lat": -36.718306,
+      "lon": 144.254279,
+      "joint": true
+    },
+    {
+      "name": "Elmore",
+      "venue": "Elmore Athenaeum Hall",
+      "address": "62 Michie Street",
+      "suburb": "Elmore",
+      "postcode": "3558",
+      "access": "LNWA",
+      "lat": -36.494919,
+      "lon": 144.609995
+    },
+    {
+      "name": "Eppalock",
+      "venue": "Eppalock Primary School",
+      "address": "149 Patons Road",
+      "suburb": "Axe Creek",
+      "postcode": "3551",
+      "access": "IWA",
+      "lat": -36.841997,
+      "lon": 144.387735
+    },
+    {
+      "name": "Epsom",
+      "venue": "Epsom Primary School",
+      "address": "31 Howard Street",
+      "suburb": "Epsom",
+      "postcode": "3551",
+      "access": "IWA",
+      "lat": -36.704785,
+      "lon": 144.312351
+    },
+    {
+      "name": "Flora Hill",
+      "venue": "Holy Trinity Anglican Hall",
+      "address": "14 Keck Street",
+      "suburb": "Flora Hill",
+      "postcode": "3550",
+      "access": "IWA",
+      "lat": -36.776797,
+      "lon": 144.290812
+    },
+    {
+      "name": "Goornong",
+      "venue": "Goornong Soldiers Memorial Hall",
+      "address": "32 Midland Highway",
+      "suburb": "Goornong",
+      "postcode": "3557",
+      "access": "AWA",
+      "lat": -36.615125,
+      "lon": 144.505472
+    },
+    {
+      "name": "Huntly",
+      "venue": "Huntly Primary School",
+      "address": "101 Brunel Street",
+      "suburb": "Huntly",
+      "postcode": "3551",
+      "access": "IWA",
+      "lat": -36.662551,
+      "lon": 144.334642
+    },
+    {
+      "name": "Jobs Gully",
+      "venue": "Eaglehawk Secondary College",
+      "address": "1-3 Reserve Street, (access via Bright Street)",
+      "suburb": "Eaglehawk",
+      "postcode": "3556",
+      "access": "AWA",
+      "lat": -36.721148,
+      "lon": 144.262483
+    },
+    {
+      "name": "Junortoun",
+      "venue": "Bendigo Baptist Church",
+      "address": "757 McIvor Highway",
+      "suburb": "Junortoun",
+      "postcode": "3551",
+      "access": "AWA",
+      "lat": -36.770182,
+      "lon": 144.345967
+    },
+    {
+      "name": "Kangaroo Flat South",
+      "venue": "St Monica's Primary School (Kangaroo Flat)",
+      "address": "91 High Street, (access via Station Street)",
+      "suburb": "Kangaroo Flat",
+      "postcode": "3555",
+      "access": "AWA",
+      "lat": -36.794822,
+      "lon": 144.2454,
+      "joint": true
+    },
+    {
+      "name": "Maiden Gully",
+      "venue": "Maiden Gully Primary School",
+      "address": "10 Carolyn Way",
+      "suburb": "Maiden Gully",
+      "postcode": "3551",
+      "access": "LNWA",
+      "lat": -36.743643,
+      "lon": 144.210066,
+      "joint": true
+    },
+    {
+      "name": "Quarry Hill",
+      "venue": "Quarry Hill Primary School",
+      "address": "25 Peel Street",
+      "suburb": "Quarry Hill",
+      "postcode": "3550",
+      "access": "AWA",
+      "lat": -36.775399,
+      "lon": 144.280204
+    },
+    {
+      "name": "Raywood",
+      "venue": "Raywood Memorial Public Hall",
+      "address": "50-52 Inglewood Street",
+      "suburb": "Raywood",
+      "postcode": "3570",
+      "access": "AWA",
+      "lat": -36.535645,
+      "lon": 144.207398
+    },
+    {
+      "name": "Sailors Gully",
+      "venue": "Sailors Gully Lions Community Hall",
+      "address": "1A Growler Street",
+      "suburb": "Eaglehawk",
+      "postcode": "3556",
+      "access": "LNWA",
+      "lat": -36.708099,
+      "lon": 144.246572
+    },
+    {
+      "name": "Sedgwick",
+      "venue": "Sedgwick Public Hall",
+      "address": "Corner Sedgwick Road and Boyd Lane",
+      "suburb": "Sedgwick",
+      "postcode": "3551",
+      "access": "LNWA",
+      "lat": -36.871412,
+      "lon": 144.315695
+    },
+    {
+      "name": "Serpentine",
+      "venue": "Loddon Shire Council Offices",
+      "address": "37 Peppercorn Way",
+      "suburb": "Serpentine",
+      "postcode": "3517",
+      "access": "AWA",
+      "lat": -36.409881,
+      "lon": 143.974202
+    },
+    {
+      "name": "Spring Gully",
+      "venue": "Spring Gully Tennis Club",
+      "address": "101 Spring Gully Road",
+      "suburb": "Spring Gully",
+      "postcode": "3550",
+      "access": "IWA",
+      "lat": -36.791682,
+      "lon": 144.28497
+    },
+    {
+      "name": "Strath Hill",
+      "venue": "Kennington Primary School",
+      "address": "60 Crook Street, (access via school driveway)",
+      "suburb": "Kennington",
+      "postcode": "3550",
+      "access": "AWA",
+      "lat": -36.768753,
+      "lon": 144.308233
+    },
+    {
+      "name": "Strathdale",
+      "venue": "Strathdale Community Centre",
+      "address": "155 Crook Street",
+      "suburb": "Strathdale",
+      "postcode": "3551",
+      "access": "AWA",
+      "lat": -36.760891,
+      "lon": 144.313852
+    },
+    {
+      "name": "Strathfieldsaye",
+      "venue": "Strathfieldsaye Community Church Hall",
+      "address": "920 Wellington Street",
+      "suburb": "Strathfieldsaye",
+      "postcode": "3551",
+      "access": "LNWA",
+      "lat": -36.806342,
+      "lon": 144.354963
+    },
+    {
+      "name": "Weeroona",
+      "venue": "Weeroona College",
+      "address": "383 Napier Street, (access via Knight Street)",
+      "suburb": "White Hills",
+      "postcode": "3550",
+      "access": "IWA",
+      "lat": -36.738951,
+      "lon": 144.29641
+    },
+    {
+      "name": "White Hills",
+      "venue": "Holy Rosary Parish Centre (Ted Harte Centre)",
+      "address": "2 Hamelin Street",
+      "suburb": "White Hills",
+      "postcode": "3550",
+      "access": "AWA",
+      "lat": -36.726238,
+      "lon": 144.30956
+    },
+    {
+      "name": "Woodvale",
+      "venue": "Woodvale Community Hall",
+      "address": "34 Dalys Road",
+      "suburb": "Woodvale",
+      "postcode": "3556",
+      "access": "LNWA",
+      "lat": -36.655063,
+      "lon": 144.212313
+    }
+  ]
+}

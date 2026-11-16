@@ -1,0 +1,430 @@
+{
+  "district": "eildon",
+  "name": "Eildon",
+  "early": [
+    {
+      "name": "Eildon - EVC 1",
+      "venue": "Healesville Living and Learning Centre (EVC)",
+      "address": "1 Badger Creek Road",
+      "suburb": "Healesville",
+      "postcode": "3777",
+      "access": "AWA",
+      "lat": -37.655677,
+      "lon": 145.524315
+    },
+    {
+      "name": "Eildon - EVC 2",
+      "venue": "Mansfield CWA Hall (EVC)",
+      "address": "22 High Street",
+      "suburb": "Mansfield",
+      "postcode": "3722",
+      "access": "AWA",
+      "lat": -37.052857,
+      "lon": 146.091633
+    },
+    {
+      "name": "Evelyn - EVC 3",
+      "venue": "1st Lilydale Scout Hall (EVC)",
+      "address": "9 Erldunda Court",
+      "suburb": "Lilydale",
+      "postcode": "3140",
+      "access": "LNWA",
+      "lat": -37.748019,
+      "lon": 145.339795,
+      "joint": true,
+      "host": "evelyn"
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Alexandra",
+      "venue": "Alexandra Secondary College",
+      "address": "15 Hall Street",
+      "suburb": "Alexandra",
+      "postcode": "3714",
+      "access": "AWA",
+      "lat": -37.195151,
+      "lon": 145.701179
+    },
+    {
+      "name": "Arthurs Creek",
+      "venue": "Arthurs Creek Primary School",
+      "address": "900 Arthurs Creek Road",
+      "suburb": "Arthurs Creek",
+      "postcode": "3099",
+      "access": "LNWA",
+      "lat": -37.579283,
+      "lon": 145.20244
+    },
+    {
+      "name": "Badger Creek",
+      "venue": "Badger Creek Primary School",
+      "address": "139 Badger Creek Road",
+      "suburb": "Badger Creek",
+      "postcode": "3777",
+      "access": "LNWA",
+      "lat": -37.681375,
+      "lon": 145.533211
+    },
+    {
+      "name": "Bonnie Doon",
+      "venue": "Bonnie Doon Community Centre",
+      "address": "75 Arnot Street",
+      "suburb": "Bonnie Doon",
+      "postcode": "3720",
+      "access": "LNWA",
+      "lat": -37.025312,
+      "lon": 145.852824
+    },
+    {
+      "name": "Buxton",
+      "venue": "Buxton Primary School",
+      "address": "2208 Maroondah Highway",
+      "suburb": "Buxton",
+      "postcode": "3711",
+      "access": "IWA",
+      "lat": -37.421753,
+      "lon": 145.70899
+    },
+    {
+      "name": "Dixons Creek",
+      "venue": "Dixons Creek Recreation Reserve Hall",
+      "address": "1659 Melba Highway",
+      "suburb": "Dixons Creek",
+      "postcode": "3775",
+      "access": "AWA",
+      "lat": -37.604778,
+      "lon": 145.417206
+    },
+    {
+      "name": "Eildon",
+      "venue": "Eildon Community Centre",
+      "address": "2 Centre Avenue",
+      "suburb": "Eildon",
+      "postcode": "3713",
+      "access": "AWA",
+      "lat": -37.234398,
+      "lon": 145.908476
+    },
+    {
+      "name": "Flowerdale",
+      "venue": "Flowerdale Primary School",
+      "address": "3377 Whittlesea-Yea Road, (access vis Flowerdale School Road)",
+      "suburb": "Flowerdale",
+      "postcode": "3717",
+      "access": "IWA",
+      "lat": -37.31712,
+      "lon": 145.290794
+    },
+    {
+      "name": "Gladysdale",
+      "venue": "Gladysdale Primary School",
+      "address": "550 Little Yarra Road",
+      "suburb": "Gladysdale",
+      "postcode": "3797",
+      "access": "AWA",
+      "lat": -37.820308,
+      "lon": 145.651143
+    },
+    {
+      "name": "Glenburn",
+      "venue": "Glenburn Hall",
+      "address": "3876 Melba Highway",
+      "suburb": "Glenburn",
+      "postcode": "3717",
+      "access": "IWA",
+      "lat": -37.419953,
+      "lon": 145.426153
+    },
+    {
+      "name": "Healesville",
+      "venue": "Healesville High School",
+      "address": "10 Camerons Road",
+      "suburb": "Healesville",
+      "postcode": "3777",
+      "access": "IWA",
+      "lat": -37.643496,
+      "lon": 145.530758
+    },
+    {
+      "name": "Healesville Central",
+      "venue": "Healesville Living and Learning Centre",
+      "address": "1 Badger Creek Road",
+      "suburb": "Healesville",
+      "postcode": "3777",
+      "access": "AWA",
+      "lat": -37.655673,
+      "lon": 145.524306
+    },
+    {
+      "name": "Hurstbridge",
+      "venue": "Hurstbridge Primary School",
+      "address": "961-989 Heidelberg-Kinglake Road",
+      "suburb": "Hurstbridge",
+      "postcode": "3099",
+      "access": "LNWA",
+      "lat": -37.636254,
+      "lon": 145.198423
+    },
+    {
+      "name": "Jamieson",
+      "venue": "Jamieson Memorial Hall",
+      "address": "Corner of Perkins Street and Grey Street",
+      "suburb": "Jamieson",
+      "postcode": "3723",
+      "access": "LNWA",
+      "lat": -37.301966,
+      "lon": 146.137742
+    },
+    {
+      "name": "Kangaroo Ground",
+      "venue": "Kangaroo Ground Primary School",
+      "address": "10 Graham Road",
+      "suburb": "Kangaroo Ground",
+      "postcode": "3097",
+      "access": "IWA",
+      "lat": -37.691589,
+      "lon": 145.213986
+    },
+    {
+      "name": "Kinglake",
+      "venue": "Kinglake Primary School",
+      "address": "20 McMahons Road, (access via Goodall Street)",
+      "suburb": "Kinglake",
+      "postcode": "3763",
+      "access": "LNWA",
+      "lat": -37.521402,
+      "lon": 145.356219
+    },
+    {
+      "name": "Kinglake West",
+      "venue": "Kinglake West Mechanics Institute Hall",
+      "address": "1055 Whittlesea-Kinglake Road",
+      "suburb": "Kinglake West",
+      "postcode": "3757",
+      "access": "LNWA",
+      "lat": -37.481061,
+      "lon": 145.258307
+    },
+    {
+      "name": "Launching Place",
+      "venue": "Launching Place Primary School",
+      "address": "20A Carter Street",
+      "suburb": "Launching Place",
+      "postcode": "3139",
+      "access": "IWA",
+      "lat": -37.782681,
+      "lon": 145.57094
+    },
+    {
+      "name": "Mansfield Ford Creek",
+      "venue": "Mansfield CWA Hall",
+      "address": "22 High Street",
+      "suburb": "Mansfield",
+      "postcode": "3722",
+      "access": "AWA",
+      "lat": -37.052843,
+      "lon": 146.091644
+    },
+    {
+      "name": "Marysville",
+      "venue": "Marysville Primary School",
+      "address": "15 Falls Road",
+      "suburb": "Marysville",
+      "postcode": "3779",
+      "access": "IWA",
+      "lat": -37.512268,
+      "lon": 145.749204
+    },
+    {
+      "name": "Merrijig",
+      "venue": "Merrijig Primary School",
+      "address": "1820 Mt Buller Road, (access via Alpha Street)",
+      "suburb": "Merrijig",
+      "postcode": "3723",
+      "access": "AWA",
+      "lat": -37.102888,
+      "lon": 146.257764
+    },
+    {
+      "name": "Merton",
+      "venue": "Merton Memorial Hall",
+      "address": "17 Shaws Road",
+      "suburb": "Merton",
+      "postcode": "3715",
+      "access": "IWA",
+      "lat": -36.976341,
+      "lon": 145.709277
+    },
+    {
+      "name": "Millgrove",
+      "venue": "Millwarra Primary School - Millgrove Campus",
+      "address": "18-20 Cavanagh Road",
+      "suburb": "Millgrove",
+      "postcode": "3799",
+      "access": "IWA",
+      "lat": -37.752759,
+      "lon": 145.651589
+    },
+    {
+      "name": "Narbethong",
+      "venue": "Narbethong Community Hall",
+      "address": "606 Maroondah Highway",
+      "suburb": "Narbethong",
+      "postcode": "3778",
+      "access": "IWA",
+      "lat": -37.55106,
+      "lon": 145.65963
+    },
+    {
+      "name": "Panton Hill",
+      "venue": "Panton Hill Primary School",
+      "address": "585 Kangaroo Ground-St Andrews Road",
+      "suburb": "Panton Hill",
+      "postcode": "3759",
+      "access": "LNWA",
+      "lat": -37.641815,
+      "lon": 145.239708
+    },
+    {
+      "name": "Piries-Goughs Bay",
+      "venue": "Goughs Bay Boat Club",
+      "address": "53 Bayside Boulevard",
+      "suburb": "Goughs Bay",
+      "postcode": "3723",
+      "access": "LNWA",
+      "lat": -37.19051,
+      "lon": 146.06813
+    },
+    {
+      "name": "St Andrews",
+      "venue": "St Andrews Primary School",
+      "address": "15 Caledonia Street",
+      "suburb": "St Andrews",
+      "postcode": "3761",
+      "access": "LNWA",
+      "lat": -37.60233,
+      "lon": 145.26986
+    },
+    {
+      "name": "Taggerty",
+      "venue": "Taggerty Mechanics Institute Hall",
+      "address": "5 Taggerty-Thornton Road",
+      "suburb": "Taggerty",
+      "postcode": "3714",
+      "access": "LNWA",
+      "lat": -37.321213,
+      "lon": 145.712377
+    },
+    {
+      "name": "Thornton",
+      "venue": "Thornton Memorial Hall",
+      "address": "1335 Taggerty-Thornton Road",
+      "suburb": "Thornton",
+      "postcode": "3712",
+      "access": "LNWA",
+      "lat": -37.257488,
+      "lon": 145.797435
+    },
+    {
+      "name": "Tolmie",
+      "venue": "Tolmie Mechanics Institute Hall",
+      "address": "13 Tolmie-Mahaikah Road",
+      "suburb": "Tolmie",
+      "postcode": "3723",
+      "access": "LNWA",
+      "lat": -36.935867,
+      "lon": 146.238688
+    },
+    {
+      "name": "Toolangi",
+      "venue": "Toolangi Memorial Hall",
+      "address": "1717 Healesville-Kinglake Road",
+      "suburb": "Toolangi",
+      "postcode": "3777",
+      "access": "IWA",
+      "lat": -37.537994,
+      "lon": 145.473859
+    },
+    {
+      "name": "Warburton",
+      "venue": "Warburton Primary School",
+      "address": "16 Horners Road",
+      "suburb": "Warburton",
+      "postcode": "3799",
+      "access": "AWA",
+      "lat": -37.756088,
+      "lon": 145.701552
+    },
+    {
+      "name": "Warburton East",
+      "venue": "Millwarra Primary School - Warburton East Campus",
+      "address": "397 Woods Point Road",
+      "suburb": "Warburton East",
+      "postcode": "3799",
+      "access": "IWA",
+      "lat": -37.74245,
+      "lon": 145.735731
+    },
+    {
+      "name": "Wesburn",
+      "venue": "Wesburn Primary School",
+      "address": "2850 Warburton Highway, (access via Wylie Street)",
+      "suburb": "Wesburn",
+      "postcode": "3799",
+      "access": "AWA",
+      "lat": -37.768665,
+      "lon": 145.647004
+    },
+    {
+      "name": "Woori Yallock",
+      "venue": "Woori Yallock Primary School",
+      "address": "1360 Healesville-Koo Wee Rup Road",
+      "suburb": "Woori Yallock",
+      "postcode": "3139",
+      "access": "IWA",
+      "lat": -37.77731,
+      "lon": 145.53275
+    },
+    {
+      "name": "Yarck",
+      "venue": "Yarck Community Hall",
+      "address": "6583 Maroondah Highway",
+      "suburb": "Yarck",
+      "postcode": "3719",
+      "access": "IWA",
+      "lat": -37.102059,
+      "lon": 145.616157
+    },
+    {
+      "name": "Yarra Glen",
+      "venue": "Yarra Glen Primary School",
+      "address": "35 Symonds Street",
+      "suburb": "Yarra Glen",
+      "postcode": "3775",
+      "access": "IWA",
+      "lat": -37.649873,
+      "lon": 145.372583
+    },
+    {
+      "name": "Yarra Junction",
+      "venue": "Yarra Junction Bowling Club",
+      "address": "2435 Warburton Highway, (behind the Yarra Recreation Centre)",
+      "suburb": "Yarra Junction",
+      "postcode": "3797",
+      "access": "AWA",
+      "lat": -37.781603,
+      "lon": 145.611682
+    },
+    {
+      "name": "Yea",
+      "venue": "Yea Shire Hall",
+      "address": "27A High Street",
+      "suburb": "Yea",
+      "postcode": "3717",
+      "access": "AWA",
+      "lat": -37.211352,
+      "lon": 145.425837
+    }
+  ]
+}

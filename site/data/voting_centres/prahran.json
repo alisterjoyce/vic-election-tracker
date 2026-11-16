@@ -1,0 +1,251 @@
+{
+  "district": "prahran",
+  "name": "Prahran",
+  "early": [
+    {
+      "name": "Melbourne - EVC 2",
+      "venue": "Melbourne Town Hall (EVC)",
+      "address": "90-130 Swanston Street",
+      "suburb": "Melbourne",
+      "postcode": "3000",
+      "access": "AWA",
+      "lat": -37.815037,
+      "lon": 144.966519,
+      "joint": true,
+      "host": "melbourne"
+    },
+    {
+      "name": "Prahran - EVC 1",
+      "venue": "John Pierce Centre (EVC)",
+      "address": "35 High Street",
+      "suburb": "Prahran",
+      "postcode": "3181",
+      "access": "IWA",
+      "lat": -37.850871,
+      "lon": 144.986775
+    },
+    {
+      "name": "Prahran - EVC 2",
+      "venue": "Prahran Masonic Centre (EVC)",
+      "address": "36A St Edmonds Road",
+      "suburb": "Prahran",
+      "postcode": "3181",
+      "access": "IWA",
+      "lat": -37.849887,
+      "lon": 144.991918
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Alma",
+      "venue": "Alma Road Community House",
+      "address": "200 Alma Road",
+      "suburb": "St Kilda East",
+      "postcode": "3183",
+      "access": "LNWA",
+      "lat": -37.863338,
+      "lon": 145.007302,
+      "joint": true
+    },
+    {
+      "name": "Balaclava",
+      "venue": "Bet Anielewicz Centre",
+      "address": "214 Inkerman Street, (access via Raglan Street)",
+      "suburb": "St Kilda East",
+      "postcode": "3183",
+      "access": "LNWA",
+      "lat": -37.86547,
+      "lon": 144.993993,
+      "joint": true
+    },
+    {
+      "name": "Fawkner Park",
+      "venue": "Christ Church Grammar School",
+      "address": "677 Punt Road, (access via The Butler Memorial Gate)",
+      "suburb": "South Yarra",
+      "postcode": "3141",
+      "access": "LNWA",
+      "lat": -37.838831,
+      "lon": 144.986043
+    },
+    {
+      "name": "Hawksburn",
+      "venue": "Toorak - South Yarra Library",
+      "address": "340 Toorak Road",
+      "suburb": "South Yarra",
+      "postcode": "3141",
+      "access": "AWA",
+      "lat": -37.840039,
+      "lon": 144.99946,
+      "joint": true
+    },
+    {
+      "name": "Hawksburn Central",
+      "venue": "Earthen Vessels Church",
+      "address": "12 Surrey Road",
+      "suburb": "South Yarra",
+      "postcode": "3141",
+      "access": "IWA",
+      "lat": -37.846137,
+      "lon": 144.998513
+    },
+    {
+      "name": "Orrong",
+      "venue": "Our Lady of Lourdes Catholic Primary School",
+      "address": "7 Wynnstay Road",
+      "suburb": "Prahran",
+      "postcode": "3181",
+      "access": "AWA",
+      "lat": -37.852539,
+      "lon": 145.009417,
+      "joint": true
+    },
+    {
+      "name": "Prahran",
+      "venue": "Prahran Masonic Centre",
+      "address": "36A St Edmonds Road",
+      "suburb": "Prahran",
+      "postcode": "3181",
+      "access": "IWA",
+      "lat": -37.849888,
+      "lon": 144.991916
+    },
+    {
+      "name": "Prahran Central",
+      "venue": "St Demetrios Church",
+      "address": "380 High Street",
+      "suburb": "Windsor",
+      "postcode": "3181",
+      "access": "IWA",
+      "lat": -37.852984,
+      "lon": 145.000443
+    },
+    {
+      "name": "Prahran East",
+      "venue": "Grattan Gardens Community Centre",
+      "address": "40 Grattan Street",
+      "suburb": "Prahran",
+      "postcode": "3181",
+      "access": "AWA",
+      "lat": -37.847188,
+      "lon": 144.991453
+    },
+    {
+      "name": "Prahran West",
+      "venue": "John Pierce Centre",
+      "address": "35 High Street",
+      "suburb": "Prahran",
+      "postcode": "3181",
+      "access": "IWA",
+      "lat": -37.850852,
+      "lon": 144.986751
+    },
+    {
+      "name": "South Melbourne Park",
+      "venue": "South Melbourne Park Primary School",
+      "address": "29A Albert Road Drive South, (access via Aughtie Drive)",
+      "suburb": "Albert Park",
+      "postcode": "3206",
+      "access": "LNWA",
+      "lat": -37.841129,
+      "lon": 144.963097,
+      "joint": true
+    },
+    {
+      "name": "South Yarra",
+      "venue": "Melbourne Girls Grammar - Morris Hall Campus",
+      "address": "100 Caroline Street",
+      "suburb": "South Yarra",
+      "postcode": "3141",
+      "access": "AWA",
+      "lat": -37.83546,
+      "lon": 144.988828
+    },
+    {
+      "name": "South Yarra Central",
+      "venue": "St Martins Hall",
+      "address": "120 Millswyn Street",
+      "suburb": "South Yarra",
+      "postcode": "3141",
+      "access": "LNWA",
+      "lat": -37.834493,
+      "lon": 144.980754
+    },
+    {
+      "name": "Southbank",
+      "venue": "Victorian College of the Arts Secondary School",
+      "address": "57 Miles Street",
+      "suburb": "Southbank",
+      "postcode": "3006",
+      "access": "LNWA",
+      "lat": -37.828204,
+      "lon": 144.964938,
+      "joint": true
+    },
+    {
+      "name": "St Kilda",
+      "venue": "St Kilda Primary School",
+      "address": "2B Brighton Road",
+      "suburb": "St Kilda",
+      "postcode": "3182",
+      "access": "AWA",
+      "lat": -37.870046,
+      "lon": 144.988771,
+      "joint": true
+    },
+    {
+      "name": "St Kilda Central",
+      "venue": "Betty Day Centre",
+      "address": "67 Argyle Street",
+      "suburb": "St Kilda",
+      "postcode": "3182",
+      "access": "AWA",
+      "lat": -37.862808,
+      "lon": 144.987064,
+      "joint": true
+    },
+    {
+      "name": "St Kilda East",
+      "venue": "St Michael's Grammar School",
+      "address": "20 Redan Street, (access via Gate 4)",
+      "suburb": "St Kilda",
+      "postcode": "3182",
+      "access": "IWA",
+      "lat": -37.859882,
+      "lon": 144.990379
+    },
+    {
+      "name": "St Kilda Park",
+      "venue": "St Kilda Park Primary School",
+      "address": "68 Fitzroy Street, (access via public car park off Fitzroy Street)",
+      "suburb": "St Kilda",
+      "postcode": "3182",
+      "access": "IWA",
+      "lat": -37.858108,
+      "lon": 144.978041,
+      "joint": true
+    },
+    {
+      "name": "Toorak Central",
+      "venue": "Toorak Primary School",
+      "address": "75 Canterbury Road",
+      "suburb": "Toorak",
+      "postcode": "3142",
+      "access": "AWA",
+      "lat": -37.844848,
+      "lon": 145.010018,
+      "joint": true
+    },
+    {
+      "name": "Windsor",
+      "venue": "St Mary's Parish Hall",
+      "address": "208 Dandenong Road, (access via Westbury Street)",
+      "suburb": "St Kilda East",
+      "postcode": "3183",
+      "access": "LNWA",
+      "lat": -37.858912,
+      "lon": 144.997193,
+      "joint": true
+    }
+  ]
+}

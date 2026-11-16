@@ -1,0 +1,550 @@
+{
+  "district": "lowan",
+  "name": "Lowan",
+  "early": [
+    {
+      "name": "Lowan - EVC 1",
+      "venue": "Horsham Anglican Church Hall (EVC)",
+      "address": "10 Andrew Street",
+      "suburb": "Horsham",
+      "postcode": "3400",
+      "access": "LNWA",
+      "lat": -36.710786,
+      "lon": 142.199675
+    },
+    {
+      "name": "Lowan - EVC 2",
+      "venue": "Hamilton Baptist Church (EVC)",
+      "address": "48 Gray Street",
+      "suburb": "Hamilton",
+      "postcode": "3300",
+      "access": "LNWA",
+      "lat": -37.74451,
+      "lon": 142.021922
+    },
+    {
+      "name": "Ripon - EVC 1",
+      "venue": "St Mary's Catholic Church Hall (EVC)",
+      "address": "304 Barkly Street",
+      "suburb": "Ararat",
+      "postcode": "3377",
+      "access": "IWA",
+      "lat": -37.284616,
+      "lon": 142.938726,
+      "joint": true,
+      "host": "ripon"
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Antwerp",
+      "venue": "Antwerp Public Hall",
+      "address": "Antwerp-Woorak Road",
+      "suburb": "Antwerp",
+      "postcode": "3414",
+      "access": "LNWA",
+      "lat": -36.295031,
+      "lon": 142.022155
+    },
+    {
+      "name": "Apsley",
+      "venue": "Apsley Hall",
+      "address": "62 Wallace Street",
+      "suburb": "Apsley",
+      "postcode": "3319",
+      "access": "AWA",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Balmoral",
+      "venue": "Balmoral Mechanics Institute and Memorial Hall",
+      "address": "26 Glendinning Street",
+      "suburb": "Balmoral",
+      "postcode": "3407",
+      "access": "AWA",
+      "lat": -37.248679,
+      "lon": 141.842429
+    },
+    {
+      "name": "Branxholme",
+      "venue": "Branxholme Hall",
+      "address": "McNichol Street",
+      "suburb": "Branxholme",
+      "postcode": "3302",
+      "access": "LNWA",
+      "lat": -37.857248,
+      "lon": 141.796315
+    },
+    {
+      "name": "Brim",
+      "venue": "Brim Memorial Hall",
+      "address": "28A Swann Street",
+      "suburb": "Brim",
+      "postcode": "3391",
+      "access": "LNWA",
+      "lat": -36.076089,
+      "lon": 142.416343
+    },
+    {
+      "name": "Caramut",
+      "venue": "Caramut War Memorial Hall",
+      "address": "30 Brown Street",
+      "suburb": "Caramut",
+      "postcode": "3274",
+      "access": "LNWA",
+      "lat": -37.956843,
+      "lon": 142.519767
+    },
+    {
+      "name": "Casterton",
+      "venue": "Casterton Town Hall",
+      "address": "67 Henty Street",
+      "suburb": "Casterton",
+      "postcode": "3311",
+      "access": "AWA",
+      "lat": -37.584648,
+      "lon": 141.405209
+    },
+    {
+      "name": "Cavendish",
+      "venue": "Cavendish Memorial Hall",
+      "address": "32-34 Barker Street",
+      "suburb": "Cavendish",
+      "postcode": "3314",
+      "access": "AWA",
+      "lat": -37.528039,
+      "lon": 142.03989
+    },
+    {
+      "name": "Coleraine",
+      "venue": "Coleraine Primary School",
+      "address": "124 Church Street, (access via McConochie Street)",
+      "suburb": "Coleraine",
+      "postcode": "3315",
+      "access": "AWA",
+      "lat": -37.601283,
+      "lon": 141.684039
+    },
+    {
+      "name": "Concongella",
+      "venue": "Concongella Primary School",
+      "address": "61 Concongella School Road",
+      "suburb": "Concongella",
+      "postcode": "3384",
+      "access": "AWA",
+      "lat": -37.04938,
+      "lon": 142.822626
+    },
+    {
+      "name": "Dartmoor",
+      "venue": "Dartmoor Hall",
+      "address": "73 Greenham Street",
+      "suburb": "Dartmoor",
+      "postcode": "3304",
+      "access": "AWA",
+      "lat": -37.922191,
+      "lon": 141.276333
+    },
+    {
+      "name": "Dimboola",
+      "venue": "Dimboola Uniting Church",
+      "address": "17-19 Normanby Street",
+      "suburb": "Dimboola",
+      "postcode": "3414",
+      "access": "AWA",
+      "lat": -36.451163,
+      "lon": 142.0262
+    },
+    {
+      "name": "Dunkeld",
+      "venue": "Sterling Place Dunkeld Community Centre",
+      "address": "Corner of Sterling Street and Martin Street",
+      "suburb": "Dunkeld",
+      "postcode": "3294",
+      "access": "IWA",
+      "lat": -37.651367,
+      "lon": 142.341933
+    },
+    {
+      "name": "Edenhope",
+      "venue": "Edenhope and District Community Centre",
+      "address": "76 Elizabeth Street",
+      "suburb": "Edenhope",
+      "postcode": "3318",
+      "access": "IWA",
+      "lat": -37.036243,
+      "lon": 141.295388
+    },
+    {
+      "name": "Glenorchy",
+      "venue": "Glenorchy Memorial Hall",
+      "address": "29 Forest Street",
+      "suburb": "Glenorchy",
+      "postcode": "3385",
+      "access": "AWA",
+      "lat": -36.908014,
+      "lon": 142.662216
+    },
+    {
+      "name": "Glenthompson",
+      "venue": "Glenthompson Memorial Hall",
+      "address": "13 McLennan Street",
+      "suburb": "Glenthompson",
+      "postcode": "3293",
+      "access": "LNWA",
+      "lat": -37.638064,
+      "lon": 142.54788
+    },
+    {
+      "name": "Goroke",
+      "venue": "Goroke Memorial Hall",
+      "address": "27 Main Street",
+      "suburb": "Goroke",
+      "postcode": "3412",
+      "access": "AWA",
+      "lat": -36.718283,
+      "lon": 141.474132
+    },
+    {
+      "name": "Great Western",
+      "venue": "Great Western Primary School",
+      "address": "45-59 Stephenson Street",
+      "suburb": "Great Western",
+      "postcode": "3374",
+      "access": "AWA",
+      "lat": -37.148963,
+      "lon": 142.851779
+    },
+    {
+      "name": "Halls Gap",
+      "venue": "Halls Gap Community Hall",
+      "address": "115 Grampians Road",
+      "suburb": "Halls Gap",
+      "postcode": "3381",
+      "access": "AWA",
+      "lat": -37.140463,
+      "lon": 142.519186
+    },
+    {
+      "name": "Hamilton Central",
+      "venue": "Hamilton Baptist Church",
+      "address": "48 Gray Street",
+      "suburb": "Hamilton",
+      "postcode": "3300",
+      "access": "LNWA",
+      "lat": -37.744512,
+      "lon": 142.021922
+    },
+    {
+      "name": "Hamilton East",
+      "venue": "Hamilton Senior Citizens Clubroom",
+      "address": "100 Lonsdale Street",
+      "suburb": "Hamilton",
+      "postcode": "3300",
+      "access": "AWA",
+      "lat": -37.740854,
+      "lon": 142.024441
+    },
+    {
+      "name": "Harrow",
+      "venue": "Harrow RSL Hall",
+      "address": "27 Blair Street",
+      "suburb": "Harrow",
+      "postcode": "3317",
+      "access": "LNWA",
+      "lat": -37.16645,
+      "lon": 141.5922
+    },
+    {
+      "name": "Horsham Central",
+      "venue": "Horsham Anglican Church Hall",
+      "address": "10 Andrew Street",
+      "suburb": "Horsham",
+      "postcode": "3400",
+      "access": "LNWA",
+      "lat": -36.710789,
+      "lon": 142.199665
+    },
+    {
+      "name": "Horsham East",
+      "venue": "Horsham CWA Hall",
+      "address": "37 McPherson Street",
+      "suburb": "Horsham",
+      "postcode": "3400",
+      "access": "AWA",
+      "lat": -36.713368,
+      "lon": 142.205125
+    },
+    {
+      "name": "Horsham North",
+      "venue": "Horsham Primary School - Rasmussen Campus",
+      "address": "2B Rasmussen Road",
+      "suburb": "Horsham",
+      "postcode": "3400",
+      "access": "AWA",
+      "lat": -36.697092,
+      "lon": 142.205412
+    },
+    {
+      "name": "Horsham West",
+      "venue": "Horsham West and Haven Primary School - West Campus",
+      "address": "24 Hillary Street",
+      "suburb": "Horsham",
+      "postcode": "3400",
+      "access": "AWA",
+      "lat": -36.717049,
+      "lon": 142.180351
+    },
+    {
+      "name": "Jeparit",
+      "venue": "Jeparit Memorial Town Hall",
+      "address": "10 Roy Street",
+      "suburb": "Jeparit",
+      "postcode": "3423",
+      "access": "AWA",
+      "lat": -36.143111,
+      "lon": 141.987171
+    },
+    {
+      "name": "Kaniva",
+      "venue": "Kaniva Senior Citizens Hall",
+      "address": "32 Progress Street",
+      "suburb": "Kaniva",
+      "postcode": "3419",
+      "access": "AWA",
+      "lat": -36.377765,
+      "lon": 141.241977
+    },
+    {
+      "name": "Laharum",
+      "venue": "Laharum Public Hall",
+      "address": "1574 Northern Grampians Road",
+      "suburb": "Laharum",
+      "postcode": "3401",
+      "access": "AWA",
+      "lat": -36.946377,
+      "lon": 142.323693
+    },
+    {
+      "name": "Lake Bolac",
+      "venue": "Lake Bolac Memorial Hall",
+      "address": "172 Montgomery Street",
+      "suburb": "Lake Bolac",
+      "postcode": "3351",
+      "access": "AWA",
+      "lat": -37.713376,
+      "lon": 142.839771
+    },
+    {
+      "name": "Merino",
+      "venue": "Merino Consolidated School",
+      "address": "49 Paschendale Road",
+      "suburb": "Merino",
+      "postcode": "3310",
+      "access": "IWA",
+      "lat": -37.706607,
+      "lon": 141.548689
+    },
+    {
+      "name": "Minyip",
+      "venue": "Minyip Memorial Hall",
+      "address": "52 Main Street",
+      "suburb": "Minyip",
+      "postcode": "3392",
+      "access": "AWA",
+      "lat": -36.460178,
+      "lon": 142.586465
+    },
+    {
+      "name": "Mortlake",
+      "venue": "Mortlake Soldiers Memorial Hall",
+      "address": "Shaw Street",
+      "suburb": "Mortlake",
+      "postcode": "3272",
+      "access": "AWA",
+      "lat": -38.079665,
+      "lon": 142.81023
+    },
+    {
+      "name": "Moyston",
+      "venue": "Moyston Hall",
+      "address": "12 Brooke Street",
+      "suburb": "Moyston",
+      "postcode": "3377",
+      "access": "AWA",
+      "lat": -37.30243,
+      "lon": 142.766117
+    },
+    {
+      "name": "Murtoa",
+      "venue": "Murtoa Uniting Church Education Centre",
+      "address": "62 McDonald Street",
+      "suburb": "Murtoa",
+      "postcode": "3390",
+      "access": "LNWA",
+      "lat": -36.620765,
+      "lon": 142.470371
+    },
+    {
+      "name": "Natimuk",
+      "venue": "Natimuk Soldiers Memorial Hall",
+      "address": "101 Main Street",
+      "suburb": "Natimuk",
+      "postcode": "3409",
+      "access": "LNWA",
+      "lat": -36.742676,
+      "lon": 141.940122
+    },
+    {
+      "name": "Netherby",
+      "venue": "Netherby Hall",
+      "address": "7 William Street",
+      "suburb": "Netherby",
+      "postcode": "3418",
+      "access": "AWA",
+      "lat": -36.108613,
+      "lon": 141.651602
+    },
+    {
+      "name": "Nhill",
+      "venue": "Nhill Uniting Church Hall",
+      "address": "57 Victoria Street",
+      "suburb": "Nhill",
+      "postcode": "3418",
+      "access": "LNWA",
+      "lat": -36.335161,
+      "lon": 141.648472
+    },
+    {
+      "name": "Patterson Park",
+      "venue": "Patterson Park Hall",
+      "address": "194 King Street",
+      "suburb": "Hamilton",
+      "postcode": "3300",
+      "access": "LNWA",
+      "lat": -37.732134,
+      "lon": 142.025754
+    },
+    {
+      "name": "Penshurst",
+      "venue": "Penshurst Memorial Hall",
+      "address": "21 Martin Street",
+      "suburb": "Penshurst",
+      "postcode": "3289",
+      "access": "AWA",
+      "lat": -37.876207,
+      "lon": 142.29
+    },
+    {
+      "name": "Pomonal",
+      "venue": "Pomonal Hall",
+      "address": "3360 Ararat-Halls Gap Road",
+      "suburb": "Pomonal",
+      "postcode": "3381",
+      "access": "AWA",
+      "lat": -37.195279,
+      "lon": 142.609148
+    },
+    {
+      "name": "Rainbow",
+      "venue": "Rainbow Civic Centre",
+      "address": "15 Federal Street",
+      "suburb": "Rainbow",
+      "postcode": "3424",
+      "access": "AWA",
+      "lat": -35.897868,
+      "lon": 141.994427
+    },
+    {
+      "name": "Rupanyup",
+      "venue": "Rupanyup Senior Citizens Hall",
+      "address": "21 Dyer Street",
+      "suburb": "Rupanyup",
+      "postcode": "3388",
+      "access": "LNWA",
+      "lat": -36.631925,
+      "lon": 142.629288
+    },
+    {
+      "name": "Stawell",
+      "venue": "Stawell Senior Citizens Club Rooms",
+      "address": "9 Victoria Street",
+      "suburb": "Stawell",
+      "postcode": "3380",
+      "access": "AWA",
+      "lat": -37.058231,
+      "lon": 142.777144
+    },
+    {
+      "name": "Stawell West",
+      "venue": "Stawell West Primary School",
+      "address": "80-88 Cooper Street, (access via Sutherland Street)",
+      "suburb": "Stawell",
+      "postcode": "3380",
+      "access": "LNWA",
+      "lat": -37.065746,
+      "lon": 142.770105
+    },
+    {
+      "name": "Streatham",
+      "venue": "Streatham Public Hall",
+      "address": "30 Campbell Street",
+      "suburb": "Streatham",
+      "postcode": "3351",
+      "access": "IWA",
+      "lat": -37.679242,
+      "lon": 143.062341
+    },
+    {
+      "name": "Tarrington",
+      "venue": "Tarrington Church Hall",
+      "address": "7901 Hamilton Highway",
+      "suburb": "Tarrington",
+      "postcode": "3301",
+      "access": "IWA",
+      "lat": -37.766953,
+      "lon": 142.094883
+    },
+    {
+      "name": "Tatyoon",
+      "venue": "Tatyoon Public Hall",
+      "address": "Tatyoon Road",
+      "suburb": "Tatyoon",
+      "postcode": "3378",
+      "access": "LNWA",
+      "lat": -37.523179,
+      "lon": 142.943814
+    },
+    {
+      "name": "Toolondo",
+      "venue": "Toolondo Recreation Reserve",
+      "address": "2955 Natimuk-Hamilton Road, (access via McKenry Lane)",
+      "suburb": "Toolondo",
+      "postcode": "3401",
+      "access": "LNWA",
+      "lat": -36.990705,
+      "lon": 141.93627
+    },
+    {
+      "name": "Warracknabeal",
+      "venue": "Warracknabeal Scout and Band Hall",
+      "address": "45 Devereux Street",
+      "suburb": "Warracknabeal",
+      "postcode": "3393",
+      "access": "IWA",
+      "lat": -36.25022,
+      "lon": 142.396605
+    },
+    {
+      "name": "Willaura",
+      "venue": "Willaura Memorial Hall",
+      "address": "93 Main Street",
+      "suburb": "Willaura",
+      "postcode": "3379",
+      "access": "IWA",
+      "lat": -37.544661,
+      "lon": 142.742418
+    }
+  ]
+}

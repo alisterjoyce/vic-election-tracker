@@ -1,0 +1,364 @@
+{
+  "district": "narracan",
+  "name": "Narracan",
+  "early": [
+    {
+      "name": "Morwell - EVC 1",
+      "venue": "St Andrew's Presbyterian Church Hall (EVC)",
+      "address": "34 Fowler Street",
+      "suburb": "Moe",
+      "postcode": "3825",
+      "access": "AWA",
+      "lat": -38.179206,
+      "lon": 146.261125,
+      "joint": true,
+      "host": "morwell"
+    },
+    {
+      "name": "Narracan - EVC 1",
+      "venue": "Drouin Recreation Reserve - Football Club Rooms (EVC)",
+      "address": "Sinclair Street",
+      "suburb": "Drouin",
+      "postcode": "3818",
+      "access": "IWA",
+      "lat": -38.132886,
+      "lon": 145.857771
+    },
+    {
+      "name": "Narracan - EVC 2",
+      "venue": "Sutton Street Voting Centre (EVC)",
+      "address": "57 Sutton Street",
+      "suburb": "Warragul",
+      "postcode": "3820",
+      "access": "IWA",
+      "lat": -38.151123,
+      "lon": 145.926849
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Bona Vista",
+      "venue": "Bona Vista Primary School",
+      "address": "520 Bona Vista Road",
+      "suburb": "Bona Vista",
+      "postcode": "3820",
+      "access": "AWA",
+      "lat": -38.210115,
+      "lon": 145.959452
+    },
+    {
+      "name": "Buln Buln",
+      "venue": "Buln Buln Primary School",
+      "address": "15 Old Sale Road",
+      "suburb": "Buln Buln",
+      "postcode": "3821",
+      "access": "LNWA",
+      "lat": -38.099114,
+      "lon": 145.93805
+    },
+    {
+      "name": "Cora Lynn",
+      "venue": "Cora Lynn Recreation Reserve Hall",
+      "address": "Corner Bunyip River Road and Nine Mile Road, (access via Bunyip River Road)",
+      "suburb": "Cora Lynn",
+      "postcode": "3814",
+      "access": "IWA",
+      "lat": -38.144589,
+      "lon": 145.608322
+    },
+    {
+      "name": "Darnum",
+      "venue": "Darnum Primary School",
+      "address": "6 Graham Street",
+      "suburb": "Darnum",
+      "postcode": "3822",
+      "access": "AWA",
+      "lat": -38.187689,
+      "lon": 145.999811
+    },
+    {
+      "name": "Drouin",
+      "venue": "Drouin Recreation Reserve - Football Club Rooms",
+      "address": "Sinclair Street",
+      "suburb": "Drouin",
+      "postcode": "3818",
+      "access": "IWA",
+      "lat": -38.132894,
+      "lon": 145.857782
+    },
+    {
+      "name": "Drouin College",
+      "venue": "Drouin Secondary College",
+      "address": "52 Main South Road",
+      "suburb": "Drouin",
+      "postcode": "3818",
+      "access": "AWA",
+      "lat": -38.143966,
+      "lon": 145.852127
+    },
+    {
+      "name": "Drouin South",
+      "venue": "Drouin South Primary School",
+      "address": "3061 Westernport Road",
+      "suburb": "Drouin South",
+      "postcode": "3818",
+      "access": "IWA",
+      "lat": -38.170809,
+      "lon": 145.826933
+    },
+    {
+      "name": "Drouin West",
+      "venue": "Drouin West Primary School",
+      "address": "535 Main Neerim Road",
+      "suburb": "Drouin West",
+      "postcode": "3818",
+      "access": "AWA",
+      "lat": -38.087781,
+      "lon": 145.871015
+    },
+    {
+      "name": "Ellinbank",
+      "venue": "Ellinbank Primary School",
+      "address": "13 Community Place",
+      "suburb": "Ellinbank",
+      "postcode": "3821",
+      "access": "LNWA",
+      "lat": -38.24012,
+      "lon": 145.935808
+    },
+    {
+      "name": "Erica",
+      "venue": "Erica Memorial Hall",
+      "address": "14 School Road",
+      "suburb": "Erica",
+      "postcode": "3825",
+      "access": "IWA",
+      "lat": -37.978728,
+      "lon": 146.371641
+    },
+    {
+      "name": "Garfield",
+      "venue": "Garfield Primary School",
+      "address": "84 Railway Avenue",
+      "suburb": "Garfield",
+      "postcode": "3814",
+      "access": "AWA",
+      "lat": -38.090526,
+      "lon": 145.673985
+    },
+    {
+      "name": "Jindivick",
+      "venue": "Jindivick Primary School",
+      "address": "1080 Jacksons Track",
+      "suburb": "Jindivick",
+      "postcode": "3818",
+      "access": "IWA",
+      "lat": -38.027606,
+      "lon": 145.90105
+    },
+    {
+      "name": "Lillico",
+      "venue": "Nilma North and Lillico Memorial Hall",
+      "address": "488 Bloomfield Road",
+      "suburb": "Nilma North",
+      "postcode": "3821",
+      "access": "IWA",
+      "lat": -38.132242,
+      "lon": 145.985932
+    },
+    {
+      "name": "Longwarry",
+      "venue": "Longwarry Public Hall",
+      "address": "14 Kennedy Street",
+      "suburb": "Longwarry",
+      "postcode": "3816",
+      "access": "IWA",
+      "lat": -38.11388,
+      "lon": 145.767597
+    },
+    {
+      "name": "Nar Nar Goon",
+      "venue": "Nar Nar Goon Soldiers Memorial Hall",
+      "address": "Spencer Street",
+      "suburb": "Nar Nar Goon",
+      "postcode": "3812",
+      "access": "IWA",
+      "lat": -38.082994,
+      "lon": 145.574269
+    },
+    {
+      "name": "Narracan",
+      "venue": "Narracan Public Hall",
+      "address": "401 Narracan Connection Road",
+      "suburb": "Narracan",
+      "postcode": "3824",
+      "access": "AWA",
+      "lat": -38.25951,
+      "lon": 146.227472
+    },
+    {
+      "name": "Neerim Junction",
+      "venue": "Neerim Junction Public Hall",
+      "address": "2957 Main Neerim Road",
+      "suburb": "Neerim Junction",
+      "postcode": "3832",
+      "access": "AWA",
+      "lat": -37.928205,
+      "lon": 145.96134
+    },
+    {
+      "name": "Neerim South",
+      "venue": "Neerim South Primary School",
+      "address": "180 Main Neerim Road",
+      "suburb": "Neerim South",
+      "postcode": "3831",
+      "access": "IWA",
+      "lat": -38.015624,
+      "lon": 145.955261
+    },
+    {
+      "name": "Nilma",
+      "venue": "Nilma Primary School",
+      "address": "76 Bloomfield Road",
+      "suburb": "Nilma",
+      "postcode": "3821",
+      "access": "AWA",
+      "lat": -38.16566,
+      "lon": 145.974256
+    },
+    {
+      "name": "Noojee",
+      "venue": "Noojee Community Hall",
+      "address": "7 Henty Street",
+      "suburb": "Noojee",
+      "postcode": "3833",
+      "access": "IWA",
+      "lat": -37.892653,
+      "lon": 145.998213
+    },
+    {
+      "name": "Pakenham",
+      "venue": "Pakenham Secondary College",
+      "address": "1020 Princes Highway, (access via Cunningham Crescent)",
+      "suburb": "Pakenham",
+      "postcode": "3810",
+      "access": "IWA",
+      "lat": -38.072297,
+      "lon": 145.472013,
+      "joint": true,
+      "host": "pakenham"
+    },
+    {
+      "name": "Pakenham Central",
+      "venue": "Pakenham Scout Hall",
+      "address": "34 James Street",
+      "suburb": "Pakenham",
+      "postcode": "3810",
+      "access": "LNWA",
+      "lat": -38.075263,
+      "lon": 145.481235,
+      "joint": true
+    },
+    {
+      "name": "Pakenham Hills",
+      "venue": "Pakenham Hills Primary School",
+      "address": "15 Kennedy Road, (access via Army Road)",
+      "suburb": "Pakenham",
+      "postcode": "3810",
+      "access": "LNWA",
+      "lat": -38.062008,
+      "lon": 145.496546,
+      "joint": true
+    },
+    {
+      "name": "Tanjil South",
+      "venue": "Tanjil South Primary School",
+      "address": "253 Moe-Willow Grove Road",
+      "suburb": "Tanjil South",
+      "postcode": "3825",
+      "access": "AWA",
+      "lat": -38.119111,
+      "lon": 146.252747
+    },
+    {
+      "name": "Thorpdale",
+      "venue": "Thorpdale Public Hall",
+      "address": "14 Johnstone Street",
+      "suburb": "Thorpdale",
+      "postcode": "3835",
+      "access": "IWA",
+      "lat": -38.287666,
+      "lon": 146.177407
+    },
+    {
+      "name": "Trafalgar",
+      "venue": "Trafalgar Primary School",
+      "address": "85 School Road",
+      "suburb": "Trafalgar",
+      "postcode": "3824",
+      "access": "AWA",
+      "lat": -38.214785,
+      "lon": 146.15971
+    },
+    {
+      "name": "Tynong",
+      "venue": "Tynong Public Hall",
+      "address": "18 Railway Avenue",
+      "suburb": "Tynong",
+      "postcode": "3813",
+      "access": "IWA",
+      "lat": -38.084476,
+      "lon": 145.625825
+    },
+    {
+      "name": "Warragul",
+      "venue": "Warragul Primary School - Senior Campus",
+      "address": "48-62 Bowen Street",
+      "suburb": "Warragul",
+      "postcode": "3820",
+      "access": "IWA",
+      "lat": -38.157412,
+      "lon": 145.927625
+    },
+    {
+      "name": "Warragul East",
+      "venue": "Warragul Uniting Church",
+      "address": "210 Sutton Street",
+      "suburb": "Warragul",
+      "postcode": "3820",
+      "access": "AWA",
+      "lat": -38.153681,
+      "lon": 145.944037
+    },
+    {
+      "name": "Warragul North",
+      "venue": "Sutton Street Voting Centre",
+      "address": "57 Sutton Street",
+      "suburb": "Warragul",
+      "postcode": "3820",
+      "access": "IWA",
+      "lat": -38.151113,
+      "lon": 145.926844
+    },
+    {
+      "name": "Willow Grove",
+      "venue": "Willow Grove Community Centre",
+      "address": "12 Moe-Willow Grove Road",
+      "suburb": "Willow Grove",
+      "postcode": "3825",
+      "access": "AWA",
+      "lat": -38.073072,
+      "lon": 146.179491
+    },
+    {
+      "name": "Yarragon",
+      "venue": "Yarragon Public Hall",
+      "address": "7 Campbell Street",
+      "suburb": "Yarragon",
+      "postcode": "3823",
+      "access": "IWA",
+      "lat": -38.205131,
+      "lon": 146.064116
+    }
+  ]
+}

@@ -1,0 +1,436 @@
+{
+  "district": "ripon",
+  "name": "Ripon",
+  "early": [
+    {
+      "name": "Ripon - EVC 1",
+      "venue": "St Mary's Catholic Church Hall (EVC)",
+      "address": "304 Barkly Street",
+      "suburb": "Ararat",
+      "postcode": "3377",
+      "access": "IWA",
+      "lat": -37.284616,
+      "lon": 142.938726,
+      "joint": true
+    },
+    {
+      "name": "Ripon - EVC 2",
+      "venue": "Maryborough Football and Netball Club Rooms (EVC)",
+      "address": "40 Park Road",
+      "suburb": "Maryborough",
+      "postcode": "3465",
+      "access": "LNWA",
+      "lat": -37.043848,
+      "lon": 143.740815
+    },
+    {
+      "name": "Wendouree - EVC 2",
+      "venue": "Alfredton Sports and Community Club (EVC)",
+      "address": "89 Cuthberts Road",
+      "suburb": "Alfredton",
+      "postcode": "3350",
+      "access": "IWA",
+      "lat": -37.5549,
+      "lon": 143.799079,
+      "joint": true,
+      "host": "wendouree"
+    },
+    {
+      "name": "Wendouree - EVC 3",
+      "venue": "St John's Lutheran Church Hall (EVC)",
+      "address": "204A Doveton Street South",
+      "suburb": "Ballarat Central",
+      "postcode": "3350",
+      "access": "LNWA",
+      "lat": -37.566465,
+      "lon": 143.853754,
+      "joint": true,
+      "host": "wendouree"
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Alfredton West",
+      "venue": "Alfredton Sports and Community Club",
+      "address": "89 Cuthberts Road",
+      "suburb": "Alfredton",
+      "postcode": "3350",
+      "access": "IWA",
+      "lat": -37.554906,
+      "lon": 143.799048,
+      "joint": true
+    },
+    {
+      "name": "Amphitheatre",
+      "venue": "Amphitheatre Mechanics Institute",
+      "address": "77 Bailey Street",
+      "suburb": "Amphitheatre",
+      "postcode": "3468",
+      "access": "AWA",
+      "lat": -37.182777,
+      "lon": 143.39939
+    },
+    {
+      "name": "Ararat",
+      "venue": "Ararat Senior Citizens Clubrooms",
+      "address": "193 Barkly Street",
+      "suburb": "Ararat",
+      "postcode": "3377",
+      "access": "AWA",
+      "lat": -37.283614,
+      "lon": 142.932589
+    },
+    {
+      "name": "Ararat Central",
+      "venue": "St Mary's Catholic Church Hall (Ararat)",
+      "address": "304 Barkly Street",
+      "suburb": "Ararat",
+      "postcode": "3377",
+      "access": "IWA",
+      "lat": -37.284627,
+      "lon": 142.938743
+    },
+    {
+      "name": "Ararat West",
+      "venue": "Ararat Secondary College",
+      "address": "4-30 Barkly Street",
+      "suburb": "Ararat",
+      "postcode": "3377",
+      "access": "AWA",
+      "lat": -37.285459,
+      "lon": 142.922073
+    },
+    {
+      "name": "Avoca",
+      "venue": "Avoca RSL Hall",
+      "address": "157 High Street",
+      "suburb": "Avoca",
+      "postcode": "3467",
+      "access": "AWA",
+      "lat": -37.085007,
+      "lon": 143.472713
+    },
+    {
+      "name": "Ballarat North",
+      "venue": "Ballarat North Primary School",
+      "address": "513 Landsborough Street, (access via Walker Street)",
+      "suburb": "Ballarat North",
+      "postcode": "3350",
+      "access": "AWA",
+      "lat": -37.541681,
+      "lon": 143.862283,
+      "joint": true
+    },
+    {
+      "name": "Bealiba",
+      "venue": "Bealiba Primary School",
+      "address": "9 Grant Street",
+      "suburb": "Bealiba",
+      "postcode": "3475",
+      "access": "AWA",
+      "lat": -36.789984,
+      "lon": 143.551697
+    },
+    {
+      "name": "Beaufort",
+      "venue": "Beeripmo Development Centre",
+      "address": "1 Lawrence Street",
+      "suburb": "Beaufort",
+      "postcode": "3373",
+      "access": "AWA",
+      "lat": -37.427931,
+      "lon": 143.384081
+    },
+    {
+      "name": "Buangor",
+      "venue": "Buangor Primary School",
+      "address": "26 School Road",
+      "suburb": "Buangor",
+      "postcode": "3375",
+      "access": "IWA",
+      "lat": -37.364416,
+      "lon": 143.175125
+    },
+    {
+      "name": "Clunes",
+      "venue": "Clunes Primary School",
+      "address": "1 Canterbury Street, (access via School Road)",
+      "suburb": "Clunes",
+      "postcode": "3370",
+      "access": "AWA",
+      "lat": -37.291529,
+      "lon": 143.791754
+    },
+    {
+      "name": "Creswick",
+      "venue": "Creswick Neighbourhood Centre",
+      "address": "19-21 Victoria Street",
+      "suburb": "Creswick",
+      "postcode": "3363",
+      "access": "LNWA",
+      "lat": -37.422337,
+      "lon": 143.8924
+    },
+    {
+      "name": "Dunolly",
+      "venue": "Dunolly Senior Citizens Clubrooms",
+      "address": "21 Bull Street",
+      "suburb": "Dunolly",
+      "postcode": "3472",
+      "access": "LNWA",
+      "lat": -36.857944,
+      "lon": 143.732077
+    },
+    {
+      "name": "Elmhurst",
+      "venue": "Elmhurst Mechanics Hall",
+      "address": "34 High Street",
+      "suburb": "Elmhurst",
+      "postcode": "3469",
+      "access": "AWA",
+      "lat": -37.179957,
+      "lon": 143.250339
+    },
+    {
+      "name": "Haddon",
+      "venue": "Haddon Recreation Centre",
+      "address": "396 Sago Hill Road",
+      "suburb": "Haddon",
+      "postcode": "3351",
+      "access": "LNWA",
+      "lat": -37.588441,
+      "lon": 143.72233
+    },
+    {
+      "name": "Inglewood",
+      "venue": "Inglewood Primary School",
+      "address": "75-83 Sullivan Street",
+      "suburb": "Inglewood",
+      "postcode": "3517",
+      "access": "IWA",
+      "lat": -36.573974,
+      "lon": 143.870242
+    },
+    {
+      "name": "Landsborough",
+      "venue": "Landsborough Public Hall",
+      "address": "29 Burke Street",
+      "suburb": "Landsborough",
+      "postcode": "3384",
+      "access": "AWA",
+      "lat": -37.00888,
+      "lon": 143.13401
+    },
+    {
+      "name": "Learmonth",
+      "venue": "Learmonth Football and Netball Club",
+      "address": "1 Laidlaw Street",
+      "suburb": "Learmonth",
+      "postcode": "3352",
+      "access": "IWA",
+      "lat": -37.421583,
+      "lon": 143.712886
+    },
+    {
+      "name": "Lexton",
+      "venue": "Lexton Community Centre",
+      "address": "1 Goldsmith Street",
+      "suburb": "Lexton",
+      "postcode": "3352",
+      "access": "LNWA",
+      "lat": -37.275014,
+      "lon": 143.514491
+    },
+    {
+      "name": "Lucas",
+      "venue": "Lucas Primary School",
+      "address": "46 O'Shannassy Parade",
+      "suburb": "Lucas",
+      "postcode": "3350",
+      "access": "IWA",
+      "lat": -37.548143,
+      "lon": 143.781007,
+      "joint": true
+    },
+    {
+      "name": "Maryborough",
+      "venue": "Genesis Church",
+      "address": "9 Neill Street",
+      "suburb": "Maryborough",
+      "postcode": "3465",
+      "access": "IWA",
+      "lat": -37.044843,
+      "lon": 143.735815
+    },
+    {
+      "name": "Maryborough Central",
+      "venue": "Maryborough Football and Netball Club Rooms",
+      "address": "40 Park Road",
+      "suburb": "Maryborough",
+      "postcode": "3465",
+      "access": "LNWA",
+      "lat": -37.043845,
+      "lon": 143.740837
+    },
+    {
+      "name": "Maryborough East",
+      "venue": "Highview College",
+      "address": "21 Kars Street",
+      "suburb": "Maryborough",
+      "postcode": "3465",
+      "access": "IWA",
+      "lat": -37.053339,
+      "lon": 143.73685
+    },
+    {
+      "name": "Miners Rest",
+      "venue": "Miners Rest Primary School",
+      "address": "2-12 Dundas Street",
+      "suburb": "Miners Rest",
+      "postcode": "3352",
+      "access": "AWA",
+      "lat": -37.477645,
+      "lon": 143.794023
+    },
+    {
+      "name": "Moonambel",
+      "venue": "Moonambel State Primary School",
+      "address": "24 Humffray Street",
+      "suburb": "Moonambel",
+      "postcode": "3478",
+      "access": "LNWA",
+      "lat": -36.989586,
+      "lon": 143.32102
+    },
+    {
+      "name": "Napoleons",
+      "venue": "Napoleons Primary School",
+      "address": "4721 Colac-Ballarat Road",
+      "suburb": "Napoleons",
+      "postcode": "3352",
+      "access": "AWA",
+      "lat": -37.679092,
+      "lon": 143.827372
+    },
+    {
+      "name": "Newbridge",
+      "venue": "Newbridge Public Hall",
+      "address": "38 Burke Street",
+      "suburb": "Newbridge",
+      "postcode": "3551",
+      "access": "AWA",
+      "lat": -36.740488,
+      "lon": 143.900235
+    },
+    {
+      "name": "Newlyn",
+      "venue": "Newlyn Primary School",
+      "address": "2701 Midland Highway",
+      "suburb": "Newlyn",
+      "postcode": "3364",
+      "access": "AWA",
+      "lat": -37.412028,
+      "lon": 143.984201
+    },
+    {
+      "name": "Ross Creek",
+      "venue": "Ross Creek Hall",
+      "address": "655 Sebastopol-Smythesdale Road",
+      "suburb": "Ross Creek",
+      "postcode": "3351",
+      "access": "AWA",
+      "lat": -37.633399,
+      "lon": 143.75768
+    },
+    {
+      "name": "Scarsdale",
+      "venue": "Scarsdale Town Hall",
+      "address": "23 Pitfield-Scarsdale Road",
+      "suburb": "Scarsdale",
+      "postcode": "3351",
+      "access": "LNWA",
+      "lat": -37.670866,
+      "lon": 143.654622
+    },
+    {
+      "name": "Skipton",
+      "venue": "Skipton Mechanics Institute",
+      "address": "5 Anderson Street",
+      "suburb": "Skipton",
+      "postcode": "3361",
+      "access": "AWA",
+      "lat": -37.686997,
+      "lon": 143.36467
+    },
+    {
+      "name": "Smeaton",
+      "venue": "Smeaton Community Centre",
+      "address": "3514 Creswick-Newstead Road",
+      "suburb": "Smeaton",
+      "postcode": "3364",
+      "access": "AWA",
+      "lat": -37.333156,
+      "lon": 143.948518
+    },
+    {
+      "name": "Smythesdale",
+      "venue": "Woady Yaloak Recreation Reserve",
+      "address": "55 Heales Street",
+      "suburb": "Smythesdale",
+      "postcode": "3351",
+      "access": "LNWA",
+      "lat": -37.642316,
+      "lon": 143.682678
+    },
+    {
+      "name": "Snake Valley",
+      "venue": "Snake Valley Hall",
+      "address": "875 Linton-Carngham Road",
+      "suburb": "Snake Valley",
+      "postcode": "3351",
+      "access": "AWA",
+      "lat": -37.612387,
+      "lon": 143.58449
+    },
+    {
+      "name": "St Arnaud",
+      "venue": "St Arnaud Senior Citizens Clubrooms",
+      "address": "1 Market Street, (access via Golden Street)",
+      "suburb": "St Arnaud",
+      "postcode": "3478",
+      "access": "IWA",
+      "lat": -36.61575,
+      "lon": 143.2588
+    },
+    {
+      "name": "Talbot",
+      "venue": "Talbot Primary School",
+      "address": "2 Rowe Street, (access via Barkly Street)",
+      "suburb": "Talbot",
+      "postcode": "3371",
+      "access": "AWA",
+      "lat": -37.168656,
+      "lon": 143.704015
+    },
+    {
+      "name": "Waubra",
+      "venue": "Waubra Primary School",
+      "address": "2110 Sunraysia Highway",
+      "suburb": "Waubra",
+      "postcode": "3352",
+      "access": "LNWA",
+      "lat": -37.353942,
+      "lon": 143.634257
+    },
+    {
+      "name": "Wedderburn",
+      "venue": "Wedderburn Senior Citizens Centre",
+      "address": "19 Kerr Street, (also known as Peter Street)",
+      "suburb": "Wedderburn",
+      "postcode": "3518",
+      "access": "AWA",
+      "lat": -36.419808,
+      "lon": 143.61455
+    }
+  ]
+}

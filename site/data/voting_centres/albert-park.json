@@ -1,0 +1,239 @@
+{
+  "district": "albert-park",
+  "name": "Albert Park",
+  "early": [
+    {
+      "name": "Albert Park - EVC 1",
+      "venue": "Port Melbourne Town Hall (EVC)",
+      "address": "333 Bay Street, (access via Spring Street South)",
+      "suburb": "Port Melbourne",
+      "postcode": "3207",
+      "access": "AWA",
+      "lat": -37.835838,
+      "lon": 144.944547
+    },
+    {
+      "name": "Albert Park - EVC 2",
+      "venue": "St Kilda Life Saving Club (EVC)",
+      "address": "34 Jacka Boulevard",
+      "suburb": "St Kilda",
+      "postcode": "3182",
+      "access": "IWA",
+      "lat": -37.867927,
+      "lon": 144.974861
+    },
+    {
+      "name": "Melbourne - EVC 2",
+      "venue": "Melbourne Town Hall (EVC)",
+      "address": "90-130 Swanston Street",
+      "suburb": "Melbourne",
+      "postcode": "3000",
+      "access": "AWA",
+      "lat": -37.815037,
+      "lon": 144.966519,
+      "joint": true,
+      "host": "melbourne"
+    },
+    {
+      "name": "Melbourne - EVC 3",
+      "venue": "Flinders Street Voting Centre (EVC)",
+      "address": "340 Flinders Street",
+      "suburb": "Melbourne",
+      "postcode": "3000",
+      "access": "IWA",
+      "lat": -37.818517,
+      "lon": 144.963365,
+      "joint": true,
+      "host": "melbourne"
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Bridport",
+      "venue": "Albert Park Primary School",
+      "address": "210 Bridport Street, (access via Cardigan Place)",
+      "suburb": "Albert Park",
+      "postcode": "3206",
+      "access": "AWA",
+      "lat": -37.841359,
+      "lon": 144.952374
+    },
+    {
+      "name": "Ferrars",
+      "venue": "South Melbourne Primary School",
+      "address": "129-161 Ferrars Street",
+      "suburb": "Southbank",
+      "postcode": "3006",
+      "access": "AWA",
+      "lat": -37.829685,
+      "lon": 144.953634
+    },
+    {
+      "name": "Kerferd South",
+      "venue": "Middle Park Primary School",
+      "address": "194 Richardson Street, (access via Mills Street)",
+      "suburb": "Middle Park",
+      "postcode": "3206",
+      "access": "IWA",
+      "lat": -37.847771,
+      "lon": 144.957437
+    },
+    {
+      "name": "Melbourne",
+      "venue": "Flinders Street Voting Centre",
+      "address": "340 Flinders Street",
+      "suburb": "Melbourne",
+      "postcode": "3000",
+      "access": "IWA",
+      "lat": -37.818517,
+      "lon": 144.963361,
+      "joint": true,
+      "host": "melbourne"
+    },
+    {
+      "name": "Port Melbourne",
+      "venue": "Port Melbourne Primary School",
+      "address": "415 Graham Street, (access via Clark Street)",
+      "suburb": "Port Melbourne",
+      "postcode": "3207",
+      "access": "IWA",
+      "lat": -37.835796,
+      "lon": 144.933273
+    },
+    {
+      "name": "Port Melbourne Beach",
+      "venue": "Port Melbourne Town Hall",
+      "address": "333 Bay Street, (access via Spring Street South)",
+      "suburb": "Port Melbourne",
+      "postcode": "3207",
+      "access": "AWA",
+      "lat": -37.835844,
+      "lon": 144.944545
+    },
+    {
+      "name": "Port Melbourne East",
+      "venue": "Sol Green Community Centre",
+      "address": "180-204 Montague Street, (access via Nelson Road)",
+      "suburb": "South Melbourne",
+      "postcode": "3205",
+      "access": "AWA",
+      "lat": -37.833844,
+      "lon": 144.952057
+    },
+    {
+      "name": "Port Melbourne West",
+      "venue": "Albert Park College - Bay St Campus",
+      "address": "40 Bay Street, (access via Post Office Place)",
+      "suburb": "Port Melbourne",
+      "postcode": "3207",
+      "access": "LNWA",
+      "lat": -37.842451,
+      "lon": 144.939117
+    },
+    {
+      "name": "Sandridge",
+      "venue": "Fishermans Bend Community Hall",
+      "address": "Corner Dunstan Parade and Centre Avenue",
+      "suburb": "Port Melbourne",
+      "postcode": "3207",
+      "access": "IWA",
+      "lat": -37.836814,
+      "lon": 144.920464
+    },
+    {
+      "name": "South Melbourne",
+      "venue": "South Melbourne Community Centre",
+      "address": "1 Ferrars Place",
+      "suburb": "South Melbourne",
+      "postcode": "3205",
+      "access": "AWA",
+      "lat": -37.83691,
+      "lon": 144.957692
+    },
+    {
+      "name": "South Melbourne Park",
+      "venue": "South Melbourne Park Primary School",
+      "address": "29A Albert Road Drive South, (access via Aughtie Drive)",
+      "suburb": "Albert Park",
+      "postcode": "3206",
+      "access": "LNWA",
+      "lat": -37.841129,
+      "lon": 144.963097,
+      "joint": true
+    },
+    {
+      "name": "South Port",
+      "venue": "St Kilda South Port Uniting Church",
+      "address": "325 Dorcas Street",
+      "suburb": "South Melbourne",
+      "postcode": "3205",
+      "access": "LNWA",
+      "lat": -37.83435,
+      "lon": 144.9567
+    },
+    {
+      "name": "Southbank",
+      "venue": "Victorian College of the Arts Secondary School",
+      "address": "57 Miles Street",
+      "suburb": "Southbank",
+      "postcode": "3006",
+      "access": "LNWA",
+      "lat": -37.828204,
+      "lon": 144.964938,
+      "joint": true
+    },
+    {
+      "name": "St Kilda",
+      "venue": "St Kilda Primary School",
+      "address": "2B Brighton Road",
+      "suburb": "St Kilda",
+      "postcode": "3182",
+      "access": "AWA",
+      "lat": -37.870046,
+      "lon": 144.988771,
+      "joint": true
+    },
+    {
+      "name": "St Kilda Beach",
+      "venue": "St Kilda Life Saving Club",
+      "address": "34 Jacka Boulevard",
+      "suburb": "St Kilda",
+      "postcode": "3182",
+      "access": "IWA",
+      "lat": -37.867998,
+      "lon": 144.974824
+    },
+    {
+      "name": "St Kilda Central",
+      "venue": "Betty Day Centre",
+      "address": "67 Argyle Street",
+      "suburb": "St Kilda",
+      "postcode": "3182",
+      "access": "AWA",
+      "lat": -37.862808,
+      "lon": 144.987064,
+      "joint": true
+    },
+    {
+      "name": "St Kilda Park",
+      "venue": "St Kilda Park Primary School",
+      "address": "68 Fitzroy Street, (access via public car park off Fitzroy Street)",
+      "suburb": "St Kilda",
+      "postcode": "3182",
+      "access": "IWA",
+      "lat": -37.858108,
+      "lon": 144.978041,
+      "joint": true
+    },
+    {
+      "name": "St Kilda South",
+      "venue": "Christ Church Mission Community Centre",
+      "address": "14 Acland Street",
+      "suburb": "St Kilda",
+      "postcode": "3182",
+      "access": "LNWA",
+      "lat": -37.863861,
+      "lon": 144.975504
+    }
+  ]
+}

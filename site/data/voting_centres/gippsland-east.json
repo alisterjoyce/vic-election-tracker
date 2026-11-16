@@ -1,0 +1,390 @@
+{
+  "district": "gippsland-east",
+  "name": "Gippsland East",
+  "early": [
+    {
+      "name": "Gippsland East - EVC 1",
+      "venue": "Lakes Entrance Masonic Centre (EVC)",
+      "address": "10 Rowe Street",
+      "suburb": "Lakes Entrance",
+      "postcode": "3909",
+      "access": "IWA",
+      "lat": -37.878173,
+      "lon": 147.986109
+    },
+    {
+      "name": "Gippsland East - EVC 2",
+      "venue": "Cremin Hall (EVC)",
+      "address": "38 Pyke Street",
+      "suburb": "Bairnsdale",
+      "postcode": "3875",
+      "access": "AWA",
+      "lat": -37.826295,
+      "lon": 147.626513
+    },
+    {
+      "name": "Gippsland South - EVC 2",
+      "venue": "Raymond Street Voting Centre (EVC)",
+      "address": "180 Raymond Street",
+      "suburb": "Sale",
+      "postcode": "3850",
+      "access": "IWA",
+      "lat": -38.108948,
+      "lon": 147.06576,
+      "joint": true,
+      "host": "gippsland-south"
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Bairnsdale",
+      "venue": "Cremin Hall",
+      "address": "38 Pyke Street",
+      "suburb": "Bairnsdale",
+      "postcode": "3875",
+      "access": "AWA",
+      "lat": -37.826289,
+      "lon": 147.626516
+    },
+    {
+      "name": "Bairnsdale West",
+      "venue": "Bairnsdale West Primary School",
+      "address": "60 Wallace Street, (access via McKean Street)",
+      "suburb": "Bairnsdale",
+      "postcode": "3875",
+      "access": "AWA",
+      "lat": -37.823362,
+      "lon": 147.607742
+    },
+    {
+      "name": "Boisdale",
+      "venue": "Boisdale Public Hall",
+      "address": "42-44 Main Street",
+      "suburb": "Boisdale",
+      "postcode": "3860",
+      "access": "LNWA",
+      "lat": -37.88279,
+      "lon": 146.98818
+    },
+    {
+      "name": "Briagolong",
+      "venue": "Briagolong Mechanics Institute",
+      "address": "9-11 Avon Street",
+      "suburb": "Briagolong",
+      "postcode": "3860",
+      "access": "LNWA",
+      "lat": -37.843336,
+      "lon": 147.068449
+    },
+    {
+      "name": "Bruthen",
+      "venue": "Bruthen Mechanics Hall",
+      "address": "49 Main Street",
+      "suburb": "Bruthen",
+      "postcode": "3885",
+      "access": "LNWA",
+      "lat": -37.707456,
+      "lon": 147.831831
+    },
+    {
+      "name": "Buchan",
+      "venue": "Buchan Primary School",
+      "address": "4 Dalley Street",
+      "suburb": "Buchan",
+      "postcode": "3885",
+      "access": "LNWA",
+      "lat": -37.497482,
+      "lon": 148.180419
+    },
+    {
+      "name": "Bundalaguah",
+      "venue": "Bundalaguah Primary School",
+      "address": "627 Maffra-Sale Road",
+      "suburb": "Bundalaguah",
+      "postcode": "3851",
+      "access": "AWA",
+      "lat": -38.02287,
+      "lon": 147.011832
+    },
+    {
+      "name": "Cann River",
+      "venue": "Cann River Public Hall",
+      "address": "Corner Cameron Street and Tamboon Road",
+      "suburb": "Cann River",
+      "postcode": "3890",
+      "access": "LNWA",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Cobains",
+      "venue": "Cobains Primary School",
+      "address": "3 Crofts Road",
+      "suburb": "Cobains",
+      "postcode": "3851",
+      "access": "IWA",
+      "lat": -38.074688,
+      "lon": 147.132765
+    },
+    {
+      "name": "Dargo",
+      "venue": "Dargo Public Hall",
+      "address": "177 Lind Avenue",
+      "suburb": "Dargo",
+      "postcode": "3862",
+      "access": "LNWA",
+      "lat": -37.455532,
+      "lon": 147.251019
+    },
+    {
+      "name": "Eagle Point",
+      "venue": "Eagle Point Primary School",
+      "address": "43 School Road",
+      "suburb": "Eagle Point",
+      "postcode": "3878",
+      "access": "LNWA",
+      "lat": -37.892314,
+      "lon": 147.679935
+    },
+    {
+      "name": "Ellaswood",
+      "venue": "Wy Yung Community Hall",
+      "address": "250 Wy Yung-Calulu Road",
+      "suburb": "Ellaswood",
+      "postcode": "3875",
+      "access": "LNWA",
+      "lat": -37.798108,
+      "lon": 147.58155
+    },
+    {
+      "name": "Glenmaggie",
+      "venue": "Glenmaggie Mechanics Institute",
+      "address": "21 Glenfalloch Road",
+      "suburb": "Glenmaggie",
+      "postcode": "3858",
+      "access": "AWA",
+      "lat": -37.894969,
+      "lon": 146.751267
+    },
+    {
+      "name": "Heyfield",
+      "venue": "Heyfield Memorial Hall",
+      "address": "38 MacFarlane Street",
+      "suburb": "Heyfield",
+      "postcode": "3858",
+      "access": "AWA",
+      "lat": -37.984693,
+      "lon": 146.784318
+    },
+    {
+      "name": "Johnsonville",
+      "venue": "Johnsonville Public Hall",
+      "address": "1754 Princes Highway",
+      "suburb": "Johnsonville",
+      "postcode": "3902",
+      "access": "AWA",
+      "lat": -37.82023,
+      "lon": 147.83013
+    },
+    {
+      "name": "Lakes Entrance",
+      "venue": "Lakes Entrance Masonic Centre",
+      "address": "10 Rowe Street",
+      "suburb": "Lakes Entrance",
+      "postcode": "3909",
+      "access": "IWA",
+      "lat": -37.878166,
+      "lon": 147.986109
+    },
+    {
+      "name": "Lakes Entrance East",
+      "venue": "St Brendan's Primary School (Lakes Entrance)",
+      "address": "40 Golf Links Road, (access via Eastern Beach Road)",
+      "suburb": "Lakes Entrance",
+      "postcode": "3909",
+      "access": "AWA",
+      "lat": -37.873415,
+      "lon": 148.012024
+    },
+    {
+      "name": "Lindenow",
+      "venue": "Lindenow Hall",
+      "address": "150 Main Road",
+      "suburb": "Lindenow",
+      "postcode": "3865",
+      "access": "LNWA",
+      "lat": -37.800082,
+      "lon": 147.457009
+    },
+    {
+      "name": "Lucknow West",
+      "venue": "Lucknow Primary School",
+      "address": "Balmoral Crescent",
+      "suburb": "Eastwood",
+      "postcode": "3875",
+      "access": "AWA",
+      "lat": -37.813798,
+      "lon": 147.63037
+    },
+    {
+      "name": "Maffra",
+      "venue": "Maffra Uniting Church Hall",
+      "address": "9 Pearson Street",
+      "suburb": "Maffra",
+      "postcode": "3860",
+      "access": "IWA",
+      "lat": -37.965133,
+      "lon": 146.977584
+    },
+    {
+      "name": "Mallacoota",
+      "venue": "Miva Miva Health Centre",
+      "address": "Corner of Mattsson Street and Genoa-Mallacoota Road",
+      "suburb": "Mallacoota",
+      "postcode": "3892",
+      "access": "IWA",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "name": "Marlo",
+      "venue": "Marlo Primary School",
+      "address": "12 Jorgensen Street",
+      "suburb": "Marlo",
+      "postcode": "3888",
+      "access": "IWA",
+      "lat": -37.796618,
+      "lon": 148.534751
+    },
+    {
+      "name": "Metung",
+      "venue": "Metung Primary School",
+      "address": "90 Stirling Road, (access via Park Road)",
+      "suburb": "Metung",
+      "postcode": "3904",
+      "access": "LNWA",
+      "lat": -37.883285,
+      "lon": 147.852605
+    },
+    {
+      "name": "Newlands Arm",
+      "venue": "Newlands Arm Community Centre",
+      "address": "25 Meridian Way",
+      "suburb": "Newlands Arm",
+      "postcode": "3875",
+      "access": "AWA",
+      "lat": -37.928083,
+      "lon": 147.692762
+    },
+    {
+      "name": "Newmerella",
+      "venue": "Newmerella Primary School",
+      "address": "Corner Thomas Road and McLaughlins Road",
+      "suburb": "Newmerella",
+      "postcode": "3886",
+      "access": "IWA",
+      "lat": -37.735229,
+      "lon": 148.433591
+    },
+    {
+      "name": "Newry",
+      "venue": "Upper Maffra Mechanics Institute",
+      "address": "139-141 Main Street",
+      "suburb": "Newry",
+      "postcode": "3859",
+      "access": "AWA",
+      "lat": -37.916522,
+      "lon": 146.895989
+    },
+    {
+      "name": "Nowa Nowa",
+      "venue": "Nowa Nowa Community Health Centre",
+      "address": "4 Bridge Street",
+      "suburb": "Nowa Nowa",
+      "postcode": "3887",
+      "access": "AWA",
+      "lat": -37.730512,
+      "lon": 148.092588
+    },
+    {
+      "name": "Omeo",
+      "venue": "Omeo Soldiers Memorial Hall",
+      "address": "179 Day Avenue",
+      "suburb": "Omeo",
+      "postcode": "3898",
+      "access": "AWA",
+      "lat": -37.100667,
+      "lon": 147.591525
+    },
+    {
+      "name": "Orbost",
+      "venue": "St James Anglican Parish Hall",
+      "address": "28 Browning Street",
+      "suburb": "Orbost",
+      "postcode": "3888",
+      "access": "AWA",
+      "lat": -37.708198,
+      "lon": 148.456403
+    },
+    {
+      "name": "Paynesville",
+      "venue": "Paynesville Community Centre",
+      "address": "55 Esplanade",
+      "suburb": "Paynesville",
+      "postcode": "3880",
+      "access": "AWA",
+      "lat": -37.91973,
+      "lon": 147.723121
+    },
+    {
+      "name": "Stratford",
+      "venue": "Stratford Mechanics Hall",
+      "address": "17 Hobson Street",
+      "suburb": "Stratford",
+      "postcode": "3862",
+      "access": "AWA",
+      "lat": -37.966079,
+      "lon": 147.081179
+    },
+    {
+      "name": "Swifts Creek",
+      "venue": "Swifts Creek Hall",
+      "address": "6869 Great Alpine Road",
+      "suburb": "Swifts Creek",
+      "postcode": "3896",
+      "access": "AWA",
+      "lat": -37.264218,
+      "lon": 147.721987
+    },
+    {
+      "name": "Tinamba",
+      "venue": "Tinamba Community Meeting Room",
+      "address": "17-19 Traralgon-Maffra Road",
+      "suburb": "Tinamba",
+      "postcode": "3859",
+      "access": "LNWA",
+      "lat": -37.963392,
+      "lon": 146.89182
+    },
+    {
+      "name": "Toorloo Arm",
+      "venue": "Toorloo Arm Primary School",
+      "address": "315 Lake Tyers Beach Road",
+      "suburb": "Lake Tyers",
+      "postcode": "3909",
+      "access": "LNWA",
+      "lat": -37.852351,
+      "lon": 148.051013
+    },
+    {
+      "name": "Valencia Creek",
+      "venue": "Valencia Creek Soldiers Memorial Hall",
+      "address": "86 Valencia Creek-Briagolong Road",
+      "suburb": "Valencia Creek",
+      "postcode": "3860",
+      "access": "LNWA",
+      "lat": -37.825486,
+      "lon": 146.989789
+    }
+  ]
+}

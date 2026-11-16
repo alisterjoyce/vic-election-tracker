@@ -1,0 +1,335 @@
+{
+  "district": "eureka",
+  "name": "Eureka",
+  "early": [
+    {
+      "name": "Eureka - EVC 1",
+      "venue": "St Andrew's Uniting Church (EVC)",
+      "address": "12 Gisborne Road",
+      "suburb": "Bacchus Marsh",
+      "postcode": "3340",
+      "access": "AWA",
+      "lat": -37.673216,
+      "lon": 144.436492
+    },
+    {
+      "name": "Eureka - EVC 2",
+      "venue": "Ballarat Masonic Centre (EVC)",
+      "address": "616 Barkly Street",
+      "suburb": "Golden Point (Ballarat)",
+      "postcode": "3350",
+      "access": "AWA",
+      "lat": -37.572598,
+      "lon": 143.85916,
+      "joint": true
+    },
+    {
+      "name": "Wendouree - EVC 1",
+      "venue": "Ballarat South Community Hub (EVC)",
+      "address": "11 Tuppen Drive",
+      "suburb": "Sebastopol",
+      "postcode": "3356",
+      "access": "AWA",
+      "lat": -37.58822,
+      "lon": 143.832285,
+      "joint": true,
+      "host": "wendouree"
+    },
+    {
+      "name": "Wendouree - EVC 3",
+      "venue": "St John's Lutheran Church Hall (EVC)",
+      "address": "204A Doveton Street South",
+      "suburb": "Ballarat Central",
+      "postcode": "3350",
+      "access": "LNWA",
+      "lat": -37.566465,
+      "lon": 143.853754,
+      "joint": true,
+      "host": "wendouree"
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Bacchus Marsh",
+      "venue": "Bacchus Marsh College - Maddingley Campus",
+      "address": "73 Grant Street",
+      "suburb": "Maddingley",
+      "postcode": "3340",
+      "access": "AWA",
+      "lat": -37.684897,
+      "lon": 144.433389
+    },
+    {
+      "name": "Bacchus Marsh Central",
+      "venue": "St Andrew's Uniting Church",
+      "address": "12 Gisborne Road",
+      "suburb": "Bacchus Marsh",
+      "postcode": "3340",
+      "access": "AWA",
+      "lat": -37.673221,
+      "lon": 144.4365
+    },
+    {
+      "name": "Ballan",
+      "venue": "Ballan and District Community House",
+      "address": "143 Inglis Street",
+      "suburb": "Ballan",
+      "postcode": "3342",
+      "access": "LNWA",
+      "lat": -37.600199,
+      "lon": 144.224461
+    },
+    {
+      "name": "Ballarat",
+      "venue": "Ballarat Masonic Centre",
+      "address": "616 Barkly Street",
+      "suburb": "Golden Point (Ballarat)",
+      "postcode": "3350",
+      "access": "AWA",
+      "lat": -37.572591,
+      "lon": 143.85916
+    },
+    {
+      "name": "Ballarat City",
+      "venue": "St John's Lutheran Church Hall",
+      "address": "204A Doveton Street South",
+      "suburb": "Ballarat Central",
+      "postcode": "3350",
+      "access": "LNWA",
+      "lat": -37.56645,
+      "lon": 143.85376,
+      "joint": true
+    },
+    {
+      "name": "Black Hill",
+      "venue": "Black Hill Primary School",
+      "address": "601 Chisholm Street",
+      "suburb": "Black Hill",
+      "postcode": "3350",
+      "access": "AWA",
+      "lat": -37.549911,
+      "lon": 143.869657,
+      "joint": true
+    },
+    {
+      "name": "Bungaree",
+      "venue": "Bungaree Mechanics Institute",
+      "address": "221 Bungaree-Wallace Road",
+      "suburb": "Bungaree",
+      "postcode": "3352",
+      "access": "LNWA",
+      "lat": -37.5586,
+      "lon": 143.993064
+    },
+    {
+      "name": "Buninyong",
+      "venue": "Buninyong Primary School",
+      "address": "202 Simpson Street, (access via Inglis Street)",
+      "suburb": "Buninyong",
+      "postcode": "3357",
+      "access": "AWA",
+      "lat": -37.653039,
+      "lon": 143.885859
+    },
+    {
+      "name": "Caledonian",
+      "venue": "Caledonian Primary School",
+      "address": "2 Thompson Street",
+      "suburb": "Brown Hill",
+      "postcode": "3350",
+      "access": "LNWA",
+      "lat": -37.555198,
+      "lon": 143.893858
+    },
+    {
+      "name": "Canadian",
+      "venue": "Canadian Lead Primary School",
+      "address": "301 Otway Street South",
+      "suburb": "Ballarat East",
+      "postcode": "3350",
+      "access": "LNWA",
+      "lat": -37.572169,
+      "lon": 143.876054
+    },
+    {
+      "name": "Cape Clear",
+      "venue": "Cape Clear Hall",
+      "address": "11 Recreation Road",
+      "suburb": "Cape Clear",
+      "postcode": "3351",
+      "access": "AWA",
+      "lat": -37.791908,
+      "lon": 143.609514
+    },
+    {
+      "name": "Clarkes Hill",
+      "venue": "St Mary's Primary School (Clarkes Hill)",
+      "address": "131 Powells Road",
+      "suburb": "Clarkes Hill",
+      "postcode": "3352",
+      "access": "AWA",
+      "lat": -37.500655,
+      "lon": 143.98863
+    },
+    {
+      "name": "Darley",
+      "venue": "Darley Primary School",
+      "address": "21 Nelson Street",
+      "suburb": "Bacchus Marsh",
+      "postcode": "3340",
+      "access": "LNWA",
+      "lat": -37.654519,
+      "lon": 144.437563
+    },
+    {
+      "name": "Dereel",
+      "venue": "Dereel Community Hall",
+      "address": "14 Swamp Road",
+      "suburb": "Dereel",
+      "postcode": "3352",
+      "access": "LNWA",
+      "lat": -37.819865,
+      "lon": 143.753021
+    },
+    {
+      "name": "Elaine",
+      "venue": "Elaine Mechanics Institute",
+      "address": "20 Pearsons Road",
+      "suburb": "Elaine",
+      "postcode": "3334",
+      "access": "LNWA",
+      "lat": -37.777011,
+      "lon": 144.030691
+    },
+    {
+      "name": "Gordon",
+      "venue": "Gordon Public Hall",
+      "address": "68 Main Street",
+      "suburb": "Gordon",
+      "postcode": "3345",
+      "access": "IWA",
+      "lat": -37.580546,
+      "lon": 144.103703
+    },
+    {
+      "name": "Inverleigh",
+      "venue": "Inverleigh Primary School",
+      "address": "54 High Street",
+      "suburb": "Inverleigh",
+      "postcode": "3321",
+      "access": "AWA",
+      "lat": -38.101035,
+      "lon": 144.054956
+    },
+    {
+      "name": "Lethbridge",
+      "venue": "Lethbridge Public Hall",
+      "address": "25 Russell Street",
+      "suburb": "Lethbridge",
+      "postcode": "3332",
+      "access": "LNWA",
+      "lat": -37.966109,
+      "lon": 144.134147
+    },
+    {
+      "name": "Magpie",
+      "venue": "Magpie Primary School",
+      "address": "61 Docwra Street",
+      "suburb": "Magpie",
+      "postcode": "3352",
+      "access": "LNWA",
+      "lat": -37.616375,
+      "lon": 143.843456
+    },
+    {
+      "name": "Meredith",
+      "venue": "Meredith Memorial Hall",
+      "address": "61 Staughton Street",
+      "suburb": "Meredith",
+      "postcode": "3333",
+      "access": "AWA",
+      "lat": -37.845102,
+      "lon": 144.071325
+    },
+    {
+      "name": "Mount Clear",
+      "venue": "Damascus College",
+      "address": "John Shannon Centre, 1412 Geelong Road",
+      "suburb": "Mount Clear",
+      "postcode": "3350",
+      "access": "AWA",
+      "lat": -37.612104,
+      "lon": 143.869531
+    },
+    {
+      "name": "Mount Egerton",
+      "venue": "Mount Egerton Mechanics Institute",
+      "address": "69 Main Road",
+      "suburb": "Mount Egerton",
+      "postcode": "3352",
+      "access": "LNWA",
+      "lat": -37.62804,
+      "lon": 144.105091
+    },
+    {
+      "name": "Mount Pleasant",
+      "venue": "Mount Pleasant Primary School",
+      "address": "401 Cobden Street, (access via Trethowan Street)",
+      "suburb": "Mount Pleasant",
+      "postcode": "3350",
+      "access": "LNWA",
+      "lat": -37.57805,
+      "lon": 143.858552
+    },
+    {
+      "name": "Mount Wallace",
+      "venue": "Mount Wallace Reserve Hall",
+      "address": "16 Mount Wallace Hall Road",
+      "suburb": "Mount Wallace",
+      "postcode": "3342",
+      "access": "AWA",
+      "lat": -37.738645,
+      "lon": 144.218657
+    },
+    {
+      "name": "Rokewood",
+      "venue": "Rokewood Primary School",
+      "address": "38 Aitchison Street",
+      "suburb": "Rokewood",
+      "postcode": "3330",
+      "access": "AWA",
+      "lat": -37.903434,
+      "lon": 143.722889
+    },
+    {
+      "name": "Teesdale",
+      "venue": "Teesdale Community Hall",
+      "address": "1109 Shelford-Bannockburn Road, (access via Mercer Terrace)",
+      "suburb": "Teesdale",
+      "postcode": "3328",
+      "access": "LNWA",
+      "lat": -38.028505,
+      "lon": 144.047002
+    },
+    {
+      "name": "The Stockade",
+      "venue": "St Alipius Primary School",
+      "address": "106-108 Victoria Street",
+      "suburb": "Ballarat East",
+      "postcode": "3350",
+      "access": "AWA",
+      "lat": -37.561604,
+      "lon": 143.873762
+    },
+    {
+      "name": "Warrenheip",
+      "venue": "Warrenheip Primary School",
+      "address": "93 Warrenheip Road",
+      "suburb": "Warrenheip",
+      "postcode": "3352",
+      "access": "LNWA",
+      "lat": -37.574062,
+      "lon": 143.927374
+    }
+  ]
+}

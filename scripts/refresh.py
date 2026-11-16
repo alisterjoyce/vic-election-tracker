@@ -2533,6 +2533,89 @@ def refresh_htv(data_dir: Path, meta: dict) -> bool:
 # One request per second; a source that fails is logged and skipped, and each
 # seat keeps its earlier list.
 
+# --------------------------------------------------------------------------
+# Where to vote and how many have voted (scripts/vec_voting.py): voting centres once a day, early and postal
+# vote figures every run
+# --------------------------------------------------------------------------
+
+def refresh_voting_centres(data_dir: Path, meta: dict, force: bool = False) -> bool:
+    """data/voting_centres/<district>.json and index.json from the VEC's venues spreadsheet and venue locator."""
+    import vec_voting as vv   # same folder (scripts/)
+    folder = data_dir / "voting_centres"
+    index_path = folder / "index.json"
+    old = read_json(index_path, None) or {}
+    source = meta.setdefault("sources", {}).setdefault("vec_voting_centres", {})
+    source["url"] = vv.LOCATIONS_PAGE
+    today = datetime.now(MELBOURNE).date().isoformat()
+    if old.get("checked") == today and not force:
+        log.info("Voting centres: read today already (%s); not fetched again", today)
+        return False
+    prev = {f.stem: read_json(f, {}) or {} for f in folder.glob("*.json") if f.name != "index.json"} if folder.is_dir() else {}
+    try:
+        districts = (read_json(data_dir / "districts.json", {}) or {}).get("districts", [])
+        geo = read_json(data_dir / "geo" / "districts.geojson", {}) or {}
+        doc = vv.fetch_voting_centres(districts, geo, prev, ABC_USER_AGENT)
+    except Exception as exc:  # noqa: BLE001 - keep the last files
+        log.error("Voting centres skipped, last files kept: %s", exc)
+        warn_ci(f"Voting centres skipped, last files kept: {exc}")
+        source.update(status="error", message=str(exc)[:300])
+        return False
+    folder.mkdir(exist_ok=True)
+    changed = False
+    for did, entry in doc["districts"].items():
+        if prev.get(did) != entry:
+            write_json(folder / f"{did}.json", entry)
+            changed = True
+    index = {"_schema": vv.CENTRES_SCHEMA, **doc["index"], "checked": today, "fetched": now_iso()}
+    if changed or {k: v for k, v in index.items() if k not in ("checked", "fetched")} != {k: v for k, v in old.items() if k not in ("checked", "fetched")}:
+        changed = True
+    write_json(index_path, index)   # its checked date is what stops a second read today
+    n_early = sum(v["early"] for v in index["districts"].values())
+    n_day = sum(v["election_day"] for v in index["districts"].values())
+    source.update(status="ok", last_success=now_iso(),
+                  message=f"{n_early} early and {n_day} election-day centre listings in {len(index['districts'])} districts"
+                          + (f"; {index['unplaced']} without a map position" if index.get("unplaced") else ""))
+    log.info("Voting centres: %s (%s)", source["message"], "changed" if changed else "unchanged")
+    return changed
+
+
+def refresh_early_votes(data_dir: Path, meta: dict) -> bool:
+    """early_votes.json: the VEC's early and postal vote figures (when published), enrolment and 2022's figures."""
+    import vec_voting as vv
+    path = data_dir / "early_votes.json"
+    prev = read_json(path, None)
+    source = meta.setdefault("sources", {}).setdefault("vec_early_votes", {})
+    source["url"] = vv.STATS_PAGES[0]
+    try:
+        districts = (read_json(data_dir / "districts.json", {}) or {}).get("districts", [])
+        doc = vv.fetch_early_votes(districts, prev, ABC_USER_AGENT)
+    except Exception as exc:  # noqa: BLE001
+        log.error("Early votes skipped, last file kept: %s", exc)
+        warn_ci(f"Early and postal vote figures skipped, last file kept: {exc}")
+        source.update(status="error", message=str(exc)[:300])
+        return False
+    for e in doc.pop("errors", []):
+        log.warning("Early votes: %s", e)
+        warn_ci(f"Early votes: {e}")
+    out = {"_schema": vv.EARLY_SCHEMA, "status": doc["status"], "checked": now_iso(),
+           **{k: doc.get(k) for k in ("source", "statewide", "statewide_total", "districts", "enrolment", "comparison_2022")}}
+    figures = lambda d: {k: v for k, v in (d or {}).items() if k not in ("_schema", "checked")}
+    changed = figures(out) != figures(prev)
+    if changed or not prev:
+        write_json(path, out)
+    elif prev:
+        prev["checked"] = out["checked"]
+        write_json(path, prev)
+    last = (doc.get("statewide") or [{}])[-1]
+    source.update(status="ok", last_success=now_iso(),
+                  message=("not published yet by the VEC" if doc["status"] == "not_published"
+                           else f"{len(doc['statewide'])} days to {last.get('date')}; {len(doc.get('districts') or {})} districts"))
+    if changed and doc["status"] == "published" and (prev or {}).get("status") != "published":
+        warn_ci("The VEC has started publishing early and postal vote figures: check early_votes.json and the home chart")
+    log.info("Early votes: %s", source["message"])
+    return changed
+
+
 NEWS_PER_SEAT = 10
 NEWS_STATEWIDE = 50
 NEWS_MAX_AGE_DAYS = 120
@@ -3225,6 +3308,8 @@ def main(argv=None) -> int:
                         help="read BludgerTrack and Ace Strategies now, even if they were read today (normally once a day)")
     parser.add_argument("--backfill-changelog", action="store_true",
                         help="rebuild changelog.json from git history instead of refreshing")
+    parser.add_argument("--centres-check", action="store_true",
+                        help="read the VEC's voting centres now, even if they were read today (normally once a day)")
     parser.add_argument("--backfill-seat-history", action="store_true",
                         help="rebuild seat_history.json from git history instead of refreshing")
     args = parser.parse_args(argv)
@@ -3262,6 +3347,8 @@ def main(argv=None) -> int:
         check_redbridge(data_dir, meta),       # watch only: logs a warning if RedBridge has a newer release
         refresh_vec_nominations(data_dir, meta, args.vec_check),   # after Wikipedia and the ABC: the VEC's list is final
         refresh_htv(data_dir, meta),
+        refresh_voting_centres(data_dir, meta, args.centres_check),   # once a day
+        refresh_early_votes(data_dir, meta),
         refresh_news(data_dir, meta),
         check_profiles(data_dir, meta),        # watch only: warns when a respelled or withdrawn name strands a profile
         sync_profile_files(data_dir, meta),    # data/profiles/<seat>.json, the candidate page's copy of profiles.json

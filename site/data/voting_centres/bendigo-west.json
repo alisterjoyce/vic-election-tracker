@@ -1,0 +1,278 @@
+{
+  "district": "bendigo-west",
+  "name": "Bendigo West",
+  "early": [
+    {
+      "name": "Bendigo East - EVC 1",
+      "venue": "Bendigo East Public Hall (EVC)",
+      "address": "35 Lansell Street",
+      "suburb": "East Bendigo",
+      "postcode": "3550",
+      "access": "LNWA",
+      "lat": -36.754802,
+      "lon": 144.294703,
+      "joint": true,
+      "host": "bendigo-east"
+    },
+    {
+      "name": "Bendigo East - EVC 2",
+      "venue": "Eaglehawk Presbyterian Church (EVC)",
+      "address": "75 Victoria Street",
+      "suburb": "Eaglehawk",
+      "postcode": "3556",
+      "access": "AWA",
+      "lat": -36.718304,
+      "lon": 144.254279,
+      "joint": true,
+      "host": "bendigo-east"
+    },
+    {
+      "name": "Bendigo West - EVC 1",
+      "venue": "Castlemaine Goods Shed (EVC)",
+      "address": "21 Kennedy Street",
+      "suburb": "Castlemaine",
+      "postcode": "3450",
+      "access": "LNWA",
+      "lat": -37.061288,
+      "lon": 144.214811
+    },
+    {
+      "name": "Bendigo West - EVC 2",
+      "venue": "St Pauls Cathedral Hall (EVC)",
+      "address": "6 Myers Street",
+      "suburb": "Bendigo",
+      "postcode": "3550",
+      "access": "IWA",
+      "lat": -36.762091,
+      "lon": 144.282989,
+      "joint": true
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Bendigo Central",
+      "venue": "St Pauls Cathedral Hall",
+      "address": "6 Myers Street",
+      "suburb": "Bendigo",
+      "postcode": "3550",
+      "access": "IWA",
+      "lat": -36.762045,
+      "lon": 144.282741,
+      "joint": true
+    },
+    {
+      "name": "Bendigo North",
+      "venue": "St Peter's Primary School (Long Gully)",
+      "address": "Knuldoorong Centre, 23 Fenton Street",
+      "suburb": "Bendigo North",
+      "postcode": "3550",
+      "access": "AWA",
+      "lat": -36.744044,
+      "lon": 144.272434
+    },
+    {
+      "name": "Campbells Creek",
+      "venue": "Campbells Creek Primary School",
+      "address": "127-133 Main Road",
+      "suburb": "Campbells Creek",
+      "postcode": "3451",
+      "access": "AWA",
+      "lat": -37.093132,
+      "lon": 144.204028
+    },
+    {
+      "name": "Castlemaine",
+      "venue": "Castlemaine Goods Shed",
+      "address": "21 Kennedy Street",
+      "suburb": "Castlemaine",
+      "postcode": "3450",
+      "access": "LNWA",
+      "lat": -37.061268,
+      "lon": 144.214824
+    },
+    {
+      "name": "Chewton",
+      "venue": "Chewton Primary School",
+      "address": "1 Hunter Street",
+      "suburb": "Chewton",
+      "postcode": "3451",
+      "access": "LNWA",
+      "lat": -37.081963,
+      "lon": 144.261128
+    },
+    {
+      "name": "Comet Hill",
+      "venue": "Lightning Reef Primary School",
+      "address": "74 Holmes Road",
+      "suburb": "North Bendigo",
+      "postcode": "3550",
+      "access": "LNWA",
+      "lat": -36.736738,
+      "lon": 144.268126,
+      "joint": true
+    },
+    {
+      "name": "Eaglehawk",
+      "venue": "Eaglehawk Presbyterian Church",
+      "address": "75 Victoria Street",
+      "suburb": "Eaglehawk",
+      "postcode": "3556",
+      "access": "AWA",
+      "lat": -36.718306,
+      "lon": 144.254279,
+      "joint": true
+    },
+    {
+      "name": "Eaglehawk West",
+      "venue": "Bendigo Badminton and Table Tennis Complex",
+      "address": "140 Victoria Street",
+      "suburb": "Eaglehawk",
+      "postcode": "3556",
+      "access": "AWA",
+      "lat": -36.725543,
+      "lon": 144.249119
+    },
+    {
+      "name": "Golden Square",
+      "venue": "Golden Square Primary School - Maple Street Campus",
+      "address": "19 Maple Street, (access via MacKenzie Street West)",
+      "suburb": "Golden Square",
+      "postcode": "3555",
+      "access": "AWA",
+      "lat": -36.770338,
+      "lon": 144.25672
+    },
+    {
+      "name": "Golden Square South",
+      "venue": "Golden Square Girl Guide Hall",
+      "address": "5 Bond Street",
+      "suburb": "Golden Square",
+      "postcode": "3555",
+      "access": "LNWA",
+      "lat": -36.776559,
+      "lon": 144.251909
+    },
+    {
+      "name": "Guildford",
+      "venue": "Guildford Public Hall",
+      "address": "6 Templeton Street, (access via Fryers Street)",
+      "suburb": "Guildford",
+      "postcode": "3451",
+      "access": "AWA",
+      "lat": -37.149314,
+      "lon": 144.1665
+    },
+    {
+      "name": "Harcourt",
+      "venue": "Harcourt Valley Primary School",
+      "address": "3 Wilkinson Street",
+      "suburb": "Harcourt",
+      "postcode": "3453",
+      "access": "LNWA",
+      "lat": -37.002656,
+      "lon": 144.257411
+    },
+    {
+      "name": "Ironbark",
+      "venue": "Violet Street Primary School",
+      "address": "91 Old Violet Street",
+      "suburb": "Bendigo",
+      "postcode": "3550",
+      "access": "AWA",
+      "lat": -36.757008,
+      "lon": 144.26551
+    },
+    {
+      "name": "Kangaroo Flat",
+      "venue": "Crusoe Secondary College",
+      "address": "57 Olympic Parade",
+      "suburb": "Kangaroo Flat",
+      "postcode": "3555",
+      "access": "AWA",
+      "lat": -36.789548,
+      "lon": 144.234664
+    },
+    {
+      "name": "Kangaroo Flat South",
+      "venue": "St Monica's Primary School (Kangaroo Flat)",
+      "address": "91 High Street, (access via Station Street)",
+      "suburb": "Kangaroo Flat",
+      "postcode": "3555",
+      "access": "AWA",
+      "lat": -36.794822,
+      "lon": 144.2454,
+      "joint": true
+    },
+    {
+      "name": "Kangaroo Flat South West",
+      "venue": "Kangaroo Flat Community and Neighbourhood House",
+      "address": "21 Woolcock Avenue",
+      "suburb": "Kangaroo Flat",
+      "postcode": "3555",
+      "access": "LNWA",
+      "lat": -36.80363,
+      "lon": 144.235237
+    },
+    {
+      "name": "Lockwood",
+      "venue": "Lockwood Primary School",
+      "address": "190 Wiegards Road",
+      "suburb": "Lockwood",
+      "postcode": "3551",
+      "access": "IWA",
+      "lat": -36.802858,
+      "lon": 144.161491
+    },
+    {
+      "name": "Maiden Gully",
+      "venue": "Maiden Gully Primary School",
+      "address": "10 Carolyn Way",
+      "suburb": "Maiden Gully",
+      "postcode": "3551",
+      "access": "LNWA",
+      "lat": -36.743643,
+      "lon": 144.210066,
+      "joint": true
+    },
+    {
+      "name": "Maldon",
+      "venue": "Maldon Community Centre",
+      "address": "6 Francis Street",
+      "suburb": "Maldon",
+      "postcode": "3463",
+      "access": "LNWA",
+      "lat": -36.995905,
+      "lon": 144.068884
+    },
+    {
+      "name": "Newstead",
+      "venue": "Newstead Community Centre",
+      "address": "9 Pyrenees Highway",
+      "suburb": "Newstead",
+      "postcode": "3462",
+      "access": "IWA",
+      "lat": -37.107147,
+      "lon": 144.060545
+    },
+    {
+      "name": "Specimen Hill",
+      "venue": "Specimen Hill Primary School",
+      "address": "25 Inglewood Street, (access via Croxton Street)",
+      "suburb": "Golden Square",
+      "postcode": "3555",
+      "access": "IWA",
+      "lat": -36.762303,
+      "lon": 144.248397
+    },
+    {
+      "name": "Winters Flat",
+      "venue": "Winters Flat Primary School",
+      "address": "3 Roberts Avenue",
+      "suburb": "Castlemaine",
+      "postcode": "3450",
+      "access": "LNWA",
+      "lat": -37.070119,
+      "lon": 144.207949
+    }
+  ]
+}

@@ -1,0 +1,263 @@
+{
+  "district": "ashwood",
+  "name": "Ashwood",
+  "early": [
+    {
+      "name": "Ashwood - EVC 1",
+      "venue": "1st Ashburton Scout Hall (EVC)",
+      "address": "339 High Street",
+      "suburb": "Ashburton",
+      "postcode": "3147",
+      "access": "LNWA",
+      "lat": -37.864044,
+      "lon": 145.086096
+    },
+    {
+      "name": "Box Hill - EVC 1",
+      "venue": "9th Box Hill Scout Hall (EVC)",
+      "address": "1228 Riversdale Road, (access via Thomas Street)",
+      "suburb": "Box Hill South",
+      "postcode": "3128",
+      "access": "LNWA",
+      "lat": -37.838895,
+      "lon": 145.119991,
+      "joint": true,
+      "host": "box-hill"
+    },
+    {
+      "name": "Hawthorn - EVC 1",
+      "venue": "Camberwell South Anglican Church (EVC)",
+      "address": "101-103 Bowen Street",
+      "suburb": "Camberwell",
+      "postcode": "3124",
+      "access": "IWA",
+      "lat": -37.846248,
+      "lon": 145.062228,
+      "joint": true,
+      "host": "hawthorn"
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Ashburton",
+      "venue": "1st Ashburton Scout Hall",
+      "address": "339 High Street",
+      "suburb": "Ashburton",
+      "postcode": "3147",
+      "access": "LNWA",
+      "lat": -37.864052,
+      "lon": 145.086099
+    },
+    {
+      "name": "Ashwood",
+      "venue": "Ashwood High School",
+      "address": "50 Vannam Drive, (access via Gate A)",
+      "suburb": "Ashwood",
+      "postcode": "3147",
+      "access": "AWA",
+      "lat": -37.863322,
+      "lon": 145.103406
+    },
+    {
+      "name": "Bowen",
+      "venue": "Camberwell South Anglican Church",
+      "address": "101-103 Bowen Street",
+      "suburb": "Camberwell",
+      "postcode": "3124",
+      "access": "IWA",
+      "lat": -37.846254,
+      "lon": 145.062235,
+      "joint": true
+    },
+    {
+      "name": "Burwood",
+      "venue": "Alfred Road Kindergarten",
+      "address": "48A Alfred Road",
+      "suburb": "Glen Iris",
+      "postcode": "3146",
+      "access": "AWA",
+      "lat": -37.854425,
+      "lon": 145.089047
+    },
+    {
+      "name": "Burwood West",
+      "venue": "1st Glen Iris Scout Hall",
+      "address": "101 Glen Iris Road, (access via Ferndale Park car park)",
+      "suburb": "Glen Iris",
+      "postcode": "3146",
+      "access": "AWA",
+      "lat": -37.852813,
+      "lon": 145.067697,
+      "joint": true
+    },
+    {
+      "name": "Camberwell South",
+      "venue": "Camberwell South Primary School",
+      "address": "4 Peate Avenue",
+      "suburb": "Glen Iris",
+      "postcode": "3146",
+      "access": "AWA",
+      "lat": -37.848152,
+      "lon": 145.062737,
+      "joint": true
+    },
+    {
+      "name": "Chadstone",
+      "venue": "Malvern Valley Primary School",
+      "address": "1 Abbotsford Avenue, (access via Quentin Road)",
+      "suburb": "Malvern East",
+      "postcode": "3145",
+      "access": "IWA",
+      "lat": -37.880453,
+      "lon": 145.082642,
+      "joint": true
+    },
+    {
+      "name": "Essex Heights",
+      "venue": "Essex Heights Primary School",
+      "address": "22-30 Essex Road",
+      "suburb": "Mount Waverley",
+      "postcode": "3149",
+      "access": "IWA",
+      "lat": -37.862877,
+      "lon": 145.115198
+    },
+    {
+      "name": "Glen Iris",
+      "venue": "St Oswald's Church Hall",
+      "address": "100 High Street",
+      "suburb": "Glen Iris",
+      "postcode": "3146",
+      "access": "AWA",
+      "lat": -37.862437,
+      "lon": 145.070953,
+      "joint": true
+    },
+    {
+      "name": "Glen Iris South",
+      "venue": "Solway Primary School",
+      "address": "19 Taylor Street",
+      "suburb": "Ashburton",
+      "postcode": "3147",
+      "access": "LNWA",
+      "lat": -37.872311,
+      "lon": 145.072941
+    },
+    {
+      "name": "Hartwell",
+      "venue": "Hartwell Primary School",
+      "address": "Milverton Street",
+      "suburb": "Camberwell",
+      "postcode": "3124",
+      "access": "AWA",
+      "lat": -37.848002,
+      "lon": 145.083937,
+      "joint": true
+    },
+    {
+      "name": "Highbury",
+      "venue": "Equippers Church Burwood",
+      "address": "144 Highbury Road",
+      "suburb": "Burwood",
+      "postcode": "3125",
+      "access": "IWA",
+      "lat": -37.855434,
+      "lon": 145.111908
+    },
+    {
+      "name": "Manooka",
+      "venue": "Burwood East Special Developmental School",
+      "address": "18 Manooka Street",
+      "suburb": "Burwood East",
+      "postcode": "3151",
+      "access": "AWA",
+      "lat": -37.857119,
+      "lon": 145.141769
+    },
+    {
+      "name": "Mount Waverley North",
+      "venue": "Mount Waverley Secondary College - Senior Campus",
+      "address": "98-120 Stephensons Road, (access via Gate 6 on Beaufort Street)",
+      "suburb": "Mount Waverley",
+      "postcode": "3149",
+      "access": "IWA",
+      "lat": -37.868345,
+      "lon": 145.133863
+    },
+    {
+      "name": "Mount Waverley South",
+      "venue": "Mount Waverley Primary School",
+      "address": "37-45 Park Lane, (access via Toirram Road)",
+      "suburb": "Mount Waverley",
+      "postcode": "3149",
+      "access": "IWA",
+      "lat": -37.881356,
+      "lon": 145.122244
+    },
+    {
+      "name": "Pinewood",
+      "venue": "Pinewood Primary School",
+      "address": "27-35 Pinewood Drive",
+      "suburb": "Mount Waverley",
+      "postcode": "3149",
+      "access": "AWA",
+      "lat": -37.890094,
+      "lon": 145.142325,
+      "joint": true
+    },
+    {
+      "name": "Scotchmans Creek",
+      "venue": "Monash District Scout Hall",
+      "address": "40 Fairway Avenue",
+      "suburb": "Mount Waverley",
+      "postcode": "3149",
+      "access": "LNWA",
+      "lat": -37.891024,
+      "lon": 145.126925,
+      "joint": true
+    },
+    {
+      "name": "Starling",
+      "venue": "St Scholastica's Primary School",
+      "address": "4-8 Starling Street",
+      "suburb": "Burwood",
+      "postcode": "3125",
+      "access": "IWA",
+      "lat": -37.851959,
+      "lon": 145.126307,
+      "joint": true
+    },
+    {
+      "name": "Sussex Heights",
+      "venue": "Mount Waverley Heights Primary School",
+      "address": "36 Solomon Street",
+      "suburb": "Mount Waverley",
+      "postcode": "3149",
+      "access": "AWA",
+      "lat": -37.889184,
+      "lon": 145.111867,
+      "joint": true
+    },
+    {
+      "name": "Syndal North",
+      "venue": "Mount Waverley North Primary School",
+      "address": "1 Marcus Avenue, (access via Josephine Street)",
+      "suburb": "Mount Waverley",
+      "postcode": "3149",
+      "access": "AWA",
+      "lat": -37.867439,
+      "lon": 145.14057
+    },
+    {
+      "name": "Syndal South",
+      "venue": "Syndal South Primary School",
+      "address": "14 Montgomery Avenue, (access via Vasey Street)",
+      "suburb": "Mount Waverley",
+      "postcode": "3149",
+      "access": "LNWA",
+      "lat": -37.879343,
+      "lon": 145.14245,
+      "joint": true
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "district": "kalkallo",
+  "name": "Kalkallo",
+  "early": [
+    {
+      "name": "Greenvale - EVC 1",
+      "venue": "Yellowbox Drive Voting Centre (EVC)",
+      "address": "23 Yellowbox Drive",
+      "suburb": "Craigieburn",
+      "postcode": "3064",
+      "access": "LNWA",
+      "lat": -37.618575,
+      "lon": 144.944046,
+      "joint": true,
+      "host": "greenvale"
+    },
+    {
+      "name": "Greenvale - EVC 2",
+      "venue": "Roxburgh Park Football Club (EVC)",
+      "address": "Lakeside Reserve, 75 Lakeside Drive",
+      "suburb": "Roxburgh Park",
+      "postcode": "3064",
+      "access": "IWA",
+      "lat": -37.63046,
+      "lon": 144.932043,
+      "joint": true,
+      "host": "greenvale"
+    },
+    {
+      "name": "Kalkallo - EVC 1",
+      "venue": "Gilgai Plains Scout Hall (EVC)",
+      "address": "31 Toyon Road",
+      "suburb": "Kalkallo",
+      "postcode": "3064",
+      "access": "IWA",
+      "lat": -37.533744,
+      "lon": 144.959034,
+      "joint": true
+    },
+    {
+      "name": "Kalkallo - EVC 2",
+      "venue": "North Victorian Buddhist Association (EVC)",
+      "address": "1690 Mickleham Road",
+      "suburb": "Mickleham",
+      "postcode": "3064",
+      "access": "LNWA",
+      "lat": -37.577074,
+      "lon": 144.875871
+    },
+    {
+      "name": "Yan Yean - EVC 1",
+      "venue": "Wandong Public Hall (EVC)",
+      "address": "19 Rail Street",
+      "suburb": "Wandong",
+      "postcode": "3758",
+      "access": "AWA",
+      "lat": -37.356464,
+      "lon": 145.027458,
+      "joint": true,
+      "host": "yan-yean"
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Beveridge",
+      "venue": "Beveridge Primary School - Ambrosia Campus",
+      "address": "30 Ambrosia Way",
+      "suburb": "Beveridge",
+      "postcode": "3753",
+      "access": "IWA",
+      "lat": -37.468803,
+      "lon": 144.955153
+    },
+    {
+      "name": "Botanical",
+      "venue": "Yubup Primary School",
+      "address": "120 Ellscott Boulevard",
+      "suburb": "Mickleham",
+      "postcode": "3064",
+      "access": "IWA",
+      "lat": -37.542983,
+      "lon": 144.894583
+    },
+    {
+      "name": "Craigieburn",
+      "venue": "Our Lady's Primary School (Craigieburn)",
+      "address": "169-171 Craigieburn Road, (access via Bridgewater Road)",
+      "suburb": "Craigieburn",
+      "postcode": "3064",
+      "access": "AWA",
+      "lat": -37.598133,
+      "lon": 144.931486,
+      "joint": true
+    },
+    {
+      "name": "Craigieburn Central",
+      "venue": "Craigieburn Primary School",
+      "address": "87-91 Grand Boulevard",
+      "suburb": "Craigieburn",
+      "postcode": "3064",
+      "access": "AWA",
+      "lat": -37.582834,
+      "lon": 144.934179
+    },
+    {
+      "name": "Craigieburn North West",
+      "venue": "Aitken Creek Primary School",
+      "address": "51-81 Grevillea Street, (access via Waterview Boulevard)",
+      "suburb": "Craigieburn",
+      "postcode": "3064",
+      "access": "IWA",
+      "lat": -37.583089,
+      "lon": 144.906962
+    },
+    {
+      "name": "Craigieburn South",
+      "venue": "Craigieburn Secondary College",
+      "address": "102 Hothlyn Drive",
+      "suburb": "Craigieburn",
+      "postcode": "3064",
+      "access": "AWA",
+      "lat": -37.609105,
+      "lon": 144.936225,
+      "joint": true
+    },
+    {
+      "name": "Craigieburn West",
+      "venue": "Willmott Park Primary School",
+      "address": "Corner Dorchester Street and Cowes Street, (access via Cowes Street)",
+      "suburb": "Craigieburn",
+      "postcode": "3064",
+      "access": "AWA",
+      "lat": -37.591765,
+      "lon": 144.922655
+    },
+    {
+      "name": "Elevation",
+      "venue": "Elevation Secondary College",
+      "address": "199 Elevation Boulevard",
+      "suburb": "Craigieburn",
+      "postcode": "3064",
+      "access": "IWA",
+      "lat": -37.598123,
+      "lon": 144.889092
+    },
+    {
+      "name": "Gilgai Plains",
+      "venue": "Gilgai Plains Scout Hall",
+      "address": "31 Toyon Road",
+      "suburb": "Kalkallo",
+      "postcode": "3064",
+      "access": "IWA",
+      "lat": -37.533732,
+      "lon": 144.959049,
+      "joint": true
+    },
+    {
+      "name": "Kalkallo",
+      "venue": "Banum Warrik Primary School",
+      "address": "2 Koeks Vista",
+      "suburb": "Kalkallo",
+      "postcode": "3064",
+      "access": "IWA",
+      "lat": -37.520769,
+      "lon": 144.955472
+    },
+    {
+      "name": "Mickleham",
+      "venue": "Newbury Primary School",
+      "address": "202-226 Newbury Boulevard, (access via Gate 4)",
+      "suburb": "Craigieburn",
+      "postcode": "3064",
+      "access": "LNWA",
+      "lat": -37.570466,
+      "lon": 144.909477
+    },
+    {
+      "name": "Mickleham North",
+      "venue": "Gaayip-Yagila Primary School",
+      "address": "115 Blackmore Road, (access via Wheatley Parade)",
+      "suburb": "Mickleham",
+      "postcode": "3064",
+      "access": "IWA",
+      "lat": -37.527281,
+      "lon": 144.910215
+    },
+    {
+      "name": "Mickleham South",
+      "venue": "North Victorian Buddhist Association",
+      "address": "1690 Mickleham Road",
+      "suburb": "Mickleham",
+      "postcode": "3064",
+      "access": "LNWA",
+      "lat": -37.577075,
+      "lon": 144.875873
+    },
+    {
+      "name": "Mount Ridley",
+      "venue": "Mount Ridley P-12 College",
+      "address": "2-30 Hampton Street, (access via Essex Way)",
+      "suburb": "Craigieburn",
+      "postcode": "3064",
+      "access": "IWA",
+      "lat": -37.579451,
+      "lon": 144.923591
+    },
+    {
+      "name": "Wallan",
+      "venue": "Wallan Primary School",
+      "address": "42-48 Queen Street",
+      "suburb": "Wallan",
+      "postcode": "3756",
+      "access": "AWA",
+      "lat": -37.412435,
+      "lon": 144.97449
+    },
+    {
+      "name": "Wallan Creek",
+      "venue": "1st Wallan Wallan Scout Hall",
+      "address": "26 Windham Street",
+      "suburb": "Wallan",
+      "postcode": "3756",
+      "access": "AWA",
+      "lat": -37.416246,
+      "lon": 144.982224
+    },
+    {
+      "name": "Wallan East",
+      "venue": "Our Lady of the Way Catholic Primary School",
+      "address": "30 Alcantara Boulevard, (access via Newbridge Boulevard)",
+      "suburb": "Wallan",
+      "postcode": "3756",
+      "access": "AWA",
+      "lat": -37.42512,
+      "lon": 145.000011,
+      "joint": true
+    },
+    {
+      "name": "Wallan South",
+      "venue": "Wallan Secondary College",
+      "address": "100 Duke Street",
+      "suburb": "Wallan",
+      "postcode": "3756",
+      "access": "AWA",
+      "lat": -37.419646,
+      "lon": 144.979774,
+      "joint": true
+    }
+  ]
+}

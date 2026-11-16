@@ -254,7 +254,25 @@
   // Returns null if the container left the page while the boundaries loaded (the user
   // switched seats): a map on a detached, zero-size container has no valid view, and
   // Leaflet then throws when the boundary is added.
-  async function boothMap(el, districtId, contest) {
+  // 2026 places to vote (data/voting_centres/<district>.json), as pins over the booth circles.
+  const ACCESS = { IWA: "Independent wheelchair access", AWA: "Assisted wheelchair access", LNWA: "Limited or no wheelchair access" };
+  function centrePins(map, centres) {
+    let n = 0;
+    [["election_day", "Election-day voting centre"], ["early", "Early voting centre"]].forEach(([kind, label]) => {
+      ((centres && centres[kind]) || []).filter((c) => c.lat != null).forEach((c) => {
+        const icon = L.divIcon({ className: `vc-pin vc-${kind}`, html: '<span aria-hidden="true"></span>', iconSize: [18, 18], iconAnchor: [9, 9] });
+        const venue = String(c.venue || c.name).replace(/\s*\(EVC\)$/, "");
+        L.marker([c.lat, c.lon], { icon, keyboard: false, title: `${label}: ${venue}` }).addTo(map)
+          .bindPopup(`<div class="booth-pop"><strong>${escapeHtml(venue)}</strong><div class="small">${escapeHtml(label)}, 2026</div>
+            <div class="muted small">${escapeHtml([c.address, [c.suburb, c.postcode].filter(Boolean).join(" ")].filter(Boolean).join(", "))}</div>
+            <div class="muted small">${escapeHtml(ACCESS[c.access] || c.access || "")}</div></div>`, { maxWidth: 280 });
+        n++;
+      });
+    });
+    return n;
+  }
+
+  async function boothMap(el, districtId, contest, centres) {
     const geo = await loadGeo("districts");
     if (!el.isConnected) return null;
     for (const [box, m] of boothMaps) {   // maps whose container left the page (another seat) or is being redrawn
@@ -297,7 +315,8 @@
         { maxWidth: 340 });
       m.bindTooltip(escapeHtml(p.name), { direction: "top" });
     });
-    return { placed: placed.length, total: contest.polling_places.length };
+    const pins = centres ? centrePins(map, centres) : 0;
+    return { placed: placed.length, total: contest.polling_places.length, pins };
   }
 
   /* ---------------- Find my seat: the district containing a point ---------------- */

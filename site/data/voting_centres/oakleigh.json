@@ -1,0 +1,315 @@
+{
+  "district": "oakleigh",
+  "name": "Oakleigh",
+  "early": [
+    {
+      "name": "Bentleigh - EVC 2",
+      "venue": "Bentleigh Girl Guide Hall (EVC)",
+      "address": "182 East Boundary Road",
+      "suburb": "Bentleigh East",
+      "postcode": "3165",
+      "access": "LNWA",
+      "lat": -37.91807,
+      "lon": 145.059946,
+      "joint": true,
+      "host": "bentleigh"
+    },
+    {
+      "name": "Caulfield - EVC 2",
+      "venue": "Caulfield Presbyterian Church (EVC)",
+      "address": "1 Neerim Road",
+      "suburb": "Caulfield",
+      "postcode": "3162",
+      "access": "AWA",
+      "lat": -37.885345,
+      "lon": 145.029954,
+      "joint": true,
+      "host": "caulfield"
+    },
+    {
+      "name": "Malvern - EVC 1",
+      "venue": "1st Malvern Scout Hall (EVC)",
+      "address": "3 Cooinda Place",
+      "suburb": "Malvern East",
+      "postcode": "3145",
+      "access": "AWA",
+      "lat": -37.880017,
+      "lon": 145.067371,
+      "joint": true,
+      "host": "malvern"
+    },
+    {
+      "name": "Oakleigh - EVC 1",
+      "venue": "Oakleigh Masonic Centre (EVC)",
+      "address": "150 Drummond Street",
+      "suburb": "Oakleigh",
+      "postcode": "3166",
+      "access": "LNWA",
+      "lat": -37.897446,
+      "lon": 145.090105
+    },
+    {
+      "name": "Oakleigh - EVC 2",
+      "venue": "Wirringga Scout Hall (EVC)",
+      "address": "Davies Reserve, (access via Talbot Avenue)",
+      "suburb": "Oakleigh South",
+      "postcode": "3167",
+      "access": "AWA",
+      "lat": -37.921082,
+      "lon": 145.103884,
+      "joint": true
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Bailey Reserve",
+      "venue": "Bentleigh Girl Guide Hall",
+      "address": "182 East Boundary Road",
+      "suburb": "Bentleigh East",
+      "postcode": "3165",
+      "access": "LNWA",
+      "lat": -37.918084,
+      "lon": 145.059965,
+      "joint": true
+    },
+    {
+      "name": "Brine",
+      "venue": "Hughesdale Primary School",
+      "address": "2A Brine Street",
+      "suburb": "Hughesdale",
+      "postcode": "3166",
+      "access": "IWA",
+      "lat": -37.90584,
+      "lon": 145.077524,
+      "joint": true
+    },
+    {
+      "name": "Carnegie",
+      "venue": "Carnegie Primary School",
+      "address": "51 Truganini Road",
+      "suburb": "Carnegie",
+      "postcode": "3163",
+      "access": "AWA",
+      "lat": -37.890048,
+      "lon": 145.054424
+    },
+    {
+      "name": "Carnegie East",
+      "venue": "St Peter's Anglican Church",
+      "address": "371 Neerim Road, (access via Ames Avenue)",
+      "suburb": "Carnegie",
+      "postcode": "3163",
+      "access": "AWA",
+      "lat": -37.890266,
+      "lon": 145.06228
+    },
+    {
+      "name": "Carnegie West",
+      "venue": "St Anthony's Primary School",
+      "address": "172 Neerim Road, (access via Grange Road)",
+      "suburb": "Carnegie",
+      "postcode": "3163",
+      "access": "IWA",
+      "lat": -37.886532,
+      "lon": 145.046663
+    },
+    {
+      "name": "Clarinda",
+      "venue": "Clarinda Primary School",
+      "address": "1166 Centre Road, (access via Crawford Road)",
+      "suburb": "Clarinda",
+      "postcode": "3169",
+      "access": "IWA",
+      "lat": -37.926704,
+      "lon": 145.102011,
+      "joint": true,
+      "host": "clarinda"
+    },
+    {
+      "name": "Clayton",
+      "venue": "Fregon Hall",
+      "address": "4-8 Fregon Road",
+      "suburb": "Clayton",
+      "postcode": "3168",
+      "access": "AWA",
+      "lat": -37.918432,
+      "lon": 145.123558
+    },
+    {
+      "name": "Clayton East",
+      "venue": "Clayton Senior Citizens Club",
+      "address": "19 Mary Street",
+      "suburb": "Clayton",
+      "postcode": "3168",
+      "access": "IWA",
+      "lat": -37.923202,
+      "lon": 145.12141
+    },
+    {
+      "name": "Clayton North",
+      "venue": "Monash Uniting Church Hall",
+      "address": "1939 Dandenong Road, (access from Princes Highway Service Road)",
+      "suburb": "Clayton",
+      "postcode": "3168",
+      "access": "LNWA",
+      "lat": -37.912256,
+      "lon": 145.124313
+    },
+    {
+      "name": "Coatesville",
+      "venue": "Coatesville Primary School",
+      "address": "21 Mackie Road",
+      "suburb": "Bentleigh East",
+      "postcode": "3165",
+      "access": "LNWA",
+      "lat": -37.920088,
+      "lon": 145.073735,
+      "joint": true
+    },
+    {
+      "name": "Davies Reserve",
+      "venue": "Wirringga Scout Hall",
+      "address": "Davies Reserve, (access via Talbot Avenue)",
+      "suburb": "Oakleigh South",
+      "postcode": "3167",
+      "access": "AWA",
+      "lat": -37.921079,
+      "lon": 145.103814
+    },
+    {
+      "name": "Glenhuntly East",
+      "venue": "Glen Huntly Primary School - East Campus",
+      "address": "170 Grange Road",
+      "suburb": "Carnegie",
+      "postcode": "3163",
+      "access": "IWA",
+      "lat": -37.893646,
+      "lon": 145.04617,
+      "joint": true
+    },
+    {
+      "name": "Hughesdale",
+      "venue": "Hughesdale Community Centre",
+      "address": "Corner Poath Road and Kangaroo Road",
+      "suburb": "Hughesdale",
+      "postcode": "3166",
+      "access": "IWA",
+      "lat": -37.898213,
+      "lon": 145.076176
+    },
+    {
+      "name": "Hughesdale South",
+      "venue": "Coatesville Uniting Church",
+      "address": "1050 North Road, (access via Mackie Road)",
+      "suburb": "Bentleigh East",
+      "postcode": "3165",
+      "access": "AWA",
+      "lat": -37.908646,
+      "lon": 145.07619,
+      "joint": true
+    },
+    {
+      "name": "Huntingdale",
+      "venue": "Oakleigh Occasional Care Centre - Huntingdale",
+      "address": "16 Garnett Street",
+      "suburb": "Huntingdale",
+      "postcode": "3166",
+      "access": "LNWA",
+      "lat": -37.906088,
+      "lon": 145.111887
+    },
+    {
+      "name": "Monash East",
+      "venue": "Notting Hill Neighbourhood House",
+      "address": "37 Westerfield Drive",
+      "suburb": "Notting Hill",
+      "postcode": "3168",
+      "access": "AWA",
+      "lat": -37.906372,
+      "lon": 145.149379
+    },
+    {
+      "name": "Murrumbeena",
+      "venue": "Murrumbeena Primary School",
+      "address": "20 Hobart Road",
+      "suburb": "Murrumbeena",
+      "postcode": "3163",
+      "access": "AWA",
+      "lat": -37.886936,
+      "lon": 145.070165
+    },
+    {
+      "name": "Oakleigh",
+      "venue": "Oakleigh Masonic Centre",
+      "address": "150 Drummond Street",
+      "suburb": "Oakleigh",
+      "postcode": "3166",
+      "access": "LNWA",
+      "lat": -37.897476,
+      "lon": 145.090108
+    },
+    {
+      "name": "Oakleigh Central",
+      "venue": "Emmanuel Anglican Church Hall",
+      "address": "26 Abbeygate Street",
+      "suburb": "Oakleigh",
+      "postcode": "3166",
+      "access": "LNWA",
+      "lat": -37.906542,
+      "lon": 145.089959
+    },
+    {
+      "name": "Oakleigh East",
+      "venue": "Amsleigh Park Primary School",
+      "address": "17-19 State Street",
+      "suburb": "Oakleigh East",
+      "postcode": "3166",
+      "access": "IWA",
+      "lat": -37.900436,
+      "lon": 145.109298
+    },
+    {
+      "name": "Oakleigh North",
+      "venue": "Christ Our Holy Redeemer Primary School",
+      "address": "43 Ferntree Gully Road",
+      "suburb": "Oakleigh",
+      "postcode": "3166",
+      "access": "AWA",
+      "lat": -37.896734,
+      "lon": 145.104949
+    },
+    {
+      "name": "Ormond",
+      "venue": "Kilvington Grammar School",
+      "address": "Lillimur Road, (access via Gate 4)",
+      "suburb": "Ormond",
+      "postcode": "3204",
+      "access": "AWA",
+      "lat": -37.899446,
+      "lon": 145.04194,
+      "joint": true
+    },
+    {
+      "name": "Scotchmans Creek",
+      "venue": "Monash District Scout Hall",
+      "address": "40 Fairway Avenue",
+      "suburb": "Mount Waverley",
+      "postcode": "3149",
+      "access": "LNWA",
+      "lat": -37.891024,
+      "lon": 145.126925,
+      "joint": true
+    },
+    {
+      "name": "Sussex Heights",
+      "venue": "Mount Waverley Heights Primary School",
+      "address": "36 Solomon Street",
+      "suburb": "Mount Waverley",
+      "postcode": "3149",
+      "access": "AWA",
+      "lat": -37.889184,
+      "lon": 145.111867,
+      "joint": true
+    }
+  ]
+}

@@ -3,7 +3,8 @@ else "unchanged". The refresh workflow commits (and deploys) only on "changed", 
 every source failed (only status messages moved) doesn't make a commit.
 
 Bookkeeping that doesn't count: meta.json's per-source status, news.json's updated time and per-feed
-status, changelog.json's updated time, htv.json's last_checked and vec_nominations.json's fetched time. meta.json's last_updated does count:
+status, changelog.json's updated time, htv.json's last_checked, vec_nominations.json's fetched time, voting_centres/index.json's checked and fetched
+times and early_votes.json's checked time. meta.json's last_updated does count:
 refresh.py sets it on every successful run and the site shows it ("Data updated ..."), so every
 successful run is committed and deployed. A run where every source failed leaves it alone and isn't.
 Any other difference, or a file that can't be compared, counts as a change (so a real update is never lost).
@@ -27,6 +28,8 @@ VOLATILE = {   # top-level keys that change on every successful run
     "changelog.json": {"updated"},
     "htv.json": {"last_checked"},
     "vec_nominations.json": {"fetched"},
+    "index.json": {"checked", "fetched"},   # voting_centres/index.json (profiles/index.json has neither key)
+    "early_votes.json": {"checked"},
 }
 
 

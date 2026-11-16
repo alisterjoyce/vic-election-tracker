@@ -1,0 +1,412 @@
+{
+  "_schema": {
+    "description": "Where to vote in the 2026 Victorian state election, from the VEC: early voting centres and election-day voting centres for each district (data/voting_centres/<district id>.json), with positions and hours from the VEC's venue locator. Read once a day by scripts/refresh.py (scripts/vec_voting.py). © Victorian Electoral Commission, CC BY 4.0.",
+    "fields": {
+      "source": "{label, page (the VEC's voting locations page), spreadsheet_url, spreadsheet_as_at (as printed on it), locator}",
+      "checked": "Melbourne date the VEC's list was last read successfully",
+      "fetched": "ISO UTC time of that read",
+      "hours": "{early: [{from, to (YYYY-MM-DD), days, open, close (HH:MM), note}], election_day: [same]}: the hours every centre of that kind keeps (a centre with other hours carries its own)",
+      "districts": "{district id: {early, election_day}}: how many centres each district has",
+      "<district>.json": "{district, name, early: [centre], election_day: [centre]} where centre is {name (the VEC's voting location name), venue, address, suburb, postcode, access (IWA | AWA | LNWA), lat, lon (null if the locator has no position), joint (true when the centre is shared with another district), host (id of the district that runs a shared centre, when it isn't this one), hours (only if different)}"
+    }
+  },
+  "source": {
+    "label": "Victorian Electoral Commission",
+    "page": "https://www.vec.vic.gov.au/voting/2026-state-election/voting-locations",
+    "spreadsheet_url": "https://www.vec.vic.gov.au/-/media/19326aa361284a49a69b08194421da96.xlsx",
+    "spreadsheet_as_at": "16th Nov 10:00am",
+    "locator": "https://maps.vec.vic.gov.au/elections"
+  },
+  "election": {
+    "earlyVotingStart": "2026-11-18T09:00:30",
+    "earlyVotingFinish": "2026-11-27T18:00:00",
+    "postalVotingFinish": "2026-11-25T18:00:00"
+  },
+  "hours": {
+    "early": [
+      {
+        "from": "2026-11-18",
+        "to": "2026-11-21",
+        "days": "Wednesday to Saturday",
+        "open": "09:00",
+        "close": "18:00",
+        "note": "Sunday 22 November (closed)"
+      },
+      {
+        "from": "2026-11-23",
+        "to": "2026-11-27",
+        "days": "Monday to Friday",
+        "open": "09:00",
+        "close": "18:00",
+        "note": null
+      }
+    ],
+    "election_day": [
+      {
+        "from": "2026-11-28",
+        "to": "2026-11-28",
+        "days": "Election day",
+        "open": "08:00",
+        "close": "18:00",
+        "note": null
+      }
+    ]
+  },
+  "districts": {
+    "albert-park": {
+      "early": 4,
+      "election_day": 18
+    },
+    "ashwood": {
+      "early": 3,
+      "election_day": 21
+    },
+    "bass": {
+      "early": 2,
+      "election_day": 25
+    },
+    "bayswater": {
+      "early": 3,
+      "election_day": 18
+    },
+    "bellarine": {
+      "early": 4,
+      "election_day": 15
+    },
+    "benambra": {
+      "early": 2,
+      "election_day": 24
+    },
+    "bendigo-east": {
+      "early": 3,
+      "election_day": 28
+    },
+    "bendigo-west": {
+      "early": 4,
+      "election_day": 22
+    },
+    "bentleigh": {
+      "early": 4,
+      "election_day": 20
+    },
+    "berwick": {
+      "early": 3,
+      "election_day": 19
+    },
+    "box-hill": {
+      "early": 4,
+      "election_day": 21
+    },
+    "brighton": {
+      "early": 4,
+      "election_day": 15
+    },
+    "broadmeadows": {
+      "early": 2,
+      "election_day": 17
+    },
+    "brunswick": {
+      "early": 3,
+      "election_day": 20
+    },
+    "bulleen": {
+      "early": 4,
+      "election_day": 19
+    },
+    "bundoora": {
+      "early": 4,
+      "election_day": 18
+    },
+    "carrum": {
+      "early": 4,
+      "election_day": 17
+    },
+    "caulfield": {
+      "early": 4,
+      "election_day": 18
+    },
+    "clarinda": {
+      "early": 5,
+      "election_day": 23
+    },
+    "cranbourne": {
+      "early": 2,
+      "election_day": 17
+    },
+    "croydon": {
+      "early": 4,
+      "election_day": 21
+    },
+    "dandenong": {
+      "early": 5,
+      "election_day": 21
+    },
+    "eildon": {
+      "early": 3,
+      "election_day": 39
+    },
+    "eltham": {
+      "early": 4,
+      "election_day": 18
+    },
+    "essendon": {
+      "early": 3,
+      "election_day": 15
+    },
+    "eureka": {
+      "early": 4,
+      "election_day": 28
+    },
+    "euroa": {
+      "early": 3,
+      "election_day": 33
+    },
+    "evelyn": {
+      "early": 5,
+      "election_day": 21
+    },
+    "footscray": {
+      "early": 4,
+      "election_day": 16
+    },
+    "frankston": {
+      "early": 3,
+      "election_day": 17
+    },
+    "geelong": {
+      "early": 5,
+      "election_day": 24
+    },
+    "gippsland-east": {
+      "early": 3,
+      "election_day": 35
+    },
+    "gippsland-south": {
+      "early": 2,
+      "election_day": 41
+    },
+    "glen-waverley": {
+      "early": 4,
+      "election_day": 21
+    },
+    "greenvale": {
+      "early": 3,
+      "election_day": 15
+    },
+    "hastings": {
+      "early": 3,
+      "election_day": 16
+    },
+    "hawthorn": {
+      "early": 2,
+      "election_day": 20
+    },
+    "ivanhoe": {
+      "early": 2,
+      "election_day": 16
+    },
+    "kalkallo": {
+      "early": 5,
+      "election_day": 18
+    },
+    "kew": {
+      "early": 4,
+      "election_day": 19
+    },
+    "kororoit": {
+      "early": 5,
+      "election_day": 16
+    },
+    "lara": {
+      "early": 4,
+      "election_day": 20
+    },
+    "laverton": {
+      "early": 5,
+      "election_day": 16
+    },
+    "lowan": {
+      "early": 3,
+      "election_day": 51
+    },
+    "macedon": {
+      "early": 2,
+      "election_day": 25
+    },
+    "malvern": {
+      "early": 2,
+      "election_day": 16
+    },
+    "melbourne": {
+      "early": 6,
+      "election_day": 15
+    },
+    "melton": {
+      "early": 2,
+      "election_day": 14
+    },
+    "mildura": {
+      "early": 2,
+      "election_day": 34
+    },
+    "mill-park": {
+      "early": 3,
+      "election_day": 14
+    },
+    "monbulk": {
+      "early": 3,
+      "election_day": 23
+    },
+    "mordialloc": {
+      "early": 4,
+      "election_day": 17
+    },
+    "mornington": {
+      "early": 2,
+      "election_day": 13
+    },
+    "morwell": {
+      "early": 3,
+      "election_day": 20
+    },
+    "mulgrave": {
+      "early": 4,
+      "election_day": 19
+    },
+    "murray-plains": {
+      "early": 2,
+      "election_day": 36
+    },
+    "narracan": {
+      "early": 3,
+      "election_day": 32
+    },
+    "narre-warren-north": {
+      "early": 4,
+      "election_day": 16
+    },
+    "narre-warren-south": {
+      "early": 4,
+      "election_day": 18
+    },
+    "nepean": {
+      "early": 3,
+      "election_day": 12
+    },
+    "niddrie": {
+      "early": 3,
+      "election_day": 18
+    },
+    "northcote": {
+      "early": 5,
+      "election_day": 18
+    },
+    "oakleigh": {
+      "early": 5,
+      "election_day": 24
+    },
+    "ovens-valley": {
+      "early": 2,
+      "election_day": 33
+    },
+    "pakenham": {
+      "early": 4,
+      "election_day": 15
+    },
+    "pascoe-vale": {
+      "early": 3,
+      "election_day": 22
+    },
+    "point-cook": {
+      "early": 4,
+      "election_day": 12
+    },
+    "polwarth": {
+      "early": 2,
+      "election_day": 32
+    },
+    "prahran": {
+      "early": 3,
+      "election_day": 20
+    },
+    "preston": {
+      "early": 3,
+      "election_day": 19
+    },
+    "richmond": {
+      "early": 4,
+      "election_day": 16
+    },
+    "ringwood": {
+      "early": 6,
+      "election_day": 23
+    },
+    "ripon": {
+      "early": 4,
+      "election_day": 38
+    },
+    "rowville": {
+      "early": 4,
+      "election_day": 15
+    },
+    "sandringham": {
+      "early": 4,
+      "election_day": 17
+    },
+    "shepparton": {
+      "early": 3,
+      "election_day": 30
+    },
+    "south-barwon": {
+      "early": 5,
+      "election_day": 21
+    },
+    "south-west-coast": {
+      "early": 2,
+      "election_day": 34
+    },
+    "st-albans": {
+      "early": 3,
+      "election_day": 13
+    },
+    "sunbury": {
+      "early": 4,
+      "election_day": 14
+    },
+    "sydenham": {
+      "early": 5,
+      "election_day": 15
+    },
+    "tarneit": {
+      "early": 3,
+      "election_day": 17
+    },
+    "thomastown": {
+      "early": 2,
+      "election_day": 17
+    },
+    "warrandyte": {
+      "early": 5,
+      "election_day": 23
+    },
+    "wendouree": {
+      "early": 4,
+      "election_day": 17
+    },
+    "werribee": {
+      "early": 3,
+      "election_day": 17
+    },
+    "williamstown": {
+      "early": 4,
+      "election_day": 19
+    },
+    "yan-yean": {
+      "early": 6,
+      "election_day": 17
+    }
+  },
+  "unplaced": 4,
+  "checked": "2026-11-16",
+  "fetched": "2026-11-16T12:39:35Z"
+}

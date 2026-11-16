@@ -1,0 +1,191 @@
+{
+  "district": "sunbury",
+  "name": "Sunbury",
+  "early": [
+    {
+      "name": "Greenvale - EVC 3",
+      "venue": "Attwood House Community Centre (EVC)",
+      "address": "202 Erinbank Crescent",
+      "suburb": "Attwood",
+      "postcode": "3049",
+      "access": "AWA",
+      "lat": -37.671084,
+      "lon": 144.897919,
+      "joint": true,
+      "host": "greenvale"
+    },
+    {
+      "name": "Sunbury - EVC 1",
+      "venue": "1st & 3rd Sunbury Scout Hall (EVC)",
+      "address": "8 Miller Street",
+      "suburb": "Sunbury",
+      "postcode": "3429",
+      "access": "LNWA",
+      "lat": -37.58165,
+      "lon": 144.723263
+    },
+    {
+      "name": "Sunbury - EVC 2",
+      "venue": "Our Lady of Mt Carmel Parish Hall (EVC)",
+      "address": "101 Riddell Road",
+      "suburb": "Sunbury",
+      "postcode": "3429",
+      "access": "IWA",
+      "lat": -37.568061,
+      "lon": 144.719642
+    },
+    {
+      "name": "Sunbury - EVC 3",
+      "venue": "Calabria Club (EVC)",
+      "address": "5 Uniting Lane",
+      "suburb": "Bulla",
+      "postcode": "3428",
+      "access": "AWA",
+      "lat": -37.639831,
+      "lon": 144.824777
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Bulla East",
+      "venue": "Calabria Club",
+      "address": "5 Uniting Lane",
+      "suburb": "Bulla",
+      "postcode": "3428",
+      "access": "AWA",
+      "lat": -37.639857,
+      "lon": 144.824752
+    },
+    {
+      "name": "Diggers Rest",
+      "venue": "Diggers Rest Primary School",
+      "address": "70-88 Plumpton Road",
+      "suburb": "Diggers Rest",
+      "postcode": "3427",
+      "access": "AWA",
+      "lat": -37.622544,
+      "lon": 144.709547
+    },
+    {
+      "name": "Gladstone Park",
+      "venue": "Gladstone Park Secondary College",
+      "address": "14-36 Taylor Drive",
+      "suburb": "Gladstone Park",
+      "postcode": "3043",
+      "access": "IWA",
+      "lat": -37.689128,
+      "lon": 144.889531
+    },
+    {
+      "name": "Gladstone Views",
+      "venue": "Gladstone Views Primary School",
+      "address": "217 Carrick Drive",
+      "suburb": "Gladstone Park",
+      "postcode": "3043",
+      "access": "AWA",
+      "lat": -37.689769,
+      "lon": 144.897677
+    },
+    {
+      "name": "Goonawarra",
+      "venue": "Goonawarra Primary School",
+      "address": "6 Gullane Drive",
+      "suburb": "Sunbury",
+      "postcode": "3429",
+      "access": "IWA",
+      "lat": -37.580512,
+      "lon": 144.750997
+    },
+    {
+      "name": "Jacksons Hill",
+      "venue": "Sunbury Primary School",
+      "address": "145-149 Circular Drive",
+      "suburb": "Sunbury",
+      "postcode": "3429",
+      "access": "LNWA",
+      "lat": -37.59589,
+      "lon": 144.728607
+    },
+    {
+      "name": "Sunbury",
+      "venue": "Sunbury College",
+      "address": "30 Racecourse Road",
+      "suburb": "Sunbury",
+      "postcode": "3429",
+      "access": "LNWA",
+      "lat": -37.573399,
+      "lon": 144.729191
+    },
+    {
+      "name": "Sunbury Central",
+      "venue": "1st & 3rd Sunbury Scout Hall",
+      "address": "8 Miller Street",
+      "suburb": "Sunbury",
+      "postcode": "3429",
+      "access": "LNWA",
+      "lat": -37.581635,
+      "lon": 144.723265
+    },
+    {
+      "name": "Sunbury Heights",
+      "venue": "Sunbury Heights Primary School",
+      "address": "9-39 Charter Road East, (access via Leichardt Street)",
+      "suburb": "Sunbury",
+      "postcode": "3429",
+      "access": "AWA",
+      "lat": -37.582259,
+      "lon": 144.706823
+    },
+    {
+      "name": "Sunbury North",
+      "venue": "Kismet Park Primary School",
+      "address": "9-11 McEwen Drive",
+      "suburb": "Sunbury",
+      "postcode": "3429",
+      "access": "AWA",
+      "lat": -37.564818,
+      "lon": 144.728784
+    },
+    {
+      "name": "Sunbury North West",
+      "venue": "Killara Primary School",
+      "address": "61 Phillip Drive, (access via Rees Road)",
+      "suburb": "Sunbury",
+      "postcode": "3429",
+      "access": "IWA",
+      "lat": -37.564168,
+      "lon": 144.705484
+    },
+    {
+      "name": "Sunbury West",
+      "venue": "Our Lady of Mt Carmel Parish Hall",
+      "address": "101 Riddell Road",
+      "suburb": "Sunbury",
+      "postcode": "3429",
+      "access": "IWA",
+      "lat": -37.568056,
+      "lon": 144.71964
+    },
+    {
+      "name": "Tullamarine",
+      "venue": "Tullamarine Primary School",
+      "address": "37-39 Broadmeadows Road, (access via Eumarella Street)",
+      "suburb": "Tullamarine",
+      "postcode": "3043",
+      "access": "AWA",
+      "lat": -37.702518,
+      "lon": 144.878372
+    },
+    {
+      "name": "Westmeadows",
+      "venue": "Westmeadows Community Centre",
+      "address": "9A Ardlie Street",
+      "suburb": "Westmeadows",
+      "postcode": "3049",
+      "access": "LNWA",
+      "lat": -37.675893,
+      "lon": 144.887995,
+      "joint": true
+    }
+  ]
+}

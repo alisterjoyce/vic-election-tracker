@@ -1000,7 +1000,7 @@ html:not(.js) .search-hero:empty { display: none; }
 html:not(.js) .search:empty { display: none; }
 /* The key-dates strip: the milestones row plus the "Today: ... Next, ..." note, whose length changes daily. Each
    height is the tallest the strip gets at that width over the whole timetable (measured 10 Nov 2026 for every day
-   to 19 Dec): kept after filling, so the strip neither pushes the page down nor pulls it up. On a day whose note is
+   to 19 Dec, and again on 16 Nov for 16 Nov to 19 Dec once the postal-applications milestone replaced nominations): kept after filling, so the strip neither pushes the page down nor pulls it up. On a day whose note is
    shorter, the content sits in the middle, so the spare room reads as padding rather than a gap. */
 html.js .key-dates { min-height: 84px; }   /* 960px and wider: the milestones and two lines of note */
 @media (min-width: 641px) {
@@ -1015,6 +1015,7 @@ html.has-hash #district-detail[hidden] { display: block; min-height: 2400px; }  
 @media (max-width: 760px) { #pref-watch:empty { min-height: 760px; } #region-chips:empty { min-height: 254px; } }
 @media (max-width: 400px) { #region-chips:empty { min-height: 341px; } }  /* seat pages: the 2022 results load after the page scrolls to the seat */
 @media (min-width: 840px) and (max-width: 959px) { html.js .key-dates { min-height: 105px; } }   /* a long note runs to three lines */
+@media (min-width: 840px) and (max-width: 859px) { html.js .key-dates { min-height: 112px; } }   /* 25 Nov: "today, 6 pm" wraps the milestones (measured 16 Nov 2026) */
 @media (min-width: 641px) and (max-width: 839px) { html.js .key-dates { min-height: 133px; } }   /* the milestones wrap too */
 @media (max-width: 640px) {
   html.js .key-dates { min-height: 45px; }   /* the one-line summary */
@@ -1110,6 +1111,20 @@ html.has-hash #district-detail[hidden] { display: block; min-height: 2400px; }  
   .pol-table { min-width: 680px; }
   .pol-table thead th:first-child, .pol-table .pol-issue { width: 104px; }
 }
+
+/* ---------- Where to vote (seat pages; data/voting_centres/) ---------- */
+.seat-vote { margin-top: 20px; }
+.seat-vote h3 { margin-bottom: 6px; }
+.wtv-times { margin: 0 0 8px; }
+.wtv-list { border-top: 1px solid var(--border); }
+.wtv-list:last-of-type { border-bottom: 1px solid var(--border); }
+.wtv-list > summary { cursor: pointer; padding: 10px 0; min-height: 44px; box-sizing: border-box; font-weight: 600; }
+.wtv-centres { list-style: none; margin: 0 0 10px; padding: 0; display: grid; gap: 8px; }
+.wtv-centres li { display: flex; flex-direction: column; gap: 1px; }
+.wtv-src { margin: 8px 0 0; }
+.vc-pin span { display: block; width: 14px; height: 14px; margin: 2px; box-sizing: border-box; border: 2px solid var(--surface); box-shadow: 0 0 0 1.5px var(--text); }
+.vc-early span { background: var(--accent); border-radius: 3px; }
+.vc-election_day span { background: var(--text); border-radius: 50%; }
 
 /* ---------- Compare candidates (seat pages): one column per candidate, opened on demand ---------- */
 .compare { margin: 20px 0 0; border: 1px solid var(--border); border-radius: 8px; padding: 0 12px; }

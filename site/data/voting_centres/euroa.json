@@ -1,0 +1,371 @@
+{
+  "district": "euroa",
+  "name": "Euroa",
+  "early": [
+    {
+      "name": "Euroa - EVC 1",
+      "venue": "Seymour Scout Hall (EVC)",
+      "address": "49 Howe Street",
+      "suburb": "Seymour",
+      "postcode": "3660",
+      "access": "LNWA",
+      "lat": -37.028484,
+      "lon": 145.151028
+    },
+    {
+      "name": "Euroa - EVC 2",
+      "venue": "Benalla Uniting Church (EVC)",
+      "address": "44 Carrier Street",
+      "suburb": "Benalla",
+      "postcode": "3672",
+      "access": "IWA",
+      "lat": -36.549721,
+      "lon": 145.98514
+    },
+    {
+      "name": "Yan Yean - EVC 1",
+      "venue": "Wandong Public Hall (EVC)",
+      "address": "19 Rail Street",
+      "suburb": "Wandong",
+      "postcode": "3758",
+      "access": "AWA",
+      "lat": -37.356464,
+      "lon": 145.027458,
+      "joint": true,
+      "host": "yan-yean"
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Avenel",
+      "venue": "Avenel Primary School",
+      "address": "40 Anderson Street",
+      "suburb": "Avenel",
+      "postcode": "3664",
+      "access": "LNWA",
+      "lat": -36.901436,
+      "lon": 145.234993
+    },
+    {
+      "name": "Baddaginnie",
+      "venue": "Peranbin Primary College",
+      "address": "49 Clarendon Street",
+      "suburb": "Baddaginnie",
+      "postcode": "3670",
+      "access": "LNWA",
+      "lat": -36.592335,
+      "lon": 145.863669
+    },
+    {
+      "name": "Benalla Central",
+      "venue": "Benalla Uniting Church",
+      "address": "44 Carrier Street",
+      "suburb": "Benalla",
+      "postcode": "3672",
+      "access": "IWA",
+      "lat": -36.54972,
+      "lon": 145.985137
+    },
+    {
+      "name": "Benalla West",
+      "venue": "Benalla P-12 College - Faithful Campus",
+      "address": "20 Faithfull Street",
+      "suburb": "Benalla",
+      "postcode": "3672",
+      "access": "IWA",
+      "lat": -36.552969,
+      "lon": 145.963722
+    },
+    {
+      "name": "Broadford",
+      "venue": "Broadford Secondary College",
+      "address": "Snodgrass Street",
+      "suburb": "Broadford",
+      "postcode": "3658",
+      "access": "IWA",
+      "lat": -37.205218,
+      "lon": 145.039766
+    },
+    {
+      "name": "Broadford North",
+      "venue": "Broadford Shire Hall",
+      "address": "20 Murchison Street",
+      "suburb": "Broadford",
+      "postcode": "3658",
+      "access": "AWA",
+      "lat": -37.2027,
+      "lon": 145.049177
+    },
+    {
+      "name": "Byrneside",
+      "venue": "Byrneside Public Hall",
+      "address": "5390 Midland Highway",
+      "suburb": "Byrneside",
+      "postcode": "3617",
+      "access": "LNWA",
+      "lat": -36.420917,
+      "lon": 145.174679
+    },
+    {
+      "name": "Clonbinane",
+      "venue": "Clonbinane Community Hall",
+      "address": "15 Linton Street",
+      "suburb": "Clonbinane",
+      "postcode": "3658",
+      "access": "IWA",
+      "lat": -37.297913,
+      "lon": 145.068731
+    },
+    {
+      "name": "Colbinabbin",
+      "venue": "Colbinabbin Primary School",
+      "address": "56 Mitchell Street",
+      "suburb": "Colbinabbin",
+      "postcode": "3559",
+      "access": "AWA",
+      "lat": -36.590192,
+      "lon": 144.801591
+    },
+    {
+      "name": "Cooma",
+      "venue": "Cooma Recreation Reserve Pavilion",
+      "address": "1015 Kyabram-Cooma Road",
+      "suburb": "Cooma",
+      "postcode": "3616",
+      "access": "LNWA",
+      "lat": -36.415927,
+      "lon": 145.068368
+    },
+    {
+      "name": "Euroa",
+      "venue": "Civic Hall Euroa",
+      "address": "1B Bury Street",
+      "suburb": "Euroa",
+      "postcode": "3666",
+      "access": "AWA",
+      "lat": -36.752928,
+      "lon": 145.572706
+    },
+    {
+      "name": "Goorambat",
+      "venue": "Goorambat Public Hall",
+      "address": "55 Halls Road",
+      "suburb": "Goorambat",
+      "postcode": "3725",
+      "access": "LNWA",
+      "lat": -36.411148,
+      "lon": 145.922718
+    },
+    {
+      "name": "Heathcote",
+      "venue": "Heathcote RSL Hall",
+      "address": "127 High Street",
+      "suburb": "Heathcote",
+      "postcode": "3523",
+      "access": "AWA",
+      "lat": -36.923165,
+      "lon": 144.709394
+    },
+    {
+      "name": "Kilmore",
+      "venue": "St Patrick's Primary School (Kilmore)",
+      "address": "1 Conway Street",
+      "suburb": "Kilmore",
+      "postcode": "3764",
+      "access": "AWA",
+      "lat": -37.298145,
+      "lon": 144.947461
+    },
+    {
+      "name": "Longwood",
+      "venue": "Longwood Community Centre",
+      "address": "2A Down Street",
+      "suburb": "Longwood",
+      "postcode": "3665",
+      "access": "LNWA",
+      "lat": -36.806573,
+      "lon": 145.425702
+    },
+    {
+      "name": "Lurg",
+      "venue": "Lurg Public Hall",
+      "address": "952 Winton-Lurg Road",
+      "suburb": "Lurg",
+      "postcode": "3673",
+      "access": "LNWA",
+      "lat": -36.581922,
+      "lon": 146.126127
+    },
+    {
+      "name": "Merrigum",
+      "venue": "Merrigum Primary School",
+      "address": "10-26 Judd Avenue",
+      "suburb": "Merrigum",
+      "postcode": "3618",
+      "access": "AWA",
+      "lat": -36.369314,
+      "lon": 145.130201
+    },
+    {
+      "name": "Murchison",
+      "venue": "Murchison Community Centre",
+      "address": "10 Watson Street",
+      "suburb": "Murchison",
+      "postcode": "3610",
+      "access": "IWA",
+      "lat": -36.618203,
+      "lon": 145.216069
+    },
+    {
+      "name": "Nagambie",
+      "venue": "Nagambie Senior Citizens Hall",
+      "address": "358-360 High Street",
+      "suburb": "Nagambie",
+      "postcode": "3608",
+      "access": "AWA",
+      "lat": -36.781732,
+      "lon": 145.155019
+    },
+    {
+      "name": "Redesdale",
+      "venue": "Redesdale Public Hall",
+      "address": "2631 Kyneton-Heathcote Road",
+      "suburb": "Redesdale",
+      "postcode": "3444",
+      "access": "LNWA",
+      "lat": -37.022919,
+      "lon": 144.53154
+    },
+    {
+      "name": "Ruffy",
+      "venue": "Ruffy Public Hall",
+      "address": "3 Nolans Road",
+      "suburb": "Ruffy",
+      "postcode": "3666",
+      "access": "LNWA",
+      "lat": -36.974475,
+      "lon": 145.501893
+    },
+    {
+      "name": "Rushworth",
+      "venue": "Rushworth P-12 College",
+      "address": "45 Heily Street, (access via McDonald Street)",
+      "suburb": "Rushworth",
+      "postcode": "3612",
+      "access": "IWA",
+      "lat": -36.583025,
+      "lon": 145.013791
+    },
+    {
+      "name": "Seymour",
+      "venue": "Anglican Parish Hall",
+      "address": "4 Anzac Avenue",
+      "suburb": "Seymour",
+      "postcode": "3660",
+      "access": "AWA",
+      "lat": -37.026014,
+      "lon": 145.136545
+    },
+    {
+      "name": "Seymour Central",
+      "venue": "Seymour Scout Hall",
+      "address": "49 Howe Street",
+      "suburb": "Seymour",
+      "postcode": "3660",
+      "access": "LNWA",
+      "lat": -37.028502,
+      "lon": 145.151043
+    },
+    {
+      "name": "Stanhope",
+      "venue": "Stanhope Community Hall",
+      "address": "3 Godley Place",
+      "suburb": "Stanhope",
+      "postcode": "3623",
+      "access": "AWA",
+      "lat": -36.446703,
+      "lon": 144.984203
+    },
+    {
+      "name": "Strathbogie",
+      "venue": "Strathbogie Memorial Hall",
+      "address": "29 Main Street",
+      "suburb": "Strathbogie",
+      "postcode": "3666",
+      "access": "LNWA",
+      "lat": -36.857125,
+      "lon": 145.736341
+    },
+    {
+      "name": "Swanpool",
+      "venue": "Albert Heaney Recreation Reserve Clubrooms",
+      "address": "14 Swanpool-Lima Road, (access via Midland Hwy)",
+      "suburb": "Swanpool",
+      "postcode": "3673",
+      "access": "LNWA",
+      "lat": -36.749535,
+      "lon": 146.001691
+    },
+    {
+      "name": "Tallarook",
+      "venue": "Tallarook Primary School",
+      "address": "52 Main Road",
+      "suburb": "Tallarook",
+      "postcode": "3659",
+      "access": "IWA",
+      "lat": -37.097184,
+      "lon": 145.101075
+    },
+    {
+      "name": "Tatong",
+      "venue": "Tatong Memorial Hall",
+      "address": "8 Tiger Hill Road",
+      "suburb": "Tatong",
+      "postcode": "3673",
+      "access": "LNWA",
+      "lat": -36.730641,
+      "lon": 146.109035
+    },
+    {
+      "name": "Thoona",
+      "venue": "Thoona Memorial Hall",
+      "address": "47 Sargeant Street",
+      "suburb": "Thoona",
+      "postcode": "3726",
+      "access": "AWA",
+      "lat": -36.339886,
+      "lon": 146.077377
+    },
+    {
+      "name": "Tooborac",
+      "venue": "Tooborac Mechanics Institute Hall",
+      "address": "5185 Northern Highway, (next to Tooborac Primary School)",
+      "suburb": "Tooborac",
+      "postcode": "3522",
+      "access": "LNWA",
+      "lat": -37.038903,
+      "lon": 144.798618
+    },
+    {
+      "name": "Violet Town",
+      "venue": "Violet Town Community Complex",
+      "address": "35 Cowslip Street",
+      "suburb": "Violet Town",
+      "postcode": "3669",
+      "access": "IWA",
+      "lat": -36.637002,
+      "lon": 145.717429
+    },
+    {
+      "name": "Wandong North",
+      "venue": "Wandong Public Hall",
+      "address": "19 Rail Street",
+      "suburb": "Wandong",
+      "postcode": "3758",
+      "access": "AWA",
+      "lat": -37.356459,
+      "lon": 145.027459,
+      "joint": true
+    }
+  ]
+}

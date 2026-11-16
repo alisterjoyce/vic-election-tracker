@@ -1,0 +1,246 @@
+{
+  "district": "northcote",
+  "name": "Northcote",
+  "early": [
+    {
+      "name": "Kew - EVC 1",
+      "venue": "Guide Dogs Victoria (EVC)",
+      "address": "2 Chandler Highway",
+      "suburb": "Kew",
+      "postcode": "3101",
+      "access": "IWA",
+      "lat": -37.789533,
+      "lon": 145.026727,
+      "joint": true,
+      "host": "kew"
+    },
+    {
+      "name": "Northcote - EVC 1",
+      "venue": "The Salvation Army Thornbury Church (EVC)",
+      "address": "704-710 High Street",
+      "suburb": "Thornbury",
+      "postcode": "3071",
+      "access": "LNWA",
+      "lat": -37.75783,
+      "lon": 145.000841
+    },
+    {
+      "name": "Northcote - EVC 2",
+      "venue": "Span Community House (EVC)",
+      "address": "64 Clyde Street",
+      "suburb": "Thornbury",
+      "postcode": "3071",
+      "access": "AWA",
+      "lat": -37.761844,
+      "lon": 145.013657
+    },
+    {
+      "name": "Northcote - EVC 3",
+      "venue": "Separation Street Voting Centre (EVC)",
+      "address": "Unit 22/5 Separation Street",
+      "suburb": "Northcote",
+      "postcode": "3070",
+      "access": "AWA",
+      "lat": -37.769353,
+      "lon": 144.99987
+    },
+    {
+      "name": "Preston - EVC 1",
+      "venue": "Bridge Darebin Preston (EVC)",
+      "address": "Front Hall, 220 High Street",
+      "suburb": "Preston",
+      "postcode": "3072",
+      "access": "IWA",
+      "lat": -37.744125,
+      "lon": 145.003119,
+      "joint": true,
+      "host": "preston"
+    }
+  ],
+  "election_day": [
+    {
+      "name": "Alphington",
+      "venue": "Alphington Primary School",
+      "address": "26 Yarralea Street, (access via Adams Street)",
+      "suburb": "Alphington",
+      "postcode": "3078",
+      "access": "LNWA",
+      "lat": -37.783187,
+      "lon": 145.03274
+    },
+    {
+      "name": "Alphington North",
+      "venue": "Alfred Nuttall Kindergarten",
+      "address": "34 Separation Street",
+      "suburb": "Fairfield",
+      "postcode": "3078",
+      "access": "AWA",
+      "lat": -37.771957,
+      "lon": 145.022236
+    },
+    {
+      "name": "Bell",
+      "venue": "Bell Primary School",
+      "address": "78A Oakover Road, (access via Scotia Street)",
+      "suburb": "Preston",
+      "postcode": "3072",
+      "access": "AWA",
+      "lat": -37.747066,
+      "lon": 144.99101
+    },
+    {
+      "name": "Brunswick East",
+      "venue": "Brunswick East Primary School",
+      "address": "195A Stewart Street",
+      "suburb": "Brunswick East",
+      "postcode": "3057",
+      "access": "AWA",
+      "lat": -37.765259,
+      "lon": 144.979352,
+      "joint": true
+    },
+    {
+      "name": "Darebin Parklands",
+      "venue": "Thornbury High School",
+      "address": "238 Collins Street",
+      "suburb": "Thornbury",
+      "postcode": "3071",
+      "access": "IWA",
+      "lat": -37.756702,
+      "lon": 145.025126
+    },
+    {
+      "name": "Fairfield",
+      "venue": "Fairfield Primary School",
+      "address": "5 Langridge Street, (access via Fairfield Road)",
+      "suburb": "Fairfield",
+      "postcode": "3078",
+      "access": "AWA",
+      "lat": -37.778238,
+      "lon": 145.01994
+    },
+    {
+      "name": "Merri Creek",
+      "venue": "Merri Creek Primary School",
+      "address": "175 Miller Street, (access via Ida Street)",
+      "suburb": "Fitzroy North",
+      "postcode": "3068",
+      "access": "AWA",
+      "lat": -37.776939,
+      "lon": 144.987217,
+      "joint": true
+    },
+    {
+      "name": "Northcote",
+      "venue": "Separation Street Voting Centre",
+      "address": "Unit 22/5 Separation Street",
+      "suburb": "Northcote",
+      "postcode": "3070",
+      "access": "AWA",
+      "lat": -37.769355,
+      "lon": 144.999889
+    },
+    {
+      "name": "Northcote North",
+      "venue": "Northcote Baptist Church Hall",
+      "address": "542 High Street",
+      "suburb": "Northcote",
+      "postcode": "3070",
+      "access": "LNWA",
+      "lat": -37.76371,
+      "lon": 144.99988
+    },
+    {
+      "name": "Northcote South",
+      "venue": "Westgarth Primary School",
+      "address": "311-351 Clarke Street",
+      "suburb": "Northcote",
+      "postcode": "3070",
+      "access": "AWA",
+      "lat": -37.777585,
+      "lon": 145.006399
+    },
+    {
+      "name": "Preston South",
+      "venue": "Bridge Darebin Preston",
+      "address": "Front Hall, 220 High Street",
+      "suburb": "Preston",
+      "postcode": "3072",
+      "access": "IWA",
+      "lat": -37.744118,
+      "lon": 145.003112,
+      "joint": true
+    },
+    {
+      "name": "Thornbury",
+      "venue": "5th Northcote Scout Hall",
+      "address": "5 Ethel Street",
+      "suburb": "Thornbury",
+      "postcode": "3071",
+      "access": "LNWA",
+      "lat": -37.754234,
+      "lon": 144.99914
+    },
+    {
+      "name": "Thornbury Central",
+      "venue": "The Salvation Army Thornbury Church",
+      "address": "704-710 High Street",
+      "suburb": "Thornbury",
+      "postcode": "3071",
+      "access": "LNWA",
+      "lat": -37.757835,
+      "lon": 145.000828
+    },
+    {
+      "name": "Thornbury East",
+      "venue": "Penders Grove Primary School",
+      "address": "370 Victoria Road",
+      "suburb": "Thornbury",
+      "postcode": "3071",
+      "access": "AWA",
+      "lat": -37.7545,
+      "lon": 145.014099
+    },
+    {
+      "name": "Thornbury South",
+      "venue": "Wales Street Primary School",
+      "address": "49 Wales Street, (access via Speight Street)",
+      "suburb": "Thornbury",
+      "postcode": "3071",
+      "access": "AWA",
+      "lat": -37.762121,
+      "lon": 145.008192
+    },
+    {
+      "name": "Thornbury South-East",
+      "venue": "Span Community House",
+      "address": "64 Clyde Street",
+      "suburb": "Thornbury",
+      "postcode": "3071",
+      "access": "AWA",
+      "lat": -37.761835,
+      "lon": 145.01365
+    },
+    {
+      "name": "Westgarth",
+      "venue": "All Saints Parish Hall",
+      "address": "14-16 High Street",
+      "suburb": "Northcote",
+      "postcode": "3070",
+      "access": "AWA",
+      "lat": -37.783488,
+      "lon": 144.996561
+    },
+    {
+      "name": "Wurundjeri",
+      "venue": "Guide Dogs Victoria",
+      "address": "2 Chandler Highway",
+      "suburb": "Kew",
+      "postcode": "3101",
+      "access": "IWA",
+      "lat": -37.789537,
+      "lon": 145.02672,
+      "joint": true
+    }
+  ]
+}
