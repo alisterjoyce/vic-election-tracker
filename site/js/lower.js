@@ -121,13 +121,22 @@
       : App.PARTIES[code] ? partyBadge(code) : escapeHtml(code));
     if (seatOdds && (seatOdds.favourite || seatOdds.joint_favourites || (seatOdds.options || []).length)) {
       const date = seatOdds.date_checked || odds.date_checked;
-      let head;
-      if (seatOdds.favourite) head = `${favLabel(seatOdds.favourite, seatOdds.favourite_candidate)} ${price(seatOdds.price)}`;
-      else if (seatOdds.joint_favourites) head = `${seatOdds.joint_favourites.map((p) => favLabel(p)).join(" / ")} ${price(seatOdds.price)} <span class="muted small">(joint favourites)</span>`;
-      else head = '<span class="muted">favourite not visible (partial market)</span>';
-      const market = (seatOdds.options || []).map((o) => `${escapeHtml(o.label)} ${price(o.price)}`).join(" · ");
+      const favText = (row) => (row.favourite ? `${favLabel(row.favourite, row.favourite_candidate)} ${price(row.price)}`
+        : row.joint_favourites ? `${row.joint_favourites.map((p) => favLabel(p)).join(" / ")} ${price(row.price)} <span class="muted small">(joint favourites)</span>`
+        : null);
+      const head = favText(seatOdds) || '<span class="muted">favourite not visible (partial market)</span>';
+      // The previous check (seat_odds.json → history, newest first): each option's earlier price in brackets.
+      const prev = (seatOdds.history || [])[0] || null;
+      const optKey = (o) => `${o.party || "any"}|${o.candidate || ""}`;
+      const before = new Map(((prev && prev.options) || []).map((o) => [optKey(o), o.price]));
+      const was = (o) => { const p = before.get(optKey(o)); return p != null && p !== o.price ? ` (${price(p)})` : ""; };
+      const market = (seatOdds.options || []).map((o) => `${escapeHtml(o.label)} ${price(o.price)}${was(o)}`).join(" · ");
+      const favKey = (row) => (row.favourite ? `${row.favourite}|${row.favourite_candidate || ""}` : (row.joint_favourites || []).join("/"));
+      const prevFav = prev && favText(prev);
+      const moveNote = prev ? `<div class="muted small">In brackets: the price on ${escapeHtml(fmtDate(prev.date_checked))}, where it has moved.${
+        prevFav && favKey(prev) !== favKey(seatOdds) ? ` The favourite then: ${prevFav}.` : ""} A shorter price means a better chance in the bookmaker's view.</div>` : "";
       oddsCell = `${head} <span class="muted small">${escapeHtml(odds.source || "")}${date ? `, as at ${escapeHtml(fmtDate(date))}` : ""}</span>
-        ${market ? `<div class="muted small">${market}${seatOdds.more_options_hidden ? " · more options not shown" : ""}</div>` : ""}`;
+        ${market ? `<div class="muted small">${market}${seatOdds.more_options_hidden ? " · more options not shown" : ""}</div>` : ""}${moveNote}`;
     } else {
       oddsCell = '<span class="muted">not recorded</span>';
     }
