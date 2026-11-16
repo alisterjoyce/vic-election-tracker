@@ -374,5 +374,40 @@
     };
   }
 
-  App.ShareCard = { drawCandidate, mount, shareButton, seatCard, homeCard, W, H };
+  /* Your ballot (ballot.html): the district's Assembly paper in ballot order, and a line on its Council paper.
+     district: districts.json row; entry, regionEntry: vec_nominations.json → districts[id], regions[id] */
+  function ballotCard({ district, entry, regionEntry }) {
+    const drawn = !!entry.ballot_drawn;
+    const cands = entry.candidates.slice().sort((a, b) => (drawn ? a.ballot_position - b.ballot_position : (a.nominated || 0) - (b.nominated || 0)));
+    const n = cands.length;
+    // Two columns, filled down then across; a long paper gets a smaller type size so it still fits.
+    const perCol = Math.ceil(n / 2);
+    const size = perCol <= 6 ? 1 : perCol <= 8 ? 0.8 : 0.66;
+    const name = (c) => {
+      const b = String(c.ballot_name || c.name), i = b.indexOf(",");
+      return i < 0 ? `<b>${escapeHtml(b)}</b>` : `<b>${escapeHtml(b.slice(0, i))}</b>, ${escapeHtml(b.slice(i + 1).trim())}`;
+    };
+    const lc = regionEntry ? `${escapeHtml(regionEntry.name)} Region: ${regionEntry.candidates.length} candidates${regionEntry.ballot_drawn
+      ? ` in ${(regionEntry.groups || []).length} groups` : ""}. Number at least 1 box above the line, or at least 5 below it.` : "";
+    return {
+      accent: "--accent",
+      filename: `ballot-${district.id}-${App.melbourneToday()}.png`,
+      title: `Your ballot: ${district.name}, Vic Election 2026`,
+      url: new URL(`ballot.html#${district.id}`, App.ROOT).href,
+      inner: `
+        <div class="hc-body">
+          <div class="hc-kicker">2026 Victorian state election · Your ballot</div>
+          <div class="hc-title hc-title-sm">${escapeHtml(district.name)} District: Legislative Assembly</div>
+          <div class="hc-ballot-instr">${drawn ? `Number every box from 1 to ${n} in the order of your choice` : "Ballot order not yet published: candidates in nominating order"}</div>
+          <ol class="hc-ballot" style="--hc-rows:${perCol};font-size:${(26 * size).toFixed(1)}px">${cands.map((c) => `
+            <li style="--party-color: var(${App.partyVar(c.party)})"><span class="hc-box"></span><span class="hc-bname"><span>${name(c)}</span>
+              <span class="hc-bparty">${escapeHtml(c.party_label || "Independent")}</span></span></li>`).join("")}</ol>
+          ${lc ? `<div class="hc-sub"><b>Legislative Council</b>, ${lc}</div>` : ""}
+        </div>
+        <div class="hc-foot"><strong>Vic Election 2026</strong><span>${escapeHtml(siteLink(`ballot.html#${district.id}`))}</span>
+          <span>Ballot order: VEC · ${escapeHtml(today())}</span></div>`,
+    };
+  }
+
+  App.ShareCard = { drawCandidate, mount, shareButton, seatCard, homeCard, ballotCard, W, H };
 })();

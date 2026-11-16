@@ -674,7 +674,8 @@
     const dName = Object.fromEntries(districts.map((d) => [d.id, d.name]));
     const rName = Object.fromEntries(regions.map((r) => [r.id, r.name]));
     const items = [];
-    districts.forEach((d) => items.push({ type: "District", label: d.name, sub: rName[d.region] || "", href: `lower.html#${d.id}`, key: norm(d.name), rank: 0 }));
+    districts.forEach((d) => items.push({ type: "District", label: d.name, sub: rName[d.region] || "", href: `lower.html#${d.id}`, key: norm(d.name), rank: 0,
+      district: [d.id, d.name] }));
     regions.forEach((r) => items.push({ type: "Region", label: r.name, sub: "Legislative Council region", href: `upper.html#${r.id}`, key: norm(r.name), rank: 0 }));
     buildPeople(cd, rd, dd).forEach((p) => {
       if (p.status === "withdrawn" && !p.mlc) return;
@@ -686,13 +687,13 @@
     ((ld && ld.localities) || []).forEach((l) => {
       l.d.forEach(([id, share]) => items.push({
         type: "Suburb", label: `${l.n}${l.p.length ? " " + l.p.join(", ") : ""}`, sub: `${dName[id] || id}${shareText(share)}`,
-        href: `lower.html#${id}`, key: norm(l.n), postcodes: l.p, rank: 1, share,
+        href: `lower.html#${id}`, key: norm(l.n), postcodes: l.p, rank: 1, share, district: [id, dName[id] || id],
       }));
     });
     ((ld && ld.postcodes) || []).forEach((p) => {
       p.d.forEach(([id, share]) => items.push({
         type: "Postcode", label: p.p, sub: `${dName[id] || id}${shareText(share)}`, href: `lower.html#${id}`,
-        key: p.p, postcodes: [p.p], rank: 0, share,
+        key: p.p, postcodes: [p.p], rank: 0, share, district: [id, dName[id] || id],
       }));
     });
     searchIndex = items;
@@ -727,7 +728,7 @@
   const NAV = [
     { label: "Overview", items: [["Home", "index.html"], ["Results", "results.html"], ["Map", "index.html#state-map"], ["Pendulum", "pendulum.html"],
       ["Scenarios", "pendulum.html#scenarios"], ["Timeline", "timeline.html"]] },
-    { label: "Lower house", items: [["Seats", "lower.html"], ["Candidates", "candidate.html"], ["My seats", "myseats.html"]] },
+    { label: "Lower house", items: [["Seats", "lower.html"], ["Your ballot", "ballot.html"], ["Candidates", "candidate.html"], ["My seats", "myseats.html"]] },
     { label: "Upper house", items: [["Regions", "upper.html"], ["Quota calculator", "upper.html#quota"]] },
     { label: "About", items: [["Methodology", "about.html"], ["Data", "data/"], ["Polls", "poll.html"], ["Policies", "policies.html"]] },
   ];
@@ -928,6 +929,7 @@
   // Result groups, in the order the dropdown shows them, with how many of each to show.
   const SEARCH_GROUPS = [
     { name: "Seats", types: ["District", "Region"], max: 6 },
+    { name: "Your ballot", types: ["Ballot"], max: 2 },
     { name: "Candidates", types: ["Candidate", "MLC"], max: 8 },
     { name: "Suburbs", types: ["Suburb"], max: 8 },
     { name: "Postcodes", types: ["Postcode"], max: 8 },
@@ -1021,7 +1023,14 @@
       }
     };
     // The scored matches, grouped (Seats, Candidates, Suburbs, Postcodes) so the arrow keys follow the list's order.
-    const grouped = (matches) => SEARCH_GROUPS.flatMap((g) => matches.filter((it) => g.types.includes(it.type)).slice(0, g.max));
+    // "Your ballot" (ballot.html) for the first two districts the matches point to: a district, suburb or postcode.
+    const withBallots = (matches) => {
+      const seen = new Map();
+      matches.forEach((it) => { if (it.district && !seen.has(it.district[0])) seen.set(it.district[0], it.district[1]); });
+      return matches.concat([...seen].slice(0, 2).map(([id, name]) => ({ type: "Ballot", label: `Your ballot: ${name}`,
+        sub: "Both ballot papers and how-to-vote cards", href: `ballot.html#${id}` })));
+    };
+    const grouped = (matches) => SEARCH_GROUPS.flatMap((g) => withBallots(matches).filter((it) => g.types.includes(it.type)).slice(0, g.max));
 
     input.addEventListener("focus", () => { buildSearchIndex(); }, { once: true });
     input.addEventListener("input", async () => {

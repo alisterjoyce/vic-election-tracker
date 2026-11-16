@@ -952,6 +952,14 @@ html.js .agg-table { min-height: 257px; }
 .hc-value i { width: 18px; height: 18px; border-radius: 50%; display: inline-block; }
 .hc-sub { font-size: 18px; color: var(--muted); }
 .hc-people { display: flex; gap: 26px; }
+.hc-title-sm { font-size: 44px; }
+.hc-ballot-instr { font-size: 22px; font-weight: 600; border: 2px solid var(--text); border-radius: 6px; padding: 6px 12px; align-self: flex-start; }
+.hc-ballot { list-style: none; margin: 4px 0 0; padding: 0; display: grid; grid-auto-flow: column; grid-template-rows: repeat(var(--hc-rows), auto); grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.45em 36px; min-height: 0; }
+.hc-ballot li { display: flex; align-items: center; gap: 0.6em; line-height: 1.1; }
+.hc-box { width: 1.25em; height: 1.25em; flex: none; border: 3px solid var(--text); border-radius: 3px; background: var(--bg); }
+.hc-bname { display: flex; align-items: baseline; gap: 0.5em; min-width: 0; white-space: nowrap; overflow: hidden; }
+.hc-bname > span:first-child { flex: none; }
+.hc-bparty { font-size: 0.66em; color: var(--muted); border-left: 4px solid var(--party-color); padding-left: 6px; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
 .hc-person { display: flex; flex-direction: column; align-items: center; gap: 4px; width: 170px; text-align: center; }
 .hc-name { font-size: 20px; font-weight: 600; line-height: 1.15; }
 .hc-party { font-size: 16px; color: var(--muted); }
@@ -1090,4 +1098,60 @@ html.has-hash #district-detail[hidden] { display: block; min-height: 2400px; }  
 @media (max-width: 640px) {
   .pol-table { min-width: 680px; }
   .pol-table thead th:first-child, .pol-table .pol-issue { width: 104px; }
+}
+
+/* ---------- Your ballot (ballot.html): mock-ups of both papers, how-to-vote cards, the VEC's formality rules ---------- */
+html.has-hash #yb-view:empty { min-height: 2400px; }   /* room for the papers before they render */
+.yb-pick p { margin: 8px 0 0; }
+.yb-actions { margin: 0 0 12px; }
+.yb-voters { margin: 0 0 16px; }
+.yb-house h3 { font-size: 1rem; margin: 0 0 6px; }
+.yb-grid { display: grid; gap: 16px 24px; grid-template-columns: minmax(0, 1fr); align-items: start; }
+@media (min-width: 900px) { .yb-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+.yb-paper { border: 1px solid var(--border); border-radius: 8px; background: var(--surface); padding: 14px 16px; max-width: 560px; }
+.yb-paper-kicker { margin: 0; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+.yb-paper-title { margin: 2px 0 6px; font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; line-height: 1.2; }
+.yb-paper-title span { display: block; font-weight: 600; font-size: 1rem; }
+.yb-paper-instr { margin: 0 0 8px; padding: 8px 10px; border: 2px solid var(--text); border-radius: 4px; font-weight: 600; font-size: 0.9rem; }
+.yb-box { width: 28px; height: 28px; flex: none; border: 2px solid var(--text); border-radius: 2px; background: var(--bg); }
+.yb-la-list { list-style: none; margin: 0; padding: 0; }
+.yb-la-list li { display: flex; align-items: center; gap: 12px; padding: 7px 0; min-height: 46px; border-top: 1px solid var(--border); }
+.yb-la-list li:first-child { border-top: 0; }
+.yb-htv-h { margin-top: 0 !important; }
+.yb-htv p { margin: 0 0 8px; }
+.yb-htv-table th[scope="row"] { font-weight: 400; text-align: left; }
+.yb-htv-table td.num { font-family: var(--font-display); font-weight: 700; }
+.yb-gl { display: inline-block; min-width: 1.4em; font-family: var(--font-display); font-weight: 800; }
+.yb-rules { margin-top: 16px; padding: 12px 14px; border-left: 4px solid var(--accent); background: var(--surface-2); border-radius: 0 8px 8px 0; }
+.yb-rules p, .yb-rules ul { margin: 0 0 6px; }
+.yb-rules ul { padding-left: 1.2em; }
+.yb-grid-lc .yb-rules { margin-top: 0; }
+.yb-lc-key { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 0 0 8px; color: var(--muted); }
+/* The Council paper is wide, like the real one: it scrolls sideways inside its frame, never the page. */
+.yb-lc-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); margin-bottom: 16px; }
+.yb-lc-scroll:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.yb-lc { padding: 10px; width: max-content; }
+.yb-lc-cols { display: flex; gap: 8px; align-items: stretch; }
+.yb-col { width: 150px; flex: none; display: flex; flex-direction: column; border-top: 4px solid var(--party-color, var(--p-oth)); }
+.yb-atl { display: grid; grid-template-columns: 28px 1fr; gap: 2px 8px; align-items: center; min-height: 92px; padding: 8px 4px 10px; border-bottom: 3px solid var(--text); align-content: start; }
+.yb-letter { font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; line-height: 1; }
+.yb-glabel { grid-column: 1 / -1; font-size: 0.8rem; font-weight: 600; line-height: 1.25; overflow-wrap: anywhere; }
+.yb-btl { list-style: none; margin: 0; padding: 6px 4px 0; display: flex; flex-direction: column; gap: 6px; }
+.yb-btl li { display: flex; gap: 8px; align-items: flex-start; font-size: 0.85rem; min-height: 44px; }
+.yb-btl .yb-box { width: 24px; height: 24px; }
+.yb-btl .bp-party { font-size: 0.75rem; }
+.yb-src { margin-top: 4px; }
+
+/* Print: the page's content in black on white, without the site's chrome (ballot.html in particular). */
+@media print {
+  :root:root:root { --bg: #fff; --surface: #fff; --surface-2: #f2f2f2; --text: #000; --muted: #333; --border: #999; --accent: #000; }
+  body { background: #fff; color: #000; }
+  .site-header, .key-dates, .site-footer, .yb-pick, .yb-actions, .sw-toast, .csv-bar, .nav-toggle { display: none !important; }
+  .card { box-shadow: none; border: 0; padding: 0; margin: 0 0 16px; }
+  .yb-house { break-inside: auto; }
+  .yb-lc-scroll { overflow: visible; border: 0; }
+  .yb-lc { width: auto; }
+  .yb-lc-cols { flex-wrap: wrap; }
+  .yb-col, .yb-la-list li, .yb-htv-table tr { break-inside: avoid; }
+  a { color: #000; text-decoration: none; }
 }

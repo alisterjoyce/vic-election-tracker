@@ -239,6 +239,7 @@
         <h2>${App.starButton(d.id, d.name)} ${escapeHtml(d.name)}</h2>
         <div class="card-actions">
           ${d.abc_url ? `<a class="icon-btn" href="${escapeHtml(d.abc_url)}" target="_blank" rel="noopener">ABC guide ↗</a>` : ""}
+          <a class="icon-btn" href="ballot.html#${escapeHtml(d.id)}">Your ballot</a>
           <button class="icon-btn" type="button" id="copy-link">Copy link</button>
           <button class="icon-btn" type="button" id="share-seat" title="Share or download a 1200x630 image of this seat">Share</button>
         </div>
