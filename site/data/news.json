@@ -8,7 +8,7 @@
       "sources": "Source -> {status: ok | error | skipped, url, items, message}"
     }
   },
-  "updated": "2026-11-15T23:39:10Z",
+  "updated": "2026-11-16T06:05:00Z",
   "statewide": [
     {
       "title": "Live: Stalking laws in focus, days from early voting in Victorian election",
@@ -27,6 +27,12 @@
       "outlet": "ABC News",
       "published": "2026-11-15T18:00:00Z",
       "url": "https://www.abc.net.au/news/2026-11-16/one-nation-victorian-election-where-is-pauline-hanson/107387414"
+    },
+    {
+      "title": "Victorian election: The state of play in your electorate",
+      "outlet": "Australian Financial Review",
+      "published": "2026-11-15T15:19:00Z",
+      "url": "https://www.afr.com/politics/victorian-election-the-state-of-play-in-your-electorate-20261116-p61ei8"
     },
     {
       "title": "US Democrats win final two Senate seats; Coalition likely to easily win Victorian election",
@@ -119,9 +125,9 @@
       "url": "https://starweekly.com.au/news/2026/11/13/v-line-service-boost-commitment/"
     },
     {
-      "title": "Live: Victorian election campaign rolls on as parties appeal to regions",
-      "outlet": "ABC News",
-      "published": "2026-11-12T23:05:07Z",
+      "title": "UN adviser criticises opposition plan to scrap Victoria's Treaty - as it happened",
+      "outlet": "ABC (Australian Broadcasting Corporation)",
+      "published": "2026-11-13T02:05:00Z",
       "url": "https://www.abc.net.au/news/2026-11-13/victoria-election-campaign-live-blog-november-13/107381434"
     },
     {
@@ -153,12 +159,6 @@
       "outlet": "The Age",
       "published": "2026-11-12T09:52:00Z",
       "url": "https://www.theage.com.au/politics/victoria/i-am-hungry-pesutto-tipped-for-frontbench-return-20261109-p61cc9.html"
-    },
-    {
-      "title": "Meet Jess Wilson’s father",
-      "outlet": "victoriannews",
-      "published": "2026-11-12T08:28:00Z",
-      "url": "https://www.victoriannews.com.au/politics/state-politics-victoria/meet-jess-wilsons-father/"
     }
   ],
   "seats": {
@@ -216,6 +216,12 @@
     ],
     "benambra": [
       {
+        "title": "'It will be devastating': cost-of-living pressures increase pet surrenders",
+        "outlet": "Border Mail",
+        "published": "2026-11-16T05:00:00Z",
+        "url": "https://www.bordermail.com.au/story/9392366/liberals-promise-desexing-program-for-wodonga-dog-rescue/?src=rss"
+      },
+      {
         "title": "Wilson guarantees $177 million for Benambra as preference deals heat up",
         "outlet": "Border Mail",
         "published": "2026-11-13T07:00:00Z",
@@ -268,12 +274,6 @@
         "outlet": "Border Mail",
         "published": "2026-11-02T06:00:00Z",
         "url": "https://www.bordermail.com.au/story/9384009/labors-euroa-candidate-julian-kelly-rejects-extra-train-runs/?src=rss"
-      },
-      {
-        "title": "Why MP Bill Tilley is leaving Parliament without delivering a farewell speech",
-        "outlet": "The Border Mail",
-        "published": "2026-09-07T13:00:00Z",
-        "url": "https://www.bordermail.com.au/story/9344985/why-benambra-mp-bill-tilley-will-not-give-a-farewell-speech/"
       }
     ],
     "bendigo-east": [
@@ -302,16 +302,16 @@
         "url": "https://www.msn.com/en-au/news/other/rebuke-for-one-nation-over-cartoon-depicting-ex-victorian-premier-jacinta-allan-as-a-witch/ar-AA2gsGgX"
       },
       {
-        "title": "Former Victorian premier Jacinta Allan quits politics weeks after being forced from top job",
-        "outlet": "The Australian",
-        "published": "2026-08-14T11:14:00Z",
-        "url": "https://www.theaustralian.com.au/nation/politics/former-victorian-premier-jacinta-allan-quits-politics-weeks-after-being-forced-from-top-job/news-story/a2689e3760bb75c47c9793638634161d"
-      },
-      {
         "title": "Jacinta Allan will not recontest the November election in Bendigo East",
         "outlet": "Adelaide Now",
         "published": "2026-08-14T11:14:00Z",
         "url": "https://www.adelaidenow.com.au/news/victoria/jacinta-allan-will-not-recontest-the-next-election-for-bendigo/news-story/1ec4f44c52023ea1a71b82b25f982dda"
+      },
+      {
+        "title": "Former Victorian premier Jacinta Allan quits politics weeks after being forced from top job",
+        "outlet": "The Australian",
+        "published": "2026-08-14T11:14:00Z",
+        "url": "https://www.theaustralian.com.au/nation/politics/former-victorian-premier-jacinta-allan-quits-politics-weeks-after-being-forced-from-top-job/news-story/a2689e3760bb75c47c9793638634161d"
       },
       {
         "title": "Jacinta Allan’s phantom act as Labor colleagues tip imminent resignation",
@@ -935,9 +935,9 @@
         "url": "https://www.theaustralian.com.au/nation/victoria/jess-wilson-targets-key-marginal-seat-of-south-barwon-in-state-election-push/news-story/67dafdc7fab4a561f08af351c1015b0f"
       },
       {
-        "title": "Live: Victorian election campaign rolls on as parties appeal to regions",
-        "outlet": "ABC News",
-        "published": "2026-11-12T23:05:07Z",
+        "title": "UN adviser criticises opposition plan to scrap Victoria's Treaty - as it happened",
+        "outlet": "ABC (Australian Broadcasting Corporation)",
+        "published": "2026-11-13T02:05:00Z",
         "url": "https://www.abc.net.au/news/2026-11-13/victoria-election-campaign-live-blog-november-13/107381434"
       },
       {
@@ -1072,6 +1072,12 @@
         "url": "https://www.abc.net.au/news/2026-11-16/regional-healthcare-in-crisis-victoria-election/107308520"
       },
       {
+        "title": "Victorian Greens leader Ellen Sandell never raised 2018 school Google safety warnings in Parliament ahead of 2026 student data breach",
+        "outlet": "onenewsaustralia.com",
+        "published": "2026-11-15T16:00:00Z",
+        "url": "https://www.onenewsaustralia.com/victorian-greens-leader-ellen-sandell-never-raised-2018-school-google-safety-warnings-in-parliament-ahead-of-2026-student-data-breach/"
+      },
+      {
         "title": "eXtreme just misses finals",
         "outlet": "Star Weekly",
         "published": "2026-11-14T13:31:00Z",
@@ -1112,12 +1118,6 @@
         "outlet": "ABC News",
         "published": "2026-11-08T02:03:22Z",
         "url": "https://www.abc.net.au/news/2026-11-08/delivery-driver-death-jianming-feng/107360706"
-      },
-      {
-        "title": "Labor allegedly used threats and inflated costs to dictate Airport Rail Link",
-        "outlet": "ABC News",
-        "published": "2026-11-02T01:29:59Z",
-        "url": "https://www.abc.net.au/news/2026-11-02/melbourne-airport-rail-link-royal-commission/107335408"
       }
     ],
     "melton": [
