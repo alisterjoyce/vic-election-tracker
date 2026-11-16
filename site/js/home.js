@@ -500,9 +500,8 @@
     initMeasureToggle();
     initFindSeat();
     try {
-      const [meta, districtData, regionData, pollData, odds, aggs] = await Promise.all([
+      const [meta, districtData, regionData, pollData, odds] = await Promise.all([
         loadJSON("meta"), loadJSON("districts"), loadJSON("regions"), loadJSON("polls"), loadJSON("seat_odds").catch(() => null),
-        loadJSON("poll_aggregates").catch(() => null),   // small (about 1 KB compressed): drawn with the card, so nothing moves
       ]);
       renderCountdown(meta);
       renderNominations(meta);
@@ -511,7 +510,8 @@
           `<time datetime="${escapeHtml(meta.last_updated)}">${escapeHtml(App.dataUpdatedText(meta.last_updated))}</time>`;
       }
       renderHero(meta, districtData.districts, pollData, odds);
-      renderAggregates(aggs);
+      // The other aggregates' line has its height reserved (style.css), so it can wait until the card has painted.
+      App.afterPaint(() => loadJSON("poll_aggregates")).then(renderAggregates, () => {});
       // seat_models.json is the biggest of these (about 20 KB gzipped): fetched once the card has painted. Its space is reserved.
       App.afterPaint(() => loadJSON("seat_models")).then(renderModels, () => {
         document.getElementById("hero-models").innerHTML = '<p class="empty">Models failed to load.</p>';

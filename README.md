@@ -4,7 +4,7 @@ A static tracker for the 2026 Victorian state election (polling day Saturday 28 
 
 **Live site: https://alisterjoyce.github.io/vic-election-tracker/**
 
-- **Home** (`index.html`): a headline card first: the poll-of-polls 2PP and its move over the last fortnight, an 88-seat projection bar at the pendulum's uniform swing, a bar of Sportsbet favourites by party (ties and partial markets count as undecided), each with the 45-seat majority line, and the countdown. Then a map of all 88 districts (Leaflet), coloured by holder, margin band, Sportsbet favourite or (from 28 Nov) result, with a Regions view for the upper house, a party legend and a "Find my seat" button (browser location, asked for once and not stored). Desktop shows the state with a Melbourne inset; phones open on greater Melbourne with a "Show all Victoria" toggle. Below the map: the ten closest seats in the betting (favourite under 2.00) and the five latest statewide headlines, then seat counts, a poll-of-polls chart (Chart.js 4.4.1 from cdnjs) and the latest polls.
+- **Home** (`index.html`): a headline card first: the poll-of-polls 2PP and its move over the last fortnight, a line with the other aggregates (BludgerTrack, Ace Strategies, electiontracker.au) linked to the Polls page's comparison, an 88-seat projection bar at the pendulum's uniform swing, a bar of Sportsbet favourites by party (ties and partial markets count as undecided), each with the 45-seat majority line, and the countdown. Then a map of all 88 districts (Leaflet), coloured by holder, margin band, Sportsbet favourite or (from 28 Nov) result, with a Regions view for the upper house, a party legend and a "Find my seat" button (browser location, asked for once and not stored). Desktop shows the state with a Melbourne inset; phones open on greater Melbourne with a "Show all Victoria" toggle. Below the map: the ten closest seats in the betting (favourite under 2.00) and the five latest statewide headlines, then seat counts, a poll-of-polls chart (Chart.js 4.4.1 from cdnjs), the early and postal votes chart and the latest polls.
 - **Lower house** (`lower.html`): filter districts by region and metro/regional, then pick one to see its sitting MP, margin and candidates with status badges.
 - **Seat outlook** (on each district page, under the margin cards):
   - **Swing-adjusted margin:** the current poll-of-polls statewide 2PP swing since 2022 (`meta.json` → `previous_election`), applied uniformly to the seat margin. Shown only for Labor-v-Coalition contests.
@@ -16,6 +16,11 @@ A static tracker for the 2026 Victorian state election (polling day Saturday 28 
 - **Pendulum** (`pendulum.html`): all 88 seats on a two-sided ladder by notional margin, with a swing slider (−10 to +15, starting at the poll-of-polls swing) that recolours seats that fall and counts seats against the 45-seat majority line. Only Labor-v-Coalition contests swing. Below it, three scenarios (Coalition majority, Coalition relying on One Nation, Labor-Greens minority), each with the swing and 2PP range it needs, the seats that must fall and which current polls support it, recomputed from `polls.json` and `seat_odds.json` on every load.
 - **Timeline** (`timeline.html`): the 2022-2026 term from `timeline.json`: by-elections with results, leadership changes, retirements, defections, the end of group voting tickets and the election timetable, each with a date, one line and a source, filterable by type, with a "today" marker.
 - **Preferences:** each seat and region page shows its registered how-to-vote cards (`htv.json`) and flags the Liberal card in Labor-v-Greens seats and One Nation's card; the lower-house page has a statewide "Preference watch". Until registration opens on 10 Nov they read "not yet registered".
+- **Your ballot** (`ballot.html#melton`): mock-ups of a district's two ballot papers in the VEC's ballot order (the Assembly paper, and the region's Council paper with groups above the line and candidates below), every registered how-to-vote card's order beside them (labelled as that party's or candidate's recommendation), and the VEC's rules for a formal vote. Printable, and shareable as an image. Reached from a "Your ballot" button on each seat page and from search results.
+- **Where to vote** (each seat page): the district's early voting centres and election-day voting centres from the VEC, with address and wheelchair access, pinned on the voting-centre map.
+- **Early and postal votes:** a home-page chart of the running totals the VEC publishes, against 2022; each seat page shows its district's figures as a share of enrolment once the VEC publishes them by district; on election night each seat shows how many of those votes are still to be counted.
+- **Compare candidates** (each seat page): the candidates side by side in ballot order: party, occupation, prior roles and stated priorities from their researched profiles.
+- **This week** (home page): a 1200x630 briefing image with the poll average, seat projection, the three seats whose model probability or Sportsbet price moved most in 7 days, and the next key date. The latest is always at `share/this-week.png`, redrawn at each refresh.
 - **Data downloads** (`data/`): each JSON file with its fields, credit and licence (CC BY 4.0 for this site's data; VEC, ABC, Wikipedia and Vicmap credited). Every table on the site has a "Download CSV" button.
 - **Share buttons:** each seat page and the home page make a 1200x630 image in the browser (seat: holder, margin, Sportsbet favourite, leading candidates; home: poll average and seat projection) and share it, or download it where sharing isn't available.
 - **News:** each seat page lists the latest 10 headlines that mention the district, its MP or a candidate, and the home page shows the five latest statewide, with an outlet filter (`news.json`). Headlines and links only. The Data page's "News sources" table shows each source's status and its headlines in the last 7 days.
@@ -35,9 +40,9 @@ A static tracker for the 2026 Victorian state election (polling day Saturday 28 
 
 ```
 site/                  # published by GitHub Pages
-  index.html, lower.html, upper.html, candidate.html, pendulum.html, poll.html, myseats.html, about.html
+  index.html, lower.html, upper.html, candidate.html, pendulum.html, poll.html, ballot.html, myseats.html, about.html
   css/style.css
-  js/common.js, home.js, lower.js, upper.js, candidate.js, sharecard.js
+  js/common.js, home.js, lower.js, upper.js, candidate.js, sharecard.js, ballot.js
   data/
     districts.json     # Legislative Assembly districts
     candidates.json    # lower-house candidates
@@ -48,6 +53,9 @@ site/                  # published by GitHub Pages
     seat_models.json   # MRP seat estimates (manual; YouGov Jun-Jul 2026, DemosAU slot)
     seat_odds.json     # Sportsbet seat markets: every option and price, favourite (manual; entered from 30 Oct 2026 screenshots)
     seat_polls.json    # single-seat polls (manual; empty until one is published)
+    seat_history.json  # a daily snapshot of each seat's model probabilities and prices, for the weekly card (refresh.py)
+    voting_centres/    # where to vote: <district>.json per district plus index.json (refresh.py via scripts/vec_voting.py, daily)
+    early_votes.json   # early and postal votes, enrolment, 2022 comparison (refresh.py via scripts/vec_voting.py)
     council_polls.json # upper-house primary vote by region (manual; seeds the quota calculator)
     timeline.json      # the term's events and the election timetable (manual)
     htv.json           # registered how-to-vote cards (refresh.py) and their preference orders (manual)
@@ -58,6 +66,7 @@ site/                  # published by GitHub Pages
     headshots.json     # candidate photos: files, source credit, licence note (scripts/build_headshots.py)
     profiles.json      # researched candidate profiles, a source for every fact (by hand; rules in CLAUDE.md)
     profiles/          # the same split by seat, <seat id>.json, plus index.json: what the candidate page loads (scripts/profiles_split.py)
+  share/this-week.png  # the weekly briefing image (scripts/build_share.py, each refresh)
   photos/320/, 160/    # candidate headshots (WebP)
   fonts/               # Archivo and Inter, self-hosted (SIL Open Font License; scripts/build_fonts.py)
   icons/               # app icons (scripts/build_icons.py)
@@ -71,6 +80,8 @@ scripts/build_headshots.py  # headshot zip -> WebP photos + headshots.json (by h
 scripts/build_fonts.py      # downloads, trims and subsets the web fonts into site/fonts/ (by hand; needs fonttools, brotli)
 scripts/build_icons.py      # draws the app icons into site/icons/ (by hand; needs Pillow)
 scripts/data_changed.py     # tells the refresh workflow whether the data really changed
+scripts/vec_voting.py       # the VEC's voting centres, early and postal votes, and enrolment (run by refresh.py)
+scripts/build_share.py      # draws share/this-week.png with the site's own sharecard.js in headless Chromium (refresh workflow)
 scripts/vec_feed.py    # converts the VEC election-night media feed to the same format; --selftest on the VEC samples
 CLAUDE.md              # project conventions: schemas, merge rules, design system, formats
 .github/workflows/refresh.yml

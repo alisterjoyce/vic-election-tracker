@@ -9,6 +9,7 @@
 
   const OURS = "This site, CC BY 4.0.";
   const WIKI = '<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>';
+  const VEC_CC = '<a href="https://www.vec.vic.gov.au/legal">© Victorian Electoral Commission</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>';
   const VICMAP = 'Vicmap Admin, © State of Victoria (Department of Energy, Environment and Climate Action), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.';
   const FILES = [
     ["districts.json", "88 Legislative Assembly districts: region, sitting MP, notional margin, classification, retiring", "District list and regions: Victorian Electoral Commission. Margins and classifications: ABC election guide."],
@@ -22,7 +23,14 @@
     ["seat_models.json", "Seat models: MRP calls, forecast win probabilities with first-preference ranges and 2CP scenarios per candidate, and a seat projection's totals",
       'YouGov for Common Threads (MRP). <a href="https://www.aeforecasts.com/forecast/2026vic/regular">Australian Election Forecasts (aeforecasts.com)</a>, refreshed four times a day; its numbers belong to that site, so credit it when reusing them. <a href="https://www.linkedin.com/posts/kosmos-samaras-80bb9978_what-the-latest-victorian-newspoll-numbers-activity-7520224020676386816-mTuv">RedBridge Group seat model</a> (26 Oct 2026, statewide totals).'],
     ["seat_odds.json", "Sportsbet seat markets: every option and price, favourite", "Sportsbet, prices as at the date in the file."],
+    ["seat_history.json", "A daily snapshot of each seat's forecast win probabilities and Sportsbet prices (35 days), for the weekly briefing's biggest seat moves",
+      'Australian Election Forecasts (aeforecasts.com) and Sportsbet, as in seat_models.json and seat_odds.json; credit them when reusing.'],
+    ["../share/this-week.png", "The weekly briefing image (1200x630): poll average, seat projection, biggest seat moves in 7 days, next key date. Redrawn at each refresh, always at this address", `${OURS} Figures as credited on the files above.`],
     ["seat_polls.json", "Single-seat polls", "Each pollster, as published."],
+    ["voting_centres/index.json", "Where to vote: every early and election-day voting centre per district, with position, address, wheelchair access and hours. One file per district alongside it (e.g. voting_centres/melton.json); the index has the standard hours and counts",
+      `${VEC_CC}: the VEC's <a href="https://www.vec.vic.gov.au/voting/2026-state-election/voting-locations">venues spreadsheet</a> and <a href="https://maps.vec.vic.gov.au/elections">venue locator</a>, read once a day.`],
+    ["early_votes.json", "Early votes and postal votes returned, statewide by day and by district where the VEC publishes them; enrolment per district at the close of roll; 2022's daily figures for comparison",
+      `${VEC_CC}, read at each refresh (2022: the VEC's daily table, via the <a href="http://web.archive.org/web/20221227113148/https://www.vec.vic.gov.au/voting/electoral-statistics/state-election-statistics">Wayback Machine</a>). Nothing is estimated.`],
     ["htv.json", "How-to-vote cards registered with the VEC, and their preference orders", "Victorian Electoral Commission register; each card belongs to whoever registered it."],
     ["timeline.json", "Events of the 2022-2026 term and the election timetable", `${OURS} Each entry links its source.`],
     ["news.json", "Headlines per seat and statewide: title, outlet, date, link", "Headlines belong to their publishers and aren't covered by this site's licence. Links only."],
