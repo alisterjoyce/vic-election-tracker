@@ -6,8 +6,2334 @@
       "entries": "[{date (Melbourne YYYY-MM-DD), at (ISO UTC), type, ...}] where type is one of: candidate_added {seat, name, party, status, source}; candidate_superseded {seat, name, party, by}; candidate_withdrawn {seat, name, party}; candidate_not_standing {seat, name, party}; poll_added {id, pollster, end_date, tpp (L/NP), primary}; odds_move {seat, label, party, from, to} (a price moving 0.5 or more); retirement {seat, name}; news {count} (new headlines collected)"
     }
   },
-  "updated": "2026-11-16T19:54:49Z",
+  "updated": "2026-11-16T22:09:27Z",
   "entries": [
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "albert-park",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 5.0,
+      "to": 3.6
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "albert-park",
+      "label": "Greens",
+      "party": "GRN",
+      "from": 3.75,
+      "to": 5.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "albert-park",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 12.0,
+      "to": 10.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "albert-park",
+      "label": "Any Other",
+      "party": null,
+      "from": 36.0,
+      "to": 31.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "ashwood",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 3.3,
+      "to": 5.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "ashwood",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 10.0,
+      "to": 11.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "ashwood",
+      "label": "Any Other",
+      "party": null,
+      "from": 26.0,
+      "to": 41.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "ashwood",
+      "label": "Greens",
+      "party": "GRN",
+      "from": 26.0,
+      "to": 51.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "bass",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 2.0,
+      "to": 1.28
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "bass",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 1.67,
+      "to": 3.25
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "bass",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 18.0,
+      "to": 26.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "bass",
+      "label": "Any Other",
+      "party": null,
+      "from": 26.0,
+      "to": 34.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "bayswater",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 6.0,
+      "to": 8.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "bayswater",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 7.5,
+      "to": 11.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "bellarine",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 2.5,
+      "to": 1.91
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "bellarine",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 4.0,
+      "to": 5.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "bellarine",
+      "label": "Any Other",
+      "party": null,
+      "from": 18.0,
+      "to": 34.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "benambra",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 1.72,
+      "to": 1.22
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "benambra",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 2.2,
+      "to": 4.2
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "benambra",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 34.0,
+      "to": 51.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "benambra",
+      "label": "Any Other",
+      "party": null,
+      "from": 6.5,
+      "to": 10.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "bendigo-east",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 2.62,
+      "to": 3.6
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "bendigo-east",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 13.0,
+      "to": 16.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "bendigo-east",
+      "label": "Any Other",
+      "party": null,
+      "from": 31.0,
+      "to": 36.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "bendigo-west",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 2.0,
+      "to": 2.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "bendigo-west",
+      "label": "Nationals",
+      "party": "NAT",
+      "from": 6.0,
+      "to": 3.75
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "bendigo-west",
+      "label": "Any Other",
+      "party": null,
+      "from": 34.0,
+      "to": 51.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "bendigo-west",
+      "label": "Greens",
+      "party": "GRN",
+      "from": 41.0,
+      "to": 51.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "bentleigh",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 2.25,
+      "to": 3.6
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "bentleigh",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 11.0,
+      "to": 15.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "bentleigh",
+      "label": "Any Other",
+      "party": null,
+      "from": 23.0,
+      "to": 41.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "berwick",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 8.5,
+      "to": 21.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "berwick",
+      "label": "Any Other",
+      "party": null,
+      "from": 34.0,
+      "to": 46.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "box-hill",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 3.0,
+      "to": 4.33
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "box-hill",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 12.0,
+      "to": 15.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "box-hill",
+      "label": "Any Other",
+      "party": null,
+      "from": 18.0,
+      "to": 31.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "brighton",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 21.0,
+      "to": 31.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "brighton",
+      "label": "Greens",
+      "party": "GRN",
+      "from": 26.0,
+      "to": 46.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "brighton",
+      "label": "Any Other",
+      "party": null,
+      "from": 23.0,
+      "to": 34.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "broadmeadows",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 6.0,
+      "to": 7.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "broadmeadows",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 12.0,
+      "to": 15.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "brunswick",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 4.33,
+      "to": 5.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "bulleen",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 8.5,
+      "to": 15.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "bulleen",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 13.0,
+      "to": 21.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "bulleen",
+      "label": "Any Other",
+      "party": null,
+      "from": 26.0,
+      "to": 41.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "carrum",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 3.5,
+      "to": 2.2
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "carrum",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 2.4,
+      "to": 4.2
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "carrum",
+      "label": "Any Other",
+      "party": null,
+      "from": 34.0,
+      "to": 41.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "caulfield",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 10.0,
+      "to": 12.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "caulfield",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 12.0,
+      "to": 21.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "caulfield",
+      "label": "Greens",
+      "party": "GRN",
+      "from": 34.0,
+      "to": 36.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "caulfield",
+      "label": "Any Other",
+      "party": null,
+      "from": 31.0,
+      "to": 36.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "clarinda",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 5.0,
+      "to": 6.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "clarinda",
+      "label": "Any Other",
+      "party": null,
+      "from": 26.0,
+      "to": 23.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "cranbourne",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 5.0,
+      "to": 4.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "croydon",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 4.33,
+      "to": 6.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "croydon",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 8.0,
+      "to": 12.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "croydon",
+      "label": "Any Other",
+      "party": null,
+      "from": 34.0,
+      "to": 41.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "eildon",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 3.25,
+      "to": 4.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "eildon",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 21.0,
+      "to": 26.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "eildon",
+      "label": "Any Other",
+      "party": null,
+      "from": 21.0,
+      "to": 26.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "eltham",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 6.5,
+      "to": 8.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "eltham",
+      "label": "Greens",
+      "party": "GRN",
+      "from": 34.0,
+      "to": 46.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "eltham",
+      "label": "Any Other",
+      "party": null,
+      "from": 34.0,
+      "to": 46.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "essendon",
+      "label": "Independent (Oscar Yildiz)",
+      "party": "IND",
+      "from": 6.0,
+      "to": 7.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "essendon",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 8.0,
+      "to": 10.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "essendon",
+      "label": "Greens",
+      "party": "GRN",
+      "from": 14.0,
+      "to": 26.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "eureka",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 3.5,
+      "to": 4.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "eureka",
+      "label": "Any Other",
+      "party": null,
+      "from": 18.0,
+      "to": 34.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "euroa",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 15.0,
+      "to": 26.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "euroa",
+      "label": "Any Other",
+      "party": null,
+      "from": 21.0,
+      "to": 34.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "evelyn",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 6.0,
+      "to": 6.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "evelyn",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 21.0,
+      "to": 26.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "evelyn",
+      "label": "Any Other",
+      "party": null,
+      "from": 34.0,
+      "to": 36.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "footscray",
+      "label": "Greens",
+      "party": "GRN",
+      "from": 3.5,
+      "to": 3.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "footscray",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 10.0,
+      "to": 13.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "footscray",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 26.0,
+      "to": 18.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "footscray",
+      "label": "Any Other",
+      "party": null,
+      "from": 11.0,
+      "to": 13.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "frankston",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 2.88,
+      "to": 2.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "frankston",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 1.91,
+      "to": 2.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "frankston",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 3.6,
+      "to": 4.2
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "frankston",
+      "label": "Any Other",
+      "party": null,
+      "from": 26.0,
+      "to": 41.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "geelong",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 7.0,
+      "to": 4.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "geelong",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 4.0,
+      "to": 6.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "geelong",
+      "label": "Greens",
+      "party": "GRN",
+      "from": 26.0,
+      "to": 34.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "geelong",
+      "label": "Any Other",
+      "party": null,
+      "from": 31.0,
+      "to": 46.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "gippsland-east",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 3.5,
+      "to": 4.33
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "gippsland-east",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 26.0,
+      "to": 46.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "gippsland-east",
+      "label": "Any Other",
+      "party": null,
+      "from": 46.0,
+      "to": 51.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "gippsland-south",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 21.0,
+      "to": 36.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "gippsland-south",
+      "label": "Any Other",
+      "party": null,
+      "from": 34.0,
+      "to": 46.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "glen-waverley",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 5.0,
+      "to": 6.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "glen-waverley",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 12.0,
+      "to": 13.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "greenvale",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 3.0,
+      "to": 3.6
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "greenvale",
+      "label": "Any Other",
+      "party": null,
+      "from": 34.0,
+      "to": 36.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "hastings",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 2.63,
+      "to": 3.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "hastings",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 7.5,
+      "to": 9.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "hawthorn",
+      "label": "Independent (Shima Ibuki)",
+      "party": "IND",
+      "from": 7.0,
+      "to": 7.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "hawthorn",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 12.0,
+      "to": 21.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "hawthorn",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 18.0,
+      "to": 34.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "hawthorn",
+      "label": "Any Other",
+      "party": null,
+      "from": 21.0,
+      "to": 34.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "ivanhoe",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 6.0,
+      "to": 10.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "ivanhoe",
+      "label": "Greens",
+      "party": "GRN",
+      "from": 14.0,
+      "to": 15.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "kalkallo",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 4.0,
+      "to": 4.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "kalkallo",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 15.0,
+      "to": 8.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "kalkallo",
+      "label": "Any Other",
+      "party": null,
+      "from": 36.0,
+      "to": 46.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "kew",
+      "label": "Independent (Sophie Torney)",
+      "party": "IND",
+      "from": 8.0,
+      "to": 8.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "kew",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 20.0,
+      "to": 34.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "kew",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 26.0,
+      "to": 46.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "kew",
+      "label": "Any Other",
+      "party": null,
+      "from": 36.0,
+      "to": 51.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "kororoit",
+      "label": "Any Other",
+      "party": null,
+      "from": 34.0,
+      "to": 46.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "laverton",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 21.0,
+      "to": 15.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "laverton",
+      "label": "Any Other",
+      "party": null,
+      "from": 36.0,
+      "to": 46.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "lowan",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 3.5,
+      "to": 4.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "lowan",
+      "label": "Any Other",
+      "party": null,
+      "from": 36.0,
+      "to": 46.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "macedon",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 2.7,
+      "to": 1.45
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "macedon",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 2.2,
+      "to": 3.75
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "macedon",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 3.4,
+      "to": 5.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "macedon",
+      "label": "Greens",
+      "party": "GRN",
+      "from": 46.0,
+      "to": 51.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "macedon",
+      "label": "Any Other",
+      "party": null,
+      "from": 26.0,
+      "to": 46.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "malvern",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 12.0,
+      "to": 13.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "malvern",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 19.0,
+      "to": 34.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "malvern",
+      "label": "Greens",
+      "party": "GRN",
+      "from": 23.0,
+      "to": 36.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "malvern",
+      "label": "Any Other",
+      "party": null,
+      "from": 15.0,
+      "to": 23.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "melbourne",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 3.5,
+      "to": 5.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "melbourne",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 36.0,
+      "to": 26.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "melton",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 4.0,
+      "to": 5.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "melton",
+      "label": "Any Other",
+      "party": null,
+      "from": 34.0,
+      "to": 36.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "mildura",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 3.0,
+      "to": 4.33
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "mildura",
+      "label": "Independent (Ali Cupper)",
+      "party": "IND",
+      "from": 8.0,
+      "to": 10.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "mildura",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 36.0,
+      "to": 46.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "mildura",
+      "label": "Any Other",
+      "party": null,
+      "from": 26.0,
+      "to": 34.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "mill-park",
+      "label": "Any Other",
+      "party": null,
+      "from": 46.0,
+      "to": 51.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "monbulk",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 2.63,
+      "to": 1.62
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "monbulk",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 2.0,
+      "to": 2.88
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "monbulk",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 4.5,
+      "to": 7.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "monbulk",
+      "label": "Greens",
+      "party": "GRN",
+      "from": 15.0,
+      "to": 18.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "monbulk",
+      "label": "Any Other",
+      "party": null,
+      "from": 21.0,
+      "to": 34.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "mordialloc",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 2.88,
+      "to": 1.67
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "mordialloc",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 2.0,
+      "to": 2.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "mordialloc",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 3.3,
+      "to": 6.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "mordialloc",
+      "label": "Any Other",
+      "party": null,
+      "from": 23.0,
+      "to": 41.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "mornington",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 7.0,
+      "to": 8.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "mornington",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 34.0,
+      "to": 46.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "morwell",
+      "label": "Nationals",
+      "party": "NAT",
+      "from": 2.63,
+      "to": 1.83
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "morwell",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 5.0,
+      "to": 18.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "morwell",
+      "label": "Any Other",
+      "party": null,
+      "from": 15.0,
+      "to": 21.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "mulgrave",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 6.5,
+      "to": 3.25
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "mulgrave",
+      "label": "Independent (Ian Cook)",
+      "party": "IND",
+      "from": 4.0,
+      "to": 4.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "mulgrave",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 5.0,
+      "to": 7.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "mulgrave",
+      "label": "Any Other",
+      "party": null,
+      "from": 36.0,
+      "to": 46.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "narracan",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 3.5,
+      "to": 4.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "narracan",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 34.0,
+      "to": 46.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "narracan",
+      "label": "Any Other",
+      "party": null,
+      "from": 15.0,
+      "to": 34.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "narre-warren-north",
+      "label": "Any Other",
+      "party": null,
+      "from": 34.0,
+      "to": 46.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "narre-warren-south",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 3.75,
+      "to": 2.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "narre-warren-south",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 2.25,
+      "to": 3.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "narre-warren-south",
+      "label": "Any Other",
+      "party": null,
+      "from": 34.0,
+      "to": 46.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "nepean",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 8.0,
+      "to": 10.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "nepean",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 34.0,
+      "to": 46.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "nepean",
+      "label": "Any Other",
+      "party": null,
+      "from": 26.0,
+      "to": 34.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "niddrie",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 1.91,
+      "to": 2.8
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "niddrie",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 7.5,
+      "to": 10.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "northcote",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 15.0,
+      "to": 21.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "oakleigh",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 6.5,
+      "to": 9.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "oakleigh",
+      "label": "Greens",
+      "party": "GRN",
+      "from": 26.0,
+      "to": 36.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "oakleigh",
+      "label": "Any Other",
+      "party": null,
+      "from": 26.0,
+      "to": 36.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "ovens-valley",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 4.33,
+      "to": 5.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "pakenham",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 10.0,
+      "to": 13.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "pascoe-vale",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 8.5,
+      "to": 13.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "pascoe-vale",
+      "label": "Any Other",
+      "party": null,
+      "from": 36.0,
+      "to": 46.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "point-cook",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 2.8,
+      "to": 3.3
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "point-cook",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 4.33,
+      "to": 3.6
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "point-cook",
+      "label": "Any Other",
+      "party": null,
+      "from": 23.0,
+      "to": 34.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "polwarth",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 3.1,
+      "to": 3.75
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "polwarth",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 8.5,
+      "to": 18.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "polwarth",
+      "label": "Greens",
+      "party": "GRN",
+      "from": 18.0,
+      "to": 36.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "polwarth",
+      "label": "Any Other",
+      "party": null,
+      "from": 23.0,
+      "to": 36.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "prahran",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 10.0,
+      "to": 9.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "preston",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 18.0,
+      "to": 21.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "preston",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 14.0,
+      "to": 21.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "richmond",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 3.1,
+      "to": 3.6
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "richmond",
+      "label": "Any Other",
+      "party": null,
+      "from": 11.0,
+      "to": 15.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "ringwood",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 1.8,
+      "to": 1.22
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "ringwood",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 3.0,
+      "to": 4.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "ringwood",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 6.0,
+      "to": 11.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "ringwood",
+      "label": "Greens",
+      "party": "GRN",
+      "from": 34.0,
+      "to": 51.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "ringwood",
+      "label": "Any Other",
+      "party": null,
+      "from": 9.5,
+      "to": 26.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "ripon",
+      "label": "Nationals",
+      "party": "NAT",
+      "from": 8.5,
+      "to": 9.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "ripon",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 15.0,
+      "to": 21.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "rowville",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 4.0,
+      "to": 8.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "rowville",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 9.5,
+      "to": 15.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "rowville",
+      "label": "Any Other",
+      "party": null,
+      "from": 23.0,
+      "to": 34.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "sandringham",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 13.0,
+      "to": 18.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "sandringham",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 21.0,
+      "to": 34.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "sandringham",
+      "label": "Greens",
+      "party": "GRN",
+      "from": 26.0,
+      "to": 51.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "sandringham",
+      "label": "Any Other",
+      "party": null,
+      "from": 26.0,
+      "to": 36.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "shepparton",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 2.4,
+      "to": 4.33
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "shepparton",
+      "label": "Any Other",
+      "party": null,
+      "from": 9.5,
+      "to": 15.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "south-barwon",
+      "label": "Liberals",
+      "party": "LIB",
+      "from": 2.62,
+      "to": 1.57
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "south-barwon",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 2.7,
+      "to": 4.33
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "south-barwon",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 2.88,
+      "to": 4.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "south-barwon",
+      "label": "Independent (Ron Nelson)",
+      "party": "IND",
+      "from": 11.0,
+      "to": 15.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "south-west-coast",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 3.5,
+      "to": 6.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "south-west-coast",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 36.0,
+      "to": 51.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "south-west-coast",
+      "label": "Any Other",
+      "party": null,
+      "from": 18.0,
+      "to": 31.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "st-albans",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 2.5,
+      "to": 3.1
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "st-albans",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 4.33,
+      "to": 3.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "st-albans",
+      "label": "Any Other",
+      "party": null,
+      "from": 34.0,
+      "to": 36.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "sunbury",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 4.0,
+      "to": 2.88
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "sunbury",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 4.33,
+      "to": 6.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "sydenham",
+      "label": "Any Other",
+      "party": null,
+      "from": 36.0,
+      "to": 31.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "tarneit",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 6.5,
+      "to": 6.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "tarneit",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 4.33,
+      "to": 7.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "tarneit",
+      "label": "Any Other",
+      "party": null,
+      "from": 21.0,
+      "to": 26.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "thomastown",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 4.5,
+      "to": 5.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "thomastown",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 9.5,
+      "to": 8.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "thomastown",
+      "label": "Any Other",
+      "party": null,
+      "from": 34.0,
+      "to": 36.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "warrandyte",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 8.0,
+      "to": 10.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "warrandyte",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 26.0,
+      "to": 36.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "warrandyte",
+      "label": "Any Other",
+      "party": null,
+      "from": 34.0,
+      "to": 36.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "wendouree",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 2.2,
+      "to": 2.7
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "wendouree",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 5.0,
+      "to": 3.6
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "wendouree",
+      "label": "Any Other",
+      "party": null,
+      "from": 26.0,
+      "to": 36.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "werribee",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 4.33,
+      "to": 3.6
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "werribee",
+      "label": "Any Other",
+      "party": null,
+      "from": 8.0,
+      "to": 13.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "williamstown",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 3.75,
+      "to": 4.5
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "williamstown",
+      "label": "One Nation",
+      "party": "ONP",
+      "from": 7.0,
+      "to": 10.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "williamstown",
+      "label": "Independent (Tony Briffa)",
+      "party": "IND",
+      "from": 8.0,
+      "to": 13.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "williamstown",
+      "label": "Greens",
+      "party": "GRN",
+      "from": 26.0,
+      "to": 46.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "yan-yean",
+      "label": "Liberal",
+      "party": "LIB",
+      "from": 2.37,
+      "to": 1.72
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "odds_move",
+      "seat": "yan-yean",
+      "label": "Labor",
+      "party": "ALP",
+      "from": 6.0,
+      "to": 10.0
+    },
+    {
+      "date": "2026-11-17",
+      "at": "2026-11-16T22:09:27Z",
+      "type": "news",
+      "count": 1
+    },
     {
       "date": "2026-11-17",
       "at": "2026-11-16T19:54:49Z",

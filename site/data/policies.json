@@ -26,8 +26,8 @@
     "licence_url": "https://creativecommons.org/licenses/by/4.0/",
     "citation": "Australian Election Tracker (OZE), Victorian state election 2026 candidate ledger, electiontracker.au"
   },
-  "generated": "2026-11-15T21:36:13.000Z",
-  "copied": "2026-11-16",
+  "generated": "2026-11-16T21:38:57.932Z",
+  "copied": "2026-11-17",
   "caveat": "Policy cells show only positions with an individually sourced public record (manifesto, press release, Hansard, or Parliamentary Budget Office costing). An empty cell means no sourced position is in the ledger yet — not that a party has no view, and not an editorial judgement of importance.",
   "parties": [
     {
@@ -2204,6 +2204,24 @@
           "fiscal": {
             "amount_display": "$1.17 billion plus more than $195 million",
             "timeframe": "Not specified",
+            "financing": "taxpayer",
+            "pbo_status": "uncosted"
+          }
+        },
+        {
+          "id": "labor-health-prenatal-testing-2026-11",
+          "statement": "A re-elected Carroll Labor Government says it will provide a state rebate of up to $500 for Non-Invasive Prenatal Testing (NIPT) for every pregnancy in Victoria, paid directly to pathology labs with no gap charged, at a cost of $120 million over four years. Labor says it will also make 6-week pregnancy scans free at its Sexual and Reproductive Health Hubs within existing budgets.",
+          "kind": "pledge",
+          "source": {
+            "url": "https://www.viclabor.org.au/news/labor-will-make-prenatal-testing-free",
+            "publisher": "Victorian Labor",
+            "title": "Prenatal Testing Costs $500 - Labor Will Make It Free",
+            "published": "2026-11-16",
+            "accessed": "2026-11-17"
+          },
+          "fiscal": {
+            "amount_display": "$120 million over four years",
+            "timeframe": "Four years",
             "financing": "taxpayer",
             "pbo_status": "uncosted"
           }
@@ -4993,6 +5011,18 @@
             "title": "Biological Reality and Women Inmates' Right to Safety",
             "published": "2026-02-09",
             "accessed": "2026-08-02"
+          }
+        },
+        {
+          "id": "onp-gender-equal-opportunity-act-2026-11",
+          "statement": "One Nation Victoria deputy leader Colleen Harkin announced the party would amend the Equal Opportunity Act 2010 to prioritise biological sex over gender identity in law, policy and practice, saying the policy would apply to female-only facilities such as bathrooms, changerooms, shelters, prisons and family violence refuges, and to women's sport, wherever these receive state government funding.",
+          "kind": "pledge",
+          "source": {
+            "url": "https://www.outinperth.com/victorian-pride-lobby-condemns-one-nations-attack-on-trans-and-gender-diverse-victorians/",
+            "publisher": "OUTinPerth (reporting One Nation Victoria media conference)",
+            "title": "Victorian Pride Lobby condemns One Nation's attack on trans and gender diverse Victorians",
+            "published": "2026-11-16",
+            "accessed": "2026-11-17"
           }
         }
       ]
