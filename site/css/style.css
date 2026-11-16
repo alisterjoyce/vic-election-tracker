@@ -804,6 +804,22 @@ select {
 /* ---------- Poll pages (poll.html) ---------- */
 .poll-title { margin: 0; font-size: 1.5rem; }
 .poll-list tr.current td { background: var(--surface-2); font-weight: 600; }
+/* Aggregates compared: filled by poll.js, so its height (table, CSV button, notes) is reserved. */
+.agg-card { margin-bottom: 20px; }
+.agg-compare tr.current td { background: var(--surface-2); font-weight: 600; }
+.agg-compare th .party { font-size: inherit; }
+/* The names stay in view while the figures scroll sideways on a phone. */
+.agg-compare th:first-child, .agg-compare td:first-child { position: sticky; left: 0; z-index: 1; background: var(--surface); }
+.agg-compare tr.current td:first-child { background: var(--surface-2); }
+.agg-caveats { margin: 0 0 8px; }
+.agg-notes { margin: 0; }
+.agg-method { margin: 8px 0 0; }
+/* The tallest it gets in each band (measured 16 Nov 2026, 320-1400px; the line above the table wraps):
+   re-measure if that line changes. */
+html.js .agg-table { min-height: 257px; }
+@media (max-width: 959px) { html.js .agg-table { min-height: 278px; } }
+@media (max-width: 640px) { html.js .agg-table { min-height: 293px; } }
+@media (max-width: 420px) { html.js .agg-table { min-height: 314px; } }
 
 /* ---------- Timeline (timeline.html) ---------- */
 .timeline { list-style: none; margin: 0; padding: 0 0 0 4px; position: relative; }

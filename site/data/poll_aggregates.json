@@ -1,0 +1,89 @@
+{
+  "_schema": {
+    "description": "Other sites' statewide poll averages, for the polls page's comparison table. Figures, dates and links only. This site's own poll of polls isn't stored here: the page computes it from polls.json.",
+    "fields": {
+      "updated": "When this file's figures last changed (UTC)",
+      "aggregates[]": "One per outside average: id, name, publisher, url (the page), data_url (the file read), credit, licence, cadence (every_refresh or daily)",
+      "aggregates[].primary": "Primary vote % by party code (ALP, LNP = Coalition, GRN, ONP, OTH = all others); a party the source doesn't publish is absent",
+      "aggregates[].tpp": "Two-party preferred % {ALP, LNP}, or null when the source publishes none",
+      "aggregates[].as_of": "The date the estimate runs to (YYYY-MM-DD): electiontracker.au's as_of (its newest poll's fieldwork end), the newest poll in BludgerTrack's trend (fieldwork midpoint), and the day Ace Strategies last updated its page",
+      "aggregates[].published": "When the source last updated its figures (its own timestamp)",
+      "aggregates[].polls_included": "How many polls the average uses, where the source lists them",
+      "aggregates[].checked": "Melbourne date the figures were last read successfully",
+      "aggregates[].tpp_note": "Why tpp is null, in a few words"
+    }
+  },
+  "updated": "2026-11-16T10:42:26Z",
+  "aggregates": [
+    {
+      "id": "bludgertrack",
+      "name": "BludgerTrack",
+      "publisher": "The Poll Bludger (William Bowe)",
+      "url": "https://www.pollbludger.net/vic2026/bludgertrack/",
+      "data_url": "https://www.pollbludger.net/vic2026/bludgertrack/xml/current.xml",
+      "credit": "The Poll Bludger",
+      "licence": null,
+      "cadence": "daily",
+      "primary": {
+        "ALP": 22.0,
+        "LNP": 30.9,
+        "GRN": 14.9,
+        "ONP": 22.0
+      },
+      "tpp": {
+        "ALP": 46.7,
+        "LNP": 53.3
+      },
+      "as_of": "2026-11-07",
+      "published": "2026-11-11T04:45:57Z",
+      "checked": "2026-11-16"
+    },
+    {
+      "id": "acestrategies",
+      "name": "Ace Strategies",
+      "publisher": "Ace Strategies Intelligence Unit",
+      "url": "https://acestrategies.au/victoria-election-2026/polls",
+      "data_url": "https://acestrategies.au/victoria-election-2026/polls",
+      "credit": "Ace Strategies",
+      "licence": null,
+      "cadence": "daily",
+      "primary": {
+        "LNP": 29.6,
+        "ALP": 23.6,
+        "ONP": 22.5,
+        "GRN": 13.9,
+        "OTH": 11.2
+      },
+      "tpp": {
+        "LNP": 54.6,
+        "ALP": 45.4
+      },
+      "as_of": "2026-11-12",
+      "published": "2026-11-12T07:16:00+11:00",
+      "checked": "2026-11-16"
+    },
+    {
+      "id": "electiontracker",
+      "name": "electiontracker.au",
+      "publisher": "Australian Election Tracker (OZE), electiontracker.au",
+      "url": "https://electiontracker.au/elections/vic/2026/polls",
+      "data_url": "https://electiontracker.au/data/vic2026/poll-average.json",
+      "credit": "electiontracker.au",
+      "licence": "CC BY 4.0",
+      "cadence": "every_refresh",
+      "primary": {
+        "ALP": 21.8,
+        "LNP": 30.8,
+        "ONP": 21.8,
+        "GRN": 14.0,
+        "OTH": 11.6
+      },
+      "tpp_note": "publishes no two-party estimate",
+      "as_of": "2026-11-10",
+      "published": "2026-11-15T21:36:12.712Z",
+      "polls_included": 6,
+      "tpp": null,
+      "checked": "2026-11-16"
+    }
+  ]
+}

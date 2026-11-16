@@ -47,6 +47,12 @@
         <p class="muted">Every published statewide voting-intention poll since the 2022 election. Choose one for its full record and its pollster's trend.</p>
         <p class="muted small" id="poll-list-note"></p>
       </section>
+      <section class="card agg-card" aria-labelledby="agg-title">
+        <div class="card-head"><h2 id="agg-title">Aggregates compared</h2><span class="muted small">Each average's latest figures, primary vote and 2PP (%)</span></div>
+        <div id="agg-table" class="agg-table"><p class="empty">Loading…</p></div>
+        <p class="small muted agg-notes">BludgerTrack and Ace Strategies are read once a day, electiontracker.au at every refresh. electiontracker.au's figures are <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; the others belong to their publishers, linked in the table.</p>
+        <p class="small muted agg-method"><strong>How this site's average works:</strong> every statewide poll on the polls list, placed at the midpoint of its fieldwork, is averaged with Gaussian-kernel weights (a 21-day standard deviation, so polls more than 63 days away count for nothing) multiplied by the square root of its sample size over 1,000 (1,000 where no sample is published). The latest figure uses only polls up to the newest one, so it is dated at that poll's fieldwork midpoint. The 2PP averages each poll's published two-party figure, and independents count in Others, as on the home page's chart.</p>
+      </section>
       <section class="card" aria-labelledby="pl-title">
         <div class="card-head"><h2 id="pl-title">All polls</h2><span class="muted small" id="poll-count"></span></div>
         <div class="filters" style="margin-bottom:12px">
@@ -60,7 +66,7 @@
   <footer class="site-footer">
     <div class="container">
       <p id="last-updated">Data last updated: loading…</p>
-      <p><a href="about.html">About and methodology</a> · Polls via <a href="https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election">Wikipedia</a>, linked to each pollster's release where cited.</p>
+      <p><a href="about.html">About and methodology</a> · Polls via <a href="https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election">Wikipedia</a>, linked to each pollster's release where cited. Other averages: <a href="https://www.pollbludger.net/vic2026/bludgertrack/">BludgerTrack (The Poll Bludger)</a>, <a href="https://acestrategies.au/victoria-election-2026/polls">Ace Strategies</a> and <a href="https://electiontracker.au/elections/vic/2026/polls">electiontracker.au</a> (CC BY 4.0).</p>
     </div>
   </footer>
 

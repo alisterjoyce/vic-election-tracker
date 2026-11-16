@@ -3,6 +3,9 @@
 
 * Polls: scraped from the Wikipedia page "Opinion polling for the 2026
   Victorian state election" with pandas.read_html, written to polls.json.
+* Poll aggregates (poll_aggregates.json): electiontracker.au's poll-average.json
+  every run; BludgerTrack's XML feed and Ace Strategies' polls page once a day.
+  Figures, dates and links only; a source that fails keeps its last values.
 * Candidates: new names from the Wikipedia page "Candidates of the 2026
   Victorian state election" (Assembly and Council tables) are added to
   candidates.json as "announced". Existing rows are never changed.
@@ -1812,6 +1815,223 @@ def refresh_seat_odds(data_dir: Path, meta: dict) -> bool:
 
 
 # --------------------------------------------------------------------------
+# Poll aggregates: other sites' averages, for the polls page's comparison table
+# --------------------------------------------------------------------------
+# Three outside averages, stored as figures, dates and links only (no prose):
+#  * electiontracker.au's poll-average.json (open data, CC BY 4.0, credit "electiontracker.au"), every run;
+#  * BludgerTrack Victoria (The Poll Bludger): its page draws from xml/current.xml, read once a day;
+#  * Ace Strategies' Victorian polls page (HTML; robots.txt disallows its /api/), read once a day.
+# Each robots.txt is checked before the request. A source that fails keeps its last stored values
+# (and its "checked" date, so the daily ones are tried again at the next refresh). This site's own
+# poll of polls isn't stored: the page computes it from polls.json with App.smoothedSeries.
+AGG_FILE = "poll_aggregates.json"
+ET_POLL_AVERAGE_URL = ET_SITE + "/data/vic2026/poll-average.json"
+ET_POLLS_PAGE_URL = ET_SITE + "/elections/vic/2026/polls"
+BLUDGER_SITE = "https://www.pollbludger.net"
+BLUDGER_PAGE_URL = BLUDGER_SITE + "/vic2026/bludgertrack/"
+BLUDGER_XML_URL = BLUDGER_PAGE_URL + "xml/current.xml"
+ACE_SITE = "https://acestrategies.au"
+ACE_PAGE_URL = ACE_SITE + "/victoria-election-2026/polls"
+AGG_PARTIES = ("ALP", "LNP", "GRN", "ONP", "OTH")
+ET_AVG_KEYS = {"alp": "ALP", "lnp": "LNP", "grn": "GRN", "onp": "ONP", "others": "OTH"}
+BLUDGER_KEYS = {"alp": "ALP", "lnc": "LNP", "grn": "GRN", "onp": "ONP"}
+ACE_ROWS = {"labor": "ALP", "coalition": "LNP", "greens": "GRN", "one nation": "ONP", "others": "OTH"}
+AGG_SCHEMA = {
+    "description": "Other sites' statewide poll averages, for the polls page's comparison table. Figures, dates and "
+                   "links only. This site's own poll of polls isn't stored here: the page computes it from polls.json.",
+    "fields": {
+        "updated": "When this file's figures last changed (UTC)",
+        "aggregates[]": "One per outside average: id, name, publisher, url (the page), data_url (the file read), "
+                        "credit, licence, cadence (every_refresh or daily)",
+        "aggregates[].primary": "Primary vote % by party code (ALP, LNP = Coalition, GRN, ONP, OTH = all others); "
+                                "a party the source doesn't publish is absent",
+        "aggregates[].tpp": "Two-party preferred % {ALP, LNP}, or null when the source publishes none",
+        "aggregates[].as_of": "The date the estimate runs to (YYYY-MM-DD): electiontracker.au's as_of (its newest "
+                              "poll's fieldwork end), the newest poll in BludgerTrack's trend (fieldwork midpoint), "
+                              "and the day Ace Strategies last updated its page",
+        "aggregates[].published": "When the source last updated its figures (its own timestamp)",
+        "aggregates[].polls_included": "How many polls the average uses, where the source lists them",
+        "aggregates[].checked": "Melbourne date the figures were last read successfully",
+        "aggregates[].tpp_note": "Why tpp is null, in a few words",
+    },
+}
+
+
+def _agg_pct(value, label: str) -> float:
+    v = float(str(value).strip().replace("−", "-"))
+    if not 0 < v < 100:
+        raise ValueError(f"{label} out of range: {value}")
+    return round(v, 1)
+
+
+def _agg_check(primary: dict, tpp: dict | None, name: str) -> None:
+    """Reject figures that can't be an average: Labor and the Coalition missing, primaries that don't add up
+    (when Others is published), or a 2PP that doesn't make 100."""
+    if "ALP" not in primary or "LNP" not in primary:
+        raise ValueError(f"{name}: Labor or Coalition primary missing ({primary})")
+    total = sum(primary.values())
+    if ("OTH" in primary and not 97 <= total <= 103) or total > 103:
+        raise ValueError(f"{name}: primaries add to {total:.1f}")
+    if tpp is not None and (set(tpp) != {"ALP", "LNP"} or abs(tpp["ALP"] + tpp["LNP"] - 100) > 0.5):
+        raise ValueError(f"{name}: two-party figures {tpp} don't make 100")
+
+
+def _agg_allowed(web: "PoliteSession", site: str, url: str) -> None:
+    rp = urllib.robotparser.RobotFileParser()
+    rp.parse(web.get(site + "/robots.txt").splitlines())
+    if not rp.can_fetch(ABC_USER_AGENT, url):
+        raise PermissionError("robots.txt disallows " + url)
+
+
+def parse_et_poll_average(doc: dict) -> dict:
+    prim = doc.get("primaries") or {}
+    primary = {ET_AVG_KEYS[k]: _agg_pct(v, k) for k, v in prim.items() if k in ET_AVG_KEYS and v is not None}
+    unknown = sorted(set(prim) - set(ET_AVG_KEYS))
+    if unknown:
+        log.warning("electiontracker.au poll average: party keys with no code here (left out): %s", unknown)
+    _agg_check(primary, None, "electiontracker.au")
+    as_of = str(doc.get("as_of") or "")
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", as_of):
+        raise ValueError(f"electiontracker.au: no as_of date ({as_of!r})")
+    return {"primary": primary, "tpp": None, "tpp_note": "publishes no two-party estimate",
+            "as_of": as_of, "published": doc.get("generated"),
+            "polls_included": len(doc.get("included_poll_ids") or []) or None}
+
+
+def parse_bludgertrack(xml_text: str) -> dict:
+    """The summary block BludgerTrack's page draws its headline table from (<victoria><summary>). Its trend
+    points are polls (dated at the fieldwork midpoint) carrying that week's trend values, so the estimate
+    runs to the newest of them: that date is as_of."""
+    import lxml.etree as etree
+    parser = etree.XMLParser(resolve_entities=False, no_network=True, huge_tree=False)
+    root = etree.fromstring(xml_text.encode("utf-8"), parser)
+    summary = root.find("victoria/summary")
+    if summary is None:
+        raise ValueError("BludgerTrack XML has no victoria/summary")
+    cur = lambda tag: summary.findtext(f"{tag}/current")
+    primary = {code: _agg_pct(cur(tag), tag) for tag, code in BLUDGER_KEYS.items() if (cur(tag) or "").strip()}
+    tpp = {"ALP": _agg_pct(cur("alp2"), "alp2"), "LNP": _agg_pct(cur("lnc2"), "lnc2")} if cur("alp2") and cur("lnc2") else None
+    _agg_check(primary, tpp, "BludgerTrack")
+    weeks = sorted(p.get("date") for p in root.iterfind("victoria/charts/point")
+                   if p.get("date") and (p.findtext("ALPout2") or p.findtext("ALP2out") or "").strip())
+    if not weeks or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", weeks[-1]):
+        raise ValueError("BludgerTrack XML has no dated trend points")
+    stamp = root.get("date") or ""
+    try:
+        published = datetime.fromisoformat(stamp).astimezone(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+    except ValueError:
+        published = None
+    return {"primary": primary, "tpp": tpp, "as_of": weeks[-1], "published": published, "polls_included": None}
+
+
+def parse_ace(page: str) -> dict:
+    """Ace Strategies' polls page: the average column of its primary-vote table (marked up with ARIA table
+    roles), the two-party readout under its pendulum (<dl class="vl-readout">) and the page's
+    'last updated' time. Rows and terms are found by their labels, not their position."""
+    doc = lxml.html.fromstring(page)
+    primary = {}
+    for row in doc.xpath('//*[@role="table"][contains(@class,"vl-latest")]//*[@role="row"]'):
+        head = row.xpath('.//*[@role="rowheader"]')
+        avg = row.xpath('.//*[contains(concat(" ", normalize-space(@class), " "), " vl-latest-avg ")]')
+        if not head or not avg:
+            continue
+        label = clean_text(head[0].text_content()).lower()
+        m = re.match(r"\s*(\d+(?:\.\d+)?)", avg[0].text_content())
+        if label not in ACE_ROWS:
+            log.warning("Ace Strategies: primary-vote row %r has no party code here (left out)", label)
+        elif m:
+            primary[ACE_ROWS[label]] = _agg_pct(m.group(1), label)
+    tpp = {}
+    for item in doc.xpath('//dl[contains(concat(" ", normalize-space(@class), " "), " vl-readout ")]/div'):
+        dt, dd = item.findtext("dt"), item.findtext("dd")
+        code = {"labor": "ALP", "coalition": "LNP"}.get(clean_text(dt).lower())
+        if code and dd:
+            tpp[code] = _agg_pct(dd, dt)
+    tpp = tpp or None
+    _agg_check(primary, tpp, "Ace Strategies")
+    stamp = (doc.xpath('//*[contains(@class,"hero-updated")]//time/@datetime') or [""])[0]
+    try:
+        when = datetime.fromisoformat(stamp)
+    except ValueError:
+        raise ValueError(f"Ace Strategies: no 'last updated' time ({stamp!r})") from None
+    return {"primary": primary, "tpp": tpp, "as_of": when.astimezone(MELBOURNE).date().isoformat(),
+            "published": when.isoformat(), "polls_included": None}
+
+
+def fetch_et_poll_average(web: "PoliteSession") -> dict:
+    _agg_allowed(web, ET_SITE, ET_POLL_AVERAGE_URL)
+    return parse_et_poll_average(json.loads(web.get(ET_POLL_AVERAGE_URL)))
+
+
+def fetch_bludgertrack(web: "PoliteSession") -> dict:
+    _agg_allowed(web, BLUDGER_SITE, BLUDGER_XML_URL)
+    return parse_bludgertrack(web.get(BLUDGER_XML_URL))
+
+
+def fetch_ace(web: "PoliteSession") -> dict:
+    _agg_allowed(web, ACE_SITE, ACE_PAGE_URL)
+    return parse_ace(web.get(ACE_PAGE_URL))
+
+
+AGG_SOURCES = [   # (id, cadence, fixed fields, fetch-and-parse), in the order the page lists them
+    ("bludgertrack", "daily",
+     {"name": "BludgerTrack", "publisher": "The Poll Bludger (William Bowe)",
+      "url": BLUDGER_PAGE_URL, "data_url": BLUDGER_XML_URL, "credit": "The Poll Bludger", "licence": None},
+     fetch_bludgertrack),
+    ("acestrategies", "daily",
+     {"name": "Ace Strategies", "publisher": "Ace Strategies Intelligence Unit",
+      "url": ACE_PAGE_URL, "data_url": ACE_PAGE_URL, "credit": "Ace Strategies", "licence": None},
+     fetch_ace),
+    ("electiontracker", "every_refresh",
+     {"name": "electiontracker.au", "publisher": "Australian Election Tracker (OZE), electiontracker.au",
+      "url": ET_POLLS_PAGE_URL, "data_url": ET_POLL_AVERAGE_URL, "credit": "electiontracker.au", "licence": "CC BY 4.0"},
+     fetch_et_poll_average),
+]
+
+
+def refresh_poll_aggregates(data_dir: Path, meta: dict, force: bool = False) -> bool:
+    """poll_aggregates.json: each outside average's latest figures. A failure keeps that source's last values."""
+    path = data_dir / AGG_FILE
+    prev = read_json(path, None) or {}
+    old = {a.get("id"): a for a in prev.get("aggregates", []) if isinstance(a, dict)}
+    today = datetime.now(MELBOURNE).date().isoformat()
+    web = PoliteSession()
+    out, ok = [], False
+    for sid, cadence, fixed, fetch in AGG_SOURCES:
+        source = meta.setdefault("sources", {}).setdefault(f"aggregate_{sid}", {"url": fixed["data_url"]})
+        entry = old.get(sid)
+        if cadence == "daily" and entry and entry.get("checked") == today and not force:
+            log.info("%s: read today already (%s); not fetched again", fixed["name"], today)
+            out.append({**entry, **fixed, "id": sid, "cadence": cadence})
+            continue
+        try:
+            figures = fetch(web)
+        except Exception as exc:  # noqa: BLE001 - keep the last values, report, keep going
+            log.error("%s skipped, last values kept: %s", fixed["name"], exc)
+            warn_ci(f"Poll aggregate {fixed['name']} skipped, last values kept: {exc}")
+            source.update(status="error", message=str(exc)[:300])
+            if entry:
+                out.append({**entry, **fixed, "id": sid, "cadence": cadence})
+            continue
+        ok = True
+        out.append({"id": sid, **fixed, "cadence": cadence, **{k: v for k, v in figures.items() if v is not None},
+                    "tpp": figures.get("tpp"), "checked": today})
+        source.update(status="ok", url=fixed["data_url"], last_success=now_iso(),
+                      message=f"as of {figures['as_of']}: " + ", ".join(f"{k} {v}" for k, v in figures["primary"].items())
+                              + (f"; 2PP L/NP {figures['tpp']['LNP']}" if figures.get("tpp") else ""))
+        log.info("%s as of %s: %s; 2PP %s", fixed["name"], figures["as_of"], figures["primary"], figures.get("tpp"))
+    if not out:
+        return False
+    # Order: as listed in AGG_SOURCES. Only the figures and the checked dates decide whether the file is rewritten.
+    if out == prev.get("aggregates"):
+        log.info("%s unchanged", AGG_FILE)
+        return ok
+    write_json(path, {"_schema": AGG_SCHEMA, "updated": now_iso(), "aggregates": out})
+    log.info("Wrote %s (%d aggregates)", AGG_FILE, len(out))
+    return ok
+
+
+# --------------------------------------------------------------------------
 # Seat models: Australian Election Forecasts (automatic), RedBridge (watch only)
 # --------------------------------------------------------------------------
 
@@ -2689,6 +2909,8 @@ def main(argv=None) -> int:
                         help="directory holding the JSON files (default: site/data)")
     parser.add_argument("--vec-check", action="store_true",
                         help="read the VEC's candidate list now, whatever the time (it normally runs on the evening refresh)")
+    parser.add_argument("--aggregates-check", action="store_true",
+                        help="read BludgerTrack and Ace Strategies now, even if they were read today (normally once a day)")
     parser.add_argument("--backfill-changelog", action="store_true",
                         help="rebuild changelog.json from git history instead of refreshing")
     args = parser.parse_args(argv)
@@ -2712,6 +2934,7 @@ def main(argv=None) -> int:
 
     updated = [
         refresh_polls(data_dir, meta),
+        refresh_poll_aggregates(data_dir, meta, args.aggregates_check),   # BludgerTrack and Ace once a day
         refresh_wiki_candidates(data_dir, meta),
         refresh_abc(data_dir, meta),           # after Wikipedia, so the ABC (primary) wins conflicts
         refresh_electiontracker(data_dir, meta),   # report only: compared after the ABC has added its names

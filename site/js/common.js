@@ -187,21 +187,32 @@
     const pts = polls.filter((p) => value(p) != null);
     if (!pts.length) return [];
     const out = [];
-    const bw = BANDWIDTH_DAYS * DAY;
     const first = pts[0].t, last = pts[pts.length - 1].t;
     const days = Math.ceil((last - first) / DAY);
     for (let i = 0; i <= days; i++) {
-      const t = Math.min(first + i * DAY, last);
-      let w = 0, v = 0;
-      for (const p of pts) {
-        const z = (t - p.t) / bw;
-        if (Math.abs(z) > 3) continue;
-        const weight = Math.exp(-0.5 * z * z) * Math.sqrt((p.sample_size || 1000) / 1000);
-        w += weight; v += weight * value(p);
-      }
-      if (w > 0) out.push({ x: t, y: Math.round((v / w) * 10) / 10 });
+      const pt = kernelPoint(pts, Math.min(first + i * DAY, last), value);
+      if (pt) out.push(pt);
     }
     return out;
+  }
+
+  // The average at time t, rounded to one decimal, or null when no poll is within 3 bandwidths.
+  function kernelPoint(pts, t, value) {
+    const bw = BANDWIDTH_DAYS * DAY;
+    let w = 0, v = 0;
+    for (const p of pts) {
+      const z = (t - p.t) / bw;
+      if (Math.abs(z) > 3) continue;
+      const weight = Math.exp(-0.5 * z * z) * Math.sqrt((p.sample_size || 1000) / 1000);
+      w += weight; v += weight * value(p);
+    }
+    return w > 0 ? { x: t, y: Math.round((v / w) * 10) / 10 } : null;
+  }
+
+  // The last point of smoothedSeries(polls, value) (at the newest poll with a value) without the whole series.
+  function smoothedLatest(polls, value) {
+    const pts = polls.filter((p) => value(p) != null);
+    return pts.length ? kernelPoint(pts, pts[pts.length - 1].t, value) : null;
   }
 
   // Polls that set a new high or low for a party when they came out. polls: preparePolls output; keys: party
@@ -1234,7 +1245,7 @@
     PARTIES, STATUSES, COALITION, loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, partyBadge, statusBadge,
     slugify, parseDate, fmtDate, fmtMonth, fmtDateTime, dataUpdatedText, fmtPrice, fmtMargin, fmtSwing, melbourneToday, daysBetween,
     hashId, cssVar, currentTheme, showError, copyLink,
-    DAY, preparePolls, smoothedSeries, pollRecords, statewideSwing, swingAdjusted, projectSeats, BLOCS, blocOf, modelLink, quotaBars,
+    DAY, preparePolls, smoothedSeries, smoothedLatest, pollRecords, statewideSwing, swingAdjusted, projectSeats, BLOCS, blocOf, modelLink, quotaBars,
     getWatchlist, setWatchlist, isWatched, toggleWatch, starButton, storageWorks,
     buildSearchIndex, searchItems,
     candidateId, givenFirst, loadHeadshots, avatar, photoCredits, initials, inkFor, inkVar, newsList,

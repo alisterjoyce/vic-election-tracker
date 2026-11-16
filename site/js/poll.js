@@ -221,6 +221,84 @@
     </table></div>`;
   }
 
+  /* ---------- Aggregates compared: this site's poll of polls against three other averages ---------- */
+  const AGG_PARTIES = ["ALP", "LNP", "GRN", "ONP", "OTH"];
+
+  // The latest point of the home chart's average (the last point of App.smoothedSeries, via App.smoothedLatest),
+  // with independents counted in Others as the home chart counts them. Dated at the newest poll's fieldwork
+  // midpoint, where the series ends.
+  function ownAggregate() {
+    const value = (part, key) => (p) => {
+      const m = p[part] || {};
+      if (part === "primary" && key === "OTH" && (m.OTH != null || m.IND != null)) return (m.OTH || 0) + (m.IND || 0);
+      return m[key] == null || isNaN(m[key]) ? null : m[key];
+    };
+    let last = null;
+    const latest = (part, key) => {
+      const pt = App.smoothedLatest(polls, value(part, key));
+      if (!pt) return null;
+      last = Math.max(last || 0, pt.x);
+      return pt.y;
+    };
+    const primary = {};
+    AGG_PARTIES.forEach((k) => { const v = latest("primary", k); if (v != null) primary[k] = v; });
+    const alp = latest("tpp", "ALP"), lnp = latest("tpp", "LNP");
+    return { id: "this-site", name: "This site", url: "index.html", linkText: "Home page chart",
+      primary, tpp: alp != null && lnp != null ? { ALP: alp, LNP: lnp } : null, asOf: last ? new Date(last) : null, own: true };
+  }
+
+  let aggregates = null;   // poll_aggregates.json (null until loaded; false if it couldn't be)
+  function aggregatesTable() {
+    const outside = (aggregates && aggregates.aggregates) || [];
+    const rows = [ownAggregate(), ...outside];
+    const pct = (v) => (v == null ? "–" : Number(v).toFixed(1));
+    // YYYY-MM-DD for the CSV, from the same local date fmtDate shows.
+    const isoDay = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+    const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return ""; } };
+    const missing = (a, what) => (what === "2PP" && a.tpp_note ? `${a.name} ${a.tpp_note}` : `${a.name} doesn't publish ${what}`);
+    // One short line above the table (below it, the CSV button that common.js adds would push it down a
+    // moment after it paints): what each source leaves out, and when the figures were read.
+    const gaps = [];
+    outside.forEach((a) => {
+      const absent = AGG_PARTIES.filter((k) => !a.primary || a.primary[k] == null).map((k) => (k === "OTH" ? "Others" : App.partyShort(k)));
+      if (!a.tpp) absent.push("2PP");
+      if (absent.length) gaps.push(`${escapeHtml(a.name)}'s ${escapeHtml(absent.join(" and "))}`);
+    });
+    const checked = outside.map((a) => a.checked).filter(Boolean).sort();
+    const line = [
+      gaps.length ? `– not published: ${gaps.join(", ")}.` : "",
+      checked.length ? `Last read ${escapeHtml(fmtDate(checked[0]))}${checked[0] !== checked[checked.length - 1] ? ` to ${escapeHtml(fmtDate(checked[checked.length - 1]))}` : ""}.` : "",
+      aggregates === false ? "The other averages couldn't be loaded; try again later." : "",
+    ].filter(Boolean).join(" ");
+    const cell = (a, v, what) => (v == null ? `<td class="num muted" title="${escapeHtml(missing(a, what))}">–</td>` : `<td class="num">${pct(v)}</td>`);
+    return `<p class="small muted agg-caveats">${line}</p>
+    <div class="table-scroll"><table class="agg-compare">
+      <thead><tr><th>Aggregate</th><th>As of</th>
+        ${AGG_PARTIES.map((k) => `<th class="num"><span class="party" style="--party-color: var(${partyVar(k)})">${escapeHtml(k === "OTH" ? "Others" : App.partyShort(k))}</span></th>`).join("")}
+        <th class="num">2PP ALP</th><th class="num">2PP L/NP</th><th>Source</th></tr></thead>
+      <tbody>${rows.map((a) => {
+        const p = a.primary || {};
+        return `<tr${a.own ? ' class="current"' : ""}>
+          <td>${escapeHtml(a.name)}</td>
+          <td data-csv="${escapeHtml(a.own ? (a.asOf ? isoDay(a.asOf) : "") : a.as_of || "")}">${escapeHtml(fmtDate(a.own ? a.asOf : a.as_of) || "–")}</td>
+          ${AGG_PARTIES.map((k) => cell(a, p[k], `a ${k === "OTH" ? "Others" : partyName(k)} figure`)).join("")}
+          ${cell(a, a.tpp && a.tpp.ALP, "2PP")}${cell(a, a.tpp && a.tpp.LNP, "2PP")}
+          <td data-csv="${escapeHtml(a.own ? "" : a.url)}">${a.own ? `<a href="${a.url}">${escapeHtml(a.linkText)}</a>`
+            : `<a href="${escapeHtml(a.url)}" target="_blank" rel="noopener">${escapeHtml(host(a.url))} ↗</a>`}</td></tr>`;
+      }).join("")}</tbody>
+    </table></div>`;
+  }
+
+  async function renderAggregates() {
+    const el = $("agg-table");
+    if (el.dataset.done) return;   // once: the pollster filter re-renders only the list
+    el.dataset.done = "1";
+    if (aggregates === null) {
+      try { aggregates = await loadJSON("poll_aggregates"); } catch (err) { console.error(err); aggregates = false; }
+    }
+    el.innerHTML = aggregatesTable();
+  }
+
   function renderList() {
     document.title = "Polls · Vic Election 2026";
     const firms = [...new Set(polls.map((p) => p.pollster))].sort();
@@ -232,6 +310,7 @@
     const list = polls.filter((p) => !sel.value || p.pollster === sel.value).reverse();
     $("poll-count").textContent = `${list.length} poll${list.length === 1 ? "" : "s"}`;
     $("poll-list").innerHTML = pollTable(list);
+    renderAggregates();
   }
 
   function onHashChange() {
@@ -244,6 +323,7 @@
   }
 
   async function init() {
+    if (!hashId()) loadJSON("poll_aggregates").catch(() => {});   // start it alongside polls.json (loadJSON caches the request)
     try {
       polls = App.preparePolls(await loadJSON("polls"));
       if (window.Chart) Chart.defaults.font.family = cssVar("--font-body") || "system-ui, sans-serif";
