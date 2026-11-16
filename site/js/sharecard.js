@@ -388,7 +388,7 @@
       return i < 0 ? `<b>${escapeHtml(b)}</b>` : `<b>${escapeHtml(b.slice(0, i))}</b>, ${escapeHtml(b.slice(i + 1).trim())}`;
     };
     const lc = regionEntry ? `${escapeHtml(regionEntry.name)} Region: ${regionEntry.candidates.length} candidates${regionEntry.ballot_drawn
-      ? ` in ${(regionEntry.groups || []).length} groups` : ""}. Number at least 1 box above the line, or at least 5 below it.` : "";
+      ? ` in ${(regionEntry.groups || []).length} groups` : ""}. Number at least 5 boxes, above the line or below it.` : "";
     return {
       accent: "--accent",
       filename: `ballot-${district.id}-${App.melbourneToday()}.png`,

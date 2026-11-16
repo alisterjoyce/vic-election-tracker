@@ -10,20 +10,31 @@
   const { loadJSON, escapeHtml, partyName, partyShort, partyVar, fmtDate, hashId } = App;
   const $ = (id) => document.getElementById(id);
 
-  // The VEC's rules for a formal vote, in its own terms (checked against the pages linked, 16 Nov 2026).
+  // The VEC's rules for a formal vote, as its voter guide gives them (checked 16 Nov 2026). Since group voting tickets
+  // ended (Aug 2026) the Council instruction is at least 5 boxes either side of the line. The savings rules are the
+  // VEC's counting rules from its scrutineer handbook (Appendix 6), shown as that, not as advice.
+  const GUIDE = "https://www.vec.vic.gov.au/voting/learn-to-vote/how-to-fill-out-state-ballot-papers";
+  const HANDBOOK = "https://www.vec.vic.gov.au/-/media/a601cc5549c04608951cc7c87b196624.pdf";
   const RULES = {
     la: {
-      url: "https://www.vec.vic.gov.au/voting/how-to-vote/how-to-fill-in-your-ballot-papers",
-      text: (n) => `<p>Number <strong>every box</strong>, from 1 to ${n}, in the order of your choice: 1 beside your first choice, 2 beside your
-        second, and so on until every box has a number.</p>`,
+      url: GUIDE,
+      text: (n) => `<p>Number <strong>every box</strong> in the order of your choice: 1 beside your first choice, 2 beside your
+        second, and so on until there is a number in every box (here, 1 to ${n}). Use numbers only: ticks, crosses, a repeated
+        or missing number, or a zero can make the vote informal.</p>
+        <p class="muted small">In the count, the VEC accepts a paper with one box left blank if that box would have held the last number
+        (<a href="${HANDBOOK}" target="_blank" rel="noopener">scrutineer handbook ↗</a>, Appendix 6).</p>`,
     },
     lc: {
-      url: "https://www.vec.vic.gov.au/voting/how-to-vote/how-to-fill-in-your-ballot-papers",
-      text: () => `<p>Vote <strong>either</strong> above the line <strong>or</strong> below it:</p>
-        <ul><li><strong>Above the line:</strong> number at least one box (1 for the group you choose). You can number more boxes
-          (2, 3 and so on) to give preferences to other groups.</li>
-        <li><strong>Below the line:</strong> number at least 5 boxes, from 1 to 5, for individual candidates. You can keep
-          numbering as many more as you like.</li></ul>`,
+      url: GUIDE,
+      text: () => `<p>Number <strong>at least 5 boxes</strong>, either <strong>above</strong> the line <strong>or below</strong> it, not both:</p>
+        <ul><li><strong>Above the line:</strong> number the group boxes 1, 2, 3 and so on in the order of your choice until you have
+          numbered at least 5. Don't write any numbers below the line.</li>
+        <li><strong>Below the line:</strong> number the candidate boxes 1, 2, 3 and so on until you have numbered at least 5. Don't write
+          any numbers above the line.</li></ul>
+        <p class="muted small">Group voting tickets no longer exist: your preferences go only where you number them. In the count, the VEC
+          still accepts an above-the-line vote with only a first preference, and a below-the-line vote with 1 to 5 in sequence, ignoring
+          mistakes after 5; if both sides are formal, the below-the-line vote counts
+          (<a href="${HANDBOOK}" target="_blank" rel="noopener">scrutineer handbook ↗</a>, Appendix 6).</p>`,
     },
   };
 
@@ -113,7 +124,7 @@
         ${htvPanel(cards, rows, `${entry.name} District`)}
       </div>
       <div class="yb-rules"><h3>For your Assembly vote to count</h3>${RULES.la.text(n)}
-        <p class="muted small">The VEC's guide: <a href="${escapeHtml(RULES.la.url)}" target="_blank" rel="noopener">how to fill in your ballot papers ↗</a></p></div>
+        <p class="muted small">The VEC's guide: <a href="${escapeHtml(RULES.la.url)}" target="_blank" rel="noopener">how to fill out state ballot papers ↗</a></p></div>
     </section>`;
   }
 
@@ -147,12 +158,12 @@
       <div class="card-head"><h2 id="yb-lc-h">Legislative Council</h2><span class="muted small">${escapeHtml(entry.name)} Region · ${entry.vacancies || 5} members · ${entry.candidates.length} candidates${drawn ? ` in ${groups.length} groups${loose.length ? ` and ${loose.length} ungrouped` : ""}` : ""}</span></div>
       <p class="yb-paper-kicker">Mock-up, not an official ballot paper</p>
       <p class="yb-paper-title">Legislative Council<span>${escapeHtml(entry.name)} Region</span></p>
-      ${drawn ? `<div class="yb-lc-key small"><span><strong>Above the line:</strong> one box per group (the top row)</span><span><strong>Below the line:</strong> one box per candidate (the columns)</span></div>` : ""}
+      ${drawn ? `<div class="yb-lc-key small"><span><strong>Above the line:</strong> one box per group (the top row)</span><span><strong>Below the line:</strong> one box per candidate (the columns)</span><span>Number at least 5 boxes on one side</span></div>` : ""}
       ${paper}
       <div class="yb-grid yb-grid-lc">
         ${htvPanel(cards, rows, `${entry.name} Region`)}
         <div class="yb-rules"><h3>For your Council vote to count</h3>${RULES.lc.text()}
-          <p class="muted small">The VEC's guide: <a href="${escapeHtml(RULES.lc.url)}" target="_blank" rel="noopener">how to fill in your ballot papers ↗</a></p></div>
+          <p class="muted small">The VEC's guide: <a href="${escapeHtml(RULES.lc.url)}" target="_blank" rel="noopener">how to fill out state ballot papers ↗</a></p></div>
       </div>
     </section>`;
   }
@@ -187,7 +198,7 @@
       </div>
       <p class="yb-voters small">If you are enrolled in ${escapeHtml(d.name)} District, you vote for 1 member of the Legislative Assembly
         for ${escapeHtml(d.name)} and 5 members of the Legislative Council for ${escapeHtml(region ? region.name : d.region)} Region.
-        Check your enrolment and district with the <a href="https://www.vec.vic.gov.au/enrolment/check-your-enrolment" target="_blank" rel="noopener">VEC ↗</a>.</p>
+        Check your enrolment and district with the <a href="https://www.vec.vic.gov.au/enrolment/check-my-enrolment" target="_blank" rel="noopener">VEC ↗</a>.</p>
       ${assembly(d, entry)}
       ${region && rEntry ? council(region, rEntry) : '<p class="empty">The Council ballot for this region isn\'t loaded yet.</p>'}
       <p class="muted small yb-src">Candidates, ballot order and party names as printed, from the
