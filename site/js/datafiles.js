@@ -91,5 +91,29 @@
     }
   }
 
-  document.addEventListener("DOMContentLoaded", () => { render(); renderProfileCount(); });
+  // news.json's sources: how each outlet is read, whether it worked at the last refresh, and its headlines in the last 7 days.
+  async function renderNewsSources() {
+    const el = document.getElementById("news-sources-body");
+    if (!el) return;
+    try {
+      const n = await App.loadJSON("news");
+      const badge = { ok: ["vec_nominated", "OK"], error: ["withdrawn", "Failed"], skipped: ["neutral", "Skipped"] };
+      const link = (href, text) => href ? `<a href="${escapeHtml(href)}">${escapeHtml(text)}</a>` : escapeHtml(text);
+      const rows = Object.entries(n.sources || {}).map(([name, s]) => {
+        const [cls, word] = badge[s.status] || ["neutral", s.status || "?"];
+        const via = s.status === "skipped" ? "Not read" : s.via === "feed" ? "Own feed" : s.via === "sitemap" ? "Own news sitemap" : s.via === "feed and Bing News search" ? "Own feed and Bing News search" : (s.via || "");
+        return `<tr><td>${link(s.page, name)}</td><td class="small">${s.url ? link(s.url, via || "Link") : escapeHtml(via)}</td>
+          <td class="num">${s.status === "ok" ? (s.last_7_days || 0).toLocaleString("en-AU") : "–"}</td>
+          <td class="news-src-status"><span class="badge ${cls}">${escapeHtml(word)}</span>${s.message ? `<div class="muted small">${escapeHtml(s.message)}</div>` : ""}</td></tr>`;
+      }).join("");
+      document.getElementById("news-sources-updated").textContent = n.updated ? `Checked ${App.fmtDateTime(n.updated)}` : "";
+      el.innerHTML = `<div class="table-scroll"><table data-no-csv>
+          <thead><tr><th>Source</th><th>Read through</th><th class="num">Last 7 days</th><th>Status</th></tr></thead>
+          <tbody>${rows}</tbody></table></div>`;
+    } catch (err) {
+      el.innerHTML = "<p class=\"empty\">The news source list isn't available.</p>";
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => { render(); renderProfileCount(); renderNewsSources(); });
 })();

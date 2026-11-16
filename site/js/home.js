@@ -464,8 +464,18 @@
         .then(() => { if (location.hash === "#state-map") mapRoot.scrollIntoView(); })   // the nav's "Map" link
         .catch((err) => App.showError(mapRoot.querySelector("[data-map=main]"), err));
     }
-    loadJSON("news").then((n) => {
-      document.getElementById("news-statewide").innerHTML = App.newsList((n.statewide || []).slice(0, 5));
+    // Below the headline card: fetched after the first paint so it stays off the critical path.
+    App.afterPaint(() => loadJSON("news")).then((n) => {
+      // Outlet filter: every outlet in the statewide list, with its count; "All outlets" shows the five latest.
+      const all = n.statewide || [], box = document.getElementById("news-statewide"), sel = document.getElementById("news-outlet");
+      const counts = {};
+      all.forEach((it) => { if (it.outlet) counts[it.outlet] = (counts[it.outlet] || 0) + 1; });
+      Object.keys(counts).sort((a, b) => a.localeCompare(b)).forEach((o) => sel.add(new Option(`${o} (${counts[o]})`, o)));
+      const show = () => {
+        box.innerHTML = sel.value ? App.newsList(all.filter((it) => it.outlet === sel.value), { more: 5 }) : App.newsList(all.slice(0, 5));
+      };
+      sel.addEventListener("change", show);
+      show();
       document.getElementById("news-updated").textContent = n.updated ? `Updated ${App.fmtDateTime(n.updated)}` : "";
     }).catch(() => {
       document.getElementById("news-statewide").innerHTML = "<p class=\"empty\">News isn't available yet.</p>";

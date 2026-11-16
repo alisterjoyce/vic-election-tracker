@@ -2522,36 +2522,116 @@ def refresh_htv(data_dir: Path, meta: dict) -> bool:
 # --------------------------------------------------------------------------
 # News: headlines, outlet, date and link only (never article text)
 # --------------------------------------------------------------------------
-# Per seat: a Bing News RSS search for the district or the sitting MP with
-# "Victorian election" (Google News RSS is disallowed by its robots.txt),
-# plus regional papers' and the ABC's feeds, matched to seats by district
-# or MP name. One request per second; any source that fails is skipped and
-# the seat keeps its earlier list.
+# Sources (NEWS_SOURCES): each outlet's own RSS/Atom feed or Google News
+# sitemap where its robots.txt allows us; when it has none, its robots.txt
+# disallows us, or the feed fails, a Bing News RSS search restricted to the
+# outlet's site ("site:<domain> \"Victorian election\""), so its headlines
+# still arrive under its name. Google News RSS is never used: its robots.txt
+# disallows /rss. Per seat: two Bing News searches (the district with
+# "Victorian election", and the sitting MP), plus every source's items that
+# name the district in an election story or name the MP or a candidate in full.
+# One request per second; a source that fails is logged and skipped, and each
+# seat keeps its earlier list.
 
 NEWS_PER_SEAT = 10
-NEWS_STATEWIDE = 25
+NEWS_STATEWIDE = 50
 NEWS_MAX_AGE_DAYS = 120
+NEWS_RECENT_DAYS = 7
 BING_NEWS = "https://www.bing.com/news/search"
-NEWS_FEEDS = [
-    # (outlet, feed URL, the ABC's general feed: filtered to state-election stories for the statewide list)
-    ("ABC News", "https://www.abc.net.au/news/feed/51120/rss.xml", True),
-    ("Bendigo Advertiser", "https://www.bendigoadvertiser.com.au/rss.xml", False),
-    ("Border Mail", "https://www.bordermail.com.au/rss.xml", False),
-    ("Warrnambool Standard", "https://www.standard.net.au/rss.xml", False),
-    ("Latrobe Valley Express", "https://www.latrobevalleyexpress.com.au/feed/", False),
-    ("Sunraysia Daily", "https://www.sunraysiadaily.com.au/feed", False),
-    ("Star Weekly", "https://www.starweekly.com.au/feed/", False),
-    ("Shepparton News", "https://www.sheppnews.com.au/feed/", False),
-    ("Geelong Advertiser", "https://www.geelongadvertiser.com.au/feed", False),   # robots.txt prohibits: always skipped
+# outlet: the label shown (and given to every link on its domain, whichever source found it).
+# url + kind: the outlet's own feed ("rss" covers RSS and Atom; "sitemap" is a Google News sitemap).
+# site: the domain for the Bing News fallback search; search "also" runs it even when the feed works
+#   (the ABC's election page has no feed, and its general feed misses some election stories).
+# scope: "regional" papers count for the statewide list only when a story says "state election";
+#   "national" outlets count when it reads as a Victorian election story, and their seat matches
+#   must also mention Victoria (district names such as Richmond and Brighton exist elsewhere).
+# note: why the outlet's own site isn't read (checked by hand on 16 Nov 2026).
+# page: the outlet's Victorian election page, linked from the Data page.
+NEWS_ROBOTS_NOTE = "robots.txt disallows the whole site (checked 16 Nov 2026)"
+NEWS_SOURCES = [
+    {"outlet": "ABC News", "url": "https://www.abc.net.au/news/feed/51120/rss.xml", "kind": "rss", "site": "abc.net.au",
+     "search": "also", "scope": "national", "page": "https://www.abc.net.au/news/elections/vic-election-2026"},
+    {"outlet": "The Age", "url": "https://www.theage.com.au/rss/national/victoria.xml", "kind": "rss", "site": "theage.com.au",
+     "scope": "national", "page": "https://www.theage.com.au/politics/victoria"},
+    {"outlet": "Herald Sun", "site": "heraldsun.com.au", "scope": "national", "note": NEWS_ROBOTS_NOTE},
+    {"outlet": "Guardian Australia", "url": "https://www.theguardian.com/australia-news/victorian-politics/rss", "kind": "rss",
+     "site": "theguardian.com", "scope": "national", "page": "https://www.theguardian.com/australia-news/victorian-politics"},
+    {"outlet": "SBS News", "url": "https://www.sbs.com.au/news/topic/australia/feed", "kind": "rss", "site": "sbs.com.au",
+     "scope": "national"},
+    {"outlet": "9News", "url": "https://www.nine.com.au/sitemaps/news/brands/nine", "kind": "sitemap", "site": "nine.com.au",
+     "hosts": ["9news.com.au"], "scope": "national", "page": "https://www.nine.com.au/australia-news/vic"},
+    {"outlet": "7News", "url": "https://7news.com.au/news/vic/vic-election-2026/feed", "kind": "rss", "site": "7news.com.au",
+     "scope": "national", "page": "https://7news.com.au/news/vic/vic-election-2026"},
+    {"outlet": "Sky News Australia", "site": "skynews.com.au", "scope": "national", "note": NEWS_ROBOTS_NOTE},
+    {"outlet": "News24", "site": "news24.com.au", "scope": "national", "note": NEWS_ROBOTS_NOTE,
+     "page": "https://www.news24.com.au/topics/victorian-election"},
+    {"outlet": "The Australian", "site": "theaustralian.com.au", "scope": "national", "note": NEWS_ROBOTS_NOTE},
+    {"outlet": "Australian Financial Review", "url": "https://www.afr.com/rss/politics.xml", "kind": "rss", "site": "afr.com",
+     "scope": "national"},
+    {"outlet": "AAP", "site": "aap.com.au", "scope": "national", "note": "no RSS feed found"},
+    {"outlet": "Crikey", "url": "https://www.crikey.com.au/feed/", "kind": "rss", "site": "crikey.com.au", "scope": "national"},
+    {"outlet": "The Conversation", "url": "https://theconversation.com/au/politics/articles.atom", "kind": "rss",
+     "site": "theconversation.com", "scope": "national"},
+    {"outlet": "10 News First", "site": "10.com.au", "hosts": ["10play.com.au"], "scope": "national", "note": "no RSS feed found"},
+    {"outlet": "The Saturday Paper", "url": "https://www.thesaturdaypaper.com.au/feed.xml", "kind": "rss",
+     "site": "thesaturdaypaper.com.au", "scope": "national"},
+    {"outlet": "The New Daily", "site": "thenewdaily.com.au", "scope": "national", "note": "no RSS feed found"},
+    {"outlet": "Daily Mail Australia", "url": "https://www.dailymail.co.uk/auhome/index.rss", "kind": "rss", "site": "dailymail.com",
+     "hosts": ["dailymail.co.uk"], "scope": "national"},
+    # Regional papers (feeds only).
+    {"outlet": "Bendigo Advertiser", "url": "https://www.bendigoadvertiser.com.au/rss.xml", "kind": "rss", "scope": "regional"},
+    {"outlet": "Border Mail", "url": "https://www.bordermail.com.au/rss.xml", "kind": "rss", "scope": "regional"},
+    {"outlet": "Warrnambool Standard", "url": "https://www.standard.net.au/rss.xml", "kind": "rss", "scope": "regional"},
+    {"outlet": "Latrobe Valley Express", "url": "https://www.latrobevalleyexpress.com.au/feed/", "kind": "rss", "scope": "regional"},
+    {"outlet": "Sunraysia Daily", "url": "https://www.sunraysiadaily.com.au/feed", "kind": "rss", "scope": "regional"},
+    {"outlet": "Star Weekly", "url": "https://www.starweekly.com.au/feed/", "kind": "rss", "scope": "regional"},
+    {"outlet": "Shepparton News", "url": "https://www.sheppnews.com.au/feed/", "kind": "rss", "scope": "regional"},
+    {"outlet": "Geelong Advertiser", "url": "https://www.geelongadvertiser.com.au/feed", "kind": "rss", "scope": "regional"},   # robots.txt prohibits: always skipped
 ]
+NEWS_SEARCH = "Bing News search"   # the per-district and statewide searches, as a source
+
+
+# Other outlets Bing names more than one way (by domain), so each has one label.
+NEWS_OTHER_HOSTS = {"couriermail.com.au": "The Courier-Mail", "smh.com.au": "The Sydney Morning Herald",
+                    "brisbanetimes.com.au": "Brisbane Times", "watoday.com.au": "WAtoday", "news.com.au": "news.com.au",
+                    "weeklytimesnow.com.au": "The Weekly Times", "redflag.org.au": "Red Flag", "ozarab.media": "OzArab Media",
+                    "mpnews.com.au": "MPNEWS", "roymorgan.com": "Roy Morgan Research"}
+
+
+def _news_hosts() -> list[tuple[str, str]]:
+    """(domain, outlet) for every source, longest domain first, so a subdomain's own label wins."""
+    pairs = dict(NEWS_OTHER_HOSTS)
+    for s in NEWS_SOURCES:
+        for h in [s.get("site"), *(s.get("hosts") or []),
+                  re.sub(r"^www\.", "", urllib.parse.urlparse(s["url"]).netloc) if s.get("url") else None]:
+            if h:
+                pairs.setdefault(h, s["outlet"])
+    return sorted(pairs.items(), key=lambda p: -len(p[0]))
+
+
+NEWS_HOSTS = _news_hosts()
+
+
+def _news_outlet(url: str, fallback: str) -> str:
+    """The outlet's label by the link's domain (Bing names one outlet several ways), else the feed's own name."""
+    host = re.sub(r"^www\.", "", urllib.parse.urlparse(url).netloc.lower())
+    for dom, outlet in NEWS_HOSTS:
+        if host == dom or host.endswith("." + dom):
+            return outlet
+    return fallback
+
+
 NEWS_SCHEMA = {
-    "description": "Election news per district and statewide, refreshed four times a day by scripts/refresh.py from Bing News RSS searches "
-                   "and publishers' RSS feeds. Headline, outlet, date and link only; article text is never stored.",
+    "description": "Election news per district and statewide, refreshed four times a day by scripts/refresh.py from publishers' RSS feeds "
+                   "and news sitemaps, and Bing News RSS searches (per district, and per outlet where its own site can't be read). "
+                   "Headline, outlet, date and link only; article text is never stored.",
     "fields": {
         "updated": "ISO UTC time of the last refresh",
         "statewide": f"Up to {NEWS_STATEWIDE} latest items about the state election: [{{title, outlet, published (ISO UTC), url}}]",
-        "seats": f"District id -> up to {NEWS_PER_SEAT} latest items mentioning the district or its sitting MP",
-        "sources": "Source -> {status: ok | error | skipped, url, items, message}",
+        "seats": f"District id -> up to {NEWS_PER_SEAT} latest items mentioning the district, its sitting MP or a candidate by full name",
+        "sources": "Source (outlet, or the Bing News search) -> {status: ok | error | skipped, via: feed | sitemap | Bing News search, "
+                   "url (what was read), page (the outlet's election page, if any), items (items read this run), "
+                   f"last_7_days (election headlines from it dated in the last {NEWS_RECENT_DAYS} days), message}}",
     },
 }
 ELECTION_WORDS = re.compile(r"\b(election|by-election|candidates?|preselect\w*|ballot|preferences|polling|MP|"
@@ -2562,6 +2642,9 @@ NOT_VICTORIA = re.compile(r"(\bB\.?C\.?\b|British Columbia|Victoria-area|Saanich
 NEWS_BLOCKED_HOSTS = {"europesays.com"}
 STATE_ELECTION = re.compile(r"(state election|Victorian election|Victorian (poll|campaign|voters)|"
                             r"Ben Carroll|Jess Wilson|Warren Pickering|Spring Street)", re.I)
+# National outlets also cover other states' elections: "state election" alone counts only beside a mention of Victoria.
+VIC_ELECTION = re.compile(r"(Victorian (state )?election|Victorian (poll|campaign|voters)|"
+                          r"Ben Carroll|Jess Wilson|Warren Pickering|Spring Street)", re.I)
 
 
 def _news_title_key(title: str) -> str:
@@ -2574,8 +2657,9 @@ def _wrong_victoria(text: str) -> bool:
 
 
 def _dedupe_news(items: list[dict]) -> list[dict]:
-    """Newest first; drop repeats by URL or near-identical headline, Canadian stories and blocked hosts.
-    Runs over earlier items too, so a filter added later also cleans what was already saved."""
+    """Newest first; drop repeats by URL or near-identical headline, Canadian stories and blocked hosts, and
+    label each by its domain's outlet. Runs over earlier items too, so a filter or label added later also
+    cleans what was already saved."""
     out = []
     for it in sorted(items, key=lambda x: x.get("published") or "", reverse=True):
         host = re.sub(r"^www\.", "", urllib.parse.urlparse(it["url"]).netloc)
@@ -2584,36 +2668,71 @@ def _dedupe_news(items: list[dict]) -> list[dict]:
         if any(it["url"] == o["url"] or difflib.SequenceMatcher(None, _news_title_key(it["title"]), _news_title_key(o["title"])).ratio() > 0.9
                for o in out):
             continue
-        out.append(it)
+        out.append({**it, "outlet": _news_outlet(it["url"], it.get("outlet") or "")})
     return out
 
 
+def _news_date(value: str) -> datetime | None:
+    """RFC 822 (RSS: "+1100" or "GMT") or ISO 8601 (Atom, sitemaps), as UTC."""
+    value = (value or "").strip()
+    if not value:
+        return None
+    try:
+        d = email.utils.parsedate_to_datetime(value)
+    except (TypeError, ValueError):
+        try:
+            d = datetime.fromisoformat(value.replace("Z", "+00:00"))
+        except ValueError:
+            return None
+    return (d if d.tzinfo else d.replace(tzinfo=timezone.utc)).astimezone(timezone.utc)
+
+
 def _parse_rss(xml: bytes, outlet: str | None) -> list[dict]:
-    """[{title, outlet, published, url, _text}]; _text (headline + summary) is for matching only and is never stored."""
+    """RSS <item>s, Atom <entry>s or Google News sitemap <url>s -> [{title, outlet, published, url, _text}].
+    _text (headline + summary) is for matching only and is never stored."""
     from lxml import etree
     root = etree.fromstring(xml, parser=etree.XMLParser(recover=True, resolve_entities=False, no_network=True))
     if root is None:
         return []
+
+    def local(el):
+        return etree.QName(el).localname.lower() if isinstance(el.tag, str) else ""
+
+    def kid(el, name):
+        return next((c for c in el if local(c) == name), None)
+
+    def txt(el, name):
+        c = kid(el, name) if el is not None else None
+        return (c.text or "").strip() if c is not None else ""
+
     out = []
-    for item in root.iter("item"):
-        def get(tag):
-            return (item.findtext(tag) or "").strip()
-        title, link = htmllib.unescape(clean_text(get("title"))), get("link")
+    for el in root.iter():
+        tag, src = local(el), None
+        if tag == "item":                                    # RSS
+            title, link, when, summary = txt(el, "title"), txt(el, "link"), txt(el, "pubdate"), txt(el, "description")
+            src = txt(el, "source") or None                  # Bing's <News:Source>: the publisher
+        elif tag == "entry":                                 # Atom
+            links = [c for c in el if local(c) == "link" and c.get("rel", "alternate") == "alternate"]
+            title, link = txt(el, "title"), (links[0].get("href") or "").strip() if links else ""
+            when, summary = txt(el, "published") or txt(el, "updated"), txt(el, "summary") or txt(el, "content")
+        elif tag == "url" and kid(el, "news") is not None:   # Google News sitemap
+            news = kid(el, "news")
+            title, link, when, summary = txt(news, "title"), txt(el, "loc"), txt(news, "publication_date"), ""
+        else:
+            continue
+        title = htmllib.unescape(clean_text(title))
         if not title or not link:
             continue
-        src = next((el.text for el in item if isinstance(el.tag, str) and el.tag.lower().endswith("source") and el.text), None)
         if "bing.com/news/apiclick" in link:   # unwrap Bing's redirect to the publisher's URL
             m = re.search(r"[?&]url=([^&]+)", link)
             link = requests.utils.unquote(m.group(1)) if m else link
-        try:
-            published = email.utils.parsedate_to_datetime(get("pubDate"))   # RFC 822: "+1100" or "GMT"
-        except (TypeError, ValueError):
+        published = _news_date(when)
+        if not published:
             continue
-        published = (published if published.tzinfo else published.replace(tzinfo=timezone.utc)).astimezone(timezone.utc)
-        summary = re.sub(r"<[^>]+>", " ", htmllib.unescape(get("description")))
+        summary = re.sub(r"<[^>]+>", " ", htmllib.unescape(summary))
         out.append({"title": title, "outlet": clean_text(src or outlet or ""),
                     "published": published.replace(microsecond=0).isoformat().replace("+00:00", "Z"),
-                    "url": link, "_text": f"{title} {summary}"})
+                    "url": link, "_text": f"{title} {summary[:2000]}"})
     return out
 
 
@@ -2625,8 +2744,14 @@ def refresh_news(data_dir: Path, meta: dict) -> bool:
     if not districts:
         log.error("news: districts.json missing; skipped")
         return False
+    # Each district's active candidates (not the sitting MP, searched for separately), for matching by full name.
+    hidden = {"withdrawn", "superseded", "not_standing"}
+    cands = {}
+    for c in (read_json(data_dir / "candidates.json", {}) or {}).get("candidates", []):
+        if c.get("district") and c.get("status") not in hidden and len((c.get("name") or "").split()) >= 2:
+            cands.setdefault(c["district"], set()).add(c["name"].strip())
     web = PoliteSession()
-    web.session.headers["Accept"] = "application/rss+xml, application/xml;q=0.9, */*;q=0.5"
+    web.session.headers["Accept"] = "application/rss+xml, application/atom+xml, application/xml;q=0.9, */*;q=0.5"
     status, robots_cache = {}, {}
 
     def allowed(url):
@@ -2653,80 +2778,151 @@ def refresh_news(data_dir: Path, meta: dict) -> bool:
         finally:
             web.last = time.monotonic()
 
-    cutoff = (datetime.now(timezone.utc) - pd.Timedelta(days=NEWS_MAX_AGE_DAYS)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    now = datetime.now(timezone.utc)
+    cutoff = (now - pd.Timedelta(days=NEWS_MAX_AGE_DAYS)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    recent = (now - pd.Timedelta(days=NEWS_RECENT_DAYS)).strftime("%Y-%m-%dT%H:%M:%SZ")
     def fresh(items):
         return [i for i in items if i["published"] >= cutoff]
     def bare(items):
-        return [{k: v for k, v in i.items() if k != "_text"} for i in items]
+        return [{k: v for k, v in i.items() if not k.startswith("_")} for i in items]
+    def tag(items, source, scope):
+        for i in items:
+            i["_source"], i["_scope"] = source, scope
+        return items
+    def is_statewide(i):
+        t = i["_text"]
+        if i["_scope"] == "regional":
+            return bool(re.search(r"state election", t, re.I))
+        return bool(VIC_ELECTION.search(t) or (re.search(r"state election", t, re.I) and VICTORIA.search(t)))
+    used = {}   # source -> {url: published} of items that reached the statewide list or a seat
 
-    # Publisher feeds, fetched once each.
-    feed_items, statewide = [], []
-    for outlet, url, is_abc in NEWS_FEEDS:
-        if not allowed(url):
-            status[outlet] = {"status": "skipped", "url": url, "message": "robots.txt disallows automated access"}
-            continue
-        try:
-            items = [i for i in fresh(_parse_rss(fetch(url), outlet)) if not _wrong_victoria(i["_text"])]
-            if not items:
-                raise ValueError("feed returned no recent items")
-            status[outlet] = {"status": "ok", "url": url, "items": len(items)}
-            feed_items.extend(items)
-            if is_abc:
-                statewide.extend(i for i in items if STATE_ELECTION.search(i["_text"]))
-            else:
-                statewide.extend(i for i in items if re.search(r"state election", i["_text"], re.I))
-        except Exception as exc:  # noqa: BLE001 - skip this feed
-            log.warning("news: %s feed failed: %s", outlet, exc)
-            status[outlet] = {"status": "error", "url": url, "message": str(exc)[:200]}
+    def use(items):
+        for i in items:
+            used.setdefault(i["_source"], {})[i["url"]] = i["published"]
 
     def bing(q):
         url = f"{BING_NEWS}?{requests.compat.urlencode({'q': q, 'format': 'rss', 'cc': 'AU', 'setlang': 'en-AU'})}"
         # Video pages (ABC iview) carry the page's date, not the story's.
         return [i for i in fresh(_parse_rss(fetch(url), None))
                 if "iview.abc.net.au" not in i["url"] and not _wrong_victoria(i["_text"])]
+    bing_ok = allowed(BING_NEWS + "?q=x&format=rss")
+
+    # Each outlet: its own feed if robots.txt allows it, else (or on failure) the Bing search for its site.
+    pool, statewide = [], []
+    for src in NEWS_SOURCES:
+        outlet, scope, problems = src["outlet"], src["scope"], []
+        st = {"status": "error", "page": src.get("page")}
+        items = None
+        if src.get("url"):
+            st.update(url=src["url"], via=src["kind"] if src["kind"] == "sitemap" else "feed")
+            if not allowed(src["url"]):
+                problems.append("robots.txt disallows its feed")
+                st["status"] = "skipped"
+            else:
+                try:
+                    items = [i for i in fresh(_parse_rss(fetch(src["url"]), outlet)) if not _wrong_victoria(i["_text"])]
+                    if not items:
+                        raise ValueError("feed returned no recent items")
+                except Exception as exc:  # noqa: BLE001 - skip this feed (and try the search below)
+                    problems.append(f"feed failed: {str(exc)[:160]}")
+                    items = None
+        elif src.get("note"):
+            problems.append(src["note"])
+        searched = None
+        if src.get("site") and (items is None or src.get("search") == "also"):
+            q = f'site:{src["site"]} "Victorian election"'
+            if not bing_ok:
+                problems.append("Bing News search disallowed by robots.txt")
+            else:
+                try:
+                    searched = [i for i in bing(q) if _news_outlet(i["url"], "") == outlet]
+                except Exception as exc:  # noqa: BLE001 - skip this search
+                    problems.append(f"Bing search failed: {str(exc)[:160]}")
+            if searched is not None:
+                if items is None:
+                    st.update(url=f"{BING_NEWS}?{requests.compat.urlencode({'q': q})}", via=NEWS_SEARCH)
+                else:
+                    st["via"] = f"{st['via']} and {NEWS_SEARCH}"
+                items = (items or []) + searched
+        if items is not None:
+            tag(items, outlet, scope)
+            pool.extend(items)
+            st.update(status="ok", items=len(items))
+            if not items:
+                problems.append("no recent items")
+        message = "; ".join(problems)
+        if message:
+            st["message"] = message
+        if any("failed" in p for p in problems):
+            log.warning("news: %s: %s", outlet, message)
+            warn_ci(f"News: {outlet}: {message}")
+        status[outlet] = {k: v for k, v in st.items() if v is not None}
 
     # Bing News: statewide searches, then two per district (stops after 5 failures in a row).
-    bing_ok = allowed(BING_NEWS + "?q=x&format=rss")
-    failures, searched, seats = 0, 0, {}
+    failures, searched_n, seats = 0, 0, {}
     if bing_ok:
         for q in ('"Victorian state election"', '"Victorian election" 2026'):
             try:
-                statewide.extend(i for i in bing(q) if STATE_ELECTION.search(i["_text"]))
+                pool.extend(tag(bing(q), NEWS_SEARCH, "national"))
             except Exception as exc:  # noqa: BLE001
                 log.warning("news: Bing statewide search failed: %s", exc)
+                warn_ci(f"News: Bing statewide search failed: {exc}")
+    for i in pool:
+        if is_statewide(i):
+            statewide.append(i)
     for d in districts:
         name, mp = d["name"], d.get("sitting_mp") or ""
         name_re = re.compile(rf"\b{re.escape(name)}\b", re.I)
         mp_re = re.compile(rf"\b{re.escape(mp)}\b", re.I) if mp else None
-        # Feed items: the MP's full name, or the district name in an election story.
-        found = [it for it in feed_items
-                 if (mp_re and mp_re.search(it["_text"])) or (name_re.search(it["_text"]) and ELECTION_WORDS.search(it["_text"]))]
-        searched_ok = False
-        # Two searches: the district with "Victorian election" (the result must name the district in a Victorian
-        # election story: "Richmond" or "Melbourne" alone match far too much), and the sitting MP by name.
+        others = sorted(n for n in cands.get(d["id"], ()) if n.lower() != mp.lower())
+        cand_re = re.compile(r"\b(" + "|".join(re.escape(n) for n in others) + r")\b", re.I) if others else None
+        # A district hit: the district named in a Victorian election story ("Richmond" or "Melbourne" alone match far too much).
         district_hit = lambda t: name_re.search(t) and VICTORIA.search(t) and ELECTION_WORDS.search(t)
         if name == "Melbourne":   # the seat shares its name with the city
             district_hit = lambda t: re.search(r"\b(seat|electorate|district|member) (of|for) Melbourne\b", t, re.I)
+
+        def pool_hit(it):
+            t = it["_text"]
+            if mp_re and mp_re.search(t):
+                return True
+            if it["_scope"] == "national" and not (VICTORIA.search(t) or STATE_ELECTION.search(t)):
+                return False
+            if cand_re and cand_re.search(t) and ELECTION_WORDS.search(t):
+                return True
+            if name == "Melbourne":
+                return bool(district_hit(t))
+            return bool(name_re.search(t) and ELECTION_WORDS.search(t))
+        found = [it for it in pool if pool_hit(it)]
+        searched_ok = False
+        # Two searches: the district with "Victorian election" and the sitting MP by name.
         queries = [(f'"{name}" Victorian election', district_hit)] + ([(f'"{mp}" MP Victoria', mp_re.search)] if mp else [])
         for q, keep in queries:
             if not bing_ok or failures >= 5:
                 break
             try:
-                found.extend(i for i in bing(q) if keep(i["_text"]))
-                searched += 1
+                hits = tag([i for i in bing(q) if keep(i["_text"])], NEWS_SEARCH, "national")
+                found.extend(hits)
+                statewide.extend(i for i in hits if STATE_ELECTION.search(i["_text"]))
+                searched_n += 1
                 failures = 0
                 searched_ok = True
             except Exception as exc:  # noqa: BLE001 - keep this seat's earlier items
                 log.warning("news: Bing search %r failed: %s", q, exc)
                 failures += 1
-        statewide.extend(i for i in found if STATE_ELECTION.search(i["_text"]))
+                if failures == 5:
+                    warn_ci("News: 5 Bing searches failed in a row; the remaining seats keep their earlier headlines")
+        use(found)
         merged = fresh(_dedupe_news(bare(found) + seats_old.get(d["id"], [])))
         seats[d["id"]] = merged[:NEWS_PER_SEAT] if (searched_ok or found) else seats_old.get(d["id"], [])
-    status["Bing News search"] = ({"status": "ok" if searched else "error", "url": BING_NEWS, "items": searched,
-                                   "message": f"{searched} searches for {len(districts)} districts"}
-                                  if bing_ok else {"status": "skipped", "url": BING_NEWS, "message": "robots.txt disallows"})
+    use(statewide)
+    status[NEWS_SEARCH] = ({"status": "ok" if searched_n else "error", "url": BING_NEWS, "via": NEWS_SEARCH, "items": searched_n,
+                            "message": f"{searched_n} searches for {len(districts)} districts, plus 2 statewide"}
+                           if bing_ok else {"status": "skipped", "url": BING_NEWS, "message": "robots.txt disallows"})
     status["Google News"] = {"status": "skipped", "url": "https://news.google.com/rss",
                              "message": "robots.txt disallows /rss for all crawlers; Bing News search used instead"}
+    for name, st in status.items():
+        if st["status"] == "ok":
+            st["last_7_days"] = sum(1 for p in used.get(name, {}).values() if p >= recent)
 
     if not any(s["status"] == "ok" for s in status.values()):
         log.error("news: every source failed; keeping %s", path.name)
@@ -2745,6 +2941,16 @@ def refresh_news(data_dir: Path, meta: dict) -> bool:
                                               "message": f"{len(data['statewide'])} statewide, {total} seat items"}
     log.info("Wrote %s (%d statewide, %d seat items across %d seats)", path.name, len(data["statewide"]), total,
              sum(1 for v in seats.values() if v))
+    # Headlines stored by outlet (statewide and seats, each link once), for the log and the run summary.
+    stored = {}
+    for it in data["statewide"] + [i for v in seats.values() for i in v]:
+        stored.setdefault(it["outlet"], set()).add(it["url"])
+    log.info("news: headlines stored by outlet: %s",
+             ", ".join(f"{o} {len(u)}" for o, u in sorted(stored.items(), key=lambda p: (-len(p[1]), p[0]))))
+    log.info("news: sources: %s", ", ".join(f"{n} {s['status']}" + (f" ({s.get('last_7_days', 0)} in 7 days)" if s["status"] == "ok" else "")
+                                           for n, s in status.items()))
+    run_summary("- news, headlines stored by outlet: " +
+                ", ".join(f"{o} {len(u)}" for o, u in sorted(stored.items(), key=lambda p: (-len(p[1]), p[0]))))
     return True
 
 

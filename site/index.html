@@ -103,8 +103,9 @@
       </div>
       <div class="card" aria-labelledby="news-title">
         <div class="card-head"><h2 id="news-title">Latest news</h2><span class="muted small" id="news-updated"></span></div>
-        <div id="news-statewide"><p class="empty">Loading…</p></div>
-        <p class="muted small" style="margin:8px 0 0">Headlines and links only. Each seat page lists its own stories; <a href="timeline.html">the term so far</a>.</p>
+        <label class="news-filter"><span>Outlet</span><select id="news-outlet"><option value="">All outlets</option></select></label>
+        <div id="news-statewide" aria-live="polite"><p class="empty">Loading…</p></div>
+        <p class="muted small" style="margin:8px 0 0">Headlines and links only. Each seat page lists its own stories; <a href="data/index.html#news-sources">news sources</a>; <a href="timeline.html">the term so far</a>.</p>
       </div>
     </section>
 

@@ -874,6 +874,10 @@ html.js .agg-table { min-height: 257px; }
 .news-list a { font-weight: 600; text-decoration: none; color: var(--text); }
 .news-list a:hover { text-decoration: underline; color: var(--accent); }
 .news-more summary { cursor: pointer; color: var(--muted); font-size: 0.875rem; margin-top: 6px; }
+.news-filter { display: flex; align-items: center; gap: 8px; margin: 0 0 6px; font-size: 0.85rem; color: var(--muted); }
+.news-filter select { width: auto; max-width: 100%; min-width: 0; font-size: 0.9rem; padding: 6px 8px; min-height: 40px; }
+#news-sources-body { min-height: 300px; }
+.news-src-status { min-width: 12em; white-space: normal; }
 .seat-news { margin-top: 18px; }
 /* Ballot paper (common.js ballotPaper): the VEC's official list, seat page and region page */
 .seat-ballot { margin-top: 18px; }
@@ -990,7 +994,7 @@ html.has-hash #district-detail[hidden] { display: block; min-height: 2400px; }  
 /* Phones: tap targets at least 44px. The home page also takes about 15% off padding and type, so the
    headline card and the top of the map fit on one screen. */
 @media (max-width: 640px) {
-  .icon-btn, .segmented button, .search input { min-height: 44px; }
+  .icon-btn, .segmented button, .search input, .news-filter select { min-height: 44px; }
   .home .card { padding: 14px; margin-bottom: 14px; }
   .home .grid { gap: 14px; }
   .home .home-panels { margin-bottom: 14px; }
