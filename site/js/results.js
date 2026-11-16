@@ -46,7 +46,8 @@
       <td><span class="call ${d.called_by === "vec" ? "call-vec" : d.status === "called" ? "call-site" : d.status === "leading" ? "call-lead" : "call-und"}">${escapeHtml(statusLabel(d))}</span></td>
       <td class="num" data-csv="${pct ?? ""}">${pct != null ? `${fmt1(pct)}%` : (d.leader ? '<span class="muted small">1st prefs</span>' : "–")}</td>
       <td class="num" data-csv="${d.swing_2cp ?? ""}">${d.swing_2cp != null ? App.fmtSwing(d.swing_2cp) : "–"}</td>
-      <td class="num" data-csv="${d.counted_pct}">${fmt1(d.counted_pct || 0)}%${d.centres_total ? `<div class="muted small">${d.centres_counted}/${d.centres_total} centres</div>` : ""}</td>
+      <td class="num" data-csv="${d.counted_pct}">${fmt1(d.counted_pct || 0)}%${d.centres_total ? `<div class="muted small">${d.centres_counted}/${d.centres_total} centres</div>` : ""}${
+        d.declaration_votes && d.declaration_votes.outstanding ? `<div class="muted small" title="Early and postal votes the VEC reported before election day that aren't counted yet">~${d.declaration_votes.outstanding.toLocaleString("en-AU")} early/postal to come</div>` : ""}</td>
     </tr>`;
   }
 

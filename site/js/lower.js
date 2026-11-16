@@ -263,6 +263,7 @@
       <section class="seat-vote" id="where-to-vote" aria-labelledby="wtv-h">
         <h3 id="wtv-h">Where to vote</h3>
         <p class="small wtv-times">${VOTE_TIMES}</p>
+        <p class="small wtv-early-votes" id="wtv-early-votes">&nbsp;</p>
         <details class="wtv-list" id="wtv-early"><summary>Early voting centres <span class="muted" data-count></span></summary><div class="wtv-body"><p class="muted small">Loading…</p></div></details>
         <details class="wtv-list" id="wtv-day"><summary>Election-day voting centres <span class="muted" data-count></span></summary><div class="wtv-body"><p class="muted small">Loading…</p></div></details>
         <p class="muted small wtv-src">From the VEC's <a href="https://www.vec.vic.gov.au/voting/2026-state-election/voting-locations" target="_blank" rel="noopener">voting locations</a>
@@ -320,9 +321,29 @@
   const hoursText = (hours) => (hours || []).map((h) => `${h.days ? `${escapeHtml(h.days)}, ` : ""}${escapeHtml(dayMonth(h.from))}${
     h.to && h.to !== h.from ? `–${escapeHtml(dayMonth(h.to))}` : ""} ${escapeHtml(h.open || "")}–${escapeHtml(h.close || "")}${h.note ? ` (${escapeHtml(h.note)})` : ""}`).join("; ");
 
+  // The district's early and postal votes as the VEC publishes them (data/early_votes.json), against its enrolment.
+  function earlyVotesLine(d, ev) {
+    const n = (v) => Number(v).toLocaleString("en-AU");
+    const enrol = ev && ev.enrolment && ev.enrolment.districts && ev.enrolment.districts[d.id];
+    const fig = ev && ev.districts && ev.districts[d.id];
+    const share = (v) => (enrol ? ` (${(100 * v / enrol).toFixed(1)}% of enrolment)` : "");
+    const enrolText = enrol ? `${n(enrol)} people are enrolled in ${escapeHtml(d.name)} (VEC, close of roll${ev.enrolment.as_at ? `, ${escapeHtml(fmtDate(ev.enrolment.as_at))}` : ""}).` : "";
+    if (!ev) return "Early and postal vote figures aren't available.";
+    if (!fig || (fig.early == null && fig.postal_returned == null)) {
+      return `${enrolText} The VEC hasn't published early or postal vote figures for ${escapeHtml(d.name)} yet.`;
+    }
+    const parts = [];
+    if (fig.early != null) parts.push(`<strong>${n(fig.early)}</strong> early votes${share(fig.early)}`);
+    if (fig.postal_returned != null) parts.push(`<strong>${n(fig.postal_returned)}</strong> postal votes returned${share(fig.postal_returned)}`);
+    if (fig.postal_applications != null) parts.push(`${n(fig.postal_applications)} postal vote applications`);
+    return `${fig.as_of ? `To ${escapeHtml(fmtDate(fig.as_of))}: ` : ""}${parts.join("; ")}. ${enrolText}`;
+  }
+
   async function renderWhereToVote(d) {
-    let doc = null;
-    try { doc = await centresFor(d.id); } catch (err) { console.warn(err); }
+    let doc = null, ev = null;
+    [doc, ev] = await Promise.all([centresFor(d.id).catch((err) => { console.warn(err); return null; }),
+      loadJSON("early_votes").catch(() => null)]);
+    if (hashId() === d.id && $("wtv-early-votes")) $("wtv-early-votes").innerHTML = earlyVotesLine(d, ev);
     const sec = $("where-to-vote");
     if (hashId() !== d.id || !sec || !sec.isConnected) return;
     const names = Object.fromEntries(districts.map((x) => [x.id, x.name]));
@@ -453,7 +474,18 @@
       <p class="muted small" style="margin-top:4px">${counted.toFixed(1)}% of enrolment counted${centres ? ` · ${centres}` : ""}${swing}.
         Source: <a href="${escapeHtml(live.url || r.event.source)}" rel="noopener" target="_blank">Victorian Electoral Commission</a>${
         live.vec_updated ? `, updated ${escapeHtml(live.vec_updated)}` : ""}. Refreshed every 5 minutes.
+        ${declarationText(live.declaration_votes)}
         ${live.holder && live.changes_hands ? `<strong>${escapeHtml(App.partyName(live.holder))} hold the seat; on these figures it would change hands.</strong>` : ""}</p>`;
+  }
+
+  // Early and postal votes the VEC said were cast before election day, against those counted so far (results.py).
+  function declarationText(dv) {
+    if (!dv) return "";
+    const n = (v) => Number(v || 0).toLocaleString("en-AU");
+    const cast = (dv.early_cast || 0) + (dv.postal_returned || 0);
+    return `Before election day the VEC reported ${n(dv.early_cast)} early votes and ${n(dv.postal_returned)} postal votes returned here;
+      ${n(dv.early_counted + dv.postal_counted)} of those types are counted so far, so about <strong>${n(dv.outstanding)}</strong> of the ${n(cast)} are still to come
+      (postal votes can arrive until Fri 4 Dec).`;
   }
 
   function intro2022(r) {

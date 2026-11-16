@@ -408,6 +408,60 @@
     });
   }
 
+  /* ---------- Early and postal votes (data/early_votes.json): running totals by day, 2026 against 2022 ---------- */
+  let evChart = null;
+  const daysTo = (iso, election) => App.daysBetween(election, iso);   // negative before election day
+  function cumulative(rows, key, election) {
+    const kept = rows.filter((r) => r[key] != null);
+    while (kept.length && !kept[kept.length - 1][key]) kept.pop();   // no flat tail of zero days (early voting ends before polling day)
+    let sum = 0;
+    return kept.map((r) => { sum += r[key]; return { x: daysTo(r.date, election), y: sum, date: r.date }; });
+  }
+
+  function renderEarly(doc, meta) {
+    const status = document.getElementById("ev-status");
+    const canvas = document.getElementById("ev-chart");
+    if (!doc) { status.textContent = "Early and postal vote figures aren't available."; return; }
+    const election = meta.election_date;
+    const now = doc.statewide || [];
+    const was = (doc.comparison_2022 && doc.comparison_2022.statewide) || [];
+    const e26 = cumulative(now, "early", election), p26 = cumulative(now, "postal_returned", election);
+    const e22 = cumulative(was, "early", doc.comparison_2022.election_date), p22 = cumulative(was, "postal_returned", doc.comparison_2022.election_date);
+    const n = (v) => Number(v).toLocaleString("en-AU");
+    if (doc.status !== "published" || !e26.length) {
+      status.innerHTML = `The VEC hasn't published 2026 figures yet; early voting opens Wed 18 Nov. In 2022, ${n(doc.comparison_2022 ? doc.comparison_2022.totals.early : 0)} people voted early and ${n(doc.comparison_2022 ? doc.comparison_2022.totals.postal_returned : 0)} postal votes came back.`;
+    } else {
+      const last = e26[e26.length - 1];
+      const at = (series, x) => (series.filter((p) => p.x <= x).pop() || { y: 0 }).y;
+      const lp = p26.length ? p26[p26.length - 1].y : null;
+      status.innerHTML = `To ${escapeHtml(fmtDate(last.date))}: <strong>${n(last.y)}</strong> early votes${lp != null ? ` and <strong>${n(lp)}</strong> postal votes returned` : ""}. At the same point in 2022: ${n(at(e22, last.x))} early${lp != null ? ` and ${n(at(p22, last.x))} postal` : ""}.`;
+    }
+    document.getElementById("ev-note").textContent = doc.checked ? `Checked ${App.fmtDateTime(doc.checked)}` : "";
+    if (!window.Chart || !canvas) return;
+    const early = cssVar("--accent"), postal = cssVar("--text"), grid = cssVar("--border"), text = cssVar("--muted");
+    const line = (label, data, color, dashed) => ({ type: "line", label, data, borderColor: color, backgroundColor: color, borderWidth: 2.5,
+      borderDash: dashed ? [6, 4] : [], pointRadius: dashed ? 0 : 3, pointHoverRadius: 5, tension: 0 });
+    if (evChart) evChart.destroy();
+    evChart = new Chart(canvas, {
+      data: { datasets: [line("Early votes, 2026", e26, early), line("Postal votes returned, 2026", p26, postal),
+        line("Early votes, 2022 (dashed)", e22, early, true), line("Postal votes returned, 2022 (dashed)", p22, postal, true)] },
+      options: {
+        responsive: true, maintainAspectRatio: false, interaction: { mode: "nearest", intersect: false },
+        scales: {
+          x: { type: "linear", min: -13, max: 7, grid: { color: grid },
+            title: { display: true, text: "Days to election day (0 = polling day)", color: text },
+            ticks: { color: text, stepSize: 1, callback: (v) => (v === 0 ? "0" : v > 0 ? `+${v}` : `${v}`) } },
+          y: { beginAtZero: true, grid: { color: grid }, ticks: { color: text, callback: (v) => (v >= 1e6 ? `${(v / 1e6).toFixed(1)}m` : v >= 1e3 ? `${Math.round(v / 1e3)}k` : v) } },
+        },
+        plugins: {
+          legend: { labels: { color: text, usePointStyle: true } },
+          tooltip: { callbacks: { title: (items) => (items.length ? fmtDate(items[0].raw.date) : ""),
+            label: (ctx) => `${ctx.dataset.label}: ${n(ctx.parsed.y)}` } },
+        },
+      },
+    });
+  }
+
   /* ---------- Latest polls table ---------- */
   function renderTable(data) {
     const el = document.getElementById("polls-table");
@@ -472,9 +526,15 @@
       await new Promise((resolve) => setTimeout(resolve, 0));
       polls = preparePolls(pollData);
       renderTable(pollData);
+      const earlyVotes = App.afterPaint(() => loadJSON("early_votes")).catch(() => null);
+      earlyVotes.then((doc) => renderEarly(doc, meta));   // the line of figures, before the chart library arrives
       App.afterPaint(() => App.loadLib("chart")).then(() => {
         renderChart();
         document.addEventListener("themechange", renderChart);
+        earlyVotes.then((doc) => {
+          renderEarly(doc, meta);
+          document.addEventListener("themechange", () => renderEarly(doc, meta));
+        });
       }, () => {
         document.getElementById("pop-chart").parentElement.innerHTML = '<p class="empty">Chart library failed to load.</p>';
       });

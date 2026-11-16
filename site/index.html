@@ -136,6 +136,13 @@
       <p class="muted small" style="margin: 10px 0 0">Lines are a smoothed average of published polls (3-week Gaussian kernel, weighted by sample size). Dots are individual polls; a larger outlined triangle (new high) or diamond (new low) marks a poll that set a record for Labor, the Coalition, the Greens or One Nation when it came out. Independents are counted in Other.</p>
     </section>
 
+    <section class="card" id="early-votes" aria-labelledby="ev-title">
+      <div class="card-head"><h2 id="ev-title">Early and postal votes</h2><span class="muted small" id="ev-note"></span></div>
+      <p class="small ev-status" id="ev-status">&nbsp;</p>
+      <div class="chart-wrap ev-chart"><canvas id="ev-chart" role="img" aria-label="Cumulative early votes and postal votes returned by day, 2026 against 2022"></canvas></div>
+      <p class="muted small" style="margin: 10px 0 0">Running totals by day, lined up by days to election day (early voting opened 12 days out in 2022 and 10 in 2026). Solid lines are 2026, dashed lines 2022. Figures as the <a href="https://www.vec.vic.gov.au/results/electoral-statistics/state-election-statistics" rel="noopener" target="_blank">Victorian Electoral Commission</a> publishes them (2022: its daily table, from the <a href="http://web.archive.org/web/20221227113148/https://www.vec.vic.gov.au/voting/electoral-statistics/state-election-statistics" rel="noopener" target="_blank">Wayback Machine's copy</a>); nothing is estimated.</p>
+    </section>
+
     <section class="card" aria-labelledby="polls-title">
       <div class="card-head"><h2 id="polls-title">Latest polls</h2><span class="muted small" id="polls-source"></span></div>
       <div class="table-scroll" id="polls-table"><p class="empty">Loading…</p></div>

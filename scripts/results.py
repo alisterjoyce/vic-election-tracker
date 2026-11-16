@@ -25,7 +25,8 @@ previous figures and the run carries on. The script exits 0 unless the configura
 CALL RULE (this site's projection, not the VEC's): a seat is "called" when the leader's 2CP margin in votes
 exceeds the estimated uncounted vote plus a safety buffer, i.e. the trailing candidate couldn't catch up
 even with every remaining vote. Uncounted = enrolment x the district's 2022 turnout (TURNOUT_DEFAULT if
-unknown) - votes counted. Buffer = max(CALL_BUFFER_MIN votes, CALL_BUFFER_PCT % of enrolment), for rechecks
+unknown) - votes counted, or, if larger, the early and postal votes the VEC says were cast before election day
+(early_votes.json, by district) that aren't in the count yet. Buffer = max(CALL_BUFFER_MIN votes, CALL_BUFFER_PCT % of enrolment), for rechecks
 and the chance the VEC's indicative 2CP pair is the wrong pair. A seat the VEC has declared (an elected
 member shown) is "called" by the VEC. With votes but no call: "leading". No votes yet: "undecided".
 
@@ -94,7 +95,10 @@ RESULTS_SCHEMA = {
                       "centres_counted, centres_total, declared, elected {name, party}, candidates [{id, name, party, party_name, votes, pct}], "
                       "tcp [{id, name, party, votes, pct}] or null, tcp_basis (2cp | distribution), leader {id, name, party, basis}, "
                       "margin_votes, uncounted_estimate, status (called | leading | undecided), called_by (vec | site | null), "
-                      "holder (party before the election), changes_hands, swing_2cp (leader's 2CP change since 2022, same pair only)}}"),
+                      "holder (party before the election), changes_hands, swing_2cp (leader's 2CP change since 2022, same pair only), "
+                      "declaration_votes {early_cast, postal_returned, as_of (the VEC's pre-election figures, early_votes.json), "
+                      "early_counted, postal_counted (formal first preferences of those types so far), outstanding} or null "
+                      "when the VEC published no district figures}}"),
     },
 }
 LC_SCHEMA = {
@@ -495,6 +499,31 @@ def build_contest(did: str, event: dict, page: dict, vc: dict | None, tcp: dict 
     }
 
 
+EARLY_TYPES = ("Early", "EVCEarly", "MobileVotingEarly")   # first-preference vote types counted as early votes
+
+
+def early_votes_2026(data_dir: Path, did: str) -> dict | None:
+    """The district's early votes cast and postal votes returned before election day, from early_votes.json (as the VEC
+    published them; None where it didn't)."""
+    d = ((read_json(data_dir / "early_votes.json", {}) or {}).get("districts") or {}).get(did) or {}
+    return d if d.get("early") is not None or d.get("postal_returned") is not None else None
+
+
+def declaration_votes(data_dir: Path, did: str, fp: dict) -> dict | None:
+    """Early and postal votes the VEC says were cast, against those in the count so far (formal first preferences by
+    vote type), so the seat shows how many of them are still to come. None if the VEC published no district figures."""
+    cast = early_votes_2026(data_dir, did)
+    if not cast:
+        return None
+    by_type = fp.get("by_type") or {}
+    counted = lambda types: sum(sum((by_type.get(t) or {}).values()) for t in types)
+    early_counted, postal_counted = counted(EARLY_TYPES), counted(("Postal",))
+    early, postal = cast.get("early"), cast.get("postal_returned")
+    outstanding = max(0, (early or 0) - early_counted) + max(0, (postal or 0) - postal_counted)
+    return {"early_cast": early, "postal_returned": postal, "as_of": cast.get("as_of"),
+            "early_counted": early_counted, "postal_counted": postal_counted, "outstanding": outstanding}
+
+
 def summarise(did: str, contest: dict, page: dict, url: str, holder: str | None, data_dir: Path) -> dict:
     cand = {c["id"]: c for c in contest["candidates"]}
     fp = contest["first_preferences"]
@@ -512,6 +541,9 @@ def summarise(did: str, contest: dict, page: dict, url: str, holder: str | None,
     centres_total = page.get("centres_total") if page.get("centres_total") is not None else len(booths)
     turnout = turnout_2022(data_dir, did) or TURNOUT_DEFAULT
     uncounted = max(0, round((enrol or 0) * turnout) - total) if enrol else None
+    decl = declaration_votes(data_dir, did, fp)
+    if decl and decl["outstanding"] and (uncounted is None or decl["outstanding"] > uncounted):
+        uncounted = decl["outstanding"]   # early and postal votes known to be waiting are a floor under the estimate
     buffer = max(CALL_BUFFER_MIN, round((enrol or 0) * CALL_BUFFER_PCT / 100))
     out = {"name": contest["contest"]["name"], "url": url, "vec_updated": page.get("vec_updated"), "fetched": now_iso(),
            "enrolment": enrol, "formal": formal or None, "informal": fp["informal"], "total": total or None,
@@ -521,7 +553,7 @@ def summarise(did: str, contest: dict, page: dict, url: str, holder: str | None,
            "elected": next(({"name": c["name"], "party": c["party"]} for c in contest["candidates"] if c["elected"]), None),
            "candidates": rows(fp["candidates"]), "tcp": tcp_rows, "tcp_basis": basis if tcp_rows else None,
            "leader": None, "margin_votes": None, "uncounted_estimate": uncounted, "status": "undecided", "called_by": None,
-           "holder": holder, "changes_hands": False, "swing_2cp": None}
+           "holder": holder, "changes_hands": False, "swing_2cp": None, "declaration_votes": decl}
     if not total:
         return out
     if tcp_rows:
@@ -643,7 +675,8 @@ def run(cfg: dict, data_dir: Path, only: set | None = None) -> int:
            "call_rule": {"buffer_pct_of_enrolment": CALL_BUFFER_PCT, "buffer_min_votes": CALL_BUFFER_MIN, "turnout_default": TURNOUT_DEFAULT,
                          "text": ("Called by this site when the leader's two-candidate-preferred margin is larger than the estimated uncounted "
                                   "vote plus a buffer (the larger of 250 votes and 1% of enrolment), so the trailing candidate couldn't catch "
-                                  "up even with every remaining vote. Uncounted = enrolment x the seat's 2022 turnout - votes counted. "
+                                  "up even with every remaining vote. Uncounted = enrolment x the seat's 2022 turnout - votes counted, or, if larger, "
+                                  "the early and postal votes the VEC says were cast that aren't in the count yet. "
                                   "A seat the VEC has declared is called by the VEC.")},
            "tally": None, "districts": dict(old.get("districts") or {})}
     lc = {"_schema": LC_SCHEMA, "source": res["source"], "profile": cfg["profile"], "updated": old_lc.get("updated"),

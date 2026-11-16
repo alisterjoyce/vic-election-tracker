@@ -1,0 +1,225 @@
+{
+  "_schema": {
+    "description": "Early votes and postal votes for the 2026 Victorian state election as the VEC publishes them (statewide by day, and by district where it publishes that), with enrolment at the close of roll and 2022's daily figures for comparison. Figures the VEC hasn't published are absent, never estimated. Read each refresh by scripts/refresh.py (scripts/vec_voting.py). © Victorian Electoral Commission, CC BY 4.0.",
+    "fields": {
+      "status": "not_published (no 2026 figures yet) | published",
+      "checked": "ISO UTC time of the last successful check",
+      "source": "{statewide_url (the page the daily table was read from, or null), districts_url (the by-district spreadsheet, or null)}",
+      "statewide": "[{date (YYYY-MM-DD), early (early votes cast that day), postal_returned (postal votes received that day)}], as the VEC's daily table gives them; cumulative totals are summed by the page",
+      "statewide_total": "{early, postal_returned}: the table's own total row, where it has one",
+      "districts": "{district id: {early, postal_returned, postal_applications (each null if not published), as_of}}",
+      "enrolment": "{as_at (YYYY-MM-DD), url, total, districts: {district id: electors}}",
+      "comparison_2022": "{election_date, source (Wayback Machine copy of the VEC's 2022 page), statewide: [{date, early, postal_returned}], totals {early, postal_returned}}"
+    }
+  },
+  "status": "not_published",
+  "checked": "2026-11-16T12:38:05Z",
+  "source": {
+    "statewide_url": null,
+    "districts_url": null
+  },
+  "statewide": [],
+  "statewide_total": null,
+  "districts": {},
+  "enrolment": {
+    "as_at": "2026-11-05",
+    "url": "https://www.vec.vic.gov.au/-/media/4739cbf7670546dcb4b7b3427b278383.xls",
+    "page": "https://www.vec.vic.gov.au/enrolment/electoral-roll-statistics",
+    "total": 4725477,
+    "districts": {
+      "albert-park": 51108,
+      "ashwood": 53106,
+      "bass": 57984,
+      "bayswater": 51494,
+      "bellarine": 59807,
+      "benambra": 51961,
+      "bendigo-east": 56137,
+      "bendigo-west": 49714,
+      "bentleigh": 54940,
+      "berwick": 66983,
+      "box-hill": 52737,
+      "brighton": 50918,
+      "broadmeadows": 51568,
+      "brunswick": 56175,
+      "bulleen": 51215,
+      "bundoora": 48958,
+      "carrum": 54520,
+      "caulfield": 51072,
+      "clarinda": 49558,
+      "cranbourne": 58742,
+      "croydon": 55597,
+      "dandenong": 54242,
+      "eildon": 51695,
+      "eltham": 50532,
+      "essendon": 53711,
+      "eureka": 58098,
+      "euroa": 53135,
+      "evelyn": 53141,
+      "footscray": 51945,
+      "frankston": 51223,
+      "geelong": 53888,
+      "gippsland-east": 51679,
+      "gippsland-south": 50943,
+      "glen-waverley": 50797,
+      "greenvale": 55532,
+      "hastings": 50837,
+      "hawthorn": 51900,
+      "ivanhoe": 50215,
+      "kalkallo": 70346,
+      "kew": 51097,
+      "kororoit": 61804,
+      "lara": 51646,
+      "laverton": 56038,
+      "lowan": 51016,
+      "macedon": 51427,
+      "malvern": 49045,
+      "melbourne": 57327,
+      "melton": 60201,
+      "mildura": 48551,
+      "mill-park": 48284,
+      "monbulk": 49988,
+      "mordialloc": 54091,
+      "mornington": 50138,
+      "morwell": 55314,
+      "mulgrave": 48078,
+      "murray-plains": 48358,
+      "narracan": 55235,
+      "narre-warren-north": 53482,
+      "narre-warren-south": 57171,
+      "nepean": 51863,
+      "niddrie": 52589,
+      "northcote": 53868,
+      "oakleigh": 54215,
+      "ovens-valley": 49573,
+      "pakenham": 55891,
+      "pascoe-vale": 52152,
+      "point-cook": 55726,
+      "polwarth": 55060,
+      "prahran": 49673,
+      "preston": 53534,
+      "richmond": 49889,
+      "ringwood": 54882,
+      "ripon": 54513,
+      "rowville": 50548,
+      "sandringham": 49820,
+      "shepparton": 52613,
+      "south-barwon": 61024,
+      "south-west-coast": 54414,
+      "st-albans": 47820,
+      "sunbury": 51654,
+      "sydenham": 64779,
+      "tarneit": 60730,
+      "thomastown": 56172,
+      "warrandyte": 52034,
+      "wendouree": 53556,
+      "werribee": 62780,
+      "williamstown": 50382,
+      "yan-yean": 57279
+    }
+  },
+  "comparison_2022": {
+    "election_date": "2022-11-26",
+    "source": "http://web.archive.org/web/20221227113148/https://www.vec.vic.gov.au/voting/electoral-statistics/state-election-statistics",
+    "statewide": [
+      {
+        "date": "2022-11-14",
+        "early": 115065,
+        "postal_returned": 0
+      },
+      {
+        "date": "2022-11-15",
+        "early": 154829,
+        "postal_returned": 0
+      },
+      {
+        "date": "2022-11-16",
+        "early": 131631,
+        "postal_returned": 0
+      },
+      {
+        "date": "2022-11-17",
+        "early": 154663,
+        "postal_returned": 669
+      },
+      {
+        "date": "2022-11-18",
+        "early": 141212,
+        "postal_returned": 9069
+      },
+      {
+        "date": "2022-11-19",
+        "early": 120502,
+        "postal_returned": 15
+      },
+      {
+        "date": "2022-11-20",
+        "early": 48,
+        "postal_returned": 0
+      },
+      {
+        "date": "2022-11-21",
+        "early": 166225,
+        "postal_returned": 43581
+      },
+      {
+        "date": "2022-11-22",
+        "early": 186114,
+        "postal_returned": 57488
+      },
+      {
+        "date": "2022-11-23",
+        "early": 200013,
+        "postal_returned": 97017
+      },
+      {
+        "date": "2022-11-24",
+        "early": 264023,
+        "postal_returned": 64940
+      },
+      {
+        "date": "2022-11-25",
+        "early": 274049,
+        "postal_returned": 17
+      },
+      {
+        "date": "2022-11-26",
+        "early": 0,
+        "postal_returned": 0
+      },
+      {
+        "date": "2022-11-27",
+        "early": 0,
+        "postal_returned": 57930
+      },
+      {
+        "date": "2022-11-28",
+        "early": 0,
+        "postal_returned": 66299
+      },
+      {
+        "date": "2022-11-29",
+        "early": 0,
+        "postal_returned": 51485
+      },
+      {
+        "date": "2022-11-30",
+        "early": 0,
+        "postal_returned": 14077
+      },
+      {
+        "date": "2022-12-01",
+        "early": 0,
+        "postal_returned": 15
+      },
+      {
+        "date": "2022-12-02",
+        "early": 0,
+        "postal_returned": 19274
+      }
+    ],
+    "totals": {
+      "early": 1908417,
+      "postal_returned": 481875
+    }
+  }
+}

@@ -1112,6 +1112,14 @@ html.has-hash #district-detail[hidden] { display: block; min-height: 2400px; }  
   .pol-table thead th:first-child, .pol-table .pol-issue { width: 104px; }
 }
 
+/* ---------- Early and postal votes (home page card, seat pages) ---------- */
+.ev-status { margin: 0 0 10px; line-height: 1.5; min-height: 3em; }   /* two lines, filled after the first paint */
+@media (max-width: 560px) { .ev-status { min-height: 6em; } }
+@media (max-width: 380px) { .ev-status { min-height: 7.5em; } }
+.wtv-early-votes { margin: 0 0 8px; line-height: 1.5; min-height: 3em; }
+@media (max-width: 560px) { .wtv-early-votes { min-height: 4.5em; } }
+@media (max-width: 400px) { .wtv-early-votes { min-height: 6em; } }
+
 /* ---------- Where to vote (seat pages; data/voting_centres/) ---------- */
 .seat-vote { margin-top: 20px; }
 .seat-vote h3 { margin-bottom: 6px; }
