@@ -291,12 +291,15 @@
 
   async function renderAggregates() {
     const el = $("agg-table");
-    if (el.dataset.done) return;   // once: the pollster filter re-renders only the list
+    if (el.dataset.done) return el.donePromise;   // once: the pollster filter re-renders only the list
     el.dataset.done = "1";
-    if (aggregates === null) {
-      try { aggregates = await loadJSON("poll_aggregates"); } catch (err) { console.error(err); aggregates = false; }
-    }
-    el.innerHTML = aggregatesTable();
+    el.donePromise = (async () => {
+      if (aggregates === null) {
+        try { aggregates = await loadJSON("poll_aggregates"); } catch (err) { console.error(err); aggregates = false; }
+      }
+      el.innerHTML = aggregatesTable();
+    })();
+    return el.donePromise;
   }
 
   function renderList() {
@@ -310,11 +313,22 @@
     const list = polls.filter((p) => !sel.value || p.pollster === sel.value).reverse();
     $("poll-count").textContent = `${list.length} poll${list.length === 1 ? "" : "s"}`;
     $("poll-list").innerHTML = pollTable(list);
-    renderAggregates();
+    return renderAggregates();
   }
 
+  // "#aggregates" (the home page's "Other aggregates" line) is the list page, scrolled to that card.
+  const SECTIONS = ["aggregates"];
   function onHashChange() {
     const id = hashId();
+    if (SECTIONS.includes(id)) {
+      $("poll-index").hidden = false;
+      $("poll-detail").hidden = true;
+      renderList().then(() => {   // once the table is in, so nothing moves under the reader
+        const target = document.getElementById(`${id}-card`);   // not the hash itself: the browser would jump there before the page fills in
+        if (target) App.afterPaint(() => target.scrollIntoView());
+      });
+      return;
+    }
     const p = id && polls.find((x) => x.id === id);
     $("poll-index").hidden = !!p;
     $("poll-detail").hidden = !p;
@@ -323,7 +337,7 @@
   }
 
   async function init() {
-    if (!hashId()) loadJSON("poll_aggregates").catch(() => {});   // start it alongside polls.json (loadJSON caches the request)
+    if (!hashId() || hashId() === "aggregates") loadJSON("poll_aggregates").catch(() => {});   // start it alongside polls.json (loadJSON caches the request)
     try {
       polls = App.preparePolls(await loadJSON("polls"));
       if (window.Chart) Chart.defaults.font.family = cssVar("--font-body") || "system-ui, sans-serif";

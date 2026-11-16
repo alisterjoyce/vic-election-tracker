@@ -130,6 +130,29 @@
     document.getElementById("hero-odds-note").textContent = odds && odds.date_checked ? `as at ${fmtDate(odds.date_checked)}` : "";
   }
 
+  // "Other aggregates": BludgerTrack, Ace Strategies and electiontracker.au, each with its 2PP (or its primaries
+  // where it publishes no 2PP) and the date its estimate runs to; the line links to the polls page's comparison table.
+  function renderAggregates(doc) {
+    const el = document.getElementById("hero-aggs");
+    const list = ((doc && doc.aggregates) || []).filter((a) => a.tpp || a.primary);
+    if (!list.length) return;   // the line keeps its link alone
+    const short = (iso) => { const d = App.parseDate(iso); return d ? `${d.getDate()} ${fmtDate(d).split(" ")[1]}` : ""; };
+    const one = (a) => {
+      let figs;
+      if (a.tpp && a.tpp.LNP != null && a.tpp.ALP != null) {
+        const sides = [["L/NP", a.tpp.LNP], ["ALP", a.tpp.ALP]].sort((x, y) => y[1] - x[1]);
+        figs = `${sides.map(([n, v]) => `${n} ${Number(v).toFixed(1)}`).join("–")}`;
+      } else {
+        figs = ["LNP", "ALP", "ONP", "GRN"].filter((k) => a.primary && a.primary[k] != null)
+          .sort((x, y) => a.primary[y] - a.primary[x])
+          .map((k) => `${partyShort(k)} ${Number(a.primary[k]).toFixed(1)}`).join(", ");
+        figs = `primary vote ${figs}`;
+      }
+      return `<span class="agg-one"><b>${escapeHtml(a.name)}</b> ${escapeHtml(figs)}${a.as_of ? ` <span class="muted">(${escapeHtml(short(a.as_of))})</span>` : ""}</span>`;
+    };
+    el.innerHTML = `<a href="poll.html#aggregates">Other aggregates:</a> ${list.map(one).join('<span class="agg-sep" aria-hidden="true"> · </span>')}`;
+  }
+
   // Models: Australian Election Forecasts' expected seats (the sum of its win probabilities), RedBridge's totals beneath.
   function renderModels(doc) {
     const models = (doc && doc.models) || [];
@@ -423,8 +446,9 @@
     initMeasureToggle();
     initFindSeat();
     try {
-      const [meta, districtData, regionData, pollData, odds] = await Promise.all([
+      const [meta, districtData, regionData, pollData, odds, aggs] = await Promise.all([
         loadJSON("meta"), loadJSON("districts"), loadJSON("regions"), loadJSON("polls"), loadJSON("seat_odds").catch(() => null),
+        loadJSON("poll_aggregates").catch(() => null),   // small (about 1 KB compressed): drawn with the card, so nothing moves
       ]);
       renderCountdown(meta);
       renderNominations(meta);
@@ -433,6 +457,7 @@
           `<time datetime="${escapeHtml(meta.last_updated)}">${escapeHtml(App.dataUpdatedText(meta.last_updated))}</time>`;
       }
       renderHero(meta, districtData.districts, pollData, odds);
+      renderAggregates(aggs);
       // seat_models.json is the biggest of these (about 20 KB gzipped): fetched once the card has painted. Its space is reserved.
       App.afterPaint(() => loadJSON("seat_models")).then(renderModels, () => {
         document.getElementById("hero-models").innerHTML = '<p class="empty">Models failed to load.</p>';

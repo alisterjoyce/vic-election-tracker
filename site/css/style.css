@@ -570,6 +570,16 @@ a.icon-btn { text-decoration: none; display: inline-block; }
 .tpp-dash { color: var(--muted); font-weight: 400; }
 .hero-tpp-label { display: block; font-family: var(--font-body); font-size: 0.78rem; font-weight: 400; color: var(--muted); }
 .hero-trend { font-size: 0.9rem; min-height: 1.5em; }
+.hero-aggs { margin-top: 4px !important; line-height: 1.5; color: var(--muted); }
+.hero-aggs b { font-weight: 600; color: var(--text); }
+/* Reserved: filled with the card (poll_aggregates.json), measured 16 Nov 2026 with three sources (two with a 2PP). */
+.hero-aggs { min-height: 42px; }
+@media (max-width: 760px) { .hero-aggs { min-height: 63px; } }
+@media (max-width: 640px) { .hero-aggs { min-height: 59px; } }
+@media (max-width: 479px) { .hero-aggs { min-height: 79px; } }
+@media (max-width: 389px) { .hero-aggs { min-height: 98px; } }
+@media (max-width: 359px) { .hero-aggs { min-height: 118px; } }
+
 .hero-block { margin-top: 14px; }
 .hero-block-head { display: flex; justify-content: space-between; align-items: center; gap: 0 8px; flex-wrap: wrap; line-height: 22px; }   /* fixed line height: no jump when the web font arrives */
 .hero-block-title { font-weight: 600; font-size: 0.92rem; }
@@ -958,7 +968,7 @@ html.js .agg-table { min-height: 257px; }
 
 /* Targets of the nav's in-page links clear the sticky header (static on phones) */
 @media (min-width: 641px) {
-  #state-map, #sc-title, #quota-card, #tl-now, :target { scroll-margin-top: 72px; }
+  #state-map, #sc-title, #quota-card, #tl-now, #aggregates-card, :target { scroll-margin-top: 72px; }
 }
 
 /* Space reserved for what common.js fills in, so the page doesn't jump once scripts run
