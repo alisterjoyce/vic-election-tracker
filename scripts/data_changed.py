@@ -8,6 +8,10 @@ refresh.py sets it on every successful run and the site shows it ("Data updated 
 successful run is committed and deployed. A run where every source failed leaves it alone and isn't.
 Any other difference, or a file that can't be compared, counts as a change (so a real update is never lost).
 
+Only site/data decides. The weekly briefing image (site/share/this-week.png, scripts/build_share.py) is
+committed alongside whenever the data is: it is drawn from the data, so it never changes on its own
+except when the date on it rolls over, and a run that changes nothing else shouldn't deploy just for that.
+
 Usage: python scripts/data_changed.py [--data-dir site/data]
 """
 import argparse

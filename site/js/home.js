@@ -465,6 +465,8 @@
       renderWatch(districtData.districts, odds);
       renderSeats(meta, districtData.districts, regionData.regions);
       App.ShareCard.shareButton(document.getElementById("share-home"), async () => headlineCard(meta, districtData.districts, pollData));
+      // "This week": the weekly briefing image (the same card refresh saves as share/this-week.png).
+      App.ShareCard.shareButton(document.getElementById("share-week"), () => App.ShareCard.weekly());
       // The headline card paints first; the polls table and the chart (Chart.js, fetched once it has
       // painted) come after, in their own tasks.
       await new Promise((resolve) => setTimeout(resolve, 0));

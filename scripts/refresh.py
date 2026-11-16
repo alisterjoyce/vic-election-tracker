@@ -3080,6 +3080,112 @@ def refresh_changelog(data_dir: Path, meta: dict) -> bool:
     return bool(new)
 
 
+# --------------------------------------------------------------------------
+# Seat history: a daily snapshot of each seat's model probabilities and betting prices, so the weekly
+# briefing card can name the seats that moved most in 7 days without reading git history.
+# --------------------------------------------------------------------------
+
+SEAT_HISTORY_DAYS = 35
+SEAT_HISTORY_MIN_PROB = 0.5   # model probabilities (%) below this aren't kept
+SEAT_HISTORY_SCHEMA = {
+    "description": "One snapshot a day (Melbourne date) of each district's Australian Election Forecasts win probabilities "
+                   f"and Sportsbet prices, kept for {SEAT_HISTORY_DAYS} days, so the weekly briefing card (home page, "
+                   "share/this-week.png) can show the seats that moved most over 7 days. Written by scripts/refresh.py from "
+                   "seat_models.json and seat_odds.json (backfilled from git history with --backfill-seat-history).",
+    "fields": {
+        "days": "{YYYY-MM-DD: {model_date, odds_date, seats: {district id: {model: {party code: win probability %}, "
+                "odds: {party code: decimal price}}}}}; model probabilities under "
+                f"{SEAT_HISTORY_MIN_PROB}% and unnamed betting options ('Any Other') are left out",
+    },
+}
+
+
+def seat_snapshot(models: dict | None, odds: dict | None) -> dict:
+    """One day's compact view of seat_models.json (aeforecasts) and seat_odds.json."""
+    seats: dict[str, dict] = {}
+    aef = next((m for m in (models or {}).get("models", []) if m.get("id") == "aeforecasts"), None)
+    for row in (models or {}).get("seats", []):
+        if row.get("model") != "aeforecasts":
+            continue
+        probs: dict[str, float] = {}
+        for c in (row.get("candidates") or []) + (row.get("others") or []):
+            p, party = c.get("win_probability"), c.get("party")
+            if p is None or not party or p < SEAT_HISTORY_MIN_PROB:
+                continue
+            probs[party] = round(probs.get(party, 0) + p, 1)
+        if probs:
+            seats.setdefault(row["district"], {})["model"] = probs
+    for s in (odds or {}).get("seats", []):
+        prices = {o["party"]: o["price"] for o in s.get("options", []) if o.get("party") and o.get("price") is not None}
+        if prices:
+            seats.setdefault(s["district"], {})["odds"] = prices
+    return {"model_date": aef.get("model_date") if aef else None, "odds_date": (odds or {}).get("date_checked"), "seats": seats}
+
+
+def _write_seat_history(path: Path, days: dict, today: str) -> None:
+    cutoff = (date.fromisoformat(today) - pd.Timedelta(days=SEAT_HISTORY_DAYS)).isoformat()
+    days = {d: v for d, v in sorted(days.items()) if d >= cutoff}
+    write_json(path, {"_schema": SEAT_HISTORY_SCHEMA, "days": days})
+
+
+def refresh_seat_history(data_dir: Path, meta: dict) -> bool:
+    """Today's snapshot in seat_history.json (replacing an earlier one from the same day)."""
+    path = data_dir / "seat_history.json"
+    doc = read_json(path, {}) or {}
+    days = dict(doc.get("days") or {})
+    today = datetime.now(MELBOURNE).date().isoformat()
+    snap = seat_snapshot(read_json(data_dir / "seat_models.json", None), read_json(data_dir / "seat_odds.json", None))
+    if not snap["seats"]:
+        log.warning("Seat history: no model or odds data to record")
+        return False
+    if days.get(today) == snap:
+        log.info("Seat history: today's snapshot unchanged")
+        return False
+    days[today] = snap
+    _write_seat_history(path, days, today)
+    log.info("Seat history: recorded %s (%d seats, %d days kept)", today, len(snap["seats"]), len(days))
+    return True
+
+
+def backfill_seat_history(data_dir: Path) -> None:
+    """Rebuild seat_history.json from git history: the last commit of each day's seat_models.json and seat_odds.json."""
+    import subprocess
+    root = Path(subprocess.check_output(["git", "rev-parse", "--show-toplevel"], cwd=data_dir, text=True).strip())
+    rel = data_dir.resolve().relative_to(root.resolve()).as_posix()
+    today = datetime.now(MELBOURNE).date()
+    start = today - pd.Timedelta(days=SEAT_HISTORY_DAYS)
+    # Every commit that touched either file, oldest first, plus the newest commit before the window (the state on day one).
+    files = [f"{rel}/seat_models.json", f"{rel}/seat_odds.json"]
+    lines = subprocess.check_output(["git", "log", "--reverse", "--format=%H %cI", f"--since={start.isoformat()}", "--", *files],
+                                    cwd=root, text=True).splitlines()
+    before = subprocess.check_output(["git", "log", "-1", "--format=%H %cI", f"--until={start.isoformat()}", "--", *files],
+                                     cwd=root, text=True).splitlines()
+    last_by_day: dict[str, str] = {}
+    for line in before + lines:
+        sha, when = line.split(" ", 1)
+        day = max(datetime.fromisoformat(when).astimezone(MELBOURNE).date(), start).isoformat()
+        last_by_day[day] = sha
+
+    def load(sha, name):
+        try:
+            return json.loads(subprocess.check_output(["git", "show", f"{sha}:{rel}/{name}"], cwd=root,
+                                                      stderr=subprocess.DEVNULL).decode("utf-8"))
+        except (subprocess.CalledProcessError, json.JSONDecodeError):
+            return None
+    days = {d: seat_snapshot(load(sha, "seat_models.json"), load(sha, "seat_odds.json")) for d, sha in last_by_day.items()}
+    days[today.isoformat()] = seat_snapshot(read_json(data_dir / "seat_models.json", None), read_json(data_dir / "seat_odds.json", None))
+    # A day with no commit carries the day before's snapshot, so every day in range has one.
+    filled, prev = {}, None
+    cur = date.fromisoformat(min(days))
+    while cur <= today:
+        prev = days.get(cur.isoformat(), prev)
+        if prev and prev["seats"]:
+            filled[cur.isoformat()] = prev
+        cur += pd.Timedelta(days=1)
+    _write_seat_history(data_dir / "seat_history.json", filled, today.isoformat())
+    log.info("Seat history rebuilt from %d commits: %d days", len(last_by_day), len(filled))
+
+
 def backfill_changelog(data_dir: Path) -> None:
     """Rebuild changelog.json from git history: diff each commit's data with the previous one."""
     import subprocess
@@ -3119,6 +3225,8 @@ def main(argv=None) -> int:
                         help="read BludgerTrack and Ace Strategies now, even if they were read today (normally once a day)")
     parser.add_argument("--backfill-changelog", action="store_true",
                         help="rebuild changelog.json from git history instead of refreshing")
+    parser.add_argument("--backfill-seat-history", action="store_true",
+                        help="rebuild seat_history.json from git history instead of refreshing")
     args = parser.parse_args(argv)
 
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
@@ -3132,6 +3240,9 @@ def main(argv=None) -> int:
 
     if args.backfill_changelog:
         backfill_changelog(data_dir)
+        return 0
+    if args.backfill_seat_history:
+        backfill_seat_history(data_dir)
         return 0
 
     meta_path = data_dir / "meta.json"
@@ -3154,6 +3265,7 @@ def main(argv=None) -> int:
         refresh_news(data_dir, meta),
         check_profiles(data_dir, meta),        # watch only: warns when a respelled or withdrawn name strands a profile
         sync_profile_files(data_dir, meta),    # data/profiles/<seat>.json, the candidate page's copy of profiles.json
+        refresh_seat_history(data_dir, meta),  # after the models and odds: today's snapshot for the weekly card
     ]
     refresh_changelog(data_dir, meta)   # last: compares everything written above with the previous run
     if any(updated):

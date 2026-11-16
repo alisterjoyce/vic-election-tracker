@@ -409,5 +409,108 @@
     };
   }
 
-  App.ShareCard = { drawCandidate, mount, shareButton, seatCard, homeCard, ballotCard, W, H };
+  /* ---------- This week (home page button; scripts/build_share.py saves it as share/this-week.png each refresh) ---------- */
+  const MOVE_DAYS = 7;
+  const MOVE_MIN = 1;   // percentage points: smaller moves aren't news
+  const isoMinus = (iso, n) => { const d = App.parseDate(iso); d.setDate(d.getDate() - n);
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; };
+
+  // The seats whose model win probability or Sportsbet price moved most between the latest snapshot in
+  // seat_history.json and the one MOVE_DAYS earlier. A price counts by its implied chance (100 / price), so both
+  // are in percentage points. [{id, kind: "model" | "odds", party, from, to, by}], biggest first.
+  function seatMovers(history, n = 3) {
+    const keys = Object.keys((history && history.days) || {}).sort();
+    if (keys.length < 2) return { movers: [], since: null };
+    const latest = keys[keys.length - 1];
+    const since = keys.filter((k) => k <= isoMinus(latest, MOVE_DAYS)).pop() || keys[0];
+    const now = history.days[latest].seats, then = history.days[since].seats;
+    const best = [];
+    Object.keys(now).forEach((id) => {
+      const a = then[id] || {}, b = now[id];
+      let top = null;
+      const consider = (kind, party, from, to, by) => { if (!top || Math.abs(by) > Math.abs(top.by)) top = { id, kind, party, from, to, by }; };
+      const mParties = new Set([...Object.keys(a.model || {}), ...Object.keys(b.model || {})]);
+      if (a.model && b.model) mParties.forEach((p) => consider("model", p, a.model[p] || 0, b.model[p] || 0, (b.model[p] || 0) - (a.model[p] || 0)));
+      if (a.odds && b.odds) Object.keys(b.odds).forEach((p) => {
+        if (a.odds[p] != null) consider("odds", p, a.odds[p], b.odds[p], 100 / b.odds[p] - 100 / a.odds[p]);
+      });
+      if (top && Math.abs(top.by) >= MOVE_MIN) best.push(top);
+    });
+    best.sort((x, y) => Math.abs(y.by) - Math.abs(x.by) || x.id.localeCompare(y.id));
+    return { movers: best.slice(0, n), since, latest };
+  }
+
+  // Everything the weekly card shows, from the published data files.
+  async function weekly() {
+    const [meta, dd, pollData, history] = await Promise.all([
+      App.loadJSON("meta"), App.loadJSON("districts"), App.loadJSON("polls"), App.loadJSON("seat_history").catch(() => null)]);
+    const districts = dd.districts;
+    const all = App.preparePolls(pollData);
+    const last = (fn) => { const ser = App.smoothedSeries(all, fn); return ser.length ? ser[ser.length - 1].y : null; };
+    const s = App.statewideSwing(meta, pollData);
+    if (!s) throw new Error("No poll average available");
+    const primaries = {};
+    ["LNP", "ALP", "ONP", "GRN"].forEach((k) => {
+      const v = last((p) => (p.primary && p.primary[k] != null ? p.primary[k] : null));
+      if (v != null) primaries[k] = v;
+    });
+    const tally = App.projectSeats(districts, s).tally;
+    const today = App.melbourneToday();
+    const next = ((meta.key_dates && meta.key_dates.events) || []).filter((e) => !e.ongoing && e.from > today)
+      .sort((a, b) => a.from.localeCompare(b.from))[0] || null;
+    const names = Object.fromEntries(districts.map((d) => [d.id, d.name]));
+    const moves = seatMovers(history);
+    return weekCard({ today, s, primaries, tally, n: all.length, next, moves, names,
+      days: App.daysBetween(today, meta.election_date), electionDate: meta.election_date });
+  }
+
+  function weekCard({ today: day, s, primaries, tally, n, next, moves, names, days, electionDate }) {
+    const lnp = s.current, alp = 100 - s.current;
+    const lead = lnp >= 50 ? ["Coalition", lnp, "Labor", alp] : ["Labor", alp, "Coalition", lnp];
+    const BLOC = { LNP: ["Coalition", "--p-lib"], ALP: ["Labor", "--p-alp"], GRN: ["Greens", "--p-grn"], ONP: ["One Nation", "--p-onp"], OTH: ["Others", "--p-ind"] };
+    const seats = Object.keys(BLOC).filter((b) => tally[b]).sort((a, b) => tally[b] - tally[a]);
+    const pct = (v) => `${Math.round(v)}%`;
+    const move = (m) => {
+      const party = escapeHtml(App.partyName(m.party));
+      const what = m.kind === "model"
+        ? `${party} win chance ${pct(m.from)} → ${pct(m.to)} <span class="hc-sub">(AEF model)</span>`
+        : `${party} ${App.fmtPrice(m.from)} → ${App.fmtPrice(m.to)} <span class="hc-sub">(Sportsbet)</span>`;
+      return `<li style="--party-color: var(${App.partyVar(m.party)})"><b>${escapeHtml(names[m.id] || m.id)}</b> ${what}</li>`;
+    };
+    const short = (iso) => fmtDate(iso).replace(/ \d{4}$/, "");
+    return {
+      accent: lnp >= 50 ? "--p-lib" : "--p-alp",
+      filename: `vic-election-2026-this-week-${day}.png`,
+      title: `Vic Election 2026: this week (${fmtDate(day)})`,
+      url: App.ROOT.href,
+      inner: `
+        <div class="hc-body hc-week">
+          <div class="hc-kicker">This week · ${escapeHtml(fmtDate(day))}${days > 0 ? ` · ${days} days to election day` : ` · election day ${escapeHtml(fmtDate(electionDate))}`}</div>
+          <div class="hc-title hc-title-sm">${lead[0]} ${lead[1].toFixed(1)} – ${lead[2]} ${lead[3].toFixed(1)} <span class="hc-sub">2PP, poll of polls</span></div>
+          <div class="hc-facts">
+            <div><span class="hc-label">Primary vote</span><span class="hc-value">${Object.entries(primaries).map(([k, v]) => `${escapeHtml(App.partyShort(k))} ${v.toFixed(0)}`).join(" · ")}</span>
+              <span class="hc-sub">Average of ${n} polls</span></div>
+            <div><span class="hc-label">Seat projection (45 to win)</span><span class="hc-value">${seats.map((b) => `<i style="background:var(${BLOC[b][1]})"></i>${BLOC[b][0]} ${tally[b]}`).join(" ")}</span>
+              <span class="hc-sub">Uniform swing of ${escapeHtml(App.fmtSwing(Math.abs(s.swing)))} to ${s.swing >= 0 ? "L/NP" : "Labor"}</span></div>
+          </div>
+          <div class="hc-week-cols">
+            <div><div class="hc-label">Biggest seat moves${moves.since ? ` since ${escapeHtml(short(moves.since))}` : ""}</div>
+              ${moves.movers.length ? `<ol class="hc-moves">${moves.movers.map(move).join("")}</ol>`
+                : '<div class="hc-sub">No seat moved by a point or more this week.</div>'}</div>
+            <div><div class="hc-label">Next key date</div>
+              ${next ? `<div class="hc-next"><b>${escapeHtml(short(next.from))}</b> ${escapeHtml(next.short || next.text)}</div>` : '<div class="hc-sub">None scheduled</div>'}</div>
+          </div>
+        </div>
+        <div class="hc-foot"><strong>Vic Election 2026</strong><span>${escapeHtml(siteLink())}</span><span>${escapeHtml(fmtDate(day))}</span></div>`,
+    };
+  }
+
+  // For scripts/build_share.py: the card as a PNG data URL.
+  async function weeklyPng() {
+    const card = await weekly();
+    const blob = await renderHtmlCard(card.inner, card.accent);
+    return new Promise((res) => { const r = new FileReader(); r.onload = () => res(r.result); r.readAsDataURL(blob); });
+  }
+
+  App.ShareCard = { drawCandidate, mount, shareButton, seatCard, homeCard, ballotCard, weekly, weeklyPng, seatMovers, W, H };
 })();

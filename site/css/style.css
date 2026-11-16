@@ -603,6 +603,10 @@ a.icon-btn { text-decoration: none; display: inline-block; }
 @media (max-width: 760px) { #hero-models { min-height: 80px; } }
 @media (max-width: 400px) { #hero-models { min-height: 100px; } }   /* its key wraps to three lines */
 .hero-updated { margin-top: 10px !important; font-size: 0.8rem; line-height: 1.5; min-height: 1.5em; }
+@media (max-width: 374px) { .hb-proj-head { min-height: 44px; } }   /* "Uniform swing, +10.6 to L/NP" wraps under the title */
+.hero-foot { display: flex; align-items: center; justify-content: space-between; gap: 8px 12px; margin-top: 10px; }
+.hero-foot .hero-updated { margin-top: 0 !important; }
+.hero-foot .icon-btn { flex: none; min-height: 44px; }
 
 /* ---------- Home: seats to watch ---------- */
 .watch-list { list-style: none; margin: 0; padding: 0; counter-reset: watch; }
@@ -953,6 +957,13 @@ html.js .agg-table { min-height: 257px; }
 .hc-sub { font-size: 18px; color: var(--muted); }
 .hc-people { display: flex; gap: 26px; }
 .hc-title-sm { font-size: 44px; }
+.hc-title .hc-sub { font-family: var(--font-body); font-weight: 500; font-size: 22px; }
+.hc-week .hc-value { font-size: 26px; gap: 8px; }
+.hc-week-cols { display: grid; grid-template-columns: 1.6fr 1fr; gap: 28px; margin-top: 4px; }
+.hc-moves { margin: 6px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; font-size: 23px; }
+.hc-moves li { border-left: 6px solid var(--party-color, var(--p-oth)); padding-left: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hc-moves .hc-sub { font-size: 17px; }
+.hc-next { margin-top: 6px; font-size: 24px; line-height: 1.3; }
 .hc-ballot-instr { font-size: 22px; font-weight: 600; border: 2px solid var(--text); border-radius: 6px; padding: 6px 12px; align-self: flex-start; }
 .hc-ballot { list-style: none; margin: 4px 0 0; padding: 0; display: grid; grid-auto-flow: column; grid-template-rows: repeat(var(--hc-rows), auto); grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.45em 36px; min-height: 0; }
 .hc-ballot li { display: flex; align-items: center; gap: 0.6em; line-height: 1.1; }
