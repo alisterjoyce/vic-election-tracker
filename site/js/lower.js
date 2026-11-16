@@ -260,6 +260,10 @@
         <h3 id="ballot-h">Ballot paper</h3>
         <div id="seat-ballot" style="min-height:${ballotHeight(cands)}px">${ballotBlock(d)}</div>
       </section>
+      <details class="compare" id="compare">
+        <summary><h3 id="compare-h">Compare candidates</h3><span class="muted small">Party, occupation, roles and stated priorities side by side</span></summary>
+        <div id="compare-body"><p class="muted small">Loading profiles…</p></div>
+      </details>
       ${App.Htv ? App.Htv.section(htv, { district: d.id, margin: d.margin, parties: cands.filter((c) => !isInactive(c)).map((c) => c.party) }) : ""}
       <section class="seat-news" aria-labelledby="news-h">
         <h3 id="news-h">In the news</h3>
@@ -276,6 +280,8 @@
       odds: outlook.odds && (outlook.odds.seats || []).find((x) => x.district === d.id),
       oddsDate: outlook.odds && outlook.odds.date_checked,
     }));
+    // The comparison loads the seat's profiles (data/profiles/<seat>.json) only when it is opened.
+    $("compare").addEventListener("toggle", (e) => { if (e.currentTarget.open) renderCompare(d); });
     if (live) renderContest(d, { key: "r26", file: `results_2026/${d.id}`, title: "2026 results", live, intro: intro2026 });
     renderContest(d, { key: "r22", file: `results_2022/${d.id}`, title: "How it voted in 2022", intro: intro2022 });
   }
@@ -293,6 +299,51 @@
     if (vec === undefined) return `<p class="muted small">Loading the VEC's ballot paper…</p>`;
     const entry = vec && vec.districts && vec.districts[d.id];
     return entry ? App.ballotPaper(entry, "lower") : `<p class="empty">The VEC's list of candidates isn't loaded yet.</p>`;
+  }
+
+  /* ---------- Compare candidates: one column per candidate in ballot order, from their researched profiles ---------- */
+  const NOTHING = '<span class="muted">Nothing published</span>';
+  const roleYears = (r) => (r.from || r.to ? ` <span class="muted">(${r.from || "?"}–${r.to != null ? r.to : r.ended ? "?" : "present"})</span>` : "");
+  const unver = (f) => (f && f.unverified ? ' <span class="muted">(unverified)</span>' : "");
+  const ROLES_SHOWN = 4;
+
+  async function renderCompare(d) {
+    const el = $("compare-body");
+    if (!el || el.dataset.done === d.id) return;
+    let profiles = {};
+    try { profiles = (await loadJSON(`profiles/${d.id}`)).profiles || {}; } catch (err) { console.warn(err); }
+    if (hashId() !== d.id || !el.isConnected) return;   // user moved on
+    el.dataset.done = d.id;
+    // Ballot order (the VEC's), else the order the candidate list uses.
+    const order = vec && vec.districts && vec.districts[d.id] ? Object.fromEntries(vec.districts[d.id].candidates.map((c) => [c.id, c.ballot_position])) : {};
+    const cands = seatCands(d).map((c) => ({ ...c, id: App.candidateId(d.id, c.name) }))
+      .sort((a, b) => (order[a.id] ?? a.ballot_position ?? 99) - (order[b.id] ?? b.ballot_position ?? 99));
+    if (!cands.length) { el.innerHTML = '<p class="empty">No candidates recorded yet.</p>'; return; }
+    const cell = (html) => `<td>${html || NOTHING}</td>`;
+    const list = (items) => (items.length ? `<ul class="cmp-list">${items.map((x) => `<li>${x}</li>`).join("")}</ul>` : "");
+    const roles = (pr) => {
+      const all = ((pr && pr.prior_roles) || []).slice().sort((a, b) => ((b.to == null && !b.ended) - (a.to == null && !a.ended)) || (b.from || 0) - (a.from || 0));
+      const shown = all.slice(0, ROLES_SHOWN).map((r) => `${escapeHtml(r.role)}${r.organisation ? `, ${escapeHtml(r.organisation)}` : ""}${roleYears(r)}${unver(r)}`);
+      if (all.length > ROLES_SHOWN) shown.push(`<span class="muted">and ${all.length - ROLES_SHOWN} more on the profile</span>`);
+      return list(shown);
+    };
+    const priorities = (pr) => list(((pr && pr.priorities) || []).map((x) => `${x.quoted ? `“${escapeHtml(x.text)}”` : escapeHtml(x.text)}${unver(x)}`));
+    const rows = [
+      ["Party", (c) => `${partyBadge(c.party)}`],
+      ["Occupation", (c, pr) => (pr && pr.occupation ? `${escapeHtml(pr.occupation.text)}${unver(pr.occupation)}` : "")],
+      ["Prior roles", (c, pr) => roles(pr)],
+      ["Stated priorities", (c, pr) => priorities(pr)],
+      ["Full profile", (c, pr) => `<a href="candidate.html#${escapeHtml(c.id)}">${pr ? "Profile and sources" : "Candidate page"}</a>`],
+    ];
+    const profiled = cands.filter((c) => profiles[c.id]).length;
+    el.innerHTML = `<p class="muted small">In ballot order. From each candidate's researched profile, where every fact has a source (on the profile page).
+        ${profiled < cands.length ? `${cands.length - profiled} of ${cands.length} candidates have no profile yet.` : ""} Scroll sideways for more candidates.</p>
+      <div class="table-scroll cmp-scroll"><table class="cmp-table">
+        <caption class="sr-only">Candidates for ${escapeHtml(d.name)} compared</caption>
+        <thead><tr><td class="cmp-corner"></td>${cands.map((c) => `<th scope="col" style="--party-color: var(${App.partyVar(c.party)})">
+          ${order[c.id] != null ? `<span class="cmp-pos">${order[c.id]}</span>` : ""}${App.profileLink(d.id, c.name)}</th>`).join("")}</tr></thead>
+        <tbody>${rows.map(([label, fn]) => `<tr><th scope="row">${label}</th>${cands.map((c) => cell(fn(c, profiles[c.id]))).join("")}</tr>`).join("")}</tbody>
+      </table></div>`;
   }
 
   function candidatesBlock(d, cands) {
