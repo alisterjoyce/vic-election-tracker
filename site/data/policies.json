@@ -26,8 +26,8 @@
     "licence_url": "https://creativecommons.org/licenses/by/4.0/",
     "citation": "Australian Election Tracker (OZE), Victorian state election 2026 candidate ledger, electiontracker.au"
   },
-  "generated": "2026-11-16T21:38:57.932Z",
-  "copied": "2026-11-17",
+  "generated": "2026-11-17T21:53:50.433Z",
+  "copied": "2026-11-18",
   "caveat": "Policy cells show only positions with an individually sourced public record (manifesto, press release, Hansard, or Parliamentary Budget Office costing). An empty cell means no sourced position is in the ledger yet — not that a party has no view, and not an editorial judgement of importance.",
   "parties": [
     {
@@ -2225,6 +2225,24 @@
             "financing": "taxpayer",
             "pbo_status": "uncosted"
           }
+        },
+        {
+          "id": "labor-health-casey-mental-health-2026-11",
+          "statement": "Labor says a re-elected Carroll Labor Government will plan a new 100-bed acute mental health unit at Casey Hospital, with 50 adult beds, 25 beds for people aged 65 and over and 25 youth beds for 18 to 24-year-olds. Labor describes its $6 million investment as the first step towards delivering the unit.",
+          "kind": "pledge",
+          "source": {
+            "url": "https://www.viclabor.org.au/news/mental-health-is-health-care-too-labor-will-protect-it",
+            "publisher": "Victorian Labor",
+            "title": "Mental Health is Health Care Too - Labor Will Protect It",
+            "published": "2026-11-17",
+            "accessed": "2026-11-18"
+          },
+          "fiscal": {
+            "amount_display": "$6 million (planning, first step)",
+            "timeframe": "Not specified",
+            "financing": "taxpayer",
+            "pbo_status": "uncosted"
+          }
         }
       ]
     },
@@ -3107,6 +3125,24 @@
             "published": "2026-11-04",
             "accessed": "2026-11-06"
           }
+        },
+        {
+          "id": "liberal-env-coastal-resilience-2026-11",
+          "statement": "The Liberals and Nationals pledged a Victorian Coastal Resilience Strategy backed by a $50 million Coastal Environment Resilience Fund over four years, to pay for urgent repairs to damaged beaches, dunes, foreshore access and existing protection structures, plus dune restoration, revegetation and statewide drone monitoring. A statewide coastal risk framework would identify where protection, adaptation or planned retreat is appropriate and set out state and local government responsibilities. Silverleaves was named as the first priority.",
+          "kind": "pledge",
+          "source": {
+            "url": "https://www.sgst.com.au/silverleaves-first-in-line-as-coalition-pledges-50-million-to-save-beaches/",
+            "publisher": "South Gippsland Sentinel-Times (reporting Liberal–Nationals announcement)",
+            "title": "Silverleaves first in line as Coalition pledges $50 million to save beaches",
+            "published": "2026-11-17",
+            "accessed": "2026-11-18"
+          },
+          "fiscal": {
+            "amount_display": "$50 million over four years",
+            "timeframe": "Four years",
+            "financing": "taxpayer",
+            "pbo_status": "uncosted"
+          }
         }
       ]
     },
@@ -3149,6 +3185,18 @@
             "title": "New laws to protect Victorians by criminalising coercive control",
             "published": "2025-12-02",
             "accessed": "2026-08-02"
+          }
+        },
+        {
+          "id": "liberal-gender-puberty-suppressants-review-2026-11",
+          "statement": "Opposition Leader Jess Wilson said a Liberal and Nationals government would follow Queensland's approach and immediately commission an independent review into the prescription of puberty suppressants in Victorian public hospitals and health services, citing concerns that the NHMRC interim recommendation did not set a minimum clinical pathway.",
+          "kind": "pledge",
+          "source": {
+            "url": "https://www.smh.com.au/politics/victoria/a-second-opinion-is-common-sense-wilson-promises-review-of-puberty-blockers-20261117-p61ey5.html",
+            "publisher": "The Sydney Morning Herald (quoting Jess Wilson statement)",
+            "title": "'A second opinion is common sense': Wilson promises review of puberty blockers",
+            "published": "2026-11-17",
+            "accessed": "2026-11-18"
           }
         }
       ]
