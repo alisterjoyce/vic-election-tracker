@@ -8,8 +8,14 @@
       "sources": "Source (outlet, or the Bing News search) -> {status: ok | error | skipped, via: feed | sitemap | Bing News search, url (what was read), page (the outlet's election page, if any), items (items read this run), last_7_days (election headlines from it dated in the last 7 days), message}"
     }
   },
-  "updated": "2026-11-18T06:00:24Z",
+  "updated": "2026-11-18T10:00:06Z",
   "statewide": [
+    {
+      "title": "What voters in Ben Carroll’s seat said on day one of pre-poll voting",
+      "outlet": "Australian Financial Review",
+      "published": "2026-11-18T07:00:13Z",
+      "url": "https://www.afr.com/politics/federal/what-voters-in-ben-carroll-s-seat-said-on-day-one-of-pre-poll-voting-20261118-p61ex3?ref=rss&utm_medium=rss&utm_source=rss_politics"
+    },
     {
       "title": "Confused about who to vote for in the Victoria election? A guide to key promises made by Labor, the Coalition, Greens and One Nation",
       "outlet": "Guardian Australia",
@@ -47,6 +53,12 @@
       "url": "https://www.abc.net.au/news/2026-11-18/victoria-election-blog-november-18-royal-commission/107397488"
     },
     {
+      "title": "Victoria Police clears Warren Pickering of historic allegation",
+      "outlet": "The Australian",
+      "published": "2026-11-17T22:12:00Z",
+      "url": "https://www.theaustralian.com.au/nation/victoria/victoria-police-clears-warren-pickering-of-historic-allegation/news-story/3ef6d937e5d99d4efe0e6f8b9aefe1de"
+    },
+    {
       "title": "Trump full of praise for Quad alliance, reckons he and Albanese are ‘OK’",
       "outlet": "Crikey",
       "published": "2026-11-17T20:19:13Z",
@@ -59,6 +71,24 @@
       "url": "https://www.abc.net.au/news/2026-11-18/victorian-election-debate-jess-wilson-winner/107397070"
     },
     {
+      "title": "'Pretty pathetic': Embattled Victorian Premier Ben Carroll ridiculed for failing to mention Daniel Andrews and Jacinta Allan by name",
+      "outlet": "News24",
+      "published": "2026-11-17T19:25:00Z",
+      "url": "https://www.news24.com.au/politics/australian-politics/pretty-pathetic-embattled-victorian-premier-ben-carroll-ridiculed-for-failing-to-mention-daniel-andrews-and-jacinta-allan-by-name/news-story/0fdb82c94511dc8d81ab13e1128c1625"
+    },
+    {
+      "title": "Celeste Manno’s mother lashes Premier Ben Carroll over claim he marched with family",
+      "outlet": "Herald Sun",
+      "published": "2026-11-17T17:40:00Z",
+      "url": "https://www.heraldsun.com.au/news/victoria/state-election/celeste-mannos-mother-lashes-premier-ben-carroll-over-claim-he-marched-with-family/news-story/9875a39ceddf5025f804c0e6a71fe1fb"
+    },
+    {
+      "title": "Transmission lines emerge as election flashpoint in Victoria",
+      "outlet": "pv magazine Australia",
+      "published": "2026-11-17T16:00:00Z",
+      "url": "https://www.pv-magazine-australia.com/2026/11/18/transmission-lines-emerge-as-election-flashpoint-in-victoria/"
+    },
+    {
       "title": "First election votes cast",
       "outlet": "Bayside News",
       "published": "2026-11-17T16:00:00Z",
@@ -69,6 +99,12 @@
       "outlet": "Bairnsdale Advertiser",
       "published": "2026-11-17T16:00:00Z",
       "url": "https://bairnsdaleadvertiser.com.au/23128/barnaby-joyce-hits-the-streets/"
+    },
+    {
+      "title": "Why One Nation’s Victorian election how to vote cards put Ellen Sandell’s Greens and the Socialists below Labor in Melbourne and inner seats",
+      "outlet": "onenewsaustralia.com",
+      "published": "2026-11-17T16:00:00Z",
+      "url": "https://www.onenewsaustralia.com/why-one-nations-victorian-election-how-to-vote-cards-put-ellen-sandells-greens-and-the-socialists-below-labor-in-melbourne-and-inner-seats/"
     },
     {
       "title": "A voice for animals, people and the Murray",
@@ -273,42 +309,6 @@
       "outlet": "QNews",
       "published": "2026-11-16T15:30:00Z",
       "url": "https://qnews.com.au/minister-for-equality-challenges-liberals-to-debate-inclusion-policies-on-joy-94-9/"
-    },
-    {
-      "title": "Labor, Coalition, Greens split on land tax, reserve prices and rental supply ahead of Victorian election",
-      "outlet": "Elite Agent",
-      "published": "2026-11-16T15:30:00Z",
-      "url": "https://eliteagent.com/victorian-election-parties-split-on-land-tax-rental-supply/"
-    },
-    {
-      "title": "Record number of early voting centres to open for 2026 state election",
-      "outlet": "Star Weekly",
-      "published": "2026-11-16T15:22:00Z",
-      "url": "https://starweekly.com.au/news/2026/11/17/record-number-of-early-voting-centres-to-open-for-2026-state-election/"
-    },
-    {
-      "title": "Sydenham gets ready to vote",
-      "outlet": "Star Weekly",
-      "published": "2026-11-16T12:06:00Z",
-      "url": "https://starweekly.com.au/news/2026/11/16/sydenham-gets-ready-to-vote/"
-    },
-    {
-      "title": "Restaurateur and Melburnian of the Year Chris Lucas says the upcoming Victorian election is the 'most important' in the state's history",
-      "outlet": "News24",
-      "published": "2026-11-16T10:00:00Z",
-      "url": "https://www.news24.com.au/politics/australian-politics/restaurateur-and-melburnian-of-the-year-chris-lucas-says-the-upcoming-victorian-election-is-the-most-important-in-the-states-history/news-story/2b1a6a476bac5869c331a76b808dc0aa"
-    },
-    {
-      "title": "Chinese-Australian voters in Victoria agree with One Nation positions, rank climate change low on the agenda in new survey as election looms",
-      "outlet": "News24",
-      "published": "2026-11-16T10:00:00Z",
-      "url": "https://www.news24.com.au/opinion/chineseaustralian-voters-in-victoria-agree-with-one-nation-positions-rank-climate-change-low-on-the-agenda-in-new-survey-as-election-looms/news-story/1d677414644057b2a99f2b7d78ee8da5"
-    },
-    {
-      "title": "Victorian election 2026: Every Geelong and Western Victoria candidate makes their pitch",
-      "outlet": "Geelong Advertiser",
-      "published": "2026-11-16T10:00:00Z",
-      "url": "https://www.geelongadvertiser.com.au/news/geelong/victorian-election-2026-every-geelong-and-western-victoria-candidate-makes-their-pitch/news-story/bfed94f98321e4584fd64bd2869b9dd7"
     }
   ],
   "seats": {
@@ -434,6 +434,12 @@
         "url": "https://www.nine.com.au/australia-news/vic/ben-carroll-daniel-andrews-jacinta-allan-victorian-debate-20261118-p61f7i.html"
       },
       {
+        "title": "'Pretty pathetic': Embattled Victorian Premier Ben Carroll ridiculed for failing to mention Daniel Andrews and Jacinta Allan by name",
+        "outlet": "News24",
+        "published": "2026-11-17T19:25:00Z",
+        "url": "https://www.news24.com.au/politics/australian-politics/pretty-pathetic-embattled-victorian-premier-ben-carroll-ridiculed-for-failing-to-mention-daniel-andrews-and-jacinta-allan-by-name/news-story/0fdb82c94511dc8d81ab13e1128c1625"
+      },
+      {
         "title": "Jacinta Allan’s exit from politics turns her safe seat into open race",
         "outlet": "Australian Financial Review",
         "published": "2026-11-17T18:00:00Z",
@@ -480,12 +486,6 @@
         "outlet": "The Australian",
         "published": "2026-11-09T07:15:00Z",
         "url": "https://www.theaustralian.com.au/breaking-news/premier-ben-carrolls-construction-royal-commission-starts-hearings-20-days-before-victorian-election/news-story/72a393cb9e660d8dbf667d1a49ba7dd7"
-      },
-      {
-        "title": "Criticism of One Nation cartoon of ex-Victorian premier Jacinta Allan",
-        "outlet": "ABC News",
-        "published": "2026-10-31T05:11:19Z",
-        "url": "https://www.abc.net.au/news/2026-10-31/one-nation-cartoon-david-farley-staffing/107331900"
       }
     ],
     "bendigo-west": [
@@ -1082,12 +1082,18 @@
       },
       {
         "title": "Anthony Carbines refuses to talk about blistering attack on Labor Party bosses in media outing with Jacinta Allan",
-        "outlet": "Northern Territory News",
+        "outlet": "The Toowoomba Chronicle",
         "published": "2026-07-22T06:34:00Z",
-        "url": "https://www.ntnews.com.au/news/victoria/anthony-carbines-refuses-to-talk-about-blistering-private-attack-on-labor-party-bosses-in-media-outing-with-jacinta-allan/news-story/ed2b829f1f11614de0cea198cae51852"
+        "url": "https://www.thechronicle.com.au/news/victoria/anthony-carbines-refuses-to-talk-about-blistering-private-attack-on-labor-party-bosses-in-media-outing-with-jacinta-allan/news-story/ed2b829f1f11614de0cea198cae51852"
       }
     ],
     "kalkallo": [
+      {
+        "title": "Dadisho Pledges More Police, Tax Relief and Infrastructure Investment for Melbourne's North",
+        "outlet": "SBS News",
+        "published": "2026-11-17T21:03:00Z",
+        "url": "https://www.sbs.com.au/language/assyrian/en/podcast-episode/dadisho-pledges-more-police-tax-relief-and-infrastructure-investment-for-melbournes-north/fm6ieazw5"
+      },
       {
         "title": "New police station pledged for the north",
         "outlet": "Star Weekly",
@@ -1125,6 +1131,12 @@
         "outlet": "Crikey",
         "published": "2026-11-17T20:19:13Z",
         "url": "https://www.crikey.com.au/2026/11/18/trump-quad-alliance-critical-minerals-military-exercises-jess-wilson-wins-victorian-leaders-debate/"
+      },
+      {
+        "title": "'Pretty pathetic': Embattled Victorian Premier Ben Carroll ridiculed for failing to mention Daniel Andrews and Jacinta Allan by name",
+        "outlet": "News24",
+        "published": "2026-11-17T19:25:00Z",
+        "url": "https://www.news24.com.au/politics/australian-politics/pretty-pathetic-embattled-victorian-premier-ben-carroll-ridiculed-for-failing-to-mention-daniel-andrews-and-jacinta-allan-by-name/news-story/0fdb82c94511dc8d81ab13e1128c1625"
       },
       {
         "title": "The Snoop: Is SA slacking on AUKUS? Plus a Victorian MP’s big bill for ‘professional development’, and more",
@@ -1167,12 +1179,6 @@
         "outlet": "Herald Sun",
         "published": "2026-11-17T03:48:00Z",
         "url": "https://www.heraldsun.com.au/news/victoria/state-election/jess-wilson-dominates-victorian-leaders-debate-as-premier-ben-carroll-loses-the-room/news-story/264072b8643d9cc397e03678db25fbdd"
-      },
-      {
-        "title": "Victorian Liberal leader Jess Wilson’s win as unnamed ghosts of ALP’s past haunt Premier Ben Carroll",
-        "outlet": "The Australian",
-        "published": "2026-11-17T03:10:00Z",
-        "url": "https://www.theaustralian.com.au/nation/jess-wilson-takes-convincing-win-as-victoria-premier-ben-carroll-suffers-name-game-gaffe/news-story/9f7c63e1ac57805324078d5e583fc386"
       }
     ],
     "kororoit": [],
@@ -1258,6 +1264,12 @@
     "malvern": [],
     "melbourne": [
       {
+        "title": "Why One Nation’s Victorian election how to vote cards put Ellen Sandell’s Greens and the Socialists below Labor in Melbourne and inner seats",
+        "outlet": "onenewsaustralia.com",
+        "published": "2026-11-17T16:00:00Z",
+        "url": "https://www.onenewsaustralia.com/why-one-nations-victorian-election-how-to-vote-cards-put-ellen-sandells-greens-and-the-socialists-below-labor-in-melbourne-and-inner-seats/"
+      },
+      {
         "title": "Victoria leaders debate: Voldemort, Gotham City and the Greens - Victorian election gets a jolt of life as leaders face off",
         "outlet": "Guardian Australia",
         "published": "2026-11-17T11:55:28Z",
@@ -1310,12 +1322,6 @@
         "outlet": "Star Weekly",
         "published": "2026-11-13T07:03:00Z",
         "url": "https://starweekly.com.au/news/2026/11/13/v-line-service-boost-commitment/"
-      },
-      {
-        "title": "Review puts Altona North station a step closer",
-        "outlet": "Star Weekly",
-        "published": "2026-11-12T17:06:00Z",
-        "url": "https://starweekly.com.au/news/2026/11/13/review-puts-altona-north-station-a-step-closer/"
       }
     ],
     "melton": [
@@ -1558,6 +1564,12 @@
     ],
     "niddrie": [
       {
+        "title": "What voters in Ben Carroll’s seat said on day one of pre-poll voting",
+        "outlet": "Australian Financial Review",
+        "published": "2026-11-18T07:00:13Z",
+        "url": "https://www.afr.com/politics/federal/what-voters-in-ben-carroll-s-seat-said-on-day-one-of-pre-poll-voting-20261118-p61ex3?ref=rss&utm_medium=rss&utm_source=rss_politics"
+      },
+      {
         "title": "‘He’s not Voldemort’: Ben Carroll grilled after declining to name Daniel Andrews and Jacinta Allan",
         "outlet": "9News",
         "published": "2026-11-18T03:16:54Z",
@@ -1574,6 +1586,18 @@
         "outlet": "Crikey",
         "published": "2026-11-17T20:19:13Z",
         "url": "https://www.crikey.com.au/2026/11/18/trump-quad-alliance-critical-minerals-military-exercises-jess-wilson-wins-victorian-leaders-debate/"
+      },
+      {
+        "title": "'Pretty pathetic': Embattled Victorian Premier Ben Carroll ridiculed for failing to mention Daniel Andrews and Jacinta Allan by name",
+        "outlet": "News24",
+        "published": "2026-11-17T19:25:00Z",
+        "url": "https://www.news24.com.au/politics/australian-politics/pretty-pathetic-embattled-victorian-premier-ben-carroll-ridiculed-for-failing-to-mention-daniel-andrews-and-jacinta-allan-by-name/news-story/0fdb82c94511dc8d81ab13e1128c1625"
+      },
+      {
+        "title": "Celeste Manno’s mother lashes Premier Ben Carroll over claim he marched with family",
+        "outlet": "Herald Sun",
+        "published": "2026-11-17T17:40:00Z",
+        "url": "https://www.heraldsun.com.au/news/victoria/state-election/celeste-mannos-mother-lashes-premier-ben-carroll-over-claim-he-marched-with-family/news-story/9875a39ceddf5025f804c0e6a71fe1fb"
       },
       {
         "title": "Victoria election 2026: Victorian Premier Ben Carroll a no-show on campaign bus after debate fail",
@@ -1598,24 +1622,6 @@
         "outlet": "Guardian Australia",
         "published": "2026-11-17T11:55:28Z",
         "url": "https://www.theguardian.com/australia-news/2026/nov/17/voldemort-gotham-city-greens-liberal-labor-one-nation-victorian-election-leaders-debate-ntwnfb"
-      },
-      {
-        "title": "Victorian election leaders’ debate as it happened: Ben Carroll, Jess Wilson, Warren Pickering and Ellen Sandell pitch to undecided voters",
-        "outlet": "The Age",
-        "published": "2026-11-17T10:14:58Z",
-        "url": "https://www.theage.com.au/national/victoria/victorian-election-leaders-debate-live-ben-carroll-jess-wilson-warren-pickering-and-ellen-sandell-make-pitch-to-undecided-voters-20261117-p61exb.html?ref=rss&utm_medium=rss&utm_source=rss_national_victoria"
-      },
-      {
-        "title": "Former Daniel Andrews advisers warn Premier Ben Carroll faces historic Victorian election wipe-out",
-        "outlet": "Herald Sun",
-        "published": "2026-11-17T08:27:00Z",
-        "url": "https://www.heraldsun.com.au/news/victoria/state-election/former-daniel-andrews-advisers-warn-premier-ben-carroll-faces-historic-victorian-election-wipeout/news-story/94411e278436226c74bc5650dc1b696a"
-      },
-      {
-        "title": "Jess Wilson dominates Victorian leaders’ debate as Premier Ben Carroll loses the room",
-        "outlet": "Herald Sun",
-        "published": "2026-11-17T03:48:00Z",
-        "url": "https://www.heraldsun.com.au/news/victoria/state-election/jess-wilson-dominates-victorian-leaders-debate-as-premier-ben-carroll-loses-the-room/news-story/264072b8643d9cc397e03678db25fbdd"
       }
     ],
     "northcote": [
@@ -1674,6 +1680,12 @@
     ],
     "pakenham": [
       {
+        "title": "Victoria Police clears Warren Pickering of historic allegation",
+        "outlet": "The Australian",
+        "published": "2026-11-17T22:12:00Z",
+        "url": "https://www.theaustralian.com.au/nation/victoria/victoria-police-clears-warren-pickering-of-historic-allegation/news-story/3ef6d937e5d99d4efe0e6f8b9aefe1de"
+      },
+      {
         "title": "Victoria leaders debate: Voldemort, Gotham City and the Greens - Victorian election gets a jolt of life as leaders face off",
         "outlet": "Guardian Australia",
         "published": "2026-11-17T11:55:28Z",
@@ -1726,12 +1738,6 @@
         "outlet": "The Australian",
         "published": "2026-11-06T13:35:00Z",
         "url": "https://www.theaustralian.com.au/nation/politics/one-nation-targets-angry-outer-voters-to-disrupt-victorian-election-and-jess-wilsons-drive-for-power/news-story/8767a8bb00db2fb793903e51dc846464"
-      },
-      {
-        "title": "Desperate deepfakes: Labor blasted over Halloween AI video targeting Jess Wilson, Warren Pickering",
-        "outlet": "Herald Sun",
-        "published": "2026-11-04T05:43:00Z",
-        "url": "https://www.heraldsun.com.au/news/victoria/state-election/desperate-deepfakes-labor-blasted-over-halloween-ai-video-targeting-jess-wilson-warren-pickering/news-story/a86c678403108b67c2a27fdf332643f0"
       }
     ],
     "pascoe-vale": [
@@ -2199,7 +2205,7 @@
       "url": "https://www.abc.net.au/news/feed/51120/rss.xml",
       "via": "feed and Bing News search",
       "items": 37,
-      "last_7_days": 9
+      "last_7_days": 6
     },
     "The Age": {
       "status": "ok",
@@ -2215,7 +2221,7 @@
       "via": "Bing News search",
       "items": 12,
       "message": "robots.txt disallows the whole site (checked 16 Nov 2026)",
-      "last_7_days": 7
+      "last_7_days": 8
     },
     "Guardian Australia": {
       "status": "ok",
@@ -2237,7 +2243,7 @@
       "page": "https://www.nine.com.au/australia-news/vic",
       "url": "https://www.nine.com.au/sitemaps/news/brands/nine",
       "via": "sitemap",
-      "items": 189,
+      "items": 201,
       "last_7_days": 2
     },
     "7News": {
@@ -2246,7 +2252,7 @@
       "url": "https://7news.com.au/news/vic/vic-election-2026/feed",
       "via": "feed",
       "items": 13,
-      "last_7_days": 3
+      "last_7_days": 2
     },
     "Sky News Australia": {
       "status": "ok",
@@ -2271,14 +2277,14 @@
       "via": "Bing News search",
       "items": 12,
       "message": "robots.txt disallows the whole site (checked 16 Nov 2026)",
-      "last_7_days": 6
+      "last_7_days": 7
     },
     "Australian Financial Review": {
       "status": "ok",
       "url": "https://www.afr.com/rss/politics.xml",
       "via": "feed",
       "items": 20,
-      "last_7_days": 3
+      "last_7_days": 4
     },
     "AAP": {
       "status": "ok",
@@ -2329,7 +2335,7 @@
       "status": "ok",
       "url": "https://www.dailymail.co.uk/auhome/index.rss",
       "via": "feed",
-      "items": 96,
+      "items": 76,
       "last_7_days": 1
     },
     "Bendigo Advertiser": {
@@ -2368,10 +2374,11 @@
       "last_7_days": 1
     },
     "Star Weekly": {
-      "status": "error",
+      "status": "ok",
       "url": "https://www.starweekly.com.au/feed/",
       "via": "feed",
-      "message": "feed failed: 502 Server Error: Bad Gateway for url: https://starweekly.com.au/feed/"
+      "items": 12,
+      "last_7_days": 2
     },
     "Shepparton News": {
       "status": "error",
@@ -2391,7 +2398,7 @@
       "via": "Bing News search",
       "items": 176,
       "message": "176 searches for 88 districts, plus 2 statewide",
-      "last_7_days": 37
+      "last_7_days": 41
     },
     "Google News": {
       "status": "skipped",
