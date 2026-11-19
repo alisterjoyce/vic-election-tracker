@@ -8,13 +8,19 @@
       "sources": "Source (outlet, or the Bing News search) -> {status: ok | error | skipped, via: feed | sitemap | Bing News search, url (what was read), page (the outlet's election page, if any), items (items read this run), last_7_days (election headlines from it dated in the last 7 days), message}"
     }
   },
-  "updated": "2026-11-18T23:46:25Z",
+  "updated": "2026-11-19T05:58:16Z",
   "statewide": [
     {
       "title": "Live: One Nation candidate denies climate change as election campaign rolls on",
       "outlet": "ABC News",
       "published": "2026-11-18T22:40:26Z",
       "url": "https://www.abc.net.au/news/2026-11-19/victorian-election-live-early-voting-second-day/107402202"
+    },
+    {
+      "title": "Meet the Bentleigh candidates",
+      "outlet": "The Australian Jewish News",
+      "published": "2026-11-18T14:01:00Z",
+      "url": "https://www.australianjewishnews.com/meet-the-bentleigh-candidates/"
     },
     {
       "title": "Ben Carroll opens up on Jacinta Allan rift while pitching new health hub",
@@ -101,6 +107,12 @@
       "url": "https://www.abc.net.au/news/2026-11-18/victoria-election-blog-november-18-royal-commission/107397488"
     },
     {
+      "title": "Why One Nation’s Victorian election how to vote cards put Ellen Sandell’s Greens and the Socialists below Labor in Melbourne and inner seats",
+      "outlet": "onenewsaustralia.com",
+      "published": "2026-11-17T22:44:00Z",
+      "url": "https://www.onenewsaustralia.com/why-one-nations-victorian-election-how-to-vote-cards-put-ellen-sandells-greens-and-the-socialists-below-labor-in-melbourne-and-inner-seats/"
+    },
+    {
       "title": "Victoria Police clears Warren Pickering of historic allegation",
       "outlet": "The Australian",
       "published": "2026-11-17T22:12:00Z",
@@ -141,12 +153,6 @@
       "outlet": "Bairnsdale Advertiser",
       "published": "2026-11-17T16:00:00Z",
       "url": "https://bairnsdaleadvertiser.com.au/23128/barnaby-joyce-hits-the-streets/"
-    },
-    {
-      "title": "Why One Nation’s Victorian election how to vote cards put Ellen Sandell’s Greens and the Socialists below Labor in Melbourne and inner seats",
-      "outlet": "onenewsaustralia.com",
-      "published": "2026-11-17T16:00:00Z",
-      "url": "https://www.onenewsaustralia.com/why-one-nations-victorian-election-how-to-vote-cards-put-ellen-sandells-greens-and-the-socialists-below-labor-in-melbourne-and-inner-seats/"
     },
     {
       "title": "A voice for animals, people and the Murray",
@@ -251,6 +257,12 @@
       "url": "https://www.news24.com.au/watch/news-shows/news24herald-sun-peoples-forum-carroll-vs-wilson-vs-pickering-vs-sandell/video/dd7fd621b7c51fd8352dfc40d0fd5659"
     },
     {
+      "title": "'I felt really uncomfortable': teacher questions state election letter",
+      "outlet": "Border Mail",
+      "published": "2026-11-17T06:45:00Z",
+      "url": "https://www.bordermail.com.au/story/9392892/wodonga-catholic-college-parents-receive-election-letter/?src=rss"
+    },
+    {
       "title": "Pickering facing a ‘tough’ election, says Joyce",
       "outlet": "Australian Financial Review",
       "published": "2026-11-17T05:56:37Z",
@@ -297,18 +309,6 @@
       "outlet": "ABC News",
       "published": "2026-11-17T02:03:00Z",
       "url": "https://www.abc.net.au/news/2026-11-17/victoria-election-blog-november-17-royal-commission/107393612"
-    },
-    {
-      "title": "Victorian election minus ten days",
-      "outlet": "The Poll Bludger",
-      "published": "2026-11-17T02:00:00Z",
-      "url": "https://www.pollbludger.net/2026/11/18/victorian-election-minus-ten-days/"
-    },
-    {
-      "title": "Brace for an orange wave? What are One Nation’s realistic chances at the Victorian election",
-      "outlet": "9News",
-      "published": "2026-11-17T00:42:27Z",
-      "url": "https://www.nine.com.au/australia-news/vic/victorian-election-one-nation-chances-where-is-pauline-hanson-20261117-p61er4.html"
     }
   ],
   "seats": {
@@ -332,7 +332,7 @@
       {
         "title": "State $160 billion debt looms as sticking point for Bass candidates",
         "outlet": "South Gippsland Sentinel Times",
-        "published": "2026-11-05T05:37:00Z",
+        "published": "2026-11-06T04:45:00Z",
         "url": "https://www.sgst.com.au/state-160-billion-debt-looms-as-sticking-point-for-bass-candidates/"
       },
       {
@@ -509,6 +509,12 @@
       }
     ],
     "bentleigh": [
+      {
+        "title": "Meet the Bentleigh candidates",
+        "outlet": "The Australian Jewish News",
+        "published": "2026-11-18T14:01:00Z",
+        "url": "https://www.australianjewishnews.com/meet-the-bentleigh-candidates/"
+      },
       {
         "title": "First election votes cast",
         "outlet": "Bayside News",
@@ -887,9 +893,9 @@
       },
       {
         "title": "Deadline: Bullet threat against MP Paul Edbrooke echoes intimidation of Victoria Police corruption detective",
-        "outlet": "Geelong Advertiser",
+        "outlet": "Northern Territory News",
         "published": "2026-11-05T07:00:00Z",
-        "url": "https://www.geelongadvertiser.com.au/news/victoria/deadline-bullet-threat-against-mp-paul-edbrooke-echoes-intimidation-of-victoria-police-corruption-detective/news-story/19b630a3aba10507d52bb959f3eff45a"
+        "url": "https://www.ntnews.com.au/news/victoria/deadline-bullet-threat-against-mp-paul-edbrooke-echoes-intimidation-of-victoria-police-corruption-detective/news-story/19b630a3aba10507d52bb959f3eff45a"
       },
       {
         "title": "Recovering Public Lands and Environments After Emergencies",
@@ -1048,6 +1054,12 @@
       }
     ],
     "hawthorn": [
+      {
+        "title": "Early voters turn out in Hawthorn",
+        "outlet": "The Age",
+        "published": "2026-11-19T05:46:05Z",
+        "url": "https://www.theage.com.au/national/victoria/early-voters-turn-out-in-hawthorn-20261119-p61fpp.html?ref=rss&utm_medium=rss&utm_source=rss_national_victoria"
+      },
       {
         "title": "Victorian election hot seats: The social media app that could hold major voter sway in Ringwood",
         "outlet": "The Age",
@@ -1270,9 +1282,15 @@
     "malvern": [],
     "melbourne": [
       {
+        "title": "Greens leader Ellen Sandell poses as swinging voter in response to Labor text",
+        "outlet": "The Australian",
+        "published": "2026-11-18T20:39:00Z",
+        "url": "https://www.theaustralian.com.au/commentary/victoria-ink/greens-leader-ellen-sandell-poses-as-swinging-voter-in-response-to-labor-text/news-story/0320db04102e1a56075ec85135f9b211"
+      },
+      {
         "title": "Why One Nation’s Victorian election how to vote cards put Ellen Sandell’s Greens and the Socialists below Labor in Melbourne and inner seats",
         "outlet": "onenewsaustralia.com",
-        "published": "2026-11-17T16:00:00Z",
+        "published": "2026-11-17T22:44:00Z",
         "url": "https://www.onenewsaustralia.com/why-one-nations-victorian-election-how-to-vote-cards-put-ellen-sandells-greens-and-the-socialists-below-labor-in-melbourne-and-inner-seats/"
       },
       {
@@ -1322,12 +1340,6 @@
         "outlet": "ABC News",
         "published": "2026-11-15T19:04:35Z",
         "url": "https://www.abc.net.au/news/2026-11-16/regional-healthcare-in-crisis-victoria-election/107308520"
-      },
-      {
-        "title": "eXtreme just misses finals",
-        "outlet": "Star Weekly",
-        "published": "2026-11-14T13:31:00Z",
-        "url": "https://starweekly.com.au/sport/2026/11/15/extreme-just-misses-finals/"
       }
     ],
     "melton": [
@@ -1905,6 +1917,12 @@
     "sandringham": [],
     "shepparton": [
       {
+        "title": "Council Welcomes Election Pledge for Tatura Sports Lights",
+        "outlet": "Mirage News",
+        "published": "2026-11-18T18:10:00Z",
+        "url": "https://www.miragenews.com/council-welcomes-election-pledge-for-tatura-1780256/"
+      },
+      {
         "title": "Victorian election hot seats: Alison has a top spot on how-to-vote cards. But in Shepparton, she’s nowhere to be seen",
         "outlet": "The Age",
         "published": "2026-11-16T07:25:00Z",
@@ -2229,7 +2247,7 @@
       "url": "https://www.abc.net.au/news/feed/51120/rss.xml",
       "via": "feed and Bing News search",
       "items": 37,
-      "last_7_days": 7
+      "last_7_days": 6
     },
     "The Age": {
       "status": "ok",
@@ -2245,7 +2263,7 @@
       "via": "Bing News search",
       "items": 12,
       "message": "robots.txt disallows the whole site (checked 16 Nov 2026)",
-      "last_7_days": 9
+      "last_7_days": 8
     },
     "Guardian Australia": {
       "status": "ok",
@@ -2253,7 +2271,7 @@
       "url": "https://www.theguardian.com/australia-news/victorian-politics/rss",
       "via": "feed",
       "items": 20,
-      "last_7_days": 7
+      "last_7_days": 6
     },
     "SBS News": {
       "status": "ok",
@@ -2267,7 +2285,7 @@
       "page": "https://www.nine.com.au/australia-news/vic",
       "url": "https://www.nine.com.au/sitemaps/news/brands/nine",
       "via": "sitemap",
-      "items": 238,
+      "items": 200,
       "last_7_days": 2
     },
     "7News": {
@@ -2293,7 +2311,7 @@
       "via": "Bing News search",
       "items": 12,
       "message": "robots.txt disallows the whole site (checked 16 Nov 2026)",
-      "last_7_days": 10
+      "last_7_days": 8
     },
     "The Australian": {
       "status": "ok",
@@ -2301,7 +2319,7 @@
       "via": "Bing News search",
       "items": 12,
       "message": "robots.txt disallows the whole site (checked 16 Nov 2026)",
-      "last_7_days": 6
+      "last_7_days": 7
     },
     "Australian Financial Review": {
       "status": "ok",
@@ -2323,7 +2341,7 @@
       "url": "https://www.crikey.com.au/feed/",
       "via": "feed",
       "items": 10,
-      "last_7_days": 3
+      "last_7_days": 2
     },
     "The Conversation": {
       "status": "ok",
@@ -2359,7 +2377,7 @@
       "status": "ok",
       "url": "https://www.dailymail.co.uk/auhome/index.rss",
       "via": "feed",
-      "items": 86,
+      "items": 89,
       "last_7_days": 0
     },
     "Bendigo Advertiser": {
@@ -2374,7 +2392,7 @@
       "url": "https://www.bordermail.com.au/rss.xml",
       "via": "feed",
       "items": 20,
-      "last_7_days": 0
+      "last_7_days": 1
     },
     "Warrnambool Standard": {
       "status": "ok",
@@ -2395,14 +2413,14 @@
       "url": "https://www.sunraysiadaily.com.au/feed",
       "via": "feed",
       "items": 12,
-      "last_7_days": 1
+      "last_7_days": 0
     },
     "Star Weekly": {
       "status": "ok",
       "url": "https://www.starweekly.com.au/feed/",
       "via": "feed",
       "items": 12,
-      "last_7_days": 2
+      "last_7_days": 1
     },
     "Shepparton News": {
       "status": "error",
@@ -2422,7 +2440,7 @@
       "via": "Bing News search",
       "items": 176,
       "message": "176 searches for 88 districts, plus 2 statewide",
-      "last_7_days": 36
+      "last_7_days": 39
     },
     "Google News": {
       "status": "skipped",
