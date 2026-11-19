@@ -8,13 +8,25 @@
       "sources": "Source (outlet, or the Bing News search) -> {status: ok | error | skipped, via: feed | sitemap | Bing News search, url (what was read), page (the outlet's election page, if any), items (items read this run), last_7_days (election headlines from it dated in the last 7 days), message}"
     }
   },
-  "updated": "2026-11-19T05:58:16Z",
+  "updated": "2026-11-19T10:02:55Z",
   "statewide": [
     {
-      "title": "Live: One Nation candidate denies climate change as election campaign rolls on",
+      "title": "Labor defends handing out how-to-vote cards that look like Greens ones - as it happened",
       "outlet": "ABC News",
-      "published": "2026-11-18T22:40:26Z",
+      "published": "2026-11-19T01:40:00Z",
       "url": "https://www.abc.net.au/news/2026-11-19/victorian-election-live-early-voting-second-day/107402202"
+    },
+    {
+      "title": "'Come at me': Opposition Leader Jess Wilson vows to confront corruption and organised crime in Victoria head-on",
+      "outlet": "News24",
+      "published": "2026-11-18T21:20:00Z",
+      "url": "https://www.news24.com.au/politics/australian-politics/come-at-me-opposition-leader-jess-wilson-vows-to-confront-corruption-and-organised-crime-in-victoria-headon/news-story/c9d559880f98ef8b97c8d9269c5fb74c"
+    },
+    {
+      "title": "Roads Crisis Threatens Food Bowl as Council Seeks State Investment",
+      "outlet": "Mirage News",
+      "published": "2026-11-18T16:34:00Z",
+      "url": "https://www.miragenews.com/roads-crisis-threatens-food-bowl-as-council-1780196/"
     },
     {
       "title": "Meet the Bentleigh candidates",
@@ -297,18 +309,6 @@
       "outlet": "The Australian",
       "published": "2026-11-17T03:10:00Z",
       "url": "https://www.theaustralian.com.au/nation/jess-wilson-takes-convincing-win-as-victoria-premier-ben-carroll-suffers-name-game-gaffe/news-story/9f7c63e1ac57805324078d5e583fc386"
-    },
-    {
-      "title": "‘Strong, competent’: News24 host Peta Credlin explains how Jess Wilson won Tuesday's People's Forum",
-      "outlet": "News24",
-      "published": "2026-11-17T03:04:00Z",
-      "url": "https://www.news24.com.au/politics/australian-politics/strong-competent-news24-host-peta-credlin-explains-how-jess-wilson-won-tuesdays-peoples-forum/news-story/859453d353002ea10b6350339c50a17e"
-    },
-    {
-      "title": "Party leaders face off in televised Victorian election forum - as it happened",
-      "outlet": "ABC News",
-      "published": "2026-11-17T02:03:00Z",
-      "url": "https://www.abc.net.au/news/2026-11-17/victoria-election-blog-november-17-royal-commission/107393612"
     }
   ],
   "seats": {
@@ -1091,12 +1091,6 @@
         "outlet": "India Education Diary on MSN",
         "published": "2026-10-26T03:36:00Z",
         "url": "https://www.msn.com/en-in/news/other/biontech-mrna-manufacturing-facility-opens/ar-AA2g6A8N"
-      },
-      {
-        "title": "Anthony Carbines refuses to talk about blistering attack on Labor Party bosses in media outing with Jacinta Allan",
-        "outlet": "Northern Territory News",
-        "published": "2026-07-22T06:34:00Z",
-        "url": "https://www.ntnews.com.au/news/victoria/anthony-carbines-refuses-to-talk-about-blistering-private-attack-on-labor-party-bosses-in-media-outing-with-jacinta-allan/news-story/ed2b829f1f11614de0cea198cae51852"
       }
     ],
     "kalkallo": [
@@ -1132,6 +1126,12 @@
       }
     ],
     "kew": [
+      {
+        "title": "'Come at me': Opposition Leader Jess Wilson vows to confront corruption and organised crime in Victoria head-on",
+        "outlet": "News24",
+        "published": "2026-11-18T21:20:00Z",
+        "url": "https://www.news24.com.au/politics/australian-politics/come-at-me-opposition-leader-jess-wilson-vows-to-confront-corruption-and-organised-crime-in-victoria-headon/news-story/c9d559880f98ef8b97c8d9269c5fb74c"
+      },
       {
         "title": "'Pretty pathetic': Embattled Victorian Premier Ben Carroll ridiculed for failing to mention Daniel Andrews and Jacinta Allan by name",
         "outlet": "News24",
@@ -1185,12 +1185,6 @@
         "outlet": "The Age",
         "published": "2026-11-17T10:14:58Z",
         "url": "https://www.theage.com.au/national/victoria/victorian-election-leaders-debate-live-ben-carroll-jess-wilson-warren-pickering-and-ellen-sandell-make-pitch-to-undecided-voters-20261117-p61exb.html?ref=rss&utm_medium=rss&utm_source=rss_national_victoria"
-      },
-      {
-        "title": "Voldemort, Gotham City and the Greens: Victorian election gets a jolt of life as leaders face off in sole debate",
-        "outlet": "Guardian Australia",
-        "published": "2026-11-17T03:55:00Z",
-        "url": "https://www.theguardian.com/australia-news/2026/nov/17/voldemort-gotham-city-greens-liberal-labor-one-nation-victorian-election-leaders-debate-ntwnfb?_kx=LA3Y3a0xXihK_ly-2WkxM8Fk6FyoflDea5Za3BcjUncrUZf28N14p6Bs1vwUD2um.WerQVn"
       }
     ],
     "kororoit": [],
@@ -1282,6 +1276,12 @@
     "malvern": [],
     "melbourne": [
       {
+        "title": "Greens leader hits out at ‘elite media establishment’, keeps cards close on policy demands",
+        "outlet": "Crikey",
+        "published": "2026-11-19T05:57:12Z",
+        "url": "https://www.crikey.com.au/2026/11/19/victorian-state-election-greens-ellen-sandell-interview/"
+      },
+      {
         "title": "Greens leader Ellen Sandell poses as swinging voter in response to Labor text",
         "outlet": "The Australian",
         "published": "2026-11-18T20:39:00Z",
@@ -1334,12 +1334,6 @@
         "outlet": "onenewsaustralia.com",
         "published": "2026-11-15T21:22:00Z",
         "url": "https://www.onenewsaustralia.com/victorian-greens-leader-ellen-sandell-never-raised-2018-school-google-safety-warnings-in-parliament-ahead-of-2026-student-data-breach/"
-      },
-      {
-        "title": "Regional Victorians look for health funding ahead of election",
-        "outlet": "ABC News",
-        "published": "2026-11-15T19:04:35Z",
-        "url": "https://www.abc.net.au/news/2026-11-16/regional-healthcare-in-crisis-victoria-election/107308520"
       }
     ],
     "melton": [
@@ -1375,6 +1369,12 @@
       }
     ],
     "mildura": [
+      {
+        "title": "Growers still exposed",
+        "outlet": "Sunraysia Daily",
+        "published": "2026-11-19T06:08:18Z",
+        "url": "https://sunraysiadaily.com.au/news/2026/11/19/growers-still-exposed/"
+      },
       {
         "title": "Building the socialist movement in regional Victoria",
         "outlet": "Red Flag",
@@ -1428,12 +1428,6 @@
         "outlet": "Sunraysia Daily",
         "published": "2026-11-07T00:00:28Z",
         "url": "https://sunraysiadaily.com.au/news/2026/11/07/greens-pledge-rail-return/"
-      },
-      {
-        "title": "CUPPER BOWS OUT Family, work first says ex-MP",
-        "outlet": "Sunraysia Daily",
-        "published": "2026-11-06T19:02:38Z",
-        "url": "https://sunraysiadaily.com.au/news/2026/11/07/cupper-bows-out-family-work-first-says-ex-mp/"
       }
     ],
     "mill-park": [
@@ -1923,6 +1917,12 @@
         "url": "https://www.miragenews.com/council-welcomes-election-pledge-for-tatura-1780256/"
       },
       {
+        "title": "Roads Crisis Threatens Food Bowl as Council Seeks State Investment",
+        "outlet": "Mirage News",
+        "published": "2026-11-18T16:34:00Z",
+        "url": "https://www.miragenews.com/roads-crisis-threatens-food-bowl-as-council-1780196/"
+      },
+      {
         "title": "Victorian election hot seats: Alison has a top spot on how-to-vote cards. But in Shepparton, she’s nowhere to be seen",
         "outlet": "The Age",
         "published": "2026-11-16T07:25:00Z",
@@ -1969,12 +1969,6 @@
         "outlet": "Shepparton News",
         "published": "2026-11-01T16:01:00Z",
         "url": "https://www.sheppnews.com.au/news/labor-promises-free-dental-clinic-for-shepparton/"
-      },
-      {
-        "title": "Greater Shepparton Secures First Cancer Centre Commitment",
-        "outlet": "Mirage News",
-        "published": "2026-10-07T05:27:00Z",
-        "url": "https://www.miragenews.com/greater-shepparton-secures-first-cancer-centre-1755885/"
       }
     ],
     "south-barwon": [
@@ -2247,7 +2241,7 @@
       "url": "https://www.abc.net.au/news/feed/51120/rss.xml",
       "via": "feed and Bing News search",
       "items": 37,
-      "last_7_days": 6
+      "last_7_days": 7
     },
     "The Age": {
       "status": "ok",
@@ -2285,7 +2279,7 @@
       "page": "https://www.nine.com.au/australia-news/vic",
       "url": "https://www.nine.com.au/sitemaps/news/brands/nine",
       "via": "sitemap",
-      "items": 200,
+      "items": 211,
       "last_7_days": 2
     },
     "7News": {
@@ -2326,7 +2320,7 @@
       "url": "https://www.afr.com/rss/politics.xml",
       "via": "feed",
       "items": 20,
-      "last_7_days": 4
+      "last_7_days": 2
     },
     "AAP": {
       "status": "ok",
@@ -2341,7 +2335,7 @@
       "url": "https://www.crikey.com.au/feed/",
       "via": "feed",
       "items": 10,
-      "last_7_days": 2
+      "last_7_days": 3
     },
     "The Conversation": {
       "status": "ok",
@@ -2377,7 +2371,7 @@
       "status": "ok",
       "url": "https://www.dailymail.co.uk/auhome/index.rss",
       "via": "feed",
-      "items": 89,
+      "items": 98,
       "last_7_days": 0
     },
     "Bendigo Advertiser": {
@@ -2392,7 +2386,7 @@
       "url": "https://www.bordermail.com.au/rss.xml",
       "via": "feed",
       "items": 20,
-      "last_7_days": 1
+      "last_7_days": 0
     },
     "Warrnambool Standard": {
       "status": "ok",
@@ -2413,7 +2407,7 @@
       "url": "https://www.sunraysiadaily.com.au/feed",
       "via": "feed",
       "items": 12,
-      "last_7_days": 0
+      "last_7_days": 1
     },
     "Star Weekly": {
       "status": "ok",
