@@ -2,7 +2,7 @@
   "area": "tarneit",
   "house": "lower",
   "name": "Tarneit",
-  "status": "open",
+  "status": "closed",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
   "registration_closes": "2026-11-20",
   "ballot": [
@@ -346,6 +346,46 @@
       "type": "Single",
       "registered_on": "2026-11-20",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=78694b51-0b56-43a4-9dfc-3ab339bf04ff%2Ftarneit_green%20contests_htv_registered.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RIFAI, A. Raheem",
+        "WIGHT, Dylan",
+        "MOINUDDIN, Aijaz",
+        "RAHN, Maurita",
+        "ISLAM, SM Zaberul",
+        "VAN KEULEN, Leah",
+        "AHMED, Rahima Ibrahim",
+        "ELSBURY, Andrew",
+        "SUDHAGANI, Sindhu",
+        "UPPARLAPALLE, Venkat Ram",
+        "NIYONGABIRE, Horizana",
+        "VILLAGONZALO, Walter"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 2,
+        "LNP": 10,
+        "ONP": 12
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 1,
+          "of_n": 10
+        }
+      ]
+    },
+    {
+      "registration": "1679",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3c3f97cd-51cd-46be-8159-0e711e733821%2Ftarneit_green%20contests_htv_v4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
       "status": "read",
       "order": [
         "RIFAI, A. Raheem",

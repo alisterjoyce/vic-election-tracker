@@ -2,7 +2,7 @@
   "area": "south-barwon",
   "house": "lower",
   "name": "South Barwon",
-  "status": "open",
+  "status": "closed",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
   "registration_closes": "2026-11-20",
   "ballot": [
@@ -296,6 +296,42 @@
       "type": "Single",
       "registered_on": "2026-11-20",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9184849b-5175-4fb6-9961-c03c02e367ef%2Fsouth%20barwon_green%20contests_htv_registered.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SCHERRER, Izzy",
+        "THISTLETON, Rebecca",
+        "HEDLEY, Freya",
+        "GORMAN, Madilyn",
+        "NELSON, Ron",
+        "PETTIT, Libby",
+        "BARRON, Alan",
+        "GEARD, Josh"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 2,
+        "LNP": 6,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 1,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1699",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9da7130d-75d8-46dc-b008-17d88269dcff%2Fsouth%20barwon_green%20contests_htv_v4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
       "status": "read",
       "order": [
         "SCHERRER, Izzy",

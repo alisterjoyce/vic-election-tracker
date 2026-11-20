@@ -7,68 +7,73 @@
       "watch": "[{area, party, cards, read, ranks (when every read card agrees), differ, flags, flags_some, card_url}]"
     }
   },
-  "status": "open",
+  "status": "closed",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
   "registration_closes": "2026-11-20",
-  "last_checked": "2026-11-20T09:54:35Z",
+  "last_checked": "2026-11-20T19:52:14Z",
   "coverage": {
-    "cards": 1415,
-    "listings": 4772,
-    "orders_read": 3950,
-    "orders_same_as": 154,
-    "orders_unreadable": 665,
-    "districts_with_cards": 87,
-    "regions_with_cards": 8,
+    "cards": 1410,
+    "listings": 4617,
+    "orders_read": 3844,
+    "orders_same_as": 152,
+    "orders_unreadable": 616,
+    "districts_with_cards": 88,
+    "regions_with_cards": 7,
     "by_party": {
       "ALP": {
-        "cards": 323,
-        "districts": 87,
-        "regions": 8
+        "cards": 329,
+        "districts": 88,
+        "regions": 7
       },
       "LIB": {
-        "cards": 275,
-        "districts": 76,
-        "regions": 8
+        "cards": 273,
+        "districts": 77,
+        "regions": 7
       },
       "GRN": {
-        "cards": 192,
-        "districts": 87,
-        "regions": 8
+        "cards": 191,
+        "districts": 88,
+        "regions": 7
       },
       "VS": {
         "cards": 96,
-        "districts": 87,
-        "regions": 8
+        "districts": 88,
+        "regions": 7
       },
       "IND": {
-        "cards": 95,
+        "cards": 94,
         "districts": 49,
-        "regions": 5
+        "regions": 4
       },
       "ONP": {
         "cards": 89,
-        "districts": 87,
-        "regions": 8
+        "districts": 88,
+        "regions": 7
       },
       "NONCAND": {
-        "cards": 88,
+        "cards": 85,
         "districts": 32,
-        "regions": 6
+        "regions": 5
       },
       "FF": {
-        "cards": 65,
-        "districts": 64,
-        "regions": 6
+        "cards": 63,
+        "districts": 65,
+        "regions": 5
       },
       "AJP": {
         "cards": 47,
-        "districts": 39,
+        "districts": 40,
         "regions": 2
       },
+      "LBT": {
+        "cards": 28,
+        "districts": 23,
+        "regions": 3
+      },
       "OTH": {
-        "cards": 29,
+        "cards": 28,
         "districts": 17,
-        "regions": 6,
+        "regions": 5,
         "registered_by": [
           "Australian Democrats",
           "Christian Alliance Party – Reform AU",
@@ -76,25 +81,20 @@
           "The Republican"
         ]
       },
-      "LBT": {
-        "cards": 27,
-        "districts": 22,
-        "regions": 3
-      },
       "WEST": {
         "cards": 22,
         "districts": 12,
-        "regions": 1
-      },
-      "DLP": {
-        "cards": 20,
-        "districts": 12,
-        "regions": 8
+        "regions": 0
       },
       "NAT": {
         "cards": 19,
         "districts": 12,
         "regions": 3
+      },
+      "DLP": {
+        "cards": 19,
+        "districts": 12,
+        "regions": 7
       },
       "SAL": {
         "cards": 10,
@@ -102,9 +102,9 @@
         "regions": 2
       },
       "LCV": {
-        "cards": 8,
+        "cards": 7,
         "districts": 5,
-        "regions": 8
+        "regions": 7
       },
       "SFF": {
         "cards": 5,
@@ -119,12 +119,12 @@
       "SUS": {
         "cards": 1,
         "districts": 0,
-        "regions": 8
+        "regions": 7
       }
     },
     "no_card": {
-      "lower": 49,
-      "upper": 16,
+      "lower": 41,
+      "upper": 59,
       "candidates_lower": 734,
       "candidates_upper": 303
     }
@@ -199,13 +199,13 @@
     },
     "bellarine": {
       "house": "lower",
-      "cards": 35,
-      "read": 32,
+      "cards": 36,
+      "read": 33,
       "same_as": 1,
       "unreadable": 2,
       "parties": {
         "SAL": 2,
-        "ALP": 6,
+        "ALP": 7,
         "VS": 2,
         "LIB": 8,
         "ONP": 2,
@@ -236,12 +236,12 @@
     },
     "bendigo-east": {
       "house": "lower",
-      "cards": 27,
-      "read": 19,
+      "cards": 28,
+      "read": 20,
       "same_as": 0,
       "unreadable": 8,
       "parties": {
-        "ALP": 4,
+        "ALP": 5,
         "VS": 2,
         "NAT": 5,
         "FF": 1,
@@ -254,12 +254,12 @@
     },
     "bendigo-west": {
       "house": "lower",
-      "cards": 24,
-      "read": 18,
+      "cards": 25,
+      "read": 19,
       "same_as": 0,
       "unreadable": 6,
       "parties": {
-        "ALP": 4,
+        "ALP": 5,
         "VS": 2,
         "NAT": 5,
         "FF": 2,
@@ -1310,12 +1310,12 @@
     },
     "point-cook": {
       "house": "lower",
-      "cards": 41,
-      "read": 38,
+      "cards": 42,
+      "read": 39,
       "same_as": 0,
       "unreadable": 3,
       "parties": {
-        "ALP": 10,
+        "ALP": 11,
         "VS": 2,
         "FF": 1,
         "GRN": 11,
@@ -1491,13 +1491,13 @@
     },
     "south-barwon": {
       "house": "lower",
-      "cards": 45,
-      "read": 41,
+      "cards": 46,
+      "read": 42,
       "same_as": 1,
       "unreadable": 3,
       "parties": {
         "SAL": 2,
-        "ALP": 7,
+        "ALP": 8,
         "VS": 2,
         "LIB": 9,
         "IND": 4,
@@ -1587,12 +1587,12 @@
     },
     "tarneit": {
       "house": "lower",
-      "cards": 43,
-      "read": 35,
+      "cards": 44,
+      "read": 36,
       "same_as": 0,
       "unreadable": 8,
       "parties": {
-        "ALP": 7,
+        "ALP": 8,
         "VS": 2,
         "FF": 1,
         "GRN": 11,
@@ -1698,12 +1698,21 @@
     },
     "yan-yean": {
       "house": "lower",
-      "cards": 0,
-      "read": 0,
+      "cards": 36,
+      "read": 33,
       "same_as": 0,
-      "unreadable": 0,
-      "parties": {},
-      "no_card": 8
+      "unreadable": 1,
+      "parties": {
+        "ALP": 8,
+        "VS": 2,
+        "LIB": 10,
+        "FF": 1,
+        "ONP": 2,
+        "GRN": 11,
+        "AJP": 1,
+        "LBT": 1
+      },
+      "no_card": 0
     },
     "eastern-victoria": {
       "house": "upper",
@@ -1843,26 +1852,12 @@
     },
     "western-metropolitan": {
       "house": "upper",
-      "cards": 197,
-      "read": 145,
-      "same_as": 2,
-      "unreadable": 50,
-      "parties": {
-        "ALP": 60,
-        "IND": 1,
-        "SUS": 1,
-        "LCV": 1,
-        "VS": 12,
-        "GRN": 25,
-        "FF": 2,
-        "LIB": 41,
-        "ONP": 12,
-        "NONCAND": 3,
-        "DLP": 6,
-        "OTH": 12,
-        "WEST": 21
-      },
-      "no_card": 0
+      "cards": 0,
+      "read": 0,
+      "same_as": 0,
+      "unreadable": 0,
+      "parties": {},
+      "no_card": 43
     },
     "western-victoria": {
       "house": "upper",
@@ -2161,8 +2156,8 @@
     {
       "area": "bellarine",
       "party": "ALP",
-      "cards": 6,
-      "read": 6,
+      "cards": 7,
+      "read": 7,
       "differ": true,
       "flags_some": [
         {
@@ -2298,19 +2293,20 @@
     {
       "area": "bendigo-east",
       "party": "ALP",
-      "cards": 4,
-      "read": 4,
-      "ranks": {
-        "ALP": 1,
-        "GRN": 2,
-        "LNP": 6,
-        "ONP": 9
-      },
-      "flags": [
+      "cards": 5,
+      "read": 5,
+      "differ": true,
+      "flags_some": [
         {
           "ahead": "GRN",
+          "ahead_n": 1,
           "of": "LNP",
+          "of_n": 6
+        },
+        {
+          "ahead": "GRN",
           "ahead_n": 2,
+          "of": "LNP",
           "of_n": 6
         }
       ],
@@ -2366,19 +2362,20 @@
     {
       "area": "bendigo-west",
       "party": "ALP",
-      "cards": 4,
-      "read": 4,
-      "ranks": {
-        "ALP": 1,
-        "GRN": 3,
-        "LNP": 5,
-        "ONP": 7
-      },
-      "flags": [
+      "cards": 5,
+      "read": 5,
+      "differ": true,
+      "flags_some": [
         {
           "ahead": "GRN",
+          "ahead_n": 1,
           "of": "LNP",
+          "of_n": 5
+        },
+        {
+          "ahead": "GRN",
           "ahead_n": 3,
+          "of": "LNP",
           "of_n": 5
         }
       ],
@@ -6314,8 +6311,8 @@
     {
       "area": "point-cook",
       "party": "ALP",
-      "cards": 10,
-      "read": 10,
+      "cards": 11,
+      "read": 11,
       "differ": true,
       "flags_some": [
         {
@@ -6992,8 +6989,8 @@
     {
       "area": "south-barwon",
       "party": "ALP",
-      "cards": 7,
-      "read": 7,
+      "cards": 8,
+      "read": 8,
       "differ": true,
       "flags_some": [
         {
@@ -7333,8 +7330,8 @@
     {
       "area": "tarneit",
       "party": "ALP",
-      "cards": 7,
-      "read": 6,
+      "cards": 8,
+      "read": 7,
       "differ": true,
       "flags_some": [
         {
@@ -7708,6 +7705,74 @@
         "LNP": 3,
         "ALP": 6,
         "GRN": 8
+      },
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "area": "yan-yean",
+      "party": "ALP",
+      "cards": 8,
+      "read": 8,
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 6,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7ae889cb-c5d8-44f3-adfa-5e36a4f659b8%2Falp_combined_nv%20yan%20yean_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "area": "yan-yean",
+      "party": "GRN",
+      "cards": 11,
+      "read": 11,
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 8
+      },
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3ecb378c-7017-42ed-aaf1-4d9b4dfed9db%2Fthe%20greens%20combined%20north-east%20metro%20eltham%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "area": "yan-yean",
+      "party": "LIB",
+      "cards": 10,
+      "read": 10,
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=50121465-80ca-4252-9967-0b45133f4ec9%2Fliberal_combined_nvr%20yan%20yean_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "area": "yan-yean",
+      "party": "ONP",
+      "cards": 2,
+      "read": 1,
+      "ranks": {
+        "ONP": 1,
+        "LNP": 4,
+        "ALP": 5,
+        "GRN": 6
       },
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
     }

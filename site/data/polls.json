@@ -23,6 +23,22 @@
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election",
   "polls": [
     {
+      "id": "lighthouse-growth-intelligence-centre-2026-11-20",
+      "start_date": "2026-11-20",
+      "end_date": "2026-11-20",
+      "pollster": "Lighthouse/Growth Intelligence Centre",
+      "client": "Herald Sun",
+      "sample_size": 1221,
+      "source_url": "https://www.heraldsun.com.au/news/victoria/state-election/poll-puts-coalition-primary-vote-at-31-per-cent-one-nation-24-per-cent-labor-22-per-cent-greens-15-per-cent-and-8-per-cent-other/news-story/03b5f85d726a1206e2b6347f9e65cec4",
+      "primary": {
+        "ALP": 22,
+        "LNP": 31,
+        "GRN": 15,
+        "ONP": 24,
+        "OTH": 8
+      }
+    },
+    {
       "id": "lighthouse-growth-intelligence-centre-2026-11-13",
       "start_date": "2026-11-13",
       "end_date": "2026-11-13",
