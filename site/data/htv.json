@@ -17,35 +17,35 @@
   "registration_opens": "2026-11-10",
   "registration_closes": "2026-11-20",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
-  "last_checked": "2026-11-20T05:54:06Z",
+  "last_checked": "2026-11-20T09:54:35Z",
   "pending": 3,
   "coverage": {
-    "cards": 1383,
-    "listings": 4746,
-    "orders_read": 3931,
+    "cards": 1415,
+    "listings": 4772,
+    "orders_read": 3950,
     "orders_same_as": 154,
-    "orders_unreadable": 658,
-    "districts_with_cards": 88,
+    "orders_unreadable": 665,
+    "districts_with_cards": 87,
     "regions_with_cards": 8,
     "by_party": {
       "ALP": {
-        "cards": 301,
-        "districts": 88,
+        "cards": 323,
+        "districts": 87,
         "regions": 8
       },
       "LIB": {
-        "cards": 272,
-        "districts": 77,
+        "cards": 275,
+        "districts": 76,
         "regions": 8
       },
       "GRN": {
         "cards": 192,
-        "districts": 88,
+        "districts": 87,
         "regions": 8
       },
       "VS": {
         "cards": 96,
-        "districts": 88,
+        "districts": 87,
         "regions": 8
       },
       "IND": {
@@ -55,22 +55,22 @@
       },
       "ONP": {
         "cards": 89,
-        "districts": 88,
+        "districts": 87,
         "regions": 8
       },
       "NONCAND": {
-        "cards": 80,
-        "districts": 31,
+        "cards": 88,
+        "districts": 32,
         "regions": 6
       },
       "FF": {
         "cards": 65,
-        "districts": 65,
+        "districts": 64,
         "regions": 6
       },
       "AJP": {
         "cards": 47,
-        "districts": 40,
+        "districts": 39,
         "regions": 2
       },
       "OTH": {
@@ -85,8 +85,8 @@
         ]
       },
       "LBT": {
-        "cards": 28,
-        "districts": 23,
+        "cards": 27,
+        "districts": 22,
         "regions": 3
       },
       "WEST": {
@@ -131,7 +131,7 @@
       }
     },
     "no_card": {
-      "lower": 41,
+      "lower": 49,
       "upper": 16,
       "candidates_lower": 734,
       "candidates_upper": 303
@@ -7025,41 +7025,12 @@
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7ae889cb-c5d8-44f3-adfa-5e36a4f659b8%2Falp_combined_nv%20yan%20yean_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
       "file": "alp_combined_nv yan yean_1.pdf",
       "areas": [
-        "yan-yean",
         "northern-victoria"
       ],
       "party": "ALP",
       "candidate": null,
       "read_on": "2026-11-20",
       "orders": {
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "KATHAGE, Lauren",
-            "OKATAN, Sinan",
-            "MOHAMMED, Gufran",
-            "BELL, Andrew",
-            "CHEERS, Troy",
-            "DOW, Amanda",
-            "HALL, James",
-            "JOHNSON, Jeremy"
-          ],
-          "via": "text",
-          "ranks": {
-            "ALP": 1,
-            "GRN": 3,
-            "LNP": 6,
-            "ONP": 8
-          },
-          "flags": [
-            {
-              "ahead": "GRN",
-              "of": "LNP",
-              "ahead_n": 3,
-              "of_n": 6
-            }
-          ]
-        },
         "northern-victoria": {
           "atl": [
             "C",
@@ -8751,7 +8722,6 @@
       "file": "alp_combined_nm_nv_kalkallo_yan yean_1.pdf",
       "areas": [
         "kalkallo",
-        "yan-yean",
         "northern-metropolitan",
         "northern-victoria"
       ],
@@ -8770,34 +8740,6 @@
             "DADISHO, Eddie",
             "DOBSON, Jeanette",
             "STEANS, Troy"
-          ],
-          "via": "text",
-          "ranks": {
-            "ALP": 1,
-            "GRN": 3,
-            "LNP": 6,
-            "ONP": 8
-          },
-          "flags": [
-            {
-              "ahead": "GRN",
-              "of": "LNP",
-              "ahead_n": 3,
-              "of_n": 6
-            }
-          ]
-        },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "KATHAGE, Lauren",
-            "OKATAN, Sinan",
-            "MOHAMMED, Gufran",
-            "BELL, Andrew",
-            "CHEERS, Troy",
-            "DOW, Amanda",
-            "HALL, James",
-            "JOHNSON, Jeremy"
           ],
           "via": "text",
           "ranks": {
@@ -9855,7 +9797,6 @@
       "areas": [
         "mill-park",
         "thomastown",
-        "yan-yean",
         "north-eastern-metropolitan",
         "northern-metropolitan",
         "northern-victoria"
@@ -9895,34 +9836,6 @@
         "thomastown": {
           "status": "unreadable",
           "note": "unreadable, see card"
-        },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "KATHAGE, Lauren",
-            "OKATAN, Sinan",
-            "MOHAMMED, Gufran",
-            "BELL, Andrew",
-            "CHEERS, Troy",
-            "DOW, Amanda",
-            "HALL, James",
-            "JOHNSON, Jeremy"
-          ],
-          "via": "text",
-          "ranks": {
-            "ALP": 1,
-            "GRN": 3,
-            "LNP": 6,
-            "ONP": 8
-          },
-          "flags": [
-            {
-              "ahead": "GRN",
-              "of": "LNP",
-              "ahead_n": 3,
-              "of_n": 6
-            }
-          ]
         },
         "north-eastern-metropolitan": {
           "status": "unreadable",
@@ -10221,7 +10134,6 @@
       "file": "alp_combined_nv_euroa_yan yean_1.pdf",
       "areas": [
         "euroa",
-        "yan-yean",
         "northern-victoria"
       ],
       "party": "ALP",
@@ -10252,34 +10164,6 @@
               "of": "LNP",
               "ahead_n": 2,
               "of_n": 5
-            }
-          ]
-        },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "KATHAGE, Lauren",
-            "OKATAN, Sinan",
-            "MOHAMMED, Gufran",
-            "BELL, Andrew",
-            "CHEERS, Troy",
-            "DOW, Amanda",
-            "HALL, James",
-            "JOHNSON, Jeremy"
-          ],
-          "via": "text",
-          "ranks": {
-            "ALP": 1,
-            "GRN": 3,
-            "LNP": 6,
-            "ONP": 8
-          },
-          "flags": [
-            {
-              "ahead": "GRN",
-              "of": "LNP",
-              "ahead_n": 3,
-              "of_n": 6
             }
           ]
         },
@@ -10765,7 +10649,6 @@
       "areas": [
         "euroa",
         "kalkallo",
-        "yan-yean",
         "northern-metropolitan",
         "northern-victoria"
       ],
@@ -10811,34 +10694,6 @@
             "DADISHO, Eddie",
             "DOBSON, Jeanette",
             "STEANS, Troy"
-          ],
-          "via": "text",
-          "ranks": {
-            "ALP": 1,
-            "GRN": 3,
-            "LNP": 6,
-            "ONP": 8
-          },
-          "flags": [
-            {
-              "ahead": "GRN",
-              "of": "LNP",
-              "ahead_n": 3,
-              "of_n": 6
-            }
-          ]
-        },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "KATHAGE, Lauren",
-            "OKATAN, Sinan",
-            "MOHAMMED, Gufran",
-            "BELL, Andrew",
-            "CHEERS, Troy",
-            "DOW, Amanda",
-            "HALL, James",
-            "JOHNSON, Jeremy"
           ],
           "via": "text",
           "ranks": {
@@ -15849,33 +15704,12 @@
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f886d107-bcfe-4010-b900-30178e633b28%2Fvictorian%20socialists%20combined%20northern%20victoria%20yan%20yean%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
       "file": "victorian socialists combined northern victoria yan yean 1.pdf",
       "areas": [
-        "yan-yean",
         "northern-victoria"
       ],
       "party": "VS",
       "candidate": null,
       "read_on": "2026-11-20",
       "orders": {
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "BELL, Andrew",
-            "MOHAMMED, Gufran",
-            "OKATAN, Sinan",
-            "KATHAGE, Lauren",
-            "DOW, Amanda",
-            "CHEERS, Troy",
-            "HALL, James",
-            "JOHNSON, Jeremy"
-          ],
-          "via": "text",
-          "ranks": {
-            "GRN": 2,
-            "ALP": 4,
-            "LNP": 5,
-            "ONP": 8
-          }
-        },
         "northern-victoria": {
           "atl": [
             "M",
@@ -16675,7 +16509,6 @@
       "file": "alp_combined_nem_nv_eltham_yan yean_1.pdf",
       "areas": [
         "eltham",
-        "yan-yean",
         "northern-metropolitan",
         "northern-victoria"
       ],
@@ -16706,34 +16539,6 @@
               "ahead": "GRN",
               "of": "LNP",
               "ahead_n": 2,
-              "of_n": 6
-            }
-          ]
-        },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "KATHAGE, Lauren",
-            "OKATAN, Sinan",
-            "MOHAMMED, Gufran",
-            "BELL, Andrew",
-            "CHEERS, Troy",
-            "DOW, Amanda",
-            "HALL, James",
-            "JOHNSON, Jeremy"
-          ],
-          "via": "text",
-          "ranks": {
-            "ALP": 1,
-            "GRN": 3,
-            "LNP": 6,
-            "ONP": 8
-          },
-          "flags": [
-            {
-              "ahead": "GRN",
-              "of": "LNP",
-              "ahead_n": 3,
               "of_n": 6
             }
           ]
@@ -17404,7 +17209,6 @@
       "file": "alp_combined_nem_nv_mill park_yan yean_1.pdf",
       "areas": [
         "mill-park",
-        "yan-yean",
         "north-eastern-metropolitan",
         "northern-victoria"
       ],
@@ -17437,34 +17241,6 @@
               "of": "LNP",
               "ahead_n": 3,
               "of_n": 5
-            }
-          ]
-        },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "KATHAGE, Lauren",
-            "OKATAN, Sinan",
-            "MOHAMMED, Gufran",
-            "BELL, Andrew",
-            "CHEERS, Troy",
-            "DOW, Amanda",
-            "HALL, James",
-            "JOHNSON, Jeremy"
-          ],
-          "via": "text",
-          "ranks": {
-            "ALP": 1,
-            "GRN": 3,
-            "LNP": 6,
-            "ONP": 8
-          },
-          "flags": [
-            {
-              "ahead": "GRN",
-              "of": "LNP",
-              "ahead_n": 3,
-              "of_n": 6
             }
           ]
         },
@@ -28013,41 +27789,12 @@
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=50121465-80ca-4252-9967-0b45133f4ec9%2Fliberal_combined_nvr%20yan%20yean_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
       "file": "liberal_combined_nvr yan yean_1.pdf",
       "areas": [
-        "yan-yean",
         "northern-victoria"
       ],
       "party": "LIB",
       "candidate": null,
       "read_on": "2026-11-20",
       "orders": {
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "DOW, Amanda",
-            "HALL, James",
-            "CHEERS, Troy",
-            "JOHNSON, Jeremy",
-            "OKATAN, Sinan",
-            "KATHAGE, Lauren",
-            "MOHAMMED, Gufran",
-            "BELL, Andrew"
-          ],
-          "via": "text",
-          "ranks": {
-            "LNP": 1,
-            "ONP": 4,
-            "ALP": 6,
-            "GRN": 7
-          },
-          "flags": [
-            {
-              "ahead": "ONP",
-              "of": "ALP",
-              "ahead_n": 4,
-              "of_n": 6
-            }
-          ]
-        },
         "northern-victoria": {
           "atl": [
             "J",
@@ -30157,41 +29904,12 @@
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=744c97b8-45c1-40cc-bcc5-0548981a4522%2Fliberal_combined_nvr%20yan%20yean_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
       "file": "liberal_combined_nvr yan yean_2.pdf",
       "areas": [
-        "yan-yean",
         "northern-victoria"
       ],
       "party": "LIB",
       "candidate": null,
       "read_on": "2026-11-20",
       "orders": {
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "DOW, Amanda",
-            "HALL, James",
-            "CHEERS, Troy",
-            "JOHNSON, Jeremy",
-            "OKATAN, Sinan",
-            "KATHAGE, Lauren",
-            "MOHAMMED, Gufran",
-            "BELL, Andrew"
-          ],
-          "via": "text",
-          "ranks": {
-            "LNP": 1,
-            "ONP": 4,
-            "ALP": 6,
-            "GRN": 7
-          },
-          "flags": [
-            {
-              "ahead": "ONP",
-              "of": "ALP",
-              "ahead_n": 4,
-              "of_n": 6
-            }
-          ]
-        },
         "northern-victoria": {
           "atl": [
             "J",
@@ -35618,33 +35336,12 @@
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9cd60919-b0eb-45ee-96d5-5a437a62393f%2Ffamilyfirst_yanyean_version2%20%28dragged%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
       "file": "familyfirst_yanyean_version2 (dragged).pdf",
       "areas": [
-        "yan-yean",
         "northern-victoria"
       ],
       "party": "FF",
       "candidate": null,
       "read_on": "2026-11-20",
       "orders": {
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "HALL, James",
-            "CHEERS, Troy",
-            "JOHNSON, Jeremy",
-            "DOW, Amanda",
-            "KATHAGE, Lauren",
-            "OKATAN, Sinan",
-            "MOHAMMED, Gufran",
-            "BELL, Andrew"
-          ],
-          "via": "text",
-          "ranks": {
-            "ONP": 3,
-            "LNP": 4,
-            "ALP": 5,
-            "GRN": 7
-          }
-        },
         "northern-victoria": {
           "status": "unreadable",
           "note": "unreadable, see card"
@@ -36694,7 +36391,8 @@
             "414",
             "419",
             "428",
-            "1634"
+            "1634",
+            "1673"
           ],
           "note": "same order as the English card"
         },
@@ -36735,7 +36433,8 @@
             "408",
             "794",
             "799",
-            "803"
+            "803",
+            "1686"
           ],
           "note": "same order as the English card"
         }
@@ -36970,7 +36669,8 @@
             "414",
             "419",
             "428",
-            "1634"
+            "1634",
+            "1673"
           ],
           "note": "same order as the English card"
         },
@@ -37011,7 +36711,8 @@
             "408",
             "794",
             "799",
-            "803"
+            "803",
+            "1686"
           ],
           "note": "same order as the English card"
         }
@@ -37226,7 +36927,8 @@
             "414",
             "419",
             "428",
-            "1634"
+            "1634",
+            "1673"
           ],
           "note": "same order as the English card"
         },
@@ -37267,7 +36969,8 @@
             "408",
             "794",
             "799",
-            "803"
+            "803",
+            "1686"
           ],
           "note": "same order as the English card"
         }
@@ -37385,7 +37088,8 @@
             "800",
             "808",
             "819",
-            "1639"
+            "1639",
+            "1675"
           ],
           "note": "same order as the English card"
         }
@@ -38134,7 +37838,8 @@
             "414",
             "419",
             "428",
-            "1634"
+            "1634",
+            "1673"
           ],
           "note": "same order as the English card"
         },
@@ -38171,7 +37876,9 @@
             "385",
             "430",
             "432",
-            "1637"
+            "1637",
+            "1683",
+            "1689"
           ],
           "note": "same order as the English card"
         }
@@ -38375,7 +38082,9 @@
             "385",
             "430",
             "432",
-            "1637"
+            "1637",
+            "1683",
+            "1689"
           ],
           "note": "same order as the English card"
         },
@@ -38416,7 +38125,8 @@
             "408",
             "794",
             "799",
-            "803"
+            "803",
+            "1686"
           ],
           "note": "same order as the English card"
         }
@@ -39479,7 +39189,8 @@
             "408",
             "794",
             "799",
-            "803"
+            "803",
+            "1686"
           ],
           "note": "same order as the English card"
         }
@@ -40479,7 +40190,8 @@
             "800",
             "808",
             "819",
-            "1639"
+            "1639",
+            "1675"
           ],
           "note": "same order as the English card"
         },
@@ -40520,7 +40232,8 @@
             "354",
             "357",
             "358",
-            "427"
+            "427",
+            "1672"
           ],
           "note": "same order as the English card"
         }
@@ -41566,7 +41279,8 @@
             "354",
             "357",
             "358",
-            "427"
+            "427",
+            "1672"
           ],
           "note": "same order as the English card"
         }
@@ -43188,17 +42902,12 @@
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=cfbaec03-01c8-4ec2-8ffb-4c3a69331c0a%2Fonv%20-%20combined%20-%20northern%20victoria%20region%20-%20yan%20yean%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
       "file": "onv - combined - northern victoria region - yan yean - 2.pdf",
       "areas": [
-        "yan-yean",
         "northern-victoria"
       ],
       "party": "ONP",
       "candidate": null,
       "read_on": "2026-11-20",
       "orders": {
-        "yan-yean": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
-        },
         "northern-victoria": {
           "atl": [
             "H",
@@ -44681,7 +44390,6 @@
         "wendouree",
         "werribee",
         "williamstown",
-        "yan-yean",
         "eastern-victoria",
         "north-eastern-metropolitan",
         "northern-metropolitan",
@@ -47093,34 +46801,6 @@
             }
           ]
         },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "KATHAGE, Lauren",
-            "OKATAN, Sinan",
-            "MOHAMMED, Gufran",
-            "BELL, Andrew",
-            "CHEERS, Troy",
-            "DOW, Amanda",
-            "HALL, James",
-            "JOHNSON, Jeremy"
-          ],
-          "via": "text",
-          "ranks": {
-            "ALP": 1,
-            "GRN": 3,
-            "LNP": 6,
-            "ONP": 8
-          },
-          "flags": [
-            {
-              "ahead": "GRN",
-              "of": "LNP",
-              "ahead_n": 3,
-              "of_n": 6
-            }
-          ]
-        },
         "eastern-victoria": {
           "status": "unreadable",
           "note": "unreadable, see card"
@@ -48786,7 +48466,6 @@
         "wendouree",
         "werribee",
         "williamstown",
-        "yan-yean",
         "eastern-victoria",
         "north-eastern-metropolitan",
         "northern-metropolitan",
@@ -50568,26 +50247,6 @@
             "LNP": 3,
             "ALP": 6,
             "GRN": 8
-          }
-        },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "JOHNSON, Jeremy",
-            "CHEERS, Troy",
-            "HALL, James",
-            "DOW, Amanda",
-            "KATHAGE, Lauren",
-            "MOHAMMED, Gufran",
-            "OKATAN, Sinan",
-            "BELL, Andrew"
-          ],
-          "via": "text",
-          "ranks": {
-            "ONP": 1,
-            "LNP": 4,
-            "ALP": 5,
-            "GRN": 6
           }
         },
         "eastern-victoria": {
@@ -52451,7 +52110,6 @@
         "eltham",
         "ivanhoe",
         "warrandyte",
-        "yan-yean",
         "north-eastern-metropolitan"
       ],
       "party": "GRN",
@@ -52573,26 +52231,6 @@
             "ALP": 3,
             "LNP": 4,
             "ONP": 6
-          }
-        },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "MOHAMMED, Gufran",
-            "BELL, Andrew",
-            "OKATAN, Sinan",
-            "KATHAGE, Lauren",
-            "DOW, Amanda",
-            "CHEERS, Troy",
-            "HALL, James",
-            "JOHNSON, Jeremy"
-          ],
-          "via": "text",
-          "ranks": {
-            "GRN": 1,
-            "ALP": 4,
-            "LNP": 5,
-            "ONP": 8
           }
         },
         "north-eastern-metropolitan": {
@@ -53418,7 +53056,6 @@
         "bundoora",
         "mill-park",
         "thomastown",
-        "yan-yean",
         "north-eastern-metropolitan"
       ],
       "party": "GRN",
@@ -53481,26 +53118,6 @@
             "ALP": 3,
             "LNP": 4,
             "ONP": 6
-          }
-        },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "MOHAMMED, Gufran",
-            "BELL, Andrew",
-            "OKATAN, Sinan",
-            "KATHAGE, Lauren",
-            "DOW, Amanda",
-            "CHEERS, Troy",
-            "HALL, James",
-            "JOHNSON, Jeremy"
-          ],
-          "via": "text",
-          "ranks": {
-            "GRN": 1,
-            "ALP": 4,
-            "LNP": 5,
-            "ONP": 8
           }
         },
         "north-eastern-metropolitan": {
@@ -54096,7 +53713,6 @@
         "macedon",
         "sunbury",
         "thomastown",
-        "yan-yean",
         "northern-metropolitan"
       ],
       "party": "GRN",
@@ -54224,26 +53840,6 @@
             "ALP": 3,
             "LNP": 4,
             "ONP": 6
-          }
-        },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "MOHAMMED, Gufran",
-            "BELL, Andrew",
-            "OKATAN, Sinan",
-            "KATHAGE, Lauren",
-            "DOW, Amanda",
-            "CHEERS, Troy",
-            "HALL, James",
-            "JOHNSON, Jeremy"
-          ],
-          "via": "text",
-          "ranks": {
-            "GRN": 1,
-            "ALP": 4,
-            "LNP": 5,
-            "ONP": 8
           }
         },
         "northern-metropolitan": {
@@ -55346,7 +54942,6 @@
         "mill-park",
         "preston",
         "thomastown",
-        "yan-yean",
         "northern-metropolitan"
       ],
       "party": "GRN",
@@ -55496,26 +55091,6 @@
             "ALP": 3,
             "LNP": 4,
             "ONP": 6
-          }
-        },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "MOHAMMED, Gufran",
-            "BELL, Andrew",
-            "OKATAN, Sinan",
-            "KATHAGE, Lauren",
-            "DOW, Amanda",
-            "CHEERS, Troy",
-            "HALL, James",
-            "JOHNSON, Jeremy"
-          ],
-          "via": "text",
-          "ranks": {
-            "GRN": 1,
-            "ALP": 4,
-            "LNP": 5,
-            "ONP": 8
           }
         },
         "northern-metropolitan": {
@@ -56314,7 +55889,6 @@
         "mill-park",
         "preston",
         "thomastown",
-        "yan-yean",
         "north-eastern-metropolitan"
       ],
       "party": "GRN",
@@ -56439,26 +56013,6 @@
             "ALP": 3,
             "LNP": 4,
             "ONP": 6
-          }
-        },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "MOHAMMED, Gufran",
-            "BELL, Andrew",
-            "OKATAN, Sinan",
-            "KATHAGE, Lauren",
-            "DOW, Amanda",
-            "CHEERS, Troy",
-            "HALL, James",
-            "JOHNSON, Jeremy"
-          ],
-          "via": "text",
-          "ranks": {
-            "GRN": 1,
-            "ALP": 4,
-            "LNP": 5,
-            "ONP": 8
           }
         },
         "north-eastern-metropolitan": {
@@ -59828,17 +59382,12 @@
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=be35a6d2-ad36-4ce5-8838-f57ddbda91ae%2Fnv%202026-11-11%20-%20yan%20yean.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
       "file": "nv 2026-11-11 - yan yean.pdf",
       "areas": [
-        "yan-yean",
         "northern-victoria"
       ],
       "party": "AJP",
       "candidate": null,
       "read_on": "2026-11-20",
       "orders": {
-        "yan-yean": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
-        },
         "northern-victoria": {
           "atl": [
             "I"
@@ -60312,7 +59861,6 @@
         "murray-plains",
         "ovens-valley",
         "shepparton",
-        "yan-yean",
         "northern-victoria"
       ],
       "party": "VS",
@@ -60518,26 +60066,6 @@
             "ALP": 5,
             "LNP": 7,
             "ONP": 9
-          }
-        },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "BELL, Andrew",
-            "MOHAMMED, Gufran",
-            "OKATAN, Sinan",
-            "KATHAGE, Lauren",
-            "DOW, Amanda",
-            "CHEERS, Troy",
-            "HALL, James",
-            "JOHNSON, Jeremy"
-          ],
-          "via": "text",
-          "ranks": {
-            "GRN": 2,
-            "ALP": 4,
-            "LNP": 5,
-            "ONP": 8
           }
         },
         "northern-victoria": {
@@ -67017,7 +66545,6 @@
         "macedon",
         "sunbury",
         "thomastown",
-        "yan-yean",
         "northern-metropolitan",
         "northern-victoria"
       ],
@@ -67166,26 +66693,6 @@
             "ALP": 3,
             "LNP": 4,
             "ONP": 6
-          }
-        },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "MOHAMMED, Gufran",
-            "BELL, Andrew",
-            "OKATAN, Sinan",
-            "KATHAGE, Lauren",
-            "DOW, Amanda",
-            "CHEERS, Troy",
-            "HALL, James",
-            "JOHNSON, Jeremy"
-          ],
-          "via": "text",
-          "ranks": {
-            "GRN": 1,
-            "ALP": 4,
-            "LNP": 5,
-            "ONP": 8
           }
         },
         "northern-metropolitan": {
@@ -67621,7 +67128,6 @@
         "murray-plains",
         "ovens-valley",
         "shepparton",
-        "yan-yean",
         "northern-victoria"
       ],
       "party": "GRN",
@@ -67768,26 +67274,6 @@
             "ALP": 5,
             "LNP": 7,
             "ONP": 9
-          }
-        },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "MOHAMMED, Gufran",
-            "BELL, Andrew",
-            "OKATAN, Sinan",
-            "KATHAGE, Lauren",
-            "DOW, Amanda",
-            "CHEERS, Troy",
-            "HALL, James",
-            "JOHNSON, Jeremy"
-          ],
-          "via": "text",
-          "ranks": {
-            "GRN": 1,
-            "ALP": 4,
-            "LNP": 5,
-            "ONP": 8
           }
         },
         "northern-victoria": {
@@ -69753,7 +69239,6 @@
         "mill-park",
         "preston",
         "thomastown",
-        "yan-yean",
         "north-eastern-metropolitan",
         "northern-metropolitan"
       ],
@@ -69919,26 +69404,6 @@
             "ALP": 3,
             "LNP": 4,
             "ONP": 6
-          }
-        },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "MOHAMMED, Gufran",
-            "BELL, Andrew",
-            "OKATAN, Sinan",
-            "KATHAGE, Lauren",
-            "DOW, Amanda",
-            "CHEERS, Troy",
-            "HALL, James",
-            "JOHNSON, Jeremy"
-          ],
-          "via": "text",
-          "ranks": {
-            "GRN": 1,
-            "ALP": 4,
-            "LNP": 5,
-            "ONP": 8
           }
         },
         "north-eastern-metropolitan": {
@@ -70557,7 +70022,6 @@
         "murray-plains",
         "ovens-valley",
         "shepparton",
-        "yan-yean",
         "northern-victoria"
       ],
       "party": "GRN",
@@ -70704,26 +70168,6 @@
             "ALP": 5,
             "LNP": 7,
             "ONP": 9
-          }
-        },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "MOHAMMED, Gufran",
-            "BELL, Andrew",
-            "OKATAN, Sinan",
-            "KATHAGE, Lauren",
-            "DOW, Amanda",
-            "CHEERS, Troy",
-            "HALL, James",
-            "JOHNSON, Jeremy"
-          ],
-          "via": "text",
-          "ranks": {
-            "GRN": 1,
-            "ALP": 4,
-            "LNP": 5,
-            "ONP": 8
           }
         },
         "northern-victoria": {
@@ -76285,7 +75729,6 @@
         "wendouree",
         "werribee",
         "williamstown",
-        "yan-yean",
         "eastern-victoria",
         "north-eastern-metropolitan",
         "northern-metropolitan",
@@ -77952,26 +77395,6 @@
             "ONP": 9
           }
         },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "MOHAMMED, Gufran",
-            "BELL, Andrew",
-            "OKATAN, Sinan",
-            "KATHAGE, Lauren",
-            "DOW, Amanda",
-            "CHEERS, Troy",
-            "HALL, James",
-            "JOHNSON, Jeremy"
-          ],
-          "via": "text",
-          "ranks": {
-            "GRN": 1,
-            "ALP": 4,
-            "LNP": 5,
-            "ONP": 8
-          }
-        },
         "eastern-victoria": {
           "status": "unreadable",
           "note": "unreadable, see card"
@@ -79604,7 +79027,6 @@
         "kalkallo",
         "mill-park",
         "thomastown",
-        "yan-yean",
         "northern-victoria"
       ],
       "party": "GRN",
@@ -79745,26 +79167,6 @@
             "ALP": 3,
             "LNP": 4,
             "ONP": 6
-          }
-        },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "MOHAMMED, Gufran",
-            "BELL, Andrew",
-            "OKATAN, Sinan",
-            "KATHAGE, Lauren",
-            "DOW, Amanda",
-            "CHEERS, Troy",
-            "HALL, James",
-            "JOHNSON, Jeremy"
-          ],
-          "via": "text",
-          "ranks": {
-            "GRN": 1,
-            "ALP": 4,
-            "LNP": 5,
-            "ONP": 8
           }
         },
         "northern-victoria": {
@@ -81112,7 +80514,7 @@
       "kind": "independent",
       "type": "Single",
       "registered_on": "2026-11-16",
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fbd39be0-5e20-46db-b00b-7cfbfc7e4fc9%2Fdragwidge%2C%20georgina.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4391ef43-81cb-4b3e-9929-26fd26d78ba5%2Fdragwidge%2C%20georgina.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
       "file": "dragwidge, georgina.pdf",
       "areas": [
         "albert-park"
@@ -87014,7 +86416,6 @@
       "file": "liberal_combined_nemr eltham_nvr yan yean_1.pdf",
       "areas": [
         "eltham",
-        "yan-yean",
         "north-eastern-metropolitan",
         "northern-victoria"
       ],
@@ -87046,34 +86447,6 @@
               "of": "ALP",
               "ahead_n": 3,
               "of_n": 5
-            }
-          ]
-        },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "DOW, Amanda",
-            "HALL, James",
-            "CHEERS, Troy",
-            "JOHNSON, Jeremy",
-            "OKATAN, Sinan",
-            "KATHAGE, Lauren",
-            "MOHAMMED, Gufran",
-            "BELL, Andrew"
-          ],
-          "via": "text",
-          "ranks": {
-            "LNP": 1,
-            "ONP": 4,
-            "ALP": 6,
-            "GRN": 7
-          },
-          "flags": [
-            {
-              "ahead": "ONP",
-              "of": "ALP",
-              "ahead_n": 4,
-              "of_n": 6
             }
           ]
         },
@@ -88361,7 +87734,6 @@
         "wendouree",
         "werribee",
         "williamstown",
-        "yan-yean",
         "eastern-victoria",
         "north-eastern-metropolitan",
         "northern-metropolitan",
@@ -90450,34 +89822,6 @@
           ],
           "via": "text"
         },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "DOW, Amanda",
-            "HALL, James",
-            "CHEERS, Troy",
-            "JOHNSON, Jeremy",
-            "OKATAN, Sinan",
-            "KATHAGE, Lauren",
-            "MOHAMMED, Gufran",
-            "BELL, Andrew"
-          ],
-          "via": "text",
-          "ranks": {
-            "LNP": 1,
-            "ONP": 4,
-            "ALP": 6,
-            "GRN": 7
-          },
-          "flags": [
-            {
-              "ahead": "ONP",
-              "of": "ALP",
-              "ahead_n": 4,
-              "of_n": 6
-            }
-          ]
-        },
         "eastern-victoria": {
           "status": "unreadable",
           "note": "unreadable, see card"
@@ -90522,7 +89866,6 @@
       "file": "liberal_combined_nmr kalkallo_nvr yan yean_1.pdf",
       "areas": [
         "kalkallo",
-        "yan-yean",
         "northern-metropolitan",
         "northern-victoria"
       ],
@@ -90555,34 +89898,6 @@
               "of": "ALP",
               "ahead_n": 3,
               "of_n": 5
-            }
-          ]
-        },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "DOW, Amanda",
-            "HALL, James",
-            "CHEERS, Troy",
-            "JOHNSON, Jeremy",
-            "OKATAN, Sinan",
-            "KATHAGE, Lauren",
-            "MOHAMMED, Gufran",
-            "BELL, Andrew"
-          ],
-          "via": "text",
-          "ranks": {
-            "LNP": 1,
-            "ONP": 4,
-            "ALP": 6,
-            "GRN": 7
-          },
-          "flags": [
-            {
-              "ahead": "ONP",
-              "of": "ALP",
-              "ahead_n": 4,
-              "of_n": 6
             }
           ]
         },
@@ -94362,43 +93677,6 @@
         "footscray": {
           "status": "unreadable",
           "note": "unreadable, see card"
-        }
-      }
-    },
-    {
-      "registration": "1398",
-      "registered_by": "Libertarian (formerly Liberal Democrats)",
-      "kind": "party",
-      "type": "Single",
-      "registered_on": "2026-11-16",
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5df32f07-6780-45ef-b80d-a9ca2cb8d056%2Fyanyeandistricthtv_reg.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "file": "yanyeandistricthtv_reg.pdf",
-      "areas": [
-        "yan-yean"
-      ],
-      "party": "LBT",
-      "candidate": null,
-      "read_on": "2026-11-20",
-      "orders": {
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "CHEERS, Troy",
-            "JOHNSON, Jeremy",
-            "HALL, James",
-            "DOW, Amanda",
-            "OKATAN, Sinan",
-            "KATHAGE, Lauren",
-            "MOHAMMED, Gufran",
-            "BELL, Andrew"
-          ],
-          "via": "text",
-          "ranks": {
-            "ONP": 2,
-            "LNP": 4,
-            "ALP": 6,
-            "GRN": 7
-          }
         }
       }
     },
@@ -100388,7 +99666,6 @@
         "wendouree",
         "werribee",
         "williamstown",
-        "yan-yean",
         "eastern-victoria",
         "north-eastern-metropolitan",
         "northern-metropolitan",
@@ -102476,34 +101753,6 @@
             "MARTIN, Oskar"
           ],
           "via": "text"
-        },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "DOW, Amanda",
-            "HALL, James",
-            "CHEERS, Troy",
-            "JOHNSON, Jeremy",
-            "OKATAN, Sinan",
-            "KATHAGE, Lauren",
-            "MOHAMMED, Gufran",
-            "BELL, Andrew"
-          ],
-          "via": "text",
-          "ranks": {
-            "LNP": 1,
-            "ONP": 4,
-            "ALP": 6,
-            "GRN": 7
-          },
-          "flags": [
-            {
-              "ahead": "ONP",
-              "of": "ALP",
-              "ahead_n": 4,
-              "of_n": 6
-            }
-          ]
         },
         "eastern-victoria": {
           "status": "unreadable",
@@ -102914,7 +102163,6 @@
         "wendouree",
         "werribee",
         "williamstown",
-        "yan-yean",
         "eastern-victoria",
         "north-eastern-metropolitan",
         "northern-metropolitan",
@@ -105002,34 +104250,6 @@
             "MARTIN, Oskar"
           ],
           "via": "text"
-        },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "DOW, Amanda",
-            "HALL, James",
-            "CHEERS, Troy",
-            "JOHNSON, Jeremy",
-            "OKATAN, Sinan",
-            "KATHAGE, Lauren",
-            "MOHAMMED, Gufran",
-            "BELL, Andrew"
-          ],
-          "via": "text",
-          "ranks": {
-            "LNP": 1,
-            "ONP": 4,
-            "ALP": 6,
-            "GRN": 7
-          },
-          "flags": [
-            {
-              "ahead": "ONP",
-              "of": "ALP",
-              "ahead_n": 4,
-              "of_n": 6
-            }
-          ]
         },
         "eastern-victoria": {
           "status": "unreadable",
@@ -105462,7 +104682,6 @@
         "wendouree",
         "werribee",
         "williamstown",
-        "yan-yean",
         "eastern-victoria",
         "north-eastern-metropolitan",
         "northern-metropolitan",
@@ -107550,34 +106769,6 @@
             "MARTIN, Oskar"
           ],
           "via": "text"
-        },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "DOW, Amanda",
-            "HALL, James",
-            "CHEERS, Troy",
-            "JOHNSON, Jeremy",
-            "OKATAN, Sinan",
-            "KATHAGE, Lauren",
-            "MOHAMMED, Gufran",
-            "BELL, Andrew"
-          ],
-          "via": "text",
-          "ranks": {
-            "LNP": 1,
-            "ONP": 4,
-            "ALP": 6,
-            "GRN": 7
-          },
-          "flags": [
-            {
-              "ahead": "ONP",
-              "of": "ALP",
-              "ahead_n": 4,
-              "of_n": 6
-            }
-          ]
         },
         "eastern-victoria": {
           "status": "unreadable",
@@ -107698,7 +106889,6 @@
         "wendouree",
         "werribee",
         "williamstown",
-        "yan-yean",
         "eastern-victoria",
         "north-eastern-metropolitan",
         "northern-metropolitan",
@@ -109786,34 +108976,6 @@
             "MARTIN, Oskar"
           ],
           "via": "text"
-        },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "DOW, Amanda",
-            "HALL, James",
-            "CHEERS, Troy",
-            "JOHNSON, Jeremy",
-            "OKATAN, Sinan",
-            "KATHAGE, Lauren",
-            "MOHAMMED, Gufran",
-            "BELL, Andrew"
-          ],
-          "via": "text",
-          "ranks": {
-            "LNP": 1,
-            "ONP": 4,
-            "ALP": 6,
-            "GRN": 7
-          },
-          "flags": [
-            {
-              "ahead": "ONP",
-              "of": "ALP",
-              "ahead_n": 4,
-              "of_n": 6
-            }
-          ]
         },
         "eastern-victoria": {
           "status": "unreadable",
@@ -117443,6 +116605,283 @@
       }
     },
     {
+      "registration": "1570",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "type": "Single",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=78694b51-0b56-43a4-9dfc-3ab339bf04ff%2Ftarneit_green%20contests_htv_registered.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "tarneit_green contests_htv_registered.pdf",
+      "areas": [
+        "tarneit"
+      ],
+      "party": "ALP",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "tarneit": {
+          "status": "read",
+          "order": [
+            "RIFAI, A. Raheem",
+            "WIGHT, Dylan",
+            "MOINUDDIN, Aijaz",
+            "RAHN, Maurita",
+            "ISLAM, SM Zaberul",
+            "VAN KEULEN, Leah",
+            "AHMED, Rahima Ibrahim",
+            "ELSBURY, Andrew",
+            "SUDHAGANI, Sindhu",
+            "UPPARLAPALLE, Venkat Ram",
+            "NIYONGABIRE, Horizana",
+            "VILLAGONZALO, Walter"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 2,
+            "LNP": 10,
+            "ONP": 12
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 1,
+              "of_n": 10
+            }
+          ]
+        }
+      }
+    },
+    {
+      "registration": "1571",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "type": "Single",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c0a7fc75-f684-4164-ade0-6b6ca6deefd1%2Fwerribee_green%20contests_htv_registered.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "werribee_green contests_htv_registered.pdf",
+      "areas": [
+        "werribee"
+      ],
+      "party": "ALP",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "werribee": {
+          "status": "read",
+          "order": [
+            "KUMAR, Tushar",
+            "LISTER, John",
+            "MUNRO, Sue",
+            "HOPPER, Paul",
+            "ORCHARD, Jeremy",
+            "KAYAGURLA, Sandhya",
+            "RAIZADA, Monica Sharma",
+            "CLARK, Reece",
+            "EMERSON, Matt",
+            "PATERAS, Paul"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 2,
+            "LNP": 8,
+            "ONP": 10
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 1,
+              "of_n": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "registration": "1572",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "type": "Single",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9184849b-5175-4fb6-9961-c03c02e367ef%2Fsouth%20barwon_green%20contests_htv_registered.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "south barwon_green contests_htv_registered.pdf",
+      "areas": [
+        "south-barwon"
+      ],
+      "party": "ALP",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "south-barwon": {
+          "status": "read",
+          "order": [
+            "SCHERRER, Izzy",
+            "THISTLETON, Rebecca",
+            "HEDLEY, Freya",
+            "GORMAN, Madilyn",
+            "NELSON, Ron",
+            "PETTIT, Libby",
+            "BARRON, Alan",
+            "GEARD, Josh"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 2,
+            "LNP": 6,
+            "ONP": 8
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 1,
+              "of_n": 6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "registration": "1573",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "type": "Single",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b11860ee-f57e-4ad2-a8d3-d8fc0a2d38cc%2Fpoint%20cook_green%20contests_htv_registered.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "point cook_green contests_htv_registered.pdf",
+      "areas": [
+        "point-cook"
+      ],
+      "party": "ALP",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "point-cook": {
+          "status": "read",
+          "order": [
+            "KRISHNA PANDI, Ponraj",
+            "HILAKARI, Mathew",
+            "ALLE, Kirti",
+            "LAINE, Taylor",
+            "GRECH, Mark",
+            "KELLY, Paul",
+            "MEURE, Keith",
+            "REDDY, Raja",
+            "REID, Cameron"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 2,
+            "LNP": 8,
+            "ONP": 9
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 1,
+              "of_n": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "registration": "1574",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "type": "Single",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8a413722-f8bc-4c93-9df5-ebc507e04613%2Fbellarine_green%20contests_htv_registered.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "bellarine_green contests_htv_registered.pdf",
+      "areas": [
+        "bellarine"
+      ],
+      "party": "ALP",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "bellarine": {
+          "status": "read",
+          "order": [
+            "POPE, Mitch",
+            "MARCHANT, Alison",
+            "LOCKHART, Kate",
+            "KEOGH, Ronan",
+            "WILLIAMS, Dom",
+            "WHITEHEAD, Callum",
+            "MANUELL, Guy",
+            "MCRAE, Ross"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 2,
+            "LNP": 6,
+            "ONP": 8
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 1,
+              "of_n": 6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "registration": "1575",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "type": "Single",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fd482ad1-e9e6-47e4-830c-12ab9df903fe%2Fessendon_green%20contests_htv_registered.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "essendon_green contests_htv_registered.pdf",
+      "areas": [
+        "essendon"
+      ],
+      "party": "ALP",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "essendon": {
+          "status": "read",
+          "order": [
+            "WILLIAMS, James",
+            "THEODOSIS, Kat",
+            "ADAMS, Ava",
+            "MOHAMUD, Anab",
+            "KEDEM, Michal",
+            "LE DEUX, Tommy",
+            "YILDIZ, Oscar",
+            "BARNES, John"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 2,
+            "LNP": 6,
+            "ONP": 8
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 1,
+              "of_n": 6
+            }
+          ]
+        }
+      }
+    },
+    {
       "registration": "1580",
       "registered_by": "Liberal",
       "kind": "party",
@@ -119941,7 +119380,6 @@
       "file": "liberal_combined_nmr kalkallo_nvr yan yean_4_punjabi (1).pdf",
       "areas": [
         "kalkallo",
-        "yan-yean",
         "northern-metropolitan",
         "northern-victoria"
       ],
@@ -119974,34 +119412,6 @@
               "of": "ALP",
               "ahead_n": 3,
               "of_n": 5
-            }
-          ]
-        },
-        "yan-yean": {
-          "status": "read",
-          "order": [
-            "DOW, Amanda",
-            "HALL, James",
-            "CHEERS, Troy",
-            "JOHNSON, Jeremy",
-            "OKATAN, Sinan",
-            "KATHAGE, Lauren",
-            "MOHAMMED, Gufran",
-            "BELL, Andrew"
-          ],
-          "via": "text",
-          "ranks": {
-            "LNP": 1,
-            "ONP": 4,
-            "ALP": 6,
-            "GRN": 7
-          },
-          "flags": [
-            {
-              "ahead": "ONP",
-              "of": "ALP",
-              "ahead_n": 4,
-              "of_n": 6
             }
           ]
         },
@@ -120043,7 +119453,8 @@
             "1335",
             "1515",
             "1520",
-            "1645"
+            "1645",
+            "1680"
           ],
           "note": "same order as the English card"
         },
@@ -120196,6 +119607,90 @@
         "northern-metropolitan": {
           "status": "unreadable",
           "note": "unreadable, see card"
+        }
+      }
+    },
+    {
+      "registration": "1651",
+      "registered_by": "Tosh-Jake Finnigan",
+      "kind": "non_candidate",
+      "type": "Single",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5630b703-3bfe-448c-878f-ac978afd8c32%2Fprahran%20-%20finnigan_tosh-jake%20-%20htvc%203%20%28pe%29.pdf.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "prahran - finnigan_tosh-jake - htvc 3 (pe).pdf.pdf",
+      "areas": [
+        "prahran"
+      ],
+      "party": null,
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "prahran": {
+          "status": "read",
+          "order": [
+            "FINNIGAN, Tosh-Jake",
+            "O'NEILL, G. Daniel",
+            "LEETON WATTS, George",
+            "WESTAWAY, Rachel",
+            "MENADUE, Alan",
+            "DICKS, Max",
+            "DOUEIHI, Clayton",
+            "HOPPER, Meghan",
+            "DI CAMILLO, Angelica",
+            "VIRSU, Shaun",
+            "JONAS, Morgan",
+            "WONG, Nicholas",
+            "JONES, Daniel"
+          ],
+          "via": "text",
+          "ranks": {
+            "LNP": 4,
+            "ALP": 8,
+            "GRN": 9,
+            "ONP": 10
+          }
+        }
+      }
+    },
+    {
+      "registration": "1652",
+      "registered_by": "Tosh-Jake Finnigan",
+      "kind": "non_candidate",
+      "type": "Single",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=401ba669-9970-4bad-a116-6229b241f4bf%2Fprahran%20-%20finnigan_tosh-jake%20-%20htvc%203%20%28snap%29.pdf.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "prahran - finnigan_tosh-jake - htvc 3 (snap).pdf.pdf",
+      "areas": [
+        "prahran"
+      ],
+      "party": null,
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "prahran": {
+          "status": "read",
+          "order": [
+            "FINNIGAN, Tosh-Jake",
+            "O'NEILL, G. Daniel",
+            "LEETON WATTS, George",
+            "WESTAWAY, Rachel",
+            "MENADUE, Alan",
+            "DICKS, Max",
+            "DOUEIHI, Clayton",
+            "HOPPER, Meghan",
+            "DI CAMILLO, Angelica",
+            "VIRSU, Shaun",
+            "JONAS, Morgan",
+            "WONG, Nicholas",
+            "JONES, Daniel"
+          ],
+          "via": "text",
+          "ranks": {
+            "LNP": 4,
+            "ALP": 8,
+            "GRN": 9,
+            "ONP": 10
+          }
         }
       }
     },
@@ -121062,9 +120557,3195 @@
           ]
         }
       }
+    },
+    {
+      "registration": "1661",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "type": "Combined",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=dcd485bb-3c19-46a7-acc4-712377118b9f%2Falp_combined_nm%20broadmeadows%20greenvale_1_tr5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "alp_combined_nm broadmeadows greenvale_1_tr5.pdf",
+      "areas": [
+        "broadmeadows",
+        "greenvale",
+        "northern-metropolitan"
+      ],
+      "party": "ALP",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "broadmeadows": {
+          "status": "read",
+          "order": [
+            "MATTHEWS-WARD, Kathleen",
+            "UNICOMB, Rachel",
+            "EL YOUSSEF, Mohamad",
+            "NASIM, Maryam",
+            "ELMUSTAPHA, Mohamad",
+            "YOLBULAN, Mutullah Can",
+            "BOLTON, Sue",
+            "DUZOVA, Baris",
+            "WILSON, Russell",
+            "KEIRS, Ethan"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 8,
+            "ONP": 10
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 8
+            }
+          ]
+        },
+        "greenvale": {
+          "status": "read",
+          "order": [
+            "WALTERS, Iwan",
+            "FURINA, Rosanna",
+            "MCGINNESS, Declan",
+            "SMELOV, Kirill",
+            "SAID, Hassan",
+            "ZOUGHAIB, Yehya",
+            "YOHANNA, Mazen",
+            "TITHERIDGE, Michael",
+            "OVEREND, Jim",
+            "MOORE, Chris"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 9,
+            "ONP": 10
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 9
+            }
+          ]
+        },
+        "northern-metropolitan": {
+          "atl": [
+            "K",
+            "L",
+            "A",
+            "D",
+            "I",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "registration": "1663",
+      "registered_by": "Muslim Votes Matter",
+      "kind": "non_candidate",
+      "type": "Single",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1a5077ba-2b6c-47a6-ada4-cbc6b60d16f8%2F1663%20-%20richmond%20%28unredacted%29_redacted.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "1663 - richmond (unredacted)_redacted.pdf",
+      "areas": [
+        "richmond"
+      ],
+      "party": null,
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "richmond": {
+          "status": "unreadable",
+          "note": "unreadable, see card"
+        }
+      }
+    },
+    {
+      "registration": "1664",
+      "registered_by": "Muslim Votes Matter",
+      "kind": "non_candidate",
+      "type": "Single",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ff93f52a-b712-4235-bbd9-7b60a24b55a4%2F1664%20-%20preston_redacted.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "1664 - preston_redacted.pdf",
+      "areas": [
+        "preston"
+      ],
+      "party": null,
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "preston": {
+          "status": "unreadable",
+          "note": "unreadable, see card"
+        }
+      }
+    },
+    {
+      "registration": "1665",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "type": "Combined",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ee68bbcb-f5c3-4881-bf37-67ba905bb0c5%2Falp_combined_nm%20preston%20thomastown_1_tr3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "alp_combined_nm preston thomastown_1_tr3.pdf",
+      "areas": [
+        "preston",
+        "thomastown",
+        "northern-metropolitan"
+      ],
+      "party": "ALP",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "preston": {
+          "status": "read",
+          "order": [
+            "LAMBERT, Nathan",
+            "SANGARYA, Loki",
+            "ASHMORE, Serena",
+            "CHIN, Zheng",
+            "AL KATRANJI, Hamza",
+            "VALENCIA, Julio",
+            "FOWLES, William",
+            "BRYANT, Mark",
+            "DOWER, Simon",
+            "DATE, Tim",
+            "GUARDIANI, Franco"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 2,
+            "LNP": 5,
+            "ONP": 11
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 2,
+              "of_n": 5
+            }
+          ]
+        },
+        "thomastown": {
+          "status": "read",
+          "order": [
+            "HALFPENNY, Bronwyn",
+            "TREWELLA, Gavin",
+            "REDDY, Priya",
+            "STOJCEVSKI, Belinda",
+            "RANCIE, Rob",
+            "ANTHONY, Nadia"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 2,
+            "LNP": 4,
+            "ONP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 2,
+              "of_n": 4
+            }
+          ]
+        },
+        "northern-metropolitan": {
+          "atl": [
+            "K",
+            "L",
+            "A",
+            "D",
+            "I",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "registration": "1666",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "type": "Combined",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7ed2c65b-9c4e-4623-a306-bcb311a44c22%2Falp_combined_nm%20pascoe%20vale%20preston_1_tr3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "alp_combined_nm pascoe vale preston_1_tr3.pdf",
+      "areas": [
+        "pascoe-vale",
+        "preston",
+        "northern-metropolitan"
+      ],
+      "party": "ALP",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "pascoe-vale": {
+          "status": "read",
+          "order": [
+            "CIANFLONE, Anthony",
+            "PANOPOULOS, Angelica",
+            "SHAMSILI, Yasemin",
+            "ANDREWARTHA, Jacob",
+            "TAGGAR, Rohit",
+            "HAUPT, Kerry",
+            "LAWRENCE, Stuart",
+            "HICKEY, Amanda",
+            "ASHTON, Kathrine",
+            "GANCI, Rosemarie Pauline"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 2,
+            "LNP": 5,
+            "ONP": 10
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 2,
+              "of_n": 5
+            }
+          ]
+        },
+        "preston": {
+          "status": "read",
+          "order": [
+            "LAMBERT, Nathan",
+            "SANGARYA, Loki",
+            "ASHMORE, Serena",
+            "CHIN, Zheng",
+            "AL KATRANJI, Hamza",
+            "VALENCIA, Julio",
+            "FOWLES, William",
+            "BRYANT, Mark",
+            "DOWER, Simon",
+            "DATE, Tim",
+            "GUARDIANI, Franco"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 2,
+            "LNP": 5,
+            "ONP": 11
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 2,
+              "of_n": 5
+            }
+          ]
+        },
+        "northern-metropolitan": {
+          "atl": [
+            "K",
+            "L",
+            "A",
+            "D",
+            "I",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "registration": "1667",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "type": "Combined",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=67106f6a-2d16-4071-a4ea-c6a54c5a0f44%2Falp_combined_nm%20northcote%20preston_1_tr3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "alp_combined_nm northcote preston_1_tr3.pdf",
+      "areas": [
+        "northcote",
+        "preston",
+        "northern-metropolitan"
+      ],
+      "party": "ALP",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "northcote": {
+          "status": "read",
+          "order": [
+            "THEOPHANOUS, Kat",
+            "GOME, Campbell",
+            "LARKIN, Kath",
+            "HILLMAN, Ian",
+            "PENMAN, Jim",
+            "AWAD, Lynda",
+            "PILLEY, Clive",
+            "KAFEL, Hannah",
+            "CIMBARO, Richard",
+            "BRADBURY, Christopher"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 2,
+            "LNP": 6,
+            "ONP": 10
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 2,
+              "of_n": 6
+            }
+          ]
+        },
+        "preston": {
+          "status": "read",
+          "order": [
+            "LAMBERT, Nathan",
+            "SANGARYA, Loki",
+            "ASHMORE, Serena",
+            "CHIN, Zheng",
+            "AL KATRANJI, Hamza",
+            "VALENCIA, Julio",
+            "FOWLES, William",
+            "BRYANT, Mark",
+            "DOWER, Simon",
+            "DATE, Tim",
+            "GUARDIANI, Franco"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 2,
+            "LNP": 5,
+            "ONP": 11
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 2,
+              "of_n": 5
+            }
+          ]
+        },
+        "northern-metropolitan": {
+          "atl": [
+            "K",
+            "L",
+            "A",
+            "D",
+            "I",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "registration": "1668",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "type": "Combined",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef4e2a81-6e5c-4015-9223-fde4f40355bc%2Falp_combined_wm_sydenham_tr12_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "alp_combined_wm_sydenham_tr12_1.pdf",
+      "areas": [
+        "sydenham",
+        "western-metropolitan"
+      ],
+      "party": "ALP",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "sydenham": {
+          "status": "read",
+          "order": [
+            "RASIC, Uros",
+            "JANE, Maggie",
+            "KHAN, Shania",
+            "POON, Bruce",
+            "SINCLAIR, Brandon",
+            "MOUSSI, Nathalie",
+            "KERR, Maria",
+            "LANCASHIRE, Bruce",
+            "LANKALA KENDERLA, Laxmi",
+            "CROES, Nancy G",
+            "VANDENBERG, Ashleigh",
+            "BAUCH, Joh"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 2,
+            "LNP": 6,
+            "ONP": 12
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 2,
+              "of_n": 6
+            }
+          ]
+        },
+        "western-metropolitan": {
+          "atl": [
+            "E",
+            "D",
+            "B",
+            "I",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "registration": "1669",
+      "registered_by": "Muslim Votes Matter",
+      "kind": "non_candidate",
+      "type": "Single",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8a2e0c22-d342-4335-afb6-1765c9a82410%2F1669%20-%20melbourne_redacted.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "1669 - melbourne_redacted.pdf",
+      "areas": [
+        "melbourne"
+      ],
+      "party": null,
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "melbourne": {
+          "status": "unreadable",
+          "note": "unreadable, see card"
+        }
+      }
+    },
+    {
+      "registration": "1670",
+      "registered_by": "Muslim Votes matter",
+      "kind": "non_candidate",
+      "type": "Single",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5329daf4-897c-4c72-9a26-c1398b7aa5fd%2F1670%20-%20northern%20metro_redacted.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "1670 - northern metro_redacted.pdf",
+      "areas": [
+        "northern-metropolitan"
+      ],
+      "party": null,
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "northern-metropolitan": {
+          "status": "unreadable",
+          "note": "unreadable, see card"
+        }
+      }
+    },
+    {
+      "registration": "1671",
+      "registered_by": "Muslim Votes Matter",
+      "kind": "non_candidate",
+      "type": "Single",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=245e0f6c-b459-4185-b8d8-47e879c23299%2F1671%20-%20northern%20metro_redacted.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "1671 - northern metro_redacted.pdf",
+      "areas": [
+        "northern-metropolitan"
+      ],
+      "party": null,
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "northern-metropolitan": {
+          "atl": [
+            "J",
+            "D",
+            "G",
+            "L",
+            "K"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 2,
+            "ALP": 5
+          }
+        }
+      }
+    },
+    {
+      "registration": "1672",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "type": "Combined",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d9f170dd-773a-49c5-a446-cf61a0724ed5%2Falp_combined_wm%20kororoit_1%20%28amended%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "alp_combined_wm kororoit_1 (amended).pdf",
+      "areas": [
+        "kororoit",
+        "western-metropolitan"
+      ],
+      "party": "ALP",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "kororoit": {
+          "status": "read",
+          "order": [
+            "GRIGOROVITCH, Luba",
+            "SOUTHERN, Donna",
+            "MCDONALD, Joyce",
+            "PIDI, Divya",
+            "HASSAN, Rayan",
+            "KANDPAL, Vasundhara",
+            "CHAKOMA, Jack",
+            "PATTERSON, Nick",
+            "MELNIKOV, Seva"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 7,
+            "ONP": 9
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 7
+            }
+          ]
+        },
+        "western-metropolitan": {
+          "atl": [
+            "E",
+            "D",
+            "B",
+            "I",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "registration": "1673",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "type": "Combined",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7f17ce0a-acc6-4d67-aa18-b1a8a9670b0b%2Falp_combined_nem_mill%20park_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "alp_combined_nem_mill park_1.pdf",
+      "areas": [
+        "mill-park",
+        "north-eastern-metropolitan"
+      ],
+      "party": "ALP",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "mill-park": {
+          "status": "read",
+          "order": [
+            "NEALY, Elizabeth",
+            "LEVENS, Eve",
+            "ZACHARIAS, Binoy",
+            "LAMBOURN, Jesse",
+            "DRYSDALE, Joel",
+            "VAN DER END, Kath",
+            "McLINDON, Aidan",
+            "TSOUTSOULIS, Arthur"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 5,
+            "ONP": 8
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 5
+            }
+          ]
+        },
+        "north-eastern-metropolitan": {
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "registration": "1675",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "type": "Combined",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=561f76bc-14cd-4e61-9577-fedeae37689f%2Falp_combined_nm_essendon_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "alp_combined_nm_essendon_1.pdf",
+      "areas": [
+        "essendon",
+        "northern-metropolitan"
+      ],
+      "party": "ALP",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "essendon": {
+          "status": "read",
+          "order": [
+            "THEODOSIS, Kat",
+            "ADAMS, Ava",
+            "MOHAMUD, Anab",
+            "WILLIAMS, James",
+            "KEDEM, Michal",
+            "LE DEUX, Tommy",
+            "YILDIZ, Oscar",
+            "BARNES, John"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6,
+            "ONP": 8
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
+        },
+        "northern-metropolitan": {
+          "atl": [
+            "K",
+            "L",
+            "A",
+            "D",
+            "I",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "registration": "1678",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "type": "Combined",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=aa2ef0dc-9d1d-41a1-8964-fa010e6e0a53%2Falp_combined_nm_greenvale_tr14_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "alp_combined_nm_greenvale_tr14_1.pdf",
+      "areas": [
+        "greenvale",
+        "northern-metropolitan"
+      ],
+      "party": "ALP",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "greenvale": {
+          "status": "read",
+          "order": [
+            "WALTERS, Iwan",
+            "FURINA, Rosanna",
+            "MCGINNESS, Declan",
+            "SMELOV, Kirill",
+            "SAID, Hassan",
+            "ZOUGHAIB, Yehya",
+            "YOHANNA, Mazen",
+            "TITHERIDGE, Michael",
+            "OVEREND, Jim",
+            "MOORE, Chris"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 9,
+            "ONP": 10
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 9
+            }
+          ]
+        },
+        "northern-metropolitan": {
+          "atl": [
+            "K",
+            "L",
+            "A",
+            "D",
+            "I",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "registration": "1680",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "type": "Combined",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=be17f97f-3988-4c59-ab0f-eb8b82921ec5%2Fliberal_combined_nmr_broadmeadows_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "liberal_combined_nmr_broadmeadows_3.pdf",
+      "areas": [
+        "broadmeadows",
+        "northern-metropolitan"
+      ],
+      "party": "LIB",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "broadmeadows": {
+          "status": "read",
+          "order": [
+            "DUZOVA, Baris",
+            "WILSON, Russell",
+            "KEIRS, Ethan",
+            "UNICOMB, Rachel",
+            "ELMUSTAPHA, Mohamad",
+            "EL YOUSSEF, Mohamad",
+            "MATTHEWS-WARD, Kathleen",
+            "NASIM, Maryam",
+            "YOLBULAN, Mutullah Can",
+            "BOLTON, Sue"
+          ],
+          "via": "text",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3,
+            "ALP": 7,
+            "GRN": 8
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 3,
+              "of_n": 7
+            }
+          ]
+        },
+        "northern-metropolitan": {
+          "atl": [
+            "C",
+            "H",
+            "E",
+            "M",
+            "I"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
+        }
+      }
+    },
+    {
+      "registration": "1683",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "type": "Combined",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1bb051ff-be2c-4463-a652-1f5b9af3e38b%2Falp_combined_sem_mordialloc_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "alp_combined_sem_mordialloc_1.pdf",
+      "areas": [
+        "mordialloc",
+        "south-eastern-metropolitan"
+      ],
+      "party": "ALP",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "mordialloc": {
+          "status": "read",
+          "order": [
+            "RICHARDSON, Tim",
+            "THOMPSON, Renee",
+            "BRESKIN, Alex",
+            "HOSSAIN, Mahee",
+            "O'HALLORAN, Paul",
+            "POTUCEK, Lily",
+            "VERSTEEGEN, Rachel",
+            "TICEHURST, Nadia"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 5,
+            "ONP": 8
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 5
+            }
+          ]
+        },
+        "south-eastern-metropolitan": {
+          "atl": [
+            "D",
+            "F",
+            "H",
+            "E",
+            "I",
+            "K"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "registration": "1686",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "type": "Combined",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4ba796c5-1cc4-49a2-8d64-05c8009f0077%2Falp_combined_sm%20albert%20park_1_open%20ticket.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "alp_combined_sm albert park_1_open ticket.pdf",
+      "areas": [
+        "albert-park",
+        "southern-metropolitan"
+      ],
+      "party": "ALP",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "albert-park": {
+          "status": "partial",
+          "order": [
+            "TAYLOR, Nina"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1
+          }
+        },
+        "southern-metropolitan": {
+          "atl": [
+            "A",
+            "C",
+            "K",
+            "B",
+            "G",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "registration": "1687",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "type": "Combined",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a8a1cc59-7011-4cf5-913f-120897bd50dc%2Fliberal_combined_wmr%20niddrie_wmr%20sydenham_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "liberal_combined_wmr niddrie_wmr sydenham_5.pdf",
+      "areas": [
+        "niddrie",
+        "sydenham",
+        "western-metropolitan"
+      ],
+      "party": "LIB",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "niddrie": {
+          "status": "read",
+          "order": [
+            "BYRNE, Samantha",
+            "METE, Domenic",
+            "THEODOROU, George",
+            "PATRIKEOS, Brett",
+            "TAVERNA, Jason",
+            "SFAMENI, Sam",
+            "CHITTEDI, Karthik Reddy",
+            "HASELGROVE, Salomae",
+            "CARROLL, Ben",
+            "NGUYEN, Lana",
+            "LAWS, Brendan"
+          ],
+          "via": "text",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5,
+            "ALP": 9,
+            "GRN": 10
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 5,
+              "of_n": 9
+            }
+          ]
+        },
+        "sydenham": {
+          "status": "read",
+          "order": [
+            "MOUSSI, Nathalie",
+            "SINCLAIR, Brandon",
+            "CROES, Nancy G",
+            "LANCASHIRE, Bruce",
+            "KERR, Maria",
+            "BAUCH, Joh",
+            "LANKALA KENDERLA, Laxmi",
+            "POON, Bruce",
+            "RASIC, Uros",
+            "JANE, Maggie",
+            "VANDENBERG, Ashleigh",
+            "KHAN, Shania"
+          ],
+          "via": "text",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 6,
+            "ALP": 9,
+            "GRN": 10
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 6,
+              "of_n": 9
+            }
+          ]
+        },
+        "western-metropolitan": {
+          "atl": [
+            "C",
+            "L",
+            "A",
+            "K",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
+        }
+      }
+    },
+    {
+      "registration": "1689",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "type": "Combined",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=026ca084-a64f-4957-ac6c-ddf79ae50707%2Falp_combined_sem%20clarinda%20dandenong%20mulgrave_1%20%281%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "alp_combined_sem clarinda dandenong mulgrave_1 (1).pdf",
+      "areas": [
+        "clarinda",
+        "dandenong",
+        "mulgrave",
+        "south-eastern-metropolitan"
+      ],
+      "party": "ALP",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "clarinda": {
+          "status": "read",
+          "order": [
+            "TAK, Meng Heang",
+            "BOYD-EEDLE, Conor",
+            "MESSAGE, Kit",
+            "ROCHE, Liam",
+            "PAGANIS, John",
+            "WHITE, Caroline",
+            "BAIN, Gavin"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 2,
+            "LNP": 5,
+            "ONP": 7
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 2,
+              "of_n": 5
+            }
+          ]
+        },
+        "dandenong": {
+          "status": "read",
+          "order": [
+            "WILLIAMS, Gabrielle",
+            "D'ARCY, Catherine",
+            "KHAN, Arshad Ali",
+            "McMAHON, Jack",
+            "FORTE, Jordan",
+            "BILLINGS, William",
+            "HARVEY, Jacqueline",
+            "WRIGHT, Glenda"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 2,
+            "LNP": 6,
+            "ONP": 8
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 2,
+              "of_n": 6
+            }
+          ]
+        },
+        "mulgrave": {
+          "status": "read",
+          "order": [
+            "FOSTER, Eden",
+            "SCHOFIELD, Paul J",
+            "BUCHANAN, Connor",
+            "TRAN, Charles",
+            "DOBRZYNSKI, Stewart",
+            "COOK, Ian",
+            "THEODOSSOPOULOU, Fotini",
+            "REBBECHI, Cody"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 2,
+            "LNP": 4,
+            "ONP": 8
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 2,
+              "of_n": 4
+            }
+          ]
+        },
+        "south-eastern-metropolitan": {
+          "atl": [
+            "D",
+            "F",
+            "H",
+            "E",
+            "I",
+            "K"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "registration": "1690",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "type": "Combined",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d028df0f-79e5-49ee-a87e-c6bdb1bed237%2Falp_combined_nm_greenvale_tr15_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "alp_combined_nm_greenvale_tr15_1.pdf",
+      "areas": [
+        "greenvale",
+        "northern-metropolitan"
+      ],
+      "party": "ALP",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "greenvale": {
+          "status": "read",
+          "order": [
+            "WALTERS, Iwan",
+            "FURINA, Rosanna",
+            "MCGINNESS, Declan",
+            "SMELOV, Kirill",
+            "SAID, Hassan",
+            "ZOUGHAIB, Yehya",
+            "YOHANNA, Mazen",
+            "TITHERIDGE, Michael",
+            "OVEREND, Jim",
+            "MOORE, Chris"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 9,
+            "ONP": 10
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 9
+            }
+          ]
+        },
+        "northern-metropolitan": {
+          "atl": [
+            "K",
+            "L",
+            "A",
+            "D",
+            "I",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "registration": "1695",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "type": "Combined",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3a8899a5-b0ce-46c7-a747-c38f3363a45a%2Fliberal_combined_wmr_point%20cook_chinese_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "liberal_combined_wmr_point cook_chinese_3.pdf",
+      "areas": [
+        "point-cook",
+        "western-metropolitan"
+      ],
+      "party": "LIB",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "point-cook": {
+          "status": "read",
+          "order": [
+            "REDDY, Raja",
+            "MEURE, Keith",
+            "KELLY, Paul",
+            "GRECH, Mark",
+            "REID, Cameron",
+            "ALLE, Kirti",
+            "HILAKARI, Mathew",
+            "KRISHNA PANDI, Ponraj",
+            "LAINE, Taylor"
+          ],
+          "via": "text",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5,
+            "ALP": 7,
+            "GRN": 8
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 5,
+              "of_n": 7
+            }
+          ]
+        },
+        "western-metropolitan": {
+          "atl": [
+            "C",
+            "L",
+            "A",
+            "K",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
+        }
+      }
+    },
+    {
+      "registration": "1697",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "type": "Combined",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=cfb0fc7b-c319-4976-b48b-781631c8a645%2Falp_combined_wm_sydenham_tr13_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "alp_combined_wm_sydenham_tr13_1.pdf",
+      "areas": [
+        "sydenham",
+        "western-metropolitan"
+      ],
+      "party": "ALP",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "sydenham": {
+          "status": "read",
+          "order": [
+            "RASIC, Uros",
+            "JANE, Maggie",
+            "KHAN, Shania",
+            "POON, Bruce",
+            "SINCLAIR, Brandon",
+            "MOUSSI, Nathalie",
+            "KERR, Maria",
+            "LANCASHIRE, Bruce",
+            "LANKALA KENDERLA, Laxmi",
+            "CROES, Nancy G",
+            "VANDENBERG, Ashleigh",
+            "BAUCH, Joh"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 2,
+            "LNP": 6,
+            "ONP": 12
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 2,
+              "of_n": 6
+            }
+          ]
+        },
+        "western-metropolitan": {
+          "atl": [
+            "E",
+            "D",
+            "B",
+            "I",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "registration": "1700",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "type": "Combined",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=67b27d04-55fe-4f87-a3cf-76d4565d6dff%2Falp_combined_sem%20berwick%20narre%20warren%20north_ev%20pakenham_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "alp_combined_sem berwick narre warren north_ev pakenham_1.pdf",
+      "areas": [
+        "berwick",
+        "narre-warren-north",
+        "pakenham",
+        "eastern-victoria",
+        "south-eastern-metropolitan"
+      ],
+      "party": "ALP",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "berwick": {
+          "status": "read",
+          "order": [
+            "KHAN, Rana",
+            "DE SILVA, Roshan",
+            "JOHN, David",
+            "AMARASIRI GUNAWARDANA, Nalinda",
+            "KING, Ethelyn",
+            "BATTIN, Brad",
+            "DE PAOLIS, Vincenzo",
+            "DOWLING, Scott",
+            "PIASTRINO, Michael"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 2,
+            "LNP": 6,
+            "ONP": 9
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 2,
+              "of_n": 6
+            }
+          ]
+        },
+        "narre-warren-north": {
+          "status": "read",
+          "order": [
+            "WILSON, Belinda",
+            "LEAHY, Martin",
+            "PERRY, Hayley",
+            "McCRACKEN, Lachlan",
+            "UTOYO, Joshua",
+            "NATHANIELSZ, Shemane",
+            "EMMANUEL, Cristina",
+            "CRUTCHFIELD, Sebastian"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6,
+            "ONP": 8
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
+        },
+        "pakenham": {
+          "status": "unreadable",
+          "note": "unreadable, see card"
+        },
+        "eastern-victoria": {
+          "status": "unreadable",
+          "note": "unreadable, see card"
+        },
+        "south-eastern-metropolitan": {
+          "status": "unreadable",
+          "note": "unreadable, see card"
+        }
+      }
+    },
+    {
+      "registration": "1704",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "type": "Combined",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=be75c388-f8ad-49ee-ac94-a66439f2d216%2Falp_combined_nm_broadmeadows_nov20.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "alp_combined_nm_broadmeadows_nov20.pdf",
+      "areas": [
+        "broadmeadows",
+        "northern-metropolitan"
+      ],
+      "party": "ALP",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "broadmeadows": {
+          "status": "unreadable",
+          "note": "unreadable, see card"
+        },
+        "northern-metropolitan": {
+          "status": "unreadable",
+          "note": "unreadable, see card"
+        }
+      }
+    },
+    {
+      "registration": "1710",
+      "registered_by": "Muslim Votes Matter",
+      "kind": "non_candidate",
+      "type": "Single",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=03e951be-acb1-4fba-a980-7b3324b145d2%2F1710%20-%20northern%20metro%29_redacted.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "1710 - northern metro)_redacted.pdf",
+      "areas": [
+        "northern-metropolitan"
+      ],
+      "party": null,
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "northern-metropolitan": {
+          "atl": [
+            "J",
+            "D",
+            "G",
+            "L",
+            "K"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 2,
+            "ALP": 5
+          }
+        }
+      }
     }
   ],
   "changes": [
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "albert-park",
+        "ashwood",
+        "bass",
+        "bayswater",
+        "bellarine",
+        "benambra",
+        "bendigo-east",
+        "bendigo-west",
+        "bentleigh",
+        "berwick",
+        "box-hill",
+        "brighton",
+        "broadmeadows",
+        "brunswick",
+        "bulleen",
+        "bundoora",
+        "carrum",
+        "caulfield",
+        "clarinda",
+        "cranbourne",
+        "croydon",
+        "dandenong",
+        "eildon",
+        "eltham",
+        "essendon",
+        "eureka",
+        "euroa",
+        "evelyn",
+        "footscray",
+        "frankston",
+        "geelong",
+        "gippsland-east",
+        "gippsland-south",
+        "glen-waverley",
+        "greenvale",
+        "hastings",
+        "hawthorn",
+        "ivanhoe",
+        "kalkallo",
+        "kew",
+        "kororoit",
+        "lara",
+        "laverton",
+        "lowan",
+        "macedon",
+        "malvern",
+        "melbourne",
+        "melton",
+        "mildura",
+        "mill-park",
+        "monbulk",
+        "mordialloc",
+        "mornington",
+        "morwell",
+        "mulgrave",
+        "murray-plains",
+        "narracan",
+        "narre-warren-north",
+        "narre-warren-south",
+        "nepean",
+        "niddrie",
+        "northcote",
+        "oakleigh",
+        "ovens-valley",
+        "pakenham",
+        "pascoe-vale",
+        "point-cook",
+        "polwarth",
+        "prahran",
+        "preston",
+        "richmond",
+        "ringwood",
+        "ripon",
+        "rowville",
+        "sandringham",
+        "shepparton",
+        "south-barwon",
+        "south-west-coast",
+        "st-albans",
+        "sunbury",
+        "sydenham",
+        "tarneit",
+        "thomastown",
+        "warrandyte",
+        "wendouree",
+        "werribee",
+        "williamstown",
+        "eastern-victoria",
+        "north-eastern-metropolitan",
+        "northern-metropolitan",
+        "northern-victoria",
+        "south-eastern-metropolitan",
+        "southern-metropolitan",
+        "western-metropolitan",
+        "western-victoria"
+      ],
+      "detail": "was albert-park, ashwood, bass, bayswater, bellarine, benambra, bendigo-east, bendigo-west, bentleigh, berwick, box-hill, brighton, broadmeadows, brunswick, bulleen, bundoora, carrum, caulfield, clarinda, cranbourne, croydon, dandenong, eildon, eltham, essendon, eureka, euroa, evelyn, footscray, frankston, geelong, gippsland-east, gippsland-south, glen-waverley, greenvale, hastings, hawthorn, ivanhoe, kalkallo, kew, kororoit, lara, laverton, lowan, macedon, malvern, melbourne, melton, mildura, mill-park, monbulk, mordialloc, mornington, morwell, mulgrave, murray-plains, narracan, narre-warren-north, narre-warren-south, nepean, niddrie, northcote, oakleigh, ovens-valley, pakenham, pascoe-vale, point-cook, polwarth, prahran, preston, richmond, ringwood, ripon, rowville, sandringham, shepparton, south-barwon, south-west-coast, st-albans, sunbury, sydenham, tarneit, thomastown, warrandyte, wendouree, werribee, williamstown, yan-yean, eastern-victoria, north-eastern-metropolitan, northern-metropolitan, northern-victoria, south-eastern-metropolitan, southern-metropolitan, western-metropolitan, western-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "areas": [
+        "albert-park",
+        "ashwood",
+        "bass",
+        "bayswater",
+        "bellarine",
+        "benambra",
+        "bendigo-east",
+        "bendigo-west",
+        "bentleigh",
+        "berwick",
+        "box-hill",
+        "brighton",
+        "broadmeadows",
+        "brunswick",
+        "bulleen",
+        "bundoora",
+        "carrum",
+        "caulfield",
+        "clarinda",
+        "cranbourne",
+        "croydon",
+        "dandenong",
+        "eildon",
+        "eltham",
+        "essendon",
+        "eureka",
+        "euroa",
+        "evelyn",
+        "footscray",
+        "frankston",
+        "geelong",
+        "gippsland-east",
+        "gippsland-south",
+        "glen-waverley",
+        "greenvale",
+        "hastings",
+        "hawthorn",
+        "ivanhoe",
+        "kalkallo",
+        "kew",
+        "kororoit",
+        "lara",
+        "laverton",
+        "lowan",
+        "macedon",
+        "malvern",
+        "melbourne",
+        "melton",
+        "mildura",
+        "mill-park",
+        "monbulk",
+        "mordialloc",
+        "mornington",
+        "morwell",
+        "mulgrave",
+        "murray-plains",
+        "narracan",
+        "narre-warren-north",
+        "narre-warren-south",
+        "nepean",
+        "niddrie",
+        "northcote",
+        "oakleigh",
+        "ovens-valley",
+        "pakenham",
+        "pascoe-vale",
+        "point-cook",
+        "polwarth",
+        "prahran",
+        "preston",
+        "richmond",
+        "ringwood",
+        "ripon",
+        "rowville",
+        "sandringham",
+        "shepparton",
+        "south-barwon",
+        "south-west-coast",
+        "st-albans",
+        "sunbury",
+        "sydenham",
+        "tarneit",
+        "thomastown",
+        "warrandyte",
+        "wendouree",
+        "werribee",
+        "williamstown",
+        "eastern-victoria",
+        "north-eastern-metropolitan",
+        "northern-metropolitan",
+        "northern-victoria",
+        "south-eastern-metropolitan",
+        "southern-metropolitan",
+        "western-metropolitan",
+        "western-victoria"
+      ],
+      "detail": "was albert-park, ashwood, bass, bayswater, bellarine, benambra, bendigo-east, bendigo-west, bentleigh, berwick, box-hill, brighton, broadmeadows, brunswick, bulleen, bundoora, carrum, caulfield, clarinda, cranbourne, croydon, dandenong, eildon, eltham, essendon, eureka, euroa, evelyn, footscray, frankston, geelong, gippsland-east, gippsland-south, glen-waverley, greenvale, hastings, hawthorn, ivanhoe, kalkallo, kew, kororoit, lara, laverton, lowan, macedon, malvern, melbourne, melton, mildura, mill-park, monbulk, mordialloc, mornington, morwell, mulgrave, murray-plains, narracan, narre-warren-north, narre-warren-south, nepean, niddrie, northcote, oakleigh, ovens-valley, pakenham, pascoe-vale, point-cook, polwarth, prahran, preston, richmond, ringwood, ripon, rowville, sandringham, shepparton, south-barwon, south-west-coast, st-albans, sunbury, sydenham, tarneit, thomastown, warrandyte, wendouree, werribee, williamstown, yan-yean, eastern-victoria, north-eastern-metropolitan, northern-metropolitan, northern-victoria, south-eastern-metropolitan, southern-metropolitan, western-metropolitan, western-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "1504",
+      "registered_by": "Liberal",
+      "areas": [
+        "albert-park",
+        "ashwood",
+        "bass",
+        "bayswater",
+        "bellarine",
+        "benambra",
+        "bentleigh",
+        "berwick",
+        "box-hill",
+        "brighton",
+        "broadmeadows",
+        "brunswick",
+        "bulleen",
+        "bundoora",
+        "carrum",
+        "caulfield",
+        "clarinda",
+        "cranbourne",
+        "croydon",
+        "dandenong",
+        "eildon",
+        "eltham",
+        "essendon",
+        "eureka",
+        "evelyn",
+        "footscray",
+        "frankston",
+        "geelong",
+        "glen-waverley",
+        "greenvale",
+        "hastings",
+        "hawthorn",
+        "ivanhoe",
+        "kalkallo",
+        "kew",
+        "kororoit",
+        "lara",
+        "laverton",
+        "macedon",
+        "malvern",
+        "melbourne",
+        "melton",
+        "mill-park",
+        "monbulk",
+        "mordialloc",
+        "mornington",
+        "mulgrave",
+        "narracan",
+        "narre-warren-north",
+        "narre-warren-south",
+        "nepean",
+        "niddrie",
+        "northcote",
+        "oakleigh",
+        "pakenham",
+        "pascoe-vale",
+        "point-cook",
+        "polwarth",
+        "prahran",
+        "preston",
+        "richmond",
+        "ringwood",
+        "ripon",
+        "rowville",
+        "sandringham",
+        "south-barwon",
+        "south-west-coast",
+        "st-albans",
+        "sunbury",
+        "sydenham",
+        "tarneit",
+        "thomastown",
+        "warrandyte",
+        "wendouree",
+        "werribee",
+        "williamstown",
+        "eastern-victoria",
+        "north-eastern-metropolitan",
+        "northern-metropolitan",
+        "northern-victoria",
+        "south-eastern-metropolitan",
+        "southern-metropolitan",
+        "western-metropolitan",
+        "western-victoria"
+      ],
+      "detail": "was albert-park, ashwood, bass, bayswater, bellarine, benambra, bentleigh, berwick, box-hill, brighton, broadmeadows, brunswick, bulleen, bundoora, carrum, caulfield, clarinda, cranbourne, croydon, dandenong, eildon, eltham, essendon, eureka, evelyn, footscray, frankston, geelong, glen-waverley, greenvale, hastings, hawthorn, ivanhoe, kalkallo, kew, kororoit, lara, laverton, macedon, malvern, melbourne, melton, mill-park, monbulk, mordialloc, mornington, mulgrave, narracan, narre-warren-north, narre-warren-south, nepean, niddrie, northcote, oakleigh, pakenham, pascoe-vale, point-cook, polwarth, prahran, preston, richmond, ringwood, ripon, rowville, sandringham, south-barwon, south-west-coast, st-albans, sunbury, sydenham, tarneit, thomastown, warrandyte, wendouree, werribee, williamstown, yan-yean, eastern-victoria, north-eastern-metropolitan, northern-metropolitan, northern-victoria, south-eastern-metropolitan, southern-metropolitan, western-metropolitan, western-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "areas": [
+        "albert-park",
+        "ashwood",
+        "bass",
+        "bayswater",
+        "bellarine",
+        "benambra",
+        "bendigo-east",
+        "bendigo-west",
+        "bentleigh",
+        "berwick",
+        "box-hill",
+        "brighton",
+        "broadmeadows",
+        "brunswick",
+        "bulleen",
+        "bundoora",
+        "carrum",
+        "caulfield",
+        "clarinda",
+        "cranbourne",
+        "croydon",
+        "dandenong",
+        "eildon",
+        "eltham",
+        "essendon",
+        "eureka",
+        "euroa",
+        "evelyn",
+        "footscray",
+        "frankston",
+        "geelong",
+        "gippsland-east",
+        "gippsland-south",
+        "glen-waverley",
+        "greenvale",
+        "hastings",
+        "hawthorn",
+        "ivanhoe",
+        "kalkallo",
+        "kew",
+        "kororoit",
+        "lara",
+        "laverton",
+        "lowan",
+        "macedon",
+        "malvern",
+        "melbourne",
+        "melton",
+        "mildura",
+        "mill-park",
+        "monbulk",
+        "mordialloc",
+        "mornington",
+        "morwell",
+        "mulgrave",
+        "murray-plains",
+        "narracan",
+        "narre-warren-north",
+        "narre-warren-south",
+        "nepean",
+        "niddrie",
+        "northcote",
+        "oakleigh",
+        "ovens-valley",
+        "pakenham",
+        "pascoe-vale",
+        "point-cook",
+        "polwarth",
+        "prahran",
+        "preston",
+        "richmond",
+        "ringwood",
+        "ripon",
+        "rowville",
+        "sandringham",
+        "shepparton",
+        "south-barwon",
+        "south-west-coast",
+        "st-albans",
+        "sunbury",
+        "sydenham",
+        "tarneit",
+        "thomastown",
+        "warrandyte",
+        "wendouree",
+        "werribee",
+        "williamstown",
+        "eastern-victoria",
+        "north-eastern-metropolitan",
+        "northern-metropolitan",
+        "northern-victoria",
+        "south-eastern-metropolitan",
+        "southern-metropolitan",
+        "western-metropolitan",
+        "western-victoria"
+      ],
+      "detail": "was albert-park, ashwood, bass, bayswater, bellarine, benambra, bendigo-east, bendigo-west, bentleigh, berwick, box-hill, brighton, broadmeadows, brunswick, bulleen, bundoora, carrum, caulfield, clarinda, cranbourne, croydon, dandenong, eildon, eltham, essendon, eureka, euroa, evelyn, footscray, frankston, geelong, gippsland-east, gippsland-south, glen-waverley, greenvale, hastings, hawthorn, ivanhoe, kalkallo, kew, kororoit, lara, laverton, lowan, macedon, malvern, melbourne, melton, mildura, mill-park, monbulk, mordialloc, mornington, morwell, mulgrave, murray-plains, narracan, narre-warren-north, narre-warren-south, nepean, niddrie, northcote, oakleigh, ovens-valley, pakenham, pascoe-vale, point-cook, polwarth, prahran, preston, richmond, ringwood, ripon, rowville, sandringham, shepparton, south-barwon, south-west-coast, st-albans, sunbury, sydenham, tarneit, thomastown, warrandyte, wendouree, werribee, williamstown, yan-yean, eastern-victoria, north-eastern-metropolitan, northern-metropolitan, northern-victoria, south-eastern-metropolitan, southern-metropolitan, western-metropolitan, western-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "1327",
+      "registered_by": "Liberal",
+      "areas": [
+        "albert-park",
+        "ashwood",
+        "bass",
+        "bayswater",
+        "bellarine",
+        "benambra",
+        "bentleigh",
+        "berwick",
+        "box-hill",
+        "brighton",
+        "broadmeadows",
+        "brunswick",
+        "bulleen",
+        "bundoora",
+        "carrum",
+        "caulfield",
+        "clarinda",
+        "cranbourne",
+        "croydon",
+        "dandenong",
+        "eildon",
+        "eltham",
+        "essendon",
+        "eureka",
+        "evelyn",
+        "footscray",
+        "frankston",
+        "geelong",
+        "glen-waverley",
+        "greenvale",
+        "hastings",
+        "hawthorn",
+        "ivanhoe",
+        "kalkallo",
+        "kew",
+        "kororoit",
+        "lara",
+        "laverton",
+        "macedon",
+        "malvern",
+        "melbourne",
+        "melton",
+        "mill-park",
+        "monbulk",
+        "mordialloc",
+        "mornington",
+        "mulgrave",
+        "narracan",
+        "narre-warren-north",
+        "narre-warren-south",
+        "nepean",
+        "niddrie",
+        "northcote",
+        "oakleigh",
+        "pakenham",
+        "pascoe-vale",
+        "point-cook",
+        "polwarth",
+        "prahran",
+        "preston",
+        "richmond",
+        "ringwood",
+        "ripon",
+        "rowville",
+        "sandringham",
+        "south-barwon",
+        "south-west-coast",
+        "st-albans",
+        "sunbury",
+        "sydenham",
+        "tarneit",
+        "thomastown",
+        "warrandyte",
+        "wendouree",
+        "werribee",
+        "williamstown",
+        "eastern-victoria",
+        "north-eastern-metropolitan",
+        "northern-metropolitan",
+        "northern-victoria",
+        "south-eastern-metropolitan",
+        "southern-metropolitan",
+        "western-metropolitan",
+        "western-victoria"
+      ],
+      "detail": "was albert-park, ashwood, bass, bayswater, bellarine, benambra, bentleigh, berwick, box-hill, brighton, broadmeadows, brunswick, bulleen, bundoora, carrum, caulfield, clarinda, cranbourne, croydon, dandenong, eildon, eltham, essendon, eureka, evelyn, footscray, frankston, geelong, glen-waverley, greenvale, hastings, hawthorn, ivanhoe, kalkallo, kew, kororoit, lara, laverton, macedon, malvern, melbourne, melton, mill-park, monbulk, mordialloc, mornington, mulgrave, narracan, narre-warren-north, narre-warren-south, nepean, niddrie, northcote, oakleigh, pakenham, pascoe-vale, point-cook, polwarth, prahran, preston, richmond, ringwood, ripon, rowville, sandringham, south-barwon, south-west-coast, st-albans, sunbury, sydenham, tarneit, thomastown, warrandyte, wendouree, werribee, williamstown, yan-yean, eastern-victoria, north-eastern-metropolitan, northern-metropolitan, northern-victoria, south-eastern-metropolitan, southern-metropolitan, western-metropolitan, western-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "amended",
+      "registration": "1220",
+      "registered_by": "DRAGWIDGE, Georgie",
+      "areas": [
+        "albert-park"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4391ef43-81cb-4b3e-9929-26fd26d78ba5%2Fdragwidge%2C%20georgina.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "detail": "replaces dragwidge, georgina.pdf"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "1508",
+      "registered_by": "Liberal",
+      "areas": [
+        "albert-park",
+        "ashwood",
+        "bass",
+        "bayswater",
+        "bellarine",
+        "benambra",
+        "bentleigh",
+        "berwick",
+        "box-hill",
+        "brighton",
+        "broadmeadows",
+        "brunswick",
+        "bulleen",
+        "bundoora",
+        "carrum",
+        "caulfield",
+        "clarinda",
+        "cranbourne",
+        "croydon",
+        "dandenong",
+        "eildon",
+        "eltham",
+        "essendon",
+        "eureka",
+        "evelyn",
+        "footscray",
+        "frankston",
+        "geelong",
+        "glen-waverley",
+        "greenvale",
+        "hastings",
+        "hawthorn",
+        "ivanhoe",
+        "kalkallo",
+        "kew",
+        "kororoit",
+        "lara",
+        "laverton",
+        "macedon",
+        "malvern",
+        "melbourne",
+        "melton",
+        "mill-park",
+        "monbulk",
+        "mordialloc",
+        "mornington",
+        "mulgrave",
+        "narracan",
+        "narre-warren-north",
+        "narre-warren-south",
+        "nepean",
+        "niddrie",
+        "northcote",
+        "oakleigh",
+        "pakenham",
+        "pascoe-vale",
+        "point-cook",
+        "polwarth",
+        "prahran",
+        "preston",
+        "richmond",
+        "ringwood",
+        "ripon",
+        "rowville",
+        "sandringham",
+        "south-barwon",
+        "south-west-coast",
+        "st-albans",
+        "sunbury",
+        "sydenham",
+        "tarneit",
+        "thomastown",
+        "warrandyte",
+        "wendouree",
+        "werribee",
+        "williamstown",
+        "eastern-victoria",
+        "north-eastern-metropolitan",
+        "northern-metropolitan",
+        "northern-victoria",
+        "south-eastern-metropolitan",
+        "southern-metropolitan",
+        "western-metropolitan",
+        "western-victoria"
+      ],
+      "detail": "was albert-park, ashwood, bass, bayswater, bellarine, benambra, bentleigh, berwick, box-hill, brighton, broadmeadows, brunswick, bulleen, bundoora, carrum, caulfield, clarinda, cranbourne, croydon, dandenong, eildon, eltham, essendon, eureka, evelyn, footscray, frankston, geelong, glen-waverley, greenvale, hastings, hawthorn, ivanhoe, kalkallo, kew, kororoit, lara, laverton, macedon, malvern, melbourne, melton, mill-park, monbulk, mordialloc, mornington, mulgrave, narracan, narre-warren-north, narre-warren-south, nepean, niddrie, northcote, oakleigh, pakenham, pascoe-vale, point-cook, polwarth, prahran, preston, richmond, ringwood, ripon, rowville, sandringham, south-barwon, south-west-coast, st-albans, sunbury, sydenham, tarneit, thomastown, warrandyte, wendouree, werribee, williamstown, yan-yean, eastern-victoria, north-eastern-metropolitan, northern-metropolitan, northern-victoria, south-eastern-metropolitan, southern-metropolitan, western-metropolitan, western-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "1512",
+      "registered_by": "Liberal",
+      "areas": [
+        "albert-park",
+        "ashwood",
+        "bass",
+        "bayswater",
+        "bellarine",
+        "benambra",
+        "bentleigh",
+        "berwick",
+        "box-hill",
+        "brighton",
+        "broadmeadows",
+        "brunswick",
+        "bulleen",
+        "bundoora",
+        "carrum",
+        "caulfield",
+        "clarinda",
+        "cranbourne",
+        "croydon",
+        "dandenong",
+        "eildon",
+        "eltham",
+        "essendon",
+        "eureka",
+        "evelyn",
+        "footscray",
+        "frankston",
+        "geelong",
+        "glen-waverley",
+        "greenvale",
+        "hastings",
+        "hawthorn",
+        "ivanhoe",
+        "kalkallo",
+        "kew",
+        "kororoit",
+        "lara",
+        "laverton",
+        "macedon",
+        "malvern",
+        "melbourne",
+        "melton",
+        "mill-park",
+        "monbulk",
+        "mordialloc",
+        "mornington",
+        "mulgrave",
+        "narracan",
+        "narre-warren-north",
+        "narre-warren-south",
+        "nepean",
+        "niddrie",
+        "northcote",
+        "oakleigh",
+        "pakenham",
+        "pascoe-vale",
+        "point-cook",
+        "polwarth",
+        "prahran",
+        "preston",
+        "richmond",
+        "ringwood",
+        "ripon",
+        "rowville",
+        "sandringham",
+        "south-barwon",
+        "south-west-coast",
+        "st-albans",
+        "sunbury",
+        "sydenham",
+        "tarneit",
+        "thomastown",
+        "warrandyte",
+        "wendouree",
+        "werribee",
+        "williamstown",
+        "eastern-victoria",
+        "north-eastern-metropolitan",
+        "northern-metropolitan",
+        "northern-victoria",
+        "south-eastern-metropolitan",
+        "southern-metropolitan",
+        "western-metropolitan",
+        "western-victoria"
+      ],
+      "detail": "was albert-park, ashwood, bass, bayswater, bellarine, benambra, bentleigh, berwick, box-hill, brighton, broadmeadows, brunswick, bulleen, bundoora, carrum, caulfield, clarinda, cranbourne, croydon, dandenong, eildon, eltham, essendon, eureka, evelyn, footscray, frankston, geelong, glen-waverley, greenvale, hastings, hawthorn, ivanhoe, kalkallo, kew, kororoit, lara, laverton, macedon, malvern, melbourne, melton, mill-park, monbulk, mordialloc, mornington, mulgrave, narracan, narre-warren-north, narre-warren-south, nepean, niddrie, northcote, oakleigh, pakenham, pascoe-vale, point-cook, polwarth, prahran, preston, richmond, ringwood, ripon, rowville, sandringham, south-barwon, south-west-coast, st-albans, sunbury, sydenham, tarneit, thomastown, warrandyte, wendouree, werribee, williamstown, yan-yean, eastern-victoria, north-eastern-metropolitan, northern-metropolitan, northern-victoria, south-eastern-metropolitan, southern-metropolitan, western-metropolitan, western-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "1513",
+      "registered_by": "Liberal",
+      "areas": [
+        "albert-park",
+        "ashwood",
+        "bass",
+        "bayswater",
+        "bellarine",
+        "benambra",
+        "bentleigh",
+        "berwick",
+        "box-hill",
+        "brighton",
+        "broadmeadows",
+        "brunswick",
+        "bulleen",
+        "bundoora",
+        "carrum",
+        "caulfield",
+        "clarinda",
+        "cranbourne",
+        "croydon",
+        "dandenong",
+        "eildon",
+        "eltham",
+        "essendon",
+        "eureka",
+        "evelyn",
+        "footscray",
+        "frankston",
+        "geelong",
+        "glen-waverley",
+        "greenvale",
+        "hastings",
+        "hawthorn",
+        "ivanhoe",
+        "kalkallo",
+        "kew",
+        "kororoit",
+        "lara",
+        "laverton",
+        "macedon",
+        "malvern",
+        "melbourne",
+        "melton",
+        "mill-park",
+        "monbulk",
+        "mordialloc",
+        "mornington",
+        "mulgrave",
+        "narracan",
+        "narre-warren-north",
+        "narre-warren-south",
+        "nepean",
+        "niddrie",
+        "northcote",
+        "oakleigh",
+        "pakenham",
+        "pascoe-vale",
+        "point-cook",
+        "polwarth",
+        "prahran",
+        "preston",
+        "richmond",
+        "ringwood",
+        "ripon",
+        "rowville",
+        "sandringham",
+        "south-barwon",
+        "south-west-coast",
+        "st-albans",
+        "sunbury",
+        "sydenham",
+        "tarneit",
+        "thomastown",
+        "warrandyte",
+        "wendouree",
+        "werribee",
+        "williamstown",
+        "eastern-victoria",
+        "north-eastern-metropolitan",
+        "northern-metropolitan",
+        "northern-victoria",
+        "south-eastern-metropolitan",
+        "southern-metropolitan",
+        "western-metropolitan",
+        "western-victoria"
+      ],
+      "detail": "was albert-park, ashwood, bass, bayswater, bellarine, benambra, bentleigh, berwick, box-hill, brighton, broadmeadows, brunswick, bulleen, bundoora, carrum, caulfield, clarinda, cranbourne, croydon, dandenong, eildon, eltham, essendon, eureka, evelyn, footscray, frankston, geelong, glen-waverley, greenvale, hastings, hawthorn, ivanhoe, kalkallo, kew, kororoit, lara, laverton, macedon, malvern, melbourne, melton, mill-park, monbulk, mordialloc, mornington, mulgrave, narracan, narre-warren-north, narre-warren-south, nepean, niddrie, northcote, oakleigh, pakenham, pascoe-vale, point-cook, polwarth, prahran, preston, richmond, ringwood, ripon, rowville, sandringham, south-barwon, south-west-coast, st-albans, sunbury, sydenham, tarneit, thomastown, warrandyte, wendouree, werribee, williamstown, yan-yean, eastern-victoria, north-eastern-metropolitan, northern-metropolitan, northern-victoria, south-eastern-metropolitan, southern-metropolitan, western-metropolitan, western-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1686",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "albert-park",
+        "southern-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4ba796c5-1cc4-49a2-8d64-05c8009f0077%2Falp_combined_sm%20albert%20park_1_open%20ticket.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1574",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "bellarine"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8a413722-f8bc-4c93-9df5-ebc507e04613%2Fbellarine_green%20contests_htv_registered.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "1026",
+      "registered_by": "Victorian Socialists",
+      "areas": [
+        "benambra",
+        "bendigo-east",
+        "bendigo-west",
+        "eildon",
+        "euroa",
+        "macedon",
+        "mildura",
+        "murray-plains",
+        "ovens-valley",
+        "shepparton",
+        "northern-victoria"
+      ],
+      "detail": "was benambra, bendigo-east, bendigo-west, eildon, euroa, macedon, mildura, murray-plains, ovens-valley, shepparton, yan-yean, northern-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "1135",
+      "registered_by": "The Greens",
+      "areas": [
+        "bendigo-east",
+        "eildon",
+        "euroa",
+        "macedon",
+        "murray-plains",
+        "ovens-valley",
+        "shepparton",
+        "northern-victoria"
+      ],
+      "detail": "was bendigo-east, eildon, euroa, macedon, murray-plains, ovens-valley, shepparton, yan-yean, northern-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "1155",
+      "registered_by": "The Greens",
+      "areas": [
+        "bendigo-east",
+        "eildon",
+        "euroa",
+        "macedon",
+        "murray-plains",
+        "ovens-valley",
+        "shepparton",
+        "northern-victoria"
+      ],
+      "detail": "was bendigo-east, eildon, euroa, macedon, murray-plains, ovens-valley, shepparton, yan-yean, northern-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1700",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "berwick",
+        "narre-warren-north",
+        "pakenham",
+        "eastern-victoria",
+        "south-eastern-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=67b27d04-55fe-4f87-a3cf-76d4565d6dff%2Falp_combined_sem%20berwick%20narre%20warren%20north_ev%20pakenham_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "974",
+      "registered_by": "The Greens",
+      "areas": [
+        "broadmeadows",
+        "bundoora",
+        "greenvale",
+        "kalkallo",
+        "mill-park",
+        "preston",
+        "thomastown",
+        "northern-metropolitan"
+      ],
+      "detail": "was broadmeadows, bundoora, greenvale, kalkallo, mill-park, preston, thomastown, yan-yean, northern-metropolitan"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1661",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "broadmeadows",
+        "greenvale",
+        "northern-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=dcd485bb-3c19-46a7-acc4-712377118b9f%2Falp_combined_nm%20broadmeadows%20greenvale_1_tr5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1680",
+      "registered_by": "Liberal",
+      "areas": [
+        "broadmeadows",
+        "northern-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=be17f97f-3988-4c59-ab0f-eb8b82921ec5%2Fliberal_combined_nmr_broadmeadows_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1704",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "broadmeadows",
+        "northern-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=be75c388-f8ad-49ee-ac94-a66439f2d216%2Falp_combined_nm_broadmeadows_nov20.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "951",
+      "registered_by": "The Greens",
+      "areas": [
+        "bulleen",
+        "bundoora",
+        "eildon",
+        "eltham",
+        "ivanhoe",
+        "warrandyte",
+        "north-eastern-metropolitan"
+      ],
+      "detail": "was bulleen, bundoora, eildon, eltham, ivanhoe, warrandyte, yan-yean, north-eastern-metropolitan"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "957",
+      "registered_by": "The Greens",
+      "areas": [
+        "bundoora",
+        "mill-park",
+        "thomastown",
+        "north-eastern-metropolitan"
+      ],
+      "detail": "was bundoora, mill-park, thomastown, yan-yean, north-eastern-metropolitan"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "981",
+      "registered_by": "The Greens",
+      "areas": [
+        "bundoora",
+        "eltham",
+        "ivanhoe",
+        "mill-park",
+        "preston",
+        "thomastown",
+        "north-eastern-metropolitan"
+      ],
+      "detail": "was bundoora, eltham, ivanhoe, mill-park, preston, thomastown, yan-yean, north-eastern-metropolitan"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "1148",
+      "registered_by": "The Greens",
+      "areas": [
+        "bundoora",
+        "eildon",
+        "eltham",
+        "ivanhoe",
+        "kalkallo",
+        "mill-park",
+        "preston",
+        "thomastown",
+        "north-eastern-metropolitan",
+        "northern-metropolitan"
+      ],
+      "detail": "was bundoora, eildon, eltham, ivanhoe, kalkallo, mill-park, preston, thomastown, yan-yean, north-eastern-metropolitan, northern-metropolitan"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "1203",
+      "registered_by": "The Greens",
+      "areas": [
+        "bundoora",
+        "eildon",
+        "eltham",
+        "euroa",
+        "kalkallo",
+        "mill-park",
+        "thomastown",
+        "northern-victoria"
+      ],
+      "detail": "was bundoora, eildon, eltham, euroa, kalkallo, mill-park, thomastown, yan-yean, northern-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1689",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "clarinda",
+        "dandenong",
+        "mulgrave",
+        "south-eastern-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=026ca084-a64f-4957-ac6c-ddf79ae50707%2Falp_combined_sem%20clarinda%20dandenong%20mulgrave_1%20%281%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "1132",
+      "registered_by": "The Greens",
+      "areas": [
+        "eildon",
+        "euroa",
+        "greenvale",
+        "kalkallo",
+        "macedon",
+        "sunbury",
+        "thomastown",
+        "northern-metropolitan",
+        "northern-victoria"
+      ],
+      "detail": "was eildon, euroa, greenvale, kalkallo, macedon, sunbury, thomastown, yan-yean, northern-metropolitan, northern-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "367",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "eltham",
+        "northern-metropolitan",
+        "northern-victoria"
+      ],
+      "detail": "was eltham, yan-yean, northern-metropolitan, northern-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "1305",
+      "registered_by": "Liberal",
+      "areas": [
+        "eltham",
+        "north-eastern-metropolitan",
+        "northern-victoria"
+      ],
+      "detail": "was eltham, yan-yean, north-eastern-metropolitan, northern-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1575",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "essendon"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fd482ad1-e9e6-47e4-830c-12ab9df903fe%2Fessendon_green%20contests_htv_registered.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1675",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "essendon",
+        "northern-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=561f76bc-14cd-4e61-9577-fedeae37689f%2Falp_combined_nm_essendon_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "273",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "euroa",
+        "northern-victoria"
+      ],
+      "detail": "was euroa, yan-yean, northern-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "279",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "euroa",
+        "kalkallo",
+        "northern-metropolitan",
+        "northern-victoria"
+      ],
+      "detail": "was euroa, kalkallo, yan-yean, northern-metropolitan, northern-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "963",
+      "registered_by": "The Greens",
+      "areas": [
+        "euroa",
+        "greenvale",
+        "kalkallo",
+        "macedon",
+        "sunbury",
+        "thomastown",
+        "northern-metropolitan"
+      ],
+      "detail": "was euroa, greenvale, kalkallo, macedon, sunbury, thomastown, yan-yean, northern-metropolitan"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1678",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "greenvale",
+        "northern-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=aa2ef0dc-9d1d-41a1-8964-fa010e6e0a53%2Falp_combined_nm_greenvale_tr14_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1690",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "greenvale",
+        "northern-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d028df0f-79e5-49ee-a87e-c6bdb1bed237%2Falp_combined_nm_greenvale_tr15_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "257",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "kalkallo",
+        "northern-metropolitan",
+        "northern-victoria"
+      ],
+      "detail": "was kalkallo, yan-yean, northern-metropolitan, northern-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "1328",
+      "registered_by": "Liberal",
+      "areas": [
+        "kalkallo",
+        "northern-metropolitan",
+        "northern-victoria"
+      ],
+      "detail": "was kalkallo, yan-yean, northern-metropolitan, northern-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "1646",
+      "registered_by": "Liberal",
+      "areas": [
+        "kalkallo",
+        "northern-metropolitan",
+        "northern-victoria"
+      ],
+      "detail": "was kalkallo, yan-yean, northern-metropolitan, northern-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1672",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "kororoit",
+        "western-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d9f170dd-773a-49c5-a446-cf61a0724ed5%2Falp_combined_wm%20kororoit_1%20%28amended%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1669",
+      "registered_by": "Muslim Votes Matter",
+      "areas": [
+        "melbourne"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8a2e0c22-d342-4335-afb6-1765c9a82410%2F1669%20-%20melbourne_redacted.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "269",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "mill-park",
+        "thomastown",
+        "north-eastern-metropolitan",
+        "northern-metropolitan",
+        "northern-victoria"
+      ],
+      "detail": "was mill-park, thomastown, yan-yean, north-eastern-metropolitan, northern-metropolitan, northern-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "381",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "mill-park",
+        "north-eastern-metropolitan",
+        "northern-victoria"
+      ],
+      "detail": "was mill-park, yan-yean, north-eastern-metropolitan, northern-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1673",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "mill-park",
+        "north-eastern-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7f17ce0a-acc6-4d67-aa18-b1a8a9670b0b%2Falp_combined_nem_mill%20park_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1683",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "mordialloc",
+        "south-eastern-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1bb051ff-be2c-4463-a652-1f5b9af3e38b%2Falp_combined_sem_mordialloc_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1687",
+      "registered_by": "Liberal",
+      "areas": [
+        "niddrie",
+        "sydenham",
+        "western-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a8a1cc59-7011-4cf5-913f-120897bd50dc%2Fliberal_combined_wmr%20niddrie_wmr%20sydenham_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1667",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "northcote",
+        "preston",
+        "northern-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=67106f6a-2d16-4071-a4ea-c6a54c5a0f44%2Falp_combined_nm%20northcote%20preston_1_tr3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1666",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "pascoe-vale",
+        "preston",
+        "northern-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7ed2c65b-9c4e-4623-a306-bcb311a44c22%2Falp_combined_nm%20pascoe%20vale%20preston_1_tr3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1573",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "point-cook"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b11860ee-f57e-4ad2-a8d3-d8fc0a2d38cc%2Fpoint%20cook_green%20contests_htv_registered.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1695",
+      "registered_by": "Liberal",
+      "areas": [
+        "point-cook",
+        "western-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3a8899a5-b0ce-46c7-a747-c38f3363a45a%2Fliberal_combined_wmr_point%20cook_chinese_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1651",
+      "registered_by": "Tosh-Jake Finnigan",
+      "areas": [
+        "prahran"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5630b703-3bfe-448c-878f-ac978afd8c32%2Fprahran%20-%20finnigan_tosh-jake%20-%20htvc%203%20%28pe%29.pdf.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1652",
+      "registered_by": "Tosh-Jake Finnigan",
+      "areas": [
+        "prahran"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=401ba669-9970-4bad-a116-6229b241f4bf%2Fprahran%20-%20finnigan_tosh-jake%20-%20htvc%203%20%28snap%29.pdf.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1664",
+      "registered_by": "Muslim Votes Matter",
+      "areas": [
+        "preston"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ff93f52a-b712-4235-bbd9-7b60a24b55a4%2F1664%20-%20preston_redacted.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1665",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "preston",
+        "thomastown",
+        "northern-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ee68bbcb-f5c3-4881-bf37-67ba905bb0c5%2Falp_combined_nm%20preston%20thomastown_1_tr3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1663",
+      "registered_by": "Muslim Votes Matter",
+      "areas": [
+        "richmond"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1a5077ba-2b6c-47a6-ada4-cbc6b60d16f8%2F1663%20-%20richmond%20%28unredacted%29_redacted.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1572",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "south-barwon"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9184849b-5175-4fb6-9961-c03c02e367ef%2Fsouth%20barwon_green%20contests_htv_registered.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1668",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "sydenham",
+        "western-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef4e2a81-6e5c-4015-9223-fde4f40355bc%2Falp_combined_wm_sydenham_tr12_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1697",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "sydenham",
+        "western-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=cfb0fc7b-c319-4976-b48b-781631c8a645%2Falp_combined_wm_sydenham_tr13_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1570",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "tarneit"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=78694b51-0b56-43a4-9dfc-3ab339bf04ff%2Ftarneit_green%20contests_htv_registered.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1571",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "werribee"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c0a7fc75-f684-4164-ade0-6b6ca6deefd1%2Fwerribee_green%20contests_htv_registered.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1670",
+      "registered_by": "Muslim Votes matter",
+      "areas": [
+        "northern-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5329daf4-897c-4c72-9a26-c1398b7aa5fd%2F1670%20-%20northern%20metro_redacted.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1671",
+      "registered_by": "Muslim Votes Matter",
+      "areas": [
+        "northern-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=245e0f6c-b459-4185-b8d8-47e879c23299%2F1671%20-%20northern%20metro_redacted.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1710",
+      "registered_by": "Muslim Votes Matter",
+      "areas": [
+        "northern-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=03e951be-acb1-4fba-a980-7b3324b145d2%2F1710%20-%20northern%20metro%29_redacted.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "133",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "northern-victoria"
+      ],
+      "detail": "was yan-yean, northern-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "355",
+      "registered_by": "Victorian Socialists",
+      "areas": [
+        "northern-victoria"
+      ],
+      "detail": "was yan-yean, northern-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "588",
+      "registered_by": "Liberal",
+      "areas": [
+        "northern-victoria"
+      ],
+      "detail": "was yan-yean, northern-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "623",
+      "registered_by": "Liberal",
+      "areas": [
+        "northern-victoria"
+      ],
+      "detail": "was yan-yean, northern-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "736",
+      "registered_by": "Family First",
+      "areas": [
+        "northern-victoria"
+      ],
+      "detail": "was yan-yean, northern-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "857",
+      "registered_by": "One Nation Victoria",
+      "areas": [
+        "northern-victoria"
+      ],
+      "detail": "was yan-yean, northern-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "areas",
+      "registration": "1017",
+      "registered_by": "Animal Justice Party",
+      "areas": [
+        "northern-victoria"
+      ],
+      "detail": "was yan-yean, northern-victoria"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "removed",
+      "registration": "1398",
+      "registered_by": "Libertarian (formerly Liberal Democrats)",
+      "areas": [
+        "yan-yean"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5df32f07-6780-45ef-b80d-a9ca2cb8d056%2Fyanyeandistricthtv_reg.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
     {
       "date": "2026-11-20",
       "kind": "added",
@@ -124924,922 +127605,6 @@
         "south-eastern-metropolitan"
       ],
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b1ecdbfb-8253-4928-bf89-3de6acd6f3b7%2Falp_combined_sem_berwick_cranbourne_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "360",
-      "registered_by": "Victorian Socialists",
-      "areas": [
-        "berwick",
-        "south-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=25e5521f-d24e-429e-a4bb-981ba03c2aed%2Fvictorian%20socialists%20combined%20south-eastern%20metropolitan%20berwick%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "521",
-      "registered_by": "Family First",
-      "areas": [
-        "berwick"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=59eb2bad-2b32-4d51-8226-2e3f04feb8be%2Ffamilyfirst_berwick_version1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "563",
-      "registered_by": "Liberal",
-      "areas": [
-        "berwick",
-        "south-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a94cb3e4-72ca-4072-b942-e1fd2612bdac%2Fliberal_combined_semr%20berwick_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "633",
-      "registered_by": "Liberal",
-      "areas": [
-        "berwick",
-        "south-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=02ac1202-e247-4839-8e98-65f555bfa70e%2Fliberal_combined_semr%20berwick_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "907",
-      "registered_by": "One Nation Victoria",
-      "areas": [
-        "berwick",
-        "south-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a1993f01-1789-4bb6-898f-3c4e90cc69d7%2Fonv%20-%20combined%20-%20south-eastern%20metropolitan%20region%20-%20berwick%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "909",
-      "registered_by": "The Greens",
-      "areas": [
-        "berwick",
-        "dandenong",
-        "monbulk",
-        "narre-warren-north",
-        "narre-warren-south",
-        "south-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f12ebbef-5536-4069-8293-0a25600c41b6%2Fthe%20greens%20combined%20south-east%20metro%20narre%20warren%20north%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "918",
-      "registered_by": "The Greens",
-      "areas": [
-        "berwick",
-        "cranbourne",
-        "monbulk",
-        "narre-warren-north",
-        "narre-warren-south",
-        "pakenham",
-        "south-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=cc19ffcf-5490-4b71-b094-636dea4672f6%2Fthe%20greens%20combined%20south-east%20metro%20berwick%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "996",
-      "registered_by": "The Greens",
-      "areas": [
-        "berwick",
-        "carrum",
-        "cranbourne",
-        "dandenong",
-        "narre-warren-north",
-        "narre-warren-south",
-        "south-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9a9a408e-c894-4da6-b366-e247e5c1948d%2Fthe%20greens%20combined%20south-east%20metro%20narre%20warren%20south%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1029",
-      "registered_by": "Victorian Socialists",
-      "areas": [
-        "berwick",
-        "carrum",
-        "clarinda",
-        "cranbourne",
-        "dandenong",
-        "frankston",
-        "mordialloc",
-        "mulgrave",
-        "narre-warren-north",
-        "narre-warren-south",
-        "rowville",
-        "south-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9f9f4d4a-36a7-4afb-84ee-6d50bbcb46b8%2Fvs_sem_combined%20all_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1157",
-      "registered_by": "The Greens",
-      "areas": [
-        "berwick",
-        "carrum",
-        "cranbourne",
-        "dandenong",
-        "frankston",
-        "hastings",
-        "mordialloc",
-        "narre-warren-north",
-        "narre-warren-south",
-        "south-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fc47539a-2bf1-47b8-a04d-f5e67f1ff04f%2Fthe%20greens%20combined%20cranbourne%20narre%20warren%20south%20carrum%20south-eastern%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1332",
-      "registered_by": "Liberal",
-      "areas": [
-        "berwick",
-        "pakenham",
-        "eastern-victoria",
-        "south-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=78e13274-a993-46c5-8cce-23586dd0496b%2Fliberal_combined_semr%20berwick_evr%20pakenham_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1333",
-      "registered_by": "Liberal",
-      "areas": [
-        "berwick",
-        "narre-warren-south",
-        "south-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=87951677-a023-4eb4-97ac-d79838f6c108%2Fliberal_combined_semr%20berwick_semr%20narre%20warren%20south_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1334",
-      "registered_by": "Liberal",
-      "areas": [
-        "berwick",
-        "narre-warren-north",
-        "south-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=744fb088-fae4-46d8-9086-eedc4fe0364c%2Fliberal_combined_semr%20berwick_semr%20narre%20warren%20north_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1054",
-      "registered_by": "Libertarian (formerly Liberal Democrats)",
-      "areas": [
-        "berwick",
-        "south-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=271ac512-ef1b-4f35-bc01-93f552d5deac%2Fd_berwick_king_reg.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1204",
-      "registered_by": "The Greens",
-      "areas": [
-        "berwick",
-        "cranbourne",
-        "narre-warren-south",
-        "south-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7a7f7555-ed8e-4213-88c0-9136291eb9a0%2Fthe%20greens%20combined%20berwickcranbournenarre%20warren%20southsouth-eastern%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1375",
-      "registered_by": "Citizens Party",
-      "areas": [
-        "berwick",
-        "south-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=be5ed938-ae11-4959-9400-c69c9d212665%2Facp_htv_vic_berwick_uh_semetro_region_print.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1506",
-      "registered_by": "The Greens",
-      "areas": [
-        "berwick",
-        "carrum",
-        "clarinda",
-        "cranbourne",
-        "dandenong",
-        "frankston",
-        "mordialloc",
-        "mulgrave",
-        "narre-warren-north",
-        "narre-warren-south",
-        "rowville",
-        "south-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8036686d-a05d-49f4-9ab5-0e83c749f7ea%2Fthe%20greens%20combined%20south-eastern%20metro%20simplified%20chinese%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1509",
-      "registered_by": "The Greens",
-      "areas": [
-        "berwick",
-        "carrum",
-        "clarinda",
-        "cranbourne",
-        "dandenong",
-        "frankston",
-        "mordialloc",
-        "mulgrave",
-        "narre-warren-north",
-        "narre-warren-south",
-        "rowville",
-        "south-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=00c53f08-bcfc-461f-80b9-674bc9a9e669%2Fthe%20greens%20combined%20south-eastern%20metro%20vietnamese%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1550",
-      "registered_by": "The Greens",
-      "areas": [
-        "berwick",
-        "carrum",
-        "clarinda",
-        "cranbourne",
-        "dandenong",
-        "frankston",
-        "mordialloc",
-        "mulgrave",
-        "narre-warren-north",
-        "narre-warren-south",
-        "rowville",
-        "south-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=358471e6-653f-4281-b7de-6e76704ae1b3%2Fthe%20greens%20combined%20south-eastern%20metro%20hazeragi%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1564",
-      "registered_by": "JOHN, David",
-      "areas": [
-        "berwick"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=0eb4bc99-6cd0-46f7-be49-bcd24dedc5dc%2Fjohn%2C%20david.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1545",
-      "registered_by": "The Greens",
-      "areas": [
-        "berwick",
-        "carrum",
-        "clarinda",
-        "cranbourne",
-        "dandenong",
-        "frankston",
-        "mordialloc",
-        "mulgrave",
-        "narre-warren-north",
-        "narre-warren-south",
-        "rowville",
-        "south-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=bdbdccbf-8c6b-4876-8388-c766041a35e4%2Fthe%20greens%20combined%20south-eastern%20metro%20hazeragi%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1552",
-      "registered_by": "The Greens",
-      "areas": [
-        "berwick",
-        "carrum",
-        "clarinda",
-        "cranbourne",
-        "dandenong",
-        "frankston",
-        "mordialloc",
-        "mulgrave",
-        "narre-warren-north",
-        "narre-warren-south",
-        "rowville",
-        "south-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=22a6b6a9-3fa6-4e30-b01f-59b76d053fb6%2Fthe%20greens%20combined%20south-eastern%20metro%20simplified%20chinese%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1555",
-      "registered_by": "The Greens",
-      "areas": [
-        "berwick",
-        "carrum",
-        "clarinda",
-        "cranbourne",
-        "dandenong",
-        "frankston",
-        "mordialloc",
-        "mulgrave",
-        "narre-warren-north",
-        "narre-warren-south",
-        "rowville",
-        "south-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=dff45eca-78f5-4564-b0c1-30b72052ed1c%2Fthe%20greens%20combined%20south-eastern%20metro%20vietnamese%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "79",
-      "registered_by": "Australian Labor Party",
-      "areas": [
-        "box-hill",
-        "north-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=46f46f06-db4c-428c-b0ac-7c1246ded371%2Falp_combined_nem%20box%20hill_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "293",
-      "registered_by": "Australian Labor Party",
-      "areas": [
-        "box-hill",
-        "hawthorn",
-        "kew",
-        "north-eastern-metropolitan",
-        "southern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3c2347e7-4f44-4219-a6fe-f52b8f6ec90b%2Falp_combined_nem_sm_box%20hill_hawthorn_kew_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "296",
-      "registered_by": "Victorian Socialists",
-      "areas": [
-        "box-hill",
-        "north-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=03dae850-caa1-44d5-ab73-dde25549c441%2Fvictorian%20socialists%20combined%20north-eastern%20metropolitan%20box%20hill%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "318",
-      "registered_by": "Australian Labor Party",
-      "areas": [
-        "box-hill",
-        "warrandyte",
-        "north-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=39afae19-c1ce-4006-9f25-5ba595713d61%2Falp_combined_nem_box%20hill_warrandyte_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "421",
-      "registered_by": "Australian Labor Party",
-      "areas": [
-        "box-hill",
-        "hawthorn",
-        "north-eastern-metropolitan",
-        "southern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=511331ef-ffff-41b9-ac87-4917fb624baa%2Falp_combined_nem_sm_box%20hill_hawthorn_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "528",
-      "registered_by": "Family First",
-      "areas": [
-        "box-hill",
-        "north-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=10e47ed6-2e48-406e-9390-4f9aef4ae01b%2Ffamilyfirst_box_hill_version1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "631",
-      "registered_by": "Liberal",
-      "areas": [
-        "box-hill",
-        "north-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=89d6d57a-42f6-4ce9-890e-c0ea26c87784%2Fliberal_combined_nemr%20box%20hill_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "635",
-      "registered_by": "Liberal",
-      "areas": [
-        "box-hill",
-        "north-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=25070666-2131-401d-9652-da6a5dd3597d%2Fliberal_combined_nemr%20box%20hill_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "706",
-      "registered_by": "Victorian Trades Hall Council",
-      "areas": [
-        "box-hill"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4e5dfd88-ad62-4106-b37c-e14ec2beb13f%2Fbox%20hill%20-%20boland%2C%20claire%20-%20htvc.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "764",
-      "registered_by": "Australian Labor Party",
-      "areas": [
-        "box-hill",
-        "ringwood",
-        "north-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c2d4339f-60c2-416c-b136-c96ce7efea96%2Falp_combined_nem_box%20hill_ringwood_tr7_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "765",
-      "registered_by": "Australian Labor Party",
-      "areas": [
-        "box-hill",
-        "kew",
-        "north-eastern-metropolitan",
-        "southern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=42d7c525-4f19-4805-9d90-edfa7c55da64%2Falp_combined_nem_sm_box%20hill_kew_tr7_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "784",
-      "registered_by": "Australian Labor Party",
-      "areas": [
-        "box-hill",
-        "glen-waverley",
-        "ringwood",
-        "north-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e82180f0-8206-49d6-a50c-e68aa07c3a10%2Falp_combined_nem_box%20hill_glen%20waverley_ringwood_tr7_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "806",
-      "registered_by": "Australian Labor Party",
-      "areas": [
-        "box-hill",
-        "north-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6dbce4dc-49d3-494a-8960-535d3aee6dbc%2Falp_combined_nem_box%20hill_tr7_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "900",
-      "registered_by": "One Nation Victoria",
-      "areas": [
-        "box-hill",
-        "north-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=136cb6fa-8d45-4269-acb1-b9fc89cdd174%2Fonv%20-%20combined%20-%20north-eastern%20metropolitan%20region%20-%20box%20hill%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "942",
-      "registered_by": "The Greens",
-      "areas": [
-        "box-hill",
-        "bulleen",
-        "eltham",
-        "ivanhoe",
-        "kew",
-        "warrandyte",
-        "north-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3adbcf9e-32b3-4942-844c-323ef1c68a5c%2Fthe%20greens%20combined%20north-east%20metro%20bulleen%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "945",
-      "registered_by": "The Greens",
-      "areas": [
-        "box-hill",
-        "bulleen",
-        "croydon",
-        "eildon",
-        "eltham",
-        "evelyn",
-        "ringwood",
-        "warrandyte",
-        "north-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=94be6742-e719-4730-a7ab-4248978ae8d7%2Fthe%20greens%20combined%20north-east%20metro%20warrandyte%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1138",
-      "registered_by": "The Greens",
-      "areas": [
-        "box-hill",
-        "bulleen",
-        "hawthorn",
-        "ivanhoe",
-        "kew",
-        "northcote",
-        "richmond",
-        "southern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=700f8775-015e-4a1b-a066-e59c75bdb3c8%2Fthe%20greens%20combined%20southern%20metro%20kew%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1139",
-      "registered_by": "The Greens",
-      "areas": [
-        "box-hill",
-        "bulleen",
-        "croydon",
-        "eltham",
-        "evelyn",
-        "ivanhoe",
-        "ringwood",
-        "warrandyte",
-        "north-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=dd593554-f0d4-4bda-accd-4cd00dd40080%2Fthe%20greens%20combined%20north-eastern%20metro%20warrandyte%20bulleen%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1240",
-      "registered_by": "Liberal",
-      "areas": [
-        "box-hill",
-        "hawthorn",
-        "north-eastern-metropolitan",
-        "southern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9b5efe00-d38c-4d8c-9c3e-c31f0d7848c1%2Fliberal_combined_nemr%20box%20hill_smr%20hawthorn_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1245",
-      "registered_by": "Liberal",
-      "areas": [
-        "box-hill",
-        "hawthorn",
-        "kew",
-        "north-eastern-metropolitan",
-        "southern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b6414bff-0005-454f-94fc-d7f3a643b0cc%2Fliberal_combined_smr%20hawthorn_smr%20kew_nemr%20box%20hill_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1340",
-      "registered_by": "Liberal",
-      "areas": [
-        "box-hill",
-        "north-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7c2e6a8b-f04e-4d71-b0e6-f12a5dbb0a10%2Fliberal_combined_nemr%20box%20hill_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1193",
-      "registered_by": "CHEUNG, Heena",
-      "areas": [
-        "box-hill"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7c6b1ef6-f3a2-444a-b74f-5ebd25060f5d%2Fcheung%2C%20heena.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1194",
-      "registered_by": "CHEUNG, Heena",
-      "areas": [
-        "box-hill"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8a857e24-7664-4fc3-ac40-74145c987df5%2Fcheung%2C%20heena.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1275",
-      "registered_by": "Liberal",
-      "areas": [
-        "box-hill",
-        "kew",
-        "north-eastern-metropolitan",
-        "southern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d4132dcd-4d3e-4d66-a781-33b60e5ba0ab%2Fliberal_combined_nemr%20box%20hill_smr%20kew_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1250",
-      "registered_by": "Liberal",
-      "areas": [
-        "box-hill",
-        "glen-waverley",
-        "ringwood",
-        "north-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a217c525-beae-4023-8000-33b4af7f48e2%2Fliberal_combined_nemr_box_hill_glen_waverley_ringwood_1_update.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1255",
-      "registered_by": "Liberal",
-      "areas": [
-        "box-hill",
-        "ringwood",
-        "north-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=68faece7-53f3-4b18-9e87-56b9c4433c52%2Fliberal_combined_nemr%20box%20hill_nemr%20ringwood_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1380",
-      "registered_by": "Menzies for Climate Inc.",
-      "areas": [
-        "box-hill"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=78ec41be-7a54-48f1-8386-91340c8c0978%2Fbox%20hill%20-%20cranston%2C%20jeffrey%20-%20htvc.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1436",
-      "registered_by": "Labour DLP",
-      "areas": [
-        "box-hill",
-        "north-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=78d174d2-1a5a-46e7-a228-9a37ad433e60%2Fdlp%20htv%20lower%20house%20-%20box%20hill%20district%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1516",
-      "registered_by": "Liberal",
-      "areas": [
-        "box-hill",
-        "ringwood",
-        "north-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=cac23906-6c29-457a-8a54-e7df3f127465%2Fliberal_combined_nemr%20box%20hill_nemr%20ringwood_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1583",
-      "registered_by": "Liberal",
-      "areas": [
-        "box-hill",
-        "ringwood",
-        "north-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6374371c-ce5e-43b9-85d4-b3a7ca7726a5%2Fliberal_combined_nemr%20box%20hill_nemr%20ringwood_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1584",
-      "registered_by": "Liberal",
-      "areas": [
-        "box-hill",
-        "north-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=0c6f59f1-0a38-461b-bca0-a79d2f1242be%2Fliberal_combined_nemr%20box%20hill_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1644",
-      "registered_by": "Liberal",
-      "areas": [
-        "box-hill",
-        "glen-waverley",
-        "ringwood",
-        "north-eastern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f470abdf-6445-43de-b4d0-0bcd63c2e57d%2Fliberal_combined_nemr%20box%20hill_nemr%20glen%20waverley_nemr%20ringwood_4%20%281%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "78",
-      "registered_by": "Australian Labor Party",
-      "areas": [
-        "brighton",
-        "southern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=41a549d3-d58b-4a5e-a92e-ea135aa817c4%2Falp_combined_sm%20brighton_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "268",
-      "registered_by": "Australian Labor Party",
-      "areas": [
-        "brighton",
-        "sandringham",
-        "southern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6c1efb12-5bdd-4db5-92ea-f21dfb50da6f%2Falp_combined_sm_brighton_sandringham_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "275",
-      "registered_by": "Australian Labor Party",
-      "areas": [
-        "brighton",
-        "caulfield",
-        "southern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=925cf4e6-983e-482f-ba0c-b0066244b9d3%2Falp_combined_sm_brighton_caulfield_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "317",
-      "registered_by": "Victorian Socialists",
-      "areas": [
-        "brighton",
-        "southern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8e9d0779-1dbb-4572-9ed9-9da53071f520%2Fvictorian%20socialists%20combined%20southern%20metropolitan%20brighton%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "512",
-      "registered_by": "Family First",
-      "areas": [
-        "brighton",
-        "southern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9146dcaf-922f-4e9f-92cb-97b39bfc4833%2Ffamilyfirst_brighton_version1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "602",
-      "registered_by": "Liberal",
-      "areas": [
-        "brighton",
-        "southern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6a6a9bb5-1bb3-4662-b224-4996964a0d1c%2Fliberal_combined_smr%20brighton_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "628",
-      "registered_by": "Liberal",
-      "areas": [
-        "brighton",
-        "southern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=71d77b9a-d80f-40d7-b221-511874a52511%2Fliberal_combined_smr%20brighton_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "913",
-      "registered_by": "One Nation Victoria",
-      "areas": [
-        "brighton",
-        "southern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c2c6abb9-1e00-43c3-bcb7-ec4064813002%2Fonv%20-%20combined%20-%20southern%20metropolitan%20region%20-%20brighton%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1230",
-      "registered_by": "Liberal",
-      "areas": [
-        "brighton",
-        "sandringham",
-        "southern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2341ed24-e607-4b39-9ab5-89eda0f8e638%2Fliberal_combined_smr%20brighton_smr%20sandringham_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1324",
-      "registered_by": "Liberal",
-      "areas": [
-        "brighton",
-        "caulfield",
-        "southern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e0248600-efa5-474f-b75b-f26f279de734%2Fliberal_combined_smr%20brighton_smr%20caulfield_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "1406",
-      "registered_by": "Libertarian (formerly Liberal Democrats)",
-      "areas": [
-        "brighton"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f4d6683f-5060-41a1-ab39-4582b0728e81%2Fbrightondistricthtv_v2_reg.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "128",
-      "registered_by": "Australian Labor Party",
-      "areas": [
-        "broadmeadows",
-        "northern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=73acf16c-cac8-4292-92b8-ddd2617d137f%2Falp_combined_nm%20broadmeadows_1-compressed.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "258",
-      "registered_by": "Australian Labor Party",
-      "areas": [
-        "broadmeadows",
-        "pascoe-vale",
-        "northern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d526fbc2-2728-4b63-ba1d-48eb30dfc129%2Falp_combined_nm_broadmeadows_pascoe%20vale_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "454",
-      "registered_by": "Socialist Alliance",
-      "areas": [
-        "broadmeadows",
-        "northern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=65602e65-6490-4d22-aa83-c0a74b451071%2Fsa_combined_broadmeadows.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "458",
-      "registered_by": "Victorian Socialists",
-      "areas": [
-        "broadmeadows",
-        "northern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=18798450-7c96-4748-9f33-baf61df70d84%2Fvictorian%20socialists%20combined%20northern%20metropolitan%20broadmeadows%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
     }
   ]
 }

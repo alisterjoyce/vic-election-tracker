@@ -10,34 +10,34 @@
   "status": "open",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
   "registration_closes": "2026-11-20",
-  "last_checked": "2026-11-20T05:54:06Z",
+  "last_checked": "2026-11-20T09:54:35Z",
   "coverage": {
-    "cards": 1383,
-    "listings": 4746,
-    "orders_read": 3931,
+    "cards": 1415,
+    "listings": 4772,
+    "orders_read": 3950,
     "orders_same_as": 154,
-    "orders_unreadable": 658,
-    "districts_with_cards": 88,
+    "orders_unreadable": 665,
+    "districts_with_cards": 87,
     "regions_with_cards": 8,
     "by_party": {
       "ALP": {
-        "cards": 301,
-        "districts": 88,
+        "cards": 323,
+        "districts": 87,
         "regions": 8
       },
       "LIB": {
-        "cards": 272,
-        "districts": 77,
+        "cards": 275,
+        "districts": 76,
         "regions": 8
       },
       "GRN": {
         "cards": 192,
-        "districts": 88,
+        "districts": 87,
         "regions": 8
       },
       "VS": {
         "cards": 96,
-        "districts": 88,
+        "districts": 87,
         "regions": 8
       },
       "IND": {
@@ -47,22 +47,22 @@
       },
       "ONP": {
         "cards": 89,
-        "districts": 88,
+        "districts": 87,
         "regions": 8
       },
       "NONCAND": {
-        "cards": 80,
-        "districts": 31,
+        "cards": 88,
+        "districts": 32,
         "regions": 6
       },
       "FF": {
         "cards": 65,
-        "districts": 65,
+        "districts": 64,
         "regions": 6
       },
       "AJP": {
         "cards": 47,
-        "districts": 40,
+        "districts": 39,
         "regions": 2
       },
       "OTH": {
@@ -77,8 +77,8 @@
         ]
       },
       "LBT": {
-        "cards": 28,
-        "districts": 23,
+        "cards": 27,
+        "districts": 22,
         "regions": 3
       },
       "WEST": {
@@ -123,7 +123,7 @@
       }
     },
     "no_card": {
-      "lower": 41,
+      "lower": 49,
       "upper": 16,
       "candidates_lower": 734,
       "candidates_upper": 303
@@ -132,12 +132,12 @@
   "areas": {
     "albert-park": {
       "house": "lower",
-      "cards": 39,
-      "read": 32,
+      "cards": 40,
+      "read": 33,
       "same_as": 1,
       "unreadable": 6,
       "parties": {
-        "ALP": 6,
+        "ALP": 7,
         "VS": 2,
         "LIB": 8,
         "ONP": 2,
@@ -199,13 +199,13 @@
     },
     "bellarine": {
       "house": "lower",
-      "cards": 34,
-      "read": 31,
+      "cards": 35,
+      "read": 32,
       "same_as": 1,
       "unreadable": 2,
       "parties": {
         "SAL": 2,
-        "ALP": 5,
+        "ALP": 6,
         "VS": 2,
         "LIB": 8,
         "ONP": 2,
@@ -287,12 +287,12 @@
     },
     "berwick": {
       "house": "lower",
-      "cards": 42,
-      "read": 24,
+      "cards": 43,
+      "read": 25,
       "same_as": 0,
       "unreadable": 18,
       "parties": {
-        "ALP": 9,
+        "ALP": 10,
         "VS": 2,
         "FF": 1,
         "LIB": 10,
@@ -342,16 +342,16 @@
     },
     "broadmeadows": {
       "house": "lower",
-      "cards": 57,
-      "read": 48,
+      "cards": 60,
+      "read": 50,
       "same_as": 7,
-      "unreadable": 2,
+      "unreadable": 3,
       "parties": {
-        "ALP": 7,
+        "ALP": 9,
         "SAL": 1,
         "VS": 2,
         "FF": 1,
-        "LIB": 7,
+        "LIB": 8,
         "ONP": 2,
         "GRN": 34,
         "AJP": 1,
@@ -449,12 +449,12 @@
     },
     "clarinda": {
       "house": "lower",
-      "cards": 49,
-      "read": 45,
+      "cards": 50,
+      "read": 46,
       "same_as": 2,
       "unreadable": 2,
       "parties": {
-        "ALP": 12,
+        "ALP": 13,
         "VS": 2,
         "LIB": 14,
         "NONCAND": 1,
@@ -502,12 +502,12 @@
     },
     "dandenong": {
       "house": "lower",
-      "cards": 48,
-      "read": 42,
+      "cards": 49,
+      "read": 43,
       "same_as": 2,
       "unreadable": 4,
       "parties": {
-        "ALP": 8,
+        "ALP": 9,
         "VS": 2,
         "FF": 1,
         "LIB": 12,
@@ -556,13 +556,13 @@
     },
     "essendon": {
       "house": "lower",
-      "cards": 61,
-      "read": 48,
+      "cards": 63,
+      "read": 50,
       "same_as": 7,
       "unreadable": 6,
       "parties": {
         "IND": 3,
-        "ALP": 8,
+        "ALP": 10,
         "VS": 2,
         "LIB": 8,
         "ONP": 2,
@@ -734,12 +734,12 @@
     },
     "greenvale": {
       "house": "lower",
-      "cards": 56,
-      "read": 43,
+      "cards": 59,
+      "read": 46,
       "same_as": 8,
       "unreadable": 5,
       "parties": {
-        "ALP": 13,
+        "ALP": 16,
         "IND": 2,
         "VS": 2,
         "FF": 1,
@@ -843,12 +843,12 @@
     },
     "kororoit": {
       "house": "lower",
-      "cards": 41,
-      "read": 35,
+      "cards": 42,
+      "read": 36,
       "same_as": 0,
       "unreadable": 6,
       "parties": {
-        "ALP": 8,
+        "ALP": 9,
         "VS": 2,
         "FF": 2,
         "LIB": 9,
@@ -951,17 +951,17 @@
     },
     "melbourne": {
       "house": "lower",
-      "cards": 69,
+      "cards": 70,
       "read": 59,
       "same_as": 7,
-      "unreadable": 3,
+      "unreadable": 4,
       "parties": {
         "ALP": 10,
         "VS": 2,
         "LIB": 7,
         "ONP": 2,
         "GRN": 42,
-        "NONCAND": 2,
+        "NONCAND": 3,
         "AJP": 1,
         "LBT": 1,
         "IND": 2
@@ -1006,12 +1006,12 @@
     },
     "mill-park": {
       "house": "lower",
-      "cards": 31,
-      "read": 28,
+      "cards": 32,
+      "read": 29,
       "same_as": 1,
       "unreadable": 2,
       "parties": {
-        "ALP": 8,
+        "ALP": 9,
         "VS": 2,
         "FF": 1,
         "LIB": 7,
@@ -1041,12 +1041,12 @@
     },
     "mordialloc": {
       "house": "lower",
-      "cards": 44,
-      "read": 39,
+      "cards": 45,
+      "read": 40,
       "same_as": 2,
       "unreadable": 3,
       "parties": {
-        "ALP": 8,
+        "ALP": 9,
         "VS": 2,
         "LCV": 1,
         "FF": 1,
@@ -1093,12 +1093,12 @@
     },
     "mulgrave": {
       "house": "lower",
-      "cards": 42,
-      "read": 37,
+      "cards": 43,
+      "read": 38,
       "same_as": 2,
       "unreadable": 3,
       "parties": {
-        "ALP": 6,
+        "ALP": 7,
         "VS": 2,
         "LIB": 13,
         "ONP": 2,
@@ -1144,13 +1144,13 @@
     },
     "narre-warren-north": {
       "house": "lower",
-      "cards": 41,
-      "read": 33,
+      "cards": 42,
+      "read": 34,
       "same_as": 2,
       "unreadable": 6,
       "parties": {
         "NONCAND": 3,
-        "ALP": 9,
+        "ALP": 10,
         "VS": 2,
         "LCV": 1,
         "LIB": 9,
@@ -1198,15 +1198,15 @@
     },
     "niddrie": {
       "house": "lower",
-      "cards": 53,
-      "read": 42,
+      "cards": 54,
+      "read": 43,
       "same_as": 2,
       "unreadable": 9,
       "parties": {
         "ALP": 7,
         "VS": 2,
         "FF": 1,
-        "LIB": 8,
+        "LIB": 9,
         "NONCAND": 3,
         "ONP": 2,
         "GRN": 23,
@@ -1220,12 +1220,12 @@
     },
     "northcote": {
       "house": "lower",
-      "cards": 57,
-      "read": 46,
+      "cards": 58,
+      "read": 47,
       "same_as": 7,
       "unreadable": 4,
       "parties": {
-        "ALP": 6,
+        "ALP": 7,
         "VS": 2,
         "FF": 1,
         "LIB": 7,
@@ -1274,12 +1274,12 @@
     },
     "pakenham": {
       "house": "lower",
-      "cards": 29,
+      "cards": 30,
       "read": 25,
       "same_as": 0,
-      "unreadable": 4,
+      "unreadable": 5,
       "parties": {
-        "ALP": 4,
+        "ALP": 5,
         "VS": 2,
         "LIB": 9,
         "IND": 3,
@@ -1292,12 +1292,12 @@
     },
     "pascoe-vale": {
       "house": "lower",
-      "cards": 55,
-      "read": 44,
+      "cards": 56,
+      "read": 45,
       "same_as": 7,
       "unreadable": 4,
       "parties": {
-        "ALP": 7,
+        "ALP": 8,
         "VS": 2,
         "SAL": 1,
         "FF": 1,
@@ -1310,16 +1310,16 @@
     },
     "point-cook": {
       "house": "lower",
-      "cards": 39,
-      "read": 36,
+      "cards": 41,
+      "read": 38,
       "same_as": 0,
       "unreadable": 3,
       "parties": {
-        "ALP": 9,
+        "ALP": 10,
         "VS": 2,
         "FF": 1,
         "GRN": 11,
-        "LIB": 10,
+        "LIB": 11,
         "ONP": 2,
         "DLP": 1,
         "WEST": 2,
@@ -1346,15 +1346,15 @@
     },
     "prahran": {
       "house": "lower",
-      "cards": 48,
-      "read": 40,
+      "cards": 50,
+      "read": 42,
       "same_as": 1,
       "unreadable": 7,
       "parties": {
         "ALP": 9,
         "VS": 2,
         "LIB": 9,
-        "NONCAND": 2,
+        "NONCAND": 4,
         "ONP": 2,
         "GRN": 22,
         "IND": 1,
@@ -1364,34 +1364,35 @@
     },
     "preston": {
       "house": "lower",
-      "cards": 49,
-      "read": 42,
+      "cards": 53,
+      "read": 45,
       "same_as": 7,
-      "unreadable": 0,
+      "unreadable": 1,
       "parties": {
-        "ALP": 6,
+        "ALP": 9,
         "VS": 2,
         "FF": 1,
         "LIB": 7,
         "ONP": 1,
         "GRN": 31,
-        "IND": 1
+        "IND": 1,
+        "NONCAND": 1
       },
       "no_card": 4
     },
     "richmond": {
       "house": "lower",
-      "cards": 68,
+      "cards": 69,
       "read": 51,
       "same_as": 10,
-      "unreadable": 7,
+      "unreadable": 8,
       "parties": {
         "ALP": 10,
         "VS": 2,
         "LIB": 7,
         "ONP": 2,
         "GRN": 40,
-        "NONCAND": 2,
+        "NONCAND": 3,
         "IND": 2,
         "LBT": 1,
         "OTH": 2
@@ -1490,13 +1491,13 @@
     },
     "south-barwon": {
       "house": "lower",
-      "cards": 44,
-      "read": 40,
+      "cards": 45,
+      "read": 41,
       "same_as": 1,
       "unreadable": 3,
       "parties": {
         "SAL": 2,
-        "ALP": 6,
+        "ALP": 7,
         "VS": 2,
         "LIB": 9,
         "IND": 4,
@@ -1564,15 +1565,15 @@
     },
     "sydenham": {
       "house": "lower",
-      "cards": 47,
-      "read": 36,
+      "cards": 50,
+      "read": 39,
       "same_as": 0,
       "unreadable": 11,
       "parties": {
-        "ALP": 10,
+        "ALP": 12,
         "VS": 2,
         "FF": 1,
-        "LIB": 8,
+        "LIB": 9,
         "NONCAND": 1,
         "ONP": 2,
         "GRN": 14,
@@ -1586,12 +1587,12 @@
     },
     "tarneit": {
       "house": "lower",
-      "cards": 42,
-      "read": 34,
+      "cards": 43,
+      "read": 35,
       "same_as": 0,
       "unreadable": 8,
       "parties": {
-        "ALP": 6,
+        "ALP": 7,
         "VS": 2,
         "FF": 1,
         "GRN": 11,
@@ -1607,12 +1608,12 @@
     },
     "thomastown": {
       "house": "lower",
-      "cards": 48,
-      "read": 39,
+      "cards": 49,
+      "read": 40,
       "same_as": 7,
       "unreadable": 2,
       "parties": {
-        "ALP": 9,
+        "ALP": 10,
         "VS": 2,
         "FF": 1,
         "LIB": 7,
@@ -1657,12 +1658,12 @@
     },
     "werribee": {
       "house": "lower",
-      "cards": 39,
-      "read": 33,
+      "cards": 40,
+      "read": 34,
       "same_as": 0,
       "unreadable": 6,
       "parties": {
-        "ALP": 8,
+        "ALP": 9,
         "VS": 2,
         "FF": 2,
         "GRN": 11,
@@ -1697,31 +1698,22 @@
     },
     "yan-yean": {
       "house": "lower",
-      "cards": 36,
-      "read": 34,
+      "cards": 0,
+      "read": 0,
       "same_as": 0,
-      "unreadable": 2,
-      "parties": {
-        "ALP": 8,
-        "VS": 2,
-        "LIB": 10,
-        "FF": 1,
-        "ONP": 2,
-        "GRN": 11,
-        "AJP": 1,
-        "LBT": 1
-      },
-      "no_card": 0
+      "unreadable": 0,
+      "parties": {},
+      "no_card": 8
     },
     "eastern-victoria": {
       "house": "upper",
-      "cards": 122,
+      "cards": 123,
       "read": 87,
       "same_as": 0,
-      "unreadable": 35,
+      "unreadable": 36,
       "parties": {
         "SFF": 2,
-        "ALP": 29,
+        "ALP": 30,
         "IND": 3,
         "VS": 12,
         "SUS": 1,
@@ -1738,12 +1730,12 @@
     },
     "north-eastern-metropolitan": {
       "house": "upper",
-      "cards": 183,
-      "read": 143,
+      "cards": 184,
+      "read": 144,
       "same_as": 4,
       "unreadable": 36,
       "parties": {
-        "ALP": 46,
+        "ALP": 47,
         "NONCAND": 5,
         "VS": 12,
         "SUS": 1,
@@ -1760,23 +1752,23 @@
     },
     "northern-metropolitan": {
       "house": "upper",
-      "cards": 189,
-      "read": 146,
+      "cards": 201,
+      "read": 156,
       "same_as": 3,
-      "unreadable": 40,
+      "unreadable": 42,
       "parties": {
-        "ALP": 61,
+        "ALP": 69,
         "SUS": 1,
         "VS": 12,
         "LCV": 1,
         "SAL": 2,
         "FF": 6,
-        "LIB": 36,
+        "LIB": 37,
         "ONP": 12,
         "GRN": 47,
         "IND": 2,
         "OTH": 3,
-        "NONCAND": 4,
+        "NONCAND": 7,
         "DLP": 1,
         "null": 1
       },
@@ -1808,12 +1800,12 @@
     },
     "south-eastern-metropolitan": {
       "house": "upper",
-      "cards": 178,
-      "read": 148,
+      "cards": 181,
+      "read": 150,
       "same_as": 2,
-      "unreadable": 28,
+      "unreadable": 29,
       "parties": {
-        "ALP": 53,
+        "ALP": 56,
         "VS": 12,
         "SUS": 1,
         "LCV": 1,
@@ -1829,12 +1821,12 @@
     },
     "southern-metropolitan": {
       "house": "upper",
-      "cards": 170,
-      "read": 134,
+      "cards": 171,
+      "read": 135,
       "same_as": 5,
       "unreadable": 31,
       "parties": {
-        "ALP": 50,
+        "ALP": 51,
         "VS": 12,
         "SUS": 1,
         "LCV": 1,
@@ -1851,19 +1843,19 @@
     },
     "western-metropolitan": {
       "house": "upper",
-      "cards": 192,
-      "read": 140,
+      "cards": 197,
+      "read": 145,
       "same_as": 2,
       "unreadable": 50,
       "parties": {
-        "ALP": 57,
+        "ALP": 60,
         "IND": 1,
         "SUS": 1,
         "LCV": 1,
         "VS": 12,
         "GRN": 25,
         "FF": 2,
-        "LIB": 39,
+        "LIB": 41,
         "ONP": 12,
         "NONCAND": 3,
         "DLP": 6,
@@ -1902,19 +1894,14 @@
     {
       "area": "albert-park",
       "party": "ALP",
-      "cards": 6,
-      "read": 6,
-      "ranks": {
-        "ALP": 1,
-        "GRN": 3,
-        "LNP": 5,
-        "ONP": 7
-      },
-      "flags": [
+      "cards": 7,
+      "read": 7,
+      "differ": true,
+      "flags_some": [
         {
           "ahead": "GRN",
-          "of": "LNP",
           "ahead_n": 3,
+          "of": "LNP",
           "of_n": 5
         }
       ],
@@ -2174,19 +2161,20 @@
     {
       "area": "bellarine",
       "party": "ALP",
-      "cards": 5,
-      "read": 5,
-      "ranks": {
-        "ALP": 1,
-        "GRN": 2,
-        "LNP": 6,
-        "ONP": 8
-      },
-      "flags": [
+      "cards": 6,
+      "read": 6,
+      "differ": true,
+      "flags_some": [
         {
           "ahead": "GRN",
+          "ahead_n": 1,
           "of": "LNP",
+          "of_n": 6
+        },
+        {
+          "ahead": "GRN",
           "ahead_n": 2,
+          "of": "LNP",
           "of_n": 6
         }
       ],
@@ -2514,8 +2502,8 @@
     {
       "area": "berwick",
       "party": "ALP",
-      "cards": 9,
-      "read": 8,
+      "cards": 10,
+      "read": 9,
       "ranks": {
         "ALP": 1,
         "GRN": 2,
@@ -2712,8 +2700,8 @@
     {
       "area": "broadmeadows",
       "party": "ALP",
-      "cards": 7,
-      "read": 7,
+      "cards": 9,
+      "read": 8,
       "ranks": {
         "ALP": 1,
         "GRN": 4,
@@ -2746,8 +2734,8 @@
     {
       "area": "broadmeadows",
       "party": "LIB",
-      "cards": 7,
-      "read": 7,
+      "cards": 8,
+      "read": 8,
       "ranks": {
         "LNP": 1,
         "ONP": 3,
@@ -3098,8 +3086,8 @@
     {
       "area": "clarinda",
       "party": "ALP",
-      "cards": 12,
-      "read": 12,
+      "cards": 13,
+      "read": 13,
       "ranks": {
         "ALP": 1,
         "GRN": 2,
@@ -3302,8 +3290,8 @@
     {
       "area": "dandenong",
       "party": "ALP",
-      "cards": 8,
-      "read": 8,
+      "cards": 9,
+      "read": 9,
       "ranks": {
         "ALP": 1,
         "GRN": 2,
@@ -3506,8 +3494,8 @@
     {
       "area": "essendon",
       "party": "ALP",
-      "cards": 8,
-      "read": 8,
+      "cards": 10,
+      "read": 10,
       "differ": true,
       "flags_some": [
         {
@@ -4168,8 +4156,8 @@
     {
       "area": "greenvale",
       "party": "ALP",
-      "cards": 13,
-      "read": 13,
+      "cards": 16,
+      "read": 16,
       "ranks": {
         "ALP": 1,
         "GRN": 3,
@@ -4568,8 +4556,8 @@
     {
       "area": "kororoit",
       "party": "ALP",
-      "cards": 8,
-      "read": 8,
+      "cards": 9,
+      "read": 9,
       "ranks": {
         "ALP": 1,
         "GRN": 3,
@@ -5180,8 +5168,8 @@
     {
       "area": "mill-park",
       "party": "ALP",
-      "cards": 8,
-      "read": 8,
+      "cards": 9,
+      "read": 9,
       "ranks": {
         "ALP": 1,
         "GRN": 3,
@@ -5316,8 +5304,8 @@
     {
       "area": "mordialloc",
       "party": "ALP",
-      "cards": 8,
-      "read": 8,
+      "cards": 9,
+      "read": 9,
       "ranks": {
         "ALP": 1,
         "GRN": 3,
@@ -5515,8 +5503,8 @@
     {
       "area": "mulgrave",
       "party": "ALP",
-      "cards": 6,
-      "read": 6,
+      "cards": 7,
+      "read": 7,
       "ranks": {
         "ALP": 1,
         "GRN": 2,
@@ -5719,8 +5707,8 @@
     {
       "area": "narre-warren-north",
       "party": "ALP",
-      "cards": 9,
-      "read": 9,
+      "cards": 10,
+      "read": 10,
       "ranks": {
         "ALP": 1,
         "GRN": 3,
@@ -5957,8 +5945,8 @@
     {
       "area": "niddrie",
       "party": "LIB",
-      "cards": 8,
-      "read": 8,
+      "cards": 9,
+      "read": 9,
       "ranks": {
         "LNP": 1,
         "ONP": 5,
@@ -5991,8 +5979,8 @@
     {
       "area": "northcote",
       "party": "ALP",
-      "cards": 6,
-      "read": 6,
+      "cards": 7,
+      "read": 7,
       "ranks": {
         "ALP": 1,
         "GRN": 2,
@@ -6195,7 +6183,7 @@
     {
       "area": "pakenham",
       "party": "ALP",
-      "cards": 4,
+      "cards": 5,
       "read": 4,
       "ranks": {
         "ALP": 1,
@@ -6258,8 +6246,8 @@
     {
       "area": "pascoe-vale",
       "party": "ALP",
-      "cards": 7,
-      "read": 7,
+      "cards": 8,
+      "read": 8,
       "ranks": {
         "ALP": 1,
         "GRN": 2,
@@ -6326,19 +6314,20 @@
     {
       "area": "point-cook",
       "party": "ALP",
-      "cards": 9,
-      "read": 9,
-      "ranks": {
-        "ALP": 1,
-        "GRN": 3,
-        "LNP": 8,
-        "ONP": 9
-      },
-      "flags": [
+      "cards": 10,
+      "read": 10,
+      "differ": true,
+      "flags_some": [
         {
           "ahead": "GRN",
+          "ahead_n": 1,
           "of": "LNP",
+          "of_n": 8
+        },
+        {
+          "ahead": "GRN",
           "ahead_n": 3,
+          "of": "LNP",
           "of_n": 8
         }
       ],
@@ -6355,8 +6344,8 @@
     {
       "area": "point-cook",
       "party": "LIB",
-      "cards": 10,
-      "read": 10,
+      "cards": 11,
+      "read": 11,
       "ranks": {
         "LNP": 1,
         "ONP": 5,
@@ -6514,8 +6503,8 @@
     {
       "area": "preston",
       "party": "ALP",
-      "cards": 6,
-      "read": 6,
+      "cards": 9,
+      "read": 9,
       "ranks": {
         "ALP": 1,
         "GRN": 2,
@@ -7003,19 +6992,20 @@
     {
       "area": "south-barwon",
       "party": "ALP",
-      "cards": 6,
-      "read": 6,
-      "ranks": {
-        "ALP": 1,
-        "GRN": 2,
-        "LNP": 6,
-        "ONP": 8
-      },
-      "flags": [
+      "cards": 7,
+      "read": 7,
+      "differ": true,
+      "flags_some": [
         {
           "ahead": "GRN",
+          "ahead_n": 1,
           "of": "LNP",
+          "of_n": 6
+        },
+        {
+          "ahead": "GRN",
           "ahead_n": 2,
+          "of": "LNP",
           "of_n": 6
         }
       ],
@@ -7275,8 +7265,8 @@
     {
       "area": "sydenham",
       "party": "ALP",
-      "cards": 10,
-      "read": 10,
+      "cards": 12,
+      "read": 12,
       "ranks": {
         "ALP": 1,
         "GRN": 2,
@@ -7309,8 +7299,8 @@
     {
       "area": "sydenham",
       "party": "LIB",
-      "cards": 8,
-      "read": 8,
+      "cards": 9,
+      "read": 9,
       "ranks": {
         "LNP": 1,
         "ONP": 6,
@@ -7343,19 +7333,20 @@
     {
       "area": "tarneit",
       "party": "ALP",
-      "cards": 6,
-      "read": 5,
-      "ranks": {
-        "ALP": 1,
-        "GRN": 4,
-        "LNP": 10,
-        "ONP": 12
-      },
-      "flags": [
+      "cards": 7,
+      "read": 6,
+      "differ": true,
+      "flags_some": [
         {
           "ahead": "GRN",
+          "ahead_n": 1,
           "of": "LNP",
+          "of_n": 10
+        },
+        {
+          "ahead": "GRN",
           "ahead_n": 4,
+          "of": "LNP",
           "of_n": 10
         }
       ],
@@ -7401,8 +7392,8 @@
     {
       "area": "thomastown",
       "party": "ALP",
-      "cards": 9,
-      "read": 8,
+      "cards": 10,
+      "read": 9,
       "ranks": {
         "ALP": 1,
         "GRN": 2,
@@ -7605,19 +7596,20 @@
     {
       "area": "werribee",
       "party": "ALP",
-      "cards": 8,
-      "read": 7,
-      "ranks": {
-        "ALP": 1,
-        "GRN": 2,
-        "LNP": 8,
-        "ONP": 10
-      },
-      "flags": [
+      "cards": 9,
+      "read": 8,
+      "differ": true,
+      "flags_some": [
         {
           "ahead": "GRN",
+          "ahead_n": 1,
           "of": "LNP",
+          "of_n": 8
+        },
+        {
+          "ahead": "GRN",
           "ahead_n": 2,
+          "of": "LNP",
           "of_n": 8
         }
       ],
@@ -7716,74 +7708,6 @@
         "LNP": 3,
         "ALP": 6,
         "GRN": 8
-      },
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "area": "yan-yean",
-      "party": "ALP",
-      "cards": 8,
-      "read": 8,
-      "ranks": {
-        "ALP": 1,
-        "GRN": 3,
-        "LNP": 6,
-        "ONP": 8
-      },
-      "flags": [
-        {
-          "ahead": "GRN",
-          "of": "LNP",
-          "ahead_n": 3,
-          "of_n": 6
-        }
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7ae889cb-c5d8-44f3-adfa-5e36a4f659b8%2Falp_combined_nv%20yan%20yean_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "area": "yan-yean",
-      "party": "GRN",
-      "cards": 11,
-      "read": 11,
-      "ranks": {
-        "GRN": 1,
-        "ALP": 4,
-        "LNP": 5,
-        "ONP": 8
-      },
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3ecb378c-7017-42ed-aaf1-4d9b4dfed9db%2Fthe%20greens%20combined%20north-east%20metro%20eltham%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "area": "yan-yean",
-      "party": "LIB",
-      "cards": 10,
-      "read": 10,
-      "ranks": {
-        "LNP": 1,
-        "ONP": 4,
-        "ALP": 6,
-        "GRN": 7
-      },
-      "flags": [
-        {
-          "ahead": "ONP",
-          "of": "ALP",
-          "ahead_n": 4,
-          "of_n": 6
-        }
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=50121465-80ca-4252-9967-0b45133f4ec9%2Fliberal_combined_nvr%20yan%20yean_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "area": "yan-yean",
-      "party": "ONP",
-      "cards": 2,
-      "read": 1,
-      "ranks": {
-        "ONP": 1,
-        "LNP": 4,
-        "ALP": 5,
-        "GRN": 6
       },
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
     }
