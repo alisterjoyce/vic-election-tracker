@@ -2408,7 +2408,6 @@ def refresh_vec_nominations(data_dir: Path, meta: dict, force: bool = False) -> 
 # (rapidocr-onnxruntime, not installed on the runner: such cards stay "unreadable, see card").
 
 HTV_MAX_NEW = 40   # a few seconds each (download and read); the rest wait for the next run
-HTV_PDF_DIR = Path(__file__).resolve().parent.parent / "website samples and summary (complete set)" / "htv-2026"
 
 
 def refresh_htv(data_dir: Path, meta: dict) -> bool:
@@ -2418,8 +2417,9 @@ def refresh_htv(data_dir: Path, meta: dict) -> bool:
     path = data_dir / "htv.json"
     before = {k: v for k, v in (read_json(path, {}) or {}).items() if k not in ("last_checked",)}
     today = datetime.now(MELBOURNE).date().isoformat()
-    # PDFs are kept in the git-ignored samples folder when it exists (a local run), so they're read only once.
-    pdf_dir = HTV_PDF_DIR if HTV_PDF_DIR.parent.exists() and not os.environ.get("GITHUB_ACTIONS") else None
+    # On this machine PDFs are kept in vh.PDF_CACHE (C:\vec-cache\htv-2026, outside OneDrive) and read only once;
+    # the Actions runner keeps none (each card is read once anyway: its order is stored in htv.json).
+    pdf_dir = vh.PDF_CACHE if not os.environ.get("GITHUB_ACTIONS") and vh.PDF_CACHE.parent.exists() else None
     try:
         doc, changes = vh.run(data_dir, pdf_dir, write_json, today, now_iso(), max_new=HTV_MAX_NEW)
     except Exception as exc:  # noqa: BLE001 - keep the existing files

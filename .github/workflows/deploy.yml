@@ -19,10 +19,10 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20   # up to 3 deploy attempts, 60 s apart
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment2.outputs.page_url || steps.deployment3.outputs.page_url }}
     steps:
       - uses: actions/checkout@v5
 
@@ -32,5 +32,30 @@ jobs:
         with:
           path: site
 
+      # deploy-pages sometimes can't see the artifact uploaded a moment before ("No artifacts named github-pages",
+      # 20 Nov 2026; GitHub reported no incident). Try up to 3 times, 60 s apart, in this job (a re-run of the job
+      # uploads a second artifact and fails on "Multiple artifacts"); the last try fails the run if it fails too.
       - id: deployment
         uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+      - name: Wait 60 s before deploy attempt 2
+        if: steps.deployment.outcome == 'failure'
+        run: echo "::warning::Pages deploy attempt 1 failed; trying again in 60 s" && sleep 60
+
+      - id: deployment2
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+      - name: Wait 60 s before deploy attempt 3
+        if: steps.deployment.outcome == 'failure' && steps.deployment2.outcome == 'failure'
+        run: echo "::warning::Pages deploy attempt 2 failed; trying once more in 60 s" && sleep 60
+
+      - id: deployment3
+        if: steps.deployment.outcome == 'failure' && steps.deployment2.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+
+      - name: Report a failed deploy
+        if: failure()
+        run: echo "::error title=Pages deploy::The site was not deployed after 3 attempts; run deploy.yml by hand (workflow_dispatch)."

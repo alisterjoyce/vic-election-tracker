@@ -91,7 +91,7 @@
         const n = list.filter((p) => profiles.has(p.id)).length;
         return `<tr><td>${label}</td><td class="num">${n.toLocaleString("en-AU")}</td><td class="num">${list.length.toLocaleString("en-AU")}</td><td class="num">${list.length ? Math.round((100 * n) / list.length) : 0}%</td></tr>`;
       };
-      el.innerHTML = `<div class="table-scroll"><table data-no-csv>
+      el.innerHTML = `<div class="table-scroll" tabindex="0" role="region" aria-label="Candidate profiles by house (scrolls sideways)"><table data-no-csv>
           <thead><tr><th>Candidates</th><th class="num">Profiled</th><th class="num">Active</th><th class="num">Complete</th></tr></thead>
           <tbody>${row("Legislative Assembly", active.filter((p) => p.house === "lower"))}${row("Legislative Council", active.filter((p) => p.house === "upper"))}${row("Both houses", active)}</tbody>
         </table></div>`;

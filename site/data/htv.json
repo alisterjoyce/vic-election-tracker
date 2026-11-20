@@ -8,8 +8,8 @@
       "source_url": "The VEC's register of registered how-to-vote cards",
       "last_checked": "ISO UTC time the register was last read successfully",
       "pending": "Orders not read yet (cards whose PDF is still to be read, at most a set number per refresh)",
-      "coverage": "{cards (registrations), listings (card x district or region), orders_read, orders_unreadable, districts_with_cards, regions_with_cards, by_party: {code | IND (independent candidates) | NONCAND (registered by someone not standing): {cards, districts, regions}}, no_card: {lower, upper (candidates with no card from their party or themselves), candidates_lower, candidates_upper}}",
-      "cards": "[{registration (VEC number), registered_by (as the VEC lists it), kind (party | independent | non_candidate), party (code; IND for an independent candidate; null for others), candidate (tracker id of the independent it is for), type (Single | Combined | MEHTVC, as listed), registered_on (YYYY-MM-DD), card_url (the VEC's link to the card PDF), file (its file name), areas (district and region ids it is listed under), read_on, orders: {area id: {status (read | partial: numbers only some boxes | unreadable | pending), order (Assembly: ballot names, 'SURNAME, Given', first preference first), atl (Council: group letters numbered above the line, first first), btl (Council: ballot names numbered below the line, when the card numbers at least 5), via (text | ocr | hand), note ('unreadable, see card'), ranks ({ALP | LNP | GRN | ONP: preference given to that party's best-placed candidate or group}), flags ([{ahead, of, ahead_n, of_n}]: a Labor, Liberal or Nationals card numbering One Nation or the Greens ahead of the other side of government)}}, notes}]",
+      "coverage": "{cards (registrations), listings (card x district or region), orders_read, orders_same_as, orders_unreadable, districts_with_cards, regions_with_cards, by_party: {code | IND (independent candidates) | NONCAND (registered by someone not standing): {cards, districts, regions}}, no_card: {lower, upper (candidates with no card from their party or themselves), candidates_lower, candidates_upper}}",
+      "cards": "[{registration (VEC number), registered_by (as the VEC lists it), kind (party | independent | non_candidate), party (code; IND for an independent candidate; null for others), candidate (tracker id of the independent it is for), type (Single | Combined | MEHTVC, as listed), registered_on (YYYY-MM-DD), card_url (the VEC's link to the card PDF), file (its file name), areas (district and region ids it is listed under), read_on, orders: {area id: {status (read | partial: numbers only some boxes | same_as: a translated card that couldn't be read, given the order every readable card from the same registrant prints for that seat, with same_as = their registration numbers and note 'same order as the English card' | unreadable | pending), order (Assembly: ballot names, 'SURNAME, Given', first preference first), atl (Council: group letters numbered above the line, first first), btl (Council: ballot names numbered below the line, when the card numbers at least 5), via (text | ocr | hand), note ('unreadable, see card'), ranks ({ALP | LNP | GRN | ONP: preference given to that party's best-placed candidate or group}), flags ([{ahead, of, ahead_n, of_n}]: a Labor, Liberal or Nationals card numbering One Nation or the Greens ahead of the other side of government)}}, notes}]",
       "changes": "Cards added, amended (new PDF), moved between areas or removed, as found at each refresh: [{date, kind, registration, registered_by, areas, card_url, detail}], newest first, last 300"
     }
   },
@@ -23,7 +23,8 @@
     "cards": 1372,
     "listings": 4708,
     "orders_read": 3903,
-    "orders_unreadable": 802,
+    "orders_same_as": 151,
+    "orders_unreadable": 651,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -36675,12 +36676,81 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "same_as": [
+            "30",
+            "32",
+            "47",
+            "49",
+            "50",
+            "52",
+            "53",
+            "54",
+            "55",
+            "79",
+            "313",
+            "318",
+            "375",
+            "380",
+            "397",
+            "401",
+            "405",
+            "410",
+            "414",
+            "419",
+            "428",
+            "1634"
+          ],
+          "note": "same order as the English card"
         },
         "southern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "atl": [
+            "A",
+            "C",
+            "K",
+            "B",
+            "G",
+            "F"
+          ],
+          "same_as": [
+            "71",
+            "74",
+            "77",
+            "78",
+            "81",
+            "83",
+            "87",
+            "88",
+            "90",
+            "94",
+            "242",
+            "243",
+            "252",
+            "256",
+            "268",
+            "275",
+            "292",
+            "295",
+            "305",
+            "330",
+            "334",
+            "373",
+            "399",
+            "408",
+            "794",
+            "799",
+            "803"
+          ],
+          "note": "same order as the English card"
         }
       }
     },
@@ -36882,12 +36952,81 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "same_as": [
+            "30",
+            "32",
+            "47",
+            "49",
+            "50",
+            "52",
+            "53",
+            "54",
+            "55",
+            "79",
+            "313",
+            "318",
+            "375",
+            "380",
+            "397",
+            "401",
+            "405",
+            "410",
+            "414",
+            "419",
+            "428",
+            "1634"
+          ],
+          "note": "same order as the English card"
         },
         "southern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "atl": [
+            "A",
+            "C",
+            "K",
+            "B",
+            "G",
+            "F"
+          ],
+          "same_as": [
+            "71",
+            "74",
+            "77",
+            "78",
+            "81",
+            "83",
+            "87",
+            "88",
+            "90",
+            "94",
+            "242",
+            "243",
+            "252",
+            "256",
+            "268",
+            "275",
+            "292",
+            "295",
+            "305",
+            "330",
+            "334",
+            "373",
+            "399",
+            "408",
+            "794",
+            "799",
+            "803"
+          ],
+          "note": "same order as the English card"
         }
       }
     },
@@ -37069,12 +37208,81 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "same_as": [
+            "30",
+            "32",
+            "47",
+            "49",
+            "50",
+            "52",
+            "53",
+            "54",
+            "55",
+            "79",
+            "313",
+            "318",
+            "375",
+            "380",
+            "397",
+            "401",
+            "405",
+            "410",
+            "414",
+            "419",
+            "428",
+            "1634"
+          ],
+          "note": "same order as the English card"
         },
         "southern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "atl": [
+            "A",
+            "C",
+            "K",
+            "B",
+            "G",
+            "F"
+          ],
+          "same_as": [
+            "71",
+            "74",
+            "77",
+            "78",
+            "81",
+            "83",
+            "87",
+            "88",
+            "90",
+            "94",
+            "242",
+            "243",
+            "252",
+            "256",
+            "268",
+            "275",
+            "292",
+            "295",
+            "305",
+            "330",
+            "334",
+            "373",
+            "399",
+            "408",
+            "794",
+            "799",
+            "803"
+          ],
+          "note": "same order as the English card"
         }
       }
     },
@@ -37156,8 +37364,43 @@
           ]
         },
         "northern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "atl": [
+            "K",
+            "L",
+            "A",
+            "D",
+            "I",
+            "C"
+          ],
+          "same_as": [
+            "48",
+            "51",
+            "63",
+            "68",
+            "72",
+            "75",
+            "80",
+            "121",
+            "125",
+            "128",
+            "224",
+            "245",
+            "258",
+            "277",
+            "297",
+            "340",
+            "382",
+            "387",
+            "390",
+            "403",
+            "773",
+            "800",
+            "808",
+            "819",
+            "1639"
+          ],
+          "note": "same order as the English card"
         }
       }
     },
@@ -37873,12 +38116,77 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "same_as": [
+            "30",
+            "32",
+            "47",
+            "49",
+            "50",
+            "52",
+            "53",
+            "54",
+            "55",
+            "79",
+            "313",
+            "318",
+            "375",
+            "380",
+            "397",
+            "401",
+            "405",
+            "410",
+            "414",
+            "419",
+            "428",
+            "1634"
+          ],
+          "note": "same order as the English card"
         },
         "south-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "atl": [
+            "D",
+            "F",
+            "H",
+            "E",
+            "I",
+            "K"
+          ],
+          "same_as": [
+            "62",
+            "64",
+            "66",
+            "67",
+            "70",
+            "82",
+            "85",
+            "86",
+            "91",
+            "93",
+            "132",
+            "253",
+            "309",
+            "310",
+            "316",
+            "324",
+            "326",
+            "356",
+            "368",
+            "385",
+            "430",
+            "432",
+            "1637"
+          ],
+          "note": "same order as the English card"
         }
       }
     },
@@ -38048,12 +38356,82 @@
           ]
         },
         "south-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "atl": [
+            "D",
+            "F",
+            "H",
+            "E",
+            "I",
+            "K"
+          ],
+          "same_as": [
+            "62",
+            "64",
+            "66",
+            "67",
+            "70",
+            "82",
+            "85",
+            "86",
+            "91",
+            "93",
+            "132",
+            "253",
+            "309",
+            "310",
+            "316",
+            "324",
+            "326",
+            "356",
+            "368",
+            "385",
+            "430",
+            "432",
+            "1637"
+          ],
+          "note": "same order as the English card"
         },
         "southern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "atl": [
+            "A",
+            "C",
+            "K",
+            "B",
+            "G",
+            "F"
+          ],
+          "same_as": [
+            "71",
+            "74",
+            "77",
+            "78",
+            "81",
+            "83",
+            "87",
+            "88",
+            "90",
+            "94",
+            "242",
+            "243",
+            "252",
+            "256",
+            "268",
+            "275",
+            "292",
+            "295",
+            "305",
+            "330",
+            "334",
+            "373",
+            "399",
+            "408",
+            "794",
+            "799",
+            "803"
+          ],
+          "note": "same order as the English card"
         }
       }
     },
@@ -39078,8 +39456,45 @@
           ]
         },
         "southern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "atl": [
+            "A",
+            "C",
+            "K",
+            "B",
+            "G",
+            "F"
+          ],
+          "same_as": [
+            "71",
+            "74",
+            "77",
+            "78",
+            "81",
+            "83",
+            "87",
+            "88",
+            "90",
+            "94",
+            "242",
+            "243",
+            "252",
+            "256",
+            "268",
+            "275",
+            "292",
+            "295",
+            "305",
+            "330",
+            "334",
+            "373",
+            "399",
+            "408",
+            "794",
+            "799",
+            "803"
+          ],
+          "note": "same order as the English card"
         }
       }
     },
@@ -40021,16 +40436,106 @@
           ]
         },
         "sunbury": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "BULL, Josh",
+            "MOHR, Rohanna",
+            "BETHI, Bhasker Reddy",
+            "BREMNER, Adam",
+            "VINE, Geoff",
+            "GRANGER-BROWN, Lauren",
+            "BATRES, Elmer",
+            "MEDCRAFT, Steve Jack",
+            "STAFFORD, John",
+            "COTTOM, Simmone",
+            "DABROWSKI, Elita"
+          ],
+          "same_as": [
+            "105",
+            "321",
+            "893"
+          ],
+          "note": "same order as the English card"
         },
         "northern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "atl": [
+            "K",
+            "L",
+            "A",
+            "D",
+            "I",
+            "C"
+          ],
+          "same_as": [
+            "48",
+            "51",
+            "63",
+            "68",
+            "72",
+            "75",
+            "80",
+            "121",
+            "125",
+            "128",
+            "224",
+            "245",
+            "258",
+            "277",
+            "297",
+            "340",
+            "382",
+            "387",
+            "390",
+            "403",
+            "773",
+            "800",
+            "808",
+            "819",
+            "1639"
+          ],
+          "note": "same order as the English card"
         },
         "western-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "atl": [
+            "E",
+            "D",
+            "B",
+            "I",
+            "H",
+            "C"
+          ],
+          "same_as": [
+            "84",
+            "96",
+            "97",
+            "98",
+            "101",
+            "102",
+            "103",
+            "105",
+            "108",
+            "130",
+            "244",
+            "270",
+            "271",
+            "274",
+            "283",
+            "284",
+            "288",
+            "298",
+            "301",
+            "304",
+            "331",
+            "347",
+            "352",
+            "354",
+            "357",
+            "358",
+            "427"
+          ],
+          "note": "same order as the English card"
         }
       }
     },
@@ -41038,8 +41543,45 @@
           ]
         },
         "western-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "atl": [
+            "E",
+            "D",
+            "B",
+            "I",
+            "H",
+            "C"
+          ],
+          "same_as": [
+            "84",
+            "96",
+            "97",
+            "98",
+            "101",
+            "102",
+            "103",
+            "105",
+            "108",
+            "130",
+            "244",
+            "270",
+            "271",
+            "274",
+            "283",
+            "284",
+            "288",
+            "298",
+            "301",
+            "304",
+            "331",
+            "347",
+            "352",
+            "354",
+            "357",
+            "358",
+            "427"
+          ],
+          "note": "same order as the English card"
         }
       }
     },
@@ -96454,8 +96996,30 @@
           }
         },
         "greenvale": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "MCGINNESS, Declan",
+            "SMELOV, Kirill",
+            "FURINA, Rosanna",
+            "SAID, Hassan",
+            "WALTERS, Iwan",
+            "ZOUGHAIB, Yehya",
+            "OVEREND, Jim",
+            "YOHANNA, Mazen",
+            "TITHERIDGE, Michael",
+            "MOORE, Chris"
+          ],
+          "same_as": [
+            "963",
+            "971",
+            "974",
+            "988",
+            "1132",
+            "1159",
+            "1168",
+            "1190"
+          ],
+          "note": "same order as the English card"
         },
         "kalkallo": {
           "status": "read",
@@ -98273,8 +98837,30 @@
           }
         },
         "lara": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "SLATER, Theresa",
+            "HATHWAY, Sarah",
+            "RANDALL, Oliver",
+            "LONG, Samantha",
+            "GEORGE, Ella",
+            "BEDDOE, Tim",
+            "UWIZEYIMANA, Tina",
+            "SPYROS, Steven"
+          ],
+          "same_as": [
+            "1106",
+            "1128",
+            "1145",
+            "1165",
+            "1172",
+            "1181",
+            "1182",
+            "1190",
+            "1198",
+            "1412"
+          ],
+          "note": "same order as the English card"
         },
         "lowan": {
           "status": "read",
@@ -98584,8 +99170,40 @@
           }
         },
         "niddrie": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "NGUYEN, Lana",
+            "LAWS, Brendan",
+            "HASELGROVE, Salomae",
+            "PATRIKEOS, Brett",
+            "CARROLL, Ben",
+            "SFAMENI, Sam",
+            "BYRNE, Samantha",
+            "CHITTEDI, Karthik Reddy",
+            "METE, Domenic",
+            "THEODOROU, George",
+            "TAVERNA, Jason"
+          ],
+          "same_as": [
+            "971",
+            "986",
+            "1105",
+            "1116",
+            "1122",
+            "1137",
+            "1143",
+            "1150",
+            "1159",
+            "1162",
+            "1168",
+            "1190",
+            "1199",
+            "1201",
+            "1209",
+            "1368",
+            "1369"
+          ],
+          "note": "same order as the English card"
         },
         "point-cook": {
           "status": "read",
@@ -110304,48 +110922,383 @@
       "read_on": "2026-11-20",
       "orders": {
         "broadmeadows": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "NASIM, Maryam",
+            "BOLTON, Sue",
+            "YOLBULAN, Mutullah Can",
+            "UNICOMB, Rachel",
+            "ELMUSTAPHA, Mohamad",
+            "MATTHEWS-WARD, Kathleen",
+            "EL YOUSSEF, Mohamad",
+            "DUZOVA, Baris",
+            "WILSON, Russell",
+            "KEIRS, Ethan"
+          ],
+          "same_as": [
+            "971",
+            "974",
+            "977",
+            "987",
+            "988",
+            "1130",
+            "1137",
+            "1150",
+            "1154",
+            "1159",
+            "1168",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1367",
+            "1368",
+            "1369"
+          ],
+          "note": "same order as the English card"
         },
         "brunswick": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "PULFORD, Adam",
+            "FARMER, Naomi",
+            "YUAN, Melissa",
+            "ROSE, India",
+            "STEGER, Gabe",
+            "AMANATIDIS, Jack",
+            "MARGELIS, John",
+            "HELMAN, Adam"
+          ],
+          "same_as": [
+            "956",
+            "959",
+            "965",
+            "976",
+            "977",
+            "1126",
+            "1133",
+            "1134",
+            "1137",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1366",
+            "1367",
+            "1368",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "essendon": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "WILLIAMS, James",
+            "KEDEM, Michal",
+            "MOHAMUD, Anab",
+            "ADAMS, Ava",
+            "THEODOSIS, Kat",
+            "YILDIZ, Oscar",
+            "LE DEUX, Tommy",
+            "BARNES, John"
+          ],
+          "same_as": [
+            "959",
+            "965",
+            "971",
+            "977",
+            "986",
+            "1122",
+            "1130",
+            "1134",
+            "1137",
+            "1150",
+            "1154",
+            "1159",
+            "1162",
+            "1190",
+            "1191",
+            "1209",
+            "1365",
+            "1366",
+            "1367",
+            "1368"
+          ],
+          "note": "same order as the English card"
         },
         "greenvale": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "MCGINNESS, Declan",
+            "SMELOV, Kirill",
+            "FURINA, Rosanna",
+            "SAID, Hassan",
+            "WALTERS, Iwan",
+            "ZOUGHAIB, Yehya",
+            "OVEREND, Jim",
+            "YOHANNA, Mazen",
+            "TITHERIDGE, Michael",
+            "MOORE, Chris"
+          ],
+          "same_as": [
+            "963",
+            "971",
+            "974",
+            "988",
+            "1132",
+            "1159",
+            "1168",
+            "1190"
+          ],
+          "note": "same order as the English card"
         },
         "kalkallo": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "TIWARI, Payal",
+            "MILLETT, Courtney",
+            "LYNCH, Matthew",
+            "ISLAM, Rebeca",
+            "SPENCE, Ros",
+            "DADISHO, Eddie",
+            "DOBSON, Jeanette",
+            "STEANS, Troy"
+          ],
+          "same_as": [
+            "963",
+            "974",
+            "988",
+            "1132",
+            "1148",
+            "1168",
+            "1175",
+            "1190",
+            "1203"
+          ],
+          "note": "same order as the English card"
         },
         "melbourne": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "SANDELL, Ellen",
+            "VAN DEN LAMB, Jordan",
+            "YUSUF, Mohamed",
+            "JONES, Naomi",
+            "GRIFFITHS, Davydd",
+            "TUCKFIELD, Rowan",
+            "CAMILLO, Rafael",
+            "MCCATHIE, Rob",
+            "COURTIS, Phillip"
+          ],
+          "same_as": [
+            "952",
+            "956",
+            "959",
+            "965",
+            "986",
+            "1108",
+            "1122",
+            "1127",
+            "1133",
+            "1134",
+            "1137",
+            "1150",
+            "1154",
+            "1162",
+            "1163",
+            "1186",
+            "1187",
+            "1188",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1366",
+            "1368",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "northcote": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "GOME, Campbell",
+            "LARKIN, Kath",
+            "THEOPHANOUS, Kat",
+            "HILLMAN, Ian",
+            "AWAD, Lynda",
+            "CIMBARO, Richard",
+            "PENMAN, Jim",
+            "PILLEY, Clive",
+            "KAFEL, Hannah",
+            "BRADBURY, Christopher"
+          ],
+          "same_as": [
+            "956",
+            "965",
+            "976",
+            "977",
+            "980",
+            "987",
+            "1126",
+            "1133",
+            "1138",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1199",
+            "1365",
+            "1366",
+            "1367",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "pascoe-vale": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "PANOPOULOS, Angelica",
+            "ANDREWARTHA, Jacob",
+            "SHAMSILI, Yasemin",
+            "CIANFLONE, Anthony",
+            "TAGGAR, Rohit",
+            "ASHTON, Kathrine",
+            "HAUPT, Kerry",
+            "LAWRENCE, Stuart",
+            "HICKEY, Amanda",
+            "GANCI, Rosemarie Pauline"
+          ],
+          "same_as": [
+            "965",
+            "971",
+            "976",
+            "977",
+            "987",
+            "1126",
+            "1137",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1366",
+            "1367",
+            "1368",
+            "1369"
+          ],
+          "note": "same order as the English card"
         },
         "preston": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "SANGARYA, Loki",
+            "CHIN, Zheng",
+            "ASHMORE, Serena",
+            "LAMBERT, Nathan",
+            "AL KATRANJI, Hamza",
+            "DOWER, Simon",
+            "BRYANT, Mark",
+            "DATE, Tim",
+            "FOWLES, William",
+            "VALENCIA, Julio",
+            "GUARDIANI, Franco"
+          ],
+          "same_as": [
+            "971",
+            "974",
+            "976",
+            "977",
+            "980",
+            "981",
+            "987",
+            "1126",
+            "1129",
+            "1148",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1365",
+            "1367"
+          ],
+          "note": "same order as the English card"
         },
         "richmond": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "de VIETRI, Gabrielle",
+            "DITE, Chris",
+            "MCKENZIE, Sarah",
+            "PEAD-PHILIPSON, Jack",
+            "MEYER, David",
+            "APONSO, Charles",
+            "GRAY, Bernadette",
+            "MAYNARD, Christine",
+            "RINDFLEISH, Harrison"
+          ],
+          "same_as": [
+            "952",
+            "956",
+            "959",
+            "965",
+            "976",
+            "1108",
+            "1126",
+            "1131",
+            "1133",
+            "1134",
+            "1138",
+            "1142",
+            "1154",
+            "1191",
+            "1199",
+            "1202",
+            "1207",
+            "1365",
+            "1366",
+            "1367",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "thomastown": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "TREWELLA, Gavin",
+            "REDDY, Priya",
+            "HALFPENNY, Bronwyn",
+            "STOJCEVSKI, Belinda",
+            "RANCIE, Rob",
+            "ANTHONY, Nadia"
+          ],
+          "same_as": [
+            "957",
+            "963",
+            "971",
+            "974",
+            "981",
+            "987",
+            "988",
+            "1132",
+            "1148",
+            "1154",
+            "1190",
+            "1203",
+            "1365"
+          ],
+          "note": "same order as the English card"
         },
         "northern-metropolitan": {
           "atl": [
@@ -110391,48 +111344,383 @@
       "read_on": "2026-11-20",
       "orders": {
         "broadmeadows": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "NASIM, Maryam",
+            "BOLTON, Sue",
+            "YOLBULAN, Mutullah Can",
+            "UNICOMB, Rachel",
+            "ELMUSTAPHA, Mohamad",
+            "MATTHEWS-WARD, Kathleen",
+            "EL YOUSSEF, Mohamad",
+            "DUZOVA, Baris",
+            "WILSON, Russell",
+            "KEIRS, Ethan"
+          ],
+          "same_as": [
+            "971",
+            "974",
+            "977",
+            "987",
+            "988",
+            "1130",
+            "1137",
+            "1150",
+            "1154",
+            "1159",
+            "1168",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1367",
+            "1368",
+            "1369"
+          ],
+          "note": "same order as the English card"
         },
         "brunswick": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "PULFORD, Adam",
+            "FARMER, Naomi",
+            "YUAN, Melissa",
+            "ROSE, India",
+            "STEGER, Gabe",
+            "AMANATIDIS, Jack",
+            "MARGELIS, John",
+            "HELMAN, Adam"
+          ],
+          "same_as": [
+            "956",
+            "959",
+            "965",
+            "976",
+            "977",
+            "1126",
+            "1133",
+            "1134",
+            "1137",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1366",
+            "1367",
+            "1368",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "essendon": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "WILLIAMS, James",
+            "KEDEM, Michal",
+            "MOHAMUD, Anab",
+            "ADAMS, Ava",
+            "THEODOSIS, Kat",
+            "YILDIZ, Oscar",
+            "LE DEUX, Tommy",
+            "BARNES, John"
+          ],
+          "same_as": [
+            "959",
+            "965",
+            "971",
+            "977",
+            "986",
+            "1122",
+            "1130",
+            "1134",
+            "1137",
+            "1150",
+            "1154",
+            "1159",
+            "1162",
+            "1190",
+            "1191",
+            "1209",
+            "1365",
+            "1366",
+            "1367",
+            "1368"
+          ],
+          "note": "same order as the English card"
         },
         "greenvale": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "MCGINNESS, Declan",
+            "SMELOV, Kirill",
+            "FURINA, Rosanna",
+            "SAID, Hassan",
+            "WALTERS, Iwan",
+            "ZOUGHAIB, Yehya",
+            "OVEREND, Jim",
+            "YOHANNA, Mazen",
+            "TITHERIDGE, Michael",
+            "MOORE, Chris"
+          ],
+          "same_as": [
+            "963",
+            "971",
+            "974",
+            "988",
+            "1132",
+            "1159",
+            "1168",
+            "1190"
+          ],
+          "note": "same order as the English card"
         },
         "kalkallo": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "TIWARI, Payal",
+            "MILLETT, Courtney",
+            "LYNCH, Matthew",
+            "ISLAM, Rebeca",
+            "SPENCE, Ros",
+            "DADISHO, Eddie",
+            "DOBSON, Jeanette",
+            "STEANS, Troy"
+          ],
+          "same_as": [
+            "963",
+            "974",
+            "988",
+            "1132",
+            "1148",
+            "1168",
+            "1175",
+            "1190",
+            "1203"
+          ],
+          "note": "same order as the English card"
         },
         "melbourne": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "SANDELL, Ellen",
+            "VAN DEN LAMB, Jordan",
+            "YUSUF, Mohamed",
+            "JONES, Naomi",
+            "GRIFFITHS, Davydd",
+            "TUCKFIELD, Rowan",
+            "CAMILLO, Rafael",
+            "MCCATHIE, Rob",
+            "COURTIS, Phillip"
+          ],
+          "same_as": [
+            "952",
+            "956",
+            "959",
+            "965",
+            "986",
+            "1108",
+            "1122",
+            "1127",
+            "1133",
+            "1134",
+            "1137",
+            "1150",
+            "1154",
+            "1162",
+            "1163",
+            "1186",
+            "1187",
+            "1188",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1366",
+            "1368",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "northcote": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "GOME, Campbell",
+            "LARKIN, Kath",
+            "THEOPHANOUS, Kat",
+            "HILLMAN, Ian",
+            "AWAD, Lynda",
+            "CIMBARO, Richard",
+            "PENMAN, Jim",
+            "PILLEY, Clive",
+            "KAFEL, Hannah",
+            "BRADBURY, Christopher"
+          ],
+          "same_as": [
+            "956",
+            "965",
+            "976",
+            "977",
+            "980",
+            "987",
+            "1126",
+            "1133",
+            "1138",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1199",
+            "1365",
+            "1366",
+            "1367",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "pascoe-vale": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "PANOPOULOS, Angelica",
+            "ANDREWARTHA, Jacob",
+            "SHAMSILI, Yasemin",
+            "CIANFLONE, Anthony",
+            "TAGGAR, Rohit",
+            "ASHTON, Kathrine",
+            "HAUPT, Kerry",
+            "LAWRENCE, Stuart",
+            "HICKEY, Amanda",
+            "GANCI, Rosemarie Pauline"
+          ],
+          "same_as": [
+            "965",
+            "971",
+            "976",
+            "977",
+            "987",
+            "1126",
+            "1137",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1366",
+            "1367",
+            "1368",
+            "1369"
+          ],
+          "note": "same order as the English card"
         },
         "preston": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "SANGARYA, Loki",
+            "CHIN, Zheng",
+            "ASHMORE, Serena",
+            "LAMBERT, Nathan",
+            "AL KATRANJI, Hamza",
+            "DOWER, Simon",
+            "BRYANT, Mark",
+            "DATE, Tim",
+            "FOWLES, William",
+            "VALENCIA, Julio",
+            "GUARDIANI, Franco"
+          ],
+          "same_as": [
+            "971",
+            "974",
+            "976",
+            "977",
+            "980",
+            "981",
+            "987",
+            "1126",
+            "1129",
+            "1148",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1365",
+            "1367"
+          ],
+          "note": "same order as the English card"
         },
         "richmond": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "de VIETRI, Gabrielle",
+            "DITE, Chris",
+            "MCKENZIE, Sarah",
+            "PEAD-PHILIPSON, Jack",
+            "MEYER, David",
+            "APONSO, Charles",
+            "GRAY, Bernadette",
+            "MAYNARD, Christine",
+            "RINDFLEISH, Harrison"
+          ],
+          "same_as": [
+            "952",
+            "956",
+            "959",
+            "965",
+            "976",
+            "1108",
+            "1126",
+            "1131",
+            "1133",
+            "1134",
+            "1138",
+            "1142",
+            "1154",
+            "1191",
+            "1199",
+            "1202",
+            "1207",
+            "1365",
+            "1366",
+            "1367",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "thomastown": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "TREWELLA, Gavin",
+            "REDDY, Priya",
+            "HALFPENNY, Bronwyn",
+            "STOJCEVSKI, Belinda",
+            "RANCIE, Rob",
+            "ANTHONY, Nadia"
+          ],
+          "same_as": [
+            "957",
+            "963",
+            "971",
+            "974",
+            "981",
+            "987",
+            "988",
+            "1132",
+            "1148",
+            "1154",
+            "1190",
+            "1203",
+            "1365"
+          ],
+          "note": "same order as the English card"
         },
         "northern-metropolitan": {
           "atl": [
@@ -110547,8 +111835,40 @@
           }
         },
         "niddrie": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "NGUYEN, Lana",
+            "LAWS, Brendan",
+            "HASELGROVE, Salomae",
+            "PATRIKEOS, Brett",
+            "CARROLL, Ben",
+            "SFAMENI, Sam",
+            "BYRNE, Samantha",
+            "CHITTEDI, Karthik Reddy",
+            "METE, Domenic",
+            "THEODOROU, George",
+            "TAVERNA, Jason"
+          ],
+          "same_as": [
+            "971",
+            "986",
+            "1105",
+            "1116",
+            "1122",
+            "1137",
+            "1143",
+            "1150",
+            "1159",
+            "1162",
+            "1168",
+            "1190",
+            "1199",
+            "1201",
+            "1209",
+            "1368",
+            "1369"
+          ],
+          "note": "same order as the English card"
         },
         "point-cook": {
           "status": "read",
@@ -110750,48 +112070,331 @@
       "read_on": "2026-11-20",
       "orders": {
         "albert-park": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "SEMMENS, Sonya",
+            "DRAGWIDGE, Georgie",
+            "BOLGER, Colleen",
+            "TAYLOR, Nina",
+            "COOK, Andrew",
+            "KING, Adrian William",
+            "LINDRUM, Tam"
+          ],
+          "same_as": [
+            "952",
+            "959",
+            "986",
+            "1122",
+            "1127",
+            "1133",
+            "1163",
+            "1164",
+            "1178",
+            "1186",
+            "1188",
+            "1190",
+            "1192"
+          ],
+          "note": "same order as the English card"
         },
         "ashwood": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "RANDALL, Tim",
+            "JOSHI, Hitendra K.",
+            "VAN DER EYNDEN, Jacob",
+            "FREGON, Matt",
+            "ZOGRAPHOS, Theo",
+            "UWIMANA, Enid",
+            "MITCHELL, Steven"
+          ],
+          "same_as": [
+            "953",
+            "967",
+            "1001",
+            "1117",
+            "1123",
+            "1131",
+            "1136",
+            "1142",
+            "1186",
+            "1190",
+            "1202",
+            "1207",
+            "1363",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "bentleigh": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "PROCTOR, Claire",
+            "KRUGER, Liam",
+            "STAIKOS, Nick",
+            "PUTT, Tynan",
+            "VAINORAS, Tony",
+            "LONSING, Herbert"
+          ],
+          "same_as": [
+            "911",
+            "1113",
+            "1114",
+            "1115",
+            "1136",
+            "1164",
+            "1178",
+            "1187",
+            "1190",
+            "1192",
+            "1363"
+          ],
+          "note": "same order as the English card"
         },
         "brighton": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "BAIN, Ebony",
+            "SMITH, Jessica",
+            "MULLAHY, Bridget",
+            "NEWBURY, James",
+            "HAIN, Anthony",
+            "CASLEY, John",
+            "VINCENT, Barry",
+            "FAGAN, Alexander"
+          ],
+          "same_as": [
+            "952",
+            "1108",
+            "1113",
+            "1115",
+            "1134",
+            "1163",
+            "1164",
+            "1178",
+            "1186",
+            "1187",
+            "1188",
+            "1190",
+            "1192"
+          ],
+          "note": "same order as the English card"
         },
         "caulfield": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "DOLEJŠÍ, Angel",
+            "ABABNEH, Malak",
+            "STAFRACE, Mikaela",
+            "SHROOT, Yaakov Ziv",
+            "SOUTHWICK, David",
+            "GILBERT, Geneviève",
+            "ABELMAN, Michael"
+          ],
+          "same_as": [
+            "952",
+            "1108",
+            "1115",
+            "1134",
+            "1136",
+            "1163",
+            "1164",
+            "1178",
+            "1186",
+            "1187",
+            "1188",
+            "1190",
+            "1192",
+            "1202",
+            "1207"
+          ],
+          "note": "same order as the English card"
         },
         "hawthorn": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "ROCHA, Kylie",
+            "McENEARNEY, Tess",
+            "IBUKI, Shima",
+            "CROSBY, Clive",
+            "PESUTTO, John",
+            "NICOLL, Adam",
+            "PRIBILOVICS, Paul"
+          ],
+          "same_as": [
+            "956",
+            "967",
+            "1117",
+            "1123",
+            "1126",
+            "1131",
+            "1133",
+            "1138",
+            "1142",
+            "1146",
+            "1186",
+            "1190",
+            "1202",
+            "1207",
+            "1366"
+          ],
+          "note": "same order as the English card"
         },
         "kew": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "CARTER, Jackie",
+            "LINCOLNE, Samantha",
+            "HALES, Juliet",
+            "TORNEY, Sophie",
+            "SUN, David",
+            "WILSON, Jess",
+            "LIANG, Man",
+            "DAVIS, Finlay",
+            "SEELEY, Ann",
+            "LAIRD, David"
+          ],
+          "same_as": [
+            "942",
+            "956",
+            "967",
+            "976",
+            "980",
+            "1126",
+            "1131",
+            "1133",
+            "1138",
+            "1142",
+            "1146",
+            "1190",
+            "1207",
+            "1366",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "malvern": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "KATSIKIS, Georgia",
+            "LEONARD, Gavin",
+            "ZIGOURAS, Christina",
+            "MARTIN, Peter",
+            "HAMER, Amelia",
+            "SEGAL, David",
+            "BODE, Edward"
+          ],
+          "same_as": [
+            "952",
+            "956",
+            "1108",
+            "1117",
+            "1123",
+            "1131",
+            "1133",
+            "1136",
+            "1142",
+            "1146",
+            "1164",
+            "1186",
+            "1187",
+            "1190",
+            "1202",
+            "1207",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "oakleigh": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "HSIEH, Hsiang-Han",
+            "BUGTER, Rowdy",
+            "DIMOPOULOS, Steve",
+            "JUNG, Martin",
+            "GRINTER, Matthew",
+            "CARTER, Brooke"
+          ],
+          "same_as": [
+            "911",
+            "953",
+            "1001",
+            "1114",
+            "1115",
+            "1117",
+            "1123",
+            "1136",
+            "1164",
+            "1186",
+            "1187",
+            "1190",
+            "1202",
+            "1207",
+            "1363"
+          ],
+          "note": "same order as the English card"
         },
         "prahran": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "DI CAMILLO, Angelica",
+            "DOUEIHI, Clayton",
+            "O'NEILL, G. Daniel",
+            "LEETON WATTS, George",
+            "DICKS, Max",
+            "MENADUE, Alan",
+            "HOPPER, Meghan",
+            "FINNIGAN, Tosh-Jake",
+            "WESTAWAY, Rachel",
+            "WONG, Nicholas",
+            "JONES, Daniel",
+            "JONAS, Morgan",
+            "VIRSU, Shaun"
+          ],
+          "same_as": [
+            "952",
+            "956",
+            "959",
+            "1108",
+            "1133",
+            "1134",
+            "1163",
+            "1164",
+            "1178",
+            "1186",
+            "1187",
+            "1188",
+            "1192",
+            "1199",
+            "1202",
+            "1207",
+            "1366",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "sandringham": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "FOTAKIS, Timon",
+            "STEVENSON, Lauren",
+            "SAGRIS-DESMOND, Anastasia",
+            "ROWSWELL, Brad",
+            "BLIGHT, Anthony"
+          ],
+          "same_as": [
+            "911",
+            "1002",
+            "1113",
+            "1114",
+            "1115",
+            "1178",
+            "1187",
+            "1190",
+            "1192"
+          ],
+          "note": "same order as the English card"
         },
         "southern-metropolitan": {
           "atl": [
@@ -111085,48 +112688,383 @@
       "read_on": "2026-11-20",
       "orders": {
         "broadmeadows": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "NASIM, Maryam",
+            "BOLTON, Sue",
+            "YOLBULAN, Mutullah Can",
+            "UNICOMB, Rachel",
+            "ELMUSTAPHA, Mohamad",
+            "MATTHEWS-WARD, Kathleen",
+            "EL YOUSSEF, Mohamad",
+            "DUZOVA, Baris",
+            "WILSON, Russell",
+            "KEIRS, Ethan"
+          ],
+          "same_as": [
+            "971",
+            "974",
+            "977",
+            "987",
+            "988",
+            "1130",
+            "1137",
+            "1150",
+            "1154",
+            "1159",
+            "1168",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1367",
+            "1368",
+            "1369"
+          ],
+          "note": "same order as the English card"
         },
         "brunswick": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "PULFORD, Adam",
+            "FARMER, Naomi",
+            "YUAN, Melissa",
+            "ROSE, India",
+            "STEGER, Gabe",
+            "AMANATIDIS, Jack",
+            "MARGELIS, John",
+            "HELMAN, Adam"
+          ],
+          "same_as": [
+            "956",
+            "959",
+            "965",
+            "976",
+            "977",
+            "1126",
+            "1133",
+            "1134",
+            "1137",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1366",
+            "1367",
+            "1368",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "essendon": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "WILLIAMS, James",
+            "KEDEM, Michal",
+            "MOHAMUD, Anab",
+            "ADAMS, Ava",
+            "THEODOSIS, Kat",
+            "YILDIZ, Oscar",
+            "LE DEUX, Tommy",
+            "BARNES, John"
+          ],
+          "same_as": [
+            "959",
+            "965",
+            "971",
+            "977",
+            "986",
+            "1122",
+            "1130",
+            "1134",
+            "1137",
+            "1150",
+            "1154",
+            "1159",
+            "1162",
+            "1190",
+            "1191",
+            "1209",
+            "1365",
+            "1366",
+            "1367",
+            "1368"
+          ],
+          "note": "same order as the English card"
         },
         "greenvale": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "MCGINNESS, Declan",
+            "SMELOV, Kirill",
+            "FURINA, Rosanna",
+            "SAID, Hassan",
+            "WALTERS, Iwan",
+            "ZOUGHAIB, Yehya",
+            "OVEREND, Jim",
+            "YOHANNA, Mazen",
+            "TITHERIDGE, Michael",
+            "MOORE, Chris"
+          ],
+          "same_as": [
+            "963",
+            "971",
+            "974",
+            "988",
+            "1132",
+            "1159",
+            "1168",
+            "1190"
+          ],
+          "note": "same order as the English card"
         },
         "kalkallo": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "TIWARI, Payal",
+            "MILLETT, Courtney",
+            "LYNCH, Matthew",
+            "ISLAM, Rebeca",
+            "SPENCE, Ros",
+            "DADISHO, Eddie",
+            "DOBSON, Jeanette",
+            "STEANS, Troy"
+          ],
+          "same_as": [
+            "963",
+            "974",
+            "988",
+            "1132",
+            "1148",
+            "1168",
+            "1175",
+            "1190",
+            "1203"
+          ],
+          "note": "same order as the English card"
         },
         "melbourne": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "SANDELL, Ellen",
+            "VAN DEN LAMB, Jordan",
+            "YUSUF, Mohamed",
+            "JONES, Naomi",
+            "GRIFFITHS, Davydd",
+            "TUCKFIELD, Rowan",
+            "CAMILLO, Rafael",
+            "MCCATHIE, Rob",
+            "COURTIS, Phillip"
+          ],
+          "same_as": [
+            "952",
+            "956",
+            "959",
+            "965",
+            "986",
+            "1108",
+            "1122",
+            "1127",
+            "1133",
+            "1134",
+            "1137",
+            "1150",
+            "1154",
+            "1162",
+            "1163",
+            "1186",
+            "1187",
+            "1188",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1366",
+            "1368",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "northcote": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "GOME, Campbell",
+            "LARKIN, Kath",
+            "THEOPHANOUS, Kat",
+            "HILLMAN, Ian",
+            "AWAD, Lynda",
+            "CIMBARO, Richard",
+            "PENMAN, Jim",
+            "PILLEY, Clive",
+            "KAFEL, Hannah",
+            "BRADBURY, Christopher"
+          ],
+          "same_as": [
+            "956",
+            "965",
+            "976",
+            "977",
+            "980",
+            "987",
+            "1126",
+            "1133",
+            "1138",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1199",
+            "1365",
+            "1366",
+            "1367",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "pascoe-vale": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "PANOPOULOS, Angelica",
+            "ANDREWARTHA, Jacob",
+            "SHAMSILI, Yasemin",
+            "CIANFLONE, Anthony",
+            "TAGGAR, Rohit",
+            "ASHTON, Kathrine",
+            "HAUPT, Kerry",
+            "LAWRENCE, Stuart",
+            "HICKEY, Amanda",
+            "GANCI, Rosemarie Pauline"
+          ],
+          "same_as": [
+            "965",
+            "971",
+            "976",
+            "977",
+            "987",
+            "1126",
+            "1137",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1366",
+            "1367",
+            "1368",
+            "1369"
+          ],
+          "note": "same order as the English card"
         },
         "preston": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "SANGARYA, Loki",
+            "CHIN, Zheng",
+            "ASHMORE, Serena",
+            "LAMBERT, Nathan",
+            "AL KATRANJI, Hamza",
+            "DOWER, Simon",
+            "BRYANT, Mark",
+            "DATE, Tim",
+            "FOWLES, William",
+            "VALENCIA, Julio",
+            "GUARDIANI, Franco"
+          ],
+          "same_as": [
+            "971",
+            "974",
+            "976",
+            "977",
+            "980",
+            "981",
+            "987",
+            "1126",
+            "1129",
+            "1148",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1365",
+            "1367"
+          ],
+          "note": "same order as the English card"
         },
         "richmond": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "de VIETRI, Gabrielle",
+            "DITE, Chris",
+            "MCKENZIE, Sarah",
+            "PEAD-PHILIPSON, Jack",
+            "MEYER, David",
+            "APONSO, Charles",
+            "GRAY, Bernadette",
+            "MAYNARD, Christine",
+            "RINDFLEISH, Harrison"
+          ],
+          "same_as": [
+            "952",
+            "956",
+            "959",
+            "965",
+            "976",
+            "1108",
+            "1126",
+            "1131",
+            "1133",
+            "1134",
+            "1138",
+            "1142",
+            "1154",
+            "1191",
+            "1199",
+            "1202",
+            "1207",
+            "1365",
+            "1366",
+            "1367",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "thomastown": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "TREWELLA, Gavin",
+            "REDDY, Priya",
+            "HALFPENNY, Bronwyn",
+            "STOJCEVSKI, Belinda",
+            "RANCIE, Rob",
+            "ANTHONY, Nadia"
+          ],
+          "same_as": [
+            "957",
+            "963",
+            "971",
+            "974",
+            "981",
+            "987",
+            "988",
+            "1132",
+            "1148",
+            "1154",
+            "1190",
+            "1203",
+            "1365"
+          ],
+          "note": "same order as the English card"
         },
         "northern-metropolitan": {
           "status": "unreadable",
@@ -111165,44 +113103,271 @@
           "note": "unreadable, see card"
         },
         "carrum": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "PEGRUM, Zoe",
+            "ABABNEH, Reema",
+            "MOORE, Carolyn",
+            "MACKENZIE, Harley",
+            "KILKENNY, Sonya",
+            "SHELLEY, Jeff",
+            "SMITH, Trevor",
+            "MATHEWS, Joshua"
+          ],
+          "same_as": [
+            "899",
+            "901",
+            "923",
+            "996",
+            "1002",
+            "1007",
+            "1107",
+            "1114",
+            "1157",
+            "1190",
+            "1550"
+          ],
+          "note": "same order as the English card"
         },
         "clarinda": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "BOYD-EEDLE, Conor",
+            "MESSAGE, Kit",
+            "TAK, Meng Heang",
+            "PAGANIS, John",
+            "ROCHE, Liam",
+            "WHITE, Caroline",
+            "BAIN, Gavin"
+          ],
+          "same_as": [
+            "911",
+            "926",
+            "1001",
+            "1002",
+            "1113",
+            "1114",
+            "1115",
+            "1136",
+            "1190",
+            "1192",
+            "1363",
+            "1550"
+          ],
+          "note": "same order as the English card"
         },
         "cranbourne": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "MERCER, Annalise",
+            "YUNIS, Reem",
+            "URQUIOLA, Liam",
+            "RICHARDS, Pauline",
+            "TRIPODI, Gino",
+            "BAIRD, Craig",
+            "FOREMAN, Shane",
+            "HIRST, Andrew"
+          ],
+          "same_as": [
+            "899",
+            "918",
+            "923",
+            "969",
+            "996",
+            "1007",
+            "1107",
+            "1157",
+            "1190",
+            "1204",
+            "1550"
+          ],
+          "note": "same order as the English card"
         },
         "dandenong": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "D'ARCY, Catherine",
+            "McMAHON, Jack",
+            "WILLIAMS, Gabrielle",
+            "BILLINGS, William",
+            "KHAN, Arshad Ali",
+            "FORTE, Jordan",
+            "HARVEY, Jacqueline",
+            "WRIGHT, Glenda"
+          ],
+          "same_as": [
+            "909",
+            "911",
+            "926",
+            "954",
+            "996",
+            "1001",
+            "1002",
+            "1107",
+            "1112",
+            "1114",
+            "1157",
+            "1190",
+            "1363",
+            "1550"
+          ],
+          "note": "same order as the English card"
         },
         "frankston": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "GOULAS, Katie",
+            "KELSALL, Henry",
+            "CHEESEMAN, Andrew",
+            "HARMAN, Julie",
+            "KNIPE, Jeff",
+            "EDBROOKE, Paul",
+            "ABRAHAM, Chrysten",
+            "AMBRY, Bree",
+            "BARRY, Nicola",
+            "NICHOLES, Peter",
+            "STAFFORD, Paul"
+          ],
+          "same_as": [
+            "899",
+            "901",
+            "1007",
+            "1107",
+            "1110",
+            "1157",
+            "1158",
+            "1190",
+            "1550"
+          ],
+          "note": "same order as the English card"
         },
         "mordialloc": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "BRESKIN, Alex",
+            "HOSSAIN, Mahee",
+            "THOMPSON, Renee",
+            "RICHARDSON, Tim",
+            "O'HALLORAN, Paul",
+            "VERSTEEGEN, Rachel",
+            "POTUCEK, Lily",
+            "TICEHURST, Nadia"
+          ],
+          "same_as": [
+            "899",
+            "911",
+            "926",
+            "1002",
+            "1107",
+            "1113",
+            "1114",
+            "1157",
+            "1190",
+            "1192",
+            "1363",
+            "1550"
+          ],
+          "note": "same order as the English card"
         },
         "mulgrave": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "SCHOFIELD, Paul J",
+            "BUCHANAN, Connor",
+            "FOSTER, Eden",
+            "TRAN, Charles",
+            "THEODOSSOPOULOU, Fotini",
+            "COOK, Ian",
+            "DOBRZYNSKI, Stewart",
+            "REBBECHI, Cody"
+          ],
+          "same_as": [
+            "911",
+            "926",
+            "953",
+            "954",
+            "1001",
+            "1112",
+            "1114",
+            "1136",
+            "1190",
+            "1363",
+            "1550"
+          ],
+          "note": "same order as the English card"
         },
         "narre-warren-north": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "PERRY, Hayley",
+            "McCRACKEN, Lachlan",
+            "LEAHY, Martin",
+            "WILSON, Belinda",
+            "NATHANIELSZ, Shemane",
+            "UTOYO, Joshua",
+            "EMMANUEL, Cristina",
+            "CRUTCHFIELD, Sebastian"
+          ],
+          "same_as": [
+            "909",
+            "918",
+            "996",
+            "1003",
+            "1114",
+            "1157",
+            "1190",
+            "1363",
+            "1550"
+          ],
+          "note": "same order as the English card"
         },
         "narre-warren-south": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "NAMBU, Jill",
+            "McCRACKEN, Bailey",
+            "WATSON, Scott",
+            "KOOMEN, Stefan",
+            "PETERSON, Norliah",
+            "DENKER, Lydia",
+            "CURRIE, Alan",
+            "HAMMOND, Trevor"
+          ],
+          "same_as": [
+            "899",
+            "909",
+            "918",
+            "923",
+            "996",
+            "1107",
+            "1157",
+            "1190",
+            "1204",
+            "1550"
+          ],
+          "note": "same order as the English card"
         },
         "rowville": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "MASSEY, David",
+            "HIEMSTRA, Lars",
+            "SHAHBAZ, Muhammad",
+            "WILLIAMS, Max",
+            "ROBSON, Scott",
+            "DOBRZYNSKI, Fiona",
+            "WATT, Bradley"
+          ],
+          "same_as": [
+            "936",
+            "953",
+            "954",
+            "1003",
+            "1112",
+            "1190",
+            "1550"
+          ],
+          "note": "same order as the English card"
         },
         "south-eastern-metropolitan": {
           "atl": [
@@ -111248,48 +113413,383 @@
       "read_on": "2026-11-20",
       "orders": {
         "broadmeadows": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "NASIM, Maryam",
+            "BOLTON, Sue",
+            "YOLBULAN, Mutullah Can",
+            "UNICOMB, Rachel",
+            "ELMUSTAPHA, Mohamad",
+            "MATTHEWS-WARD, Kathleen",
+            "EL YOUSSEF, Mohamad",
+            "DUZOVA, Baris",
+            "WILSON, Russell",
+            "KEIRS, Ethan"
+          ],
+          "same_as": [
+            "971",
+            "974",
+            "977",
+            "987",
+            "988",
+            "1130",
+            "1137",
+            "1150",
+            "1154",
+            "1159",
+            "1168",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1367",
+            "1368",
+            "1369"
+          ],
+          "note": "same order as the English card"
         },
         "brunswick": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "PULFORD, Adam",
+            "FARMER, Naomi",
+            "YUAN, Melissa",
+            "ROSE, India",
+            "STEGER, Gabe",
+            "AMANATIDIS, Jack",
+            "MARGELIS, John",
+            "HELMAN, Adam"
+          ],
+          "same_as": [
+            "956",
+            "959",
+            "965",
+            "976",
+            "977",
+            "1126",
+            "1133",
+            "1134",
+            "1137",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1366",
+            "1367",
+            "1368",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "essendon": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "WILLIAMS, James",
+            "KEDEM, Michal",
+            "MOHAMUD, Anab",
+            "ADAMS, Ava",
+            "THEODOSIS, Kat",
+            "YILDIZ, Oscar",
+            "LE DEUX, Tommy",
+            "BARNES, John"
+          ],
+          "same_as": [
+            "959",
+            "965",
+            "971",
+            "977",
+            "986",
+            "1122",
+            "1130",
+            "1134",
+            "1137",
+            "1150",
+            "1154",
+            "1159",
+            "1162",
+            "1190",
+            "1191",
+            "1209",
+            "1365",
+            "1366",
+            "1367",
+            "1368"
+          ],
+          "note": "same order as the English card"
         },
         "greenvale": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "MCGINNESS, Declan",
+            "SMELOV, Kirill",
+            "FURINA, Rosanna",
+            "SAID, Hassan",
+            "WALTERS, Iwan",
+            "ZOUGHAIB, Yehya",
+            "OVEREND, Jim",
+            "YOHANNA, Mazen",
+            "TITHERIDGE, Michael",
+            "MOORE, Chris"
+          ],
+          "same_as": [
+            "963",
+            "971",
+            "974",
+            "988",
+            "1132",
+            "1159",
+            "1168",
+            "1190"
+          ],
+          "note": "same order as the English card"
         },
         "kalkallo": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "TIWARI, Payal",
+            "MILLETT, Courtney",
+            "LYNCH, Matthew",
+            "ISLAM, Rebeca",
+            "SPENCE, Ros",
+            "DADISHO, Eddie",
+            "DOBSON, Jeanette",
+            "STEANS, Troy"
+          ],
+          "same_as": [
+            "963",
+            "974",
+            "988",
+            "1132",
+            "1148",
+            "1168",
+            "1175",
+            "1190",
+            "1203"
+          ],
+          "note": "same order as the English card"
         },
         "melbourne": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "SANDELL, Ellen",
+            "VAN DEN LAMB, Jordan",
+            "YUSUF, Mohamed",
+            "JONES, Naomi",
+            "GRIFFITHS, Davydd",
+            "TUCKFIELD, Rowan",
+            "CAMILLO, Rafael",
+            "MCCATHIE, Rob",
+            "COURTIS, Phillip"
+          ],
+          "same_as": [
+            "952",
+            "956",
+            "959",
+            "965",
+            "986",
+            "1108",
+            "1122",
+            "1127",
+            "1133",
+            "1134",
+            "1137",
+            "1150",
+            "1154",
+            "1162",
+            "1163",
+            "1186",
+            "1187",
+            "1188",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1366",
+            "1368",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "northcote": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "GOME, Campbell",
+            "LARKIN, Kath",
+            "THEOPHANOUS, Kat",
+            "HILLMAN, Ian",
+            "AWAD, Lynda",
+            "CIMBARO, Richard",
+            "PENMAN, Jim",
+            "PILLEY, Clive",
+            "KAFEL, Hannah",
+            "BRADBURY, Christopher"
+          ],
+          "same_as": [
+            "956",
+            "965",
+            "976",
+            "977",
+            "980",
+            "987",
+            "1126",
+            "1133",
+            "1138",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1199",
+            "1365",
+            "1366",
+            "1367",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "pascoe-vale": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "PANOPOULOS, Angelica",
+            "ANDREWARTHA, Jacob",
+            "SHAMSILI, Yasemin",
+            "CIANFLONE, Anthony",
+            "TAGGAR, Rohit",
+            "ASHTON, Kathrine",
+            "HAUPT, Kerry",
+            "LAWRENCE, Stuart",
+            "HICKEY, Amanda",
+            "GANCI, Rosemarie Pauline"
+          ],
+          "same_as": [
+            "965",
+            "971",
+            "976",
+            "977",
+            "987",
+            "1126",
+            "1137",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1366",
+            "1367",
+            "1368",
+            "1369"
+          ],
+          "note": "same order as the English card"
         },
         "preston": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "SANGARYA, Loki",
+            "CHIN, Zheng",
+            "ASHMORE, Serena",
+            "LAMBERT, Nathan",
+            "AL KATRANJI, Hamza",
+            "DOWER, Simon",
+            "BRYANT, Mark",
+            "DATE, Tim",
+            "FOWLES, William",
+            "VALENCIA, Julio",
+            "GUARDIANI, Franco"
+          ],
+          "same_as": [
+            "971",
+            "974",
+            "976",
+            "977",
+            "980",
+            "981",
+            "987",
+            "1126",
+            "1129",
+            "1148",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1365",
+            "1367"
+          ],
+          "note": "same order as the English card"
         },
         "richmond": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "de VIETRI, Gabrielle",
+            "DITE, Chris",
+            "MCKENZIE, Sarah",
+            "PEAD-PHILIPSON, Jack",
+            "MEYER, David",
+            "APONSO, Charles",
+            "GRAY, Bernadette",
+            "MAYNARD, Christine",
+            "RINDFLEISH, Harrison"
+          ],
+          "same_as": [
+            "952",
+            "956",
+            "959",
+            "965",
+            "976",
+            "1108",
+            "1126",
+            "1131",
+            "1133",
+            "1134",
+            "1138",
+            "1142",
+            "1154",
+            "1191",
+            "1199",
+            "1202",
+            "1207",
+            "1365",
+            "1366",
+            "1367",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "thomastown": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "TREWELLA, Gavin",
+            "REDDY, Priya",
+            "HALFPENNY, Bronwyn",
+            "STOJCEVSKI, Belinda",
+            "RANCIE, Rob",
+            "ANTHONY, Nadia"
+          ],
+          "same_as": [
+            "957",
+            "963",
+            "971",
+            "974",
+            "981",
+            "987",
+            "988",
+            "1132",
+            "1148",
+            "1154",
+            "1190",
+            "1203",
+            "1365"
+          ],
+          "note": "same order as the English card"
         },
         "northern-metropolitan": {
           "atl": [
@@ -111334,48 +113834,288 @@
       "read_on": "2026-11-20",
       "orders": {
         "bellarine": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "POPE, Mitch",
+            "WILLIAMS, Dom",
+            "KEOGH, Ronan",
+            "LOCKHART, Kate",
+            "MARCHANT, Alison",
+            "WHITEHEAD, Callum",
+            "MANUELL, Guy",
+            "MCRAE, Ross"
+          ],
+          "same_as": [
+            "1106",
+            "1125",
+            "1128",
+            "1165",
+            "1172",
+            "1190",
+            "1198",
+            "1208",
+            "1410",
+            "1411"
+          ],
+          "note": "same order as the English card"
         },
         "eureka": {
           "status": "unreadable",
           "note": "unreadable, see card"
         },
         "geelong": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "FLYNN, Emilie",
+            "GRULL, Brenden",
+            "VANDERPOL, Bree",
+            "MACPHERSON, Pippa",
+            "COUZENS, Christine",
+            "POBJOY, Andy",
+            "BENGTSSON, Maria",
+            "DE LORENZO, John"
+          ],
+          "same_as": [
+            "1106",
+            "1125",
+            "1128",
+            "1145",
+            "1165",
+            "1172",
+            "1176",
+            "1181",
+            "1182",
+            "1190",
+            "1198",
+            "1208",
+            "1410",
+            "1411",
+            "1412"
+          ],
+          "note": "same order as the English card"
         },
         "lara": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "SLATER, Theresa",
+            "HATHWAY, Sarah",
+            "RANDALL, Oliver",
+            "LONG, Samantha",
+            "GEORGE, Ella",
+            "BEDDOE, Tim",
+            "UWIZEYIMANA, Tina",
+            "SPYROS, Steven"
+          ],
+          "same_as": [
+            "1106",
+            "1128",
+            "1145",
+            "1165",
+            "1172",
+            "1181",
+            "1182",
+            "1190",
+            "1198",
+            "1412"
+          ],
+          "note": "same order as the English card"
         },
         "lowan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "MORAN, Jeff",
+            "DOWNEY, Jos",
+            "PAVLOVICH, Sue",
+            "HYSLOP, Karen",
+            "BUTLER, Kieran",
+            "KEALY, Emma",
+            "ELMES, Lee-Ann",
+            "PARTRIDGE, Andrew"
+          ],
+          "same_as": [
+            "1125",
+            "1140",
+            "1177",
+            "1180",
+            "1183",
+            "1190",
+            "1198",
+            "1206",
+            "1411"
+          ],
+          "note": "same order as the English card"
         },
         "melton": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "LEVCHENKOVA, Veronika",
+            "KELLY, Daire",
+            "ADIN-JAMES, Fiona",
+            "LEGRO, Hayden",
+            "BORG, Broden",
+            "BINGHAM, Jarrod",
+            "PERERA, Jason Spencer",
+            "FRASER, Jason",
+            "FARUQ, M.D. Omor",
+            "WEST, Marlene",
+            "KATSELIS, Matthew"
+          ],
+          "same_as": [
+            "1105",
+            "1116",
+            "1168",
+            "1173",
+            "1176",
+            "1182",
+            "1190",
+            "1201",
+            "1412"
+          ],
+          "note": "same order as the English card"
         },
         "polwarth": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "HOLDEN, Jesse",
+            "TOLLEY, Lula",
+            "HUSSEIN, Hutch",
+            "RIORDAN, Richard",
+            "COLLA, Vince",
+            "CARBINS, Brenton",
+            "MALCOLM, Anna"
+          ],
+          "same_as": [
+            "1106",
+            "1125",
+            "1128",
+            "1145",
+            "1165",
+            "1172",
+            "1177",
+            "1180",
+            "1181",
+            "1182",
+            "1183",
+            "1190",
+            "1208",
+            "1410",
+            "1411",
+            "1412"
+          ],
+          "note": "same order as the English card"
         },
         "ripon": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "DRYLIE, Tim",
+            "BRENNAN-JONES, Taylah",
+            "HAYLETT, Martha",
+            "QUINCE, Bernard",
+            "READ, Megan",
+            "ARMSTRONG, Jo",
+            "WOJTKOWSKI, Krzysztof",
+            "MCGRATH, Mark",
+            "SKRUZNY, Ronald",
+            "BARRY, Jeff",
+            "ANDREI, Trevor Scott",
+            "BUXTON, Donna"
+          ],
+          "same_as": [
+            "1124",
+            "1140",
+            "1144",
+            "1147",
+            "1166",
+            "1170",
+            "1174",
+            "1175",
+            "1177",
+            "1179",
+            "1183",
+            "1190",
+            "1206"
+          ],
+          "note": "same order as the English card"
         },
         "south-barwon": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "SCHERRER, Izzy",
+            "HEDLEY, Freya",
+            "GORMAN, Madilyn",
+            "THISTLETON, Rebecca",
+            "PETTIT, Libby",
+            "BARRON, Alan",
+            "NELSON, Ron",
+            "GEARD, Josh"
+          ],
+          "same_as": [
+            "1106",
+            "1125",
+            "1128",
+            "1165",
+            "1172",
+            "1181",
+            "1182",
+            "1190",
+            "1208",
+            "1410",
+            "1411",
+            "1412"
+          ],
+          "note": "same order as the English card"
         },
         "south-west-coast": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "WATTS, Silver Rose",
+            "SHEPPARD, Hera",
+            "GOVANSTONE, Andrew",
+            "BRITNELL, Roma",
+            "BUCHAN, Tamhas",
+            "HUGHES, Richard"
+          ],
+          "same_as": [
+            "1125",
+            "1180",
+            "1183",
+            "1190",
+            "1198",
+            "1411"
+          ],
+          "note": "same order as the English card"
         },
         "western-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "atl": [
+            "A",
+            "J",
+            "G",
+            "H",
+            "C"
+          ],
+          "same_as": [
+            "1106",
+            "1124",
+            "1125",
+            "1128",
+            "1145",
+            "1165",
+            "1172",
+            "1176",
+            "1177",
+            "1180",
+            "1181",
+            "1182",
+            "1183",
+            "1198",
+            "1208",
+            "1410",
+            "1411",
+            "1412",
+            "1499"
+          ],
+          "note": "same order as the English card"
         }
       }
     },
@@ -111410,44 +114150,271 @@
           "note": "unreadable, see card"
         },
         "carrum": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "PEGRUM, Zoe",
+            "ABABNEH, Reema",
+            "MOORE, Carolyn",
+            "MACKENZIE, Harley",
+            "KILKENNY, Sonya",
+            "SHELLEY, Jeff",
+            "SMITH, Trevor",
+            "MATHEWS, Joshua"
+          ],
+          "same_as": [
+            "899",
+            "901",
+            "923",
+            "996",
+            "1002",
+            "1007",
+            "1107",
+            "1114",
+            "1157",
+            "1190",
+            "1550"
+          ],
+          "note": "same order as the English card"
         },
         "clarinda": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "BOYD-EEDLE, Conor",
+            "MESSAGE, Kit",
+            "TAK, Meng Heang",
+            "PAGANIS, John",
+            "ROCHE, Liam",
+            "WHITE, Caroline",
+            "BAIN, Gavin"
+          ],
+          "same_as": [
+            "911",
+            "926",
+            "1001",
+            "1002",
+            "1113",
+            "1114",
+            "1115",
+            "1136",
+            "1190",
+            "1192",
+            "1363",
+            "1550"
+          ],
+          "note": "same order as the English card"
         },
         "cranbourne": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "MERCER, Annalise",
+            "YUNIS, Reem",
+            "URQUIOLA, Liam",
+            "RICHARDS, Pauline",
+            "TRIPODI, Gino",
+            "BAIRD, Craig",
+            "FOREMAN, Shane",
+            "HIRST, Andrew"
+          ],
+          "same_as": [
+            "899",
+            "918",
+            "923",
+            "969",
+            "996",
+            "1007",
+            "1107",
+            "1157",
+            "1190",
+            "1204",
+            "1550"
+          ],
+          "note": "same order as the English card"
         },
         "dandenong": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "D'ARCY, Catherine",
+            "McMAHON, Jack",
+            "WILLIAMS, Gabrielle",
+            "BILLINGS, William",
+            "KHAN, Arshad Ali",
+            "FORTE, Jordan",
+            "HARVEY, Jacqueline",
+            "WRIGHT, Glenda"
+          ],
+          "same_as": [
+            "909",
+            "911",
+            "926",
+            "954",
+            "996",
+            "1001",
+            "1002",
+            "1107",
+            "1112",
+            "1114",
+            "1157",
+            "1190",
+            "1363",
+            "1550"
+          ],
+          "note": "same order as the English card"
         },
         "frankston": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "GOULAS, Katie",
+            "KELSALL, Henry",
+            "CHEESEMAN, Andrew",
+            "HARMAN, Julie",
+            "KNIPE, Jeff",
+            "EDBROOKE, Paul",
+            "ABRAHAM, Chrysten",
+            "AMBRY, Bree",
+            "BARRY, Nicola",
+            "NICHOLES, Peter",
+            "STAFFORD, Paul"
+          ],
+          "same_as": [
+            "899",
+            "901",
+            "1007",
+            "1107",
+            "1110",
+            "1157",
+            "1158",
+            "1190",
+            "1550"
+          ],
+          "note": "same order as the English card"
         },
         "mordialloc": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "BRESKIN, Alex",
+            "HOSSAIN, Mahee",
+            "THOMPSON, Renee",
+            "RICHARDSON, Tim",
+            "O'HALLORAN, Paul",
+            "VERSTEEGEN, Rachel",
+            "POTUCEK, Lily",
+            "TICEHURST, Nadia"
+          ],
+          "same_as": [
+            "899",
+            "911",
+            "926",
+            "1002",
+            "1107",
+            "1113",
+            "1114",
+            "1157",
+            "1190",
+            "1192",
+            "1363",
+            "1550"
+          ],
+          "note": "same order as the English card"
         },
         "mulgrave": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "SCHOFIELD, Paul J",
+            "BUCHANAN, Connor",
+            "FOSTER, Eden",
+            "TRAN, Charles",
+            "THEODOSSOPOULOU, Fotini",
+            "COOK, Ian",
+            "DOBRZYNSKI, Stewart",
+            "REBBECHI, Cody"
+          ],
+          "same_as": [
+            "911",
+            "926",
+            "953",
+            "954",
+            "1001",
+            "1112",
+            "1114",
+            "1136",
+            "1190",
+            "1363",
+            "1550"
+          ],
+          "note": "same order as the English card"
         },
         "narre-warren-north": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "PERRY, Hayley",
+            "McCRACKEN, Lachlan",
+            "LEAHY, Martin",
+            "WILSON, Belinda",
+            "NATHANIELSZ, Shemane",
+            "UTOYO, Joshua",
+            "EMMANUEL, Cristina",
+            "CRUTCHFIELD, Sebastian"
+          ],
+          "same_as": [
+            "909",
+            "918",
+            "996",
+            "1003",
+            "1114",
+            "1157",
+            "1190",
+            "1363",
+            "1550"
+          ],
+          "note": "same order as the English card"
         },
         "narre-warren-south": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "NAMBU, Jill",
+            "McCRACKEN, Bailey",
+            "WATSON, Scott",
+            "KOOMEN, Stefan",
+            "PETERSON, Norliah",
+            "DENKER, Lydia",
+            "CURRIE, Alan",
+            "HAMMOND, Trevor"
+          ],
+          "same_as": [
+            "899",
+            "909",
+            "918",
+            "923",
+            "996",
+            "1107",
+            "1157",
+            "1190",
+            "1204",
+            "1550"
+          ],
+          "note": "same order as the English card"
         },
         "rowville": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "MASSEY, David",
+            "HIEMSTRA, Lars",
+            "SHAHBAZ, Muhammad",
+            "WILLIAMS, Max",
+            "ROBSON, Scott",
+            "DOBRZYNSKI, Fiona",
+            "WATT, Bradley"
+          ],
+          "same_as": [
+            "936",
+            "953",
+            "954",
+            "1003",
+            "1112",
+            "1190",
+            "1550"
+          ],
+          "note": "same order as the English card"
         },
         "south-eastern-metropolitan": {
           "atl": [
@@ -111767,48 +114734,383 @@
       "read_on": "2026-11-20",
       "orders": {
         "broadmeadows": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "NASIM, Maryam",
+            "BOLTON, Sue",
+            "YOLBULAN, Mutullah Can",
+            "UNICOMB, Rachel",
+            "ELMUSTAPHA, Mohamad",
+            "MATTHEWS-WARD, Kathleen",
+            "EL YOUSSEF, Mohamad",
+            "DUZOVA, Baris",
+            "WILSON, Russell",
+            "KEIRS, Ethan"
+          ],
+          "same_as": [
+            "971",
+            "974",
+            "977",
+            "987",
+            "988",
+            "1130",
+            "1137",
+            "1150",
+            "1154",
+            "1159",
+            "1168",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1367",
+            "1368",
+            "1369"
+          ],
+          "note": "same order as the English card"
         },
         "brunswick": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "PULFORD, Adam",
+            "FARMER, Naomi",
+            "YUAN, Melissa",
+            "ROSE, India",
+            "STEGER, Gabe",
+            "AMANATIDIS, Jack",
+            "MARGELIS, John",
+            "HELMAN, Adam"
+          ],
+          "same_as": [
+            "956",
+            "959",
+            "965",
+            "976",
+            "977",
+            "1126",
+            "1133",
+            "1134",
+            "1137",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1366",
+            "1367",
+            "1368",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "essendon": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "WILLIAMS, James",
+            "KEDEM, Michal",
+            "MOHAMUD, Anab",
+            "ADAMS, Ava",
+            "THEODOSIS, Kat",
+            "YILDIZ, Oscar",
+            "LE DEUX, Tommy",
+            "BARNES, John"
+          ],
+          "same_as": [
+            "959",
+            "965",
+            "971",
+            "977",
+            "986",
+            "1122",
+            "1130",
+            "1134",
+            "1137",
+            "1150",
+            "1154",
+            "1159",
+            "1162",
+            "1190",
+            "1191",
+            "1209",
+            "1365",
+            "1366",
+            "1367",
+            "1368"
+          ],
+          "note": "same order as the English card"
         },
         "greenvale": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "MCGINNESS, Declan",
+            "SMELOV, Kirill",
+            "FURINA, Rosanna",
+            "SAID, Hassan",
+            "WALTERS, Iwan",
+            "ZOUGHAIB, Yehya",
+            "OVEREND, Jim",
+            "YOHANNA, Mazen",
+            "TITHERIDGE, Michael",
+            "MOORE, Chris"
+          ],
+          "same_as": [
+            "963",
+            "971",
+            "974",
+            "988",
+            "1132",
+            "1159",
+            "1168",
+            "1190"
+          ],
+          "note": "same order as the English card"
         },
         "kalkallo": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "TIWARI, Payal",
+            "MILLETT, Courtney",
+            "LYNCH, Matthew",
+            "ISLAM, Rebeca",
+            "SPENCE, Ros",
+            "DADISHO, Eddie",
+            "DOBSON, Jeanette",
+            "STEANS, Troy"
+          ],
+          "same_as": [
+            "963",
+            "974",
+            "988",
+            "1132",
+            "1148",
+            "1168",
+            "1175",
+            "1190",
+            "1203"
+          ],
+          "note": "same order as the English card"
         },
         "melbourne": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "SANDELL, Ellen",
+            "VAN DEN LAMB, Jordan",
+            "YUSUF, Mohamed",
+            "JONES, Naomi",
+            "GRIFFITHS, Davydd",
+            "TUCKFIELD, Rowan",
+            "CAMILLO, Rafael",
+            "MCCATHIE, Rob",
+            "COURTIS, Phillip"
+          ],
+          "same_as": [
+            "952",
+            "956",
+            "959",
+            "965",
+            "986",
+            "1108",
+            "1122",
+            "1127",
+            "1133",
+            "1134",
+            "1137",
+            "1150",
+            "1154",
+            "1162",
+            "1163",
+            "1186",
+            "1187",
+            "1188",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1366",
+            "1368",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "northcote": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "GOME, Campbell",
+            "LARKIN, Kath",
+            "THEOPHANOUS, Kat",
+            "HILLMAN, Ian",
+            "AWAD, Lynda",
+            "CIMBARO, Richard",
+            "PENMAN, Jim",
+            "PILLEY, Clive",
+            "KAFEL, Hannah",
+            "BRADBURY, Christopher"
+          ],
+          "same_as": [
+            "956",
+            "965",
+            "976",
+            "977",
+            "980",
+            "987",
+            "1126",
+            "1133",
+            "1138",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1199",
+            "1365",
+            "1366",
+            "1367",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "pascoe-vale": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "PANOPOULOS, Angelica",
+            "ANDREWARTHA, Jacob",
+            "SHAMSILI, Yasemin",
+            "CIANFLONE, Anthony",
+            "TAGGAR, Rohit",
+            "ASHTON, Kathrine",
+            "HAUPT, Kerry",
+            "LAWRENCE, Stuart",
+            "HICKEY, Amanda",
+            "GANCI, Rosemarie Pauline"
+          ],
+          "same_as": [
+            "965",
+            "971",
+            "976",
+            "977",
+            "987",
+            "1126",
+            "1137",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1366",
+            "1367",
+            "1368",
+            "1369"
+          ],
+          "note": "same order as the English card"
         },
         "preston": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "SANGARYA, Loki",
+            "CHIN, Zheng",
+            "ASHMORE, Serena",
+            "LAMBERT, Nathan",
+            "AL KATRANJI, Hamza",
+            "DOWER, Simon",
+            "BRYANT, Mark",
+            "DATE, Tim",
+            "FOWLES, William",
+            "VALENCIA, Julio",
+            "GUARDIANI, Franco"
+          ],
+          "same_as": [
+            "971",
+            "974",
+            "976",
+            "977",
+            "980",
+            "981",
+            "987",
+            "1126",
+            "1129",
+            "1148",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1365",
+            "1367"
+          ],
+          "note": "same order as the English card"
         },
         "richmond": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "de VIETRI, Gabrielle",
+            "DITE, Chris",
+            "MCKENZIE, Sarah",
+            "PEAD-PHILIPSON, Jack",
+            "MEYER, David",
+            "APONSO, Charles",
+            "GRAY, Bernadette",
+            "MAYNARD, Christine",
+            "RINDFLEISH, Harrison"
+          ],
+          "same_as": [
+            "952",
+            "956",
+            "959",
+            "965",
+            "976",
+            "1108",
+            "1126",
+            "1131",
+            "1133",
+            "1134",
+            "1138",
+            "1142",
+            "1154",
+            "1191",
+            "1199",
+            "1202",
+            "1207",
+            "1365",
+            "1366",
+            "1367",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "thomastown": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "TREWELLA, Gavin",
+            "REDDY, Priya",
+            "HALFPENNY, Bronwyn",
+            "STOJCEVSKI, Belinda",
+            "RANCIE, Rob",
+            "ANTHONY, Nadia"
+          ],
+          "same_as": [
+            "957",
+            "963",
+            "971",
+            "974",
+            "981",
+            "987",
+            "988",
+            "1132",
+            "1148",
+            "1154",
+            "1190",
+            "1203",
+            "1365"
+          ],
+          "note": "same order as the English card"
         },
         "northern-metropolitan": {
           "atl": [
@@ -112145,48 +115447,303 @@
       "read_on": "2026-11-20",
       "orders": {
         "bayswater": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "KENNEDY, Jess",
+            "FERGUSON, Alec",
+            "BUXTON, Julie",
+            "CLARKE, Mathew",
+            "KITCHEN, David",
+            "HUBBARD, Naomi",
+            "COOMBES, Gary",
+            "BLEAKNEY, Kayte"
+          ],
+          "same_as": [
+            "936",
+            "950",
+            "953",
+            "954",
+            "961",
+            "1003",
+            "1112",
+            "1185",
+            "1189",
+            "1190"
+          ],
+          "note": "same order as the English card"
         },
         "box-hill": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "QIN, Aaron",
+            "CHEUNG, Heena",
+            "AFAJ, Saravina",
+            "HAMER, Paul",
+            "HOUGUET, Sally",
+            "McGRATH, Sue-Ellen",
+            "FAGG, Peter",
+            "BAKER, Jamie"
+          ],
+          "same_as": [
+            "942",
+            "945",
+            "953",
+            "961",
+            "967",
+            "1117",
+            "1123",
+            "1131",
+            "1138",
+            "1139",
+            "1142",
+            "1146",
+            "1189",
+            "1190"
+          ],
+          "note": "same order as the English card"
         },
         "bulleen": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "LIGHTBODY, Tomas",
+            "TAFIDIS, Dimitrios",
+            "RUBLEE, Greg",
+            "DALE, Tim",
+            "GUY, Matthew",
+            "PALIOURAS, Amanda",
+            "HARVEY, Bradley",
+            "ATHARI, Mahdi"
+          ],
+          "same_as": [
+            "942",
+            "945",
+            "951",
+            "967",
+            "980",
+            "1129",
+            "1138",
+            "1139",
+            "1146",
+            "1189",
+            "1190"
+          ],
+          "note": "same order as the English card"
         },
         "bundoora": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "LAITALA, Nina",
+            "SANYAL, Sagar",
+            "NICOLOSI, Chloe",
+            "BROOKS, Colin",
+            "PARR, Chris",
+            "MURPHY-WEBSTER, Melissa",
+            "RANCIE, Rae",
+            "WHALLEY, Bruce"
+          ],
+          "same_as": [
+            "951",
+            "957",
+            "974",
+            "980",
+            "981",
+            "987",
+            "1129",
+            "1148",
+            "1190",
+            "1203",
+            "1367"
+          ],
+          "note": "same order as the English card"
         },
         "croydon": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "FERNANDO, Lini",
+            "GRIMSHAW, Beth",
+            "VANDERWOLF, David",
+            "FARR, Richard",
+            "WOOLDRIDGE, Toby",
+            "SCHWAB, Nathan",
+            "THOMAS, Nofoao",
+            "BRINDLEY, Glenn"
+          ],
+          "same_as": [
+            "936",
+            "945",
+            "950",
+            "961",
+            "1003",
+            "1010",
+            "1112",
+            "1139",
+            "1185",
+            "1189",
+            "1190"
+          ],
+          "note": "same order as the English card"
         },
         "eltham": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "BUSBRIDGE, Rachel",
+            "RICHES, Maeve",
+            "BROOKSBY, Louise",
+            "WARD, Vicki",
+            "BYRNES, Paul",
+            "MARASEA, Steven",
+            "WEATHERLEY, Jessie"
+          ],
+          "same_as": [
+            "942",
+            "945",
+            "951",
+            "980",
+            "981",
+            "1129",
+            "1139",
+            "1148",
+            "1189",
+            "1190",
+            "1203"
+          ],
+          "note": "same order as the English card"
         },
         "glen-waverley": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "WHITE, Toyo",
+            "SIOW, Nicholas",
+            "MULLAHY, John",
+            "SUN, Jacky",
+            "NADARAJAH, Segar",
+            "DOBIE, Anna",
+            "COX, Brad"
+          ],
+          "same_as": [
+            "936",
+            "953",
+            "961",
+            "967",
+            "1001",
+            "1112",
+            "1117",
+            "1123",
+            "1136",
+            "1146",
+            "1185",
+            "1189",
+            "1190",
+            "1363"
+          ],
+          "note": "same order as the English card"
         },
         "ivanhoe": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "CRAWLEY, Nina",
+            "MILNE, Ben",
+            "KENNEDY, Michelle",
+            "CARBINES, Anthony",
+            "BERGMAN, Dora",
+            "LOPEZ RIOS, Oscar",
+            "CASONATO, Ren",
+            "HUTCHINSON, Wayne"
+          ],
+          "same_as": [
+            "942",
+            "951",
+            "976",
+            "980",
+            "981",
+            "987",
+            "1126",
+            "1129",
+            "1138",
+            "1139",
+            "1148",
+            "1190",
+            "1367"
+          ],
+          "note": "same order as the English card"
         },
         "mill-park": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "ZACHARIAS, Binoy",
+            "LAMBOURN, Jesse",
+            "LEVENS, Eve",
+            "NEALY, Elizabeth",
+            "DRYSDALE, Joel",
+            "McLINDON, Aidan",
+            "VAN DER END, Kath",
+            "TSOUTSOULIS, Arthur"
+          ],
+          "same_as": [
+            "957",
+            "974",
+            "981",
+            "1129",
+            "1148",
+            "1190",
+            "1203"
+          ],
+          "note": "same order as the English card"
         },
         "ringwood": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "MILLS, Amy",
+            "CUTTS, Prue",
+            "GARDNER, Jack",
+            "WALKER, Lyndon",
+            "HALSE, Rachel",
+            "McGOWAN, Nick",
+            "NORTON, Christopher William",
+            "HUANG, Elaine",
+            "O'CONNOR, John"
+          ],
+          "same_as": [
+            "936",
+            "945",
+            "950",
+            "953",
+            "961",
+            "967",
+            "1112",
+            "1139",
+            "1146",
+            "1185",
+            "1189",
+            "1190"
+          ],
+          "note": "same order as the English card"
         },
         "warrandyte": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "MURADIAN, Vanessa",
+            "STANLEY, John",
+            "PATERSON, Rebecca",
+            "WERNER, Nicole",
+            "SCHWAB, Caleb",
+            "BURNSIDE, Mark"
+          ],
+          "same_as": [
+            "942",
+            "945",
+            "950",
+            "951",
+            "961",
+            "967",
+            "1010",
+            "1129",
+            "1139",
+            "1184",
+            "1189",
+            "1190"
+          ],
+          "note": "same order as the English card"
         },
         "north-eastern-metropolitan": {
           "atl": [
@@ -112232,48 +115789,383 @@
       "read_on": "2026-11-20",
       "orders": {
         "broadmeadows": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "NASIM, Maryam",
+            "BOLTON, Sue",
+            "YOLBULAN, Mutullah Can",
+            "UNICOMB, Rachel",
+            "ELMUSTAPHA, Mohamad",
+            "MATTHEWS-WARD, Kathleen",
+            "EL YOUSSEF, Mohamad",
+            "DUZOVA, Baris",
+            "WILSON, Russell",
+            "KEIRS, Ethan"
+          ],
+          "same_as": [
+            "971",
+            "974",
+            "977",
+            "987",
+            "988",
+            "1130",
+            "1137",
+            "1150",
+            "1154",
+            "1159",
+            "1168",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1367",
+            "1368",
+            "1369"
+          ],
+          "note": "same order as the English card"
         },
         "brunswick": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "PULFORD, Adam",
+            "FARMER, Naomi",
+            "YUAN, Melissa",
+            "ROSE, India",
+            "STEGER, Gabe",
+            "AMANATIDIS, Jack",
+            "MARGELIS, John",
+            "HELMAN, Adam"
+          ],
+          "same_as": [
+            "956",
+            "959",
+            "965",
+            "976",
+            "977",
+            "1126",
+            "1133",
+            "1134",
+            "1137",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1366",
+            "1367",
+            "1368",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "essendon": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "WILLIAMS, James",
+            "KEDEM, Michal",
+            "MOHAMUD, Anab",
+            "ADAMS, Ava",
+            "THEODOSIS, Kat",
+            "YILDIZ, Oscar",
+            "LE DEUX, Tommy",
+            "BARNES, John"
+          ],
+          "same_as": [
+            "959",
+            "965",
+            "971",
+            "977",
+            "986",
+            "1122",
+            "1130",
+            "1134",
+            "1137",
+            "1150",
+            "1154",
+            "1159",
+            "1162",
+            "1190",
+            "1191",
+            "1209",
+            "1365",
+            "1366",
+            "1367",
+            "1368"
+          ],
+          "note": "same order as the English card"
         },
         "greenvale": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "MCGINNESS, Declan",
+            "SMELOV, Kirill",
+            "FURINA, Rosanna",
+            "SAID, Hassan",
+            "WALTERS, Iwan",
+            "ZOUGHAIB, Yehya",
+            "OVEREND, Jim",
+            "YOHANNA, Mazen",
+            "TITHERIDGE, Michael",
+            "MOORE, Chris"
+          ],
+          "same_as": [
+            "963",
+            "971",
+            "974",
+            "988",
+            "1132",
+            "1159",
+            "1168",
+            "1190"
+          ],
+          "note": "same order as the English card"
         },
         "kalkallo": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "TIWARI, Payal",
+            "MILLETT, Courtney",
+            "LYNCH, Matthew",
+            "ISLAM, Rebeca",
+            "SPENCE, Ros",
+            "DADISHO, Eddie",
+            "DOBSON, Jeanette",
+            "STEANS, Troy"
+          ],
+          "same_as": [
+            "963",
+            "974",
+            "988",
+            "1132",
+            "1148",
+            "1168",
+            "1175",
+            "1190",
+            "1203"
+          ],
+          "note": "same order as the English card"
         },
         "melbourne": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "SANDELL, Ellen",
+            "VAN DEN LAMB, Jordan",
+            "YUSUF, Mohamed",
+            "JONES, Naomi",
+            "GRIFFITHS, Davydd",
+            "TUCKFIELD, Rowan",
+            "CAMILLO, Rafael",
+            "MCCATHIE, Rob",
+            "COURTIS, Phillip"
+          ],
+          "same_as": [
+            "952",
+            "956",
+            "959",
+            "965",
+            "986",
+            "1108",
+            "1122",
+            "1127",
+            "1133",
+            "1134",
+            "1137",
+            "1150",
+            "1154",
+            "1162",
+            "1163",
+            "1186",
+            "1187",
+            "1188",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1366",
+            "1368",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "northcote": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "GOME, Campbell",
+            "LARKIN, Kath",
+            "THEOPHANOUS, Kat",
+            "HILLMAN, Ian",
+            "AWAD, Lynda",
+            "CIMBARO, Richard",
+            "PENMAN, Jim",
+            "PILLEY, Clive",
+            "KAFEL, Hannah",
+            "BRADBURY, Christopher"
+          ],
+          "same_as": [
+            "956",
+            "965",
+            "976",
+            "977",
+            "980",
+            "987",
+            "1126",
+            "1133",
+            "1138",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1199",
+            "1365",
+            "1366",
+            "1367",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "pascoe-vale": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "PANOPOULOS, Angelica",
+            "ANDREWARTHA, Jacob",
+            "SHAMSILI, Yasemin",
+            "CIANFLONE, Anthony",
+            "TAGGAR, Rohit",
+            "ASHTON, Kathrine",
+            "HAUPT, Kerry",
+            "LAWRENCE, Stuart",
+            "HICKEY, Amanda",
+            "GANCI, Rosemarie Pauline"
+          ],
+          "same_as": [
+            "965",
+            "971",
+            "976",
+            "977",
+            "987",
+            "1126",
+            "1137",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1366",
+            "1367",
+            "1368",
+            "1369"
+          ],
+          "note": "same order as the English card"
         },
         "preston": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "SANGARYA, Loki",
+            "CHIN, Zheng",
+            "ASHMORE, Serena",
+            "LAMBERT, Nathan",
+            "AL KATRANJI, Hamza",
+            "DOWER, Simon",
+            "BRYANT, Mark",
+            "DATE, Tim",
+            "FOWLES, William",
+            "VALENCIA, Julio",
+            "GUARDIANI, Franco"
+          ],
+          "same_as": [
+            "971",
+            "974",
+            "976",
+            "977",
+            "980",
+            "981",
+            "987",
+            "1126",
+            "1129",
+            "1148",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1365",
+            "1367"
+          ],
+          "note": "same order as the English card"
         },
         "richmond": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "de VIETRI, Gabrielle",
+            "DITE, Chris",
+            "MCKENZIE, Sarah",
+            "PEAD-PHILIPSON, Jack",
+            "MEYER, David",
+            "APONSO, Charles",
+            "GRAY, Bernadette",
+            "MAYNARD, Christine",
+            "RINDFLEISH, Harrison"
+          ],
+          "same_as": [
+            "952",
+            "956",
+            "959",
+            "965",
+            "976",
+            "1108",
+            "1126",
+            "1131",
+            "1133",
+            "1134",
+            "1138",
+            "1142",
+            "1154",
+            "1191",
+            "1199",
+            "1202",
+            "1207",
+            "1365",
+            "1366",
+            "1367",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "thomastown": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "TREWELLA, Gavin",
+            "REDDY, Priya",
+            "HALFPENNY, Bronwyn",
+            "STOJCEVSKI, Belinda",
+            "RANCIE, Rob",
+            "ANTHONY, Nadia"
+          ],
+          "same_as": [
+            "957",
+            "963",
+            "971",
+            "974",
+            "981",
+            "987",
+            "988",
+            "1132",
+            "1148",
+            "1154",
+            "1190",
+            "1203",
+            "1365"
+          ],
+          "note": "same order as the English card"
         },
         "northern-metropolitan": {
           "atl": [
@@ -112319,48 +116211,383 @@
       "read_on": "2026-11-20",
       "orders": {
         "broadmeadows": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "NASIM, Maryam",
+            "BOLTON, Sue",
+            "YOLBULAN, Mutullah Can",
+            "UNICOMB, Rachel",
+            "ELMUSTAPHA, Mohamad",
+            "MATTHEWS-WARD, Kathleen",
+            "EL YOUSSEF, Mohamad",
+            "DUZOVA, Baris",
+            "WILSON, Russell",
+            "KEIRS, Ethan"
+          ],
+          "same_as": [
+            "971",
+            "974",
+            "977",
+            "987",
+            "988",
+            "1130",
+            "1137",
+            "1150",
+            "1154",
+            "1159",
+            "1168",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1367",
+            "1368",
+            "1369"
+          ],
+          "note": "same order as the English card"
         },
         "brunswick": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "PULFORD, Adam",
+            "FARMER, Naomi",
+            "YUAN, Melissa",
+            "ROSE, India",
+            "STEGER, Gabe",
+            "AMANATIDIS, Jack",
+            "MARGELIS, John",
+            "HELMAN, Adam"
+          ],
+          "same_as": [
+            "956",
+            "959",
+            "965",
+            "976",
+            "977",
+            "1126",
+            "1133",
+            "1134",
+            "1137",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1366",
+            "1367",
+            "1368",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "essendon": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "WILLIAMS, James",
+            "KEDEM, Michal",
+            "MOHAMUD, Anab",
+            "ADAMS, Ava",
+            "THEODOSIS, Kat",
+            "YILDIZ, Oscar",
+            "LE DEUX, Tommy",
+            "BARNES, John"
+          ],
+          "same_as": [
+            "959",
+            "965",
+            "971",
+            "977",
+            "986",
+            "1122",
+            "1130",
+            "1134",
+            "1137",
+            "1150",
+            "1154",
+            "1159",
+            "1162",
+            "1190",
+            "1191",
+            "1209",
+            "1365",
+            "1366",
+            "1367",
+            "1368"
+          ],
+          "note": "same order as the English card"
         },
         "greenvale": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "MCGINNESS, Declan",
+            "SMELOV, Kirill",
+            "FURINA, Rosanna",
+            "SAID, Hassan",
+            "WALTERS, Iwan",
+            "ZOUGHAIB, Yehya",
+            "OVEREND, Jim",
+            "YOHANNA, Mazen",
+            "TITHERIDGE, Michael",
+            "MOORE, Chris"
+          ],
+          "same_as": [
+            "963",
+            "971",
+            "974",
+            "988",
+            "1132",
+            "1159",
+            "1168",
+            "1190"
+          ],
+          "note": "same order as the English card"
         },
         "kalkallo": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "TIWARI, Payal",
+            "MILLETT, Courtney",
+            "LYNCH, Matthew",
+            "ISLAM, Rebeca",
+            "SPENCE, Ros",
+            "DADISHO, Eddie",
+            "DOBSON, Jeanette",
+            "STEANS, Troy"
+          ],
+          "same_as": [
+            "963",
+            "974",
+            "988",
+            "1132",
+            "1148",
+            "1168",
+            "1175",
+            "1190",
+            "1203"
+          ],
+          "note": "same order as the English card"
         },
         "melbourne": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "SANDELL, Ellen",
+            "VAN DEN LAMB, Jordan",
+            "YUSUF, Mohamed",
+            "JONES, Naomi",
+            "GRIFFITHS, Davydd",
+            "TUCKFIELD, Rowan",
+            "CAMILLO, Rafael",
+            "MCCATHIE, Rob",
+            "COURTIS, Phillip"
+          ],
+          "same_as": [
+            "952",
+            "956",
+            "959",
+            "965",
+            "986",
+            "1108",
+            "1122",
+            "1127",
+            "1133",
+            "1134",
+            "1137",
+            "1150",
+            "1154",
+            "1162",
+            "1163",
+            "1186",
+            "1187",
+            "1188",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1366",
+            "1368",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "northcote": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "GOME, Campbell",
+            "LARKIN, Kath",
+            "THEOPHANOUS, Kat",
+            "HILLMAN, Ian",
+            "AWAD, Lynda",
+            "CIMBARO, Richard",
+            "PENMAN, Jim",
+            "PILLEY, Clive",
+            "KAFEL, Hannah",
+            "BRADBURY, Christopher"
+          ],
+          "same_as": [
+            "956",
+            "965",
+            "976",
+            "977",
+            "980",
+            "987",
+            "1126",
+            "1133",
+            "1138",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1199",
+            "1365",
+            "1366",
+            "1367",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "pascoe-vale": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "PANOPOULOS, Angelica",
+            "ANDREWARTHA, Jacob",
+            "SHAMSILI, Yasemin",
+            "CIANFLONE, Anthony",
+            "TAGGAR, Rohit",
+            "ASHTON, Kathrine",
+            "HAUPT, Kerry",
+            "LAWRENCE, Stuart",
+            "HICKEY, Amanda",
+            "GANCI, Rosemarie Pauline"
+          ],
+          "same_as": [
+            "965",
+            "971",
+            "976",
+            "977",
+            "987",
+            "1126",
+            "1137",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1199",
+            "1209",
+            "1365",
+            "1366",
+            "1367",
+            "1368",
+            "1369"
+          ],
+          "note": "same order as the English card"
         },
         "preston": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "SANGARYA, Loki",
+            "CHIN, Zheng",
+            "ASHMORE, Serena",
+            "LAMBERT, Nathan",
+            "AL KATRANJI, Hamza",
+            "DOWER, Simon",
+            "BRYANT, Mark",
+            "DATE, Tim",
+            "FOWLES, William",
+            "VALENCIA, Julio",
+            "GUARDIANI, Franco"
+          ],
+          "same_as": [
+            "971",
+            "974",
+            "976",
+            "977",
+            "980",
+            "981",
+            "987",
+            "1126",
+            "1129",
+            "1148",
+            "1154",
+            "1159",
+            "1190",
+            "1191",
+            "1365",
+            "1367"
+          ],
+          "note": "same order as the English card"
         },
         "richmond": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "de VIETRI, Gabrielle",
+            "DITE, Chris",
+            "MCKENZIE, Sarah",
+            "PEAD-PHILIPSON, Jack",
+            "MEYER, David",
+            "APONSO, Charles",
+            "GRAY, Bernadette",
+            "MAYNARD, Christine",
+            "RINDFLEISH, Harrison"
+          ],
+          "same_as": [
+            "952",
+            "956",
+            "959",
+            "965",
+            "976",
+            "1108",
+            "1126",
+            "1131",
+            "1133",
+            "1134",
+            "1138",
+            "1142",
+            "1154",
+            "1191",
+            "1199",
+            "1202",
+            "1207",
+            "1365",
+            "1366",
+            "1367",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
         },
         "thomastown": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "TREWELLA, Gavin",
+            "REDDY, Priya",
+            "HALFPENNY, Bronwyn",
+            "STOJCEVSKI, Belinda",
+            "RANCIE, Rob",
+            "ANTHONY, Nadia"
+          ],
+          "same_as": [
+            "957",
+            "963",
+            "971",
+            "974",
+            "981",
+            "987",
+            "988",
+            "1132",
+            "1148",
+            "1154",
+            "1190",
+            "1203",
+            "1365"
+          ],
+          "note": "same order as the English card"
         },
         "northern-metropolitan": {
           "atl": [
@@ -115732,12 +119959,70 @@
           ]
         },
         "northern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "atl": [
+            "C",
+            "H",
+            "E",
+            "M",
+            "I"
+          ],
+          "same_as": [
+            "544",
+            "569",
+            "578",
+            "595",
+            "599",
+            "606",
+            "611",
+            "624",
+            "632",
+            "634",
+            "647",
+            "661",
+            "663",
+            "664",
+            "668",
+            "671",
+            "673",
+            "684",
+            "827",
+            "828",
+            "835",
+            "836",
+            "1258",
+            "1266",
+            "1328",
+            "1335",
+            "1515",
+            "1520",
+            "1645"
+          ],
+          "note": "same order as the English card"
         },
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "atl": [
+            "J",
+            "D",
+            "F",
+            "H",
+            "E"
+          ],
+          "same_as": [
+            "571",
+            "588",
+            "591",
+            "609",
+            "623",
+            "653",
+            "686",
+            "690",
+            "1257",
+            "1305",
+            "1328"
+          ],
+          "note": "same order as the English card"
         }
       }
     },

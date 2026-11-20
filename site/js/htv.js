@@ -16,7 +16,10 @@
 
   const load = (area) => loadJSON(`htv/${area}`);
   const link = (url, text) => (url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener">${escapeHtml(text)} ↗</a>` : escapeHtml(text));
-  const isRead = (c) => (c.status === "read" || c.status === "partial") && ((c.order && c.order.length) || (c.atl && c.atl.length) || (c.btl && c.btl.length));
+  // "same_as": a translated card that couldn't be read, given the order every readable card from the same registrant
+  // prints for this seat (scripts/vec_htv.py); it joins that card's column with the note "same order as the English card".
+  const isRead = (c) => ["read", "partial", "same_as"].includes(c.status) && ((c.order && c.order.length) || (c.atl && c.atl.length) || (c.btl && c.btl.length));
+  const SAME_AS = "same order as the English card";
 
   // Who a card is from, as a short label: the party, or the person or group that registered it.
   function who(c) {
@@ -35,8 +38,10 @@
     for (const c of doc.cards || []) {
       if (!isRead(c)) continue;
       const key = `${c.kind}|${c.party}|${c.registered_by}|${JSON.stringify([c.order, c.atl, c.btl])}`;
-      if (!cols.has(key)) cols.set(key, { card: c, cards: [] });
-      cols.get(key).cards.push(c);
+      if (!cols.has(key)) cols.set(key, { card: c, cards: [], same: [] });
+      const col = cols.get(key);
+      if (c.status === "same_as") col.same.push(c);
+      else { if (col.card.status === "same_as") col.card = c; col.cards.push(c); }
     }
     const rank = (c) => ({ ALP: 0, LIB: 1, NAT: 2, GRN: 3, ONP: 4 }[c.party] ?? (c.kind === "party" ? 5 : c.kind === "independent" ? 6 : 7));
     return [...cols.values()].sort((a, b) => rank(a.card) - rank(b.card) || who(a.card).localeCompare(who(b.card)));
@@ -82,7 +87,7 @@
     cols.forEach((col) => { const w = who(col.card); seenWho[w] = (seenWho[w] || 0) + 1; col.n = seenWho[w]; });
     const tagOf = (col) => (seenWho[who(col.card)] > 1 ? ` (${col.n})` : "");
     const head = cols.map((col) => `<th scope="col" class="num htv-col">${whoHtml(col.card)}${escapeHtml(tagOf(col))}
-        <span class="htv-col-meta">${col.cards.length} card${col.cards.length === 1 ? "" : "s"}${col.card.status === "partial" ? "; only these numbers read, see card" : ""}</span></th>`).join("");
+        <span class="htv-col-meta">${col.cards.length} card${col.cards.length === 1 ? "" : "s"}${col.same.length ? ` + ${col.same.length} translated` : ""}${col.card.status === "partial" ? "; only these numbers read, see card" : ""}</span></th>`).join("");
     const body = rs.map((r) => `<tr><th scope="row">${r.label}</th>${cols.map((col) => {
       const n = r.pref(col.card);
       return `<td class="num">${n == null ? '<span class="muted" aria-label="not numbered">–</span>' : n}</td>`;
@@ -92,7 +97,8 @@
         <caption class="sr-only">${escapeHtml(caption)}</caption>
         <thead><tr><th scope="col">On the ballot</th>${head}</tr></thead>
         <tbody>${body}</tbody></table></div>
-      <ul class="htv-links small">${cols.map((col) => `<li><strong>${escapeHtml(who(col.card) + tagOf(col))}:</strong> ${cardLinks(col.cards)}</li>`).join("")}</ul>` : ""}
+      <ul class="htv-links small">${cols.map((col) => `<li><strong>${escapeHtml(who(col.card) + tagOf(col))}:</strong> ${cardLinks(col.cards)}${col.same.length
+        ? `; translated cards, ${SAME_AS}: ${cardLinks(col.same)}` : ""}</li>`).join("")}</ul>` : ""}
       ${btl.map((col) => `<p class="small">${escapeHtml(who(col.card))}'s card numbers candidates below the line:
         ${col.card.btl.map((n, i) => `${i + 1} ${escapeHtml(n)}`).join(", ")}.</p>`).join("")}
       ${unread.length ? `<p class="small htv-unread"><strong>Unreadable, see card:</strong> ${unread.map((c) =>
@@ -131,6 +137,27 @@
     </div>`;
   }
 
+  // Labor-v-Greens seats (doc.labor_greens, set by scripts/vec_htv.py): which of the two each card ranks higher.
+  function laborGreensHtml(doc) {
+    if (!doc.labor_greens || doc.house !== "lower") return "";
+    const party = new Map((doc.ballot || []).map((b) => [b.ballot_name, b.party]));
+    const items = columns(doc).map((col) => {
+      const order = col.card.order || [];
+      const at = (code) => { const i = order.findIndex((n) => party.get(n) === code); return i < 0 ? null : i + 1; };
+      const a = at("ALP"), g = at("GRN");
+      const text = a && g ? (a < g ? `Labor (${a}) ahead of the Greens (${g})` : `the Greens (${g}) ahead of Labor (${a})`)
+        : col.card.status === "partial" ? "doesn't number both (only these numbers read, see card)" : "doesn't number both";
+      const n = col.cards.length + col.same.length;
+      return `<li>${whoHtml(col.card)} ${n > 1 ? `cards (${n})` : "card"}: ${escapeHtml(text)}</li>`;
+    });
+    if (!items.length) return "";
+    return `<div class="htv-lvg">
+      <p class="htv-flags-h"><strong>Labor or the Greens: which each card ranks higher</strong></p>
+      <ul>${items.join("")}</ul>
+      <p class="muted small">From the cards read here (${escapeHtml(doc.labor_greens)}). Numbers are each card's preferences.</p>
+    </div>`;
+  }
+
   function statusLine(doc) {
     const n = (doc.cards || []).length;
     if (!doc || doc.status === "not_open") return "Registration with the VEC opens 9 am 10 Nov 2026. No cards registered yet.";
@@ -153,6 +180,7 @@
       <${H} id="htv-h-${id}">How-to-vote cards</${H}>
       <p class="muted small">${statusLine(doc)} <a href="${escapeHtml(doc.source_url || REGISTER)}" target="_blank" rel="noopener">VEC register ↗</a></p>
       ${flagsHtml(doc)}
+      ${laborGreensHtml(doc)}
       ${matrix(doc, `Preference numbers on each registered how-to-vote card for ${doc.name}`)}
       ${(doc.cards || []).length ? `<p class="muted small">Each column is one party's or candidate's card${columns(doc).some((c) => c.cards.length > 1) ? " (cards printing the same order are combined)" : ""}, as registered with the VEC:
         their recommendation, not this site's. Numbers are read from each card's PDF; follow the links for the originals.</p>` : ""}
@@ -231,7 +259,8 @@
     const nc = cov.no_card || {};
     return `<p class="small" style="margin-top:0"><strong>${fmt(cov.cards)}</strong> cards registered, covering <strong>${fmt(cov.districts_with_cards)}</strong> of 88 districts
         and <strong>${fmt(cov.regions_with_cards)}</strong> of 8 regions. Preference orders read from ${fmt(cov.orders_read)} of ${fmt(cov.listings)} district and region listings;
-        ${fmt(cov.orders_unreadable)} are marked "unreadable, see card".</p>
+        ${cov.orders_same_as ? `${fmt(cov.orders_same_as)} more are translated cards shown with the order of the same registrant's English card for that seat ("${SAME_AS}");
+        ` : ""}${fmt(cov.orders_unreadable)} are marked "unreadable, see card".</p>
       <p class="small"><strong>Candidates with no card</strong> from their party or themselves: ${fmt(nc.lower)} of ${fmt(nc.candidates_lower)} Assembly candidates and
         ${fmt(nc.upper)} of ${fmt(nc.candidates_upper)} Council candidates.</p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="How-to-vote cards by who registered them"><table class="htv-cov">

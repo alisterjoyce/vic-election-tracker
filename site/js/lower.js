@@ -583,7 +583,7 @@
       <div class="booth-map" id="${key}-booth-map"></div>
       <p class="muted small" id="${key}-booth-note"></p>
       ${byType.length ? `
-        <div class="table-scroll"><table>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Two-candidate-preferred share by vote type (scrolls sideways)"><table>
           <thead><tr><th>Vote type (2CP)</th>${tcpEntries.map(([id]) => `<th class="num">${escapeHtml(App.partyShort(cand[id].party))}</th>`).join("")}<th class="num">Votes</th></tr></thead>
           <tbody>${byType.map((t) => {
             const row = r.tcp.by_type[t];
@@ -592,7 +592,7 @@
           }).join("")}</tbody>
         </table></div>` : ""}
       <details class="booth-table"><summary>All ${r.polling_places.length} voting centres</summary>
-        <div class="table-scroll"><table>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Votes at every voting centre (scrolls sideways)"><table>
           <thead><tr><th>Voting centre</th><th class="num">Votes</th>${tcpEntries.map(([id]) => `<th class="num">${escapeHtml(App.partyShort(cand[id].party))} 2CP</th>`).join("")}</tr></thead>
           <tbody>${r.polling_places.slice().sort((a, b) => (b.total || 0) - (a.total || 0)).map((p) => {
             const s = p.tcp ? Object.values(p.tcp).reduce((a, b) => a + (b || 0), 0) : 0;

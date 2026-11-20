@@ -52,6 +52,9 @@ log = logging.getLogger("vec_htv")
 VEC = "https://www.vec.vic.gov.au"
 REGISTER_PAGE = VEC + "/voting/2026-state-election/how-to-vote-cards"
 TABLE_API = VEC + "/api/sitecore/HtvcResults/GetTable"
+# Where card PDFs are kept between runs on this machine (outside OneDrive: ~4.4 GB). The one place to change it;
+# VEC_HTV_PDF_DIR overrides it. refresh.py and --reread both read it; the Actions runner keeps no cache.
+PDF_CACHE = Path(os.environ.get("VEC_HTV_PDF_DIR") or r"C:\vec-cache\htv-2026")
 DELAY = 1.0
 TIMEOUT = 60
 ATTEMPTS = 3
@@ -794,9 +797,10 @@ def coverage(cards: list[dict], vec: dict) -> dict:
             missing = [c for c in b["candidates"] if not covered(c)]
         no_card[aid] = [c["ballot_name"] for c in missing]
     read = sum(1 for c in cards for o in c["orders"].values() if o.get("status") in ("read", "partial"))
+    same_as = sum(1 for c in cards for o in c["orders"].values() if o.get("status") == "same_as")
     listings = sum(len(c["orders"]) for c in cards)
     return {
-        "cards": len(cards), "listings": listings, "orders_read": read,
+        "cards": len(cards), "listings": listings, "orders_read": read, "orders_same_as": same_as,
         "orders_unreadable": sum(1 for c in cards for o in c["orders"].values() if o.get("status") == "unreadable"),
         "districts_with_cards": sum(1 for a, b in ballot.items() if b["house"] == "lower" and by_area.get(a)),
         "regions_with_cards": sum(1 for a, b in ballot.items() if b["house"] == "upper" and by_area.get(a)),
@@ -829,7 +833,7 @@ SCHEMA = {
         "source_url": "The VEC's register of registered how-to-vote cards",
         "last_checked": "ISO UTC time the register was last read successfully",
         "pending": "Orders not read yet (cards whose PDF is still to be read, at most a set number per refresh)",
-        "coverage": "{cards (registrations), listings (card x district or region), orders_read, orders_unreadable, "
+        "coverage": "{cards (registrations), listings (card x district or region), orders_read, orders_same_as, orders_unreadable, "
                     "districts_with_cards, regions_with_cards, by_party: {code | IND (independent candidates) | NONCAND "
                     "(registered by someone not standing): {cards, districts, regions}}, no_card: {lower, upper "
                     "(candidates with no card from their party or themselves), candidates_lower, candidates_upper}}",
@@ -837,7 +841,7 @@ SCHEMA = {
                  "party (code; IND for an independent candidate; null for others), candidate (tracker id of the independent "
                  "it is for), type (Single | Combined | MEHTVC, as listed), registered_on (YYYY-MM-DD), card_url (the VEC's "
                  "link to the card PDF), file (its file name), areas (district and region ids it is listed under), read_on, "
-                 "orders: {area id: {status (read | partial: numbers only some boxes | unreadable | pending), order (Assembly: "
+                 "orders: {area id: {status (read | partial: numbers only some boxes | same_as: a translated card that couldn't be read, given the order every readable card from the same registrant prints for that seat, with same_as = their registration numbers and note 'same order as the English card' | unreadable | pending), order (Assembly: "
                  "ballot names, 'SURNAME, Given', first preference first), atl (Council: group letters numbered above the line, "
                  "first first), btl (Council: ballot names numbered below the line, when the card numbers at least 5), via "
                  "(text | ocr | hand), note ('unreadable, see card'), ranks ({ALP | LNP | GRN | ONP: preference given to that "
@@ -853,8 +857,49 @@ def status_for(today: str) -> str:
     return "not_open" if today < REG_OPENS else ("open" if today <= REG_CLOSES else "closed")
 
 
+# A card in another language, by its file name: the Greens' "... arabic 2.pdf", Labor's "..._tr5_1.pdf".
+TRANSLATED = re.compile(r"arabic|chinese|vietnamese|punjabi|hindi|greek|italian|turkish|somali|oromo|dari|persian|farsi|"
+                        r"urdu|tamil|korean|khmer|nepali|sinhal|macedonian|serbian|croatian|spanish|amharic|tigrinya|"
+                        r"dinka|swahili|karen|burmese|bengali|gujarati|telugu|filipino|tagalog|indonesian|thai|japanese|"
+                        r"russian|ukrainian|polish|portuguese|cantonese|mandarin|(?:^|[_ ])tr\d", re.I)
+SAME_AS_NOTE = "same order as the English card"
+
+
+def borrow_translations(cards: list[dict]) -> int:
+    """A translated card that can't be read takes the order of the same registrant's readable cards for the same
+    district or region, when every one of those prints the same order (status "same_as", with the registration
+    numbers it follows). Recomputed every run, so it lapses if those cards stop agreeing. Returns how many."""
+    readable: dict[tuple, list[dict]] = {}
+    for c in cards:
+        if TRANSLATED.search(c.get("file") or ""):
+            continue
+        for aid, o in c["orders"].items():
+            if o.get("status") == "read":
+                readable.setdefault((c["kind"], c["registered_by"], aid), []).append((c, o))
+    n = 0
+    for c in cards:
+        if not TRANSLATED.search(c.get("file") or ""):
+            continue
+        for aid, o in list(c["orders"].items()):
+            if o.get("status") not in ("unreadable", "same_as"):
+                continue
+            sib = readable.get((c["kind"], c["registered_by"], aid), [])
+            orders = {json.dumps([so.get("order"), so.get("atl"), so.get("btl")]) for _, so in sib}
+            if sib and len(orders) == 1:
+                src = sib[0][1]
+                c["orders"][aid] = {"status": "same_as", **{k: src[k] for k in ("order", "atl", "btl") if src.get(k)},
+                                    "same_as": sorted({sc["registration"] for sc, _ in sib}, key=lambda r: (len(r), r)),
+                                    "note": SAME_AS_NOTE}
+                n += 1
+            elif o.get("status") == "same_as":
+                c["orders"][aid] = {"status": "unreadable", "note": UNREADABLE}
+    return n
+
+
 def decorate(cards: list[dict], vec: dict) -> None:
-    """Add ranks and flags to every read order."""
+    """Translated cards borrow their English card's order where it is certain; then ranks and flags on every read order."""
+    borrowed = borrow_translations(cards)
+    log.info("How-to-vote cards: %d translated-card orders taken from the same registrant's English cards", borrowed)
     ballot = ballots(vec)
     for c in cards:
         if c["kind"] == "party" and not (c.get("registered_by") or "").strip():
@@ -873,6 +918,31 @@ def decorate(cards: list[dict], vec: dict) -> None:
                     o["flags"] = f
 
 
+# Seats where the seat page says which of Labor or the Greens each card ranks higher: every district whose 2022
+# two-candidate-preferred count was Labor v Greens (from results_2022/), plus seats named by hand (Prahran: its 2022
+# count was Greens v Liberal, but it was asked for on 20 Nov 2026).
+LABOR_GREENS_EXTRA = {"prahran": "2022 two-candidate-preferred count: Greens v Liberal"}
+
+
+def labor_greens_seats(data_dir: Path) -> dict[str, str]:
+    """{district id: note} for the Labor-or-Greens panel."""
+    out = {}
+    for f in sorted((data_dir / "results_2022").glob("*.json")):
+        if f.stem == "index":
+            continue
+        try:
+            d = json.loads(f.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        ids = set(((d.get("tcp") or {}).get("candidates") or {}).keys())
+        parties = {c.get("party") for c in d.get("candidates") or [] if c.get("id") in ids}
+        if parties == {"ALP", "GRN"}:
+            out[f.stem] = "2022 two-candidate-preferred count: Labor v Greens"
+    for k, v in LABOR_GREENS_EXTRA.items():
+        out.setdefault(k, v)
+    return out
+
+
 def area_doc(aid: str, b: dict, cards: list[dict], no_card: list[str], head: dict) -> dict:
     keep = ("registration", "registered_by", "kind", "party", "candidate", "type", "registered_on", "card_url")
     rows = []
@@ -882,11 +952,13 @@ def area_doc(aid: str, b: dict, cards: list[dict], no_card: list[str], head: dic
     rows.sort(key=lambda r: (r["kind"] != "party", r.get("party") or "", r.get("registered_on") or "", int(r["registration"]) if str(r["registration"]).isdigit() else 0))
     cands = [{k: c.get(k) for k in ("ballot_name", "name", "party", "party_label", "ballot_position", "group", "id") if c.get(k) is not None}
              for c in b["candidates"]]
-    doc = {"area": aid, "house": b["house"], "name": b["name"], **head, "ballot": cands}
+    doc = {"area": aid, "house": b["house"], "name": b["name"], **{k: v for k, v in head.items() if k != "labor_greens"}, "ballot": cands}
     if b["house"] == "upper":
         doc["groups"] = [{k: g.get(k) for k in ("group", "label", "party")} for g in b["groups"]]
     doc["cards"] = rows
     doc["no_card"] = no_card
+    if head.get("labor_greens", {}).get(aid):
+        doc["labor_greens"] = head["labor_greens"][aid]
     return doc
 
 
@@ -928,6 +1000,7 @@ def write_files(data_dir: Path, doc: dict, vec: dict, write_json) -> None:
     write_json(data_dir / "htv.json", doc)
     head = {"status": doc["status"], "source_url": doc["source_url"], "registration_closes": doc.get("registration_closes")}
     ballot = ballots(vec)
+    lvg = labor_greens_seats(data_dir)
     folder = data_dir / "htv"
     folder.mkdir(exist_ok=True)
     by_area: dict[str, list] = {a: [] for a in ballot}
@@ -937,13 +1010,13 @@ def write_files(data_dir: Path, doc: dict, vec: dict, write_json) -> None:
     areas = {}
     for aid, b in ballot.items():
         cs = by_area.get(aid, [])
-        write_json(folder / f"{aid}.json", area_doc(aid, b, cs, no_card.get(aid, []), head))
+        write_json(folder / f"{aid}.json", area_doc(aid, b, cs, no_card.get(aid, []), {**head, "labor_greens": lvg}))
         st = [c["orders"].get(aid, {}).get("status") for c in cs]
         parties: dict[str, int] = {}
         for c in cs:
             k = c["party"] if c["kind"] == "party" else ("IND" if c["kind"] == "independent" else "NONCAND")
             parties[k] = parties.get(k, 0) + 1
-        areas[aid] = {"house": b["house"], "cards": len(cs), "read": sum(s in ("read", "partial") for s in st),
+        areas[aid] = {"house": b["house"], "cards": len(cs), "read": sum(s in ("read", "partial") for s in st), "same_as": st.count("same_as"),
                       "unreadable": st.count("unreadable"), "parties": parties, "no_card": len(no_card.get(aid, []))}
     for stale in folder.glob("*.json"):
         if stale.stem not in ballot and stale.stem != "index":
@@ -951,7 +1024,12 @@ def write_files(data_dir: Path, doc: dict, vec: dict, write_json) -> None:
     index = {"_schema": {"description": "Summary of htv.json: coverage counts, per-area counts and, per district, where "
                                         "Labor's, the Liberals', the Nationals', One Nation's and the Greens' cards put Labor, "
                                         "the Coalition, the Greens and One Nation. Generated by scripts/vec_htv.py.",
-                         "fields": {"areas": "{area id: {house, cards, read, unreadable, parties: {code: cards}, no_card}}",
+                         "fields": {"areas": "{area id: {house, cards, read, same_as, unreadable, parties: {code: cards}, no_card}}",
+                                    "htv/<area>.json": "{area, house, name, status, source_url, registration_closes, ballot: "
+                                                       "[candidates in ballot order], groups (Council), cards: [each card with "
+                                                       "this area's order, as in htv.json], no_card: [ballot names], "
+                                                       "labor_greens (seats whose page says which of Labor or the Greens "
+                                                       "each card ranks higher: why the seat is listed)}",
                                     "watch": "[{area, party, cards, read, ranks (when every read card agrees), differ, "
                                              "flags, flags_some, card_url}]"}},
              **head, "last_checked": doc.get("last_checked"), "coverage": cov, "areas": areas, "watch": watch_rows(doc["cards"], vec)}
@@ -984,8 +1062,8 @@ def run(data_dir: Path, pdf_dir: Path | None, write_json, today: str, now_iso: s
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--data-dir", type=Path, required=True)
-    ap.add_argument("--pdf-dir", type=Path, default=Path(__file__).resolve().parent.parent / "website samples and summary (complete set)" / "htv-2026",
-                    help="where card PDFs are saved and reused (git-ignored)")
+    ap.add_argument("--pdf-dir", type=Path, default=PDF_CACHE,
+                    help=f"where card PDFs are saved and reused (default {PDF_CACHE}, or VEC_HTV_PDF_DIR)")
     ap.add_argument("--max-new", type=int, default=2000, help="most card PDFs to read in one run")
     ap.add_argument("--rewrite", action="store_true",
                     help="no fetching: recompute ranks, flags and coverage from htv.json and rewrite htv/ (after a code change)")
