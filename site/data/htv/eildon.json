@@ -235,7 +235,7 @@
       "candidate": null,
       "type": "Combined",
       "registered_on": "2026-11-12",
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=22186002-ccc3-4b0f-a904-bae6f7f07150%2Ffamilyfirst_eildon_version2%20%28dragged%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=21396b15-155b-4dc0-a71e-8c3ed8d5812f%2Ffamilyfirst_eildon_version3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
       "status": "read",
       "order": [
         "MOSELY, Joshua",
@@ -1106,9 +1106,22 @@
         "LNP": 6,
         "ONP": 8
       }
+    },
+    {
+      "registration": "1648",
+      "registered_by": "WARD, Tom",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "eildon/tom-ward",
+      "type": "Single",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d0c73054-7274-47b9-b15f-fb82d3ed162c%2Fward%2C%20thomas.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "partial",
+      "order": [
+        "WARD, Tom"
+      ],
+      "via": "text"
     }
   ],
-  "no_card": [
-    "WARD, Tom"
-  ]
+  "no_card": []
 }

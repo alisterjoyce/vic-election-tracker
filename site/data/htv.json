@@ -17,19 +17,19 @@
   "registration_opens": "2026-11-10",
   "registration_closes": "2026-11-20",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
-  "last_checked": "2026-11-20T01:12:49Z",
+  "last_checked": "2026-11-20T05:54:06Z",
   "pending": 3,
   "coverage": {
-    "cards": 1372,
-    "listings": 4708,
-    "orders_read": 3903,
-    "orders_same_as": 151,
-    "orders_unreadable": 651,
+    "cards": 1383,
+    "listings": 4746,
+    "orders_read": 3931,
+    "orders_same_as": 154,
+    "orders_unreadable": 658,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
       "ALP": {
-        "cards": 300,
+        "cards": 301,
         "districts": 88,
         "regions": 8
       },
@@ -39,7 +39,7 @@
         "regions": 8
       },
       "GRN": {
-        "cards": 186,
+        "cards": 192,
         "districts": 88,
         "regions": 8
       },
@@ -49,8 +49,8 @@
         "regions": 8
       },
       "IND": {
-        "cards": 93,
-        "districts": 47,
+        "cards": 95,
+        "districts": 49,
         "regions": 5
       },
       "ONP": {
@@ -59,7 +59,7 @@
         "regions": 8
       },
       "NONCAND": {
-        "cards": 78,
+        "cards": 80,
         "districts": 31,
         "regions": 6
       },
@@ -131,7 +131,7 @@
       }
     },
     "no_card": {
-      "lower": 43,
+      "lower": 41,
       "upper": 16,
       "candidates_lower": 734,
       "candidates_upper": 303
@@ -35296,8 +35296,8 @@
       "kind": "party",
       "type": "Combined",
       "registered_on": "2026-11-12",
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=22186002-ccc3-4b0f-a904-bae6f7f07150%2Ffamilyfirst_eildon_version2%20%28dragged%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "file": "familyfirst_eildon_version2 (dragged).pdf",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=21396b15-155b-4dc0-a71e-8c3ed8d5812f%2Ffamilyfirst_eildon_version3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "familyfirst_eildon_version3.pdf",
       "areas": [
         "eildon",
         "northern-victoria"
@@ -35437,8 +35437,8 @@
       "kind": "party",
       "type": "Combined",
       "registered_on": "2026-11-12",
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3213ea70-6bc6-48d8-a44d-61ea8d1b4e03%2Ffamilyfirst_benambra_version2%20%28dragged%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "file": "familyfirst_benambra_version2 (dragged).pdf",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=37a7a8f7-a680-40fa-ba2f-a6c2e377712f%2Ffamilyfirst_benambra_version3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "familyfirst_benambra_version3.pdf",
       "areas": [
         "benambra",
         "northern-victoria"
@@ -35469,21 +35469,8 @@
           }
         },
         "northern-victoria": {
-          "atl": [
-            "D",
-            "E",
-            "H",
-            "J",
-            "F",
-            "C"
-          ],
-          "via": "text",
-          "status": "read",
-          "ranks": {
-            "ONP": 3,
-            "LNP": 4,
-            "ALP": 6
-          }
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -98858,7 +98845,9 @@
             "1182",
             "1190",
             "1198",
-            "1412"
+            "1412",
+            "1657",
+            "1658"
           ],
           "note": "same order as the English card"
         },
@@ -99201,7 +99190,8 @@
             "1201",
             "1209",
             "1368",
-            "1369"
+            "1369",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -110954,7 +110944,8 @@
             "1365",
             "1367",
             "1368",
-            "1369"
+            "1369",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -110991,7 +110982,8 @@
             "1367",
             "1368",
             "1369",
-            "1390"
+            "1390",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -111122,7 +111114,8 @@
             "1366",
             "1368",
             "1369",
-            "1390"
+            "1390",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -111159,7 +111152,8 @@
             "1366",
             "1367",
             "1369",
-            "1390"
+            "1390",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -111195,7 +111189,8 @@
             "1366",
             "1367",
             "1368",
-            "1369"
+            "1369",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -111230,7 +111225,8 @@
             "1190",
             "1191",
             "1365",
-            "1367"
+            "1367",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -111376,7 +111372,8 @@
             "1365",
             "1367",
             "1368",
-            "1369"
+            "1369",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -111413,7 +111410,8 @@
             "1367",
             "1368",
             "1369",
-            "1390"
+            "1390",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -111544,7 +111542,8 @@
             "1366",
             "1368",
             "1369",
-            "1390"
+            "1390",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -111581,7 +111580,8 @@
             "1366",
             "1367",
             "1369",
-            "1390"
+            "1390",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -111617,7 +111617,8 @@
             "1366",
             "1367",
             "1368",
-            "1369"
+            "1369",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -111652,7 +111653,8 @@
             "1190",
             "1191",
             "1365",
-            "1367"
+            "1367",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -111866,7 +111868,8 @@
             "1201",
             "1209",
             "1368",
-            "1369"
+            "1369",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -112720,7 +112723,8 @@
             "1365",
             "1367",
             "1368",
-            "1369"
+            "1369",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -112757,7 +112761,8 @@
             "1367",
             "1368",
             "1369",
-            "1390"
+            "1390",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -112888,7 +112893,8 @@
             "1366",
             "1368",
             "1369",
-            "1390"
+            "1390",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -112925,7 +112931,8 @@
             "1366",
             "1367",
             "1369",
-            "1390"
+            "1390",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -112961,7 +112968,8 @@
             "1366",
             "1367",
             "1368",
-            "1369"
+            "1369",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -112996,7 +113004,8 @@
             "1190",
             "1191",
             "1365",
-            "1367"
+            "1367",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -113445,7 +113454,8 @@
             "1365",
             "1367",
             "1368",
-            "1369"
+            "1369",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -113482,7 +113492,8 @@
             "1367",
             "1368",
             "1369",
-            "1390"
+            "1390",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -113613,7 +113624,8 @@
             "1366",
             "1368",
             "1369",
-            "1390"
+            "1390",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -113650,7 +113662,8 @@
             "1366",
             "1367",
             "1369",
-            "1390"
+            "1390",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -113686,7 +113699,8 @@
             "1366",
             "1367",
             "1368",
-            "1369"
+            "1369",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -113721,7 +113735,8 @@
             "1190",
             "1191",
             "1365",
-            "1367"
+            "1367",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -113855,7 +113870,8 @@
             "1198",
             "1208",
             "1410",
-            "1411"
+            "1411",
+            "1657"
           ],
           "note": "same order as the English card"
         },
@@ -113890,7 +113906,9 @@
             "1208",
             "1410",
             "1411",
-            "1412"
+            "1412",
+            "1657",
+            "1658"
           ],
           "note": "same order as the English card"
         },
@@ -113916,7 +113934,9 @@
             "1182",
             "1190",
             "1198",
-            "1412"
+            "1412",
+            "1657",
+            "1658"
           ],
           "note": "same order as the English card"
         },
@@ -113941,7 +113961,8 @@
             "1190",
             "1198",
             "1206",
-            "1411"
+            "1411",
+            "1658"
           ],
           "note": "same order as the English card"
         },
@@ -113969,7 +113990,8 @@
             "1182",
             "1190",
             "1201",
-            "1412"
+            "1412",
+            "1658"
           ],
           "note": "same order as the English card"
         },
@@ -114000,7 +114022,9 @@
             "1208",
             "1410",
             "1411",
-            "1412"
+            "1412",
+            "1657",
+            "1658"
           ],
           "note": "same order as the English card"
         },
@@ -114033,7 +114057,8 @@
             "1179",
             "1183",
             "1190",
-            "1206"
+            "1206",
+            "1658"
           ],
           "note": "same order as the English card"
         },
@@ -114061,7 +114086,9 @@
             "1208",
             "1410",
             "1411",
-            "1412"
+            "1412",
+            "1657",
+            "1658"
           ],
           "note": "same order as the English card"
         },
@@ -114113,7 +114140,9 @@
             "1410",
             "1411",
             "1412",
-            "1499"
+            "1499",
+            "1657",
+            "1658"
           ],
           "note": "same order as the English card"
         }
@@ -114766,7 +114795,8 @@
             "1365",
             "1367",
             "1368",
-            "1369"
+            "1369",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -114803,7 +114833,8 @@
             "1367",
             "1368",
             "1369",
-            "1390"
+            "1390",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -114934,7 +114965,8 @@
             "1366",
             "1368",
             "1369",
-            "1390"
+            "1390",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -114971,7 +115003,8 @@
             "1366",
             "1367",
             "1369",
-            "1390"
+            "1390",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -115007,7 +115040,8 @@
             "1366",
             "1367",
             "1368",
-            "1369"
+            "1369",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -115042,7 +115076,8 @@
             "1190",
             "1191",
             "1365",
-            "1367"
+            "1367",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -115821,7 +115856,8 @@
             "1365",
             "1367",
             "1368",
-            "1369"
+            "1369",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -115858,7 +115894,8 @@
             "1367",
             "1368",
             "1369",
-            "1390"
+            "1390",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -115989,7 +116026,8 @@
             "1366",
             "1368",
             "1369",
-            "1390"
+            "1390",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -116026,7 +116064,8 @@
             "1366",
             "1367",
             "1369",
-            "1390"
+            "1390",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -116062,7 +116101,8 @@
             "1366",
             "1367",
             "1368",
-            "1369"
+            "1369",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -116097,7 +116137,8 @@
             "1190",
             "1191",
             "1365",
-            "1367"
+            "1367",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -116243,7 +116284,8 @@
             "1365",
             "1367",
             "1368",
-            "1369"
+            "1369",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -116280,7 +116322,8 @@
             "1367",
             "1368",
             "1369",
-            "1390"
+            "1390",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -116411,7 +116454,8 @@
             "1366",
             "1368",
             "1369",
-            "1390"
+            "1390",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -116448,7 +116492,8 @@
             "1366",
             "1367",
             "1369",
-            "1390"
+            "1390",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -116484,7 +116529,8 @@
             "1366",
             "1367",
             "1368",
-            "1369"
+            "1369",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -116519,7 +116565,8 @@
             "1190",
             "1191",
             "1365",
-            "1367"
+            "1367",
+            "1656"
           ],
           "note": "same order as the English card"
         },
@@ -120085,9 +120132,1100 @@
           }
         }
       }
+    },
+    {
+      "registration": "1648",
+      "registered_by": "WARD, Tom",
+      "kind": "independent",
+      "type": "Single",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d0c73054-7274-47b9-b15f-fb82d3ed162c%2Fward%2C%20thomas.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "ward, thomas.pdf",
+      "areas": [
+        "eildon"
+      ],
+      "party": "IND",
+      "candidate": "eildon/tom-ward",
+      "read_on": "2026-11-20",
+      "orders": {
+        "eildon": {
+          "status": "partial",
+          "order": [
+            "WARD, Tom"
+          ],
+          "via": "text"
+        }
+      }
+    },
+    {
+      "registration": "1649",
+      "registered_by": "Darebin Climate Action Now",
+      "kind": "non_candidate",
+      "type": "Single",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7beadd62-cbc1-4491-bed9-6d5cb8b138f8%2Fnorthcote%20-%20morton%2C%20jane%20-%20htvc.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "northcote - morton, jane - htvc.pdf",
+      "areas": [
+        "northcote"
+      ],
+      "party": null,
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "northcote": {
+          "status": "unreadable",
+          "note": "unreadable, see card"
+        }
+      }
+    },
+    {
+      "registration": "1650",
+      "registered_by": "Darebin Climate Action Now",
+      "kind": "non_candidate",
+      "type": "Single",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=794d4019-d8ae-44a9-acfd-16f147308a83%2Fnorthern%20metropolitan%20region%20-%20morton%2C%20jane%20-%20htvc.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "northern metropolitan region - morton, jane - htvc.pdf",
+      "areas": [
+        "northern-metropolitan"
+      ],
+      "party": null,
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "northern-metropolitan": {
+          "status": "unreadable",
+          "note": "unreadable, see card"
+        }
+      }
+    },
+    {
+      "registration": "1653",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "type": "Combined",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fd2687eb-692c-4649-b5af-99584d339e2d%2Fthe%20greens%20combined%20northern%20metro%20richmond%20vietnamese%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "the greens combined northern metro richmond vietnamese 1.pdf",
+      "areas": [
+        "richmond",
+        "northern-metropolitan"
+      ],
+      "party": "GRN",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "richmond": {
+          "status": "same_as",
+          "order": [
+            "de VIETRI, Gabrielle",
+            "DITE, Chris",
+            "MCKENZIE, Sarah",
+            "PEAD-PHILIPSON, Jack",
+            "MEYER, David",
+            "APONSO, Charles",
+            "GRAY, Bernadette",
+            "MAYNARD, Christine",
+            "RINDFLEISH, Harrison"
+          ],
+          "same_as": [
+            "952",
+            "956",
+            "959",
+            "965",
+            "976",
+            "1108",
+            "1126",
+            "1131",
+            "1133",
+            "1134",
+            "1138",
+            "1142",
+            "1154",
+            "1191",
+            "1199",
+            "1202",
+            "1207",
+            "1365",
+            "1366",
+            "1367",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
+        },
+        "northern-metropolitan": {
+          "atl": [
+            "D",
+            "G",
+            "L",
+            "J",
+            "K"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
+        }
+      }
+    },
+    {
+      "registration": "1654",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "type": "Combined",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=07161932-8d2c-4bd1-a509-1511d3b9f32e%2Fthe%20greens%20combined%20northern%20metro%20richmond%20simplified%20chinese%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "the greens combined northern metro richmond simplified chinese 1.pdf",
+      "areas": [
+        "richmond",
+        "northern-metropolitan"
+      ],
+      "party": "GRN",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "richmond": {
+          "status": "same_as",
+          "order": [
+            "de VIETRI, Gabrielle",
+            "DITE, Chris",
+            "MCKENZIE, Sarah",
+            "PEAD-PHILIPSON, Jack",
+            "MEYER, David",
+            "APONSO, Charles",
+            "GRAY, Bernadette",
+            "MAYNARD, Christine",
+            "RINDFLEISH, Harrison"
+          ],
+          "same_as": [
+            "952",
+            "956",
+            "959",
+            "965",
+            "976",
+            "1108",
+            "1126",
+            "1131",
+            "1133",
+            "1134",
+            "1138",
+            "1142",
+            "1154",
+            "1191",
+            "1199",
+            "1202",
+            "1207",
+            "1365",
+            "1366",
+            "1367",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
+        },
+        "northern-metropolitan": {
+          "atl": [
+            "D",
+            "G",
+            "L",
+            "J",
+            "K"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
+        }
+      }
+    },
+    {
+      "registration": "1655",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "type": "Combined",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2ac66f54-8d74-4ddd-9dcb-634294f8052b%2Fthe%20greens%20combined%20northern%20metro%20richmond%20arabic%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "the greens combined northern metro richmond arabic 1.pdf",
+      "areas": [
+        "richmond",
+        "northern-metropolitan"
+      ],
+      "party": "GRN",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "richmond": {
+          "status": "same_as",
+          "order": [
+            "de VIETRI, Gabrielle",
+            "DITE, Chris",
+            "MCKENZIE, Sarah",
+            "PEAD-PHILIPSON, Jack",
+            "MEYER, David",
+            "APONSO, Charles",
+            "GRAY, Bernadette",
+            "MAYNARD, Christine",
+            "RINDFLEISH, Harrison"
+          ],
+          "same_as": [
+            "952",
+            "956",
+            "959",
+            "965",
+            "976",
+            "1108",
+            "1126",
+            "1131",
+            "1133",
+            "1134",
+            "1138",
+            "1142",
+            "1154",
+            "1191",
+            "1199",
+            "1202",
+            "1207",
+            "1365",
+            "1366",
+            "1367",
+            "1369",
+            "1390"
+          ],
+          "note": "same order as the English card"
+        },
+        "northern-metropolitan": {
+          "atl": [
+            "D",
+            "G",
+            "L",
+            "J",
+            "K"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
+        }
+      }
+    },
+    {
+      "registration": "1656",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "type": "Combined",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5f1e68c0-c105-42fa-9c08-40fd70217384%2Fthe%20greens%20combined%20essendon%20niddrie%20pascoe%20vale%20northern%20metro%20western%20metro%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "the greens combined essendon niddrie pascoe vale northern metro western metro 2.pdf",
+      "areas": [
+        "broadmeadows",
+        "brunswick",
+        "essendon",
+        "footscray",
+        "melbourne",
+        "niddrie",
+        "northcote",
+        "pascoe-vale",
+        "preston",
+        "northern-metropolitan",
+        "western-metropolitan"
+      ],
+      "party": "GRN",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "broadmeadows": {
+          "status": "read",
+          "order": [
+            "NASIM, Maryam",
+            "BOLTON, Sue",
+            "YOLBULAN, Mutullah Can",
+            "UNICOMB, Rachel",
+            "ELMUSTAPHA, Mohamad",
+            "MATTHEWS-WARD, Kathleen",
+            "EL YOUSSEF, Mohamad",
+            "DUZOVA, Baris",
+            "WILSON, Russell",
+            "KEIRS, Ethan"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 6,
+            "LNP": 8,
+            "ONP": 10
+          }
+        },
+        "brunswick": {
+          "status": "read",
+          "order": [
+            "PULFORD, Adam",
+            "FARMER, Naomi",
+            "YUAN, Melissa",
+            "ROSE, India",
+            "STEGER, Gabe",
+            "AMANATIDIS, Jack",
+            "MARGELIS, John",
+            "HELMAN, Adam"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5,
+            "LNP": 7,
+            "ONP": 8
+          }
+        },
+        "essendon": {
+          "status": "unreadable",
+          "note": "unreadable, see card"
+        },
+        "footscray": {
+          "status": "read",
+          "order": [
+            "PEREYRA, Elena",
+            "DUFF, Jasmine",
+            "MARSH, Jess",
+            "NGUYEN, Minh Quan",
+            "HALL, Katie",
+            "IBRAHIM, Marcus",
+            "CHANG, Tim",
+            "FELATE, Andualem",
+            "DINH, Hai",
+            "CUMMING, Catherine",
+            "HESS, Kristina",
+            "CALDER, Daryle",
+            "LEWIS, Daniel",
+            "FLORES, Ana",
+            "LOPEZ, Alexander"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5,
+            "LNP": 7,
+            "ONP": 15
+          }
+        },
+        "melbourne": {
+          "status": "read",
+          "order": [
+            "SANDELL, Ellen",
+            "VAN DEN LAMB, Jordan",
+            "YUSUF, Mohamed",
+            "JONES, Naomi",
+            "GRIFFITHS, Davydd",
+            "TUCKFIELD, Rowan",
+            "CAMILLO, Rafael",
+            "MCCATHIE, Rob",
+            "COURTIS, Phillip"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5,
+            "LNP": 7,
+            "ONP": 9
+          }
+        },
+        "niddrie": {
+          "status": "read",
+          "order": [
+            "NGUYEN, Lana",
+            "LAWS, Brendan",
+            "HASELGROVE, Salomae",
+            "PATRIKEOS, Brett",
+            "CARROLL, Ben",
+            "SFAMENI, Sam",
+            "BYRNE, Samantha",
+            "CHITTEDI, Karthik Reddy",
+            "METE, Domenic",
+            "THEODOROU, George",
+            "TAVERNA, Jason"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5,
+            "LNP": 7,
+            "ONP": 11
+          }
+        },
+        "northcote": {
+          "status": "read",
+          "order": [
+            "GOME, Campbell",
+            "LARKIN, Kath",
+            "THEOPHANOUS, Kat",
+            "HILLMAN, Ian",
+            "AWAD, Lynda",
+            "CIMBARO, Richard",
+            "PENMAN, Jim",
+            "PILLEY, Clive",
+            "KAFEL, Hannah",
+            "BRADBURY, Christopher"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 3,
+            "LNP": 5,
+            "ONP": 10
+          }
+        },
+        "pascoe-vale": {
+          "status": "read",
+          "order": [
+            "PANOPOULOS, Angelica",
+            "ANDREWARTHA, Jacob",
+            "SHAMSILI, Yasemin",
+            "CIANFLONE, Anthony",
+            "TAGGAR, Rohit",
+            "ASHTON, Kathrine",
+            "HAUPT, Kerry",
+            "LAWRENCE, Stuart",
+            "HICKEY, Amanda",
+            "GANCI, Rosemarie Pauline"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 4,
+            "LNP": 5,
+            "ONP": 10
+          }
+        },
+        "preston": {
+          "status": "read",
+          "order": [
+            "SANGARYA, Loki",
+            "CHIN, Zheng",
+            "ASHMORE, Serena",
+            "LAMBERT, Nathan",
+            "AL KATRANJI, Hamza",
+            "DOWER, Simon",
+            "BRYANT, Mark",
+            "DATE, Tim",
+            "FOWLES, William",
+            "VALENCIA, Julio",
+            "GUARDIANI, Franco"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 4,
+            "LNP": 5,
+            "ONP": 11
+          }
+        },
+        "northern-metropolitan": {
+          "status": "unreadable",
+          "note": "unreadable, see card"
+        },
+        "western-metropolitan": {
+          "status": "unreadable",
+          "note": "unreadable, see card"
+        }
+      }
+    },
+    {
+      "registration": "1657",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "type": "Combined",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f74f3287-4447-40b2-a0d9-c15233d82712%2Fthe%20greens%20combined%20western%20victoria%20south%20barwon%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "the greens combined western victoria south barwon 2.pdf",
+      "areas": [
+        "bellarine",
+        "geelong",
+        "lara",
+        "polwarth",
+        "south-barwon",
+        "western-victoria"
+      ],
+      "party": "GRN",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "bellarine": {
+          "status": "read",
+          "order": [
+            "POPE, Mitch",
+            "WILLIAMS, Dom",
+            "KEOGH, Ronan",
+            "LOCKHART, Kate",
+            "MARCHANT, Alison",
+            "WHITEHEAD, Callum",
+            "MANUELL, Guy",
+            "MCRAE, Ross"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5,
+            "LNP": 6,
+            "ONP": 8
+          }
+        },
+        "geelong": {
+          "status": "read",
+          "order": [
+            "FLYNN, Emilie",
+            "GRULL, Brenden",
+            "VANDERPOL, Bree",
+            "MACPHERSON, Pippa",
+            "COUZENS, Christine",
+            "POBJOY, Andy",
+            "BENGTSSON, Maria",
+            "DE LORENZO, John"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5,
+            "LNP": 6,
+            "ONP": 8
+          }
+        },
+        "lara": {
+          "status": "read",
+          "order": [
+            "SLATER, Theresa",
+            "HATHWAY, Sarah",
+            "RANDALL, Oliver",
+            "LONG, Samantha",
+            "GEORGE, Ella",
+            "BEDDOE, Tim",
+            "UWIZEYIMANA, Tina",
+            "SPYROS, Steven"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5,
+            "LNP": 6,
+            "ONP": 8
+          }
+        },
+        "polwarth": {
+          "status": "read",
+          "order": [
+            "HOLDEN, Jesse",
+            "TOLLEY, Lula",
+            "HUSSEIN, Hutch",
+            "RIORDAN, Richard",
+            "COLLA, Vince",
+            "CARBINS, Brenton",
+            "MALCOLM, Anna"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 3,
+            "LNP": 4,
+            "ONP": 7
+          }
+        },
+        "south-barwon": {
+          "status": "read",
+          "order": [
+            "SCHERRER, Izzy",
+            "HEDLEY, Freya",
+            "GORMAN, Madilyn",
+            "THISTLETON, Rebecca",
+            "PETTIT, Libby",
+            "BARRON, Alan",
+            "NELSON, Ron",
+            "GEARD, Josh"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 4,
+            "LNP": 5,
+            "ONP": 8
+          }
+        },
+        "western-victoria": {
+          "atl": [
+            "A",
+            "J",
+            "G",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
+        }
+      }
+    },
+    {
+      "registration": "1658",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "type": "Combined",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1ac0ff9a-0d89-4f1e-bad4-82a8eb398902%2Fthe%20greens%20combined%20wendouree%20eureka%20ripon%20western%20victoria%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "the greens combined wendouree eureka ripon western victoria 1.pdf",
+      "areas": [
+        "eureka",
+        "geelong",
+        "lara",
+        "lowan",
+        "melton",
+        "polwarth",
+        "ripon",
+        "south-barwon",
+        "wendouree",
+        "western-victoria"
+      ],
+      "party": "GRN",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "eureka": {
+          "status": "read",
+          "order": [
+            "McCOLL, Sam",
+            "MORRISON, Wendy",
+            "ZIVKOVIC, Belinda",
+            "RAVEN, Andy",
+            "SETTLE, Michaela",
+            "MUIR, Emma",
+            "VENDITTI-TAYLOR, Steven",
+            "HARKNESS, Ian Maxwell",
+            "BALLINGER, Paul"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5,
+            "LNP": 6,
+            "ONP": 9
+          }
+        },
+        "geelong": {
+          "status": "read",
+          "order": [
+            "FLYNN, Emilie",
+            "GRULL, Brenden",
+            "VANDERPOL, Bree",
+            "MACPHERSON, Pippa",
+            "COUZENS, Christine",
+            "POBJOY, Andy",
+            "BENGTSSON, Maria",
+            "DE LORENZO, John"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5,
+            "LNP": 6,
+            "ONP": 8
+          }
+        },
+        "lara": {
+          "status": "read",
+          "order": [
+            "SLATER, Theresa",
+            "HATHWAY, Sarah",
+            "RANDALL, Oliver",
+            "LONG, Samantha",
+            "GEORGE, Ella",
+            "BEDDOE, Tim",
+            "UWIZEYIMANA, Tina",
+            "SPYROS, Steven"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5,
+            "LNP": 6,
+            "ONP": 8
+          }
+        },
+        "lowan": {
+          "status": "read",
+          "order": [
+            "MORAN, Jeff",
+            "DOWNEY, Jos",
+            "PAVLOVICH, Sue",
+            "HYSLOP, Karen",
+            "BUTLER, Kieran",
+            "KEALY, Emma",
+            "ELMES, Lee-Ann",
+            "PARTRIDGE, Andrew"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 3,
+            "LNP": 6,
+            "ONP": 8
+          }
+        },
+        "melton": {
+          "status": "read",
+          "order": [
+            "LEVCHENKOVA, Veronika",
+            "KELLY, Daire",
+            "ADIN-JAMES, Fiona",
+            "LEGRO, Hayden",
+            "BORG, Broden",
+            "BINGHAM, Jarrod",
+            "PERERA, Jason Spencer",
+            "FRASER, Jason",
+            "FARUQ, M.D. Omor",
+            "WEST, Marlene",
+            "KATSELIS, Matthew"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5,
+            "LNP": 6,
+            "ONP": 11
+          }
+        },
+        "polwarth": {
+          "status": "read",
+          "order": [
+            "HOLDEN, Jesse",
+            "TOLLEY, Lula",
+            "HUSSEIN, Hutch",
+            "RIORDAN, Richard",
+            "COLLA, Vince",
+            "CARBINS, Brenton",
+            "MALCOLM, Anna"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 3,
+            "LNP": 4,
+            "ONP": 7
+          }
+        },
+        "ripon": {
+          "status": "read",
+          "order": [
+            "DRYLIE, Tim",
+            "BRENNAN-JONES, Taylah",
+            "HAYLETT, Martha",
+            "QUINCE, Bernard",
+            "READ, Megan",
+            "ARMSTRONG, Jo",
+            "WOJTKOWSKI, Krzysztof",
+            "MCGRATH, Mark",
+            "SKRUZNY, Ronald",
+            "BARRY, Jeff",
+            "ANDREI, Trevor Scott",
+            "BUXTON, Donna"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 3,
+            "LNP": 5,
+            "ONP": 12
+          }
+        },
+        "south-barwon": {
+          "status": "read",
+          "order": [
+            "SCHERRER, Izzy",
+            "HEDLEY, Freya",
+            "GORMAN, Madilyn",
+            "THISTLETON, Rebecca",
+            "PETTIT, Libby",
+            "BARRON, Alan",
+            "NELSON, Ron",
+            "GEARD, Josh"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 4,
+            "LNP": 5,
+            "ONP": 8
+          }
+        },
+        "wendouree": {
+          "status": "read",
+          "order": [
+            "BURNS, Ellen",
+            "COLLINS, Melissa",
+            "MEAGHER, Chris",
+            "ADDISON, Juliana",
+            "RONAN, Gav",
+            "BYRNE, Ruth",
+            "ROBINSON, Stuart"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 4,
+            "LNP": 5,
+            "ONP": 7
+          }
+        },
+        "western-victoria": {
+          "atl": [
+            "A",
+            "J",
+            "G",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
+        }
+      }
+    },
+    {
+      "registration": "1659",
+      "registered_by": "SMART, Jason",
+      "kind": "independent",
+      "type": "Single",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=edd1c1c6-b4f5-4607-9c66-6844bc011b67%2Fsmart%2C%20jason%20scott.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "smart, jason scott.pdf",
+      "areas": [
+        "hastings"
+      ],
+      "party": "IND",
+      "candidate": "hastings/jason-smart",
+      "read_on": "2026-11-20",
+      "orders": {
+        "hastings": {
+          "status": "unreadable",
+          "note": "unreadable, see card"
+        }
+      }
+    },
+    {
+      "registration": "1660",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "type": "Single",
+      "registered_on": "2026-11-20",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a8d5bcfe-ecab-48f4-b53b-81697f57b292%2Fessendon_green%20contests_htv_v4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "essendon_green contests_htv_v4.pdf",
+      "areas": [
+        "essendon"
+      ],
+      "party": "ALP",
+      "candidate": null,
+      "read_on": "2026-11-20",
+      "orders": {
+        "essendon": {
+          "status": "read",
+          "order": [
+            "WILLIAMS, James",
+            "THEODOSIS, Kat",
+            "ADAMS, Ava",
+            "MOHAMUD, Anab",
+            "KEDEM, Michal",
+            "LE DEUX, Tommy",
+            "YILDIZ, Oscar",
+            "BARNES, John"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 2,
+            "LNP": 6,
+            "ONP": 8
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 1,
+              "of_n": 6
+            }
+          ]
+        }
+      }
     }
   ],
   "changes": [
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1657",
+      "registered_by": "The Greens",
+      "areas": [
+        "bellarine",
+        "geelong",
+        "lara",
+        "polwarth",
+        "south-barwon",
+        "western-victoria"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f74f3287-4447-40b2-a0d9-c15233d82712%2Fthe%20greens%20combined%20western%20victoria%20south%20barwon%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "amended",
+      "registration": "729",
+      "registered_by": "Family First",
+      "areas": [
+        "benambra",
+        "northern-victoria"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=37a7a8f7-a680-40fa-ba2f-a6c2e377712f%2Ffamilyfirst_benambra_version3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "detail": "replaces familyfirst_benambra_version2 (dragged).pdf"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1656",
+      "registered_by": "The Greens",
+      "areas": [
+        "broadmeadows",
+        "brunswick",
+        "essendon",
+        "footscray",
+        "melbourne",
+        "niddrie",
+        "northcote",
+        "pascoe-vale",
+        "preston",
+        "northern-metropolitan",
+        "western-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5f1e68c0-c105-42fa-9c08-40fd70217384%2Fthe%20greens%20combined%20essendon%20niddrie%20pascoe%20vale%20northern%20metro%20western%20metro%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "amended",
+      "registration": "724",
+      "registered_by": "Family First",
+      "areas": [
+        "eildon",
+        "northern-victoria"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=21396b15-155b-4dc0-a71e-8c3ed8d5812f%2Ffamilyfirst_eildon_version3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "detail": "replaces familyfirst_eildon_version2 (dragged).pdf"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1648",
+      "registered_by": "WARD, Tom",
+      "areas": [
+        "eildon"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d0c73054-7274-47b9-b15f-fb82d3ed162c%2Fward%2C%20thomas.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1660",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "essendon"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a8d5bcfe-ecab-48f4-b53b-81697f57b292%2Fessendon_green%20contests_htv_v4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1658",
+      "registered_by": "The Greens",
+      "areas": [
+        "eureka",
+        "geelong",
+        "lara",
+        "lowan",
+        "melton",
+        "polwarth",
+        "ripon",
+        "south-barwon",
+        "wendouree",
+        "western-victoria"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1ac0ff9a-0d89-4f1e-bad4-82a8eb398902%2Fthe%20greens%20combined%20wendouree%20eureka%20ripon%20western%20victoria%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1659",
+      "registered_by": "SMART, Jason",
+      "areas": [
+        "hastings"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=edd1c1c6-b4f5-4607-9c66-6844bc011b67%2Fsmart%2C%20jason%20scott.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1649",
+      "registered_by": "Darebin Climate Action Now",
+      "areas": [
+        "northcote"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7beadd62-cbc1-4491-bed9-6d5cb8b138f8%2Fnorthcote%20-%20morton%2C%20jane%20-%20htvc.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1653",
+      "registered_by": "The Greens",
+      "areas": [
+        "richmond",
+        "northern-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fd2687eb-692c-4649-b5af-99584d339e2d%2Fthe%20greens%20combined%20northern%20metro%20richmond%20vietnamese%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1654",
+      "registered_by": "The Greens",
+      "areas": [
+        "richmond",
+        "northern-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=07161932-8d2c-4bd1-a509-1511d3b9f32e%2Fthe%20greens%20combined%20northern%20metro%20richmond%20simplified%20chinese%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1655",
+      "registered_by": "The Greens",
+      "areas": [
+        "richmond",
+        "northern-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2ac66f54-8d74-4ddd-9dcb-634294f8052b%2Fthe%20greens%20combined%20northern%20metro%20richmond%20arabic%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "added",
+      "registration": "1650",
+      "registered_by": "Darebin Climate Action Now",
+      "areas": [
+        "northern-metropolitan"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=794d4019-d8ae-44a9-acfd-16f147308a83%2Fnorthern%20metropolitan%20region%20-%20morton%2C%20jane%20-%20htvc.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
     {
       "date": "2026-11-20",
       "kind": "added",
@@ -124702,184 +125840,6 @@
         "northern-metropolitan"
       ],
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=18798450-7c96-4748-9f33-baf61df70d84%2Fvictorian%20socialists%20combined%20northern%20metropolitan%20broadmeadows%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "535",
-      "registered_by": "Family First",
-      "areas": [
-        "broadmeadows",
-        "northern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e8a1d26a-928f-4597-98c5-19dda276b98b%2Ffamilyfirst_broadmeadows_version1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "624",
-      "registered_by": "Liberal",
-      "areas": [
-        "broadmeadows",
-        "northern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=de012817-b18b-4868-91f4-58ce9f4fd39c%2Fliberal_combined_nmr%20broadmeadows_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "634",
-      "registered_by": "Liberal",
-      "areas": [
-        "broadmeadows",
-        "northern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c9322680-7f3a-4c69-8e92-4d75c2057d5b%2Fliberal_combined_nmr%20broadmeadows_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "766",
-      "registered_by": "Australian Labor Party",
-      "areas": [
-        "broadmeadows",
-        "greenvale",
-        "northern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c262d431-02fc-45d8-a6ca-3051584c3f15%2Falp_combined_nm_wm_broadmeadows_greenvale_sunbury_tr5_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "805",
-      "registered_by": "Australian Labor Party",
-      "areas": [
-        "broadmeadows",
-        "greenvale",
-        "sunbury",
-        "northern-metropolitan",
-        "western-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=24d773ef-1d3d-4bb8-9581-c8e990206d8a%2Falp_combined_nm_wm_broadmeadows_greenvale_sunbury_tr5_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "811",
-      "registered_by": "Australian Labor Party",
-      "areas": [
-        "broadmeadows",
-        "greenvale",
-        "kalkallo",
-        "northern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=540a2b2f-d26e-4ac7-9634-b11315fc8f24%2Falp_combined_nm_broadmeadows_greenvale_kalkallo_tr5_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "818",
-      "registered_by": "Australian Labor Party",
-      "areas": [
-        "broadmeadows",
-        "western-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fdb9657a-28b6-486c-810e-ead02de754fe%2Falp_combined_nm_broadmeadows_tr5_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "914",
-      "registered_by": "One Nation Victoria",
-      "areas": [
-        "broadmeadows",
-        "northern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8eb21e00-680e-4796-9f6f-0ba7fe515fad%2Fonv%20-%20combined%20-%20northern%20metropolitan%20region%20-%20broadmeadows%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "971",
-      "registered_by": "The Greens",
-      "areas": [
-        "broadmeadows",
-        "essendon",
-        "greenvale",
-        "niddrie",
-        "pascoe-vale",
-        "preston",
-        "sunbury",
-        "thomastown",
-        "northern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=90bf4110-d3d3-4152-ac6f-9933f82cd18b%2Fthe%20greens%20combined%20northern%20metro%20broadmeadows%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "974",
-      "registered_by": "The Greens",
-      "areas": [
-        "broadmeadows",
-        "bundoora",
-        "greenvale",
-        "kalkallo",
-        "mill-park",
-        "preston",
-        "thomastown",
-        "yan-yean",
-        "northern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=85c5c4bb-d8e0-4b93-aaf1-0ada472b7df9%2Fthe%20greens%20combined%20northern%20metro%20thomastown%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "977",
-      "registered_by": "The Greens",
-      "areas": [
-        "broadmeadows",
-        "brunswick",
-        "essendon",
-        "northcote",
-        "pascoe-vale",
-        "preston",
-        "northern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3d090b17-8e4c-4723-898a-a3a783e36c40%2Fthe%20greens%20combined%20northern%20metro%20pascoe%20vale%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "987",
-      "registered_by": "The Greens",
-      "areas": [
-        "broadmeadows",
-        "bundoora",
-        "ivanhoe",
-        "northcote",
-        "pascoe-vale",
-        "preston",
-        "thomastown",
-        "northern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=dafd989e-2264-4bd0-b3e0-a899293dd5ef%2Fthe%20greens%20combined%20northern%20metro%20preston%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "date": "2026-11-20",
-      "kind": "added",
-      "registration": "988",
-      "registered_by": "The Greens",
-      "areas": [
-        "broadmeadows",
-        "greenvale",
-        "kalkallo",
-        "sunbury",
-        "thomastown",
-        "northern-metropolitan"
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=be51a2b7-d690-4a90-8a7d-3f738101002c%2Fthe%20greens%20combined%20northern%20metro%20greenvale%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
     }
   ]
 }
