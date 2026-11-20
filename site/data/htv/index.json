@@ -10,70 +10,65 @@
   "status": "closed",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
   "registration_closes": "2026-11-20",
-  "last_checked": "2026-11-20T19:52:14Z",
+  "last_checked": "2026-11-20T23:38:25Z",
   "coverage": {
-    "cards": 1410,
-    "listings": 4617,
-    "orders_read": 3844,
-    "orders_same_as": 152,
-    "orders_unreadable": 616,
+    "cards": 1422,
+    "listings": 4814,
+    "orders_read": 3870,
+    "orders_same_as": 154,
+    "orders_unreadable": 628,
     "districts_with_cards": 88,
-    "regions_with_cards": 7,
+    "regions_with_cards": 8,
     "by_party": {
       "ALP": {
         "cards": 329,
         "districts": 88,
-        "regions": 7
+        "regions": 8
       },
       "LIB": {
-        "cards": 273,
+        "cards": 275,
         "districts": 77,
-        "regions": 7
+        "regions": 8
       },
       "GRN": {
-        "cards": 191,
+        "cards": 192,
         "districts": 88,
-        "regions": 7
+        "regions": 8
       },
       "VS": {
         "cards": 96,
         "districts": 88,
-        "regions": 7
+        "regions": 8
       },
       "IND": {
-        "cards": 94,
+        "cards": 95,
         "districts": 49,
-        "regions": 4
+        "regions": 5
       },
       "ONP": {
         "cards": 89,
         "districts": 88,
-        "regions": 7
+        "regions": 8
       },
       "NONCAND": {
-        "cards": 85,
+        "cards": 88,
         "districts": 32,
-        "regions": 5
+        "regions": 6
       },
       "FF": {
-        "cards": 63,
+        "cards": 65,
         "districts": 65,
-        "regions": 5
+        "regions": 6
       },
       "AJP": {
         "cards": 47,
         "districts": 40,
         "regions": 2
       },
-      "LBT": {
-        "cards": 28,
-        "districts": 23,
-        "regions": 3
-      },
       "OTH": {
-        "cards": 28,
+        "cards": 29,
         "districts": 17,
-        "regions": 5,
+        "regions": 6,
         "registered_by": [
           "Australian Democrats",
           "Christian Alliance Party – Reform AU",
@@ -81,20 +76,25 @@
           "The Republican"
         ]
       },
+      "LBT": {
+        "cards": 28,
+        "districts": 23,
+        "regions": 3
+      },
       "WEST": {
         "cards": 22,
         "districts": 12,
-        "regions": 0
+        "regions": 1
+      },
+      "DLP": {
+        "cards": 20,
+        "districts": 12,
+        "regions": 8
       },
       "NAT": {
         "cards": 19,
         "districts": 12,
         "regions": 3
-      },
-      "DLP": {
-        "cards": 19,
-        "districts": 12,
-        "regions": 7
       },
       "SAL": {
         "cards": 10,
@@ -102,9 +102,9 @@
         "regions": 2
       },
       "LCV": {
-        "cards": 7,
+        "cards": 8,
         "districts": 5,
-        "regions": 7
+        "regions": 8
       },
       "SFF": {
         "cards": 5,
@@ -119,12 +119,12 @@
       "SUS": {
         "cards": 1,
         "districts": 0,
-        "regions": 7
+        "regions": 8
       }
     },
     "no_card": {
       "lower": 41,
-      "upper": 59,
+      "upper": 16,
       "candidates_lower": 734,
       "candidates_upper": 303
     }
@@ -1852,12 +1852,26 @@
     },
     "western-metropolitan": {
       "house": "upper",
-      "cards": 0,
-      "read": 0,
-      "same_as": 0,
-      "unreadable": 0,
-      "parties": {},
-      "no_card": 43
+      "cards": 197,
+      "read": 26,
+      "same_as": 2,
+      "unreadable": 12,
+      "parties": {
+        "ALP": 60,
+        "IND": 1,
+        "SUS": 1,
+        "LCV": 1,
+        "VS": 12,
+        "GRN": 25,
+        "FF": 2,
+        "LIB": 41,
+        "ONP": 12,
+        "NONCAND": 3,
+        "DLP": 6,
+        "OTH": 12,
+        "WEST": 21
+      },
+      "no_card": 0
     },
     "western-victoria": {
       "house": "upper",

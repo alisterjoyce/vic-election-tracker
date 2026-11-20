@@ -8,7 +8,7 @@
       "sources": "Source (outlet, or the Bing News search) -> {status: ok | error | skipped, via: feed | sitemap | Bing News search, url (what was read), page (the outlet's election page, if any), items (items read this run), last_7_days (election headlines from it dated in the last 7 days), message}"
     }
   },
-  "updated": "2026-11-20T20:00:44Z",
+  "updated": "2026-11-20T23:46:26Z",
   "statewide": [
     {
       "title": "Steve Bracks is on board: Ben Carroll finds a believer as most write off Labor’s Victorian election chances",
@@ -2284,7 +2284,7 @@
       "url": "https://www.abc.net.au/news/feed/51120/rss.xml",
       "via": "feed and Bing News search",
       "items": 37,
-      "last_7_days": 8
+      "last_7_days": 9
     },
     "The Age": {
       "status": "ok",
@@ -2322,7 +2322,7 @@
       "page": "https://www.nine.com.au/australia-news/vic",
       "url": "https://www.nine.com.au/sitemaps/news/brands/nine",
       "via": "sitemap",
-      "items": 213,
+      "items": 225,
       "last_7_days": 1
     },
     "7News": {
@@ -2356,7 +2356,7 @@
       "via": "Bing News search",
       "items": 12,
       "message": "robots.txt disallows the whole site (checked 16 Nov 2026)",
-      "last_7_days": 5
+      "last_7_days": 6
     },
     "Australian Financial Review": {
       "status": "ok",
@@ -2414,7 +2414,7 @@
       "status": "ok",
       "url": "https://www.dailymail.co.uk/auhome/index.rss",
       "via": "feed",
-      "items": 84,
+      "items": 93,
       "last_7_days": 0
     },
     "Bendigo Advertiser": {
@@ -2422,7 +2422,7 @@
       "url": "https://www.bendigoadvertiser.com.au/rss.xml",
       "via": "feed",
       "items": 20,
-      "last_7_days": 1
+      "last_7_days": 0
     },
     "Border Mail": {
       "status": "ok",
