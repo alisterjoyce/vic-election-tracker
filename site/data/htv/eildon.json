@@ -1,0 +1,1114 @@
+{
+  "area": "eildon",
+  "house": "lower",
+  "name": "Eildon",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "WARD, Tom",
+      "name": "Tom Ward",
+      "party": "IND",
+      "ballot_position": 1,
+      "id": "eildon/tom-ward"
+    },
+    {
+      "ballot_name": "MCLEISH, Cindy",
+      "name": "Cindy McLeish",
+      "party": "LIB",
+      "party_label": "Liberal",
+      "ballot_position": 2,
+      "id": "eildon/cindy-mcleish"
+    },
+    {
+      "ballot_name": "BARBER, Tim",
+      "name": "Tim Barber",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 3,
+      "id": "eildon/tim-barber"
+    },
+    {
+      "ballot_name": "MOSELY, Joshua",
+      "name": "Joshua Mosely",
+      "party": "FF",
+      "party_label": "Family First",
+      "ballot_position": 4,
+      "id": "eildon/joshua-mosely"
+    },
+    {
+      "ballot_name": "GULPILIL, Talia",
+      "name": "Talia Gulpilil",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 5,
+      "id": "eildon/talia-gulpilil"
+    },
+    {
+      "ballot_name": "LITTLE, Dylan",
+      "name": "Dylan Little",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 6,
+      "id": "eildon/dylan-little"
+    },
+    {
+      "ballot_name": "GIBSON, Kevin",
+      "name": "Kevin Gibson",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 7,
+      "id": "eildon/kevin-gibson"
+    },
+    {
+      "ballot_name": "BOND, Chloe",
+      "name": "Chloe Bond",
+      "party": "AJP",
+      "party_label": "Animal Justice Party",
+      "ballot_position": 8,
+      "id": "eildon/chloe-bond"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "1020",
+      "registered_by": "Animal Justice Party",
+      "kind": "party",
+      "party": "AJP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=56506733-d9d1-42d5-bf89-fc6fa5bf2c22%2Fnv-%20eildon%20htvc.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "106",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3cb9c637-7dae-485b-9c31-d4040d5c0c04%2Falp_combined_nv%20eildon_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GIBSON, Kevin",
+        "BOND, Chloe",
+        "GULPILIL, Talia",
+        "LITTLE, Dylan",
+        "WARD, Tom",
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 6,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "260",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=55baf883-7f6f-47d2-80e4-3b4207a2b45e%2Falp_combined_nv_ev_eildon_evelyn_monbulk_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GIBSON, Kevin",
+        "BOND, Chloe",
+        "GULPILIL, Talia",
+        "LITTLE, Dylan",
+        "WARD, Tom",
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 6,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "348",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8559e8b8-9768-49df-bc3a-a19f58154a28%2Falp_combined_nv_ev_eildon_evelyn_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GIBSON, Kevin",
+        "BOND, Chloe",
+        "GULPILIL, Talia",
+        "LITTLE, Dylan",
+        "WARD, Tom",
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 6,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GIBSON, Kevin",
+        "BOND, Chloe",
+        "GULPILIL, Talia",
+        "LITTLE, Dylan",
+        "WARD, Tom",
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 6,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "724",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=22186002-ccc3-4b0f-a904-bae6f7f07150%2Ffamilyfirst_eildon_version2%20%28dragged%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MOSELY, Joshua",
+        "BARBER, Tim",
+        "WARD, Tom",
+        "MCLEISH, Cindy",
+        "GIBSON, Kevin",
+        "BOND, Chloe",
+        "GULPILIL, Talia",
+        "LITTLE, Dylan"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 4,
+        "ALP": 5,
+        "GRN": 7
+      }
+    },
+    {
+      "registration": "945",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=94be6742-e719-4730-a7ab-4248978ae8d7%2Fthe%20greens%20combined%20north-east%20metro%20warrandyte%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GULPILIL, Talia",
+        "BOND, Chloe",
+        "LITTLE, Dylan",
+        "GIBSON, Kevin",
+        "WARD, Tom",
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "951",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3ecb378c-7017-42ed-aaf1-4d9b4dfed9db%2Fthe%20greens%20combined%20north-east%20metro%20eltham%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GULPILIL, Talia",
+        "BOND, Chloe",
+        "LITTLE, Dylan",
+        "GIBSON, Kevin",
+        "WARD, Tom",
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1003",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ba551bcf-3d14-4a2b-92c5-c905f89f40bc%2Fthe%20greens%20combined%20eastern%20victoria%20monbulk%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GULPILIL, Talia",
+        "BOND, Chloe",
+        "LITTLE, Dylan",
+        "GIBSON, Kevin",
+        "WARD, Tom",
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1006",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9ad76913-2863-4756-988b-d2743d944879%2Fthe%20greens%20combined%20eastern%20victoria%20narracan%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GULPILIL, Talia",
+        "BOND, Chloe",
+        "LITTLE, Dylan",
+        "GIBSON, Kevin",
+        "WARD, Tom",
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1008",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c6bf4ba2-12cd-4760-bd0a-44907af31b00%2Fthe%20greens%20combined%20eastern%20victoria%20gippsland%20east%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GULPILIL, Talia",
+        "BOND, Chloe",
+        "LITTLE, Dylan",
+        "GIBSON, Kevin",
+        "WARD, Tom",
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1010",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c096521e-1ff3-4df4-a883-8b2dfe279d90%2Fthe%20greens%20combined%20eastern%20victoria%20evelyn%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GULPILIL, Talia",
+        "BOND, Chloe",
+        "LITTLE, Dylan",
+        "GIBSON, Kevin",
+        "WARD, Tom",
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1129",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a9dc71b1-a972-484e-aedc-dfcbb4ccce61%2Fthe%20greens%20combined%20north-eastern%20metro%20bundoora%20eltham%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GULPILIL, Talia",
+        "BOND, Chloe",
+        "LITTLE, Dylan",
+        "GIBSON, Kevin",
+        "WARD, Tom",
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1132",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7c125df8-5882-4685-b05b-087f485045c9%2Fthe%20greens%20combined%20northern%20metro%20northern%20victoria%20kalkallo%20yan%20yean%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GULPILIL, Talia",
+        "BOND, Chloe",
+        "LITTLE, Dylan",
+        "GIBSON, Kevin",
+        "WARD, Tom",
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1135",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f74d6a92-ec67-4f60-b6fa-e8c5b16687d6%2Fthe%20greens%20combined%20northern%20victoria%20euroa%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GULPILIL, Talia",
+        "BOND, Chloe",
+        "LITTLE, Dylan",
+        "GIBSON, Kevin",
+        "WARD, Tom",
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1141",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d164bc6b-6b25-4cad-8523-2fa62790d70f%2Fthe%20greens%20combined%20northern%20victoria%20ovens%20valley%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GULPILIL, Talia",
+        "BOND, Chloe",
+        "LITTLE, Dylan",
+        "GIBSON, Kevin",
+        "WARD, Tom",
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1148",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=81f622b0-195b-4e3f-8cb2-2f4222e70bd1%2Fthe%20greens%20combined%20bundoora%20yan%20yean%20mill%20park%20north-eastern%20metro%20northern%20victoria%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GULPILIL, Talia",
+        "BOND, Chloe",
+        "LITTLE, Dylan",
+        "GIBSON, Kevin",
+        "WARD, Tom",
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1155",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c1819269-ccd5-4cce-82b9-b6236088597a%2Fthe%20greens%20combined%20northern%20victoria%20euroa%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GULPILIL, Talia",
+        "BOND, Chloe",
+        "LITTLE, Dylan",
+        "GIBSON, Kevin",
+        "WARD, Tom",
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1171",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=566928ae-6887-487b-b73d-3c1fccd9f5da%2Fthe%20greens%20combined%20eastern%20victoria%20gippsland%20east%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GULPILIL, Talia",
+        "BOND, Chloe",
+        "LITTLE, Dylan",
+        "GIBSON, Kevin",
+        "WARD, Tom",
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1184",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=92f96d58-5c62-45f2-803a-8633f5dca5d7%2Fthe%20greens%20combined%20northern%20victoria%20eildon%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GULPILIL, Talia",
+        "BOND, Chloe",
+        "LITTLE, Dylan",
+        "GIBSON, Kevin",
+        "WARD, Tom",
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1185",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c2f42085-b7bd-4048-89e2-8d4f9bf19c1b%2Fthe%20greens%20combined%20north-eastern%20metro%20eastern%20victoria%20bayswater%20monbulk%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GULPILIL, Talia",
+        "BOND, Chloe",
+        "LITTLE, Dylan",
+        "GIBSON, Kevin",
+        "WARD, Tom",
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GULPILIL, Talia",
+        "BOND, Chloe",
+        "LITTLE, Dylan",
+        "GIBSON, Kevin",
+        "WARD, Tom",
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1197",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=63acfa3d-7df3-441f-bea6-330ee9e51263%2Fthe%20greens%20combined%20eastern%20victoria%20gippsland%20south%20gippsland%20east%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GULPILIL, Talia",
+        "BOND, Chloe",
+        "LITTLE, Dylan",
+        "GIBSON, Kevin",
+        "WARD, Tom",
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1203",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=95e68076-8a0f-4c74-aa4c-dabe7ae4c8d3%2Fthe%20greens%20combined%20northern%20victoria%20yan%20yean%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GULPILIL, Talia",
+        "BOND, Chloe",
+        "LITTLE, Dylan",
+        "GIBSON, Kevin",
+        "WARD, Tom",
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "686",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b50ca912-8b4e-4d4b-88c1-17fb86abd4c9%2Fliberal_combined_nvr%20eildon_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim",
+        "WARD, Tom",
+        "BOND, Chloe",
+        "GIBSON, Kevin",
+        "GULPILIL, Talia",
+        "LITTLE, Dylan"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "690",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=57c3d107-4f44-470d-b82c-d1d38d78463d%2Fliberal_combined_nvr%20eildon_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim",
+        "WARD, Tom",
+        "BOND, Chloe",
+        "GIBSON, Kevin",
+        "GULPILIL, Talia",
+        "LITTLE, Dylan"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1504",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7eac0f08-ef9e-4f3c-8153-4ef5729fa74d%2Fliberal_multiple_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim",
+        "WARD, Tom",
+        "BOND, Chloe",
+        "GIBSON, Kevin",
+        "GULPILIL, Talia",
+        "LITTLE, Dylan"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1327",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim",
+        "WARD, Tom",
+        "BOND, Chloe",
+        "GIBSON, Kevin",
+        "GULPILIL, Talia",
+        "LITTLE, Dylan"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1508",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef298e7a-1371-41f2-a9a0-ed8f2eb25360%2Fliberal_multiple_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim",
+        "WARD, Tom",
+        "BOND, Chloe",
+        "GIBSON, Kevin",
+        "GULPILIL, Talia",
+        "LITTLE, Dylan"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1512",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8d451e6-5d8a-43a1-9577-8481a2ccdc56%2Fliberal_multiple_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim",
+        "WARD, Tom",
+        "BOND, Chloe",
+        "GIBSON, Kevin",
+        "GULPILIL, Talia",
+        "LITTLE, Dylan"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1513",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f6f69e90-716d-4ff5-8422-2a0f36601988%2Fliberal_multiple_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim",
+        "WARD, Tom",
+        "BOND, Chloe",
+        "GIBSON, Kevin",
+        "GULPILIL, Talia",
+        "LITTLE, Dylan"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BARBER, Tim",
+        "MOSELY, Joshua",
+        "MCLEISH, Cindy",
+        "WARD, Tom",
+        "GIBSON, Kevin",
+        "GULPILIL, Talia",
+        "BOND, Chloe",
+        "LITTLE, Dylan"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 3,
+        "ALP": 5,
+        "GRN": 6
+      }
+    },
+    {
+      "registration": "931",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d0590591-334d-4c3c-9e19-98b186b108b5%2Fonv%20-%20combined%20-%20northern%20victoria%20region%20-%20eildon%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "306",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4e734643-a6b3-47fa-8832-e2164de1d09d%2Fvictorian%20socialists%20combined%20northern%20victoria%20eildon%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LITTLE, Dylan",
+        "GULPILIL, Talia",
+        "BOND, Chloe",
+        "GIBSON, Kevin",
+        "WARD, Tom",
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1026",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=cb0419bd-cc93-4b44-9a29-72bda72505e3%2Fvs_nv_combined%20all_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LITTLE, Dylan",
+        "GULPILIL, Talia",
+        "BOND, Chloe",
+        "GIBSON, Kevin",
+        "WARD, Tom",
+        "MCLEISH, Cindy",
+        "MOSELY, Joshua",
+        "BARBER, Tim"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 8
+      }
+    }
+  ],
+  "no_card": [
+    "WARD, Tom"
+  ]
+}

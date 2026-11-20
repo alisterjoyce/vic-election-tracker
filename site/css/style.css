@@ -870,11 +870,34 @@ html.js .agg-table { min-height: 257px; }
 
 /* ---------- How-to-vote cards and preference watch ---------- */
 .htv { margin-top: 18px; }
-.htv-flag { display: grid; gap: 2px; padding: 10px 12px; margin: 8px 0; border-radius: 8px; border-left: 4px solid var(--accent); background: var(--surface-2); }
-.htv-flag.pending { border-left-color: var(--star); }
-.htv-order { list-style: none; display: flex; flex-wrap: wrap; gap: 4px; margin: 0; padding: 0; counter-reset: pref; }
-.htv-order li { counter-increment: pref; font-size: 0.8rem; padding: 1px 6px; border-radius: 4px; border-left: 3px solid var(--party-color); background: var(--surface-2); }
-.htv-order li::before { content: counter(pref) " "; color: var(--muted); }
+.htv-flags { margin: 10px 0 12px; padding: 10px 14px; border-radius: 8px; border-left: 5px solid var(--star); background: var(--surface-2); }
+.htv-flags ul { margin: 4px 0 6px; padding-left: 1.1em; }
+.htv-flags li { margin: 3px 0; }
+.htv-flags p { margin: 0; }
+.htv-flags-h { font-size: 0.95rem; }
+.htv-scroll { margin: 8px 0; }
+.htv-scroll:focus-visible, #htv-coverage-body .table-scroll:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.htv-matrix { border-collapse: collapse; font-size: 0.88rem; }
+.htv-matrix th { text-transform: none; letter-spacing: normal; }
+.htv-matrix th[scope="row"] { position: sticky; left: 0; z-index: 1; background: var(--surface); color: var(--text); font-weight: 400; font-size: 0.85rem; text-align: left; white-space: normal; min-width: 9rem; max-width: 14rem; }
+.htv-matrix th[scope="row"] .muted { display: block; }
+@media (max-width: 640px) { .htv-matrix th[scope="row"] { min-width: 7.5rem; max-width: 9.5rem; } }
+.htv-matrix td.num { font-family: var(--font-display); font-weight: 700; font-size: 1rem; text-align: center; }
+.htv-matrix th.htv-col { vertical-align: bottom; text-align: center; min-width: 5.5rem; max-width: 9rem; font-weight: 600; white-space: normal; }
+.htv-col-meta { display: block; font-weight: 400; font-size: 0.75rem; line-height: 1.35; color: var(--muted); }
+.htv-links { margin: 6px 0; padding-left: 1.1em; }
+.htv-links li { margin: 2px 0; }
+.htv-links a, .htv-flags a { white-space: nowrap; }
+.htv-nocard { display: inline-block; margin-left: 4px; padding: 0 6px; border-radius: 4px; font-size: 0.72rem; background: var(--surface-2); color: var(--muted); border: 1px solid var(--border); white-space: nowrap; }
+.htv-unread { margin: 6px 0; }
+.htv-cov td:first-child { white-space: normal; min-width: 10rem; }
+/* Data page coverage: reserved until htv/index.json arrives (measured 20 Nov 2026, 19 registrant rows). */
+#htv-coverage-body { min-height: 958px; }
+@media (max-width: 760px) { #htv-coverage-body { min-height: 1020px; } }
+@media (max-width: 640px) { #htv-coverage-body { min-height: 1137px; } }
+@media (max-width: 420px) { #htv-coverage-body { min-height: 1381px; } }
+.htv-watch-lines { padding-left: 1.1em; }
+.htv-watch-lines li { margin: 6px 0; }
 .htv-watch { list-style: none; padding: 0; margin: 0; }
 .htv-watch li { display: grid; grid-template-columns: 1fr auto; gap: 0 8px; padding: 6px 0; border-bottom: 1px solid var(--border); }
 .htv-watch li > span:last-child { grid-column: 1 / -1; font-size: 0.88rem; }
@@ -1166,10 +1189,9 @@ html.has-hash #yb-view:empty { min-height: 2400px; }   /* room for the papers be
 .yb-la-list { list-style: none; margin: 0; padding: 0; }
 .yb-la-list li { display: flex; align-items: center; gap: 12px; padding: 7px 0; min-height: 46px; border-top: 1px solid var(--border); }
 .yb-la-list li:first-child { border-top: 0; }
-.yb-htv-h { margin-top: 0 !important; }
+.yb-htv .htv { margin-top: 0; }
+.yb-htv .htv h3 { margin-top: 0; }
 .yb-htv p { margin: 0 0 8px; }
-.yb-htv-table th[scope="row"] { font-weight: 400; text-align: left; }
-.yb-htv-table td.num { font-family: var(--font-display); font-weight: 700; }
 .yb-gl { display: inline-block; min-width: 1.4em; font-family: var(--font-display); font-weight: 800; }
 .yb-rules { margin-top: 16px; padding: 12px 14px; border-left: 4px solid var(--accent); background: var(--surface-2); border-radius: 0 8px 8px 0; }
 .yb-rules p, .yb-rules ul { margin: 0 0 6px; }
@@ -1201,6 +1223,6 @@ html.has-hash #yb-view:empty { min-height: 2400px; }   /* room for the papers be
   .yb-lc-scroll { overflow: visible; border: 0; }
   .yb-lc { width: auto; }
   .yb-lc-cols { flex-wrap: wrap; }
-  .yb-col, .yb-la-list li, .yb-htv-table tr { break-inside: avoid; }
+  .yb-col, .yb-la-list li, .htv-matrix tr { break-inside: avoid; }
   a { color: #000; text-decoration: none; }
 }

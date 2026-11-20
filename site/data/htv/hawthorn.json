@@ -1,0 +1,1383 @@
+{
+  "area": "hawthorn",
+  "house": "lower",
+  "name": "Hawthorn",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "CROSBY, Clive",
+      "name": "Clive Crosby",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 1,
+      "id": "hawthorn/clive-crosby"
+    },
+    {
+      "ballot_name": "ROCHA, Kylie",
+      "name": "Kylie Rocha",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 2,
+      "id": "hawthorn/kylie-rocha"
+    },
+    {
+      "ballot_name": "IBUKI, Shima",
+      "name": "Shima Ibuki",
+      "party": "IND",
+      "ballot_position": 3,
+      "id": "hawthorn/shima-ibuki"
+    },
+    {
+      "ballot_name": "PRIBILOVICS, Paul",
+      "name": "Paul Pribilovics",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 4,
+      "id": "hawthorn/paul-pribilovics"
+    },
+    {
+      "ballot_name": "NICOLL, Adam",
+      "name": "Adam Nicoll",
+      "party": "FF",
+      "party_label": "Family First",
+      "ballot_position": 5,
+      "id": "hawthorn/adam-nicoll"
+    },
+    {
+      "ballot_name": "McENEARNEY, Tess",
+      "name": "Tess McEnearney",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 6,
+      "id": "hawthorn/tess-mcenearney"
+    },
+    {
+      "ballot_name": "PESUTTO, John",
+      "name": "John Pesutto",
+      "party": "LIB",
+      "party_label": "Liberal",
+      "ballot_position": 7,
+      "id": "hawthorn/john-pesutto"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "90",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d6ba1994-9d57-4ecf-830f-4aeb6b184cf4%2Falp_combined_sm%20hawthorn_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CROSBY, Clive",
+        "ROCHA, Kylie",
+        "IBUKI, Shima",
+        "McENEARNEY, Tess",
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "252",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=dbb3d6ac-5712-4a65-848a-96fd4890d866%2Falp_combined_sm_hawthorn_kew_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CROSBY, Clive",
+        "ROCHA, Kylie",
+        "IBUKI, Shima",
+        "McENEARNEY, Tess",
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "264",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=adbb1fe5-d224-48b9-86f9-fdf663bdf5eb%2Falp_combined_sm_nm_hawthorn_kew_richmond_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CROSBY, Clive",
+        "ROCHA, Kylie",
+        "IBUKI, Shima",
+        "McENEARNEY, Tess",
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "293",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3c2347e7-4f44-4219-a6fe-f52b8f6ec90b%2Falp_combined_nem_sm_box%20hill_hawthorn_kew_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CROSBY, Clive",
+        "ROCHA, Kylie",
+        "IBUKI, Shima",
+        "McENEARNEY, Tess",
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "421",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=511331ef-ffff-41b9-ac87-4917fb624baa%2Falp_combined_nem_sm_box%20hill_hawthorn_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CROSBY, Clive",
+        "ROCHA, Kylie",
+        "IBUKI, Shima",
+        "McENEARNEY, Tess",
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "768",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a7154705-e46a-476f-8691-c2e68d352bc6%2Falp_combined_sm_ashwood_hawthorn_tr1_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CROSBY, Clive",
+        "ROCHA, Kylie",
+        "IBUKI, Shima",
+        "McENEARNEY, Tess",
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CROSBY, Clive",
+        "ROCHA, Kylie",
+        "IBUKI, Shima",
+        "McENEARNEY, Tess",
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "513",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1333e93b-724c-49f8-a016-2038d8cd5eb9%2Ffamilyfirst_hawthorn_version1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul",
+        "CROSBY, Clive",
+        "IBUKI, Shima",
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess",
+        "PESUTTO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "ALP": 3,
+        "GRN": 5,
+        "LNP": 7
+      }
+    },
+    {
+      "registration": "956",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=262323cd-5f44-4058-88b4-8b0631befca9%2Fthe%20greens%20combined%20northern%20metro%20richmond%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "967",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b402477c-7a2d-4ee7-8bb9-373ac0f7d8ca%2Fthe%20greens%20combined%20north-east%20metro%20box%20hill%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1117",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1b1a7247-e11a-4cfe-9dbe-980561812b94%2Fthe%20greens%20combined%20southern%20metro%20ashwood%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1123",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=04d04173-e943-4c64-85d9-971b52d7bd18%2Fthe%20greens%20combined%20southern%20metro%20ashwood%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1126",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=bcdb08b9-68ee-4d55-8aab-5746b76885ec%2Fthe%20greens%20combined%20northern%20metro%20southern%20metro%20northcotekew1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1131",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=57876f4e-7ade-43cd-9a8b-2cab56a6868b%2Fthe%20greens%20combined%20southern%20metro%20hawthorn%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1133",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d63c2a18-1fb0-4910-a57b-0f64d357e222%2Fthe%20greens%20combined%20melbourne%20richmond%20prahran%20northern%20metro%20southern%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1138",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=700f8775-015e-4a1b-a066-e59c75bdb3c8%2Fthe%20greens%20combined%20southern%20metro%20kew%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1142",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=aec166dd-e527-4c71-aca7-95bee0af060d%2Fthe%20greens%20combined%20southern%20metro%20hawthorn%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1146",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=76a6bef2-8b40-478b-a142-7580170fd6a6%2Fthe%20greens%20combined%20southern%20metro%20north-eastern%20metro%20box%20hill%20ashwood2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1186",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=904c89f5-10fe-4efc-93f5-c5502c017a30%2Fthe%20greens%20combined%20malvern%20caulfield%20prahran%20southern%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1202",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=37ee2b5f-2fc4-48d9-a341-d8b51f5858d0%2Fthe%20greens%20combined%20southern%20metro%20malvern%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1207",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a82a9d61-0a43-49a2-a46b-3c2c6b9b5e15%2F1207%20the%20greens%20combined%20ashwood%20hawthorn%20malvern%20southern%20metro%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1366",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4a362916-dc76-4575-881f-96f9ee71e945%2F1366%20the%20greens%20combined%20richmond%20melbourne%20brunswick%20northern%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1390",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a106139d-2629-47af-bbf4-73ef410fb930%2F1390%20the%20greens%20combined%20hawthorn%20kew%20richmond%20southern%20metro%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1496",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b08723d9-8625-42fc-a9c4-c942533416d8%2Fthe%20greens%20combined%20southern%20metro%20simplified%20chinese%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1549",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=608ba255-d06b-4f81-9750-9b21a9bc8c33%2Fthe%20greens%20combined%20southern%20metro%20simplified%20chinese%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "534",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5af6cc33-6cd4-4ed2-a2f4-1c4b7a851c18%2Fliberal_combined_smr%20hawthorn_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "683",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7c30648a-ed58-4b5a-a15a-460819ec98f1%2Fliberal_combined_smr%20hawthorn_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1240",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9b5efe00-d38c-4d8c-9c3e-c31f0d7848c1%2Fliberal_combined_nemr%20box%20hill_smr%20hawthorn_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1245",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b6414bff-0005-454f-94fc-d7f3a643b0cc%2Fliberal_combined_smr%20hawthorn_smr%20kew_nemr%20box%20hill_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1304",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=388f065c-77dd-4e78-8789-0bb74620462c%2Fliberal_combined_smr%20hawthorn_smr%20kew_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1504",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7eac0f08-ef9e-4f3c-8153-4ef5729fa74d%2Fliberal_multiple_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1327",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1338",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=707aa7b1-73f9-495c-8212-81f2c596c074%2Fliberal_combined_smr%20hawthorn_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1339",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ff606a94-4109-4fe0-8719-f8778c48deae%2Fliberal_combined_smr%20ashwood_smr%20hawthorn_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1508",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef298e7a-1371-41f2-a9a0-ed8f2eb25360%2Fliberal_multiple_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1512",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8d451e6-5d8a-43a1-9577-8481a2ccdc56%2Fliberal_multiple_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1513",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f6f69e90-716d-4ff5-8422-2a0f36601988%2Fliberal_multiple_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1590",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-18",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7ba9d887-3cb0-4c2b-902d-ccb2a8af718d%2Fliberal_combined_smr%20hawthorn_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul",
+        "IBUKI, Shima",
+        "CROSBY, Clive",
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "908",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=da0d915a-7bea-442b-b72e-b314c165435e%2Fonv%20-%20combined%20-%20southern%20metropolitan%20region%20-%20hawthorn%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PRIBILOVICS, Paul",
+        "NICOLL, Adam",
+        "PESUTTO, John",
+        "CROSBY, Clive",
+        "IBUKI, Shima",
+        "ROCHA, Kylie",
+        "McENEARNEY, Tess"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 3,
+        "ALP": 4,
+        "GRN": 6
+      }
+    },
+    {
+      "registration": "307",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c6c0781c-1eb1-4791-925c-bd0292c49de0%2Fvictorian%20socialists%20combined%20southern%20metropolitan%20hawthorn%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "McENEARNEY, Tess",
+        "ROCHA, Kylie",
+        "CROSBY, Clive",
+        "IBUKI, Shima",
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 3,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1031",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a5f41e15-b2b3-4893-89d9-47cc29d091ea%2Fvs_sm_combined%20all_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "McENEARNEY, Tess",
+        "ROCHA, Kylie",
+        "CROSBY, Clive",
+        "IBUKI, Shima",
+        "PESUTTO, John",
+        "NICOLL, Adam",
+        "PRIBILOVICS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 3,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "781",
+      "registered_by": "Kooyong Climate Change Alliance",
+      "kind": "non_candidate",
+      "party": null,
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2a1cf7bf-6cf9-4933-9035-492dddf11b8a%2Fhawthorn%20-%20kooyong%20climate%20change%20alliance%20-%20htvc%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1420",
+      "registered_by": "Common Threads",
+      "kind": "non_candidate",
+      "party": null,
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=bc89b02f-1c43-4d85-b73b-8a36f387f90d%2Fhawthorn%20-%20common%20threads%20-%20htvc2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "6",
+      "registered_by": "IBUKI, Shima",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "hawthorn/shima-ibuki",
+      "type": "Single",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=40854ba0-1df4-4e16-9357-7ca9bfa11dac%2Fibuki%2C%20shima.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "partial",
+      "order": [
+        "IBUKI, Shima"
+      ],
+      "via": "text"
+    }
+  ],
+  "no_card": []
+}

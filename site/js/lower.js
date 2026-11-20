@@ -13,7 +13,7 @@
   // Seat outlook inputs: statewide swing, MRP models, betting, seat polls.
   let outlook = { swing: null, models: null, odds: null, seatPolls: null };
   let shots = {};   // candidate id -> headshot (data/headshots.json); filled in after the first paint
-  let htv = null;   // data/htv.json (how-to-vote cards)
+  const htvDocs = {};   // data/htv/<district>.json (how-to-vote cards), loaded per seat
   let news;         // data/news.json (headlines per seat); undefined until loaded, null if it failed
   let vec;          // data/vec_nominations.json (the VEC's list, for the ballot paper); undefined until loaded
   let results = null;   // data/results.json: the 2026 count (scripts/results.py), null if missing
@@ -282,7 +282,7 @@
         <summary><h3 id="compare-h">Compare candidates</h3><span class="muted small">Party, occupation, roles and stated priorities side by side</span></summary>
         <div id="compare-body"><p class="muted small">Loading profiles…</p></div>
       </details>
-      ${App.Htv ? App.Htv.section(htv, { district: d.id, margin: d.margin, parties: cands.filter((c) => !isInactive(c)).map((c) => c.party) }) : ""}
+      <div id="seat-htv" style="min-height:${htvDocs[d.id] ? 0 : App.Htv.reserve(cands.filter((c) => !isInactive(c)).length)}px">${htvDocs[d.id] ? App.Htv.section(htvDocs[d.id]) : ""}</div>
       <section class="seat-news" aria-labelledby="news-h">
         <h3 id="news-h">In the news</h3>
         <div id="seat-news">${newsBlock(d)}</div>
@@ -293,6 +293,14 @@
         <p class="empty">Loading 2022 results…</p>
       </section>`;
     $("copy-link").addEventListener("click", (e) => copyLink(e.currentTarget));
+    if (!htvDocs[d.id]) {   // another seat chosen after load: fetch its cards into the reserved space
+      App.Htv.load(d.id).then((doc) => { htvDocs[d.id] = doc; }).catch(() => null).then(() => {
+        const box = $("seat-htv");
+        if (!box || hashId() !== d.id) return;
+        box.innerHTML = App.Htv.section(htvDocs[d.id] || null, { area: d.id });
+        box.style.minHeight = "";
+      });
+    }
     App.ShareCard.shareButton($("share-seat"), async () => App.ShareCard.seatCard({
       seat: d, cands: cands.filter((c) => !isInactive(c)), shots: await App.loadHeadshots(), classification: seatLabel(d),
       odds: outlook.odds && (outlook.odds.seats || []).find((x) => x.district === d.id),
@@ -643,18 +651,19 @@
     try {
       const optional = (name) => loadJSON(name).catch((err) => { console.warn(err); return null; });
       // What the seat panel needs, in parallel. Photos and headlines wait until it has painted.
-      const [dd, cd, rd, meta, pollData, models, odds, seatPolls, htvData, resultData] = await Promise.all([
+      const first = hashId();
+      const [dd, cd, rd, meta, pollData, models, odds, seatPolls, resultData] = await Promise.all([
         loadJSON("districts"), loadJSON("candidates"), loadJSON("regions"),
         optional("meta"), optional("polls"), optional("seat_models"), optional("seat_odds"), optional("seat_polls"),
-        optional("htv"), optional("results"),
+        optional("results"),
+        first ? App.Htv.load(first).then((doc) => { htvDocs[first] = doc; }).catch(() => null) : null,
       ]);
-      htv = htvData;
       results = resultData;
       outlook = { swing: App.statewideSwing(meta, pollData), models, odds, seatPolls };
       districts = dd.districts.slice().sort((a, b) => a.name.localeCompare(b.name));
       candidates = cd.candidates || [];
       rd.regions.forEach((r) => { regionsById[r.id] = r; });
-      if (App.Htv && $("pref-watch")) $("pref-watch").innerHTML = App.Htv.watch(htv, districts, candidates);
+      if ($("pref-watch")) App.afterPaint(() => optional("htv/index").then((index) => { $("pref-watch").innerHTML = App.Htv.watch(index, districts); }));
 
       $("f-region").innerHTML += rd.regions.slice().sort((a, b) => a.name.localeCompare(b.name))
         .map((r) => `<option value="${escapeHtml(r.id)}">${escapeHtml(r.name)}</option>`).join("");

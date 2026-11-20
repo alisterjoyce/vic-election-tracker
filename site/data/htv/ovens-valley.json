@@ -1,0 +1,729 @@
+{
+  "area": "ovens-valley",
+  "house": "lower",
+  "name": "Ovens Valley",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "McCURDY, Tim",
+      "name": "Tim McCurdy",
+      "party": "NAT",
+      "party_label": "The Nationals",
+      "ballot_position": 1,
+      "id": "ovens-valley/tim-mccurdy"
+    },
+    {
+      "ballot_name": "FIDGE, Julian",
+      "name": "Julian Fidge",
+      "party": "LBT",
+      "party_label": "Libertarian (formerly Liberal Democrats)",
+      "ballot_position": 2,
+      "id": "ovens-valley/julian-fidge"
+    },
+    {
+      "ballot_name": "MURPHY, Bronwyn",
+      "name": "Bronwyn Murphy",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 3,
+      "id": "ovens-valley/bronwyn-murphy"
+    },
+    {
+      "ballot_name": "ROUEL, James",
+      "name": "James Rouel",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 4,
+      "id": "ovens-valley/james-rouel"
+    },
+    {
+      "ballot_name": "MANNING, Steve",
+      "name": "Steve Manning",
+      "party": "IND",
+      "ballot_position": 5,
+      "id": "ovens-valley/steve-manning"
+    },
+    {
+      "ballot_name": "NORTON-SMITH, Carol",
+      "name": "Carol Norton-Smith",
+      "party": "FF",
+      "party_label": "Family First",
+      "ballot_position": 6,
+      "id": "ovens-valley/carol-norton-smith"
+    },
+    {
+      "ballot_name": "SMITH, Jennifer",
+      "name": "Jennifer Smith",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 7,
+      "id": "ovens-valley/jennifer-smith"
+    },
+    {
+      "ballot_name": "GILBERT, Benjamin",
+      "name": "Benjamin Gilbert",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 8,
+      "id": "ovens-valley/benjamin-gilbert"
+    },
+    {
+      "ballot_name": "LITCHFIELD, Sue",
+      "name": "Sue Litchfield",
+      "party": "AJP",
+      "party_label": "Animal Justice Party",
+      "ballot_position": 9,
+      "id": "ovens-valley/sue-litchfield"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "1016",
+      "registered_by": "Animal Justice Party",
+      "kind": "party",
+      "party": "AJP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a7f51a21-6297-410e-ba5f-5a9ae6745025%2Fnv%202026-11-11%20-%20ovens%20valley.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "111",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c0f65852-d9ec-4367-8c6f-dcb18ec9318a%2Falp_combined_nv%20ovens%20valley_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SMITH, Jennifer",
+        "LITCHFIELD, Sue",
+        "GILBERT, Benjamin",
+        "MURPHY, Bronwyn",
+        "MANNING, Steve",
+        "FIDGE, Julian",
+        "McCURDY, Tim",
+        "NORTON-SMITH, Carol",
+        "ROUEL, James"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "351",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2d349153-2d76-4bb6-86a3-55bac9fb6a05%2Falp_combined_nv_ovens%20valley_shepparton_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SMITH, Jennifer",
+        "LITCHFIELD, Sue",
+        "GILBERT, Benjamin",
+        "MURPHY, Bronwyn",
+        "MANNING, Steve",
+        "FIDGE, Julian",
+        "McCURDY, Tim",
+        "NORTON-SMITH, Carol",
+        "ROUEL, James"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SMITH, Jennifer",
+        "LITCHFIELD, Sue",
+        "GILBERT, Benjamin",
+        "MURPHY, Bronwyn",
+        "MANNING, Steve",
+        "FIDGE, Julian",
+        "McCURDY, Tim",
+        "NORTON-SMITH, Carol",
+        "ROUEL, James"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "719",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=cb0f932d-d7f4-46f2-b0c9-07558d572153%2Ffamilyfirst_ovens_version2%20%28dragged%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NORTON-SMITH, Carol",
+        "FIDGE, Julian",
+        "ROUEL, James",
+        "MANNING, Steve",
+        "McCURDY, Tim",
+        "SMITH, Jennifer",
+        "LITCHFIELD, Sue",
+        "GILBERT, Benjamin",
+        "MURPHY, Bronwyn"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 3,
+        "LNP": 5,
+        "ALP": 6,
+        "GRN": 8
+      }
+    },
+    {
+      "registration": "1008",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c6bf4ba2-12cd-4760-bd0a-44907af31b00%2Fthe%20greens%20combined%20eastern%20victoria%20gippsland%20east%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GILBERT, Benjamin",
+        "MANNING, Steve",
+        "LITCHFIELD, Sue",
+        "MURPHY, Bronwyn",
+        "SMITH, Jennifer",
+        "McCURDY, Tim",
+        "FIDGE, Julian",
+        "NORTON-SMITH, Carol",
+        "ROUEL, James"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1111",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d0b5e9d4-77de-4bcb-af9b-f9335a463c24%2Fthe%20greens%20combined%20northern%20victoria%20shepparton%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GILBERT, Benjamin",
+        "MANNING, Steve",
+        "LITCHFIELD, Sue",
+        "MURPHY, Bronwyn",
+        "SMITH, Jennifer",
+        "McCURDY, Tim",
+        "FIDGE, Julian",
+        "NORTON-SMITH, Carol",
+        "ROUEL, James"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1135",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f74d6a92-ec67-4f60-b6fa-e8c5b16687d6%2Fthe%20greens%20combined%20northern%20victoria%20euroa%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GILBERT, Benjamin",
+        "MANNING, Steve",
+        "LITCHFIELD, Sue",
+        "MURPHY, Bronwyn",
+        "SMITH, Jennifer",
+        "McCURDY, Tim",
+        "FIDGE, Julian",
+        "NORTON-SMITH, Carol",
+        "ROUEL, James"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1141",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d164bc6b-6b25-4cad-8523-2fa62790d70f%2Fthe%20greens%20combined%20northern%20victoria%20ovens%20valley%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GILBERT, Benjamin",
+        "MANNING, Steve",
+        "LITCHFIELD, Sue",
+        "MURPHY, Bronwyn",
+        "SMITH, Jennifer",
+        "McCURDY, Tim",
+        "FIDGE, Julian",
+        "NORTON-SMITH, Carol",
+        "ROUEL, James"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1155",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c1819269-ccd5-4cce-82b9-b6236088597a%2Fthe%20greens%20combined%20northern%20victoria%20euroa%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GILBERT, Benjamin",
+        "MANNING, Steve",
+        "LITCHFIELD, Sue",
+        "MURPHY, Bronwyn",
+        "SMITH, Jennifer",
+        "McCURDY, Tim",
+        "FIDGE, Julian",
+        "NORTON-SMITH, Carol",
+        "ROUEL, James"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1160",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e600e85e-059d-43c3-b044-ee0bcafc9be9%2Fthe%20greens%20combined%20northern%20victoria%20benambra%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GILBERT, Benjamin",
+        "MANNING, Steve",
+        "LITCHFIELD, Sue",
+        "MURPHY, Bronwyn",
+        "SMITH, Jennifer",
+        "McCURDY, Tim",
+        "FIDGE, Julian",
+        "NORTON-SMITH, Carol",
+        "ROUEL, James"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1171",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=566928ae-6887-487b-b73d-3c1fccd9f5da%2Fthe%20greens%20combined%20eastern%20victoria%20gippsland%20east%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GILBERT, Benjamin",
+        "MANNING, Steve",
+        "LITCHFIELD, Sue",
+        "MURPHY, Bronwyn",
+        "SMITH, Jennifer",
+        "McCURDY, Tim",
+        "FIDGE, Julian",
+        "NORTON-SMITH, Carol",
+        "ROUEL, James"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1184",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=92f96d58-5c62-45f2-803a-8633f5dca5d7%2Fthe%20greens%20combined%20northern%20victoria%20eildon%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GILBERT, Benjamin",
+        "MANNING, Steve",
+        "LITCHFIELD, Sue",
+        "MURPHY, Bronwyn",
+        "SMITH, Jennifer",
+        "McCURDY, Tim",
+        "FIDGE, Julian",
+        "NORTON-SMITH, Carol",
+        "ROUEL, James"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GILBERT, Benjamin",
+        "MANNING, Steve",
+        "LITCHFIELD, Sue",
+        "MURPHY, Bronwyn",
+        "SMITH, Jennifer",
+        "McCURDY, Tim",
+        "FIDGE, Julian",
+        "NORTON-SMITH, Carol",
+        "ROUEL, James"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1197",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=63acfa3d-7df3-441f-bea6-330ee9e51263%2Fthe%20greens%20combined%20eastern%20victoria%20gippsland%20south%20gippsland%20east%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GILBERT, Benjamin",
+        "MANNING, Steve",
+        "LITCHFIELD, Sue",
+        "MURPHY, Bronwyn",
+        "SMITH, Jennifer",
+        "McCURDY, Tim",
+        "FIDGE, Julian",
+        "NORTON-SMITH, Carol",
+        "ROUEL, James"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1036",
+      "registered_by": "Libertarian (formerly Liberal Democrats)",
+      "kind": "party",
+      "party": "LBT",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=85e401c9-10cc-4184-be99-edd6c2f18423%2Fd_ovensvalley_fidge_reg.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FIDGE, Julian",
+        "NORTON-SMITH, Carol",
+        "ROUEL, James",
+        "McCURDY, Tim",
+        "MANNING, Steve",
+        "LITCHFIELD, Sue",
+        "SMITH, Jennifer",
+        "GILBERT, Benjamin",
+        "MURPHY, Bronwyn"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 3,
+        "LNP": 4,
+        "ALP": 7,
+        "GRN": 8
+      }
+    },
+    {
+      "registration": "482",
+      "registered_by": "The Nationals",
+      "kind": "party",
+      "party": "NAT",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=cf4ba229-ee63-4ee7-b0b0-c77e58ca1055%2Fovens%20valley%20tim%20mccurdy%20htv%20vec%20no%20trims.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "465",
+      "registered_by": "The Nationals",
+      "kind": "party",
+      "party": "NAT",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d595f20b-4ffd-4556-ac63-5472d5971ef9%2Fnationals_combined_htvc_a4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1562",
+      "registered_by": "The Nationals",
+      "kind": "party",
+      "party": "NAT",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-18",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=479dbc4c-1e73-4414-9656-1400fe0b5aa0%2Fstatewide_htv_a3_rogueprint%20%281%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "McCURDY, Tim",
+        "ROUEL, James",
+        "MANNING, Steve",
+        "NORTON-SMITH, Carol",
+        "FIDGE, Julian",
+        "SMITH, Jennifer",
+        "GILBERT, Benjamin",
+        "LITCHFIELD, Sue",
+        "MURPHY, Bronwyn"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 2,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 2,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "943",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b297ac15-9e8f-497a-9fa1-1a2c22b35e8f%2Fonv%20-%20combined%20-%20northern%20victoria%20region%20-%20ovens%20valley%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ROUEL, James",
+        "FIDGE, Julian",
+        "NORTON-SMITH, Carol",
+        "McCURDY, Tim",
+        "SMITH, Jennifer",
+        "MANNING, Steve",
+        "GILBERT, Benjamin",
+        "LITCHFIELD, Sue",
+        "MURPHY, Bronwyn"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 4,
+        "ALP": 5,
+        "GRN": 7
+      }
+    },
+    {
+      "registration": "346",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2cd1b169-03e8-4f5b-a37d-78a5ba902dd7%2Fvictorian%20socialists%20combined%20northern%20victoria%20ovens%20valley%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MURPHY, Bronwyn",
+        "GILBERT, Benjamin",
+        "LITCHFIELD, Sue",
+        "MANNING, Steve",
+        "SMITH, Jennifer",
+        "McCURDY, Tim",
+        "FIDGE, Julian",
+        "NORTON-SMITH, Carol",
+        "ROUEL, James"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1026",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=cb0419bd-cc93-4b44-9a29-72bda72505e3%2Fvs_nv_combined%20all_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MURPHY, Bronwyn",
+        "GILBERT, Benjamin",
+        "LITCHFIELD, Sue",
+        "MANNING, Steve",
+        "SMITH, Jennifer",
+        "McCURDY, Tim",
+        "FIDGE, Julian",
+        "NORTON-SMITH, Carol",
+        "ROUEL, James"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "713",
+      "registered_by": "Steve Manning Independent",
+      "kind": "non_candidate",
+      "party": null,
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7a79795e-f762-441a-8465-2eb5d7266bef%2Fovens%20valley%20-%20manning%2C%20steve%20-%20htvc.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    }
+  ],
+  "no_card": [
+    "MANNING, Steve"
+  ]
+}

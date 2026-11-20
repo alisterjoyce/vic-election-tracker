@@ -1,0 +1,1069 @@
+{
+  "area": "polwarth",
+  "house": "lower",
+  "name": "Polwarth",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "TOLLEY, Lula",
+      "name": "Lula Tolley",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 1,
+      "id": "polwarth/lula-tolley"
+    },
+    {
+      "ballot_name": "RIORDAN, Richard",
+      "name": "Richard Riordan",
+      "party": "LIB",
+      "party_label": "Liberal",
+      "ballot_position": 2,
+      "id": "polwarth/richard-riordan"
+    },
+    {
+      "ballot_name": "HUSSEIN, Hutch",
+      "name": "Hutch Hussein",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 3,
+      "id": "polwarth/hutch-hussein"
+    },
+    {
+      "ballot_name": "HOLDEN, Jesse",
+      "name": "Jesse Holden",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 4,
+      "id": "polwarth/jesse-holden"
+    },
+    {
+      "ballot_name": "CARBINS, Brenton",
+      "name": "Brenton Carbins",
+      "party": "OTH",
+      "party_label": "Citizens Party",
+      "ballot_position": 5,
+      "id": "polwarth/brenton-carbins"
+    },
+    {
+      "ballot_name": "MALCOLM, Anna",
+      "name": "Anna Malcolm",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 6,
+      "id": "polwarth/anna-malcolm"
+    },
+    {
+      "ballot_name": "COLLA, Vince",
+      "name": "Vince Colla",
+      "party": "FF",
+      "party_label": "Family First",
+      "ballot_position": 7,
+      "id": "polwarth/vince-colla"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "107",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fa5f9b38-afa0-4239-a9a3-05ed225a98ea%2Falp_combined_wv%20polwarth_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HUSSEIN, Hutch",
+        "HOLDEN, Jesse",
+        "TOLLEY, Lula",
+        "RIORDAN, Richard",
+        "CARBINS, Brenton",
+        "COLLA, Vince",
+        "MALCOLM, Anna"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 4,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 4
+        }
+      ]
+    },
+    {
+      "registration": "363",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=22b74efa-2b62-4150-af00-d536d3611f71%2Falp_combined_wv_polwarth_south%20barwon_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HUSSEIN, Hutch",
+        "HOLDEN, Jesse",
+        "TOLLEY, Lula",
+        "RIORDAN, Richard",
+        "CARBINS, Brenton",
+        "COLLA, Vince",
+        "MALCOLM, Anna"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 4,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 4
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HUSSEIN, Hutch",
+        "HOLDEN, Jesse",
+        "TOLLEY, Lula",
+        "RIORDAN, Richard",
+        "CARBINS, Brenton",
+        "COLLA, Vince",
+        "MALCOLM, Anna"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 4,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 4
+        }
+      ]
+    },
+    {
+      "registration": "1214",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9aa36896-7ed6-46cd-bac3-4303e5c042a4%2Ffamilyfirst_western-vic-polwarth-geelong-seats_version%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "COLLA, Vince",
+        "MALCOLM, Anna",
+        "RIORDAN, Richard",
+        "CARBINS, Brenton",
+        "HUSSEIN, Hutch",
+        "HOLDEN, Jesse",
+        "TOLLEY, Lula"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 3,
+        "ALP": 5,
+        "GRN": 6
+      }
+    },
+    {
+      "registration": "1125",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6c93fdd7-9146-44be-8364-fe6b32ae6eab%2Fthe%20greens%20combined%20western%20victoria%20polwarth%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOLDEN, Jesse",
+        "TOLLEY, Lula",
+        "HUSSEIN, Hutch",
+        "RIORDAN, Richard",
+        "COLLA, Vince",
+        "CARBINS, Brenton",
+        "MALCOLM, Anna"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1128",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=be0cb3f0-a1bc-4e7a-8fd0-5be47232aa3e%2Fthe%20greens%20combined%20western%20victoria%20south%20barwon%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOLDEN, Jesse",
+        "TOLLEY, Lula",
+        "HUSSEIN, Hutch",
+        "RIORDAN, Richard",
+        "COLLA, Vince",
+        "CARBINS, Brenton",
+        "MALCOLM, Anna"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1145",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=0f7383aa-b7b6-4b87-b25d-5bd1ddac347f%2Fthe%20greens%20combined%20geelong%20south%20barwon%20bellarine%20western%20victoria%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOLDEN, Jesse",
+        "TOLLEY, Lula",
+        "HUSSEIN, Hutch",
+        "RIORDAN, Richard",
+        "COLLA, Vince",
+        "CARBINS, Brenton",
+        "MALCOLM, Anna"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1165",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d4ae46ee-3105-4166-bd0a-288088ebc987%2Fthe%20greens%20combined%20western%20victoria%20south%20barwon%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOLDEN, Jesse",
+        "TOLLEY, Lula",
+        "HUSSEIN, Hutch",
+        "RIORDAN, Richard",
+        "COLLA, Vince",
+        "CARBINS, Brenton",
+        "MALCOLM, Anna"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1172",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e1e23b63-5bb7-46cd-8257-62694f4302f3%2Fthe%20greens%20combined%20western%20victoria%20geelong%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOLDEN, Jesse",
+        "TOLLEY, Lula",
+        "HUSSEIN, Hutch",
+        "RIORDAN, Richard",
+        "COLLA, Vince",
+        "CARBINS, Brenton",
+        "MALCOLM, Anna"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1177",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5a93bcb3-2919-482e-ba0a-2eca4f6e378e%2Fthe%20greens%20combined%20western%20victoria%20ripon%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOLDEN, Jesse",
+        "TOLLEY, Lula",
+        "HUSSEIN, Hutch",
+        "RIORDAN, Richard",
+        "COLLA, Vince",
+        "CARBINS, Brenton",
+        "MALCOLM, Anna"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1180",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d0f351e0-dc06-4729-8217-f1493f5b2d17%2Fthe%20greens%20combined%20western%20victoria%20south-west%20coast%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOLDEN, Jesse",
+        "TOLLEY, Lula",
+        "HUSSEIN, Hutch",
+        "RIORDAN, Richard",
+        "COLLA, Vince",
+        "CARBINS, Brenton",
+        "MALCOLM, Anna"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1181",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=15cbe873-057b-4541-b1a1-26c691a904fa%2Fthe%20greens%20combined%20western%20victoria%20lara%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOLDEN, Jesse",
+        "TOLLEY, Lula",
+        "HUSSEIN, Hutch",
+        "RIORDAN, Richard",
+        "COLLA, Vince",
+        "CARBINS, Brenton",
+        "MALCOLM, Anna"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1182",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7d3205bf-f329-4f67-80fb-15b7860448bc%2Fthe%20greens%20combined%20western%20victoria%20eureka%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOLDEN, Jesse",
+        "TOLLEY, Lula",
+        "HUSSEIN, Hutch",
+        "RIORDAN, Richard",
+        "COLLA, Vince",
+        "CARBINS, Brenton",
+        "MALCOLM, Anna"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1183",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=33225b50-6e34-4f1a-9214-d9f9ae513799%2Fthe%20greens%20combined%20western%20victoria%20lowan%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOLDEN, Jesse",
+        "TOLLEY, Lula",
+        "HUSSEIN, Hutch",
+        "RIORDAN, Richard",
+        "COLLA, Vince",
+        "CARBINS, Brenton",
+        "MALCOLM, Anna"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOLDEN, Jesse",
+        "TOLLEY, Lula",
+        "HUSSEIN, Hutch",
+        "RIORDAN, Richard",
+        "COLLA, Vince",
+        "CARBINS, Brenton",
+        "MALCOLM, Anna"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1198",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f8b8df23-b334-45a6-b04f-317659dc0d56%2Fthe%20greens%20combined%20western%20victoria%20polwarth%20south%20barwon%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1208",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d0a1c2da-ed56-4e30-80df-74538bacfc94%2Fthe%20greens%20combined%20western%20victoria%20bellarine%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOLDEN, Jesse",
+        "TOLLEY, Lula",
+        "HUSSEIN, Hutch",
+        "RIORDAN, Richard",
+        "COLLA, Vince",
+        "CARBINS, Brenton",
+        "MALCOLM, Anna"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1106",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fec738f3-7cc3-4cfc-98c9-c6aa8f009357%2Fems%201106%20the%20greens%20combined%20geelong%20south%20barwon%20bellarine%20western%20victoria%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOLDEN, Jesse",
+        "TOLLEY, Lula",
+        "HUSSEIN, Hutch",
+        "RIORDAN, Richard",
+        "COLLA, Vince",
+        "CARBINS, Brenton",
+        "MALCOLM, Anna"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1410",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5bd8d1be-860c-4fc2-b025-3da39124ed56%2Fg90%20the%20greens%20combined%20western%20victoria%20bellarine%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOLDEN, Jesse",
+        "TOLLEY, Lula",
+        "HUSSEIN, Hutch",
+        "RIORDAN, Richard",
+        "COLLA, Vince",
+        "CARBINS, Brenton",
+        "MALCOLM, Anna"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1411",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=73d86f2d-2086-4213-a293-2ed1e86209ad%2Fg93%20the%20greens%20combined%20western%20victoria%20polwarth%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOLDEN, Jesse",
+        "TOLLEY, Lula",
+        "HUSSEIN, Hutch",
+        "RIORDAN, Richard",
+        "COLLA, Vince",
+        "CARBINS, Brenton",
+        "MALCOLM, Anna"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1412",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f82308ee-ae6d-4f07-85ae-5f62e4a2c2ca%2Fg36%20the%20greens%20combined%20western%20victoria%20eureka%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOLDEN, Jesse",
+        "TOLLEY, Lula",
+        "HUSSEIN, Hutch",
+        "RIORDAN, Richard",
+        "COLLA, Vince",
+        "CARBINS, Brenton",
+        "MALCOLM, Anna"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1489",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5957c100-260a-436a-811c-28fd44bf871b%2Fthe%20greens%20combined%20western%20victoria%20punjabi%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOLDEN, Jesse",
+        "TOLLEY, Lula",
+        "HUSSEIN, Hutch",
+        "RIORDAN, Richard",
+        "COLLA, Vince",
+        "CARBINS, Brenton",
+        "MALCOLM, Anna"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1554",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5392ee0d-27e0-4480-9c0d-8a5bc9cc74c7%2Fthe%20greens%20combined%20western%20victoria%20punjabi%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "646",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef0b08cc-8659-4972-b4db-47600737379b%2Fliberal_combined_wvr%20polwarth_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RIORDAN, Richard",
+        "COLLA, Vince",
+        "MALCOLM, Anna",
+        "HUSSEIN, Hutch",
+        "HOLDEN, Jesse",
+        "CARBINS, Brenton",
+        "TOLLEY, Lula"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 4,
+        "GRN": 5
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 4
+        }
+      ]
+    },
+    {
+      "registration": "674",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a7ac5d15-234b-4eb9-a7d0-f3d1bd201af8%2Fliberal_combined_wvr%20polwarth_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RIORDAN, Richard",
+        "COLLA, Vince",
+        "MALCOLM, Anna",
+        "HUSSEIN, Hutch",
+        "HOLDEN, Jesse",
+        "CARBINS, Brenton",
+        "TOLLEY, Lula"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 4,
+        "GRN": 5
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 4
+        }
+      ]
+    },
+    {
+      "registration": "1317",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8e056328-d6ce-4fc6-a8d3-43bd0f5da4f7%2Fliberal_combined_wvr%20polwarth_wvr%20south%20barwon_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RIORDAN, Richard",
+        "COLLA, Vince",
+        "MALCOLM, Anna",
+        "HUSSEIN, Hutch",
+        "HOLDEN, Jesse",
+        "CARBINS, Brenton",
+        "TOLLEY, Lula"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 4,
+        "GRN": 5
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 4
+        }
+      ]
+    },
+    {
+      "registration": "1504",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7eac0f08-ef9e-4f3c-8153-4ef5729fa74d%2Fliberal_multiple_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RIORDAN, Richard",
+        "COLLA, Vince",
+        "MALCOLM, Anna",
+        "HUSSEIN, Hutch",
+        "HOLDEN, Jesse",
+        "CARBINS, Brenton",
+        "TOLLEY, Lula"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 4,
+        "GRN": 5
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 4
+        }
+      ]
+    },
+    {
+      "registration": "1327",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RIORDAN, Richard",
+        "COLLA, Vince",
+        "MALCOLM, Anna",
+        "HUSSEIN, Hutch",
+        "HOLDEN, Jesse",
+        "CARBINS, Brenton",
+        "TOLLEY, Lula"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 4,
+        "GRN": 5
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 4
+        }
+      ]
+    },
+    {
+      "registration": "1508",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef298e7a-1371-41f2-a9a0-ed8f2eb25360%2Fliberal_multiple_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RIORDAN, Richard",
+        "COLLA, Vince",
+        "MALCOLM, Anna",
+        "HUSSEIN, Hutch",
+        "HOLDEN, Jesse",
+        "CARBINS, Brenton",
+        "TOLLEY, Lula"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 4,
+        "GRN": 5
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 4
+        }
+      ]
+    },
+    {
+      "registration": "1512",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8d451e6-5d8a-43a1-9577-8481a2ccdc56%2Fliberal_multiple_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RIORDAN, Richard",
+        "COLLA, Vince",
+        "MALCOLM, Anna",
+        "HUSSEIN, Hutch",
+        "HOLDEN, Jesse",
+        "CARBINS, Brenton",
+        "TOLLEY, Lula"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 4,
+        "GRN": 5
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 4
+        }
+      ]
+    },
+    {
+      "registration": "1513",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f6f69e90-716d-4ff5-8422-2a0f36601988%2Fliberal_multiple_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RIORDAN, Richard",
+        "COLLA, Vince",
+        "MALCOLM, Anna",
+        "HUSSEIN, Hutch",
+        "HOLDEN, Jesse",
+        "CARBINS, Brenton",
+        "TOLLEY, Lula"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 4,
+        "GRN": 5
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 4
+        }
+      ]
+    },
+    {
+      "registration": "842",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6a923065-4771-4a43-a9bf-63ec308e710d%2Fonv%20-%20combined%20-%20western%20victoria%20region%20-%20polwarth%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MALCOLM, Anna",
+        "COLLA, Vince",
+        "CARBINS, Brenton",
+        "RIORDAN, Richard",
+        "HUSSEIN, Hutch",
+        "HOLDEN, Jesse",
+        "TOLLEY, Lula"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 4,
+        "ALP": 5,
+        "GRN": 6
+      }
+    },
+    {
+      "registration": "1370",
+      "registered_by": "Citizens Party",
+      "kind": "party",
+      "party": "OTH",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=90f46c27-6758-4963-ba31-516c00810053%2Facp_htv_vic_polwarth_print.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "446",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=87843f9d-2edd-4666-8058-2c7a1dddd94c%2Fvictorian%20socialists%20combined%20western%20victoria%20polwarth%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TOLLEY, Lula",
+        "HOLDEN, Jesse",
+        "HUSSEIN, Hutch",
+        "RIORDAN, Richard",
+        "CARBINS, Brenton",
+        "COLLA, Vince",
+        "MALCOLM, Anna"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1032",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3cb352aa-6aea-462a-851f-36f81b5f44a3%2Fvs_wv_combined%20all_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TOLLEY, Lula",
+        "HOLDEN, Jesse",
+        "HUSSEIN, Hutch",
+        "RIORDAN, Richard",
+        "CARBINS, Brenton",
+        "COLLA, Vince",
+        "MALCOLM, Anna"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    }
+  ],
+  "no_card": []
+}

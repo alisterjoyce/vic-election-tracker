@@ -1,0 +1,1095 @@
+{
+  "area": "melton",
+  "house": "lower",
+  "name": "Melton",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "LEGRO, Hayden",
+      "name": "Hayden Legro",
+      "party": "WEST",
+      "party_label": "The West Party",
+      "ballot_position": 1,
+      "id": "melton/hayden-legro"
+    },
+    {
+      "ballot_name": "KELLY, Daire",
+      "name": "Daire Kelly",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 2,
+      "id": "melton/daire-kelly"
+    },
+    {
+      "ballot_name": "FARUQ, M.D. Omor",
+      "name": "M.D. Omor Faruq",
+      "party": "IND",
+      "ballot_position": 3,
+      "id": "melton/m-d-omor-faruq"
+    },
+    {
+      "ballot_name": "LEVCHENKOVA, Veronika",
+      "name": "Veronika Levchenkova",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 4,
+      "id": "melton/veronika-levchenkova"
+    },
+    {
+      "ballot_name": "ADIN-JAMES, Fiona",
+      "name": "Fiona Adin-James",
+      "party": "AJP",
+      "party_label": "Animal Justice Party",
+      "ballot_position": 5,
+      "id": "melton/fiona-adin-james"
+    },
+    {
+      "ballot_name": "BINGHAM, Jarrod",
+      "name": "Jarrod Bingham",
+      "party": "LIB",
+      "party_label": "Liberal",
+      "ballot_position": 6,
+      "id": "melton/jarrod-bingham"
+    },
+    {
+      "ballot_name": "WEST, Marlene",
+      "name": "Marlene West",
+      "party": "FF",
+      "party_label": "Family First",
+      "ballot_position": 7,
+      "id": "melton/marlene-west"
+    },
+    {
+      "ballot_name": "BORG, Broden",
+      "name": "Broden Borg",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 8,
+      "id": "melton/broden-borg"
+    },
+    {
+      "ballot_name": "PERERA, Jason Spencer",
+      "name": "Jason Spencer Perera",
+      "party": "IND",
+      "ballot_position": 9,
+      "id": "melton/jason-spencer-perera"
+    },
+    {
+      "ballot_name": "FRASER, Jason",
+      "name": "Jason Fraser",
+      "party": "IND",
+      "ballot_position": 10,
+      "id": "melton/jason-fraser"
+    },
+    {
+      "ballot_name": "KATSELIS, Matthew",
+      "name": "Matthew Katselis",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 11,
+      "id": "melton/matthew-katselis"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "1091",
+      "registered_by": "Animal Justice Party",
+      "kind": "party",
+      "party": "AJP",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1224c466-e3b2-4ec3-987b-c825cf614361%2Fmelton.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1274",
+      "registered_by": "Animal Justice Party",
+      "kind": "party",
+      "party": "AJP",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9a2efc0c-52b1-49f7-b394-e4c1ed89eba1%2Fmelton.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "122",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=326d65e0-cd4b-41ce-a012-6dd300d255ab%2Falp_combined_wv%20melton_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BORG, Broden",
+        "ADIN-JAMES, Fiona",
+        "LEVCHENKOVA, Veronika",
+        "KELLY, Daire",
+        "LEGRO, Hayden",
+        "FARUQ, M.D. Omor",
+        "PERERA, Jason Spencer",
+        "BINGHAM, Jarrod",
+        "WEST, Marlene",
+        "FRASER, Jason",
+        "KATSELIS, Matthew"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 8,
+        "ONP": 11
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BORG, Broden",
+        "ADIN-JAMES, Fiona",
+        "LEVCHENKOVA, Veronika",
+        "KELLY, Daire",
+        "LEGRO, Hayden",
+        "FARUQ, M.D. Omor",
+        "PERERA, Jason Spencer",
+        "BINGHAM, Jarrod",
+        "WEST, Marlene",
+        "FRASER, Jason",
+        "KATSELIS, Matthew"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 8,
+        "ONP": 11
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "940",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b65778c5-673e-40e6-9594-11a23f50c1e9%2Falp_combined_wv_melton_tr9_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BORG, Broden",
+        "ADIN-JAMES, Fiona",
+        "LEVCHENKOVA, Veronika",
+        "KELLY, Daire",
+        "LEGRO, Hayden",
+        "FARUQ, M.D. Omor",
+        "PERERA, Jason Spencer",
+        "BINGHAM, Jarrod",
+        "WEST, Marlene",
+        "FRASER, Jason",
+        "KATSELIS, Matthew"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 8,
+        "ONP": 11
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "1212",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7fc4324b-07f2-4b88-bfb4-315649b04107%2Ffamilyfirst_western-vic-polwarth-geelong-seats-wendouree_version%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WEST, Marlene",
+        "KATSELIS, Matthew",
+        "BINGHAM, Jarrod",
+        "LEGRO, Hayden",
+        "BORG, Broden",
+        "FRASER, Jason",
+        "FARUQ, M.D. Omor",
+        "PERERA, Jason Spencer",
+        "ADIN-JAMES, Fiona",
+        "LEVCHENKOVA, Veronika",
+        "KELLY, Daire"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 3,
+        "ALP": 5,
+        "GRN": 10
+      }
+    },
+    {
+      "registration": "1213",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d78a4dd7-38d8-4f8c-996e-346fdcf3f8ff%2Ffamilyfirst_western-vic-south-west-coast-ballarat-seats_version2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WEST, Marlene",
+        "KATSELIS, Matthew",
+        "BINGHAM, Jarrod",
+        "LEGRO, Hayden",
+        "BORG, Broden",
+        "FRASER, Jason",
+        "FARUQ, M.D. Omor",
+        "PERERA, Jason Spencer",
+        "ADIN-JAMES, Fiona",
+        "LEVCHENKOVA, Veronika",
+        "KELLY, Daire"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 3,
+        "ALP": 5,
+        "GRN": 10
+      }
+    },
+    {
+      "registration": "1105",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=55783289-1f83-45db-89d2-7270d48d4d99%2Fthe%20greens%20combined%20western%20metro%20laverton%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LEVCHENKOVA, Veronika",
+        "KELLY, Daire",
+        "ADIN-JAMES, Fiona",
+        "LEGRO, Hayden",
+        "BORG, Broden",
+        "BINGHAM, Jarrod",
+        "PERERA, Jason Spencer",
+        "FRASER, Jason",
+        "FARUQ, M.D. Omor",
+        "WEST, Marlene",
+        "KATSELIS, Matthew"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1116",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=88a586f3-203e-4342-bbba-3a8335969420%2Fthe%20greens%20combined%20western%20metro%20sydenham%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LEVCHENKOVA, Veronika",
+        "KELLY, Daire",
+        "ADIN-JAMES, Fiona",
+        "LEGRO, Hayden",
+        "BORG, Broden",
+        "BINGHAM, Jarrod",
+        "PERERA, Jason Spencer",
+        "FRASER, Jason",
+        "FARUQ, M.D. Omor",
+        "WEST, Marlene",
+        "KATSELIS, Matthew"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1168",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a31ebc17-da3f-404c-8ff4-2688759e3cb0%2Fthe%20greens%20combined%20western%20metro%20sunbury%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LEVCHENKOVA, Veronika",
+        "KELLY, Daire",
+        "ADIN-JAMES, Fiona",
+        "LEGRO, Hayden",
+        "BORG, Broden",
+        "BINGHAM, Jarrod",
+        "PERERA, Jason Spencer",
+        "FRASER, Jason",
+        "FARUQ, M.D. Omor",
+        "WEST, Marlene",
+        "KATSELIS, Matthew"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1173",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=20e3a507-9914-4be3-910a-d1922aa58a9d%2F1173%20the%20greens%20combined%20western%20metro%20kororoit%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LEVCHENKOVA, Veronika",
+        "KELLY, Daire",
+        "ADIN-JAMES, Fiona",
+        "LEGRO, Hayden",
+        "BORG, Broden",
+        "BINGHAM, Jarrod",
+        "PERERA, Jason Spencer",
+        "FRASER, Jason",
+        "FARUQ, M.D. Omor",
+        "WEST, Marlene",
+        "KATSELIS, Matthew"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1176",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=eb91dd96-cd39-486d-b1d9-d3b7e34fb7e3%2Fthe%20greens%20combined%20western%20victoria%20melton%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LEVCHENKOVA, Veronika",
+        "KELLY, Daire",
+        "ADIN-JAMES, Fiona",
+        "LEGRO, Hayden",
+        "BORG, Broden",
+        "BINGHAM, Jarrod",
+        "PERERA, Jason Spencer",
+        "FRASER, Jason",
+        "FARUQ, M.D. Omor",
+        "WEST, Marlene",
+        "KATSELIS, Matthew"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1182",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7d3205bf-f329-4f67-80fb-15b7860448bc%2Fthe%20greens%20combined%20western%20victoria%20eureka%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LEVCHENKOVA, Veronika",
+        "KELLY, Daire",
+        "ADIN-JAMES, Fiona",
+        "LEGRO, Hayden",
+        "BORG, Broden",
+        "BINGHAM, Jarrod",
+        "PERERA, Jason Spencer",
+        "FRASER, Jason",
+        "FARUQ, M.D. Omor",
+        "WEST, Marlene",
+        "KATSELIS, Matthew"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LEVCHENKOVA, Veronika",
+        "KELLY, Daire",
+        "ADIN-JAMES, Fiona",
+        "LEGRO, Hayden",
+        "BORG, Broden",
+        "BINGHAM, Jarrod",
+        "PERERA, Jason Spencer",
+        "FRASER, Jason",
+        "FARUQ, M.D. Omor",
+        "WEST, Marlene",
+        "KATSELIS, Matthew"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1201",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1e7ee1a4-bd62-49a6-a92b-8e5a9e3ebd54%2Fthe%20greens%20combined%20sydenham%20kororoit%20st%20albans%20western%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LEVCHENKOVA, Veronika",
+        "KELLY, Daire",
+        "ADIN-JAMES, Fiona",
+        "LEGRO, Hayden",
+        "BORG, Broden",
+        "BINGHAM, Jarrod",
+        "PERERA, Jason Spencer",
+        "FRASER, Jason",
+        "FARUQ, M.D. Omor",
+        "WEST, Marlene",
+        "KATSELIS, Matthew"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1412",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f82308ee-ae6d-4f07-85ae-5f62e4a2c2ca%2Fg36%20the%20greens%20combined%20western%20victoria%20eureka%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LEVCHENKOVA, Veronika",
+        "KELLY, Daire",
+        "ADIN-JAMES, Fiona",
+        "LEGRO, Hayden",
+        "BORG, Broden",
+        "BINGHAM, Jarrod",
+        "PERERA, Jason Spencer",
+        "FRASER, Jason",
+        "FARUQ, M.D. Omor",
+        "WEST, Marlene",
+        "KATSELIS, Matthew"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1489",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5957c100-260a-436a-811c-28fd44bf871b%2Fthe%20greens%20combined%20western%20victoria%20punjabi%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LEVCHENKOVA, Veronika",
+        "KELLY, Daire",
+        "ADIN-JAMES, Fiona",
+        "LEGRO, Hayden",
+        "BORG, Broden",
+        "BINGHAM, Jarrod",
+        "PERERA, Jason Spencer",
+        "FRASER, Jason",
+        "FARUQ, M.D. Omor",
+        "WEST, Marlene",
+        "KATSELIS, Matthew"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1554",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5392ee0d-27e0-4480-9c0d-8a5bc9cc74c7%2Fthe%20greens%20combined%20western%20victoria%20punjabi%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "570",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a67c3b6e-c46a-498e-81f5-84a31780cd7f%2Fliberal_combined_wvr%20melton_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BINGHAM, Jarrod",
+        "WEST, Marlene",
+        "LEGRO, Hayden",
+        "KATSELIS, Matthew",
+        "FRASER, Jason",
+        "PERERA, Jason Spencer",
+        "FARUQ, M.D. Omor",
+        "ADIN-JAMES, Fiona",
+        "BORG, Broden",
+        "LEVCHENKOVA, Veronika",
+        "KELLY, Daire"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 9,
+        "GRN": 10
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "656",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=10983dd3-b5f9-45d5-a85d-c624a8bde97c%2Fliberal_combined_wvr%20melton_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BINGHAM, Jarrod",
+        "WEST, Marlene",
+        "LEGRO, Hayden",
+        "KATSELIS, Matthew",
+        "FRASER, Jason",
+        "PERERA, Jason Spencer",
+        "FARUQ, M.D. Omor",
+        "ADIN-JAMES, Fiona",
+        "BORG, Broden",
+        "LEVCHENKOVA, Veronika",
+        "KELLY, Daire"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 9,
+        "GRN": 10
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "1504",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7eac0f08-ef9e-4f3c-8153-4ef5729fa74d%2Fliberal_multiple_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BINGHAM, Jarrod",
+        "WEST, Marlene",
+        "LEGRO, Hayden",
+        "KATSELIS, Matthew",
+        "FRASER, Jason",
+        "PERERA, Jason Spencer",
+        "FARUQ, M.D. Omor",
+        "ADIN-JAMES, Fiona",
+        "BORG, Broden",
+        "LEVCHENKOVA, Veronika",
+        "KELLY, Daire"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 9,
+        "GRN": 10
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "1327",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BINGHAM, Jarrod",
+        "WEST, Marlene",
+        "LEGRO, Hayden",
+        "KATSELIS, Matthew",
+        "FRASER, Jason",
+        "PERERA, Jason Spencer",
+        "FARUQ, M.D. Omor",
+        "ADIN-JAMES, Fiona",
+        "BORG, Broden",
+        "LEVCHENKOVA, Veronika",
+        "KELLY, Daire"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 9,
+        "GRN": 10
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "1508",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef298e7a-1371-41f2-a9a0-ed8f2eb25360%2Fliberal_multiple_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BINGHAM, Jarrod",
+        "WEST, Marlene",
+        "LEGRO, Hayden",
+        "KATSELIS, Matthew",
+        "FRASER, Jason",
+        "PERERA, Jason Spencer",
+        "FARUQ, M.D. Omor",
+        "ADIN-JAMES, Fiona",
+        "BORG, Broden",
+        "LEVCHENKOVA, Veronika",
+        "KELLY, Daire"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 9,
+        "GRN": 10
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "1512",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8d451e6-5d8a-43a1-9577-8481a2ccdc56%2Fliberal_multiple_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BINGHAM, Jarrod",
+        "WEST, Marlene",
+        "LEGRO, Hayden",
+        "KATSELIS, Matthew",
+        "FRASER, Jason",
+        "PERERA, Jason Spencer",
+        "FARUQ, M.D. Omor",
+        "ADIN-JAMES, Fiona",
+        "BORG, Broden",
+        "LEVCHENKOVA, Veronika",
+        "KELLY, Daire"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 9,
+        "GRN": 10
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "1513",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f6f69e90-716d-4ff5-8422-2a0f36601988%2Fliberal_multiple_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BINGHAM, Jarrod",
+        "WEST, Marlene",
+        "LEGRO, Hayden",
+        "KATSELIS, Matthew",
+        "FRASER, Jason",
+        "PERERA, Jason Spencer",
+        "FARUQ, M.D. Omor",
+        "ADIN-JAMES, Fiona",
+        "BORG, Broden",
+        "LEVCHENKOVA, Veronika",
+        "KELLY, Daire"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 9,
+        "GRN": 10
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "855",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=de607d2c-a972-4cba-bacb-7086ac0152bf%2Fonv%20-%20combined%20-%20western%20victoria%20region%20-%20melton%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KATSELIS, Matthew",
+        "WEST, Marlene",
+        "LEGRO, Hayden",
+        "BINGHAM, Jarrod",
+        "BORG, Broden",
+        "PERERA, Jason Spencer",
+        "FARUQ, M.D. Omor",
+        "FRASER, Jason",
+        "LEVCHENKOVA, Veronika",
+        "ADIN-JAMES, Fiona",
+        "KELLY, Daire"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 4,
+        "ALP": 5,
+        "GRN": 9
+      }
+    },
+    {
+      "registration": "431",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9de58a20-cb55-4c4f-9686-30b1e6aa4b43%2Fvictorian%20socialists%20combined%20western%20victoria%20melton%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KELLY, Daire",
+        "LEVCHENKOVA, Veronika",
+        "ADIN-JAMES, Fiona",
+        "BORG, Broden",
+        "LEGRO, Hayden",
+        "FARUQ, M.D. Omor",
+        "PERERA, Jason Spencer",
+        "FRASER, Jason",
+        "BINGHAM, Jarrod",
+        "WEST, Marlene",
+        "KATSELIS, Matthew"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 9,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1032",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3cb352aa-6aea-462a-851f-36f81b5f44a3%2Fvs_wv_combined%20all_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KELLY, Daire",
+        "LEVCHENKOVA, Veronika",
+        "ADIN-JAMES, Fiona",
+        "BORG, Broden",
+        "LEGRO, Hayden",
+        "FARUQ, M.D. Omor",
+        "PERERA, Jason Spencer",
+        "FRASER, Jason",
+        "BINGHAM, Jarrod",
+        "WEST, Marlene",
+        "KATSELIS, Matthew"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 9,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1475",
+      "registered_by": "The West Party",
+      "kind": "party",
+      "party": "WEST",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9a4af8e9-0559-4051-8e56-5b6a3b5546a3%2Fhtv%20the%20west%20party%20hayden%20legro%20melton.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1450",
+      "registered_by": "FRASER, Jason",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "melton/jason-fraser",
+      "type": "Single",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=15297fe9-3b3d-4540-9027-2d42a8461b3b%2Ffraser%2C%20jason.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FRASER, Jason",
+        "LEVCHENKOVA, Veronika",
+        "WEST, Marlene",
+        "FARUQ, M.D. Omor",
+        "PERERA, Jason Spencer",
+        "LEGRO, Hayden",
+        "KELLY, Daire",
+        "ADIN-JAMES, Fiona",
+        "BORG, Broden",
+        "BINGHAM, Jarrod",
+        "KATSELIS, Matthew"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 9,
+        "LNP": 10,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1524",
+      "registered_by": "FARUQ, M.D. Omor",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "melton/m-d-omor-faruq",
+      "type": "Single",
+      "registered_on": "2026-11-18",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2689ab6e-8932-423c-9e5d-d1717fb415b6%2Ffaruq%2C%20m.d.%20omor&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "pending",
+      "tried": "2026-11-20",
+      "note": "the VEC's link to this card didn't open"
+    },
+    {
+      "registration": "1525",
+      "registered_by": "FARUQ, M.D. Omor",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "melton/m-d-omor-faruq",
+      "type": "Single",
+      "registered_on": "2026-11-18",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7f37ad09-2abc-4a71-9b4e-558e6883faea%2Ffaruq%2C%20m.d.%20omor&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "pending",
+      "tried": "2026-11-20",
+      "note": "the VEC's link to this card didn't open"
+    },
+    {
+      "registration": "1526",
+      "registered_by": "FARUQ, M.D. Omor",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "melton/m-d-omor-faruq",
+      "type": "Single",
+      "registered_on": "2026-11-18",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=267cb93d-f08b-4c22-b1d0-1344681f217a%2Ffaruq%2C%20m.d.%20omor&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "pending",
+      "tried": "2026-11-20",
+      "note": "the VEC's link to this card didn't open"
+    },
+    {
+      "registration": "1606",
+      "registered_by": "PERERA, Jason Spencer",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "melton/jason-spencer-perera",
+      "type": "Single",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4e179855-b36f-435a-a296-8f0e45cebc74%2Fperera%2C%20jason%20spencer.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    }
+  ],
+  "no_card": []
+}

@@ -1,0 +1,1238 @@
+{
+  "area": "werribee",
+  "house": "lower",
+  "name": "Werribee",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "HOPPER, Paul",
+      "name": "Paul Hopper",
+      "party": "WEST",
+      "party_label": "The West Party",
+      "ballot_position": 1,
+      "id": "werribee/paul-hopper"
+    },
+    {
+      "ballot_name": "KUMAR, Tushar",
+      "name": "Tushar Kumar",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 2,
+      "id": "werribee/tushar-kumar"
+    },
+    {
+      "ballot_name": "PATERAS, Paul",
+      "name": "Paul Pateras",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 3,
+      "id": "werribee/paul-pateras"
+    },
+    {
+      "ballot_name": "CLARK, Reece",
+      "name": "Reece Clark",
+      "party": "LIB",
+      "party_label": "Liberal",
+      "ballot_position": 4,
+      "id": "werribee/reece-clark"
+    },
+    {
+      "ballot_name": "EMERSON, Matt",
+      "name": "Matt Emerson",
+      "party": "FF",
+      "party_label": "Family First",
+      "ballot_position": 5,
+      "id": "werribee/matt-emerson"
+    },
+    {
+      "ballot_name": "LISTER, John",
+      "name": "John Lister",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 6,
+      "id": "werribee/john-lister"
+    },
+    {
+      "ballot_name": "ORCHARD, Jeremy",
+      "name": "Jeremy Orchard",
+      "party": "DLP",
+      "party_label": "Labour DLP",
+      "ballot_position": 7,
+      "id": "werribee/jeremy-orchard"
+    },
+    {
+      "ballot_name": "MUNRO, Sue",
+      "name": "Sue Munro",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 8,
+      "id": "werribee/sue-munro"
+    },
+    {
+      "ballot_name": "RAIZADA, Monica Sharma",
+      "name": "Monica Sharma Raizada",
+      "party": "IND",
+      "ballot_position": 9,
+      "id": "werribee/monica-sharma-raizada"
+    },
+    {
+      "ballot_name": "KAYAGURLA, Sandhya",
+      "name": "Sandhya Kayagurla",
+      "party": "OTH",
+      "party_label": "The Republican",
+      "ballot_position": 10,
+      "id": "werribee/sandhya-kayagurla"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "97",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8e8ec340-b518-408c-b917-50601e0b3af4%2Falp_combined_wm%20werribee_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LISTER, John",
+        "KUMAR, Tushar",
+        "MUNRO, Sue",
+        "HOPPER, Paul",
+        "ORCHARD, Jeremy",
+        "KAYAGURLA, Sandhya",
+        "RAIZADA, Monica Sharma",
+        "CLARK, Reece",
+        "EMERSON, Matt",
+        "PATERAS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 8,
+        "ONP": 10
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "274",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8f5b55c0-247e-4161-9aa2-6ed65228d73b%2Falp_combined_wm_point%20cook_tarneit_werribee_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "344",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=23a55f48-ddc6-4c25-8503-99f9dcf7e8fe%2Falp_combined_wv_wm_lara_werribee_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LISTER, John",
+        "KUMAR, Tushar",
+        "MUNRO, Sue",
+        "HOPPER, Paul",
+        "ORCHARD, Jeremy",
+        "KAYAGURLA, Sandhya",
+        "RAIZADA, Monica Sharma",
+        "CLARK, Reece",
+        "EMERSON, Matt",
+        "PATERAS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 8,
+        "ONP": 10
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "352",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6244a0e2-f5a5-4d3b-aedb-0243e5fb04b4%2Falp_combined_wm_tarneit_werribee_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LISTER, John",
+        "KUMAR, Tushar",
+        "MUNRO, Sue",
+        "HOPPER, Paul",
+        "ORCHARD, Jeremy",
+        "KAYAGURLA, Sandhya",
+        "RAIZADA, Monica Sharma",
+        "CLARK, Reece",
+        "EMERSON, Matt",
+        "PATERAS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 8,
+        "ONP": 10
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "358",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=296824a2-9fae-4ef3-9daa-b53683d01ebc%2Falp_combined_wm_point%20cook_werribee_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LISTER, John",
+        "KUMAR, Tushar",
+        "MUNRO, Sue",
+        "HOPPER, Paul",
+        "ORCHARD, Jeremy",
+        "KAYAGURLA, Sandhya",
+        "RAIZADA, Monica Sharma",
+        "CLARK, Reece",
+        "EMERSON, Matt",
+        "PATERAS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 8,
+        "ONP": 10
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "809",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6b8aa1b0-b2f5-4c91-994f-2f3ef5d7b3cc%2Falp_combined_wm_werribee_tr2_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LISTER, John",
+        "KUMAR, Tushar",
+        "MUNRO, Sue",
+        "HOPPER, Paul",
+        "ORCHARD, Jeremy",
+        "KAYAGURLA, Sandhya",
+        "RAIZADA, Monica Sharma",
+        "CLARK, Reece",
+        "EMERSON, Matt",
+        "PATERAS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 8,
+        "ONP": 10
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LISTER, John",
+        "KUMAR, Tushar",
+        "MUNRO, Sue",
+        "HOPPER, Paul",
+        "ORCHARD, Jeremy",
+        "KAYAGURLA, Sandhya",
+        "RAIZADA, Monica Sharma",
+        "CLARK, Reece",
+        "EMERSON, Matt",
+        "PATERAS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 8,
+        "ONP": 10
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "978",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=93a6dabe-3916-4949-b7be-d1c49080fd8e%2Falp_combined_wm_werribee_tr9_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LISTER, John",
+        "KUMAR, Tushar",
+        "MUNRO, Sue",
+        "HOPPER, Paul",
+        "ORCHARD, Jeremy",
+        "KAYAGURLA, Sandhya",
+        "RAIZADA, Monica Sharma",
+        "CLARK, Reece",
+        "EMERSON, Matt",
+        "PATERAS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 8,
+        "ONP": 10
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "1435",
+      "registered_by": "Labour DLP",
+      "kind": "party",
+      "party": "DLP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=05a95dbe-1d04-400e-aea6-070ad0c34ec9%2Fdlp%20htv%20lower%20house%20-%20werribee%20district%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ORCHARD, Jeremy",
+        "HOPPER, Paul",
+        "CLARK, Reece",
+        "EMERSON, Matt",
+        "PATERAS, Paul",
+        "RAIZADA, Monica Sharma",
+        "KAYAGURLA, Sandhya",
+        "LISTER, John",
+        "KUMAR, Tushar",
+        "MUNRO, Sue"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 3,
+        "ONP": 5,
+        "ALP": 8,
+        "GRN": 9
+      }
+    },
+    {
+      "registration": "486",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=55b22b3a-b837-446d-86ba-157b21f021d9%2Fwerribee.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "EMERSON, Matt",
+        "PATERAS, Paul",
+        "ORCHARD, Jeremy",
+        "KAYAGURLA, Sandhya",
+        "CLARK, Reece",
+        "HOPPER, Paul",
+        "RAIZADA, Monica Sharma",
+        "LISTER, John",
+        "KUMAR, Tushar",
+        "MUNRO, Sue"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 5,
+        "ALP": 8,
+        "GRN": 9
+      }
+    },
+    {
+      "registration": "1004",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=786fc017-b16e-462b-8943-c7856c4754bc%2Ffamilyfirst_werribee%20version%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "EMERSON, Matt",
+        "HOPPER, Paul",
+        "ORCHARD, Jeremy",
+        "KAYAGURLA, Sandhya",
+        "CLARK, Reece",
+        "PATERAS, Paul",
+        "RAIZADA, Monica Sharma",
+        "LISTER, John",
+        "KUMAR, Tushar",
+        "MUNRO, Sue"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 5,
+        "ONP": 6,
+        "ALP": 8,
+        "GRN": 9
+      }
+    },
+    {
+      "registration": "507",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=88da6346-48cd-4d71-8e72-1b097964fcab%2Fthe%20greens%20combined%20tarneit%20werribee%20western%20metro%20point%20cook%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "partial",
+      "order": [
+        "KUMAR, Tushar"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1
+      }
+    },
+    {
+      "registration": "510",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=701a9ed3-c2e3-4cbf-9e56-9a48b496d7bf%2Fthe%20greens%20combined%20tarneit%20werribee%20western%20metro%20point%20cook%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "partial",
+      "order": [
+        "KUMAR, Tushar"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1
+      }
+    },
+    {
+      "registration": "1149",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fc6480a9-3299-402f-84f1-b19f706ec1ae%2Fthe%20greens%20combined%20western%20metro%20tarneit%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KUMAR, Tushar",
+        "MUNRO, Sue",
+        "RAIZADA, Monica Sharma",
+        "HOPPER, Paul",
+        "LISTER, John",
+        "CLARK, Reece",
+        "KAYAGURLA, Sandhya",
+        "ORCHARD, Jeremy",
+        "EMERSON, Matt",
+        "PATERAS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 10
+      }
+    },
+    {
+      "registration": "1161",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8638698-961d-40a7-91cc-aea158939e47%2Fthe%20greens%20combined%20western%20metro%20werribee%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KUMAR, Tushar",
+        "MUNRO, Sue",
+        "RAIZADA, Monica Sharma",
+        "HOPPER, Paul",
+        "LISTER, John",
+        "CLARK, Reece",
+        "KAYAGURLA, Sandhya",
+        "ORCHARD, Jeremy",
+        "EMERSON, Matt",
+        "PATERAS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 10
+      }
+    },
+    {
+      "registration": "1167",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=92014fe9-f8e2-44f3-ad76-be9b12a760fd%2Fthe%20greens%20combined%20western%20metro%20point%20cook%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KUMAR, Tushar",
+        "MUNRO, Sue",
+        "RAIZADA, Monica Sharma",
+        "HOPPER, Paul",
+        "LISTER, John",
+        "CLARK, Reece",
+        "KAYAGURLA, Sandhya",
+        "ORCHARD, Jeremy",
+        "EMERSON, Matt",
+        "PATERAS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 10
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KUMAR, Tushar",
+        "MUNRO, Sue",
+        "RAIZADA, Monica Sharma",
+        "HOPPER, Paul",
+        "LISTER, John",
+        "CLARK, Reece",
+        "KAYAGURLA, Sandhya",
+        "ORCHARD, Jeremy",
+        "EMERSON, Matt",
+        "PATERAS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 10
+      }
+    },
+    {
+      "registration": "1200",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=91027d9f-f756-4534-94c3-425d0bb8ecee%2Fthe%20greens%20combined%20western%20metro%20werribee%20tarneit%204.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "partial",
+      "order": [
+        "KUMAR, Tushar"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1
+      }
+    },
+    {
+      "registration": "1478",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e269e427-1a9f-4777-85b4-0db846eda110%2Fthe%20greens%20combined%20western%20metro%20vietnamese%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KUMAR, Tushar",
+        "MUNRO, Sue",
+        "RAIZADA, Monica Sharma",
+        "HOPPER, Paul",
+        "LISTER, John",
+        "CLARK, Reece",
+        "KAYAGURLA, Sandhya",
+        "ORCHARD, Jeremy",
+        "EMERSON, Matt",
+        "PATERAS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 10
+      }
+    },
+    {
+      "registration": "1492",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9790b150-f633-47f4-8b9e-aed7a9554e98%2Fthe%20greens%20combined%20western%20metro%20punjabi%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KUMAR, Tushar",
+        "MUNRO, Sue",
+        "RAIZADA, Monica Sharma",
+        "HOPPER, Paul",
+        "LISTER, John",
+        "CLARK, Reece",
+        "KAYAGURLA, Sandhya",
+        "ORCHARD, Jeremy",
+        "EMERSON, Matt",
+        "PATERAS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 10
+      }
+    },
+    {
+      "registration": "1548",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d948fa13-a951-4e9f-a310-26cd0001f101%2Fthe%20greens%20combined%20western%20metro%20punjabi%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KUMAR, Tushar",
+        "MUNRO, Sue",
+        "RAIZADA, Monica Sharma",
+        "HOPPER, Paul",
+        "LISTER, John",
+        "CLARK, Reece",
+        "KAYAGURLA, Sandhya",
+        "ORCHARD, Jeremy",
+        "EMERSON, Matt",
+        "PATERAS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 10
+      }
+    },
+    {
+      "registration": "1558",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=72d3cabb-ecac-4ed9-bd28-c39010cb0178%2Fthe%20greens%20combined%20western%20metro%20vietnamese%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KUMAR, Tushar",
+        "MUNRO, Sue",
+        "RAIZADA, Monica Sharma",
+        "HOPPER, Paul",
+        "LISTER, John",
+        "CLARK, Reece",
+        "KAYAGURLA, Sandhya",
+        "ORCHARD, Jeremy",
+        "EMERSON, Matt",
+        "PATERAS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 10
+      }
+    },
+    {
+      "registration": "592",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=46d1bb39-daaf-4f8e-abdf-e51a79d4d257%2Fliberal_combined_wmr%20werribee_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CLARK, Reece",
+        "ORCHARD, Jeremy",
+        "EMERSON, Matt",
+        "HOPPER, Paul",
+        "PATERAS, Paul",
+        "RAIZADA, Monica Sharma",
+        "KAYAGURLA, Sandhya",
+        "LISTER, John",
+        "KUMAR, Tushar",
+        "MUNRO, Sue"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 5,
+        "ALP": 8,
+        "GRN": 9
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 5,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "625",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=49ac515e-0fdc-4eaf-9cfc-8f735b33b307%2Fliberal_combined_wmr%20werribee_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CLARK, Reece",
+        "ORCHARD, Jeremy",
+        "EMERSON, Matt",
+        "HOPPER, Paul",
+        "PATERAS, Paul",
+        "RAIZADA, Monica Sharma",
+        "KAYAGURLA, Sandhya",
+        "LISTER, John",
+        "KUMAR, Tushar",
+        "MUNRO, Sue"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 5,
+        "ALP": 8,
+        "GRN": 9
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 5,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "1248",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2bbaecc2-d1ec-4838-9c74-84f6a2eee52d%2Fliberal_combined_wmr%20tarneit_wmr%20werribee_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CLARK, Reece",
+        "ORCHARD, Jeremy",
+        "EMERSON, Matt",
+        "HOPPER, Paul",
+        "PATERAS, Paul",
+        "RAIZADA, Monica Sharma",
+        "KAYAGURLA, Sandhya",
+        "LISTER, John",
+        "KUMAR, Tushar",
+        "MUNRO, Sue"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 5,
+        "ALP": 8,
+        "GRN": 9
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 5,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "1504",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7eac0f08-ef9e-4f3c-8153-4ef5729fa74d%2Fliberal_multiple_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CLARK, Reece",
+        "ORCHARD, Jeremy",
+        "EMERSON, Matt",
+        "HOPPER, Paul",
+        "PATERAS, Paul",
+        "RAIZADA, Monica Sharma",
+        "KAYAGURLA, Sandhya",
+        "LISTER, John",
+        "KUMAR, Tushar",
+        "MUNRO, Sue"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 5,
+        "ALP": 8,
+        "GRN": 9
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 5,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "1327",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CLARK, Reece",
+        "ORCHARD, Jeremy",
+        "EMERSON, Matt",
+        "HOPPER, Paul",
+        "PATERAS, Paul",
+        "RAIZADA, Monica Sharma",
+        "KAYAGURLA, Sandhya",
+        "LISTER, John",
+        "KUMAR, Tushar",
+        "MUNRO, Sue"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 5,
+        "ALP": 8,
+        "GRN": 9
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 5,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "1508",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef298e7a-1371-41f2-a9a0-ed8f2eb25360%2Fliberal_multiple_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CLARK, Reece",
+        "ORCHARD, Jeremy",
+        "EMERSON, Matt",
+        "HOPPER, Paul",
+        "PATERAS, Paul",
+        "RAIZADA, Monica Sharma",
+        "KAYAGURLA, Sandhya",
+        "LISTER, John",
+        "KUMAR, Tushar",
+        "MUNRO, Sue"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 5,
+        "ALP": 8,
+        "GRN": 9
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 5,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "1512",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8d451e6-5d8a-43a1-9577-8481a2ccdc56%2Fliberal_multiple_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CLARK, Reece",
+        "ORCHARD, Jeremy",
+        "EMERSON, Matt",
+        "HOPPER, Paul",
+        "PATERAS, Paul",
+        "RAIZADA, Monica Sharma",
+        "KAYAGURLA, Sandhya",
+        "LISTER, John",
+        "KUMAR, Tushar",
+        "MUNRO, Sue"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 5,
+        "ALP": 8,
+        "GRN": 9
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 5,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "1513",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f6f69e90-716d-4ff5-8422-2a0f36601988%2Fliberal_multiple_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CLARK, Reece",
+        "ORCHARD, Jeremy",
+        "EMERSON, Matt",
+        "HOPPER, Paul",
+        "PATERAS, Paul",
+        "RAIZADA, Monica Sharma",
+        "KAYAGURLA, Sandhya",
+        "LISTER, John",
+        "KUMAR, Tushar",
+        "MUNRO, Sue"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 5,
+        "ALP": 8,
+        "GRN": 9
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 5,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "897",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9157ee24-e4bd-4a06-997c-16b3880db6c6%2Fonv%20-%20combined%20-%20western%20metropolitan%20region%20-%20werribee%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PATERAS, Paul",
+        "EMERSON, Matt",
+        "CLARK, Reece",
+        "HOPPER, Paul",
+        "KAYAGURLA, Sandhya",
+        "ORCHARD, Jeremy",
+        "LISTER, John",
+        "RAIZADA, Monica Sharma",
+        "KUMAR, Tushar",
+        "MUNRO, Sue"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 3,
+        "ALP": 7,
+        "GRN": 9
+      }
+    },
+    {
+      "registration": "1537",
+      "registered_by": "The Republican",
+      "kind": "party",
+      "party": "OTH",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-18",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=05a8b849-a836-4b62-9397-57be385c77a7%2Fthe%20republican%20-%20combined%20-%20western%20metro%2C%20werribee.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "468",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f662d81c-9e7f-4f00-8233-e6c3d40351fb%2Fvictorian%20socialists%20combined%20western%20metropolitan%20werribee%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MUNRO, Sue",
+        "KUMAR, Tushar",
+        "LISTER, John",
+        "HOPPER, Paul",
+        "RAIZADA, Monica Sharma",
+        "KAYAGURLA, Sandhya",
+        "ORCHARD, Jeremy",
+        "CLARK, Reece",
+        "EMERSON, Matt",
+        "PATERAS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 3,
+        "LNP": 8,
+        "ONP": 10
+      }
+    },
+    {
+      "registration": "1241",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=cd16c6bd-e6c9-4c80-a12c-951109d051cd%2Fvictorian%20socialists%20combined%20western%20metropolitan%20all.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MUNRO, Sue",
+        "KUMAR, Tushar",
+        "LISTER, John",
+        "HOPPER, Paul",
+        "RAIZADA, Monica Sharma",
+        "KAYAGURLA, Sandhya",
+        "ORCHARD, Jeremy",
+        "CLARK, Reece",
+        "EMERSON, Matt",
+        "PATERAS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 3,
+        "LNP": 8,
+        "ONP": 10
+      }
+    },
+    {
+      "registration": "1479",
+      "registered_by": "The West Party",
+      "kind": "party",
+      "party": "WEST",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b1cc669e-2770-470d-aae6-9f932aa78277%2Fhtv%20the%20west%20party%20paul%20hopper%20werribee%20%28%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1616",
+      "registered_by": "The West Party",
+      "kind": "party",
+      "party": "WEST",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c18f1a2b-829c-4fdb-9157-59488fb16d14%2Fhtv%20the%20west%20party%20werribee%20tarneit.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "727",
+      "registered_by": "Victorian Trades Hall Council",
+      "kind": "non_candidate",
+      "party": null,
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6404ca90-5f8d-4e52-869b-e9978c9cc8f3%2Fwerribee.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1472",
+      "registered_by": "RAIZADA, Monica Sharma",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "werribee/monica-sharma-raizada",
+      "type": "Single",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=80febaa3-5c97-4a6b-9132-1a59c7a926c9%2Fraizada%2C%20monica.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RAIZADA, Monica Sharma",
+        "KAYAGURLA, Sandhya",
+        "HOPPER, Paul",
+        "KUMAR, Tushar",
+        "MUNRO, Sue",
+        "CLARK, Reece",
+        "LISTER, John",
+        "EMERSON, Matt",
+        "ORCHARD, Jeremy",
+        "PATERAS, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 4,
+        "LNP": 6,
+        "ALP": 7,
+        "ONP": 10
+      }
+    }
+  ],
+  "no_card": []
+}

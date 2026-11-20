@@ -1,0 +1,1229 @@
+{
+  "area": "carrum",
+  "house": "lower",
+  "name": "Carrum",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "MATHEWS, Joshua",
+      "name": "Joshua Mathews",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 1,
+      "id": "carrum/joshua-mathews"
+    },
+    {
+      "ballot_name": "ABABNEH, Reema",
+      "name": "Reema Ababneh",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 2,
+      "id": "carrum/reema-ababneh"
+    },
+    {
+      "ballot_name": "MOORE, Carolyn",
+      "name": "Carolyn Moore",
+      "party": "AJP",
+      "party_label": "Animal Justice Party",
+      "ballot_position": 3,
+      "id": "carrum/carolyn-moore"
+    },
+    {
+      "ballot_name": "MACKENZIE, Harley",
+      "name": "Harley Mackenzie",
+      "party": "LCV",
+      "party_label": "Legalise Cannabis Victoria",
+      "ballot_position": 4,
+      "id": "carrum/harley-mackenzie"
+    },
+    {
+      "ballot_name": "SMITH, Trevor",
+      "name": "Trevor Smith",
+      "party": "LBT",
+      "party_label": "Libertarian (formerly Liberal Democrats)",
+      "ballot_position": 5,
+      "id": "carrum/trevor-smith"
+    },
+    {
+      "ballot_name": "KILKENNY, Sonya",
+      "name": "Sonya Kilkenny",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 6,
+      "id": "carrum/sonya-kilkenny"
+    },
+    {
+      "ballot_name": "PEGRUM, Zoe",
+      "name": "Zoe Pegrum",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 7,
+      "id": "carrum/zoe-pegrum"
+    },
+    {
+      "ballot_name": "SHELLEY, Jeff",
+      "name": "Jeff Shelley",
+      "party": "LIB",
+      "party_label": "Liberal",
+      "ballot_position": 8,
+      "id": "carrum/jeff-shelley"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "1293",
+      "registered_by": "Animal Justice Party",
+      "kind": "party",
+      "party": "AJP",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=06ebd3e6-153a-434d-8464-47f31d6085d4%2Fcarrum.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MOORE, Carolyn",
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "SMITH, Trevor",
+        "SHELLEY, Jeff",
+        "MATHEWS, Joshua"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "82",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=56953e5a-7443-4a38-9528-bc0d9ff2cbe3%2Falp_combined_sem%20carrum_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KILKENNY, Sonya",
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "SMITH, Trevor",
+        "SHELLEY, Jeff",
+        "MATHEWS, Joshua"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 7,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "309",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ace49b6c-2169-407f-9648-94374eb8d696%2Falp_combined_sem_carrum_narre%20warren%20south_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KILKENNY, Sonya",
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "SMITH, Trevor",
+        "SHELLEY, Jeff",
+        "MATHEWS, Joshua"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 7,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "316",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=391a2dd8-bb83-49fd-bebd-69869a2382a7%2Falp_combined_sem_carrum_mordialloc_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KILKENNY, Sonya",
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "SMITH, Trevor",
+        "SHELLEY, Jeff",
+        "MATHEWS, Joshua"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 7,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "385",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b1992a2a-57ee-45e6-8d99-a96177fbbadb%2Falp_combined_sem_carrum_frankston_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KILKENNY, Sonya",
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "SMITH, Trevor",
+        "SHELLEY, Jeff",
+        "MATHEWS, Joshua"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 7,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KILKENNY, Sonya",
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "SMITH, Trevor",
+        "SHELLEY, Jeff",
+        "MATHEWS, Joshua"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 7,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "899",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=25552d3f-55b8-495d-b5a0-48668f119c89%2Fthe%20greens%20combined%20south-east%20metro%20carrum%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "SHELLEY, Jeff",
+        "SMITH, Trevor",
+        "MATHEWS, Joshua"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "901",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1898f0c7-c75e-4464-96a8-0b4e9b769313%2Fthe%20greens%20combined%20south-east%20metro%20frankston%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "SHELLEY, Jeff",
+        "SMITH, Trevor",
+        "MATHEWS, Joshua"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "923",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=cf1ef57d-c4a7-4fd3-94d8-eacbba664962%2Fthe%20greens%20combined%20south-east%20metro%20cranbourne%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "SHELLEY, Jeff",
+        "SMITH, Trevor",
+        "MATHEWS, Joshua"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "996",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9a9a408e-c894-4da6-b366-e247e5c1948d%2Fthe%20greens%20combined%20south-east%20metro%20narre%20warren%20south%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "SHELLEY, Jeff",
+        "SMITH, Trevor",
+        "MATHEWS, Joshua"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1002",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fde3c880-ea20-4bf5-99bc-5e4105c0d9ef%2Fthe%20greens%20combined%20south-east%20metro%20mordialloc%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "SHELLEY, Jeff",
+        "SMITH, Trevor",
+        "MATHEWS, Joshua"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1007",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d26c1bb4-6b15-45d6-926c-14d83e6a2247%2Fthe%20greens%20combined%20eastern%20victoria%20hastings%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "SHELLEY, Jeff",
+        "SMITH, Trevor",
+        "MATHEWS, Joshua"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1107",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2763f284-2e2b-4c39-a735-7f7e0c4191b4%2Fthe%20greens%20combined%20south-eastern%20metro%20carrum%20frankston1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "SHELLEY, Jeff",
+        "SMITH, Trevor",
+        "MATHEWS, Joshua"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1114",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e7993ea1-98e1-47a7-a6fb-fc0164411f74%2Fthe%20greens%20combined%20dandenong%20mordialloc%20clarinda%20south-eastern%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "SHELLEY, Jeff",
+        "SMITH, Trevor",
+        "MATHEWS, Joshua"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1157",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fc47539a-2bf1-47b8-a04d-f5e67f1ff04f%2Fthe%20greens%20combined%20cranbourne%20narre%20warren%20south%20carrum%20south-eastern%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "SHELLEY, Jeff",
+        "SMITH, Trevor",
+        "MATHEWS, Joshua"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "SHELLEY, Jeff",
+        "SMITH, Trevor",
+        "MATHEWS, Joshua"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1506",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8036686d-a05d-49f4-9ab5-0e83c749f7ea%2Fthe%20greens%20combined%20south-eastern%20metro%20simplified%20chinese%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "SHELLEY, Jeff",
+        "SMITH, Trevor",
+        "MATHEWS, Joshua"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1509",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=00c53f08-bcfc-461f-80b9-674bc9a9e669%2Fthe%20greens%20combined%20south-eastern%20metro%20vietnamese%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "SHELLEY, Jeff",
+        "SMITH, Trevor",
+        "MATHEWS, Joshua"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1550",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-18",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=358471e6-653f-4281-b7de-6e76704ae1b3%2Fthe%20greens%20combined%20south-eastern%20metro%20hazeragi%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "SHELLEY, Jeff",
+        "SMITH, Trevor",
+        "MATHEWS, Joshua"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1545",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=bdbdccbf-8c6b-4876-8388-c766041a35e4%2Fthe%20greens%20combined%20south-eastern%20metro%20hazeragi%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1552",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=22a6b6a9-3fa6-4e30-b01f-59b76d053fb6%2Fthe%20greens%20combined%20south-eastern%20metro%20simplified%20chinese%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1555",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=dff45eca-78f5-4564-b0c1-30b72052ed1c%2Fthe%20greens%20combined%20south-eastern%20metro%20vietnamese%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1061",
+      "registered_by": "Libertarian (formerly Liberal Democrats)",
+      "kind": "party",
+      "party": "LBT",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=32fd1126-0cc0-4365-b35e-e1738aa028bf%2Fd_carrum_smith_reg.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SMITH, Trevor",
+        "MATHEWS, Joshua",
+        "SHELLEY, Jeff",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "MOORE, Carolyn",
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 3,
+        "ALP": 5,
+        "GRN": 7
+      }
+    },
+    {
+      "registration": "444",
+      "registered_by": "Legalise Cannabis Victoria",
+      "kind": "party",
+      "party": "LCV",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=445a4b66-7cb0-49be-8948-5757e9602007%2Flcv_single_northern%20victoria_wayne%20taylor.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "453",
+      "registered_by": "Legalise Cannabis Victoria",
+      "kind": "party",
+      "party": "LCV",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=aa5bddf5-dbf4-4788-b3af-635c81a15396%2Flcv_combined_south-eastern%20metropolitan_rachel%20payne.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "619",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8a75e551-c854-4eb2-92e3-1fdb1bd75264%2Fliberal_combined_semr%20carrum_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SHELLEY, Jeff",
+        "SMITH, Trevor",
+        "MATHEWS, Joshua",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "621",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=935958b5-a6cd-4f41-b460-c1ee6c1da908%2Fliberal_combined_semr%20carrum_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SHELLEY, Jeff",
+        "SMITH, Trevor",
+        "MATHEWS, Joshua",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1235",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=831c24d5-684b-4f62-b1de-e68d8d035e32%2Fliberal_combined_semr%20carrum_semr%20narre%20warren%20south_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SHELLEY, Jeff",
+        "SMITH, Trevor",
+        "MATHEWS, Joshua",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1236",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5b0d1920-e046-4cef-99e5-bb6b778b67f4%2Fliberal_combined_semr%20carrum_semr%20mordialloc_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SHELLEY, Jeff",
+        "SMITH, Trevor",
+        "MATHEWS, Joshua",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1238",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e3d8b46a-c2e3-46bf-95b6-981833cf70a9%2Fliberal_combined_semr%20carrum_semr%20frankston_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SHELLEY, Jeff",
+        "SMITH, Trevor",
+        "MATHEWS, Joshua",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1504",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7eac0f08-ef9e-4f3c-8153-4ef5729fa74d%2Fliberal_multiple_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SHELLEY, Jeff",
+        "SMITH, Trevor",
+        "MATHEWS, Joshua",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1327",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SHELLEY, Jeff",
+        "SMITH, Trevor",
+        "MATHEWS, Joshua",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1508",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef298e7a-1371-41f2-a9a0-ed8f2eb25360%2Fliberal_multiple_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SHELLEY, Jeff",
+        "SMITH, Trevor",
+        "MATHEWS, Joshua",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1512",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8d451e6-5d8a-43a1-9577-8481a2ccdc56%2Fliberal_multiple_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SHELLEY, Jeff",
+        "SMITH, Trevor",
+        "MATHEWS, Joshua",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1513",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f6f69e90-716d-4ff5-8422-2a0f36601988%2Fliberal_multiple_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SHELLEY, Jeff",
+        "SMITH, Trevor",
+        "MATHEWS, Joshua",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "PEGRUM, Zoe",
+        "ABABNEH, Reema"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "885",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=839c513f-fee3-4f03-be8f-9e9d186d9db7%2Fonv%20-%20combined%20-%20south-eastern%20metropolitan%20region%20-%20carrum%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MATHEWS, Joshua",
+        "SMITH, Trevor",
+        "SHELLEY, Jeff",
+        "KILKENNY, Sonya",
+        "PEGRUM, Zoe",
+        "MACKENZIE, Harley",
+        "MOORE, Carolyn",
+        "ABABNEH, Reema"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 3,
+        "ALP": 4,
+        "GRN": 5
+      }
+    },
+    {
+      "registration": "418",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d04a4887-7cd6-40f4-a721-3ededd7c1815%2Fvictorian%20socialists%20combined%20south-eastern%20metropolitan%20carrum%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ABABNEH, Reema",
+        "PEGRUM, Zoe",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "SHELLEY, Jeff",
+        "SMITH, Trevor",
+        "MATHEWS, Joshua"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1029",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9f9f4d4a-36a7-4afb-84ee-6d50bbcb46b8%2Fvs_sem_combined%20all_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ABABNEH, Reema",
+        "PEGRUM, Zoe",
+        "MOORE, Carolyn",
+        "MACKENZIE, Harley",
+        "KILKENNY, Sonya",
+        "SHELLEY, Jeff",
+        "SMITH, Trevor",
+        "MATHEWS, Joshua"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "2",
+      "registered_by": "Getup Limited",
+      "kind": "non_candidate",
+      "party": null,
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=782e716e-96bf-404d-a786-fdb444454206%2Fcarrum-getup-htvc1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "4",
+      "registered_by": "Getup",
+      "kind": "non_candidate",
+      "party": null,
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5e1fc929-e0c0-4234-97bd-cb06772613b4%2Fcarrum-getup-htvc2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "698",
+      "registered_by": "Victorian Trades Hall Council",
+      "kind": "non_candidate",
+      "party": null,
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=52857121-85ee-4c41-b197-dcb8746d164c%2Fcarrum-trades%20hall%20council-htvc1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    }
+  ],
+  "no_card": []
+}

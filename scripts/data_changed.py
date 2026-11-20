@@ -3,7 +3,7 @@ else "unchanged". The refresh workflow commits (and deploys) only on "changed", 
 every source failed (only status messages moved) doesn't make a commit.
 
 Bookkeeping that doesn't count: meta.json's per-source status, news.json's updated time and per-feed
-status, changelog.json's updated time, htv.json's last_checked, vec_nominations.json's fetched time, voting_centres/index.json's checked and fetched
+status, changelog.json's updated time, htv.json's and htv/index.json's last_checked, vec_nominations.json's fetched time, voting_centres/index.json's checked and fetched
 times and early_votes.json's checked time. meta.json's last_updated does count:
 refresh.py sets it on every successful run and the site shows it ("Data updated ..."), so every
 successful run is committed and deployed. A run where every source failed leaves it alone and isn't.
@@ -27,6 +27,7 @@ VOLATILE = {   # top-level keys that change on every successful run
     "news.json": {"updated", "sources"},
     "changelog.json": {"updated"},
     "htv.json": {"last_checked"},
+    "htv/index.json": {"last_checked"},   # a folder/name key wins over a bare name
     "vec_nominations.json": {"fetched"},
     "index.json": {"checked", "fetched"},   # voting_centres/index.json (profiles/index.json has neither key)
     "early_votes.json": {"checked"},
@@ -43,7 +44,7 @@ def committed(path):
 
 
 def same(path, before, after):
-    skip = VOLATILE.get(path.name)
+    skip = VOLATILE.get(f"{path.parent.name}/{path.name}", VOLATILE.get(path.name))
     if not skip:
         return False
     try:

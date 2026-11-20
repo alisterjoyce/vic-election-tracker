@@ -1,0 +1,1081 @@
+{
+  "area": "macedon",
+  "house": "lower",
+  "name": "Macedon",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "BONANNO, Dom",
+      "name": "Dom Bonanno",
+      "party": "IND",
+      "ballot_position": 1,
+      "id": "macedon/dom-bonanno"
+    },
+    {
+      "ballot_name": "DEATH, Annette",
+      "name": "Annette Death",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 2,
+      "id": "macedon/annette-death"
+    },
+    {
+      "ballot_name": "WILSON, Catherine",
+      "name": "Catherine Wilson",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 3,
+      "id": "macedon/catherine-wilson"
+    },
+    {
+      "ballot_name": "MCRAE MCLEOD, Marley",
+      "name": "Marley McRae McLeod",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 4,
+      "id": "macedon/marley-mcrae-mcleod"
+    },
+    {
+      "ballot_name": "SETON, Michael",
+      "name": "Michael Seton",
+      "party": "IND",
+      "ballot_position": 5,
+      "id": "macedon/michael-seton"
+    },
+    {
+      "ballot_name": "MAYNE, Bernadette",
+      "name": "Bernadette Mayne",
+      "party": "FF",
+      "party_label": "Family First",
+      "ballot_position": 6,
+      "id": "macedon/bernadette-mayne"
+    },
+    {
+      "ballot_name": "KORINFSKY, Natalie",
+      "name": "Natalie Korinfsky",
+      "party": "AJP",
+      "party_label": "Animal Justice Party",
+      "ballot_position": 7,
+      "id": "macedon/natalie-korinfsky"
+    },
+    {
+      "ballot_name": "KENDALL, Kate",
+      "name": "Kate Kendall",
+      "party": "LIB",
+      "party_label": "Liberal",
+      "ballot_position": 8,
+      "id": "macedon/kate-kendall"
+    },
+    {
+      "ballot_name": "PAROLIN, Damien",
+      "name": "Damien Parolin",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 9,
+      "id": "macedon/damien-parolin"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "1014",
+      "registered_by": "Animal Justice Party",
+      "kind": "party",
+      "party": "AJP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=05affb09-369c-427a-b4a1-acdc1ce28e2e%2Fnv%202026-11-11%20-%20macedon.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "117",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=68327bb2-5b9e-48ab-937c-e6eb20b4ac4f%2Falp_combined_nv%20macedon_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "DEATH, Annette",
+        "KORINFSKY, Natalie",
+        "WILSON, Catherine",
+        "MCRAE MCLEOD, Marley",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "PAROLIN, Damien"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 4,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 4,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "DEATH, Annette",
+        "KORINFSKY, Natalie",
+        "WILSON, Catherine",
+        "MCRAE MCLEOD, Marley",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "PAROLIN, Damien"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 4,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 4,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "722",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7e28d90d-b8e2-42d1-ad0d-3264bc94d5b2%2Ffamilyfirst_macedon_version2%20%28dragged%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MAYNE, Bernadette",
+        "PAROLIN, Damien",
+        "BONANNO, Dom",
+        "KENDALL, Kate",
+        "SETON, Michael",
+        "DEATH, Annette",
+        "KORINFSKY, Natalie",
+        "MCRAE MCLEOD, Marley",
+        "WILSON, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 4,
+        "ALP": 6,
+        "GRN": 8
+      }
+    },
+    {
+      "registration": "963",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=665b4d2b-6374-4f46-b485-ac6c905666f8%2Fthe%20greens%20combined%20northern%20metro%20kalkallo%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCRAE MCLEOD, Marley",
+        "KORINFSKY, Natalie",
+        "WILSON, Catherine",
+        "DEATH, Annette",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "PAROLIN, Damien"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1132",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7c125df8-5882-4685-b05b-087f485045c9%2Fthe%20greens%20combined%20northern%20metro%20northern%20victoria%20kalkallo%20yan%20yean%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCRAE MCLEOD, Marley",
+        "KORINFSKY, Natalie",
+        "WILSON, Catherine",
+        "DEATH, Annette",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "PAROLIN, Damien"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1135",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f74d6a92-ec67-4f60-b6fa-e8c5b16687d6%2Fthe%20greens%20combined%20northern%20victoria%20euroa%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCRAE MCLEOD, Marley",
+        "KORINFSKY, Natalie",
+        "WILSON, Catherine",
+        "DEATH, Annette",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "PAROLIN, Damien"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1144",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=19845e76-c6ec-4c94-baa1-e406b3470830%2Fthe%20greens%20combined%20northern%20victoria%20bendigo%20west%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCRAE MCLEOD, Marley",
+        "KORINFSKY, Natalie",
+        "WILSON, Catherine",
+        "DEATH, Annette",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "PAROLIN, Damien"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1147",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=92784b14-84fe-484a-bdd8-c3149d3cb1d8%2Fthe%20greens%20combined%20northern%20victoria%20bendigo%20west%20bendigo%20east%202%20.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCRAE MCLEOD, Marley",
+        "KORINFSKY, Natalie",
+        "WILSON, Catherine",
+        "DEATH, Annette",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "PAROLIN, Damien"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1155",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c1819269-ccd5-4cce-82b9-b6236088597a%2Fthe%20greens%20combined%20northern%20victoria%20euroa%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCRAE MCLEOD, Marley",
+        "KORINFSKY, Natalie",
+        "WILSON, Catherine",
+        "DEATH, Annette",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "PAROLIN, Damien"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1168",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a31ebc17-da3f-404c-8ff4-2688759e3cb0%2Fthe%20greens%20combined%20western%20metro%20sunbury%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCRAE MCLEOD, Marley",
+        "KORINFSKY, Natalie",
+        "WILSON, Catherine",
+        "DEATH, Annette",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "PAROLIN, Damien"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1170",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d035ace9-aebf-4b37-b3c3-951b28a2952b%2Fthe%20greens%20combined%20northern%20victoria%20bendigo%20west%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCRAE MCLEOD, Marley",
+        "KORINFSKY, Natalie",
+        "WILSON, Catherine",
+        "DEATH, Annette",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "PAROLIN, Damien"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1174",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=da0e074a-2657-439f-aedd-6a4b753319cd%2Fthe%20greens%20combined%20northern%20victoria%20bendigo%20east%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCRAE MCLEOD, Marley",
+        "KORINFSKY, Natalie",
+        "WILSON, Catherine",
+        "DEATH, Annette",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "PAROLIN, Damien"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1175",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=137d1eb3-1c6f-4e3f-924e-bc8694e82692%2Fthe%20greens%20combined%20northern%20victoria%20macedon%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCRAE MCLEOD, Marley",
+        "KORINFSKY, Natalie",
+        "WILSON, Catherine",
+        "DEATH, Annette",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "PAROLIN, Damien"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1176",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=eb91dd96-cd39-486d-b1d9-d3b7e34fb7e3%2Fthe%20greens%20combined%20western%20victoria%20melton%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCRAE MCLEOD, Marley",
+        "KORINFSKY, Natalie",
+        "WILSON, Catherine",
+        "DEATH, Annette",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "PAROLIN, Damien"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1177",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5a93bcb3-2919-482e-ba0a-2eca4f6e378e%2Fthe%20greens%20combined%20western%20victoria%20ripon%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCRAE MCLEOD, Marley",
+        "KORINFSKY, Natalie",
+        "WILSON, Catherine",
+        "DEATH, Annette",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "PAROLIN, Damien"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1179",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e362f539-2e59-4ee7-beb9-cb982f447a9f%2Fthe%20greens%20combined%20northern%20victoria%20bendigo%20east%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCRAE MCLEOD, Marley",
+        "KORINFSKY, Natalie",
+        "WILSON, Catherine",
+        "DEATH, Annette",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "PAROLIN, Damien"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1182",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7d3205bf-f329-4f67-80fb-15b7860448bc%2Fthe%20greens%20combined%20western%20victoria%20eureka%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCRAE MCLEOD, Marley",
+        "KORINFSKY, Natalie",
+        "WILSON, Catherine",
+        "DEATH, Annette",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "PAROLIN, Damien"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCRAE MCLEOD, Marley",
+        "KORINFSKY, Natalie",
+        "WILSON, Catherine",
+        "DEATH, Annette",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "PAROLIN, Damien"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1412",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f82308ee-ae6d-4f07-85ae-5f62e4a2c2ca%2Fg36%20the%20greens%20combined%20western%20victoria%20eureka%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCRAE MCLEOD, Marley",
+        "KORINFSKY, Natalie",
+        "WILSON, Catherine",
+        "DEATH, Annette",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "PAROLIN, Damien"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "571",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=16ad3cde-a06c-48b6-b8c2-a74ad93462d7%2Fliberal_combined_nvr%20macedon_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "PAROLIN, Damien",
+        "KORINFSKY, Natalie",
+        "DEATH, Annette",
+        "MCRAE MCLEOD, Marley",
+        "WILSON, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 5,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 5,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "653",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b458ff77-05c7-4d77-bc59-e3a6cd9730b6%2Fliberal_combined_nvr%20macedon_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "PAROLIN, Damien",
+        "KORINFSKY, Natalie",
+        "DEATH, Annette",
+        "MCRAE MCLEOD, Marley",
+        "WILSON, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 5,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 5,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "1504",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7eac0f08-ef9e-4f3c-8153-4ef5729fa74d%2Fliberal_multiple_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "PAROLIN, Damien",
+        "KORINFSKY, Natalie",
+        "DEATH, Annette",
+        "MCRAE MCLEOD, Marley",
+        "WILSON, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 5,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 5,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "1327",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "PAROLIN, Damien",
+        "KORINFSKY, Natalie",
+        "DEATH, Annette",
+        "MCRAE MCLEOD, Marley",
+        "WILSON, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 5,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 5,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "1508",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef298e7a-1371-41f2-a9a0-ed8f2eb25360%2Fliberal_multiple_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "PAROLIN, Damien",
+        "KORINFSKY, Natalie",
+        "DEATH, Annette",
+        "MCRAE MCLEOD, Marley",
+        "WILSON, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 5,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 5,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "1512",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8d451e6-5d8a-43a1-9577-8481a2ccdc56%2Fliberal_multiple_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "PAROLIN, Damien",
+        "KORINFSKY, Natalie",
+        "DEATH, Annette",
+        "MCRAE MCLEOD, Marley",
+        "WILSON, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 5,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 5,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "1513",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f6f69e90-716d-4ff5-8422-2a0f36601988%2Fliberal_multiple_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "PAROLIN, Damien",
+        "KORINFSKY, Natalie",
+        "DEATH, Annette",
+        "MCRAE MCLEOD, Marley",
+        "WILSON, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 5,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 5,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "846",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ac8f7cf6-eca4-4fe7-9d36-e2f91ccc19eb%2Fonv%20-%20combined%20-%20northern%20victoria%20region%20-%20macedon%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PAROLIN, Damien",
+        "MAYNE, Bernadette",
+        "BONANNO, Dom",
+        "SETON, Michael",
+        "KENDALL, Kate",
+        "DEATH, Annette",
+        "MCRAE MCLEOD, Marley",
+        "KORINFSKY, Natalie",
+        "WILSON, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 5,
+        "ALP": 6,
+        "GRN": 7
+      }
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PAROLIN, Damien",
+        "MAYNE, Bernadette",
+        "SETON, Michael",
+        "BONANNO, Dom",
+        "KENDALL, Kate",
+        "DEATH, Annette",
+        "MCRAE MCLEOD, Marley",
+        "KORINFSKY, Natalie",
+        "WILSON, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 5,
+        "ALP": 6,
+        "GRN": 7
+      }
+    },
+    {
+      "registration": "319",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6f6a6f93-e638-4af2-9310-69ea02892c44%2Fvictorian%20socialists%20combined%20northern%20victoria%20macedon%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WILSON, Catherine",
+        "MCRAE MCLEOD, Marley",
+        "KORINFSKY, Natalie",
+        "DEATH, Annette",
+        "BONANNO, Dom",
+        "SETON, Michael",
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "PAROLIN, Damien"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1026",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=cb0419bd-cc93-4b44-9a29-72bda72505e3%2Fvs_nv_combined%20all_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WILSON, Catherine",
+        "MCRAE MCLEOD, Marley",
+        "KORINFSKY, Natalie",
+        "DEATH, Annette",
+        "BONANNO, Dom",
+        "SETON, Michael",
+        "KENDALL, Kate",
+        "MAYNE, Bernadette",
+        "PAROLIN, Damien"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1",
+      "registered_by": "SETON, Michael",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "macedon/michael-seton",
+      "type": "Single",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a0650496-941c-47e8-b241-fd9890cfca88%2Fseton%2C%20michael.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "partial",
+      "order": [
+        "SETON, Michael"
+      ],
+      "via": "text"
+    },
+    {
+      "registration": "839",
+      "registered_by": "BONANNO, Dom",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "macedon/dom-bonanno",
+      "type": "Single",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b4490e43-baad-4fe9-83bb-aa41644d5d8c%2Fbonanno%2C%20domenico.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BONANNO, Dom",
+        "SETON, Michael",
+        "PAROLIN, Damien",
+        "MAYNE, Bernadette",
+        "KENDALL, Kate",
+        "DEATH, Annette",
+        "KORINFSKY, Natalie",
+        "MCRAE MCLEOD, Marley",
+        "WILSON, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 3,
+        "LNP": 5,
+        "ALP": 6,
+        "GRN": 8
+      }
+    }
+  ],
+  "no_card": []
+}

@@ -1,0 +1,1452 @@
+{
+  "area": "laverton",
+  "house": "lower",
+  "name": "Laverton",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "NGUYEN, Lucy",
+      "name": "Lucy Nguyen",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 1,
+      "id": "laverton/lucy-nguyen"
+    },
+    {
+      "ballot_name": "MENDELSOHN, Emma",
+      "name": "Emma Mendelsohn",
+      "party": "WEST",
+      "party_label": "The West Party",
+      "ballot_position": 2,
+      "id": "laverton/emma-mendelsohn"
+    },
+    {
+      "ballot_name": "PAREDES, Rufo",
+      "name": "Rufo Paredes",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 3,
+      "id": "laverton/rufo-paredes"
+    },
+    {
+      "ballot_name": "GARCIA, Jo",
+      "name": "Jo Garcia",
+      "party": "FF",
+      "party_label": "Family First",
+      "ballot_position": 4,
+      "id": "laverton/jo-garcia"
+    },
+    {
+      "ballot_name": "CONNOLLY, Sarah",
+      "name": "Sarah Connolly",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 5,
+      "id": "laverton/sarah-connolly"
+    },
+    {
+      "ballot_name": "MANSOURI JAJAEE, Shohre",
+      "name": "Shohre Mansouri Jajaee",
+      "party": "AJP",
+      "party_label": "Animal Justice Party",
+      "ballot_position": 6,
+      "id": "laverton/shohre-mansouri-jajaee"
+    },
+    {
+      "ballot_name": "CHITTEDI, Suchithra",
+      "name": "Suchithra Chittedi",
+      "party": "OTH",
+      "party_label": "The Republican",
+      "ballot_position": 7,
+      "id": "laverton/suchithra-chittedi"
+    },
+    {
+      "ballot_name": "NOUNE, Ghada",
+      "name": "Ghada Noune",
+      "party": "LIB",
+      "party_label": "Liberal",
+      "ballot_position": 8,
+      "id": "laverton/ghada-noune"
+    },
+    {
+      "ballot_name": "RUDD, Van Thanh",
+      "name": "Van Thanh Rudd",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 9,
+      "id": "laverton/van-thanh-rudd"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "1276",
+      "registered_by": "Animal Justice Party",
+      "kind": "party",
+      "party": "AJP",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=77dee9b2-daf5-4477-9a13-38e43854ecdc%2Flaverton.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MANSOURI JAJAEE, Shohre",
+        "NGUYEN, Lucy",
+        "RUDD, Van Thanh",
+        "CONNOLLY, Sarah",
+        "NOUNE, Ghada",
+        "MENDELSOHN, Emma",
+        "GARCIA, Jo",
+        "CHITTEDI, Suchithra",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "84",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d6be94ef-2287-4ec8-9298-37c69dc5f9db%2Falp_combined_wm%20laverton_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CONNOLLY, Sarah",
+        "MANSOURI JAJAEE, Shohre",
+        "CHITTEDI, Suchithra",
+        "RUDD, Van Thanh",
+        "NGUYEN, Lucy",
+        "MENDELSOHN, Emma",
+        "NOUNE, Ghada",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 5,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 5,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "271",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ec2b0593-6819-4f3b-8146-8371799cedd9%2Falp_combined_wm_footscray_laverton_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CONNOLLY, Sarah",
+        "MANSOURI JAJAEE, Shohre",
+        "CHITTEDI, Suchithra",
+        "RUDD, Van Thanh",
+        "NGUYEN, Lucy",
+        "MENDELSOHN, Emma",
+        "NOUNE, Ghada",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 5,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 5,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "288",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d920924b-7090-4a19-8e1c-955d60f6b356%2Falp_combined_wm_laverton_point%20cook_williamstown_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CONNOLLY, Sarah",
+        "MANSOURI JAJAEE, Shohre",
+        "CHITTEDI, Suchithra",
+        "RUDD, Van Thanh",
+        "NGUYEN, Lucy",
+        "MENDELSOHN, Emma",
+        "NOUNE, Ghada",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 5,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 5,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "298",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8570ea76-9e51-44fd-8b35-629d86f958a1%2Falp_combined_wm_laverton_williamstown_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CONNOLLY, Sarah",
+        "MANSOURI JAJAEE, Shohre",
+        "CHITTEDI, Suchithra",
+        "RUDD, Van Thanh",
+        "NGUYEN, Lucy",
+        "MENDELSOHN, Emma",
+        "NOUNE, Ghada",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 5,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 5,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "304",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e6bb9d3f-62c6-4778-ad50-3a6d6f8aa294%2Falp_combined_wm_laverton_tarneit_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CONNOLLY, Sarah",
+        "MANSOURI JAJAEE, Shohre",
+        "CHITTEDI, Suchithra",
+        "RUDD, Van Thanh",
+        "NGUYEN, Lucy",
+        "MENDELSOHN, Emma",
+        "NOUNE, Ghada",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 5,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 5,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "331",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=37baa404-6a36-4442-b609-f774a6b89152%2Falp_combined_wm_kororoit_laverton_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CONNOLLY, Sarah",
+        "MANSOURI JAJAEE, Shohre",
+        "CHITTEDI, Suchithra",
+        "RUDD, Van Thanh",
+        "NGUYEN, Lucy",
+        "MENDELSOHN, Emma",
+        "NOUNE, Ghada",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 5,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 5,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "354",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4e974ba2-54ca-4617-a495-c8b1bbe9c052%2Falp_combined_wm_laverton_st%20albans_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CONNOLLY, Sarah",
+        "MANSOURI JAJAEE, Shohre",
+        "CHITTEDI, Suchithra",
+        "RUDD, Van Thanh",
+        "NGUYEN, Lucy",
+        "MENDELSOHN, Emma",
+        "NOUNE, Ghada",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 5,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 5,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "755",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=164b3f9f-b29c-41fb-8527-fe647b5c7966%2Falp_combined_wm_laverton_tr2_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CONNOLLY, Sarah",
+        "MANSOURI JAJAEE, Shohre",
+        "CHITTEDI, Suchithra",
+        "RUDD, Van Thanh",
+        "NGUYEN, Lucy",
+        "MENDELSOHN, Emma",
+        "NOUNE, Ghada",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 5,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 5,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "786",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=27a39d9c-90c7-4149-88e0-2a78df00afaa%2Falp_combined_wm_laverton_point%20cook_tr2_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CONNOLLY, Sarah",
+        "MANSOURI JAJAEE, Shohre",
+        "CHITTEDI, Suchithra",
+        "RUDD, Van Thanh",
+        "NGUYEN, Lucy",
+        "MENDELSOHN, Emma",
+        "NOUNE, Ghada",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 5,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 5,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CONNOLLY, Sarah",
+        "MANSOURI JAJAEE, Shohre",
+        "CHITTEDI, Suchithra",
+        "RUDD, Van Thanh",
+        "NGUYEN, Lucy",
+        "MENDELSOHN, Emma",
+        "NOUNE, Ghada",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 5,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 5,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "985",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d21055ff-1c96-484c-b993-3a4208d38000%2Falp_combined_wm_laverton_tr6_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CONNOLLY, Sarah",
+        "MANSOURI JAJAEE, Shohre",
+        "CHITTEDI, Suchithra",
+        "RUDD, Van Thanh",
+        "NGUYEN, Lucy",
+        "MENDELSOHN, Emma",
+        "NOUNE, Ghada",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 5,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 5,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "504",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b49d01d2-844d-4cee-8942-f083f302a92f%2Flaverton.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GARCIA, Jo",
+        "PAREDES, Rufo",
+        "CHITTEDI, Suchithra",
+        "NOUNE, Ghada",
+        "MENDELSOHN, Emma",
+        "CONNOLLY, Sarah",
+        "MANSOURI JAJAEE, Shohre",
+        "NGUYEN, Lucy",
+        "RUDD, Van Thanh"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 4,
+        "ALP": 6,
+        "GRN": 8
+      }
+    },
+    {
+      "registration": "986",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=930fe8a4-bd44-4010-b049-c895564fa4a9%2Fthe%20greens%20combined%20western%20metro%20footscray%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NGUYEN, Lucy",
+        "RUDD, Van Thanh",
+        "MANSOURI JAJAEE, Shohre",
+        "MENDELSOHN, Emma",
+        "CONNOLLY, Sarah",
+        "NOUNE, Ghada",
+        "CHITTEDI, Suchithra",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1105",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=55783289-1f83-45db-89d2-7270d48d4d99%2Fthe%20greens%20combined%20western%20metro%20laverton%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NGUYEN, Lucy",
+        "RUDD, Van Thanh",
+        "MANSOURI JAJAEE, Shohre",
+        "MENDELSOHN, Emma",
+        "CONNOLLY, Sarah",
+        "NOUNE, Ghada",
+        "CHITTEDI, Suchithra",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1122",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=0c96b416-bd1f-4eab-a48c-ecb1bccf3df7%2Fthe%20greens%20combined%20western%20metro%20williamstown%20footscray%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NGUYEN, Lucy",
+        "RUDD, Van Thanh",
+        "MANSOURI JAJAEE, Shohre",
+        "MENDELSOHN, Emma",
+        "CONNOLLY, Sarah",
+        "NOUNE, Ghada",
+        "CHITTEDI, Suchithra",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1127",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8a79788-b6a5-4c7e-bbd7-b471b83f8312%2Fthe%20greens%20combined%20western%20metro%20williamstown%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NGUYEN, Lucy",
+        "RUDD, Van Thanh",
+        "MANSOURI JAJAEE, Shohre",
+        "MENDELSOHN, Emma",
+        "CONNOLLY, Sarah",
+        "NOUNE, Ghada",
+        "CHITTEDI, Suchithra",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1130",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=49a14609-3074-49e7-a459-483132195854%2Fthe%20greens%20combined%20western%20metro%20niddrie%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NGUYEN, Lucy",
+        "RUDD, Van Thanh",
+        "MANSOURI JAJAEE, Shohre",
+        "MENDELSOHN, Emma",
+        "CONNOLLY, Sarah",
+        "NOUNE, Ghada",
+        "CHITTEDI, Suchithra",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1143",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=20025e49-2ded-4f3e-9667-2cba26e4b1c6%2F1143%20the%20greens%20combined%20western%20metro%20st%20albans%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NGUYEN, Lucy",
+        "RUDD, Van Thanh",
+        "MANSOURI JAJAEE, Shohre",
+        "MENDELSOHN, Emma",
+        "CONNOLLY, Sarah",
+        "NOUNE, Ghada",
+        "CHITTEDI, Suchithra",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1150",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=951fdf92-f76f-4496-a2dd-ad299f0e135e%2Fthe%20greens%20combined%20western%20metro%20niddrie%20footscray%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NGUYEN, Lucy",
+        "RUDD, Van Thanh",
+        "MANSOURI JAJAEE, Shohre",
+        "MENDELSOHN, Emma",
+        "CONNOLLY, Sarah",
+        "NOUNE, Ghada",
+        "CHITTEDI, Suchithra",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1162",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7de7a90a-8509-40cb-9986-51cc08814abd%2Fthe%20greens%20combined%20laverton%20st%20albans%20footscray%20western%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NGUYEN, Lucy",
+        "RUDD, Van Thanh",
+        "MANSOURI JAJAEE, Shohre",
+        "MENDELSOHN, Emma",
+        "CONNOLLY, Sarah",
+        "NOUNE, Ghada",
+        "CHITTEDI, Suchithra",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1173",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=20e3a507-9914-4be3-910a-d1922aa58a9d%2F1173%20the%20greens%20combined%20western%20metro%20kororoit%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NGUYEN, Lucy",
+        "RUDD, Van Thanh",
+        "MANSOURI JAJAEE, Shohre",
+        "MENDELSOHN, Emma",
+        "CONNOLLY, Sarah",
+        "NOUNE, Ghada",
+        "CHITTEDI, Suchithra",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NGUYEN, Lucy",
+        "RUDD, Van Thanh",
+        "MANSOURI JAJAEE, Shohre",
+        "MENDELSOHN, Emma",
+        "CONNOLLY, Sarah",
+        "NOUNE, Ghada",
+        "CHITTEDI, Suchithra",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1201",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1e7ee1a4-bd62-49a6-a92b-8e5a9e3ebd54%2Fthe%20greens%20combined%20sydenham%20kororoit%20st%20albans%20western%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NGUYEN, Lucy",
+        "RUDD, Van Thanh",
+        "MANSOURI JAJAEE, Shohre",
+        "MENDELSOHN, Emma",
+        "CONNOLLY, Sarah",
+        "NOUNE, Ghada",
+        "CHITTEDI, Suchithra",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1478",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e269e427-1a9f-4777-85b4-0db846eda110%2Fthe%20greens%20combined%20western%20metro%20vietnamese%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NGUYEN, Lucy",
+        "RUDD, Van Thanh",
+        "MANSOURI JAJAEE, Shohre",
+        "MENDELSOHN, Emma",
+        "CONNOLLY, Sarah",
+        "NOUNE, Ghada",
+        "CHITTEDI, Suchithra",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1492",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9790b150-f633-47f4-8b9e-aed7a9554e98%2Fthe%20greens%20combined%20western%20metro%20punjabi%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NGUYEN, Lucy",
+        "RUDD, Van Thanh",
+        "MANSOURI JAJAEE, Shohre",
+        "MENDELSOHN, Emma",
+        "CONNOLLY, Sarah",
+        "NOUNE, Ghada",
+        "CHITTEDI, Suchithra",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1548",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d948fa13-a951-4e9f-a310-26cd0001f101%2Fthe%20greens%20combined%20western%20metro%20punjabi%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NGUYEN, Lucy",
+        "RUDD, Van Thanh",
+        "MANSOURI JAJAEE, Shohre",
+        "MENDELSOHN, Emma",
+        "CONNOLLY, Sarah",
+        "NOUNE, Ghada",
+        "CHITTEDI, Suchithra",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1558",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=72d3cabb-ecac-4ed9-bd28-c39010cb0178%2Fthe%20greens%20combined%20western%20metro%20vietnamese%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NGUYEN, Lucy",
+        "RUDD, Van Thanh",
+        "MANSOURI JAJAEE, Shohre",
+        "MENDELSOHN, Emma",
+        "CONNOLLY, Sarah",
+        "NOUNE, Ghada",
+        "CHITTEDI, Suchithra",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "573",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=769437a3-cd64-470a-8ab9-fb5085f675ce%2Fliberal_combined_wmr%20laverton_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NOUNE, Ghada",
+        "GARCIA, Jo",
+        "MENDELSOHN, Emma",
+        "PAREDES, Rufo",
+        "MANSOURI JAJAEE, Shohre",
+        "CHITTEDI, Suchithra",
+        "CONNOLLY, Sarah",
+        "NGUYEN, Lucy",
+        "RUDD, Van Thanh"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "658",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=84c36530-779b-4378-b95f-86960e422df3%2Fliberal_combined_wmr%20laverton_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NOUNE, Ghada",
+        "GARCIA, Jo",
+        "MENDELSOHN, Emma",
+        "PAREDES, Rufo",
+        "MANSOURI JAJAEE, Shohre",
+        "CHITTEDI, Suchithra",
+        "CONNOLLY, Sarah",
+        "NGUYEN, Lucy",
+        "RUDD, Van Thanh"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "1504",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7eac0f08-ef9e-4f3c-8153-4ef5729fa74d%2Fliberal_multiple_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NOUNE, Ghada",
+        "GARCIA, Jo",
+        "MENDELSOHN, Emma",
+        "PAREDES, Rufo",
+        "MANSOURI JAJAEE, Shohre",
+        "CHITTEDI, Suchithra",
+        "CONNOLLY, Sarah",
+        "NGUYEN, Lucy",
+        "RUDD, Van Thanh"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "1327",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NOUNE, Ghada",
+        "GARCIA, Jo",
+        "MENDELSOHN, Emma",
+        "PAREDES, Rufo",
+        "MANSOURI JAJAEE, Shohre",
+        "CHITTEDI, Suchithra",
+        "CONNOLLY, Sarah",
+        "NGUYEN, Lucy",
+        "RUDD, Van Thanh"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "1508",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef298e7a-1371-41f2-a9a0-ed8f2eb25360%2Fliberal_multiple_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NOUNE, Ghada",
+        "GARCIA, Jo",
+        "MENDELSOHN, Emma",
+        "PAREDES, Rufo",
+        "MANSOURI JAJAEE, Shohre",
+        "CHITTEDI, Suchithra",
+        "CONNOLLY, Sarah",
+        "NGUYEN, Lucy",
+        "RUDD, Van Thanh"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "1512",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8d451e6-5d8a-43a1-9577-8481a2ccdc56%2Fliberal_multiple_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NOUNE, Ghada",
+        "GARCIA, Jo",
+        "MENDELSOHN, Emma",
+        "PAREDES, Rufo",
+        "MANSOURI JAJAEE, Shohre",
+        "CHITTEDI, Suchithra",
+        "CONNOLLY, Sarah",
+        "NGUYEN, Lucy",
+        "RUDD, Van Thanh"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "1513",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f6f69e90-716d-4ff5-8422-2a0f36601988%2Fliberal_multiple_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NOUNE, Ghada",
+        "GARCIA, Jo",
+        "MENDELSOHN, Emma",
+        "PAREDES, Rufo",
+        "MANSOURI JAJAEE, Shohre",
+        "CHITTEDI, Suchithra",
+        "CONNOLLY, Sarah",
+        "NGUYEN, Lucy",
+        "RUDD, Van Thanh"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "1594",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-18",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fde63b5b-3814-4a6e-a17d-9d6c2b6134bf%2Fliberal_combined_wmr%20laverton_vietnamese_6.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NOUNE, Ghada",
+        "GARCIA, Jo",
+        "MENDELSOHN, Emma",
+        "PAREDES, Rufo",
+        "MANSOURI JAJAEE, Shohre",
+        "CHITTEDI, Suchithra",
+        "CONNOLLY, Sarah",
+        "NGUYEN, Lucy",
+        "RUDD, Van Thanh"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "905",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=591ae3e9-7c79-4531-abd2-23c194d29e00%2Fonv%20-%20combined%20-%20western%20metropolitan%20region%20-%20laverton%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PAREDES, Rufo",
+        "GARCIA, Jo",
+        "NOUNE, Ghada",
+        "MENDELSOHN, Emma",
+        "CHITTEDI, Suchithra",
+        "CONNOLLY, Sarah",
+        "NGUYEN, Lucy",
+        "MANSOURI JAJAEE, Shohre",
+        "RUDD, Van Thanh"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 3,
+        "ALP": 6,
+        "GRN": 7
+      }
+    },
+    {
+      "registration": "1529",
+      "registered_by": "The Republican",
+      "kind": "party",
+      "party": "OTH",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-18",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=15e22f7b-60fd-4901-a0f1-638ad0a1fa87%2Fthe%20republican%20-%20combined%20-%20western%20metro%2C%20laverton.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "479",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fc6c3da2-8ae3-485c-b967-32eeb33b3b2b%2Fvictorian%20socialists%20combined%20western%20metropolitan%20laverton%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RUDD, Van Thanh",
+        "NGUYEN, Lucy",
+        "MANSOURI JAJAEE, Shohre",
+        "CONNOLLY, Sarah",
+        "MENDELSOHN, Emma",
+        "CHITTEDI, Suchithra",
+        "NOUNE, Ghada",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1241",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=cd16c6bd-e6c9-4c80-a12c-951109d051cd%2Fvictorian%20socialists%20combined%20western%20metropolitan%20all.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RUDD, Van Thanh",
+        "NGUYEN, Lucy",
+        "MANSOURI JAJAEE, Shohre",
+        "CONNOLLY, Sarah",
+        "MENDELSOHN, Emma",
+        "CHITTEDI, Suchithra",
+        "NOUNE, Ghada",
+        "GARCIA, Jo",
+        "PAREDES, Rufo"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1490",
+      "registered_by": "The West Party",
+      "kind": "party",
+      "party": "WEST",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=eaffca55-5d42-4eaa-8333-240419b06177%2Fhtv%20the%20west%20party%20emma%20mendlesohn%20laverton%20%28%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1615",
+      "registered_by": "The West Party",
+      "kind": "party",
+      "party": "WEST",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a0f72e2d-e82f-4a18-b92d-485b110faa97%2Fhtv%20the%20west%20party%20laverton%20kororoit.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1617",
+      "registered_by": "The West Party",
+      "kind": "party",
+      "party": "WEST",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef78407c-9167-44e9-8bc0-ec313effb00f%2Fhtv%20the%20west%20party%20st%20albans%20laverton.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1619",
+      "registered_by": "The West Party",
+      "kind": "party",
+      "party": "WEST",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e30cf081-a368-4403-bbab-b962f453918a%2Fhtv%20the%20west%20party%20footscray%20laverton.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1624",
+      "registered_by": "The West Party",
+      "kind": "party",
+      "party": "WEST",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f34cde29-622f-453c-9a81-d2efbc225ce8%2Femma%20vietnamese%20-%20reduced%20by%20vec.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    }
+  ],
+  "no_card": []
+}

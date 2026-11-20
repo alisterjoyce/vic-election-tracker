@@ -1,0 +1,1250 @@
+{
+  "area": "eureka",
+  "house": "lower",
+  "name": "Eureka",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "ZIVKOVIC, Belinda",
+      "name": "Belinda Zivkovic",
+      "party": "IND",
+      "ballot_position": 1,
+      "id": "eureka/belinda-zivkovic"
+    },
+    {
+      "ballot_name": "McCOLL, Sam",
+      "name": "Sam McColl",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 2,
+      "id": "eureka/sam-mccoll"
+    },
+    {
+      "ballot_name": "SETTLE, Michaela",
+      "name": "Michaela Settle",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 3,
+      "id": "eureka/michaela-settle"
+    },
+    {
+      "ballot_name": "RAVEN, Andy",
+      "name": "Andy Raven",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 4,
+      "id": "eureka/andy-raven"
+    },
+    {
+      "ballot_name": "HARKNESS, Ian Maxwell",
+      "name": "Ian Maxwell Harkness",
+      "party": "FF",
+      "party_label": "Family First",
+      "ballot_position": 5,
+      "id": "eureka/ian-maxwell-harkness"
+    },
+    {
+      "ballot_name": "MORRISON, Wendy",
+      "name": "Wendy Morrison",
+      "party": "AJP",
+      "party_label": "Animal Justice Party",
+      "ballot_position": 6,
+      "id": "eureka/wendy-morrison"
+    },
+    {
+      "ballot_name": "BALLINGER, Paul",
+      "name": "Paul Ballinger",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 7,
+      "id": "eureka/paul-ballinger"
+    },
+    {
+      "ballot_name": "MUIR, Emma",
+      "name": "Emma Muir",
+      "party": "LIB",
+      "party_label": "Liberal",
+      "ballot_position": 8,
+      "id": "eureka/emma-muir"
+    },
+    {
+      "ballot_name": "VENDITTI-TAYLOR, Steven",
+      "name": "Steven Venditti-Taylor",
+      "party": "IND",
+      "ballot_position": 9,
+      "id": "eureka/steven-venditti-taylor"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "1603",
+      "registered_by": "Animal Justice Party",
+      "kind": "party",
+      "party": "AJP",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef44dda1-c2a7-4bee-9f1c-b66102987848%2Feureka.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MORRISON, Wendy",
+        "McCOLL, Sam",
+        "RAVEN, Andy",
+        "SETTLE, Michaela",
+        "MUIR, Emma",
+        "ZIVKOVIC, Belinda",
+        "VENDITTI-TAYLOR, Steven",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "118",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6f4e01cb-6160-423d-8664-d027a0d2a856%2Falp_combined_wv%20eureka_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SETTLE, Michaela",
+        "MORRISON, Wendy",
+        "McCOLL, Sam",
+        "RAVEN, Andy",
+        "VENDITTI-TAYLOR, Steven",
+        "MUIR, Emma",
+        "ZIVKOVIC, Belinda",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 6,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "272",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6fbda785-e76c-40a9-9f0e-0f8d02df3d0e%2Falp_combined_wv_eureka_ripon_wendouree_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SETTLE, Michaela",
+        "MORRISON, Wendy",
+        "McCOLL, Sam",
+        "RAVEN, Andy",
+        "VENDITTI-TAYLOR, Steven",
+        "MUIR, Emma",
+        "ZIVKOVIC, Belinda",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 6,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "415",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6492efb8-740e-4035-aa5c-2d32ac00b155%2Falp_combined_wv_eureka_wendouree_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SETTLE, Michaela",
+        "MORRISON, Wendy",
+        "McCOLL, Sam",
+        "RAVEN, Andy",
+        "VENDITTI-TAYLOR, Steven",
+        "MUIR, Emma",
+        "ZIVKOVIC, Belinda",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 6,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SETTLE, Michaela",
+        "MORRISON, Wendy",
+        "McCOLL, Sam",
+        "RAVEN, Andy",
+        "VENDITTI-TAYLOR, Steven",
+        "MUIR, Emma",
+        "ZIVKOVIC, Belinda",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 6,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1212",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7fc4324b-07f2-4b88-bfb4-315649b04107%2Ffamilyfirst_western-vic-polwarth-geelong-seats-wendouree_version%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul",
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "ZIVKOVIC, Belinda",
+        "SETTLE, Michaela",
+        "MORRISON, Wendy",
+        "McCOLL, Sam",
+        "RAVEN, Andy"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 3,
+        "ALP": 6,
+        "GRN": 8
+      }
+    },
+    {
+      "registration": "1213",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d78a4dd7-38d8-4f8c-996e-346fdcf3f8ff%2Ffamilyfirst_western-vic-south-west-coast-ballarat-seats_version2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul",
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "ZIVKOVIC, Belinda",
+        "SETTLE, Michaela",
+        "MORRISON, Wendy",
+        "McCOLL, Sam",
+        "RAVEN, Andy"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 3,
+        "ALP": 6,
+        "GRN": 8
+      }
+    },
+    {
+      "registration": "1214",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9aa36896-7ed6-46cd-bac3-4303e5c042a4%2Ffamilyfirst_western-vic-polwarth-geelong-seats_version%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul",
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "ZIVKOVIC, Belinda",
+        "SETTLE, Michaela",
+        "MORRISON, Wendy",
+        "McCOLL, Sam",
+        "RAVEN, Andy"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 3,
+        "ALP": 6,
+        "GRN": 8
+      }
+    },
+    {
+      "registration": "1124",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=bafe1e46-962b-4b17-b565-59f4bdcad1d3%2Fthe%20greens%20combined%20western%20victoria%20wendouree%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "McCOLL, Sam",
+        "MORRISON, Wendy",
+        "ZIVKOVIC, Belinda",
+        "RAVEN, Andy",
+        "SETTLE, Michaela",
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1125",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6c93fdd7-9146-44be-8364-fe6b32ae6eab%2Fthe%20greens%20combined%20western%20victoria%20polwarth%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "McCOLL, Sam",
+        "MORRISON, Wendy",
+        "ZIVKOVIC, Belinda",
+        "RAVEN, Andy",
+        "SETTLE, Michaela",
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1145",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=0f7383aa-b7b6-4b87-b25d-5bd1ddac347f%2Fthe%20greens%20combined%20geelong%20south%20barwon%20bellarine%20western%20victoria%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "McCOLL, Sam",
+        "MORRISON, Wendy",
+        "ZIVKOVIC, Belinda",
+        "RAVEN, Andy",
+        "SETTLE, Michaela",
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1172",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e1e23b63-5bb7-46cd-8257-62694f4302f3%2Fthe%20greens%20combined%20western%20victoria%20geelong%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "McCOLL, Sam",
+        "MORRISON, Wendy",
+        "ZIVKOVIC, Belinda",
+        "RAVEN, Andy",
+        "SETTLE, Michaela",
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1175",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=137d1eb3-1c6f-4e3f-924e-bc8694e82692%2Fthe%20greens%20combined%20northern%20victoria%20macedon%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "McCOLL, Sam",
+        "MORRISON, Wendy",
+        "ZIVKOVIC, Belinda",
+        "RAVEN, Andy",
+        "SETTLE, Michaela",
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1176",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=eb91dd96-cd39-486d-b1d9-d3b7e34fb7e3%2Fthe%20greens%20combined%20western%20victoria%20melton%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "McCOLL, Sam",
+        "MORRISON, Wendy",
+        "ZIVKOVIC, Belinda",
+        "RAVEN, Andy",
+        "SETTLE, Michaela",
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1181",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=15cbe873-057b-4541-b1a1-26c691a904fa%2Fthe%20greens%20combined%20western%20victoria%20lara%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "McCOLL, Sam",
+        "MORRISON, Wendy",
+        "ZIVKOVIC, Belinda",
+        "RAVEN, Andy",
+        "SETTLE, Michaela",
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1182",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7d3205bf-f329-4f67-80fb-15b7860448bc%2Fthe%20greens%20combined%20western%20victoria%20eureka%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "McCOLL, Sam",
+        "MORRISON, Wendy",
+        "ZIVKOVIC, Belinda",
+        "RAVEN, Andy",
+        "SETTLE, Michaela",
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "McCOLL, Sam",
+        "MORRISON, Wendy",
+        "ZIVKOVIC, Belinda",
+        "RAVEN, Andy",
+        "SETTLE, Michaela",
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1198",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f8b8df23-b334-45a6-b04f-317659dc0d56%2Fthe%20greens%20combined%20western%20victoria%20polwarth%20south%20barwon%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "McCOLL, Sam",
+        "MORRISON, Wendy",
+        "ZIVKOVIC, Belinda",
+        "RAVEN, Andy",
+        "SETTLE, Michaela",
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1106",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fec738f3-7cc3-4cfc-98c9-c6aa8f009357%2Fems%201106%20the%20greens%20combined%20geelong%20south%20barwon%20bellarine%20western%20victoria%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "McCOLL, Sam",
+        "MORRISON, Wendy",
+        "ZIVKOVIC, Belinda",
+        "RAVEN, Andy",
+        "SETTLE, Michaela",
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1411",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=73d86f2d-2086-4213-a293-2ed1e86209ad%2Fg93%20the%20greens%20combined%20western%20victoria%20polwarth%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "McCOLL, Sam",
+        "MORRISON, Wendy",
+        "ZIVKOVIC, Belinda",
+        "RAVEN, Andy",
+        "SETTLE, Michaela",
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1412",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f82308ee-ae6d-4f07-85ae-5f62e4a2c2ca%2Fg36%20the%20greens%20combined%20western%20victoria%20eureka%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "McCOLL, Sam",
+        "MORRISON, Wendy",
+        "RAVEN, Andy",
+        "SETTLE, Michaela",
+        "VENDITTI-TAYLOR, Steven",
+        "MUIR, Emma",
+        "ZIVKOVIC, Belinda",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1489",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5957c100-260a-436a-811c-28fd44bf871b%2Fthe%20greens%20combined%20western%20victoria%20punjabi%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "McCOLL, Sam",
+        "MORRISON, Wendy",
+        "ZIVKOVIC, Belinda",
+        "RAVEN, Andy",
+        "SETTLE, Michaela",
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1554",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5392ee0d-27e0-4480-9c0d-8a5bc9cc74c7%2Fthe%20greens%20combined%20western%20victoria%20punjabi%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "556",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=146e9e29-65a7-4486-b72b-f1a3190f993b%2Fliberal_combined_wvr%20eureka_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul",
+        "ZIVKOVIC, Belinda",
+        "MORRISON, Wendy",
+        "SETTLE, Michaela",
+        "McCOLL, Sam",
+        "RAVEN, Andy"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "681",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e77915e8-79d1-47bb-ae19-67339b55819f%2Fliberal_combined_wvr%20eureka_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul",
+        "ZIVKOVIC, Belinda",
+        "MORRISON, Wendy",
+        "SETTLE, Michaela",
+        "McCOLL, Sam",
+        "RAVEN, Andy"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "1246",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b099568b-e3ff-46ef-81a9-0ac6e6b4456a%2Fliberal_combined_wvr%20eureka_wvr%20ripon_wvr%20wendouree_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul",
+        "ZIVKOVIC, Belinda",
+        "MORRISON, Wendy",
+        "SETTLE, Michaela",
+        "McCOLL, Sam",
+        "RAVEN, Andy"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "1272",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2cacb235-286b-4327-b91d-f8eb0ff19be4%2Fliberal_combined_wvr%20eureka_wvr%20wendouree_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul",
+        "ZIVKOVIC, Belinda",
+        "MORRISON, Wendy",
+        "SETTLE, Michaela",
+        "McCOLL, Sam",
+        "RAVEN, Andy"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "1504",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7eac0f08-ef9e-4f3c-8153-4ef5729fa74d%2Fliberal_multiple_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul",
+        "ZIVKOVIC, Belinda",
+        "MORRISON, Wendy",
+        "SETTLE, Michaela",
+        "McCOLL, Sam",
+        "RAVEN, Andy"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "1327",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul",
+        "ZIVKOVIC, Belinda",
+        "MORRISON, Wendy",
+        "SETTLE, Michaela",
+        "McCOLL, Sam",
+        "RAVEN, Andy"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "1508",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef298e7a-1371-41f2-a9a0-ed8f2eb25360%2Fliberal_multiple_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul",
+        "ZIVKOVIC, Belinda",
+        "MORRISON, Wendy",
+        "SETTLE, Michaela",
+        "McCOLL, Sam",
+        "RAVEN, Andy"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "1512",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8d451e6-5d8a-43a1-9577-8481a2ccdc56%2Fliberal_multiple_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul",
+        "ZIVKOVIC, Belinda",
+        "MORRISON, Wendy",
+        "SETTLE, Michaela",
+        "McCOLL, Sam",
+        "RAVEN, Andy"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "1513",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f6f69e90-716d-4ff5-8422-2a0f36601988%2Fliberal_multiple_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul",
+        "ZIVKOVIC, Belinda",
+        "MORRISON, Wendy",
+        "SETTLE, Michaela",
+        "McCOLL, Sam",
+        "RAVEN, Andy"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "845",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3e4c78d6-268a-4003-8efb-91bd899b6d35%2Fonv%20-%20combined%20-%20western%20victoria%20region%20-%20eureka%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BALLINGER, Paul",
+        "HARKNESS, Ian Maxwell",
+        "MUIR, Emma",
+        "VENDITTI-TAYLOR, Steven",
+        "SETTLE, Michaela",
+        "ZIVKOVIC, Belinda",
+        "McCOLL, Sam",
+        "MORRISON, Wendy",
+        "RAVEN, Andy"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 3,
+        "ALP": 5,
+        "GRN": 7
+      }
+    },
+    {
+      "registration": "437",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=01a01e77-c572-4e44-b92a-53057bf98816%2Fvictorian%20socialists%20combined%20western%20victoria%20eureka%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RAVEN, Andy",
+        "McCOLL, Sam",
+        "MORRISON, Wendy",
+        "SETTLE, Michaela",
+        "ZIVKOVIC, Belinda",
+        "VENDITTI-TAYLOR, Steven",
+        "MUIR, Emma",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1032",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3cb352aa-6aea-462a-851f-36f81b5f44a3%2Fvs_wv_combined%20all_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RAVEN, Andy",
+        "McCOLL, Sam",
+        "MORRISON, Wendy",
+        "SETTLE, Michaela",
+        "ZIVKOVIC, Belinda",
+        "VENDITTI-TAYLOR, Steven",
+        "MUIR, Emma",
+        "HARKNESS, Ian Maxwell",
+        "BALLINGER, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1448",
+      "registered_by": "Luke Hilakari, Victorian Trades Hall Council",
+      "kind": "non_candidate",
+      "party": null,
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5389736f-5ac3-4caa-b3fc-b85815803467%2Feureka-hammersley-simon-htvc1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1383",
+      "registered_by": "ZIVKOVIC, Belinda",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "eureka/belinda-zivkovic",
+      "type": "Single",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f05de7b9-2156-48c5-b18f-1c966f2f8f1f%2Fzivkovic%2C%20belinda%20lee%20anne.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ZIVKOVIC, Belinda",
+        "MORRISON, Wendy",
+        "McCOLL, Sam",
+        "RAVEN, Andy",
+        "VENDITTI-TAYLOR, Steven",
+        "HARKNESS, Ian Maxwell",
+        "SETTLE, Michaela",
+        "MUIR, Emma",
+        "BALLINGER, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 3,
+        "ALP": 7,
+        "LNP": 8,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1505",
+      "registered_by": "VENDITTI-TAYLOR, Steven",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "eureka/steven-venditti-taylor",
+      "type": "Single",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f1392a70-f259-4333-a94d-066ea4d03639%2Fvenditti-taylor%2C%20steven%20joseph.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    }
+  ],
+  "no_card": []
+}

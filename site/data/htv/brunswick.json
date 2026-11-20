@@ -1,0 +1,1473 @@
+{
+  "area": "brunswick",
+  "house": "lower",
+  "name": "Brunswick",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "FARMER, Naomi",
+      "name": "Naomi Farmer",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 1,
+      "id": "brunswick/naomi-farmer"
+    },
+    {
+      "ballot_name": "MARGELIS, John",
+      "name": "John Margelis",
+      "party": "LIB",
+      "party_label": "Liberal",
+      "ballot_position": 2,
+      "id": "brunswick/john-margelis"
+    },
+    {
+      "ballot_name": "PULFORD, Adam",
+      "name": "Adam Pulford",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 3,
+      "id": "brunswick/adam-pulford"
+    },
+    {
+      "ballot_name": "HELMAN, Adam",
+      "name": "Adam Helman",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 4,
+      "id": "brunswick/adam-helman"
+    },
+    {
+      "ballot_name": "ROSE, India",
+      "name": "India Rose",
+      "party": "AJP",
+      "party_label": "Animal Justice Party",
+      "ballot_position": 5,
+      "id": "brunswick/india-rose"
+    },
+    {
+      "ballot_name": "STEGER, Gabe",
+      "name": "Gabe Steger",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 6,
+      "id": "brunswick/gabe-steger"
+    },
+    {
+      "ballot_name": "AMANATIDIS, Jack",
+      "name": "Jack Amanatidis",
+      "party": "IND",
+      "ballot_position": 7,
+      "id": "brunswick/jack-amanatidis"
+    },
+    {
+      "ballot_name": "YUAN, Melissa",
+      "name": "Melissa Yuan",
+      "party": "IND",
+      "ballot_position": 8,
+      "id": "brunswick/melissa-yuan"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "1323",
+      "registered_by": "Animal Justice Party",
+      "kind": "party",
+      "party": "AJP",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e9d6dffd-295a-4b9b-839a-d741c0f8670a%2Fbrunswick.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ROSE, India",
+        "PULFORD, Adam",
+        "YUAN, Melissa",
+        "FARMER, Naomi",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "51",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e33ba563-54da-4d29-b80b-1ba4f9dfdc0c%2Falp_combined_nm%20brunswick_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "STEGER, Gabe",
+        "FARMER, Naomi",
+        "PULFORD, Adam",
+        "ROSE, India",
+        "YUAN, Melissa",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 7,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "245",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=17534eda-f918-4218-a72e-144c4a8e806c%2Falp_combined_nm_brunswick_melbourne_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "STEGER, Gabe",
+        "FARMER, Naomi",
+        "PULFORD, Adam",
+        "ROSE, India",
+        "YUAN, Melissa",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 7,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "297",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=837438bd-1da9-4865-9be7-3783399bc22b%2Falp_combined_nm_brunswick_melbourne_richmond_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "STEGER, Gabe",
+        "FARMER, Naomi",
+        "PULFORD, Adam",
+        "ROSE, India",
+        "YUAN, Melissa",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 7,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "340",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9b4b158a-65fc-4d61-a7d1-f17c93445ca7%2Falp_combined_nm_brunswick_northcote_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "STEGER, Gabe",
+        "FARMER, Naomi",
+        "PULFORD, Adam",
+        "ROSE, India",
+        "YUAN, Melissa",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 7,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "387",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=72669b02-a986-4445-9898-7e171d7d2f7a%2Falp_combined_nm_brunswick_richmond_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "STEGER, Gabe",
+        "FARMER, Naomi",
+        "PULFORD, Adam",
+        "ROSE, India",
+        "YUAN, Melissa",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 7,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "390",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b07a599d-f888-4224-ab56-ffd2e5ad3899%2Falp_combined_nm_brunswick_pascoe%20vale_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "STEGER, Gabe",
+        "FARMER, Naomi",
+        "PULFORD, Adam",
+        "ROSE, India",
+        "YUAN, Melissa",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 7,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "STEGER, Gabe",
+        "FARMER, Naomi",
+        "PULFORD, Adam",
+        "ROSE, India",
+        "YUAN, Melissa",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 7,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "956",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=262323cd-5f44-4058-88b4-8b0631befca9%2Fthe%20greens%20combined%20northern%20metro%20richmond%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "959",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3a410b71-e5c7-45d9-a59b-6997e35025bb%2Fthe%20greens%20combined%20northern%20metro%20melbourne%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "965",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8c82ec33-bf56-4e80-9889-25f01c3e3a50%2Fthe%20greens%20combined%20northern%20metro%20brunswick%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "976",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=36481245-6c8e-4776-98a4-cc8da488aa55%2Fthe%20greens%20combined%20northern%20metro%20northcote%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "977",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3d090b17-8e4c-4723-898a-a3a783e36c40%2Fthe%20greens%20combined%20northern%20metro%20pascoe%20vale%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1126",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=bcdb08b9-68ee-4d55-8aab-5746b76885ec%2Fthe%20greens%20combined%20northern%20metro%20southern%20metro%20northcotekew1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1133",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d63c2a18-1fb0-4910-a57b-0f64d357e222%2Fthe%20greens%20combined%20melbourne%20richmond%20prahran%20northern%20metro%20southern%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1134",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6efa0497-698a-4aff-a098-f2e5d761478b%2Fthe%20greens%20combined%20southern%20metro%20northern%20metro%20albert%20park%20melbourne2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1137",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ea3ed5f7-1a88-4d49-ae5e-35b87c9428c4%2Fthe%20greens%20combined%20northern%20metro%20essendon%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1154",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7fe7017f-7ad2-40e2-9661-85cf2b35720f%2Fthe%20greens%20combined%20northcote%20preston%20brunswick%20northern%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1159",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3699c083-ebb1-460b-a8b3-afd324808b88%2Fthe%20greens%20combined%20northern%20metro%20northern%20metro%20broadmeadows%20pascoe%20vale1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1191",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=bb2a442e-bf89-417c-b741-35dd55b2bf9d%2Fthe%20greens%20combined%20northern%20metro%20pascoe%20vale%20brunswick%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1199",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4e83bc56-7f07-4d72-8c4d-07917cc80e6f%2Fthe%20greens%20combined%20essendon%20melbourne%20brunswick%20northern%20metro%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1209",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f7e50d42-7ac9-4b83-af4a-cf53e2554287%2Fthe%20greens%20combined%20northern%20metro%20essendon%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1365",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a5dea3b8-6899-48ca-9771-d7d6a0eacc05%2F1365%20the%20greens%20combined%20northcote%20preston%20brunswick%20northern%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1366",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4a362916-dc76-4575-881f-96f9ee71e945%2F1366%20the%20greens%20combined%20richmond%20melbourne%20brunswick%20northern%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1367",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fc1b3f2e-ebb8-4510-bfbd-9745c5c68b78%2F1367%20the%20greens%20combined%20northcote%20preston%20pascoe%20vale%20northern%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1368",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=06b0fd58-359e-42fc-a9dc-927fd4fe9283%2F1368%20the%20greens%20combined%20northern%20metro%20essendon%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1466",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9d417544-2226-4078-8119-0647660b85ed%2Fthe%20greens%20combined%20northern%20metro%20punjabi%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1469",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c033a595-22ea-44bf-81a1-394d009efd87%2Fthe%20greens%20combined%20northern%20metro%20somali%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1369",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b19d2224-a684-40b6-8b63-9769fbc55982%2F1369%20the%20greens%20combined%20essendon%20melbourne%20brunswick%20northern%20metro%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1390",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a106139d-2629-47af-bbf4-73ef410fb930%2F1390%20the%20greens%20combined%20hawthorn%20kew%20richmond%20southern%20metro%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1463",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fcb53da6-bb2b-417e-aa09-3cd7787bcf0b%2Fthe%20greens%20combined%20northern%20metro%20simplified%20chinese%201%20-%20fixed.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1477",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5d4890e0-4312-4b1f-8db0-f6d301611277%2Fthe%20greens%20combined%20northern%20metro%20turkish%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1482",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b27f9abe-3aaf-4653-bbd1-66e0cb106133%2Fthe%20greens%20combined%20northern%20metro%20vietnamese%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1500",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4e952deb-da7d-41f4-a621-0d02a890de5f%2Fthe%20greens%20combined%20northern%20metro%20oromo%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1546",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7a150eea-7a12-479f-8517-15a940b8e0f5%2Fthe%20greens%20combined%20northern%20metro%20oromo%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1547",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=0e941175-149a-4281-8381-189431030cd0%2Fthe%20greens%20combined%20northern%20metro%20turkish%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1551",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=924f62e8-8c52-4daf-8085-7578978c97b1%2Fthe%20greens%20combined%20northern%20metro%20arabic%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1553",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e9491fc8-e39b-46ba-abaa-af140d9e7801%2Fthe%20greens%20combined%20northern%20metro%20vietnamese%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1556",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9aabcd63-f61a-4b7d-b39e-408833e3b0e8%2Fthe%20greens%20combined%20northern%20metro%20arabic%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PULFORD, Adam",
+        "FARMER, Naomi",
+        "YUAN, Melissa",
+        "ROSE, India",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1557",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f9aa9d45-db38-459b-a909-c9a0bb006e1b%2Fthe%20greens%20combined%20northern%20metro%20punjabi%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1560",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4462e692-e42f-4ec3-8c56-ad867371ac1b%2Fthe%20greens%20combined%20northern%20metro%20somali%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1561",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ea8d48b8-048a-48da-9227-79b0136125f9%2Fthe%20greens%20combined%20northern%20metro%20simplified%20chinese%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "827",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7434e5cb-a0d4-4068-917f-f63c601119e4%2Fliberal_combined_nmr%20brunswick_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "828",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d6c9d374-9928-46d9-a9f9-987d8dd7c9ef%2Fliberal_combined_nmr%20brunswick_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1504",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7eac0f08-ef9e-4f3c-8153-4ef5729fa74d%2Fliberal_multiple_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "partial",
+      "order": [
+        "MARGELIS, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1
+      }
+    },
+    {
+      "registration": "1327",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "partial",
+      "order": [
+        "MARGELIS, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1
+      }
+    },
+    {
+      "registration": "1508",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef298e7a-1371-41f2-a9a0-ed8f2eb25360%2Fliberal_multiple_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "partial",
+      "order": [
+        "MARGELIS, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1
+      }
+    },
+    {
+      "registration": "1512",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8d451e6-5d8a-43a1-9577-8481a2ccdc56%2Fliberal_multiple_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "partial",
+      "order": [
+        "MARGELIS, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1
+      }
+    },
+    {
+      "registration": "1513",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f6f69e90-716d-4ff5-8422-2a0f36601988%2Fliberal_multiple_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "partial",
+      "order": [
+        "MARGELIS, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1
+      }
+    },
+    {
+      "registration": "898",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1c03a9de-4aff-446f-8f6e-44715787cfba%2Fonv%20-%20combined%20-%20northern%20metropolitan%20region%20-%20brunswick%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HELMAN, Adam",
+        "MARGELIS, John",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "YUAN, Melissa",
+        "PULFORD, Adam",
+        "ROSE, India",
+        "FARMER, Naomi"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 2,
+        "ALP": 3,
+        "GRN": 6
+      }
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HELMAN, Adam",
+        "MARGELIS, John",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "YUAN, Melissa",
+        "PULFORD, Adam",
+        "ROSE, India",
+        "FARMER, Naomi"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 2,
+        "ALP": 3,
+        "GRN": 6
+      }
+    },
+    {
+      "registration": "462",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=addf8d84-e444-45e0-b3b6-8e2fdbc89108%2Fvictorian%20socialists%20combined%20northern%20metropolitan%20brunswick%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FARMER, Naomi",
+        "PULFORD, Adam",
+        "ROSE, India",
+        "YUAN, Melissa",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1027",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=57829ff5-3bb6-4b6e-8c5e-24cb2bd9c111%2Fvs_nm_combined%20all_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FARMER, Naomi",
+        "PULFORD, Adam",
+        "ROSE, India",
+        "YUAN, Melissa",
+        "STEGER, Gabe",
+        "AMANATIDIS, Jack",
+        "MARGELIS, John",
+        "HELMAN, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1364",
+      "registered_by": "AMANATIDIS, Jack",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "brunswick/jack-amanatidis",
+      "type": "Single",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=819b5869-314b-40ce-bc53-13ec19925d3f%2Famanatidis%2C%20kyriakos%20jack.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1528",
+      "registered_by": "YUAN, Melissa",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "brunswick/melissa-yuan",
+      "type": "Single",
+      "registered_on": "2026-11-18",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60043c19-2b98-42a9-a424-b3af6964f82c%2Fyuan%2C%20melissa.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    }
+  ],
+  "no_card": []
+}

@@ -1,0 +1,1541 @@
+{
+  "area": "clarinda",
+  "house": "lower",
+  "name": "Clarinda",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "ROCHE, Liam",
+      "name": "Liam Roche",
+      "party": "LBT",
+      "party_label": "Libertarian (formerly Liberal Democrats)",
+      "ballot_position": 1,
+      "id": "clarinda/liam-roche"
+    },
+    {
+      "ballot_name": "BOYD-EEDLE, Conor",
+      "name": "Conor Boyd-Eedle",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 2,
+      "id": "clarinda/conor-boyd-eedle"
+    },
+    {
+      "ballot_name": "TAK, Meng Heang",
+      "name": "Meng Heang Tak",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 3,
+      "id": "clarinda/meng-heang-tak"
+    },
+    {
+      "ballot_name": "MESSAGE, Kit",
+      "name": "Kit Message",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 4,
+      "id": "clarinda/kit-message"
+    },
+    {
+      "ballot_name": "WHITE, Caroline",
+      "name": "Caroline White",
+      "party": "IND",
+      "ballot_position": 5,
+      "id": "clarinda/caroline-white"
+    },
+    {
+      "ballot_name": "BAIN, Gavin",
+      "name": "Gavin Bain",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 6,
+      "id": "clarinda/gavin-bain"
+    },
+    {
+      "ballot_name": "PAGANIS, John",
+      "name": "John Paganis",
+      "party": "LIB",
+      "party_label": "Liberal",
+      "ballot_position": 7,
+      "id": "clarinda/john-paganis"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "86",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4f79fd04-c087-41a6-8b55-39ca52f4ab1a%2Falp_combined_sem%20clarinda_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "ROCHE, Liam",
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "250",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e8507870-b0cf-4384-a075-96acf7094e37%2Falp_combined_sm_sem_bentleigh_clarinda_sandringham_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "ROCHE, Liam",
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "254",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=189556b2-40c7-4a65-b985-c26a4a5f39ba%2Falp_combined_sem_sm_clarinda_mordialloc_sandringham_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "ROCHE, Liam",
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "259",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4e80f3c7-8288-4d64-a8c3-a1b056746e09%2Falp_combined_sm_sem_bentleigh_clarinda_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "ROCHE, Liam",
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "432",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d8d2a1a3-67a1-457c-b02d-ad03a070c016%2Falp_combined_sem_clarinda_mordialloc_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "ROCHE, Liam",
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "771",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=83514f21-b1a2-4f1a-87f8-7607921b07c1%2Falp_combined_sem_clarinda_dandenong_tr1_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "ROCHE, Liam",
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "777",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=39ce7365-316f-4e21-bbca-27dcddb4713d%2Falp_combined_sem_clarinda_tr1_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "ROCHE, Liam",
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "778",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=81e200be-3eb1-4630-a315-ce8e5ad5242f%2Falp_combined_sem_sm_clarinda_oakleigh_tr1_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "ROCHE, Liam",
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "779",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=96be09b1-528b-400b-9b32-777558f1f174%2Falp_combined_sem_clarinda_mulgrave_tr1_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "ROCHE, Liam",
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "783",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebf9571d-772b-4db5-b891-0d1ae6504939%2Falp_combined_sem_clarinda_dandenong_mordialloc_tr1_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "ROCHE, Liam",
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "ROCHE, Liam",
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "964",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cc39290-4036-4cac-99e7-3e67266388be%2Falp_combined_sem_clarinda_tr6_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "ROCHE, Liam",
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "911",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f74cd502-2c81-4d48-a54b-c7ab1f412269%2Fthe%20greens%20combined%20south-east%20metro%20clarinda%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "TAK, Meng Heang",
+        "PAGANIS, John",
+        "ROCHE, Liam",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "926",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c0d31273-bd90-4241-b954-e56525e7b367%2Fthe%20greens%20combined%20south-east%20metro%20dandenong%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "TAK, Meng Heang",
+        "PAGANIS, John",
+        "ROCHE, Liam",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1001",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e2a504ef-101f-4012-9912-5a5c41c985dc%2Fthe%20greens%20combined%20south-east%20metro%20mulgrave%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "TAK, Meng Heang",
+        "PAGANIS, John",
+        "ROCHE, Liam",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1002",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fde3c880-ea20-4bf5-99bc-5e4105c0d9ef%2Fthe%20greens%20combined%20south-east%20metro%20mordialloc%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "TAK, Meng Heang",
+        "PAGANIS, John",
+        "ROCHE, Liam",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1113",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=01dc65d1-c4d1-44b6-b7b2-a47d90c147d9%2Fthe%20greens%20combined%20southern%20metro%20sandringham%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "TAK, Meng Heang",
+        "PAGANIS, John",
+        "ROCHE, Liam",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1114",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e7993ea1-98e1-47a7-a6fb-fc0164411f74%2Fthe%20greens%20combined%20dandenong%20mordialloc%20clarinda%20south-eastern%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "TAK, Meng Heang",
+        "PAGANIS, John",
+        "ROCHE, Liam",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1115",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d3c944c2-f7d8-4773-91be-fdde8e78d097%2Fthe%20greens%20combined%20southern%20metro%20bentleigh%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "TAK, Meng Heang",
+        "PAGANIS, John",
+        "ROCHE, Liam",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1136",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6c256f6f-f2b7-4ac5-970d-5f5118a526b7%2Fthe%20greens%20combined%20southern%20metro%20oakleigh%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "TAK, Meng Heang",
+        "PAGANIS, John",
+        "ROCHE, Liam",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "TAK, Meng Heang",
+        "PAGANIS, John",
+        "ROCHE, Liam",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1192",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ab515401-11ec-4b5b-ad7e-e3f12a8a328a%2Fthe%20greens%20combined%20southern%20metro%20sandringham%20brighton%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "TAK, Meng Heang",
+        "PAGANIS, John",
+        "ROCHE, Liam",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1363",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=306e2814-4746-4d74-9fb9-4ecdc125a4e4%2F1363%20the%20greens%20combined%20mulgrave%20dandenong%20clarinda%20south-eastern%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "TAK, Meng Heang",
+        "PAGANIS, John",
+        "ROCHE, Liam",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1506",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8036686d-a05d-49f4-9ab5-0e83c749f7ea%2Fthe%20greens%20combined%20south-eastern%20metro%20simplified%20chinese%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "TAK, Meng Heang",
+        "PAGANIS, John",
+        "ROCHE, Liam",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1509",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=00c53f08-bcfc-461f-80b9-674bc9a9e669%2Fthe%20greens%20combined%20south-eastern%20metro%20vietnamese%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "TAK, Meng Heang",
+        "PAGANIS, John",
+        "ROCHE, Liam",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1550",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-18",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=358471e6-653f-4281-b7de-6e76704ae1b3%2Fthe%20greens%20combined%20south-eastern%20metro%20hazeragi%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit",
+        "TAK, Meng Heang",
+        "PAGANIS, John",
+        "ROCHE, Liam",
+        "WHITE, Caroline",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1545",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=bdbdccbf-8c6b-4876-8388-c766041a35e4%2Fthe%20greens%20combined%20south-eastern%20metro%20hazeragi%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1552",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=22a6b6a9-3fa6-4e30-b01f-59b76d053fb6%2Fthe%20greens%20combined%20south-eastern%20metro%20simplified%20chinese%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1555",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=dff45eca-78f5-4564-b0c1-30b72052ed1c%2Fthe%20greens%20combined%20south-eastern%20metro%20vietnamese%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1050",
+      "registered_by": "Libertarian (formerly Liberal Democrats)",
+      "kind": "party",
+      "party": "LBT",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b4a2b4f8-40ad-4932-9df0-31eec679252c%2Fd_clarinda_roche_reg.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ROCHE, Liam",
+        "WHITE, Caroline",
+        "PAGANIS, John",
+        "BAIN, Gavin",
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 3,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      }
+    },
+    {
+      "registration": "590",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3df47d8f-9228-474e-b217-f9ba9ece93af%2Fliberal_combined_semr%20clarinda_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "ROCHE, Liam",
+        "BAIN, Gavin",
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "670",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5895444a-0bee-4175-8092-05c263b998f9%2Fliberal_combined_semr%20clarinda_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "ROCHE, Liam",
+        "BAIN, Gavin",
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1223",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a12bb98a-59a1-4214-b9e7-17f3d037ef44%2Fliberal_combined_semr%20clarinda_semr%20dandenong_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "ROCHE, Liam",
+        "BAIN, Gavin",
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1227",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=566e53a3-3565-4804-870e-bd644acbc4a0%2Fliberal_combined_semr%20clarinda_semr%20mordialloc_semr%20dandenong_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "ROCHE, Liam",
+        "BAIN, Gavin",
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1243",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c28ebf9a-0cc7-4685-8713-f4e33ad68c14%2Fliberal_combined_semr%20clarinda_semr%20mordialloc_smr%20sandringham_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "ROCHE, Liam",
+        "BAIN, Gavin",
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1251",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a3cc5eb4-2c89-4c01-8bb5-fbb63d3f1522%2Fliberal_combined_smr%20bentleigh_semr%20clarinda_smr%20sandringham_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "ROCHE, Liam",
+        "BAIN, Gavin",
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1303",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=505823c0-d30e-4091-8092-1b0065edf3d9%2Fliberal_combined_semr%20clarinda_semr%20mulgrave_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "ROCHE, Liam",
+        "BAIN, Gavin",
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1329",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4f5596e4-780d-4d39-b8d3-73af08da9665%2Fliberal_combined_semr%20clarinda_semr%20mordialloc_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "ROCHE, Liam",
+        "BAIN, Gavin",
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1337",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=abc84f78-4078-4c3b-8633-67715cc35cb2%2Fliberal_combined_semr%20clarinda_smr%20oakleigh_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "ROCHE, Liam",
+        "BAIN, Gavin",
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1504",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7eac0f08-ef9e-4f3c-8153-4ef5729fa74d%2Fliberal_multiple_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "ROCHE, Liam",
+        "BAIN, Gavin",
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1327",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "ROCHE, Liam",
+        "BAIN, Gavin",
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1508",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef298e7a-1371-41f2-a9a0-ed8f2eb25360%2Fliberal_multiple_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "ROCHE, Liam",
+        "BAIN, Gavin",
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1512",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8d451e6-5d8a-43a1-9577-8481a2ccdc56%2Fliberal_multiple_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "ROCHE, Liam",
+        "BAIN, Gavin",
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1513",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f6f69e90-716d-4ff5-8422-2a0f36601988%2Fliberal_multiple_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PAGANIS, John",
+        "WHITE, Caroline",
+        "ROCHE, Liam",
+        "BAIN, Gavin",
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "904",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a5c6c306-7bc3-43ae-ae55-6b63aff9defc%2Fonv%20-%20combined%20-%20south-eastern%20metropolitan%20region%20-%20clarinda%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BAIN, Gavin",
+        "WHITE, Caroline",
+        "ROCHE, Liam",
+        "PAGANIS, John",
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 4,
+        "ALP": 5,
+        "GRN": 6
+      }
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BAIN, Gavin",
+        "WHITE, Caroline",
+        "ROCHE, Liam",
+        "PAGANIS, John",
+        "TAK, Meng Heang",
+        "BOYD-EEDLE, Conor",
+        "MESSAGE, Kit"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 4,
+        "ALP": 5,
+        "GRN": 6
+      }
+    },
+    {
+      "registration": "424",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2c5170e5-8c2e-42ad-a3bf-e24a24d8776e%2Fvictorian%20socialists%20combined%20south-eastern%20metropolitan%20clarinda%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MESSAGE, Kit",
+        "BOYD-EEDLE, Conor",
+        "TAK, Meng Heang",
+        "WHITE, Caroline",
+        "PAGANIS, John",
+        "ROCHE, Liam",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 3,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1029",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9f9f4d4a-36a7-4afb-84ee-6d50bbcb46b8%2Fvs_sem_combined%20all_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MESSAGE, Kit",
+        "BOYD-EEDLE, Conor",
+        "TAK, Meng Heang",
+        "WHITE, Caroline",
+        "PAGANIS, John",
+        "ROCHE, Liam",
+        "BAIN, Gavin"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 3,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "697",
+      "registered_by": "Caroline White",
+      "kind": "non_candidate",
+      "party": null,
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f2fc1edc-9e93-4cf3-8ca2-891d3a676c59%2Fwhite%2C%20caroline.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    }
+  ],
+  "no_card": [
+    "WHITE, Caroline"
+  ]
+}

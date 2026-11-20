@@ -1,0 +1,703 @@
+{
+  "area": "south-west-coast",
+  "house": "lower",
+  "name": "South-West Coast",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "BUCHAN, Tamhas",
+      "name": "Tamhas Buchan",
+      "party": "FF",
+      "party_label": "Family First",
+      "ballot_position": 1,
+      "id": "south-west-coast/tamhas-buchan"
+    },
+    {
+      "ballot_name": "HUGHES, Richard",
+      "name": "Richard Hughes",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 2,
+      "id": "south-west-coast/richard-hughes"
+    },
+    {
+      "ballot_name": "GOVANSTONE, Andrew",
+      "name": "Andrew Govanstone",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 3,
+      "id": "south-west-coast/andrew-govanstone"
+    },
+    {
+      "ballot_name": "WATTS, Silver Rose",
+      "name": "Silver Rose Watts",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 4,
+      "id": "south-west-coast/silver-rose-watts"
+    },
+    {
+      "ballot_name": "BRITNELL, Roma",
+      "name": "Roma Britnell",
+      "party": "LIB",
+      "party_label": "Liberal",
+      "ballot_position": 5,
+      "id": "south-west-coast/roma-britnell"
+    },
+    {
+      "ballot_name": "SHEPPARD, Hera",
+      "name": "Hera Sheppard",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 6,
+      "id": "south-west-coast/hera-sheppard"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "123",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e20994ee-8a05-4ebb-b54d-810579ad0946%2Falp_combined_wv%20south-west%20coast_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GOVANSTONE, Andrew",
+        "WATTS, Silver Rose",
+        "SHEPPARD, Hera",
+        "BRITNELL, Roma",
+        "BUCHAN, Tamhas",
+        "HUGHES, Richard"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 4,
+        "ONP": 6
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 4
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GOVANSTONE, Andrew",
+        "WATTS, Silver Rose",
+        "SHEPPARD, Hera",
+        "BRITNELL, Roma",
+        "BUCHAN, Tamhas",
+        "HUGHES, Richard"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 4,
+        "ONP": 6
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 4
+        }
+      ]
+    },
+    {
+      "registration": "1212",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7fc4324b-07f2-4b88-bfb4-315649b04107%2Ffamilyfirst_western-vic-polwarth-geelong-seats-wendouree_version%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BUCHAN, Tamhas",
+        "HUGHES, Richard",
+        "BRITNELL, Roma",
+        "GOVANSTONE, Andrew",
+        "WATTS, Silver Rose",
+        "SHEPPARD, Hera"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 3,
+        "ALP": 4,
+        "GRN": 5
+      }
+    },
+    {
+      "registration": "1213",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d78a4dd7-38d8-4f8c-996e-346fdcf3f8ff%2Ffamilyfirst_western-vic-south-west-coast-ballarat-seats_version2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BUCHAN, Tamhas",
+        "HUGHES, Richard",
+        "BRITNELL, Roma",
+        "GOVANSTONE, Andrew",
+        "WATTS, Silver Rose",
+        "SHEPPARD, Hera"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 3,
+        "ALP": 4,
+        "GRN": 5
+      }
+    },
+    {
+      "registration": "1125",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6c93fdd7-9146-44be-8364-fe6b32ae6eab%2Fthe%20greens%20combined%20western%20victoria%20polwarth%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WATTS, Silver Rose",
+        "SHEPPARD, Hera",
+        "GOVANSTONE, Andrew",
+        "BRITNELL, Roma",
+        "BUCHAN, Tamhas",
+        "HUGHES, Richard"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 6
+      }
+    },
+    {
+      "registration": "1180",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d0f351e0-dc06-4729-8217-f1493f5b2d17%2Fthe%20greens%20combined%20western%20victoria%20south-west%20coast%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WATTS, Silver Rose",
+        "SHEPPARD, Hera",
+        "GOVANSTONE, Andrew",
+        "BRITNELL, Roma",
+        "BUCHAN, Tamhas",
+        "HUGHES, Richard"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 6
+      }
+    },
+    {
+      "registration": "1183",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=33225b50-6e34-4f1a-9214-d9f9ae513799%2Fthe%20greens%20combined%20western%20victoria%20lowan%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WATTS, Silver Rose",
+        "SHEPPARD, Hera",
+        "GOVANSTONE, Andrew",
+        "BRITNELL, Roma",
+        "BUCHAN, Tamhas",
+        "HUGHES, Richard"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 6
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WATTS, Silver Rose",
+        "SHEPPARD, Hera",
+        "GOVANSTONE, Andrew",
+        "BRITNELL, Roma",
+        "BUCHAN, Tamhas",
+        "HUGHES, Richard"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 6
+      }
+    },
+    {
+      "registration": "1198",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f8b8df23-b334-45a6-b04f-317659dc0d56%2Fthe%20greens%20combined%20western%20victoria%20polwarth%20south%20barwon%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WATTS, Silver Rose",
+        "SHEPPARD, Hera",
+        "GOVANSTONE, Andrew",
+        "BRITNELL, Roma",
+        "BUCHAN, Tamhas",
+        "HUGHES, Richard"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 6
+      }
+    },
+    {
+      "registration": "1411",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=73d86f2d-2086-4213-a293-2ed1e86209ad%2Fg93%20the%20greens%20combined%20western%20victoria%20polwarth%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WATTS, Silver Rose",
+        "SHEPPARD, Hera",
+        "GOVANSTONE, Andrew",
+        "BRITNELL, Roma",
+        "BUCHAN, Tamhas",
+        "HUGHES, Richard"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 6
+      }
+    },
+    {
+      "registration": "1489",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5957c100-260a-436a-811c-28fd44bf871b%2Fthe%20greens%20combined%20western%20victoria%20punjabi%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WATTS, Silver Rose",
+        "SHEPPARD, Hera",
+        "GOVANSTONE, Andrew",
+        "BRITNELL, Roma",
+        "BUCHAN, Tamhas",
+        "HUGHES, Richard"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 6
+      }
+    },
+    {
+      "registration": "1554",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5392ee0d-27e0-4480-9c0d-8a5bc9cc74c7%2Fthe%20greens%20combined%20western%20victoria%20punjabi%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "832",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6447d799-9ce1-48e8-93ba-5d6010859b71%2Fliberal_combined_wvr%20south-west%20coast_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BRITNELL, Roma",
+        "BUCHAN, Tamhas",
+        "HUGHES, Richard",
+        "GOVANSTONE, Andrew",
+        "WATTS, Silver Rose",
+        "SHEPPARD, Hera"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 4,
+        "GRN": 5
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 4
+        }
+      ]
+    },
+    {
+      "registration": "834",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4832b6d2-9aea-4851-94bd-7cb153278b19%2Fliberal_combined_wvr%20south-west%20coast_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BRITNELL, Roma",
+        "BUCHAN, Tamhas",
+        "HUGHES, Richard",
+        "GOVANSTONE, Andrew",
+        "WATTS, Silver Rose",
+        "SHEPPARD, Hera"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 4,
+        "GRN": 5
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 4
+        }
+      ]
+    },
+    {
+      "registration": "1504",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7eac0f08-ef9e-4f3c-8153-4ef5729fa74d%2Fliberal_multiple_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BRITNELL, Roma",
+        "BUCHAN, Tamhas",
+        "HUGHES, Richard",
+        "GOVANSTONE, Andrew",
+        "WATTS, Silver Rose",
+        "SHEPPARD, Hera"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 4,
+        "GRN": 5
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 4
+        }
+      ]
+    },
+    {
+      "registration": "1327",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BRITNELL, Roma",
+        "BUCHAN, Tamhas",
+        "HUGHES, Richard",
+        "GOVANSTONE, Andrew",
+        "WATTS, Silver Rose",
+        "SHEPPARD, Hera"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 4,
+        "GRN": 5
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 4
+        }
+      ]
+    },
+    {
+      "registration": "1508",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef298e7a-1371-41f2-a9a0-ed8f2eb25360%2Fliberal_multiple_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BRITNELL, Roma",
+        "BUCHAN, Tamhas",
+        "HUGHES, Richard",
+        "GOVANSTONE, Andrew",
+        "WATTS, Silver Rose",
+        "SHEPPARD, Hera"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 4,
+        "GRN": 5
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 4
+        }
+      ]
+    },
+    {
+      "registration": "1512",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8d451e6-5d8a-43a1-9577-8481a2ccdc56%2Fliberal_multiple_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BRITNELL, Roma",
+        "BUCHAN, Tamhas",
+        "HUGHES, Richard",
+        "GOVANSTONE, Andrew",
+        "WATTS, Silver Rose",
+        "SHEPPARD, Hera"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 4,
+        "GRN": 5
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 4
+        }
+      ]
+    },
+    {
+      "registration": "1513",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f6f69e90-716d-4ff5-8422-2a0f36601988%2Fliberal_multiple_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BRITNELL, Roma",
+        "BUCHAN, Tamhas",
+        "HUGHES, Richard",
+        "GOVANSTONE, Andrew",
+        "WATTS, Silver Rose",
+        "SHEPPARD, Hera"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 4,
+        "GRN": 5
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 4
+        }
+      ]
+    },
+    {
+      "registration": "888",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a013967b-1c26-4034-92c1-91f6ad8d1502%2Fonv%20-%20combined%20-%20western%20victoria%20region%20-%20south-west%20coast%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HUGHES, Richard",
+        "BUCHAN, Tamhas",
+        "BRITNELL, Roma",
+        "GOVANSTONE, Andrew",
+        "WATTS, Silver Rose",
+        "SHEPPARD, Hera"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 3,
+        "ALP": 4,
+        "GRN": 5
+      }
+    },
+    {
+      "registration": "439",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d69b5136-b6de-46ab-b0ef-c94f8cdd5a1c%2Fvictorian%20socialists%20combined%20western%20victoria%20south-west%20coast%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SHEPPARD, Hera",
+        "WATTS, Silver Rose",
+        "GOVANSTONE, Andrew",
+        "BRITNELL, Roma",
+        "BUCHAN, Tamhas",
+        "HUGHES, Richard"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 6
+      }
+    },
+    {
+      "registration": "1032",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3cb352aa-6aea-462a-851f-36f81b5f44a3%2Fvs_wv_combined%20all_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SHEPPARD, Hera",
+        "WATTS, Silver Rose",
+        "GOVANSTONE, Andrew",
+        "BRITNELL, Roma",
+        "BUCHAN, Tamhas",
+        "HUGHES, Richard"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 6
+      }
+    }
+  ],
+  "no_card": []
+}

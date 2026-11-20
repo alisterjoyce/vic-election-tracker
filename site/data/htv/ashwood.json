@@ -1,0 +1,1523 @@
+{
+  "area": "ashwood",
+  "house": "lower",
+  "name": "Ashwood",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "UWIMANA, Enid",
+      "name": "Enid Uwimana",
+      "party": "FF",
+      "party_label": "Family First",
+      "ballot_position": 1,
+      "id": "ashwood/enid-uwimana"
+    },
+    {
+      "ballot_name": "RANDALL, Tim",
+      "name": "Tim Randall",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 2,
+      "id": "ashwood/tim-randall"
+    },
+    {
+      "ballot_name": "FREGON, Matt",
+      "name": "Matt Fregon",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 3,
+      "id": "ashwood/matt-fregon"
+    },
+    {
+      "ballot_name": "VAN DER EYNDEN, Jacob",
+      "name": "Jacob Van Der Eynden",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 4,
+      "id": "ashwood/jacob-van-der-eynden"
+    },
+    {
+      "ballot_name": "ZOGRAPHOS, Theo",
+      "name": "Theo Zographos",
+      "party": "LIB",
+      "party_label": "Liberal",
+      "ballot_position": 5,
+      "id": "ashwood/theo-zographos"
+    },
+    {
+      "ballot_name": "JOSHI, Hitendra K.",
+      "name": "Hitendra K. Joshi",
+      "party": "IND",
+      "ballot_position": 6,
+      "id": "ashwood/hitendra-k-joshi"
+    },
+    {
+      "ballot_name": "MITCHELL, Steven",
+      "name": "Steven Mitchell",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 7,
+      "id": "ashwood/steven-mitchell"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "131",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d70796db-126e-482c-ba11-52ee51020013%2Falp_combined_sm_ashwood_tr7_1-compressed.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FREGON, Matt",
+        "JOSHI, Hitendra K.",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "752",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=0781fec9-ef08-4342-b3a6-41987bd7d887%2Falp_combined_sm_ashwood_malvern_tr1_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FREGON, Matt",
+        "JOSHI, Hitendra K.",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "756",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a2f65263-f9b0-431f-9f3e-d260d6c73afb%2Falp_combined_sm_ashwood_oakleigh_tr1_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FREGON, Matt",
+        "JOSHI, Hitendra K.",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "759",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ca314e00-0fdb-4f4c-9183-3d7bb234ecd1%2Falp_combined_sm_nem_ashwood_glen%20waverley_tr1_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FREGON, Matt",
+        "JOSHI, Hitendra K.",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "762",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=50e25721-9971-428a-a261-5f97330d02fd%2Falp_combined_sm%20ashwood_nem%20box%20hill_tr7_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FREGON, Matt",
+        "JOSHI, Hitendra K.",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "768",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a7154705-e46a-476f-8691-c2e68d352bc6%2Falp_combined_sm_ashwood_hawthorn_tr1_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FREGON, Matt",
+        "JOSHI, Hitendra K.",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "782",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8378e257-2a4c-451d-a766-3e2e4d7c519c%2Falp_combined_sm_ashwood_tr1_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FREGON, Matt",
+        "JOSHI, Hitendra K.",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "787",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a6a05321-7759-4022-bccf-31917c9063d5%2Falp_combined_sm_ashwood_tr7_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FREGON, Matt",
+        "JOSHI, Hitendra K.",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FREGON, Matt",
+        "JOSHI, Hitendra K.",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "518",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a3a190a7-3599-47e7-811f-adfc3805ab10%2Ffamilyfirst_ashwood_version1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "UWIMANA, Enid",
+        "MITCHELL, Steven",
+        "ZOGRAPHOS, Theo",
+        "JOSHI, Hitendra K.",
+        "FREGON, Matt",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 3,
+        "ALP": 5,
+        "GRN": 6
+      }
+    },
+    {
+      "registration": "953",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1dc33acc-b28a-4045-ab09-ad65a11633c6%2Fthe%20greens%20combined%20north-east%20metro%20glen%20waverley%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RANDALL, Tim",
+        "JOSHI, Hitendra K.",
+        "VAN DER EYNDEN, Jacob",
+        "FREGON, Matt",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "967",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b402477c-7a2d-4ee7-8bb9-373ac0f7d8ca%2Fthe%20greens%20combined%20north-east%20metro%20box%20hill%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RANDALL, Tim",
+        "JOSHI, Hitendra K.",
+        "VAN DER EYNDEN, Jacob",
+        "FREGON, Matt",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1001",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e2a504ef-101f-4012-9912-5a5c41c985dc%2Fthe%20greens%20combined%20south-east%20metro%20mulgrave%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RANDALL, Tim",
+        "JOSHI, Hitendra K.",
+        "VAN DER EYNDEN, Jacob",
+        "FREGON, Matt",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1117",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1b1a7247-e11a-4cfe-9dbe-980561812b94%2Fthe%20greens%20combined%20southern%20metro%20ashwood%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RANDALL, Tim",
+        "JOSHI, Hitendra K.",
+        "VAN DER EYNDEN, Jacob",
+        "FREGON, Matt",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1123",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=04d04173-e943-4c64-85d9-971b52d7bd18%2Fthe%20greens%20combined%20southern%20metro%20ashwood%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RANDALL, Tim",
+        "JOSHI, Hitendra K.",
+        "VAN DER EYNDEN, Jacob",
+        "FREGON, Matt",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1131",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=57876f4e-7ade-43cd-9a8b-2cab56a6868b%2Fthe%20greens%20combined%20southern%20metro%20hawthorn%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RANDALL, Tim",
+        "JOSHI, Hitendra K.",
+        "VAN DER EYNDEN, Jacob",
+        "FREGON, Matt",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1136",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6c256f6f-f2b7-4ac5-970d-5f5118a526b7%2Fthe%20greens%20combined%20southern%20metro%20oakleigh%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RANDALL, Tim",
+        "JOSHI, Hitendra K.",
+        "VAN DER EYNDEN, Jacob",
+        "FREGON, Matt",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1142",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=aec166dd-e527-4c71-aca7-95bee0af060d%2Fthe%20greens%20combined%20southern%20metro%20hawthorn%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RANDALL, Tim",
+        "JOSHI, Hitendra K.",
+        "VAN DER EYNDEN, Jacob",
+        "FREGON, Matt",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1146",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=76a6bef2-8b40-478b-a142-7580170fd6a6%2Fthe%20greens%20combined%20southern%20metro%20north-eastern%20metro%20box%20hill%20ashwood2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1186",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=904c89f5-10fe-4efc-93f5-c5502c017a30%2Fthe%20greens%20combined%20malvern%20caulfield%20prahran%20southern%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RANDALL, Tim",
+        "JOSHI, Hitendra K.",
+        "VAN DER EYNDEN, Jacob",
+        "FREGON, Matt",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RANDALL, Tim",
+        "JOSHI, Hitendra K.",
+        "VAN DER EYNDEN, Jacob",
+        "FREGON, Matt",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1202",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=37ee2b5f-2fc4-48d9-a341-d8b51f5858d0%2Fthe%20greens%20combined%20southern%20metro%20malvern%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RANDALL, Tim",
+        "JOSHI, Hitendra K.",
+        "VAN DER EYNDEN, Jacob",
+        "FREGON, Matt",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1207",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a82a9d61-0a43-49a2-a46b-3c2c6b9b5e15%2F1207%20the%20greens%20combined%20ashwood%20hawthorn%20malvern%20southern%20metro%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RANDALL, Tim",
+        "JOSHI, Hitendra K.",
+        "VAN DER EYNDEN, Jacob",
+        "FREGON, Matt",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1390",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a106139d-2629-47af-bbf4-73ef410fb930%2F1390%20the%20greens%20combined%20hawthorn%20kew%20richmond%20southern%20metro%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RANDALL, Tim",
+        "JOSHI, Hitendra K.",
+        "VAN DER EYNDEN, Jacob",
+        "FREGON, Matt",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1363",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=306e2814-4746-4d74-9fb9-4ecdc125a4e4%2F1363%20the%20greens%20combined%20mulgrave%20dandenong%20clarinda%20south-eastern%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RANDALL, Tim",
+        "JOSHI, Hitendra K.",
+        "VAN DER EYNDEN, Jacob",
+        "FREGON, Matt",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1496",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b08723d9-8625-42fc-a9c4-c942533416d8%2Fthe%20greens%20combined%20southern%20metro%20simplified%20chinese%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RANDALL, Tim",
+        "JOSHI, Hitendra K.",
+        "VAN DER EYNDEN, Jacob",
+        "FREGON, Matt",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1549",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=608ba255-d06b-4f81-9750-9b21a9bc8c33%2Fthe%20greens%20combined%20southern%20metro%20simplified%20chinese%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "587",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2d747444-f9e4-4f68-b9c9-91ee7a1d06dc%2Fliberal_combined_smr%20ashwood_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ZOGRAPHOS, Theo",
+        "JOSHI, Hitendra K.",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven",
+        "FREGON, Matt",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "617",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=37356394-3c36-4ea8-b4bb-bad644893b24%2Fliberal_combined_smr%20ashwood_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ZOGRAPHOS, Theo",
+        "JOSHI, Hitendra K.",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven",
+        "FREGON, Matt",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1224",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b46170eb-08d9-4b72-be91-ec6f74de894b%2Fliberal_combined_nemr%20box%20hill_nemr%20glen%20waverley_nemr%20ringwood_smr%20ashwood_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ZOGRAPHOS, Theo",
+        "JOSHI, Hitendra K.",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven",
+        "FREGON, Matt",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1289",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=86bbeec7-93bd-4666-af15-5daef6436a2f%2Fliberal_combined_smr%20ashwood_smr%20oakleigh_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ZOGRAPHOS, Theo",
+        "JOSHI, Hitendra K.",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven",
+        "FREGON, Matt",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1504",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7eac0f08-ef9e-4f3c-8153-4ef5729fa74d%2Fliberal_multiple_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ZOGRAPHOS, Theo",
+        "JOSHI, Hitendra K.",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven",
+        "FREGON, Matt",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1327",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ZOGRAPHOS, Theo",
+        "JOSHI, Hitendra K.",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven",
+        "FREGON, Matt",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1339",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ff606a94-4109-4fe0-8719-f8778c48deae%2Fliberal_combined_smr%20ashwood_smr%20hawthorn_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ZOGRAPHOS, Theo",
+        "JOSHI, Hitendra K.",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven",
+        "FREGON, Matt",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1343",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4d662f32-b0e3-43e0-9d44-1fb439bfb3d7%2Fliberal_combined_smr%20ashwood_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ZOGRAPHOS, Theo",
+        "JOSHI, Hitendra K.",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven",
+        "FREGON, Matt",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1249",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=25eda5de-717b-4547-a3de-0c2f83414e85%2Fliberal_combined_smr%20ashwood_nemr%20box%20hill_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ZOGRAPHOS, Theo",
+        "JOSHI, Hitendra K.",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven",
+        "FREGON, Matt",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1508",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef298e7a-1371-41f2-a9a0-ed8f2eb25360%2Fliberal_multiple_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ZOGRAPHOS, Theo",
+        "JOSHI, Hitendra K.",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven",
+        "FREGON, Matt",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1512",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8d451e6-5d8a-43a1-9577-8481a2ccdc56%2Fliberal_multiple_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ZOGRAPHOS, Theo",
+        "JOSHI, Hitendra K.",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven",
+        "FREGON, Matt",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1513",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f6f69e90-716d-4ff5-8422-2a0f36601988%2Fliberal_multiple_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ZOGRAPHOS, Theo",
+        "JOSHI, Hitendra K.",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven",
+        "FREGON, Matt",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1580",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=803ee1af-cd47-46f5-86a0-cf32d2d650d4%2Fliberal_combined_smr%20ashwood_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ZOGRAPHOS, Theo",
+        "JOSHI, Hitendra K.",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven",
+        "FREGON, Matt",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1585",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=acdc03ef-80e7-48b7-b6e5-c1ac2e1559ed%2Fliberal_combined_smr%20ashwood_nemr%20box%20hill_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ZOGRAPHOS, Theo",
+        "JOSHI, Hitendra K.",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven",
+        "FREGON, Matt",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1647",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=68bf6361-dd49-4377-97b9-268d25ed38a8%2Fliberal_combined_smr%20ashwood_6.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ZOGRAPHOS, Theo",
+        "JOSHI, Hitendra K.",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven",
+        "FREGON, Matt",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "882",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d27d1c00-b349-4ac8-a9db-e4ee0f1723e8%2Fonv%20-%20combined%20-%20southern%20metropolitan%20region%20-%20ashwood%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MITCHELL, Steven",
+        "UWIMANA, Enid",
+        "ZOGRAPHOS, Theo",
+        "FREGON, Matt",
+        "JOSHI, Hitendra K.",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 3,
+        "ALP": 4,
+        "GRN": 6
+      }
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MITCHELL, Steven",
+        "UWIMANA, Enid",
+        "ZOGRAPHOS, Theo",
+        "FREGON, Matt",
+        "JOSHI, Hitendra K.",
+        "RANDALL, Tim",
+        "VAN DER EYNDEN, Jacob"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 3,
+        "ALP": 4,
+        "GRN": 6
+      }
+    },
+    {
+      "registration": "327",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=969b1449-e1e3-438d-bbbf-e3e4c8b6ac6f%2Fvictorian%20socialists%20combined%20southern%20metropolitan%20ashwood%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "VAN DER EYNDEN, Jacob",
+        "RANDALL, Tim",
+        "FREGON, Matt",
+        "JOSHI, Hitendra K.",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 3,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1031",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a5f41e15-b2b3-4893-89d9-47cc29d091ea%2Fvs_sm_combined%20all_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "VAN DER EYNDEN, Jacob",
+        "RANDALL, Tim",
+        "FREGON, Matt",
+        "JOSHI, Hitendra K.",
+        "ZOGRAPHOS, Theo",
+        "UWIMANA, Enid",
+        "MITCHELL, Steven"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 3,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "700",
+      "registered_by": "Victorian Trades Hall Council",
+      "kind": "non_candidate",
+      "party": null,
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b89a1a31-59e7-4015-a0d6-1c596b45ce7a%2Fashwood%20-%20boland%20claire%20victorian%20trades%20hall%20council%20-%20htvc.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "704",
+      "registered_by": "Chisholm Climate Action Network",
+      "kind": "non_candidate",
+      "party": null,
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=29338e9d-4e3d-478e-b9ee-ece32b3bcde4%2Fashwood%20-%20greg%20davies%20chisholm%20climate%20action%20network%20-%20htvc4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "13",
+      "registered_by": "JOSHI, Hitendra K.",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "ashwood/hitendra-k-joshi",
+      "type": "Single",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=909444df-d6a5-4f52-b69b-c31683aac16c%2Fjoshi%2C%20hitendra%20k..pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "230",
+      "registered_by": "JOSHI, Hitendra K.",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "ashwood/hitendra-k-joshi",
+      "type": "Single",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=001f0ca5-1b43-478c-ae7f-e281d10df550%2Fjoshi%2C%20hitendra%20k..pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "partial",
+      "order": [
+        "JOSHI, Hitendra K."
+      ],
+      "via": "text"
+    }
+  ],
+  "no_card": []
+}

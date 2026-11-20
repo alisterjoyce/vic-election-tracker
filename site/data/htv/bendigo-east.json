@@ -1,0 +1,772 @@
+{
+  "area": "bendigo-east",
+  "house": "lower",
+  "name": "Bendigo East",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "JOHN, Des",
+      "name": "Des John",
+      "party": "FF",
+      "party_label": "Family First",
+      "ballot_position": 1,
+      "id": "bendigo-east/des-john"
+    },
+    {
+      "ballot_name": "DUNN, Bonnie",
+      "name": "Bonnie Dunn",
+      "party": "AJP",
+      "party_label": "Animal Justice Party",
+      "ballot_position": 2,
+      "id": "bendigo-east/bonnie-dunn"
+    },
+    {
+      "ballot_name": "NORSEN, Denali",
+      "name": "Denali Norsen",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 3,
+      "id": "bendigo-east/denali-norsen"
+    },
+    {
+      "ballot_name": "HAWKEN, Cheryl",
+      "name": "Cheryl Hawken",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 4,
+      "id": "bendigo-east/cheryl-hawken"
+    },
+    {
+      "ballot_name": "LETHLEAN, Andrew",
+      "name": "Andrew Lethlean",
+      "party": "NAT",
+      "party_label": "The Nationals",
+      "ballot_position": 5,
+      "id": "bendigo-east/andrew-lethlean"
+    },
+    {
+      "ballot_name": "WRIGHT, Liz",
+      "name": "Liz Wright",
+      "party": "IND",
+      "ballot_position": 6,
+      "id": "bendigo-east/liz-wright"
+    },
+    {
+      "ballot_name": "HOSKINS, Kristie",
+      "name": "Kristie Hoskins",
+      "party": "IND",
+      "ballot_position": 7,
+      "id": "bendigo-east/kristie-hoskins"
+    },
+    {
+      "ballot_name": "RICKWOOD, Tim",
+      "name": "Tim Rickwood",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 8,
+      "id": "bendigo-east/tim-rickwood"
+    },
+    {
+      "ballot_name": "TOLHURST, Michael",
+      "name": "Michael Tolhurst",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 9,
+      "id": "bendigo-east/michael-tolhurst"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "1018",
+      "registered_by": "Animal Justice Party",
+      "kind": "party",
+      "party": "AJP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=bf99a550-3c5d-4254-95c0-b300b9b2f38c%2Fnv%202026-11-11%20-%20bendigo%20east.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "95",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=88ca8b41-bd06-4f42-b8af-0f3f2a196927%2Falp_combined_nv%20bendigo%20east_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RICKWOOD, Tim",
+        "TOLHURST, Michael",
+        "DUNN, Bonnie",
+        "NORSEN, Denali",
+        "WRIGHT, Liz",
+        "LETHLEAN, Andrew",
+        "HOSKINS, Kristie",
+        "JOHN, Des",
+        "HAWKEN, Cheryl"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 6,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "338",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2c4e999b-f417-45af-837f-5bb268c0bd77%2Falp_combined_nv_bendigo%20east_bendigo%20west_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RICKWOOD, Tim",
+        "TOLHURST, Michael",
+        "DUNN, Bonnie",
+        "NORSEN, Denali",
+        "WRIGHT, Liz",
+        "LETHLEAN, Andrew",
+        "HOSKINS, Kristie",
+        "JOHN, Des",
+        "HAWKEN, Cheryl"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 6,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RICKWOOD, Tim",
+        "TOLHURST, Michael",
+        "DUNN, Bonnie",
+        "NORSEN, Denali",
+        "WRIGHT, Liz",
+        "LETHLEAN, Andrew",
+        "HOSKINS, Kristie",
+        "JOHN, Des",
+        "HAWKEN, Cheryl"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 6,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "906",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=000ad02c-e440-40ec-b8a9-39de752aeb6c%2Falp_combined_nv%20bendigo%20east%20bendigo%20west_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RICKWOOD, Tim",
+        "TOLHURST, Michael",
+        "DUNN, Bonnie",
+        "NORSEN, Denali",
+        "WRIGHT, Liz",
+        "LETHLEAN, Andrew",
+        "HOSKINS, Kristie",
+        "JOHN, Des",
+        "HAWKEN, Cheryl"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 6,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "738",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a4976a3f-4a02-4f2b-9567-3a045ad899ec%2Ffamilyfirst_beneast_version2%20%28dragged%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "JOHN, Des",
+        "HAWKEN, Cheryl",
+        "LETHLEAN, Andrew",
+        "HOSKINS, Kristie",
+        "WRIGHT, Liz",
+        "RICKWOOD, Tim",
+        "DUNN, Bonnie",
+        "TOLHURST, Michael",
+        "NORSEN, Denali"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 3,
+        "ALP": 6,
+        "GRN": 8
+      }
+    },
+    {
+      "registration": "1135",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f74d6a92-ec67-4f60-b6fa-e8c5b16687d6%2Fthe%20greens%20combined%20northern%20victoria%20euroa%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TOLHURST, Michael",
+        "DUNN, Bonnie",
+        "HOSKINS, Kristie",
+        "NORSEN, Denali",
+        "WRIGHT, Liz",
+        "RICKWOOD, Tim",
+        "LETHLEAN, Andrew",
+        "JOHN, Des",
+        "HAWKEN, Cheryl"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 6,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1144",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=19845e76-c6ec-4c94-baa1-e406b3470830%2Fthe%20greens%20combined%20northern%20victoria%20bendigo%20west%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TOLHURST, Michael",
+        "DUNN, Bonnie",
+        "HOSKINS, Kristie",
+        "NORSEN, Denali",
+        "WRIGHT, Liz",
+        "RICKWOOD, Tim",
+        "LETHLEAN, Andrew",
+        "JOHN, Des",
+        "HAWKEN, Cheryl"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 6,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1147",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=92784b14-84fe-484a-bdd8-c3149d3cb1d8%2Fthe%20greens%20combined%20northern%20victoria%20bendigo%20west%20bendigo%20east%202%20.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1155",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c1819269-ccd5-4cce-82b9-b6236088597a%2Fthe%20greens%20combined%20northern%20victoria%20euroa%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TOLHURST, Michael",
+        "DUNN, Bonnie",
+        "HOSKINS, Kristie",
+        "NORSEN, Denali",
+        "WRIGHT, Liz",
+        "RICKWOOD, Tim",
+        "LETHLEAN, Andrew",
+        "JOHN, Des",
+        "HAWKEN, Cheryl"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 6,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1166",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=52b04f59-de7c-4b00-969b-e5bf08857355%2Fthe%20greens%20combined%20northern%20victoria%20murray%20plains%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TOLHURST, Michael",
+        "DUNN, Bonnie",
+        "HOSKINS, Kristie",
+        "NORSEN, Denali",
+        "WRIGHT, Liz",
+        "RICKWOOD, Tim",
+        "LETHLEAN, Andrew",
+        "JOHN, Des",
+        "HAWKEN, Cheryl"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 6,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1170",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d035ace9-aebf-4b37-b3c3-951b28a2952b%2Fthe%20greens%20combined%20northern%20victoria%20bendigo%20west%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TOLHURST, Michael",
+        "DUNN, Bonnie",
+        "HOSKINS, Kristie",
+        "NORSEN, Denali",
+        "WRIGHT, Liz",
+        "RICKWOOD, Tim",
+        "LETHLEAN, Andrew",
+        "JOHN, Des",
+        "HAWKEN, Cheryl"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 6,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1174",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=da0e074a-2657-439f-aedd-6a4b753319cd%2Fthe%20greens%20combined%20northern%20victoria%20bendigo%20east%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TOLHURST, Michael",
+        "DUNN, Bonnie",
+        "HOSKINS, Kristie",
+        "NORSEN, Denali",
+        "WRIGHT, Liz",
+        "RICKWOOD, Tim",
+        "LETHLEAN, Andrew",
+        "JOHN, Des",
+        "HAWKEN, Cheryl"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 6,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1175",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=137d1eb3-1c6f-4e3f-924e-bc8694e82692%2Fthe%20greens%20combined%20northern%20victoria%20macedon%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TOLHURST, Michael",
+        "DUNN, Bonnie",
+        "HOSKINS, Kristie",
+        "NORSEN, Denali",
+        "WRIGHT, Liz",
+        "RICKWOOD, Tim",
+        "LETHLEAN, Andrew",
+        "JOHN, Des",
+        "HAWKEN, Cheryl"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 6,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1177",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5a93bcb3-2919-482e-ba0a-2eca4f6e378e%2Fthe%20greens%20combined%20western%20victoria%20ripon%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TOLHURST, Michael",
+        "DUNN, Bonnie",
+        "HOSKINS, Kristie",
+        "NORSEN, Denali",
+        "WRIGHT, Liz",
+        "RICKWOOD, Tim",
+        "LETHLEAN, Andrew",
+        "JOHN, Des",
+        "HAWKEN, Cheryl"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 6,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1179",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e362f539-2e59-4ee7-beb9-cb982f447a9f%2Fthe%20greens%20combined%20northern%20victoria%20bendigo%20east%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TOLHURST, Michael",
+        "DUNN, Bonnie",
+        "HOSKINS, Kristie",
+        "NORSEN, Denali",
+        "WRIGHT, Liz",
+        "RICKWOOD, Tim",
+        "LETHLEAN, Andrew",
+        "JOHN, Des",
+        "HAWKEN, Cheryl"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 6,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TOLHURST, Michael",
+        "DUNN, Bonnie",
+        "HOSKINS, Kristie",
+        "NORSEN, Denali",
+        "WRIGHT, Liz",
+        "RICKWOOD, Tim",
+        "LETHLEAN, Andrew",
+        "JOHN, Des",
+        "HAWKEN, Cheryl"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 6,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "466",
+      "registered_by": "The Nationals",
+      "kind": "party",
+      "party": "NAT",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=0b600c29-8b8e-4d98-8d95-b9d2afda87ae%2Fbendigo%20east%20andrew%20lethlean%20htv%20vec%20no%20trims.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "465",
+      "registered_by": "The Nationals",
+      "kind": "party",
+      "party": "NAT",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d595f20b-4ffd-4556-ac63-5472d5971ef9%2Fnationals_combined_htvc_a4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1562",
+      "registered_by": "The Nationals",
+      "kind": "party",
+      "party": "NAT",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-18",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=479dbc4c-1e73-4414-9656-1400fe0b5aa0%2Fstatewide_htv_a3_rogueprint%20%281%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LETHLEAN, Andrew",
+        "WRIGHT, Liz",
+        "JOHN, Des",
+        "HAWKEN, Cheryl",
+        "HOSKINS, Kristie",
+        "RICKWOOD, Tim",
+        "TOLHURST, Michael",
+        "DUNN, Bonnie",
+        "NORSEN, Denali"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1563",
+      "registered_by": "The Nationals",
+      "kind": "party",
+      "party": "NAT",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-18",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c746180f-abd2-415a-af6a-6d1945154359%2Fbendigo_joint_htvc.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1608",
+      "registered_by": "The Nationals",
+      "kind": "party",
+      "party": "NAT",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5d60bb6a-6e99-41b5-b8e9-7b79e8b07786%2Fbendigo_joint_htvc%20with%20logos.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "867",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=624a6868-f063-4167-b128-8fa721194b96%2Fonv%20-%20combined%20-%20northern%20victoria%20region%20-%20bendigo%20east%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HAWKEN, Cheryl",
+        "JOHN, Des",
+        "LETHLEAN, Andrew",
+        "WRIGHT, Liz",
+        "HOSKINS, Kristie",
+        "RICKWOOD, Tim",
+        "TOLHURST, Michael",
+        "DUNN, Bonnie",
+        "NORSEN, Denali"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 3,
+        "ALP": 6,
+        "GRN": 7
+      }
+    },
+    {
+      "registration": "311",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8e7524d0-6a63-4a05-a21c-bfc93e2cd3a0%2Fvictorian%20socialists%20combined%20northern%20victoria%20bendigo%20east%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NORSEN, Denali",
+        "TOLHURST, Michael",
+        "DUNN, Bonnie",
+        "RICKWOOD, Tim",
+        "WRIGHT, Liz",
+        "HOSKINS, Kristie",
+        "LETHLEAN, Andrew",
+        "JOHN, Des",
+        "HAWKEN, Cheryl"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1026",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=cb0419bd-cc93-4b44-9a29-72bda72505e3%2Fvs_nv_combined%20all_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NORSEN, Denali",
+        "TOLHURST, Michael",
+        "DUNN, Bonnie",
+        "RICKWOOD, Tim",
+        "WRIGHT, Liz",
+        "HOSKINS, Kristie",
+        "LETHLEAN, Andrew",
+        "JOHN, Des",
+        "HAWKEN, Cheryl"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1121",
+      "registered_by": "WRIGHT, Liz",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "bendigo-east/liz-wright",
+      "type": "Single",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=30052da0-1bfd-41ad-b0f0-9d5569cf87ef%2Fbendigo%20east%20-%20wright%2C%20liz%20-%20htvc%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    }
+  ],
+  "no_card": [
+    "HOSKINS, Kristie"
+  ]
+}

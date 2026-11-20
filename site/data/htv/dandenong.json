@@ -1,0 +1,1484 @@
+{
+  "area": "dandenong",
+  "house": "lower",
+  "name": "Dandenong",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "BILLINGS, William",
+      "name": "William Billings",
+      "party": "LIB",
+      "party_label": "Liberal",
+      "ballot_position": 1,
+      "id": "dandenong/william-billings"
+    },
+    {
+      "ballot_name": "McMAHON, Jack",
+      "name": "Jack McMahon",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 2,
+      "id": "dandenong/jack-mcmahon"
+    },
+    {
+      "ballot_name": "KHAN, Arshad Ali",
+      "name": "Arshad Ali Khan",
+      "party": "IND",
+      "ballot_position": 3,
+      "id": "dandenong/arshad-ali-khan"
+    },
+    {
+      "ballot_name": "HARVEY, Jacqueline",
+      "name": "Jacqueline Harvey",
+      "party": "FF",
+      "party_label": "Family First",
+      "ballot_position": 4,
+      "id": "dandenong/jacqueline-harvey"
+    },
+    {
+      "ballot_name": "WILLIAMS, Gabrielle",
+      "name": "Gabrielle Williams",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 5,
+      "id": "dandenong/gabrielle-williams"
+    },
+    {
+      "ballot_name": "FORTE, Jordan",
+      "name": "Jordan Forte",
+      "party": "LBT",
+      "party_label": "Libertarian (formerly Liberal Democrats)",
+      "ballot_position": 6,
+      "id": "dandenong/jordan-forte"
+    },
+    {
+      "ballot_name": "D'ARCY, Catherine",
+      "name": "Catherine D'Arcy",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 7,
+      "id": "dandenong/catherine-d-arcy"
+    },
+    {
+      "ballot_name": "WRIGHT, Glenda",
+      "name": "Glenda Wright",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 8,
+      "id": "dandenong/glenda-wright"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "64",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6e618c9a-a6a9-4bb3-b170-8f7984858294%2Falp_combined_sem%20dandenong_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WILLIAMS, Gabrielle",
+        "D'ARCY, Catherine",
+        "KHAN, Arshad Ali",
+        "McMAHON, Jack",
+        "FORTE, Jordan",
+        "BILLINGS, William",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 6,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "356",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=37f46a1a-da1f-478e-a474-1f28dbf61297%2Falp_combined_sem_dandenong_narre%20warren%20north_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WILLIAMS, Gabrielle",
+        "D'ARCY, Catherine",
+        "KHAN, Arshad Ali",
+        "McMAHON, Jack",
+        "FORTE, Jordan",
+        "BILLINGS, William",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 6,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "368",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=0efa5bf4-01b8-42ce-ba45-fc8a60c70d81%2Falp_combined_sem_dandenong_rowville_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WILLIAMS, Gabrielle",
+        "D'ARCY, Catherine",
+        "KHAN, Arshad Ali",
+        "McMAHON, Jack",
+        "FORTE, Jordan",
+        "BILLINGS, William",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 6,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "761",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=87c6fee3-2ab4-4262-a4ca-d297aeff0a20%2Falp_combined_sem_dandenong_mulgrave_tr1_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WILLIAMS, Gabrielle",
+        "D'ARCY, Catherine",
+        "KHAN, Arshad Ali",
+        "McMAHON, Jack",
+        "FORTE, Jordan",
+        "BILLINGS, William",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 6,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "771",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=83514f21-b1a2-4f1a-87f8-7607921b07c1%2Falp_combined_sem_clarinda_dandenong_tr1_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WILLIAMS, Gabrielle",
+        "D'ARCY, Catherine",
+        "KHAN, Arshad Ali",
+        "McMAHON, Jack",
+        "FORTE, Jordan",
+        "BILLINGS, William",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 6,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "783",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebf9571d-772b-4db5-b891-0d1ae6504939%2Falp_combined_sem_clarinda_dandenong_mordialloc_tr1_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WILLIAMS, Gabrielle",
+        "D'ARCY, Catherine",
+        "KHAN, Arshad Ali",
+        "McMAHON, Jack",
+        "FORTE, Jordan",
+        "BILLINGS, William",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 6,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "792",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4e4a7c1f-8edb-46f1-b808-4588aaad97b7%2Falp_combined_sem_dandenong_tr1_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WILLIAMS, Gabrielle",
+        "D'ARCY, Catherine",
+        "KHAN, Arshad Ali",
+        "McMAHON, Jack",
+        "FORTE, Jordan",
+        "BILLINGS, William",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 6,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WILLIAMS, Gabrielle",
+        "D'ARCY, Catherine",
+        "KHAN, Arshad Ali",
+        "McMAHON, Jack",
+        "FORTE, Jordan",
+        "BILLINGS, William",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 6,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "543",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=50f49ad2-f355-486b-9ceb-1a7abee6c669%2Ffamilyfirst_mordi-dandenong_version%201%20amended.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HARVEY, Jacqueline",
+        "FORTE, Jordan",
+        "WRIGHT, Glenda",
+        "BILLINGS, William",
+        "KHAN, Arshad Ali",
+        "D'ARCY, Catherine",
+        "McMAHON, Jack",
+        "WILLIAMS, Gabrielle"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 3,
+        "LNP": 4,
+        "GRN": 6,
+        "ALP": 8
+      }
+    },
+    {
+      "registration": "911",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f74cd502-2c81-4d48-a54b-c7ab1f412269%2Fthe%20greens%20combined%20south-east%20metro%20clarinda%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "D'ARCY, Catherine",
+        "McMAHON, Jack",
+        "WILLIAMS, Gabrielle",
+        "BILLINGS, William",
+        "KHAN, Arshad Ali",
+        "FORTE, Jordan",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "909",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f12ebbef-5536-4069-8293-0a25600c41b6%2Fthe%20greens%20combined%20south-east%20metro%20narre%20warren%20north%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "D'ARCY, Catherine",
+        "McMAHON, Jack",
+        "WILLIAMS, Gabrielle",
+        "BILLINGS, William",
+        "KHAN, Arshad Ali",
+        "FORTE, Jordan",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "926",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c0d31273-bd90-4241-b954-e56525e7b367%2Fthe%20greens%20combined%20south-east%20metro%20dandenong%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "D'ARCY, Catherine",
+        "McMAHON, Jack",
+        "WILLIAMS, Gabrielle",
+        "BILLINGS, William",
+        "KHAN, Arshad Ali",
+        "FORTE, Jordan",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "954",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e94f0a71-765b-4991-b25e-052f9491df83%2Fthe%20greens%20combined%20south-east%20metro%20rowville%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "D'ARCY, Catherine",
+        "McMAHON, Jack",
+        "WILLIAMS, Gabrielle",
+        "BILLINGS, William",
+        "KHAN, Arshad Ali",
+        "FORTE, Jordan",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "996",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9a9a408e-c894-4da6-b366-e247e5c1948d%2Fthe%20greens%20combined%20south-east%20metro%20narre%20warren%20south%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "D'ARCY, Catherine",
+        "McMAHON, Jack",
+        "WILLIAMS, Gabrielle",
+        "BILLINGS, William",
+        "KHAN, Arshad Ali",
+        "FORTE, Jordan",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1001",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e2a504ef-101f-4012-9912-5a5c41c985dc%2Fthe%20greens%20combined%20south-east%20metro%20mulgrave%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "D'ARCY, Catherine",
+        "McMAHON, Jack",
+        "WILLIAMS, Gabrielle",
+        "BILLINGS, William",
+        "KHAN, Arshad Ali",
+        "FORTE, Jordan",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1002",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fde3c880-ea20-4bf5-99bc-5e4105c0d9ef%2Fthe%20greens%20combined%20south-east%20metro%20mordialloc%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "D'ARCY, Catherine",
+        "McMAHON, Jack",
+        "WILLIAMS, Gabrielle",
+        "BILLINGS, William",
+        "KHAN, Arshad Ali",
+        "FORTE, Jordan",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1107",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2763f284-2e2b-4c39-a735-7f7e0c4191b4%2Fthe%20greens%20combined%20south-eastern%20metro%20carrum%20frankston1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "D'ARCY, Catherine",
+        "McMAHON, Jack",
+        "WILLIAMS, Gabrielle",
+        "BILLINGS, William",
+        "KHAN, Arshad Ali",
+        "FORTE, Jordan",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1112",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b2370ec9-b872-4e2c-bea4-07ea932c3d5b%2Fthe%20greens%20combined%20south-eastern%20metro%20north-eastern%20metro%20rowville%20bayswater%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "D'ARCY, Catherine",
+        "McMAHON, Jack",
+        "WILLIAMS, Gabrielle",
+        "BILLINGS, William",
+        "KHAN, Arshad Ali",
+        "FORTE, Jordan",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1114",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e7993ea1-98e1-47a7-a6fb-fc0164411f74%2Fthe%20greens%20combined%20dandenong%20mordialloc%20clarinda%20south-eastern%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "D'ARCY, Catherine",
+        "McMAHON, Jack",
+        "WILLIAMS, Gabrielle",
+        "BILLINGS, William",
+        "KHAN, Arshad Ali",
+        "FORTE, Jordan",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1157",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fc47539a-2bf1-47b8-a04d-f5e67f1ff04f%2Fthe%20greens%20combined%20cranbourne%20narre%20warren%20south%20carrum%20south-eastern%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "D'ARCY, Catherine",
+        "McMAHON, Jack",
+        "WILLIAMS, Gabrielle",
+        "BILLINGS, William",
+        "KHAN, Arshad Ali",
+        "FORTE, Jordan",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "D'ARCY, Catherine",
+        "McMAHON, Jack",
+        "WILLIAMS, Gabrielle",
+        "BILLINGS, William",
+        "KHAN, Arshad Ali",
+        "FORTE, Jordan",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1363",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=306e2814-4746-4d74-9fb9-4ecdc125a4e4%2F1363%20the%20greens%20combined%20mulgrave%20dandenong%20clarinda%20south-eastern%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "D'ARCY, Catherine",
+        "McMAHON, Jack",
+        "WILLIAMS, Gabrielle",
+        "BILLINGS, William",
+        "KHAN, Arshad Ali",
+        "FORTE, Jordan",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1506",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8036686d-a05d-49f4-9ab5-0e83c749f7ea%2Fthe%20greens%20combined%20south-eastern%20metro%20simplified%20chinese%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "D'ARCY, Catherine",
+        "McMAHON, Jack",
+        "WILLIAMS, Gabrielle",
+        "BILLINGS, William",
+        "KHAN, Arshad Ali",
+        "FORTE, Jordan",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1509",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=00c53f08-bcfc-461f-80b9-674bc9a9e669%2Fthe%20greens%20combined%20south-eastern%20metro%20vietnamese%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "D'ARCY, Catherine",
+        "McMAHON, Jack",
+        "WILLIAMS, Gabrielle",
+        "BILLINGS, William",
+        "KHAN, Arshad Ali",
+        "FORTE, Jordan",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1550",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-18",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=358471e6-653f-4281-b7de-6e76704ae1b3%2Fthe%20greens%20combined%20south-eastern%20metro%20hazeragi%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "D'ARCY, Catherine",
+        "McMAHON, Jack",
+        "WILLIAMS, Gabrielle",
+        "BILLINGS, William",
+        "KHAN, Arshad Ali",
+        "FORTE, Jordan",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1545",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=bdbdccbf-8c6b-4876-8388-c766041a35e4%2Fthe%20greens%20combined%20south-eastern%20metro%20hazeragi%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1552",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=22a6b6a9-3fa6-4e30-b01f-59b76d053fb6%2Fthe%20greens%20combined%20south-eastern%20metro%20simplified%20chinese%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1555",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=dff45eca-78f5-4564-b0c1-30b72052ed1c%2Fthe%20greens%20combined%20south-eastern%20metro%20vietnamese%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1057",
+      "registered_by": "Libertarian (formerly Liberal Democrats)",
+      "kind": "party",
+      "party": "LBT",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c9c9a345-593c-404d-a4d4-206740098843%2Fd_dandenong_forte_reg.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FORTE, Jordan",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda",
+        "BILLINGS, William",
+        "KHAN, Arshad Ali",
+        "WILLIAMS, Gabrielle",
+        "D'ARCY, Catherine",
+        "McMAHON, Jack"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 3,
+        "LNP": 4,
+        "ALP": 6,
+        "GRN": 7
+      }
+    },
+    {
+      "registration": "564",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7e05054f-75b5-41b0-9cf9-cf12dc3cd050%2Fliberal_combined_semr%20dandenong_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BILLINGS, William",
+        "HARVEY, Jacqueline",
+        "KHAN, Arshad Ali",
+        "WRIGHT, Glenda",
+        "FORTE, Jordan",
+        "WILLIAMS, Gabrielle",
+        "D'ARCY, Catherine",
+        "McMAHON, Jack"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "650",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=543377eb-5ea2-4c60-b769-6598ddc1d683%2Fliberal_combined_semr%20dandenong_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BILLINGS, William",
+        "HARVEY, Jacqueline",
+        "KHAN, Arshad Ali",
+        "WRIGHT, Glenda",
+        "FORTE, Jordan",
+        "WILLIAMS, Gabrielle",
+        "D'ARCY, Catherine",
+        "McMAHON, Jack"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1223",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a12bb98a-59a1-4214-b9e7-17f3d037ef44%2Fliberal_combined_semr%20clarinda_semr%20dandenong_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BILLINGS, William",
+        "HARVEY, Jacqueline",
+        "KHAN, Arshad Ali",
+        "WRIGHT, Glenda",
+        "FORTE, Jordan",
+        "WILLIAMS, Gabrielle",
+        "D'ARCY, Catherine",
+        "McMAHON, Jack"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1227",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=566e53a3-3565-4804-870e-bd644acbc4a0%2Fliberal_combined_semr%20clarinda_semr%20mordialloc_semr%20dandenong_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BILLINGS, William",
+        "HARVEY, Jacqueline",
+        "KHAN, Arshad Ali",
+        "WRIGHT, Glenda",
+        "FORTE, Jordan",
+        "WILLIAMS, Gabrielle",
+        "D'ARCY, Catherine",
+        "McMAHON, Jack"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1252",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=70a54c4b-70d5-4c41-a8b6-53045a2578b2%2Fliberal_combined_semr%20dandenong_semr%20mulgrave_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BILLINGS, William",
+        "HARVEY, Jacqueline",
+        "KHAN, Arshad Ali",
+        "WRIGHT, Glenda",
+        "FORTE, Jordan",
+        "WILLIAMS, Gabrielle",
+        "D'ARCY, Catherine",
+        "McMAHON, Jack"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1254",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d0602838-864e-442c-a041-bff1deffe0a3%2Fliberal_combined_semr%20dandenong_semr%20narre%20warren%20north_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BILLINGS, William",
+        "HARVEY, Jacqueline",
+        "KHAN, Arshad Ali",
+        "WRIGHT, Glenda",
+        "FORTE, Jordan",
+        "WILLIAMS, Gabrielle",
+        "D'ARCY, Catherine",
+        "McMAHON, Jack"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1298",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=040fae5a-006a-4305-a14e-4b52c60a46c7%2Fliberal_combined_semr%20dandenong_semr%20mordialloc_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BILLINGS, William",
+        "HARVEY, Jacqueline",
+        "KHAN, Arshad Ali",
+        "WRIGHT, Glenda",
+        "FORTE, Jordan",
+        "WILLIAMS, Gabrielle",
+        "D'ARCY, Catherine",
+        "McMAHON, Jack"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1504",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7eac0f08-ef9e-4f3c-8153-4ef5729fa74d%2Fliberal_multiple_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BILLINGS, William",
+        "HARVEY, Jacqueline",
+        "KHAN, Arshad Ali",
+        "WRIGHT, Glenda",
+        "FORTE, Jordan",
+        "WILLIAMS, Gabrielle",
+        "D'ARCY, Catherine",
+        "McMAHON, Jack"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1327",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BILLINGS, William",
+        "HARVEY, Jacqueline",
+        "KHAN, Arshad Ali",
+        "WRIGHT, Glenda",
+        "FORTE, Jordan",
+        "WILLIAMS, Gabrielle",
+        "D'ARCY, Catherine",
+        "McMAHON, Jack"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1508",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef298e7a-1371-41f2-a9a0-ed8f2eb25360%2Fliberal_multiple_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BILLINGS, William",
+        "HARVEY, Jacqueline",
+        "KHAN, Arshad Ali",
+        "WRIGHT, Glenda",
+        "FORTE, Jordan",
+        "WILLIAMS, Gabrielle",
+        "D'ARCY, Catherine",
+        "McMAHON, Jack"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1512",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8d451e6-5d8a-43a1-9577-8481a2ccdc56%2Fliberal_multiple_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BILLINGS, William",
+        "HARVEY, Jacqueline",
+        "KHAN, Arshad Ali",
+        "WRIGHT, Glenda",
+        "FORTE, Jordan",
+        "WILLIAMS, Gabrielle",
+        "D'ARCY, Catherine",
+        "McMAHON, Jack"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1513",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f6f69e90-716d-4ff5-8422-2a0f36601988%2Fliberal_multiple_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BILLINGS, William",
+        "HARVEY, Jacqueline",
+        "KHAN, Arshad Ali",
+        "WRIGHT, Glenda",
+        "FORTE, Jordan",
+        "WILLIAMS, Gabrielle",
+        "D'ARCY, Catherine",
+        "McMAHON, Jack"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "873",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=466847c2-dc70-402c-aacc-881e344fbe2c%2Fonv%20-%20combined%20-%20south-eastern%20metropolitan%20region%20-%20dandenong%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WRIGHT, Glenda",
+        "HARVEY, Jacqueline",
+        "FORTE, Jordan",
+        "BILLINGS, William",
+        "WILLIAMS, Gabrielle",
+        "KHAN, Arshad Ali",
+        "D'ARCY, Catherine",
+        "McMAHON, Jack"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 4,
+        "ALP": 5,
+        "GRN": 7
+      }
+    },
+    {
+      "registration": "426",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d677c5da-c79d-4d06-85ba-5302c2b6ccc3%2Fvictorian%20socialists%20combined%20south-eastern%20metropolitan%20dandenong%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "McMAHON, Jack",
+        "D'ARCY, Catherine",
+        "WILLIAMS, Gabrielle",
+        "KHAN, Arshad Ali",
+        "BILLINGS, William",
+        "FORTE, Jordan",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 3,
+        "LNP": 5,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1029",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9f9f4d4a-36a7-4afb-84ee-6d50bbcb46b8%2Fvs_sem_combined%20all_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "McMAHON, Jack",
+        "D'ARCY, Catherine",
+        "WILLIAMS, Gabrielle",
+        "KHAN, Arshad Ali",
+        "BILLINGS, William",
+        "FORTE, Jordan",
+        "HARVEY, Jacqueline",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 3,
+        "LNP": 5,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1384",
+      "registered_by": "KHAN, Arshad Ali",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "dandenong/arshad-ali-khan",
+      "type": "Single",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=50d719b2-ce5c-4fd2-b818-d82018237b02%2Fkhan%2C%20arshad%20ali.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1385",
+      "registered_by": "KHAN, Arshad Ali",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "dandenong/arshad-ali-khan",
+      "type": "Single",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9717d05c-7648-4e0c-b244-0f9b07aaad74%2Fkhan%2C%20arshad%20ali.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KHAN, Arshad Ali",
+        "WILLIAMS, Gabrielle",
+        "BILLINGS, William",
+        "McMAHON, Jack",
+        "HARVEY, Jacqueline",
+        "FORTE, Jordan",
+        "D'ARCY, Catherine",
+        "WRIGHT, Glenda"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 2,
+        "LNP": 3,
+        "GRN": 7,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1386",
+      "registered_by": "KHAN, Arshad Ali",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "dandenong/arshad-ali-khan",
+      "type": "Single",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=51ae12dc-0f4a-41a1-9af1-268460c7a905%2Fkhan%2C%20arshad%20ali.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    }
+  ],
+  "no_card": []
+}

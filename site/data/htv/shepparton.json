@@ -1,0 +1,595 @@
+{
+  "area": "shepparton",
+  "house": "lower",
+  "name": "Shepparton",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "SALI, Shane",
+      "name": "Shane Sali",
+      "party": "NAT",
+      "party_label": "The Nationals",
+      "ballot_position": 1,
+      "id": "shepparton/shane-sali"
+    },
+    {
+      "ballot_name": "WHITE, Alison",
+      "name": "Alison White",
+      "party": "FF",
+      "party_label": "Family First",
+      "ballot_position": 2,
+      "id": "shepparton/alison-white"
+    },
+    {
+      "ballot_name": "VERNEY, Grace",
+      "name": "Grace Verney",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 3,
+      "id": "shepparton/grace-verney"
+    },
+    {
+      "ballot_name": "HOCKING, Karen",
+      "name": "Karen Hocking",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 4,
+      "id": "shepparton/karen-hocking"
+    },
+    {
+      "ballot_name": "COSTA, Lou",
+      "name": "Lou Costa",
+      "party": "IND",
+      "ballot_position": 5,
+      "id": "shepparton/lou-costa"
+    },
+    {
+      "ballot_name": "FIN, Cayla",
+      "name": "Cayla Fin",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 6,
+      "id": "shepparton/cayla-fin"
+    },
+    {
+      "ballot_name": "BRYANT, Phillip",
+      "name": "Phillip Bryant",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 7,
+      "id": "shepparton/phillip-bryant"
+    },
+    {
+      "ballot_name": "MURPHY-GINGER, Faith",
+      "name": "Faith Murphy-Ginger",
+      "party": "AJP",
+      "party_label": "Animal Justice Party",
+      "ballot_position": 8,
+      "id": "shepparton/faith-murphy-ginger"
+    },
+    {
+      "ballot_name": "VARKEY, Johnson",
+      "name": "Johnson Varkey",
+      "party": "IND",
+      "ballot_position": 9,
+      "id": "shepparton/johnson-varkey"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "1315",
+      "registered_by": "Animal Justice Party",
+      "kind": "party",
+      "party": "AJP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=47625d2d-3822-4f67-b055-27bd51b46ece%2Fnv%202026-11-11%20-%20shepparton.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "116",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8d489730-e578-4071-aadf-52449aaf9837%2Falp_combined_nv%20shepparton_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FIN, Cayla",
+        "MURPHY-GINGER, Faith",
+        "VERNEY, Grace",
+        "HOCKING, Karen",
+        "COSTA, Lou",
+        "VARKEY, Johnson",
+        "SALI, Shane",
+        "WHITE, Alison",
+        "BRYANT, Phillip"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "351",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2d349153-2d76-4bb6-86a3-55bac9fb6a05%2Falp_combined_nv_ovens%20valley_shepparton_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FIN, Cayla",
+        "MURPHY-GINGER, Faith",
+        "VERNEY, Grace",
+        "HOCKING, Karen",
+        "COSTA, Lou",
+        "VARKEY, Johnson",
+        "SALI, Shane",
+        "WHITE, Alison",
+        "BRYANT, Phillip"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FIN, Cayla",
+        "MURPHY-GINGER, Faith",
+        "VERNEY, Grace",
+        "HOCKING, Karen",
+        "COSTA, Lou",
+        "VARKEY, Johnson",
+        "SALI, Shane",
+        "WHITE, Alison",
+        "BRYANT, Phillip"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "716",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=13362347-20bf-4b44-a2ab-e43c7d2b9054%2Ffamilyfirst_shep_version2%20%28dragged%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WHITE, Alison",
+        "BRYANT, Phillip",
+        "SALI, Shane",
+        "FIN, Cayla",
+        "COSTA, Lou",
+        "VARKEY, Johnson",
+        "MURPHY-GINGER, Faith",
+        "VERNEY, Grace",
+        "HOCKING, Karen"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 3,
+        "ALP": 4,
+        "GRN": 8
+      }
+    },
+    {
+      "registration": "1111",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d0b5e9d4-77de-4bcb-af9b-f9335a463c24%2Fthe%20greens%20combined%20northern%20victoria%20shepparton%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "VERNEY, Grace",
+        "COSTA, Lou",
+        "HOCKING, Karen",
+        "MURPHY-GINGER, Faith",
+        "FIN, Cayla",
+        "VARKEY, Johnson",
+        "SALI, Shane",
+        "WHITE, Alison",
+        "BRYANT, Phillip"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1135",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f74d6a92-ec67-4f60-b6fa-e8c5b16687d6%2Fthe%20greens%20combined%20northern%20victoria%20euroa%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "VERNEY, Grace",
+        "COSTA, Lou",
+        "HOCKING, Karen",
+        "MURPHY-GINGER, Faith",
+        "FIN, Cayla",
+        "VARKEY, Johnson",
+        "SALI, Shane",
+        "WHITE, Alison",
+        "BRYANT, Phillip"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1141",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d164bc6b-6b25-4cad-8523-2fa62790d70f%2Fthe%20greens%20combined%20northern%20victoria%20ovens%20valley%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "VERNEY, Grace",
+        "COSTA, Lou",
+        "HOCKING, Karen",
+        "MURPHY-GINGER, Faith",
+        "FIN, Cayla",
+        "VARKEY, Johnson",
+        "SALI, Shane",
+        "WHITE, Alison",
+        "BRYANT, Phillip"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1155",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c1819269-ccd5-4cce-82b9-b6236088597a%2Fthe%20greens%20combined%20northern%20victoria%20euroa%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "VERNEY, Grace",
+        "COSTA, Lou",
+        "HOCKING, Karen",
+        "MURPHY-GINGER, Faith",
+        "FIN, Cayla",
+        "VARKEY, Johnson",
+        "SALI, Shane",
+        "WHITE, Alison",
+        "BRYANT, Phillip"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1166",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=52b04f59-de7c-4b00-969b-e5bf08857355%2Fthe%20greens%20combined%20northern%20victoria%20murray%20plains%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "VERNEY, Grace",
+        "COSTA, Lou",
+        "HOCKING, Karen",
+        "MURPHY-GINGER, Faith",
+        "FIN, Cayla",
+        "VARKEY, Johnson",
+        "SALI, Shane",
+        "WHITE, Alison",
+        "BRYANT, Phillip"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "VERNEY, Grace",
+        "COSTA, Lou",
+        "HOCKING, Karen",
+        "MURPHY-GINGER, Faith",
+        "FIN, Cayla",
+        "VARKEY, Johnson",
+        "SALI, Shane",
+        "WHITE, Alison",
+        "BRYANT, Phillip"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "475",
+      "registered_by": "The Nationals",
+      "kind": "party",
+      "party": "NAT",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=eb196dbd-9deb-42ea-91df-568528f466b0%2Fshepparton%20shane%20sali%20htv%20vec%20no%20trims.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "465",
+      "registered_by": "The Nationals",
+      "kind": "party",
+      "party": "NAT",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d595f20b-4ffd-4556-ac63-5472d5971ef9%2Fnationals_combined_htvc_a4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1562",
+      "registered_by": "The Nationals",
+      "kind": "party",
+      "party": "NAT",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-18",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=479dbc4c-1e73-4414-9656-1400fe0b5aa0%2Fstatewide_htv_a3_rogueprint%20%281%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SALI, Shane",
+        "WHITE, Alison",
+        "BRYANT, Phillip",
+        "VARKEY, Johnson",
+        "COSTA, Lou",
+        "FIN, Cayla",
+        "VERNEY, Grace",
+        "HOCKING, Karen",
+        "MURPHY-GINGER, Faith"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "948",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f03ca65a-8b5e-4d7f-8c81-439d894ab769%2Fonv%20-%20combined%20-%20northern%20victoria%20region%20-%20shepparton%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BRYANT, Phillip",
+        "WHITE, Alison",
+        "SALI, Shane",
+        "COSTA, Lou",
+        "VARKEY, Johnson",
+        "FIN, Cayla",
+        "VERNEY, Grace",
+        "MURPHY-GINGER, Faith",
+        "HOCKING, Karen"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 3,
+        "ALP": 6,
+        "GRN": 7
+      }
+    },
+    {
+      "registration": "345",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=88f1ce7d-df43-4d5a-813a-5c008416142d%2Fvictorian%20socialists%20combined%20northern%20victoria%20shepparton%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOCKING, Karen",
+        "VERNEY, Grace",
+        "COSTA, Lou",
+        "MURPHY-GINGER, Faith",
+        "FIN, Cayla",
+        "VARKEY, Johnson",
+        "SALI, Shane",
+        "WHITE, Alison",
+        "BRYANT, Phillip"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1026",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=cb0419bd-cc93-4b44-9a29-72bda72505e3%2Fvs_nv_combined%20all_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOCKING, Karen",
+        "VERNEY, Grace",
+        "COSTA, Lou",
+        "MURPHY-GINGER, Faith",
+        "FIN, Cayla",
+        "VARKEY, Johnson",
+        "SALI, Shane",
+        "WHITE, Alison",
+        "BRYANT, Phillip"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "456",
+      "registered_by": "Lou Costa",
+      "kind": "non_candidate",
+      "party": null,
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4238ae9f-3a60-4972-8bc6-9e6a5384f529%2Fshepparton%20-%20costa%2C%20lou%20-%20htvc.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1362",
+      "registered_by": "VARKEY, Johnson",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "shepparton/johnson-varkey",
+      "type": "Single",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e879acaf-a8a1-4076-8882-648ae9954691%2Fvarkey%2C%20johnson.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    }
+  ],
+  "no_card": [
+    "COSTA, Lou"
+  ]
+}

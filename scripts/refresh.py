@@ -36,8 +36,9 @@
   VEC's nominations pages and spreadsheet on the evening refresh (and every run
   until the ballot order is out); candidates.json and regions.json follow it,
   and any change since the last check is flagged.
-* How-to-vote cards: the VEC register (from 10 Nov 2026), recorded in htv.json;
-  preference orders are entered by hand and kept.
+* How-to-vote cards: the VEC register (from 10 Nov 2026) and each card's preference order (scripts/vec_htv.py),
+  in htv.json, htv/<seat>.json and htv/index.json;
+  orders entered by hand are kept unless a new PDF of that card reads cleanly.
 * Change log: compares the data with the previous run's (changelog_state.json)
   and records new candidates, superseded names, new polls, odds moves of 0.5
   or more, retirements and new headlines in changelog.json.
@@ -2399,124 +2400,51 @@ def refresh_vec_nominations(data_dir: Path, meta: dict, force: bool = False) -> 
 
 
 # --------------------------------------------------------------------------
-# How-to-vote cards: VEC register (opens 9 am Tue 10 Nov 2026)
+# How-to-vote cards: the VEC's register and each card's preference order (scripts/vec_htv.py)
 # --------------------------------------------------------------------------
-# The VEC lists registered cards per district/region (heading "<Name> District"
-# or "<Name> Region", then a table of registration number, registered by, date,
-# and a link to the card PDF). The fetch records each card; the preference
-# order printed on the card is entered by hand into "order" and is kept.
+# The register (registration 10-20 Nov 2026) is read at every refresh: ~96 requests, one a second. A card's PDF
+# is read once, when it first appears or when the VEC replaces it (a new link); at most HTV_MAX_NEW a run, the
+# rest next run. PDF text reading needs pdfplumber (requirements.txt); OCR for image-only cards is optional
+# (rapidocr-onnxruntime, not installed on the runner: such cards stay "unreadable, see card").
 
-VEC_HTV_URL = "https://www.vec.vic.gov.au/candidates-and-parties/become-a-state-election-candidate/how-to-vote-cards"
-HTV_OPENS = "2026-11-10"
-HTV_SCHEMA = {
-    "description": "How-to-vote cards registered with the VEC for the 2026 election. scripts/refresh.py checks the VEC's "
-                   "register four times a day and records each card; the preference order on each card is entered by hand from the "
-                   "card PDF and is never overwritten.",
-    "fields": {
-        "status": "not_open (before registration opens) | open (register live, cards listed) | open_no_cards",
-        "registration_opens": "YYYY-MM-DD registration opens (9 am)",
-        "source_url": "The VEC how-to-vote card page",
-        "last_checked": "ISO UTC time of the last successful check",
-        "cards": "[{house: lower|upper, district or region (id), registered_by (as listed by the VEC), party (code or null), "
-                 "candidate (independents: name as listed), registration (VEC number), registered_on (YYYY-MM-DD), card_url, "
-                 "order (party codes or candidate names in the card's preference order, first to last; null until entered), notes}]",
-    },
-}
-
-
-def _vec_party(label: str) -> str | None:
-    if re.match(r"^[A-Z'\- ]+,\s", label):   # "SURNAME, Given": an individual
-        return None
-    return _abc_party(label) or _party_code(label)
-
-
-def parse_vec_htv(page: str, districts: dict[str, str], regions: dict[str, str]) -> list[dict]:
-    """Cards from a VEC register page; empty if it has no district/region tables."""
-    doc = lxml.html.fromstring(page)
-    cards = []
-    for h in doc.xpath("//h2|//h3"):
-        title = clean_text(h.text_content())
-        m = re.match(r"(.+?)\s+(District|Region)$", title)
-        if not m:
-            continue
-        house, names = ("lower", districts) if m.group(2) == "District" else ("upper", regions)
-        seat = names.get(m.group(1).lower())
-        table = h.xpath("following::table[1]")
-        if not seat or not table:
-            continue
-        for tr in table[0].xpath(".//tr[td]"):
-            cells = [clean_text(td.text_content()) for td in tr.xpath("./td")]
-            link = tr.xpath(".//a/@href")
-            if len(cells) < 3 or not cells[1]:
-                continue
-            when = parse_date_range(cells[2], date.today().year)
-            party = _vec_party(cells[1])
-            cards.append({
-                "house": house, ("district" if house == "lower" else "region"): seat,
-                "registered_by": cells[1], "party": party,
-                "candidate": cells[1] if party is None and "," in cells[1] else None,
-                "registration": cells[0], "registered_on": when[1].isoformat() if when else None,
-                "card_url": link[0] if link else None, "order": None,
-            })
-    return cards
+HTV_MAX_NEW = 40   # a few seconds each (download and read); the rest wait for the next run
+HTV_PDF_DIR = Path(__file__).resolve().parent.parent / "website samples and summary (complete set)" / "htv-2026"
 
 
 def refresh_htv(data_dir: Path, meta: dict) -> bool:
-    source = meta.setdefault("sources", {}).setdefault("htv", {"url": VEC_HTV_URL})
+    import vec_htv as vh   # same folder (scripts/)
+    source = meta.setdefault("sources", {}).setdefault("htv", {})
+    source["url"] = vh.REGISTER_PAGE
     path = data_dir / "htv.json"
-    existing = read_json(path, {}) or {}
-    data = {"_schema": HTV_SCHEMA, "status": existing.get("status", "not_open"), "registration_opens": HTV_OPENS,
-            "source_url": VEC_HTV_URL, "last_checked": existing.get("last_checked"), "cards": existing.get("cards", [])}
-    districts = {d["name"].lower(): d["id"] for d in (read_json(data_dir / "districts.json", {}) or {}).get("districts", [])}
-    regions = {r["name"].lower(): r["id"] for r in (read_json(data_dir / "regions.json", {}) or {}).get("regions", [])}
+    before = {k: v for k, v in (read_json(path, {}) or {}).items() if k not in ("last_checked",)}
     today = datetime.now(MELBOURNE).date().isoformat()
+    # PDFs are kept in the git-ignored samples folder when it exists (a local run), so they're read only once.
+    pdf_dir = HTV_PDF_DIR if HTV_PDF_DIR.parent.exists() and not os.environ.get("GITHUB_ACTIONS") else None
     try:
-        web = PoliteSession()
-        robots = urllib.robotparser.RobotFileParser()
-        robots.parse(web.get("https://www.vec.vic.gov.au/robots.txt").splitlines())
-        if not robots.can_fetch(ABC_USER_AGENT, VEC_HTV_URL):
-            raise ValueError("robots.txt disallows the VEC how-to-vote page")
-        page = web.get(VEC_HTV_URL)
-        cards = parse_vec_htv(page, districts, regions)
-        if not cards:
-            # The 2026 register may be its own page, linked from this one (earlier events are "archive" pages).
-            doc = lxml.html.fromstring(page)
-            for a in doc.xpath("//a[@href]"):
-                href, text = a.get("href"), clean_text(a.text_content())
-                if "2026" in text and "by-election" not in text.lower() and "how-to-vote" in href and "archive" not in href:
-                    cards = parse_vec_htv(web.get(requests.compat.urljoin(VEC_HTV_URL, href)), districts, regions)
-                    if cards:
-                        break
-    except Exception as exc:  # noqa: BLE001 - keep the existing file
+        doc, changes = vh.run(data_dir, pdf_dir, write_json, today, now_iso(), max_new=HTV_MAX_NEW)
+    except Exception as exc:  # noqa: BLE001 - keep the existing files
         log.error("VEC how-to-vote check failed, keeping %s: %s", path.name, exc)
         warn_ci(f"VEC how-to-vote check failed: {exc}")
         source.update(status="error", message=str(exc)[:300])
-        if not path.exists():
-            write_json(path, data)
         return False
-
-    # Keep hand-entered orders and notes for cards already recorded.
-    def key(c):
-        return (c.get("district") or c.get("region"), c.get("registration"), c.get("registered_by"))
-    old = {key(c): c for c in data["cards"]}
-    merged = []
-    for c in cards:
-        prev = old.pop(key(c), {})
-        merged.append({**c, "order": prev.get("order"), **({"notes": prev["notes"]} if prev.get("notes") else {})})
-    merged.extend(old.values())   # never drop a card once recorded
-    data["cards"] = sorted(merged, key=lambda c: (c["house"], c.get("district") or c.get("region") or "", c.get("registered_by") or ""))
-    data["status"] = "open" if data["cards"] else ("not_open" if today < HTV_OPENS else "open_no_cards")
-    source.update(status="ok", url=VEC_HTV_URL, last_success=now_iso(),
-                  message=f"{len(data['cards'])} cards registered" if data["cards"] else f"No cards yet (status {data['status']})")
-    strip = lambda d: json.dumps({k: v for k, v in d.items() if k != "last_checked"}, sort_keys=True)
-    changed = strip(data) != strip(existing)
-    if changed or not path.exists():
-        data["last_checked"] = now_iso()
-        write_json(path, data)
-        log.info("Wrote %s (%s, %d cards)", path.name, data["status"], len(data["cards"]))
-    else:
-        log.info("%s unchanged (%s, %d cards)", path.name, data["status"], len(data["cards"]))
-    return changed
+    for ch in changes:
+        areas = ", ".join(ch["areas"][:5]) + (f" and {len(ch['areas']) - 5} more" if len(ch["areas"]) > 5 else "")
+        text = f"How-to-vote card {ch['kind']}: no. {ch['registration']} by {ch['registered_by']} ({areas})"
+        if ch.get("detail"):
+            text += f"; {ch['detail']}"
+        log.warning(text)
+        warn_ci(text)
+        run_summary(f"- {text}")
+    cov = doc["coverage"]
+    source.update(status="ok", last_success=now_iso(), changes=len(changes),
+                  message=(f"{cov['cards']} cards registered ({cov['listings']} district or region listings); "
+                           f"{cov['orders_read']} orders read, {cov['orders_unreadable']} unreadable, {doc['pending']} still to read; "
+                           f"{cov['no_card']['lower']} Assembly and {cov['no_card']['upper']} Council candidates with no card"))
+    log.info("VEC how-to-vote cards: %s", source["message"])
+    if doc["pending"]:
+        log.warning("How-to-vote cards: %d orders still to read (at most %d cards a run)", doc["pending"], HTV_MAX_NEW)
+    after = {k: v for k, v in doc.items() if k not in ("last_checked",)}
+    return json.dumps(after, sort_keys=True, default=str) != json.dumps(before, sort_keys=True, default=str)
 
 
 # --------------------------------------------------------------------------

@@ -1,0 +1,1364 @@
+{
+  "area": "frankston",
+  "house": "lower",
+  "name": "Frankston",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "KNIPE, Jeff",
+      "name": "Jeff Knipe",
+      "party": "LCV",
+      "party_label": "Legalise Cannabis Victoria",
+      "ballot_position": 1,
+      "id": "frankston/jeff-knipe"
+    },
+    {
+      "ballot_name": "KELSALL, Henry",
+      "name": "Henry Kelsall",
+      "party": "IND",
+      "ballot_position": 2,
+      "id": "frankston/henry-kelsall"
+    },
+    {
+      "ballot_name": "BARRY, Nicola",
+      "name": "Nicola Barry",
+      "party": "IND",
+      "ballot_position": 3,
+      "id": "frankston/nicola-barry"
+    },
+    {
+      "ballot_name": "NICHOLES, Peter",
+      "name": "Peter Nicholes",
+      "party": "FF",
+      "party_label": "Family First",
+      "ballot_position": 4,
+      "id": "frankston/peter-nicholes"
+    },
+    {
+      "ballot_name": "EDBROOKE, Paul",
+      "name": "Paul Edbrooke",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 5,
+      "id": "frankston/paul-edbrooke"
+    },
+    {
+      "ballot_name": "ABRAHAM, Chrysten",
+      "name": "Chrysten Abraham",
+      "party": "IND",
+      "ballot_position": 6,
+      "id": "frankston/chrysten-abraham"
+    },
+    {
+      "ballot_name": "AMBRY, Bree",
+      "name": "Bree Ambry",
+      "party": "LIB",
+      "party_label": "Liberal",
+      "ballot_position": 7,
+      "id": "frankston/bree-ambry"
+    },
+    {
+      "ballot_name": "STAFFORD, Paul",
+      "name": "Paul Stafford",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 8,
+      "id": "frankston/paul-stafford"
+    },
+    {
+      "ballot_name": "HARMAN, Julie",
+      "name": "Julie Harman",
+      "party": "AJP",
+      "party_label": "Animal Justice Party",
+      "ballot_position": 9,
+      "id": "frankston/julie-harman"
+    },
+    {
+      "ballot_name": "GOULAS, Katie",
+      "name": "Katie Goulas",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 10,
+      "id": "frankston/katie-goulas"
+    },
+    {
+      "ballot_name": "CHEESEMAN, Andrew",
+      "name": "Andrew Cheeseman",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 11,
+      "id": "frankston/andrew-cheeseman"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "1073",
+      "registered_by": "Animal Justice Party",
+      "kind": "party",
+      "party": "AJP",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=77d2189e-2c7b-4a49-ba13-6d0202c7679a%2Ffrankston%20district.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1351",
+      "registered_by": "Animal Justice Party",
+      "kind": "party",
+      "party": "AJP",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6faf73d2-a3f9-4b91-8d9f-c55fe64e6053%2Ffrankston.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "70",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2000d1f9-4225-4fd7-b1b4-2b9075f01e5b%2Falp_combined_sem%20frankston_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "EDBROOKE, Paul",
+        "KNIPE, Jeff",
+        "KELSALL, Henry",
+        "HARMAN, Julie",
+        "GOULAS, Katie",
+        "CHEESEMAN, Andrew",
+        "AMBRY, Bree",
+        "BARRY, Nicola",
+        "NICHOLES, Peter",
+        "ABRAHAM, Chrysten",
+        "STAFFORD, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 5,
+        "LNP": 7,
+        "ONP": 11
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 5,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "280",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=0b790783-08d3-461f-9fb9-5262d3d36912%2Falp_combined_sem_ev_frankston_mornington_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "EDBROOKE, Paul",
+        "KNIPE, Jeff",
+        "KELSALL, Henry",
+        "HARMAN, Julie",
+        "GOULAS, Katie",
+        "CHEESEMAN, Andrew",
+        "AMBRY, Bree",
+        "BARRY, Nicola",
+        "NICHOLES, Peter",
+        "ABRAHAM, Chrysten",
+        "STAFFORD, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 5,
+        "LNP": 7,
+        "ONP": 11
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 5,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "385",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b1992a2a-57ee-45e6-8d99-a96177fbbadb%2Falp_combined_sem_carrum_frankston_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "EDBROOKE, Paul",
+        "KNIPE, Jeff",
+        "KELSALL, Henry",
+        "HARMAN, Julie",
+        "GOULAS, Katie",
+        "CHEESEMAN, Andrew",
+        "AMBRY, Bree",
+        "BARRY, Nicola",
+        "NICHOLES, Peter",
+        "ABRAHAM, Chrysten",
+        "STAFFORD, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 5,
+        "LNP": 7,
+        "ONP": 11
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 5,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "416",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=11f69d0c-fe81-436a-b4da-135feca0a0ac%2Falp_combined_sem_ev_frankston_hastings_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "EDBROOKE, Paul",
+        "KNIPE, Jeff",
+        "KELSALL, Henry",
+        "HARMAN, Julie",
+        "GOULAS, Katie",
+        "CHEESEMAN, Andrew",
+        "AMBRY, Bree",
+        "BARRY, Nicola",
+        "NICHOLES, Peter",
+        "ABRAHAM, Chrysten",
+        "STAFFORD, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 5,
+        "LNP": 7,
+        "ONP": 11
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 5,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "EDBROOKE, Paul",
+        "KNIPE, Jeff",
+        "KELSALL, Henry",
+        "HARMAN, Julie",
+        "GOULAS, Katie",
+        "CHEESEMAN, Andrew",
+        "AMBRY, Bree",
+        "BARRY, Nicola",
+        "NICHOLES, Peter",
+        "ABRAHAM, Chrysten",
+        "STAFFORD, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 5,
+        "LNP": 7,
+        "ONP": 11
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 5,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "522",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=0b39be92-4f3e-495d-af65-4c64cca7c77c%2Ffamilyfirst_frankston_version1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NICHOLES, Peter",
+        "BARRY, Nicola",
+        "STAFFORD, Paul",
+        "EDBROOKE, Paul",
+        "HARMAN, Julie",
+        "ABRAHAM, Chrysten",
+        "KNIPE, Jeff",
+        "KELSALL, Henry",
+        "AMBRY, Bree",
+        "GOULAS, Katie",
+        "CHEESEMAN, Andrew"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 3,
+        "ALP": 4,
+        "LNP": 9,
+        "GRN": 10
+      }
+    },
+    {
+      "registration": "733",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=44f9c151-07ad-4f60-a62d-dd6658f74770%2Ffamilyfirst_frankston_version2.pdf%20%28dragged%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NICHOLES, Peter",
+        "BARRY, Nicola",
+        "STAFFORD, Paul",
+        "AMBRY, Bree",
+        "KELSALL, Henry",
+        "KNIPE, Jeff",
+        "ABRAHAM, Chrysten",
+        "HARMAN, Julie",
+        "GOULAS, Katie",
+        "CHEESEMAN, Andrew",
+        "EDBROOKE, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 3,
+        "LNP": 4,
+        "GRN": 9,
+        "ALP": 11
+      }
+    },
+    {
+      "registration": "899",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=25552d3f-55b8-495d-b5a0-48668f119c89%2Fthe%20greens%20combined%20south-east%20metro%20carrum%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GOULAS, Katie",
+        "KELSALL, Henry",
+        "CHEESEMAN, Andrew",
+        "HARMAN, Julie",
+        "KNIPE, Jeff",
+        "EDBROOKE, Paul",
+        "ABRAHAM, Chrysten",
+        "AMBRY, Bree",
+        "BARRY, Nicola",
+        "NICHOLES, Peter",
+        "STAFFORD, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 6,
+        "LNP": 8,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "901",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1898f0c7-c75e-4464-96a8-0b4e9b769313%2Fthe%20greens%20combined%20south-east%20metro%20frankston%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GOULAS, Katie",
+        "KELSALL, Henry",
+        "CHEESEMAN, Andrew",
+        "HARMAN, Julie",
+        "KNIPE, Jeff",
+        "EDBROOKE, Paul",
+        "ABRAHAM, Chrysten",
+        "AMBRY, Bree",
+        "BARRY, Nicola",
+        "NICHOLES, Peter",
+        "STAFFORD, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 6,
+        "LNP": 8,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1007",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d26c1bb4-6b15-45d6-926c-14d83e6a2247%2Fthe%20greens%20combined%20eastern%20victoria%20hastings%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GOULAS, Katie",
+        "KELSALL, Henry",
+        "CHEESEMAN, Andrew",
+        "HARMAN, Julie",
+        "KNIPE, Jeff",
+        "EDBROOKE, Paul",
+        "ABRAHAM, Chrysten",
+        "AMBRY, Bree",
+        "BARRY, Nicola",
+        "NICHOLES, Peter",
+        "STAFFORD, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 6,
+        "LNP": 8,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1107",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2763f284-2e2b-4c39-a735-7f7e0c4191b4%2Fthe%20greens%20combined%20south-eastern%20metro%20carrum%20frankston1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GOULAS, Katie",
+        "KELSALL, Henry",
+        "CHEESEMAN, Andrew",
+        "HARMAN, Julie",
+        "KNIPE, Jeff",
+        "EDBROOKE, Paul",
+        "ABRAHAM, Chrysten",
+        "AMBRY, Bree",
+        "BARRY, Nicola",
+        "NICHOLES, Peter",
+        "STAFFORD, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 6,
+        "LNP": 8,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1110",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=643181db-eec1-44a5-b21c-d3221e567e5a%2Fthe%20greens%20combined%20eastern%20victoria%20mornington%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GOULAS, Katie",
+        "KELSALL, Henry",
+        "CHEESEMAN, Andrew",
+        "HARMAN, Julie",
+        "KNIPE, Jeff",
+        "EDBROOKE, Paul",
+        "ABRAHAM, Chrysten",
+        "AMBRY, Bree",
+        "BARRY, Nicola",
+        "NICHOLES, Peter",
+        "STAFFORD, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 6,
+        "LNP": 8,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1157",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fc47539a-2bf1-47b8-a04d-f5e67f1ff04f%2Fthe%20greens%20combined%20cranbourne%20narre%20warren%20south%20carrum%20south-eastern%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GOULAS, Katie",
+        "KELSALL, Henry",
+        "CHEESEMAN, Andrew",
+        "HARMAN, Julie",
+        "KNIPE, Jeff",
+        "EDBROOKE, Paul",
+        "ABRAHAM, Chrysten",
+        "AMBRY, Bree",
+        "BARRY, Nicola",
+        "NICHOLES, Peter",
+        "STAFFORD, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 6,
+        "LNP": 8,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1158",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e0bab8d5-9437-4163-80f9-95aaf0d45536%2Fthe%20greens%20combined%20eastern%20victoria%20mornington%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GOULAS, Katie",
+        "KELSALL, Henry",
+        "CHEESEMAN, Andrew",
+        "HARMAN, Julie",
+        "KNIPE, Jeff",
+        "EDBROOKE, Paul",
+        "ABRAHAM, Chrysten",
+        "AMBRY, Bree",
+        "BARRY, Nicola",
+        "NICHOLES, Peter",
+        "STAFFORD, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 6,
+        "LNP": 8,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GOULAS, Katie",
+        "KELSALL, Henry",
+        "CHEESEMAN, Andrew",
+        "HARMAN, Julie",
+        "KNIPE, Jeff",
+        "EDBROOKE, Paul",
+        "ABRAHAM, Chrysten",
+        "AMBRY, Bree",
+        "BARRY, Nicola",
+        "NICHOLES, Peter",
+        "STAFFORD, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 6,
+        "LNP": 8,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1506",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8036686d-a05d-49f4-9ab5-0e83c749f7ea%2Fthe%20greens%20combined%20south-eastern%20metro%20simplified%20chinese%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GOULAS, Katie",
+        "KELSALL, Henry",
+        "CHEESEMAN, Andrew",
+        "HARMAN, Julie",
+        "KNIPE, Jeff",
+        "EDBROOKE, Paul",
+        "ABRAHAM, Chrysten",
+        "AMBRY, Bree",
+        "BARRY, Nicola",
+        "NICHOLES, Peter",
+        "STAFFORD, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 6,
+        "LNP": 8,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1509",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=00c53f08-bcfc-461f-80b9-674bc9a9e669%2Fthe%20greens%20combined%20south-eastern%20metro%20vietnamese%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GOULAS, Katie",
+        "KELSALL, Henry",
+        "CHEESEMAN, Andrew",
+        "HARMAN, Julie",
+        "KNIPE, Jeff",
+        "EDBROOKE, Paul",
+        "ABRAHAM, Chrysten",
+        "AMBRY, Bree",
+        "BARRY, Nicola",
+        "NICHOLES, Peter",
+        "STAFFORD, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 6,
+        "LNP": 8,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1550",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-18",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=358471e6-653f-4281-b7de-6e76704ae1b3%2Fthe%20greens%20combined%20south-eastern%20metro%20hazeragi%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GOULAS, Katie",
+        "KELSALL, Henry",
+        "CHEESEMAN, Andrew",
+        "HARMAN, Julie",
+        "KNIPE, Jeff",
+        "EDBROOKE, Paul",
+        "ABRAHAM, Chrysten",
+        "AMBRY, Bree",
+        "BARRY, Nicola",
+        "NICHOLES, Peter",
+        "STAFFORD, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 6,
+        "LNP": 8,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1545",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=bdbdccbf-8c6b-4876-8388-c766041a35e4%2Fthe%20greens%20combined%20south-eastern%20metro%20hazeragi%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1552",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=22a6b6a9-3fa6-4e30-b01f-59b76d053fb6%2Fthe%20greens%20combined%20south-eastern%20metro%20simplified%20chinese%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1555",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=dff45eca-78f5-4564-b0c1-30b72052ed1c%2Fthe%20greens%20combined%20south-eastern%20metro%20vietnamese%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "453",
+      "registered_by": "Legalise Cannabis Victoria",
+      "kind": "party",
+      "party": "LCV",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=aa5bddf5-dbf4-4788-b3af-635c81a15396%2Flcv_combined_south-eastern%20metropolitan_rachel%20payne.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "558",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c8f87426-e5f7-4d7a-b31f-0896266f1bdd%2Fliberal_combined_semr%20frankston_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "AMBRY, Bree",
+        "NICHOLES, Peter",
+        "ABRAHAM, Chrysten",
+        "STAFFORD, Paul",
+        "BARRY, Nicola",
+        "KELSALL, Henry",
+        "HARMAN, Julie",
+        "KNIPE, Jeff",
+        "EDBROOKE, Paul",
+        "GOULAS, Katie",
+        "CHEESEMAN, Andrew"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 9,
+        "GRN": 10
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "659",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1949a0c3-350b-40b9-ba87-ec79540d044f%2Fliberal_combined_semr%20frankston_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "AMBRY, Bree",
+        "NICHOLES, Peter",
+        "ABRAHAM, Chrysten",
+        "STAFFORD, Paul",
+        "BARRY, Nicola",
+        "KELSALL, Henry",
+        "HARMAN, Julie",
+        "KNIPE, Jeff",
+        "EDBROOKE, Paul",
+        "GOULAS, Katie",
+        "CHEESEMAN, Andrew"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 9,
+        "GRN": 10
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "1238",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e3d8b46a-c2e3-46bf-95b6-981833cf70a9%2Fliberal_combined_semr%20carrum_semr%20frankston_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "AMBRY, Bree",
+        "NICHOLES, Peter",
+        "ABRAHAM, Chrysten",
+        "STAFFORD, Paul",
+        "BARRY, Nicola",
+        "KELSALL, Henry",
+        "HARMAN, Julie",
+        "KNIPE, Jeff",
+        "EDBROOKE, Paul",
+        "GOULAS, Katie",
+        "CHEESEMAN, Andrew"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 9,
+        "GRN": 10
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "1278",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c38c1493-c131-400d-8a29-c0945ccada5d%2Fliberal_combined_semr%20frankston_evr%20mornington_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "AMBRY, Bree",
+        "NICHOLES, Peter",
+        "ABRAHAM, Chrysten",
+        "STAFFORD, Paul",
+        "BARRY, Nicola",
+        "KELSALL, Henry",
+        "HARMAN, Julie",
+        "KNIPE, Jeff",
+        "EDBROOKE, Paul",
+        "GOULAS, Katie",
+        "CHEESEMAN, Andrew"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 9,
+        "GRN": 10
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "1504",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7eac0f08-ef9e-4f3c-8153-4ef5729fa74d%2Fliberal_multiple_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "AMBRY, Bree",
+        "NICHOLES, Peter",
+        "ABRAHAM, Chrysten",
+        "STAFFORD, Paul",
+        "BARRY, Nicola",
+        "KELSALL, Henry",
+        "HARMAN, Julie",
+        "KNIPE, Jeff",
+        "EDBROOKE, Paul",
+        "GOULAS, Katie",
+        "CHEESEMAN, Andrew"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 9,
+        "GRN": 10
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "1327",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "AMBRY, Bree",
+        "NICHOLES, Peter",
+        "ABRAHAM, Chrysten",
+        "STAFFORD, Paul",
+        "BARRY, Nicola",
+        "KELSALL, Henry",
+        "HARMAN, Julie",
+        "KNIPE, Jeff",
+        "EDBROOKE, Paul",
+        "GOULAS, Katie",
+        "CHEESEMAN, Andrew"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 9,
+        "GRN": 10
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "1341",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=90351775-790c-4aaa-ba06-68b0e2e3f614%2Fliberal_combined_semr%20frankston_evr%20hastings_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "AMBRY, Bree",
+        "NICHOLES, Peter",
+        "ABRAHAM, Chrysten",
+        "STAFFORD, Paul",
+        "BARRY, Nicola",
+        "KELSALL, Henry",
+        "HARMAN, Julie",
+        "KNIPE, Jeff",
+        "EDBROOKE, Paul",
+        "GOULAS, Katie",
+        "CHEESEMAN, Andrew"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 9,
+        "GRN": 10
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "1508",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef298e7a-1371-41f2-a9a0-ed8f2eb25360%2Fliberal_multiple_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "AMBRY, Bree",
+        "NICHOLES, Peter",
+        "ABRAHAM, Chrysten",
+        "STAFFORD, Paul",
+        "BARRY, Nicola",
+        "KELSALL, Henry",
+        "HARMAN, Julie",
+        "KNIPE, Jeff",
+        "EDBROOKE, Paul",
+        "GOULAS, Katie",
+        "CHEESEMAN, Andrew"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 9,
+        "GRN": 10
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "1512",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8d451e6-5d8a-43a1-9577-8481a2ccdc56%2Fliberal_multiple_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "AMBRY, Bree",
+        "NICHOLES, Peter",
+        "ABRAHAM, Chrysten",
+        "STAFFORD, Paul",
+        "BARRY, Nicola",
+        "KELSALL, Henry",
+        "HARMAN, Julie",
+        "KNIPE, Jeff",
+        "EDBROOKE, Paul",
+        "GOULAS, Katie",
+        "CHEESEMAN, Andrew"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 9,
+        "GRN": 10
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "1513",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f6f69e90-716d-4ff5-8422-2a0f36601988%2Fliberal_multiple_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "AMBRY, Bree",
+        "NICHOLES, Peter",
+        "ABRAHAM, Chrysten",
+        "STAFFORD, Paul",
+        "BARRY, Nicola",
+        "KELSALL, Henry",
+        "HARMAN, Julie",
+        "KNIPE, Jeff",
+        "EDBROOKE, Paul",
+        "GOULAS, Katie",
+        "CHEESEMAN, Andrew"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 9,
+        "GRN": 10
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "881",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a24449f9-9fd3-44a9-9ac7-68c28dc5673c%2Fonv%20-%20combined%20-%20south-eastern%20metropolitan%20region%20-%20frankston%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "STAFFORD, Paul",
+        "NICHOLES, Peter",
+        "ABRAHAM, Chrysten",
+        "AMBRY, Bree",
+        "EDBROOKE, Paul",
+        "BARRY, Nicola",
+        "KELSALL, Henry",
+        "GOULAS, Katie",
+        "KNIPE, Jeff",
+        "HARMAN, Julie",
+        "CHEESEMAN, Andrew"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 4,
+        "ALP": 5,
+        "GRN": 8
+      }
+    },
+    {
+      "registration": "407",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7722e65e-2c82-4687-9e3b-d0a764837b5e%2Fvictorian%20socialists%20combined%20south-eastern%20metropolitan%20frankston%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CHEESEMAN, Andrew",
+        "GOULAS, Katie",
+        "HARMAN, Julie",
+        "KNIPE, Jeff",
+        "EDBROOKE, Paul",
+        "KELSALL, Henry",
+        "AMBRY, Bree",
+        "ABRAHAM, Chrysten",
+        "BARRY, Nicola",
+        "NICHOLES, Peter",
+        "STAFFORD, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1029",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9f9f4d4a-36a7-4afb-84ee-6d50bbcb46b8%2Fvs_sem_combined%20all_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CHEESEMAN, Andrew",
+        "GOULAS, Katie",
+        "HARMAN, Julie",
+        "KNIPE, Jeff",
+        "EDBROOKE, Paul",
+        "KELSALL, Henry",
+        "AMBRY, Bree",
+        "ABRAHAM, Chrysten",
+        "BARRY, Nicola",
+        "NICHOLES, Peter",
+        "STAFFORD, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 5,
+        "LNP": 7,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "8",
+      "registered_by": "GetUp Limited",
+      "kind": "non_candidate",
+      "party": null,
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c2722bab-ee99-4c91-bc40-a8d7d6fbbd3f%2Ffrankston%20-%20getup%20limited%20-%20htvc%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "21",
+      "registered_by": "Getup Limited",
+      "kind": "non_candidate",
+      "party": null,
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2e8d6c21-2281-4f8a-a4d8-f5065ea606c5%2Ffrankston%20-%20getup%20limited%20-%20htvc%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "702",
+      "registered_by": "Victorian Trades Hall Council",
+      "kind": "non_candidate",
+      "party": null,
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=aa33ecfa-421e-4643-a9d9-29919ff74a2d%2Ffrankston%20-%20trades%20hall%20council%20-%20htvc%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1035",
+      "registered_by": "United Firefighters Union, Vic",
+      "kind": "non_candidate",
+      "party": null,
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b5f1d5bd-69ac-4dfe-90d3-be34a61169a1%2Ffrankston%20-%20united%20firefighters%20union%20vic%2C%20htvc%204.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1034",
+      "registered_by": "United Firefighters Union, Vic",
+      "kind": "non_candidate",
+      "party": null,
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1f71a84a-76ce-4c69-ab3a-42add2730ea3%2Ffrankston%20-%20united%20firefighters%20union%2C%20vic%20-%20htvc%203.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "56",
+      "registered_by": "KELSALL, Henry",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "frankston/henry-kelsall",
+      "type": "Single",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8a18aacf-fbfc-419e-8fe2-4e5563cdb1b8%2Fkelsall%2C%20henry.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "partial",
+      "order": [
+        "KELSALL, Henry"
+      ],
+      "via": "text"
+    },
+    {
+      "registration": "1085",
+      "registered_by": "ABRAHAM, Chrysten",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "frankston/chrysten-abraham",
+      "type": "Single",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c58cd101-be73-4b14-b156-c07f11e9d31d%2Fabraham%2C%20chrysten%20jaslyn%20myra.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1270",
+      "registered_by": "ABRAHAM, Chrysten",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "frankston/chrysten-abraham",
+      "type": "Single",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=694e10e9-f6bb-48c2-8f35-3e8100b07304%2Fabraham%2C%20chrysten%20jaslyn%20myra.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    }
+  ],
+  "no_card": [
+    "BARRY, Nicola"
+  ]
+}

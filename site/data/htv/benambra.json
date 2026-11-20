@@ -1,0 +1,802 @@
+{
+  "area": "benambra",
+  "house": "lower",
+  "name": "Benambra",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "FUERY, Mike",
+      "name": "Mike Fuery",
+      "party": "AJP",
+      "party_label": "Animal Justice Party",
+      "ballot_position": 1,
+      "id": "benambra/mike-fuery"
+    },
+    {
+      "ballot_name": "PARTON, Graham",
+      "name": "Graham Parton",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 2,
+      "id": "benambra/graham-parton"
+    },
+    {
+      "ballot_name": "YOUNG, Oliver",
+      "name": "Oliver Young",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 3,
+      "id": "benambra/oliver-young"
+    },
+    {
+      "ballot_name": "VANGALEN, Alex",
+      "name": "Alex Vangalen",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 4,
+      "id": "benambra/alex-vangalen"
+    },
+    {
+      "ballot_name": "McKEEMAN, Lachie",
+      "name": "Lachie McKeeman",
+      "party": "IND",
+      "ballot_position": 5,
+      "id": "benambra/lachie-mckeeman"
+    },
+    {
+      "ballot_name": "MARTIN, Steve",
+      "name": "Steve Martin",
+      "party": "LIB",
+      "party_label": "Liberal",
+      "ballot_position": 6,
+      "id": "benambra/steve-martin"
+    },
+    {
+      "ballot_name": "SHEPPARD, Kellie",
+      "name": "Kellie Sheppard",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 7,
+      "id": "benambra/kellie-sheppard"
+    },
+    {
+      "ballot_name": "PEPPER, Evette",
+      "name": "Evette Pepper",
+      "party": "FF",
+      "party_label": "Family First",
+      "ballot_position": 8,
+      "id": "benambra/evette-pepper"
+    },
+    {
+      "ballot_name": "QUILTY, Tim",
+      "name": "Tim Quilty",
+      "party": "LBT",
+      "party_label": "Libertarian (formerly Liberal Democrats)",
+      "ballot_position": 9,
+      "id": "benambra/tim-quilty"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "1019",
+      "registered_by": "Animal Justice Party",
+      "kind": "party",
+      "party": "AJP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9929cc65-ec9f-4862-abfe-2e24bdf62445%2Fnv%202026-11-11%20-%20benambra.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "89",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7260507d-cc24-424d-b2b7-57ca96ec0ae8%2Falp_combined_nv%20benambra_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "YOUNG, Oliver",
+        "FUERY, Mike",
+        "PARTON, Graham",
+        "VANGALEN, Alex",
+        "McKEEMAN, Lachie",
+        "QUILTY, Tim",
+        "MARTIN, Steve",
+        "PEPPER, Evette",
+        "SHEPPARD, Kellie"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "YOUNG, Oliver",
+        "FUERY, Mike",
+        "PARTON, Graham",
+        "VANGALEN, Alex",
+        "McKEEMAN, Lachie",
+        "QUILTY, Tim",
+        "MARTIN, Steve",
+        "PEPPER, Evette",
+        "SHEPPARD, Kellie"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "729",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3213ea70-6bc6-48d8-a44d-61ea8d1b4e03%2Ffamilyfirst_benambra_version2%20%28dragged%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PEPPER, Evette",
+        "QUILTY, Tim",
+        "SHEPPARD, Kellie",
+        "MARTIN, Steve",
+        "McKEEMAN, Lachie",
+        "YOUNG, Oliver",
+        "FUERY, Mike",
+        "PARTON, Graham",
+        "VANGALEN, Alex"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 3,
+        "LNP": 4,
+        "ALP": 6,
+        "GRN": 8
+      }
+    },
+    {
+      "registration": "1008",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c6bf4ba2-12cd-4760-bd0a-44907af31b00%2Fthe%20greens%20combined%20eastern%20victoria%20gippsland%20east%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PARTON, Graham",
+        "McKEEMAN, Lachie",
+        "FUERY, Mike",
+        "VANGALEN, Alex",
+        "YOUNG, Oliver",
+        "MARTIN, Steve",
+        "QUILTY, Tim",
+        "PEPPER, Evette",
+        "SHEPPARD, Kellie"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1141",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d164bc6b-6b25-4cad-8523-2fa62790d70f%2Fthe%20greens%20combined%20northern%20victoria%20ovens%20valley%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PARTON, Graham",
+        "McKEEMAN, Lachie",
+        "FUERY, Mike",
+        "VANGALEN, Alex",
+        "YOUNG, Oliver",
+        "MARTIN, Steve",
+        "QUILTY, Tim",
+        "PEPPER, Evette",
+        "SHEPPARD, Kellie"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1160",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e600e85e-059d-43c3-b044-ee0bcafc9be9%2Fthe%20greens%20combined%20northern%20victoria%20benambra%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PARTON, Graham",
+        "McKEEMAN, Lachie",
+        "FUERY, Mike",
+        "VANGALEN, Alex",
+        "YOUNG, Oliver",
+        "MARTIN, Steve",
+        "QUILTY, Tim",
+        "PEPPER, Evette",
+        "SHEPPARD, Kellie"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1171",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=566928ae-6887-487b-b73d-3c1fccd9f5da%2Fthe%20greens%20combined%20eastern%20victoria%20gippsland%20east%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PARTON, Graham",
+        "McKEEMAN, Lachie",
+        "FUERY, Mike",
+        "VANGALEN, Alex",
+        "YOUNG, Oliver",
+        "MARTIN, Steve",
+        "QUILTY, Tim",
+        "PEPPER, Evette",
+        "SHEPPARD, Kellie"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PARTON, Graham",
+        "McKEEMAN, Lachie",
+        "FUERY, Mike",
+        "VANGALEN, Alex",
+        "YOUNG, Oliver",
+        "MARTIN, Steve",
+        "QUILTY, Tim",
+        "PEPPER, Evette",
+        "SHEPPARD, Kellie"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1197",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=63acfa3d-7df3-441f-bea6-330ee9e51263%2Fthe%20greens%20combined%20eastern%20victoria%20gippsland%20south%20gippsland%20east%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PARTON, Graham",
+        "McKEEMAN, Lachie",
+        "FUERY, Mike",
+        "VANGALEN, Alex",
+        "YOUNG, Oliver",
+        "MARTIN, Steve",
+        "QUILTY, Tim",
+        "PEPPER, Evette",
+        "SHEPPARD, Kellie"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1041",
+      "registered_by": "Libertarian (formerly Liberal Democrats)",
+      "kind": "party",
+      "party": "LBT",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=51432ea5-41d7-4569-8129-91fdf7e891b1%2Fd_benambra_quilty_reg.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "QUILTY, Tim",
+        "PEPPER, Evette",
+        "SHEPPARD, Kellie",
+        "MARTIN, Steve",
+        "McKEEMAN, Lachie",
+        "FUERY, Mike",
+        "YOUNG, Oliver",
+        "PARTON, Graham",
+        "VANGALEN, Alex"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 3,
+        "LNP": 4,
+        "ALP": 7,
+        "GRN": 8
+      }
+    },
+    {
+      "registration": "591",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=34cb0b72-835b-4deb-8962-08c351428b2e%2Fliberal_combined_nvr%20benambra_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MARTIN, Steve",
+        "SHEPPARD, Kellie",
+        "PEPPER, Evette",
+        "QUILTY, Tim",
+        "McKEEMAN, Lachie",
+        "FUERY, Mike",
+        "YOUNG, Oliver",
+        "PARTON, Graham",
+        "VANGALEN, Alex"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 2,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 2,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "609",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9244ac83-cc9d-44f5-beda-21c2023801a7%2Fliberal_combined_nvr%20benambra_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MARTIN, Steve",
+        "SHEPPARD, Kellie",
+        "PEPPER, Evette",
+        "QUILTY, Tim",
+        "McKEEMAN, Lachie",
+        "FUERY, Mike",
+        "YOUNG, Oliver",
+        "PARTON, Graham",
+        "VANGALEN, Alex"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 2,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 2,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "1504",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7eac0f08-ef9e-4f3c-8153-4ef5729fa74d%2Fliberal_multiple_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MARTIN, Steve",
+        "SHEPPARD, Kellie",
+        "PEPPER, Evette",
+        "QUILTY, Tim",
+        "McKEEMAN, Lachie",
+        "FUERY, Mike",
+        "YOUNG, Oliver",
+        "PARTON, Graham",
+        "VANGALEN, Alex"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 2,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 2,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "1327",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MARTIN, Steve",
+        "SHEPPARD, Kellie",
+        "PEPPER, Evette",
+        "QUILTY, Tim",
+        "McKEEMAN, Lachie",
+        "FUERY, Mike",
+        "YOUNG, Oliver",
+        "PARTON, Graham",
+        "VANGALEN, Alex"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 2,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 2,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "1508",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef298e7a-1371-41f2-a9a0-ed8f2eb25360%2Fliberal_multiple_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MARTIN, Steve",
+        "SHEPPARD, Kellie",
+        "PEPPER, Evette",
+        "QUILTY, Tim",
+        "McKEEMAN, Lachie",
+        "FUERY, Mike",
+        "YOUNG, Oliver",
+        "PARTON, Graham",
+        "VANGALEN, Alex"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 2,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 2,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "1512",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8d451e6-5d8a-43a1-9577-8481a2ccdc56%2Fliberal_multiple_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MARTIN, Steve",
+        "SHEPPARD, Kellie",
+        "PEPPER, Evette",
+        "QUILTY, Tim",
+        "McKEEMAN, Lachie",
+        "FUERY, Mike",
+        "YOUNG, Oliver",
+        "PARTON, Graham",
+        "VANGALEN, Alex"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 2,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 2,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "1513",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f6f69e90-716d-4ff5-8422-2a0f36601988%2Fliberal_multiple_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MARTIN, Steve",
+        "SHEPPARD, Kellie",
+        "PEPPER, Evette",
+        "QUILTY, Tim",
+        "McKEEMAN, Lachie",
+        "FUERY, Mike",
+        "YOUNG, Oliver",
+        "PARTON, Graham",
+        "VANGALEN, Alex"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 2,
+        "ALP": 7,
+        "GRN": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 2,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "928",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e2affd17-a521-452f-b783-85cb981acb69%2Fonv%20-%20combined%20-%20northern%20victoria%20region%20-%20benambra%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SHEPPARD, Kellie",
+        "QUILTY, Tim",
+        "PEPPER, Evette",
+        "MARTIN, Steve",
+        "YOUNG, Oliver",
+        "McKEEMAN, Lachie",
+        "PARTON, Graham",
+        "FUERY, Mike",
+        "VANGALEN, Alex"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 4,
+        "ALP": 5,
+        "GRN": 7
+      }
+    },
+    {
+      "registration": "290",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9fc11417-07c9-47b6-ac48-115e699287aa%2Fvictorian%20socialists%20combined%20northern%20victoria%20benambra%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "VANGALEN, Alex",
+        "PARTON, Graham",
+        "FUERY, Mike",
+        "YOUNG, Oliver",
+        "McKEEMAN, Lachie",
+        "MARTIN, Steve",
+        "QUILTY, Tim",
+        "PEPPER, Evette",
+        "SHEPPARD, Kellie"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1026",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=cb0419bd-cc93-4b44-9a29-72bda72505e3%2Fvs_nv_combined%20all_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "VANGALEN, Alex",
+        "PARTON, Graham",
+        "FUERY, Mike",
+        "YOUNG, Oliver",
+        "McKEEMAN, Lachie",
+        "MARTIN, Steve",
+        "QUILTY, Tim",
+        "PEPPER, Evette",
+        "SHEPPARD, Kellie"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1605",
+      "registered_by": "Michael Paul White",
+      "kind": "non_candidate",
+      "party": null,
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d1850673-bd08-4ccb-8ed1-d233b20bfc2e%2Fbenambra-white%2C%20michael-htvc.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "281",
+      "registered_by": "McKEEMAN, Lachie",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "benambra/lachie-mckeeman",
+      "type": "Single",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7a2e3737-d722-4c90-8c5b-5201e8327cc6%2Fmckeeman%2C%20lachlan.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "partial",
+      "order": [
+        "McKEEMAN, Lachie"
+      ],
+      "via": "text"
+    },
+    {
+      "registration": "712",
+      "registered_by": "McKEEMAN, Lachie",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "benambra/lachie-mckeeman",
+      "type": "Single",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f9a567fe-3fc6-4ae1-b07a-8d351a64dde1%2Fmckeeman%2C%20lachlan.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "partial",
+      "order": [
+        "McKEEMAN, Lachie"
+      ],
+      "via": "text"
+    }
+  ],
+  "no_card": []
+}

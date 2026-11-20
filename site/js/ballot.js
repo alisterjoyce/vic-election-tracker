@@ -1,13 +1,13 @@
 /* Your ballot (ballot.html#<district id>): mock-ups of both ballot papers for a district, in the VEC's ballot
    order (data/vec_nominations.json): the Legislative Assembly paper for the district and the Legislative Council
    paper for its region, groups above the line and candidates below. Beside each, every how-to-vote card
-   registered for that contest (data/htv.json), labelled as the registering party's or candidate's own
+   registered for that contest (data/htv/<district or region>.json, shown by js/htv.js), labelled as the registering party's or candidate's own
    recommendation, and the VEC's rules for a formal vote. Facts only: this site recommends nothing.
    Printable (print styles in style.css) and shareable as an image (sharecard.js ballotCard). */
 (function () {
   "use strict";
   const App = window.App;
-  const { loadJSON, escapeHtml, partyName, partyShort, partyVar, fmtDate, hashId } = App;
+  const { loadJSON, escapeHtml, partyVar, hashId } = App;
   const $ = (id) => document.getElementById(id);
 
   // The VEC's rules for a formal vote, as its voter guide gives them (checked 16 Nov 2026). Since group voting tickets
@@ -38,58 +38,15 @@
     },
   };
 
-  let districts = [], regions = {}, vec = null, htv = null;
+  let districts = [], regions = {}, vec = null;
 
-  /* ---------- How-to-vote cards: where each card puts each candidate or group ---------- */
-  const norm = (s) => String(s || "").toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "").replace(/[^a-z]+/g, " ").trim();
-  const COALITION = ["LIB", "NAT", "LNP"];
-  const sameParty = (a, b) => a === b || (COALITION.includes(a) && COALITION.includes(b));
-  // A ballot name "SURNAME, Given" as "Given Surname", for matching a name on a card.
-  const plainName = (b) => { const i = String(b).indexOf(","); return i < 0 ? b : `${b.slice(i + 1).trim()} ${b.slice(0, i)}`; };
+  /* ---------- How-to-vote cards (js/htv.js): every registered card for the contest, side by side ---------- */
+  const htvDocs = {};
+  const loadHtv = (area) => (area in htvDocs ? Promise.resolve(htvDocs[area])
+    : App.Htv.load(area).catch(() => null).then((doc) => (htvDocs[area] = doc)));
 
-  // The preference a card gives one candidate or group (1-based), or null. An entry in the card's order is a
-  // party code or a name; a party code matches only when it picks out a single box (two independents share "IND").
-  function preferenceFor(card, target, all) {
-    const order = card.order || [];
-    const names = [target.name, target.ballot_name && plainName(target.ballot_name), target.label].filter(Boolean).map(norm);
-    let i = order.findIndex((x) => names.includes(norm(x)));
-    if (i < 0 && target.party && target.party !== "IND" && target.party !== "OTH") {
-      const rivals = all.filter((t) => sameParty(t.party, target.party));
-      if (rivals.length === 1) i = order.findIndex((x) => sameParty(x, target.party));
-    }
-    return i < 0 ? null : i + 1;
-  }
-
-  const cardName = (c) => (c.party && c.party !== "IND" && c.party !== "OTH" ? partyName(c.party) : (c.candidate || c.registered_by || "Independent"));
-  const possessive = (s) => `${s}${/s$/.test(s) ? "’" : "’s"}`;
-
-  // rows: [{key, label (html), party, name, ballot_name}] in ballot order.
-  function htvPanel(cards, rows, where) {
-    const open = htv && htv.status && htv.status !== "not_open";
-    const register = `<a href="${escapeHtml((htv && htv.source_url) || "https://www.vec.vic.gov.au/")}" target="_blank" rel="noopener">VEC register ↗</a>`;
-    const head = `<h3 class="yb-htv-h">Registered how-to-vote cards</h3>`;
-    if (!cards.length) {
-      return `<div class="yb-htv">${head}
-        <p class="muted small">${open ? `No how-to-vote cards registered for ${escapeHtml(where)} yet.`
-          : `Registration with the VEC opens ${escapeHtml(fmtDate((htv && htv.registration_opens) || "2026-11-10"))}.`}
-          Parties and candidates register their cards with the VEC; each card's order shows here once it is entered. ${register}</p></div>`;
-    }
-    const withOrder = cards.filter((c) => c.order && c.order.length);
-    const without = cards.filter((c) => !(c.order && c.order.length));
-    const table = withOrder.length ? `<div class="table-scroll"><table class="yb-htv-table">
-        <caption class="sr-only">Preference numbers on each registered how-to-vote card for ${escapeHtml(where)}</caption>
-        <thead><tr><th scope="col">On the ballot</th>${withOrder.map((c) => `<th scope="col" class="num"><span class="party" style="--party-color: var(${partyVar(c.party || "IND")})">${escapeHtml(possessive(cardName(c)))} card</span></th>`).join("")}</tr></thead>
-        <tbody>${rows.map((r) => `<tr><th scope="row">${r.label}</th>${withOrder.map((c) => {
-          const n = preferenceFor(c, r, rows);
-          return `<td class="num">${n == null ? '<span class="muted" title="Not numbered on this card, or not matched">–</span>' : n}</td>`;
-        }).join("")}</tr>`).join("")}</tbody></table></div>` : "";
-    return `<div class="yb-htv">${head}
-      <p class="muted small">Each column is the order recommended on that party's or candidate's own card, as registered with the VEC.
-        These are their recommendations, not this site's. ${register}</p>
-      ${table}
-      ${withOrder.length ? `<p class="muted small">Cards: ${withOrder.map((c) => (c.card_url ? `<a href="${escapeHtml(c.card_url)}" target="_blank" rel="noopener">${escapeHtml(cardName(c))} ↗</a>` : escapeHtml(cardName(c)))).join(", ")}.</p>` : ""}
-      ${without.length ? `<p class="muted small">Registered, order not yet entered here: ${without.map((c) => (c.card_url ? `<a href="${escapeHtml(c.card_url)}" target="_blank" rel="noopener">${escapeHtml(cardName(c))} ↗</a>` : escapeHtml(cardName(c)))).join(", ")}.</p>` : ""}
-    </div>`;
+  function htvPanel(area) {
+    return `<div class="yb-htv">${App.Htv.section(htvDocs[area] || null, { area })}</div>`;
   }
 
   /* ---------- The two papers ---------- */
@@ -107,8 +64,6 @@
     const drawn = !!entry.ballot_drawn;
     const cands = entry.candidates.slice().sort((a, b) => (drawn ? a.ballot_position - b.ballot_position : (a.nominated || 0) - (b.nominated || 0)));
     const n = cands.length;
-    const cards = ((htv && htv.cards) || []).filter((c) => c.house === "lower" && c.district === d.id);
-    const rows = cands.map((c) => ({ ...c, label: `${nameHtml(c)} <span class="muted small">${escapeHtml(c.party_label || "Independent")}</span>` }));
     return `<section class="card yb-house" aria-labelledby="yb-la-h">
       <div class="card-head"><h2 id="yb-la-h">Legislative Assembly</h2><span class="muted small">${escapeHtml(entry.name)} District · 1 member · ${n} candidates</span></div>
       <div class="yb-grid">
@@ -121,7 +76,7 @@
             <span class="yb-box" aria-hidden="true"></span>
             <span class="bp-who">${nameHtml(c)}${partyLabel(c)}</span></li>`).join("")}</ol>
         </div>
-        ${htvPanel(cards, rows, `${entry.name} District`)}
+        ${htvPanel(d.id)}
       </div>
       <div class="yb-rules"><h3>For your Assembly vote to count</h3>${RULES.la.text(n)}
         <p class="muted small">The VEC's guide: <a href="${escapeHtml(RULES.la.url)}" target="_blank" rel="noopener">how to fill out state ballot papers ↗</a></p></div>
@@ -135,12 +90,6 @@
     const groups = drawn ? (entry.groups || []).map((g) => ({ ...g, label: gLabel(g), members: entry.candidates.filter((c) => c.group === g.group).sort((a, b) => (a.group_position || 0) - (b.group_position || 0)) })) : [];
     const loose = drawn ? entry.candidates.filter((c) => !c.group).sort((a, b) => a.ballot_position - b.ballot_position)
       : entry.candidates.slice().sort((a, b) => (a.nominated || 0) - (b.nominated || 0));
-    const cards = ((htv && htv.cards) || []).filter((c) => c.house === "upper" && c.region === region.id);
-    // How-to-vote rows: groups above the line, then ungrouped candidates (who have no box above the line).
-    const rows = [
-      ...groups.map((g) => ({ key: g.group, party: g.party, label: `<span class="yb-gl">${escapeHtml(g.group)}</span> ${escapeHtml(g.label)}`, name: g.label })),
-      ...loose.map((c) => ({ ...c, label: `${nameHtml(c)} <span class="muted small">ungrouped</span>` })),
-    ];
     const col = (letter, label, party, members, atl) => `<div class="yb-col" style="--party-color: var(${partyVar(party)})">
         <div class="yb-atl">${atl ? `<span class="yb-box" aria-hidden="true"></span><span class="yb-letter">${escapeHtml(letter)}</span><span class="yb-glabel">${escapeHtml(label)}</span>`
           : `<span class="yb-glabel muted">${escapeHtml(label)}</span>`}</div>
@@ -161,7 +110,7 @@
       ${drawn ? `<div class="yb-lc-key small"><span><strong>Above the line:</strong> one box per group (the top row)</span><span><strong>Below the line:</strong> one box per candidate (the columns)</span><span>Number at least 5 boxes on one side</span></div>` : ""}
       ${paper}
       <div class="yb-grid yb-grid-lc">
-        ${htvPanel(cards, rows, `${entry.name} Region`)}
+        ${htvPanel(region.id)}
         <div class="yb-rules"><h3>For your Council vote to count</h3>${RULES.lc.text()}
           <p class="muted small">The VEC's guide: <a href="${escapeHtml(RULES.lc.url)}" target="_blank" rel="noopener">how to fill out state ballot papers ↗</a></p></div>
       </div>
@@ -169,7 +118,7 @@
   }
 
   /* ---------- The page ---------- */
-  function render() {
+  async function render() {
     const id = hashId();
     const d = districts.find((x) => x.id === id);
     const view = $("yb-view");
@@ -190,6 +139,8 @@
       view.innerHTML = '<p class="empty">The VEC\'s list of candidates isn\'t loaded yet.</p>';
       return;
     }
+    await Promise.all([loadHtv(d.id), loadHtv(d.region)]);
+    if (hashId() !== id) return;   // the reader moved on while the cards loaded
     view.innerHTML = `
       <div class="yb-actions card-actions">
         <a class="icon-btn" href="lower.html#${escapeHtml(d.id)}">${escapeHtml(d.name)} seat page</a>
@@ -211,14 +162,15 @@
 
   async function init() {
     try {
-      const [dd, rd, vecData, htvData] = await Promise.all([
+      const first = hashId();
+      const [dd, rd, vecData] = await Promise.all([
         loadJSON("districts"), loadJSON("regions"),
-        loadJSON("vec_nominations").catch(() => null), loadJSON("htv").catch(() => null),
+        loadJSON("vec_nominations").catch(() => null),
+        first ? loadHtv(first) : null,   // the district's cards alongside (its region's follow in render)
       ]);
       districts = dd.districts.slice().sort((a, b) => a.name.localeCompare(b.name));
       rd.regions.forEach((r) => { regions[r.id] = r; });
       vec = vecData;
-      htv = htvData;
       const sel = $("yb-district");
       districts.forEach((d) => sel.add(new Option(d.name, d.id)));
       sel.addEventListener("change", () => { location.hash = sel.value; if (!sel.value) render(); });

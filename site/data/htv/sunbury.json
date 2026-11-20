@@ -1,0 +1,1276 @@
+{
+  "area": "sunbury",
+  "house": "lower",
+  "name": "Sunbury",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "BREMNER, Adam",
+      "name": "Adam Bremner",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 1,
+      "id": "sunbury/adam-bremner"
+    },
+    {
+      "ballot_name": "DABROWSKI, Elita",
+      "name": "Elita Dabrowski",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 2,
+      "id": "sunbury/elita-dabrowski"
+    },
+    {
+      "ballot_name": "VINE, Geoff",
+      "name": "Geoff Vine",
+      "party": "WEST",
+      "party_label": "The West Party",
+      "ballot_position": 3,
+      "id": "sunbury/geoff-vine"
+    },
+    {
+      "ballot_name": "COTTOM, Simmone",
+      "name": "Simmone Cottom",
+      "party": "LIB",
+      "party_label": "Liberal",
+      "ballot_position": 4,
+      "id": "sunbury/simmone-cottom"
+    },
+    {
+      "ballot_name": "BULL, Josh",
+      "name": "Josh Bull",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 5,
+      "id": "sunbury/josh-bull"
+    },
+    {
+      "ballot_name": "MOHR, Rohanna",
+      "name": "Rohanna Mohr",
+      "party": "AJP",
+      "party_label": "Animal Justice Party",
+      "ballot_position": 6,
+      "id": "sunbury/rohanna-mohr"
+    },
+    {
+      "ballot_name": "BETHI, Bhasker Reddy",
+      "name": "Bhasker Reddy Bethi",
+      "party": "OTH",
+      "party_label": "The Republican",
+      "ballot_position": 7,
+      "id": "sunbury/bhasker-reddy-bethi"
+    },
+    {
+      "ballot_name": "STAFFORD, John",
+      "name": "John Stafford",
+      "party": "DLP",
+      "party_label": "Labour DLP",
+      "ballot_position": 8,
+      "id": "sunbury/john-stafford"
+    },
+    {
+      "ballot_name": "MEDCRAFT, Steve Jack",
+      "name": "Steve Jack Medcraft",
+      "party": "IND",
+      "ballot_position": 9,
+      "id": "sunbury/steve-jack-medcraft"
+    },
+    {
+      "ballot_name": "GRANGER-BROWN, Lauren",
+      "name": "Lauren Granger-Brown",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 10,
+      "id": "sunbury/lauren-granger-brown"
+    },
+    {
+      "ballot_name": "BATRES, Elmer",
+      "name": "Elmer Batres",
+      "party": "FF",
+      "party_label": "Family First",
+      "ballot_position": 11,
+      "id": "sunbury/elmer-batres"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "1080",
+      "registered_by": "Animal Justice Party",
+      "kind": "party",
+      "party": "AJP",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=539f5df0-efbf-4de7-972d-40ff624d1184%2Fsunbury.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1277",
+      "registered_by": "Animal Justice Party",
+      "kind": "party",
+      "party": "AJP",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ec43a60d-8aac-4120-a63d-bc03f26e4889%2Fsunbury.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "105",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fec69ca7-35d7-4c6c-b26e-1c21dff21913%2Falp_combined_wm%20sunbury_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BULL, Josh",
+        "MOHR, Rohanna",
+        "BETHI, Bhasker Reddy",
+        "BREMNER, Adam",
+        "VINE, Geoff",
+        "GRANGER-BROWN, Lauren",
+        "BATRES, Elmer",
+        "MEDCRAFT, Steve Jack",
+        "STAFFORD, John",
+        "COTTOM, Simmone",
+        "DABROWSKI, Elita"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 6,
+        "LNP": 10,
+        "ONP": 11
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 6,
+          "of_n": 10
+        }
+      ]
+    },
+    {
+      "registration": "321",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9325f4f4-64c5-4681-8561-dbe4a9aea2cf%2Falp_combined_nm_wm_greenvale_sunbury_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BULL, Josh",
+        "MOHR, Rohanna",
+        "BETHI, Bhasker Reddy",
+        "BREMNER, Adam",
+        "VINE, Geoff",
+        "GRANGER-BROWN, Lauren",
+        "BATRES, Elmer",
+        "MEDCRAFT, Steve Jack",
+        "STAFFORD, John",
+        "COTTOM, Simmone",
+        "DABROWSKI, Elita"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 6,
+        "LNP": 10,
+        "ONP": 11
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 6,
+          "of_n": 10
+        }
+      ]
+    },
+    {
+      "registration": "805",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=24d773ef-1d3d-4bb8-9581-c8e990206d8a%2Falp_combined_nm_wm_broadmeadows_greenvale_sunbury_tr5_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BULL, Josh",
+        "MOHR, Rohanna",
+        "BETHI, Bhasker Reddy",
+        "BREMNER, Adam",
+        "VINE, Geoff",
+        "GRANGER-BROWN, Lauren",
+        "BATRES, Elmer",
+        "MEDCRAFT, Steve Jack",
+        "STAFFORD, John",
+        "COTTOM, Simmone",
+        "DABROWSKI, Elita"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 6,
+        "LNP": 10,
+        "ONP": 11
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 6,
+          "of_n": 10
+        }
+      ]
+    },
+    {
+      "registration": "1422",
+      "registered_by": "Labour DLP",
+      "kind": "party",
+      "party": "DLP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6229dd84-279c-4322-b790-29e706745bd2%2Fdlp%20htv%20lower%20house%20-%20sunbury%20district%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "STAFFORD, John",
+        "VINE, Geoff",
+        "COTTOM, Simmone",
+        "BATRES, Elmer",
+        "DABROWSKI, Elita",
+        "MEDCRAFT, Steve Jack",
+        "BETHI, Bhasker Reddy",
+        "MOHR, Rohanna",
+        "BULL, Josh",
+        "GRANGER-BROWN, Lauren",
+        "BREMNER, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 3,
+        "ONP": 5,
+        "ALP": 9,
+        "GRN": 10
+      }
+    },
+    {
+      "registration": "497",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d3b3fe95-1d2e-4016-a94a-25fce6b6bb82%2Fsunbury.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BATRES, Elmer",
+        "DABROWSKI, Elita",
+        "STAFFORD, John",
+        "BETHI, Bhasker Reddy",
+        "COTTOM, Simmone",
+        "VINE, Geoff",
+        "BULL, Josh",
+        "MOHR, Rohanna",
+        "GRANGER-BROWN, Lauren",
+        "MEDCRAFT, Steve Jack",
+        "BREMNER, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 5,
+        "ALP": 7,
+        "GRN": 9
+      }
+    },
+    {
+      "registration": "721",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c3344911-133a-4d06-a12f-c73f590d9ce8%2Ffamilyfirst_sunbury_version2%20%28dragged%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BATRES, Elmer",
+        "STAFFORD, John",
+        "BETHI, Bhasker Reddy",
+        "COTTOM, Simmone",
+        "DABROWSKI, Elita",
+        "VINE, Geoff",
+        "BULL, Josh",
+        "MOHR, Rohanna",
+        "GRANGER-BROWN, Lauren",
+        "MEDCRAFT, Steve Jack",
+        "BREMNER, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 4,
+        "ONP": 5,
+        "ALP": 7,
+        "GRN": 9
+      }
+    },
+    {
+      "registration": "728",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=896cf7a8-ac8d-4650-85f1-e899731d6599%2Ffamilyfirst_sunbury_version3%20%28dragged%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BATRES, Elmer",
+        "BETHI, Bhasker Reddy",
+        "COTTOM, Simmone",
+        "DABROWSKI, Elita",
+        "STAFFORD, John",
+        "VINE, Geoff",
+        "BULL, Josh",
+        "MOHR, Rohanna",
+        "GRANGER-BROWN, Lauren",
+        "MEDCRAFT, Steve Jack",
+        "BREMNER, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 3,
+        "ONP": 4,
+        "ALP": 7,
+        "GRN": 9
+      }
+    },
+    {
+      "registration": "963",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=665b4d2b-6374-4f46-b485-ac6c905666f8%2Fthe%20greens%20combined%20northern%20metro%20kalkallo%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRANGER-BROWN, Lauren",
+        "BREMNER, Adam",
+        "MOHR, Rohanna",
+        "VINE, Geoff",
+        "BULL, Josh",
+        "COTTOM, Simmone",
+        "BETHI, Bhasker Reddy",
+        "STAFFORD, John",
+        "MEDCRAFT, Steve Jack",
+        "BATRES, Elmer",
+        "DABROWSKI, Elita"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "971",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=90bf4110-d3d3-4152-ac6f-9933f82cd18b%2Fthe%20greens%20combined%20northern%20metro%20broadmeadows%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRANGER-BROWN, Lauren",
+        "BREMNER, Adam",
+        "MOHR, Rohanna",
+        "VINE, Geoff",
+        "BULL, Josh",
+        "COTTOM, Simmone",
+        "BETHI, Bhasker Reddy",
+        "STAFFORD, John",
+        "MEDCRAFT, Steve Jack",
+        "BATRES, Elmer",
+        "DABROWSKI, Elita"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "988",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=be51a2b7-d690-4a90-8a7d-3f738101002c%2Fthe%20greens%20combined%20northern%20metro%20greenvale%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRANGER-BROWN, Lauren",
+        "BREMNER, Adam",
+        "MOHR, Rohanna",
+        "VINE, Geoff",
+        "BULL, Josh",
+        "COTTOM, Simmone",
+        "BETHI, Bhasker Reddy",
+        "STAFFORD, John",
+        "MEDCRAFT, Steve Jack",
+        "BATRES, Elmer",
+        "DABROWSKI, Elita"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1116",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=88a586f3-203e-4342-bbba-3a8335969420%2Fthe%20greens%20combined%20western%20metro%20sydenham%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRANGER-BROWN, Lauren",
+        "BREMNER, Adam",
+        "MOHR, Rohanna",
+        "VINE, Geoff",
+        "BULL, Josh",
+        "COTTOM, Simmone",
+        "BETHI, Bhasker Reddy",
+        "STAFFORD, John",
+        "MEDCRAFT, Steve Jack",
+        "BATRES, Elmer",
+        "DABROWSKI, Elita"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1130",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=49a14609-3074-49e7-a459-483132195854%2Fthe%20greens%20combined%20western%20metro%20niddrie%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRANGER-BROWN, Lauren",
+        "BREMNER, Adam",
+        "MOHR, Rohanna",
+        "VINE, Geoff",
+        "BULL, Josh",
+        "COTTOM, Simmone",
+        "BETHI, Bhasker Reddy",
+        "STAFFORD, John",
+        "MEDCRAFT, Steve Jack",
+        "BATRES, Elmer",
+        "DABROWSKI, Elita"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1132",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7c125df8-5882-4685-b05b-087f485045c9%2Fthe%20greens%20combined%20northern%20metro%20northern%20victoria%20kalkallo%20yan%20yean%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRANGER-BROWN, Lauren",
+        "BREMNER, Adam",
+        "MOHR, Rohanna",
+        "VINE, Geoff",
+        "BULL, Josh",
+        "COTTOM, Simmone",
+        "BETHI, Bhasker Reddy",
+        "STAFFORD, John",
+        "MEDCRAFT, Steve Jack",
+        "BATRES, Elmer",
+        "DABROWSKI, Elita"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1168",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a31ebc17-da3f-404c-8ff4-2688759e3cb0%2Fthe%20greens%20combined%20western%20metro%20sunbury%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRANGER-BROWN, Lauren",
+        "BREMNER, Adam",
+        "MOHR, Rohanna",
+        "VINE, Geoff",
+        "BULL, Josh",
+        "COTTOM, Simmone",
+        "BETHI, Bhasker Reddy",
+        "STAFFORD, John",
+        "MEDCRAFT, Steve Jack",
+        "BATRES, Elmer",
+        "DABROWSKI, Elita"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1175",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=137d1eb3-1c6f-4e3f-924e-bc8694e82692%2Fthe%20greens%20combined%20northern%20victoria%20macedon%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRANGER-BROWN, Lauren",
+        "BREMNER, Adam",
+        "MOHR, Rohanna",
+        "VINE, Geoff",
+        "BULL, Josh",
+        "COTTOM, Simmone",
+        "BETHI, Bhasker Reddy",
+        "STAFFORD, John",
+        "MEDCRAFT, Steve Jack",
+        "BATRES, Elmer",
+        "DABROWSKI, Elita"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1176",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=eb91dd96-cd39-486d-b1d9-d3b7e34fb7e3%2Fthe%20greens%20combined%20western%20victoria%20melton%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRANGER-BROWN, Lauren",
+        "BREMNER, Adam",
+        "MOHR, Rohanna",
+        "VINE, Geoff",
+        "BULL, Josh",
+        "COTTOM, Simmone",
+        "BETHI, Bhasker Reddy",
+        "STAFFORD, John",
+        "MEDCRAFT, Steve Jack",
+        "BATRES, Elmer",
+        "DABROWSKI, Elita"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1201",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1e7ee1a4-bd62-49a6-a92b-8e5a9e3ebd54%2Fthe%20greens%20combined%20sydenham%20kororoit%20st%20albans%20western%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRANGER-BROWN, Lauren",
+        "BREMNER, Adam",
+        "MOHR, Rohanna",
+        "VINE, Geoff",
+        "BULL, Josh",
+        "COTTOM, Simmone",
+        "BETHI, Bhasker Reddy",
+        "STAFFORD, John",
+        "MEDCRAFT, Steve Jack",
+        "BATRES, Elmer",
+        "DABROWSKI, Elita"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1478",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e269e427-1a9f-4777-85b4-0db846eda110%2Fthe%20greens%20combined%20western%20metro%20vietnamese%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRANGER-BROWN, Lauren",
+        "BREMNER, Adam",
+        "MOHR, Rohanna",
+        "VINE, Geoff",
+        "BULL, Josh",
+        "COTTOM, Simmone",
+        "BETHI, Bhasker Reddy",
+        "STAFFORD, John",
+        "MEDCRAFT, Steve Jack",
+        "BATRES, Elmer",
+        "DABROWSKI, Elita"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1492",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9790b150-f633-47f4-8b9e-aed7a9554e98%2Fthe%20greens%20combined%20western%20metro%20punjabi%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRANGER-BROWN, Lauren",
+        "BREMNER, Adam",
+        "MOHR, Rohanna",
+        "VINE, Geoff",
+        "BULL, Josh",
+        "COTTOM, Simmone",
+        "BETHI, Bhasker Reddy",
+        "STAFFORD, John",
+        "MEDCRAFT, Steve Jack",
+        "BATRES, Elmer",
+        "DABROWSKI, Elita"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1548",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d948fa13-a951-4e9f-a310-26cd0001f101%2Fthe%20greens%20combined%20western%20metro%20punjabi%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRANGER-BROWN, Lauren",
+        "BREMNER, Adam",
+        "MOHR, Rohanna",
+        "VINE, Geoff",
+        "BULL, Josh",
+        "COTTOM, Simmone",
+        "BETHI, Bhasker Reddy",
+        "STAFFORD, John",
+        "MEDCRAFT, Steve Jack",
+        "BATRES, Elmer",
+        "DABROWSKI, Elita"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1558",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=72d3cabb-ecac-4ed9-bd28-c39010cb0178%2Fthe%20greens%20combined%20western%20metro%20vietnamese%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRANGER-BROWN, Lauren",
+        "BREMNER, Adam",
+        "MOHR, Rohanna",
+        "VINE, Geoff",
+        "BULL, Josh",
+        "COTTOM, Simmone",
+        "BETHI, Bhasker Reddy",
+        "STAFFORD, John",
+        "MEDCRAFT, Steve Jack",
+        "BATRES, Elmer",
+        "DABROWSKI, Elita"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "548",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=19760389-c7ac-4f9e-aa1e-c127a4c83fed%2Fliberal_combined_wmr%20sunbury_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "COTTOM, Simmone",
+        "STAFFORD, John",
+        "BATRES, Elmer",
+        "VINE, Geoff",
+        "DABROWSKI, Elita",
+        "MEDCRAFT, Steve Jack",
+        "BETHI, Bhasker Reddy",
+        "MOHR, Rohanna",
+        "BULL, Josh",
+        "GRANGER-BROWN, Lauren",
+        "BREMNER, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 5,
+        "ALP": 9,
+        "GRN": 10
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 5,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "550",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8cd96679-2e60-4c14-b2c9-7f50a338a0ea%2Fliberal_combined_wmr%20sunbury_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "COTTOM, Simmone",
+        "STAFFORD, John",
+        "BATRES, Elmer",
+        "VINE, Geoff",
+        "DABROWSKI, Elita",
+        "MEDCRAFT, Steve Jack",
+        "BETHI, Bhasker Reddy",
+        "MOHR, Rohanna",
+        "BULL, Josh",
+        "GRANGER-BROWN, Lauren",
+        "BREMNER, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 5,
+        "ALP": 9,
+        "GRN": 10
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 5,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "1335",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b6da5187-d69b-4966-b0db-db82f8e07a35%2Fliberal_combined_nmr%20greenvale_wmr%20sunbury_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "COTTOM, Simmone",
+        "STAFFORD, John",
+        "BATRES, Elmer",
+        "VINE, Geoff",
+        "DABROWSKI, Elita",
+        "MEDCRAFT, Steve Jack",
+        "BETHI, Bhasker Reddy",
+        "MOHR, Rohanna",
+        "BULL, Josh",
+        "GRANGER-BROWN, Lauren",
+        "BREMNER, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 5,
+        "ALP": 9,
+        "GRN": 10
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 5,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "1504",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7eac0f08-ef9e-4f3c-8153-4ef5729fa74d%2Fliberal_multiple_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "COTTOM, Simmone",
+        "STAFFORD, John",
+        "BATRES, Elmer",
+        "VINE, Geoff",
+        "DABROWSKI, Elita",
+        "MEDCRAFT, Steve Jack",
+        "BETHI, Bhasker Reddy",
+        "MOHR, Rohanna",
+        "BULL, Josh",
+        "GRANGER-BROWN, Lauren",
+        "BREMNER, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 5,
+        "ALP": 9,
+        "GRN": 10
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 5,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "1327",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "COTTOM, Simmone",
+        "STAFFORD, John",
+        "BATRES, Elmer",
+        "VINE, Geoff",
+        "DABROWSKI, Elita",
+        "MEDCRAFT, Steve Jack",
+        "BETHI, Bhasker Reddy",
+        "MOHR, Rohanna",
+        "BULL, Josh",
+        "GRANGER-BROWN, Lauren",
+        "BREMNER, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 5,
+        "ALP": 9,
+        "GRN": 10
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 5,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "1508",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef298e7a-1371-41f2-a9a0-ed8f2eb25360%2Fliberal_multiple_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "COTTOM, Simmone",
+        "STAFFORD, John",
+        "BATRES, Elmer",
+        "VINE, Geoff",
+        "DABROWSKI, Elita",
+        "MEDCRAFT, Steve Jack",
+        "BETHI, Bhasker Reddy",
+        "MOHR, Rohanna",
+        "BULL, Josh",
+        "GRANGER-BROWN, Lauren",
+        "BREMNER, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 5,
+        "ALP": 9,
+        "GRN": 10
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 5,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "1512",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8d451e6-5d8a-43a1-9577-8481a2ccdc56%2Fliberal_multiple_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "COTTOM, Simmone",
+        "STAFFORD, John",
+        "BATRES, Elmer",
+        "VINE, Geoff",
+        "DABROWSKI, Elita",
+        "MEDCRAFT, Steve Jack",
+        "BETHI, Bhasker Reddy",
+        "MOHR, Rohanna",
+        "BULL, Josh",
+        "GRANGER-BROWN, Lauren",
+        "BREMNER, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 5,
+        "ALP": 9,
+        "GRN": 10
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 5,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "1513",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f6f69e90-716d-4ff5-8422-2a0f36601988%2Fliberal_multiple_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "COTTOM, Simmone",
+        "STAFFORD, John",
+        "BATRES, Elmer",
+        "VINE, Geoff",
+        "DABROWSKI, Elita",
+        "MEDCRAFT, Steve Jack",
+        "BETHI, Bhasker Reddy",
+        "MOHR, Rohanna",
+        "BULL, Josh",
+        "GRANGER-BROWN, Lauren",
+        "BREMNER, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 5,
+        "ALP": 9,
+        "GRN": 10
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 5,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "892",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e08b2316-10f8-4a9e-a6f6-b8e8d2fb07a5%2Fonv%20-%20combined%20-%20western%20metropolitan%20region%20-%20sunbury%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "DABROWSKI, Elita",
+        "BATRES, Elmer",
+        "COTTOM, Simmone",
+        "VINE, Geoff",
+        "BETHI, Bhasker Reddy",
+        "STAFFORD, John",
+        "MEDCRAFT, Steve Jack",
+        "BULL, Josh",
+        "GRANGER-BROWN, Lauren",
+        "MOHR, Rohanna",
+        "BREMNER, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 3,
+        "ALP": 8,
+        "GRN": 9
+      }
+    },
+    {
+      "registration": "1539",
+      "registered_by": "The Republican",
+      "kind": "party",
+      "party": "OTH",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-18",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b7ff1a92-8ae8-4f62-a94e-12a5c8e8fd15%2Fthe%20republican%20-%20combined%20-%20western%20metro%2C%20sunbury.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "457",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=df512d1f-b77d-49c9-b1d5-bbb0ec35ee2b%2Fvictorian%20socialists%20combined%20western%20metropolitan%20sunbury%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BREMNER, Adam",
+        "GRANGER-BROWN, Lauren",
+        "MOHR, Rohanna",
+        "BULL, Josh",
+        "VINE, Geoff",
+        "BETHI, Bhasker Reddy",
+        "MEDCRAFT, Steve Jack",
+        "STAFFORD, John",
+        "COTTOM, Simmone",
+        "BATRES, Elmer",
+        "DABROWSKI, Elita"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 9,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1241",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=cd16c6bd-e6c9-4c80-a12c-951109d051cd%2Fvictorian%20socialists%20combined%20western%20metropolitan%20all.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BREMNER, Adam",
+        "GRANGER-BROWN, Lauren",
+        "MOHR, Rohanna",
+        "BULL, Josh",
+        "VINE, Geoff",
+        "BETHI, Bhasker Reddy",
+        "MEDCRAFT, Steve Jack",
+        "STAFFORD, John",
+        "COTTOM, Simmone",
+        "BATRES, Elmer",
+        "DABROWSKI, Elita"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 9,
+        "ONP": 11
+      }
+    },
+    {
+      "registration": "1481",
+      "registered_by": "The West Party",
+      "kind": "party",
+      "party": "WEST",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8d979800-3edb-4753-bd4f-fdabfdbb6272%2Fhtv%20the%20west%20party%20geoff%20vine%20sunbury%20%28%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1388",
+      "registered_by": "MEDCRAFT, Steve Jack",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "sunbury/steve-jack-medcraft",
+      "type": "Single",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9e07af51-96db-42f3-8811-0b1f9cc15866%2Fmedcraft%2C%20stephen%20paul.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    }
+  ],
+  "no_card": []
+}

@@ -1,0 +1,1357 @@
+{
+  "area": "geelong",
+  "house": "lower",
+  "name": "Geelong",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "FLYNN, Emilie",
+      "name": "Emilie Flynn",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 1,
+      "id": "geelong/emilie-flynn"
+    },
+    {
+      "ballot_name": "POBJOY, Andy",
+      "name": "Andy Pobjoy",
+      "party": "LIB",
+      "party_label": "Liberal",
+      "ballot_position": 2,
+      "id": "geelong/andy-pobjoy"
+    },
+    {
+      "ballot_name": "BENGTSSON, Maria",
+      "name": "Maria Bengtsson",
+      "party": "FF",
+      "party_label": "Family First",
+      "ballot_position": 3,
+      "id": "geelong/maria-bengtsson"
+    },
+    {
+      "ballot_name": "MACPHERSON, Pippa",
+      "name": "Pippa Macpherson",
+      "party": "AJP",
+      "party_label": "Animal Justice Party",
+      "ballot_position": 4,
+      "id": "geelong/pippa-macpherson"
+    },
+    {
+      "ballot_name": "DE LORENZO, John",
+      "name": "John De Lorenzo",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 5,
+      "id": "geelong/john-de-lorenzo"
+    },
+    {
+      "ballot_name": "GRULL, Brenden",
+      "name": "Brenden Grull",
+      "party": "SAL",
+      "party_label": "Socialist Alliance",
+      "ballot_position": 6,
+      "id": "geelong/brenden-grull"
+    },
+    {
+      "ballot_name": "COUZENS, Christine",
+      "name": "Christine Couzens",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 7,
+      "id": "geelong/christine-couzens"
+    },
+    {
+      "ballot_name": "VANDERPOL, Bree",
+      "name": "Bree Vanderpol",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 8,
+      "id": "geelong/bree-vanderpol"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "1261",
+      "registered_by": "Animal Justice Party",
+      "kind": "party",
+      "party": "AJP",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=47b14b73-b49f-4a01-b063-c8854f97f169%2Fgeelong.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MACPHERSON, Pippa",
+        "FLYNN, Emilie",
+        "VANDERPOL, Bree",
+        "COUZENS, Christine",
+        "GRULL, Brenden",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "115",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=92bdbb0f-468b-4fb1-9160-5dc12df8429d%2Falp_combined_wv%20geelong_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "COUZENS, Christine",
+        "FLYNN, Emilie",
+        "MACPHERSON, Pippa",
+        "GRULL, Brenden",
+        "VANDERPOL, Bree",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 6,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "266",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=cf84d5e3-68b1-4ba9-b866-cf11f831aa5f%2Falp_combined_wv_bellarine_geelong_lara_south%20barwon_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "COUZENS, Christine",
+        "FLYNN, Emilie",
+        "MACPHERSON, Pippa",
+        "GRULL, Brenden",
+        "VANDERPOL, Bree",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 6,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "342",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f6939804-ab9f-47f3-b537-2bc0a361c382%2Falp_combined_wv_bellarine_geelong_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "COUZENS, Christine",
+        "FLYNN, Emilie",
+        "MACPHERSON, Pippa",
+        "GRULL, Brenden",
+        "VANDERPOL, Bree",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 6,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "404",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ad4ebe2a-1236-4219-9cea-0ab161b4e0fe%2Falp_combined_wv_geelong_lara_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "COUZENS, Christine",
+        "FLYNN, Emilie",
+        "MACPHERSON, Pippa",
+        "GRULL, Brenden",
+        "VANDERPOL, Bree",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 6,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "409",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=30088e05-8b08-45fb-915b-9f40b0e215cb%2Falp_combined_wv_geelong_south%20barwon_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "COUZENS, Christine",
+        "FLYNN, Emilie",
+        "MACPHERSON, Pippa",
+        "GRULL, Brenden",
+        "VANDERPOL, Bree",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 6,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "758",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=36ad07dd-bca8-4a7c-902a-485e0aaa14cf%2Falp_combined_wv_bellarine_geelong_lara_south%20barwon_tr2_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "COUZENS, Christine",
+        "FLYNN, Emilie",
+        "MACPHERSON, Pippa",
+        "GRULL, Brenden",
+        "VANDERPOL, Bree",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 6,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "COUZENS, Christine",
+        "FLYNN, Emilie",
+        "MACPHERSON, Pippa",
+        "GRULL, Brenden",
+        "VANDERPOL, Bree",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 6,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1214",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9aa36896-7ed6-46cd-bac3-4303e5c042a4%2Ffamilyfirst_western-vic-polwarth-geelong-seats_version%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BENGTSSON, Maria",
+        "DE LORENZO, John",
+        "POBJOY, Andy",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "GRULL, Brenden",
+        "FLYNN, Emilie",
+        "VANDERPOL, Bree"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 3,
+        "ALP": 5,
+        "GRN": 7
+      }
+    },
+    {
+      "registration": "1125",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6c93fdd7-9146-44be-8364-fe6b32ae6eab%2Fthe%20greens%20combined%20western%20victoria%20polwarth%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FLYNN, Emilie",
+        "GRULL, Brenden",
+        "VANDERPOL, Bree",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1128",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=be0cb3f0-a1bc-4e7a-8fd0-5be47232aa3e%2Fthe%20greens%20combined%20western%20victoria%20south%20barwon%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FLYNN, Emilie",
+        "GRULL, Brenden",
+        "VANDERPOL, Bree",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1145",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=0f7383aa-b7b6-4b87-b25d-5bd1ddac347f%2Fthe%20greens%20combined%20geelong%20south%20barwon%20bellarine%20western%20victoria%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FLYNN, Emilie",
+        "GRULL, Brenden",
+        "VANDERPOL, Bree",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1165",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d4ae46ee-3105-4166-bd0a-288088ebc987%2Fthe%20greens%20combined%20western%20victoria%20south%20barwon%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FLYNN, Emilie",
+        "GRULL, Brenden",
+        "VANDERPOL, Bree",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1172",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e1e23b63-5bb7-46cd-8257-62694f4302f3%2Fthe%20greens%20combined%20western%20victoria%20geelong%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FLYNN, Emilie",
+        "GRULL, Brenden",
+        "VANDERPOL, Bree",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1176",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=eb91dd96-cd39-486d-b1d9-d3b7e34fb7e3%2Fthe%20greens%20combined%20western%20victoria%20melton%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FLYNN, Emilie",
+        "GRULL, Brenden",
+        "VANDERPOL, Bree",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1181",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=15cbe873-057b-4541-b1a1-26c691a904fa%2Fthe%20greens%20combined%20western%20victoria%20lara%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FLYNN, Emilie",
+        "GRULL, Brenden",
+        "VANDERPOL, Bree",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1182",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7d3205bf-f329-4f67-80fb-15b7860448bc%2Fthe%20greens%20combined%20western%20victoria%20eureka%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FLYNN, Emilie",
+        "GRULL, Brenden",
+        "VANDERPOL, Bree",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FLYNN, Emilie",
+        "GRULL, Brenden",
+        "VANDERPOL, Bree",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1198",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f8b8df23-b334-45a6-b04f-317659dc0d56%2Fthe%20greens%20combined%20western%20victoria%20polwarth%20south%20barwon%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FLYNN, Emilie",
+        "GRULL, Brenden",
+        "VANDERPOL, Bree",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1208",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d0a1c2da-ed56-4e30-80df-74538bacfc94%2Fthe%20greens%20combined%20western%20victoria%20bellarine%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FLYNN, Emilie",
+        "GRULL, Brenden",
+        "VANDERPOL, Bree",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1106",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fec738f3-7cc3-4cfc-98c9-c6aa8f009357%2Fems%201106%20the%20greens%20combined%20geelong%20south%20barwon%20bellarine%20western%20victoria%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FLYNN, Emilie",
+        "GRULL, Brenden",
+        "VANDERPOL, Bree",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1410",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5bd8d1be-860c-4fc2-b025-3da39124ed56%2Fg90%20the%20greens%20combined%20western%20victoria%20bellarine%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FLYNN, Emilie",
+        "GRULL, Brenden",
+        "VANDERPOL, Bree",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1411",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=73d86f2d-2086-4213-a293-2ed1e86209ad%2Fg93%20the%20greens%20combined%20western%20victoria%20polwarth%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FLYNN, Emilie",
+        "GRULL, Brenden",
+        "VANDERPOL, Bree",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1412",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f82308ee-ae6d-4f07-85ae-5f62e4a2c2ca%2Fg36%20the%20greens%20combined%20western%20victoria%20eureka%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FLYNN, Emilie",
+        "GRULL, Brenden",
+        "VANDERPOL, Bree",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1489",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5957c100-260a-436a-811c-28fd44bf871b%2Fthe%20greens%20combined%20western%20victoria%20punjabi%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "FLYNN, Emilie",
+        "GRULL, Brenden",
+        "VANDERPOL, Bree",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1554",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5392ee0d-27e0-4480-9c0d-8a5bc9cc74c7%2Fthe%20greens%20combined%20western%20victoria%20punjabi%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "540",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=34a4d90d-f707-42f4-b132-618cb2e8f010%2Fliberal_combined_wvr%20geelong_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "FLYNN, Emilie",
+        "VANDERPOL, Bree",
+        "GRULL, Brenden"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "692",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=29c63e35-c4bc-474f-81db-2adf0c8c1818%2Fliberal_combined_wvr%20geelong_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "FLYNN, Emilie",
+        "VANDERPOL, Bree",
+        "GRULL, Brenden"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1237",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=cf91c40c-fbfb-469b-bcce-556bc6730727%2Fliberal_combined_wvr%20geelong_wvr%20south%20barwon_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "FLYNN, Emilie",
+        "VANDERPOL, Bree",
+        "GRULL, Brenden"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1253",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6cc77c99-c7d1-45cc-bde4-137e6f52f37d%2Fliberal_combined_wvr%20geelong_wvr%20lara_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "FLYNN, Emilie",
+        "VANDERPOL, Bree",
+        "GRULL, Brenden"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1265",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3760ee27-ad0a-424e-ae14-bf626a7d5c4b%2Fliberal_combined_wvr%20bellarine_wvr%20geelong_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "FLYNN, Emilie",
+        "VANDERPOL, Bree",
+        "GRULL, Brenden"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1504",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7eac0f08-ef9e-4f3c-8153-4ef5729fa74d%2Fliberal_multiple_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "FLYNN, Emilie",
+        "VANDERPOL, Bree",
+        "GRULL, Brenden"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1327",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "FLYNN, Emilie",
+        "VANDERPOL, Bree",
+        "GRULL, Brenden"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1508",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef298e7a-1371-41f2-a9a0-ed8f2eb25360%2Fliberal_multiple_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "FLYNN, Emilie",
+        "VANDERPOL, Bree",
+        "GRULL, Brenden"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1512",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8d451e6-5d8a-43a1-9577-8481a2ccdc56%2Fliberal_multiple_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "FLYNN, Emilie",
+        "VANDERPOL, Bree",
+        "GRULL, Brenden"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1513",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f6f69e90-716d-4ff5-8422-2a0f36601988%2Fliberal_multiple_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "FLYNN, Emilie",
+        "VANDERPOL, Bree",
+        "GRULL, Brenden"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "938",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a6a3c453-3a9e-471f-b0b1-c23245fde13e%2Fonv%20-%20combined%20-%20western%20victoria%20region%20-%20geelong%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "DE LORENZO, John",
+        "BENGTSSON, Maria",
+        "POBJOY, Andy",
+        "COUZENS, Christine",
+        "FLYNN, Emilie",
+        "MACPHERSON, Pippa",
+        "GRULL, Brenden",
+        "VANDERPOL, Bree"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 3,
+        "ALP": 4,
+        "GRN": 5
+      }
+    },
+    {
+      "registration": "40",
+      "registered_by": "Socialist Alliance",
+      "kind": "party",
+      "party": "SAL",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=37578929-9f90-412f-962c-692d2098ed8f%2Fsa_combined_wv_geelong_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRULL, Brenden",
+        "VANDERPOL, Bree",
+        "FLYNN, Emilie",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 3,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "461",
+      "registered_by": "Socialist Alliance",
+      "kind": "party",
+      "party": "SAL",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=68446135-0cdb-46e1-978a-11af3c6928ef%2Fsa_combined_geelong.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRULL, Brenden",
+        "VANDERPOL, Bree",
+        "FLYNN, Emilie",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 3,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "434",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c55b37db-2177-4ea1-b60f-e44fda833832%2Fvictorian%20socialists%20combined%20western%20victoria%20geelong%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "VANDERPOL, Bree",
+        "GRULL, Brenden",
+        "FLYNN, Emilie",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 3,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1032",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3cb352aa-6aea-462a-851f-36f81b5f44a3%2Fvs_wv_combined%20all_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "VANDERPOL, Bree",
+        "GRULL, Brenden",
+        "FLYNN, Emilie",
+        "MACPHERSON, Pippa",
+        "COUZENS, Christine",
+        "POBJOY, Andy",
+        "BENGTSSON, Maria",
+        "DE LORENZO, John"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 3,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    }
+  ],
+  "no_card": []
+}

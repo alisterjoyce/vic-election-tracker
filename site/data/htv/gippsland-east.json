@@ -1,0 +1,605 @@
+{
+  "area": "gippsland-east",
+  "house": "lower",
+  "name": "Gippsland East",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "ESPESETH, Amy",
+      "name": "Amy Espeseth",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 1,
+      "id": "gippsland-east/amy-espeseth"
+    },
+    {
+      "ballot_name": "STEPHENS, Sonny",
+      "name": "Sonny Stephens",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 2,
+      "id": "gippsland-east/sonny-stephens"
+    },
+    {
+      "ballot_name": "MUNRO, Ash",
+      "name": "Ash Munro",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 3,
+      "id": "gippsland-east/ash-munro"
+    },
+    {
+      "ballot_name": "RENDELL, Gemma",
+      "name": "Gemma Rendell",
+      "party": "NAT",
+      "party_label": "The Nationals",
+      "ballot_position": 4,
+      "id": "gippsland-east/gemma-rendell"
+    },
+    {
+      "ballot_name": "WATERS, Alison",
+      "name": "Alison Waters",
+      "party": "FF",
+      "party_label": "Family First",
+      "ballot_position": 5,
+      "id": "gippsland-east/alison-waters"
+    },
+    {
+      "ballot_name": "GOODMAN, Steve",
+      "name": "Steve Goodman",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 6,
+      "id": "gippsland-east/steve-goodman"
+    },
+    {
+      "ballot_name": "MUIR, Ricky",
+      "name": "Ricky Muir",
+      "party": "SFF",
+      "party_label": "Shooters, Fishers and Farmers Party Victoria",
+      "ballot_position": 7,
+      "id": "gippsland-east/ricky-muir"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "26",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=678fe78f-e7e8-4ab0-939d-e23abe8ddac6%2Falp_combined_ev%20gippsland%20east_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "STEPHENS, Sonny",
+        "MUNRO, Ash",
+        "MUIR, Ricky",
+        "ESPESETH, Amy",
+        "RENDELL, Gemma",
+        "WATERS, Alison",
+        "GOODMAN, Steve"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "798",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8fa92243-0e35-4162-a547-2a82253b65a4%2Falp_combined_ev_gippsland%20east_gippsland%20south_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "STEPHENS, Sonny",
+        "MUNRO, Ash",
+        "MUIR, Ricky",
+        "ESPESETH, Amy",
+        "RENDELL, Gemma",
+        "WATERS, Alison",
+        "GOODMAN, Steve"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "STEPHENS, Sonny",
+        "MUNRO, Ash",
+        "MUIR, Ricky",
+        "ESPESETH, Amy",
+        "RENDELL, Gemma",
+        "WATERS, Alison",
+        "GOODMAN, Steve"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "555",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=22b58672-c1e2-441b-b0f9-582ff56e6403%2Ffamilyfirst_mor-gippse_version%202%20amended.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WATERS, Alison",
+        "MUIR, Ricky",
+        "GOODMAN, Steve",
+        "RENDELL, Gemma",
+        "STEPHENS, Sonny",
+        "MUNRO, Ash",
+        "ESPESETH, Amy"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 3,
+        "LNP": 4,
+        "ALP": 5,
+        "GRN": 6
+      }
+    },
+    {
+      "registration": "1006",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9ad76913-2863-4756-988b-d2743d944879%2Fthe%20greens%20combined%20eastern%20victoria%20narracan%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MUNRO, Ash",
+        "ESPESETH, Amy",
+        "STEPHENS, Sonny",
+        "RENDELL, Gemma",
+        "MUIR, Ricky",
+        "WATERS, Alison",
+        "GOODMAN, Steve"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1008",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c6bf4ba2-12cd-4760-bd0a-44907af31b00%2Fthe%20greens%20combined%20eastern%20victoria%20gippsland%20east%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MUNRO, Ash",
+        "ESPESETH, Amy",
+        "STEPHENS, Sonny",
+        "RENDELL, Gemma",
+        "MUIR, Ricky",
+        "WATERS, Alison",
+        "GOODMAN, Steve"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1009",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=05996cac-4923-421a-91e0-cb8d07e1883a%2Fthe%20greens%20combined%20eastern%20victoria%20gippsland%20south%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MUNRO, Ash",
+        "ESPESETH, Amy",
+        "STEPHENS, Sonny",
+        "RENDELL, Gemma",
+        "MUIR, Ricky",
+        "WATERS, Alison",
+        "GOODMAN, Steve"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1141",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d164bc6b-6b25-4cad-8523-2fa62790d70f%2Fthe%20greens%20combined%20northern%20victoria%20ovens%20valley%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MUNRO, Ash",
+        "ESPESETH, Amy",
+        "STEPHENS, Sonny",
+        "RENDELL, Gemma",
+        "MUIR, Ricky",
+        "WATERS, Alison",
+        "GOODMAN, Steve"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1160",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e600e85e-059d-43c3-b044-ee0bcafc9be9%2Fthe%20greens%20combined%20northern%20victoria%20benambra%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MUNRO, Ash",
+        "ESPESETH, Amy",
+        "STEPHENS, Sonny",
+        "RENDELL, Gemma",
+        "MUIR, Ricky",
+        "WATERS, Alison",
+        "GOODMAN, Steve"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1171",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=566928ae-6887-487b-b73d-3c1fccd9f5da%2Fthe%20greens%20combined%20eastern%20victoria%20gippsland%20east%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MUNRO, Ash",
+        "ESPESETH, Amy",
+        "STEPHENS, Sonny",
+        "RENDELL, Gemma",
+        "MUIR, Ricky",
+        "WATERS, Alison",
+        "GOODMAN, Steve"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1184",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=92f96d58-5c62-45f2-803a-8633f5dca5d7%2Fthe%20greens%20combined%20northern%20victoria%20eildon%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MUNRO, Ash",
+        "ESPESETH, Amy",
+        "STEPHENS, Sonny",
+        "RENDELL, Gemma",
+        "MUIR, Ricky",
+        "WATERS, Alison",
+        "GOODMAN, Steve"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MUNRO, Ash",
+        "ESPESETH, Amy",
+        "STEPHENS, Sonny",
+        "RENDELL, Gemma",
+        "MUIR, Ricky",
+        "WATERS, Alison",
+        "GOODMAN, Steve"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1197",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=63acfa3d-7df3-441f-bea6-330ee9e51263%2Fthe%20greens%20combined%20eastern%20victoria%20gippsland%20south%20gippsland%20east%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "471",
+      "registered_by": "The Nationals",
+      "kind": "party",
+      "party": "NAT",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4f8bec0f-4f63-4cb3-b61a-3d04809f607b%2Fgippsland%20east%20gemma%20rendell%20htv%20vec%20no%20trims.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "465",
+      "registered_by": "The Nationals",
+      "kind": "party",
+      "party": "NAT",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d595f20b-4ffd-4556-ac63-5472d5971ef9%2Fnationals_combined_htvc_a4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1562",
+      "registered_by": "The Nationals",
+      "kind": "party",
+      "party": "NAT",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-18",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=479dbc4c-1e73-4414-9656-1400fe0b5aa0%2Fstatewide_htv_a3_rogueprint%20%281%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RENDELL, Gemma",
+        "MUIR, Ricky",
+        "GOODMAN, Steve",
+        "WATERS, Alison",
+        "STEPHENS, Sonny",
+        "MUNRO, Ash",
+        "ESPESETH, Amy"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1607",
+      "registered_by": "The Nationals",
+      "kind": "party",
+      "party": "NAT",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9e9a6115-fb72-4eff-8152-a5a3c3f305e6%2Fgippsland%20east%20gemma%20rendell%20htv%20vec%20no%20trims%2019.11.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "868",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2ba226cc-65c6-4f59-a2c2-3bd9151cfa19%2Fonv%20-%20combined%20-%20eastern%20victoria%20region%20-%20gippsland%20east%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GOODMAN, Steve",
+        "WATERS, Alison",
+        "MUIR, Ricky",
+        "RENDELL, Gemma",
+        "STEPHENS, Sonny",
+        "MUNRO, Ash",
+        "ESPESETH, Amy"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 4,
+        "ALP": 5,
+        "GRN": 6
+      }
+    },
+    {
+      "registration": "238",
+      "registered_by": "Shooters, Fishers and Farmers Party Victoria",
+      "kind": "party",
+      "party": "SFF",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3e14f1c3-627b-4ff2-8a8d-8ef262b39e2f%2Fsff_combined_easternvicgippslandeast_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "393",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=74fe0115-7f6f-4d2a-ac7e-ba8d60ef75ba%2Fvictorian%20socialists%20combined%20eastern%20victoria%20gippsland%20east%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ESPESETH, Amy",
+        "MUNRO, Ash",
+        "STEPHENS, Sonny",
+        "MUIR, Ricky",
+        "RENDELL, Gemma",
+        "WATERS, Alison",
+        "GOODMAN, Steve"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 3,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1025",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=613ee757-15ec-4982-b86e-445f2e7521ca%2Fvs_ev_combined%20all_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "ESPESETH, Amy",
+        "MUNRO, Ash",
+        "STEPHENS, Sonny",
+        "MUIR, Ricky",
+        "RENDELL, Gemma",
+        "WATERS, Alison",
+        "GOODMAN, Steve"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 3,
+        "LNP": 5,
+        "ONP": 7
+      }
+    }
+  ],
+  "no_card": []
+}

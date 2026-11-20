@@ -1,0 +1,763 @@
+{
+  "area": "mornington",
+  "house": "lower",
+  "name": "Mornington",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "BROWNLIE, Gene",
+      "name": "Gene Brownlie",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 1,
+      "id": "mornington/gene-brownlie"
+    },
+    {
+      "ballot_name": "MACDONALD, Kerry",
+      "name": "Kerry Macdonald",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 2,
+      "id": "mornington/kerry-macdonald"
+    },
+    {
+      "ballot_name": "CREWTHER, Chris",
+      "name": "Chris Crewther",
+      "party": "LIB",
+      "party_label": "Liberal",
+      "ballot_position": 3,
+      "id": "mornington/chris-crewther"
+    },
+    {
+      "ballot_name": "BEARDS, Ashli",
+      "name": "Ashli Beards",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 4,
+      "id": "mornington/ashli-beards"
+    },
+    {
+      "ballot_name": "TITCHER, Kai",
+      "name": "Kai Titcher",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 5,
+      "id": "mornington/kai-titcher"
+    },
+    {
+      "ballot_name": "GOFFIN, Melissa",
+      "name": "Melissa Goffin",
+      "party": "IND",
+      "ballot_position": 6,
+      "id": "mornington/melissa-goffin"
+    },
+    {
+      "ballot_name": "MAHER, Adrian",
+      "name": "Adrian Maher",
+      "party": "IND",
+      "ballot_position": 7,
+      "id": "mornington/adrian-maher"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "29",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=cdd0ed2d-9049-43a3-ace1-d441af080b01%2Falp_combined_ev%20mornington_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MACDONALD, Kerry",
+        "GOFFIN, Melissa",
+        "TITCHER, Kai",
+        "BROWNLIE, Gene",
+        "MAHER, Adrian",
+        "CREWTHER, Chris",
+        "BEARDS, Ashli"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 6,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "280",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=0b790783-08d3-461f-9fb9-5262d3d36912%2Falp_combined_sem_ev_frankston_mornington_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MACDONALD, Kerry",
+        "GOFFIN, Melissa",
+        "TITCHER, Kai",
+        "BROWNLIE, Gene",
+        "MAHER, Adrian",
+        "CREWTHER, Chris",
+        "BEARDS, Ashli"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 6,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MACDONALD, Kerry",
+        "GOFFIN, Melissa",
+        "TITCHER, Kai",
+        "BROWNLIE, Gene",
+        "MAHER, Adrian",
+        "CREWTHER, Chris",
+        "BEARDS, Ashli"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 6,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "901",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1898f0c7-c75e-4464-96a8-0b4e9b769313%2Fthe%20greens%20combined%20south-east%20metro%20frankston%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TITCHER, Kai",
+        "BROWNLIE, Gene",
+        "GOFFIN, Melissa",
+        "MAHER, Adrian",
+        "MACDONALD, Kerry",
+        "CREWTHER, Chris",
+        "BEARDS, Ashli"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "998",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=09c47db0-7a29-4700-b4dc-5f954977b8d1%2Fthe%20greens%20combined%20eastern%20victoria%20nepean%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TITCHER, Kai",
+        "BROWNLIE, Gene",
+        "GOFFIN, Melissa",
+        "MAHER, Adrian",
+        "MACDONALD, Kerry",
+        "CREWTHER, Chris",
+        "BEARDS, Ashli"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1007",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d26c1bb4-6b15-45d6-926c-14d83e6a2247%2Fthe%20greens%20combined%20eastern%20victoria%20hastings%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TITCHER, Kai",
+        "BROWNLIE, Gene",
+        "GOFFIN, Melissa",
+        "MAHER, Adrian",
+        "MACDONALD, Kerry",
+        "CREWTHER, Chris",
+        "BEARDS, Ashli"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1107",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2763f284-2e2b-4c39-a735-7f7e0c4191b4%2Fthe%20greens%20combined%20south-eastern%20metro%20carrum%20frankston1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TITCHER, Kai",
+        "BROWNLIE, Gene",
+        "GOFFIN, Melissa",
+        "MAHER, Adrian",
+        "MACDONALD, Kerry",
+        "CREWTHER, Chris",
+        "BEARDS, Ashli"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1110",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=643181db-eec1-44a5-b21c-d3221e567e5a%2Fthe%20greens%20combined%20eastern%20victoria%20mornington%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TITCHER, Kai",
+        "BROWNLIE, Gene",
+        "GOFFIN, Melissa",
+        "MAHER, Adrian",
+        "MACDONALD, Kerry",
+        "CREWTHER, Chris",
+        "BEARDS, Ashli"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1158",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e0bab8d5-9437-4163-80f9-95aaf0d45536%2Fthe%20greens%20combined%20eastern%20victoria%20mornington%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TITCHER, Kai",
+        "BROWNLIE, Gene",
+        "GOFFIN, Melissa",
+        "MAHER, Adrian",
+        "MACDONALD, Kerry",
+        "CREWTHER, Chris",
+        "BEARDS, Ashli"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "TITCHER, Kai",
+        "BROWNLIE, Gene",
+        "GOFFIN, Melissa",
+        "MAHER, Adrian",
+        "MACDONALD, Kerry",
+        "CREWTHER, Chris",
+        "BEARDS, Ashli"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "584",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e3cacec2-f266-4b31-8447-b18733eb0d05%2Fliberal_combined_evr%20mornington_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CREWTHER, Chris",
+        "MAHER, Adrian",
+        "BEARDS, Ashli",
+        "GOFFIN, Melissa",
+        "MACDONALD, Kerry",
+        "TITCHER, Kai",
+        "BROWNLIE, Gene"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "649",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5fcbf2db-c05b-47ae-a402-4ef5fc22dfe7%2Fliberal_combined_evr%20mornington_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CREWTHER, Chris",
+        "MAHER, Adrian",
+        "BEARDS, Ashli",
+        "GOFFIN, Melissa",
+        "MACDONALD, Kerry",
+        "TITCHER, Kai",
+        "BROWNLIE, Gene"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1278",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c38c1493-c131-400d-8a29-c0945ccada5d%2Fliberal_combined_semr%20frankston_evr%20mornington_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CREWTHER, Chris",
+        "MAHER, Adrian",
+        "BEARDS, Ashli",
+        "GOFFIN, Melissa",
+        "MACDONALD, Kerry",
+        "TITCHER, Kai",
+        "BROWNLIE, Gene"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1504",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7eac0f08-ef9e-4f3c-8153-4ef5729fa74d%2Fliberal_multiple_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CREWTHER, Chris",
+        "MAHER, Adrian",
+        "BEARDS, Ashli",
+        "GOFFIN, Melissa",
+        "MACDONALD, Kerry",
+        "TITCHER, Kai",
+        "BROWNLIE, Gene"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1327",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CREWTHER, Chris",
+        "MAHER, Adrian",
+        "BEARDS, Ashli",
+        "GOFFIN, Melissa",
+        "MACDONALD, Kerry",
+        "TITCHER, Kai",
+        "BROWNLIE, Gene"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1508",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef298e7a-1371-41f2-a9a0-ed8f2eb25360%2Fliberal_multiple_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CREWTHER, Chris",
+        "MAHER, Adrian",
+        "BEARDS, Ashli",
+        "GOFFIN, Melissa",
+        "MACDONALD, Kerry",
+        "TITCHER, Kai",
+        "BROWNLIE, Gene"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1512",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8d451e6-5d8a-43a1-9577-8481a2ccdc56%2Fliberal_multiple_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CREWTHER, Chris",
+        "MAHER, Adrian",
+        "BEARDS, Ashli",
+        "GOFFIN, Melissa",
+        "MACDONALD, Kerry",
+        "TITCHER, Kai",
+        "BROWNLIE, Gene"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1513",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f6f69e90-716d-4ff5-8422-2a0f36601988%2Fliberal_multiple_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CREWTHER, Chris",
+        "MAHER, Adrian",
+        "BEARDS, Ashli",
+        "GOFFIN, Melissa",
+        "MACDONALD, Kerry",
+        "TITCHER, Kai",
+        "BROWNLIE, Gene"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BEARDS, Ashli",
+        "CREWTHER, Chris",
+        "MAHER, Adrian",
+        "MACDONALD, Kerry",
+        "TITCHER, Kai",
+        "GOFFIN, Melissa",
+        "BROWNLIE, Gene"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 2,
+        "ALP": 4,
+        "GRN": 5
+      }
+    },
+    {
+      "registration": "924",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c0f198ca-41cb-4324-a4bb-9dfb866cef2d%2Fonv%20-%20combined%20-%20eastern%20victoria%20region%20-%20mornington%20-%203.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "359",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8fc7362e-7bdd-4404-a9a3-56f1d2f9b7a8%2Fvictorian%20socialists%20combined%20eastern%20victoria%20mornington%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BROWNLIE, Gene",
+        "TITCHER, Kai",
+        "MACDONALD, Kerry",
+        "GOFFIN, Melissa",
+        "MAHER, Adrian",
+        "CREWTHER, Chris",
+        "BEARDS, Ashli"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 3,
+        "LNP": 6,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1025",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=613ee757-15ec-4982-b86e-445f2e7521ca%2Fvs_ev_combined%20all_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BROWNLIE, Gene",
+        "TITCHER, Kai",
+        "MACDONALD, Kerry",
+        "GOFFIN, Melissa",
+        "MAHER, Adrian",
+        "CREWTHER, Chris",
+        "BEARDS, Ashli"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 3,
+        "LNP": 6,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "3",
+      "registered_by": "GOFFIN, Melissa",
+      "kind": "non_candidate",
+      "party": null,
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d4554d13-c39e-4a38-85bb-9e606596789b%2Fmornington%20-%20goffin%2C%20melissa%20-%20htvc.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "partial",
+      "order": [
+        "GOFFIN, Melissa"
+      ],
+      "via": "text"
+    },
+    {
+      "registration": "1417",
+      "registered_by": "MAHER, Adrian",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "mornington/adrian-maher",
+      "type": "Single",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=18fe59e5-ecad-40a6-b08b-00e33dc83297%2Fmaher%2C%20adrian%20robert.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    }
+  ],
+  "no_card": [
+    "GOFFIN, Melissa"
+  ]
+}

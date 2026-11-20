@@ -1,0 +1,992 @@
+{
+  "area": "pakenham",
+  "house": "lower",
+  "name": "Pakenham",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "HAMALAINEN, Jesse",
+      "name": "Jesse Hamalainen",
+      "party": "DLP",
+      "party_label": "Labour DLP",
+      "ballot_position": 1,
+      "id": "pakenham/jesse-hamalainen"
+    },
+    {
+      "ballot_name": "FRENCH, Raymond",
+      "name": "Raymond French",
+      "party": "IND",
+      "ballot_position": 2,
+      "id": "pakenham/raymond-french"
+    },
+    {
+      "ballot_name": "HANDS, Kate",
+      "name": "Kate Hands",
+      "party": "LBT",
+      "party_label": "Libertarian (formerly Liberal Democrats)",
+      "ballot_position": 3,
+      "id": "pakenham/kate-hands"
+    },
+    {
+      "ballot_name": "OGDEN, Lucas",
+      "name": "Lucas Ogden",
+      "party": "IND",
+      "ballot_position": 4,
+      "id": "pakenham/lucas-ogden"
+    },
+    {
+      "ballot_name": "GRIGG, Stephanie",
+      "name": "Stephanie Grigg",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 5,
+      "id": "pakenham/stephanie-grigg"
+    },
+    {
+      "ballot_name": "SOLIVEN, Alessandra",
+      "name": "Alessandra Soliven",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 6,
+      "id": "pakenham/alessandra-soliven"
+    },
+    {
+      "ballot_name": "DYSON, Radmila",
+      "name": "Radmila Dyson",
+      "party": "LIB",
+      "party_label": "Liberal",
+      "ballot_position": 7,
+      "id": "pakenham/radmila-dyson"
+    },
+    {
+      "ballot_name": "YAWARI, Nasser",
+      "name": "Nasser Yawari",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 8,
+      "id": "pakenham/nasser-yawari"
+    },
+    {
+      "ballot_name": "PICKERING, Warren",
+      "name": "Warren Pickering",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 9,
+      "id": "pakenham/warren-pickering"
+    },
+    {
+      "ballot_name": "DAVIES, Stephanie",
+      "name": "Stephanie Davies",
+      "party": "IND",
+      "ballot_position": 10,
+      "id": "pakenham/stephanie-davies"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "113",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a461d762-4589-4b8e-baa5-f1fa1ed0fe2a%2Falp_combined_ev%20pakenham_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SOLIVEN, Alessandra",
+        "YAWARI, Nasser",
+        "GRIGG, Stephanie",
+        "HAMALAINEN, Jesse",
+        "HANDS, Kate",
+        "OGDEN, Lucas",
+        "FRENCH, Raymond",
+        "DAVIES, Stephanie",
+        "DYSON, Radmila",
+        "PICKERING, Warren"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 9,
+        "ONP": 10
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "249",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=cfe6a540-095e-4bb8-bc99-d668d17ff3c2%2Falp_combined_sem_ev_berwick_pakenham_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SOLIVEN, Alessandra",
+        "YAWARI, Nasser",
+        "GRIGG, Stephanie",
+        "HAMALAINEN, Jesse",
+        "HANDS, Kate",
+        "OGDEN, Lucas",
+        "FRENCH, Raymond",
+        "DAVIES, Stephanie",
+        "DYSON, Radmila",
+        "PICKERING, Warren"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 9,
+        "ONP": 10
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "795",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5a0f4ebd-1a62-40fa-86c0-4e915328f308%2Falp_combined_ev_narracan_pakenham_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SOLIVEN, Alessandra",
+        "YAWARI, Nasser",
+        "GRIGG, Stephanie",
+        "HAMALAINEN, Jesse",
+        "HANDS, Kate",
+        "OGDEN, Lucas",
+        "FRENCH, Raymond",
+        "DAVIES, Stephanie",
+        "DYSON, Radmila",
+        "PICKERING, Warren"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 9,
+        "ONP": 10
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SOLIVEN, Alessandra",
+        "YAWARI, Nasser",
+        "GRIGG, Stephanie",
+        "HAMALAINEN, Jesse",
+        "HANDS, Kate",
+        "OGDEN, Lucas",
+        "FRENCH, Raymond",
+        "DAVIES, Stephanie",
+        "DYSON, Radmila",
+        "PICKERING, Warren"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 9,
+        "ONP": 10
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 9
+        }
+      ]
+    },
+    {
+      "registration": "1434",
+      "registered_by": "Labour DLP",
+      "kind": "party",
+      "party": "DLP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=04b5a4a5-789e-4bae-85c6-b59c2d1b50b5%2Fdlp%20htv%20lower%20house%20-%20pakenham%20district%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HAMALAINEN, Jesse",
+        "PICKERING, Warren",
+        "HANDS, Kate",
+        "DYSON, Radmila",
+        "FRENCH, Raymond",
+        "OGDEN, Lucas",
+        "DAVIES, Stephanie",
+        "SOLIVEN, Alessandra",
+        "YAWARI, Nasser",
+        "GRIGG, Stephanie"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 4,
+        "ALP": 8,
+        "GRN": 9
+      }
+    },
+    {
+      "registration": "918",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=cc19ffcf-5490-4b71-b094-636dea4672f6%2Fthe%20greens%20combined%20south-east%20metro%20berwick%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "YAWARI, Nasser",
+        "GRIGG, Stephanie",
+        "SOLIVEN, Alessandra",
+        "DYSON, Radmila",
+        "OGDEN, Lucas",
+        "DAVIES, Stephanie",
+        "HANDS, Kate",
+        "HAMALAINEN, Jesse",
+        "FRENCH, Raymond",
+        "PICKERING, Warren"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 10
+      }
+    },
+    {
+      "registration": "969",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7f4a1fd4-cfb3-4659-a717-4b087ae54d31%2Fthe%20greens%20combined%20eastern%20victoria%20bass%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "YAWARI, Nasser",
+        "GRIGG, Stephanie",
+        "SOLIVEN, Alessandra",
+        "DYSON, Radmila",
+        "OGDEN, Lucas",
+        "DAVIES, Stephanie",
+        "HANDS, Kate",
+        "HAMALAINEN, Jesse",
+        "FRENCH, Raymond",
+        "PICKERING, Warren"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 10
+      }
+    },
+    {
+      "registration": "999",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f29146ad-addf-4d5c-bd13-845db4881a4e%2Fthe%20greens%20combined%20eastern%20victoria%20pakenham%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "YAWARI, Nasser",
+        "OGDEN, Lucas",
+        "GRIGG, Stephanie",
+        "FRENCH, Raymond",
+        "SOLIVEN, Alessandra",
+        "DYSON, Radmila",
+        "HANDS, Kate",
+        "HAMALAINEN, Jesse",
+        "DAVIES, Stephanie",
+        "PICKERING, Warren"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 10
+      }
+    },
+    {
+      "registration": "1003",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ba551bcf-3d14-4a2b-92c5-c905f89f40bc%2Fthe%20greens%20combined%20eastern%20victoria%20monbulk%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "YAWARI, Nasser",
+        "GRIGG, Stephanie",
+        "SOLIVEN, Alessandra",
+        "DYSON, Radmila",
+        "OGDEN, Lucas",
+        "DAVIES, Stephanie",
+        "HANDS, Kate",
+        "HAMALAINEN, Jesse",
+        "FRENCH, Raymond",
+        "PICKERING, Warren"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 10
+      }
+    },
+    {
+      "registration": "1006",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9ad76913-2863-4756-988b-d2743d944879%2Fthe%20greens%20combined%20eastern%20victoria%20narracan%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "YAWARI, Nasser",
+        "GRIGG, Stephanie",
+        "SOLIVEN, Alessandra",
+        "DYSON, Radmila",
+        "OGDEN, Lucas",
+        "DAVIES, Stephanie",
+        "HANDS, Kate",
+        "HAMALAINEN, Jesse",
+        "FRENCH, Raymond",
+        "PICKERING, Warren"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 10
+      }
+    },
+    {
+      "registration": "1185",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c2f42085-b7bd-4048-89e2-8d4f9bf19c1b%2Fthe%20greens%20combined%20north-eastern%20metro%20eastern%20victoria%20bayswater%20monbulk%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "YAWARI, Nasser",
+        "GRIGG, Stephanie",
+        "SOLIVEN, Alessandra",
+        "DYSON, Radmila",
+        "OGDEN, Lucas",
+        "DAVIES, Stephanie",
+        "HANDS, Kate",
+        "HAMALAINEN, Jesse",
+        "FRENCH, Raymond",
+        "PICKERING, Warren"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 10
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "YAWARI, Nasser",
+        "GRIGG, Stephanie",
+        "SOLIVEN, Alessandra",
+        "DYSON, Radmila",
+        "OGDEN, Lucas",
+        "DAVIES, Stephanie",
+        "HANDS, Kate",
+        "HAMALAINEN, Jesse",
+        "FRENCH, Raymond",
+        "PICKERING, Warren"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 4,
+        "ONP": 10
+      }
+    },
+    {
+      "registration": "1409",
+      "registered_by": "Libertarian (formerly Liberal Democrats)",
+      "kind": "party",
+      "party": "LBT",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=379b9274-fe08-47bc-8c90-f447f76d97f5%2Fpakenhamdistricthtv_reg.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HANDS, Kate",
+        "PICKERING, Warren",
+        "DYSON, Radmila",
+        "DAVIES, Stephanie",
+        "HAMALAINEN, Jesse",
+        "OGDEN, Lucas",
+        "FRENCH, Raymond",
+        "SOLIVEN, Alessandra",
+        "YAWARI, Nasser",
+        "GRIGG, Stephanie"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 3,
+        "ALP": 8,
+        "GRN": 9
+      }
+    },
+    {
+      "registration": "604",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c970029e-aa9f-499f-900d-296937d146bb%2Fliberal_combined_evr%20pakenham_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "DYSON, Radmila",
+        "HANDS, Kate",
+        "HAMALAINEN, Jesse",
+        "DAVIES, Stephanie",
+        "FRENCH, Raymond",
+        "OGDEN, Lucas",
+        "PICKERING, Warren",
+        "SOLIVEN, Alessandra",
+        "YAWARI, Nasser",
+        "GRIGG, Stephanie"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 7,
+        "ALP": 8,
+        "GRN": 9
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 7,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "695",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5f26c35c-6749-4fce-8e85-bb419db3f4be%2Fliberal_combined_evr%20pakenham_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "DYSON, Radmila",
+        "HANDS, Kate",
+        "HAMALAINEN, Jesse",
+        "DAVIES, Stephanie",
+        "FRENCH, Raymond",
+        "OGDEN, Lucas",
+        "PICKERING, Warren",
+        "SOLIVEN, Alessandra",
+        "YAWARI, Nasser",
+        "GRIGG, Stephanie"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 7,
+        "ALP": 8,
+        "GRN": 9
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 7,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "1228",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=49fa61a1-71d8-4c60-a62f-7dfac4a48158%2Fliberal_combined_evr%20narracan_evr%20pakenham_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "DYSON, Radmila",
+        "HANDS, Kate",
+        "HAMALAINEN, Jesse",
+        "DAVIES, Stephanie",
+        "FRENCH, Raymond",
+        "OGDEN, Lucas",
+        "PICKERING, Warren",
+        "SOLIVEN, Alessandra",
+        "YAWARI, Nasser",
+        "GRIGG, Stephanie"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 7,
+        "ALP": 8,
+        "GRN": 9
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 7,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "1332",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=78e13274-a993-46c5-8cce-23586dd0496b%2Fliberal_combined_semr%20berwick_evr%20pakenham_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "DYSON, Radmila",
+        "HANDS, Kate",
+        "HAMALAINEN, Jesse",
+        "DAVIES, Stephanie",
+        "FRENCH, Raymond",
+        "OGDEN, Lucas",
+        "PICKERING, Warren",
+        "SOLIVEN, Alessandra",
+        "YAWARI, Nasser",
+        "GRIGG, Stephanie"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 7,
+        "ALP": 8,
+        "GRN": 9
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 7,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "1504",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7eac0f08-ef9e-4f3c-8153-4ef5729fa74d%2Fliberal_multiple_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "DYSON, Radmila",
+        "HANDS, Kate",
+        "HAMALAINEN, Jesse",
+        "DAVIES, Stephanie",
+        "FRENCH, Raymond",
+        "OGDEN, Lucas",
+        "PICKERING, Warren",
+        "SOLIVEN, Alessandra",
+        "YAWARI, Nasser",
+        "GRIGG, Stephanie"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 7,
+        "ALP": 8,
+        "GRN": 9
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 7,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "1327",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "DYSON, Radmila",
+        "HANDS, Kate",
+        "HAMALAINEN, Jesse",
+        "DAVIES, Stephanie",
+        "FRENCH, Raymond",
+        "OGDEN, Lucas",
+        "PICKERING, Warren",
+        "SOLIVEN, Alessandra",
+        "YAWARI, Nasser",
+        "GRIGG, Stephanie"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 7,
+        "ALP": 8,
+        "GRN": 9
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 7,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "1508",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef298e7a-1371-41f2-a9a0-ed8f2eb25360%2Fliberal_multiple_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "DYSON, Radmila",
+        "HANDS, Kate",
+        "HAMALAINEN, Jesse",
+        "DAVIES, Stephanie",
+        "FRENCH, Raymond",
+        "OGDEN, Lucas",
+        "PICKERING, Warren",
+        "SOLIVEN, Alessandra",
+        "YAWARI, Nasser",
+        "GRIGG, Stephanie"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 7,
+        "ALP": 8,
+        "GRN": 9
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 7,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "1512",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8d451e6-5d8a-43a1-9577-8481a2ccdc56%2Fliberal_multiple_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "DYSON, Radmila",
+        "HANDS, Kate",
+        "HAMALAINEN, Jesse",
+        "DAVIES, Stephanie",
+        "FRENCH, Raymond",
+        "OGDEN, Lucas",
+        "PICKERING, Warren",
+        "SOLIVEN, Alessandra",
+        "YAWARI, Nasser",
+        "GRIGG, Stephanie"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 7,
+        "ALP": 8,
+        "GRN": 9
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 7,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "1513",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f6f69e90-716d-4ff5-8422-2a0f36601988%2Fliberal_multiple_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "DYSON, Radmila",
+        "HANDS, Kate",
+        "HAMALAINEN, Jesse",
+        "DAVIES, Stephanie",
+        "FRENCH, Raymond",
+        "OGDEN, Lucas",
+        "PICKERING, Warren",
+        "SOLIVEN, Alessandra",
+        "YAWARI, Nasser",
+        "GRIGG, Stephanie"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 7,
+        "ALP": 8,
+        "GRN": 9
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 7,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "847",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c9bebe1a-7d7a-40ba-8616-88bb9d20785a%2Fonv%20-%20combined%20-%20eastern%20victoria%20region%20-%20pakenham%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PICKERING, Warren",
+        "HANDS, Kate",
+        "DAVIES, Stephanie",
+        "FRENCH, Raymond",
+        "DYSON, Radmila",
+        "HAMALAINEN, Jesse",
+        "SOLIVEN, Alessandra",
+        "YAWARI, Nasser",
+        "OGDEN, Lucas",
+        "GRIGG, Stephanie"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 5,
+        "ALP": 7,
+        "GRN": 8
+      }
+    },
+    {
+      "registration": "370",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=82c7709d-f315-4ab3-923a-42021d4e82a6%2Fvictorian%20socialists%20combined%20eastern%20victoria%20pakenham%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRIGG, Stephanie",
+        "YAWARI, Nasser",
+        "SOLIVEN, Alessandra",
+        "FRENCH, Raymond",
+        "OGDEN, Lucas",
+        "DAVIES, Stephanie",
+        "HAMALAINEN, Jesse",
+        "DYSON, Radmila",
+        "HANDS, Kate",
+        "PICKERING, Warren"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 3,
+        "LNP": 8,
+        "ONP": 10
+      }
+    },
+    {
+      "registration": "1025",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=613ee757-15ec-4982-b86e-445f2e7521ca%2Fvs_ev_combined%20all_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRIGG, Stephanie",
+        "YAWARI, Nasser",
+        "SOLIVEN, Alessandra",
+        "FRENCH, Raymond",
+        "OGDEN, Lucas",
+        "DAVIES, Stephanie",
+        "HAMALAINEN, Jesse",
+        "DYSON, Radmila",
+        "HANDS, Kate",
+        "PICKERING, Warren"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 3,
+        "LNP": 8,
+        "ONP": 10
+      }
+    },
+    {
+      "registration": "841",
+      "registered_by": "FRENCH, Raymond",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "pakenham/raymond-french",
+      "type": "Single",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fe8ad10e-b87f-474b-ba4b-4050083d5075%2Ffrench%2C%20raymond%20mark.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1444",
+      "registered_by": "DAVIES, Stephanie",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "pakenham/stephanie-davies",
+      "type": "Single",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=003629e9-1c64-4854-92a7-17440de436e5%2Fdavies%2C%20stephanie%20marie.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1521",
+      "registered_by": "OGDEN, Lucas",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "pakenham/lucas-ogden",
+      "type": "Single",
+      "registered_on": "2026-11-18",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=926060cb-a48c-4bbd-a327-33e6a1a3fbb2%2Fogden%2C%20lucas%20bradley.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    }
+  ],
+  "no_card": []
+}

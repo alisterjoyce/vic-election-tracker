@@ -31,7 +31,8 @@
       `${VEC_CC}: the VEC's <a href="https://www.vec.vic.gov.au/voting/2026-state-election/voting-locations">venues spreadsheet</a> and <a href="https://maps.vec.vic.gov.au/elections">venue locator</a>, read once a day.`],
     ["early_votes.json", "Early votes and postal votes returned, statewide by day and by district where the VEC publishes them; enrolment per district at the close of roll; 2022's daily figures for comparison",
       `${VEC_CC}, read at each refresh (2022: the VEC's daily table, via the <a href="http://web.archive.org/web/20221227113148/https://www.vec.vic.gov.au/voting/electoral-statistics/state-election-statistics">Wayback Machine</a>). Nothing is estimated.`],
-    ["htv.json", "How-to-vote cards registered with the VEC, and their preference orders", "Victorian Electoral Commission register; each card belongs to whoever registered it."],
+    ["htv.json", "How-to-vote cards registered with the VEC: who registered each, when, the districts and regions it covers, a link to the card, and the preference order it prints for each (read from the card's PDF; \"unreadable, see card\" where it couldn't be read reliably). The same per seat: htv/<district or region id>.json (e.g. htv/bendigo-east.json); counts in htv/index.json",
+      `${VEC_CC} (the <a href="https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards">register</a>). The cards themselves belong to whoever registered them; only facts from them are stored.`],
     ["timeline.json", "Events of the 2022-2026 term and the election timetable", `${OURS} Each entry links its source.`],
     ["news.json", "Headlines per seat and statewide: title, outlet, date, link", "Headlines belong to their publishers and aren't covered by this site's licence. Links only."],
     ["headshots.json", "Candidate photo records: files, source, credit, licence", "Photos belong to the parties, campaigns and outlets credited and aren't covered by this site's licence."],
@@ -123,5 +124,16 @@
     }
   }
 
-  document.addEventListener("DOMContentLoaded", () => { render(); renderProfileCount(); renderNewsSources(); });
+  // How-to-vote card coverage (htv/index.json): cards per party, districts and regions covered, candidates with no card.
+  async function renderHtvCoverage() {
+    const el = document.getElementById("htv-coverage-body");
+    if (!el || !App.Htv) return;
+    try {
+      el.innerHTML = App.Htv.coverage(await App.loadJSON("htv/index"));
+    } catch (err) {
+      el.innerHTML = "<p class=\"empty\">The how-to-vote card counts aren't available.</p>";
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => { render(); renderProfileCount(); renderHtvCoverage(); renderNewsSources(); });
 })();

@@ -1,0 +1,1046 @@
+{
+  "area": "bundoora",
+  "house": "lower",
+  "name": "Bundoora",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "MURPHY-WEBSTER, Melissa",
+      "name": "Melissa Murphy-Webster",
+      "party": "IND",
+      "ballot_position": 1,
+      "id": "bundoora/melissa-murphy-webster"
+    },
+    {
+      "ballot_name": "LAITALA, Nina",
+      "name": "Nina Laitala",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 2,
+      "id": "bundoora/nina-laitala"
+    },
+    {
+      "ballot_name": "PARR, Chris",
+      "name": "Chris Parr",
+      "party": "LIB",
+      "party_label": "Liberal",
+      "ballot_position": 3,
+      "id": "bundoora/chris-parr"
+    },
+    {
+      "ballot_name": "WHALLEY, Bruce",
+      "name": "Bruce Whalley",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 4,
+      "id": "bundoora/bruce-whalley"
+    },
+    {
+      "ballot_name": "RANCIE, Rae",
+      "name": "Rae Rancie",
+      "party": "FF",
+      "party_label": "Family First",
+      "ballot_position": 5,
+      "id": "bundoora/rae-rancie"
+    },
+    {
+      "ballot_name": "NICOLOSI, Chloe",
+      "name": "Chloe Nicolosi",
+      "party": "AJP",
+      "party_label": "Animal Justice Party",
+      "ballot_position": 6,
+      "id": "bundoora/chloe-nicolosi"
+    },
+    {
+      "ballot_name": "BROOKS, Colin",
+      "name": "Colin Brooks",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 7,
+      "id": "bundoora/colin-brooks"
+    },
+    {
+      "ballot_name": "SANYAL, Sagar",
+      "name": "Sagar Sanyal",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 8,
+      "id": "bundoora/sagar-sanyal"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "1290",
+      "registered_by": "Animal Justice Party",
+      "kind": "party",
+      "party": "AJP",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e2c39541-cb6e-4f41-8508-2c490ee6730e%2Fbundoora.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "NICOLOSI, Chloe",
+        "MURPHY-WEBSTER, Melissa",
+        "LAITALA, Nina",
+        "SANYAL, Sagar",
+        "BROOKS, Colin",
+        "PARR, Chris",
+        "RANCIE, Rae",
+        "WHALLEY, Bruce"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 3,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "52",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6ba80d77-0b47-410b-8f9d-a69a5e0b8b20%2Falp_combined_nem%20bundoora_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BROOKS, Colin",
+        "NICOLOSI, Chloe",
+        "MURPHY-WEBSTER, Melissa",
+        "LAITALA, Nina",
+        "SANYAL, Sagar",
+        "PARR, Chris",
+        "WHALLEY, Bruce",
+        "RANCIE, Rae"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 4,
+        "LNP": 6,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "392",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a094233d-8e20-4416-a534-1e8ccbdaa351%2Falp_combined_nem_nm_bundoora_thomastown_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BROOKS, Colin",
+        "NICOLOSI, Chloe",
+        "MURPHY-WEBSTER, Melissa",
+        "LAITALA, Nina",
+        "SANYAL, Sagar",
+        "PARR, Chris",
+        "WHALLEY, Bruce",
+        "RANCIE, Rae"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 4,
+        "LNP": 6,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "401",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=608fc3fa-951b-49fc-887b-c30171af3b07%2Falp_combined_nem_bundoora_mill%20park_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BROOKS, Colin",
+        "NICOLOSI, Chloe",
+        "MURPHY-WEBSTER, Melissa",
+        "LAITALA, Nina",
+        "SANYAL, Sagar",
+        "PARR, Chris",
+        "WHALLEY, Bruce",
+        "RANCIE, Rae"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 4,
+        "LNP": 6,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "410",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=bdbf11b9-0040-4709-9ad0-75717ac8a1c7%2Falp_combined_nem_bundoora_ivanhoe_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BROOKS, Colin",
+        "NICOLOSI, Chloe",
+        "MURPHY-WEBSTER, Melissa",
+        "LAITALA, Nina",
+        "SANYAL, Sagar",
+        "PARR, Chris",
+        "WHALLEY, Bruce",
+        "RANCIE, Rae"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 4,
+        "LNP": 6,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "419",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2978c1f0-4ca8-4f84-9ea9-19d773c61b2b%2Falp_combined_nem_bundoora_eltham_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BROOKS, Colin",
+        "NICOLOSI, Chloe",
+        "MURPHY-WEBSTER, Melissa",
+        "LAITALA, Nina",
+        "SANYAL, Sagar",
+        "PARR, Chris",
+        "WHALLEY, Bruce",
+        "RANCIE, Rae"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 4,
+        "LNP": 6,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BROOKS, Colin",
+        "NICOLOSI, Chloe",
+        "MURPHY-WEBSTER, Melissa",
+        "LAITALA, Nina",
+        "SANYAL, Sagar",
+        "PARR, Chris",
+        "WHALLEY, Bruce",
+        "RANCIE, Rae"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 4,
+        "LNP": 6,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "951",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3ecb378c-7017-42ed-aaf1-4d9b4dfed9db%2Fthe%20greens%20combined%20north-east%20metro%20eltham%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LAITALA, Nina",
+        "SANYAL, Sagar",
+        "NICOLOSI, Chloe",
+        "BROOKS, Colin",
+        "PARR, Chris",
+        "MURPHY-WEBSTER, Melissa",
+        "RANCIE, Rae",
+        "WHALLEY, Bruce"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "957",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=33e15de1-5a0a-40c3-b1d3-7e9fdcc307a3%2Fthe%20greens%20combined%20north-east%20metro%20mill%20park%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LAITALA, Nina",
+        "SANYAL, Sagar",
+        "NICOLOSI, Chloe",
+        "BROOKS, Colin",
+        "PARR, Chris",
+        "MURPHY-WEBSTER, Melissa",
+        "RANCIE, Rae",
+        "WHALLEY, Bruce"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "974",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=85c5c4bb-d8e0-4b93-aaf1-0ada472b7df9%2Fthe%20greens%20combined%20northern%20metro%20thomastown%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LAITALA, Nina",
+        "SANYAL, Sagar",
+        "NICOLOSI, Chloe",
+        "BROOKS, Colin",
+        "PARR, Chris",
+        "MURPHY-WEBSTER, Melissa",
+        "RANCIE, Rae",
+        "WHALLEY, Bruce"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "980",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a03585b6-644f-4025-96c5-b6a899a3f998%2Fthe%20greens%20combined%20north-east%20metro%20ivanhoe%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LAITALA, Nina",
+        "SANYAL, Sagar",
+        "NICOLOSI, Chloe",
+        "BROOKS, Colin",
+        "PARR, Chris",
+        "MURPHY-WEBSTER, Melissa",
+        "RANCIE, Rae",
+        "WHALLEY, Bruce"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "981",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c0484769-9373-42e3-9143-0c230daaabae%2Fthe%20greens%20combined%20north-east%20metro%20bundoora%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LAITALA, Nina",
+        "SANYAL, Sagar",
+        "NICOLOSI, Chloe",
+        "BROOKS, Colin",
+        "PARR, Chris",
+        "MURPHY-WEBSTER, Melissa",
+        "RANCIE, Rae",
+        "WHALLEY, Bruce"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "987",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=dafd989e-2264-4bd0-b3e0-a899293dd5ef%2Fthe%20greens%20combined%20northern%20metro%20preston%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LAITALA, Nina",
+        "SANYAL, Sagar",
+        "NICOLOSI, Chloe",
+        "BROOKS, Colin",
+        "PARR, Chris",
+        "MURPHY-WEBSTER, Melissa",
+        "RANCIE, Rae",
+        "WHALLEY, Bruce"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1129",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a9dc71b1-a972-484e-aedc-dfcbb4ccce61%2Fthe%20greens%20combined%20north-eastern%20metro%20bundoora%20eltham%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LAITALA, Nina",
+        "SANYAL, Sagar",
+        "NICOLOSI, Chloe",
+        "BROOKS, Colin",
+        "PARR, Chris",
+        "MURPHY-WEBSTER, Melissa",
+        "RANCIE, Rae",
+        "WHALLEY, Bruce"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1148",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=81f622b0-195b-4e3f-8cb2-2f4222e70bd1%2Fthe%20greens%20combined%20bundoora%20yan%20yean%20mill%20park%20north-eastern%20metro%20northern%20victoria%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LAITALA, Nina",
+        "SANYAL, Sagar",
+        "NICOLOSI, Chloe",
+        "BROOKS, Colin",
+        "PARR, Chris",
+        "MURPHY-WEBSTER, Melissa",
+        "RANCIE, Rae",
+        "WHALLEY, Bruce"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LAITALA, Nina",
+        "SANYAL, Sagar",
+        "NICOLOSI, Chloe",
+        "BROOKS, Colin",
+        "PARR, Chris",
+        "MURPHY-WEBSTER, Melissa",
+        "RANCIE, Rae",
+        "WHALLEY, Bruce"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1203",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=95e68076-8a0f-4c74-aa4c-dabe7ae4c8d3%2Fthe%20greens%20combined%20northern%20victoria%20yan%20yean%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LAITALA, Nina",
+        "SANYAL, Sagar",
+        "NICOLOSI, Chloe",
+        "BROOKS, Colin",
+        "PARR, Chris",
+        "MURPHY-WEBSTER, Melissa",
+        "RANCIE, Rae",
+        "WHALLEY, Bruce"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1367",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fc1b3f2e-ebb8-4510-bfbd-9745c5c68b78%2F1367%20the%20greens%20combined%20northcote%20preston%20pascoe%20vale%20northern%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LAITALA, Nina",
+        "SANYAL, Sagar",
+        "NICOLOSI, Chloe",
+        "BROOKS, Colin",
+        "PARR, Chris",
+        "MURPHY-WEBSTER, Melissa",
+        "RANCIE, Rae",
+        "WHALLEY, Bruce"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1502",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1f42b12b-5738-46cd-bcfd-c9305fa269f6%2Fthe%20greens%20combined%20north-eastern%20metro%20simplified%20chinese%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LAITALA, Nina",
+        "SANYAL, Sagar",
+        "NICOLOSI, Chloe",
+        "BROOKS, Colin",
+        "PARR, Chris",
+        "MURPHY-WEBSTER, Melissa",
+        "RANCIE, Rae",
+        "WHALLEY, Bruce"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1559",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c7366162-b19b-430f-87f3-c6fc5c3f5605%2Fthe%20greens%20combined%20north-eastern%20metro%20simplified%20chinese%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "622",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=50af3840-2fdc-4c8d-bc03-260f78685ae2%2Fliberal_combined_nemr%20bundoora_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PARR, Chris",
+        "MURPHY-WEBSTER, Melissa",
+        "WHALLEY, Bruce",
+        "RANCIE, Rae",
+        "NICOLOSI, Chloe",
+        "BROOKS, Colin",
+        "LAITALA, Nina",
+        "SANYAL, Sagar"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "640",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7ae293cf-f7db-4e06-93ba-e613a10772fa%2Fliberal_combined_nemr%20bundoora_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PARR, Chris",
+        "MURPHY-WEBSTER, Melissa",
+        "WHALLEY, Bruce",
+        "RANCIE, Rae",
+        "NICOLOSI, Chloe",
+        "BROOKS, Colin",
+        "LAITALA, Nina",
+        "SANYAL, Sagar"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1504",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7eac0f08-ef9e-4f3c-8153-4ef5729fa74d%2Fliberal_multiple_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PARR, Chris",
+        "MURPHY-WEBSTER, Melissa",
+        "WHALLEY, Bruce",
+        "RANCIE, Rae",
+        "NICOLOSI, Chloe",
+        "BROOKS, Colin",
+        "LAITALA, Nina",
+        "SANYAL, Sagar"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1327",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PARR, Chris",
+        "MURPHY-WEBSTER, Melissa",
+        "WHALLEY, Bruce",
+        "RANCIE, Rae",
+        "NICOLOSI, Chloe",
+        "BROOKS, Colin",
+        "LAITALA, Nina",
+        "SANYAL, Sagar"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1508",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef298e7a-1371-41f2-a9a0-ed8f2eb25360%2Fliberal_multiple_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PARR, Chris",
+        "MURPHY-WEBSTER, Melissa",
+        "WHALLEY, Bruce",
+        "RANCIE, Rae",
+        "NICOLOSI, Chloe",
+        "BROOKS, Colin",
+        "LAITALA, Nina",
+        "SANYAL, Sagar"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1512",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8d451e6-5d8a-43a1-9577-8481a2ccdc56%2Fliberal_multiple_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PARR, Chris",
+        "MURPHY-WEBSTER, Melissa",
+        "WHALLEY, Bruce",
+        "RANCIE, Rae",
+        "NICOLOSI, Chloe",
+        "BROOKS, Colin",
+        "LAITALA, Nina",
+        "SANYAL, Sagar"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1513",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f6f69e90-716d-4ff5-8422-2a0f36601988%2Fliberal_multiple_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PARR, Chris",
+        "MURPHY-WEBSTER, Melissa",
+        "WHALLEY, Bruce",
+        "RANCIE, Rae",
+        "NICOLOSI, Chloe",
+        "BROOKS, Colin",
+        "LAITALA, Nina",
+        "SANYAL, Sagar"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "850",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=27263fff-860d-4e98-ad25-34075dcdb2f0%2Fonv%20-%20combined%20-%20north-eastern%20metropolitan%20region%20-%20bundoora%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WHALLEY, Bruce",
+        "RANCIE, Rae",
+        "PARR, Chris",
+        "MURPHY-WEBSTER, Melissa",
+        "BROOKS, Colin",
+        "LAITALA, Nina",
+        "NICOLOSI, Chloe",
+        "SANYAL, Sagar"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 3,
+        "ALP": 5,
+        "GRN": 6
+      }
+    },
+    {
+      "registration": "361",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=0da04301-bad5-4f38-9dc7-abb2fd474579%2Fvictorian%20socialists%20combined%20north-eastern%20metropolitan%20bundoora%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SANYAL, Sagar",
+        "LAITALA, Nina",
+        "NICOLOSI, Chloe",
+        "BROOKS, Colin",
+        "MURPHY-WEBSTER, Melissa",
+        "PARR, Chris",
+        "RANCIE, Rae",
+        "WHALLEY, Bruce"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "1028",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=16db2470-4346-4d07-a275-ae8d2b33aded%2Fs_nem_combined%20all_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SANYAL, Sagar",
+        "LAITALA, Nina",
+        "NICOLOSI, Chloe",
+        "BROOKS, Colin",
+        "MURPHY-WEBSTER, Melissa",
+        "PARR, Chris",
+        "RANCIE, Rae",
+        "WHALLEY, Bruce"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 8
+      }
+    },
+    {
+      "registration": "265",
+      "registered_by": "MURPHY-WEBSTER, Melissa",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "bundoora/melissa-murphy-webster",
+      "type": "Single",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4c401474-d95a-42f4-adef-29052cf05009%2Fmurphy-webster%2C%20melissa.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MURPHY-WEBSTER, Melissa",
+        "NICOLOSI, Chloe",
+        "PARR, Chris",
+        "WHALLEY, Bruce",
+        "LAITALA, Nina",
+        "RANCIE, Rae",
+        "BROOKS, Colin",
+        "SANYAL, Sagar"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 3,
+        "ONP": 4,
+        "GRN": 5,
+        "ALP": 7
+      }
+    }
+  ],
+  "no_card": [
+    "RANCIE, Rae"
+  ]
+}

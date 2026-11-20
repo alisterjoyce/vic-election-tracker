@@ -8,7 +8,7 @@
   let districts = [];
   let councilCandidates = [];
   let shots = {};   // candidate id -> headshot (data/headshots.json)
-  let htv = null;           // data/htv.json (how-to-vote cards)
+  const htvDocs = {};       // data/htv/<region>.json (how-to-vote cards), loaded per region
   let councilPolls = [];   // regional upper-house polls (data/council_polls.json), newest first
   let resultsLc = null;    // data/results_lc.json: the 2026 count by region (scripts/results.py), null if missing
   let vec = null;          // data/vec_nominations.json: the VEC's official list (ballot paper), null if missing
@@ -151,7 +151,7 @@
 
       ${renderExtraCandidates(r)}
 
-      ${App.Htv ? `<section class="card">${App.Htv.section(htv, { region: r.id, parties: tickets.map((t) => t.party) })}</section>` : ""}
+      <section class="card" id="region-htv" style="min-height:${htvDocs[r.id] ? 0 : App.Htv.reserve(((vec && vec.regions && vec.regions[r.id] && vec.regions[r.id].groups) || []).length + 2)}px">${htvDocs[r.id] ? App.Htv.section(htvDocs[r.id], { h: "h2" }) : ""}</section>
 
       <section class="card quota" id="quota-card" aria-label="Quota calculator"></section>
 
@@ -162,6 +162,14 @@
           : '<p class="empty">No districts in the dataset for this region yet.</p>'}
       </div>`;
     document.getElementById("copy-link").addEventListener("click", (e) => copyLink(e.currentTarget));
+    if (!htvDocs[r.id]) {   // fill the reserved space once the region's cards arrive
+      App.Htv.load(r.id).then((doc) => { htvDocs[r.id] = doc; }).catch(() => null).then(() => {
+        const box = document.getElementById("region-htv");
+        if (!box || hashId().split("/")[0] !== r.id) return;
+        box.innerHTML = App.Htv.section(htvDocs[r.id] || null, { area: r.id, h: "h2" });
+        box.style.minHeight = "";
+      });
+    }
     if (App.Quota) App.Quota.mount(document.getElementById("quota-card"), r, councilPolls.find((p) => p.regions && p.regions[r.id]));
   }
 
@@ -183,8 +191,8 @@
 
   async function init() {
     try {
-      const [rd, dd, cd, shotData, cp, htvData, lcData] = await Promise.all([loadJSON("regions"), loadJSON("districts"), loadJSON("candidates"),
-        App.loadHeadshots(), loadJSON("council_polls").then((d) => d.polls || []).catch(() => []), loadJSON("htv").catch(() => null),
+      const [rd, dd, cd, shotData, cp, lcData] = await Promise.all([loadJSON("regions"), loadJSON("districts"), loadJSON("candidates"),
+        App.loadHeadshots(), loadJSON("council_polls").then((d) => d.polls || []).catch(() => []),
         loadJSON("results_lc").catch(() => null)]);
       vec = await loadJSON("vec_nominations").catch(() => null);
       resultsLc = lcData;
@@ -193,7 +201,6 @@
       councilCandidates = (cd.candidates || []).filter((c) => c.region && !c.district);
       shots = shotData;
       councilPolls = cp;
-      htv = htvData;
       document.getElementById("region-chips").addEventListener("click", (e) => {
         const btn = e.target.closest("button[data-id]");
         if (btn) location.hash = quotaMode ? `${btn.dataset.id}/quota` : btn.dataset.id;

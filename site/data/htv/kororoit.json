@@ -1,0 +1,1308 @@
+{
+  "area": "kororoit",
+  "house": "lower",
+  "name": "Kororoit",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "SOUTHERN, Donna",
+      "name": "Donna Southern",
+      "party": "WEST",
+      "party_label": "The West Party",
+      "ballot_position": 1,
+      "id": "kororoit/donna-southern"
+    },
+    {
+      "ballot_name": "PATTERSON, Nick",
+      "name": "Nick Patterson",
+      "party": "FF",
+      "party_label": "Family First",
+      "ballot_position": 2,
+      "id": "kororoit/nick-patterson"
+    },
+    {
+      "ballot_name": "MCDONALD, Joyce",
+      "name": "Joyce McDonald",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 3,
+      "id": "kororoit/joyce-mcdonald"
+    },
+    {
+      "ballot_name": "PIDI, Divya",
+      "name": "Divya Pidi",
+      "party": "OTH",
+      "party_label": "The Republican",
+      "ballot_position": 4,
+      "id": "kororoit/divya-pidi"
+    },
+    {
+      "ballot_name": "HASSAN, Rayan",
+      "name": "Rayan Hassan",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 5,
+      "id": "kororoit/rayan-hassan"
+    },
+    {
+      "ballot_name": "CHAKOMA, Jack",
+      "name": "Jack Chakoma",
+      "party": "LIB",
+      "party_label": "Liberal",
+      "ballot_position": 6,
+      "id": "kororoit/jack-chakoma"
+    },
+    {
+      "ballot_name": "GRIGOROVITCH, Luba",
+      "name": "Luba Grigorovitch",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 7,
+      "id": "kororoit/luba-grigorovitch"
+    },
+    {
+      "ballot_name": "MELNIKOV, Seva",
+      "name": "Seva Melnikov",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 8,
+      "id": "kororoit/seva-melnikov"
+    },
+    {
+      "ballot_name": "KANDPAL, Vasundhara",
+      "name": "Vasundhara Kandpal",
+      "party": "AJP",
+      "party_label": "Animal Justice Party",
+      "ballot_position": 9,
+      "id": "kororoit/vasundhara-kandpal"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "1281",
+      "registered_by": "Animal Justice Party",
+      "kind": "party",
+      "party": "AJP",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8fdfa06d-3695-4c7a-b95a-4d2dc68724b2%2Fkororoit.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KANDPAL, Vasundhara",
+        "MCDONALD, Joyce",
+        "HASSAN, Rayan",
+        "GRIGOROVITCH, Luba",
+        "CHAKOMA, Jack",
+        "PIDI, Divya",
+        "PATTERSON, Nick",
+        "SOUTHERN, Donna",
+        "MELNIKOV, Seva"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "222",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9bf44a6e-4d0d-4381-b16b-11f8e12df621%2Falp_combined_wm_kororoit_tr3_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRIGOROVITCH, Luba",
+        "SOUTHERN, Donna",
+        "MCDONALD, Joyce",
+        "PIDI, Divya",
+        "HASSAN, Rayan",
+        "KANDPAL, Vasundhara",
+        "CHAKOMA, Jack",
+        "PATTERSON, Nick",
+        "MELNIKOV, Seva"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "283",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=edc9fc74-a95a-4629-9470-ac09f008c770%2Falp_combined_wm_kororoit_st%20albans_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRIGOROVITCH, Luba",
+        "SOUTHERN, Donna",
+        "MCDONALD, Joyce",
+        "PIDI, Divya",
+        "HASSAN, Rayan",
+        "KANDPAL, Vasundhara",
+        "CHAKOMA, Jack",
+        "PATTERSON, Nick",
+        "MELNIKOV, Seva"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "284",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2155ca13-415b-4cd0-a60e-90b36f51795b%2Falp_combined_wm_kororoit_st%20albans_sydenham_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRIGOROVITCH, Luba",
+        "SOUTHERN, Donna",
+        "MCDONALD, Joyce",
+        "PIDI, Divya",
+        "HASSAN, Rayan",
+        "KANDPAL, Vasundhara",
+        "CHAKOMA, Jack",
+        "PATTERSON, Nick",
+        "MELNIKOV, Seva"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "301",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=53d6d0fa-5b9a-47c5-9804-406df51aae8a%2Falp_combined_wm_kororoit_sydenham_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRIGOROVITCH, Luba",
+        "SOUTHERN, Donna",
+        "MCDONALD, Joyce",
+        "PIDI, Divya",
+        "HASSAN, Rayan",
+        "KANDPAL, Vasundhara",
+        "CHAKOMA, Jack",
+        "PATTERSON, Nick",
+        "MELNIKOV, Seva"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "331",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=37baa404-6a36-4442-b609-f774a6b89152%2Falp_combined_wm_kororoit_laverton_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRIGOROVITCH, Luba",
+        "SOUTHERN, Donna",
+        "MCDONALD, Joyce",
+        "PIDI, Divya",
+        "HASSAN, Rayan",
+        "KANDPAL, Vasundhara",
+        "CHAKOMA, Jack",
+        "PATTERSON, Nick",
+        "MELNIKOV, Seva"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "751",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d8ce1326-fb39-4697-bf22-1dd4c0e638cf%2Falp_combined_wm_kororoit_tr3_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRIGOROVITCH, Luba",
+        "SOUTHERN, Donna",
+        "MCDONALD, Joyce",
+        "PIDI, Divya",
+        "HASSAN, Rayan",
+        "KANDPAL, Vasundhara",
+        "CHAKOMA, Jack",
+        "PATTERSON, Nick",
+        "MELNIKOV, Seva"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRIGOROVITCH, Luba",
+        "SOUTHERN, Donna",
+        "MCDONALD, Joyce",
+        "PIDI, Divya",
+        "HASSAN, Rayan",
+        "KANDPAL, Vasundhara",
+        "CHAKOMA, Jack",
+        "PATTERSON, Nick",
+        "MELNIKOV, Seva"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "983",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=0863934b-9cc9-4206-bbd0-9b26325e4406%2Falp_combined_wm_kororoit_tr6_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "GRIGOROVITCH, Luba",
+        "SOUTHERN, Donna",
+        "MCDONALD, Joyce",
+        "PIDI, Divya",
+        "HASSAN, Rayan",
+        "KANDPAL, Vasundhara",
+        "CHAKOMA, Jack",
+        "PATTERSON, Nick",
+        "MELNIKOV, Seva"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 7,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 7
+        }
+      ]
+    },
+    {
+      "registration": "500",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=93c6b170-5d81-4841-acb0-eb0a91fce84a%2Fkororoit.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PATTERSON, Nick",
+        "MELNIKOV, Seva",
+        "PIDI, Divya",
+        "CHAKOMA, Jack",
+        "SOUTHERN, Donna",
+        "GRIGOROVITCH, Luba",
+        "KANDPAL, Vasundhara",
+        "MCDONALD, Joyce",
+        "HASSAN, Rayan"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 4,
+        "ALP": 6,
+        "GRN": 8
+      }
+    },
+    {
+      "registration": "718",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1db4cca8-4562-4098-b71e-6404ef04b799%2Ffamilyfirst_kororoit%20version%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "PATTERSON, Nick",
+        "MELNIKOV, Seva",
+        "PIDI, Divya",
+        "CHAKOMA, Jack",
+        "SOUTHERN, Donna",
+        "KANDPAL, Vasundhara",
+        "MCDONALD, Joyce",
+        "HASSAN, Rayan",
+        "GRIGOROVITCH, Luba"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 4,
+        "GRN": 7,
+        "ALP": 9
+      }
+    },
+    {
+      "registration": "1105",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=55783289-1f83-45db-89d2-7270d48d4d99%2Fthe%20greens%20combined%20western%20metro%20laverton%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCDONALD, Joyce",
+        "KANDPAL, Vasundhara",
+        "HASSAN, Rayan",
+        "SOUTHERN, Donna",
+        "GRIGOROVITCH, Luba",
+        "CHAKOMA, Jack",
+        "PIDI, Divya",
+        "PATTERSON, Nick",
+        "MELNIKOV, Seva"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1116",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=88a586f3-203e-4342-bbba-3a8335969420%2Fthe%20greens%20combined%20western%20metro%20sydenham%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCDONALD, Joyce",
+        "KANDPAL, Vasundhara",
+        "HASSAN, Rayan",
+        "SOUTHERN, Donna",
+        "GRIGOROVITCH, Luba",
+        "CHAKOMA, Jack",
+        "PIDI, Divya",
+        "PATTERSON, Nick",
+        "MELNIKOV, Seva"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1143",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=20025e49-2ded-4f3e-9667-2cba26e4b1c6%2F1143%20the%20greens%20combined%20western%20metro%20st%20albans%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCDONALD, Joyce",
+        "KANDPAL, Vasundhara",
+        "HASSAN, Rayan",
+        "SOUTHERN, Donna",
+        "GRIGOROVITCH, Luba",
+        "CHAKOMA, Jack",
+        "PIDI, Divya",
+        "PATTERSON, Nick",
+        "MELNIKOV, Seva"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1162",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7de7a90a-8509-40cb-9986-51cc08814abd%2Fthe%20greens%20combined%20laverton%20st%20albans%20footscray%20western%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCDONALD, Joyce",
+        "KANDPAL, Vasundhara",
+        "HASSAN, Rayan",
+        "SOUTHERN, Donna",
+        "GRIGOROVITCH, Luba",
+        "CHAKOMA, Jack",
+        "PIDI, Divya",
+        "PATTERSON, Nick",
+        "MELNIKOV, Seva"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1173",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=20e3a507-9914-4be3-910a-d1922aa58a9d%2F1173%20the%20greens%20combined%20western%20metro%20kororoit%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCDONALD, Joyce",
+        "KANDPAL, Vasundhara",
+        "HASSAN, Rayan",
+        "SOUTHERN, Donna",
+        "GRIGOROVITCH, Luba",
+        "CHAKOMA, Jack",
+        "PIDI, Divya",
+        "PATTERSON, Nick",
+        "MELNIKOV, Seva"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1176",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=eb91dd96-cd39-486d-b1d9-d3b7e34fb7e3%2Fthe%20greens%20combined%20western%20victoria%20melton%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCDONALD, Joyce",
+        "KANDPAL, Vasundhara",
+        "HASSAN, Rayan",
+        "SOUTHERN, Donna",
+        "GRIGOROVITCH, Luba",
+        "CHAKOMA, Jack",
+        "PIDI, Divya",
+        "PATTERSON, Nick",
+        "MELNIKOV, Seva"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCDONALD, Joyce",
+        "KANDPAL, Vasundhara",
+        "HASSAN, Rayan",
+        "SOUTHERN, Donna",
+        "GRIGOROVITCH, Luba",
+        "CHAKOMA, Jack",
+        "PIDI, Divya",
+        "PATTERSON, Nick",
+        "MELNIKOV, Seva"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1201",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1e7ee1a4-bd62-49a6-a92b-8e5a9e3ebd54%2Fthe%20greens%20combined%20sydenham%20kororoit%20st%20albans%20western%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCDONALD, Joyce",
+        "KANDPAL, Vasundhara",
+        "HASSAN, Rayan",
+        "SOUTHERN, Donna",
+        "GRIGOROVITCH, Luba",
+        "CHAKOMA, Jack",
+        "PIDI, Divya",
+        "PATTERSON, Nick",
+        "MELNIKOV, Seva"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1478",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e269e427-1a9f-4777-85b4-0db846eda110%2Fthe%20greens%20combined%20western%20metro%20vietnamese%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCDONALD, Joyce",
+        "KANDPAL, Vasundhara",
+        "HASSAN, Rayan",
+        "SOUTHERN, Donna",
+        "GRIGOROVITCH, Luba",
+        "CHAKOMA, Jack",
+        "PIDI, Divya",
+        "PATTERSON, Nick",
+        "MELNIKOV, Seva"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1492",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9790b150-f633-47f4-8b9e-aed7a9554e98%2Fthe%20greens%20combined%20western%20metro%20punjabi%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCDONALD, Joyce",
+        "KANDPAL, Vasundhara",
+        "HASSAN, Rayan",
+        "SOUTHERN, Donna",
+        "GRIGOROVITCH, Luba",
+        "CHAKOMA, Jack",
+        "PIDI, Divya",
+        "PATTERSON, Nick",
+        "MELNIKOV, Seva"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1548",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d948fa13-a951-4e9f-a310-26cd0001f101%2Fthe%20greens%20combined%20western%20metro%20punjabi%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCDONALD, Joyce",
+        "KANDPAL, Vasundhara",
+        "HASSAN, Rayan",
+        "SOUTHERN, Donna",
+        "GRIGOROVITCH, Luba",
+        "CHAKOMA, Jack",
+        "PIDI, Divya",
+        "PATTERSON, Nick",
+        "MELNIKOV, Seva"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1558",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=72d3cabb-ecac-4ed9-bd28-c39010cb0178%2Fthe%20greens%20combined%20western%20metro%20vietnamese%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MCDONALD, Joyce",
+        "KANDPAL, Vasundhara",
+        "HASSAN, Rayan",
+        "SOUTHERN, Donna",
+        "GRIGOROVITCH, Luba",
+        "CHAKOMA, Jack",
+        "PIDI, Divya",
+        "PATTERSON, Nick",
+        "MELNIKOV, Seva"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "603",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ab3034f2-a7cd-47a1-9a3d-aea5620033e0%2Fliberal_combined_wmr%20kororoit_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CHAKOMA, Jack",
+        "SOUTHERN, Donna",
+        "MELNIKOV, Seva",
+        "PIDI, Divya",
+        "KANDPAL, Vasundhara",
+        "GRIGOROVITCH, Luba",
+        "MCDONALD, Joyce",
+        "HASSAN, Rayan",
+        "PATTERSON, Nick"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "665",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ccb89160-ac03-4f09-9ec8-87645df42c10%2Fliberal_combined_wmr%20kororoit_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CHAKOMA, Jack",
+        "SOUTHERN, Donna",
+        "MELNIKOV, Seva",
+        "PIDI, Divya",
+        "KANDPAL, Vasundhara",
+        "GRIGOROVITCH, Luba",
+        "MCDONALD, Joyce",
+        "HASSAN, Rayan",
+        "PATTERSON, Nick"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1260",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=faf12400-0628-49e6-88a3-d0f66fdf978a%2Fliberal_combined_wmr%20kororoit_wmr%20sydenham_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CHAKOMA, Jack",
+        "SOUTHERN, Donna",
+        "MELNIKOV, Seva",
+        "PIDI, Divya",
+        "KANDPAL, Vasundhara",
+        "GRIGOROVITCH, Luba",
+        "MCDONALD, Joyce",
+        "HASSAN, Rayan",
+        "PATTERSON, Nick"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1504",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7eac0f08-ef9e-4f3c-8153-4ef5729fa74d%2Fliberal_multiple_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CHAKOMA, Jack",
+        "SOUTHERN, Donna",
+        "MELNIKOV, Seva",
+        "PIDI, Divya",
+        "KANDPAL, Vasundhara",
+        "GRIGOROVITCH, Luba",
+        "MCDONALD, Joyce",
+        "HASSAN, Rayan",
+        "PATTERSON, Nick"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1327",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CHAKOMA, Jack",
+        "SOUTHERN, Donna",
+        "MELNIKOV, Seva",
+        "PIDI, Divya",
+        "KANDPAL, Vasundhara",
+        "GRIGOROVITCH, Luba",
+        "MCDONALD, Joyce",
+        "HASSAN, Rayan",
+        "PATTERSON, Nick"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1226",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e42c18ca-5098-4280-9a1d-beac4e4f54d0%2Fliberal_combined_wmr%20kororoit_wmr%20st%20albans_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CHAKOMA, Jack",
+        "SOUTHERN, Donna",
+        "MELNIKOV, Seva",
+        "PIDI, Divya",
+        "KANDPAL, Vasundhara",
+        "GRIGOROVITCH, Luba",
+        "MCDONALD, Joyce",
+        "HASSAN, Rayan",
+        "PATTERSON, Nick"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1508",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef298e7a-1371-41f2-a9a0-ed8f2eb25360%2Fliberal_multiple_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CHAKOMA, Jack",
+        "SOUTHERN, Donna",
+        "MELNIKOV, Seva",
+        "PIDI, Divya",
+        "KANDPAL, Vasundhara",
+        "GRIGOROVITCH, Luba",
+        "MCDONALD, Joyce",
+        "HASSAN, Rayan",
+        "PATTERSON, Nick"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1512",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8d451e6-5d8a-43a1-9577-8481a2ccdc56%2Fliberal_multiple_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CHAKOMA, Jack",
+        "SOUTHERN, Donna",
+        "MELNIKOV, Seva",
+        "PIDI, Divya",
+        "KANDPAL, Vasundhara",
+        "GRIGOROVITCH, Luba",
+        "MCDONALD, Joyce",
+        "HASSAN, Rayan",
+        "PATTERSON, Nick"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "1513",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f6f69e90-716d-4ff5-8422-2a0f36601988%2Fliberal_multiple_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "CHAKOMA, Jack",
+        "SOUTHERN, Donna",
+        "MELNIKOV, Seva",
+        "PIDI, Divya",
+        "KANDPAL, Vasundhara",
+        "GRIGOROVITCH, Luba",
+        "MCDONALD, Joyce",
+        "HASSAN, Rayan",
+        "PATTERSON, Nick"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "849",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5394bd5a-4422-4c0c-9e9a-37e857eb284e%2Fonv%20-%20combined%20-%20western%20metropolitan%20region%20-%20kororoit%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MELNIKOV, Seva",
+        "PATTERSON, Nick",
+        "CHAKOMA, Jack",
+        "SOUTHERN, Donna",
+        "PIDI, Divya",
+        "GRIGOROVITCH, Luba",
+        "MCDONALD, Joyce",
+        "KANDPAL, Vasundhara",
+        "HASSAN, Rayan"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 3,
+        "ALP": 6,
+        "GRN": 7
+      }
+    },
+    {
+      "registration": "1533",
+      "registered_by": "The Republican",
+      "kind": "party",
+      "party": "OTH",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-18",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=db17da2c-953e-4b60-a552-c23352f48af6%2Fthe%20republican%20-%20combined%20-%20western%20metro%2C%20kororoit.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "467",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ca640a11-adfa-4b12-b40c-512eda690a81%2Fvictorian%20socialists%20combined%20western%20metropolitan%20kororoit%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HASSAN, Rayan",
+        "MCDONALD, Joyce",
+        "KANDPAL, Vasundhara",
+        "GRIGOROVITCH, Luba",
+        "SOUTHERN, Donna",
+        "CHAKOMA, Jack",
+        "PIDI, Divya",
+        "PATTERSON, Nick",
+        "MELNIKOV, Seva"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1241",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=cd16c6bd-e6c9-4c80-a12c-951109d051cd%2Fvictorian%20socialists%20combined%20western%20metropolitan%20all.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HASSAN, Rayan",
+        "MCDONALD, Joyce",
+        "KANDPAL, Vasundhara",
+        "GRIGOROVITCH, Luba",
+        "SOUTHERN, Donna",
+        "CHAKOMA, Jack",
+        "PIDI, Divya",
+        "PATTERSON, Nick",
+        "MELNIKOV, Seva"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1485",
+      "registered_by": "The West Party",
+      "kind": "party",
+      "party": "WEST",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4a92eb00-c924-44d9-8232-6a7de4ec79e2%2Fhtv%20the%20west%20party%20donna%20southern%20kororoit%20%28%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1615",
+      "registered_by": "The West Party",
+      "kind": "party",
+      "party": "WEST",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a0f72e2d-e82f-4a18-b92d-485b110faa97%2Fhtv%20the%20west%20party%20laverton%20kororoit.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1620",
+      "registered_by": "The West Party",
+      "kind": "party",
+      "party": "WEST",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=bc91aa85-84b3-493d-8f8f-00882447a75b%2Fsydenham%20kororoit%20st%20albans.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1623",
+      "registered_by": "The West Party",
+      "kind": "party",
+      "party": "WEST",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=98678aab-6692-493a-8e14-1bff1715e09d%2Fhtv%20the%20west%20party%20sydenham%20kororoit.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    }
+  ],
+  "no_card": []
+}

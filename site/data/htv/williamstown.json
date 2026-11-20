@@ -1,0 +1,1096 @@
+{
+  "area": "williamstown",
+  "house": "lower",
+  "name": "Williamstown",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "MARTIN, Oskar",
+      "name": "Oskar Martin",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 1,
+      "id": "williamstown/oskar-martin"
+    },
+    {
+      "ballot_name": "HOCKING, Ben",
+      "name": "Ben Hocking",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 2,
+      "id": "williamstown/ben-hocking"
+    },
+    {
+      "ballot_name": "O'REGAN, Bruce",
+      "name": "Bruce O'Regan",
+      "party": "FF",
+      "party_label": "Family First",
+      "ballot_position": 3,
+      "id": "williamstown/bruce-o-regan"
+    },
+    {
+      "ballot_name": "LOUGHNAN, Catherine",
+      "name": "Catherine Loughnan",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 4,
+      "id": "williamstown/catherine-loughnan"
+    },
+    {
+      "ballot_name": "YARRA, Sagar Reddy",
+      "name": "Sagar Reddy Yarra",
+      "party": "OTH",
+      "party_label": "The Republican",
+      "ballot_position": 5,
+      "id": "williamstown/sagar-reddy-yarra"
+    },
+    {
+      "ballot_name": "GANNON, Gill",
+      "name": "Gill Gannon",
+      "party": "WEST",
+      "party_label": "The West Party",
+      "ballot_position": 6,
+      "id": "williamstown/gill-gannon"
+    },
+    {
+      "ballot_name": "HORNE, Melissa",
+      "name": "Melissa Horne",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 7,
+      "id": "williamstown/melissa-horne"
+    },
+    {
+      "ballot_name": "BRIFFA, Tony",
+      "name": "Tony Briffa",
+      "party": "IND",
+      "ballot_position": 8,
+      "id": "williamstown/tony-briffa"
+    },
+    {
+      "ballot_name": "LINDEMANN, Paul",
+      "name": "Paul Lindemann",
+      "party": "LIB",
+      "party_label": "Liberal",
+      "ballot_position": 9,
+      "id": "williamstown/paul-lindemann"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "98",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a5e4d0a5-e861-4f16-ba86-24a14fe9ad77%2Falp_combined_wm%20williamstown_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HORNE, Melissa",
+        "HOCKING, Ben",
+        "MARTIN, Oskar",
+        "YARRA, Sagar Reddy",
+        "BRIFFA, Tony",
+        "GANNON, Gill",
+        "O'REGAN, Bruce",
+        "LINDEMANN, Paul",
+        "LOUGHNAN, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 8,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "288",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d920924b-7090-4a19-8e1c-955d60f6b356%2Falp_combined_wm_laverton_point%20cook_williamstown_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "298",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8570ea76-9e51-44fd-8b35-629d86f958a1%2Falp_combined_wm_laverton_williamstown_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HORNE, Melissa",
+        "HOCKING, Ben",
+        "MARTIN, Oskar",
+        "YARRA, Sagar Reddy",
+        "BRIFFA, Tony",
+        "GANNON, Gill",
+        "O'REGAN, Bruce",
+        "LINDEMANN, Paul",
+        "LOUGHNAN, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 8,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "357",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=867aff04-9ab7-4243-a5fc-0d7d93f65643%2Falp_combined_wm_point%20cook_williamstown_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HORNE, Melissa",
+        "HOCKING, Ben",
+        "MARTIN, Oskar",
+        "YARRA, Sagar Reddy",
+        "BRIFFA, Tony",
+        "GANNON, Gill",
+        "O'REGAN, Bruce",
+        "LINDEMANN, Paul",
+        "LOUGHNAN, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 8,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "270",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=962cc54b-7fcf-4605-a7bc-2f0b823f46db%2Falp_combined_wm_footscray_williamstown_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "812",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3a3f2bcf-93c1-4d16-b6f6-11d0a7747839%2Falp_combined_wm_williamstown_tr2_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HORNE, Melissa",
+        "HOCKING, Ben",
+        "MARTIN, Oskar",
+        "YARRA, Sagar Reddy",
+        "BRIFFA, Tony",
+        "GANNON, Gill",
+        "O'REGAN, Bruce",
+        "LINDEMANN, Paul",
+        "LOUGHNAN, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 8,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HORNE, Melissa",
+        "HOCKING, Ben",
+        "MARTIN, Oskar",
+        "YARRA, Sagar Reddy",
+        "BRIFFA, Tony",
+        "GANNON, Gill",
+        "O'REGAN, Bruce",
+        "LINDEMANN, Paul",
+        "LOUGHNAN, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 8,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "984",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2a0963fc-205c-473d-a084-388fea082ad9%2Falp_combined_wm_williamstown_tr6_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HORNE, Melissa",
+        "HOCKING, Ben",
+        "MARTIN, Oskar",
+        "YARRA, Sagar Reddy",
+        "BRIFFA, Tony",
+        "GANNON, Gill",
+        "O'REGAN, Bruce",
+        "LINDEMANN, Paul",
+        "LOUGHNAN, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 8,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "989",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=02c946e2-e1d3-4ecd-8c18-209d257661d2%2Falp_combined_wm_williamstown_tr8_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HORNE, Melissa",
+        "HOCKING, Ben",
+        "MARTIN, Oskar",
+        "YARRA, Sagar Reddy",
+        "BRIFFA, Tony",
+        "GANNON, Gill",
+        "O'REGAN, Bruce",
+        "LINDEMANN, Paul",
+        "LOUGHNAN, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 8,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "1567",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-18",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6edd7084-4d38-480b-9639-bf998357b75b%2Falp_combined_wm_williamstown_tr8_v3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HORNE, Melissa",
+        "HOCKING, Ben",
+        "MARTIN, Oskar",
+        "YARRA, Sagar Reddy",
+        "BRIFFA, Tony",
+        "GANNON, Gill",
+        "O'REGAN, Bruce",
+        "LINDEMANN, Paul",
+        "LOUGHNAN, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 8,
+        "ONP": 9
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 8
+        }
+      ]
+    },
+    {
+      "registration": "494",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=540a48c6-6594-4941-8e59-306988dedb89%2Fwilliamstown.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "O'REGAN, Bruce",
+        "LOUGHNAN, Catherine",
+        "YARRA, Sagar Reddy",
+        "LINDEMANN, Paul",
+        "BRIFFA, Tony",
+        "GANNON, Gill",
+        "HORNE, Melissa",
+        "HOCKING, Ben",
+        "MARTIN, Oskar"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 4,
+        "ALP": 7,
+        "GRN": 8
+      }
+    },
+    {
+      "registration": "726",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=63c5a60a-bfaf-4f5b-856d-4ee54cfbdbfd%2Ffamilyfirst_williamstown_version2%20%28dragged%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "O'REGAN, Bruce",
+        "LOUGHNAN, Catherine",
+        "YARRA, Sagar Reddy",
+        "BRIFFA, Tony",
+        "GANNON, Gill",
+        "HORNE, Melissa",
+        "HOCKING, Ben",
+        "MARTIN, Oskar",
+        "LINDEMANN, Paul"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "ALP": 6,
+        "GRN": 7,
+        "LNP": 9
+      }
+    },
+    {
+      "registration": "1005",
+      "registered_by": "Family First",
+      "kind": "party",
+      "party": "FF",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c05a2910-57cf-471b-b648-eb82a29a40c6%2Ffamilyfirst_williamstown_version3%20%28dragged%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "partial",
+      "order": [
+        "O'REGAN, Bruce",
+        "LOUGHNAN, Catherine",
+        "YARRA, Sagar Reddy"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2
+      }
+    },
+    {
+      "registration": "986",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=930fe8a4-bd44-4010-b049-c895564fa4a9%2Fthe%20greens%20combined%20western%20metro%20footscray%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOCKING, Ben",
+        "MARTIN, Oskar",
+        "BRIFFA, Tony",
+        "GANNON, Gill",
+        "HORNE, Melissa",
+        "YARRA, Sagar Reddy",
+        "O'REGAN, Bruce",
+        "LINDEMANN, Paul",
+        "LOUGHNAN, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 8,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1105",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=55783289-1f83-45db-89d2-7270d48d4d99%2Fthe%20greens%20combined%20western%20metro%20laverton%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOCKING, Ben",
+        "MARTIN, Oskar",
+        "BRIFFA, Tony",
+        "GANNON, Gill",
+        "HORNE, Melissa",
+        "YARRA, Sagar Reddy",
+        "O'REGAN, Bruce",
+        "LINDEMANN, Paul",
+        "LOUGHNAN, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 8,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1122",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=0c96b416-bd1f-4eab-a48c-ecb1bccf3df7%2Fthe%20greens%20combined%20western%20metro%20williamstown%20footscray%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOCKING, Ben",
+        "MARTIN, Oskar",
+        "BRIFFA, Tony",
+        "GANNON, Gill",
+        "HORNE, Melissa",
+        "YARRA, Sagar Reddy",
+        "O'REGAN, Bruce",
+        "LINDEMANN, Paul",
+        "LOUGHNAN, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 8,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1127",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8a79788-b6a5-4c7e-bbd7-b471b83f8312%2Fthe%20greens%20combined%20western%20metro%20williamstown%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOCKING, Ben",
+        "MARTIN, Oskar",
+        "BRIFFA, Tony",
+        "GANNON, Gill",
+        "HORNE, Melissa",
+        "YARRA, Sagar Reddy",
+        "O'REGAN, Bruce",
+        "LINDEMANN, Paul",
+        "LOUGHNAN, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 8,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1150",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=951fdf92-f76f-4496-a2dd-ad299f0e135e%2Fthe%20greens%20combined%20western%20metro%20niddrie%20footscray%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOCKING, Ben",
+        "MARTIN, Oskar",
+        "BRIFFA, Tony",
+        "GANNON, Gill",
+        "HORNE, Melissa",
+        "YARRA, Sagar Reddy",
+        "O'REGAN, Bruce",
+        "LINDEMANN, Paul",
+        "LOUGHNAN, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 8,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1162",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7de7a90a-8509-40cb-9986-51cc08814abd%2Fthe%20greens%20combined%20laverton%20st%20albans%20footscray%20western%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOCKING, Ben",
+        "MARTIN, Oskar",
+        "BRIFFA, Tony",
+        "GANNON, Gill",
+        "HORNE, Melissa",
+        "YARRA, Sagar Reddy",
+        "O'REGAN, Bruce",
+        "LINDEMANN, Paul",
+        "LOUGHNAN, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 8,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1163",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=758a2fd3-a556-473b-b2e2-f3d1bf8c4cfa%2Fthe%20greens%20combined%20southern%20metro%20albert%20park%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOCKING, Ben",
+        "MARTIN, Oskar",
+        "BRIFFA, Tony",
+        "GANNON, Gill",
+        "HORNE, Melissa",
+        "YARRA, Sagar Reddy",
+        "O'REGAN, Bruce",
+        "LINDEMANN, Paul",
+        "LOUGHNAN, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 8,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1188",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e3ab0573-118e-4501-b95a-d4bb95f26f1c%2Fthe%20greens%20combined%20southern%20metro%20albert%20park%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOCKING, Ben",
+        "MARTIN, Oskar",
+        "BRIFFA, Tony",
+        "GANNON, Gill",
+        "HORNE, Melissa",
+        "YARRA, Sagar Reddy",
+        "O'REGAN, Bruce",
+        "LINDEMANN, Paul",
+        "LOUGHNAN, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 8,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOCKING, Ben",
+        "MARTIN, Oskar",
+        "BRIFFA, Tony",
+        "GANNON, Gill",
+        "HORNE, Melissa",
+        "YARRA, Sagar Reddy",
+        "O'REGAN, Bruce",
+        "LINDEMANN, Paul",
+        "LOUGHNAN, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 8,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1478",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e269e427-1a9f-4777-85b4-0db846eda110%2Fthe%20greens%20combined%20western%20metro%20vietnamese%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOCKING, Ben",
+        "MARTIN, Oskar",
+        "BRIFFA, Tony",
+        "GANNON, Gill",
+        "HORNE, Melissa",
+        "YARRA, Sagar Reddy",
+        "O'REGAN, Bruce",
+        "LINDEMANN, Paul",
+        "LOUGHNAN, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 8,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1492",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9790b150-f633-47f4-8b9e-aed7a9554e98%2Fthe%20greens%20combined%20western%20metro%20punjabi%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOCKING, Ben",
+        "MARTIN, Oskar",
+        "BRIFFA, Tony",
+        "GANNON, Gill",
+        "HORNE, Melissa",
+        "YARRA, Sagar Reddy",
+        "O'REGAN, Bruce",
+        "LINDEMANN, Paul",
+        "LOUGHNAN, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 8,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1548",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d948fa13-a951-4e9f-a310-26cd0001f101%2Fthe%20greens%20combined%20western%20metro%20punjabi%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOCKING, Ben",
+        "MARTIN, Oskar",
+        "BRIFFA, Tony",
+        "GANNON, Gill",
+        "HORNE, Melissa",
+        "YARRA, Sagar Reddy",
+        "O'REGAN, Bruce",
+        "LINDEMANN, Paul",
+        "LOUGHNAN, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 8,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1558",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=72d3cabb-ecac-4ed9-bd28-c39010cb0178%2Fthe%20greens%20combined%20western%20metro%20vietnamese%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HOCKING, Ben",
+        "MARTIN, Oskar",
+        "BRIFFA, Tony",
+        "GANNON, Gill",
+        "HORNE, Melissa",
+        "YARRA, Sagar Reddy",
+        "O'REGAN, Bruce",
+        "LINDEMANN, Paul",
+        "LOUGHNAN, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5,
+        "LNP": 8,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1504",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7eac0f08-ef9e-4f3c-8153-4ef5729fa74d%2Fliberal_multiple_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "partial",
+      "order": [
+        "MARTIN, Oskar"
+      ],
+      "via": "text"
+    },
+    {
+      "registration": "1327",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "partial",
+      "order": [
+        "MARTIN, Oskar"
+      ],
+      "via": "text"
+    },
+    {
+      "registration": "1508",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef298e7a-1371-41f2-a9a0-ed8f2eb25360%2Fliberal_multiple_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "partial",
+      "order": [
+        "MARTIN, Oskar"
+      ],
+      "via": "text"
+    },
+    {
+      "registration": "1512",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8d451e6-5d8a-43a1-9577-8481a2ccdc56%2Fliberal_multiple_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "partial",
+      "order": [
+        "MARTIN, Oskar"
+      ],
+      "via": "text"
+    },
+    {
+      "registration": "1513",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f6f69e90-716d-4ff5-8422-2a0f36601988%2Fliberal_multiple_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "partial",
+      "order": [
+        "MARTIN, Oskar"
+      ],
+      "via": "text"
+    },
+    {
+      "registration": "883",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d9bedaab-ecff-4cac-8b15-98d7ba74a1ff%2Fonv%20-%20combined%20-%20western%20metropolitan%20region%20-%20williamstown%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "LOUGHNAN, Catherine",
+        "O'REGAN, Bruce",
+        "LINDEMANN, Paul",
+        "GANNON, Gill",
+        "YARRA, Sagar Reddy",
+        "HORNE, Melissa",
+        "BRIFFA, Tony",
+        "HOCKING, Ben",
+        "MARTIN, Oskar"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 3,
+        "ALP": 6,
+        "GRN": 8
+      }
+    },
+    {
+      "registration": "1540",
+      "registered_by": "The Republican",
+      "kind": "party",
+      "party": "OTH",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-18",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=bb4b9eec-1c30-4ce9-ad7a-cf74ab316996%2Fthe%20republican%20-%20combined%20-%20western%20metro%2C%20williamstown.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "463",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f43d8404-769e-4915-84ce-cb17904e8bbd%2Fvictorian%20socialists%20combined%20western%20metropolitan%20williamstown%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MARTIN, Oskar",
+        "HOCKING, Ben",
+        "HORNE, Melissa",
+        "BRIFFA, Tony",
+        "GANNON, Gill",
+        "YARRA, Sagar Reddy",
+        "LINDEMANN, Paul",
+        "O'REGAN, Bruce",
+        "LOUGHNAN, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 3,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1241",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=cd16c6bd-e6c9-4c80-a12c-951109d051cd%2Fvictorian%20socialists%20combined%20western%20metropolitan%20all.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MARTIN, Oskar",
+        "HOCKING, Ben",
+        "HORNE, Melissa",
+        "BRIFFA, Tony",
+        "GANNON, Gill",
+        "YARRA, Sagar Reddy",
+        "LINDEMANN, Paul",
+        "O'REGAN, Bruce",
+        "LOUGHNAN, Catherine"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 3,
+        "LNP": 7,
+        "ONP": 9
+      }
+    },
+    {
+      "registration": "1487",
+      "registered_by": "The West Party",
+      "kind": "party",
+      "party": "WEST",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fcb2c79f-4eb2-42c2-9459-8116e9e77335%2Fhtv%20the%20west%20party%20gill%20gannon%20williamstown%20%28%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1621",
+      "registered_by": "The West Party",
+      "kind": "party",
+      "party": "WEST",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a3b4e251-374f-40ff-95a5-bdbc28be9244%2Fhtv%20the%20west%20party%20williamstown%20point%20cook.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "833",
+      "registered_by": "BRIFFA, Tony",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "williamstown/tony-briffa",
+      "type": "Single",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3d219fdf-2647-4c3c-a75c-8bb66f9599b2%2Fhtvc%20%20williamstown%20final%20-%20briffa.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "partial",
+      "order": [
+        "BRIFFA, Tony"
+      ],
+      "via": "text"
+    },
+    {
+      "registration": "1465",
+      "registered_by": "LINDEMANN, Paul",
+      "kind": "independent",
+      "party": "IND",
+      "candidate": "williamstown/paul-lindemann",
+      "type": "Single",
+      "registered_on": "2026-11-18",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b74eae47-1901-4fe0-b937-6f66eb1ae91a%2Flindemann%2C%20paul%20andrew.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    }
+  ],
+  "no_card": []
+}

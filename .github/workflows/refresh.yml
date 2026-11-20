@@ -19,7 +19,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 25   # ABC pages (~3 min) and news searches (~5 min) at one request a second; Chromium install (~1 min)
+    timeout-minutes: 30   # ABC pages (~3 min), news searches (~5 min) and the how-to-vote register (~2 min, plus a few seconds per new card) at one request a second; Chromium install (~1 min)
     outputs:
       changed: ${{ steps.commit.outputs.changed }}
     steps:

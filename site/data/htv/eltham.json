@@ -1,0 +1,1031 @@
+{
+  "area": "eltham",
+  "house": "lower",
+  "name": "Eltham",
+  "status": "open",
+  "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
+  "registration_closes": "2026-11-20",
+  "ballot": [
+    {
+      "ballot_name": "RICHES, Maeve",
+      "name": "Maeve Riches",
+      "party": "VS",
+      "party_label": "Victorian Socialists",
+      "ballot_position": 1,
+      "id": "eltham/maeve-riches"
+    },
+    {
+      "ballot_name": "BYRNES, Paul",
+      "name": "Paul Byrnes",
+      "party": "LIB",
+      "party_label": "Liberal",
+      "ballot_position": 2,
+      "id": "eltham/paul-byrnes"
+    },
+    {
+      "ballot_name": "BROOKSBY, Louise",
+      "name": "Louise Brooksby",
+      "party": "AJP",
+      "party_label": "Animal Justice Party",
+      "ballot_position": 3,
+      "id": "eltham/louise-brooksby"
+    },
+    {
+      "ballot_name": "MARASEA, Steven",
+      "name": "Steven Marasea",
+      "party": "LBT",
+      "party_label": "Libertarian (formerly Liberal Democrats)",
+      "ballot_position": 4,
+      "id": "eltham/steven-marasea"
+    },
+    {
+      "ballot_name": "WARD, Vicki",
+      "name": "Vicki Ward",
+      "party": "ALP",
+      "party_label": "Australian Labor Party",
+      "ballot_position": 5,
+      "id": "eltham/vicki-ward"
+    },
+    {
+      "ballot_name": "WEATHERLEY, Jessie",
+      "name": "Jessie Weatherley",
+      "party": "ONP",
+      "party_label": "One Nation Victoria",
+      "ballot_position": 6,
+      "id": "eltham/jessie-weatherley"
+    },
+    {
+      "ballot_name": "BUSBRIDGE, Rachel",
+      "name": "Rachel Busbridge",
+      "party": "GRN",
+      "party_label": "The Greens",
+      "ballot_position": 7,
+      "id": "eltham/rachel-busbridge"
+    }
+  ],
+  "cards": [
+    {
+      "registration": "1268",
+      "registered_by": "Animal Justice Party",
+      "kind": "party",
+      "party": "AJP",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=150dc8ae-5b2c-47b9-a2ab-c137dfef9f50%2Feltham.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BROOKSBY, Louise",
+        "BUSBRIDGE, Rachel",
+        "RICHES, Maeve",
+        "WARD, Vicki",
+        "MARASEA, Steven",
+        "BYRNES, Paul",
+        "WEATHERLEY, Jessie"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 6,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "50",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-10",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f4875fb0-5c0b-486c-b7d9-b4f4af0ceff2%2Falp_combined_nem%20eltham_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WARD, Vicki",
+        "BUSBRIDGE, Rachel",
+        "BROOKSBY, Louise",
+        "RICHES, Maeve",
+        "MARASEA, Steven",
+        "BYRNES, Paul",
+        "WEATHERLEY, Jessie"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 6,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "367",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8ee2ebb9-32b5-4b0f-a78a-bff50e60dac4%2Falp_combined_nem_nv_eltham_yan%20yean_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WARD, Vicki",
+        "BUSBRIDGE, Rachel",
+        "BROOKSBY, Louise",
+        "RICHES, Maeve",
+        "MARASEA, Steven",
+        "BYRNES, Paul",
+        "WEATHERLEY, Jessie"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 6,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "397",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a24aa4f8-9bb4-415e-80b2-799763b7f07f%2Falp_combined_nem_eltham_ivanhoe_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WARD, Vicki",
+        "BUSBRIDGE, Rachel",
+        "BROOKSBY, Louise",
+        "RICHES, Maeve",
+        "MARASEA, Steven",
+        "BYRNES, Paul",
+        "WEATHERLEY, Jessie"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 6,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "419",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-11",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2978c1f0-4ca8-4f84-9ea9-19d773c61b2b%2Falp_combined_nem_bundoora_eltham_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WARD, Vicki",
+        "BUSBRIDGE, Rachel",
+        "BROOKSBY, Louise",
+        "RICHES, Maeve",
+        "MARASEA, Steven",
+        "BYRNES, Paul",
+        "WEATHERLEY, Jessie"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 6,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "893",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "party": "ALP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WARD, Vicki",
+        "BUSBRIDGE, Rachel",
+        "BROOKSBY, Louise",
+        "RICHES, Maeve",
+        "MARASEA, Steven",
+        "BYRNES, Paul",
+        "WEATHERLEY, Jessie"
+      ],
+      "via": "text",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 6,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 6
+        }
+      ]
+    },
+    {
+      "registration": "942",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3adbcf9e-32b3-4942-844c-323ef1c68a5c%2Fthe%20greens%20combined%20north-east%20metro%20bulleen%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BUSBRIDGE, Rachel",
+        "RICHES, Maeve",
+        "BROOKSBY, Louise",
+        "WARD, Vicki",
+        "BYRNES, Paul",
+        "MARASEA, Steven",
+        "WEATHERLEY, Jessie"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "945",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=94be6742-e719-4730-a7ab-4248978ae8d7%2Fthe%20greens%20combined%20north-east%20metro%20warrandyte%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BUSBRIDGE, Rachel",
+        "RICHES, Maeve",
+        "BROOKSBY, Louise",
+        "WARD, Vicki",
+        "BYRNES, Paul",
+        "MARASEA, Steven",
+        "WEATHERLEY, Jessie"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "951",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3ecb378c-7017-42ed-aaf1-4d9b4dfed9db%2Fthe%20greens%20combined%20north-east%20metro%20eltham%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BUSBRIDGE, Rachel",
+        "RICHES, Maeve",
+        "BROOKSBY, Louise",
+        "WARD, Vicki",
+        "BYRNES, Paul",
+        "MARASEA, Steven",
+        "WEATHERLEY, Jessie"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "980",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a03585b6-644f-4025-96c5-b6a899a3f998%2Fthe%20greens%20combined%20north-east%20metro%20ivanhoe%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BUSBRIDGE, Rachel",
+        "RICHES, Maeve",
+        "BROOKSBY, Louise",
+        "WARD, Vicki",
+        "BYRNES, Paul",
+        "MARASEA, Steven",
+        "WEATHERLEY, Jessie"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "981",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c0484769-9373-42e3-9143-0c230daaabae%2Fthe%20greens%20combined%20north-east%20metro%20bundoora%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BUSBRIDGE, Rachel",
+        "RICHES, Maeve",
+        "BROOKSBY, Louise",
+        "WARD, Vicki",
+        "BYRNES, Paul",
+        "MARASEA, Steven",
+        "WEATHERLEY, Jessie"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1129",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a9dc71b1-a972-484e-aedc-dfcbb4ccce61%2Fthe%20greens%20combined%20north-eastern%20metro%20bundoora%20eltham%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BUSBRIDGE, Rachel",
+        "RICHES, Maeve",
+        "BROOKSBY, Louise",
+        "WARD, Vicki",
+        "BYRNES, Paul",
+        "MARASEA, Steven",
+        "WEATHERLEY, Jessie"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1139",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=dd593554-f0d4-4bda-accd-4cd00dd40080%2Fthe%20greens%20combined%20north-eastern%20metro%20warrandyte%20bulleen%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BUSBRIDGE, Rachel",
+        "RICHES, Maeve",
+        "BROOKSBY, Louise",
+        "WARD, Vicki",
+        "BYRNES, Paul",
+        "MARASEA, Steven",
+        "WEATHERLEY, Jessie"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1148",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=81f622b0-195b-4e3f-8cb2-2f4222e70bd1%2Fthe%20greens%20combined%20bundoora%20yan%20yean%20mill%20park%20north-eastern%20metro%20northern%20victoria%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BUSBRIDGE, Rachel",
+        "RICHES, Maeve",
+        "BROOKSBY, Louise",
+        "WARD, Vicki",
+        "BYRNES, Paul",
+        "MARASEA, Steven",
+        "WEATHERLEY, Jessie"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1189",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4b03454b-9104-419f-9cfd-de8ad1c591e5%2Fthe%20greens%20combined%20north-eastern%20metro%20ringwood%20warrandyte%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BUSBRIDGE, Rachel",
+        "RICHES, Maeve",
+        "BROOKSBY, Louise",
+        "WARD, Vicki",
+        "BYRNES, Paul",
+        "MARASEA, Steven",
+        "WEATHERLEY, Jessie"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1190",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BUSBRIDGE, Rachel",
+        "RICHES, Maeve",
+        "BROOKSBY, Louise",
+        "WARD, Vicki",
+        "BYRNES, Paul",
+        "MARASEA, Steven",
+        "WEATHERLEY, Jessie"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1203",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=95e68076-8a0f-4c74-aa4c-dabe7ae4c8d3%2Fthe%20greens%20combined%20northern%20victoria%20yan%20yean%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BUSBRIDGE, Rachel",
+        "RICHES, Maeve",
+        "BROOKSBY, Louise",
+        "WARD, Vicki",
+        "BYRNES, Paul",
+        "MARASEA, Steven",
+        "WEATHERLEY, Jessie"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1502",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1f42b12b-5738-46cd-bcfd-c9305fa269f6%2Fthe%20greens%20combined%20north-eastern%20metro%20simplified%20chinese%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BUSBRIDGE, Rachel",
+        "RICHES, Maeve",
+        "BROOKSBY, Louise",
+        "WARD, Vicki",
+        "BYRNES, Paul",
+        "MARASEA, Steven",
+        "WEATHERLEY, Jessie"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1559",
+      "registered_by": "The Greens",
+      "kind": "party",
+      "party": "GRN",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-19",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c7366162-b19b-430f-87f3-c6fc5c3f5605%2Fthe%20greens%20combined%20north-eastern%20metro%20simplified%20chinese%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1040",
+      "registered_by": "Libertarian (formerly Liberal Democrats)",
+      "kind": "party",
+      "party": "LBT",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9ed5bbca-a83e-4c7c-b0ba-8e2c9c6ed6ba%2Felthamdistricthtv_v2_reg.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "MARASEA, Steven",
+        "BYRNES, Paul",
+        "WEATHERLEY, Jessie",
+        "BROOKSBY, Louise",
+        "WARD, Vicki",
+        "BUSBRIDGE, Rachel",
+        "RICHES, Maeve"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 2,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      }
+    },
+    {
+      "registration": "565",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=bb68bccc-b1bd-4d2f-8c42-5b9f385eaad4%2Fliberal_combined_nemr%20eltham_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BYRNES, Paul",
+        "MARASEA, Steven",
+        "WEATHERLEY, Jessie",
+        "BROOKSBY, Louise",
+        "WARD, Vicki",
+        "BUSBRIDGE, Rachel",
+        "RICHES, Maeve"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "688",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9c627ee2-de98-408b-9c62-8feee0c048a9%2Fliberal_combined_nemr%20eltham_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BYRNES, Paul",
+        "MARASEA, Steven",
+        "WEATHERLEY, Jessie",
+        "BROOKSBY, Louise",
+        "WARD, Vicki",
+        "BUSBRIDGE, Rachel",
+        "RICHES, Maeve"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1504",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7eac0f08-ef9e-4f3c-8153-4ef5729fa74d%2Fliberal_multiple_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BYRNES, Paul",
+        "MARASEA, Steven",
+        "WEATHERLEY, Jessie",
+        "BROOKSBY, Louise",
+        "WARD, Vicki",
+        "BUSBRIDGE, Rachel",
+        "RICHES, Maeve"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1305",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=669024c3-9d0d-4eba-bae4-e82a9e55bab3%2Fliberal_combined_nemr%20eltham_nvr%20yan%20yean_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BYRNES, Paul",
+        "MARASEA, Steven",
+        "WEATHERLEY, Jessie",
+        "BROOKSBY, Louise",
+        "WARD, Vicki",
+        "BUSBRIDGE, Rachel",
+        "RICHES, Maeve"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1327",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-14",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BYRNES, Paul",
+        "MARASEA, Steven",
+        "WEATHERLEY, Jessie",
+        "BROOKSBY, Louise",
+        "WARD, Vicki",
+        "BUSBRIDGE, Rachel",
+        "RICHES, Maeve"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1508",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef298e7a-1371-41f2-a9a0-ed8f2eb25360%2Fliberal_multiple_4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BYRNES, Paul",
+        "MARASEA, Steven",
+        "WEATHERLEY, Jessie",
+        "BROOKSBY, Louise",
+        "WARD, Vicki",
+        "BUSBRIDGE, Rachel",
+        "RICHES, Maeve"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1512",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b8d451e6-5d8a-43a1-9577-8481a2ccdc56%2Fliberal_multiple_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BYRNES, Paul",
+        "MARASEA, Steven",
+        "WEATHERLEY, Jessie",
+        "BROOKSBY, Louise",
+        "WARD, Vicki",
+        "BUSBRIDGE, Rachel",
+        "RICHES, Maeve"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "1513",
+      "registered_by": "Liberal",
+      "kind": "party",
+      "party": "LIB",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f6f69e90-716d-4ff5-8422-2a0f36601988%2Fliberal_multiple_3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "BYRNES, Paul",
+        "MARASEA, Steven",
+        "WEATHERLEY, Jessie",
+        "BROOKSBY, Louise",
+        "WARD, Vicki",
+        "BUSBRIDGE, Rachel",
+        "RICHES, Maeve"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3,
+        "ALP": 5,
+        "GRN": 6
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 3,
+          "of_n": 5
+        }
+      ]
+    },
+    {
+      "registration": "856",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e86948fc-1297-41e8-b614-c7d471cb5e85%2Fonv%20-%20combined%20-%20north-eastern%20metropolitan%20region%20-%20eltham%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "921",
+      "registered_by": "One Nation Victoria",
+      "kind": "party",
+      "party": "ONP",
+      "candidate": null,
+      "type": "MEHTVC",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "WEATHERLEY, Jessie",
+        "MARASEA, Steven",
+        "BYRNES, Paul",
+        "WARD, Vicki",
+        "BUSBRIDGE, Rachel",
+        "BROOKSBY, Louise",
+        "RICHES, Maeve"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 3,
+        "ALP": 4,
+        "GRN": 5
+      }
+    },
+    {
+      "registration": "343",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-12",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=802ced57-bd4d-406c-96ff-53c94f387636%2Fvictorian%20socialists%20combined%20north-eastern%20metropolitan%20eltham%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RICHES, Maeve",
+        "BUSBRIDGE, Rachel",
+        "BROOKSBY, Louise",
+        "WARD, Vicki",
+        "BYRNES, Paul",
+        "MARASEA, Steven",
+        "WEATHERLEY, Jessie"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1028",
+      "registered_by": "Victorian Socialists",
+      "kind": "party",
+      "party": "VS",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-13",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=16db2470-4346-4d07-a275-ae8d2b33aded%2Fs_nem_combined%20all_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "RICHES, Maeve",
+        "BUSBRIDGE, Rachel",
+        "BROOKSBY, Louise",
+        "WARD, Vicki",
+        "BYRNES, Paul",
+        "MARASEA, Steven",
+        "WEATHERLEY, Jessie"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 7
+      }
+    },
+    {
+      "registration": "1374",
+      "registered_by": "Peter Marshall, United Firefighters Union",
+      "kind": "non_candidate",
+      "party": null,
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3afbe19a-67ba-4a16-bb66-4f43075c64e8%2Feltham%20-%20campanard%2C%20laura%20-%20htvc%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    },
+    {
+      "registration": "1376",
+      "registered_by": "Peter Marshall, United Firefighters Union",
+      "kind": "non_candidate",
+      "party": null,
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-16",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d4bb865f-f45a-4558-a08d-cb6b2f121adc%2Feltham%20-%20campanard%2C%20laura%20-%20htvc%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "unreadable",
+      "note": "unreadable, see card"
+    }
+  ],
+  "no_card": []
+}
