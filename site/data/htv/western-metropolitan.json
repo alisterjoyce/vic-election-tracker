@@ -530,7 +530,29 @@
       "type": "Combined",
       "registered_on": "2026-11-10",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8e8ec340-b518-408c-b917-50601e0b3af4%2Falp_combined_wm%20werribee_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "E",
+        "D",
+        "B",
+        "I",
+        "H",
+        "C"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 4,
+        "LNP": 6
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
     },
     {
       "registration": "98",
@@ -541,7 +563,29 @@
       "type": "Combined",
       "registered_on": "2026-11-10",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a5e4d0a5-e861-4f16-ba86-24a14fe9ad77%2Falp_combined_wm%20williamstown_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "E",
+        "D",
+        "B",
+        "I",
+        "H",
+        "C"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 4,
+        "LNP": 6
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
     },
     {
       "registration": "101",
@@ -1524,6 +1568,8 @@
       "same_as": [
         "84",
         "96",
+        "97",
+        "98",
         "101",
         "102",
         "103",
@@ -1593,7 +1639,9 @@
       "type": "Combined",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6b8aa1b0-b2f5-4c91-994f-2f3ef5d7b3cc%2Falp_combined_wm_werribee_tr2_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "status": "pending",
+      "tried": "2026-11-22",
+      "note": "the VEC's link to this card didn't open"
     },
     {
       "registration": "812",
@@ -1604,7 +1652,29 @@
       "type": "Combined",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3a3f2bcf-93c1-4d16-b6f6-11d0a7747839%2Falp_combined_wm_williamstown_tr2_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "E",
+        "D",
+        "B",
+        "I",
+        "H",
+        "C"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 4,
+        "LNP": 6
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
     },
     {
       "registration": "813",
@@ -1693,6 +1763,8 @@
       "same_as": [
         "84",
         "96",
+        "97",
+        "98",
         "101",
         "102",
         "103",
@@ -1906,7 +1978,29 @@
       "type": "Combined",
       "registered_on": "2026-11-13",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=93a6dabe-3916-4949-b7be-d1c49080fd8e%2Falp_combined_wm_werribee_tr9_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "E",
+        "D",
+        "B",
+        "I",
+        "H",
+        "C"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 4,
+        "LNP": 6
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
     },
     {
       "registration": "979",
@@ -2016,7 +2110,29 @@
       "type": "Combined",
       "registered_on": "2026-11-13",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2a0963fc-205c-473d-a084-388fea082ad9%2Falp_combined_wm_williamstown_tr6_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "E",
+        "D",
+        "B",
+        "I",
+        "H",
+        "C"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 4,
+        "LNP": 6
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
     },
     {
       "registration": "985",
@@ -2060,7 +2176,29 @@
       "type": "Combined",
       "registered_on": "2026-11-13",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=02c946e2-e1d3-4ecd-8c18-209d257661d2%2Falp_combined_wm_williamstown_tr8_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "E",
+        "D",
+        "B",
+        "I",
+        "H",
+        "C"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 4,
+        "LNP": 6
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
     },
     {
       "registration": "993",
@@ -2104,7 +2242,29 @@
       "type": "Combined",
       "registered_on": "2026-11-18",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6edd7084-4d38-480b-9639-bf998357b75b%2Falp_combined_wm_williamstown_tr8_v3.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "E",
+        "D",
+        "B",
+        "I",
+        "H",
+        "C"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 4,
+        "LNP": 6
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ]
     },
     {
       "registration": "1668",
@@ -2214,7 +2374,19 @@
       "type": "Single",
       "registered_on": "2026-11-17",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a0fbb15f-9647-4d2d-8ea3-121f0b7726eb%2Fdlp%20htv%20upper%20house%20-%20western%20metropolitan%20region%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "A",
+        "L",
+        "C",
+        "K",
+        "H"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 3,
+        "ONP": 4
+      }
     },
     {
       "registration": "1422",
@@ -2294,7 +2466,19 @@
       "type": "Combined",
       "registered_on": "2026-11-17",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=05a95dbe-1d04-400e-aea6-070ad0c34ec9%2Fdlp%20htv%20lower%20house%20-%20werribee%20district%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "A",
+        "L",
+        "C",
+        "K",
+        "H"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 3,
+        "ONP": 4
+      }
     },
     {
       "registration": "1439",
@@ -2328,7 +2512,20 @@
       "type": "Single",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=43c6b936-2353-49fb-90f6-dfbaf6b4a1b8%2Fwest_metro.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "H",
+        "K",
+        "A",
+        "C",
+        "E"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 4,
+        "ALP": 5
+      }
     },
     {
       "registration": "715",
@@ -2339,7 +2536,20 @@
       "type": "Single",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e66507f4-a3af-4f47-ab34-60cebb0a56de%2Ffamilyfirst_west-metro%20_version2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "H",
+        "K",
+        "A",
+        "C",
+        "E"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 4,
+        "ALP": 5
+      }
     },
     {
       "registration": "507",
@@ -2695,7 +2905,19 @@
       "type": "Single",
       "registered_on": "2026-11-13",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fe7aa088-41ff-40c6-8d1b-b90a1375558f%2Fthe%20greens%20single%20western%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "I",
+        "D",
+        "F",
+        "L",
+        "E"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5
+      }
     },
     {
       "registration": "1173",
@@ -2891,7 +3113,8 @@
       "type": "Single",
       "registered_on": "2026-11-11",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1e7ae69f-d94f-4d68-852b-3949136fe98b%2Flcv_single_western%20metropolitan_xavier%20menta.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "status": "unreadable",
+      "note": "unreadable, see card"
     },
     {
       "registration": "553",
@@ -3086,7 +3309,19 @@
       "type": "Combined",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=46d1bb39-daaf-4f8e-abdf-e51a79d4d257%2Fliberal_combined_wmr%20werribee_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "C",
+        "L",
+        "A",
+        "K",
+        "H"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4
+      }
     },
     {
       "registration": "603",
@@ -3143,7 +3378,19 @@
       "type": "Combined",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=49ac515e-0fdc-4eaf-9cfc-8f735b33b307%2Fliberal_combined_wmr%20werribee_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "C",
+        "L",
+        "A",
+        "K",
+        "H"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4
+      }
     },
     {
       "registration": "658",
@@ -3292,7 +3539,19 @@
       "type": "Single",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=cd5654c2-a32a-4a41-b7e4-56ff5a6477a2%2Fliberal_single_wmr_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "C",
+        "L",
+        "A",
+        "K",
+        "H"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4
+      }
     },
     {
       "registration": "830",
@@ -3303,7 +3562,19 @@
       "type": "Single",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=67add4d5-a43a-461f-a3a7-e5f9e70e2740%2Fliberal_single_wmr_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "C",
+        "L",
+        "A",
+        "K",
+        "H"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4
+      }
     },
     {
       "registration": "831",
@@ -3535,7 +3806,19 @@
       "type": "Combined",
       "registered_on": "2026-11-18",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=96ecc601-11b6-473f-88a8-cbeb9ca5911b%2Fliberal_combined_wmr%20tarneit_hindi_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "C",
+        "L",
+        "A",
+        "K",
+        "H"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4
+      }
     },
     {
       "registration": "1594",
@@ -3615,7 +3898,19 @@
       "type": "Combined",
       "registered_on": "2026-11-18",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=304869f0-a852-4c50-9b50-46de721c941d%2Fliberal_combined_wmr%20tarneit_punjabi_5.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "C",
+        "L",
+        "A",
+        "K",
+        "H"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4
+      }
     },
     {
       "registration": "1587",
@@ -3787,7 +4082,19 @@
       "type": "Combined",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d9bedaab-ecff-4cac-8b15-98d7ba74a1ff%2Fonv%20-%20combined%20-%20western%20metropolitan%20region%20-%20williamstown%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "K",
+        "H",
+        "G",
+        "C",
+        "L"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 4
+      }
     },
     {
       "registration": "891",
@@ -3844,7 +4151,19 @@
       "type": "Combined",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9157ee24-e4bd-4a06-997c-16b3880db6c6%2Fonv%20-%20combined%20-%20western%20metropolitan%20region%20-%20werribee%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "K",
+        "H",
+        "G",
+        "C",
+        "L"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 4
+      }
     },
     {
       "registration": "902",
@@ -3959,7 +4278,8 @@
       "type": "Single",
       "registered_on": "2026-11-16",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=eb8abfc7-e98a-4710-b720-becdb0f03952%2Faustralian%20democrats%20single%20western%20metro%201%20%28compressed%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "status": "unreadable",
+      "note": "unreadable, see card"
     },
     {
       "registration": "1529",
@@ -4018,7 +4338,8 @@
       "type": "Combined",
       "registered_on": "2026-11-18",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c4c4a8c3-10e7-403b-8246-13c08b9defcc%2Fthe%20republican%20-%20combined%20-%20western%20metro%2C%20tarneit.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "status": "unreadable",
+      "note": "unreadable, see card"
     },
     {
       "registration": "1535",
@@ -4053,7 +4374,8 @@
       "type": "Combined",
       "registered_on": "2026-11-18",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=05a8b849-a836-4b62-9397-57be385c77a7%2Fthe%20republican%20-%20combined%20-%20western%20metro%2C%20werribee.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "status": "unreadable",
+      "note": "unreadable, see card"
     },
     {
       "registration": "1538",
@@ -4088,7 +4410,8 @@
       "type": "Combined",
       "registered_on": "2026-11-18",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=bb4b9eec-1c30-4ce9-ad7a-cf74ab316996%2Fthe%20republican%20-%20combined%20-%20western%20metro%2C%20williamstown.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "status": "unreadable",
+      "note": "unreadable, see card"
     },
     {
       "registration": "384",
@@ -4099,7 +4422,8 @@
       "type": "MEHTVC",
       "registered_on": "2026-11-11",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=db689a23-6147-4752-b19b-39ae0c759d43%2Fsap_multiple_all%208%20regions.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "status": "unreadable",
+      "note": "unreadable, see card"
     },
     {
       "registration": "457",
@@ -4225,7 +4549,19 @@
       "type": "Combined",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f43d8404-769e-4915-84ce-cb17904e8bbd%2Fvictorian%20socialists%20combined%20western%20metropolitan%20williamstown%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "D",
+        "I",
+        "B",
+        "F",
+        "E"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 5
+      }
     },
     {
       "registration": "467",
@@ -4259,7 +4595,19 @@
       "type": "Combined",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f662d81c-9e7f-4f00-8233-e6c3d40351fb%2Fvictorian%20socialists%20combined%20western%20metropolitan%20werribee%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "D",
+        "I",
+        "B",
+        "F",
+        "E"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 5
+      }
     },
     {
       "registration": "472",
@@ -4374,7 +4722,8 @@
       "type": "Combined",
       "registered_on": "2026-11-17",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b1cc669e-2770-470d-aae6-9f932aa78277%2Fhtv%20the%20west%20party%20paul%20hopper%20werribee%20%28%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "status": "unreadable",
+      "note": "unreadable, see card"
     },
     {
       "registration": "1480",
@@ -4433,7 +4782,8 @@
       "type": "Combined",
       "registered_on": "2026-11-17",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fcb2c79f-4eb2-42c2-9459-8116e9e77335%2Fhtv%20the%20west%20party%20gill%20gannon%20williamstown%20%28%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "status": "unreadable",
+      "note": "unreadable, see card"
     },
     {
       "registration": "1488",
@@ -4480,7 +4830,8 @@
       "type": "Combined",
       "registered_on": "2026-11-17",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8a290ed0-3a05-48db-8faa-345290374e19%2Fhtv%20the%20west%20party%20andrew%20elsbury%20tarneit%20%28%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "status": "unreadable",
+      "note": "unreadable, see card"
     },
     {
       "registration": "1614",
@@ -4515,7 +4866,8 @@
       "type": "Combined",
       "registered_on": "2026-11-19",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c18f1a2b-829c-4fdb-9157-59488fb16d14%2Fhtv%20the%20west%20party%20werribee%20tarneit.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "status": "unreadable",
+      "note": "unreadable, see card"
     },
     {
       "registration": "1617",
@@ -4610,7 +4962,8 @@
       "type": "Single",
       "registered_on": "2026-11-17",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=012e040c-a80e-4bfb-8d60-1422d9690c6e%2F1221%20-%20western%20metropolitan%20-%20redacted.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "status": "unreadable",
+      "note": "unreadable, see card"
     },
     {
       "registration": "1357",
@@ -4621,7 +4974,18 @@
       "type": "Single",
       "registered_on": "2026-11-17",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c2682dd0-d895-41f9-bb74-4e271e4272ed%2Fwestern%20metropolitan%20-%20kerr%2C%20maria%20-%20htvc1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "H",
+        "A",
+        "K",
+        "L",
+        "F"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "ONP": 3
+      }
     },
     {
       "registration": "1471",
@@ -4632,7 +4996,8 @@
       "type": "Single",
       "registered_on": "2026-11-18",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=96487895-145f-4c0c-8c5d-ba52b4dc9a09%2F1471%20-%20western%20metropolitan%20-%20redacted.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "status": "unreadable",
+      "note": "unreadable, see card"
     },
     {
       "registration": "379",
@@ -4643,7 +5008,8 @@
       "type": "Single",
       "registered_on": "2026-11-11",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d73e10a8-8b29-4c65-b420-b708f4313fb6%2Fraizada%2C%20rakesh.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "status": "unreadable",
+      "note": "unreadable, see card"
     }
   ],
   "no_card": []

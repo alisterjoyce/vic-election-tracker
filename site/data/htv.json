@@ -17,14 +17,14 @@
   "registration_opens": "2026-11-10",
   "registration_closes": "2026-11-20",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
-  "last_checked": "2026-11-21T19:40:26Z",
-  "pending": 42,
+  "last_checked": "2026-11-21T23:29:49Z",
+  "pending": 4,
   "coverage": {
     "cards": 1422,
     "listings": 4814,
-    "orders_read": 3965,
+    "orders_read": 3989,
     "orders_same_as": 154,
-    "orders_unreadable": 653,
+    "orders_unreadable": 667,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -4585,7 +4585,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-22",
       "orders": {
         "werribee": {
           "status": "read",
@@ -4618,7 +4618,29 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "E",
+            "D",
+            "B",
+            "I",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -4636,7 +4658,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-22",
       "orders": {
         "williamstown": {
           "status": "read",
@@ -4668,7 +4690,29 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "E",
+            "D",
+            "B",
+            "I",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -17241,9 +17285,11 @@
       ],
       "party": "IND",
       "candidate": "western-metropolitan/rakesh-raizada",
+      "read_on": "2026-11-22",
       "orders": {
         "western-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -17604,7 +17650,7 @@
       ],
       "party": "SUS",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-22",
       "orders": {
         "eastern-victoria": {
           "status": "unreadable",
@@ -17631,7 +17677,8 @@
           "note": "unreadable, see card"
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         },
         "western-victoria": {
           "status": "unreadable",
@@ -21259,9 +21306,11 @@
       ],
       "party": "LCV",
       "candidate": null,
+      "read_on": "2026-11-22",
       "orders": {
         "western-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -22358,7 +22407,7 @@
       ],
       "party": "VS",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-22",
       "orders": {
         "williamstown": {
           "status": "read",
@@ -22382,7 +22431,19 @@
           }
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "D",
+            "I",
+            "B",
+            "F",
+            "E"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 2,
+            "ALP": 5
+          }
         }
       }
     },
@@ -22631,7 +22692,7 @@
       ],
       "party": "VS",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-22",
       "orders": {
         "werribee": {
           "status": "read",
@@ -22656,7 +22717,19 @@
           }
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "D",
+            "I",
+            "B",
+            "F",
+            "E"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 2,
+            "ALP": 5
+          }
         }
       }
     },
@@ -24559,9 +24632,23 @@
       ],
       "party": "FF",
       "candidate": null,
+      "read_on": "2026-11-22",
       "orders": {
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "H",
+            "K",
+            "A",
+            "C",
+            "E"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 2,
+            "LNP": 4,
+            "ALP": 5
+          }
         }
       }
     },
@@ -28174,7 +28261,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-22",
       "orders": {
         "werribee": {
           "status": "read",
@@ -28207,7 +28294,19 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "L",
+            "A",
+            "K",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         }
       }
     },
@@ -30187,7 +30286,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-22",
       "orders": {
         "werribee": {
           "status": "read",
@@ -30220,7 +30319,19 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "L",
+            "A",
+            "K",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         }
       }
     },
@@ -34857,9 +34968,23 @@
       ],
       "party": "FF",
       "candidate": null,
+      "read_on": "2026-11-22",
       "orders": {
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "H",
+            "K",
+            "A",
+            "C",
+            "E"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 2,
+            "LNP": 4,
+            "ALP": 5
+          }
         }
       }
     },
@@ -40386,6 +40511,8 @@
           "same_as": [
             "84",
             "96",
+            "97",
+            "98",
             "101",
             "102",
             "103",
@@ -40676,7 +40803,6 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
       "orders": {
         "werribee": {
           "status": "read",
@@ -40709,7 +40835,9 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "pending",
+          "tried": "2026-11-22",
+          "note": "the VEC's link to this card didn't open"
         }
       }
     },
@@ -40930,7 +41058,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-22",
       "orders": {
         "williamstown": {
           "status": "read",
@@ -40962,7 +41090,29 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "E",
+            "D",
+            "B",
+            "I",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -41387,6 +41537,8 @@
           "same_as": [
             "84",
             "96",
+            "97",
+            "98",
             "101",
             "102",
             "103",
@@ -41939,9 +42091,22 @@
       ],
       "party": "LIB",
       "candidate": null,
+      "read_on": "2026-11-22",
       "orders": {
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "L",
+            "A",
+            "K",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         }
       }
     },
@@ -42069,9 +42234,22 @@
       ],
       "party": "LIB",
       "candidate": null,
+      "read_on": "2026-11-22",
       "orders": {
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "L",
+            "A",
+            "K",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         }
       }
     },
@@ -44012,14 +44190,26 @@
       ],
       "party": "ONP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-22",
       "orders": {
         "williamstown": {
           "status": "unreadable",
           "note": "unreadable, see card"
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "K",
+            "H",
+            "G",
+            "C",
+            "L"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 4
+          }
         }
       }
     },
@@ -47049,14 +47239,26 @@
       ],
       "party": "ONP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-22",
       "orders": {
         "werribee": {
           "status": "unreadable",
           "note": "unreadable, see card"
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "K",
+            "H",
+            "G",
+            "C",
+            "L"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 4
+          }
         }
       }
     },
@@ -55774,7 +55976,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-22",
       "orders": {
         "werribee": {
           "status": "read",
@@ -55807,7 +56009,29 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "E",
+            "D",
+            "B",
+            "I",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -56411,7 +56635,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-22",
       "orders": {
         "williamstown": {
           "status": "read",
@@ -56443,7 +56667,29 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "E",
+            "D",
+            "B",
+            "I",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -57052,7 +57298,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-22",
       "orders": {
         "williamstown": {
           "status": "read",
@@ -57084,7 +57330,29 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "E",
+            "D",
+            "B",
+            "I",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -59561,10 +59829,11 @@
       ],
       "party": "AJP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-22",
       "orders": {
         "yan-yean": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         },
         "northern-victoria": {
           "atl": [
@@ -80870,9 +81139,11 @@
       ],
       "party": null,
       "candidate": null,
+      "read_on": "2026-11-22",
       "orders": {
         "western-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -91819,9 +92090,21 @@
       ],
       "party": null,
       "candidate": null,
+      "read_on": "2026-11-22",
       "orders": {
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "H",
+            "A",
+            "K",
+            "L",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 3
+          }
         }
       }
     },
@@ -94091,9 +94374,27 @@
       ],
       "party": "LBT",
       "candidate": null,
+      "read_on": "2026-11-22",
       "orders": {
         "yan-yean": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "CHEERS, Troy",
+            "JOHNSON, Jeremy",
+            "HALL, James",
+            "DOW, Amanda",
+            "OKATAN, Sinan",
+            "KATHAGE, Lauren",
+            "MOHAMMED, Gufran",
+            "BELL, Andrew"
+          ],
+          "via": "text",
+          "ranks": {
+            "ONP": 2,
+            "LNP": 4,
+            "ALP": 6,
+            "GRN": 7
+          }
         }
       }
     },
@@ -95041,9 +95342,22 @@
       ],
       "party": "DLP",
       "candidate": null,
+      "read_on": "2026-11-22",
       "orders": {
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "A",
+            "L",
+            "C",
+            "K",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 3,
+            "ONP": 4
+          }
         }
       }
     },
@@ -95712,7 +96026,7 @@
       ],
       "party": "DLP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-22",
       "orders": {
         "werribee": {
           "status": "read",
@@ -95737,7 +96051,19 @@
           }
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "A",
+            "L",
+            "C",
+            "K",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 3,
+            "ONP": 4
+          }
         }
       }
     },
@@ -96139,9 +96465,11 @@
       ],
       "party": "OTH",
       "candidate": null,
+      "read_on": "2026-11-22",
       "orders": {
         "western-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -97204,9 +97532,11 @@
       ],
       "party": null,
       "candidate": null,
+      "read_on": "2026-11-22",
       "orders": {
         "western-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -97896,14 +98226,15 @@
       ],
       "party": "WEST",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-22",
       "orders": {
         "werribee": {
           "status": "unreadable",
           "note": "unreadable, see card"
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -98363,14 +98694,15 @@
       ],
       "party": "WEST",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-22",
       "orders": {
         "williamstown": {
           "status": "unreadable",
           "note": "unreadable, see card"
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -99046,14 +99378,15 @@
       ],
       "party": "WEST",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-22",
       "orders": {
         "tarneit": {
           "status": "unreadable",
           "note": "unreadable, see card"
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -105021,9 +105354,22 @@
       ],
       "party": "GRN",
       "candidate": null,
+      "read_on": "2026-11-22",
       "orders": {
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "I",
+            "D",
+            "F",
+            "L",
+            "E"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -110193,14 +110539,15 @@
       ],
       "party": "OTH",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-22",
       "orders": {
         "tarneit": {
           "status": "unreadable",
           "note": "unreadable, see card"
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -110273,14 +110620,15 @@
       ],
       "party": "OTH",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-22",
       "orders": {
         "werribee": {
           "status": "unreadable",
           "note": "unreadable, see card"
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -110350,14 +110698,15 @@
       ],
       "party": "OTH",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-22",
       "orders": {
         "williamstown": {
           "status": "unreadable",
           "note": "unreadable, see card"
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -116886,7 +117235,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-22",
       "orders": {
         "williamstown": {
           "status": "read",
@@ -116918,7 +117267,29 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "E",
+            "D",
+            "B",
+            "I",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -118169,7 +118540,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-22",
       "orders": {
         "tarneit": {
           "status": "read",
@@ -118204,7 +118575,19 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "L",
+            "A",
+            "K",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         }
       }
     },
@@ -118470,7 +118853,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-22",
       "orders": {
         "tarneit": {
           "status": "read",
@@ -118505,7 +118888,19 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "L",
+            "A",
+            "K",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         }
       }
     },
@@ -119073,7 +119468,7 @@
       ],
       "party": "WEST",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-22",
       "orders": {
         "tarneit": {
           "status": "unreadable",
@@ -119084,7 +119479,8 @@
           "note": "unreadable, see card"
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },

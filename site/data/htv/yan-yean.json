@@ -81,7 +81,8 @@
       "type": "Combined",
       "registered_on": "2026-11-13",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=be35a6d2-ad36-4ce5-8838-f57ddbda91ae%2Fnv%202026-11-11%20-%20yan%20yean.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "status": "unreadable",
+      "note": "unreadable, see card"
     },
     {
       "registration": "133",
@@ -716,7 +717,24 @@
       "type": "Single",
       "registered_on": "2026-11-16",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5df32f07-6780-45ef-b80d-a9ca2cb8d056%2Fyanyeandistricthtv_reg.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "status": "read",
+      "order": [
+        "CHEERS, Troy",
+        "JOHNSON, Jeremy",
+        "HALL, James",
+        "DOW, Amanda",
+        "OKATAN, Sinan",
+        "KATHAGE, Lauren",
+        "MOHAMMED, Gufran",
+        "BELL, Andrew"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 4,
+        "ALP": 6,
+        "GRN": 7
+      }
     },
     {
       "registration": "588",
