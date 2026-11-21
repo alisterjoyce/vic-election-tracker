@@ -8,8 +8,44 @@
       "sources": "Source (outlet, or the Bing News search) -> {status: ok | error | skipped, via: feed | sitemap | Bing News search, url (what was read), page (the outlet's election page, if any), items (items read this run), last_7_days (election headlines from it dated in the last 7 days), message}"
     }
   },
-  "updated": "2026-11-20T23:46:26Z",
+  "updated": "2026-11-21T05:55:42Z",
   "statewide": [
+    {
+      "title": "Labor set for historic defeat at Victorian election, political experts say",
+      "outlet": "ABC News",
+      "published": "2026-11-21T04:25:18Z",
+      "url": "https://www.abc.net.au/news/2026-11-21/victorian-election-final-week/107412434"
+    },
+    {
+      "title": "Liberal voters expected to 'come home' in Victorian leader's seat of Kew",
+      "outlet": "ABC News",
+      "published": "2026-11-21T01:37:55Z",
+      "url": "https://www.abc.net.au/news/2026-11-21/jess-wilson-kew-district-sophie-torney-victorian-electorate/107400636"
+    },
+    {
+      "title": "Ben Carroll and Jess Wilson trade fierce blows on campaign trail one week out from election day",
+      "outlet": "The Australian",
+      "published": "2026-11-20T19:16:00Z",
+      "url": "https://www.theaustralian.com.au/nation/ben-carroll-and-jess-wilson-trade-fierce-blows-on-campaign-trail-one-week-out-from-election-day/news-story/203b333ecdb93699924308572c2a3e51"
+    },
+    {
+      "title": "Jess Wilson’s rental blunder & Coalition seat maths",
+      "outlet": "Herald Sun",
+      "published": "2026-11-20T17:12:00Z",
+      "url": "https://www.heraldsun.com.au/news/victoria/jess-wilsons-rental-blunder-coalition-seat-maths/audio/96af756e014cb311cf670536938858b5"
+    },
+    {
+      "title": "Candidates make final pitch",
+      "outlet": "gannawarratimes.com.au",
+      "published": "2026-11-20T16:00:00Z",
+      "url": "https://gannawarratimes.com.au/news/2026/11/21/candidates-make-final-pitch/"
+    },
+    {
+      "title": "Labor MP John Lister lashes media minutes after the cameras stop rolling",
+      "outlet": "Herald Sun",
+      "published": "2026-11-20T14:05:00Z",
+      "url": "https://www.heraldsun.com.au/news/victoria/state-election/labor-promises-14m-portable-leave-scheme-for-victorias-patient-transport-workers/live-coverage/31024755e99fa0ce9876a68d3c166ff8"
+    },
     {
       "title": "Steve Bracks is on board: Ben Carroll finds a believer as most write off Labor’s Victorian election chances",
       "outlet": "Guardian Australia",
@@ -273,42 +309,6 @@
       "outlet": "ABC News",
       "published": "2026-11-17T20:06:01Z",
       "url": "https://www.abc.net.au/news/2026-11-18/victorian-election-debate-jess-wilson-winner/107397070"
-    },
-    {
-      "title": "Macedon gets ready to vote",
-      "outlet": "Star Weekly",
-      "published": "2026-11-17T17:36:00Z",
-      "url": "https://starweekly.com.au/news/2026/11/18/macedon-gets-ready-to-vote/"
-    },
-    {
-      "title": "First election votes cast",
-      "outlet": "Bayside News",
-      "published": "2026-11-17T16:00:00Z",
-      "url": "https://baysidenews.com.au/2026/11/18/first-election-votes-cast/"
-    },
-    {
-      "title": "Barnaby Joyce hits the streets",
-      "outlet": "Bairnsdale Advertiser",
-      "published": "2026-11-17T16:00:00Z",
-      "url": "https://bairnsdaleadvertiser.com.au/23128/barnaby-joyce-hits-the-streets/"
-    },
-    {
-      "title": "Victorian Election 2026 - Meet your Lowan candidates",
-      "outlet": "theweeklyadvertiser",
-      "published": "2026-11-17T16:00:00Z",
-      "url": "https://theweeklyadvertiser.com.au/articles/victorian-election-2026-meet-your-lowan-candidates/"
-    },
-    {
-      "title": "A voice for animals, people and the Murray",
-      "outlet": "Riverine Herald",
-      "published": "2026-11-17T16:00:00Z",
-      "url": "https://www.riverineherald.com.au/news/a-voice-for-animals-people-and-the-murray/"
-    },
-    {
-      "title": "Transmission lines emerge as election flashpoint in Victoria",
-      "outlet": "pv magazine Australia",
-      "published": "2026-11-17T16:00:00Z",
-      "url": "https://www.pv-magazine-australia.com/2026/11/18/transmission-lines-emerge-as-election-flashpoint-in-victoria/"
     }
   ],
   "seats": {
@@ -1127,6 +1127,30 @@
     ],
     "kew": [
       {
+        "title": "Labor set for historic defeat at Victorian election, political experts say",
+        "outlet": "ABC News",
+        "published": "2026-11-21T04:25:18Z",
+        "url": "https://www.abc.net.au/news/2026-11-21/victorian-election-final-week/107412434"
+      },
+      {
+        "title": "Liberal voters expected to 'come home' in Victorian leader's seat of Kew",
+        "outlet": "ABC News",
+        "published": "2026-11-21T01:37:55Z",
+        "url": "https://www.abc.net.au/news/2026-11-21/jess-wilson-kew-district-sophie-torney-victorian-electorate/107400636"
+      },
+      {
+        "title": "Ben Carroll and Jess Wilson trade fierce blows on campaign trail one week out from election day",
+        "outlet": "The Australian",
+        "published": "2026-11-20T19:16:00Z",
+        "url": "https://www.theaustralian.com.au/nation/ben-carroll-and-jess-wilson-trade-fierce-blows-on-campaign-trail-one-week-out-from-election-day/news-story/203b333ecdb93699924308572c2a3e51"
+      },
+      {
+        "title": "Jess Wilson’s rental blunder & Coalition seat maths",
+        "outlet": "Herald Sun",
+        "published": "2026-11-20T17:12:00Z",
+        "url": "https://www.heraldsun.com.au/news/victoria/jess-wilsons-rental-blunder-coalition-seat-maths/audio/96af756e014cb311cf670536938858b5"
+      },
+      {
         "title": "What a Wilson cabinet could look like - but does she have the depth?",
         "outlet": "Australian Financial Review",
         "published": "2026-11-20T04:26:51Z",
@@ -1161,30 +1185,6 @@
         "outlet": "News24",
         "published": "2026-11-18T09:25:00Z",
         "url": "https://www.news24.com.au/politics/australian-politics/pretty-pathetic-embattled-victorian-premier-ben-carroll-ridiculed-for-failing-to-mention-daniel-andrews-and-jacinta-allan-by-name/news-story/0fdb82c94511dc8d81ab13e1128c1625"
-      },
-      {
-        "title": "Jess Wilson is giving millennials a bad name",
-        "outlet": "Crikey",
-        "published": "2026-11-18T01:15:38Z",
-        "url": "https://www.crikey.com.au/2026/11/18/jess-wilson-debate-millennials-victorian-state-election/"
-      },
-      {
-        "title": "Trump full of praise for Quad alliance, reckons he and Albanese are ‘OK’",
-        "outlet": "Crikey",
-        "published": "2026-11-17T20:19:13Z",
-        "url": "https://www.crikey.com.au/2026/11/18/trump-quad-alliance-critical-minerals-military-exercises-jess-wilson-wins-victorian-leaders-debate/"
-      },
-      {
-        "title": "The Snoop: Is SA slacking on AUKUS? Plus a Victorian MP’s big bill for ‘professional development’, and more",
-        "outlet": "Crikey",
-        "published": "2026-11-17T17:45:00Z",
-        "url": "https://www.crikey.com.au/2026/11/18/ben-carroll-jess-wilson-debate-sa-aukus-mp-expenses-thomas-markle/"
-      },
-      {
-        "title": "The Splash Ultimate showdown as the four leaders debate ahead of the Victorian election",
-        "outlet": "Herald Sun",
-        "published": "2026-11-17T13:10:00Z",
-        "url": "https://www.heraldsun.com.au/news/victoria/the-splash-ultimate-showdown-as-the-four-leaders-debate-ahead-of-the-victorian-election/audio/404b5e7986473016101a0102e8e52251"
       }
     ],
     "kororoit": [],
@@ -1515,6 +1515,12 @@
     ],
     "murray-plains": [
       {
+        "title": "Candidates make final pitch",
+        "outlet": "gannawarratimes.com.au",
+        "published": "2026-11-20T16:00:00Z",
+        "url": "https://gannawarratimes.com.au/news/2026/11/21/candidates-make-final-pitch/"
+      },
+      {
         "title": "Calls for One Nation candidate to withdraw from election over misconduct",
         "outlet": "ABC News",
         "published": "2026-11-20T06:17:31Z",
@@ -1567,12 +1573,6 @@
         "outlet": "Riverine Herald",
         "published": "2026-11-08T22:06:00Z",
         "url": "https://www.riverineherald.com.au/news/murray-plains-ballot-order-revealed/"
-      },
-      {
-        "title": "Hear Ky you should vote for them",
-        "outlet": "Shepparton News",
-        "published": "2026-11-02T16:00:00Z",
-        "url": "https://www.sheppnews.com.au/news/hear-ky-you-should-vote-for-them/"
       }
     ],
     "narracan": [
@@ -1594,6 +1594,18 @@
       }
     ],
     "niddrie": [
+      {
+        "title": "Labor set for historic defeat at Victorian election, political experts say",
+        "outlet": "ABC News",
+        "published": "2026-11-21T04:25:18Z",
+        "url": "https://www.abc.net.au/news/2026-11-21/victorian-election-final-week/107412434"
+      },
+      {
+        "title": "Ben Carroll and Jess Wilson trade fierce blows on campaign trail one week out from election day",
+        "outlet": "The Australian",
+        "published": "2026-11-20T19:16:00Z",
+        "url": "https://www.theaustralian.com.au/nation/ben-carroll-and-jess-wilson-trade-fierce-blows-on-campaign-trail-one-week-out-from-election-day/news-story/203b333ecdb93699924308572c2a3e51"
+      },
       {
         "title": "Steve Bracks is on board: Ben Carroll finds a believer as most write off Labor’s Victorian election chances",
         "outlet": "Guardian Australia",
@@ -1641,18 +1653,6 @@
         "outlet": "Herald Sun",
         "published": "2026-11-18T07:40:00Z",
         "url": "https://www.heraldsun.com.au/news/victoria/state-election/celeste-mannos-mother-lashes-premier-ben-carroll-over-claim-he-marched-with-family/news-story/9875a39ceddf5025f804c0e6a71fe1fb"
-      },
-      {
-        "title": "What voters in Ben Carroll’s seat said on day one of pre-poll voting",
-        "outlet": "Australian Financial Review",
-        "published": "2026-11-18T07:00:13Z",
-        "url": "https://www.afr.com/politics/federal/what-voters-in-ben-carroll-s-seat-said-on-day-one-of-pre-poll-voting-20261118-p61ex3?ref=rss&utm_medium=rss&utm_source=rss_politics"
-      },
-      {
-        "title": "Ben Carroll refuses to guarantee future of Victoria’s $76.7m duck hunting industry",
-        "outlet": "Herald Sun",
-        "published": "2026-11-18T04:55:00Z",
-        "url": "https://www.heraldsun.com.au/news/victoria/ben-carroll-refuses-to-guarantee-future-of-victorias-767m-duck-hunting-industry/news-story/fac90d74fe9e3c6ba97cb203935b8375"
       }
     ],
     "northcote": [
@@ -1808,6 +1808,12 @@
       }
     ],
     "prahran": [
+      {
+        "title": "Victorian Greens seek urgent injunction over how-to-vote cards mimicking party’s branding but preferencing it last",
+        "outlet": "Guardian Australia",
+        "published": "2026-11-21T00:26:56Z",
+        "url": "https://www.theguardian.com/australia-news/2026/nov/21/victorian-greens-seek-urgent-injunction-over-how-to-vote-cards-mimicking-branding-but-preferencing-it-last-ntwnfb"
+      },
       {
         "title": "Early voters highly-motivated but deeply divided",
         "outlet": "Mandurah Mail",
@@ -2170,6 +2176,12 @@
     ],
     "werribee": [
       {
+        "title": "Labor MP John Lister lashes media minutes after the cameras stop rolling",
+        "outlet": "Herald Sun",
+        "published": "2026-11-20T14:05:00Z",
+        "url": "https://www.heraldsun.com.au/news/victoria/state-election/labor-promises-14m-portable-leave-scheme-for-victorias-patient-transport-workers/live-coverage/31024755e99fa0ce9876a68d3c166ff8"
+      },
+      {
         "title": "Werribee prepares to vote",
         "outlet": "Star Weekly",
         "published": "2026-11-17T12:23:00Z",
@@ -2284,7 +2296,7 @@
       "url": "https://www.abc.net.au/news/feed/51120/rss.xml",
       "via": "feed and Bing News search",
       "items": 37,
-      "last_7_days": 9
+      "last_7_days": 10
     },
     "The Age": {
       "status": "ok",
@@ -2292,7 +2304,7 @@
       "url": "https://www.theage.com.au/rss/national/victoria.xml",
       "via": "feed",
       "items": 20,
-      "last_7_days": 2
+      "last_7_days": 1
     },
     "Herald Sun": {
       "status": "ok",
@@ -2300,7 +2312,7 @@
       "via": "Bing News search",
       "items": 12,
       "message": "robots.txt disallows the whole site (checked 16 Nov 2026)",
-      "last_7_days": 6
+      "last_7_days": 7
     },
     "Guardian Australia": {
       "status": "ok",
@@ -2308,7 +2320,7 @@
       "url": "https://www.theguardian.com/australia-news/victorian-politics/rss",
       "via": "feed",
       "items": 20,
-      "last_7_days": 6
+      "last_7_days": 7
     },
     "SBS News": {
       "status": "ok",
@@ -2322,8 +2334,8 @@
       "page": "https://www.nine.com.au/australia-news/vic",
       "url": "https://www.nine.com.au/sitemaps/news/brands/nine",
       "via": "sitemap",
-      "items": 225,
-      "last_7_days": 1
+      "items": 154,
+      "last_7_days": 0
     },
     "7News": {
       "status": "ok",
@@ -2414,7 +2426,7 @@
       "status": "ok",
       "url": "https://www.dailymail.co.uk/auhome/index.rss",
       "via": "feed",
-      "items": 93,
+      "items": 89,
       "last_7_days": 0
     },
     "Bendigo Advertiser": {
@@ -2477,7 +2489,7 @@
       "via": "Bing News search",
       "items": 176,
       "message": "176 searches for 88 districts, plus 2 statewide",
-      "last_7_days": 39
+      "last_7_days": 40
     },
     "Google News": {
       "status": "skipped",
