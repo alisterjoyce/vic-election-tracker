@@ -17,14 +17,14 @@
   "registration_opens": "2026-11-10",
   "registration_closes": "2026-11-20",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
-  "last_checked": "2026-11-21T05:47:47Z",
-  "pending": 122,
+  "last_checked": "2026-11-21T09:44:33Z",
+  "pending": 82,
   "coverage": {
     "cards": 1422,
     "listings": 4814,
-    "orders_read": 3898,
+    "orders_read": 3929,
     "orders_same_as": 154,
-    "orders_unreadable": 640,
+    "orders_unreadable": 649,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -4513,7 +4513,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "point-cook": {
           "status": "read",
@@ -4545,7 +4545,29 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "E",
+            "D",
+            "B",
+            "I",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -4804,7 +4826,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "st-albans": {
           "status": "read",
@@ -4836,7 +4858,29 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "E",
+            "D",
+            "B",
+            "I",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -4907,7 +4951,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "niddrie": {
           "status": "read",
@@ -4941,7 +4985,29 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "E",
+            "D",
+            "B",
+            "I",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -5029,7 +5095,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "sunbury": {
           "status": "read",
@@ -5063,7 +5129,29 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "E",
+            "D",
+            "B",
+            "I",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -7387,7 +7475,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "niddrie": {
           "status": "read",
@@ -7450,7 +7538,29 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "E",
+            "D",
+            "B",
+            "I",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -10128,7 +10238,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "point-cook": {
           "status": "read",
@@ -10168,7 +10278,29 @@
           "note": "unreadable, see card"
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "E",
+            "D",
+            "B",
+            "I",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -15029,7 +15161,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "niddrie": {
           "status": "read",
@@ -15095,7 +15227,29 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "E",
+            "D",
+            "B",
+            "I",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -15744,7 +15898,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "point-cook": {
           "status": "read",
@@ -15805,7 +15959,29 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "E",
+            "D",
+            "B",
+            "I",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -15824,7 +16000,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "point-cook": {
           "status": "read",
@@ -15886,7 +16062,29 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "E",
+            "D",
+            "B",
+            "I",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -21826,7 +22024,7 @@
       ],
       "party": "VS",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "sunbury": {
           "status": "read",
@@ -21852,7 +22050,19 @@
           }
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "D",
+            "I",
+            "B",
+            "F",
+            "E"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 2,
+            "ALP": 5
+          }
         }
       }
     },
@@ -22584,7 +22794,7 @@
       ],
       "party": "VS",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "st-albans": {
           "status": "read",
@@ -22608,7 +22818,19 @@
           }
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "D",
+            "I",
+            "B",
+            "F",
+            "E"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 2,
+            "ALP": 5
+          }
         }
       }
     },
@@ -22652,7 +22874,7 @@
       ],
       "party": "VS",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "point-cook": {
           "status": "read",
@@ -22676,7 +22898,19 @@
           }
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "D",
+            "I",
+            "B",
+            "F",
+            "E"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 2,
+            "ALP": 5
+          }
         }
       }
     },
@@ -22720,7 +22954,7 @@
       ],
       "party": "VS",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "niddrie": {
           "status": "read",
@@ -22746,7 +22980,19 @@
           }
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "D",
+            "I",
+            "B",
+            "F",
+            "E"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 2,
+            "ALP": 5
+          }
         }
       }
     },
@@ -23927,7 +24173,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "point-cook": {
           "status": "partial",
@@ -23960,7 +24206,19 @@
           }
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "I",
+            "D",
+            "F",
+            "L",
+            "E"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -24018,7 +24276,6 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-20",
       "orders": {
         "point-cook": {
           "status": "partial",
@@ -24051,7 +24308,9 @@
           }
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "pending",
+          "tried": "2026-11-21",
+          "note": "the VEC's link to this card didn't open"
         }
       }
     },
@@ -25103,7 +25362,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "st-albans": {
           "status": "read",
@@ -25135,7 +25394,19 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "L",
+            "A",
+            "K",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         }
       }
     },
@@ -25705,7 +25976,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "st-albans": {
           "status": "read",
@@ -25737,7 +26008,19 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "L",
+            "A",
+            "K",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         }
       }
     },
@@ -26835,7 +27118,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "niddrie": {
           "status": "read",
@@ -26869,7 +27152,19 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "L",
+            "A",
+            "K",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         }
       }
     },
@@ -27377,7 +27672,6 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
       "orders": {
         "point-cook": {
           "status": "read",
@@ -27409,7 +27703,9 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "pending",
+          "tried": "2026-11-21",
+          "note": "the VEC's link to this card didn't open"
         }
       }
     },
@@ -32402,7 +32698,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "niddrie": {
           "status": "read",
@@ -32436,7 +32732,19 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "L",
+            "A",
+            "K",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         }
       }
     },
@@ -33959,7 +34267,6 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
       "orders": {
         "point-cook": {
           "status": "read",
@@ -33991,7 +34298,9 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "pending",
+          "tried": "2026-11-21",
+          "note": "the VEC's link to this card didn't open"
         }
       }
     },
@@ -39026,7 +39335,6 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
       "orders": {
         "point-cook": {
           "status": "read",
@@ -39058,7 +39366,9 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "pending",
+          "tried": "2026-11-21",
+          "note": "the VEC's link to this card didn't open"
         }
       }
     },
@@ -39837,9 +40147,15 @@
           ],
           "same_as": [
             "84",
+            "96",
+            "101",
+            "103",
+            "105",
             "108",
+            "244",
             "270",
             "271",
+            "274",
             "283",
             "284",
             "288",
@@ -39847,7 +40163,10 @@
             "301",
             "304",
             "331",
+            "347",
             "354",
+            "357",
+            "358",
             "427",
             "1672"
           ],
@@ -40398,7 +40717,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "niddrie": {
           "status": "read",
@@ -40432,7 +40751,29 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "E",
+            "D",
+            "B",
+            "I",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -40450,7 +40791,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "st-albans": {
           "status": "read",
@@ -40482,7 +40823,29 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "E",
+            "D",
+            "B",
+            "I",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -40760,9 +41123,15 @@
           ],
           "same_as": [
             "84",
+            "96",
+            "101",
+            "103",
+            "105",
             "108",
+            "244",
             "270",
             "271",
+            "274",
             "283",
             "284",
             "288",
@@ -40770,7 +41139,10 @@
             "301",
             "304",
             "331",
+            "347",
             "354",
+            "357",
+            "358",
             "427",
             "1672"
           ],
@@ -41157,7 +41529,6 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
       "orders": {
         "point-cook": {
           "status": "read",
@@ -41189,7 +41560,9 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "pending",
+          "tried": "2026-11-21",
+          "note": "the VEC's link to this card didn't open"
         }
       }
     },
@@ -42424,14 +42797,26 @@
       ],
       "party": "ONP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "st-albans": {
           "status": "unreadable",
           "note": "unreadable, see card"
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "K",
+            "H",
+            "G",
+            "C",
+            "L"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 4
+          }
         }
       }
     },
@@ -49724,14 +50109,26 @@
       ],
       "party": "ONP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "niddrie": {
           "status": "unreadable",
           "note": "unreadable, see card"
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "K",
+            "H",
+            "G",
+            "C",
+            "L"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 4
+          }
         }
       }
     },
@@ -50381,7 +50778,6 @@
       ],
       "party": "ONP",
       "candidate": null,
-      "read_on": "2026-11-20",
       "orders": {
         "point-cook": {
           "status": "read",
@@ -50405,7 +50801,9 @@
           }
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "pending",
+          "tried": "2026-11-21",
+          "note": "the VEC's link to this card didn't open"
         }
       }
     },
@@ -54312,7 +54710,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "st-albans": {
           "status": "read",
@@ -54344,7 +54742,29 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "E",
+            "D",
+            "B",
+            "I",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -68852,7 +69272,6 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-20",
       "orders": {
         "point-cook": {
           "status": "read",
@@ -68922,7 +69341,9 @@
           }
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "pending",
+          "tried": "2026-11-21",
+          "note": "the VEC's link to this card didn't open"
         }
       }
     },
@@ -70267,7 +70688,6 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-20",
       "orders": {
         "point-cook": {
           "status": "read",
@@ -70337,7 +70757,9 @@
           }
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "pending",
+          "tried": "2026-11-21",
+          "note": "the VEC's link to this card didn't open"
         }
       }
     },
@@ -71262,7 +71684,6 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-20",
       "orders": {
         "point-cook": {
           "status": "read",
@@ -71332,7 +71753,9 @@
           }
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "pending",
+          "tried": "2026-11-21",
+          "note": "the VEC's link to this card didn't open"
         }
       }
     },
@@ -77975,7 +78398,6 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-20",
       "orders": {
         "point-cook": {
           "status": "read",
@@ -78019,7 +78441,9 @@
           }
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "pending",
+          "tried": "2026-11-21",
+          "note": "the VEC's link to this card didn't open"
         }
       }
     },
@@ -94558,7 +94982,7 @@
       ],
       "party": "DLP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "niddrie": {
           "status": "read",
@@ -94584,7 +95008,19 @@
           }
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "A",
+            "L",
+            "C",
+            "K",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 3,
+            "ONP": 4
+          }
         }
       }
     },
@@ -94956,7 +95392,6 @@
       ],
       "party": "DLP",
       "candidate": null,
-      "read_on": "2026-11-20",
       "orders": {
         "point-cook": {
           "status": "read",
@@ -94980,7 +95415,9 @@
           }
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "pending",
+          "tried": "2026-11-21",
+          "note": "the VEC's link to this card didn't open"
         }
       }
     },
@@ -96355,14 +96792,15 @@
       ],
       "party": "WEST",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "niddrie": {
           "status": "unreadable",
           "note": "unreadable, see card"
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -96970,14 +97408,15 @@
       ],
       "party": "WEST",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "st-albans": {
           "status": "unreadable",
           "note": "unreadable, see card"
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -97326,14 +97765,15 @@
       ],
       "party": "WEST",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "point-cook": {
           "status": "unreadable",
           "note": "unreadable, see card"
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -109122,7 +109562,7 @@
       ],
       "party": "OTH",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "st-albans": {
           "status": "read",
@@ -109146,7 +109586,8 @@
           }
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -109261,7 +109702,7 @@
       ],
       "party": "OTH",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "niddrie": {
           "status": "partial",
@@ -109271,7 +109712,8 @@
           "via": "text"
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -109340,14 +109782,15 @@
       ],
       "party": "OTH",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "point-cook": {
           "status": "unreadable",
           "note": "unreadable, see card"
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -116816,7 +117259,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "point-cook": {
           "status": "read",
@@ -116848,7 +117291,19 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "L",
+            "A",
+            "K",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         }
       }
     },
@@ -117250,7 +117705,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "laverton": {
           "status": "read",
@@ -117282,7 +117737,19 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "L",
+            "A",
+            "K",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         }
       }
     },
@@ -117300,7 +117767,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "point-cook": {
           "status": "read",
@@ -117332,7 +117799,19 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "L",
+            "A",
+            "K",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         }
       }
     },
@@ -117350,7 +117829,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "st-albans": {
           "status": "read",
@@ -117382,7 +117861,19 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "L",
+            "A",
+            "K",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         }
       }
     },
@@ -117400,7 +117891,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "point-cook": {
           "status": "read",
@@ -117432,7 +117923,19 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "L",
+            "A",
+            "K",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         }
       }
     },
@@ -118083,7 +118586,7 @@
       ],
       "party": "WEST",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "laverton": {
           "status": "unreadable",
@@ -118094,7 +118597,8 @@
           "note": "unreadable, see card"
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -118201,7 +118705,7 @@
       ],
       "party": "WEST",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "point-cook": {
           "status": "unreadable",
@@ -118212,7 +118716,8 @@
           "note": "unreadable, see card"
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -118287,14 +118792,15 @@
       ],
       "party": "WEST",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "laverton": {
           "status": "unreadable",
           "note": "unreadable, see card"
         },
         "western-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -121170,7 +121676,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "niddrie": {
           "status": "read",
@@ -121236,7 +121742,19 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "L",
+            "A",
+            "K",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         }
       }
     },
@@ -121455,7 +121973,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-21",
       "orders": {
         "point-cook": {
           "status": "read",
@@ -121487,7 +122005,19 @@
           ]
         },
         "western-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "L",
+            "A",
+            "K",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         }
       }
     },
