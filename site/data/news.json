@@ -8,8 +8,14 @@
       "sources": "Source (outlet, or the Bing News search) -> {status: ok | error | skipped, via: feed | sitemap | Bing News search, url (what was read), page (the outlet's election page, if any), items (items read this run), last_7_days (election headlines from it dated in the last 7 days), message}"
     }
   },
-  "updated": "2026-11-22T05:54:58Z",
+  "updated": "2026-11-22T09:52:18Z",
   "statewide": [
+    {
+      "title": "Minor parties with major issues",
+      "outlet": "The Age",
+      "published": "2026-11-22T09:00:00Z",
+      "url": "https://www.theage.com.au/national/victoria/minor-parties-with-major-issues-20261122-p61gao.html?ref=rss&utm_medium=rss&utm_source=rss_national_victoria"
+    },
     {
       "title": "Carroll sandbags Labor heartland as wipeout looms",
       "outlet": "Australian Financial Review",
@@ -21,6 +27,12 @@
       "outlet": "Guardian Australia",
       "published": "2026-11-22T01:00:13Z",
       "url": "https://www.theguardian.com/australia-news/2026/nov/22/victoria-election-2026-what-are-parties-promising-energy-policy"
+    },
+    {
+      "title": "One Nation tops primary vote in three Coalition seats: Labor polling",
+      "outlet": "The Australian",
+      "published": "2026-11-21T21:41:00Z",
+      "url": "https://www.theaustralian.com.au/nation/one-nation-tops-primary-vote-in-three-coalition-seats-labor-polling/news-story/0bf0541fe4aabfc471f7465cb57752ca"
     },
     {
       "title": "Intervention not jail: youth crime plea ahead of Victorian election",
@@ -297,18 +309,6 @@
       "outlet": "Herald Sun",
       "published": "2026-11-18T07:40:00Z",
       "url": "https://www.heraldsun.com.au/news/victoria/state-election/celeste-mannos-mother-lashes-premier-ben-carroll-over-claim-he-marched-with-family/news-story/9875a39ceddf5025f804c0e6a71fe1fb"
-    },
-    {
-      "title": "What voters in Ben Carroll’s seat said on day one of pre-poll voting",
-      "outlet": "Australian Financial Review",
-      "published": "2026-11-18T07:00:13Z",
-      "url": "https://www.afr.com/politics/federal/what-voters-in-ben-carroll-s-seat-said-on-day-one-of-pre-poll-voting-20261118-p61ex3?ref=rss&utm_medium=rss&utm_source=rss_politics"
-    },
-    {
-      "title": "Ben Carroll refuses to guarantee future of Victoria’s $76.7m duck hunting industry",
-      "outlet": "Herald Sun",
-      "published": "2026-11-18T04:55:00Z",
-      "url": "https://www.heraldsun.com.au/news/victoria/ben-carroll-refuses-to-guarantee-future-of-victorias-767m-duck-hunting-industry/news-story/fac90d74fe9e3c6ba97cb203935b8375"
     }
   ],
   "seats": {
@@ -929,9 +929,9 @@
       },
       {
         "title": "Paul Edbrooke: Bullet left on minister’s car in alleged death threat",
-        "outlet": "news.com.au",
+        "outlet": "The Weekly Times",
         "published": "2026-10-26T11:32:00Z",
-        "url": "https://www.news.com.au/national/paul-edbrooke-bullet-left-on-ministers-car-in-alleged-death-threat/news-story/a8d7e38c52d51c43cf3645648f3f87ef"
+        "url": "https://www.weeklytimesnow.com.au/news/national/paul-edbrooke-bullet-left-on-ministers-car-in-alleged-death-threat/news-story/a8d7e38c52d51c43cf3645648f3f87ef"
       },
       {
         "title": "Bullet left on Victorian politician’s car in chilling threat",
@@ -1055,6 +1055,12 @@
         "outlet": "Guardian Australia",
         "published": "2026-11-10T22:27:00Z",
         "url": "https://www.theguardian.com/australia-news/2026/nov/11/one-nation-candidate-apologises-offensive-comments-ntwnfb"
+      },
+      {
+        "title": "Greenvale election results 2022: live count for 2026 from 28 November",
+        "outlet": "onenewsaustralia.com",
+        "published": "2026-09-30T21:58:00Z",
+        "url": "https://www.onenewsaustralia.com/greenvale-election-results-2026/"
       }
     ],
     "hastings": [
@@ -1835,7 +1841,7 @@
       {
         "title": "Victorian Greens win court injunction against Prahran independent Tosh-Jake Finnigan's how to-vote-cards",
         "outlet": "ABC News",
-        "published": "2026-11-21T15:59:00Z",
+        "published": "2026-11-21T18:12:00Z",
         "url": "https://www.abc.net.au/news/2026-11-22/victorian-greens-win-court-injunction-liberal-labor-pledges/107414054"
       },
       {
@@ -2328,7 +2334,7 @@
       "url": "https://www.theage.com.au/rss/national/victoria.xml",
       "via": "feed",
       "items": 20,
-      "last_7_days": 0
+      "last_7_days": 1
     },
     "Herald Sun": {
       "status": "ok",
@@ -2336,7 +2342,7 @@
       "via": "Bing News search",
       "items": 12,
       "message": "robots.txt disallows the whole site (checked 16 Nov 2026)",
-      "last_7_days": 6
+      "last_7_days": 5
     },
     "Guardian Australia": {
       "status": "ok",
@@ -2358,7 +2364,7 @@
       "page": "https://www.nine.com.au/australia-news/vic",
       "url": "https://www.nine.com.au/sitemaps/news/brands/nine",
       "via": "sitemap",
-      "items": 127,
+      "items": 133,
       "last_7_days": 0
     },
     "7News": {
@@ -2367,7 +2373,7 @@
       "url": "https://7news.com.au/news/vic/vic-election-2026/feed",
       "via": "feed",
       "items": 14,
-      "last_7_days": 2
+      "last_7_days": 1
     },
     "Sky News Australia": {
       "status": "ok",
@@ -2392,7 +2398,7 @@
       "via": "Bing News search",
       "items": 12,
       "message": "robots.txt disallows the whole site (checked 16 Nov 2026)",
-      "last_7_days": 6
+      "last_7_days": 7
     },
     "Australian Financial Review": {
       "status": "ok",
@@ -2450,7 +2456,7 @@
       "status": "ok",
       "url": "https://www.dailymail.co.uk/auhome/index.rss",
       "via": "feed",
-      "items": 79,
+      "items": 81,
       "last_7_days": 1
     },
     "Bendigo Advertiser": {
@@ -2513,7 +2519,7 @@
       "via": "Bing News search",
       "items": 176,
       "message": "176 searches for 88 districts, plus 2 statewide",
-      "last_7_days": 40
+      "last_7_days": 39
     },
     "Google News": {
       "status": "skipped",
