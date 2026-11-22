@@ -10,13 +10,13 @@
   "status": "closed",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
   "registration_closes": "2026-11-20",
-  "last_checked": "2026-11-22T19:43:20Z",
+  "last_checked": "2026-11-22T23:33:36Z",
   "coverage": {
     "cards": 1422,
     "listings": 4814,
-    "orders_read": 3842,
-    "orders_same_as": 152,
-    "orders_unreadable": 644,
+    "orders_read": 3877,
+    "orders_same_as": 153,
+    "orders_unreadable": 648,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -1699,7 +1699,7 @@
     "yan-yean": {
       "house": "lower",
       "cards": 36,
-      "read": 8,
+      "read": 12,
       "same_as": 0,
       "unreadable": 0,
       "parties": {
@@ -1740,9 +1740,9 @@
     "north-eastern-metropolitan": {
       "house": "upper",
       "cards": 184,
-      "read": 23,
-      "same_as": 2,
-      "unreadable": 15,
+      "read": 54,
+      "same_as": 3,
+      "unreadable": 19,
       "parties": {
         "ALP": 47,
         "NONCAND": 5,
@@ -7747,14 +7747,14 @@
       "area": "yan-yean",
       "party": "GRN",
       "cards": 11,
-      "read": 1,
+      "read": 4,
       "ranks": {
         "GRN": 1,
         "ALP": 4,
         "LNP": 5,
         "ONP": 8
       },
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=85c5c4bb-d8e0-4b93-aaf1-0ada472b7df9%2Fthe%20greens%20combined%20northern%20metro%20thomastown%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
     },
     {
       "area": "yan-yean",
