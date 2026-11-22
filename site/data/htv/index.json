@@ -10,35 +10,35 @@
   "status": "closed",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
   "registration_closes": "2026-11-20",
-  "last_checked": "2026-11-22T09:45:27Z",
+  "last_checked": "2026-11-22T19:43:20Z",
   "coverage": {
-    "cards": 1410,
-    "listings": 4594,
-    "orders_read": 3811,
-    "orders_same_as": 150,
-    "orders_unreadable": 629,
-    "districts_with_cards": 87,
-    "regions_with_cards": 7,
+    "cards": 1422,
+    "listings": 4814,
+    "orders_read": 3842,
+    "orders_same_as": 152,
+    "orders_unreadable": 644,
+    "districts_with_cards": 88,
+    "regions_with_cards": 8,
     "by_party": {
       "ALP": {
         "cards": 329,
-        "districts": 87,
-        "regions": 7
+        "districts": 88,
+        "regions": 8
       },
       "LIB": {
-        "cards": 274,
-        "districts": 76,
-        "regions": 7
+        "cards": 275,
+        "districts": 77,
+        "regions": 8
       },
       "GRN": {
-        "cards": 191,
-        "districts": 87,
-        "regions": 7
+        "cards": 192,
+        "districts": 88,
+        "regions": 8
       },
       "VS": {
         "cards": 96,
-        "districts": 87,
-        "regions": 7
+        "districts": 88,
+        "regions": 8
       },
       "IND": {
         "cards": 95,
@@ -47,28 +47,28 @@
       },
       "ONP": {
         "cards": 89,
-        "districts": 87,
-        "regions": 7
+        "districts": 88,
+        "regions": 8
       },
       "NONCAND": {
-        "cards": 83,
+        "cards": 88,
         "districts": 32,
-        "regions": 5
+        "regions": 6
       },
       "FF": {
         "cards": 65,
-        "districts": 64,
-        "regions": 5
+        "districts": 65,
+        "regions": 6
       },
       "AJP": {
         "cards": 47,
-        "districts": 39,
+        "districts": 40,
         "regions": 2
       },
       "OTH": {
-        "cards": 28,
+        "cards": 29,
         "districts": 17,
-        "regions": 5,
+        "regions": 6,
         "registered_by": [
           "Australian Democrats",
           "Christian Alliance Party – Reform AU",
@@ -77,24 +77,24 @@
         ]
       },
       "LBT": {
-        "cards": 26,
-        "districts": 22,
-        "regions": 2
+        "cards": 28,
+        "districts": 23,
+        "regions": 3
       },
       "WEST": {
         "cards": 22,
         "districts": 12,
         "regions": 1
       },
+      "DLP": {
+        "cards": 20,
+        "districts": 12,
+        "regions": 8
+      },
       "NAT": {
         "cards": 19,
         "districts": 12,
         "regions": 3
-      },
-      "DLP": {
-        "cards": 19,
-        "districts": 12,
-        "regions": 7
       },
       "SAL": {
         "cards": 10,
@@ -102,9 +102,9 @@
         "regions": 2
       },
       "LCV": {
-        "cards": 7,
+        "cards": 8,
         "districts": 5,
-        "regions": 7
+        "regions": 8
       },
       "SFF": {
         "cards": 5,
@@ -119,12 +119,12 @@
       "SUS": {
         "cards": 1,
         "districts": 0,
-        "regions": 7
+        "regions": 8
       }
     },
     "no_card": {
-      "lower": 49,
-      "upper": 52,
+      "lower": 41,
+      "upper": 16,
       "candidates_lower": 734,
       "candidates_upper": 303
     }
@@ -1698,12 +1698,21 @@
     },
     "yan-yean": {
       "house": "lower",
-      "cards": 0,
-      "read": 0,
+      "cards": 36,
+      "read": 8,
       "same_as": 0,
       "unreadable": 0,
-      "parties": {},
-      "no_card": 8
+      "parties": {
+        "ALP": 8,
+        "VS": 2,
+        "LIB": 10,
+        "FF": 1,
+        "ONP": 2,
+        "GRN": 11,
+        "AJP": 1,
+        "LBT": 1
+      },
+      "no_card": 0
     },
     "eastern-victoria": {
       "house": "upper",
@@ -1730,12 +1739,25 @@
     },
     "north-eastern-metropolitan": {
       "house": "upper",
-      "cards": 0,
-      "read": 0,
-      "same_as": 0,
-      "unreadable": 0,
-      "parties": {},
-      "no_card": 38
+      "cards": 184,
+      "read": 23,
+      "same_as": 2,
+      "unreadable": 15,
+      "parties": {
+        "ALP": 47,
+        "NONCAND": 5,
+        "VS": 12,
+        "SUS": 1,
+        "LCV": 1,
+        "FF": 8,
+        "LIB": 66,
+        "ONP": 12,
+        "GRN": 22,
+        "LBT": 4,
+        "OTH": 1,
+        "DLP": 5
+      },
+      "no_card": 2
     },
     "northern-metropolitan": {
       "house": "upper",
@@ -7697,6 +7719,74 @@
         "LNP": 3,
         "ALP": 6,
         "GRN": 8
+      },
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "area": "yan-yean",
+      "party": "ALP",
+      "cards": 8,
+      "read": 1,
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 6,
+        "ONP": 8
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "area": "yan-yean",
+      "party": "GRN",
+      "cards": 11,
+      "read": 1,
+      "ranks": {
+        "GRN": 1,
+        "ALP": 4,
+        "LNP": 5,
+        "ONP": 8
+      },
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "area": "yan-yean",
+      "party": "LIB",
+      "cards": 10,
+      "read": 5,
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "ALP": 6,
+        "GRN": 7
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 6
+        }
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
+    {
+      "area": "yan-yean",
+      "party": "ONP",
+      "cards": 2,
+      "read": 1,
+      "ranks": {
+        "ONP": 1,
+        "LNP": 4,
+        "ALP": 5,
+        "GRN": 6
       },
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
     }

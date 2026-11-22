@@ -6,8 +6,46 @@
       "entries": "[{date (Melbourne YYYY-MM-DD), at (ISO UTC), type, ...}] where type is one of: candidate_added {seat, name, party, status, source}; candidate_superseded {seat, name, party, by}; candidate_withdrawn {seat, name, party}; candidate_not_standing {seat, name, party}; poll_added {id, pollster, end_date, tpp (L/NP), primary}; odds_move {seat, label, party, from, to} (a price moving 0.5 or more); retirement {seat, name}; news {count} (new headlines collected)"
     }
   },
-  "updated": "2026-11-22T09:52:20Z",
+  "updated": "2026-11-22T19:51:42Z",
   "entries": [
+    {
+      "date": "2026-11-23",
+      "at": "2026-11-22T19:51:42Z",
+      "type": "poll_added",
+      "id": "agenda-c-synesis-antenna-2026-11-18",
+      "pollster": "Agenda C Synesis/Antenna",
+      "end_date": "2026-11-18",
+      "tpp": 59,
+      "primary": {
+        "ALP": 25,
+        "LNP": 33,
+        "GRN": 11,
+        "ONP": 24,
+        "OTH": 7
+      }
+    },
+    {
+      "date": "2026-11-23",
+      "at": "2026-11-22T19:51:42Z",
+      "type": "poll_added",
+      "id": "redbridge-accent-2026-11-20",
+      "pollster": "RedBridge/Accent",
+      "end_date": "2026-11-20",
+      "tpp": 58,
+      "primary": {
+        "ALP": 22,
+        "LNP": 33,
+        "GRN": 15,
+        "ONP": 23,
+        "OTH": 7
+      }
+    },
+    {
+      "date": "2026-11-23",
+      "at": "2026-11-22T19:51:42Z",
+      "type": "news",
+      "count": 10
+    },
     {
       "date": "2026-11-22",
       "at": "2026-11-22T09:52:20Z",
