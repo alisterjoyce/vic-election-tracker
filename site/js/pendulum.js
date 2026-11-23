@@ -21,7 +21,7 @@
   const $ = (id) => document.getElementById(id);
   const round1 = (v) => Math.round(v * 10) / 10;
   const bloc = (p) => (COALITION.includes(p) ? "LNP" : p === "ALP" || p === "GRN" || p === "ONP" ? p : "OTH");
-  const BLOCS = ["ALP", "LNP", "GRN", "ONP", "OTH"];
+  const BLOCS = App.BLOCS;   // the fixed party order
   const BLOC_NAMES = { ALP: "Labor", LNP: "Coalition", GRN: "Greens", ONP: "One Nation", OTH: "Others" };
   const blocVar = (b) => (b === "LNP" ? "--p-lib" : b === "OTH" ? "--p-ind" : partyVar(b));
 

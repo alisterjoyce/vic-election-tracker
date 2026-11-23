@@ -588,7 +588,7 @@ a.icon-btn { text-decoration: none; display: inline-block; }
 .hero-block-title { font-weight: 600; font-size: 0.92rem; }
 .hero-bar { display: flow-root; min-height: 58px; }   /* bar plus one line of key; reserved (not just while empty) so the card never jumps */
 @media (max-width: 760px) { .hero-bar { min-height: 78px; } }   /* the key can wrap to two lines */
-@media (max-width: 374px) { .hero-bar { min-height: 100px; } }
+@media (max-width: 419px) { .hero-bar { min-height: 100px; } }   /* three lines of key (fixed party order, 23 Nov 2026) */
 .hb-track { position: relative; display: flex; height: 26px; margin: 6px 0 6px; border-radius: 6px; overflow: visible; background: var(--surface-2); }
 .hb-seg { display: flex; align-items: center; justify-content: center; min-width: 0; font-size: 0.78rem; font-weight: 700; overflow: hidden; }
 .hb-seg:first-child { border-radius: 6px 0 0 6px; }

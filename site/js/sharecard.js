@@ -311,11 +311,8 @@
   /* seat: districts.json row; cands: active candidates; odds: seat_odds.json row or null */
   function seatCard({ seat, cands, shots, odds, oddsDate, classification }) {
     const m = seat.margin;
-    const price = (party) => {
-      const o = odds && (odds.options || []).find((x) => x.party === party || (party === "LNP" && ["LIB", "NAT"].includes(x.party)));
-      return o ? o.price : Infinity;
-    };
-    const top = cands.slice().sort((a, b) => price(a.party) - price(b.party) || partyName(a.party).localeCompare(partyName(b.party))).slice(0, 5);
+    // Candidates in the VEC's ballot order (never by betting price), the first five.
+    const top = cands.slice().sort(App.candidateOrder).slice(0, 5);
     const fav = odds && (odds.favourite || (odds.joint_favourites || []).length)
       ? (odds.favourite ? `${odds.favourite_candidate ? escapeHtml(odds.favourite_candidate) : escapeHtml(partyName(odds.favourite))} ${App.fmtPrice(odds.price)}`
         : `${odds.joint_favourites.map((p) => escapeHtml(partyName(p))).join(" / ")} (joint)`)
@@ -338,7 +335,7 @@
             <div><span class="hc-label">Sportsbet favourite</span><span class="hc-value">${fav}</span>
               <span class="hc-sub">${oddsDate ? `as at ${escapeHtml(fmtDate(oddsDate))}` : ""}</span></div>
           </div>
-          <div class="hc-label">Leading candidates</div>
+          <div class="hc-label">Candidates in ballot-paper order${cands.length > top.length ? ` (first ${top.length} of ${cands.length})` : ""}</div>
           <div class="hc-people">${top.map((c) => `
             <div class="hc-person">${eager(App.avatar(shots, seat.id, c.name, c.party, { size: 72 }))}
               <span class="hc-name">${escapeHtml(c.name)}</span><span class="hc-party">${escapeHtml(partyName(c.party))}</span></div>`).join("")}</div>
@@ -362,13 +359,13 @@
           <div class="hc-kicker">2026 Victorian state election · ${escapeHtml(fmtDate(electionDate))}${days > 0 ? ` · ${days} days to go` : ""}</div>
           <div class="hc-title">${lead[0]} ahead, ${lead[1].toFixed(1)}–${(100 - lead[1]).toFixed(1)}</div>
           <div class="hc-facts">
-            <div><span class="hc-label">Poll of polls, 2PP</span><span class="hc-value">L/NP ${avg.LNP2pp.toFixed(1)} · Labor ${avg.ALP2pp.toFixed(1)}</span>
+            <div><span class="hc-label">Poll of polls, 2PP</span><span class="hc-value">Labor ${avg.ALP2pp.toFixed(1)} · L/NP ${avg.LNP2pp.toFixed(1)}</span>
               <span class="hc-sub">Smoothed average of ${avg.n} published polls</span></div>
-            <div><span class="hc-label">Primary vote</span><span class="hc-value">${Object.entries(avg.primaries).map(([k, v]) => `${escapeHtml(App.partyShort(k))} ${v.toFixed(0)}`).join(" · ")}</span>
+            <div><span class="hc-label">Primary vote</span><span class="hc-value">${Object.entries(avg.primaries).sort(([a], [b]) => App.partyOrder(a, b)).map(([k, v]) => `${escapeHtml(App.partyShort(k))} ${v.toFixed(0)}`).join(" · ")}</span>
               <span class="hc-sub">Poll-of-polls averages</span></div>
           </div>
           <div class="hc-label">Seats on a uniform swing of ${escapeHtml(App.fmtSwing(swing))} to L/NP (45 for a majority)</div>
-          <div class="hc-bars">${bar("Coalition", tally.LNP, "--p-lib")}${bar("Labor", tally.ALP, "--p-alp")}${bar("Greens", tally.GRN, "--p-grn")}${tally.OTH ? bar("Others", tally.OTH, "--p-ind") : ""}</div>
+          <div class="hc-bars">${bar("Greens", tally.GRN, "--p-grn")}${bar("Labor", tally.ALP, "--p-alp")}${bar("Coalition", tally.LNP, "--p-lib")}${tally.OTH ? bar("Others", tally.OTH, "--p-ind") : ""}</div>
         </div>
         <div class="hc-foot"><strong>Vic Election 2026</strong><span>${escapeHtml(siteLink())}</span><span>${escapeHtml(today())}</span></div>`,
     };
@@ -450,7 +447,7 @@
     const s = App.statewideSwing(meta, pollData);
     if (!s) throw new Error("No poll average available");
     const primaries = {};
-    ["LNP", "ALP", "ONP", "GRN"].forEach((k) => {
+    ["LNP", "ALP", "ONP", "GRN"].sort(App.partyOrder).forEach((k) => {
       const v = last((p) => (p.primary && p.primary[k] != null ? p.primary[k] : null));
       if (v != null) primaries[k] = v;
     });
@@ -468,7 +465,7 @@
     const lnp = s.current, alp = 100 - s.current;
     const lead = lnp >= 50 ? ["Coalition", lnp, "Labor", alp] : ["Labor", alp, "Coalition", lnp];
     const BLOC = { LNP: ["Coalition", "--p-lib"], ALP: ["Labor", "--p-alp"], GRN: ["Greens", "--p-grn"], ONP: ["One Nation", "--p-onp"], OTH: ["Others", "--p-ind"] };
-    const seats = Object.keys(BLOC).filter((b) => tally[b]).sort((a, b) => tally[b] - tally[a]);
+    const seats = App.BLOCS.filter((b) => tally[b]);   // the fixed party order, never by size
     const pct = (v) => `${Math.round(v)}%`;
     const move = (m) => {
       const party = escapeHtml(App.partyName(m.party));

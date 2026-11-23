@@ -42,7 +42,7 @@
     holder: {
       label: "Held by",
       style: (d) => ({ code: d.party, opacity: 0.85, text: partyName(d.party) }),
-      legend: (ds) => [...new Set(ds.map((d) => d.party))].map((p) => ({ code: p, text: partyName(p) })),
+      legend: (ds) => [...new Set(ds.map((d) => d.party))].sort(App.partyOrder).map((p) => ({ code: p, text: partyName(p) })),
     },
     margin: {
       label: "Margin",
@@ -64,7 +64,7 @@
         return { code: null, opacity: 0.15, text: "partial market" };
       },
       legend: (ds, ctx) => {
-        const codes = [...new Set(ds.map((d) => ctx.odds[d.id] && ctx.odds[d.id].favourite).filter(Boolean))];
+        const codes = [...new Set(ds.map((d) => ctx.odds[d.id] && ctx.odds[d.id].favourite).filter(Boolean))].sort(App.partyOrder);
         const items = codes.map((p) => ({ code: p, text: partyName(p) }));
         if (ds.some((d) => ctx.odds[d.id] && ctx.odds[d.id].joint_favourites)) items.push({ code: "OTH", opacity: 0.45, text: "Joint favourites" });
         return items;
@@ -81,7 +81,7 @@
                  text: `${e.winner_name ? `${e.winner_name}, ` : ""}${partyName(e.winner)} ${Number(p).toFixed(1)}% to win` };
       },
       legend: (ds, ctx) => {
-        const codes = [...new Set(ds.map((d) => ctx.forecast[d.id] && ctx.forecast[d.id].winner).filter(Boolean))];
+        const codes = [...new Set(ds.map((d) => ctx.forecast[d.id] && ctx.forecast[d.id].winner).filter(Boolean))].sort(App.partyOrder);
         return [...codes.map((p) => ({ code: p, text: partyName(p) })),
           ...[["under 50% to win", 0.35], ["50-75%", 0.6], ["over 75%", 0.9]].map(([t, o]) => ({ code: "OTH", opacity: o, text: t, neutral: true }))];
       },
@@ -102,7 +102,7 @@
     const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
     const lead = sorted[0] && (!sorted[1] || sorted[0][1] > sorted[1][1]) ? sorted[0][0] : null;
     return { code: lead, opacity: lead ? 0.6 : 0.25,
-             text: sorted.map(([p, n]) => `${partyShort(p)} ${n}`).join(", ") || "–" };
+             text: sorted.slice().sort(([a], [b]) => App.partyOrder(a, b)).map(([p, n]) => `${partyShort(p)} ${n}`).join(", ") || "–" };
   }
 
   async function homeMap(root) {

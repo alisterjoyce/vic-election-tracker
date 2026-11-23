@@ -20,7 +20,7 @@
     // Drawn groups (A, B, ... AA) first in ballot order, then undrawn by party.
     if (a.group && b.group) return a.group.length - b.group.length || a.group.localeCompare(b.group);
     if (a.group || b.group) return a.group ? -1 : 1;
-    return partyName(a.party).localeCompare(partyName(b.party));
+    return App.partyOrder(a.party, b.party);
   }
 
   // A ticket's heading: the party, or for a group without a registered party (and ungrouped candidates) the
@@ -42,7 +42,7 @@
     if (!rows.length) return "";
     const byParty = {};
     rows.forEach((c) => { (byParty[c.party] = byParty[c.party] || []).push(c); });
-    const parties = Object.keys(byParty).sort((a, b) => partyName(a).localeCompare(partyName(b)));
+    const parties = Object.keys(byParty).sort(App.partyOrder);
     return `
       <div class="card">
         <div class="card-head"><h2>Other announced candidates</h2><span class="muted small">${rows.length} name${rows.length === 1 ? "" : "s"}</span></div>
@@ -52,7 +52,7 @@
             <div class="ticket" style="--party-color: var(${partyVar(p)})">
               <div class="ticket-head"><strong>${escapeHtml(partyName(p))}</strong></div>
               <ul class="people">
-                ${byParty[p].sort((a, b) => (a.ticket_position || 99) - (b.ticket_position || 99)).map((c) => `
+                ${byParty[p].sort((a, b) => (a.ticket_position || 99) - (b.ticket_position || 99) || App.candidateOrder(a, b)).map((c) => `
                   <li>
                     ${c.ticket_position ? `<span class="pos" title="Reported ticket position">${c.ticket_position}</span>` : ""}
                     ${App.avatar(shots, r.id, c.name, c.party, { size: 32 })}

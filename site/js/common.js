@@ -31,6 +31,29 @@
     OTH: { name: "Other", color: "--p-oth" },
   };
 
+  // Neutral ordering (CLAUDE.md, "Neutral ordering"). Parties, wherever several are listed (legends, tables, filters,
+  // bars): one fixed order, alphabetical by the party's name, with independents and "Other" last. Never by polls,
+  // odds or seats held.
+  const PARTY_LAST = ["ILAB", "IND", "OTH"];
+  function partyOrder(a, b) {
+    const la = PARTY_LAST.indexOf(a), lb = PARTY_LAST.indexOf(b);
+    if (la !== lb) return la - lb;   // -1 (not an independent or Other) sorts first
+    return ((PARTIES[a] && PARTIES[a].name) || a || "").localeCompare((PARTIES[b] && PARTIES[b].name) || b || "");
+  }
+  // Candidates: the VEC's ballot order (ballot_position: for the Council, the position among all the region's
+  // candidates, groups in letter order then ungrouped), else alphabetical by surname, then given names.
+  function surnameOf(c) {
+    if (c.ballot_name && c.ballot_name.includes(",")) return c.ballot_name.split(",")[0].trim();
+    const parts = givenFirst(c.name || "").trim().split(/\s+/);
+    return parts[parts.length - 1] || "";
+  }
+  function candidateOrder(a, b) {
+    const pa = a.ballot_position ?? Infinity, pb = b.ballot_position ?? Infinity;
+    if (pa !== pb) return pa - pb;
+    return surnameOf(a).localeCompare(surnameOf(b), "en-AU", { sensitivity: "base" })
+      || givenFirst(a.name || "").localeCompare(givenFirst(b.name || ""), "en-AU", { sensitivity: "base" });
+  }
+
   // Short labels where the code alone would mislead (LNP is a Queensland party).
   const SHORT = { LNP: "L/NP", ILAB: "Ind. Labor" };
   const COALITION = ["LNP", "LIB", "NAT"];
@@ -345,7 +368,7 @@
 
   // Seats at a uniform swing, by the pendulum's rule: Labor-v-Coalition contests swing, every other
   // contest stays with its holder. Returns {winners: {district id: party}, tally: {bloc: seats}}.
-  const BLOCS = ["ALP", "LNP", "GRN", "ONP", "OTH"];
+  const BLOCS = ["GRN", "ALP", "LNP", "ONP", "OTH"];   // partyOrder: Greens, Labor, Liberal/National, One Nation, Others
   const blocOf = (p) => (COALITION.includes(p) ? "LNP" : BLOCS.includes(p) ? p : "OTH");
   // Upper-house groups' quotas filled: one bar each, a full quota at the first tick (half way), two at the end.
   function quotaBars(groups) {
@@ -745,7 +768,7 @@
     regions.forEach((r) => items.push({ type: "Region", label: r.name, sub: "Legislative Council region", href: `upper.html#${r.id}`, key: norm(r.name), rank: 0 }));
     buildPeople(cd, rd, dd).forEach((p) => {
       if (p.status === "withdrawn" && !p.mlc) return;
-      items.push({ type: p.contesting ? "Candidate" : "MLC", label: p.name,
+      items.push({ type: p.contesting ? "Candidate" : "MLC", label: p.name, sortKey: `${surnameOf(p)} ${givenFirst(p.name)}`,
         sub: `${p.contesting ? "" : "MLC, "}${partyName(p.party)}, ${p.seatName}`, party: p.party,
         href: `candidate.html#${p.id}`, key: norm(p.name), rank: 2 });
     });
@@ -784,7 +807,8 @@
       }
       if (score != null) scored.push({ it, score: score * 10 + it.rank - (it.share || 0) });
     }
-    scored.sort((a, b) => a.score - b.score || a.it.label.localeCompare(b.it.label));
+    // Equal scores: alphabetical, people by surname (CLAUDE.md, "Neutral ordering").
+    scored.sort((a, b) => a.score - b.score || (a.it.sortKey || a.it.label).localeCompare(b.it.sortKey || b.it.label, "en-AU", { sensitivity: "base" }));
     // A postcode can cover a dozen or more suburbs; show them all.
     return scored.slice(0, limit || (isPostcode ? 24 : 12)).map((s) => s.it);
   }
@@ -1317,7 +1341,7 @@
   });
 
   window.App = {
-    PARTIES, STATUSES, COALITION, loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, partyBadge, statusBadge,
+    PARTIES, STATUSES, COALITION, partyOrder, candidateOrder, surnameOf, loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, partyBadge, statusBadge,
     slugify, parseDate, fmtDate, fmtMonth, fmtDateTime, dataUpdatedText, fmtPrice, fmtMargin, fmtSwing, melbourneToday, daysBetween,
     hashId, cssVar, currentTheme, showError, copyLink,
     DAY, preparePolls, pollExclusion, commissionLabel, AVG_MIN_SAMPLE, smoothedSeries, smoothedLatest, fmtRange, pollRecords, statewideSwing, swingAdjusted, projectSeats, BLOCS, blocOf, modelLink, quotaBars,

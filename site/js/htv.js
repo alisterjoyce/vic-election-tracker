@@ -43,8 +43,10 @@
       if (c.status === "same_as") col.same.push(c);
       else { if (col.card.status === "same_as") col.card = c; col.cards.push(c); }
     }
-    const rank = (c) => ({ ALP: 0, LIB: 1, NAT: 2, GRN: 3, ONP: 4 }[c.party] ?? (c.kind === "party" ? 5 : c.kind === "independent" ? 6 : 7));
-    return [...cols.values()].sort((a, b) => rank(a.card) - rank(b.card) || who(a.card).localeCompare(who(b.card)));
+    // Parties' cards in the site's fixed party order, then independents' cards, then others' (CLAUDE.md, "Neutral ordering").
+    const rank = (c) => (c.kind === "party" ? 0 : c.kind === "independent" ? 1 : 2);
+    return [...cols.values()].sort((a, b) => rank(a.card) - rank(b.card)
+      || (a.card.kind === "party" ? App.partyOrder(a.card.party, b.card.party) : 0) || who(a.card).localeCompare(who(b.card)));
   }
 
   const cardLinks = (cards) => cards.map((c) => link(c.card_url, `no. ${c.registration}`)).join(" ");
@@ -200,10 +202,10 @@
     const seat = (id) => { const d = byId.get(id); return `<a href="lower.html#${escapeHtml(id)}">${escapeHtml(d ? d.name : id)}</a>`; };
     const flagged = (party, ahead) => rows.filter((r) => r.party === party && ((r.flags || []).some((f) => f.ahead === ahead) || (r.flags_some || []).some((f) => f.ahead === ahead)));
     const lines = [];
-    for (const party of ["LIB", "NAT", "ALP"]) {
+    for (const party of ["ALP", "LIB", "NAT"]) {   // the fixed party order
       const read = rows.filter((r) => r.party === party && r.read);
       if (!read.length) continue;
-      for (const ahead of ["ONP", "GRN"]) {
+      for (const ahead of ["GRN", "ONP"]) {
         const list = flagged(party, ahead);
         const other = party === "ALP" ? "the Coalition" : "Labor";
         lines.push(`<li><span class="party" style="--party-color: var(${partyVar(party)})">${escapeHtml(partyName(party))}</span>

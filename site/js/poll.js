@@ -9,12 +9,13 @@
   const LEADER_PARTY = { Carroll: "ALP", Allan: "ALP", Andrews: "ALP", Wilson: "LIB", Battin: "LIB", Pesutto: "LIB", Guy: "LIB", Pickering: "ONP", Sandell: "GRN" };
   // Records shown on a poll's page: new highs and lows for these parties' primaries, and the Coalition's 2PP.
   const RECORD_NAMES = { ALP: "Labor", LNP: "Coalition", GRN: "Greens", ONP: "One Nation" };
+  // In the site's fixed party order (Greens, Labor, Liberal/National, One Nation), 2PP first.
   const MEASURES = [
-    { key: "tpp.LNP", label: "L/NP 2PP", party: "LNP" },
     { key: "tpp.ALP", label: "Labor 2PP", party: "ALP" },
+    { key: "tpp.LNP", label: "L/NP 2PP", party: "LNP" },
+    { key: "primary.GRN", label: "Greens primary", party: "GRN" },
     { key: "primary.ALP", label: "Labor primary", party: "ALP" },
     { key: "primary.LNP", label: "L/NP primary", party: "LNP" },
-    { key: "primary.GRN", label: "Greens primary", party: "GRN" },
     { key: "primary.ONP", label: "One Nation primary", party: "ONP" },
   ];
 
@@ -132,7 +133,7 @@
 
   function renderDetail(p) {
     document.title = `${p.pollster} poll, ${fmtDate(p.end_date)} · Vic Election 2026`;
-    const prim = Object.entries(p.primary || {}).sort((a, b) => b[1] - a[1]).map(([k, v]) => [partyName(k), k, v]);
+    const prim = Object.entries(p.primary || {}).sort(([a], [b]) => App.partyOrder(a, b)).map(([k, v]) => [partyName(k), k, v]);
     const maxPrim = Math.max(1, ...prim.map(([, , v]) => v));
     const pp = p.preferred_premier, ap = p.approval;
     const own = polls.filter((x) => x.pollster === p.pollster).reverse();
@@ -210,7 +211,7 @@
   }
 
   function pollTable(list, current) {
-    const keys = ["ALP", "LNP", "GRN", "ONP"];
+    const keys = ["GRN", "ALP", "LNP", "ONP"];   // the fixed party order
     return `<div class="table-scroll"><table class="poll-list">
       <thead><tr><th>Fieldwork</th><th>Pollster</th><th>Commissioned by</th><th class="num">Sample</th>
         ${keys.map((k) => `<th class="num" title="Primary vote">${escapeHtml(App.partyShort(k))}</th>`).join("")}<th class="num">2PP L/NP</th></tr></thead>
@@ -230,7 +231,7 @@
   }
 
   /* ---------- Aggregates compared: this site's poll of polls against three other averages ---------- */
-  const AGG_PARTIES = ["ALP", "LNP", "GRN", "ONP", "OTH"];
+  const AGG_PARTIES = ["GRN", "ALP", "LNP", "ONP", "OTH"];   // the fixed party order
 
   // The latest point of the home chart's average (the last point of App.smoothedSeries, via App.smoothedLatest),
   // with independents counted in Others as the home chart counts them. Dated at the newest poll's fieldwork

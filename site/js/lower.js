@@ -5,7 +5,6 @@
   const { loadJSON, escapeHtml, partyBadge, partyShort, statusBadge, fmtDate, hashId, copyLink } = window.App;
 
   // Strongest confirmation first.
-  const STATUS_RANK = ["vec_nominated", "endorsed", "reported", "announced"];
 
   let districts = [];
   let candidates = [];
@@ -52,8 +51,9 @@
       if (!e || !e.winner) line(label, '<span class="muted">no forecast for this seat</span>');
       else {
         calls.push(["Australian Election Forecasts", e.winner]);
+        // The model's three likeliest others, listed in the fixed party order.
         const rivals = [...(e.candidates || []), ...(e.others || [])].filter((c) => c.win_probability >= 1 && c.name !== e.winner_name)
-          .sort((a, b) => b.win_probability - a.win_probability).slice(0, 3)
+          .sort((a, b) => b.win_probability - a.win_probability).slice(0, 3).sort((a, b) => App.partyOrder(a.party, b.party))
           .map((c) => `${escapeHtml(partyShort(c.party))}${c.name ? "" : ` (${escapeHtml(c.label.replace(/^An? /, ""))})`} ${pct(c.win_probability)}`).join(", ");
         const fpRows = (e.candidates || []).map((c) => `<tr><td>${escapeHtml(c.name)}</td><td>${partyBadge(c.party, { full: false })}</td>
           <td class="num">${pct(c.win_probability)}</td><td class="num">${c.fp ? `${fmt1(c.fp[1])} <span class="muted small">(${fmt1(c.fp[0])}–${fmt1(c.fp[2])})</span>` : "–"}</td></tr>`).join("");
@@ -131,7 +131,8 @@
       const optKey = (o) => `${o.party || "any"}|${o.candidate || ""}`;
       const before = new Map(((prev && prev.options) || []).map((o) => [optKey(o), o.price]));
       const was = (o) => { const p = before.get(optKey(o)); return p != null && p !== o.price ? ` (${price(p)})` : ""; };
-      const market = (seatOdds.options || []).map((o) => `${escapeHtml(o.label)} ${price(o.price)}${was(o)}`).join(" · ");
+      // In the site's fixed party order (never by price); unnamed options ("Any Other") last.
+      const market = (seatOdds.options || []).slice().sort((a, b) => (!a.party - !b.party) || (a.party && b.party ? App.partyOrder(a.party, b.party) : 0)).map((o) => `${escapeHtml(o.label)} ${price(o.price)}${was(o)}`).join(" · ");
       const favKey = (row) => (row.favourite ? `${row.favourite}|${row.favourite_candidate || ""}` : (row.joint_favourites || []).join("/"));
       const prevFav = prev && favText(prev);
       const moveNote = prev ? `<div class="muted small">In brackets: the price on ${escapeHtml(fmtDate(prev.date_checked))}, where it has moved.${
@@ -229,12 +230,11 @@
 
   const isInactive = (c) => c.status === "withdrawn" || c.status === "superseded" || c.status === "not_standing";
 
+  // Ballot order, else surname (App.candidateOrder); inactive rows last.
   function candidateSort(a, b) {
     const wa = isInactive(a), wb = isInactive(b);
     if (wa !== wb) return wa ? 1 : -1;
-    const pa = a.ballot_position ?? Infinity, pb = b.ballot_position ?? Infinity;
-    const rank = (s) => STATUS_RANK.indexOf(s) + 1 || STATUS_RANK.length + 1;
-    return pa - pb || rank(a.status) - rank(b.status) || a.name.localeCompare(b.name);
+    return App.candidateOrder(a, b);
   }
 
   function renderDetail() {
@@ -406,8 +406,8 @@
     el.dataset.done = d.id;
     // Ballot order (the VEC's), else the order the candidate list uses.
     const order = vec && vec.districts && vec.districts[d.id] ? Object.fromEntries(vec.districts[d.id].candidates.map((c) => [c.id, c.ballot_position])) : {};
-    const cands = seatCands(d).map((c) => ({ ...c, id: App.candidateId(d.id, c.name) }))
-      .sort((a, b) => (order[a.id] ?? a.ballot_position ?? 99) - (order[b.id] ?? b.ballot_position ?? 99));
+    const cands = seatCands(d).map((c) => ({ ...c, id: App.candidateId(d.id, c.name), ballot_position: order[App.candidateId(d.id, c.name)] ?? c.ballot_position }))
+      .sort(App.candidateOrder);
     if (!cands.length) { el.innerHTML = '<p class="empty">No candidates recorded yet.</p>'; return; }
     const cell = (html) => `<td>${html || NOTHING}</td>`;
     const list = (items) => (items.length ? `<ul class="cmp-list">${items.map((x) => `<li>${x}</li>`).join("")}</ul>` : "");

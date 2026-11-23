@@ -11,7 +11,6 @@
   let profiles = {};    // candidate id -> researched profile, for the seats loaded so far (data/profiles/<seat>.json)
 
   const $ = (id) => document.getElementById(id);
-  const surname = (p) => App.givenFirst(p.name).split(/\s+/).pop();
   const SOURCES = { abc: "ABC election guide", wikipedia: "Wikipedia", electiontracker: "Party page (found via electiontracker.au)" };
   const ISSUES = "https://github.com/alisterjoyce/vic-election-tracker/issues";
 
@@ -153,9 +152,7 @@
       </details>`;
   }
 
-  function contestOrder(a, b) {
-    return partyName(a.party).localeCompare(partyName(b.party)) || (a.ticket_position || 99) - (b.ticket_position || 99) || a.name.localeCompare(b.name);
-  }
+  const contestOrder = App.candidateOrder;   // ballot order, else surname
 
   function rivals(p) {
     const others = people.filter((o) => o.seat === p.seat && o.id !== p.id && o.contesting && o.status !== "withdrawn").sort(contestOrder);
@@ -292,7 +289,7 @@
   let directoryShown = false;   // the directory (1,000+ rows) is built only once it is shown, not under a profile
   function renderDirectory() {
     directoryShown = true;
-    const rows = directoryRows().sort((a, b) => surname(a).localeCompare(surname(b)) || a.name.localeCompare(b.name));
+    const rows = directoryRows().sort((a, b) => App.surnameOf(a).localeCompare(App.surnameOf(b), "en-AU", { sensitivity: "base" }) || a.name.localeCompare(b.name));
     $("c-count").textContent = `${rows.length.toLocaleString("en-AU")} ${rows.length === 1 ? "person" : "people"}`;
     $("c-list").innerHTML = rows.length ? rows.map((p) => `
       <li>
@@ -340,7 +337,7 @@
       people = peopleData;
       shots = shotData;
 
-      const parties = [...new Set(people.map((p) => p.party))].sort((a, b) => partyName(a).localeCompare(partyName(b)));
+      const parties = [...new Set(people.map((p) => p.party))].sort(App.partyOrder);
       $("c-party").innerHTML = '<option value="">All parties</option>' +
         parties.map((c) => `<option value="${escapeHtml(c)}">${escapeHtml(partyName(c))}</option>`).join("");
       ["c-search", "c-house", "c-party"].forEach((id) => $(id).addEventListener("input", renderDirectory));

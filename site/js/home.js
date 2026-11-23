@@ -6,11 +6,7 @@
   const { loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, fmtDate, fmtPrice, cssVar,
     DAY, preparePolls, smoothedSeries } = window.App;
 
-  const PARTY_ORDER = ["ALP", "LNP", "LIB", "NAT", "GRN", "ONP", "LCV", "IND", "OTH"];
-  const byPartyOrder = (a, b) => {
-    const ia = PARTY_ORDER.indexOf(a), ib = PARTY_ORDER.indexOf(b);
-    return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib) || a.localeCompare(b);
-  };
+  const byPartyOrder = App.partyOrder;   // the site's one fixed party order (alphabetical, independents and Other last)
 
   let chart = null;
   let measure = "tpp";
@@ -80,15 +76,16 @@
     el.innerHTML = html;
   }
 
-  // One 88-seat bar: blocs largest first from the left, so the leader's block meets the majority line.
+  // One 88-seat bar: blocs in the site's fixed party order (never by size), undecided last, with the majority mark.
   // `fmt` formats a count (expected seats from a model are fractional: one decimal in the key, whole seats on the bar).
   function heroBar(counts, what, fmt = String) {
-    const order = Object.keys(counts).filter((b) => b !== "UND" && counts[b] > 0).sort((a, b) => counts[b] - counts[a]);
+    const order = Object.keys(counts).filter((b) => b !== "UND" && counts[b] > 0).sort(byPartyOrder);
     if (counts.UND) order.push("UND");
+    const top = order.filter((b) => b !== "UND").reduce((best, b) => (best == null || counts[b] > counts[best] ? b : best), null);
     const fill = (b) => (b === "UND" ? "" : `background:var(${partyVar(BLOC_CODE[b])});color:${App.inkVar(BLOC_CODE[b])}`);
     const segs = order.map((b) => `<span class="hb-seg${b === "UND" ? " hb-und" : ""}" style="flex:${counts[b]} 0 0;${fill(b)}">${counts[b] >= 5 ? Math.round(counts[b]) : ""}</span>`).join("");
     const key = order.map((b) => `<li><span class="swatch${b === "UND" ? " hb-und" : ""}" style="${fill(b)}"></span>${BLOC_NAMES[b]} <b>${fmt(counts[b])}</b></li>`).join("");
-    const lead = order[0] && order[0] !== "UND" && counts[order[0]] >= MAJORITY ? `${BLOC_NAMES[order[0]]} majority` : "No majority";
+    const lead = top && counts[top] >= MAJORITY ? `${BLOC_NAMES[top]} majority` : "No majority";
     return `<div class="hb-track" role="img" aria-label="${escapeHtml(`${what}: ${order.map((b) => `${BLOC_NAMES[b]} ${fmt(counts[b])}`).join(", ")}. ${lead}; ${MAJORITY} seats needed.`)}">
         ${segs}<span class="hb-majority" style="left:${(100 * MAJORITY) / SEATS}%"></span></div>
       <ul class="hb-key">${key}<li class="hb-maj-key"><span class="hb-maj-mark"></span>${MAJORITY} for a majority</li></ul>`;
@@ -101,7 +98,7 @@
     if (s && series.length) {
       const lnp = s.current, alp = 100 - s.current;
       const last = series[series.length - 1];
-      const sides = [["Coalition", lnp, "--p-lib"], ["Labor", alp, "--p-alp"]].sort((a, b) => b[1] - a[1]);
+      const sides = [["Labor", alp, "--p-alp"], ["Coalition", lnp, "--p-lib"]];   // the fixed party order, not the leader first
       document.getElementById("hero-tpp").innerHTML = sides.map(([n, v, c]) =>
         `<span class="tpp-side" style="--side:var(${c})">${n} <b>${v.toFixed(1)}</b></span>`).join('<span class="tpp-dash"> – </span>');
       // The 95% interval of the same average (Labor's is the Coalition's mirrored).
@@ -144,11 +141,11 @@
     const one = (a) => {
       let figs;
       if (a.tpp && a.tpp.LNP != null && a.tpp.ALP != null) {
-        const sides = [["L/NP", a.tpp.LNP], ["ALP", a.tpp.ALP]].sort((x, y) => y[1] - x[1]);
+        const sides = [["ALP", a.tpp.ALP], ["L/NP", a.tpp.LNP]];
         figs = `${sides.map(([n, v]) => `${n} ${Number(v).toFixed(1)}`).join("–")}`;
       } else {
         figs = ["LNP", "ALP", "ONP", "GRN"].filter((k) => a.primary && a.primary[k] != null)
-          .sort((x, y) => a.primary[y] - a.primary[x])
+          .sort(byPartyOrder)
           .map((k) => `${partyShort(k)} ${Number(a.primary[k]).toFixed(1)}`).join(", ");
         figs = `primary vote ${figs}`;
       }
@@ -171,7 +168,7 @@
     const rb = models.find((m) => m.kind === "projection" && m.published && m.totals);
     if (rb) {
       const t = rb.totals;
-      const parts = ["LNP", "ALP", "GRN", "ONP"].filter((b) => t[b] != null).map((b) => `${BLOC_NAMES[b]} ${t[b]}`);
+      const parts = App.BLOCS.filter((b) => b !== "OTH" && t[b] != null).map((b) => `${BLOC_NAMES[b]} ${t[b]}`);
       if (t.toss_up) parts.push(`${t.toss_up} toss-ups`);
       lines.push(`<a href="${escapeHtml(rb.source_url)}" rel="noopener" target="_blank">${escapeHtml(rb.name)}</a>, ${escapeHtml(fmtDate(rb.published_date))}: ${escapeHtml(parts.join(" · "))}`);
     }
@@ -189,7 +186,7 @@
     if (!close.length) { el.innerHTML = '<li class="empty">No betting markets recorded yet.</li>'; return; }
     const opt = (x) => `<span class="watch-opt"><span class="swatch" style="background:var(${partyVar(x.party || "OTH")})"></span>${escapeHtml(x.party ? partyShort(x.party) : x.label)} <b>${fmtPrice(x.price)}</b></span>`;
     el.innerHTML = close.map((o) => {
-      const [a, b] = priced(o);
+      const [a, b] = priced(o).slice(0, 2).sort((x, y) => (!x.party - !y.party) || (x.party && y.party ? byPartyOrder(x.party, y.party) : 0));   // the two shortest prices, in the fixed party order
       return `<li><a href="lower.html#${escapeHtml(o.district)}">${escapeHtml(names[o.district] || o.district)}</a><span class="watch-odds">${opt(a)}${opt(b)}</span></li>`;
     }).join("");
     document.getElementById("watch-note").textContent = odds.date_checked ? `Sportsbet, ${fmtDate(odds.date_checked)}` : "Sportsbet";
@@ -226,7 +223,7 @@
   function seatBlock(counts, total, unknownLabel) {
     const majority = Math.floor(total / 2) + 1;
     const known = Object.values(counts).reduce((a, b) => a + b, 0);
-    const parties = Object.keys(counts).sort((a, b) => counts[b] - counts[a] || byPartyOrder(a, b));
+    const parties = Object.keys(counts).sort(byPartyOrder);
     const segs = parties.map((p) =>
       `<span style="width:${(counts[p] / total) * 100}%;background:var(${partyVar(p)})" title="${escapeHtml(partyName(p))}: ${counts[p]}"></span>`
     ).join("");
@@ -413,7 +410,7 @@
     const s = App.statewideSwing(meta, pollData);
     if (!s) throw new Error("No poll average available");
     const primaries = {};
-    ["ALP", "LNP", "ONP", "GRN"].forEach((k) => {
+    ["ALP", "LNP", "ONP", "GRN"].sort(byPartyOrder).forEach((k) => {
       const v = last((p) => (p.primary && p.primary[k] != null ? p.primary[k] : null));
       if (v != null) primaries[k] = v;
     });
