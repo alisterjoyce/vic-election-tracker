@@ -753,6 +753,55 @@
     return decodeURIComponent(location.hash.replace(/^#/, "")).trim().toLowerCase();
   }
 
+  /* ---- Tabs (seat and region pages): a scrollable tab bar and its panels ---- */
+  // tabs: [[key, label]]; panels are tabPanel(key, ...) elements with id "<prefix>-<key>".
+  function tabBar(tabs, current, prefix, label) {
+    return `<div class="tabs" role="tablist" aria-label="${escapeHtml(label)}">${tabs.map(([key, text]) =>
+      `<button type="button" role="tab" class="tab" id="${prefix}-tab-${key}" data-tab="${key}" aria-controls="${prefix}-${key}" aria-selected="${key === current}" tabindex="${key === current ? 0 : -1}">${escapeHtml(text)}</button>`).join("")}</div>`;
+  }
+  function tabPanel(key, current, prefix, html) {
+    return `<div class="tab-panel" role="tabpanel" id="${prefix}-${key}" aria-labelledby="${prefix}-tab-${key}"${key === current ? "" : " hidden"}>${html}</div>`;
+  }
+  // Wires the tab bar inside root: click, arrow keys, Home and End, and any [data-tab-go="<key>"] link in root.
+  // onShow(key, how) runs after each change ("init" first, "user" on a click or key). Returns show(key).
+  function initTabs(root, onShow) {
+    const bar = root.querySelector('[role="tablist"]');
+    const tabs = [...bar.querySelectorAll('[role="tab"]')];
+    function show(key, { focus = false, how = "user" } = {}) {
+      const t = tabs.find((x) => x.dataset.tab === key) || tabs[0];
+      tabs.forEach((x) => {
+        const on = x === t;
+        x.setAttribute("aria-selected", String(on));
+        x.tabIndex = on ? 0 : -1;
+        const p = document.getElementById(x.getAttribute("aria-controls"));
+        if (p) p.hidden = !on;
+      });
+      if (focus) t.focus();
+      bar.scrollLeft = Math.max(0, t.offsetLeft - (bar.clientWidth - t.offsetWidth) / 2);   // keep the chosen tab in view on a phone
+      if (onShow) onShow(t.dataset.tab, how);
+      return t.dataset.tab;
+    }
+    bar.addEventListener("click", (e) => { const t = e.target.closest('[role="tab"]'); if (t) show(t.dataset.tab); });
+    bar.addEventListener("keydown", (e) => {
+      const i = tabs.indexOf(document.activeElement);
+      if (i < 0) return;
+      const j = { ArrowRight: (i + 1) % tabs.length, ArrowLeft: (i - 1 + tabs.length) % tabs.length, Home: 0, End: tabs.length - 1 }[e.key];
+      if (j == null) return;
+      e.preventDefault();
+      show(tabs[j].dataset.tab, { focus: true });
+    });
+    root.addEventListener("click", (e) => {
+      const go = e.target.closest("[data-tab-go]");
+      if (!go) return;
+      e.preventDefault();
+      show(go.dataset.tabGo);
+      bar.scrollIntoView({ block: "start" });
+    });
+    const current = tabs.find((x) => x.getAttribute("aria-selected") === "true") || tabs[0];
+    show(current.dataset.tab, { how: "init" });
+    return show;
+  }
+
   /* ---- Watchlist (localStorage; works without a backend, degrades to this page only) ---- */
   const WATCH_KEY = "vic2026.watchlist";
   let memoryWatch = null;   // fallback when storage is blocked
@@ -1521,7 +1570,7 @@
   window.App = {
     PARTIES, STATUSES, COALITION, partyOrder, byValue, candidateOrder, surnameOf, loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, partyBadge, statusBadge,
     slugify, parseDate, fmtDate, fmtMonth, fmtDateTime, dataUpdatedText, fmtPrice, fmtMargin, fmtSwing, melbourneToday, daysBetween,
-    hashId, cssVar, currentTheme, showError, copyLink,
+    hashId, cssVar, currentTheme, showError, copyLink, tabBar, tabPanel, initTabs,
     DAY, preparePolls, pollExclusion, commissionLabel, AVG_MIN_SAMPLE, smoothedSeries, smoothedLatest, fmtRange, pollRecords, statewideSwing, swingAdjusted, projectSeats, modelSeats, seatCalls, apportion, hemicycle, seatRangeChart, modelsHemicycle, BLOC_LABEL, BLOC_COLOR, BLOCS, blocOf, modelLink, quotaBars,
     getWatchlist, setWatchlist, isWatched, toggleWatch, starButton, storageWorks,
     buildSearchIndex, searchItems,
