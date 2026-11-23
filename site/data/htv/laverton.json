@@ -1326,8 +1326,25 @@
       "type": "Combined",
       "registered_on": "2026-11-18",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=15e22f7b-60fd-4901-a0f1-638ad0a1fa87%2Fthe%20republican%20-%20combined%20-%20western%20metro%2C%20laverton.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "unreadable",
-      "note": "unreadable, see card"
+      "status": "read",
+      "order": [
+        "CHITTEDI, Suchithra",
+        "MENDELSOHN, Emma",
+        "CONNOLLY, Sarah",
+        "GARCIA, Jo",
+        "MANSOURI JAJAEE, Shohre",
+        "RUDD, Van Thanh",
+        "PAREDES, Rufo",
+        "NOUNE, Ghada",
+        "NGUYEN, Lucy"
+      ],
+      "via": "image",
+      "ranks": {
+        "ALP": 3,
+        "ONP": 7,
+        "LNP": 8,
+        "GRN": 9
+      }
     },
     {
       "registration": "479",
@@ -1396,8 +1413,25 @@
       "type": "Combined",
       "registered_on": "2026-11-17",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=eaffca55-5d42-4eaa-8333-240419b06177%2Fhtv%20the%20west%20party%20emma%20mendlesohn%20laverton%20%28%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "unreadable",
-      "note": "unreadable, see card"
+      "status": "read",
+      "order": [
+        "MENDELSOHN, Emma",
+        "CHITTEDI, Suchithra",
+        "MANSOURI JAJAEE, Shohre",
+        "GARCIA, Jo",
+        "NOUNE, Ghada",
+        "NGUYEN, Lucy",
+        "PAREDES, Rufo",
+        "RUDD, Van Thanh",
+        "CONNOLLY, Sarah"
+      ],
+      "via": "image",
+      "ranks": {
+        "LNP": 5,
+        "GRN": 6,
+        "ONP": 7,
+        "ALP": 9
+      }
     },
     {
       "registration": "1615",
@@ -1495,7 +1529,7 @@
       "type": "Combined",
       "registered_on": "2026-11-19",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f34cde29-622f-453c-9a81-d2efbc225ce8%2Femma%20vietnamese%20-%20reduced%20by%20vec.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "same_as",
+      "status": "read",
       "order": [
         "MENDELSOHN, Emma",
         "CHITTEDI, Suchithra",
@@ -1508,12 +1542,12 @@
         "CONNOLLY, Sarah"
       ],
       "via": "image",
-      "same_as": [
-        "1615",
-        "1617",
-        "1619"
-      ],
-      "note": "same order as the English card"
+      "ranks": {
+        "LNP": 5,
+        "GRN": 6,
+        "ONP": 7,
+        "ALP": 9
+      }
     }
   ],
   "no_card": []

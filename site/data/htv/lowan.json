@@ -694,8 +694,38 @@
       "type": "Combined",
       "registered_on": "2026-11-19",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d1847253-e155-47c2-8cf8-3c8679b9f879%2Flowan_emma_kealy_htv_vec_no_trims_updated_rogue_print.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "unreadable",
-      "note": "unreadable, see card"
+      "status": "read",
+      "order": [
+        "KEALY, Emma",
+        "ELMES, Lee-Ann",
+        "HYSLOP, Karen",
+        "PARTRIDGE, Andrew",
+        "BUTLER, Kieran",
+        "MORAN, Jeff",
+        "DOWNEY, Jos",
+        "PAVLOVICH, Sue"
+      ],
+      "via": "image",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 4,
+        "GRN": 6,
+        "ALP": 8
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 4,
+          "of_n": 8
+        },
+        {
+          "ahead": "GRN",
+          "of": "ALP",
+          "ahead_n": 6,
+          "of_n": 8
+        }
+      ]
     },
     {
       "registration": "844",
