@@ -820,7 +820,8 @@
       ["Scenarios", "pendulum.html#scenarios"], ["Timeline", "timeline.html"]] },
     { label: "Lower house", items: [["Seats", "lower.html"], ["Your ballot", "ballot.html"], ["Candidates", "candidate.html"], ["My seats", "myseats.html"]] },
     { label: "Upper house", items: [["Regions", "upper.html"], ["Quota calculator", "upper.html#quota"]] },
-    { label: "About", items: [["Methodology", "about.html"], ["Data", "data/"], ["Polls", "poll.html"], ["Policies", "policies.html"]] },
+    { label: "About", items: [["Methodology", "about.html"], ["Data", "data/"], ["Polls", "poll.html"], ["Policies", "policies.html"],
+      ["Independence", "independence.html"], ["Disclaimer", "disclaimer.html"], ["Privacy", "privacy.html"], ["Terms of use", "terms.html"]] },
   ];
 
   function initNav() {
@@ -1177,7 +1178,18 @@
   }
 
   /* ---- Footer + sample banner ---- */
+  // Every page's static footer carries the trust links and the authorisation line (so they show without JavaScript);
+  // a page that lacks them gets them here.
+  function ensureFooterLegal() {
+    const box = document.querySelector(".site-footer .container");
+    if (!box || box.querySelector(".footer-legal")) return;
+    const link = (href, text) => `<a href="${new URL(href, ROOT).href}">${text}</a>`;
+    box.insertAdjacentHTML("beforeend", `<p class="footer-legal">${link("independence.html", "Independence")} · ${link("disclaimer.html", "Disclaimer")} · `
+      + `${link("privacy.html", "Privacy")} · ${link("terms.html", "Terms of use")}</p><p class="footer-auth">Authorised by Alister Joyce, Melbourne</p>`);
+  }
+
   function renderChrome(meta) {
+    ensureFooterLegal();
     const footer = document.getElementById("last-updated");
     if (footer) {
       if (meta && meta.last_updated) {

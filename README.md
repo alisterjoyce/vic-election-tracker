@@ -30,6 +30,7 @@ A static tracker for the 2026 Victorian state election (polling day Saturday 28 
 - **Results** (`results.html`, from 6 pm on 28 Nov): the seat tally (called, leading, undecided) against the 45-seat line, seats changing hands, every seat with its leader, 2CP share, swing and count progress, and upper-house quotas filled by region. Each seat page gets a 2026 panel (count progress, candidate votes, the booth map coloured by 2CP leader) and each region page a quotas-filled panel. "Called" is this site's projection, labelled as such; the VEC is credited on every view. The "Results" menu item appears once counting starts.
 - **Policies** (`policies.html`, About menu): a party-by-issue matrix of each major party's published position on 15 issues, from [Australian Election Tracker (OZE)](https://electiontracker.au/elections/vic/2026/parties/matrix)'s policy ledger (CC BY 4.0), copied at every refresh. Each cell opens the claims behind it, each linked to its source; the ledger's caveat is shown as it asks, with a note that it is a ledger of published claims, not a rating. The Liberal and National parties show combined (shared Coalition policies) or separately. Shareable as `policies.html#housing-planning/labor`.
 - **Voting** (`voting.html`): key dates and hours, where to vote (a district picker linking to each seat page's voting centres), how to fill in both ballot papers formally, and help with voting (assisted voting, accessible centres, telephone voting for blind or low-vision voters, interpreters and Auslan, postal and interstate voting), each item linked to the VEC page it comes from.
+- **Independence, Disclaimer, Privacy, Terms of use** (`independence.html`, `disclaimer.html`, `privacy.html`, `terms.html`): linked from the About menu and every page's footer, which also carries the authorisation line.
 - **About** (`about.html`): what each number means, sources and refresh times, limits, corrections and credits.
 - **Navigation:** four groups (Overview, Lower house, Upper house, About) with dropdowns on desktop and a Menu button on phones, built by `common.js`.
 - **On every page:** a key-dates strip under the header (countdowns plus a "Today:" note, from `meta.json` → `key_dates`), and a search box that matches districts, regions, candidates, suburbs and postcodes, grouped as Seats, Candidates (with party colours), Suburbs and Postcodes, with arrow keys, Enter and a "/" shortcut. On the home page it heads the headline card, with a search button in the header.
@@ -41,7 +42,8 @@ A static tracker for the 2026 Victorian state election (polling day Saturday 28 
 
 ```
 site/                  # published by GitHub Pages
-  index.html, lower.html, upper.html, candidate.html, pendulum.html, poll.html, ballot.html, voting.html, myseats.html, about.html
+  index.html, lower.html, upper.html, candidate.html, pendulum.html, poll.html, ballot.html, voting.html, myseats.html, about.html,
+  independence.html, disclaimer.html, privacy.html, terms.html
   css/style.css
   js/common.js, home.js, lower.js, upper.js, candidate.js, sharecard.js, ballot.js, voting.js
   data/

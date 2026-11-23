@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy · Vic Election 2026</title>
+  <meta name="description" content="Privacy policy for the Vic Election 2026 tracker: no accounts, no tracking or analytics; what your browser stores and what the host logs.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d4ed8'/%3E%3Cpath d='M8 17l5 5 11-12' stroke='white' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#171b21" media="(prefers-color-scheme: dark)">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Vic Election">
+  <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Vic Election <span>2026</span></a>
+      <button type="button" class="icon-btn nav-toggle" aria-controls="main-nav" aria-expanded="false"><span class="nav-burger" aria-hidden="true"></span>Menu</button>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="lower.html">Lower house</a>
+        <a href="upper.html">Upper house</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="search"></div>
+      <button id="theme-toggle" class="icon-btn" type="button">Theme</button>
+    </div>
+  </header>
+  <div class="key-dates" id="key-dates" role="region" aria-label="Key dates"></div>
+
+  <main class="container prose">
+    <div id="sample-banner" class="banner" hidden></div>
+
+    <section class="hero">
+      <h1>Privacy</h1>
+      <p class="muted">The short version: no accounts, no cookies, no tracking or analytics. Your settings stay in your own browser.</p>
+      <p class="muted small">Last updated 23 Nov 2026.</p>
+    </section>
+
+    <section class="card" id="stored" aria-labelledby="stored-h">
+      <h2 id="stored-h">What the site stores, in your browser only</h2>
+      <ul>
+        <li><strong>Settings:</strong> your light or dark theme choice (<code>localStorage</code>, key <code>theme</code>).</li>
+        <li><strong>Your watchlist:</strong> the seats you star for "My seats" (<code>localStorage</code>).</li>
+        <li><strong>Offline copies:</strong> when you open the site, your browser keeps copies of its pages, data files and photos (a service worker's cache) so the site loads faster and works offline.</li>
+      </ul>
+      <p>All of this stays on your device. The site has no server of its own to send it to, and you can clear it at any time by clearing this site's data in your browser. The site works without it.</p>
+    </section>
+    <section class="card" id="location" aria-labelledby="location-h">
+      <h2 id="location-h">Your location</h2>
+      <p>"Find my seat" on the home page asks your browser for your location only when you tap it. The location is used in your browser to work out which district you're in, and is not sent to this site or anyone else, and not stored. You can decline, and search by suburb or postcode instead.</p>
+    </section>
+    <section class="card" id="no-tracking" aria-labelledby="no-tracking-h">
+      <h2 id="no-tracking-h">No tracking or analytics</h2>
+      <p>The site uses no cookies, no analytics, no advertising, no tracking pixels and no social-media widgets. It doesn't know who you are or what you looked at. Sharing an image uses your own device's share sheet, or downloads the image.</p>
+    </section>
+    <section class="card" id="hosting" aria-labelledby="hosting-h">
+      <h2 id="hosting-h">Hosting and other servers</h2>
+      <ul>
+        <li><strong>GitHub Pages</strong> hosts the site. Like any web host, GitHub logs each request; GitHub says it logs and stores visitors' IP addresses for security purposes (<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">GitHub Pages: data collection</a>; <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>). The tracker's author has no access to those logs.</li>
+        <li><strong>cdnjs</strong> (cdnjs.cloudflare.com) serves the chart, map and share-image libraries some pages load; your browser requests them from there, as from any server.</li>
+        <li>Links to other sites (the VEC, news outlets, party pages) are governed by those sites' own privacy policies once you follow them.</li>
+      </ul>
+    </section>
+    <section class="card" id="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h">Questions</h2>
+      <p>Questions about this policy: <a href="https://github.com/alisterjoyce/vic-election-tracker/issues">open an issue on GitHub</a>. If this policy changes, the date at the top of the page changes with it.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p id="last-updated">Data last updated: loading…</p>
+      <p><a href="about.html">About and methodology</a> · Data: VEC, ABC, Wikipedia, Vicmap, electiontracker.au. Corrections welcome.</p>
+      <p class="footer-legal"><a href="independence.html">Independence</a> · <a href="disclaimer.html">Disclaimer</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms of use</a></p>
+      <p class="footer-auth">Authorised by Alister Joyce, Melbourne</p>
+    </div>
+  </footer>
+
+  <script defer src="js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Disclaimer · Vic Election 2026</title>
+  <meta name="description" content="Disclaimer for the Vic Election 2026 tracker: an unofficial summary of public information, provided as is.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d4ed8'/%3E%3Cpath d='M8 17l5 5 11-12' stroke='white' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#171b21" media="(prefers-color-scheme: dark)">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Vic Election">
+  <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Vic Election <span>2026</span></a>
+      <button type="button" class="icon-btn nav-toggle" aria-controls="main-nav" aria-expanded="false"><span class="nav-burger" aria-hidden="true"></span>Menu</button>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="lower.html">Lower house</a>
+        <a href="upper.html">Upper house</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="search"></div>
+      <button id="theme-toggle" class="icon-btn" type="button">Theme</button>
+    </div>
+  </header>
+  <div class="key-dates" id="key-dates" role="region" aria-label="Key dates"></div>
+
+  <main class="container prose">
+    <div id="sample-banner" class="banner" hidden></div>
+
+    <section class="hero">
+      <h1>Disclaimer</h1>
+      <p class="muted">What you can and can't rely on this site for.</p>
+      <p class="muted small">Last updated 23 Nov 2026.</p>
+    </section>
+
+    <section class="card" id="unofficial" aria-labelledby="unofficial-h">
+      <h2 id="unofficial-h">Unofficial information</h2>
+      <p>This is an unofficial tracker. It gathers published information about the 2026 Victorian state election and links to its sources. It is not the Victorian Electoral Commission (VEC). The VEC's own website is the authority on enrolment, candidates, ballot papers, where and when to vote, and results: <a href="https://www.vec.vic.gov.au/">vec.vic.gov.au</a>.</p>
+    </section>
+    <section class="card" id="accuracy" aria-labelledby="accuracy-h">
+      <h2 id="accuracy-h">Accuracy</h2>
+      <p>The tracker is refreshed automatically four times a day and checked by hand, but it can be out of date or wrong: sources change, automatic matching can make mistakes, and a refresh can fail. Information is provided as is, without any warranty. Check anything important with the original source, which is linked wherever the information appears.</p>
+    </section>
+    <section class="card" id="projections" aria-labelledby="projections-h">
+      <h2 id="projections-h">Projections, models and odds</h2>
+      <ul>
+        <li>The poll of polls, its ranges, the uniform-swing seat projection and the election-night calls are this site's own calculations from published figures. They are estimates, not predictions, and the method is on the <a href="about.html">About</a> page.</li>
+        <li>Seat models are other organisations' work, credited and linked where shown.</li>
+        <li>Betting prices are shown as information about the market, as at the date given. They are not advice or encouragement to bet.</li>
+        <li>Election-night figures are the VEC's, read from its results pages; a seat "called by this site" is our projection, not the VEC's declaration.</li>
+      </ul>
+    </section>
+    <section class="card" id="third-party" aria-labelledby="third-party-h">
+      <h2 id="third-party-h">Other people's content</h2>
+      <p>Headlines, photos, how-to-vote cards, policy statements and seat models belong to their owners and are credited and linked. A link to another site isn't an endorsement of it, and the tracker isn't responsible for other sites' content. How-to-vote cards are each party's or candidate's own recommendation.</p>
+    </section>
+    <section class="card" id="not-advice" aria-labelledby="not-advice-h">
+      <h2 id="not-advice-h">Not advice</h2>
+      <p>Nothing on this site is advice about how to vote, or legal, financial or betting advice.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p id="last-updated">Data last updated: loading…</p>
+      <p><a href="about.html">About and methodology</a> · Data: VEC, ABC, Wikipedia, Vicmap, electiontracker.au. Corrections welcome.</p>
+      <p class="footer-legal"><a href="independence.html">Independence</a> · <a href="disclaimer.html">Disclaimer</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms of use</a></p>
+      <p class="footer-auth">Authorised by Alister Joyce, Melbourne</p>
+    </div>
+  </footer>
+
+  <script defer src="js/common.js"></script>
+</body>
+</html>

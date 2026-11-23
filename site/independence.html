@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Independence · Vic Election 2026</title>
+  <meta name="description" content="The Vic Election 2026 tracker is independent: not affiliated with any party, candidate or the Victorian Electoral Commission, with no paid content.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d4ed8'/%3E%3Cpath d='M8 17l5 5 11-12' stroke='white' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#171b21" media="(prefers-color-scheme: dark)">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Vic Election">
+  <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Vic Election <span>2026</span></a>
+      <button type="button" class="icon-btn nav-toggle" aria-controls="main-nav" aria-expanded="false"><span class="nav-burger" aria-hidden="true"></span>Menu</button>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="lower.html">Lower house</a>
+        <a href="upper.html">Upper house</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="search"></div>
+      <button id="theme-toggle" class="icon-btn" type="button">Theme</button>
+    </div>
+  </header>
+  <div class="key-dates" id="key-dates" role="region" aria-label="Key dates"></div>
+
+  <main class="container prose">
+    <div id="sample-banner" class="banner" hidden></div>
+
+    <section class="hero">
+      <h1>Independence</h1>
+      <p class="muted">Who runs this tracker, and what it doesn't do.</p>
+      <p class="muted small">Last updated 23 Nov 2026.</p>
+    </section>
+
+    <section class="card" id="who" aria-labelledby="who-h">
+      <h2 id="who-h">Who runs it</h2>
+      <p>The tracker is an independent project run by Alister Joyce in Melbourne, who authorises its content. Its code and data are public on <a href="https://github.com/alisterjoyce/vic-election-tracker">GitHub</a>.</p>
+    </section>
+    <section class="card" id="not-affiliated" aria-labelledby="not-affiliated-h">
+      <h2 id="not-affiliated-h">Not affiliated with anyone</h2>
+      <p>The tracker is not affiliated with, endorsed by or working for any political party or candidate, or the Victorian Electoral Commission (VEC). Nor is it affiliated with the ABC or the other publishers whose information it uses and credits. The VEC runs the election; for anything about your enrolment or your vote, go to the <a href="https://www.vec.vic.gov.au/">VEC</a>.</p>
+    </section>
+    <section class="card" id="no-paid" aria-labelledby="no-paid-h">
+      <h2 id="no-paid-h">No paid content</h2>
+      <ul>
+        <li>No advertising, sponsorship, paid placement or affiliate links. Nobody pays to appear on the site, to be listed first or to be left out.</li>
+        <li>Betting prices are shown as information about the market, not as advice or encouragement to bet.</li>
+        <li>How-to-vote cards are shown as each party or candidate registered them with the VEC, labelled as their recommendation, never ours.</li>
+      </ul>
+    </section>
+    <section class="card" id="how-neutral" aria-labelledby="how-neutral-h">
+      <h2 id="how-neutral-h">How it stays neutral</h2>
+      <ul>
+        <li><strong>No recommendations.</strong> The site never tells anyone how to vote.</li>
+        <li><strong>Neutral order.</strong> Candidates are listed in the VEC's ballot order (or by surname where there is none), and parties in one fixed alphabetical order, never by polls, odds or seats held. See <a href="about.html#numbers">Order of candidates and parties</a>.</li>
+        <li><strong>The same rules for everyone.</strong> Candidate profiles follow one set of rules: facts only, in our own words, every fact sourced, no commentary, praise or criticism.</li>
+        <li><strong>Sources shown.</strong> Every figure and fact links to where it came from, and projections made by this site (the poll of polls, uniform-swing seats, election-night calls) are labelled as such, with their method on the <a href="about.html">About</a> page.</li>
+      </ul>
+    </section>
+    <section class="card" id="corrections" aria-labelledby="corrections-h">
+      <h2 id="corrections-h">Corrections</h2>
+      <p>Spot an error or an unfair omission? <a href="https://github.com/alisterjoyce/vic-election-tracker/issues">Open an issue on GitHub</a>. Corrections are made whoever they favour.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p id="last-updated">Data last updated: loading…</p>
+      <p><a href="about.html">About and methodology</a> · Data: VEC, ABC, Wikipedia, Vicmap, electiontracker.au. Corrections welcome.</p>
+      <p class="footer-legal"><a href="independence.html">Independence</a> · <a href="disclaimer.html">Disclaimer</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms of use</a></p>
+      <p class="footer-auth">Authorised by Alister Joyce, Melbourne</p>
+    </div>
+  </footer>
+
+  <script defer src="js/common.js"></script>
+</body>
+</html>

@@ -32,7 +32,8 @@ const FETCHED_AT = "x-sw-fetched-at"; // stamped on cached data responses
 
 const SHELL = [
   "./", "index.html", "lower.html", "upper.html", "candidate.html", "pendulum.html", "poll.html",
-  "timeline.html", "myseats.html", "about.html", "results.html", "policies.html", "ballot.html", "voting.html", "data/",
+  "timeline.html", "myseats.html", "about.html", "results.html", "policies.html", "ballot.html", "voting.html",
+  "independence.html", "disclaimer.html", "privacy.html", "terms.html", "data/",
   "css/style.css",
   "js/common.js", "js/home.js", "js/lower.js", "js/upper.js", "js/candidate.js", "js/pendulum.js",
   "js/poll.js", "js/timeline.js", "js/myseats.js", "js/datafiles.js", "js/maps.js", "js/sharecard.js",
