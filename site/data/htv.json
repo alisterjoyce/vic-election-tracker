@@ -22,10 +22,10 @@
   "coverage": {
     "cards": 1423,
     "listings": 4815,
-    "orders_read": 4565,
-    "orders_image": 591,
+    "orders_read": 4586,
+    "orders_image": 597,
     "orders_same_as": 154,
-    "orders_unreadable": 68,
+    "orders_unreadable": 72,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -7179,9 +7179,29 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending",
-          "tried": "2026-11-23",
-          "note": "the VEC's link to this card didn't open"
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -11015,9 +11035,32 @@
           ]
         },
         "yan-yean": {
-          "status": "pending",
-          "tried": "2026-11-23",
-          "note": "the VEC's link to this card didn't open"
+          "status": "read",
+          "order": [
+            "KATHAGE, Lauren",
+            "OKATAN, Sinan",
+            "MOHAMMED, Gufran",
+            "BELL, Andrew",
+            "CHEERS, Troy",
+            "DOW, Amanda",
+            "HALL, James",
+            "JOHNSON, Jeremy"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6,
+            "ONP": 8
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         },
         "northern-victoria": {
           "atl": [
@@ -11639,9 +11682,32 @@
           ]
         },
         "yan-yean": {
-          "status": "pending",
-          "tried": "2026-11-23",
-          "note": "the VEC's link to this card didn't open"
+          "status": "read",
+          "order": [
+            "KATHAGE, Lauren",
+            "OKATAN, Sinan",
+            "MOHAMMED, Gufran",
+            "BELL, Andrew",
+            "CHEERS, Troy",
+            "DOW, Amanda",
+            "HALL, James",
+            "JOHNSON, Jeremy"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6,
+            "ONP": 8
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         },
         "northern-metropolitan": {
           "status": "read",
@@ -15664,9 +15730,19 @@
           }
         },
         "north-eastern-metropolitan": {
-          "status": "pending",
-          "tried": "2026-11-23",
-          "note": "the VEC's link to this card didn't open"
+          "atl": [
+            "B",
+            "K",
+            "A",
+            "L",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 2,
+            "ALP": 5
+          }
         }
       }
     },
@@ -18938,9 +19014,11 @@
           "via": "image"
         },
         "north-eastern-metropolitan": {
-          "status": "pending",
-          "tried": "2026-11-23",
-          "note": "the VEC's link to this card didn't open"
+          "status": "read",
+          "atl": [
+            "D"
+          ],
+          "via": "image"
         },
         "northern-metropolitan": {
           "status": "read",
@@ -23281,9 +23359,11 @@
       "candidate": null,
       "orders": {
         "north-eastern-metropolitan": {
-          "status": "pending",
-          "tried": "2026-11-23",
-          "note": "the VEC's link to this card didn't open"
+          "status": "read",
+          "atl": [
+            "A"
+          ],
+          "via": "image"
         }
       }
     },
@@ -28127,9 +28207,19 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending",
-          "tried": "2026-11-23",
-          "note": "the VEC's link to this card didn't open"
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         }
       }
     },
@@ -32578,9 +32668,32 @@
       "candidate": null,
       "orders": {
         "yan-yean": {
-          "status": "pending",
-          "tried": "2026-11-23",
-          "note": "the VEC's link to this card didn't open"
+          "status": "read",
+          "order": [
+            "DOW, Amanda",
+            "HALL, James",
+            "CHEERS, Troy",
+            "JOHNSON, Jeremy",
+            "OKATAN, Sinan",
+            "KATHAGE, Lauren",
+            "MOHAMMED, Gufran",
+            "BELL, Andrew"
+          ],
+          "via": "text",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4,
+            "ALP": 6,
+            "GRN": 7
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         },
         "northern-victoria": {
           "atl": [
@@ -38124,9 +38237,24 @@
       "candidate": null,
       "orders": {
         "yan-yean": {
-          "status": "pending",
-          "tried": "2026-11-23",
-          "note": "the VEC's link to this card didn't open"
+          "status": "read",
+          "order": [
+            "HALL, James",
+            "CHEERS, Troy",
+            "JOHNSON, Jeremy",
+            "DOW, Amanda",
+            "KATHAGE, Lauren",
+            "OKATAN, Sinan",
+            "MOHAMMED, Gufran",
+            "BELL, Andrew"
+          ],
+          "via": "text",
+          "ranks": {
+            "ONP": 3,
+            "LNP": 4,
+            "ALP": 5,
+            "GRN": 7
+          }
         },
         "northern-victoria": {
           "status": "read",
@@ -58544,9 +58672,24 @@
           }
         },
         "yan-yean": {
-          "status": "pending",
-          "tried": "2026-11-23",
-          "note": "the VEC's link to this card didn't open"
+          "status": "read",
+          "order": [
+            "MOHAMMED, Gufran",
+            "BELL, Andrew",
+            "OKATAN, Sinan",
+            "KATHAGE, Lauren",
+            "DOW, Amanda",
+            "CHEERS, Troy",
+            "HALL, James",
+            "JOHNSON, Jeremy"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 4,
+            "LNP": 5,
+            "ONP": 8
+          }
         },
         "northern-metropolitan": {
           "atl": [
@@ -64252,9 +64395,24 @@
       "candidate": null,
       "orders": {
         "yan-yean": {
-          "status": "pending",
-          "tried": "2026-11-23",
-          "note": "the VEC's link to this card didn't open"
+          "status": "read",
+          "order": [
+            "OKATAN, Sinan",
+            "MOHAMMED, Gufran",
+            "BELL, Andrew",
+            "KATHAGE, Lauren",
+            "CHEERS, Troy",
+            "DOW, Amanda",
+            "HALL, James",
+            "JOHNSON, Jeremy"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 2,
+            "ALP": 4,
+            "LNP": 6,
+            "ONP": 8
+          }
         },
         "northern-victoria": {
           "atl": [
@@ -83627,9 +83785,19 @@
       "candidate": null,
       "orders": {
         "north-eastern-metropolitan": {
-          "status": "pending",
-          "tried": "2026-11-23",
-          "note": "the VEC's link to this card didn't open"
+          "status": "read",
+          "atl": [
+            "K",
+            "B",
+            "L",
+            "A",
+            "C"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -83648,9 +83816,19 @@
       "candidate": null,
       "orders": {
         "north-eastern-metropolitan": {
-          "status": "pending",
-          "tried": "2026-11-23",
-          "note": "the VEC's link to this card didn't open"
+          "status": "read",
+          "atl": [
+            "K",
+            "B",
+            "L",
+            "A",
+            "C"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -92589,14 +92767,47 @@
           ]
         },
         "yan-yean": {
-          "status": "pending",
-          "tried": "2026-11-23",
-          "note": "the VEC's link to this card didn't open"
+          "status": "read",
+          "order": [
+            "DOW, Amanda",
+            "HALL, James",
+            "CHEERS, Troy",
+            "JOHNSON, Jeremy",
+            "OKATAN, Sinan",
+            "KATHAGE, Lauren",
+            "MOHAMMED, Gufran",
+            "BELL, Andrew"
+          ],
+          "via": "text",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4,
+            "ALP": 6,
+            "GRN": 7
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending",
-          "tried": "2026-11-23",
-          "note": "the VEC's link to this card didn't open"
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         },
         "northern-victoria": {
           "atl": [
@@ -96420,9 +96631,8 @@
       "candidate": null,
       "orders": {
         "north-eastern-metropolitan": {
-          "status": "pending",
-          "tried": "2026-11-23",
-          "note": "the VEC's link to this card didn't open"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -97597,9 +97807,11 @@
       "candidate": null,
       "orders": {
         "north-eastern-metropolitan": {
-          "status": "pending",
-          "tried": "2026-11-23",
-          "note": "the VEC's link to this card didn't open"
+          "status": "read",
+          "atl": [
+            "L"
+          ],
+          "via": "image"
         }
       }
     },
@@ -99659,9 +99871,8 @@
       "candidate": null,
       "orders": {
         "north-eastern-metropolitan": {
-          "status": "pending",
-          "tried": "2026-11-23",
-          "note": "the VEC's link to this card didn't open"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -100196,9 +100407,19 @@
       "candidate": null,
       "orders": {
         "north-eastern-metropolitan": {
-          "status": "pending",
-          "tried": "2026-11-23",
-          "note": "the VEC's link to this card didn't open"
+          "atl": [
+            "I",
+            "E",
+            "F",
+            "G",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 4,
+            "LNP": 5
+          }
         }
       }
     },
@@ -100279,9 +100500,24 @@
       "candidate": null,
       "orders": {
         "yan-yean": {
-          "status": "pending",
-          "tried": "2026-11-23",
-          "note": "the VEC's link to this card didn't open"
+          "status": "read",
+          "order": [
+            "CHEERS, Troy",
+            "JOHNSON, Jeremy",
+            "HALL, James",
+            "DOW, Amanda",
+            "OKATAN, Sinan",
+            "KATHAGE, Lauren",
+            "MOHAMMED, Gufran",
+            "BELL, Andrew"
+          ],
+          "via": "text",
+          "ranks": {
+            "ONP": 2,
+            "LNP": 4,
+            "ALP": 6,
+            "GRN": 7
+          }
         }
       }
     },
@@ -101845,9 +102081,19 @@
       "candidate": null,
       "orders": {
         "north-eastern-metropolitan": {
-          "status": "pending",
-          "tried": "2026-11-23",
-          "note": "the VEC's link to this card didn't open"
+          "atl": [
+            "E",
+            "I",
+            "G",
+            "H",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 3,
+            "LNP": 4
+          }
         }
       }
     },
@@ -104704,9 +104950,19 @@
       "candidate": null,
       "orders": {
         "north-eastern-metropolitan": {
-          "status": "pending",
-          "tried": "2026-11-23",
-          "note": "the VEC's link to this card didn't open"
+          "atl": [
+            "K",
+            "B",
+            "L",
+            "A",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -128626,9 +128882,8 @@
       "candidate": null,
       "orders": {
         "prahran": {
-          "status": "pending",
-          "tried": "2026-11-23",
-          "note": "the VEC's link to this card didn't open"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -128647,9 +128902,8 @@
       "candidate": null,
       "orders": {
         "prahran": {
-          "status": "pending",
-          "tried": "2026-11-23",
-          "note": "the VEC's link to this card didn't open"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -130684,9 +130938,34 @@
       "candidate": null,
       "orders": {
         "werribee": {
-          "status": "pending",
-          "tried": "2026-11-23",
-          "note": "the VEC's link to this card didn't open"
+          "status": "read",
+          "order": [
+            "KUMAR, Tushar",
+            "LISTER, John",
+            "MUNRO, Sue",
+            "HOPPER, Paul",
+            "ORCHARD, Jeremy",
+            "KAYAGURLA, Sandhya",
+            "RAIZADA, Monica Sharma",
+            "CLARK, Reece",
+            "EMERSON, Matt",
+            "PATERAS, Paul"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 2,
+            "LNP": 8,
+            "ONP": 10
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 1,
+              "of_n": 8
+            }
+          ]
         }
       }
     },

@@ -14,10 +14,10 @@
   "coverage": {
     "cards": 1423,
     "listings": 4815,
-    "orders_read": 4565,
-    "orders_image": 591,
+    "orders_read": 4586,
+    "orders_image": 597,
     "orders_same_as": 154,
-    "orders_unreadable": 68,
+    "orders_unreadable": 72,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -1350,7 +1350,7 @@
       "cards": 50,
       "read": 45,
       "same_as": 1,
-      "unreadable": 2,
+      "unreadable": 4,
       "parties": {
         "ALP": 9,
         "VS": 2,
@@ -1660,7 +1660,7 @@
     "werribee": {
       "house": "lower",
       "cards": 41,
-      "read": 39,
+      "read": 40,
       "same_as": 0,
       "unreadable": 1,
       "parties": {
@@ -1700,7 +1700,7 @@
     "yan-yean": {
       "house": "lower",
       "cards": 36,
-      "read": 28,
+      "read": 36,
       "same_as": 0,
       "unreadable": 0,
       "parties": {
@@ -1741,9 +1741,9 @@
     "north-eastern-metropolitan": {
       "house": "upper",
       "cards": 184,
-      "read": 166,
+      "read": 178,
       "same_as": 4,
-      "unreadable": 0,
+      "unreadable": 2,
       "parties": {
         "ALP": 47,
         "NONCAND": 5,
@@ -7570,7 +7570,7 @@
       "area": "werribee",
       "party": "ALP",
       "cards": 10,
-      "read": 9,
+      "read": 10,
       "differ": true,
       "flags_some": [
         {
@@ -7688,7 +7688,7 @@
       "area": "yan-yean",
       "party": "ALP",
       "cards": 8,
-      "read": 6,
+      "read": 8,
       "ranks": {
         "ALP": 1,
         "GRN": 3,
@@ -7709,7 +7709,7 @@
       "area": "yan-yean",
       "party": "GRN",
       "cards": 11,
-      "read": 10,
+      "read": 11,
       "ranks": {
         "GRN": 1,
         "ALP": 4,
@@ -7722,7 +7722,7 @@
       "area": "yan-yean",
       "party": "LIB",
       "cards": 10,
-      "read": 8,
+      "read": 10,
       "ranks": {
         "LNP": 1,
         "ONP": 4,
