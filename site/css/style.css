@@ -845,6 +845,15 @@ html.js .agg-table { min-height: 274px; }
 @media (max-width: 640px) { html.js .agg-table { min-height: 310px; } }
 @media (max-width: 420px) { html.js .agg-table { min-height: 331px; } }
 
+/* ---------- Voting (voting.html) ---------- */
+.vote-find { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
+.vote-find label { font-weight: 600; }
+.vote-find select { width: auto; min-width: 12rem; max-width: 100%; min-height: 44px; }
+.vote-find .icon-btn[aria-disabled="true"] { opacity: 0.75; }
+.vote-all { margin: 12px 0; }
+.vote-all summary { cursor: pointer; font-weight: 600; }
+.voting .table-scroll td:first-child { min-width: 9rem; }
+
 /* ---------- Candidate status history (candidate.html) ---------- */
 .status-h { font-size: 1rem; margin: 16px 0 6px; }
 .status-timeline { list-style: none; margin: 0; padding: 0 0 0 14px; border-left: 2px solid var(--border); }
@@ -1033,7 +1042,7 @@ html.js .agg-table { min-height: 274px; }
 
 /* Targets of the nav's in-page links clear the sticky header (static on phones) */
 @media (min-width: 641px) {
-  #state-map, #sc-title, #quota-card, #tl-now, #aggregates-card, #news-sources-card, #margin-diffs-card, :target { scroll-margin-top: 72px; }
+  #state-map, #sc-title, #quota-card, #tl-now, #aggregates-card, #news-sources-card, #margin-diffs-card, #where-to-vote, :target { scroll-margin-top: 72px; }
 }
 
 /* Space reserved for what common.js fills in, so the page doesn't jump once scripts run

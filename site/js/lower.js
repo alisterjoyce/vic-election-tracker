@@ -2,7 +2,10 @@
 (function () {
   "use strict";
   const App = window.App;
-  const { loadJSON, escapeHtml, partyBadge, partyShort, statusBadge, fmtDate, hashId, copyLink } = window.App;
+  const { loadJSON, escapeHtml, partyBadge, partyShort, statusBadge, fmtDate, copyLink } = window.App;
+  // "#bendigo-west" or "#bendigo-west/where-to-vote" (the Voting page's links): the district, then a section to scroll to.
+  const hashId = () => App.hashId().split("/")[0];
+  const hashSection = () => App.hashId().split("/")[1] || "";
 
   // Strongest confirmation first.
 
@@ -632,6 +635,16 @@
     }
   }
 
+  // "#<district>/where-to-vote": scroll to that section once everything above it has filled in, so nothing moves after.
+  function scrollToSection() {
+    if (!extrasDone || !hashSection()) return;
+    const want = App.hashId();
+    extrasDone.then(() => App.afterPaint()).then(() => {
+      const el = App.hashId() === want && document.getElementById(hashSection());
+      if (el) el.scrollIntoView({ block: "start" });
+    });
+  }
+
   function onHashChange() {
     const id = hashId();
     const d = districts.find((x) => x.id === id);
@@ -640,13 +653,15 @@
     renderDistrictOptions();
     renderList();
     renderDetail();
-    if (d) $("district-detail").scrollIntoView({ block: "nearest" });
+    if (d && hashSection()) scrollToSection();
+    else if (d) $("district-detail").scrollIntoView({ block: "nearest" });
   }
 
   // Photos and headlines: fetched after the first paint, then swapped into the open seat's panel
   // (avatars keep their size, so nothing moves).
+  let extrasDone = null;   // resolves once photos, headlines and the ballot paper are in (a section link scrolls after it)
   function loadExtras() {
-    Promise.all([App.loadHeadshots(), loadJSON("news").catch((err) => { console.warn(err); return null; }),
+    return Promise.all([App.loadHeadshots(), loadJSON("news").catch((err) => { console.warn(err); return null; }),
       loadJSON("vec_nominations").catch((err) => { console.warn(err); return null; })]).then(([shotData, newsData, vecData]) => {
       shots = shotData;
       news = newsData;
@@ -699,7 +714,8 @@
       });
       window.addEventListener("hashchange", onHashChange);
       onHashChange();
-      App.afterPaint(loadExtras);
+      extrasDone = App.afterPaint(loadExtras);
+      scrollToSection();
     } catch (err) {
       window.App.showError($("district-list"), err);
     }

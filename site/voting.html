@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voting · Vic Election 2026</title>
+  <meta name="description" content="How, when and where to vote in the 2026 Victorian state election: key dates and hours, voting centres for every district, filling in both ballot papers, and help with voting, from the Victorian Electoral Commission.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d4ed8'/%3E%3Cpath d='M8 17l5 5 11-12' stroke='white' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#171b21" media="(prefers-color-scheme: dark)">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Vic Election">
+  <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Vic Election <span>2026</span></a>
+      <button type="button" class="icon-btn nav-toggle" aria-controls="main-nav" aria-expanded="false"><span class="nav-burger" aria-hidden="true"></span>Menu</button>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="lower.html">Lower house</a>
+        <a href="upper.html">Upper house</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="search"></div>
+      <button id="theme-toggle" class="icon-btn" type="button">Theme</button>
+    </div>
+  </header>
+  <div class="key-dates" id="key-dates" role="region" aria-label="Key dates"></div>
+
+  <main class="container prose voting">
+    <div id="sample-banner" class="banner" hidden></div>
+
+    <section class="hero">
+      <h1>Voting</h1>
+      <p class="muted">When, where and how to vote in the Victorian state election on Saturday 28 November 2026. Everything here comes from the Victorian Electoral Commission (VEC), which runs the election, and each part links to the VEC page it is from. Check the VEC for the latest: it can change hours or venues at short notice.</p>
+      <p class="muted small">If you're enrolled, you must vote. <a href="https://www.vec.vic.gov.au/enrolment/check-my-enrolment" target="_blank" rel="noopener">Check your enrolment with the VEC ↗</a></p>
+      <p class="toc small"><a href="#dates">Key dates</a> · <a href="#where">Where to vote</a> · <a href="#formal">Filling in your ballot papers</a> · <a href="#help">Help with voting</a> · <a href="#vote-sources">Sources</a></p>
+    </section>
+
+    <section class="card" id="dates" aria-labelledby="dates-h">
+      <h2 id="dates-h">Key dates and hours</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>When</th><th>What</th><th>Source</th></tr></thead>
+          <tbody>
+            <tr><td>Wed 18 to Fri 27 Nov, 9 am to 6 pm</td><td><strong>Early voting</strong> at any early voting centre. Closed on Sunday 22 November. You don't need a reason to vote early.</td><td><a href="https://www.vec.vic.gov.au/voting/2026-state-election/voting-options" target="_blank" rel="noopener">VEC: voting options</a></td></tr>
+            <tr><td>Until 6 pm Wed 25 Nov</td><td><strong>Postal vote applications</strong> close. Anyone can apply.</td><td><a href="https://www.vec.vic.gov.au/voting/2026-state-election/postal-voting" target="_blank" rel="noopener">VEC: postal voting</a></td></tr>
+            <tr><td>Sat 28 Nov, 8 am to 6 pm</td><td><strong>Election day.</strong> Vote at any election-day voting centre in Victoria.</td><td><a href="https://www.vec.vic.gov.au/voting/2026-state-election" target="_blank" rel="noopener">VEC: notice of writ</a></td></tr>
+            <tr><td>Before 6 pm Sat 28 Nov</td><td><strong>Postal votes</strong>: post your completed vote back, or drop it at any early or election-day voting centre in Victoria. The VEC must receive it by Friday 4 December for it to count.</td><td><a href="https://www.vec.vic.gov.au/voting/2026-state-election/postal-voting" target="_blank" rel="noopener">VEC: postal voting</a></td></tr>
+            <tr><td>Every day of early voting, 9 am to 6 pm (not Sun 22 Nov); election day, 8 am to 6 pm</td><td><strong>Telephone voting</strong> for voters who are blind, have low vision or a motor impairment (see below).</td><td><a href="https://www.vec.vic.gov.au/voting/2026-state-election/voting-options/vote-by-phone" target="_blank" rel="noopener">VEC: vote by phone</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card" id="where" aria-labelledby="where-h">
+      <h2 id="where-h">Where to vote</h2>
+      <p>You can vote at any voting centre in Victoria, in your own district or another one: early voting centres from Wednesday 18 November, and election-day voting centres on Saturday 28 November. At a centre outside your district, staff help you make a declaration vote.</p>
+      <p class="vote-find">
+        <label for="vote-district">Your district</label>
+        <select id="vote-district"><option value="">Choose a district</option></select>
+        <a class="icon-btn" id="vote-go" href="lower.html" aria-disabled="true">Its voting centres</a>
+      </p>
+      <p class="muted small">Not sure of your district? Type your suburb or postcode in the search box at the top of the page. Each seat page lists its early and election-day voting centres with addresses, wheelchair access and a map.</p>
+      <details class="vote-all">
+        <summary>Every district's voting centres</summary>
+        <div id="vote-all"><p class="empty">Loading…</p></div>
+      </details>
+      <p class="small">The VEC's <a href="https://maps.vec.vic.gov.au/elections" target="_blank" rel="noopener">election venue locator ↗</a> finds the centres nearest any address, and its <a href="https://www.vec.vic.gov.au/voting/2026-state-election/voting-locations" target="_blank" rel="noopener">voting locations page ↗</a> lists every early voting centre, with access guides. Interstate and overseas voting locations are on the same page; see also <a href="https://www.vec.vic.gov.au/voting/2026-state-election/away-from-victoria" target="_blank" rel="noopener">voting from outside Victoria ↗</a>.</p>
+    </section>
+
+    <section class="card" id="formal" aria-labelledby="formal-h">
+      <h2 id="formal-h">Filling in your ballot papers</h2>
+      <p>You get two ballot papers. Fill in both, using numbers only: ticks and crosses don't count.</p>
+      <h3>Legislative Assembly (the smaller paper)</h3>
+      <p>Number <strong>every box</strong> in the order of your choice: 1 beside your first choice, 2 beside your second, and so on until there is a number in every box.</p>
+      <h3>Legislative Council (the larger paper)</h3>
+      <p>Number <strong>at least 5 boxes</strong>, either above the line or below it:</p>
+      <ul>
+        <li><strong>Above the line:</strong> number the group boxes 1, 2, 3 and so on in the order of your choice until you have numbered at least 5. Don't write any numbers below the line.</li>
+        <li><strong>Below the line:</strong> number the candidate boxes 1, 2, 3 and so on until you have numbered at least 5. You can keep numbering beyond 5. Don't write any numbers above the line.</li>
+      </ul>
+      <p class="small">Source: <a href="https://www.vec.vic.gov.au/voting/learn-to-vote/how-to-fill-out-state-ballot-papers" target="_blank" rel="noopener">VEC: how to fill out state ballot papers ↗</a>. To see your own two papers in the VEC's ballot order, with the registered how-to-vote cards beside them, open <a href="ballot.html">Your ballot</a>. How-to-vote cards are only recommendations: you can number the boxes however you like.</p>
+    </section>
+
+    <section class="card" id="help" aria-labelledby="help-h">
+      <h2 id="help-h">Help with voting</h2>
+      <dl class="defs">
+        <dt>Help at the voting centre</dt>
+        <dd>You can bring someone you trust, such as a friend, family member or carer, to help you fill in your ballot papers; they must fill them in exactly as you tell them. Election staff (in maroon vests) can also help. <a href="https://www.vec.vic.gov.au/voting/how-voting-works/what-happens-at-a-voting-centre" target="_blank" rel="noopener">VEC: what happens at a voting centre ↗</a></dd>
+        <dt>Accessible voting centres</dt>
+        <dd>Every voting centre has at least one voting screen at wheelchair height or a table-top screen, magnifying sheets, maxi pencils and information about voting in other languages; early voting centres also have an assistive hearing device. The VEC rates each venue's wheelchair access (independent, assisted, or limited or none), shown on each seat page and in its venue locator, and has an access guide for one early voting centre in each district. <a href="https://www.vec.vic.gov.au/voting/2026-state-election/voting-options/accessible-voting-options" target="_blank" rel="noopener">VEC: accessible voting options ↗</a></dd>
+        <dt>Telephone voting (blind or low-vision voters)</dt>
+        <dd>If you are blind, have low vision, or have a motor impairment and need help to vote, you can vote by phone. Call the VEC on 135 723 to register: you get a registration ID and choose a 4-digit PIN. Then call again to vote, giving only your ID and PIN; an election official fills in your ballot papers as you direct while a second official listens to check. Your vote stays secret. Open every day of early voting from 9 am to 6 pm (not Sunday 22 November) and from 8 am to 6 pm on election day. <a href="https://www.vec.vic.gov.au/voting/2026-state-election/voting-options/vote-by-phone" target="_blank" rel="noopener">VEC: vote by phone ↗</a></dd>
+        <dt>Interpreters and other languages</dt>
+        <dd>The VEC publishes election information in about 30 languages and runs a phone line for each; for any other language call 03 9209 0112. Some voting centre staff speak other languages and wear a sticker saying which. Auslan interpreting is available on demand by video at early and election-day voting centres (through the Convo app or the QR codes at early voting centres, free), and through the National Relay Service on 03 8620 1100. The VEC also has Easy English guides. <a href="https://www.vec.vic.gov.au/information-in-your-language" target="_blank" rel="noopener">VEC: information in your language ↗</a> · <a href="https://www.vec.vic.gov.au/information-in-your-language/auslan" target="_blank" rel="noopener">Auslan ↗</a> · <a href="https://www.vec.vic.gov.au/voting/learn-to-vote/easy-english-guides-on-voting" target="_blank" rel="noopener">Easy English ↗</a></dd>
+        <dt>Postal voting</dt>
+        <dd>Anyone can apply to vote by post until 6 pm on Wednesday 25 November; apply early so the ballot pack reaches you. Postal vote applications come only from the VEC or Australia Post, never from candidates or parties. Fill in your ballot papers in front of a witness, without showing them your vote. <a href="https://www.vec.vic.gov.au/voting/2026-state-election/postal-voting" target="_blank" rel="noopener">VEC: postal voting ↗</a></dd>
+        <dt>Mobile voting</dt>
+        <dd>VEC teams visit some hospitals, aged care homes, community centres, prisons and homelessness services between Tuesday 17 and Friday 27 November; ask the facility whether it has a session. <a href="https://www.vec.vic.gov.au/voting/2026-state-election/voting-options" target="_blank" rel="noopener">VEC: voting options ↗</a></dd>
+        <dt>Away from Victoria</dt>
+        <dd>Vote early, apply for a postal vote, or vote in person at another state's or territory's electoral commission head office (weekdays from 18 to 27 November) or at one of the VEC's overseas venues. <a href="https://www.vec.vic.gov.au/voting/2026-state-election/away-from-victoria" target="_blank" rel="noopener">VEC: away from Victoria ↗</a></dd>
+      </dl>
+      <p class="small">Questions about voting go to the VEC: <a href="https://www.vec.vic.gov.au/contact-us" target="_blank" rel="noopener">contact the VEC ↗</a>. This site isn't the VEC and can't help with your enrolment or your vote.</p>
+    </section>
+
+    <section class="card" id="vote-sources" aria-labelledby="vote-sources-h">
+      <h2 id="vote-sources-h">Sources</h2>
+      <p class="small">Every fact on this page is from the Victorian Electoral Commission's website, read on 23 Nov 2026 (© Victorian Electoral Commission, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>), summarised in our own words:</p>
+      <ul class="small">
+        <li><a href="https://www.vec.vic.gov.au/voting/2026-state-election" target="_blank" rel="noopener">2026 state election</a> (the notice of writ: election-day hours)</li>
+        <li><a href="https://www.vec.vic.gov.au/voting/2026-state-election/voting-options" target="_blank" rel="noopener">Voting options</a> (early, election-day, postal, phone and mobile voting)</li>
+        <li><a href="https://www.vec.vic.gov.au/voting/2026-state-election/voting-options/accessible-voting-options" target="_blank" rel="noopener">Accessible voting options</a></li>
+        <li><a href="https://www.vec.vic.gov.au/voting/2026-state-election/voting-options/vote-by-phone" target="_blank" rel="noopener">Vote by phone</a></li>
+        <li><a href="https://www.vec.vic.gov.au/voting/2026-state-election/postal-voting" target="_blank" rel="noopener">Postal voting</a></li>
+        <li><a href="https://www.vec.vic.gov.au/voting/2026-state-election/voting-locations" target="_blank" rel="noopener">Voting locations</a> and the <a href="https://maps.vec.vic.gov.au/elections" target="_blank" rel="noopener">election venue locator</a> (the voting centres on each seat page, read once a day)</li>
+        <li><a href="https://www.vec.vic.gov.au/voting/2026-state-election/away-from-victoria" target="_blank" rel="noopener">Away from Victoria</a></li>
+        <li><a href="https://www.vec.vic.gov.au/voting/how-voting-works/what-happens-at-a-voting-centre" target="_blank" rel="noopener">What happens at a voting centre</a></li>
+        <li><a href="https://www.vec.vic.gov.au/voting/learn-to-vote/how-to-fill-out-state-ballot-papers" target="_blank" rel="noopener">How to fill out state ballot papers</a></li>
+        <li><a href="https://www.vec.vic.gov.au/information-in-your-language" target="_blank" rel="noopener">Information in your language</a> and <a href="https://www.vec.vic.gov.au/information-in-your-language/auslan" target="_blank" rel="noopener">Auslan</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p id="last-updated">Data last updated: loading…</p>
+      <p><a href="about.html">About and methodology</a> · Voting information: <a href="https://www.vec.vic.gov.au/">Victorian Electoral Commission</a> (CC BY 4.0).</p>
+    </div>
+  </footer>
+
+  <script defer src="js/common.js"></script>
+  <script defer src="js/voting.js"></script>
+</body>
+</html>
