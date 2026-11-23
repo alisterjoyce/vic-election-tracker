@@ -70,7 +70,9 @@ site/photos/320/, 160/    # candidate headshots, WebP, each under 25 KB
 site/js/maps.js           # Leaflet: home choropleth with metro inset, seat-page booth map
 .github/workflows/refresh.yml   # 6 am, 10 am, 4 pm, 8 pm Melbourne (cron 0 19,23,5,9 UTC) + workflow_dispatch; runs refresh.py
                                 #   then build_share.py (best effort); commits
-                                #   site/data and deploys to Pages only if the data changed (scripts/data_changed.py)
+                                #   site/data and deploys to Pages only if the data changed (scripts/data_changed.py).
+                                #   If main moved during the run, it rebases the data commit and pushes again (3 tries);
+                                #   on a conflict with a hand edit it pushes nothing and the next refresh redoes it
 .github/workflows/deploy.yml    # deploys site/ to GitHub Pages on every push to main (and workflow_dispatch)
                                 #   Both deploy jobs try deploy-pages up to 3 times, 60 s apart, and fail the run with an
                                 #   ::error:: if all three fail (20 Nov 2026: deploy-pages twice couldn't see the artifact

@@ -63,8 +63,26 @@ jobs:
           fi
           git add site/data site/share
           git commit -m "Refresh data $(date -u +'%Y-%m-%d %H:%M UTC')"
-          git push
-          echo "changed=true" >> "$GITHUB_OUTPUT"
+          # A run takes ~11 minutes, so main often moves meanwhile (23 Nov 2026: a code push made one run's push
+          # fail with "fetch first"). Then rebase the data commit onto the new main and push again, up to 3 times.
+          # If the rebase conflicts (someone changed the same data by hand), push nothing: their commit wins and
+          # the next refresh redoes this run's data on top of it.
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "::warning title=Refresh push::main moved during the refresh; rebasing the data commit onto it (attempt $attempt of 3)"
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort
+              echo "::warning title=Refresh not pushed::This run's data conflicts with a commit pushed to main while it ran, so nothing was pushed; the next refresh will redo it."
+              echo "changed=false" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          done
+          echo "::error title=Refresh not pushed::The data commit could not be pushed after 3 rebases."
+          exit 1
 
   # Publish the refreshed site to GitHub Pages. The refresh job pushes with GITHUB_TOKEN, which
   # doesn't trigger deploy.yml, so this job deploys the new data itself (only when it changed).
