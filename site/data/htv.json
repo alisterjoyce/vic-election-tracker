@@ -22,10 +22,10 @@
   "coverage": {
     "cards": 1423,
     "listings": 4815,
-    "orders_read": 4347,
-    "orders_image": 373,
+    "orders_read": 4366,
+    "orders_image": 392,
     "orders_same_as": 158,
-    "orders_unreadable": 282,
+    "orders_unreadable": 263,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -37319,8 +37319,11 @@
       "read_on": "2026-11-20",
       "orders": {
         "ovens-valley": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "partial",
+          "order": [
+            "MANNING, Steve"
+          ],
+          "via": "image"
         }
       }
     },
@@ -37416,8 +37419,21 @@
           }
         },
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "D",
+            "E",
+            "H",
+            "J",
+            "F",
+            "C"
+          ],
+          "via": "image",
+          "ranks": {
+            "ONP": 3,
+            "LNP": 4,
+            "ALP": 6
+          }
         }
       }
     },
@@ -37457,8 +37473,21 @@
           }
         },
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "D",
+            "E",
+            "H",
+            "J",
+            "F",
+            "C"
+          ],
+          "via": "image",
+          "ranks": {
+            "ONP": 3,
+            "LNP": 4,
+            "ALP": 6
+          }
         }
       }
     },
@@ -37538,8 +37567,21 @@
           }
         },
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "D",
+            "E",
+            "H",
+            "J",
+            "F",
+            "C"
+          ],
+          "via": "image",
+          "ranks": {
+            "ONP": 3,
+            "LNP": 4,
+            "ALP": 6
+          }
         }
       }
     },
@@ -37675,8 +37717,21 @@
           }
         },
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "D",
+            "E",
+            "H",
+            "J",
+            "F",
+            "C"
+          ],
+          "via": "image",
+          "ranks": {
+            "ONP": 3,
+            "LNP": 4,
+            "ALP": 6
+          }
         }
       }
     },
@@ -37717,8 +37772,21 @@
           }
         },
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "D",
+            "E",
+            "H",
+            "J",
+            "F",
+            "C"
+          ],
+          "via": "image",
+          "ranks": {
+            "ONP": 3,
+            "LNP": 4,
+            "ALP": 6
+          }
         }
       }
     },
@@ -37859,8 +37927,21 @@
           }
         },
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "D",
+            "E",
+            "H",
+            "J",
+            "F",
+            "C"
+          ],
+          "via": "image",
+          "ranks": {
+            "ONP": 3,
+            "LNP": 4,
+            "ALP": 6
+          }
         }
       }
     },
@@ -37900,8 +37981,21 @@
           }
         },
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "D",
+            "E",
+            "H",
+            "J",
+            "F",
+            "C"
+          ],
+          "via": "image",
+          "ranks": {
+            "ONP": 3,
+            "LNP": 4,
+            "ALP": 6
+          }
         }
       }
     },
@@ -38020,8 +38114,21 @@
           "note": "the VEC's link to this card didn't open"
         },
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "D",
+            "E",
+            "H",
+            "J",
+            "F",
+            "C"
+          ],
+          "via": "image",
+          "ranks": {
+            "ONP": 3,
+            "LNP": 4,
+            "ALP": 6
+          }
         }
       }
     },
@@ -38061,8 +38168,21 @@
           }
         },
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "D",
+            "E",
+            "H",
+            "J",
+            "F",
+            "C"
+          ],
+          "via": "image",
+          "ranks": {
+            "ONP": 3,
+            "LNP": 4,
+            "ALP": 6
+          }
         }
       }
     },
@@ -38104,8 +38224,21 @@
           }
         },
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "D",
+            "E",
+            "H",
+            "J",
+            "F",
+            "C"
+          ],
+          "via": "image",
+          "ranks": {
+            "ONP": 3,
+            "LNP": 4,
+            "ALP": 6
+          }
         }
       }
     },
@@ -41767,8 +41900,24 @@
       "read_on": "2026-11-20",
       "orders": {
         "essendon": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "MOHAMUD, Anab",
+            "WILLIAMS, James",
+            "KEDEM, Michal",
+            "ADAMS, Ava",
+            "THEODOSIS, Kat",
+            "YILDIZ, Oscar",
+            "LE DEUX, Tommy",
+            "BARNES, John"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 2,
+            "ALP": 5,
+            "LNP": 7,
+            "ONP": 8
+          }
         }
       }
     },
@@ -44684,8 +44833,14 @@
       "read_on": "2026-11-20",
       "orders": {
         "brunswick": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "partial",
+          "order": [
+            "MARGELIS, John"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1
+          }
         },
         "northern-metropolitan": {
           "atl": [
@@ -44721,8 +44876,14 @@
       "read_on": "2026-11-20",
       "orders": {
         "brunswick": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "partial",
+          "order": [
+            "MARGELIS, John"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1
+          }
         },
         "northern-metropolitan": {
           "atl": [
@@ -44758,8 +44919,14 @@
       "read_on": "2026-11-21",
       "orders": {
         "footscray": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "partial",
+          "order": [
+            "CHANG, Tim"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1
+          }
         },
         "western-metropolitan": {
           "atl": [
@@ -44827,8 +44994,14 @@
       "read_on": "2026-11-21",
       "orders": {
         "footscray": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "partial",
+          "order": [
+            "CHANG, Tim"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1
+          }
         },
         "western-metropolitan": {
           "atl": [
@@ -45177,8 +45350,11 @@
       "read_on": "2026-11-20",
       "orders": {
         "pakenham": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "partial",
+          "order": [
+            "FRENCH, Raymond"
+          ],
+          "via": "image"
         }
       }
     },
@@ -45199,8 +45375,23 @@
       "read_on": "2026-11-20",
       "orders": {
         "polwarth": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "MALCOLM, Anna",
+            "COLLA, Vince",
+            "CARBINS, Brenton",
+            "RIORDAN, Richard",
+            "HUSSEIN, Hutch",
+            "HOLDEN, Jesse",
+            "TOLLEY, Lula"
+          ],
+          "via": "image",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 4,
+            "ALP": 5,
+            "GRN": 6
+          }
         },
         "western-victoria": {
           "atl": [
@@ -45289,8 +45480,25 @@
       "read_on": "2026-11-20",
       "orders": {
         "eureka": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "BALLINGER, Paul",
+            "HARKNESS, Ian Maxwell",
+            "MUIR, Emma",
+            "VENDITTI-TAYLOR, Steven",
+            "SETTLE, Michaela",
+            "ZIVKOVIC, Belinda",
+            "McCOLL, Sam",
+            "MORRISON, Wendy",
+            "RAVEN, Andy"
+          ],
+          "via": "image",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 3,
+            "ALP": 5,
+            "GRN": 7
+          }
         },
         "western-victoria": {
           "atl": [
