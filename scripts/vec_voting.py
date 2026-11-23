@@ -50,7 +50,12 @@ log = logging.getLogger("vec_voting")
 MELBOURNE = ZoneInfo("Australia/Melbourne")
 VEC = "https://www.vec.vic.gov.au"
 LOCATIONS_PAGE = VEC + "/voting/2026-state-election/voting-locations"
-STATS_PAGES = [VEC + "/results/electoral-statistics/state-election-statistics", VEC + "/voting/2026-state-election"]
+# The 2026 figures are on /voting/2026-state-election/voting-statistics (found 23 Nov 2026: a daily table from 17 Nov and
+# an "Early and postal vote statistics" Excel report by district); the other two are where 2022's were and the election page.
+STATS_PAGES = [VEC + "/voting/2026-state-election/voting-statistics",
+               VEC + "/results/electoral-statistics/state-election-statistics", VEC + "/voting/2026-state-election"]
+# Link text of the by-district report: "Early and postal vote statistics (Excel 59kB)" in 2026.
+DISTRICT_LINK_RE = r"(early|postal).*(district|statistic)|district.*(early|postal)"
 ROLL_PAGE = VEC + "/enrolment/electoral-roll-statistics"
 LOCATOR = "https://maps.vec.vic.gov.au"
 LOCATOR_PAGE = LOCATOR + "/elections"
@@ -452,8 +457,51 @@ def split_total(rows: list[dict]) -> tuple[list[dict], dict | None]:
     return [r for r in rows if r["date"] != "total"], ({k: total[k] for k in ("early", "postal_returned")} if total else None)
 
 
+def parse_daily_blocks(rows: list[list], ids: dict[str, str]) -> tuple[dict[str, dict], str | None]:
+    """The VEC's 2026 'Postal And Early Voting Summary' sheet: a two-row header (groups 'Postal Vote Applications',
+    'Postal Votes', 'Early Votes' over 'on the day' and 'Progressive Total' columns), then one block per day: a row
+    dated dd/mm/yyyy (the state) followed by a row per district. Returns each district's progressive totals from the
+    latest day's block, and that day. Columns are found by their labels, not their positions."""
+    head = next((i for i, r in enumerate(rows) if i and r and (clean(r[0]) or "").lower() == "date"), None)
+    if head is None:
+        return {}, None
+    groups, labels = rows[head - 1], [clean(c) or "" for c in rows[head]]
+    starts = [(j, clean(g)) for j, g in enumerate(groups) if clean(g)]
+    cols = {}
+    for k, (j, name) in enumerate(starts):
+        end = starts[k + 1][0] if k + 1 < len(starts) else len(labels)
+        prog = next((c for c in range(j, end) if labels[c].lower().startswith("progressive")), None)
+        key = ("early" if re.search(r"early", name, re.I) else
+               "postal_applications" if re.search(r"appl", name, re.I) else
+               "postal_returned" if re.search(r"postal", name, re.I) else None)
+        if key and prog is not None and key not in cols:
+            cols[key] = prog
+    if "early" not in cols and "postal_returned" not in cols:
+        return {}, None
+    out, day = {}, None
+    for r in rows[head + 1:]:
+        first = clean(r[0]) if r else None
+        if not first:
+            continue
+        m = re.fullmatch(r"(\d{1,2})/(\d{1,2})/(\d{4})", first)
+        if m:
+            day = f"{m.group(3)}-{int(m.group(2)):02d}-{int(m.group(1)):02d}"
+            continue
+        did = _did(first, ids)
+        if did and day:
+            out[did] = {k: (to_int(r[cols[k]]) if k in cols and cols[k] < len(r) else None)
+                        for k in ("early", "postal_returned", "postal_applications")}
+            out[did]["as_of"] = day
+    return out, day
+
+
 def parse_district_figures(book: dict[str, list[list]], ids: dict[str, str]) -> dict[str, dict]:
-    """A by-district spreadsheet of early and postal votes: the first sheet with a District column and an early column."""
+    """A by-district spreadsheet of early and postal votes: the 2026 day-by-day report (parse_daily_blocks), else the
+    first sheet with a District column and an early column."""
+    for rows in book.values():
+        figs, _ = parse_daily_blocks(rows, ids)
+        if len(figs) >= 80:
+            return figs
     for rows in book.values():
         try:
             recs = sheet_records(rows)
@@ -559,13 +607,13 @@ def fetch_early_votes(districts: list[dict], prev: dict | None, user_agent: str)
         rows = [r for r in rows if "2026-10-01" <= r["date"] <= "2026-12-31"]
         if rows:
             out["statewide"], out["source"]["statewide_url"], out["statewide_total"] = rows, url, total
-        link = find_link(page, url, r"(early|postal).*district|district.*(early|postal)")
+        link = find_link(page, url, DISTRICT_LINK_RE)
         if link:
             try:
                 figs = parse_district_figures(read_book(web.get(link).content, link), ids)
                 if figs:
                     as_of = out["statewide"][-1]["date"] if out["statewide"] else None
-                    out["districts"] = {k: {**v, "as_of": as_of} for k, v in figs.items()}
+                    out["districts"] = {k: {**v, "as_of": v.get("as_of") or as_of} for k, v in figs.items()}
                     out["source"]["districts_url"] = link
             except Exception as exc:  # noqa: BLE001
                 errors.append(f"{link}: {exc}")

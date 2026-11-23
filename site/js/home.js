@@ -431,10 +431,11 @@
     if (doc.status !== "published" || !e26.length) {
       status.innerHTML = `The VEC hasn't published 2026 figures yet; early voting opens Wed 18 Nov. In 2022, ${n(doc.comparison_2022 ? doc.comparison_2022.totals.early : 0)} people voted early and ${n(doc.comparison_2022 ? doc.comparison_2022.totals.postal_returned : 0)} postal votes came back.`;
     } else {
-      const last = e26[e26.length - 1];
+      // Dated by whichever series runs later: no early voting on Sundays, but postal votes still arrive.
+      const last = [e26[e26.length - 1], p26[p26.length - 1]].filter(Boolean).reduce((a, b) => (b.x > a.x ? b : a));
       const at = (series, x) => (series.filter((p) => p.x <= x).pop() || { y: 0 }).y;
       const lp = p26.length ? p26[p26.length - 1].y : null;
-      status.innerHTML = `To ${escapeHtml(fmtDate(last.date))}: <strong>${n(last.y)}</strong> early votes${lp != null ? ` and <strong>${n(lp)}</strong> postal votes returned` : ""}. At the same point in 2022: ${n(at(e22, last.x))} early${lp != null ? ` and ${n(at(p22, last.x))} postal` : ""}.`;
+      status.innerHTML = `To ${escapeHtml(fmtDate(last.date))}: <strong>${n(e26[e26.length - 1].y)}</strong> early votes${lp != null ? ` and <strong>${n(lp)}</strong> postal votes returned` : ""}. At the same point in 2022: ${n(at(e22, last.x))} early${lp != null ? ` and ${n(at(p22, last.x))} postal` : ""}.`;
     }
     document.getElementById("ev-note").textContent = doc.checked ? `Checked ${App.fmtDateTime(doc.checked)}` : "";
     if (!window.Chart || !canvas) return;
