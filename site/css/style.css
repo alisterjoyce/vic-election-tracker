@@ -812,6 +812,13 @@ select {
 .pd-line::before, .pd-line::after { content: ""; flex: 1; border-top: 2px dashed var(--accent); }
 .scenarios { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
 .scenario h3 { margin-top: 0; }
+.sc-models { margin-bottom: 16px; }
+.sc-models h3 { margin: 0; font-size: 1rem; }
+.sc-models-chart { min-height: 155px; }   /* five rows plus the key, filled after the first paint (measured 23 Nov 2026) */
+@media (max-width: 479px) { .sc-models-chart { min-height: 175px; } }   /* the key wraps */
+.sc-model-line { min-height: 2.9em; }   /* two lines, filled once the models load */
+@media (max-width: 499px) { .sc-models-list { min-height: 130px; } }
+@media (max-width: 369px) { .sc-models-list { min-height: 149px; } }
 .scenario h4 { margin: 14px 0 6px; font-size: 0.9rem; }
 .sc-status { font-weight: 600; }
 .sc-seats { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 4px; }

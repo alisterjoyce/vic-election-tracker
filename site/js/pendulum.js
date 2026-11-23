@@ -187,8 +187,32 @@
     return `<article class="card scenario" id="${sc.id}">
         <h3>${escapeHtml(sc.title)}</h3>
         <p class="muted small">${escapeHtml(sc.blurb)}</p>
+        <p class="small sc-model-line" data-sc="${sc.id}">${modelLine(sc)}</p>
         ${status}${body}
       </article>`;
+  }
+
+  // How many of the seat models give a scenario's result, from their seat totals (App.modelSeats), and which.
+  let modelSet = null;
+  function modelLine(sc) {
+    if (!modelSet) return "&nbsp;";
+    const ms = modelSet.models.filter((x) => BLOCS.every((b) => b === "OTH" || x.seats[b] != null));
+    if (!ms.length) return "No seat model to compare.";
+    const yes = ms.filter((x) => sc.test(x.seats));
+    const name = (x) => escapeHtml(x.model.name.replace(/ seat model$/, "").replace("Australian Election Forecasts", "AEF"));   // short, so the line fits two lines
+    return `<strong>Seat models: ${yes.length} of ${ms.length}</strong> give this result${yes.length ? ` (${yes.map(name).join(", ")})` : ""}.`;
+  }
+
+  function renderModels(doc) {
+    modelSet = App.modelSeats(doc);
+    if (!modelSet.models.length) { $("sc-models-chart").innerHTML = '<p class="empty">No seat model loaded.</p>'; return; }
+    $("sc-models-chart").innerHTML = App.seatRangeChart(modelSet, { what: "What the seat models say" });
+    $("sc-models-list").innerHTML = modelSet.models.map(({ model: m, when, basis }) =>
+      `<li>${App.modelLink(m)}${m.client ? ` for ${escapeHtml(m.client)}` : ""}${when ? `, ${escapeHtml(when)}` : ""}: ${escapeHtml(basis)}</li>`).join("");
+    document.querySelectorAll(".sc-model-line").forEach((el) => {
+      const sc = SCENARIOS.find((x) => x.id === el.dataset.sc);
+      if (sc) el.innerHTML = modelLine(sc);
+    });
   }
 
   function renderScenarios() {
@@ -241,6 +265,10 @@
       window.addEventListener("hashchange", () => { if (hashSwing() != null) setSwing(hashSwing(), { updateUrl: false }); });
       setSwing(hashSwing() ?? (average ? average.swing : 0), { updateUrl: hashSwing() != null });
       renderScenarios();
+      // seat_models.json (about 20 KB gzipped) after the first paint; the models card and each scenario's line keep their space.
+      App.afterPaint(() => loadJSON("seat_models")).then(renderModels, () => {
+        $("sc-models-chart").innerHTML = '<p class="empty">Seat models failed to load.</p>';
+      });
       // The nav's "Scenarios" link: land on them once they're drawn (the pendulum above changes height).
       if (location.hash === "#scenarios") $("sc-title").scrollIntoView();
     } catch (err) {
