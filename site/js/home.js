@@ -286,6 +286,27 @@
   // Parties whose highs and lows are marked (Other mixes different groupings from poll to poll, so not it).
   const RECORD_KEYS = ["ALP", "LNP", "GRN", "ONP"];
 
+  // Each party's 95% band as one filled path under the datasets (cheaper than two filled datasets per party).
+  // canvas.$bands: [{line, fill, pts: [{x, lo, hi}]}], set before the chart is made; a band is hidden with its line.
+  const BAND_PLUGIN = {
+    id: "bands",
+    beforeDatasetsDraw(ch) {
+      const { ctx, chartArea: a, scales: { x, y } } = ch;
+      ctx.save();
+      ctx.beginPath(); ctx.rect(a.left, a.top, a.width, a.height); ctx.clip();
+      (ch.canvas.$bands || []).forEach((b) => {
+        if (!ch.isDatasetVisible(b.line) || !b.pts.length || b.pts[0].lo == null) return;
+        ctx.beginPath();
+        b.pts.forEach((p, i) => ctx[i ? "lineTo" : "moveTo"](x.getPixelForValue(p.x), y.getPixelForValue(p.hi)));
+        for (let i = b.pts.length - 1; i >= 0; i--) ctx.lineTo(x.getPixelForValue(b.pts[i].x), y.getPixelForValue(b.pts[i].lo));
+        ctx.closePath();
+        ctx.fillStyle = b.fill;
+        ctx.fill();
+      });
+      ctx.restore();
+    },
+  };
+
   function renderChart() {
     const canvas = document.getElementById("pop-chart");
     if (!window.Chart || !canvas) return;   // Chart.js loads after the first paint (init)
@@ -294,15 +315,12 @@
     const records = App.pollRecords(polls, keys.filter((k) => RECORD_KEYS.includes(k)), chartValue);
     const ink = cssVar("--text");
     const datasets = [];
+    const bands = [];   // drawn by BAND_PLUGIN under the lines: {line (its line's dataset index), fill, pts}
     keys.forEach((k) => {
       const color = partyColor(k);
       const avg = average(k);
-      // The 95% interval: a lower edge with no line, then the upper edge filled down to it. Every third day is
-      // plenty for a smooth band (and keeps Chart.js's fill cheap), plus the last day.
-      const thin = avg.filter((pt, i) => i % 3 === 0 || i === avg.length - 1);
-      const edge = (side) => ({ type: "line", band: true, label: `${partyName(k)} 95% ${side}`, data: thin.map((pt) => ({ x: pt.x, y: pt[side] })),
-        borderWidth: 0, pointRadius: 0, pointHoverRadius: 0, backgroundColor: withAlpha(color, 0.16) });
-      datasets.push(edge("lo"), { ...edge("hi"), fill: "-1" });
+      // The 95% interval, every third day (plenty for a smooth band) plus the last.
+      bands.push({ line: datasets.length, fill: withAlpha(color, 0.16), pts: avg.filter((pt, i) => i % 3 === 0 || i === avg.length - 1) });
       datasets.push({
         type: "line", label: partyName(k), data: avg,
         borderColor: color, backgroundColor: color, borderWidth: 2.5,
@@ -329,8 +347,10 @@
     const fmtTick = (v) => App.fmtMonth(v);
 
     if (chart) chart.destroy();
+    canvas.$bands = bands;
     chart = new Chart(canvas, {
       data: { datasets },
+      plugins: [BAND_PLUGIN],
       options: {
         responsive: true,
         maintainAspectRatio: false,
@@ -368,16 +388,15 @@
         },
         plugins: {
           legend: {
-            // A party's legend item hides its line, its polls and its band together.
+            // A party's legend item hides its line and its polls together (its band follows the line).
             onClick: (e, item, legend) => {
               const ch = legend.chart, show = !ch.isDatasetVisible(item.datasetIndex);
               ch.data.datasets.forEach((d, i) => { if (d.label === item.text || d.label.startsWith(`${item.text} `)) ch.setDatasetVisibility(i, show); });
               ch.update();
             },
-            labels: { color: text, usePointStyle: true, filter: (item) => !item.text.endsWith(" polls") && !/ 95% (lo|hi)$/.test(item.text) },
+            labels: { color: text, usePointStyle: true, filter: (item) => !item.text.endsWith(" polls") },
           },
           tooltip: {
-            filter: (item) => !item.dataset.band,
             callbacks: {
               title: (items) => items.length ? fmtDate(new Date(items[0].parsed.x)) : "",
               label: (ctx) => {
