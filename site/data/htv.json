@@ -22,10 +22,10 @@
   "coverage": {
     "cards": 1423,
     "listings": 4815,
-    "orders_read": 4314,
-    "orders_image": 340,
+    "orders_read": 4333,
+    "orders_image": 359,
     "orders_same_as": 158,
-    "orders_unreadable": 315,
+    "orders_unreadable": 296,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -356,8 +356,11 @@
       "read_on": "2026-11-20",
       "orders": {
         "ashwood": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "partial",
+          "order": [
+            "JOSHI, Hitendra K."
+          ],
+          "via": "image"
         }
       }
     },
@@ -377,8 +380,11 @@
       "read_on": "2026-11-20",
       "orders": {
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "E"
+          ],
+          "via": "image"
         }
       }
     },
@@ -398,8 +404,11 @@
       "read_on": "2026-11-20",
       "orders": {
         "eastern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "I"
+          ],
+          "via": "image"
         }
       }
     },
@@ -419,8 +428,11 @@
       "read_on": "2026-11-20",
       "orders": {
         "western-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "M"
+          ],
+          "via": "image"
         }
       }
     },
@@ -441,8 +453,11 @@
       "read_on": "2026-11-20",
       "orders": {
         "ripon": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "partial",
+          "order": [
+            "WOJTKOWSKI, Krzysztof"
+          ],
+          "via": "image"
         },
         "western-victoria": {
           "atl": [
@@ -1304,8 +1319,11 @@
       "read_on": "2026-11-20",
       "orders": {
         "eastern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "J"
+          ],
+          "via": "image"
         }
       }
     },
@@ -1325,8 +1343,11 @@
       "read_on": "2026-11-20",
       "orders": {
         "kew": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "partial",
+          "order": [
+            "TORNEY, Sophie"
+          ],
+          "via": "image"
         }
       }
     },
@@ -1346,8 +1367,11 @@
       "read_on": "2026-11-20",
       "orders": {
         "kew": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "partial",
+          "order": [
+            "TORNEY, Sophie"
+          ],
+          "via": "image"
         }
       }
     },
@@ -1367,8 +1391,11 @@
       "read_on": "2026-11-20",
       "orders": {
         "kew": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "partial",
+          "order": [
+            "TORNEY, Sophie"
+          ],
+          "via": "image"
         }
       }
     },
@@ -2346,8 +2373,11 @@
       "read_on": "2026-11-23",
       "orders": {
         "north-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "J"
+          ],
+          "via": "image"
         }
       }
     },
@@ -2367,8 +2397,11 @@
       "read_on": "2026-11-20",
       "orders": {
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "B"
+          ],
+          "via": "image"
         }
       }
     },
@@ -2603,8 +2636,11 @@
       "read_on": "2026-11-20",
       "orders": {
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "B"
+          ],
+          "via": "image"
         }
       }
     },
@@ -2835,8 +2871,11 @@
       "read_on": "2026-11-20",
       "orders": {
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "B"
+          ],
+          "via": "image"
         }
       }
     },
@@ -3074,8 +3113,11 @@
       "read_on": "2026-11-20",
       "orders": {
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "B"
+          ],
+          "via": "image"
         }
       }
     },
@@ -3237,8 +3279,11 @@
       "read_on": "2026-11-20",
       "orders": {
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "B"
+          ],
+          "via": "image"
         }
       }
     },
@@ -4284,8 +4329,11 @@
       "read_on": "2026-11-20",
       "orders": {
         "eastern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "J"
+          ],
+          "via": "image"
         }
       }
     },
@@ -7348,8 +7396,11 @@
       "read_on": "2026-11-20",
       "orders": {
         "gippsland-east": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "partial",
+          "order": [
+            "MUIR, Ricky"
+          ],
+          "via": "image"
         },
         "eastern-victoria": {
           "atl": [
@@ -10624,8 +10675,33 @@
           ]
         },
         "williamstown": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "HORNE, Melissa",
+            "HOCKING, Ben",
+            "MARTIN, Oskar",
+            "YARRA, Sagar Reddy",
+            "BRIFFA, Tony",
+            "GANNON, Gill",
+            "O'REGAN, Bruce",
+            "LINDEMANN, Paul",
+            "LOUGHNAN, Catherine"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 2,
+            "LNP": 8,
+            "ONP": 9
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 2,
+              "of_n": 8
+            }
+          ]
         },
         "western-metropolitan": {
           "atl": [
@@ -11263,8 +11339,29 @@
           ]
         },
         "eastern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "G",
+            "F",
+            "D",
+            "K",
+            "I",
+            "C"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         }
       }
     },

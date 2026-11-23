@@ -14,10 +14,10 @@
   "coverage": {
     "cards": 1423,
     "listings": 4815,
-    "orders_read": 4314,
-    "orders_image": 340,
+    "orders_read": 4333,
+    "orders_image": 359,
     "orders_same_as": 158,
-    "orders_unreadable": 315,
+    "orders_unreadable": 296,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -150,9 +150,9 @@
     "ashwood": {
       "house": "lower",
       "cards": 50,
-      "read": 46,
+      "read": 47,
       "same_as": 1,
-      "unreadable": 3,
+      "unreadable": 2,
       "parties": {
         "IND": 2,
         "ALP": 9,
@@ -685,9 +685,9 @@
     "gippsland-east": {
       "house": "lower",
       "cards": 22,
-      "read": 19,
+      "read": 20,
       "same_as": 0,
-      "unreadable": 3,
+      "unreadable": 2,
       "parties": {
         "ALP": 3,
         "SFF": 1,
@@ -826,9 +826,9 @@
     "kew": {
       "house": "lower",
       "cards": 48,
-      "read": 40,
+      "read": 43,
       "same_as": 1,
-      "unreadable": 7,
+      "unreadable": 4,
       "parties": {
         "IND": 3,
         "ALP": 8,
@@ -1422,9 +1422,9 @@
     "ripon": {
       "house": "lower",
       "cards": 41,
-      "read": 39,
+      "read": 40,
       "same_as": 1,
-      "unreadable": 1,
+      "unreadable": 0,
       "parties": {
         "SFF": 1,
         "ALP": 5,
@@ -1681,9 +1681,9 @@
     "williamstown": {
       "house": "lower",
       "cards": 40,
-      "read": 36,
+      "read": 37,
       "same_as": 0,
-      "unreadable": 4,
+      "unreadable": 3,
       "parties": {
         "ALP": 10,
         "VS": 2,
@@ -1718,9 +1718,9 @@
     "eastern-victoria": {
       "house": "upper",
       "cards": 123,
-      "read": 117,
+      "read": 121,
       "same_as": 0,
-      "unreadable": 6,
+      "unreadable": 2,
       "parties": {
         "SFF": 2,
         "ALP": 30,
@@ -1741,9 +1741,9 @@
     "north-eastern-metropolitan": {
       "house": "upper",
       "cards": 184,
-      "read": 161,
+      "read": 162,
       "same_as": 4,
-      "unreadable": 5,
+      "unreadable": 4,
       "parties": {
         "ALP": 47,
         "NONCAND": 5,
@@ -1787,9 +1787,9 @@
     "northern-victoria": {
       "house": "upper",
       "cards": 131,
-      "read": 112,
+      "read": 118,
       "same_as": 1,
-      "unreadable": 18,
+      "unreadable": 12,
       "parties": {
         "SFF": 1,
         "NONCAND": 5,
@@ -1877,9 +1877,9 @@
     "western-victoria": {
       "house": "upper",
       "cards": 135,
-      "read": 126,
+      "read": 127,
       "same_as": 1,
-      "unreadable": 8,
+      "unreadable": 7,
       "parties": {
         "SFF": 2,
         "SAL": 8,
@@ -7639,7 +7639,7 @@
       "area": "williamstown",
       "party": "ALP",
       "cards": 10,
-      "read": 8,
+      "read": 9,
       "ranks": {
         "ALP": 1,
         "GRN": 2,
