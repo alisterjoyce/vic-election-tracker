@@ -13,7 +13,7 @@
     }
   },
   "status": "published",
-  "checked": "2026-11-23T19:58:19Z",
+  "checked": "2026-11-23T23:43:39Z",
   "source": {
     "statewide_url": "https://www.vec.vic.gov.au/voting/2026-state-election/voting-statistics",
     "districts_url": "https://www.vec.vic.gov.au/-/media/f700d051774e42838d13284696b32d85.xlsx"
@@ -48,537 +48,542 @@
       "date": "2026-11-22",
       "early": 0,
       "postal_returned": 1237
+    },
+    {
+      "date": "2026-11-23",
+      "early": 267666,
+      "postal_returned": 48649
     }
   ],
   "statewide_total": null,
   "districts": {
     "albert-park": {
-      "early": 8819,
-      "postal_returned": 1110,
-      "postal_applications": 9695,
-      "as_of": "2026-11-22"
+      "early": 11322,
+      "postal_returned": 1576,
+      "postal_applications": 9955,
+      "as_of": "2026-11-23"
     },
     "ashwood": {
-      "early": 8873,
-      "postal_returned": 1442,
-      "postal_applications": 9763,
-      "as_of": "2026-11-22"
+      "early": 11663,
+      "postal_returned": 1725,
+      "postal_applications": 9978,
+      "as_of": "2026-11-23"
     },
     "bass": {
-      "early": 10771,
-      "postal_returned": 1576,
-      "postal_applications": 9434,
-      "as_of": "2026-11-22"
+      "early": 14485,
+      "postal_returned": 1941,
+      "postal_applications": 9710,
+      "as_of": "2026-11-23"
     },
     "bayswater": {
-      "early": 9555,
-      "postal_returned": 1543,
-      "postal_applications": 8436,
-      "as_of": "2026-11-22"
+      "early": 12796,
+      "postal_returned": 1872,
+      "postal_applications": 8621,
+      "as_of": "2026-11-23"
     },
     "bellarine": {
-      "early": 11736,
-      "postal_returned": 893,
-      "postal_applications": 10429,
-      "as_of": "2026-11-22"
+      "early": 15071,
+      "postal_returned": 1145,
+      "postal_applications": 10600,
+      "as_of": "2026-11-23"
     },
     "benambra": {
-      "early": 9331,
-      "postal_returned": 648,
-      "postal_applications": 6934,
-      "as_of": "2026-11-22"
+      "early": 12511,
+      "postal_returned": 701,
+      "postal_applications": 7187,
+      "as_of": "2026-11-23"
     },
     "bendigo-east": {
-      "early": 10953,
-      "postal_returned": 360,
-      "postal_applications": 5460,
-      "as_of": "2026-11-22"
+      "early": 14665,
+      "postal_returned": 363,
+      "postal_applications": 5621,
+      "as_of": "2026-11-23"
     },
     "bendigo-west": {
-      "early": 8772,
-      "postal_returned": 334,
-      "postal_applications": 5218,
-      "as_of": "2026-11-22"
+      "early": 12069,
+      "postal_returned": 343,
+      "postal_applications": 5376,
+      "as_of": "2026-11-23"
     },
     "bentleigh": {
-      "early": 10114,
-      "postal_returned": 1594,
-      "postal_applications": 10363,
-      "as_of": "2026-11-22"
+      "early": 12968,
+      "postal_returned": 2151,
+      "postal_applications": 10569,
+      "as_of": "2026-11-23"
     },
     "berwick": {
-      "early": 10464,
-      "postal_returned": 1846,
-      "postal_applications": 13139,
-      "as_of": "2026-11-22"
+      "early": 14071,
+      "postal_returned": 2325,
+      "postal_applications": 13592,
+      "as_of": "2026-11-23"
     },
     "box-hill": {
-      "early": 9685,
-      "postal_returned": 2237,
-      "postal_applications": 10732,
-      "as_of": "2026-11-22"
+      "early": 12727,
+      "postal_returned": 2572,
+      "postal_applications": 10973,
+      "as_of": "2026-11-23"
     },
     "brighton": {
-      "early": 10643,
-      "postal_returned": 1641,
-      "postal_applications": 9222,
-      "as_of": "2026-11-22"
+      "early": 13596,
+      "postal_returned": 2078,
+      "postal_applications": 9350,
+      "as_of": "2026-11-23"
     },
     "broadmeadows": {
-      "early": 7399,
-      "postal_returned": 1070,
-      "postal_applications": 9090,
-      "as_of": "2026-11-22"
+      "early": 9961,
+      "postal_returned": 1593,
+      "postal_applications": 9447,
+      "as_of": "2026-11-23"
     },
     "brunswick": {
-      "early": 8938,
-      "postal_returned": 708,
-      "postal_applications": 7123,
-      "as_of": "2026-11-22"
+      "early": 12211,
+      "postal_returned": 961,
+      "postal_applications": 7358,
+      "as_of": "2026-11-23"
     },
     "bulleen": {
-      "early": 9495,
-      "postal_returned": 2102,
-      "postal_applications": 10492,
-      "as_of": "2026-11-22"
+      "early": 12738,
+      "postal_returned": 2493,
+      "postal_applications": 10727,
+      "as_of": "2026-11-23"
     },
     "bundoora": {
-      "early": 9199,
-      "postal_returned": 1380,
-      "postal_applications": 7531,
-      "as_of": "2026-11-22"
+      "early": 12194,
+      "postal_returned": 1849,
+      "postal_applications": 7732,
+      "as_of": "2026-11-23"
     },
     "carrum": {
-      "early": 9932,
-      "postal_returned": 1231,
-      "postal_applications": 8642,
-      "as_of": "2026-11-22"
+      "early": 13030,
+      "postal_returned": 1577,
+      "postal_applications": 8863,
+      "as_of": "2026-11-23"
     },
     "caulfield": {
-      "early": 8997,
-      "postal_returned": 2074,
-      "postal_applications": 12175,
-      "as_of": "2026-11-22"
+      "early": 11438,
+      "postal_returned": 2511,
+      "postal_applications": 12360,
+      "as_of": "2026-11-23"
     },
     "clarinda": {
-      "early": 10011,
-      "postal_returned": 1287,
-      "postal_applications": 8612,
-      "as_of": "2026-11-22"
+      "early": 13085,
+      "postal_returned": 1794,
+      "postal_applications": 8831,
+      "as_of": "2026-11-23"
     },
     "cranbourne": {
-      "early": 9822,
-      "postal_returned": 1243,
-      "postal_applications": 9507,
-      "as_of": "2026-11-22"
+      "early": 13124,
+      "postal_returned": 1740,
+      "postal_applications": 9865,
+      "as_of": "2026-11-23"
     },
     "croydon": {
-      "early": 9072,
-      "postal_returned": 2176,
-      "postal_applications": 10514,
-      "as_of": "2026-11-22"
+      "early": 12370,
+      "postal_returned": 2621,
+      "postal_applications": 10726,
+      "as_of": "2026-11-23"
     },
     "dandenong": {
-      "early": 10027,
-      "postal_returned": 1286,
-      "postal_applications": 7856,
-      "as_of": "2026-11-22"
+      "early": 13227,
+      "postal_returned": 1579,
+      "postal_applications": 8115,
+      "as_of": "2026-11-23"
     },
     "eildon": {
-      "early": 6911,
-      "postal_returned": 1109,
-      "postal_applications": 9243,
-      "as_of": "2026-11-22"
+      "early": 9111,
+      "postal_returned": 1417,
+      "postal_applications": 9425,
+      "as_of": "2026-11-23"
     },
     "eltham": {
-      "early": 7988,
-      "postal_returned": 1662,
-      "postal_applications": 8736,
-      "as_of": "2026-11-22"
+      "early": 11017,
+      "postal_returned": 2119,
+      "postal_applications": 8905,
+      "as_of": "2026-11-23"
     },
     "essendon": {
-      "early": 8868,
-      "postal_returned": 1254,
-      "postal_applications": 8960,
-      "as_of": "2026-11-22"
+      "early": 12112,
+      "postal_returned": 1833,
+      "postal_applications": 9244,
+      "as_of": "2026-11-23"
     },
     "eureka": {
-      "early": 10223,
-      "postal_returned": 571,
-      "postal_applications": 7627,
-      "as_of": "2026-11-22"
+      "early": 13159,
+      "postal_returned": 788,
+      "postal_applications": 7798,
+      "as_of": "2026-11-23"
     },
     "euroa": {
-      "early": 9170,
-      "postal_returned": 853,
-      "postal_applications": 7511,
-      "as_of": "2026-11-22"
+      "early": 12007,
+      "postal_returned": 997,
+      "postal_applications": 7679,
+      "as_of": "2026-11-23"
     },
     "evelyn": {
-      "early": 9438,
-      "postal_returned": 2116,
-      "postal_applications": 9036,
-      "as_of": "2026-11-22"
+      "early": 12644,
+      "postal_returned": 2493,
+      "postal_applications": 9210,
+      "as_of": "2026-11-23"
     },
     "footscray": {
-      "early": 9262,
-      "postal_returned": 706,
-      "postal_applications": 8164,
-      "as_of": "2026-11-22"
+      "early": 12023,
+      "postal_returned": 1151,
+      "postal_applications": 8407,
+      "as_of": "2026-11-23"
     },
     "frankston": {
-      "early": 7681,
-      "postal_returned": 1018,
-      "postal_applications": 8216,
-      "as_of": "2026-11-22"
+      "early": 10155,
+      "postal_returned": 1311,
+      "postal_applications": 8442,
+      "as_of": "2026-11-23"
     },
     "geelong": {
-      "early": 10126,
-      "postal_returned": 329,
-      "postal_applications": 8122,
-      "as_of": "2026-11-22"
+      "early": 12815,
+      "postal_returned": 888,
+      "postal_applications": 8258,
+      "as_of": "2026-11-23"
     },
     "gippsland-east": {
-      "early": 10596,
-      "postal_returned": 775,
-      "postal_applications": 6031,
-      "as_of": "2026-11-22"
+      "early": 13812,
+      "postal_returned": 791,
+      "postal_applications": 6165,
+      "as_of": "2026-11-23"
     },
     "gippsland-south": {
-      "early": 8508,
-      "postal_returned": 584,
-      "postal_applications": 5130,
-      "as_of": "2026-11-22"
+      "early": 11211,
+      "postal_returned": 650,
+      "postal_applications": 5282,
+      "as_of": "2026-11-23"
     },
     "glen-waverley": {
-      "early": 9552,
-      "postal_returned": 2171,
-      "postal_applications": 10170,
-      "as_of": "2026-11-22"
+      "early": 12547,
+      "postal_returned": 2541,
+      "postal_applications": 10394,
+      "as_of": "2026-11-23"
     },
     "greenvale": {
-      "early": 8268,
-      "postal_returned": 1679,
-      "postal_applications": 11457,
-      "as_of": "2026-11-22"
+      "early": 10997,
+      "postal_returned": 2390,
+      "postal_applications": 11988,
+      "as_of": "2026-11-23"
     },
     "hastings": {
-      "early": 9553,
-      "postal_returned": 1391,
-      "postal_applications": 7653,
-      "as_of": "2026-11-22"
+      "early": 12705,
+      "postal_returned": 1747,
+      "postal_applications": 7836,
+      "as_of": "2026-11-23"
     },
     "hawthorn": {
-      "early": 8475,
-      "postal_returned": 1097,
-      "postal_applications": 9055,
-      "as_of": "2026-11-22"
+      "early": 11068,
+      "postal_returned": 1460,
+      "postal_applications": 9231,
+      "as_of": "2026-11-23"
     },
     "ivanhoe": {
-      "early": 7909,
-      "postal_returned": 942,
-      "postal_applications": 6841,
-      "as_of": "2026-11-22"
+      "early": 10626,
+      "postal_returned": 1274,
+      "postal_applications": 7076,
+      "as_of": "2026-11-23"
     },
     "kalkallo": {
-      "early": 11441,
-      "postal_returned": 1778,
-      "postal_applications": 14784,
-      "as_of": "2026-11-22"
+      "early": 15260,
+      "postal_returned": 2705,
+      "postal_applications": 15507,
+      "as_of": "2026-11-23"
     },
     "kew": {
-      "early": 8029,
-      "postal_returned": 1173,
-      "postal_applications": 9304,
-      "as_of": "2026-11-22"
+      "early": 10410,
+      "postal_returned": 1564,
+      "postal_applications": 9514,
+      "as_of": "2026-11-23"
     },
     "kororoit": {
-      "early": 13019,
-      "postal_returned": 1053,
-      "postal_applications": 10358,
-      "as_of": "2026-11-22"
+      "early": 16898,
+      "postal_returned": 1688,
+      "postal_applications": 10636,
+      "as_of": "2026-11-23"
     },
     "lara": {
-      "early": 9588,
-      "postal_returned": 406,
-      "postal_applications": 6440,
-      "as_of": "2026-11-22"
+      "early": 12387,
+      "postal_returned": 897,
+      "postal_applications": 6546,
+      "as_of": "2026-11-23"
     },
     "laverton": {
-      "early": 12228,
-      "postal_returned": 915,
-      "postal_applications": 7893,
-      "as_of": "2026-11-22"
+      "early": 15834,
+      "postal_returned": 1386,
+      "postal_applications": 8108,
+      "as_of": "2026-11-23"
     },
     "lowan": {
-      "early": 8020,
-      "postal_returned": 235,
-      "postal_applications": 5539,
-      "as_of": "2026-11-22"
+      "early": 10563,
+      "postal_returned": 255,
+      "postal_applications": 5683,
+      "as_of": "2026-11-23"
     },
     "macedon": {
-      "early": 8291,
-      "postal_returned": 1202,
-      "postal_applications": 8880,
-      "as_of": "2026-11-22"
+      "early": 10708,
+      "postal_returned": 1637,
+      "postal_applications": 9052,
+      "as_of": "2026-11-23"
     },
     "malvern": {
-      "early": 9176,
-      "postal_returned": 1167,
-      "postal_applications": 9400,
-      "as_of": "2026-11-22"
+      "early": 11994,
+      "postal_returned": 1567,
+      "postal_applications": 9584,
+      "as_of": "2026-11-23"
     },
     "melbourne": {
-      "early": 10300,
-      "postal_returned": 502,
-      "postal_applications": 8673,
-      "as_of": "2026-11-22"
+      "early": 13566,
+      "postal_returned": 1331,
+      "postal_applications": 9017,
+      "as_of": "2026-11-23"
     },
     "melton": {
-      "early": 11188,
-      "postal_returned": 878,
-      "postal_applications": 9421,
-      "as_of": "2026-11-22"
+      "early": 14570,
+      "postal_returned": 1333,
+      "postal_applications": 9736,
+      "as_of": "2026-11-23"
     },
     "mildura": {
-      "early": 9017,
-      "postal_returned": 307,
-      "postal_applications": 5039,
-      "as_of": "2026-11-22"
+      "early": 11713,
+      "postal_returned": 315,
+      "postal_applications": 5171,
+      "as_of": "2026-11-23"
     },
     "mill-park": {
-      "early": 8676,
-      "postal_returned": 1355,
-      "postal_applications": 8773,
-      "as_of": "2026-11-22"
+      "early": 11533,
+      "postal_returned": 1892,
+      "postal_applications": 9040,
+      "as_of": "2026-11-23"
     },
     "monbulk": {
-      "early": 6349,
-      "postal_returned": 1556,
-      "postal_applications": 8656,
-      "as_of": "2026-11-22"
+      "early": 8556,
+      "postal_returned": 1826,
+      "postal_applications": 8841,
+      "as_of": "2026-11-23"
     },
     "mordialloc": {
-      "early": 10599,
-      "postal_returned": 1108,
-      "postal_applications": 8446,
-      "as_of": "2026-11-22"
+      "early": 13814,
+      "postal_returned": 1553,
+      "postal_applications": 8642,
+      "as_of": "2026-11-23"
     },
     "mornington": {
-      "early": 8893,
-      "postal_returned": 2229,
-      "postal_applications": 10351,
-      "as_of": "2026-11-22"
+      "early": 11879,
+      "postal_returned": 2764,
+      "postal_applications": 10521,
+      "as_of": "2026-11-23"
     },
     "morwell": {
-      "early": 13289,
-      "postal_returned": 467,
-      "postal_applications": 4861,
-      "as_of": "2026-11-22"
+      "early": 17471,
+      "postal_returned": 838,
+      "postal_applications": 5011,
+      "as_of": "2026-11-23"
     },
     "mulgrave": {
-      "early": 9978,
-      "postal_returned": 735,
-      "postal_applications": 8392,
-      "as_of": "2026-11-22"
+      "early": 12924,
+      "postal_returned": 1805,
+      "postal_applications": 8617,
+      "as_of": "2026-11-23"
     },
     "murray-plains": {
-      "early": 9183,
-      "postal_returned": 410,
-      "postal_applications": 4119,
-      "as_of": "2026-11-22"
+      "early": 12074,
+      "postal_returned": 414,
+      "postal_applications": 4243,
+      "as_of": "2026-11-23"
     },
     "narracan": {
-      "early": 9686,
-      "postal_returned": 701,
-      "postal_applications": 8433,
-      "as_of": "2026-11-22"
+      "early": 13002,
+      "postal_returned": 1358,
+      "postal_applications": 8648,
+      "as_of": "2026-11-23"
     },
     "narre-warren-north": {
-      "early": 7474,
-      "postal_returned": 651,
-      "postal_applications": 9007,
-      "as_of": "2026-11-22"
+      "early": 9993,
+      "postal_returned": 1619,
+      "postal_applications": 9280,
+      "as_of": "2026-11-23"
     },
     "narre-warren-south": {
-      "early": 10039,
-      "postal_returned": 633,
-      "postal_applications": 8866,
-      "as_of": "2026-11-22"
+      "early": 13238,
+      "postal_returned": 1475,
+      "postal_applications": 9159,
+      "as_of": "2026-11-23"
     },
     "nepean": {
-      "early": 12740,
-      "postal_returned": 1625,
-      "postal_applications": 9632,
-      "as_of": "2026-11-22"
+      "early": 16521,
+      "postal_returned": 2679,
+      "postal_applications": 9763,
+      "as_of": "2026-11-23"
     },
     "niddrie": {
-      "early": 9680,
-      "postal_returned": 543,
-      "postal_applications": 10187,
-      "as_of": "2026-11-22"
+      "early": 12619,
+      "postal_returned": 2049,
+      "postal_applications": 10402,
+      "as_of": "2026-11-23"
     },
     "northcote": {
-      "early": 9845,
-      "postal_returned": 617,
-      "postal_applications": 5938,
-      "as_of": "2026-11-22"
+      "early": 12905,
+      "postal_returned": 844,
+      "postal_applications": 6120,
+      "as_of": "2026-11-23"
     },
     "oakleigh": {
-      "early": 8975,
-      "postal_returned": 763,
-      "postal_applications": 10267,
-      "as_of": "2026-11-22"
+      "early": 11723,
+      "postal_returned": 1893,
+      "postal_applications": 10501,
+      "as_of": "2026-11-23"
     },
     "ovens-valley": {
-      "early": 6860,
-      "postal_returned": 109,
-      "postal_applications": 5953,
-      "as_of": "2026-11-22"
+      "early": 9072,
+      "postal_returned": 360,
+      "postal_applications": 6214,
+      "as_of": "2026-11-23"
     },
     "pakenham": {
-      "early": 10850,
-      "postal_returned": 864,
-      "postal_applications": 9417,
-      "as_of": "2026-11-22"
+      "early": 14243,
+      "postal_returned": 1911,
+      "postal_applications": 9717,
+      "as_of": "2026-11-23"
     },
     "pascoe-vale": {
-      "early": 8254,
-      "postal_returned": 523,
-      "postal_applications": 7982,
-      "as_of": "2026-11-22"
+      "early": 10989,
+      "postal_returned": 1448,
+      "postal_applications": 8221,
+      "as_of": "2026-11-23"
     },
     "point-cook": {
-      "early": 11687,
-      "postal_returned": 524,
-      "postal_applications": 7653,
-      "as_of": "2026-11-22"
+      "early": 14840,
+      "postal_returned": 1523,
+      "postal_applications": 7830,
+      "as_of": "2026-11-23"
     },
     "polwarth": {
-      "early": 8907,
-      "postal_returned": 176,
-      "postal_applications": 7122,
-      "as_of": "2026-11-22"
+      "early": 11879,
+      "postal_returned": 542,
+      "postal_applications": 7247,
+      "as_of": "2026-11-23"
     },
     "prahran": {
-      "early": 8560,
-      "postal_returned": 534,
-      "postal_applications": 9743,
-      "as_of": "2026-11-22"
+      "early": 10934,
+      "postal_returned": 1526,
+      "postal_applications": 9924,
+      "as_of": "2026-11-23"
     },
     "preston": {
-      "early": 8077,
-      "postal_returned": 549,
-      "postal_applications": 7624,
-      "as_of": "2026-11-22"
+      "early": 10832,
+      "postal_returned": 1348,
+      "postal_applications": 7852,
+      "as_of": "2026-11-23"
     },
     "richmond": {
-      "early": 9091,
-      "postal_returned": 339,
-      "postal_applications": 6765,
-      "as_of": "2026-11-22"
+      "early": 11780,
+      "postal_returned": 905,
+      "postal_applications": 6973,
+      "as_of": "2026-11-23"
     },
     "ringwood": {
-      "early": 8681,
-      "postal_returned": 1206,
-      "postal_applications": 10342,
-      "as_of": "2026-11-22"
+      "early": 11850,
+      "postal_returned": 2381,
+      "postal_applications": 10539,
+      "as_of": "2026-11-23"
     },
     "ripon": {
-      "early": 7627,
-      "postal_returned": 222,
-      "postal_applications": 9075,
-      "as_of": "2026-11-22"
+      "early": 10464,
+      "postal_returned": 701,
+      "postal_applications": 9192,
+      "as_of": "2026-11-23"
     },
     "rowville": {
-      "early": 10305,
-      "postal_returned": 929,
-      "postal_applications": 8921,
-      "as_of": "2026-11-22"
+      "early": 13343,
+      "postal_returned": 1907,
+      "postal_applications": 9077,
+      "as_of": "2026-11-23"
     },
     "sandringham": {
-      "early": 8779,
-      "postal_returned": 603,
-      "postal_applications": 8735,
-      "as_of": "2026-11-22"
+      "early": 11670,
+      "postal_returned": 1512,
+      "postal_applications": 8855,
+      "as_of": "2026-11-23"
     },
     "shepparton": {
-      "early": 9264,
-      "postal_returned": 228,
-      "postal_applications": 5456,
-      "as_of": "2026-11-22"
+      "early": 12635,
+      "postal_returned": 464,
+      "postal_applications": 5554,
+      "as_of": "2026-11-23"
     },
     "south-barwon": {
-      "early": 10438,
-      "postal_returned": 390,
-      "postal_applications": 10785,
-      "as_of": "2026-11-22"
+      "early": 13476,
+      "postal_returned": 1137,
+      "postal_applications": 10961,
+      "as_of": "2026-11-23"
     },
     "south-west-coast": {
-      "early": 11105,
-      "postal_returned": 72,
-      "postal_applications": 5301,
-      "as_of": "2026-11-22"
+      "early": 14343,
+      "postal_returned": 245,
+      "postal_applications": 5401,
+      "as_of": "2026-11-23"
     },
     "st-albans": {
-      "early": 11368,
-      "postal_returned": 475,
-      "postal_applications": 8433,
-      "as_of": "2026-11-22"
+      "early": 14719,
+      "postal_returned": 1634,
+      "postal_applications": 8629,
+      "as_of": "2026-11-23"
     },
     "sunbury": {
-      "early": 9936,
-      "postal_returned": 457,
-      "postal_applications": 8239,
-      "as_of": "2026-11-22"
+      "early": 12914,
+      "postal_returned": 1575,
+      "postal_applications": 8429,
+      "as_of": "2026-11-23"
     },
     "sydenham": {
-      "early": 12835,
-      "postal_returned": 594,
-      "postal_applications": 11904,
-      "as_of": "2026-11-22"
+      "early": 17004,
+      "postal_returned": 2176,
+      "postal_applications": 12201,
+      "as_of": "2026-11-23"
     },
     "tarneit": {
-      "early": 11625,
-      "postal_returned": 475,
-      "postal_applications": 8192,
-      "as_of": "2026-11-22"
+      "early": 15002,
+      "postal_returned": 1461,
+      "postal_applications": 8464,
+      "as_of": "2026-11-23"
     },
     "thomastown": {
-      "early": 8247,
-      "postal_returned": 862,
-      "postal_applications": 10426,
-      "as_of": "2026-11-22"
+      "early": 11044,
+      "postal_returned": 2034,
+      "postal_applications": 10958,
+      "as_of": "2026-11-23"
     },
     "warrandyte": {
-      "early": 9777,
-      "postal_returned": 1384,
-      "postal_applications": 9730,
-      "as_of": "2026-11-22"
+      "early": 13089,
+      "postal_returned": 2509,
+      "postal_applications": 9900,
+      "as_of": "2026-11-23"
     },
     "wendouree": {
-      "early": 10146,
-      "postal_returned": 115,
-      "postal_applications": 5923,
-      "as_of": "2026-11-22"
+      "early": 13737,
+      "postal_returned": 380,
+      "postal_applications": 6049,
+      "as_of": "2026-11-23"
     },
     "werribee": {
-      "early": 12350,
-      "postal_returned": 355,
-      "postal_applications": 7769,
-      "as_of": "2026-11-22"
+      "early": 16010,
+      "postal_returned": 1410,
+      "postal_applications": 7986,
+      "as_of": "2026-11-23"
     },
     "williamstown": {
-      "early": 9771,
-      "postal_returned": 378,
-      "postal_applications": 7208,
-      "as_of": "2026-11-22"
+      "early": 12516,
+      "postal_returned": 1241,
+      "postal_applications": 7378,
+      "as_of": "2026-11-23"
     },
     "yan-yean": {
-      "early": 10482,
-      "postal_returned": 785,
-      "postal_applications": 11117,
-      "as_of": "2026-11-22"
+      "early": 13750,
+      "postal_returned": 1467,
+      "postal_applications": 11400,
+      "as_of": "2026-11-23"
     }
   },
   "enrolment": {

@@ -15,8 +15,8 @@
   "page": "https://electiontracker.au/elections/vic/2026/polls",
   "credit": "Australian Election Tracker (OZE), electiontracker.au",
   "licence": "CC BY 4.0",
-  "generated": "2026-11-22T21:39:20.977Z",
-  "read": "2026-11-23T03:44:16Z",
+  "generated": "2026-11-23T21:40:06.180Z",
+  "read": "2026-11-23T23:38:41Z",
   "polls": [
     {
       "id": "agenda-c-synesis-2026-11-22",
@@ -612,6 +612,40 @@
         "OTH": 13.5
       },
       "source_url": "https://www.roymorgan.com/findings/10373-victorian-state-voting-intention-october-2026"
+    },
+    {
+      "id": "roy-morgan-2026-11-23",
+      "pollster": "roy-morgan",
+      "commissioner": "self",
+      "commissioner_type": "self",
+      "start_date": "2026-11-18",
+      "end_date": "2026-11-19",
+      "sample_size": 1563,
+      "primary": {
+        "ALP": 22.5,
+        "LNP": 31,
+        "ONP": 20,
+        "GRN": 13,
+        "OTH": 13.5
+      },
+      "source_url": "https://www.roymorgan.com/findings/10393-victorian-state-voting-intention-november-2026"
+    },
+    {
+      "id": "yougov-2026-11-23-news24-megapoll",
+      "pollster": "YouGov",
+      "commissioner": "news24-herald-sun",
+      "commissioner_type": "media",
+      "start_date": "2026-11-06",
+      "end_date": "2026-11-23",
+      "sample_size": 3890,
+      "primary": {
+        "ALP": 20,
+        "LNP": 31,
+        "ONP": 21,
+        "GRN": 16,
+        "OTH": 12
+      },
+      "source_url": "https://www.news24.com.au/politics/australian-politics/victorian-labor-headed-for-nightmare-state-election-recording-worst-vote-since-1902-as-coalition-set-for-landslide-victory/news-story/d5f3b4209cbfc3c3c03d8afc852d8c66"
     }
   ]
 }
