@@ -17,14 +17,14 @@
   "registration_opens": "2026-11-10",
   "registration_closes": "2026-11-20",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
-  "last_checked": "2026-11-23T01:28:16Z",
-  "pending": 92,
+  "last_checked": "2026-11-23T02:11:04Z",
+  "pending": 50,
   "coverage": {
     "cards": 1422,
     "listings": 4814,
-    "orders_read": 3916,
-    "orders_same_as": 153,
-    "orders_unreadable": 653,
+    "orders_read": 3954,
+    "orders_same_as": 154,
+    "orders_unreadable": 656,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -1638,7 +1638,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "ivanhoe": {
           "status": "read",
@@ -1669,7 +1669,29 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -2043,7 +2065,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "mill-park": {
           "status": "read",
@@ -2074,7 +2096,29 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -2092,7 +2136,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "ringwood": {
           "status": "read",
@@ -2124,7 +2168,29 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -6986,7 +7052,6 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
       "orders": {
         "glen-waverley": {
           "status": "read",
@@ -7016,7 +7081,9 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "status": "pending",
+          "tried": "2026-11-23",
+          "note": "the VEC's link to this card didn't open"
         }
       }
     },
@@ -8620,7 +8687,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-23",
       "orders": {
         "kalkallo": {
           "status": "read",
@@ -8651,7 +8718,32 @@
           ]
         },
         "yan-yean": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "KATHAGE, Lauren",
+            "OKATAN, Sinan",
+            "MOHAMMED, Gufran",
+            "BELL, Andrew",
+            "CHEERS, Troy",
+            "DOW, Amanda",
+            "HALL, James",
+            "JOHNSON, Jeremy"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6,
+            "ONP": 8
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         },
         "northern-metropolitan": {
           "status": "unreadable",
@@ -9700,7 +9792,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-23",
       "orders": {
         "mill-park": {
           "status": "read",
@@ -9735,10 +9827,36 @@
           "note": "unreadable, see card"
         },
         "yan-yean": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "KATHAGE, Lauren",
+            "OKATAN, Sinan",
+            "MOHAMMED, Gufran",
+            "BELL, Andrew",
+            "CHEERS, Troy",
+            "DOW, Amanda",
+            "HALL, James",
+            "JOHNSON, Jeremy"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6,
+            "ONP": 8
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         },
         "northern-metropolitan": {
           "status": "unreadable",
@@ -10038,7 +10156,6 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-21",
       "orders": {
         "euroa": {
           "status": "read",
@@ -10068,7 +10185,9 @@
           ]
         },
         "yan-yean": {
-          "status": "pending"
+          "status": "pending",
+          "tried": "2026-11-23",
+          "note": "the VEC's link to this card didn't open"
         },
         "northern-victoria": {
           "atl": [
@@ -10558,7 +10677,6 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-21",
       "orders": {
         "euroa": {
           "status": "read",
@@ -10616,7 +10734,9 @@
           ]
         },
         "yan-yean": {
-          "status": "pending"
+          "status": "pending",
+          "tried": "2026-11-23",
+          "note": "the VEC's link to this card didn't open"
         },
         "northern-metropolitan": {
           "status": "unreadable",
@@ -10754,7 +10874,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "mill-park": {
           "status": "read",
@@ -10811,7 +10931,8 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         },
         "northern-metropolitan": {
           "status": "unreadable",
@@ -13405,7 +13526,7 @@
       ],
       "party": "VS",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "mill-park": {
           "status": "read",
@@ -13428,7 +13549,19 @@
           }
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "B",
+            "K",
+            "A",
+            "L",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 2,
+            "ALP": 5
+          }
         }
       }
     },
@@ -13840,7 +13973,7 @@
       ],
       "party": "VS",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "ivanhoe": {
           "status": "read",
@@ -13863,7 +13996,19 @@
           }
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "B",
+            "K",
+            "A",
+            "L",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 2,
+            "ALP": 5
+          }
         }
       }
     },
@@ -14267,7 +14412,6 @@
       ],
       "party": "VS",
       "candidate": null,
-      "read_on": "2026-11-20",
       "orders": {
         "glen-waverley": {
           "status": "read",
@@ -14289,7 +14433,9 @@
           }
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "status": "pending",
+          "tried": "2026-11-23",
+          "note": "the VEC's link to this card didn't open"
         }
       }
     },
@@ -14359,7 +14505,7 @@
       ],
       "party": "VS",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "ringwood": {
           "status": "read",
@@ -14383,7 +14529,19 @@
           }
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "B",
+            "K",
+            "A",
+            "L",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 2,
+            "ALP": 5
+          }
         }
       }
     },
@@ -16765,7 +16923,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "ringwood": {
           "status": "read",
@@ -16823,7 +16981,29 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -17072,7 +17252,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-23",
       "orders": {
         "mill-park": {
           "status": "read",
@@ -17103,10 +17283,36 @@
           ]
         },
         "yan-yean": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "KATHAGE, Lauren",
+            "OKATAN, Sinan",
+            "MOHAMMED, Gufran",
+            "BELL, Andrew",
+            "CHEERS, Troy",
+            "DOW, Amanda",
+            "HALL, James",
+            "JOHNSON, Jeremy"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6,
+            "ONP": 8
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         },
         "northern-victoria": {
           "status": "unreadable",
@@ -24509,7 +24715,7 @@
       ],
       "party": "FF",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "ringwood": {
           "status": "read",
@@ -24533,7 +24739,21 @@
           }
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "F",
+            "I",
+            "G",
+            "E",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 3,
+            "LNP": 5,
+            "ALP": 6
+          }
         }
       }
     },
@@ -25292,7 +25512,6 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
       "orders": {
         "glen-waverley": {
           "status": "read",
@@ -25322,7 +25541,9 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "status": "pending",
+          "tried": "2026-11-23",
+          "note": "the VEC's link to this card didn't open"
         }
       }
     },
@@ -26355,7 +26576,7 @@
       ],
       "party": "FF",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "ivanhoe": {
           "status": "read",
@@ -26378,7 +26599,21 @@
           }
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "F",
+            "I",
+            "G",
+            "E",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 3,
+            "LNP": 5,
+            "ALP": 6
+          }
         }
       }
     },
@@ -26645,7 +26880,7 @@
       ],
       "party": "FF",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "mill-park": {
           "status": "read",
@@ -26668,7 +26903,21 @@
           }
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "F",
+            "I",
+            "G",
+            "E",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 3,
+            "LNP": 5,
+            "ALP": 6
+          }
         }
       }
     },
@@ -26806,7 +27055,7 @@
       ],
       "party": "FF",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "glen-waverley": {
           "status": "read",
@@ -26828,7 +27077,21 @@
           }
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "F",
+            "I",
+            "G",
+            "E",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 3,
+            "LNP": 5,
+            "ALP": 6
+          }
         }
       }
     },
@@ -28036,7 +28299,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "ivanhoe": {
           "status": "read",
@@ -28067,7 +28330,19 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         }
       }
     },
@@ -28329,7 +28604,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "mill-park": {
           "status": "read",
@@ -28360,7 +28635,19 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         }
       }
     },
@@ -31565,7 +31852,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "mill-park": {
           "status": "read",
@@ -31596,7 +31883,19 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         }
       }
     },
@@ -33201,7 +33500,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "ivanhoe": {
           "status": "read",
@@ -33232,7 +33531,19 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         }
       }
     },
@@ -33858,7 +34169,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "glen-waverley": {
           "status": "read",
@@ -33888,7 +34199,19 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         }
       }
     },
@@ -36065,12 +36388,16 @@
           "same_as": [
             "30",
             "32",
+            "47",
             "49",
             "50",
             "52",
+            "53",
+            "54",
             "79",
             "313",
             "318",
+            "375",
             "380",
             "397",
             "401",
@@ -36078,7 +36405,9 @@
             "410",
             "414",
             "419",
-            "428"
+            "428",
+            "1634",
+            "1673"
           ],
           "note": "same order as the English card"
         },
@@ -36336,12 +36665,16 @@
           "same_as": [
             "30",
             "32",
+            "47",
             "49",
             "50",
             "52",
+            "53",
+            "54",
             "79",
             "313",
             "318",
+            "375",
             "380",
             "397",
             "401",
@@ -36349,7 +36682,9 @@
             "410",
             "414",
             "419",
-            "428"
+            "428",
+            "1634",
+            "1673"
           ],
           "note": "same order as the English card"
         },
@@ -36587,12 +36922,16 @@
           "same_as": [
             "30",
             "32",
+            "47",
             "49",
             "50",
             "52",
+            "53",
+            "54",
             "79",
             "313",
             "318",
+            "375",
             "380",
             "397",
             "401",
@@ -36600,7 +36939,9 @@
             "410",
             "414",
             "419",
-            "428"
+            "428",
+            "1634",
+            "1673"
           ],
           "note": "same order as the English card"
         },
@@ -37320,7 +37661,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "glen-waverley": {
           "status": "read",
@@ -37379,7 +37720,29 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -37399,7 +37762,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "glen-waverley": {
           "status": "read",
@@ -37457,7 +37820,40 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "status": "same_as",
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "same_as": [
+            "30",
+            "32",
+            "47",
+            "49",
+            "50",
+            "52",
+            "53",
+            "54",
+            "79",
+            "313",
+            "318",
+            "375",
+            "380",
+            "397",
+            "401",
+            "405",
+            "410",
+            "414",
+            "419",
+            "428",
+            "1634",
+            "1673"
+          ],
+          "note": "same order as the English card"
         },
         "south-eastern-metropolitan": {
           "status": "same_as",
@@ -39062,7 +39458,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "mill-park": {
           "status": "read",
@@ -39093,7 +39489,29 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -40124,7 +40542,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "glen-waverley": {
           "status": "read",
@@ -40154,7 +40572,29 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -42214,14 +42654,26 @@
       ],
       "party": "ONP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "mill-park": {
           "status": "unreadable",
           "note": "unreadable, see card"
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "G",
+            "F",
+            "I",
+            "E",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 5
+          }
         }
       }
     },
@@ -42387,14 +42839,26 @@
       ],
       "party": "ONP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "eltham": {
           "status": "unreadable",
           "note": "unreadable, see card"
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "G",
+            "F",
+            "I",
+            "E",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 5
+          }
         }
       }
     },
@@ -42708,14 +43172,26 @@
       ],
       "party": "ONP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "ivanhoe": {
           "status": "unreadable",
           "note": "unreadable, see card"
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "G",
+            "F",
+            "I",
+            "E",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 5
+          }
         }
       }
     },
@@ -43613,14 +44089,26 @@
       ],
       "party": "ONP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "glen-waverley": {
           "status": "unreadable",
           "note": "unreadable, see card"
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "G",
+            "F",
+            "I",
+            "E",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 5
+          }
         }
       }
     },
@@ -53271,7 +53759,6 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-21",
       "orders": {
         "euroa": {
           "status": "read",
@@ -53397,7 +53884,9 @@
           }
         },
         "yan-yean": {
-          "status": "pending"
+          "status": "pending",
+          "tried": "2026-11-23",
+          "note": "the VEC's link to this card didn't open"
         },
         "northern-metropolitan": {
           "atl": [
@@ -61207,7 +61696,7 @@
       ],
       "party": "LBT",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "eltham": {
           "status": "read",
@@ -61229,7 +61718,19 @@
           }
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "I",
+            "E",
+            "F",
+            "G",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 4,
+            "LNP": 5
+          }
         }
       }
     },
@@ -83482,7 +83983,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "glen-waverley": {
           "status": "read",
@@ -83541,7 +84042,19 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         }
       }
     },
@@ -83864,7 +84377,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "glen-waverley": {
           "status": "read",
@@ -83894,7 +84407,19 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         }
       }
     },
@@ -86071,7 +86596,6 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-21",
       "orders": {
         "eltham": {
           "status": "read",
@@ -86101,10 +86625,14 @@
           ]
         },
         "yan-yean": {
-          "status": "pending"
+          "status": "pending",
+          "tried": "2026-11-23",
+          "note": "the VEC's link to this card didn't open"
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "status": "pending",
+          "tried": "2026-11-23",
+          "note": "the VEC's link to this card didn't open"
         },
         "northern-victoria": {
           "atl": [
@@ -86160,7 +86688,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "glen-waverley": {
           "status": "read",
@@ -86218,7 +86746,19 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         },
         "south-eastern-metropolitan": {
           "atl": [
@@ -86664,7 +87204,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "glen-waverley": {
           "status": "read",
@@ -86723,7 +87263,19 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         }
       }
     },
@@ -89518,7 +90070,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-23",
       "orders": {
         "kalkallo": {
           "status": "read",
@@ -89549,7 +90101,32 @@
           ]
         },
         "yan-yean": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "DOW, Amanda",
+            "HALL, James",
+            "CHEERS, Troy",
+            "JOHNSON, Jeremy",
+            "OKATAN, Sinan",
+            "KATHAGE, Lauren",
+            "MOHAMMED, Gufran",
+            "BELL, Andrew"
+          ],
+          "via": "text",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4,
+            "ALP": 6,
+            "GRN": 7
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         },
         "northern-metropolitan": {
           "atl": [
@@ -94678,7 +95255,7 @@
       ],
       "party": "DLP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "glen-waverley": {
           "status": "read",
@@ -94700,7 +95277,19 @@
           }
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "E",
+            "I",
+            "G",
+            "H",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 3,
+            "LNP": 4
+          }
         }
       }
     },
@@ -109185,7 +109774,7 @@
       "orders": {
         "melton": {
           "status": "pending",
-          "tried": "2026-11-22",
+          "tried": "2026-11-23",
           "note": "the VEC's link to this card didn't open"
         }
       }
@@ -109206,7 +109795,7 @@
       "orders": {
         "melton": {
           "status": "pending",
-          "tried": "2026-11-22",
+          "tried": "2026-11-23",
           "note": "the VEC's link to this card didn't open"
         }
       }
@@ -109227,7 +109816,7 @@
       "orders": {
         "melton": {
           "status": "pending",
-          "tried": "2026-11-22",
+          "tried": "2026-11-23",
           "note": "the VEC's link to this card didn't open"
         }
       }
@@ -117236,7 +117825,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "glen-waverley": {
           "status": "read",
@@ -117295,7 +117884,19 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         }
       }
     },
@@ -117813,7 +118414,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "glen-waverley": {
           "status": "read",
@@ -117843,7 +118444,19 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         }
       }
     },
@@ -118611,7 +119224,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "mill-park": {
           "status": "read",
@@ -118642,7 +119255,29 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -119019,7 +119654,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-23",
       "orders": {
         "kalkallo": {
           "status": "read",
@@ -119050,7 +119685,32 @@
           ]
         },
         "yan-yean": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "DOW, Amanda",
+            "HALL, James",
+            "CHEERS, Troy",
+            "JOHNSON, Jeremy",
+            "OKATAN, Sinan",
+            "KATHAGE, Lauren",
+            "MOHAMMED, Gufran",
+            "BELL, Andrew"
+          ],
+          "via": "text",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4,
+            "ALP": 6,
+            "GRN": 7
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         },
         "northern-metropolitan": {
           "status": "same_as",
@@ -120887,7 +121547,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "mill-park": {
           "status": "read",
@@ -120918,7 +121578,29 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },

@@ -10,13 +10,13 @@
   "status": "closed",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
   "registration_closes": "2026-11-20",
-  "last_checked": "2026-11-23T01:28:16Z",
+  "last_checked": "2026-11-23T02:11:04Z",
   "coverage": {
     "cards": 1422,
     "listings": 4814,
-    "orders_read": 3916,
-    "orders_same_as": 153,
-    "orders_unreadable": 653,
+    "orders_read": 3954,
+    "orders_same_as": 154,
+    "orders_unreadable": 656,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -1699,7 +1699,7 @@
     "yan-yean": {
       "house": "lower",
       "cards": 36,
-      "read": 19,
+      "read": 24,
       "same_as": 0,
       "unreadable": 0,
       "parties": {
@@ -1740,9 +1740,9 @@
     "north-eastern-metropolitan": {
       "house": "upper",
       "cards": 184,
-      "read": 86,
-      "same_as": 3,
-      "unreadable": 24,
+      "read": 119,
+      "same_as": 4,
+      "unreadable": 27,
       "parties": {
         "ALP": 47,
         "NONCAND": 5,
@@ -7726,7 +7726,7 @@
       "area": "yan-yean",
       "party": "ALP",
       "cards": 8,
-      "read": 2,
+      "read": 5,
       "ranks": {
         "ALP": 1,
         "GRN": 3,
@@ -7741,7 +7741,7 @@
           "of_n": 6
         }
       ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8ee2ebb9-32b5-4b0f-a78a-bff50e60dac4%2Falp_combined_nem_nv_eltham_yan%20yean_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fb95c8c5-0874-4e9b-a986-8cc9846d96e2%2Falp_combined_nm_nv_kalkallo_yan%20yean_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
     },
     {
       "area": "yan-yean",
@@ -7760,7 +7760,7 @@
       "area": "yan-yean",
       "party": "LIB",
       "cards": 10,
-      "read": 5,
+      "read": 7,
       "ranks": {
         "LNP": 1,
         "ONP": 4,

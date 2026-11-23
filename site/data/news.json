@@ -8,8 +8,14 @@
       "sources": "Source (outlet, or the Bing News search) -> {status: ok | error | skipped, via: feed | sitemap | Bing News search, url (what was read), page (the outlet's election page, if any), items (items read this run), last_7_days (election headlines from it dated in the last 7 days), message}"
     }
   },
-  "updated": "2026-11-23T01:36:00Z",
+  "updated": "2026-11-23T02:19:19Z",
   "statewide": [
+    {
+      "title": "The Snoop: Labor and Greens sling mud at each other, BookTok book tour ableism controversy, and more",
+      "outlet": "Crikey",
+      "published": "2026-11-23T01:37:55Z",
+      "url": "https://www.crikey.com.au/2026/11/23/victorian-election-2026-ben-carroll-alastair-campbell-sandpapergate-luke-bateman/"
+    },
     {
       "title": "Live: Community safety in election focus after violent weekend in Melbourne",
       "outlet": "ABC News",
@@ -51,6 +57,12 @@
       "outlet": "Australian Financial Review",
       "published": "2026-11-22T18:00:00Z",
       "url": "https://www.afr.com/politics/jess-wilson-should-win-but-bookies-shouldn-t-pay-out-yet-20261123-p61g6w?ref=rss&utm_medium=rss&utm_source=rss_politics"
+    },
+    {
+      "title": "Listen to locals: Council",
+      "outlet": "Star Weekly",
+      "published": "2026-11-22T12:41:00Z",
+      "url": "https://starweekly.com.au/news/2026/11/22/listen-to-locals-council/"
     },
     {
       "title": "Addy 2026 Victorian election survey: Crime among top issues for Geelong voters",
@@ -297,18 +309,6 @@
       "outlet": "News24",
       "published": "2026-11-19T11:10:00Z",
       "url": "https://www.news24.com.au/politics/australian-politics/come-at-me-opposition-leader-jess-wilson-vows-to-confront-corruption-and-organised-crime-in-victoria-headon/news-story/c9d559880f98ef8b97c8d9269c5fb74c"
-    },
-    {
-      "title": "Domestic and family violence advocates say issue absent from Victorian election pledges",
-      "outlet": "ABC (Australian Broadcasting Corporation) on MSN",
-      "published": "2026-11-19T11:03:35Z",
-      "url": "https://www.msn.com/en-au/news/australia/domestic-and-family-violence-advocates-say-issue-absent-from-victorian-election-pledges/ar-AA2hNBm7?ocid=BingNewsVerp"
-    },
-    {
-      "title": "Roads Crisis Threatens Food Bowl as Council Seeks State Investment",
-      "outlet": "Mirage News",
-      "published": "2026-11-19T06:33:00Z",
-      "url": "https://www.miragenews.com/roads-crisis-threatens-food-bowl-as-council-1780196/"
     }
   ],
   "seats": {
@@ -1890,9 +1890,9 @@
       },
       {
         "title": "One Nation Victoria dumps Preston candidate Franco Guardiani over Hitler comments",
-        "outlet": "ABC News",
-        "published": "2026-11-09T22:02:00Z",
-        "url": "https://www.abc.net.au/news/2026-11-10/vic-one-nation-preston-candidate-guardiani-dumped/107368834"
+        "outlet": "ABC (Australian Broadcasting Corporation) on MSN",
+        "published": "2026-11-09T22:02:17Z",
+        "url": "https://www.msn.com/en-au/news/other/one-nation-victoria-dumps-preston-candidate-franco-guardiani-over-hitler-comments/ar-AA2h7pVV"
       },
       {
         "title": "One Nation dumps candidate days before election over 'appalling' Hitler social media post - but he'll still appear on the ballot",
@@ -2376,7 +2376,7 @@
       "page": "https://www.nine.com.au/australia-news/vic",
       "url": "https://www.nine.com.au/sitemaps/news/brands/nine",
       "via": "sitemap",
-      "items": 106,
+      "items": 110,
       "last_7_days": 0
     },
     "7News": {
@@ -2432,7 +2432,7 @@
       "url": "https://www.crikey.com.au/feed/",
       "via": "feed",
       "items": 10,
-      "last_7_days": 0
+      "last_7_days": 1
     },
     "The Conversation": {
       "status": "ok",
@@ -2468,7 +2468,7 @@
       "status": "ok",
       "url": "https://www.dailymail.co.uk/auhome/index.rss",
       "via": "feed",
-      "items": 84,
+      "items": 89,
       "last_7_days": 0
     },
     "Bendigo Advertiser": {
@@ -2476,7 +2476,7 @@
       "url": "https://www.bendigoadvertiser.com.au/rss.xml",
       "via": "feed",
       "items": 20,
-      "last_7_days": 2
+      "last_7_days": 1
     },
     "Border Mail": {
       "status": "ok",
@@ -2511,7 +2511,7 @@
       "url": "https://www.starweekly.com.au/feed/",
       "via": "feed",
       "items": 12,
-      "last_7_days": 0
+      "last_7_days": 1
     },
     "Shepparton News": {
       "status": "error",
@@ -2531,7 +2531,7 @@
       "via": "Bing News search",
       "items": 176,
       "message": "176 searches for 88 districts, plus 2 statewide",
-      "last_7_days": 38
+      "last_7_days": 40
     },
     "Google News": {
       "status": "skipped",
