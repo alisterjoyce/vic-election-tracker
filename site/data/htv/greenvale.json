@@ -1815,8 +1815,11 @@
       "type": "Single",
       "registered_on": "2026-11-17",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e3918d93-85aa-4406-819b-73a3496fed35%2Famendment%20-%20htv_vic_l%26uh_greenvale_district_v2_redacted.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "unreadable",
-      "note": "unreadable, see card"
+      "status": "partial",
+      "order": [
+        "YOHANNA, Mazen"
+      ],
+      "via": "image"
     },
     {
       "registration": "450",
@@ -1887,8 +1890,26 @@
       "type": "Single",
       "registered_on": "2026-11-17",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=08ae6d34-8c37-45e4-b26c-58a0475c3220%2Fgreenvale%20-%20khan%2C%20imad%20-%20htvc.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "unreadable",
-      "note": "unreadable, see card"
+      "status": "read",
+      "order": [
+        "SAID, Hassan",
+        "MCGINNESS, Declan",
+        "SMELOV, Kirill",
+        "FURINA, Rosanna",
+        "YOHANNA, Mazen",
+        "WALTERS, Iwan",
+        "ZOUGHAIB, Yehya",
+        "OVEREND, Jim",
+        "TITHERIDGE, Michael",
+        "MOORE, Chris"
+      ],
+      "via": "image",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 6,
+        "LNP": 8,
+        "ONP": 10
+      }
     },
     {
       "registration": "1611",
@@ -1959,8 +1980,26 @@
       "type": "Single",
       "registered_on": "2026-11-17",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c44a1364-5480-4994-a095-930d8743b753%2Fsaid%2C%20hassan.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "unreadable",
-      "note": "unreadable, see card"
+      "status": "read",
+      "order": [
+        "SAID, Hassan",
+        "SMELOV, Kirill",
+        "MCGINNESS, Declan",
+        "FURINA, Rosanna",
+        "ZOUGHAIB, Yehya",
+        "WALTERS, Iwan",
+        "OVEREND, Jim",
+        "YOHANNA, Mazen",
+        "TITHERIDGE, Michael",
+        "MOORE, Chris"
+      ],
+      "via": "image",
+      "ranks": {
+        "GRN": 3,
+        "ALP": 6,
+        "LNP": 7,
+        "ONP": 10
+      }
     }
   ],
   "no_card": []
