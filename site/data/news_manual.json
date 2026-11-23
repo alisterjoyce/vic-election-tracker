@@ -1,0 +1,19 @@
+{
+  "_schema": {
+    "description": "Articles added by hand (on request) to the news lists: refresh.py merges each into news.json at every run, in the statewide list and in the seats given, and matches it to seats like any other story. Headline, outlet, date and link only, entered by hand; the article itself is never stored.",
+    "fields": {
+      "items": "[{url, title (the headline as published), outlet (optional: labelled by the link's domain otherwise), published (ISO UTC), seats (district ids, optional), statewide (default true), added (date added), note}]"
+    }
+  },
+  "items": [
+    {
+      "url": "https://www.news.com.au/finance/culture/inside-parliament/richard-marles-says-ben-carroll-is-doing-a-good-job-7-times-but-uphill-battle-looms/news-story/fdd5e1403aafe6049f04df844a0632af",
+      "title": "Richard Marles says Ben Carroll is doing ‘a good job’ 7 times, but ‘uphill battle’ looms",
+      "outlet": "news.com.au",
+      "published": "2026-11-21T15:41:00Z",
+      "seats": ["niddrie"],
+      "added": "2026-11-23",
+      "note": "Inside Parliament section; headline and time as Bing News lists the story (news.com.au's robots.txt disallows automated reading)."
+    }
+  ]
+}

@@ -2729,6 +2729,8 @@ NEWS_SOURCES = [
     {"outlet": "The Saturday Paper", "url": "https://www.thesaturdaypaper.com.au/feed.xml", "kind": "rss",
      "site": "thesaturdaypaper.com.au", "scope": "national"},
     {"outlet": "The New Daily", "site": "thenewdaily.com.au", "scope": "national", "note": "no RSS feed found"},
+    {"outlet": "news.com.au", "site": "news.com.au", "scope": "national", "note": NEWS_ROBOTS_NOTE + "; no feed or sitemap can be read",
+     "queries": ['site:news.com.au "Victorian election"', "site:news.com.au Victoria politics", 'site:news.com.au "Inside Parliament"']},
     {"outlet": "Daily Mail Australia", "url": "https://www.dailymail.co.uk/auhome/index.rss", "kind": "rss", "site": "dailymail.com",
      "hosts": ["dailymail.co.uk"], "scope": "national"},
     # Regional papers (feeds only).
@@ -2742,11 +2744,41 @@ NEWS_SOURCES = [
     {"outlet": "Geelong Advertiser", "url": "https://www.geelongadvertiser.com.au/feed", "kind": "rss", "scope": "regional"},   # robots.txt prohibits: always skipped
 ]
 NEWS_SEARCH = "Bing News search"   # the per-district and statewide searches, as a source
+NEWS_LEADER_SEARCH = "Leader searches"   # Bing News searches for the party leaders by name, as a source
+NEWS_MANUAL = "Added by hand"            # site/data/news_manual.json, as a source
+# Party leaders: stories about them often name no seat and don't say "Victorian election". Each run searches Bing News
+# for each by full name (two queries); any source's story naming one, beside a mention of Victoria or their role, goes
+# to the statewide list and to the leader's own seat. district: the seat they contest (checked against candidates.json).
+NEWS_LEADERS = [
+    {"name": "Ben Carroll", "district": "niddrie", "role": r"Premier|Labor",
+     "queries": ['"Ben Carroll" Premier', '"Ben Carroll" Victoria']},
+    {"name": "Jess Wilson", "district": "kew", "role": r"Opposition Leader|Liberals?|Coalition",
+     "queries": ['"Jess Wilson" "Opposition Leader"', '"Jess Wilson" Victoria']},
+    # Bing returns nothing for a quoted name with an apostrophe, so these two aren't quoted (the results are checked by name).
+    {"name": "Danny O'Brien", "district": "gippsland-south", "role": r"Nationals",
+     "queries": ["Danny O'Brien Victoria election", "Danny O'Brien Gippsland South"]},
+    {"name": "Ellen Sandell", "district": "melbourne", "role": r"Greens",
+     "queries": ['"Ellen Sandell" Greens', '"Ellen Sandell" Victoria']},
+    {"name": "Warren Pickering", "district": "pakenham", "role": r"One Nation",
+     "queries": ['"Warren Pickering" "One Nation"', '"Warren Pickering" Victoria']},
+]
+# Hand-added articles: site/data/news_manual.json (its _schema lists the fields).
+
+
+def _person_re(name: str) -> str:
+    """A full name as a regex: any apostrophe (O'Brien, O’Brien, OBrien) and any spacing."""
+    parts = [re.escape(p) for p in re.split(r"['’`]", name)]
+    return r"\s+".join(r"['’`]?".join(parts).split(r"\ "))
+
+
+def _bing_phrase(name: str) -> str:
+    """A quoted phrase for Bing, unless it has an apostrophe (Bing then finds nothing)."""
+    return name if re.search(r"['’`]", name) else f'"{name}"'
 
 
 # Other outlets Bing names more than one way (by domain), so each has one label.
 NEWS_OTHER_HOSTS = {"couriermail.com.au": "The Courier-Mail", "smh.com.au": "The Sydney Morning Herald",
-                    "brisbanetimes.com.au": "Brisbane Times", "watoday.com.au": "WAtoday", "news.com.au": "news.com.au",
+                    "brisbanetimes.com.au": "Brisbane Times", "watoday.com.au": "WAtoday",
                     "weeklytimesnow.com.au": "The Weekly Times", "redflag.org.au": "Red Flag", "ozarab.media": "OzArab Media",
                     "mpnews.com.au": "MPNEWS", "roymorgan.com": "Roy Morgan Research"}
 
@@ -2782,7 +2814,8 @@ NEWS_SCHEMA = {
         "updated": "ISO UTC time of the last refresh",
         "statewide": f"Up to {NEWS_STATEWIDE} latest items about the state election: [{{title, outlet, published (ISO UTC), url}}]",
         "seats": f"District id -> up to {NEWS_PER_SEAT} latest items mentioning the district, its sitting MP or a candidate by full name",
-        "sources": "Source (outlet, or the Bing News search) -> {status: ok | error | skipped, via: feed | sitemap | Bing News search, "
+        "sources": "Source (outlet, the Bing News search, the leader searches, or articles added by hand) -> "
+                   "{status: ok | error | skipped, via: feed | sitemap | Bing News search | news_manual.json, "
                    "url (what was read), page (the outlet's election page, if any), items (items read this run), "
                    f"last_7_days (election headlines from it dated in the last {NEWS_RECENT_DAYS} days), message}}",
     },
@@ -2797,7 +2830,7 @@ STATE_ELECTION = re.compile(r"(state election|Victorian election|Victorian (poll
                             r"Ben Carroll|Jess Wilson|Warren Pickering|Spring Street)", re.I)
 # National outlets also cover other states' elections: "state election" alone counts only beside a mention of Victoria.
 VIC_ELECTION = re.compile(r"(Victorian (state )?election|Victorian (poll|campaign|voters)|"
-                          r"Ben Carroll|Jess Wilson|Warren Pickering|Spring Street)", re.I)
+                          r"Ben Carroll|Jess Wilson|Warren Pickering|Ellen Sandell|Danny O['’`]?Brien|Spring Street)", re.I)
 
 
 def _news_title_key(title: str) -> str:
@@ -2809,12 +2842,16 @@ def _wrong_victoria(text: str) -> bool:
     return bool(NOT_VICTORIA.search(text))
 
 
-def _dedupe_news(items: list[dict]) -> list[dict]:
+def _dedupe_news(items: list[dict], prefer: set | frozenset = frozenset()) -> list[dict]:
     """Newest first; drop repeats by URL or near-identical headline, Canadian stories and blocked hosts, and
     label each by its domain's outlet. Runs over earlier items too, so a filter or label added later also
-    cleans what was already saved."""
+    cleans what was already saved. Links in `prefer` (articles added by hand) win over any repeat of them:
+    any other copy of the same link is dropped (Bing sometimes lists a link under another story's headline)."""
     out = []
-    for it in sorted(items, key=lambda x: x.get("published") or "", reverse=True):
+    by_date = sorted(items, key=lambda x: x.get("published") or "", reverse=True)
+    mine = {it["url"]: it for it in by_date if it.get("_manual") and it["url"] in prefer}
+    ordered = list(mine.values()) + [it for it in by_date if it["url"] not in prefer]
+    for it in ordered:
         host = re.sub(r"^www\.", "", urllib.parse.urlparse(it["url"]).netloc)
         if host in NEWS_BLOCKED_HOSTS or _wrong_victoria(it["title"]):
             continue
@@ -2822,7 +2859,7 @@ def _dedupe_news(items: list[dict]) -> list[dict]:
                for o in out):
             continue
         out.append({**it, "outlet": _news_outlet(it["url"], it.get("outlet") or "")})
-    return out
+    return sorted(out, key=lambda x: x.get("published") or "", reverse=True) if mine else out
 
 
 def _news_date(value: str) -> datetime | None:
@@ -2983,14 +3020,16 @@ def refresh_news(data_dir: Path, meta: dict) -> bool:
             problems.append(src["note"])
         searched = None
         if src.get("site") and (items is None or src.get("search") == "also"):
-            q = f'site:{src["site"]} "Victorian election"'
+            qs = src.get("queries") or [f'site:{src["site"]} "Victorian election"']
+            q = qs[0]
             if not bing_ok:
                 problems.append("Bing News search disallowed by robots.txt")
             else:
-                try:
-                    searched = [i for i in bing(q) if _news_outlet(i["url"], "") == outlet]
-                except Exception as exc:  # noqa: BLE001 - skip this search
-                    problems.append(f"Bing search failed: {str(exc)[:160]}")
+                for one in qs:
+                    try:
+                        searched = (searched or []) + [i for i in bing(one) if _news_outlet(i["url"], "") == outlet]
+                    except Exception as exc:  # noqa: BLE001 - skip this search
+                        problems.append(f"Bing search failed: {str(exc)[:160]}")
             if searched is not None:
                 if items is None:
                     st.update(url=f"{BING_NEWS}?{requests.compat.urlencode({'q': q})}", via=NEWS_SEARCH)
@@ -3020,15 +3059,67 @@ def refresh_news(data_dir: Path, meta: dict) -> bool:
             except Exception as exc:  # noqa: BLE001
                 log.warning("news: Bing statewide search failed: %s", exc)
                 warn_ci(f"News: Bing statewide search failed: {exc}")
+    # The party leaders by name: what passes goes to the statewide list and the leader's seat (pool_hit).
+    leaders = []
+    for ld in NEWS_LEADERS:
+        rx = re.compile(rf"\b{_person_re(ld['name'])}\b", re.I)
+        leaders.append({**ld, "rx": rx, "ctx": re.compile(rf"\b({ld['role']})\b|{VICTORIA.pattern}", re.I)})
+        if not any(re.fullmatch(_person_re(ld["name"]), n, re.I) for n in cands.get(ld["district"], ())):
+            log.warning("news: leader %s isn't a candidate in %s; check NEWS_LEADERS", ld["name"], ld["district"])
+            warn_ci(f"News: leader {ld['name']} isn't a candidate in {ld['district']}; check NEWS_LEADERS")
+
+    def leader_of(it):
+        t = it["_text"]
+        return [ld["name"] for ld in leaders if ld["rx"].search(t) and ld["ctx"].search(t)]
+    leader_seat = {ld["name"]: ld["district"] for ld in leaders}
+    leader_n, leader_found, leader_fail = 0, 0, []
+    for ld in leaders if bing_ok else []:
+        for q in ld["queries"]:
+            try:
+                hits = [i for i in bing(q) if ld["name"] in leader_of(i)]
+                pool.extend(tag(hits, NEWS_LEADER_SEARCH, "national"))
+                leader_n, leader_found = leader_n + 1, leader_found + len(hits)
+            except Exception as exc:  # noqa: BLE001 - skip this search
+                leader_fail.append(q)
+                log.warning("news: leader search %r failed: %s", q, exc)
+                warn_ci(f"News: leader search {q!r} failed: {exc}")
+    status[NEWS_LEADER_SEARCH] = ({"status": "ok" if leader_n else "error", "url": BING_NEWS, "via": NEWS_SEARCH, "items": leader_found,
+                                   "message": f"{leader_n} searches for {len(leaders)} party leaders"
+                                              + (f"; {len(leader_fail)} failed" if leader_fail else "")}
+                                  if bing_ok else {"status": "skipped", "url": BING_NEWS, "message": "robots.txt disallows"})
+
+    # Articles added by hand (news_manual.json): in the statewide list (unless statewide: false) and in the seats named.
+    manual_seats = {}
+    manual_raw = (read_json(data_dir / "news_manual.json", {}) or {}).get("items", [])
+    manual_ok = 0
+    for m in manual_raw:
+        when = _news_date(m.get("published") or "")
+        if not (str(m.get("url", "")).startswith(("https://", "http://")) and (m.get("title") or "").strip() and when):
+            log.warning("news: news_manual.json entry skipped (needs url, title and published): %s", m.get("url") or m.get("title"))
+            warn_ci(f"News: news_manual.json entry skipped (needs url, title and published): {m.get('url') or m.get('title')}")
+            continue
+        it = {"title": clean_text(m["title"]), "outlet": m.get("outlet") or _news_outlet(m["url"], ""),
+              "published": when.replace(microsecond=0).isoformat().replace("+00:00", "Z"), "url": m["url"],
+              "_text": clean_text(m["title"]), "_source": NEWS_MANUAL, "_scope": "national", "_manual": True,
+              "_statewide": m.get("statewide", True) is not False}
+        pool.append(it)
+        manual_ok += 1
+        for sid in m.get("seats") or []:
+            manual_seats.setdefault(sid, []).append(it)
+    manual_urls = frozenset(m["url"] for m in pool if m.get("_manual"))
+    if manual_raw:
+        status[NEWS_MANUAL] = {"status": "ok" if manual_ok else "error", "url": "news_manual.json", "via": "news_manual.json",
+                               "items": manual_ok, "message": f"{manual_ok} of {len(manual_raw)} entries used"}
+
     for i in pool:
-        if is_statewide(i):
+        if (i.get("_manual") and i["_statewide"]) or leader_of(i) or is_statewide(i):
             statewide.append(i)
     for d in districts:
         name, mp = d["name"], d.get("sitting_mp") or ""
         name_re = re.compile(rf"\b{re.escape(name)}\b", re.I)
-        mp_re = re.compile(rf"\b{re.escape(mp)}\b", re.I) if mp else None
+        mp_re = re.compile(rf"\b{_person_re(mp)}\b", re.I) if mp else None
         others = sorted(n for n in cands.get(d["id"], ()) if n.lower() != mp.lower())
-        cand_re = re.compile(r"\b(" + "|".join(re.escape(n) for n in others) + r")\b", re.I) if others else None
+        cand_re = re.compile(r"\b(" + "|".join(_person_re(n) for n in others) + r")\b", re.I) if others else None
         # A district hit: the district named in a Victorian election story ("Richmond" or "Melbourne" alone match far too much).
         district_hit = lambda t: name_re.search(t) and VICTORIA.search(t) and ELECTION_WORDS.search(t)
         if name == "Melbourne":   # the seat shares its name with the city
@@ -3038,6 +3129,8 @@ def refresh_news(data_dir: Path, meta: dict) -> bool:
             t = it["_text"]
             if mp_re and mp_re.search(t):
                 return True
+            if any(leader_seat[n] == d["id"] for n in leader_of(it)):
+                return True
             if it["_scope"] == "national" and not (VICTORIA.search(t) or STATE_ELECTION.search(t)):
                 return False
             if cand_re and cand_re.search(t) and ELECTION_WORDS.search(t):
@@ -3046,9 +3139,10 @@ def refresh_news(data_dir: Path, meta: dict) -> bool:
                 return bool(district_hit(t))
             return bool(name_re.search(t) and ELECTION_WORDS.search(t))
         found = [it for it in pool if pool_hit(it)]
+        found += [it for it in manual_seats.get(d["id"], []) if not any(it is f for f in found)]
         searched_ok = False
         # Two searches: the district with "Victorian election" and the sitting MP by name.
-        queries = [(f'"{name}" Victorian election', district_hit)] + ([(f'"{mp}" MP Victoria', mp_re.search)] if mp else [])
+        queries = [(f'"{name}" Victorian election', district_hit)] + ([(f'{_bing_phrase(mp)} MP Victoria', mp_re.search)] if mp else [])
         for q, keep in queries:
             if not bing_ok or failures >= 5:
                 break
@@ -3065,7 +3159,7 @@ def refresh_news(data_dir: Path, meta: dict) -> bool:
                 if failures == 5:
                     warn_ci("News: 5 Bing searches failed in a row; the remaining seats keep their earlier headlines")
         use(found)
-        merged = fresh(_dedupe_news(bare(found) + seats_old.get(d["id"], [])))
+        merged = fresh(bare(_dedupe_news(found + seats_old.get(d["id"], []), manual_urls)))
         seats[d["id"]] = merged[:NEWS_PER_SEAT] if (searched_ok or found) else seats_old.get(d["id"], [])
     use(statewide)
     status[NEWS_SEARCH] = ({"status": "ok" if searched_n else "error", "url": BING_NEWS, "via": NEWS_SEARCH, "items": searched_n,
@@ -3084,7 +3178,7 @@ def refresh_news(data_dir: Path, meta: dict) -> bool:
     data = {
         "_schema": NEWS_SCHEMA,
         "updated": now_iso(),
-        "statewide": fresh(_dedupe_news(bare(statewide) + existing.get("statewide", [])))[:NEWS_STATEWIDE],
+        "statewide": fresh(bare(_dedupe_news(statewide + existing.get("statewide", []), manual_urls)))[:NEWS_STATEWIDE],
         "seats": seats,
         "sources": status,
     }

@@ -37,6 +37,7 @@
       `${VEC_CC} (the <a href="https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards">register</a>). The cards themselves belong to whoever registered them; only facts from them are stored.`],
     ["timeline.json", "Events of the 2022-2026 term and the election timetable", `${OURS} Each entry links its source.`],
     ["news.json", "Headlines per seat and statewide: title, outlet, date, link", "Headlines belong to their publishers and aren't covered by this site's licence. Links only."],
+    ["news_manual.json", "Articles added to the news lists by hand: headline, outlet, date, link, and the seats they go to", "Headlines belong to their publishers and aren't covered by this site's licence. Links only."],
     ["headshots.json", "Candidate photo records: files, source, credit, licence", "Photos belong to the parties, campaigns and outlets credited and aren't covered by this site's licence."],
     ["profiles.json", "Researched candidate profiles: summary, roles, past candidacies, priorities, links, and a source for every fact. The same profiles split by seat: profiles/<seat id>.json (e.g. profiles/bendigo-west.json), listed in profiles/index.json", `${OURS} Facts are drawn from the sources listed in each profile, including Wikipedia (${WIKI}) and the Parliament of Victoria.`],
     ["policies.json", "Party policy ledger: each major party's published position on 15 issues, with a source for every claim",
