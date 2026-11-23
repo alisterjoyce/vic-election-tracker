@@ -1092,7 +1092,18 @@ def main(argv=None) -> int:
     from zoneinfo import ZoneInfo
 
     def write_json(p: Path, data):
-        p.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
+        # Same format as refresh.py's write_json, written to a temporary file and moved into place (a synced folder
+        # such as OneDrive can briefly refuse to open the file itself for writing).
+        tmp = p.with_name(f".{p.name}.tmp")
+        tmp.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
+        for attempt in range(5):
+            try:
+                os.replace(tmp, p)
+                return
+            except OSError:
+                if attempt == 4:
+                    raise
+                time.sleep(1)
     if args.rewrite or args.reread:
         doc = json.loads((args.data_dir / "htv.json").read_text(encoding="utf-8"))
         vec = json.loads((args.data_dir / "vec_nominations.json").read_text(encoding="utf-8"))
