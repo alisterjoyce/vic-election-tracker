@@ -1,0 +1,617 @@
+{
+  "_schema": {
+    "description": "electiontracker.au's poll ledger as this site last read it (CC BY 4.0, credit 'Australian Election Tracker (OZE), electiontracker.au'): figures, dates, names and one source link per poll, no notes. refresh.py matches it to polls.json (filling missing fields, adding polls Wikipedia lacks, and setting commissioned_by) and reuses this copy when the ledger can't be read. Pages don't load it.",
+    "fields": {
+      "url": "The file read",
+      "page": "The ledger's page",
+      "credit": "Credit line",
+      "licence": "Licence",
+      "generated": "The ledger's own timestamp",
+      "read": "When this copy's contents were read (UTC)",
+      "polls[]": "id (theirs), pollster (their slug or name), commissioner (slug), commissioner_type (media, self, party, union, excluded_advocacy, ...), start_date, end_date, sample_size, primary {party code: %}, source_url"
+    }
+  },
+  "url": "https://electiontracker.au/data/vic2026/polls.json",
+  "page": "https://electiontracker.au/elections/vic/2026/polls",
+  "credit": "Australian Election Tracker (OZE), electiontracker.au",
+  "licence": "CC BY 4.0",
+  "generated": "2026-11-22T21:39:20.977Z",
+  "read": "2026-11-23T03:44:16Z",
+  "polls": [
+    {
+      "id": "agenda-c-synesis-2026-11-22",
+      "pollster": "agenda-c-synesis",
+      "commissioner": "self-published",
+      "commissioner_type": "excluded_advocacy",
+      "start_date": "2026-11-10",
+      "end_date": "2026-11-18",
+      "sample_size": 1772,
+      "primary": {
+        "ALP": 25,
+        "LNP": 33,
+        "ONP": 24,
+        "GRN": 11,
+        "OTH": 7
+      },
+      "source_url": "https://www.news24.com.au/politics/australian-politics/coalition-leads-labor-5941-in-explosive-victorian-election-poll-despite-primary-vote-of-just-33-per-cent/news-story/11ba5269566fc953ec9a83bb238e454d"
+    },
+    {
+      "id": "demosau-2026-06",
+      "pollster": "demosau",
+      "commissioner": "premier-national",
+      "commissioner_type": "media",
+      "start_date": "2026-06-07",
+      "end_date": "2026-06-11",
+      "sample_size": 1056,
+      "primary": {
+        "ALP": 21,
+        "LNP": 30,
+        "ONP": 23,
+        "GRN": 15,
+        "OTH": 11
+      },
+      "source_url": "https://demosau.com/wp-content/uploads/2026/06/DemosAU-Vic-Poll-June-2026.pdf"
+    },
+    {
+      "id": "demosau-2026-08",
+      "pollster": "demosau",
+      "commissioner": "premier-national",
+      "commissioner_type": "media",
+      "start_date": "2026-08-06",
+      "end_date": "2026-08-11",
+      "sample_size": 1007,
+      "primary": {
+        "ALP": 23,
+        "LNP": 32,
+        "ONP": 22,
+        "GRN": 13,
+        "OTH": 10
+      },
+      "source_url": "https://demosau.com/news/coalition-holds-election-winning-lead-in-latest-victoria-poll/"
+    },
+    {
+      "id": "demosau-2026-09",
+      "pollster": "demosau",
+      "commissioner": "premier-national",
+      "commissioner_type": "media",
+      "start_date": "2026-09-10",
+      "end_date": "2026-09-20",
+      "sample_size": 1020,
+      "primary": {
+        "ALP": 25,
+        "LNP": 30,
+        "ONP": 20,
+        "GRN": 14,
+        "OTH": 11
+      },
+      "source_url": "https://www.pollbludger.net/2026/09/29/victorian-election-demosau-poll-election-guide-and-seat-projection-model/"
+    },
+    {
+      "id": "demosau-2026-11",
+      "pollster": "demosau",
+      "commissioner": "premier-national",
+      "commissioner_type": "media",
+      "start_date": "2026-10-30",
+      "end_date": "2026-11-05",
+      "sample_size": 1562,
+      "primary": {
+        "ALP": 18,
+        "LNP": 33,
+        "ONP": 21,
+        "GRN": 17,
+        "OTH": 11
+      },
+      "source_url": "https://www.pollbludger.net/2026/11/09/demosau-labor-18-coalition-33-one-nation-21-in-victoria/"
+    },
+    {
+      "id": "freshwater-2026-02",
+      "pollster": "freshwater",
+      "commissioner": "herald-sun",
+      "commissioner_type": "media",
+      "start_date": "2026-02-19",
+      "end_date": "2026-02-23",
+      "sample_size": 1030,
+      "primary": {
+        "ALP": 27.6,
+        "LNP": 26.8,
+        "ONP": 22.6,
+        "GRN": 13.1,
+        "OTH": 9.9
+      },
+      "source_url": "https://freshwaterstrategy.com/wp-content/uploads/Data-Tables-Herald-Sun-Freshwater-Strategy-Vic-Polling-230226.xlsx"
+    },
+    {
+      "id": "freshwater-2026-03",
+      "pollster": "freshwater",
+      "commissioner": "herald-sun",
+      "commissioner_type": "media",
+      "start_date": "2026-03-19",
+      "end_date": "2026-03-23",
+      "sample_size": 1062,
+      "primary": {
+        "ALP": 27.1,
+        "LNP": 29.6,
+        "ONP": 20.4,
+        "GRN": 13.8,
+        "OTH": 9.1
+      },
+      "source_url": "https://freshwaterstrategy.com/wp-content/uploads/Data-Tables-Herald-Sun-Freshwater-Strategy-Vic-Polling-230326.xlsx"
+    },
+    {
+      "id": "freshwater-2026-06",
+      "pollster": "freshwater",
+      "commissioner": "herald-sun",
+      "commissioner_type": "media",
+      "start_date": "2026-06-05",
+      "end_date": "2026-06-08",
+      "sample_size": 1034,
+      "primary": {
+        "ALP": 23,
+        "LNP": 27,
+        "ONP": 25,
+        "GRN": 14,
+        "OTH": 11
+      },
+      "source_url": "https://www.pollbludger.net/2026/06/08/freshwater-strategy-labor-23-coalition-27-one-nation-25-in-victoria/"
+    },
+    {
+      "id": "freshwater-2026-08",
+      "pollster": "freshwater",
+      "commissioner": "herald-sun",
+      "commissioner_type": "media",
+      "start_date": "2026-07-31",
+      "end_date": "2026-08-03",
+      "sample_size": 1020,
+      "primary": {
+        "ALP": 25,
+        "LNP": 30,
+        "ONP": 22,
+        "GRN": 14,
+        "OTH": 9
+      },
+      "source_url": "https://freshwaterstrategy.com/2026/08/04/herald-sun-freshwater-strategy-august-polling-data/"
+    },
+    {
+      "id": "freshwater-2026-09",
+      "pollster": "freshwater",
+      "commissioner": "herald-sun",
+      "commissioner_type": "media",
+      "start_date": "2026-09-24",
+      "end_date": "2026-09-28",
+      "sample_size": 1030,
+      "primary": {
+        "ALP": 24,
+        "LNP": 29,
+        "ONP": 22,
+        "GRN": 14,
+        "OTH": 11
+      },
+      "source_url": "https://freshwaterstrategy.com/2026/10/02/herald-sun-freshwater-strategy-september-polling-data/"
+    },
+    {
+      "id": "growth-intelligence-2026-11-13-herald-sun",
+      "pollster": "growth-intelligence-centre",
+      "commissioner": "herald-sun",
+      "commissioner_type": "media",
+      "start_date": "2026-11-13",
+      "end_date": "2026-11-13",
+      "sample_size": 1351,
+      "primary": {
+        "ALP": 21,
+        "LNP": 32,
+        "ONP": 23,
+        "GRN": 14,
+        "OTH": 10
+      },
+      "source_url": "https://www.news.com.au/finance/work/leaders/ben-carroll-risks-losing-his-seat-at-victorian-election-as-coalition-extends-primary-vote-lead-in-new-opinion-poll/news-story/f819afaf30e91e884afecb139f65d7b3"
+    },
+    {
+      "id": "growth-intelligence-2026-11-20-herald-sun",
+      "pollster": "growth-intelligence-centre",
+      "commissioner": "herald-sun",
+      "commissioner_type": "media",
+      "start_date": "2026-11-02",
+      "end_date": "2026-11-15",
+      "sample_size": 1221,
+      "primary": {
+        "ALP": 22,
+        "LNP": 31,
+        "ONP": 24,
+        "GRN": 15,
+        "OTH": 8
+      },
+      "source_url": "https://www.onenewsaustralia.com/australian-poll-tracker/"
+    },
+    {
+      "id": "growth-intelligence-2026-11-herald-sun",
+      "pollster": "growth-intelligence-centre",
+      "commissioner": "herald-sun",
+      "commissioner_type": "media",
+      "start_date": "2026-10-19",
+      "end_date": "2026-11-01",
+      "sample_size": 1289,
+      "primary": {
+        "ALP": 22,
+        "LNP": 31,
+        "ONP": 23,
+        "GRN": 14,
+        "OTH": 10
+      },
+      "source_url": "https://www.pollbludger.net/2026/11/06/victorian-election-minus-three-weeks/"
+    },
+    {
+      "id": "newspoll-2026-07",
+      "pollster": "Newspoll / Pyxis",
+      "commissioner": "the-australian",
+      "commissioner_type": "media",
+      "start_date": "2026-07-23",
+      "end_date": "2026-07-26",
+      "sample_size": 1035,
+      "primary": {
+        "ALP": 28,
+        "LNP": 31,
+        "ONP": 19,
+        "GRN": 13,
+        "OTH": 9
+      },
+      "source_url": "https://www.theaustralian.com.au/nation/newspoll-shows-victorian-coalition-with-lead-as-jacinta-allan-faces-leadership-challenge/news-story/4ac504abe32030837be16ec669cb9b94"
+    },
+    {
+      "id": "newspoll-2026-10",
+      "pollster": "Newspoll / Pyxis",
+      "commissioner": "the-australian",
+      "commissioner_type": "media",
+      "start_date": "2026-10-15",
+      "end_date": "2026-10-22",
+      "sample_size": 1017,
+      "primary": {
+        "ALP": 24,
+        "LNP": 33,
+        "ONP": 20,
+        "GRN": 14,
+        "OTH": 9
+      },
+      "source_url": "https://www.theaustralian.com.au/nation/politics/newspoll-coalition-on-track-to-end-12-years-of-labor-rule-in-victoria/news-story/de80200643073b5304702a952a05b3ec"
+    },
+    {
+      "id": "oru-2026-10-greens",
+      "pollster": "online-research-unit",
+      "commissioner": "victorian-greens",
+      "commissioner_type": "party",
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-26",
+      "sample_size": 1488,
+      "primary": {
+        "ALP": 25,
+        "LNP": 32,
+        "ONP": 14,
+        "GRN": 15,
+        "OTH": 14
+      },
+      "source_url": "https://www.theguardian.com/australia-news/2026/nov/01/is-one-nation-losing-steam-victoria-new-polling-greens-state-election-ntwnfb"
+    },
+    {
+      "id": "redbridge-2026-07-trades-hall",
+      "pollster": "redbridge",
+      "commissioner": "victorian-trades-hall",
+      "commissioner_type": "union",
+      "start_date": "2026-07-01",
+      "end_date": "2026-07-14",
+      "sample_size": 6500,
+      "primary": {
+        "ALP": 26,
+        "LNP": 26,
+        "ONP": 27,
+        "GRN": 12,
+        "OTH": 9
+      },
+      "source_url": "https://www.pollbludger.net/2026/07/14/resolve-strategic-labor-27-coalition-27-one-nation-22-in-victoria/"
+    },
+    {
+      "id": "redbridge-accent-2026-02-afr",
+      "pollster": "redbridge-accent",
+      "commissioner": "australian-financial-review",
+      "commissioner_type": "media",
+      "start_date": "2026-02-18",
+      "end_date": "2026-02-27",
+      "sample_size": 2165,
+      "primary": {
+        "ALP": 25,
+        "LNP": 28,
+        "ONP": 24,
+        "GRN": 13,
+        "OTH": 10
+      },
+      "source_url": "https://web.archive.org/web/20260308055403/https://6b72024e-077a-44e2-88f5-dc1a0ed81099.usrfiles.com/ugd/b86980_eb49b08b5fa14e63b41cd68cf9bf10ca.pdf"
+    },
+    {
+      "id": "redbridge-accent-2026-06-afr",
+      "pollster": "redbridge-accent",
+      "commissioner": "australian-financial-review",
+      "commissioner_type": "media",
+      "start_date": "2026-06-17",
+      "end_date": "2026-06-28",
+      "sample_size": 5516,
+      "primary": {
+        "ALP": 26,
+        "LNP": 26,
+        "ONP": 27,
+        "GRN": 13,
+        "OTH": 8
+      },
+      "source_url": "https://www.afr.com/politics/one-nation-overtakes-labor-liberals-in-victoria-allan-s-rating-dives-20260701-p60bnh"
+    },
+    {
+      "id": "redbridge-accent-2026-08-afr",
+      "pollster": "redbridge-accent",
+      "commissioner": "australian-financial-review",
+      "commissioner_type": "media",
+      "start_date": "2026-07-28",
+      "end_date": "2026-08-01",
+      "sample_size": 1014,
+      "primary": {
+        "ALP": 23,
+        "LNP": 30,
+        "ONP": 22,
+        "GRN": 14,
+        "OTH": 11
+      },
+      "source_url": "https://www.accent-research.com/projects/afr%2C-redbridge-group-and-accent-research-august-2026-victorian-state-poll"
+    },
+    {
+      "id": "redbridge-accent-2026-09-afr",
+      "pollster": "redbridge-accent",
+      "commissioner": "australian-financial-review",
+      "commissioner_type": "media",
+      "start_date": "2026-09-01",
+      "end_date": "2026-09-14",
+      "sample_size": 2371,
+      "primary": {
+        "ALP": 24,
+        "LNP": 29,
+        "ONP": 25,
+        "GRN": 15,
+        "OTH": 7
+      },
+      "source_url": "https://www.accent-research.com/projects/afr-redbridge-group-and-accent-research-september-2026-victorian-state-poll"
+    },
+    {
+      "id": "redbridge-accent-2026-10-afr",
+      "pollster": "redbridge-accent",
+      "commissioner": "australian-financial-review",
+      "commissioner_type": "media",
+      "start_date": "2026-10-02",
+      "end_date": "2026-10-08",
+      "sample_size": 1008,
+      "primary": {
+        "ALP": 24,
+        "LNP": 30,
+        "ONP": 24,
+        "GRN": 16,
+        "OTH": 6
+      },
+      "source_url": "https://www.afr.com/politics/coalition-firms-for-majority-in-victoria-as-voters-warm-to-wilson-20261011-p6146e"
+    },
+    {
+      "id": "redbridge-accent-2026-11-22-afr",
+      "pollster": "redbridge-accent",
+      "commissioner": "australian-financial-review",
+      "commissioner_type": "media",
+      "start_date": "2026-11-13",
+      "end_date": "2026-11-20",
+      "sample_size": 1507,
+      "primary": {
+        "ALP": 22,
+        "LNP": 33,
+        "ONP": 23,
+        "GRN": 15,
+        "OTH": 7
+      },
+      "source_url": "https://www.afr.com/politics/victorian-labor-hurtling-towards-historic-electoral-wipeout-20261122-p61fzt"
+    },
+    {
+      "id": "redbridge-accent-2026-11-afr",
+      "pollster": "redbridge-accent",
+      "commissioner": "australian-financial-review",
+      "commissioner_type": "media",
+      "start_date": "2026-11-03",
+      "end_date": "2026-11-10",
+      "sample_size": 1008,
+      "primary": {
+        "ALP": 23,
+        "LNP": 31,
+        "ONP": 22,
+        "GRN": 15,
+        "OTH": 9
+      },
+      "source_url": "https://www.afr.com/politics/victorian-coalition-position-strengthens-labor-reduced-to-rump-in-new-poll-20261111-p61d0z"
+    },
+    {
+      "id": "resolve-2026-04-age",
+      "pollster": "resolve",
+      "commissioner": "the-age",
+      "commissioner_type": "media",
+      "start_date": "2026-03-17",
+      "end_date": "2026-04-18",
+      "sample_size": 1047,
+      "primary": {
+        "ALP": 27,
+        "LNP": 29,
+        "ONP": 21,
+        "GRN": 10,
+        "OTH": 13
+      },
+      "source_url": "https://www.theage.com.au/politics/victoria/one-nation-entrenched-as-third-force-as-victorians-adopt-drain-the-swamp-mentality-20260421-p5zps9.html"
+    },
+    {
+      "id": "resolve-2026-06-age",
+      "pollster": "resolve",
+      "commissioner": "the-age",
+      "commissioner_type": "media",
+      "start_date": "2026-05-12",
+      "end_date": "2026-06-12",
+      "sample_size": 1100,
+      "primary": {
+        "ALP": 26,
+        "LNP": 26,
+        "ONP": 24,
+        "GRN": 12,
+        "OTH": 12
+      },
+      "source_url": "https://www.theage.com.au/politics/victoria/end-of-days-labor-s-own-supporters-say-time-s-up-for-allan-government-20260614-p606m1.html"
+    },
+    {
+      "id": "resolve-2026-07-age",
+      "pollster": "resolve",
+      "commissioner": "the-age",
+      "commissioner_type": "media",
+      "start_date": "2026-07-08",
+      "end_date": "2026-07-12",
+      "sample_size": 1000,
+      "primary": {
+        "ALP": 27,
+        "LNP": 27,
+        "ONP": 22,
+        "GRN": 12,
+        "OTH": 12
+      },
+      "source_url": "https://www.theage.com.au/politics/victoria/even-with-one-nation-support-dropping-state-labor-still-has-reason-to-worry-ahead-of-november-20260713-p60etg.html"
+    },
+    {
+      "id": "resolve-2026-08-age",
+      "pollster": "resolve",
+      "commissioner": "the-age",
+      "commissioner_type": "media",
+      "start_date": "2026-08-09",
+      "end_date": "2026-08-15",
+      "sample_size": 1000,
+      "primary": {
+        "ALP": 25,
+        "LNP": 27,
+        "ONP": 23,
+        "GRN": 12,
+        "OTH": 13
+      },
+      "source_url": "https://www.theage.com.au/politics/victoria/revealed-how-leadership-coup-has-changed-labor-s-electoral-fortunes-20260817-p60p2l.html"
+    },
+    {
+      "id": "resolve-2026-09-age",
+      "pollster": "resolve",
+      "commissioner": "the-age",
+      "commissioner_type": "media",
+      "start_date": "2026-09-06",
+      "end_date": "2026-09-12",
+      "sample_size": 1000,
+      "primary": {
+        "ALP": 25,
+        "LNP": 28,
+        "ONP": 23,
+        "GRN": 12,
+        "OTH": 12
+      },
+      "source_url": "https://www.theage.com.au/politics/victoria/debt-concern-looms-large-for-voters-as-carroll-struggles-to-break-through-20260914-p60x45.html"
+    },
+    {
+      "id": "resolve-2026-10-age",
+      "pollster": "resolve",
+      "commissioner": "the-age",
+      "commissioner_type": "media",
+      "start_date": "2026-10-06",
+      "end_date": "2026-10-10",
+      "sample_size": 1000,
+      "primary": {
+        "ALP": 25,
+        "LNP": 28,
+        "ONP": 23,
+        "GRN": 15,
+        "OTH": 9
+      },
+      "source_url": "https://www.theage.com.au/politics/victoria/wilson-is-gaining-economic-traction-as-carroll-s-popularity-takes-a-further-dive-20261012-p614pi.html"
+    },
+    {
+      "id": "resolve-2026-11-age",
+      "pollster": "resolve",
+      "commissioner": "the-age",
+      "commissioner_type": "media",
+      "start_date": "2026-11-02",
+      "end_date": "2026-11-07",
+      "sample_size": 1000,
+      "primary": {
+        "ALP": 22,
+        "LNP": 30,
+        "ONP": 23,
+        "GRN": 13,
+        "OTH": 12
+      },
+      "source_url": "https://www.theage.com.au/politics/victoria/half-of-victorians-open-to-a-one-nation-coalition-as-carroll-faces-labor-wipeout-20261109-p61cjv.html"
+    },
+    {
+      "id": "roy-morgan-2026-02",
+      "pollster": "roy-morgan",
+      "commissioner": "self",
+      "commissioner_type": "self",
+      "start_date": "2026-02-13",
+      "end_date": "2026-02-16",
+      "sample_size": 2462,
+      "primary": {
+        "ALP": 25.5,
+        "LNP": 21.5,
+        "ONP": 26.5,
+        "GRN": 13.5,
+        "OTH": 13
+      },
+      "source_url": "https://www.roymorgan.com/findings/10133-victorian-state-voting-intention-february-2026"
+    },
+    {
+      "id": "roy-morgan-2026-04",
+      "pollster": "roy-morgan",
+      "commissioner": "self",
+      "commissioner_type": "self",
+      "start_date": "2026-04-22",
+      "end_date": "2026-04-24",
+      "sample_size": 1707,
+      "primary": {
+        "ALP": 25.5,
+        "LNP": 24,
+        "ONP": 24.5,
+        "GRN": 13.5,
+        "OTH": 12.5
+      },
+      "source_url": "https://www.roymorgan.com/findings/10203-victorian-state-voting-intention-april-2026"
+    },
+    {
+      "id": "roy-morgan-2026-08",
+      "pollster": "roy-morgan",
+      "commissioner": "self",
+      "commissioner_type": "self",
+      "start_date": "2026-08-05",
+      "end_date": "2026-08-07",
+      "sample_size": 2084,
+      "primary": {
+        "ALP": 26,
+        "LNP": 26,
+        "ONP": 23.5,
+        "GRN": 12.5,
+        "OTH": 12
+      },
+      "source_url": "https://www.roymorgan.com/findings/10303-victorian-state-voting-intention-august-2026"
+    },
+    {
+      "id": "roy-morgan-2026-10",
+      "pollster": "roy-morgan",
+      "commissioner": "self",
+      "commissioner_type": "self",
+      "start_date": "2026-10-26",
+      "end_date": "2026-10-29",
+      "sample_size": 3610,
+      "primary": {
+        "ALP": 22.5,
+        "LNP": 29.5,
+        "ONP": 22,
+        "GRN": 12.5,
+        "OTH": 13.5
+      },
+      "source_url": "https://www.roymorgan.com/findings/10373-victorian-state-voting-intention-october-2026"
+    }
+  ]
+}

@@ -8,7 +8,7 @@
       "sources": "Source (outlet, the Bing News search, the leader searches, or articles added by hand) -> {status: ok | error | skipped, via: feed | sitemap | Bing News search | news_manual.json, url (what was read), page (the outlet's election page, if any), items (items read this run), last_7_days (election headlines from it dated in the last 7 days), message}"
     }
   },
-  "updated": "2026-11-23T03:31:48Z",
+  "updated": "2026-11-23T03:53:59Z",
   "statewide": [
     {
       "title": "Victorian Liberal party uses AI to write Jess Wilson’s tribute to Molly Meldrum",
@@ -688,9 +688,9 @@
       },
       {
         "title": "Sonya Kilkenny admits ‘oversight’ on development decision near her investment home",
-        "outlet": "Herald Sun",
+        "outlet": "Geelong Advertiser",
         "published": "2026-08-07T12:00:00Z",
-        "url": "https://www.heraldsun.com.au/news/victoria/sonya-kilkenny-admits-oversight-on-development-decision-near-her-investment-home/news-story/593059d63ccfc1e0f257e7acbbef7c1a"
+        "url": "https://www.geelongadvertiser.com.au/news/victoria/sonya-kilkenny-admits-oversight-on-development-decision-near-her-investment-home/news-story/593059d63ccfc1e0f257e7acbbef7c1a"
       },
       {
         "title": "Victoria’s Attorney-General Sonya Kilkenny criticised for ‘disappointing’ silence in refusing to respond to call for law changes",
@@ -1962,9 +1962,9 @@
     "ripon": [
       {
         "title": "Ripon election hangs in balance as One Nation and Coalition challenge vulnerable Labor",
-        "outlet": "Geelong Advertiser",
+        "outlet": "The Cairns Post",
         "published": "2026-11-18T10:00:00Z",
-        "url": "https://www.geelongadvertiser.com.au/news/victoria/ripon-election-hangs-in-balance-as-one-nation-and-coalition-challenge-vulnerable-labor/news-story/57e7cfac3bdebc7c389d137b27ec7a8a"
+        "url": "https://www.cairnspost.com.au/news/victoria/ripon-election-hangs-in-balance-as-one-nation-and-coalition-challenge-vulnerable-labor/news-story/57e7cfac3bdebc7c389d137b27ec7a8a"
       },
       {
         "title": "Victorian Labor MP accuses council of mismanaging Maryborough pool redevelopment",
@@ -2382,7 +2382,7 @@
       "page": "https://www.nine.com.au/australia-news/vic",
       "url": "https://www.nine.com.au/sitemaps/news/brands/nine",
       "via": "sitemap",
-      "items": 118,
+      "items": 120,
       "last_7_days": 0
     },
     "7News": {
@@ -2476,13 +2476,13 @@
       "via": "Bing News search",
       "items": 36,
       "message": "robots.txt disallows the whole site (checked 16 Nov 2026); no feed or sitemap can be read",
-      "last_7_days": 4
+      "last_7_days": 3
     },
     "Daily Mail Australia": {
       "status": "ok",
       "url": "https://www.dailymail.co.uk/auhome/index.rss",
       "via": "feed",
-      "items": 83,
+      "items": 84,
       "last_7_days": 0
     },
     "Bendigo Advertiser": {
@@ -2543,9 +2543,9 @@
       "status": "ok",
       "url": "https://www.bing.com/news/search",
       "via": "Bing News search",
-      "items": 67,
+      "items": 57,
       "message": "10 searches for 5 party leaders",
-      "last_7_days": 27
+      "last_7_days": 20
     },
     "Added by hand": {
       "status": "ok",
@@ -2561,7 +2561,7 @@
       "via": "Bing News search",
       "items": 176,
       "message": "176 searches for 88 districts, plus 2 statewide",
-      "last_7_days": 39
+      "last_7_days": 40
     },
     "Google News": {
       "status": "skipped",

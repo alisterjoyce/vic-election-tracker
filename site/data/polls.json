@@ -1,6 +1,6 @@
 {
   "_schema": {
-    "description": "Published voting-intention polls, scraped from Wikipedia by scripts/refresh.py, plus any entered by hand in scripts/polls_manual.json that Wikipedia hasn't listed yet (those carry 'via').",
+    "description": "Published voting-intention polls, scraped from Wikipedia by scripts/refresh.py, plus any entered by hand in scripts/polls_manual.json and any in electiontracker.au's poll ledger (CC BY 4.0) that Wikipedia hasn't listed yet (those carry 'via'). Fields Wikipedia's rows lack are filled from the ledger where it lists the same poll ('supplemented').",
     "fields": {
       "id": "Stable id: <pollster slug>-<end_date>, with -2, -3 for repeats (used by poll.html#<id>)",
       "start_date": "Fieldwork start, YYYY-MM-DD (may equal end_date)",
@@ -15,9 +15,12 @@
       "preferred_premier": "Optional: {matchup, leaders: {surname: %}, undecided: %}",
       "approval": "Optional: {matchup, leaders: {surname: {positive, negative, undecided, net}}} (net = positive - negative, as published)",
       "preferred_premier_alt": "Optional: a second preferred-premier measure from the same poll (e.g. a three-way question), shaped like preferred_premier",
-      "via": "Only on polls entered by hand (scripts/polls_manual.json): {label, url} of the report the figures came from",
+      "commissioned_by": "Who paid for the poll: {category, name, via}. category: media, pollster (its own poll), party, union, advocacy, or null when not stated; name: the commissioner where known (null for a pollster's own poll); via: where the category comes from (electiontracker = its poll ledger's commissioner type, client = the client's name, pollster = a firm that publishes its own polls). The site's poll of polls leaves out party, union and advocacy polls and samples under 800 (or not published), following electiontracker.au's rule",
+      "via": "Only on polls Wikipedia hasn't listed: {label, url} of where the figures came from (a report, for polls entered by hand; electiontracker.au's poll ledger, for polls added from it)",
       "added": "Only on polls entered by hand: the date they were entered",
-      "supplemented": "Optional {fields, label, url}: fields of a Wikipedia-listed poll filled from scripts/polls_manual.json, and where they came from"
+      "added_from": "'electiontracker' on a poll added from electiontracker.au's ledger because Wikipedia hasn't listed it",
+      "et_id": "The poll's id in electiontracker.au's ledger, where it lists the same poll",
+      "supplemented": "Optional [{fields, label, url}]: fields of a Wikipedia-listed poll filled from scripts/polls_manual.json or electiontracker.au's ledger, and where they came from"
     }
   },
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election",
@@ -36,6 +39,12 @@
         "GRN": 15,
         "ONP": 24,
         "OTH": 8
+      },
+      "et_id": "growth-intelligence-2026-11-20-herald-sun",
+      "commissioned_by": {
+        "category": "media",
+        "name": "Herald Sun",
+        "via": "electiontracker"
       }
     },
     {
@@ -56,6 +65,12 @@
       "tpp": {
         "ALP": 42,
         "LNP": 58
+      },
+      "et_id": "redbridge-accent-2026-11-22-afr",
+      "commissioned_by": {
+        "category": "media",
+        "name": "Australian Financial Review",
+        "via": "electiontracker"
       }
     },
     {
@@ -76,6 +91,12 @@
       "tpp": {
         "ALP": 41,
         "LNP": 59
+      },
+      "et_id": "agenda-c-synesis-2026-11-22",
+      "commissioned_by": {
+        "category": "advocacy",
+        "name": null,
+        "via": "electiontracker"
       }
     },
     {
@@ -103,6 +124,12 @@
             "net": 17
           }
         }
+      },
+      "et_id": "growth-intelligence-2026-11-13-herald-sun",
+      "commissioned_by": {
+        "category": "media",
+        "name": "Herald Sun",
+        "via": "electiontracker"
       }
     },
     {
@@ -155,6 +182,12 @@
             "net": -8
           }
         }
+      },
+      "et_id": "redbridge-accent-2026-11-afr",
+      "commissioned_by": {
+        "category": "media",
+        "name": "Australian Financial Review",
+        "via": "electiontracker"
       }
     },
     {
@@ -195,6 +228,12 @@
             "net": 9
           }
         }
+      },
+      "et_id": "resolve-2026-11-age",
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Age",
+        "via": "electiontracker"
       }
     },
     {
@@ -256,13 +295,21 @@
           "Pickering": 19
         }
       },
-      "supplemented": {
-        "fields": [
-          "client",
-          "preferred_premier_alt"
-        ],
-        "label": "The Poll Bludger, 9 Nov 2026 (reporting the Herald Sun)",
-        "url": "https://www.pollbludger.net/2026/11/09/demosau-labor-18-coalition-33-one-nation-21-in-victoria/"
+      "supplemented": [
+        {
+          "fields": [
+            "client",
+            "preferred_premier_alt"
+          ],
+          "label": "The Poll Bludger, 9 Nov 2026 (reporting the Herald Sun)",
+          "url": "https://www.pollbludger.net/2026/11/09/demosau-labor-18-coalition-33-one-nation-21-in-victoria/"
+        }
+      ],
+      "et_id": "demosau-2026-11",
+      "commissioned_by": {
+        "category": "media",
+        "name": "Herald Sun",
+        "via": "electiontracker"
       }
     },
     {
@@ -279,6 +326,12 @@
         "GRN": 14,
         "ONP": 23,
         "OTH": 10
+      },
+      "et_id": "growth-intelligence-2026-11-herald-sun",
+      "commissioned_by": {
+        "category": "media",
+        "name": "Herald Sun",
+        "via": "electiontracker"
       }
     },
     {
@@ -305,6 +358,12 @@
         "ALP": 43,
         "LNP": 33,
         "ONP": 24
+      },
+      "et_id": "roy-morgan-2026-10",
+      "commissioned_by": {
+        "category": "pollster",
+        "name": null,
+        "via": "electiontracker"
       }
     },
     {
@@ -325,6 +384,12 @@
       "tpp": {
         "ALP": 46,
         "LNP": 54
+      },
+      "et_id": "oru-2026-10-greens",
+      "commissioned_by": {
+        "category": "party",
+        "name": "Victorian Greens",
+        "via": "electiontracker"
       }
     },
     {
@@ -370,6 +435,12 @@
             "net": 10
           }
         }
+      },
+      "et_id": "newspoll-2026-10",
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Australian",
+        "via": "electiontracker"
       }
     },
     {
@@ -407,6 +478,12 @@
             "net": 23
           }
         }
+      },
+      "et_id": "resolve-2026-10-age",
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Age",
+        "via": "electiontracker"
       }
     },
     {
@@ -433,6 +510,11 @@
         "ALP": 44,
         "LNP": 29,
         "ONP": 27
+      },
+      "commissioned_by": {
+        "category": "pollster",
+        "name": null,
+        "via": "pollster"
       }
     },
     {
@@ -479,6 +561,12 @@
             "net": 17
           }
         }
+      },
+      "et_id": "redbridge-accent-2026-10-afr",
+      "commissioned_by": {
+        "category": "media",
+        "name": "Australian Financial Review",
+        "via": "electiontracker"
       }
     },
     {
@@ -519,6 +607,12 @@
             "net": 19
           }
         }
+      },
+      "et_id": "freshwater-2026-09",
+      "commissioned_by": {
+        "category": "media",
+        "name": "Herald Sun",
+        "via": "electiontracker"
       }
     },
     {
@@ -526,7 +620,7 @@
       "start_date": "2026-09-10",
       "end_date": "2026-09-20",
       "pollster": "DemosAU/Premier National",
-      "client": null,
+      "client": "Premier National",
       "sample_size": 1020,
       "source_url": "https://www.heraldsun.com.au/news/victoria/ben-carrolls-promised-new-direction-failing-to-win-over-victorian-voters/news-story/b67ec2414f9c5867909abd57f6baac15",
       "primary": {
@@ -550,6 +644,21 @@
             "net": 8
           }
         }
+      },
+      "et_id": "demosau-2026-09",
+      "supplemented": [
+        {
+          "fields": [
+            "client"
+          ],
+          "label": "electiontracker.au poll ledger (CC BY 4.0)",
+          "url": "https://electiontracker.au/elections/vic/2026/polls"
+        }
+      ],
+      "commissioned_by": {
+        "category": "media",
+        "name": "Premier National",
+        "via": "electiontracker"
       }
     },
     {
@@ -570,6 +679,12 @@
       "tpp": {
         "ALP": 44,
         "LNP": 56
+      },
+      "et_id": "redbridge-accent-2026-09-afr",
+      "commissioned_by": {
+        "category": "media",
+        "name": "Australian Financial Review",
+        "via": "electiontracker"
       }
     },
     {
@@ -595,6 +710,12 @@
           "Pickering": 8
         },
         "undecided": 43
+      },
+      "et_id": "resolve-2026-09-age",
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Age",
+        "via": "electiontracker"
       }
     },
     {
@@ -631,6 +752,12 @@
             "net": 18
           }
         }
+      },
+      "et_id": "resolve-2026-08-age",
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Age",
+        "via": "electiontracker"
       }
     },
     {
@@ -638,7 +765,7 @@
       "start_date": "2026-08-06",
       "end_date": "2026-08-11",
       "pollster": "DemosAU/Premier National",
-      "client": null,
+      "client": "Premier National",
       "sample_size": 1007,
       "source_url": "https://www.heraldsun.com.au/news/victoria/new-poll-shows-ben-carroll-faces-uphill-battle-to-win-novembers-election/news-story/fe71b472a24bc5642305f2f5b7dccb4e",
       "primary": {
@@ -674,6 +801,21 @@
             "net": -19
           }
         }
+      },
+      "et_id": "demosau-2026-08",
+      "supplemented": [
+        {
+          "fields": [
+            "client"
+          ],
+          "label": "electiontracker.au poll ledger (CC BY 4.0)",
+          "url": "https://electiontracker.au/elections/vic/2026/polls"
+        }
+      ],
+      "commissioned_by": {
+        "category": "media",
+        "name": "Premier National",
+        "via": "electiontracker"
       }
     },
     {
@@ -709,6 +851,12 @@
           "Pickering": 16
         },
         "undecided": 2
+      },
+      "et_id": "roy-morgan-2026-08",
+      "commissioned_by": {
+        "category": "pollster",
+        "name": null,
+        "via": "electiontracker"
       }
     },
     {
@@ -746,6 +894,12 @@
             "net": 18
           }
         }
+      },
+      "et_id": "freshwater-2026-08",
+      "commissioned_by": {
+        "category": "media",
+        "name": "Herald Sun",
+        "via": "electiontracker"
       }
     },
     {
@@ -783,6 +937,12 @@
             "net": 13
           }
         }
+      },
+      "et_id": "redbridge-accent-2026-08-afr",
+      "commissioned_by": {
+        "category": "media",
+        "name": "Australian Financial Review",
+        "via": "electiontracker"
       }
     },
     {
@@ -828,6 +988,12 @@
             "net": 8
           }
         }
+      },
+      "et_id": "newspoll-2026-07",
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Australian",
+        "via": "electiontracker"
       }
     },
     {
@@ -844,6 +1010,12 @@
         "GRN": 12,
         "ONP": 27,
         "OTH": 8
+      },
+      "et_id": "redbridge-2026-07-trades-hall",
+      "commissioned_by": {
+        "category": "union",
+        "name": "Victorian Trades Hall Council",
+        "via": "electiontracker"
       }
     },
     {
@@ -868,6 +1040,12 @@
           "Wilson": 43
         },
         "undecided": 33
+      },
+      "et_id": "resolve-2026-07-age",
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Age",
+        "via": "electiontracker"
       }
     },
     {
@@ -888,6 +1066,11 @@
       "tpp": {
         "ALP": 46.2,
         "LNP": 53.8
+      },
+      "commissioned_by": {
+        "category": "pollster",
+        "name": null,
+        "via": "pollster"
       }
     },
     {
@@ -912,6 +1095,12 @@
           "Wilson": 39
         },
         "undecided": 41
+      },
+      "et_id": "resolve-2026-06-age",
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Age",
+        "via": "electiontracker"
       }
     },
     {
@@ -954,6 +1143,12 @@
             "net": 13
           }
         }
+      },
+      "et_id": "redbridge-accent-2026-06-afr",
+      "commissioned_by": {
+        "category": "media",
+        "name": "Australian Financial Review",
+        "via": "electiontracker"
       }
     },
     {
@@ -961,7 +1156,7 @@
       "start_date": "2026-06-07",
       "end_date": "2026-06-11",
       "pollster": "DemosAU/Premier National",
-      "client": null,
+      "client": "Premier National",
       "sample_size": 1056,
       "source_url": "https://www.heraldsun.com.au/news/victoria/new-polling-cements-jacinta-allan-as-least-popular-premier-amid-labor-vote-collapse/news-story/fbe6c3312b547e876e42d9ee17f09519",
       "primary": {
@@ -991,6 +1186,21 @@
             "net": 10
           }
         }
+      },
+      "et_id": "demosau-2026-06",
+      "supplemented": [
+        {
+          "fields": [
+            "client"
+          ],
+          "label": "electiontracker.au poll ledger (CC BY 4.0)",
+          "url": "https://electiontracker.au/elections/vic/2026/polls"
+        }
+      ],
+      "commissioned_by": {
+        "category": "media",
+        "name": "Premier National",
+        "via": "electiontracker"
       }
     },
     {
@@ -1030,6 +1240,12 @@
             "net": 15
           }
         }
+      },
+      "et_id": "freshwater-2026-06",
+      "commissioned_by": {
+        "category": "media",
+        "name": "Herald Sun",
+        "via": "electiontracker"
       }
     },
     {
@@ -1054,6 +1270,12 @@
           "Wilson": 39
         },
         "undecided": 41
+      },
+      "et_id": "resolve-2026-04-age",
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Age",
+        "via": "electiontracker"
       }
     },
     {
@@ -1104,6 +1326,12 @@
             "undecided": 3
           }
         }
+      },
+      "et_id": "roy-morgan-2026-04",
+      "commissioned_by": {
+        "category": "pollster",
+        "name": null,
+        "via": "electiontracker"
       }
     },
     {
@@ -1149,6 +1377,12 @@
             "net": 18
           }
         }
+      },
+      "et_id": "freshwater-2026-03",
+      "commissioned_by": {
+        "category": "media",
+        "name": "Herald Sun",
+        "via": "electiontracker"
       }
     },
     {
@@ -1156,7 +1390,7 @@
       "start_date": "2026-02-18",
       "end_date": "2026-02-27",
       "pollster": "RedBridge/Accent",
-      "client": null,
+      "client": "Australian Financial Review",
       "sample_size": 2165,
       "source_url": "https://web.archive.org/web/20260308055403/https://6b72024e-077a-44e2-88f5-dc1a0ed81099.usrfiles.com/ugd/b86980_eb49b08b5fa14e63b41cd68cf9bf10ca.pdf",
       "primary": {
@@ -1169,6 +1403,21 @@
       "tpp": {
         "ALP": 48,
         "LNP": 52
+      },
+      "et_id": "redbridge-accent-2026-02-afr",
+      "supplemented": [
+        {
+          "fields": [
+            "client"
+          ],
+          "label": "electiontracker.au poll ledger (CC BY 4.0)",
+          "url": "https://electiontracker.au/elections/vic/2026/polls"
+        }
+      ],
+      "commissioned_by": {
+        "category": "media",
+        "name": "Australian Financial Review",
+        "via": "electiontracker"
       }
     },
     {
@@ -1208,6 +1457,12 @@
             "net": 15
           }
         }
+      },
+      "et_id": "freshwater-2026-02",
+      "commissioned_by": {
+        "category": "media",
+        "name": "Herald Sun",
+        "via": "electiontracker"
       }
     },
     {
@@ -1259,6 +1514,12 @@
             "net": 10.5
           }
         }
+      },
+      "et_id": "roy-morgan-2026-02",
+      "commissioned_by": {
+        "category": "pollster",
+        "name": null,
+        "via": "electiontracker"
       }
     },
     {
@@ -1284,6 +1545,11 @@
           "Wilson": 39
         },
         "undecided": 41
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Age",
+        "via": "client"
       }
     },
     {
@@ -1329,6 +1595,11 @@
             "net": 3
           }
         }
+      },
+      "commissioned_by": {
+        "category": null,
+        "name": null,
+        "via": null
       }
     },
     {
@@ -1349,6 +1620,11 @@
       "tpp": {
         "ALP": 50,
         "LNP": 50
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "Australian Financial Review",
+        "via": "client"
       }
     },
     {
@@ -1373,6 +1649,11 @@
           "Wilson": 41
         },
         "undecided": 35
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Age",
+        "via": "client"
       }
     },
     {
@@ -1400,6 +1681,11 @@
           "Wilson": 47
         },
         "undecided": 22
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "Herald Sun",
+        "via": "client"
       }
     },
     {
@@ -1444,6 +1730,11 @@
             "net": 1
           }
         }
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Australian",
+        "via": "client"
       }
     },
     {
@@ -1482,6 +1773,11 @@
             "net": 15
           }
         }
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "Herald Sun",
+        "via": "client"
       }
     },
     {
@@ -1509,6 +1805,11 @@
           "Battin": 40
         },
         "undecided": 28
+      },
+      "commissioned_by": {
+        "category": null,
+        "name": null,
+        "via": null
       }
     },
     {
@@ -1528,6 +1829,11 @@
       "tpp": {
         "ALP": 52,
         "LNP": 48
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "Australian Financial Review",
+        "via": "client"
       }
     },
     {
@@ -1552,6 +1858,11 @@
           "Battin": 33
         },
         "undecided": 40
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Age",
+        "via": "client"
       }
     },
     {
@@ -1571,6 +1882,11 @@
       "tpp": {
         "ALP": 52,
         "LNP": 48
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "Herald Sun",
+        "via": "client"
       }
     },
     {
@@ -1598,6 +1914,11 @@
           "Battin": 37
         },
         "undecided": 31
+      },
+      "commissioned_by": {
+        "category": null,
+        "name": null,
+        "via": null
       }
     },
     {
@@ -1614,6 +1935,11 @@
         "GRN": 12,
         "IND": 9,
         "OTH": 13
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Age",
+        "via": "client"
       }
     },
     {
@@ -1658,6 +1984,11 @@
             "net": -5
           }
         }
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Australian",
+        "via": "client"
       }
     },
     {
@@ -1677,6 +2008,11 @@
       "tpp": {
         "ALP": 51.5,
         "LNP": 48.5
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "Herald Sun",
+        "via": "client"
       }
     },
     {
@@ -1713,6 +2049,11 @@
             "net": 11
           }
         }
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "Herald Sun",
+        "via": "client"
       }
     },
     {
@@ -1737,6 +2078,11 @@
           "Battin": 36
         },
         "undecided": 41
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Age",
+        "via": "client"
       }
     },
     {
@@ -1764,6 +2110,11 @@
           "Battin": 43
         },
         "undecided": 27
+      },
+      "commissioned_by": {
+        "category": null,
+        "name": null,
+        "via": null
       }
     },
     {
@@ -1788,6 +2139,11 @@
           "Battin": 36
         },
         "undecided": 37
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Age",
+        "via": "client"
       }
     },
     {
@@ -1807,6 +2163,11 @@
       "tpp": {
         "ALP": 49,
         "LNP": 51
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "Herald Sun",
+        "via": "client"
       }
     },
     {
@@ -1831,6 +2192,11 @@
           "Pesutto": 30
         },
         "undecided": 41
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Age",
+        "via": "client"
       }
     },
     {
@@ -1850,6 +2216,11 @@
       "tpp": {
         "ALP": 49,
         "LNP": 51
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "Herald Sun",
+        "via": "client"
       }
     },
     {
@@ -1869,6 +2240,11 @@
       "tpp": {
         "ALP": 50,
         "LNP": 50
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "Herald Sun",
+        "via": "client"
       }
     },
     {
@@ -1893,6 +2269,11 @@
           "Pesutto": 29
         },
         "undecided": 41
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Age",
+        "via": "client"
       }
     },
     {
@@ -1913,6 +2294,11 @@
       "tpp": {
         "ALP": 48,
         "LNP": 52
+      },
+      "commissioned_by": {
+        "category": null,
+        "name": null,
+        "via": null
       }
     },
     {
@@ -1932,6 +2318,11 @@
       "tpp": {
         "ALP": 50,
         "LNP": 50
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "Herald Sun",
+        "via": "client"
       }
     },
     {
@@ -1956,6 +2347,11 @@
           "Pesutto": 28
         },
         "undecided": 41
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Age",
+        "via": "client"
       }
     },
     {
@@ -1975,6 +2371,11 @@
       "tpp": {
         "ALP": 55,
         "LNP": 45
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "Herald Sun",
+        "via": "client"
       }
     },
     {
@@ -1999,6 +2400,11 @@
           "Pesutto": 26
         },
         "undecided": 43
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "Herald Sun",
+        "via": "client"
       }
     },
     {
@@ -2027,6 +2433,11 @@
           "Pesutto": 25
         },
         "undecided": 41
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Age",
+        "via": "client"
       }
     },
     {
@@ -2046,6 +2457,11 @@
       "tpp": {
         "ALP": 54,
         "LNP": 46
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "Herald Sun",
+        "via": "client"
       }
     },
     {
@@ -2082,6 +2498,11 @@
             "net": -13
           }
         }
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "Herald Sun",
+        "via": "client"
       }
     },
     {
@@ -2106,6 +2527,11 @@
           "Pesutto": 22
         },
         "undecided": 44
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Age",
+        "via": "client"
       }
     },
     {
@@ -2130,6 +2556,11 @@
           "Pesutto": 19
         },
         "undecided": 43
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Age",
+        "via": "client"
       }
     },
     {
@@ -2149,6 +2580,11 @@
       "tpp": {
         "ALP": 56.5,
         "LNP": 43.5
+      },
+      "commissioned_by": {
+        "category": null,
+        "name": null,
+        "via": null
       }
     },
     {
@@ -2173,6 +2609,11 @@
           "Pesutto": 32
         },
         "undecided": 27
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Age",
+        "via": "client"
       }
     },
     {
@@ -2211,6 +2652,11 @@
             "net": -10
           }
         }
+      },
+      "commissioned_by": {
+        "category": "pollster",
+        "name": null,
+        "via": "pollster"
       }
     },
     {
@@ -2235,6 +2681,11 @@
           "Pesutto": 26
         },
         "undecided": 25
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Age",
+        "via": "client"
       }
     },
     {
@@ -2278,6 +2729,11 @@
             "net": -7
           }
         }
+      },
+      "commissioned_by": {
+        "category": "pollster",
+        "name": null,
+        "via": "pollster"
       }
     },
     {
@@ -2302,6 +2758,11 @@
           "Pesutto": 28
         },
         "undecided": 23
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Age",
+        "via": "client"
       }
     },
     {
@@ -2326,6 +2787,11 @@
           "Pesutto": 26
         },
         "undecided": 24
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Age",
+        "via": "client"
       }
     }
   ]
