@@ -392,9 +392,11 @@ h3 { font-size: 1rem; }
 
 /* Maps (Leaflet, no tiles) */
 .map-controls { display: flex; flex-wrap: wrap; gap: 8px; }
-@media (max-width: 640px) {   /* five colour modes: the group spans the card and its buttons share the width */
-  .map-controls .segmented[aria-label="Colour districts by"] { display: flex; width: 100%; }
-  .map-controls .segmented[aria-label="Colour districts by"] button { flex: 1 1 0; min-width: 0; padding: 6px 2px; font-size: 0.82rem; line-height: 1.2; }
+@media (max-width: 640px) {   /* six colour modes: the group spans the card in two rows of three */
+  .map-controls .segmented[aria-label="Colour districts by"] { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; }
+  .map-controls .segmented[aria-label="Colour districts by"] button { min-width: 0; padding: 6px 2px; font-size: 0.82rem; line-height: 1.2; }
+  .map-controls .segmented[aria-label="Colour districts by"] button:nth-child(n+4) { border-top: 1px solid var(--border); }
+  .map-controls .segmented[aria-label="Colour districts by"] button:nth-child(4) { border-left: 0; }
 }
 .segmented button:disabled { opacity: 0.45; cursor: not-allowed; }
 .segmented button[data-dim] { opacity: 0.55; }

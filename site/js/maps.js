@@ -38,6 +38,7 @@
     return Object.keys(BAND_OPACITY).find((b) => c.startsWith(b)) || null;
   }
 
+  const DISAGREE_OPACITY = [0.2, 0.55, 0.92];
   const MODES = {
     holder: {
       label: "Held by",
@@ -86,6 +87,30 @@
           ...[["under 50% to win", 0.35], ["50-75%", 0.6], ["over 75%", 0.9]].map(([t, o]) => ({ code: "OTH", opacity: o, text: t, neutral: true }))];
       },
     },
+    disagree: {
+      label: "Model disagreement",
+      // How many of the seat-by-seat sources (App.seatCalls: the seat models with a winner per seat, and Sportsbet's
+      // favourite) name a different winner from the most common call. A neutral scale in the accent colour, not a
+      // party's: paler is more agreement.
+      style: (d, ctx) => {
+        const e = ctx.calls[d.id];
+        if (!e || e.calls.length < 2) return { color: "--border", opacity: 0.6, text: e ? `only one source (${e.calls[0].label}: ${partyName(e.calls[0].party)})` : "no source rates this seat" };
+        const who = e.calls.map((c) => `${c.label} ${partyShort(c.party)}`).join(", ");
+        const level = Math.min(e.disagree, 2);
+        return { color: "--accent", opacity: DISAGREE_OPACITY[level],
+                 text: e.disagree ? `${e.disagree} of ${e.calls.length} differ (${who})` : `all ${e.calls.length} agree: ${partyName(e.pick)}` };
+      },
+      legend: (ds, ctx) => {
+        const n = (f) => ds.filter((d) => f(ctx.calls[d.id])).length;
+        const two = (e) => e && e.calls.length >= 2;
+        return [
+          { color: "--accent", opacity: DISAGREE_OPACITY[0], text: `All agree (${n((e) => two(e) && !e.disagree)})` },
+          { color: "--accent", opacity: DISAGREE_OPACITY[1], text: `One differs (${n((e) => two(e) && e.disagree === 1)})` },
+          { color: "--accent", opacity: DISAGREE_OPACITY[2], text: `Two or more differ (${n((e) => two(e) && e.disagree >= 2)})` },
+          { color: "--border", opacity: 0.6, text: `Fewer than two sources (${n((e) => !two(e))})`, none: !n((e) => !two(e)) },
+        ].filter((it) => !it.none);
+      },
+    },
     result: {
       label: "Result",
       style: (d, ctx) => {
@@ -121,6 +146,7 @@
       odds: Object.fromEntries(((odds && odds.seats) || []).map((s) => [s.district, s])),
       results: res2026 && res2026.districts && Object.keys(res2026.districts).length ? res2026.districts : null,
       forecast: Object.fromEntries(((models && models.seats) || []).filter((s) => aef && s.model === aef.id).map((s) => [s.district, s])),
+      calls: App.seatCalls(models, odds),
     };
     let mode = "holder";
     let layerKind = "districts";
@@ -143,7 +169,7 @@
         : MODES[mode].style(districts[feature.properties.id] || {}, ctx);
       return {
         color: cssVar("--surface") || "#fff", weight: kind === "regions" ? 1.5 : 0.8,
-        fillColor: s.code ? partyColor(s.code) : cssVar("--border"), fillOpacity: s.opacity,
+        fillColor: s.color ? cssVar(s.color) : s.code ? partyColor(s.code) : cssVar("--border"), fillOpacity: s.opacity,
         dashArray: s.joint ? "3 3" : null,
       };
     }
@@ -189,6 +215,13 @@
       renderLegend();
     }
 
+    // The seat-by-seat sources behind the disagreement colouring, linked and dated.
+    function disagreeSources() {
+      const ms = ((models && models.models) || []).filter((m) => m.published && (m.kind === "forecast" || m.kind === "mrp"));
+      return [...ms.map((m) => `${App.modelLink(m)} (${escapeHtml(m.model_date ? `model of ${App.fmtDate(m.model_date)}` : m.fieldwork ? `fieldwork ${m.fieldwork}` : "")})`),
+        `Sportsbet favourite${odds && odds.date_checked ? ` (as at ${escapeHtml(App.fmtDate(odds.date_checked))})` : ""}`].join(", ");
+    }
+
     function renderLegend() {
       let items;
       if (layerKind === "regions") {
@@ -198,9 +231,10 @@
       } else {
         items = MODES[mode].legend(Object.values(districts), ctx);
       }
-      legendEl.innerHTML = items.map((it) => `<li><span class="swatch" style="background:${it.code ? `var(${App.partyVar(it.code)})` : "var(--border)"};opacity:${it.opacity ?? 0.85}"></span>${escapeHtml(it.text)}</li>`).join("")
+      legendEl.innerHTML = items.map((it) => `<li><span class="swatch" style="background:${it.color ? `var(${it.color})` : it.code ? `var(${App.partyVar(it.code)})` : "var(--border)"};opacity:${it.opacity ?? 0.85}"></span>${escapeHtml(it.text)}</li>`).join("")
         + (layerKind === "districts" && mode === "odds" && odds && odds.date_checked ? `<li class="muted">Sportsbet, as at ${escapeHtml(App.fmtDate(odds.date_checked))}</li>` : "")
-        + (layerKind === "districts" && mode === "forecast" && aef ? `<li class="muted"><span>${App.modelLink(aef)}, model of ${escapeHtml(App.fmtDate(aef.model_date))}</span></li>` : "");
+        + (layerKind === "districts" && mode === "forecast" && aef ? `<li class="muted"><span>${App.modelLink(aef)}, model of ${escapeHtml(App.fmtDate(aef.model_date))}</span></li>` : "")
+        + (layerKind === "districts" && mode === "disagree" ? `<li class="muted"><span>Sources: ${disagreeSources()}. RedBridge publishes statewide totals only, so it has no seat calls.</span></li>` : "");
     }
 
     // Most districts are too small to see at state zoom. Desktop shows the state with a Melbourne inset;
