@@ -432,6 +432,93 @@
     return { models, summary };
   }
 
+  /* ---- Seat graphics: the hemicycle and the seat-range chart (home, results, pendulum, prediction, share cards) ---- */
+  const BLOC_LABEL = { GRN: "Greens", ALP: "Labor", LNP: "Coalition", ONP: "One Nation", OTH: "Others", UND: "Undecided" };
+  const BLOC_COLOR = { GRN: "GRN", ALP: "ALP", LNP: "LNP", ONP: "ONP", OTH: "IND" };   // colour codes: Others in the independents' teal
+
+  // Whole seats from fractional counts (e.g. the models' medians): each bloc gets its whole part, then the seats
+  // left go to the largest fractions, up to the rounded total (scaled down if it exceeds `total`). Any seats short of
+  // `total` stay unplaced. {bloc: n} -> {bloc: whole n}.
+  function apportion(values, total = ASSEMBLY_SEATS) {
+    const keys = Object.keys(values).filter((k) => values[k] > 0);
+    const sum = keys.reduce((s, k) => s + values[k], 0);
+    const scale = sum > total ? total / sum : 1;
+    const target = Math.min(total, Math.round(sum * scale));
+    const out = {}, rem = [];
+    keys.forEach((k) => { const v = values[k] * scale; out[k] = Math.floor(v); rem.push([v - out[k], k]); });
+    let left = target - keys.reduce((s, k) => s + out[k], 0);
+    rem.sort((a, b) => b[0] - a[0] || BLOCS.indexOf(a[1]) - BLOCS.indexOf(b[1]));
+    for (let i = 0; left > 0 && rem.length; i = (i + 1) % rem.length, left--) out[rem[i][1]]++;
+    return out;
+  }
+
+  // An 88-dot half circle: rows of seats from the inside out, filled left to right by angle, so each party is a
+  // wedge. segments: [{code (party colour code), n, outline (true: leading, not called)}] in the order drawn (the
+  // fixed party order); seats beyond them are grey (undecided or unplaced). The majority seat is marked with a
+  // radial line. Returns an inline SVG string that follows the theme (colours are CSS variables).
+  function hemicycle({ segments = [], total = ASSEMBLY_SEATS, majority = 45, label = "", rows = 5, className = "" } = {}) {
+    const R = 100, r0 = 40;
+    const radii = Array.from({ length: rows }, (_, i) => r0 + ((R - r0) * i) / (rows - 1));
+    const sumR = radii.reduce((a, b) => a + b, 0);
+    const raw = radii.map((r) => (total * r) / sumR);
+    const per = raw.map(Math.floor);
+    let left = total - per.reduce((a, b) => a + b, 0);
+    raw.map((v, i) => [v - per[i], i]).sort((a, b) => b[0] - a[0]).forEach(([, i]) => { if (left > 0) { per[i]++; left--; } });
+    const pts = [];
+    radii.forEach((r, i) => {
+      const n = per[i];
+      for (let j = 0; j < n; j++) {
+        const a = Math.PI * (1 - (n === 1 ? 0.5 : j / (n - 1)));
+        pts.push({ a, r, x: r * Math.cos(a), y: -r * Math.sin(a) });
+      }
+    });
+    pts.sort((p, q) => q.a - p.a || p.r - q.r);   // left to right; inside first where angles tie
+    const dotR = Math.min((Math.PI * R) / (per[rows - 1] - 1), (R - r0) / (rows - 1)) * 0.42;
+    const fills = [];
+    segments.forEach((s) => { for (let k = 0; k < s.n && fills.length < total; k++) fills.push(s); });
+    const dots = pts.map((p, i) => {
+      const s = fills[i];
+      const style = !s ? "fill:var(--border)"
+        : s.outline ? `fill:var(--surface);stroke:var(${partyVar(s.code)});stroke-width:${(dotR * 0.42).toFixed(2)}`
+          : `fill:var(${partyVar(s.code)})`;
+      const rr = s && s.outline ? dotR * 0.8 : dotR;
+      return `<circle cx="${p.x.toFixed(2)}" cy="${p.y.toFixed(2)}" r="${rr.toFixed(2)}" style="${style}"/>`;
+    }).join("");
+    const a1 = pts[majority - 1].a, a2 = pts[Math.min(majority, total - 1)].a, am = (a1 + a2) / 2;
+    const line = (r) => `${(r * Math.cos(am)).toFixed(2)} ${(-r * Math.sin(am)).toFixed(2)}`;
+    const pad = dotR + 2;
+    return `<svg class="hemi${className ? ` ${className}` : ""}" viewBox="${-R - pad} ${-R - pad - 10} ${2 * (R + pad)} ${R + 2 * pad + 10}" role="img" aria-label="${escapeHtml(label)}" focusable="false">
+      ${dots}<path d="M${line(r0 - pad)} L${line(R + pad + 2)}" style="stroke:var(--text);stroke-width:1.6"/>
+      <text x="${(R + pad + 8) * Math.cos(am)}" y="${-(R + pad + 6) * Math.sin(am)}" text-anchor="middle" style="fill:var(--muted);font-size:9px;font-family:var(--font-body)">${majority}</text></svg>`;
+  }
+
+  // Seat-range chart: one row per bloc (the fixed party order; a bloc every model puts under half a seat is left
+  // out), the span from the lowest to the highest model, a dot at the median, on an 88-seat scale with the
+  // majority line; then the key. ms: modelSeats(). Returns HTML (style.css .mv*).
+  function seatRangeChart(ms, { seats = ASSEMBLY_SEATS, majority = 45, what = "Seat projection" } = {}) {
+    const blocs = BLOCS.filter((b) => ms.summary[b] && ms.summary[b].hi >= 0.5);
+    const r = Math.round;
+    const pos = (n) => `${((100 * Math.min(n, seats)) / seats).toFixed(2)}%`;
+    const fig = (s) => (r(s.lo) === r(s.hi) ? `${r(s.median)}` : `${r(s.median)} (${r(s.lo)} to ${r(s.hi)})`);
+    const rows = blocs.map((b) => {
+      const s = ms.summary[b], v = partyVar(BLOC_COLOR[b]);
+      return `<div class="mv-row"><span class="mv-name">${BLOC_LABEL[b]}</span>
+        <span class="mv-track"><span class="mv-range" style="left:${pos(s.lo)};width:calc(${pos(s.hi)} - ${pos(s.lo)});background:var(${v})"></span><span class="hb-majority" style="left:${pos(majority)}"></span><span class="mv-mid" style="left:${pos(s.median)};background:var(${v})"></span></span>
+        <span class="mv-num"><b>${r(s.median)}</b>${r(s.lo) !== r(s.hi) ? ` <span class="mv-rng">${r(s.lo)}–${r(s.hi)}</span>` : ""}</span></div>`;
+    }).join("");
+    const label = `${what}: median of ${ms.models.length} seat models, with the lowest and highest: ${blocs.map((b) => `${BLOC_LABEL[b]} ${fig(ms.summary[b])}`).join(", ")}. ${majority} seats needed for a majority.`;
+    return `<div class="mv" role="img" aria-label="${escapeHtml(label)}">${rows}</div>
+      <ul class="hb-key"><li><span class="mv-key-mid"></span>Median of ${ms.models.length} models</li><li><span class="mv-key-rng"></span>Lowest to highest</li><li class="hb-maj-key"><span class="hb-maj-mark"></span>${majority} for a majority</li></ul>`;
+  }
+
+  // The models' medians as a hemicycle (home page, weekly card), whole seats by apportion().
+  function modelsHemicycle(ms, opts = {}) {
+    const med = Object.fromEntries(BLOCS.filter((b) => ms.summary[b]).map((b) => [b, ms.summary[b].median]));
+    const whole = apportion(med);
+    const segments = BLOCS.filter((b) => whole[b]).map((b) => ({ code: BLOC_COLOR[b], n: whole[b], bloc: b }));
+    return hemicycle({ segments, label: `Hemicycle of the 88 seats: the models' medians, rounded to whole seats: ${segments.map((s) => `${BLOC_LABEL[s.bloc]} ${s.n}`).join(", ")}. 45 seats needed for a majority.`, ...opts });
+  }
+
   /* ---- Candidates: ids, headshots and initials avatars ---- */
   // "<district or region id>/<slug of Given Surname>", matching scripts/build_headshots.py.
   function givenFirst(name) {
@@ -1399,7 +1486,7 @@
     PARTIES, STATUSES, COALITION, partyOrder, candidateOrder, surnameOf, loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, partyBadge, statusBadge,
     slugify, parseDate, fmtDate, fmtMonth, fmtDateTime, dataUpdatedText, fmtPrice, fmtMargin, fmtSwing, melbourneToday, daysBetween,
     hashId, cssVar, currentTheme, showError, copyLink,
-    DAY, preparePolls, pollExclusion, commissionLabel, AVG_MIN_SAMPLE, smoothedSeries, smoothedLatest, fmtRange, pollRecords, statewideSwing, swingAdjusted, projectSeats, modelSeats, BLOCS, blocOf, modelLink, quotaBars,
+    DAY, preparePolls, pollExclusion, commissionLabel, AVG_MIN_SAMPLE, smoothedSeries, smoothedLatest, fmtRange, pollRecords, statewideSwing, swingAdjusted, projectSeats, modelSeats, apportion, hemicycle, seatRangeChart, modelsHemicycle, BLOC_LABEL, BLOC_COLOR, BLOCS, blocOf, modelLink, quotaBars,
     getWatchlist, setWatchlist, isWatched, toggleWatch, starButton, storageWorks,
     buildSearchIndex, searchItems,
     candidateId, givenFirst, loadHeadshots, avatar, photoCredits, initials, inkFor, inkVar, newsList,

@@ -502,8 +502,11 @@
           <div class="hc-facts">
             <div><span class="hc-label">Primary vote</span><span class="hc-value">${Object.entries(primaries).map(([k, v]) => `${escapeHtml(App.partyShort(k))} ${v.toFixed(0)}`).join(" · ")}</span>
               <span class="hc-sub">Average of ${n} polls</span></div>
-            <div><span class="hc-label">Seat models, median (45 to win)</span><span class="hc-value">${seats.length ? seats.map((b) => `${BLOC_SHORT[b]} ${Math.round(ms.summary[b].median)}`).join(" · ") : "No model loaded"}</span>
-              <span class="hc-sub">${seats.length ? `Median of ${ms.models.length} models; range ${seats.map((b) => `${BLOC_SHORT[b]} ${Math.round(ms.summary[b].lo)}–${Math.round(ms.summary[b].hi)}`).join(", ")}` : ""}</span></div>
+            <div><span class="hc-label">Seat models, median of ${ms.models.length} (45 to win)</span>
+              ${seats.length ? `<div class="hc-seatrow">${App.modelsHemicycle(ms)}<ul class="hc-seatlist">${seats.map((b) => {
+                const m = ms.summary[b], r = Math.round;
+                return `<li><i style="background:var(${BLOC[b][1]})"></i>${BLOC[b][0]} <b>${r(m.median)}</b>${r(m.lo) !== r(m.hi) ? ` <span class="hc-sub">${r(m.lo)}–${r(m.hi)}</span>` : ""}</li>`;
+              }).join("")}</ul></div>` : '<span class="hc-value">No model loaded</span>'}</div>
           </div>
           <div class="hc-week-cols">
             <div><div class="hc-label">Biggest seat moves${moves.since ? ` since ${escapeHtml(short(moves.since))}` : ""}</div>

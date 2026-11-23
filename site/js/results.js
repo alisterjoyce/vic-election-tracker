@@ -26,7 +26,16 @@
     const key = blocs.map((x) => `<li><span class="swatch" style="background:var(${App.partyVar(BLOC_CODE[x.b])})"></span>${BLOC_NAMES[x.b]}
       <b>${x.called + x.leading}</b> <span class="muted small">(${x.called} called, ${x.leading} leading)</span></li>`).join("")
       + `<li><span class="swatch hb-und"></span>Undecided <b>${t.undecided}</b></li><li class="hb-maj-key"><span class="hb-maj-mark"></span>${MAJORITY} for a majority</li>`;
+    // The hemicycle: each party's called seats solid, then its leading seats outlined; undecided grey.
+    const segments = [];
+    blocs.forEach((x) => {
+      if (x.called) segments.push({ code: BLOC_CODE[x.b], n: x.called });
+      if (x.leading) segments.push({ code: BLOC_CODE[x.b], n: x.leading, outline: true });
+    });
+    const hemi = App.hemicycle({ segments, className: "res-hemi-svg",
+      label: `Hemicycle of the 88 seats: ${blocs.map((x) => `${BLOC_NAMES[x.b]} ${x.called} called, ${x.leading} leading`).join("; ")}; ${t.undecided} undecided. ${MAJORITY} seats needed for a majority.` });
     return `<p class="res-verdict"><strong>${escapeHtml(verdict)}.</strong></p>
+      <figure class="res-hemi">${hemi}<figcaption>Solid dots: called. Outlined: leading. Grey: no clear leader yet.</figcaption></figure>
       <div class="hb-track res-track" role="img" aria-label="${escapeHtml(`${blocs.map((x) => `${BLOC_NAMES[x.b]} ${x.called} called, ${x.leading} leading`).join("; ")}; ${t.undecided} undecided. ${MAJORITY} seats needed.`)}">
         ${segs}<span class="hb-majority" style="left:${(100 * MAJORITY) / SEATS}%"></span></div>
       <ul class="hb-key">${key}</ul>

@@ -156,19 +156,9 @@
     const el = document.getElementById("hero-proj");
     const list = document.getElementById("hero-proj-models");
     if (!ms.models.length) { el.innerHTML = '<p class="empty">No seat model loaded.</p>'; list.innerHTML = ""; return; }
-    const blocs = App.BLOCS.filter((b) => ms.summary[b] && ms.summary[b].hi >= 0.5);   // the fixed party order, never by size
-    const r = Math.round;
-    const pos = (n) => `${((100 * Math.min(n, SEATS)) / SEATS).toFixed(2)}%`;
-    const fig = (s) => (r(s.lo) === r(s.hi) ? `${r(s.median)}` : `${r(s.median)} (${r(s.lo)} to ${r(s.hi)})`);
-    const rows = blocs.map((b) => {
-      const s = ms.summary[b], v = partyVar(BLOC_CODE[b]);
-      return `<div class="mv-row"><span class="mv-name">${BLOC_NAMES[b]}</span>
-        <span class="mv-track"><span class="mv-range" style="left:${pos(s.lo)};width:calc(${pos(s.hi)} - ${pos(s.lo)});background:var(${v})"></span><span class="hb-majority" style="left:${pos(MAJORITY)}"></span><span class="mv-mid" style="left:${pos(s.median)};background:var(${v})"></span></span>
-        <span class="mv-num"><b>${r(s.median)}</b>${r(s.lo) !== r(s.hi) ? ` <span class="mv-rng">${r(s.lo)}–${r(s.hi)}</span>` : ""}</span></div>`;
-    }).join("");
-    const label = `Seat projection: median of ${ms.models.length} seat models, with the lowest and highest: ${blocs.map((b) => `${BLOC_NAMES[b]} ${fig(ms.summary[b])}`).join(", ")}. ${MAJORITY} seats needed for a majority.`;
-    el.innerHTML = `<div class="mv" role="img" aria-label="${escapeHtml(label)}">${rows}</div>
-      <ul class="hb-key"><li><span class="mv-key-mid"></span>Median of ${ms.models.length} models</li><li><span class="mv-key-rng"></span>Lowest to highest</li><li class="hb-maj-key"><span class="hb-maj-mark"></span>${MAJORITY} for a majority</li></ul>`;
+    // The hemicycle shows the medians as whole seats (they can add to 89 or 87); the rows give each median and range.
+    el.innerHTML = `<div class="mv-wrap"><figure class="mv-hemi">${App.modelsHemicycle(ms)}<figcaption>Medians as whole seats</figcaption></figure>
+      <div class="mv-rows">${App.seatRangeChart(ms)}</div></div>`;
     list.innerHTML = ms.models.map(({ model: m, when, basis }) =>
       `<li>${App.modelLink(m)}${m.client ? ` for ${escapeHtml(m.client)}` : ""}${when ? `, ${escapeHtml(when)}` : ""}: ${escapeHtml(basis)}</li>`).join("");
   }
