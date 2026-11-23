@@ -746,6 +746,7 @@ select {
 .tab-panel:focus { outline: none; }
 .tab-panel > .card-head { margin-top: 18px; }
 .link-btn { border: 0; background: none; padding: 0; font: inherit; color: var(--accent); text-decoration: underline; cursor: pointer; }
+.abc-results { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin: 4px 0 12px; }
 /* Glossary terms: a dotted underline, and a popover with the short definition on tap */
 a.gloss { color: inherit; text-decoration: underline dotted; text-decoration-color: var(--muted); text-underline-offset: 3px; text-decoration-thickness: 1px; cursor: help; }
 a.gloss:hover, a.gloss[aria-expanded="true"] { text-decoration-color: var(--accent); }

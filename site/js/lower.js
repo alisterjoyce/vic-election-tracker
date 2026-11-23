@@ -258,6 +258,7 @@
           (© Victorian Electoral Commission, CC BY 4.0). Pins on the booth map in the <a href="#${escapeHtml(d.id)}/results" data-tab-go="results">${live ? "Results" : "2022 results"} tab</a> mark them. Check the VEC's list before you go.</p>
       </section>`)}
       ${P("results", `
+      ${live ? App.abcResultsLink("district", d) : ""}
       ${live ? `<section class="r26" id="r26" aria-labelledby="r26-h"><h3 id="r26-h">2026 results</h3><p class="empty">Loading 2026 results…</p></section>` : ""}
       <section class="r22" id="r22" aria-labelledby="r22-h">
         <h3 id="r22-h">How it voted in 2022</h3>

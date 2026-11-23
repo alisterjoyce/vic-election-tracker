@@ -753,6 +753,20 @@
     return decodeURIComponent(location.hash.replace(/^#/, "")).trim().toLowerCase();
   }
 
+  /* ---- The ABC's 2026 results pages (linked from each seat's and region's results once counting starts) ---- */
+  // In 2022 a seat's ABC results were on its guide page (districts.json abc_url) and a region's on
+  // guide/results-<code>; 2026 is taken to follow (checked 23 Nov 2026: the seat guides exist, the region results
+  // pages don't yet). If the ABC uses other addresses on the night, change them here.
+  const ABC_2026 = "https://www.abc.net.au/news/elections/vic/2026/";
+  const ABC_REGION_CODES = { "eastern-victoria": "evic", "north-eastern-metropolitan": "neme", "northern-metropolitan": "nmet",
+    "northern-victoria": "nvic", "south-eastern-metropolitan": "seme", "southern-metropolitan": "met", "western-metropolitan": "wmet", "western-victoria": "wvic" };
+  function abcResultsLink(kind, x) {
+    const url = kind === "district" ? (x.abc_url || `${ABC_2026}guide/electorates`)
+      : ABC_REGION_CODES[x.id] ? `${ABC_2026}guide/results-${ABC_REGION_CODES[x.id]}` : `${ABC_2026}guide/lc-results`;
+    return `<p class="abc-results small"><a class="icon-btn" href="${escapeHtml(url)}" target="_blank" rel="noopener">ABC results: ${escapeHtml(x.name)}${kind === "region" ? " Region" : ""} ↗</a>
+      <span class="muted">The ABC's own count and analysis, on its site.</span></p>`;
+  }
+
   /* ---- Tabs (seat and region pages): a scrollable tab bar and its panels ---- */
   // tabs: [[key, label]]; panels are tabPanel(key, ...) elements with id "<prefix>-<key>".
   function tabBar(tabs, current, prefix, label) {
@@ -1696,7 +1710,7 @@
   window.App = {
     PARTIES, STATUSES, COALITION, partyOrder, byValue, candidateOrder, surnameOf, loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, partyBadge, statusBadge,
     slugify, parseDate, fmtDate, fmtMonth, fmtDateTime, dataUpdatedText, fmtPrice, fmtMargin, fmtSwing, melbourneToday, daysBetween,
-    hashId, cssVar, currentTheme, showError, copyLink, tabBar, tabPanel, initTabs, GLOSSARY, glossarize,
+    hashId, cssVar, currentTheme, showError, copyLink, tabBar, tabPanel, initTabs, GLOSSARY, glossarize, abcResultsLink,
     DAY, preparePolls, pollExclusion, commissionLabel, AVG_MIN_SAMPLE, smoothedSeries, smoothedLatest, fmtRange, pollRecords, statewideSwing, swingAdjusted, projectSeats, modelSeats, seatCalls, apportion, hemicycle, seatRangeChart, modelsHemicycle, BLOC_LABEL, BLOC_COLOR, BLOCS, blocOf, modelLink, quotaBars,
     getWatchlist, setWatchlist, isWatched, toggleWatch, starButton, storageWorks,
     buildSearchIndex, searchItems,

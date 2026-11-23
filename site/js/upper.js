@@ -78,6 +78,7 @@
     const groups = c.groups.filter((g) => g.quotas >= 0.05);
     return `<section class="region-count" aria-labelledby="rc-h">
       <h3 id="rc-h">2026 count: quotas filled</h3>
+      ${App.abcResultsLink("region", r)}
       <p class="muted small" style="margin-top:0">${c.counted_pct.toFixed(1)}% of enrolment counted · ${c.formal.toLocaleString("en-AU")} formal votes ·
         quota ${c.quota.toLocaleString("en-AU")} (${c.quota_source === "vec" ? "as published by the VEC" : "formal votes ÷ 6, plus 1"})${c.elected.length
         ? ` · elected: ${c.elected.map((n) => escapeHtml(n)).join(", ")}` : ""}</p>
