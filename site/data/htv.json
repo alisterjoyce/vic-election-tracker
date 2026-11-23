@@ -22,10 +22,10 @@
   "coverage": {
     "cards": 1423,
     "listings": 4815,
-    "orders_read": 4333,
-    "orders_image": 359,
+    "orders_read": 4347,
+    "orders_image": 373,
     "orders_same_as": 158,
-    "orders_unreadable": 296,
+    "orders_unreadable": 282,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -12121,8 +12121,33 @@
           ]
         },
         "st-albans": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "SULEYMAN, Natalie",
+            "DAVINDER KAUR",
+            "WALKER, Luân",
+            "HUYNH, Thuc Bao",
+            "NGUYEN, Leanna",
+            "DUNSTAN, Rob",
+            "JANTEN, Kerry",
+            "HAKIZIMANA, Alex",
+            "COWELL, John"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6,
+            "ONP": 9
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         },
         "sydenham": {
           "status": "read",
@@ -12363,8 +12388,33 @@
           ]
         },
         "williamstown": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "HORNE, Melissa",
+            "HOCKING, Ben",
+            "MARTIN, Oskar",
+            "YARRA, Sagar Reddy",
+            "BRIFFA, Tony",
+            "GANNON, Gill",
+            "O'REGAN, Bruce",
+            "LINDEMANN, Paul",
+            "LOUGHNAN, Catherine"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 2,
+            "LNP": 8,
+            "ONP": 9
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 2,
+              "of_n": 8
+            }
+          ]
         },
         "western-metropolitan": {
           "atl": [
@@ -12410,8 +12460,29 @@
       "read_on": "2026-11-20",
       "orders": {
         "prahran": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "DOUEIHI, Clayton",
+            "DI CAMILLO, Angelica",
+            "O'NEILL, G. Daniel",
+            "HOPPER, Meghan",
+            "FINNIGAN, Tosh-Jake",
+            "LEETON WATTS, George",
+            "MENADUE, Alan",
+            "DICKS, Max",
+            "WESTAWAY, Rachel",
+            "WONG, Nicholas",
+            "JONAS, Morgan",
+            "JONES, Daniel",
+            "VIRSU, Shaun"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 2,
+            "ALP": 4,
+            "LNP": 9,
+            "ONP": 13
+          }
         },
         "southern-metropolitan": {
           "atl": [
@@ -12500,8 +12571,11 @@
       "read_on": "2026-11-20",
       "orders": {
         "malvern": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "partial",
+          "order": [
+            "ZIGOURAS, Christina"
+          ],
+          "via": "image"
         }
       }
     },
@@ -22871,8 +22945,11 @@
       "read_on": "2026-11-22",
       "orders": {
         "western-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "B"
+          ],
+          "via": "image"
         }
       }
     },
@@ -22892,8 +22969,11 @@
       "read_on": "2026-11-20",
       "orders": {
         "southern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "C"
+          ],
+          "via": "image"
         }
       }
     },
@@ -23018,8 +23098,11 @@
       "read_on": "2026-11-20",
       "orders": {
         "eastern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "D"
+          ],
+          "via": "image"
         }
       }
     },
@@ -23039,8 +23122,11 @@
       "read_on": "2026-11-20",
       "orders": {
         "western-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "D"
+          ],
+          "via": "image"
         }
       }
     },
@@ -23322,8 +23408,11 @@
       "read_on": "2026-11-20",
       "orders": {
         "northern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "A"
+          ],
+          "via": "image"
         }
       }
     },
@@ -23453,8 +23542,26 @@
       "read_on": "2026-11-20",
       "orders": {
         "pascoe-vale": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "SHAMSILI, Yasemin",
+            "ANDREWARTHA, Jacob",
+            "PANOPOULOS, Angelica",
+            "CIANFLONE, Anthony",
+            "TAGGAR, Rohit",
+            "ASHTON, Kathrine",
+            "HAUPT, Kerry",
+            "LAWRENCE, Stuart",
+            "HICKEY, Amanda",
+            "GANCI, Rosemarie Pauline"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 3,
+            "ALP": 4,
+            "LNP": 5,
+            "ONP": 10
+          }
         },
         "northern-metropolitan": {
           "atl": [
@@ -23614,8 +23721,20 @@
           }
         },
         "northern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "G",
+            "L",
+            "D",
+            "J",
+            "A",
+            "K"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 3,
+            "ALP": 6
+          }
         }
       }
     },
@@ -23688,8 +23807,11 @@
       "read_on": "2026-11-20",
       "orders": {
         "shepparton": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "partial",
+          "order": [
+            "COSTA, Lou"
+          ],
+          "via": "image"
         }
       }
     },
@@ -24769,8 +24891,20 @@
           }
         },
         "northern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "G",
+            "L",
+            "D",
+            "J",
+            "A",
+            "K"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 3,
+            "ALP": 6
+          }
         }
       }
     },
@@ -36867,8 +37001,23 @@
       "read_on": "2026-11-20",
       "orders": {
         "clarinda": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "WHITE, Caroline",
+            "PAGANIS, John",
+            "ROCHE, Liam",
+            "BAIN, Gavin",
+            "MESSAGE, Kit",
+            "BOYD-EEDLE, Conor",
+            "TAK, Meng Heang"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 2,
+            "ONP": 4,
+            "GRN": 6,
+            "ALP": 7
+          }
         }
       }
     },

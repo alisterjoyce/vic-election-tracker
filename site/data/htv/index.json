@@ -14,10 +14,10 @@
   "coverage": {
     "cards": 1423,
     "listings": 4815,
-    "orders_read": 4333,
-    "orders_image": 359,
+    "orders_read": 4347,
+    "orders_image": 373,
     "orders_same_as": 158,
-    "orders_unreadable": 296,
+    "orders_unreadable": 282,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -451,9 +451,9 @@
     "clarinda": {
       "house": "lower",
       "cards": 50,
-      "read": 47,
+      "read": 48,
       "same_as": 2,
-      "unreadable": 1,
+      "unreadable": 0,
       "parties": {
         "ALP": 13,
         "VS": 2,
@@ -936,9 +936,9 @@
     "malvern": {
       "house": "lower",
       "cards": 43,
-      "read": 40,
+      "read": 41,
       "same_as": 1,
-      "unreadable": 2,
+      "unreadable": 1,
       "parties": {
         "ALP": 8,
         "IND": 1,
@@ -1294,9 +1294,9 @@
     "pascoe-vale": {
       "house": "lower",
       "cards": 56,
-      "read": 45,
+      "read": 46,
       "same_as": 7,
-      "unreadable": 4,
+      "unreadable": 3,
       "parties": {
         "ALP": 8,
         "VS": 2,
@@ -1348,9 +1348,9 @@
     "prahran": {
       "house": "lower",
       "cards": 50,
-      "read": 42,
+      "read": 43,
       "same_as": 1,
-      "unreadable": 5,
+      "unreadable": 4,
       "parties": {
         "ALP": 9,
         "VS": 2,
@@ -1474,9 +1474,9 @@
     "shepparton": {
       "house": "lower",
       "cards": 20,
-      "read": 16,
+      "read": 17,
       "same_as": 0,
-      "unreadable": 4,
+      "unreadable": 3,
       "parties": {
         "ALP": 3,
         "VS": 2,
@@ -1527,9 +1527,9 @@
     "st-albans": {
       "house": "lower",
       "cards": 41,
-      "read": 37,
+      "read": 38,
       "same_as": 0,
-      "unreadable": 4,
+      "unreadable": 3,
       "parties": {
         "ALP": 8,
         "VS": 2,
@@ -1681,9 +1681,9 @@
     "williamstown": {
       "house": "lower",
       "cards": 40,
-      "read": 37,
+      "read": 38,
       "same_as": 0,
-      "unreadable": 3,
+      "unreadable": 2,
       "parties": {
         "ALP": 10,
         "VS": 2,
@@ -1718,9 +1718,9 @@
     "eastern-victoria": {
       "house": "upper",
       "cards": 123,
-      "read": 121,
+      "read": 122,
       "same_as": 0,
-      "unreadable": 2,
+      "unreadable": 1,
       "parties": {
         "SFF": 2,
         "ALP": 30,
@@ -1763,9 +1763,9 @@
     "northern-metropolitan": {
       "house": "upper",
       "cards": 201,
-      "read": 184,
+      "read": 187,
       "same_as": 3,
-      "unreadable": 14,
+      "unreadable": 11,
       "parties": {
         "ALP": 69,
         "SUS": 1,
@@ -1832,9 +1832,9 @@
     "southern-metropolitan": {
       "house": "upper",
       "cards": 171,
-      "read": 160,
+      "read": 161,
       "same_as": 5,
-      "unreadable": 6,
+      "unreadable": 5,
       "parties": {
         "ALP": 51,
         "VS": 12,
@@ -1854,9 +1854,9 @@
     "western-metropolitan": {
       "house": "upper",
       "cards": 197,
-      "read": 188,
+      "read": 189,
       "same_as": 2,
-      "unreadable": 7,
+      "unreadable": 6,
       "parties": {
         "ALP": 60,
         "IND": 1,
@@ -1877,9 +1877,9 @@
     "western-victoria": {
       "house": "upper",
       "cards": 135,
-      "read": 127,
+      "read": 128,
       "same_as": 1,
-      "unreadable": 7,
+      "unreadable": 6,
       "parties": {
         "SFF": 2,
         "SAL": 8,
@@ -7108,7 +7108,7 @@
       "area": "st-albans",
       "party": "ALP",
       "cards": 8,
-      "read": 7,
+      "read": 8,
       "ranks": {
         "ALP": 1,
         "GRN": 4,
@@ -7639,7 +7639,7 @@
       "area": "williamstown",
       "party": "ALP",
       "cards": 10,
-      "read": 9,
+      "read": 10,
       "ranks": {
         "ALP": 1,
         "GRN": 2,
