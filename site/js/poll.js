@@ -150,10 +150,11 @@
         </div>
         <div class="facts">
           <div class="fact"><div class="label">Pollster</div><div class="value">${escapeHtml(p.pollster)}</div></div>
-          <div class="fact"><div class="label">Client</div><div class="value">${escapeHtml(p.client || "None published")}</div></div>
+          <div class="fact"><div class="label">Commissioned by</div><div class="value">${escapeHtml(App.commissionLabel(p))}</div></div>
           <div class="fact"><div class="label">Fieldwork</div><div class="value">${escapeHtml(fieldwork(p))}</div></div>
           <div class="fact"><div class="label">Sample</div><div class="value">${p.sample_size ? p.sample_size.toLocaleString("en-AU") : "Not published"}</div></div>
         </div>
+        ${App.pollExclusion(p) ? `<p class="small poll-excl-note"><strong>Not in this site's poll of polls:</strong> ${escapeHtml(App.pollExclusion(p).toLowerCase())}. <a href="poll.html#aggregates">How the average works</a></p>` : ""}
         ${recordNotes(p)}
         ${prim.length ? `<h3>Primary vote</h3>${bars(prim, maxPrim)}` : ""}
         ${p.tpp ? `<h3>Two-party preferred</h3>${splitBar([["Labor", "ALP", p.tpp.ALP], ["L/NP", "LNP", p.tpp.LNP]])}` : '<p class="muted small">No ALP v L/NP two-party figure published.</p>'}
@@ -173,9 +174,10 @@
           </table></div>` : ""}
         ${!pp && !ap ? '<p class="muted small">No preferred-premier or approval figures published with this poll.</p>' : ""}
         <p class="muted small">${p.source_url ? `Source: <a href="${escapeHtml(p.source_url)}" target="_blank" rel="noopener">${escapeHtml(host)}</a>, ` : ""}${p.via
-          ? `entered by hand from <a href="${escapeHtml(p.via.url)}" target="_blank" rel="noopener">${escapeHtml(p.via.label)}</a> until Wikipedia lists it.`
-          : `via <a href="https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election">Wikipedia's poll tables</a>.`}${p.supplemented
-          ? ` ${escapeHtml(SUPPLEMENT_LABEL(p.supplemented.fields))} from <a href="${escapeHtml(p.supplemented.url)}" target="_blank" rel="noopener">${escapeHtml(p.supplemented.label)}</a>.` : ""}</p>
+          ? `${p.added_from === "electiontracker" ? "added from" : "entered by hand from"} <a href="${escapeHtml(p.via.url)}" target="_blank" rel="noopener">${escapeHtml(p.via.label)}</a> until Wikipedia lists it.`
+          : `via <a href="https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election">Wikipedia's poll tables</a>.`}${(Array.isArray(p.supplemented) ? p.supplemented : p.supplemented ? [p.supplemented] : []).map((s) =>
+            ` ${escapeHtml(SUPPLEMENT_LABEL(s.fields))} from <a href="${escapeHtml(s.url)}" target="_blank" rel="noopener">${escapeHtml(s.label)}</a>.`).join("")}${p.commissioned_by && p.commissioned_by.via === "electiontracker"
+          ? ` Who commissioned it: <a href="https://electiontracker.au/elections/vic/2026/polls" target="_blank" rel="noopener">electiontracker.au poll ledger</a> (CC BY 4.0).` : ""}</p>
       </article>
 
       <section class="card" aria-labelledby="trend-h">
@@ -200,7 +202,8 @@
   // "Client, preferred premier and leader ratings" for the fields filled from a hand-entered poll.
   function SUPPLEMENT_LABEL(fields) {
     const names = { client: "client", preferred_premier: "preferred premier", preferred_premier_alt: "preferred premier",
-      approval: "leader ratings", tpp: "two-party figures", tpp3: "three-party figures", sample_size: "sample size" };
+      approval: "leader ratings", tpp: "two-party figures", tpp3: "three-party figures", sample_size: "sample size",
+      primary: "primary vote", source_url: "source link" };
     const list = [...new Set(fields.map((f) => names[f] || f.replace(/_/g, " ")))];
     const text = list.length > 1 ? `${list.slice(0, -1).join(", ")} and ${list[list.length - 1]}` : list[0];
     return text.charAt(0).toUpperCase() + text.slice(1);
@@ -209,15 +212,20 @@
   function pollTable(list, current) {
     const keys = ["ALP", "LNP", "GRN", "ONP"];
     return `<div class="table-scroll"><table class="poll-list">
-      <thead><tr><th>Fieldwork</th><th>Pollster</th><th>Client</th><th class="num">Sample</th>
+      <thead><tr><th>Fieldwork</th><th>Pollster</th><th>Commissioned by</th><th class="num">Sample</th>
         ${keys.map((k) => `<th class="num" title="Primary vote">${escapeHtml(App.partyShort(k))}</th>`).join("")}<th class="num">2PP L/NP</th></tr></thead>
-      <tbody>${list.map((p) => `<tr${p.id === current ? ' class="current"' : ""}>
+      <tbody>${list.map((p) => {
+        const out = App.pollExclusion(p);
+        const cls = [p.id === current ? "current" : "", out ? "poll-excluded" : ""].filter(Boolean).join(" ");
+        return `<tr${cls ? ` class="${cls}"` : ""}>
         <td>${escapeHtml(fmtDate(p.end_date))}</td>
-        <td><a href="poll.html#${escapeHtml(p.id)}">${escapeHtml(p.pollster)}</a></td>
-        <td>${escapeHtml(p.client || "–")}</td>
+        <td${out ? ` data-csv="${escapeHtml(`${p.pollster} (not in the average: ${out.toLowerCase()})`)}"` : ""}><a href="poll.html#${escapeHtml(p.id)}">${escapeHtml(p.pollster)}</a>${out
+          ? `<span class="excl-reason">Not in the average: ${escapeHtml(out.toLowerCase())}</span>` : ""}</td>
+        <td>${escapeHtml(App.commissionLabel(p))}</td>
         <td class="num">${p.sample_size ? p.sample_size.toLocaleString("en-AU") : "–"}</td>
         ${keys.map((k) => `<td class="num">${get(p, `primary.${k}`) ?? "–"}</td>`).join("")}
-        <td class="num">${get(p, "tpp.LNP") ?? "–"}</td></tr>`).join("")}</tbody>
+        <td class="num">${get(p, "tpp.LNP") ?? "–"}</td></tr>`;
+      }).join("")}</tbody>
     </table></div>`;
   }
 

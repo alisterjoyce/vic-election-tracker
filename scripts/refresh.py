@@ -116,7 +116,7 @@ REDBRIDGE_SITEMAPS = ("https://redbridgegroup.com.au/post-sitemap.xml", "https:/
 REDBRIDGE_RELEASE = re.compile(r"vic|victoria|seat|projection|model|mrp|blog-media", re.I)
 
 POLLS_SCHEMA = {
-    "description": "Published voting-intention polls, scraped from Wikipedia by scripts/refresh.py, plus any entered by hand in scripts/polls_manual.json that Wikipedia hasn't listed yet (those carry 'via').",
+    "description": "Published voting-intention polls, scraped from Wikipedia by scripts/refresh.py, plus any entered by hand in scripts/polls_manual.json and any in electiontracker.au's poll ledger (CC BY 4.0) that Wikipedia hasn't listed yet (those carry 'via'). Fields Wikipedia's rows lack are filled from the ledger where it lists the same poll ('supplemented').",
     "fields": {
         "id": "Stable id: <pollster slug>-<end_date>, with -2, -3 for repeats (used by poll.html#<id>)",
         "start_date": "Fieldwork start, YYYY-MM-DD (may equal end_date)",
@@ -131,9 +131,12 @@ POLLS_SCHEMA = {
         "preferred_premier": "Optional: {matchup, leaders: {surname: %}, undecided: %}",
         "approval": "Optional: {matchup, leaders: {surname: {positive, negative, undecided, net}}} (net = positive - negative, as published)",
         "preferred_premier_alt": "Optional: a second preferred-premier measure from the same poll (e.g. a three-way question), shaped like preferred_premier",
-        "via": "Only on polls entered by hand (scripts/polls_manual.json): {label, url} of the report the figures came from",
+        "commissioned_by": "Who paid for the poll: {category, name, via}. category: media, pollster (its own poll), party, union, advocacy, or null when not stated; name: the commissioner where known (null for a pollster's own poll); via: where the category comes from (electiontracker = its poll ledger's commissioner type, client = the client's name, pollster = a firm that publishes its own polls). The site's poll of polls leaves out party, union and advocacy polls and samples under 800 (or not published), following electiontracker.au's rule",
+        "via": "Only on polls Wikipedia hasn't listed: {label, url} of where the figures came from (a report, for polls entered by hand; electiontracker.au's poll ledger, for polls added from it)",
         "added": "Only on polls entered by hand: the date they were entered",
-        "supplemented": "Optional {fields, label, url}: fields of a Wikipedia-listed poll filled from scripts/polls_manual.json, and where they came from",
+        "added_from": "'electiontracker' on a poll added from electiontracker.au's ledger because Wikipedia hasn't listed it",
+        "et_id": "The poll's id in electiontracker.au's ledger, where it lists the same poll",
+        "supplemented": "Optional [{fields, label, url}]: fields of a Wikipedia-listed poll filled from scripts/polls_manual.json or electiontracker.au's ledger, and where they came from",
     },
 }
 
@@ -571,12 +574,12 @@ def refresh_polls(data_dir: Path, meta: dict) -> bool:
         return False
 
     polls = merge_manual_polls(polls, (read_json(MANUAL_POLLS, {}) or {}).get("polls", []))
+    et = refresh_et_polls(data_dir, meta)
+    polls = merge_et_polls(polls, (et or {}).get("polls", []))
+    for p in polls:
+        p["commissioned_by"] = commissioned_by(p, (et or {}).get("polls"))
     # The script owns this file, so its schema always replaces whatever was there.
-    write_json(path, {
-        "_schema": POLLS_SCHEMA,
-        "source": POLLS_URL,
-        "polls": polls,
-    })
+    write_json(path, {"_schema": POLLS_SCHEMA, "source": POLLS_URL, "polls": polls})
     source.update(status="ok", url=POLLS_URL, last_success=now_iso(), message=f"{len(polls)} polls")
     meta.setdefault("sample_data", {})["polls"] = False
     log.info("Wrote %s (%d polls)", path.name, len(polls))
@@ -608,11 +611,246 @@ def merge_manual_polls(polls: list[dict], manual: list[dict]) -> list[dict]:
             for k in filled:
                 match[k] = m[k]
             if filled and m.get("via"):
-                match["supplemented"] = {"fields": filled, **m["via"]}
+                match.setdefault("supplemented", []).append({"fields": filled, **m["via"]})
             log.info("Poll entered by hand %s is now on Wikipedia as %s%s; remove it from polls_manual.json once nothing "
                      "is filled from it", m.get("id"), match["id"], f" (filled: {', '.join(filled)})" if filled else "")
     out.sort(key=lambda p: (p["end_date"], p.get("start_date") or "", p["pollster"]), reverse=True)
     return out
+
+
+# --------------------------------------------------------------------------
+# Polls: electiontracker.au's poll ledger (second source) and who commissioned each poll
+# --------------------------------------------------------------------------
+# electiontracker.au publishes its poll ledger as open data (CC BY 4.0, credit "Australian Election Tracker (OZE),
+# electiontracker.au"); robots.txt allows /data/ and asks for the JSON. Each run reads /data/vic2026/polls.json and
+# matches it to Wikipedia's polls (same firm; fieldwork overlapping or ending within ET_MATCH_DAYS, closest first,
+# one to one). A matched poll keeps Wikipedia's figures and only gains fields its row lacks (recorded in
+# "supplemented" so the poll page credits the ledger); a ledger poll Wikipedia lacks is added (added_from
+# "electiontracker"). Only figures, dates, names and links are kept: the ledger's notes and reasons are never stored.
+# A compact copy of what was read goes in poll_ledger.json (pages don't load it), so a run where the ledger can't be
+# read reuses it rather than dropping the polls, fields and commissioners it supplied.
+ET_POLLS_URL = "https://electiontracker.au/data/vic2026/polls.json"
+ET_POLLS_LABEL = "electiontracker.au poll ledger (CC BY 4.0)"
+ET_POLLS_PAGE = "https://electiontracker.au/elections/vic/2026/polls"
+ET_MATCH_DAYS = 7
+ET_POLL_KEYS = {"alp": "ALP", "lnp": "LNP", "grn": "GRN", "onp": "ONP", "ind": "IND", "others": "OTH"}
+ET_POLLSTERS = {   # ledger slug -> name as shown here (others: the slug in title case)
+    "agenda-c-synesis": "Agenda C Synesis", "demosau": "DemosAU", "freshwater": "Freshwater",
+    "growth-intelligence-centre": "Growth Intelligence Centre", "online-research-unit": "Online Research Unit",
+    "redbridge": "RedBridge", "redbridge-accent": "RedBridge/Accent", "resolve": "Resolve", "roy-morgan": "Roy Morgan",
+    "newspoll": "Newspoll", "yougov": "YouGov", "essential": "Essential", "ipsos": "Ipsos",
+}
+ET_COMMISSIONERS = {   # ledger slug -> name
+    "herald-sun": "Herald Sun", "the-age": "The Age", "the-australian": "The Australian",
+    "australian-financial-review": "Australian Financial Review", "victorian-greens": "Victorian Greens",
+    "victorian-trades-hall": "Victorian Trades Hall Council", "premier-national": "Premier National",
+}
+ET_SELF = {"self", "self-published"}
+# Who commissioned a poll: media, pollster (its own poll), party, union or advocacy. The ledger's commissioner_type
+# wins where it lists the poll; otherwise the client Wikipedia names, by the patterns below; otherwise a pollster
+# that publishes its own polls; otherwise null (not stated). The site's poll of polls leaves out party, union and
+# advocacy polls (App.pollExclusion in common.js), following electiontracker.au's published rule.
+ET_COMMISSIONER_TYPES = {"media": "media", "self": "pollster", "party": "party", "candidate": "party",
+                         "union": "union", "excluded_advocacy": "advocacy", "advocacy": "advocacy"}
+CLIENT_CATEGORIES = [   # (category, pattern on the client's name), first match wins
+    ("union", re.compile(r"trades hall|\bunion\b|\bactu\b|cfmeu|anmf|\baeu\b|\bcpsu\b|\bsda\b|\bawu\b|\bhsu\b|\betu\b|\bnteu\b", re.I)),
+    ("party", re.compile(r"\b(greens|labor|liberals?|nationals|one nation|party|socialists|animal justice|family first|libertarian)\b", re.I)),
+    ("media", re.compile(r"herald sun|the age|financial review|\bafr\b|the australian|guardian|daily mail|sky news|"
+                         r"\bnine\b|seven|\babc\b|\bsbs\b|news corp|telegraph|sydney morning herald|\bsmh\b|news24|"
+                         r"premier national", re.I)),
+    ("advocacy", re.compile(r"institute|getup|climate 200|alliance|association|foundation|campaign|lobby|"
+                            r"council|chamber|society|agenda c", re.I)),
+]
+SELF_PUBLISHING = re.compile(r"^(roy morgan|yougov)", re.I)   # firms that publish their own polls when no client is named
+
+
+def _firm_parts(name: str) -> list[str]:
+    """'RedBridge/Accent' -> ['redbridge', 'accent']; 'Newspoll / Pyxis' -> ['newspoll', 'pyxis']; slugs lose their hyphens."""
+    return [k for k in (re.sub(r"[^a-z0-9]", "", s.lower()) for s in str(name or "").split("/")) if k]
+
+
+def _same_firm(a: str, b: str) -> bool:
+    """One name's part starts the other's ('redbridge' / 'redbridgeaccent'); parts of four letters or more."""
+    return any(len(x) >= 4 and len(y) >= 4 and (x.startswith(y) or y.startswith(x))
+               for x in _firm_parts(a) for y in _firm_parts(b))
+
+
+def parse_et_polls(doc: dict) -> list[dict]:
+    """The ledger's polls, compact: only figures, dates, names and the first source link (no notes or reasons)."""
+    out = []
+    for r in doc.get("polls") or []:
+        try:
+            start, end = date.fromisoformat(r["fieldwork_start"]), date.fromisoformat(r["fieldwork_end"])
+        except (KeyError, TypeError, ValueError):
+            log.warning("electiontracker.au poll %r has no fieldwork dates; skipped", r.get("id"))
+            continue
+        prim = {}
+        for k, v in (r.get("primaries") or {}).items():
+            if k in ET_POLL_KEYS and isinstance(v, (int, float)):
+                prim[ET_POLL_KEYS[k]] = v
+            elif k not in ET_POLL_KEYS:
+                log.warning("electiontracker.au poll %s: party key %r has no code here (left out)", r.get("id"), k)
+        if "ALP" not in prim or "LNP" not in prim:
+            log.warning("electiontracker.au poll %r lacks Labor or Coalition primaries; skipped", r.get("id"))
+            continue
+        n = r.get("sample_size")
+        src = next((s.get("url") for s in r.get("sources") or [] if str(s.get("url") or "").startswith("http")), None)
+        out.append({"id": str(r.get("id") or ""), "pollster": str(r.get("pollster") or ""),
+                    "commissioner": r.get("commissioner"), "commissioner_type": r.get("commissioner_type"),
+                    "start_date": start.isoformat(), "end_date": end.isoformat(),
+                    "sample_size": n if isinstance(n, int) and n > 0 else None, "primary": prim, "source_url": src})
+    return out
+
+
+ET_LEDGER_FILE = "poll_ledger.json"
+ET_LEDGER_SCHEMA = {
+    "description": "electiontracker.au's poll ledger as this site last read it (CC BY 4.0, credit 'Australian Election "
+                   "Tracker (OZE), electiontracker.au'): figures, dates, names and one source link per poll, no notes. "
+                   "refresh.py matches it to polls.json (filling missing fields, adding polls Wikipedia lacks, and "
+                   "setting commissioned_by) and reuses this copy when the ledger can't be read. Pages don't load it.",
+    "fields": {
+        "url": "The file read", "page": "The ledger's page", "credit": "Credit line", "licence": "Licence",
+        "generated": "The ledger's own timestamp", "read": "When this copy's contents were read (UTC)",
+        "polls[]": "id (theirs), pollster (their slug or name), commissioner (slug), commissioner_type (media, self, "
+                   "party, union, excluded_advocacy, ...), start_date, end_date, sample_size, primary {party code: %}, "
+                   "source_url",
+    },
+}
+
+
+def refresh_et_polls(data_dir: Path, meta: dict) -> dict | None:
+    """The ledger read now (poll_ledger.json rewritten when its polls change), or the last copy (or None)."""
+    source = meta.setdefault("sources", {}).setdefault("electiontracker_polls", {"url": ET_POLLS_URL})
+    path = data_dir / ET_LEDGER_FILE
+    previous = read_json(path, None)
+    try:
+        web = PoliteSession()
+        doc = _et_json(web, _et_robots(web), ET_POLLS_URL)
+        rows = parse_et_polls(doc if isinstance(doc, dict) else {"polls": doc})
+        if not rows:
+            raise ValueError("no usable polls in the ledger")
+    except Exception as exc:  # noqa: BLE001 - keep the last copy
+        log.error("electiontracker.au poll ledger failed, reusing the last copy (%s): %s",
+                  (previous or {}).get("read", "none"), exc)
+        warn_ci(f"electiontracker.au poll ledger failed, reused the last copy: {exc}")
+        source.update(status="error", message=str(exc)[:300])
+        return previous
+    source.update(status="ok", url=ET_POLLS_URL, last_success=now_iso(), message=f"{len(rows)} polls in the ledger")
+    log.info("electiontracker.au poll ledger: %d polls (generated %s)", len(rows), doc.get("generated"))
+    if previous and previous.get("polls") == rows:
+        return previous
+    ledger = {"_schema": ET_LEDGER_SCHEMA, "url": ET_POLLS_URL, "page": ET_POLLS_PAGE, "credit": ET_CREDIT,
+              "licence": "CC BY 4.0", "generated": doc.get("generated"), "read": now_iso(), "polls": rows}
+    write_json(path, ledger)
+    log.info("Wrote %s", path.name)
+    return ledger
+
+
+def _et_name(slug: str | None, names: dict) -> str | None:
+    if not slug or slug in ET_SELF:
+        return None
+    if slug in names:
+        return names[slug]
+    return slug if (" " in slug or slug != slug.lower()) else " ".join(w.capitalize() for w in slug.split("-"))
+
+
+def match_et_polls(polls: list[dict], et_rows: list[dict]) -> dict[int, dict]:
+    """index into polls -> ledger row: same firm, fieldwork overlapping or ending within ET_MATCH_DAYS, closest
+    first (overlaps before near misses, then the smaller gap between end dates), each poll used once."""
+    pairs = []
+    for i, p in enumerate(polls):
+        ps, pe = date.fromisoformat(p.get("start_date") or p["end_date"]), date.fromisoformat(p["end_date"])
+        for j, r in enumerate(et_rows):
+            if not _same_firm(p.get("pollster", ""), r["pollster"]):
+                continue
+            rs, re_ = date.fromisoformat(r["start_date"]), date.fromisoformat(r["end_date"])
+            overlap = ps <= re_ and rs <= pe
+            gap = abs((pe - re_).days)
+            if overlap or gap <= ET_MATCH_DAYS:
+                pairs.append((0 if overlap else 1, gap, i, j))
+    used_p, used_r, out = set(), set(), {}
+    for _, _, i, j in sorted(pairs):
+        if i not in used_p and j not in used_r:
+            used_p.add(i)
+            used_r.add(j)
+            out[i] = et_rows[j]
+    return out
+
+
+def merge_et_polls(polls: list[dict], et_rows: list[dict]) -> list[dict]:
+    """Fill the fields Wikipedia's rows lack from the ledger, and add the ledger's polls Wikipedia lacks."""
+    if not et_rows:
+        return polls
+    out = [dict(p) for p in polls]
+    matched = match_et_polls(out, et_rows)
+    filled_n, added = 0, []
+    for i, r in matched.items():
+        p = out[i]
+        p["et_id"] = r["id"]
+        fills = {"client": _et_name(r.get("commissioner"), ET_COMMISSIONERS), "sample_size": r.get("sample_size"),
+                 "source_url": r.get("source_url"), "primary": r.get("primary")}
+        filled = [k for k, v in fills.items() if v and not p.get(k)]
+        for k in filled:
+            p[k] = fills[k]
+        if filled:
+            filled_n += 1
+            p.setdefault("supplemented", []).append({"fields": filled, "label": ET_POLLS_LABEL, "url": ET_POLLS_PAGE})
+            log.info("Poll %s: filled %s from electiontracker.au (%s)", p["id"], ", ".join(filled), r["id"])
+        diff = {k: (p["primary"].get(k), v) for k, v in r["primary"].items()
+                if k in ("ALP", "LNP", "GRN", "ONP") and p.get("primary", {}).get(k) is not None and abs(p["primary"][k] - v) > 1}
+        if diff:
+            log.info("Poll %s: primaries differ from electiontracker.au's %s (ours, theirs): %s", p["id"], r["id"], diff)
+    taken = {id(r) for r in matched.values()}
+    for r in et_rows:
+        if id(r) in taken:
+            continue
+        name = _et_name(r["pollster"], ET_POLLSTERS) or r["pollster"]
+        base = f"{re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-')}-{r['end_date']}"
+        pid, n = base, 2
+        while any(p["id"] == pid for p in out):
+            pid, n = f"{base}-{n}", n + 1
+        out.append({"id": pid, "start_date": r["start_date"], "end_date": r["end_date"], "pollster": name,
+                    "client": _et_name(r.get("commissioner"), ET_COMMISSIONERS), "sample_size": r.get("sample_size"),
+                    "source_url": r.get("source_url"), "primary": r["primary"], "et_id": r["id"],
+                    "added_from": "electiontracker", "via": {"label": ET_POLLS_LABEL, "url": ET_POLLS_PAGE}})
+        added.append(pid)
+        log.warning("Poll added from electiontracker.au (not on Wikipedia): %s (%s, %s to %s, n=%s)", pid, name,
+                    r["start_date"], r["end_date"], r.get("sample_size"))
+    log.info("electiontracker.au poll ledger: %d of %d matched to Wikipedia's polls, %d filled, %d added",
+             len(matched), len(et_rows), filled_n, len(added))
+    if added:
+        run_summary(f"- Polls added from electiontracker.au's ledger (not on Wikipedia yet): {', '.join(added)}")
+    if filled_n:
+        run_summary(f"- Poll fields filled from electiontracker.au's ledger: {filled_n} poll(s)")
+    out.sort(key=lambda p: (p["end_date"], p.get("start_date") or "", p["pollster"]), reverse=True)
+    return out
+
+
+def commissioned_by(p: dict, et_rows: list[dict] | None = None) -> dict:
+    """{category, name, via}: category media | pollster | party | union | advocacy | None (not stated)."""
+    name = p.get("client")
+    et = next((r for r in et_rows or [] if r["id"] == p.get("et_id")), None) if p.get("et_id") else None
+    et_type = (et or {}).get("commissioner_type")
+    from_client = next((cat for cat, rx in CLIENT_CATEGORIES if name and rx.search(name)), None)
+    if et_type:
+        cat = ET_COMMISSIONER_TYPES.get(et_type)
+        if cat is None:
+            log.warning("Poll %s: electiontracker.au commissioner type %r has no category here", p["id"], et_type)
+        elif from_client and from_client != cat:
+            theirs = _et_name(et.get("commissioner"), ET_COMMISSIONERS)
+            log.warning("Poll %s: Wikipedia's client %r looks like %s but electiontracker.au says %s (%s); using theirs",
+                        p["id"], name, from_client, cat, theirs or "its own poll")
+            name = theirs
+        if cat:
+            return {"category": cat, "name": name, "via": "electiontracker"}
+    if from_client:
+        return {"category": from_client, "name": name, "via": "client"}
+    if name:
+        log.warning("Poll %s: client %r matches no commissioner category (add it to CLIENT_CATEGORIES)", p["id"], name)
+        return {"category": None, "name": name, "via": None}
+    if SELF_PUBLISHING.search(p.get("pollster") or ""):
+        return {"category": "pollster", "name": None, "via": "pollster"}
+    return {"category": None, "name": None, "via": None}
 
 
 # --------------------------------------------------------------------------

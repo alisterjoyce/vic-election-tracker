@@ -302,12 +302,14 @@
       });
       const data = polls.filter((p) => chartValue(p, k) != null)
         .map((p) => ({ x: p.t, y: chartValue(p, k), poll: p, record: (records.get(p.id) || []).find((r) => r.key === k) }));
-      // A poll that set a new high or low for this party is drawn larger, solid and outlined.
+      // A poll that set a new high or low for this party is drawn larger, solid and outlined; a poll the
+      // average leaves out (App.pollExclusion) is an empty ring.
+      const out = (d) => !d.record && App.pollExclusion(d.poll);
       datasets.push({
         type: "scatter", label: `${partyName(k)} polls`, data,
-        backgroundColor: data.map((d) => (d.record ? color : withAlpha(color, 0.35))),
-        borderColor: data.map((d) => (d.record ? ink : "transparent")),
-        borderWidth: data.map((d) => (d.record ? 1.5 : 0)),
+        backgroundColor: data.map((d) => (d.record ? color : out(d) ? "transparent" : withAlpha(color, 0.35))),
+        borderColor: data.map((d) => (d.record ? ink : out(d) ? withAlpha(color, 0.8) : "transparent")),
+        borderWidth: data.map((d) => (d.record ? 1.5 : out(d) ? 1.5 : 0)),
         pointStyle: data.map((d) => (d.record ? (d.record.kind === "high" ? "triangle" : "rectRot") : "circle")),
         pointRadius: data.map((d) => (d.record ? 6 : 3.5)),
         pointHoverRadius: data.map((d) => (d.record ? 7.5 : 5)),
@@ -367,6 +369,7 @@
                 return poll
                   ? `${poll.pollster}: ${ctx.dataset.label.replace(/ polls$/, "")} ${ctx.parsed.y}%`
                     + (rec ? ` (new ${rec.kind}${rec.current ? ", still the record" : ""})` : "")
+                    + (App.pollExclusion(poll) ? ` (not in the average: ${App.pollExclusion(poll).toLowerCase()})` : "")
                   : `${ctx.dataset.label} average: ${ctx.parsed.y}%`;
               },
             },
@@ -402,7 +405,7 @@
     const t = App.projectSeats(districts, s).tally;
     const tally = { ALP: t.ALP, LNP: t.LNP, GRN: t.GRN, OTH: t.OTH + t.ONP };
     return App.ShareCard.homeCard({
-      avg: { LNP2pp: s.current, ALP2pp: 100 - s.current, primaries, n: all.length },
+      avg: { LNP2pp: s.current, ALP2pp: 100 - s.current, primaries, n: all.filter((p) => !App.pollExclusion(p)).length },
       tally, swing: s.swing, electionDate: meta.election_date,
       days: App.daysBetween(App.melbourneToday(), meta.election_date),
     });
@@ -475,20 +478,22 @@
       <table>
         <thead>
           <tr>
-            <th>Date</th><th>Pollster</th><th class="num">Sample</th>
+            <th>Date</th><th>Pollster</th><th>Commissioned by</th><th class="num">Sample</th>
             ${primKeys.map((k) => `<th class="num" title="Primary vote">${escapeHtml(k)}</th>`).join("")}
             ${tppKeys.map((k) => `<th class="num" title="Two-party preferred">2PP ${escapeHtml(k)}</th>`).join("")}
           </tr>
         </thead>
         <tbody>
-          ${latest.map((p) => `
-            <tr>
+          ${latest.map((p) => { const out = App.pollExclusion(p); return `
+            <tr${out ? ' class="poll-excluded"' : ""}>
               <td>${escapeHtml(fmtDate(p.end_date))}</td>
-              <td>${p.id ? `<a href="poll.html#${escapeHtml(p.id)}">${escapeHtml(p.pollster)}</a>` : escapeHtml(p.pollster)}</td>
+              <td${out ? ` data-csv="${escapeHtml(`${p.pollster} (not in the average: ${out.toLowerCase()})`)}"` : ""}>${p.id ? `<a href="poll.html#${escapeHtml(p.id)}">${escapeHtml(p.pollster)}</a>` : escapeHtml(p.pollster)}${out
+                ? `<span class="excl-reason">Not in the average: ${escapeHtml(out.toLowerCase())}</span>` : ""}</td>
+              <td>${escapeHtml(App.commissionLabel(p))}</td>
               ${cell(p.sample_size ? p.sample_size.toLocaleString("en-AU") : null)}
               ${primKeys.map((k) => cell(p.primary && p.primary[k])).join("")}
               ${tppKeys.map((k) => cell(p.tpp && p.tpp[k])).join("")}
-            </tr>`).join("")}
+            </tr>`; }).join("")}
         </tbody>
       </table>`;
     document.getElementById("polls-source").innerHTML =

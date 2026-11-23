@@ -819,6 +819,11 @@ select {
 /* ---------- Poll pages (poll.html) ---------- */
 .poll-title { margin: 0; font-size: 1.5rem; }
 .poll-list tr.current td { background: var(--surface-2); font-weight: 600; }
+/* Polls the poll of polls leaves out (App.pollExclusion): greyed (muted text, AA on both surfaces), with the reason. */
+tr.poll-excluded td { color: var(--muted); }
+tr.poll-excluded td a { color: var(--muted); text-decoration-style: dotted; }
+.excl-reason { display: block; font-size: 0.78rem; font-weight: 400; white-space: nowrap; }
+.poll-excl-note { margin: 10px 0; padding: 8px 10px; border-left: 3px solid var(--border); background: var(--surface-2); }
 /* Aggregates compared: filled by poll.js, so its height (table, CSV button, notes) is reserved. */
 .agg-card { margin-bottom: 20px; }
 .agg-compare tr.current td { background: var(--surface-2); font-weight: 600; }

@@ -460,7 +460,7 @@
       .sort((a, b) => a.from.localeCompare(b.from))[0] || null;
     const names = Object.fromEntries(districts.map((d) => [d.id, d.name]));
     const moves = seatMovers(history);
-    return weekCard({ today, s, primaries, tally, n: all.length, next, moves, names,
+    return weekCard({ today, s, primaries, tally, n: all.filter((p) => !App.pollExclusion(p)).length, next, moves, names,
       days: App.daysBetween(today, meta.election_date), electionDate: meta.election_date });
   }
 

@@ -181,10 +181,33 @@
       .sort((a, b) => a.t - b.t);
   }
 
-  // Centred Gaussian-kernel average of value(p), weighted by sqrt(sample size).
+  // Which polls the average leaves out, following electiontracker.au's published rule (its poll methodology,
+  // rules D and G: https://github.com/coldix/elections/blob/main/docs/poll-methodology.md): polls commissioned by a
+  // party, union or advocacy group, and polls whose sample is under 800 or not published. polls.json's
+  // commissioned_by.category says who paid. Returns the reason, or null when the poll counts.
+  const AVG_MIN_SAMPLE = 800;
+  const AVG_EXCLUDED = { party: "a party", union: "a union", advocacy: "an advocacy group" };
+  function pollExclusion(p) {
+    const cat = p && p.commissioned_by && p.commissioned_by.category;
+    if (AVG_EXCLUDED[cat]) return `Commissioned by ${AVG_EXCLUDED[cat]}`;
+    if (!p.sample_size) return "Sample size not published";
+    if (p.sample_size < AVG_MIN_SAMPLE) return `Sample under ${AVG_MIN_SAMPLE.toLocaleString("en-AU")}`;
+    return null;
+  }
+  // "Media: Herald Sun", "Party: Victorian Greens", "Pollster's own poll", "Not stated".
+  const COMMISSION_LABELS = { media: "Media", pollster: "Pollster's own poll", party: "Party", union: "Union", advocacy: "Advocacy group" };
+  function commissionLabel(p) {
+    const c = (p && p.commissioned_by) || {};
+    const cat = COMMISSION_LABELS[c.category];
+    const name = c.name || (p && p.client);
+    if (!cat) return name || "Not stated";
+    return name && c.category !== "pollster" ? `${cat}: ${name}` : cat;
+  }
+
+  // Centred Gaussian-kernel average of value(p), weighted by sqrt(sample size), over the polls pollExclusion keeps.
   // Returns daily points [{x: time, y: value}] from the first to the last poll.
   function smoothedSeries(polls, value) {
-    const pts = polls.filter((p) => value(p) != null);
+    const pts = polls.filter((p) => !pollExclusion(p) && value(p) != null);
     if (!pts.length) return [];
     const out = [];
     const first = pts[0].t, last = pts[pts.length - 1].t;
@@ -211,7 +234,7 @@
 
   // The last point of smoothedSeries(polls, value) (at the newest poll with a value) without the whole series.
   function smoothedLatest(polls, value) {
-    const pts = polls.filter((p) => value(p) != null);
+    const pts = polls.filter((p) => !pollExclusion(p) && value(p) != null);
     return pts.length ? kernelPoint(pts, pts[pts.length - 1].t, value) : null;
   }
 
@@ -1254,7 +1277,7 @@
     PARTIES, STATUSES, COALITION, loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, partyBadge, statusBadge,
     slugify, parseDate, fmtDate, fmtMonth, fmtDateTime, dataUpdatedText, fmtPrice, fmtMargin, fmtSwing, melbourneToday, daysBetween,
     hashId, cssVar, currentTheme, showError, copyLink,
-    DAY, preparePolls, smoothedSeries, smoothedLatest, pollRecords, statewideSwing, swingAdjusted, projectSeats, BLOCS, blocOf, modelLink, quotaBars,
+    DAY, preparePolls, pollExclusion, commissionLabel, AVG_MIN_SAMPLE, smoothedSeries, smoothedLatest, pollRecords, statewideSwing, swingAdjusted, projectSeats, BLOCS, blocOf, modelLink, quotaBars,
     getWatchlist, setWatchlist, isWatched, toggleWatch, starButton, storageWorks,
     buildSearchIndex, searchItems,
     candidateId, givenFirst, loadHeadshots, avatar, photoCredits, initials, inkFor, inkVar, newsList,
