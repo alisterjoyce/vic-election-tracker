@@ -834,6 +834,11 @@ select {
 .pred-strip-v { font-weight: 700; }
 .pred-strip-n { display: flex; flex-wrap: wrap; gap: 4px 12px; }
 .pred-strip-n i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; }
+/* Home page questions */
+.faq details { border-bottom: 1px solid var(--border); }
+.faq summary { cursor: pointer; padding: 12px 0; font-weight: 600; min-height: 24px; }
+.faq details p { margin: 0 0 12px; }
+.faq-more { margin: 12px 0 0; }
 .chart-controls { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }   /* home poll chart: measure and period */
 .scenarios { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
 .scenario h3 { margin-top: 0; }
