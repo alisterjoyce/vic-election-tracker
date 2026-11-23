@@ -17,19 +17,19 @@
   "registration_opens": "2026-11-10",
   "registration_closes": "2026-11-20",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
-  "last_checked": "2026-11-23T02:24:34Z",
-  "pending": 25,
+  "last_checked": "2026-11-23T03:24:27Z",
+  "pending": 28,
   "coverage": {
-    "cards": 1422,
-    "listings": 4814,
-    "orders_read": 3976,
+    "cards": 1423,
+    "listings": 4815,
+    "orders_read": 3974,
     "orders_same_as": 154,
     "orders_unreadable": 659,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
       "ALP": {
-        "cards": 329,
+        "cards": 330,
         "districts": 88,
         "regions": 8
       },
@@ -120270,39 +120270,18 @@
       "kind": "non_candidate",
       "type": "Single",
       "registered_on": "2026-11-20",
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5630b703-3bfe-448c-878f-ac978afd8c32%2Fprahran%20-%20finnigan_tosh-jake%20-%20htvc%203%20%28pe%29.pdf.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "file": "prahran - finnigan_tosh-jake - htvc 3 (pe).pdf.pdf",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=269d2d30-f020-4a1e-b619-b37b59945a35%2F1651_redacted.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "1651_redacted.pdf",
       "areas": [
         "prahran"
       ],
       "party": null,
       "candidate": null,
-      "read_on": "2026-11-20",
       "orders": {
         "prahran": {
-          "status": "read",
-          "order": [
-            "FINNIGAN, Tosh-Jake",
-            "O'NEILL, G. Daniel",
-            "LEETON WATTS, George",
-            "WESTAWAY, Rachel",
-            "MENADUE, Alan",
-            "DICKS, Max",
-            "DOUEIHI, Clayton",
-            "HOPPER, Meghan",
-            "DI CAMILLO, Angelica",
-            "VIRSU, Shaun",
-            "JONAS, Morgan",
-            "WONG, Nicholas",
-            "JONES, Daniel"
-          ],
-          "via": "text",
-          "ranks": {
-            "LNP": 4,
-            "ALP": 8,
-            "GRN": 9,
-            "ONP": 10
-          }
+          "status": "pending",
+          "tried": "2026-11-23",
+          "note": "the VEC's link to this card didn't open"
         }
       }
     },
@@ -120312,39 +120291,18 @@
       "kind": "non_candidate",
       "type": "Single",
       "registered_on": "2026-11-20",
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=401ba669-9970-4bad-a116-6229b241f4bf%2Fprahran%20-%20finnigan_tosh-jake%20-%20htvc%203%20%28snap%29.pdf.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "file": "prahran - finnigan_tosh-jake - htvc 3 (snap).pdf.pdf",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e971af3a-c153-46ad-952b-6ad6cf19946c%2F1652_redacted.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "1652_redacted.pdf",
       "areas": [
         "prahran"
       ],
       "party": null,
       "candidate": null,
-      "read_on": "2026-11-20",
       "orders": {
         "prahran": {
-          "status": "read",
-          "order": [
-            "FINNIGAN, Tosh-Jake",
-            "O'NEILL, G. Daniel",
-            "LEETON WATTS, George",
-            "WESTAWAY, Rachel",
-            "MENADUE, Alan",
-            "DICKS, Max",
-            "DOUEIHI, Clayton",
-            "HOPPER, Meghan",
-            "DI CAMILLO, Angelica",
-            "VIRSU, Shaun",
-            "JONAS, Morgan",
-            "WONG, Nicholas",
-            "JONES, Daniel"
-          ],
-          "via": "text",
-          "ranks": {
-            "LNP": 4,
-            "ALP": 8,
-            "GRN": 9,
-            "ONP": 10
-          }
+          "status": "pending",
+          "tried": "2026-11-23",
+          "note": "the VEC's link to this card didn't open"
         }
       }
     },
@@ -122264,6 +122222,27 @@
       }
     },
     {
+      "registration": "1681",
+      "registered_by": "Australian Labor Party",
+      "kind": "party",
+      "type": "Single",
+      "registered_on": "2026-11-23",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=34011a29-fed6-4119-b6ed-efc01177cfca%2Fwerribee_green%20contests_htv_v4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "werribee_green contests_htv_v4.pdf",
+      "areas": [
+        "werribee"
+      ],
+      "party": "ALP",
+      "candidate": null,
+      "orders": {
+        "werribee": {
+          "status": "pending",
+          "tried": "2026-11-23",
+          "note": "the VEC's link to this card didn't open"
+        }
+      }
+    },
+    {
       "registration": "1683",
       "registered_by": "Australian Labor Party",
       "kind": "party",
@@ -123152,6 +123131,38 @@
     }
   ],
   "changes": [
+    {
+      "date": "2026-11-23",
+      "kind": "amended",
+      "registration": "1651",
+      "registered_by": "Tosh-Jake Finnigan",
+      "areas": [
+        "prahran"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=269d2d30-f020-4a1e-b619-b37b59945a35%2F1651_redacted.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "detail": "replaces prahran - finnigan_tosh-jake - htvc 3 (pe).pdf.pdf"
+    },
+    {
+      "date": "2026-11-23",
+      "kind": "amended",
+      "registration": "1652",
+      "registered_by": "Tosh-Jake Finnigan",
+      "areas": [
+        "prahran"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e971af3a-c153-46ad-952b-6ad6cf19946c%2F1652_redacted.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "detail": "replaces prahran - finnigan_tosh-jake - htvc 3 (snap).pdf.pdf"
+    },
+    {
+      "date": "2026-11-23",
+      "kind": "added",
+      "registration": "1681",
+      "registered_by": "Australian Labor Party",
+      "areas": [
+        "werribee"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=34011a29-fed6-4119-b6ed-efc01177cfca%2Fwerribee_green%20contests_htv_v4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+    },
     {
       "date": "2026-11-23",
       "kind": "areas",
@@ -128217,38 +128228,6 @@
         "bundoora"
       ],
       "detail": "was bundoora, north-eastern-metropolitan"
-    },
-    {
-      "date": "2026-11-22",
-      "kind": "areas",
-      "registration": "640",
-      "registered_by": "Liberal",
-      "areas": [
-        "bundoora"
-      ],
-      "detail": "was bundoora, north-eastern-metropolitan"
-    },
-    {
-      "date": "2026-11-22",
-      "kind": "areas",
-      "registration": "850",
-      "registered_by": "One Nation Victoria",
-      "areas": [
-        "bundoora"
-      ],
-      "detail": "was bundoora, north-eastern-metropolitan"
-    },
-    {
-      "date": "2026-11-22",
-      "kind": "areas",
-      "registration": "957",
-      "registered_by": "The Greens",
-      "areas": [
-        "bundoora",
-        "mill-park",
-        "thomastown"
-      ],
-      "detail": "was bundoora, mill-park, thomastown, yan-yean, north-eastern-metropolitan"
     }
   ]
 }

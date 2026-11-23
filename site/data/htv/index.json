@@ -10,18 +10,18 @@
   "status": "closed",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
   "registration_closes": "2026-11-20",
-  "last_checked": "2026-11-23T02:24:34Z",
+  "last_checked": "2026-11-23T03:24:27Z",
   "coverage": {
-    "cards": 1422,
-    "listings": 4814,
-    "orders_read": 3976,
+    "cards": 1423,
+    "listings": 4815,
+    "orders_read": 3974,
     "orders_same_as": 154,
     "orders_unreadable": 659,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
       "ALP": {
-        "cards": 329,
+        "cards": 330,
         "districts": 88,
         "regions": 8
       },
@@ -1347,7 +1347,7 @@
     "prahran": {
       "house": "lower",
       "cards": 50,
-      "read": 42,
+      "read": 40,
       "same_as": 1,
       "unreadable": 7,
       "parties": {
@@ -1658,12 +1658,12 @@
     },
     "werribee": {
       "house": "lower",
-      "cards": 40,
+      "cards": 41,
       "read": 34,
       "same_as": 0,
       "unreadable": 6,
       "parties": {
-        "ALP": 9,
+        "ALP": 10,
         "VS": 2,
         "FF": 2,
         "GRN": 11,
@@ -7607,7 +7607,7 @@
     {
       "area": "werribee",
       "party": "ALP",
-      "cards": 9,
+      "cards": 10,
       "read": 8,
       "differ": true,
       "flags_some": [
