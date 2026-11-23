@@ -10,13 +10,13 @@
   "status": "closed",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
   "registration_closes": "2026-11-20",
-  "last_checked": "2026-11-22T23:33:36Z",
+  "last_checked": "2026-11-23T01:28:16Z",
   "coverage": {
     "cards": 1422,
     "listings": 4814,
-    "orders_read": 3877,
+    "orders_read": 3916,
     "orders_same_as": 153,
-    "orders_unreadable": 648,
+    "orders_unreadable": 653,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -1699,7 +1699,7 @@
     "yan-yean": {
       "house": "lower",
       "cards": 36,
-      "read": 12,
+      "read": 19,
       "same_as": 0,
       "unreadable": 0,
       "parties": {
@@ -1740,9 +1740,9 @@
     "north-eastern-metropolitan": {
       "house": "upper",
       "cards": 184,
-      "read": 54,
+      "read": 86,
       "same_as": 3,
-      "unreadable": 19,
+      "unreadable": 24,
       "parties": {
         "ALP": 47,
         "NONCAND": 5,
@@ -7726,7 +7726,7 @@
       "area": "yan-yean",
       "party": "ALP",
       "cards": 8,
-      "read": 1,
+      "read": 2,
       "ranks": {
         "ALP": 1,
         "GRN": 3,
@@ -7741,20 +7741,20 @@
           "of_n": 6
         }
       ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8ee2ebb9-32b5-4b0f-a78a-bff50e60dac4%2Falp_combined_nem_nv_eltham_yan%20yean_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
     },
     {
       "area": "yan-yean",
       "party": "GRN",
       "cards": 11,
-      "read": 4,
+      "read": 10,
       "ranks": {
         "GRN": 1,
         "ALP": 4,
         "LNP": 5,
         "ONP": 8
       },
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=85c5c4bb-d8e0-4b93-aaf1-0ada472b7df9%2Fthe%20greens%20combined%20northern%20metro%20thomastown%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3ecb378c-7017-42ed-aaf1-4d9b4dfed9db%2Fthe%20greens%20combined%20north-east%20metro%20eltham%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
     },
     {
       "area": "yan-yean",

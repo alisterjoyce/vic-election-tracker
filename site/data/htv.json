@@ -17,14 +17,14 @@
   "registration_opens": "2026-11-10",
   "registration_closes": "2026-11-20",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
-  "last_checked": "2026-11-22T23:33:36Z",
-  "pending": 136,
+  "last_checked": "2026-11-23T01:28:16Z",
+  "pending": 92,
   "coverage": {
     "cards": 1422,
     "listings": 4814,
-    "orders_read": 3877,
+    "orders_read": 3916,
     "orders_same_as": 153,
-    "orders_unreadable": 648,
+    "orders_unreadable": 653,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -1760,7 +1760,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "croydon": {
           "status": "read",
@@ -1791,7 +1791,29 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -1809,7 +1831,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "eltham": {
           "status": "read",
@@ -1839,7 +1861,29 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -1928,7 +1972,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "bundoora": {
           "status": "read",
@@ -1959,7 +2003,29 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -8042,7 +8108,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "croydon": {
           "status": "read",
@@ -8108,7 +8174,8 @@
           "note": "unreadable, see card"
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -12881,7 +12948,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "croydon": {
           "status": "read",
@@ -12941,7 +13008,29 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -14614,7 +14703,7 @@
       ],
       "party": "VS",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "eltham": {
           "status": "read",
@@ -14636,7 +14725,19 @@
           }
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "B",
+            "K",
+            "A",
+            "L",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 2,
+            "ALP": 5
+          }
         }
       }
     },
@@ -15038,7 +15139,7 @@
       ],
       "party": "VS",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "croydon": {
           "status": "read",
@@ -15061,7 +15162,19 @@
           }
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "B",
+            "K",
+            "A",
+            "L",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 2,
+            "ALP": 5
+          }
         }
       }
     },
@@ -15889,7 +16002,7 @@
       ],
       "party": "VS",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "bundoora": {
           "status": "read",
@@ -15912,7 +16025,19 @@
           }
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "B",
+            "K",
+            "A",
+            "L",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 2,
+            "ALP": 5
+          }
         }
       }
     },
@@ -16240,7 +16365,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-23",
       "orders": {
         "eltham": {
           "status": "read",
@@ -16270,7 +16395,32 @@
           ]
         },
         "yan-yean": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "KATHAGE, Lauren",
+            "OKATAN, Sinan",
+            "MOHAMMED, Gufran",
+            "BELL, Andrew",
+            "CHEERS, Troy",
+            "DOW, Amanda",
+            "HALL, James",
+            "JOHNSON, Jeremy"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6,
+            "ONP": 8
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         },
         "northern-metropolitan": {
           "status": "unreadable",
@@ -17731,7 +17881,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "bundoora": {
           "status": "read",
@@ -17788,7 +17938,8 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         },
         "northern-metropolitan": {
           "status": "unreadable",
@@ -17999,7 +18150,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "croydon": {
           "status": "read",
@@ -18061,7 +18212,8 @@
           "note": "unreadable, see card"
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -18080,7 +18232,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "eltham": {
           "status": "read",
@@ -18138,7 +18290,29 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -18343,7 +18517,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "bundoora": {
           "status": "read",
@@ -18402,7 +18576,29 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -19094,7 +19290,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "bundoora": {
           "status": "read",
@@ -19153,7 +19349,29 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -19668,7 +19886,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "bundoora": {
           "status": "read",
@@ -19726,7 +19944,29 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -20184,7 +20424,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "croydon": {
           "status": "read",
@@ -20241,7 +20481,29 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -24852,7 +25114,7 @@
       ],
       "party": "FF",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "croydon": {
           "status": "read",
@@ -24875,7 +25137,21 @@
           }
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "F",
+            "I",
+            "G",
+            "E",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 3,
+            "LNP": 5,
+            "ALP": 6
+          }
         }
       }
     },
@@ -26019,7 +26295,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "eltham": {
           "status": "read",
@@ -26049,7 +26325,19 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         }
       }
     },
@@ -27576,7 +27864,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "croydon": {
           "status": "read",
@@ -27607,7 +27895,19 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         }
       }
     },
@@ -29293,7 +29593,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "bundoora": {
           "status": "read",
@@ -29324,7 +29624,19 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         }
       }
     },
@@ -30345,7 +30657,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "bundoora": {
           "status": "read",
@@ -30376,7 +30688,19 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         }
       }
     },
@@ -31354,7 +31678,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "croydon": {
           "status": "read",
@@ -31385,7 +31709,19 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         }
       }
     },
@@ -33154,7 +33490,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "eltham": {
           "status": "read",
@@ -33184,7 +33520,19 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         }
       }
     },
@@ -35717,11 +36065,20 @@
           "same_as": [
             "30",
             "32",
+            "49",
+            "50",
+            "52",
             "79",
+            "313",
             "318",
             "380",
+            "397",
+            "401",
             "405",
-            "414"
+            "410",
+            "414",
+            "419",
+            "428"
           ],
           "note": "same order as the English card"
         },
@@ -35979,11 +36336,20 @@
           "same_as": [
             "30",
             "32",
+            "49",
+            "50",
+            "52",
             "79",
+            "313",
             "318",
             "380",
+            "397",
+            "401",
             "405",
-            "414"
+            "410",
+            "414",
+            "419",
+            "428"
           ],
           "note": "same order as the English card"
         },
@@ -36221,11 +36587,20 @@
           "same_as": [
             "30",
             "32",
+            "49",
+            "50",
+            "52",
             "79",
+            "313",
             "318",
             "380",
+            "397",
+            "401",
             "405",
-            "414"
+            "410",
+            "414",
+            "419",
+            "428"
           ],
           "note": "same order as the English card"
         },
@@ -41802,14 +42177,26 @@
       ],
       "party": "ONP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "bundoora": {
           "status": "unreadable",
           "note": "unreadable, see card"
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "G",
+            "F",
+            "I",
+            "E",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 5
+          }
         }
       }
     },
@@ -42769,14 +43156,26 @@
       ],
       "party": "ONP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "croydon": {
           "status": "unreadable",
           "note": "unreadable, see card"
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "G",
+            "F",
+            "I",
+            "E",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 5
+          }
         }
       }
     },
@@ -51227,7 +51626,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-23",
       "orders": {
         "bulleen": {
           "status": "read",
@@ -51347,10 +51746,39 @@
           }
         },
         "yan-yean": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "MOHAMMED, Gufran",
+            "BELL, Andrew",
+            "OKATAN, Sinan",
+            "KATHAGE, Lauren",
+            "DOW, Amanda",
+            "CHEERS, Troy",
+            "HALL, James",
+            "JOHNSON, Jeremy"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 4,
+            "LNP": 5,
+            "ONP": 8
+          }
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "K",
+            "B",
+            "L",
+            "A",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -52165,7 +52593,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-23",
       "orders": {
         "bundoora": {
           "status": "read",
@@ -52226,10 +52654,39 @@
           }
         },
         "yan-yean": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "MOHAMMED, Gufran",
+            "BELL, Andrew",
+            "OKATAN, Sinan",
+            "KATHAGE, Lauren",
+            "DOW, Amanda",
+            "CHEERS, Troy",
+            "HALL, James",
+            "JOHNSON, Jeremy"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 4,
+            "LNP": 5,
+            "ONP": 8
+          }
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "K",
+            "B",
+            "L",
+            "A",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -54818,7 +55275,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "bulleen": {
           "status": "read",
@@ -54967,7 +55424,19 @@
           }
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "K",
+            "B",
+            "L",
+            "A",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -54991,7 +55460,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-23",
       "orders": {
         "bundoora": {
           "status": "read",
@@ -55114,10 +55583,39 @@
           }
         },
         "yan-yean": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "MOHAMMED, Gufran",
+            "BELL, Andrew",
+            "OKATAN, Sinan",
+            "KATHAGE, Lauren",
+            "DOW, Amanda",
+            "CHEERS, Troy",
+            "HALL, James",
+            "JOHNSON, Jeremy"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 4,
+            "LNP": 5,
+            "ONP": 8
+          }
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "K",
+            "B",
+            "L",
+            "A",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -60839,7 +61337,7 @@
       ],
       "party": "LBT",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "croydon": {
           "status": "read",
@@ -60862,7 +61360,19 @@
           }
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "I",
+            "E",
+            "F",
+            "G",
+            "H"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 4,
+            "LNP": 5
+          }
         }
       }
     },
@@ -65068,7 +65578,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "bulleen": {
           "status": "read",
@@ -65231,7 +65741,19 @@
           }
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "K",
+            "B",
+            "L",
+            "A",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -65617,7 +66139,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-23",
       "orders": {
         "eildon": {
           "status": "read",
@@ -65763,7 +66285,24 @@
           }
         },
         "yan-yean": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "MOHAMMED, Gufran",
+            "BELL, Andrew",
+            "OKATAN, Sinan",
+            "KATHAGE, Lauren",
+            "DOW, Amanda",
+            "CHEERS, Troy",
+            "HALL, James",
+            "JOHNSON, Jeremy"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 4,
+            "LNP": 5,
+            "ONP": 8
+          }
         },
         "northern-metropolitan": {
           "status": "unreadable",
@@ -68336,7 +68875,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-23",
       "orders": {
         "bundoora": {
           "status": "read",
@@ -68499,10 +69038,28 @@
           }
         },
         "yan-yean": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "MOHAMMED, Gufran",
+            "BELL, Andrew",
+            "OKATAN, Sinan",
+            "KATHAGE, Lauren",
+            "DOW, Amanda",
+            "CHEERS, Troy",
+            "HALL, James",
+            "JOHNSON, Jeremy"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 4,
+            "LNP": 5,
+            "ONP": 8
+          }
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         },
         "northern-metropolitan": {
           "status": "unreadable",
@@ -78164,7 +78721,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-23",
       "orders": {
         "bundoora": {
           "status": "read",
@@ -78303,7 +78860,24 @@
           }
         },
         "yan-yean": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "MOHAMMED, Gufran",
+            "BELL, Andrew",
+            "OKATAN, Sinan",
+            "KATHAGE, Lauren",
+            "DOW, Amanda",
+            "CHEERS, Troy",
+            "HALL, James",
+            "JOHNSON, Jeremy"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 4,
+            "LNP": 5,
+            "ONP": 8
+          }
         },
         "northern-victoria": {
           "atl": [
@@ -80271,7 +80845,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "croydon": {
           "status": "read",
@@ -80370,7 +80944,8 @@
           }
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -84372,7 +84947,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "croydon": {
           "status": "read",
@@ -84429,7 +85004,19 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         }
       }
     },
@@ -84695,7 +85282,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "croydon": {
           "status": "read",
@@ -84768,7 +85355,19 @@
           }
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         }
       }
     },
@@ -85121,7 +85720,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "croydon": {
           "status": "read",
@@ -85181,7 +85780,19 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         }
       }
     },
@@ -86260,7 +86871,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "bulleen": {
           "status": "read",
@@ -86317,7 +86928,19 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         }
       }
     },
@@ -117129,7 +117752,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-23",
       "orders": {
         "bulleen": {
           "status": "read",
@@ -117160,7 +117783,19 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "pending"
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         }
       }
     },
