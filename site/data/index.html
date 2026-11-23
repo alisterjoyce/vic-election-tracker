@@ -46,10 +46,11 @@
 
     <section class="card" aria-labelledby="licence-h">
       <h2 id="licence-h">Licence and credit</h2>
-      <p>Unless a file says otherwise below, the data is licensed <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 (CC BY 4.0)</a>. Reuse it freely, crediting: <strong id="attribution">Vic Election 2026 tracker</strong>.</p>
+      <p>Unless a file says otherwise below, the data is licensed <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 (CC BY 4.0)</a>. Reuse it freely, crediting: <strong id="attribution">Vic Election 2026 tracker, https://alisterjoyce.github.io/vic-election-tracker/</strong>.</p>
       <ul class="small">
         <li>Electoral boundaries, districts, regions, 2022 results and the how-to-vote register come from the <a href="https://www.vec.vic.gov.au/">Victorian Electoral Commission</a>; credit the VEC.</li>
         <li>Margins, classifications and lower-house candidate lists come from the <a href="https://www.abc.net.au/news/elections/vic/2026/guide/electorates">ABC election guide</a>; credit ABC News. The tracker stores facts only and links to the ABC's pages.</li>
+        <li>The comparison margins in <code>pollbludger_margins.json</code> are from <a href="https://pollbludger.net/vic2026/">The Poll Bludger</a>'s election guide (William Bowe); credit The Poll Bludger.</li>
         <li>Data drawn from Wikipedia (polls, some candidates, 2022 swings) is <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>: share those parts alike.</li>
         <li>Photos, headlines and how-to-vote cards belong to their owners and aren't covered by this licence.</li>
         <li>Election-night results from the VEC's media feed are not offered here: that feed is covered by the VEC's own terms of use.</li>
@@ -77,10 +78,16 @@
       <p class="muted small">Most files refresh daily; see <a href="../about.html">About</a> for each source's schedule.</p>
     </section>
 
-    <section class="card" id="news-sources" aria-labelledby="news-sources-h">
+    <section class="card" id="news-sources-card" aria-labelledby="news-sources-h">
       <div class="card-head"><h2 id="news-sources-h">News sources</h2><span class="muted small" id="news-sources-updated"></span></div>
       <p class="muted small" style="margin-top:0">Where <code>news.json</code>'s headlines come from at each refresh: an outlet's own feed where its site allows automated reading, otherwise a Bing News search limited to its site. "Last 7 days" counts the election headlines each source supplied that are dated in the past week.</p>
       <div id="news-sources-body"><p class="empty">Loading…</p></div>
+    </section>
+
+    <section class="card" id="margin-diffs-card" aria-labelledby="margin-diffs-h">
+      <div class="card-head"><h2 id="margin-diffs-h">Margins compared</h2><span class="muted small" id="margin-diffs-updated"></span></div>
+      <p class="muted small" style="margin-top:0">Seats where <a href="https://pollbludger.net/vic2026/">The Poll Bludger's election guide</a> (William Bowe) lists a different margin from this site's, which comes from the ABC guide. A seat counts when another party holds the margin, the margin is against another party, or the same contest's figure differs by more than 0.1 points (both publish one decimal, so 0.1 can be rounding). 2PP is Labor v Coalition; 2CP is any other final pair. The guide is read once a day; only its figures and links are kept. Each seat page notes the guide's figure under ours.</p>
+      <div id="margin-diffs-body" style="min-height:240px"><p class="empty">Loading…</p></div>
     </section>
   </main>
 

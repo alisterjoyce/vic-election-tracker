@@ -1778,6 +1778,148 @@ def refresh_et_policies(data_dir: Path, meta: dict) -> bool:
     return True
 
 
+# --------------------------------------------------------------------------
+# The Poll Bludger's election guide: its seat margins, compared with ours (report and seat-page note)
+# --------------------------------------------------------------------------
+
+PB_SITE = "https://pollbludger.net"
+PB_GUIDE_URL = PB_SITE + "/vic2026/"
+PB_SEAT_URL = PB_GUIDE_URL + "LA.htm?s="   # + the district's name with spaces removed (as the guide's own menu)
+PB_FILE = "pollbludger_margins.json"
+PB_CREDIT = "The Poll Bludger (William Bowe)"
+PB_CLASSES = {"Labor": "ALP", "Liberal": "LIB", "Nationals": "NAT", "Greens": "GRN", "Independent": "IND"}
+PB_TOLERANCE = 0.1   # both sides publish one decimal: a gap of 0.1 or less is rounding, not a difference
+PB_CELL = re.compile(r'<td class="([A-Za-z]+)Seat">(.*?)</td>', re.S)
+PB_LINK = re.compile(r'href="LA\.htm\?s=([^"&]+)"[^>]*>([^<]+)</a>')
+PB_MARGIN = re.compile(r'<span class="Margin">\s*\(\s*([\d.]+)\s*%\s*(?:vs\.?\s+([A-Za-z]+))?\s*\)\s*(\*)?')
+PB_SCHEMA = {
+    "description": "The Poll Bludger's Victorian election guide (William Bowe): the margin it lists for each seat on its "
+                   "guide's front page, read once a day, and the seats where it differs from this site's margin "
+                   "(districts.json, from the ABC guide). Figures and links only; the guide's text is never copied.",
+    "fields": {
+        "updated": "When this file last changed (UTC)",
+        "checked": "Melbourne date the guide was last read successfully",
+        "source": "{name, publisher, url, credit}",
+        "tolerance": "Margin gap (points) treated as rounding: a gap larger than this counts as a difference",
+        "seats[]": "One per district: district (id), party (holder as the guide colours the seat: ALP, LIB, NAT, GRN, "
+                   "IND), vs (the other side: LNP = the Coalition, for a Labor seat listed without a 'vs'; ALP for a "
+                   "Coalition seat listed without one), pct, basis (2PP = Labor v Coalition, else 2CP), "
+                   "asterisk (true when the guide marks the margin with *, unexplained on its list), url (the seat's guide page)",
+        "differences[]": "Seats where the guide and districts.json differ: district, ours {party, vs, pct}, theirs "
+                         "(as in seats[]), reasons (holder: a different party holds the margin; pair: a different "
+                         "two-party contest; margin: same contest, gap above the tolerance), gap (theirs - ours, "
+                         "points, same contest only). Recomputed at every refresh, so a change to our margins shows at once",
+    },
+}
+
+
+def pb_seat_url(name: str) -> str:
+    return PB_SEAT_URL + name.replace(" ", "")
+
+
+def parse_pollbludger(page: str, districts: list[dict]) -> list[dict]:
+    """The guide's front-page table: one cell per seat, coloured by holder, with "(4.2% vs GRN)" beside the link."""
+    by_key = {_seat_key(d["name"]): d for d in districts}
+    seats, seen = [], set()
+    for cls, cell in PB_CELL.findall(page):
+        link, margin = PB_LINK.search(cell), PB_MARGIN.search(cell)
+        if not link or not margin:
+            continue
+        d = by_key.get(_seat_key(htmllib.unescape(link.group(2))))
+        if not d:
+            raise ValueError(f"unknown seat on the guide: {link.group(2)!r}")
+        if d["id"] in seen:
+            raise ValueError(f"{d['name']} listed twice")
+        seen.add(d["id"])
+        party = PB_CLASSES.get(cls)
+        if not party:
+            log.warning("Poll Bludger: unknown seat colour %r for %s, counted as OTH", cls, d["name"])
+            party = "OTH"
+        pct = float(margin.group(1))
+        if not 0 <= pct < 50:
+            raise ValueError(f"{d['name']}: margin {pct} out of range")
+        vs = (margin.group(2) or "").upper()
+        vs = PARTY_CODES.get(vs, vs)
+        basis = "2CP"
+        if not vs:   # no "vs": the usual Labor v Coalition contest
+            vs, basis = ("LNP" if party == "ALP" else "ALP"), "2PP"
+        seats.append({"district": d["id"], "party": party, "vs": vs, "pct": round(pct, 1), "basis": basis,
+                      **({"asterisk": True} if margin.group(3) else {}), "url": pb_seat_url(d["name"])})
+    if len(seats) != len(districts):
+        missing = sorted(d["name"] for d in districts if d["id"] not in seen)
+        raise ValueError(f"{len(seats)} of {len(districts)} seats read; missing: {', '.join(missing[:10])}")
+    return sorted(seats, key=lambda s: s["district"])
+
+
+def _pb_side(code: str | None) -> str:
+    """The Coalition's parties count as one side when comparing who a margin is against."""
+    return "LNP" if code in ("LIB", "NAT", "LNP") else (code or "")
+
+
+def pb_differences(seats: list[dict], districts: list[dict]) -> list[dict]:
+    ours_by_id = {d["id"]: d.get("margin") or {} for d in districts}
+    out = []
+    for s in seats:
+        ours = ours_by_id.get(s["district"]) or {}
+        if ours.get("pct") is None:
+            continue
+        reasons = []
+        if ours.get("party") != s["party"]:
+            reasons.append("holder")
+        if {_pb_side(ours.get("party")), _pb_side(ours.get("vs"))} != {_pb_side(s["party"]), _pb_side(s["vs"])}:
+            reasons.append("pair")   # a reversed pair (GRN v LIB against LIB v GRN) is the same contest
+        gap = round(s["pct"] - float(ours["pct"]), 1)
+        if not reasons and abs(gap) > PB_TOLERANCE + 1e-9:
+            reasons.append("margin")
+        if reasons:
+            theirs = {k: s[k] for k in ("party", "vs", "pct", "basis", "asterisk", "url") if k in s}
+            out.append({"district": s["district"], "ours": {k: ours.get(k) for k in ("party", "vs", "pct")},
+                        "theirs": theirs, "reasons": reasons, **({"gap": gap} if reasons == ["margin"] else {})})
+    return out
+
+
+def refresh_pollbludger(data_dir: Path, meta: dict, force: bool = False) -> bool:
+    """pollbludger_margins.json: the guide's margins (read once a day) and where they differ from ours (every run).
+    A failed read keeps the last values."""
+    path = data_dir / PB_FILE
+    prev = read_json(path, None) or {}
+    districts = (read_json(data_dir / "districts.json", {}) or {}).get("districts", [])
+    if not districts:
+        log.error("Poll Bludger margins skipped: districts.json missing")
+        return False
+    source = meta.setdefault("sources", {}).setdefault("pollbludger_guide", {"url": PB_GUIDE_URL})
+    today = datetime.now(MELBOURNE).date().isoformat()
+    seats, checked, ok = prev.get("seats") or [], prev.get("checked"), False
+    if checked == today and seats and not force:
+        log.info("Poll Bludger guide: read today already (%s); not fetched again", today)
+    else:
+        try:
+            web = PoliteSession()
+            _agg_allowed(web, PB_SITE, PB_GUIDE_URL)
+            seats, checked, ok = parse_pollbludger(web.get(PB_GUIDE_URL), districts), today, True
+            source.update(status="ok", url=PB_GUIDE_URL, last_success=now_iso(), message=f"{len(seats)} seats read")
+        except Exception as exc:  # noqa: BLE001 - keep the last values, report, keep going
+            log.error("Poll Bludger guide skipped, last values kept: %s", exc)
+            warn_ci(f"Poll Bludger guide margins skipped, last values kept: {exc}")
+            source.update(status="error", message=str(exc)[:300])
+    if not seats:
+        return False
+    diffs = pb_differences(seats, districts)
+    doc = {"_schema": PB_SCHEMA, "updated": prev.get("updated"), "checked": checked,
+           "source": {"name": "The Poll Bludger: Victorian Election 2026", "publisher": PB_CREDIT,
+                      "url": PB_GUIDE_URL, "credit": "The Poll Bludger"},
+           "tolerance": PB_TOLERANCE, "seats": seats, "differences": diffs}
+    if {k: v for k, v in doc.items() if k != "updated"} == {k: v for k, v in prev.items() if k != "updated"}:
+        log.info("%s unchanged (%d differences)", PB_FILE, len(diffs))
+        return ok
+    doc["updated"] = now_iso()
+    write_json(path, doc)
+    names = {d["id"]: d["name"] for d in districts}
+    log.info("Wrote %s: %d seats, %d differ from ours: %s", PB_FILE, len(seats), len(diffs),
+             "; ".join(f"{names.get(x['district'], x['district'])} ({'/'.join(x['reasons'])})" for x in diffs))
+    return True
+
+
 def refresh_seat_odds(data_dir: Path, meta: dict) -> bool:
     source = meta.setdefault("sources", {}).setdefault("sportsbet", {"url": SPORTSBET_URL})
     path = data_dir / "seat_odds.json"
@@ -3233,7 +3375,8 @@ def main(argv=None) -> int:
     parser.add_argument("--vec-check", action="store_true",
                         help="read the VEC's candidate list now, whatever the time (it normally runs on the evening refresh)")
     parser.add_argument("--aggregates-check", action="store_true",
-                        help="read BludgerTrack and Ace Strategies now, even if they were read today (normally once a day)")
+                        help="read BludgerTrack, Ace Strategies and the Poll Bludger guide's margins now, even if they "
+                             "were read today (normally once a day)")
     parser.add_argument("--backfill-changelog", action="store_true",
                         help="rebuild changelog.json from git history instead of refreshing")
     parser.add_argument("--centres-check", action="store_true",
@@ -3270,6 +3413,7 @@ def main(argv=None) -> int:
         refresh_electiontracker(data_dir, meta),   # report only: compared after the ABC has added its names
         refresh_et_retirements(data_dir, meta),    # after the ABC, whose flags it adds to
         refresh_et_policies(data_dir, meta),
+        refresh_pollbludger(data_dir, meta, args.aggregates_check),   # once a day; after the ABC's margins
         refresh_seat_odds(data_dir, meta),
         refresh_aeforecasts(data_dir, meta),
         check_redbridge(data_dir, meta),       # watch only: logs a warning if RedBridge has a newer release

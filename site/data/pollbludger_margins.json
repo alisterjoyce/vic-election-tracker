@@ -1,0 +1,824 @@
+{
+  "_schema": {
+    "description": "The Poll Bludger's Victorian election guide (William Bowe): the margin it lists for each seat on its guide's front page, read once a day, and the seats where it differs from this site's margin (districts.json, from the ABC guide). Figures and links only; the guide's text is never copied.",
+    "fields": {
+      "updated": "When this file last changed (UTC)",
+      "checked": "Melbourne date the guide was last read successfully",
+      "source": "{name, publisher, url, credit}",
+      "tolerance": "Margin gap (points) treated as rounding: a gap larger than this counts as a difference",
+      "seats[]": "One per district: district (id), party (holder as the guide colours the seat: ALP, LIB, NAT, GRN, IND), vs (the other side: LNP = the Coalition, for a Labor seat listed without a 'vs'; ALP for a Coalition seat listed without one), pct, basis (2PP = Labor v Coalition, else 2CP), asterisk (true when the guide marks the margin with *, unexplained on its list), url (the seat's guide page)",
+      "differences[]": "Seats where the guide and districts.json differ: district, ours {party, vs, pct}, theirs (as in seats[]), reasons (holder: a different party holds the margin; pair: a different two-party contest; margin: same contest, gap above the tolerance), gap (theirs - ours, points, same contest only). Recomputed at every refresh, so a change to our margins shows at once"
+    }
+  },
+  "updated": "2026-11-23T01:44:05Z",
+  "checked": "2026-11-23",
+  "source": {
+    "name": "The Poll Bludger: Victorian Election 2026",
+    "publisher": "The Poll Bludger (William Bowe)",
+    "url": "https://pollbludger.net/vic2026/",
+    "credit": "The Poll Bludger"
+  },
+  "tolerance": 0.1,
+  "seats": [
+    {
+      "district": "albert-park",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 11.2,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=AlbertPark"
+    },
+    {
+      "district": "ashwood",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 6.2,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Ashwood"
+    },
+    {
+      "district": "bass",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 0.2,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Bass"
+    },
+    {
+      "district": "bayswater",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 4.2,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Bayswater"
+    },
+    {
+      "district": "bellarine",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 8.5,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Bellarine"
+    },
+    {
+      "district": "benambra",
+      "party": "LIB",
+      "vs": "IND",
+      "pct": 0.9,
+      "basis": "2CP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Benambra"
+    },
+    {
+      "district": "bendigo-east",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 10.8,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=BendigoEast"
+    },
+    {
+      "district": "bendigo-west",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 14.6,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=BendigoWest"
+    },
+    {
+      "district": "bentleigh",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 8.0,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Bentleigh"
+    },
+    {
+      "district": "berwick",
+      "party": "LIB",
+      "vs": "ALP",
+      "pct": 4.7,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Berwick"
+    },
+    {
+      "district": "box-hill",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 7.2,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=BoxHill"
+    },
+    {
+      "district": "brighton",
+      "party": "LIB",
+      "vs": "ALP",
+      "pct": 5.1,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Brighton"
+    },
+    {
+      "district": "broadmeadows",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 15.5,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Broadmeadows"
+    },
+    {
+      "district": "brunswick",
+      "party": "GRN",
+      "vs": "ALP",
+      "pct": 13.7,
+      "basis": "2CP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Brunswick"
+    },
+    {
+      "district": "bulleen",
+      "party": "LIB",
+      "vs": "ALP",
+      "pct": 5.9,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Bulleen"
+    },
+    {
+      "district": "bundoora",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 12.7,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Bundoora"
+    },
+    {
+      "district": "carrum",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 9.8,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Carrum"
+    },
+    {
+      "district": "caulfield",
+      "party": "LIB",
+      "vs": "ALP",
+      "pct": 2.1,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Caulfield"
+    },
+    {
+      "district": "clarinda",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 10.2,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Clarinda"
+    },
+    {
+      "district": "cranbourne",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 9.0,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Cranbourne"
+    },
+    {
+      "district": "croydon",
+      "party": "LIB",
+      "vs": "ALP",
+      "pct": 1.4,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Croydon"
+    },
+    {
+      "district": "dandenong",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 18.3,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Dandenong"
+    },
+    {
+      "district": "eildon",
+      "party": "LIB",
+      "vs": "ALP",
+      "pct": 7.0,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Eildon"
+    },
+    {
+      "district": "eltham",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 9.0,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Eltham"
+    },
+    {
+      "district": "essendon",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 12.5,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Essendon"
+    },
+    {
+      "district": "eureka",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 7.2,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Eureka"
+    },
+    {
+      "district": "euroa",
+      "party": "NAT",
+      "vs": "ALP",
+      "pct": 9.9,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Euroa"
+    },
+    {
+      "district": "evelyn",
+      "party": "LIB",
+      "vs": "ALP",
+      "pct": 5.4,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Evelyn"
+    },
+    {
+      "district": "footscray",
+      "party": "ALP",
+      "vs": "GRN",
+      "pct": 4.2,
+      "basis": "2CP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Footscray"
+    },
+    {
+      "district": "frankston",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 8.7,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Frankston"
+    },
+    {
+      "district": "geelong",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 14.7,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Geelong"
+    },
+    {
+      "district": "gippsland-east",
+      "party": "NAT",
+      "vs": "ALP",
+      "pct": 24.6,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=GippslandEast"
+    },
+    {
+      "district": "gippsland-south",
+      "party": "NAT",
+      "vs": "ALP",
+      "pct": 15.6,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=GippslandSouth"
+    },
+    {
+      "district": "glen-waverley",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 3.3,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=GlenWaverley"
+    },
+    {
+      "district": "greenvale",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 7.1,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Greenvale"
+    },
+    {
+      "district": "hastings",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 1.4,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Hastings"
+    },
+    {
+      "district": "hawthorn",
+      "party": "LIB",
+      "vs": "ALP",
+      "pct": 1.7,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Hawthorn"
+    },
+    {
+      "district": "ivanhoe",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 12.8,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Ivanhoe"
+    },
+    {
+      "district": "kalkallo",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 16.5,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Kalkallo"
+    },
+    {
+      "district": "kew",
+      "party": "LIB",
+      "vs": "ALP",
+      "pct": 4.0,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Kew"
+    },
+    {
+      "district": "kororoit",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 14.5,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Kororoit"
+    },
+    {
+      "district": "lara",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 15.9,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Lara"
+    },
+    {
+      "district": "laverton",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 18.4,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Laverton"
+    },
+    {
+      "district": "lowan",
+      "party": "NAT",
+      "vs": "ALP",
+      "pct": 21.6,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Lowan"
+    },
+    {
+      "district": "macedon",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 9.5,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Macedon"
+    },
+    {
+      "district": "malvern",
+      "party": "LIB",
+      "vs": "ALP",
+      "pct": 8.1,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Malvern"
+    },
+    {
+      "district": "melbourne",
+      "party": "GRN",
+      "vs": "ALP",
+      "pct": 10.2,
+      "basis": "2CP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Melbourne"
+    },
+    {
+      "district": "melton",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 4.6,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Melton"
+    },
+    {
+      "district": "mildura",
+      "party": "NAT",
+      "vs": "IND",
+      "pct": 1.2,
+      "basis": "2CP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Mildura"
+    },
+    {
+      "district": "mill-park",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 11.6,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=MillPark"
+    },
+    {
+      "district": "monbulk",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 7.6,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Monbulk"
+    },
+    {
+      "district": "mordialloc",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 8.2,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Mordialloc"
+    },
+    {
+      "district": "mornington",
+      "party": "LIB",
+      "vs": "IND",
+      "pct": 0.7,
+      "basis": "2CP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Mornington"
+    },
+    {
+      "district": "morwell",
+      "party": "NAT",
+      "vs": "ALP",
+      "pct": 4.4,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Morwell"
+    },
+    {
+      "district": "mulgrave",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 10.8,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Mulgrave"
+    },
+    {
+      "district": "murray-plains",
+      "party": "NAT",
+      "vs": "ALP",
+      "pct": 23.4,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=MurrayPlains"
+    },
+    {
+      "district": "narracan",
+      "party": "LIB",
+      "vs": "IND",
+      "pct": 13.0,
+      "basis": "2CP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Narracan"
+    },
+    {
+      "district": "narre-warren-north",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 8.7,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=NarreWarrenNorth"
+    },
+    {
+      "district": "narre-warren-south",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 8.3,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=NarreWarrenSouth"
+    },
+    {
+      "district": "nepean",
+      "party": "LIB",
+      "vs": "ALP",
+      "pct": 6.4,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Nepean"
+    },
+    {
+      "district": "niddrie",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 6.7,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Niddrie"
+    },
+    {
+      "district": "northcote",
+      "party": "ALP",
+      "vs": "GRN",
+      "pct": 0.2,
+      "basis": "2CP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Northcote"
+    },
+    {
+      "district": "oakleigh",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 13.5,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Oakleigh"
+    },
+    {
+      "district": "ovens-valley",
+      "party": "NAT",
+      "vs": "ALP",
+      "pct": 17.8,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=OvensValley"
+    },
+    {
+      "district": "pakenham",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 0.4,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Pakenham"
+    },
+    {
+      "district": "pascoe-vale",
+      "party": "ALP",
+      "vs": "GRN",
+      "pct": 2.0,
+      "basis": "2CP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=PascoeVale"
+    },
+    {
+      "district": "point-cook",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 8.3,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=PointCook"
+    },
+    {
+      "district": "polwarth",
+      "party": "LIB",
+      "vs": "ALP",
+      "pct": 1.8,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Polwarth"
+    },
+    {
+      "district": "prahran",
+      "party": "GRN",
+      "vs": "LIB",
+      "pct": 12.0,
+      "basis": "2CP",
+      "asterisk": true,
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Prahran"
+    },
+    {
+      "district": "preston",
+      "party": "ALP",
+      "vs": "GRN",
+      "pct": 2.1,
+      "basis": "2CP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Preston"
+    },
+    {
+      "district": "richmond",
+      "party": "GRN",
+      "vs": "ALP",
+      "pct": 7.3,
+      "basis": "2CP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Richmond"
+    },
+    {
+      "district": "ringwood",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 7.5,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Ringwood"
+    },
+    {
+      "district": "ripon",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 3.0,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Ripon"
+    },
+    {
+      "district": "rowville",
+      "party": "LIB",
+      "vs": "ALP",
+      "pct": 3.7,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Rowville"
+    },
+    {
+      "district": "sandringham",
+      "party": "LIB",
+      "vs": "ALP",
+      "pct": 5.0,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Sandringham"
+    },
+    {
+      "district": "shepparton",
+      "party": "NAT",
+      "vs": "IND",
+      "pct": 6.8,
+      "basis": "2CP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Shepparton"
+    },
+    {
+      "district": "south-barwon",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 9.8,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=SouthBarwon"
+    },
+    {
+      "district": "south-west-coast",
+      "party": "LIB",
+      "vs": "ALP",
+      "pct": 8.0,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=South-WestCoast"
+    },
+    {
+      "district": "st-albans",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 9.6,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=StAlbans"
+    },
+    {
+      "district": "sunbury",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 6.4,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Sunbury"
+    },
+    {
+      "district": "sydenham",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 8.8,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Sydenham"
+    },
+    {
+      "district": "tarneit",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 12.3,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Tarneit"
+    },
+    {
+      "district": "thomastown",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 15.8,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Thomastown"
+    },
+    {
+      "district": "warrandyte",
+      "party": "LIB",
+      "vs": "ALP",
+      "pct": 4.3,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Warrandyte"
+    },
+    {
+      "district": "wendouree",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 11.9,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Wendouree"
+    },
+    {
+      "district": "werribee",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 10.9,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Werribee"
+    },
+    {
+      "district": "williamstown",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 13.4,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=Williamstown"
+    },
+    {
+      "district": "yan-yean",
+      "party": "ALP",
+      "vs": "LNP",
+      "pct": 4.3,
+      "basis": "2PP",
+      "url": "https://pollbludger.net/vic2026/LA.htm?s=YanYean"
+    }
+  ],
+  "differences": [
+    {
+      "district": "benambra",
+      "ours": {
+        "party": "LIB",
+        "vs": "ALP",
+        "pct": 13.3
+      },
+      "theirs": {
+        "party": "LIB",
+        "vs": "IND",
+        "pct": 0.9,
+        "basis": "2CP",
+        "url": "https://pollbludger.net/vic2026/LA.htm?s=Benambra"
+      },
+      "reasons": [
+        "pair"
+      ]
+    },
+    {
+      "district": "brunswick",
+      "ours": {
+        "party": "GRN",
+        "vs": "ALP",
+        "pct": 13.5
+      },
+      "theirs": {
+        "party": "GRN",
+        "vs": "ALP",
+        "pct": 13.7,
+        "basis": "2CP",
+        "url": "https://pollbludger.net/vic2026/LA.htm?s=Brunswick"
+      },
+      "reasons": [
+        "margin"
+      ],
+      "gap": 0.2
+    },
+    {
+      "district": "mulgrave",
+      "ours": {
+        "party": "ALP",
+        "vs": "LIB",
+        "pct": 10.2
+      },
+      "theirs": {
+        "party": "ALP",
+        "vs": "LNP",
+        "pct": 10.8,
+        "basis": "2PP",
+        "url": "https://pollbludger.net/vic2026/LA.htm?s=Mulgrave"
+      },
+      "reasons": [
+        "margin"
+      ],
+      "gap": 0.6
+    },
+    {
+      "district": "prahran",
+      "ours": {
+        "party": "LIB",
+        "vs": "GRN",
+        "pct": 1.3
+      },
+      "theirs": {
+        "party": "GRN",
+        "vs": "LIB",
+        "pct": 12.0,
+        "basis": "2CP",
+        "asterisk": true,
+        "url": "https://pollbludger.net/vic2026/LA.htm?s=Prahran"
+      },
+      "reasons": [
+        "holder"
+      ]
+    },
+    {
+      "district": "shepparton",
+      "ours": {
+        "party": "NAT",
+        "vs": "ALP",
+        "pct": 24.3
+      },
+      "theirs": {
+        "party": "NAT",
+        "vs": "IND",
+        "pct": 6.8,
+        "basis": "2CP",
+        "url": "https://pollbludger.net/vic2026/LA.htm?s=Shepparton"
+      },
+      "reasons": [
+        "pair"
+      ]
+    }
+  ]
+}

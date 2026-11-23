@@ -693,6 +693,7 @@ select {
 .poll-record .small { color: var(--muted); }
 .fact .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--muted); }
 .fact .value { font-weight: 600; margin-top: 2px; overflow-wrap: anywhere; }
+.fact .pb-note { margin-top: 4px; }   /* The Poll Bludger's margin, where it differs (lower.js pbNote) */
 
 .outlook { border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; margin: 0 0 18px; }
 .outlook h3 { margin-bottom: 8px; }
@@ -1014,7 +1015,7 @@ html.js .agg-table { min-height: 257px; }
 
 /* Targets of the nav's in-page links clear the sticky header (static on phones) */
 @media (min-width: 641px) {
-  #state-map, #sc-title, #quota-card, #tl-now, #aggregates-card, :target { scroll-margin-top: 72px; }
+  #state-map, #sc-title, #quota-card, #tl-now, #aggregates-card, #news-sources-card, #margin-diffs-card, :target { scroll-margin-top: 72px; }
 }
 
 /* Space reserved for what common.js fills in, so the page doesn't jump once scripts run

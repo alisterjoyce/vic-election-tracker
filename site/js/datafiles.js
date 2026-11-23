@@ -19,6 +19,8 @@
     ["polls.json", "Statewide polls: primaries, 2PP, 3PP, preferred premier, approval, client, source link", `Wikipedia's poll tables (${WIKI}), compiled from each pollster's release (linked per poll).`],
     ["poll_aggregates.json", "Other sites' statewide poll averages: primary vote by party, 2PP where published, the date each runs to, and links (the polls page's \"Aggregates compared\" table)",
       '<a href="https://www.pollbludger.net/vic2026/bludgertrack/">BludgerTrack (The Poll Bludger)</a> and <a href="https://acestrategies.au/victoria-election-2026/polls">Ace Strategies</a>, read once a day; their figures belong to them, so credit them when reusing. <a href="https://electiontracker.au/elections/vic/2026/polls">electiontracker.au</a> poll average, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, read at each refresh.'],
+    ["pollbludger_margins.json", "The margin The Poll Bludger's election guide lists for each seat, and the seats where it differs from this site's (districts.json): another holder, another two-party contest, or a gap of more than 0.1 points",
+      '<a href="https://pollbludger.net/vic2026/">The Poll Bludger</a> (William Bowe), Victorian election guide, read once a day; its figures belong to it, so credit it when reusing. Figures and links only.'],
     ["council_polls.json", "Upper-house primary vote by region", "Roy Morgan (linked in the file)."],
     ["seat_models.json", "Seat models: MRP calls, forecast win probabilities with first-preference ranges and 2CP scenarios per candidate, and a seat projection's totals",
       'YouGov for Common Threads (MRP). <a href="https://www.aeforecasts.com/forecast/2026vic/regular">Australian Election Forecasts (aeforecasts.com)</a>, refreshed four times a day; its numbers belong to that site, so credit it when reusing them. <a href="https://www.linkedin.com/posts/kosmos-samaras-80bb9978_what-the-latest-victorian-newspoll-numbers-activity-7520224020676386816-mTuv">RedBridge Group seat model</a> (26 Oct 2026, statewide totals).'],
@@ -135,5 +137,39 @@
     }
   }
 
-  document.addEventListener("DOMContentLoaded", () => { render(); renderProfileCount(); renderHtvCoverage(); renderNewsSources(); });
+  // Seats where The Poll Bludger's guide lists a different margin from ours (pollbludger_margins.json).
+  async function renderMarginDiffs() {
+    const el = document.getElementById("margin-diffs-body");
+    if (!el) return;
+    try {
+      const [pb, dd] = await Promise.all([App.loadJSON("pollbludger_margins"), App.loadJSON("districts")]);
+      const names = Object.fromEntries(dd.districts.map((d) => [d.id, d.name]));
+      const m = (x) => `${escapeHtml(App.partyShort(x.party))} ${Number(x.pct).toFixed(1)}%${x.vs ? ` vs ${escapeHtml(App.partyShort(x.vs))}` : ""}`;
+      const why = { holder: "Different party holds the margin", pair: "Different two-party contest", margin: "Same contest, different figure" };
+      const diffs = (pb.differences || []).slice().sort((a, b) => (names[a.district] || "").localeCompare(names[b.district] || ""));
+      const rows = diffs.map((x) => `<tr><td><a href="../lower.html#${escapeHtml(x.district)}">${escapeHtml(names[x.district] || x.district)}</a></td>
+          <td>${m(x.ours)}</td>
+          <td><a href="${escapeHtml(x.theirs.url)}">${m(x.theirs)}</a> <span class="muted small">(${escapeHtml(x.theirs.basis || "")}${x.theirs.asterisk ? ", marked *" : ""})</span></td>
+          <td class="small">${x.reasons.map((r) => escapeHtml(why[r] || r)).join("; ")}${x.gap != null ? ` (${x.gap > 0 ? "+" : ""}${Number(x.gap).toFixed(1)})` : ""}</td></tr>`).join("");
+      document.getElementById("margin-diffs-updated").textContent = pb.checked ? `Guide read ${App.fmtDate(pb.checked)}` : "";
+      el.innerHTML = diffs.length ? `<div class="table-scroll"><table>
+          <thead><tr><th>District</th><th>This site (ABC)</th><th>The Poll Bludger</th><th>Difference</th></tr></thead>
+          <tbody>${rows}</tbody></table></div>` : '<p class="empty">No differences: the guide lists the same margin as this site for every seat.</p>';
+    } catch (err) {
+      el.innerHTML = "<p class=\"empty\">The margin comparison isn't available.</p>";
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    render();
+    // The sections fill in after loading. The links #news-sources and #margin-diffs deliberately aren't the cards' ids
+    // (#news-sources-card, #margin-diffs-card), so the browser doesn't jump there before the sections above have filled
+    // (which would shift the page); it scrolls once they have, a frame and 100 ms later, so the scroll doesn't land in
+    // the frame they fill in or before common.js adds the tables' "Download CSV" bars (50 ms after a change).
+    Promise.all([renderProfileCount(), renderHtvCoverage(), renderNewsSources(), renderMarginDiffs()]).then(() => {
+      const hash = decodeURIComponent(location.hash.slice(1));
+      const target = hash && document.getElementById(hash + "-card");
+      if (target) requestAnimationFrame(() => setTimeout(() => target.scrollIntoView(), 100));
+    });
+  });
 })();

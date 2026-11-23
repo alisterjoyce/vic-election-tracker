@@ -17,6 +17,7 @@
   let news;         // data/news.json (headlines per seat); undefined until loaded, null if it failed
   let vec;          // data/vec_nominations.json (the VEC's list, for the ballot paper); undefined until loaded
   let results = null;   // data/results.json: the 2026 count (scripts/results.py), null if missing
+  let pbDiffs = {};     // district id -> where The Poll Bludger's guide lists a different margin (data/pollbludger_margins.json)
 
   const $ = (id) => document.getElementById(id);
 
@@ -169,6 +170,18 @@
     return d.classification || marginLabel(d.margin && d.margin.pct);
   }
 
+  // The Poll Bludger's guide page for a seat: its own menu's ids are the names with spaces removed (all 88 checked 23 Nov 2026).
+  const pbUrl = (d) => `https://pollbludger.net/vic2026/LA.htm?s=${encodeURIComponent(d.name.replace(/ /g, ""))}`;
+
+  // "Poll Bludger: GRN 12.0% vs LIB (2CP)" under the margin, only where the guide's figure differs from ours.
+  function pbNote(d) {
+    const x = pbDiffs[d.id];
+    if (!x || !x.theirs) return "";
+    const t = x.theirs;
+    return `<div class="small pb-note">Poll Bludger: <a href="${escapeHtml(t.url || pbUrl(d))}" target="_blank" rel="noopener">${marginText(t)}</a>
+      (${escapeHtml(t.basis || "")}${t.asterisk ? ", marked * on its list" : ""})</div>`;
+  }
+
   function marginText(m) {
     if (!m || m.pct == null) return "–";
     return `${escapeHtml(partyShort(m.party))} ${Number(m.pct).toFixed(1)}%${m.vs ? ` vs ${escapeHtml(partyShort(m.vs))}` : ""}`;
@@ -248,6 +261,7 @@
         <h2>${App.starButton(d.id, d.name)} ${escapeHtml(d.name)}</h2>
         <div class="card-actions">
           ${d.abc_url ? `<a class="icon-btn" href="${escapeHtml(d.abc_url)}" target="_blank" rel="noopener">ABC guide ↗</a>` : ""}
+          <a class="icon-btn" href="${escapeHtml(pbUrl(d))}" target="_blank" rel="noopener">Poll Bludger guide ↗</a>
           <a class="icon-btn" href="ballot.html#${escapeHtml(d.id)}">Your ballot</a>
           <button class="icon-btn" type="button" id="copy-link">Copy link</button>
           <button class="icon-btn" type="button" id="share-seat" title="Share or download a 1200x630 image of this seat">Share</button>
@@ -256,7 +270,7 @@
       <div class="facts">
         <div class="fact"><div class="label">Sitting MP</div><div class="value">${escapeHtml(d.sitting_mp || "–")}${d.retiring ? ' <span class="badge neutral">Retiring</span>' : ""}</div></div>
         <div class="fact"><div class="label">Held by</div><div class="value">${partyBadge(d.party)}</div></div>
-        <div class="fact"><div class="label">Margin</div><div class="value">${marginText(d.margin)}</div><div class="muted small">${escapeHtml(seatLabel(d))}</div></div>
+        <div class="fact"><div class="label">Margin</div><div class="value">${marginText(d.margin)}</div><div class="muted small">${escapeHtml(seatLabel(d))}</div>${pbNote(d)}</div>
         <div class="fact"><div class="label">Region</div><div class="value">${region ? `<a href="upper.html#${escapeHtml(region.id)}">${escapeHtml(region.name)}</a>` : escapeHtml(d.region)}${d.needs_check ? ' <span class="badge reported" title="Region allocation flagged for checking">Check</span>' : ""}</div><div class="muted small">${d.area === "regional" ? "Regional" : "Metro"}</div></div>
       </div>
       ${resultsSlot(d, live)}
@@ -652,13 +666,14 @@
       const optional = (name) => loadJSON(name).catch((err) => { console.warn(err); return null; });
       // What the seat panel needs, in parallel. Photos and headlines wait until it has painted.
       const first = hashId();
-      const [dd, cd, rd, meta, pollData, models, odds, seatPolls, resultData] = await Promise.all([
+      const [dd, cd, rd, meta, pollData, models, odds, seatPolls, resultData, pb] = await Promise.all([
         loadJSON("districts"), loadJSON("candidates"), loadJSON("regions"),
         optional("meta"), optional("polls"), optional("seat_models"), optional("seat_odds"), optional("seat_polls"),
-        optional("results"),
+        optional("results"), optional("pollbludger_margins"),
         first ? App.Htv.load(first).then((doc) => { htvDocs[first] = doc; }).catch(() => null) : null,
       ]);
       results = resultData;
+      ((pb && pb.differences) || []).forEach((x) => { pbDiffs[x.district] = x; });
       outlook = { swing: App.statewideSwing(meta, pollData), models, odds, seatPolls };
       districts = dd.districts.slice().sort((a, b) => a.name.localeCompare(b.name));
       candidates = cd.candidates || [];
