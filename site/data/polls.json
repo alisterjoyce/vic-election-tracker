@@ -66,6 +66,29 @@
         "ALP": 42,
         "LNP": 58
       },
+      "approval": {
+        "matchup": "Carroll vs Wilson vs Pickering",
+        "leaders": {
+          "Carroll": {
+            "positive": 20,
+            "negative": 44,
+            "undecided": 36,
+            "net": -24
+          },
+          "Wilson": {
+            "positive": 37,
+            "negative": 29,
+            "undecided": 34,
+            "net": 8
+          },
+          "Pickering": {
+            "positive": 21,
+            "negative": 26,
+            "undecided": 53,
+            "net": -5
+          }
+        }
+      },
       "et_id": "redbridge-accent-2026-11-22-afr",
       "commissioned_by": {
         "category": "media",
@@ -178,7 +201,7 @@
           "Pickering": {
             "positive": 17,
             "negative": 25,
-            "undecided": 36,
+            "undecided": 58,
             "net": -8
           }
         }
