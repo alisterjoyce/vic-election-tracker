@@ -520,6 +520,31 @@
     };
   }
 
+  /* ---------- Build your own prediction (predict.html): the reader's parliament and totals ---------- */
+  function predictCard({ counts, changed }) {
+    const blocs = App.BLOCS.filter((b) => counts[b]);   // the fixed party order
+    const top = App.BLOCS.reduce((a, b) => (counts[b] > counts[a] ? b : a));
+    const L = App.BLOC_LABEL, C = App.BLOC_COLOR;
+    const title = counts[top] >= 45 ? `${L[top]} majority, ${counts[top]} seats` : `No majority: ${L[top]} ${counts[top]}, ${45 - counts[top]} short`;
+    const hemi = App.hemicycle({ segments: blocs.map((b) => ({ code: C[b], n: counts[b] })), label: title });
+    return {
+      accent: top === "ALP" ? "--p-alp" : top === "LNP" ? "--p-lib" : "--accent",
+      filename: `my-vic-election-prediction-${App.melbourneToday()}.png`,
+      title: `My prediction: ${title}`,
+      url: new URL("predict.html", App.ROOT).href,
+      inner: `
+        <div class="hc-body">
+          <div class="hc-kicker">My prediction · 2026 Victorian state election · Legislative Assembly</div>
+          <div class="hc-title hc-title-sm">${escapeHtml(title)}</div>
+          <div class="hc-pred">${hemi}
+            <ul class="hc-pred-list">${blocs.map((b) => `<li><i style="background:var(${App.partyVar(C[b])})"></i>${L[b]}<b>${counts[b]}</b></li>`).join("")}
+              <li class="hc-sub">45 seats for a majority</li></ul></div>
+          <div class="hc-sub">${changed ? `${changed} seat${changed === 1 ? "" : "s"} changed from the starting picks (seat models and Sportsbet)` : "The starting picks: what most seat models and Sportsbet favour in each seat"}</div>
+        </div>
+        <div class="hc-foot"><strong>Vic Election 2026</strong><span>${escapeHtml(siteLink("predict.html"))}</span><span>${escapeHtml(today())}</span></div>`,
+    };
+  }
+
   // For scripts/build_share.py: the card as a PNG data URL.
   async function weeklyPng() {
     const card = await weekly();
@@ -527,5 +552,5 @@
     return new Promise((res) => { const r = new FileReader(); r.onload = () => res(r.result); r.readAsDataURL(blob); });
   }
 
-  App.ShareCard = { drawCandidate, mount, shareButton, seatCard, homeCard, ballotCard, weekly, weeklyPng, seatMovers, W, H };
+  App.ShareCard = { drawCandidate, mount, shareButton, seatCard, homeCard, ballotCard, predictCard, weekly, weeklyPng, seatMovers, W, H };
 })();

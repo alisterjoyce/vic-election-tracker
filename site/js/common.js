@@ -511,6 +511,31 @@
       <ul class="hb-key"><li><span class="mv-key-mid"></span>Median of ${ms.models.length} models</li><li><span class="mv-key-rng"></span>Lowest to highest</li><li class="hb-maj-key"><span class="hb-maj-mark"></span>${majority} for a majority</li></ul>`;
   }
 
+  // Each seat's calls from the sources that rate seats one by one: every published seat model with a winner per
+  // seat (forecasts first, so Australian Election Forecasts, then the YouGov MRP) and Sportsbet's outright favourite
+  // (not joint favourites or a partial market). RedBridge publishes statewide totals only, so it makes no seat calls.
+  // {district id: {calls: [{source, label, party}], pick, agree, disagree}}: pick is the party most sources name (a
+  // tie goes to the source listed first), agree how many name it, disagree how many name someone else. A joint
+  // Coalition call (LNP) agrees with a Liberal or a National one. Used by the prediction page and the home map.
+  function seatCalls(modelsDoc, oddsDoc) {
+    const out = {};
+    const add = (id, c) => { (out[id] = out[id] || { calls: [] }).calls.push(c); };
+    const models = ((modelsDoc && modelsDoc.models) || []).filter((m) => m.published && (m.kind === "forecast" || m.kind === "mrp"))
+      .sort((a, b) => (a.kind === "forecast" ? 0 : 1) - (b.kind === "forecast" ? 0 : 1));
+    models.forEach((m) => ((modelsDoc && modelsDoc.seats) || []).filter((r) => r.model === m.id && r.winner)
+      .forEach((r) => add(r.district, { source: m.id, label: m.name, party: r.winner })));
+    ((oddsDoc && oddsDoc.seats) || []).forEach((s) => {
+      if (s.favourite && !s.partial && !(s.joint_favourites || []).length) add(s.district, { source: "sportsbet", label: "Sportsbet favourite", party: s.favourite });
+    });
+    const same = (a, b) => a === b || (a === "LNP" && COALITION.includes(b)) || (b === "LNP" && COALITION.includes(a));
+    Object.values(out).forEach((e) => {
+      let best = null, n = -1;
+      e.calls.forEach((c) => { const k = e.calls.filter((x) => same(x.party, c.party)).length; if (k > n) { best = c.party; n = k; } });
+      e.pick = best; e.agree = n; e.disagree = e.calls.length - n;
+    });
+    return out;
+  }
+
   // The models' medians as a hemicycle (home page, weekly card), whole seats by apportion().
   function modelsHemicycle(ms, opts = {}) {
     const med = Object.fromEntries(BLOCS.filter((b) => ms.summary[b]).map((b) => [b, ms.summary[b].median]));
@@ -947,7 +972,7 @@
   // The single source of the site's navigation; pages carry only a no-JS fallback.
   const NAV = [
     { label: "Overview", items: [["Home", "index.html"], ["Voting", "voting.html"], ["Results", "results.html"], ["Map", "index.html#state-map"], ["Pendulum", "pendulum.html"],
-      ["Scenarios", "pendulum.html#scenarios"], ["Timeline", "timeline.html"]] },
+      ["Scenarios", "pendulum.html#scenarios"], ["Build your own prediction", "predict.html"], ["Timeline", "timeline.html"]] },
     { label: "Lower house", items: [["Seats", "lower.html"], ["Your ballot", "ballot.html"], ["Candidates", "candidate.html"], ["My seats", "myseats.html"]] },
     { label: "Upper house", items: [["Regions", "upper.html"], ["Quota calculator", "upper.html#quota"]] },
     { label: "About", items: [["Methodology", "about.html"], ["Data", "data/"], ["Polls", "poll.html"], ["Policies", "policies.html"],
@@ -1486,7 +1511,7 @@
     PARTIES, STATUSES, COALITION, partyOrder, candidateOrder, surnameOf, loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, partyBadge, statusBadge,
     slugify, parseDate, fmtDate, fmtMonth, fmtDateTime, dataUpdatedText, fmtPrice, fmtMargin, fmtSwing, melbourneToday, daysBetween,
     hashId, cssVar, currentTheme, showError, copyLink,
-    DAY, preparePolls, pollExclusion, commissionLabel, AVG_MIN_SAMPLE, smoothedSeries, smoothedLatest, fmtRange, pollRecords, statewideSwing, swingAdjusted, projectSeats, modelSeats, apportion, hemicycle, seatRangeChart, modelsHemicycle, BLOC_LABEL, BLOC_COLOR, BLOCS, blocOf, modelLink, quotaBars,
+    DAY, preparePolls, pollExclusion, commissionLabel, AVG_MIN_SAMPLE, smoothedSeries, smoothedLatest, fmtRange, pollRecords, statewideSwing, swingAdjusted, projectSeats, modelSeats, seatCalls, apportion, hemicycle, seatRangeChart, modelsHemicycle, BLOC_LABEL, BLOC_COLOR, BLOCS, blocOf, modelLink, quotaBars,
     getWatchlist, setWatchlist, isWatched, toggleWatch, starButton, storageWorks,
     buildSearchIndex, searchItems,
     candidateId, givenFirst, loadHeadshots, avatar, photoCredits, initials, inkFor, inkVar, newsList,

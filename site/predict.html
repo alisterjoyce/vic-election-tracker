@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Build your own prediction · Vic Election 2026</title>
+  <meta name="description" content="Pick a winner in each of the 88 Victorian lower-house seats, starting from what the seat models and betting favour, and watch the parliament and party totals change. Your picks stay on your device.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d4ed8'/%3E%3Cpath d='M8 17l5 5 11-12' stroke='white' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#171b21" media="(prefers-color-scheme: dark)">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Vic Election">
+  <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Vic Election <span>2026</span></a>
+      <button type="button" class="icon-btn nav-toggle" aria-controls="main-nav" aria-expanded="false"><span class="nav-burger" aria-hidden="true"></span>Menu</button>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="lower.html">Lower house</a>
+        <a href="upper.html">Upper house</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="search"></div>
+      <button id="theme-toggle" class="icon-btn" type="button">Theme</button>
+    </div>
+  </header>
+  <div class="key-dates" id="key-dates" role="region" aria-label="Key dates"></div>
+
+  <main class="container predict">
+    <div id="sample-banner" class="banner" hidden></div>
+
+    <section class="hero">
+      <h1>Build your own prediction</h1>
+      <p class="muted">Pick who you think will win each of the 88 Legislative Assembly seats. Every seat starts on the party most of our seat-by-seat sources pick (the seat models that rate each seat, and Sportsbet's favourite); tap a seat's choice to change it. Your picks are saved on this device only and never sent anywhere.</p>
+    </section>
+
+    <section class="card pred-summary-card" aria-labelledby="pred-h">
+      <div class="card-head"><h2 id="pred-h">Your parliament</h2>
+        <div class="card-actions">
+          <button type="button" class="icon-btn" id="pred-reset">Reset to models</button>
+          <button type="button" class="icon-btn" id="pred-share" title="Share or download a 1200x630 image of your parliament and totals">Share</button>
+        </div>
+      </div>
+      <div class="pred-summary" id="pred-summary" aria-live="polite"><p class="empty">Loading…</p></div>
+      <p class="muted small" id="pred-note">&nbsp;</p>
+    </section>
+
+    <div class="pred-regions" id="pred-regions"></div>
+
+    <div class="pred-strip" id="pred-strip" aria-hidden="true"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p id="last-updated">Data last updated: loading…</p>
+      <p><a href="about.html">About and methodology</a> · Starting picks: <a href="https://www.aeforecasts.com/forecast/2026vic/regular">Australian Election Forecasts</a>, YouGov MRP, Sportsbet. Candidates: VEC.</p>
+      <p class="footer-legal"><a href="independence.html">Independence</a> · <a href="disclaimer.html">Disclaimer</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms of use</a></p>
+      <p class="footer-auth">Authorised by Alister Joyce, Melbourne</p>
+    </div>
+  </footer>
+
+  <script defer src="js/common.js"></script>
+  <script defer src="js/sharecard.js"></script>
+  <script defer src="js/predict.js"></script>
+</body>
+</html>
