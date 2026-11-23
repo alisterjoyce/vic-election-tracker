@@ -44,7 +44,7 @@
       <div class="search-hero" id="hero-search"></div>
       <button type="button" class="icon-btn icon-only hero-share" id="share-home" aria-label="Share an image of the poll average and seat projection" title="Share or download a 1200x630 image of the poll average and seat projection"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       <p class="hero-countdown" id="countdown">Election day 28 Nov 2026</p>
-      <p class="hero-tpp"><span id="hero-tpp">&nbsp;</span> <span class="hero-tpp-label">two-party preferred, poll of polls</span></p>
+      <p class="hero-tpp"><span id="hero-tpp">&nbsp;</span> <span class="hero-tpp-label">two-party preferred, poll of polls <span class="hero-tpp-ci" id="hero-tpp-ci">&nbsp;</span></span></p>
       <p class="hero-trend muted" id="hero-trend">&nbsp;</p>
       <p class="hero-aggs small" id="hero-aggs"><a href="poll.html#aggregates">Other aggregates</a></p>
       <p class="hero-status" id="hero-nominations">&nbsp;</p>
@@ -133,7 +133,7 @@
         </div>
       </div>
       <div class="chart-wrap"><canvas id="pop-chart" aria-label="Poll of polls chart" role="img"></canvas></div>
-      <p class="muted small" style="margin: 10px 0 0">Lines are a smoothed average of published polls (3-week Gaussian kernel, weighted by sample size). Following electiontracker.au's <a href="https://github.com/coldix/elections/blob/main/docs/poll-methodology.md#which-polls-to-use">published rule</a>, the average leaves out polls commissioned by a party, union or advocacy group and polls with a sample under 800 (or none published); they are drawn as empty rings. Dots are individual polls; a larger outlined triangle (new high) or diamond (new low) marks a poll that set a record for Labor, the Coalition, the Greens or One Nation when it came out. Independents are counted in Other.</p>
+      <p class="muted small" style="margin: 10px 0 0">Lines are a smoothed average of published polls (3-week Gaussian kernel, weighted by sample size). Following electiontracker.au's <a href="https://github.com/coldix/elections/blob/main/docs/poll-methodology.md#which-polls-to-use">published rule</a>, the average leaves out polls commissioned by a party, union or advocacy group and polls with a sample under 800 (or none published); they are drawn as empty rings. The shaded bands are each average's 95% range, from the polls' sample sizes and how far they spread around the average (it leaves out any error every pollster shares). Dots are individual polls; a larger outlined triangle (new high) or diamond (new low) marks a poll that set a record for Labor, the Coalition, the Greens or One Nation when it came out. Independents are counted in Other.</p>
     </section>
 
     <section class="card" id="early-votes" aria-labelledby="ev-title">

@@ -100,10 +100,14 @@
     const series = smoothedSeries(preparePolls(pollData), (p) => (p.tpp && p.tpp.LNP != null ? p.tpp.LNP : null));
     if (s && series.length) {
       const lnp = s.current, alp = 100 - s.current;
+      const last = series[series.length - 1];
       const sides = [["Coalition", lnp, "--p-lib"], ["Labor", alp, "--p-alp"]].sort((a, b) => b[1] - a[1]);
       document.getElementById("hero-tpp").innerHTML = sides.map(([n, v, c]) =>
         `<span class="tpp-side" style="--side:var(${c})">${n} <b>${v.toFixed(1)}</b></span>`).join('<span class="tpp-dash"> – </span>');
-      const last = series[series.length - 1];
+      // The 95% interval of the same average (Labor's is the Coalition's mirrored).
+      const range = { Coalition: App.fmtRange(last), Labor: App.fmtRange({ lo: 100 - last.hi, hi: 100 - last.lo }) };
+      document.getElementById("hero-tpp-ci").textContent = last.lo != null
+        ? `95% range: ${sides.map(([n]) => `${n} ${range[n]}`).join(", ")}` : "";
       const before = series.find((pt) => pt.x >= last.x - 14 * DAY) || series[0];
       const move = last.y - before.y;
       document.getElementById("hero-trend").textContent = Math.abs(move) < 0.05
@@ -295,8 +299,13 @@
     const datasets = [];
     keys.forEach((k) => {
       const color = partyColor(k);
+      const avg = average(k);
+      // The 95% interval: a lower edge with no line, then the upper edge filled down to it.
+      const edge = (side) => ({ type: "line", band: true, label: `${partyName(k)} 95% ${side}`, data: avg.map((pt) => ({ x: pt.x, y: pt[side] })),
+        borderWidth: 0, pointRadius: 0, pointHoverRadius: 0, backgroundColor: withAlpha(color, 0.16) });
+      datasets.push(edge("lo"), { ...edge("hi"), fill: "-1" });
       datasets.push({
-        type: "line", label: partyName(k), data: average(k),
+        type: "line", label: partyName(k), data: avg,
         borderColor: color, backgroundColor: color, borderWidth: 2.5,
         pointRadius: 0, pointHoverRadius: 4,
       });
@@ -358,9 +367,16 @@
         },
         plugins: {
           legend: {
-            labels: { color: text, usePointStyle: true, filter: (item) => !item.text.endsWith(" polls") },
+            // A party's legend item hides its line, its polls and its band together.
+            onClick: (e, item, legend) => {
+              const ch = legend.chart, show = !ch.isDatasetVisible(item.datasetIndex);
+              ch.data.datasets.forEach((d, i) => { if (d.label === item.text || d.label.startsWith(`${item.text} `)) ch.setDatasetVisibility(i, show); });
+              ch.update();
+            },
+            labels: { color: text, usePointStyle: true, filter: (item) => !item.text.endsWith(" polls") && !/ 95% (lo|hi)$/.test(item.text) },
           },
           tooltip: {
+            filter: (item) => !item.dataset.band,
             callbacks: {
               title: (items) => items.length ? fmtDate(new Date(items[0].parsed.x)) : "",
               label: (ctx) => {
@@ -370,7 +386,7 @@
                   ? `${poll.pollster}: ${ctx.dataset.label.replace(/ polls$/, "")} ${ctx.parsed.y}%`
                     + (rec ? ` (new ${rec.kind}${rec.current ? ", still the record" : ""})` : "")
                     + (App.pollExclusion(poll) ? ` (not in the average: ${App.pollExclusion(poll).toLowerCase()})` : "")
-                  : `${ctx.dataset.label} average: ${ctx.parsed.y}%`;
+                  : `${ctx.dataset.label} average: ${ctx.parsed.y}%${ctx.raw && ctx.raw.lo != null ? ` (95% range ${App.fmtRange(ctx.raw)})` : ""}`;
               },
             },
           },

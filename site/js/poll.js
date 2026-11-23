@@ -242,17 +242,19 @@
       return m[key] == null || isNaN(m[key]) ? null : m[key];
     };
     let last = null;
+    const ranges = {};   // "primary.ALP" -> the point, for its 95% interval
     const latest = (part, key) => {
       const pt = App.smoothedLatest(polls, value(part, key));
       if (!pt) return null;
       last = Math.max(last || 0, pt.x);
+      ranges[`${part}.${key}`] = pt;
       return pt.y;
     };
     const primary = {};
     AGG_PARTIES.forEach((k) => { const v = latest("primary", k); if (v != null) primary[k] = v; });
     const alp = latest("tpp", "ALP"), lnp = latest("tpp", "LNP");
     return { id: "this-site", name: "This site", url: "index.html", linkText: "Home page chart",
-      primary, tpp: alp != null && lnp != null ? { ALP: alp, LNP: lnp } : null, asOf: last ? new Date(last) : null, own: true };
+      primary, tpp: alp != null && lnp != null ? { ALP: alp, LNP: lnp } : null, asOf: last ? new Date(last) : null, own: true, ranges };
   }
 
   let aggregates = null;   // poll_aggregates.json (null until loaded; false if it couldn't be)
@@ -278,7 +280,12 @@
       checked.length ? `Last read ${escapeHtml(fmtDate(checked[0]))}${checked[0] !== checked[checked.length - 1] ? ` to ${escapeHtml(fmtDate(checked[checked.length - 1]))}` : ""}.` : "",
       aggregates === false ? "The other averages couldn't be loaded; try again later." : "",
     ].filter(Boolean).join(" ");
-    const cell = (a, v, what) => (v == null ? `<td class="num muted" title="${escapeHtml(missing(a, what))}">–</td>` : `<td class="num">${pct(v)}</td>`);
+    // This site's row carries each figure's 95% range beneath it (the CSV keeps the figure alone).
+    const cell = (a, v, what, key) => {
+      if (v == null) return `<td class="num muted" title="${escapeHtml(missing(a, what))}">–</td>`;
+      const r = a.own && key ? App.fmtRange(a.ranges[key]) : "";
+      return r ? `<td class="num" data-csv="${pct(v)}">${pct(v)}<span class="agg-ci" title="95% range">${r}</span></td>` : `<td class="num">${pct(v)}</td>`;
+    };
     return `<p class="small muted agg-caveats">${line}</p>
     <div class="table-scroll"><table class="agg-compare">
       <thead><tr><th>Aggregate</th><th>As of</th>
@@ -289,8 +296,8 @@
         return `<tr${a.own ? ' class="current"' : ""}>
           <td>${escapeHtml(a.name)}</td>
           <td data-csv="${escapeHtml(a.own ? (a.asOf ? isoDay(a.asOf) : "") : a.as_of || "")}">${escapeHtml(fmtDate(a.own ? a.asOf : a.as_of) || "–")}</td>
-          ${AGG_PARTIES.map((k) => cell(a, p[k], `a ${k === "OTH" ? "Others" : partyName(k)} figure`)).join("")}
-          ${cell(a, a.tpp && a.tpp.ALP, "2PP")}${cell(a, a.tpp && a.tpp.LNP, "2PP")}
+          ${AGG_PARTIES.map((k) => cell(a, p[k], `a ${k === "OTH" ? "Others" : partyName(k)} figure`, `primary.${k}`)).join("")}
+          ${cell(a, a.tpp && a.tpp.ALP, "2PP", "tpp.ALP")}${cell(a, a.tpp && a.tpp.LNP, "2PP", "tpp.LNP")}
           <td data-csv="${escapeHtml(a.own ? "" : a.url)}">${a.own ? `<a href="${a.url}">${escapeHtml(a.linkText)}</a>`
             : `<a href="${escapeHtml(a.url)}" target="_blank" rel="noopener">${escapeHtml(host(a.url))} ↗</a>`}</td></tr>`;
       }).join("")}</tbody>

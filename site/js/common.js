@@ -205,37 +205,80 @@
   }
 
   // Centred Gaussian-kernel average of value(p), weighted by sqrt(sample size), over the polls pollExclusion keeps.
-  // Returns daily points [{x: time, y: value}] from the first to the last poll.
+  // Returns daily points [{x: time, y: value, lo, hi}] from the first to the last poll (lo-hi: the 95% interval).
   function smoothedSeries(polls, value) {
     const pts = polls.filter((p) => !pollExclusion(p) && value(p) != null);
     if (!pts.length) return [];
+    const tauAll = seriesTau2(pts, value);
     const out = [];
     const first = pts[0].t, last = pts[pts.length - 1].t;
     const days = Math.ceil((last - first) / DAY);
     for (let i = 0; i <= days; i++) {
-      const pt = kernelPoint(pts, Math.min(first + i * DAY, last), value);
+      const pt = kernelPoint(pts, Math.min(first + i * DAY, last), value, tauAll);
       if (pt) out.push(pt);
     }
     return out;
   }
 
-  // The average at time t, rounded to one decimal, or null when no poll is within 3 bandwidths.
-  function kernelPoint(pts, t, value) {
+  // The 95% interval is the weighted average's standard error, sqrt(sum w^2 (s_i^2 + tau^2)) / sum w, times 1.96.
+  // s_i^2 = v(100 - v) / n is each poll's sampling variance (n = its sample, 1,000 where none is published). tau^2 is
+  // how far polls spread around the average beyond what sampling explains: the spread of the polls in the window
+  // less their sampling variance, pooled with the same figure for the whole series (worth TAU_PRIOR polls), so a
+  // window holding one or two polls doesn't swing between nothing and everything. It leaves out error that every
+  // pollster shares.
+  const Z95 = 1.96;
+  const TAU_PRIOR = 2;
+  const sampling2 = (y, n) => { const v = Math.min(Math.max(y, 0.5), 99.5); return (v * (100 - v)) / n; };
+  function kernelWeights(pts, t, value) {
     const bw = BANDWIDTH_DAYS * DAY;
-    let w = 0, v = 0;
+    const near = [];
     for (const p of pts) {
       const z = (t - p.t) / bw;
       if (Math.abs(z) > 3) continue;
-      const weight = Math.exp(-0.5 * z * z) * Math.sqrt((p.sample_size || 1000) / 1000);
-      w += weight; v += weight * value(p);
+      const n = p.sample_size || 1000;
+      const y = value(p);
+      near.push([Math.exp(-0.5 * z * z) * Math.sqrt(n / 1000), y, sampling2(y, n)]);
     }
-    return w > 0 ? { x: t, y: Math.round((v / w) * 10) / 10 } : null;
+    return near;
   }
+  // The whole series' tau^2: each poll's squared distance from the average at its own date, less its sampling variance.
+  function seriesTau2(pts, value) {
+    let sum = 0;
+    pts.forEach((p) => {
+      const near = kernelWeights(pts, p.t, value);
+      const w = near.reduce((a, [wt]) => a + wt, 0);
+      const mean = near.reduce((a, [wt, y]) => a + wt * y, 0) / w;
+      sum += (value(p) - mean) ** 2 - sampling2(value(p), p.sample_size || 1000);
+    });
+    return pts.length > 1 ? Math.max(0, (sum / pts.length) * (pts.length / (pts.length - 1))) : 0;
+  }
+
+  // The average at time t, rounded to one decimal, with its 95% interval {lo, hi}, or null when no poll is within
+  // 3 bandwidths. tauAll: seriesTau2 for the same polls.
+  function kernelPoint(pts, t, value, tauAll = 0) {
+    const near = kernelWeights(pts, t, value);
+    let w = 0, v = 0, w2 = 0;
+    near.forEach(([wt, y]) => { w += wt; v += wt * y; w2 += wt * wt; });
+    if (w <= 0) return null;
+    const mean = v / w;
+    const nEff = (w * w) / w2;
+    let spread = 0, sampling = 0;
+    near.forEach(([wt, y, s2]) => { spread += wt * (y - mean) ** 2; sampling += wt * s2; });
+    // (nEff - 1) x the window's own estimate, nEff/(nEff-1) x spread/w - sampling/w, written so it never divides by ~0.
+    const local = (nEff * spread) / w - ((nEff - 1) * sampling) / w;
+    const tau2 = Math.max(0, (TAU_PRIOR * tauAll + local) / (TAU_PRIOR + nEff - 1));
+    const se = Math.sqrt(near.reduce((a, [wt, , s2]) => a + wt * wt * (s2 + tau2), 0)) / w;
+    const r1 = (x) => Math.round(x * 10) / 10;
+    return { x: t, y: r1(mean), lo: r1(mean - Z95 * se), hi: r1(mean + Z95 * se) };
+  }
+
+  // "46.0–48.6": a point's 95% interval, or "" when it has none.
+  const fmtRange = (pt) => (pt && pt.lo != null ? `${pt.lo.toFixed(1)}–${pt.hi.toFixed(1)}` : "");
 
   // The last point of smoothedSeries(polls, value) (at the newest poll with a value) without the whole series.
   function smoothedLatest(polls, value) {
     const pts = polls.filter((p) => !pollExclusion(p) && value(p) != null);
-    return pts.length ? kernelPoint(pts, pts[pts.length - 1].t, value) : null;
+    return pts.length ? kernelPoint(pts, pts[pts.length - 1].t, value, seriesTau2(pts, value)) : null;
   }
 
   // Polls that set a new high or low for a party when they came out. polls: preparePolls output; keys: party
@@ -1277,7 +1320,7 @@
     PARTIES, STATUSES, COALITION, loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, partyBadge, statusBadge,
     slugify, parseDate, fmtDate, fmtMonth, fmtDateTime, dataUpdatedText, fmtPrice, fmtMargin, fmtSwing, melbourneToday, daysBetween,
     hashId, cssVar, currentTheme, showError, copyLink,
-    DAY, preparePolls, pollExclusion, commissionLabel, AVG_MIN_SAMPLE, smoothedSeries, smoothedLatest, pollRecords, statewideSwing, swingAdjusted, projectSeats, BLOCS, blocOf, modelLink, quotaBars,
+    DAY, preparePolls, pollExclusion, commissionLabel, AVG_MIN_SAMPLE, smoothedSeries, smoothedLatest, fmtRange, pollRecords, statewideSwing, swingAdjusted, projectSeats, BLOCS, blocOf, modelLink, quotaBars,
     getWatchlist, setWatchlist, isWatched, toggleWatch, starButton, storageWorks,
     buildSearchIndex, searchItems,
     candidateId, givenFirst, loadHeadshots, avatar, photoCredits, initials, inkFor, inkVar, newsList,

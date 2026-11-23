@@ -569,6 +569,9 @@ a.icon-btn { text-decoration: none; display: inline-block; }
 .tpp-side b { color: var(--side); }
 .tpp-dash { color: var(--muted); font-weight: 400; }
 .hero-tpp-label { display: block; font-family: var(--font-body); font-size: 0.78rem; font-weight: 400; color: var(--muted); }
+/* The 2PP's 95% range: its own line, reserved (one line; two where it wraps on a narrow phone). */
+.hero-tpp-ci { display: block; min-height: 1.5em; line-height: 1.5; }
+@media (max-width: 359px) { .hero-tpp-ci { min-height: 3em; } }
 .hero-trend { font-size: 0.9rem; min-height: 1.5em; }
 .hero-aggs { margin-top: 4px !important; line-height: 1.5; color: var(--muted); }
 .hero-aggs b { font-weight: 600; color: var(--text); }
@@ -831,15 +834,16 @@ tr.poll-excluded td a { color: var(--muted); text-decoration-style: dotted; }
 /* The names stay in view while the figures scroll sideways on a phone. */
 .agg-compare th:first-child, .agg-compare td:first-child { position: sticky; left: 0; z-index: 1; background: var(--surface); }
 .agg-compare tr.current td:first-child { background: var(--surface-2); }
+.agg-ci { display: block; font-size: 0.72rem; font-weight: 400; color: var(--muted); white-space: nowrap; }
 .agg-caveats { margin: 0 0 8px; }
 .agg-notes { margin: 0; }
 .agg-method { margin: 8px 0 0; }
-/* The tallest it gets in each band (measured 16 Nov 2026, 320-1400px; the line above the table wraps):
+/* The tallest it gets in each band (measured 23 Nov 2026, 320-1400px, with the 95% ranges under this site's row; the line above the table wraps):
    re-measure if that line changes. */
-html.js .agg-table { min-height: 257px; }
-@media (max-width: 959px) { html.js .agg-table { min-height: 278px; } }
-@media (max-width: 640px) { html.js .agg-table { min-height: 293px; } }
-@media (max-width: 420px) { html.js .agg-table { min-height: 314px; } }
+html.js .agg-table { min-height: 274px; }
+@media (max-width: 959px) { html.js .agg-table { min-height: 295px; } }
+@media (max-width: 640px) { html.js .agg-table { min-height: 310px; } }
+@media (max-width: 420px) { html.js .agg-table { min-height: 331px; } }
 
 /* ---------- Timeline (timeline.html) ---------- */
 .timeline { list-style: none; margin: 0; padding: 0 0 0 4px; position: relative; }
