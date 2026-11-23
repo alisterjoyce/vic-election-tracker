@@ -17,7 +17,7 @@
    Bump VERSION when the shell list changes or to make every installed copy refresh at once: the new
    worker precaches, the page offers "Update available, tap to refresh", and old caches are deleted
    when it activates. */
-const VERSION = "v32";
+const VERSION = "v33";
 const PREFIX = "vet-";
 const CACHES = {
   shell: `${PREFIX}shell-${VERSION}`,
@@ -32,12 +32,12 @@ const FETCHED_AT = "x-sw-fetched-at"; // stamped on cached data responses
 
 const SHELL = [
   "./", "index.html", "lower.html", "upper.html", "candidate.html", "pendulum.html", "poll.html",
-  "timeline.html", "myseats.html", "about.html", "results.html", "policies.html", "ballot.html", "voting.html", "predict.html",
+  "timeline.html", "myseats.html", "about.html", "results.html", "policies.html", "ballot.html", "voting.html", "predict.html", "contests.html",
   "independence.html", "disclaimer.html", "privacy.html", "terms.html", "data/",
   "css/style.css",
   "js/common.js", "js/home.js", "js/lower.js", "js/upper.js", "js/candidate.js", "js/pendulum.js",
   "js/poll.js", "js/timeline.js", "js/myseats.js", "js/datafiles.js", "js/maps.js", "js/sharecard.js",
-  "js/htv.js", "js/quota.js", "js/results.js", "js/policies.js", "js/ballot.js", "js/voting.js", "js/predict.js",
+  "js/htv.js", "js/quota.js", "js/results.js", "js/policies.js", "js/ballot.js", "js/voting.js", "js/predict.js", "js/forecasts.js", "js/contests.js",
   "fonts/inter-latin.woff2", "fonts/archivo-latin.woff2",
   "icons/icon-192.png", "icons/icon-512.png", "icons/icon-maskable-512.png", "icons/apple-touch-icon.png",
   "manifest.webmanifest",

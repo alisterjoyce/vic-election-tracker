@@ -982,7 +982,7 @@
   /* ---- Main navigation: four groups, dropdowns on desktop, a menu button on phones ---- */
   // The single source of the site's navigation; pages carry only a no-JS fallback.
   const NAV = [
-    { label: "Overview", items: [["Home", "index.html"], ["Voting", "voting.html"], ["Results", "results.html"], ["Map", "index.html#state-map"], ["Pendulum", "pendulum.html"],
+    { label: "Overview", items: [["Home", "index.html"], ["Voting", "voting.html"], ["Results", "results.html"], ["Map", "index.html#state-map"], ["Key contests", "contests.html"], ["Pendulum", "pendulum.html"],
       ["Scenarios", "pendulum.html#scenarios"], ["Build your own prediction", "predict.html"], ["Timeline", "timeline.html"]] },
     { label: "Lower house", items: [["Seats", "lower.html"], ["Your ballot", "ballot.html"], ["Candidates", "candidate.html"], ["My seats", "myseats.html"]] },
     { label: "Upper house", items: [["Regions", "upper.html"], ["Quota calculator", "upper.html#quota"]] },
