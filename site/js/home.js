@@ -11,6 +11,9 @@
   let chart = null;
   let measure = "tpp";
   let polls = [];
+  let period = "all";          // the poll chart's x range: "all" (since the 2022 election) or "12m" (the last 12 months)
+  let pointerType = "mouse";   // the last pointer on the poll chart: a touch's first tap on a poll shows it, the second opens it
+  let tappedPoll = null;
 
   // Old shared links like index.html#bendigo-east go to the district page.
   async function redirectDistrictHash() {
@@ -345,16 +348,19 @@
         parsing: false,      // every dataset is already {x, y}, sorted by x
         normalized: true,
         interaction: { mode: "nearest", intersect: false },
-        // A poll dot opens that poll's page.
+        // A poll dot opens that poll's page: at once with a mouse; with touch, the first tap shows its tooltip and
+        // a second tap on the same poll opens it.
         onClick: (evt, els) => {
           const el = els.find((e) => chart.data.datasets[e.datasetIndex].type === "scatter");
           const raw = el && chart.data.datasets[el.datasetIndex].data[el.index];
-          if (raw && raw.poll && raw.poll.id) location.href = `poll.html#${raw.poll.id}`;
+          if (!raw || !raw.poll || !raw.poll.id) { tappedPoll = null; return; }
+          if (pointerType !== "mouse" && tappedPoll !== raw.poll.id) { tappedPoll = raw.poll.id; return; }
+          location.href = `poll.html#${raw.poll.id}`;
         },
         scales: {
           x: {
             type: "linear",
-            min: polls.length ? polls[0].t - 7 * DAY : undefined,
+            min: polls.length ? Math.max(polls[0].t - 7 * DAY, period === "12m" ? Date.now() - 365 * DAY : -Infinity) : undefined,
             max: polls.length ? polls[polls.length - 1].t + 7 * DAY : undefined,
             grid: { color: grid },
             ticks: { color: text, callback: fmtTick, maxRotation: 0, autoSkipPadding: 12 },
@@ -386,6 +392,8 @@
           },
           tooltip: {
             callbacks: {
+              footer: (items) => (items.some((it) => it.raw && it.raw.poll)
+                ? (pointerType === "mouse" ? "Click to open the poll" : "Tap again to open the poll") : ""),
               title: (items) => items.length ? fmtDate(new Date(items[0].parsed.x)) : "",
               label: (ctx) => {
                 const poll = ctx.raw && ctx.raw.poll;
@@ -401,6 +409,18 @@
         },
       },
     });
+  }
+
+  function initPeriodToggle() {
+    document.querySelectorAll("[data-period]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        period = btn.dataset.period;
+        document.querySelectorAll("[data-period]").forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
+        renderChart();
+      });
+    });
+    const canvas = document.getElementById("pop-chart");
+    if (canvas) canvas.addEventListener("pointerdown", (e) => { pointerType = e.pointerType || "mouse"; });
   }
 
   function initMeasureToggle() {
@@ -528,6 +548,7 @@
     if (await redirectDistrictHash()) return;
     window.addEventListener("hashchange", redirectDistrictHash);
     initMeasureToggle();
+    initPeriodToggle();
     initFindSeat();
     try {
       const [meta, districtData, regionData, pollData, odds] = await Promise.all([

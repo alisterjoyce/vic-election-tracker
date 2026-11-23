@@ -810,6 +810,7 @@ select {
 .pd-seat.falls .pd-tag { opacity: 1; }   /* full ink on a party colour (AA) */
 .pd-line { display: flex; align-items: center; gap: 6px; color: var(--accent); font-size: 0.75rem; font-weight: 600; margin: 4px 0; }
 .pd-line::before, .pd-line::after { content: ""; flex: 1; border-top: 2px dashed var(--accent); }
+.chart-controls { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }   /* home poll chart: measure and period */
 .scenarios { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
 .scenario h3 { margin-top: 0; }
 .sc-models { margin-bottom: 16px; }
