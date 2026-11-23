@@ -14,10 +14,10 @@
   "coverage": {
     "cards": 1423,
     "listings": 4815,
-    "orders_read": 4458,
-    "orders_image": 484,
+    "orders_read": 4479,
+    "orders_image": 505,
     "orders_same_as": 158,
-    "orders_unreadable": 171,
+    "orders_unreadable": 150,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -134,9 +134,9 @@
     "albert-park": {
       "house": "lower",
       "cards": 40,
-      "read": 35,
+      "read": 37,
       "same_as": 1,
-      "unreadable": 4,
+      "unreadable": 2,
       "parties": {
         "ALP": 7,
         "VS": 2,
@@ -289,9 +289,9 @@
     "berwick": {
       "house": "lower",
       "cards": 43,
-      "read": 34,
+      "read": 36,
       "same_as": 4,
-      "unreadable": 5,
+      "unreadable": 3,
       "parties": {
         "ALP": 10,
         "VS": 2,
@@ -558,9 +558,9 @@
     "essendon": {
       "house": "lower",
       "cards": 63,
-      "read": 53,
+      "read": 54,
       "same_as": 7,
-      "unreadable": 3,
+      "unreadable": 2,
       "parties": {
         "IND": 3,
         "ALP": 10,
@@ -685,9 +685,9 @@
     "gippsland-east": {
       "house": "lower",
       "cards": 22,
-      "read": 21,
+      "read": 22,
       "same_as": 0,
-      "unreadable": 1,
+      "unreadable": 0,
       "parties": {
         "ALP": 3,
         "SFF": 1,
@@ -791,9 +791,9 @@
     "ivanhoe": {
       "house": "lower",
       "cards": 33,
-      "read": 31,
+      "read": 32,
       "same_as": 1,
-      "unreadable": 1,
+      "unreadable": 0,
       "parties": {
         "ALP": 4,
         "NONCAND": 1,
@@ -1164,9 +1164,9 @@
     "narre-warren-south": {
       "house": "lower",
       "cards": 44,
-      "read": 37,
+      "read": 38,
       "same_as": 2,
-      "unreadable": 5,
+      "unreadable": 4,
       "parties": {
         "IND": 1,
         "NONCAND": 4,
@@ -1200,9 +1200,9 @@
     "niddrie": {
       "house": "lower",
       "cards": 54,
-      "read": 47,
+      "read": 48,
       "same_as": 2,
-      "unreadable": 5,
+      "unreadable": 4,
       "parties": {
         "ALP": 7,
         "VS": 2,
@@ -1567,9 +1567,9 @@
     "sydenham": {
       "house": "lower",
       "cards": 50,
-      "read": 45,
+      "read": 47,
       "same_as": 0,
-      "unreadable": 5,
+      "unreadable": 3,
       "parties": {
         "ALP": 12,
         "VS": 2,
@@ -1589,9 +1589,9 @@
     "tarneit": {
       "house": "lower",
       "cards": 44,
-      "read": 41,
+      "read": 42,
       "same_as": 0,
-      "unreadable": 3,
+      "unreadable": 2,
       "parties": {
         "ALP": 8,
         "VS": 2,
@@ -1741,9 +1741,9 @@
     "north-eastern-metropolitan": {
       "house": "upper",
       "cards": 184,
-      "read": 162,
+      "read": 163,
       "same_as": 4,
-      "unreadable": 4,
+      "unreadable": 3,
       "parties": {
         "ALP": 47,
         "NONCAND": 5,
@@ -1763,9 +1763,9 @@
     "northern-metropolitan": {
       "house": "upper",
       "cards": 201,
-      "read": 187,
+      "read": 188,
       "same_as": 3,
-      "unreadable": 11,
+      "unreadable": 10,
       "parties": {
         "ALP": 69,
         "SUS": 1,
@@ -1832,9 +1832,9 @@
     "southern-metropolitan": {
       "house": "upper",
       "cards": 171,
-      "read": 161,
+      "read": 164,
       "same_as": 5,
-      "unreadable": 5,
+      "unreadable": 2,
       "parties": {
         "ALP": 51,
         "VS": 12,
@@ -1854,9 +1854,9 @@
     "western-metropolitan": {
       "house": "upper",
       "cards": 197,
-      "read": 189,
+      "read": 190,
       "same_as": 2,
-      "unreadable": 6,
+      "unreadable": 5,
       "parties": {
         "ALP": 60,
         "IND": 1,
@@ -1877,9 +1877,9 @@
     "western-victoria": {
       "house": "upper",
       "cards": 135,
-      "read": 129,
+      "read": 132,
       "same_as": 1,
-      "unreadable": 5,
+      "unreadable": 2,
       "parties": {
         "SFF": 2,
         "SAL": 8,
@@ -1921,7 +1921,7 @@
       "area": "albert-park",
       "party": "GRN",
       "cards": 19,
-      "read": 15,
+      "read": 17,
       "differ": true,
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=08163ce1-1331-4594-9582-201769fab2d3%2Fthe%20greens%20combined%20southern%20metro%20prahran%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
     },
@@ -2506,7 +2506,7 @@
       "area": "berwick",
       "party": "GRN",
       "cards": 15,
-      "read": 8,
+      "read": 10,
       "ranks": {
         "GRN": 1,
         "ALP": 3,
@@ -3505,7 +3505,7 @@
       "area": "essendon",
       "party": "GRN",
       "cards": 37,
-      "read": 28,
+      "read": 29,
       "differ": true,
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3a410b71-e5c7-45d9-a59b-6997e35025bb%2Fthe%20greens%20combined%20northern%20metro%20melbourne%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
     },
@@ -3960,13 +3960,8 @@
       "area": "gippsland-east",
       "party": "GRN",
       "cards": 9,
-      "read": 8,
-      "ranks": {
-        "GRN": 1,
-        "ALP": 3,
-        "LNP": 4,
-        "ONP": 7
-      },
+      "read": 9,
+      "differ": true,
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9ad76913-2863-4756-988b-d2743d944879%2Fthe%20greens%20combined%20eastern%20victoria%20narracan%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
     },
     {
@@ -5921,7 +5916,7 @@
       "area": "niddrie",
       "party": "GRN",
       "cards": 23,
-      "read": 20,
+      "read": 21,
       "ranks": {
         "GRN": 1,
         "ALP": 5,
