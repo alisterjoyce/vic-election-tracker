@@ -297,8 +297,10 @@
     keys.forEach((k) => {
       const color = partyColor(k);
       const avg = average(k);
-      // The 95% interval: a lower edge with no line, then the upper edge filled down to it.
-      const edge = (side) => ({ type: "line", band: true, label: `${partyName(k)} 95% ${side}`, data: avg.map((pt) => ({ x: pt.x, y: pt[side] })),
+      // The 95% interval: a lower edge with no line, then the upper edge filled down to it. Every third day is
+      // plenty for a smooth band (and keeps Chart.js's fill cheap), plus the last day.
+      const thin = avg.filter((pt, i) => i % 3 === 0 || i === avg.length - 1);
+      const edge = (side) => ({ type: "line", band: true, label: `${partyName(k)} 95% ${side}`, data: thin.map((pt) => ({ x: pt.x, y: pt[side] })),
         borderWidth: 0, pointRadius: 0, pointHoverRadius: 0, backgroundColor: withAlpha(color, 0.16) });
       datasets.push(edge("lo"), { ...edge("hi"), fill: "-1" });
       datasets.push({
@@ -332,6 +334,8 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        parsing: false,      // every dataset is already {x, y}, sorted by x
+        normalized: true,
         interaction: { mode: "nearest", intersect: false },
         // A poll dot opens that poll's page.
         onClick: (evt, els) => {
