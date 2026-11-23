@@ -852,11 +852,6 @@ select {
 .pred-strip-v { font-weight: 700; }
 .pred-strip-n { display: flex; flex-wrap: wrap; gap: 4px 12px; }
 .pred-strip-n i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; }
-/* Home page questions */
-.faq details { border-bottom: 1px solid var(--border); }
-.faq summary { cursor: pointer; padding: 12px 0; font-weight: 600; min-height: 24px; }
-.faq details p { margin: 0 0 12px; }
-.faq-more { margin: 12px 0 0; }
 /* Key contests (contests.html) */
 .contests-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 16px; }
 .contests-bar label { display: flex; align-items: center; }
