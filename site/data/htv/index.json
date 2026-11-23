@@ -10,13 +10,13 @@
   "status": "closed",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
   "registration_closes": "2026-11-20",
-  "last_checked": "2026-11-23T02:11:04Z",
+  "last_checked": "2026-11-23T02:24:34Z",
   "coverage": {
     "cards": 1422,
     "listings": 4814,
-    "orders_read": 3954,
+    "orders_read": 3976,
     "orders_same_as": 154,
-    "orders_unreadable": 656,
+    "orders_unreadable": 659,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -1699,9 +1699,9 @@
     "yan-yean": {
       "house": "lower",
       "cards": 36,
-      "read": 24,
+      "read": 27,
       "same_as": 0,
-      "unreadable": 0,
+      "unreadable": 1,
       "parties": {
         "ALP": 8,
         "VS": 2,
@@ -1740,9 +1740,9 @@
     "north-eastern-metropolitan": {
       "house": "upper",
       "cards": 184,
-      "read": 119,
+      "read": 137,
       "same_as": 4,
-      "unreadable": 27,
+      "unreadable": 29,
       "parties": {
         "ALP": 47,
         "NONCAND": 5,
@@ -1853,7 +1853,7 @@
     "western-metropolitan": {
       "house": "upper",
       "cards": 197,
-      "read": 144,
+      "read": 145,
       "same_as": 2,
       "unreadable": 50,
       "parties": {
@@ -7726,7 +7726,7 @@
       "area": "yan-yean",
       "party": "ALP",
       "cards": 8,
-      "read": 5,
+      "read": 6,
       "ranks": {
         "ALP": 1,
         "GRN": 3,
@@ -7741,7 +7741,7 @@
           "of_n": 6
         }
       ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fb95c8c5-0874-4e9b-a986-8cc9846d96e2%2Falp_combined_nm_nv_kalkallo_yan%20yean_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7ae889cb-c5d8-44f3-adfa-5e36a4f659b8%2Falp_combined_nv%20yan%20yean_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
     },
     {
       "area": "yan-yean",
@@ -7760,7 +7760,7 @@
       "area": "yan-yean",
       "party": "LIB",
       "cards": 10,
-      "read": 7,
+      "read": 8,
       "ranks": {
         "LNP": 1,
         "ONP": 4,
@@ -7775,7 +7775,7 @@
           "of_n": 6
         }
       ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=50121465-80ca-4252-9967-0b45133f4ec9%2Fliberal_combined_nvr%20yan%20yean_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
     },
     {
       "area": "yan-yean",
