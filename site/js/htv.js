@@ -49,7 +49,17 @@
       || (a.card.kind === "party" ? App.partyOrder(a.card.party, b.card.party) : 0) || who(a.card).localeCompare(who(b.card)));
   }
 
-  const cardLinks = (cards) => cards.map((c) => link(c.card_url, `no. ${c.registration}`)).join(" ");
+  // Orders with via "image" were read by eye from the card's picture (no text layer that read cleanly), twice, and kept
+  // only when both readings agreed (scripts/vec_htv.py): the link says so, so readers check the card itself.
+  const IMAGE = "read from card image";
+  const byImage = (c) => c.via === "image";
+  const checkTag = (c) => (byImage(c) ? ` <span class="htv-check" title="Numbers ${IMAGE}">check the card</span>` : "");
+  // Column header: "read from card image" when every card in it was, else how many were.
+  function imageNote(col) {
+    const all = col.cards.concat(col.same), n = all.filter(byImage).length;
+    return n ? `; ${n === all.length ? IMAGE : `${n} ${IMAGE}`}` : "";
+  }
+  const cardLinks = (cards) => cards.map((c) => link(c.card_url, `no. ${c.registration}`) + checkTag(c)).join(" ");
 
   // Rows of the table: candidates in ballot order (Assembly), or groups then ungrouped candidates (Council).
   function rows(doc) {
@@ -89,7 +99,7 @@
     cols.forEach((col) => { const w = who(col.card); seenWho[w] = (seenWho[w] || 0) + 1; col.n = seenWho[w]; });
     const tagOf = (col) => (seenWho[who(col.card)] > 1 ? ` (${col.n})` : "");
     const head = cols.map((col) => `<th scope="col" class="num htv-col">${whoHtml(col.card)}${escapeHtml(tagOf(col))}
-        <span class="htv-col-meta">${col.cards.length} card${col.cards.length === 1 ? "" : "s"}${col.same.length ? ` + ${col.same.length} translated` : ""}${col.card.status === "partial" ? "; only these numbers read, see card" : ""}</span></th>`).join("");
+        <span class="htv-col-meta">${col.cards.length} card${col.cards.length === 1 ? "" : "s"}${col.same.length ? ` + ${col.same.length} translated` : ""}${col.card.status === "partial" ? "; only these numbers read, see card" : ""}${imageNote(col)}</span></th>`).join("");
     const body = rs.map((r) => `<tr><th scope="row">${r.label}</th>${cols.map((col) => {
       const n = r.pref(col.card);
       return `<td class="num">${n == null ? '<span class="muted" aria-label="not numbered">–</span>' : n}</td>`;
@@ -185,7 +195,8 @@
       ${laborGreensHtml(doc)}
       ${matrix(doc, `Preference numbers on each registered how-to-vote card for ${doc.name}`)}
       ${(doc.cards || []).length ? `<p class="muted small">Each column is one party's or candidate's card${columns(doc).some((c) => c.cards.length > 1) ? " (cards printing the same order are combined)" : ""}, as registered with the VEC:
-        their recommendation, not this site's. Numbers are read from each card's PDF; follow the links for the originals.</p>` : ""}
+        their recommendation, not this site's. Numbers are read from each card's PDF; follow the links for the originals.${(doc.cards || []).some((c) => isRead(c) && byImage(c))
+          ? ` Cards marked "${IMAGE}" print their numbers as a picture: they were read by eye, twice, and shown only where both readings agreed and every number fits the ballot, so check the card.` : ""}</p>` : ""}
       ${noCard.length ? `<p class="small"><strong>No card registered</strong> for ${noCard.length === (doc.ballot || []).length ? "any candidate" : `${noCard.length} candidate${noCard.length === 1 ? "" : "s"}`}:
         ${noCard.map((n) => escapeHtml(n)).join("; ")}.</p>` : ""}
     </section>`;
@@ -260,7 +271,8 @@
       <td class="num">${fmt(v.cards)}</td><td class="num">${fmt(v.districts)}</td><td class="num">${fmt(v.regions)}</td></tr>`).join("");
     const nc = cov.no_card || {};
     return `<p class="small" style="margin-top:0"><strong>${fmt(cov.cards)}</strong> cards registered, covering <strong>${fmt(cov.districts_with_cards)}</strong> of 88 districts
-        and <strong>${fmt(cov.regions_with_cards)}</strong> of 8 regions. Preference orders read from ${fmt(cov.orders_read)} of ${fmt(cov.listings)} district and region listings;
+        and <strong>${fmt(cov.regions_with_cards)}</strong> of 8 regions. Preference orders read from ${fmt(cov.orders_read)} of ${fmt(cov.listings)} district and region listings${cov.orders_image ? `
+        (${fmt(cov.orders_image)} of them ${IMAGE}: read by eye, twice, where the card's numbers are a picture)` : ""};
         ${cov.orders_same_as ? `${fmt(cov.orders_same_as)} more are translated cards shown with the order of the same registrant's English card for that seat ("${SAME_AS}");
         ` : ""}${fmt(cov.orders_unreadable)} are marked "unreadable, see card".</p>
       <p class="small"><strong>Candidates with no card</strong> from their party or themselves: ${fmt(nc.lower)} of ${fmt(nc.candidates_lower)} Assembly candidates and

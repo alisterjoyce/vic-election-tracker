@@ -471,8 +471,31 @@
       "type": "Combined",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d595f20b-4ffd-4556-ac63-5472d5971ef9%2Fnationals_combined_htvc_a4.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "unreadable",
-      "note": "unreadable, see card"
+      "status": "read",
+      "order": [
+        "O'BRIEN, Danny",
+        "WILKIE, Bianca",
+        "BARRY-MACAULAY, Amy",
+        "McAULIFFE, Jessica",
+        "EVANS, Zave",
+        "McGENNISKEN, Lachie",
+        "SCHUHMANN, Phillip"
+      ],
+      "via": "image",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 2,
+        "ALP": 3,
+        "GRN": 5
+      },
+      "flags": [
+        {
+          "ahead": "ONP",
+          "of": "ALP",
+          "ahead_n": 2,
+          "of_n": 3
+        }
+      ]
     },
     {
       "registration": "1562",

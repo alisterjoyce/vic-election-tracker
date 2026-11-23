@@ -922,6 +922,7 @@ html.js .agg-table { min-height: 274px; }
 .htv-links a, .htv-flags a { white-space: nowrap; }
 .htv-nocard { display: inline-block; margin-left: 4px; padding: 0 6px; border-radius: 4px; font-size: 0.72rem; background: var(--surface-2); color: var(--muted); border: 1px solid var(--border); white-space: nowrap; }
 .htv-unread { margin: 6px 0; }
+.htv-check { display: inline-block; padding: 0 5px; border-radius: 4px; font-size: 0.72rem; background: var(--surface-2); color: var(--muted); border: 1px solid var(--border); white-space: nowrap; }
 .htv-cov td:first-child { white-space: normal; min-width: 10rem; }
 /* Data page coverage: reserved until htv/index.json arrives (measured 20 Nov 2026, 19 registrant rows). */
 #htv-coverage-body { min-height: 958px; }

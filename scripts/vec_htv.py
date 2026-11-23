@@ -719,6 +719,13 @@ def build(register: dict, existing: dict, vec: dict, fetch_pdf_bytes, today: str
             card["party"] = card["party"] or "IND"
         same_pdf = prev and prev.get("card_url") == r["card_url"]
         orders = dict(prev.get("orders") or {}) if same_pdf else {}
+        # Orders read from the card's image (via "image", by eye, read twice) are kept with the rest while the PDF is
+        # the same; an amended card drops them, since its numbers may have changed: read the new card again.
+        if prev and not same_pdf:
+            lost = sorted(a for a, o in (prev.get("orders") or {}).items() if o.get("via") == "image")
+            if lost:
+                log.warning("card %s (%s) amended: its image-read orders (%s) need reading again from the new card",
+                            reg, r["registered_by"], ", ".join(lost))
         # Hand-entered orders survive unless a new PDF for this card reads cleanly.
         hand = {a: o for a, o in ((prev or {}).get("orders") or {}).items() if o.get("via") == "hand"}
         need = [a for a in areas if a not in orders or (orders[a].get("status") == "pending" and orders[a].get("tried") != today)]
@@ -805,8 +812,9 @@ def coverage(cards: list[dict], vec: dict) -> dict:
     read = sum(1 for c in cards for o in c["orders"].values() if o.get("status") in ("read", "partial"))
     same_as = sum(1 for c in cards for o in c["orders"].values() if o.get("status") == "same_as")
     listings = sum(len(c["orders"]) for c in cards)
+    image = sum(1 for c in cards for o in c["orders"].values() if o.get("status") in ("read", "partial") and o.get("via") == "image")
     return {
-        "cards": len(cards), "listings": listings, "orders_read": read, "orders_same_as": same_as,
+        "cards": len(cards), "listings": listings, "orders_read": read, "orders_image": image, "orders_same_as": same_as,
         "orders_unreadable": sum(1 for c in cards for o in c["orders"].values() if o.get("status") == "unreadable"),
         "districts_with_cards": sum(1 for a, b in ballot.items() if b["house"] == "lower" and by_area.get(a)),
         "regions_with_cards": sum(1 for a, b in ballot.items() if b["house"] == "upper" and by_area.get(a)),
@@ -839,7 +847,8 @@ SCHEMA = {
         "source_url": "The VEC's register of registered how-to-vote cards",
         "last_checked": "ISO UTC time the register was last read successfully",
         "pending": "Orders not read yet (cards whose PDF is still to be read, at most a set number per refresh)",
-        "coverage": "{cards (registrations), listings (card x district or region), orders_read, orders_same_as, orders_unreadable, "
+        "coverage": "{cards (registrations), listings (card x district or region), orders_read, orders_image (of those, read "
+                    "from the card image by eye), orders_same_as, orders_unreadable, "
                     "districts_with_cards, regions_with_cards, by_party: {code | IND (independent candidates) | NONCAND "
                     "(registered by someone not standing): {cards, districts, regions}}, no_card: {lower, upper "
                     "(candidates with no card from their party or themselves), candidates_lower, candidates_upper}}",
@@ -850,7 +859,8 @@ SCHEMA = {
                  "orders: {area id: {status (read | partial: numbers only some boxes | same_as: a translated card that couldn't be read, given the order every readable card from the same registrant prints for that seat, with same_as = their registration numbers and note 'same order as the English card' | unreadable | pending), order (Assembly: "
                  "ballot names, 'SURNAME, Given', first preference first), atl (Council: group letters numbered above the line, "
                  "first first), btl (Council: ballot names numbered below the line, when the card numbers at least 5), via "
-                 "(text | ocr | hand), note ('unreadable, see card'), ranks ({ALP | LNP | GRN | ONP: preference given to that "
+                 "(text | ocr | hand | image: read by eye from the card's rendered image, twice, independently, and kept only "
+                 "when both readings agree and the numbers form a complete sequence; the pages say 'read from card image, check the card'), note ('unreadable, see card'), ranks ({ALP | LNP | GRN | ONP: preference given to that "
                  "party's best-placed candidate or group}), flags ([{ahead, of, ahead_n, of_n}]: a Labor, Liberal or Nationals "
                  "card numbering One Nation or the Greens ahead of the other side of government)}}, notes}]",
         "changes": "Cards added, amended (new PDF), moved between areas or removed, as found at each refresh: "
@@ -865,7 +875,7 @@ def status_for(today: str) -> str:
 
 # A card in another language, by its file name: the Greens' "... arabic 2.pdf", Labor's "..._tr5_1.pdf".
 TRANSLATED = re.compile(r"arabic|chinese|vietnamese|punjabi|hindi|greek|italian|turkish|somali|oromo|dari|persian|farsi|"
-                        r"urdu|tamil|korean|khmer|nepali|sinhal|macedonian|serbian|croatian|spanish|amharic|tigrinya|"
+                        r"urdu|hazaragi|hazara|tamil|korean|khmer|nepali|sinhal|macedonian|serbian|croatian|spanish|amharic|tigrinya|"
                         r"dinka|swahili|karen|burmese|bengali|gujarati|telugu|filipino|tagalog|indonesian|thai|japanese|"
                         r"russian|ukrainian|polish|portuguese|cantonese|mandarin|(?:^|[_ ])tr\d", re.I)
 SAME_AS_NOTE = "same order as the English card"
@@ -894,6 +904,7 @@ def borrow_translations(cards: list[dict]) -> int:
             if sib and len(orders) == 1:
                 src = sib[0][1]
                 c["orders"][aid] = {"status": "same_as", **{k: src[k] for k in ("order", "atl", "btl") if src.get(k)},
+                                    **({"via": "image"} if any(so.get("via") == "image" for _, so in sib) else {}),
                                     "same_as": sorted({sc["registration"] for sc, _ in sib}, key=lambda r: (len(r), r)),
                                     "note": SAME_AS_NOTE}
                 n += 1
@@ -1081,7 +1092,7 @@ def main(argv=None) -> int:
     from zoneinfo import ZoneInfo
 
     def write_json(p: Path, data):
-        p.write_text(json.dumps(data, indent=1, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
+        p.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
     if args.rewrite or args.reread:
         doc = json.loads((args.data_dir / "htv.json").read_text(encoding="utf-8"))
         vec = json.loads((args.data_dir / "vec_nominations.json").read_text(encoding="utf-8"))

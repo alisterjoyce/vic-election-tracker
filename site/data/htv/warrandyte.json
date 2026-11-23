@@ -99,8 +99,30 @@
       "type": "Combined",
       "registered_on": "2026-11-11",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f507f859-67c4-4d2f-bc5c-b862eb49c91a%2Falp_combined_nem_ev_croydon_evelyn_warrandyte_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "unreadable",
-      "note": "unreadable, see card"
+      "status": "read",
+      "order": [
+        "PATERSON, Rebecca",
+        "MURADIAN, Vanessa",
+        "STANLEY, John",
+        "SCHWAB, Caleb",
+        "WERNER, Nicole",
+        "BURNSIDE, Mark"
+      ],
+      "via": "image",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 2,
+        "LNP": 5,
+        "ONP": 6
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 2,
+          "of_n": 5
+        }
+      ]
     },
     {
       "registration": "318",

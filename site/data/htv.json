@@ -8,8 +8,8 @@
       "source_url": "The VEC's register of registered how-to-vote cards",
       "last_checked": "ISO UTC time the register was last read successfully",
       "pending": "Orders not read yet (cards whose PDF is still to be read, at most a set number per refresh)",
-      "coverage": "{cards (registrations), listings (card x district or region), orders_read, orders_same_as, orders_unreadable, districts_with_cards, regions_with_cards, by_party: {code | IND (independent candidates) | NONCAND (registered by someone not standing): {cards, districts, regions}}, no_card: {lower, upper (candidates with no card from their party or themselves), candidates_lower, candidates_upper}}",
-      "cards": "[{registration (VEC number), registered_by (as the VEC lists it), kind (party | independent | non_candidate), party (code; IND for an independent candidate; null for others), candidate (tracker id of the independent it is for), type (Single | Combined | MEHTVC, as listed), registered_on (YYYY-MM-DD), card_url (the VEC's link to the card PDF), file (its file name), areas (district and region ids it is listed under), read_on, orders: {area id: {status (read | partial: numbers only some boxes | same_as: a translated card that couldn't be read, given the order every readable card from the same registrant prints for that seat, with same_as = their registration numbers and note 'same order as the English card' | unreadable | pending), order (Assembly: ballot names, 'SURNAME, Given', first preference first), atl (Council: group letters numbered above the line, first first), btl (Council: ballot names numbered below the line, when the card numbers at least 5), via (text | ocr | hand), note ('unreadable, see card'), ranks ({ALP | LNP | GRN | ONP: preference given to that party's best-placed candidate or group}), flags ([{ahead, of, ahead_n, of_n}]: a Labor, Liberal or Nationals card numbering One Nation or the Greens ahead of the other side of government)}}, notes}]",
+      "coverage": "{cards (registrations), listings (card x district or region), orders_read, orders_image (of those, read from the card image by eye), orders_same_as, orders_unreadable, districts_with_cards, regions_with_cards, by_party: {code | IND (independent candidates) | NONCAND (registered by someone not standing): {cards, districts, regions}}, no_card: {lower, upper (candidates with no card from their party or themselves), candidates_lower, candidates_upper}}",
+      "cards": "[{registration (VEC number), registered_by (as the VEC lists it), kind (party | independent | non_candidate), party (code; IND for an independent candidate; null for others), candidate (tracker id of the independent it is for), type (Single | Combined | MEHTVC, as listed), registered_on (YYYY-MM-DD), card_url (the VEC's link to the card PDF), file (its file name), areas (district and region ids it is listed under), read_on, orders: {area id: {status (read | partial: numbers only some boxes | same_as: a translated card that couldn't be read, given the order every readable card from the same registrant prints for that seat, with same_as = their registration numbers and note 'same order as the English card' | unreadable | pending), order (Assembly: ballot names, 'SURNAME, Given', first preference first), atl (Council: group letters numbered above the line, first first), btl (Council: ballot names numbered below the line, when the card numbers at least 5), via (text | ocr | hand | image: read by eye from the card's rendered image, twice, independently, and kept only when both readings agree and the numbers form a complete sequence; the pages say 'read from card image, check the card'), note ('unreadable, see card'), ranks ({ALP | LNP | GRN | ONP: preference given to that party's best-placed candidate or group}), flags ([{ahead, of, ahead_n, of_n}]: a Labor, Liberal or Nationals card numbering One Nation or the Greens ahead of the other side of government)}}, notes}]",
       "changes": "Cards added, amended (new PDF), moved between areas or removed, as found at each refresh: [{date, kind, registration, registered_by, areas, card_url, detail}], newest first, last 300"
     }
   },
@@ -22,9 +22,10 @@
   "coverage": {
     "cards": 1423,
     "listings": 4815,
-    "orders_read": 3974,
-    "orders_same_as": 154,
-    "orders_unreadable": 659,
+    "orders_read": 4123,
+    "orders_image": 149,
+    "orders_same_as": 160,
+    "orders_unreadable": 504,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -8194,16 +8195,79 @@
           ]
         },
         "sandringham": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "SAGRIS-DESMOND, Anastasia",
+            "FOTAKIS, Timon",
+            "STEVENSON, Lauren",
+            "ROWSWELL, Brad",
+            "BLIGHT, Anthony"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 2,
+            "LNP": 4,
+            "ONP": 5
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 2,
+              "of_n": 4
+            }
+          ]
         },
         "south-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "D",
+            "F",
+            "H",
+            "E",
+            "I",
+            "K"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         },
         "southern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "A",
+            "C",
+            "K",
+            "B",
+            "G",
+            "F"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -8282,16 +8346,80 @@
           ]
         },
         "warrandyte": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "PATERSON, Rebecca",
+            "MURADIAN, Vanessa",
+            "STANLEY, John",
+            "SCHWAB, Caleb",
+            "WERNER, Nicole",
+            "BURNSIDE, Mark"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 2,
+            "LNP": 5,
+            "ONP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 2,
+              "of_n": 5
+            }
+          ]
         },
         "eastern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "G",
+            "F",
+            "D",
+            "K",
+            "I",
+            "C"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         },
         "north-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -8572,16 +8700,79 @@
           ]
         },
         "sandringham": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "SAGRIS-DESMOND, Anastasia",
+            "FOTAKIS, Timon",
+            "STEVENSON, Lauren",
+            "ROWSWELL, Brad",
+            "BLIGHT, Anthony"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 2,
+            "LNP": 4,
+            "ONP": 5
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 2,
+              "of_n": 4
+            }
+          ]
         },
         "south-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "D",
+            "F",
+            "H",
+            "E",
+            "I",
+            "K"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         },
         "southern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "A",
+            "C",
+            "K",
+            "B",
+            "G",
+            "F"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -9872,8 +10063,30 @@
           ]
         },
         "thomastown": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "HALFPENNY, Bronwyn",
+            "TREWELLA, Gavin",
+            "REDDY, Priya",
+            "STOJCEVSKI, Belinda",
+            "RANCIE, Rob",
+            "ANTHONY, Nadia"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 2,
+            "LNP": 4,
+            "ONP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 2,
+              "of_n": 4
+            }
+          ]
         },
         "yan-yean": {
           "status": "read",
@@ -9904,16 +10117,79 @@
           ]
         },
         "north-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         },
         "northern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "K",
+            "L",
+            "A",
+            "D",
+            "I",
+            "C"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         },
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "C",
+            "I",
+            "L",
+            "K",
+            "E",
+            "J"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -17572,8 +17848,11 @@
       "candidate": null,
       "orders": {
         "eastern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "H"
+          ],
+          "via": "image"
         },
         "north-eastern-metropolitan": {
           "status": "pending",
@@ -17581,28 +17860,46 @@
           "note": "the VEC's link to this card didn't open"
         },
         "northern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "F"
+          ],
+          "via": "image"
         },
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "G"
+          ],
+          "via": "image"
         },
         "south-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "G"
+          ],
+          "via": "image"
         },
         "southern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "H"
+          ],
+          "via": "image"
         },
         "western-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "G"
+          ],
+          "via": "image"
         },
         "western-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "B"
+          ],
+          "via": "image"
         }
       }
     },
@@ -21922,8 +22219,11 @@
           "note": "unreadable, see card"
         },
         "south-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "F"
+          ],
+          "via": "image"
         }
       }
     },
@@ -22450,52 +22750,340 @@
       "read_on": "2026-11-20",
       "orders": {
         "bendigo-east": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "LETHLEAN, Andrew",
+            "WRIGHT, Liz",
+            "JOHN, Des",
+            "HAWKEN, Cheryl",
+            "HOSKINS, Kristie",
+            "RICKWOOD, Tim",
+            "TOLHURST, Michael",
+            "DUNN, Bonnie",
+            "NORSEN, Denali"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4,
+            "ALP": 6,
+            "GRN": 7
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         },
         "bendigo-west": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "HUTCHINGS, David",
+            "MORGAN, Ellen",
+            "HARISOPOULOS, Christos",
+            "BALDWIN, Brenton",
+            "SHAW, Liza",
+            "SHALEVSKI, Tayne",
+            "TRANTER, Debra"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 2,
+            "ALP": 4,
+            "GRN": 5
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 2,
+              "of_n": 4
+            }
+          ]
         },
         "euroa": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "CLEELAND, Annabelle",
+            "TAOUK, Moussa",
+            "CAMPBELL, Steve",
+            "KELLY, Julian",
+            "REGAN, Alysia",
+            "KELLY, Karina",
+            "LYLE, Zoe"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3,
+            "ALP": 4,
+            "GRN": 5
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 3,
+              "of_n": 4
+            }
+          ]
         },
         "gippsland-east": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "RENDELL, Gemma",
+            "MUIR, Ricky",
+            "GOODMAN, Steve",
+            "WATERS, Alison",
+            "STEPHENS, Sonny",
+            "MUNRO, Ash",
+            "ESPESETH, Amy"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3,
+            "ALP": 5,
+            "GRN": 6
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 3,
+              "of_n": 5
+            }
+          ]
         },
         "gippsland-south": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "O'BRIEN, Danny",
+            "WILKIE, Bianca",
+            "BARRY-MACAULAY, Amy",
+            "McAULIFFE, Jessica",
+            "EVANS, Zave",
+            "McGENNISKEN, Lachie",
+            "SCHUHMANN, Phillip"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 2,
+            "ALP": 3,
+            "GRN": 5
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 2,
+              "of_n": 3
+            }
+          ]
         },
         "lowan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "KEALY, Emma",
+            "ELMES, Lee-Ann",
+            "HYSLOP, Karen",
+            "PARTRIDGE, Andrew",
+            "BUTLER, Kieran",
+            "PAVLOVICH, Sue",
+            "MORAN, Jeff",
+            "DOWNEY, Jos"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4,
+            "ALP": 6,
+            "GRN": 7
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         },
         "mildura": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "BENHAM, Jade",
+            "NTAHOMVUKIYE, Joselyne",
+            "COOPER, Guy",
+            "ZIGOURAS, Stella",
+            "CLEMENTS, Katie",
+            "NAYEF, Renee",
+            "FRIES, Vanessa"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3,
+            "ALP": 4,
+            "GRN": 5
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 3,
+              "of_n": 4
+            }
+          ]
         },
         "morwell": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "CAMERON, Martin",
+            "CLARKE, Brendan",
+            "MURPHY, Casey",
+            "McPHEE, Ross",
+            "LUND, Tracie",
+            "HINE, Rochelle",
+            "ACREMAN, Natalie"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3,
+            "ALP": 5,
+            "GRN": 6
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 3,
+              "of_n": 5
+            }
+          ]
         },
         "murray-plains": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "HOSKING, Brett",
+            "MCDONALD, Ewan",
+            "SMITH, Garner",
+            "GRUNDY, Christine",
+            "SANIF, Asyiqin",
+            "COOK, Zoe",
+            "COLLARD, Peita"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3,
+            "ALP": 4,
+            "GRN": 6
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 3,
+              "of_n": 4
+            }
+          ]
         },
         "ovens-valley": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "McCURDY, Tim",
+            "ROUEL, James",
+            "MANNING, Steve",
+            "NORTON-SMITH, Carol",
+            "FIDGE, Julian",
+            "SMITH, Jennifer",
+            "GILBERT, Benjamin",
+            "LITCHFIELD, Sue",
+            "MURPHY, Bronwyn"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 2,
+            "ALP": 6,
+            "GRN": 7
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 2,
+              "of_n": 6
+            }
+          ]
         },
         "ripon": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "ARMSTRONG, Jo",
+            "READ, Megan",
+            "BARRY, Jeff",
+            "SKRUZNY, Ronald",
+            "MCGRATH, Mark",
+            "BUXTON, Donna",
+            "WOJTKOWSKI, Krzysztof",
+            "QUINCE, Bernard",
+            "HAYLETT, Martha",
+            "DRYLIE, Tim",
+            "ANDREI, Trevor Scott",
+            "BRENNAN-JONES, Taylah"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 6,
+            "ALP": 9,
+            "GRN": 10
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 6,
+              "of_n": 9
+            }
+          ]
         },
         "shepparton": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "SALI, Shane",
+            "WHITE, Alison",
+            "BRYANT, Phillip",
+            "VARKEY, Johnson",
+            "COSTA, Lou",
+            "FIN, Cayla",
+            "VERNEY, Grace",
+            "HOCKING, Karen",
+            "MURPHY-GINGER, Faith"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3,
+            "ALP": 6,
+            "GRN": 7
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         },
         "northern-victoria": {
           "atl": [
@@ -22513,8 +23101,19 @@
           }
         },
         "western-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "F",
+            "L",
+            "I",
+            "K",
+            "M"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         }
       }
     },
@@ -36541,6 +37140,7 @@
             "L",
             "H"
           ],
+          "via": "image",
           "same_as": [
             "30",
             "32",
@@ -36552,6 +37152,8 @@
             "54",
             "55",
             "79",
+            "251",
+            "269",
             "313",
             "318",
             "375",
@@ -36563,6 +37165,7 @@
             "414",
             "419",
             "428",
+            "893",
             "1634",
             "1673"
           ],
@@ -36578,6 +37181,7 @@
             "G",
             "F"
           ],
+          "via": "image",
           "same_as": [
             "71",
             "74",
@@ -36591,7 +37195,9 @@
             "94",
             "242",
             "243",
+            "250",
             "252",
+            "254",
             "256",
             "268",
             "275",
@@ -36606,6 +37212,7 @@
             "794",
             "799",
             "803",
+            "893",
             "1686"
           ],
           "note": "same order as the English card"
@@ -36819,6 +37426,7 @@
             "L",
             "H"
           ],
+          "via": "image",
           "same_as": [
             "30",
             "32",
@@ -36830,6 +37438,8 @@
             "54",
             "55",
             "79",
+            "251",
+            "269",
             "313",
             "318",
             "375",
@@ -36841,6 +37451,7 @@
             "414",
             "419",
             "428",
+            "893",
             "1634",
             "1673"
           ],
@@ -36856,6 +37467,7 @@
             "G",
             "F"
           ],
+          "via": "image",
           "same_as": [
             "71",
             "74",
@@ -36869,7 +37481,9 @@
             "94",
             "242",
             "243",
+            "250",
             "252",
+            "254",
             "256",
             "268",
             "275",
@@ -36884,6 +37498,7 @@
             "794",
             "799",
             "803",
+            "893",
             "1686"
           ],
           "note": "same order as the English card"
@@ -37077,6 +37692,7 @@
             "L",
             "H"
           ],
+          "via": "image",
           "same_as": [
             "30",
             "32",
@@ -37088,6 +37704,8 @@
             "54",
             "55",
             "79",
+            "251",
+            "269",
             "313",
             "318",
             "375",
@@ -37099,6 +37717,7 @@
             "414",
             "419",
             "428",
+            "893",
             "1634",
             "1673"
           ],
@@ -37114,6 +37733,7 @@
             "G",
             "F"
           ],
+          "via": "image",
           "same_as": [
             "71",
             "74",
@@ -37127,7 +37747,9 @@
             "94",
             "242",
             "243",
+            "250",
             "252",
+            "254",
             "256",
             "268",
             "275",
@@ -37142,6 +37764,7 @@
             "794",
             "799",
             "803",
+            "893",
             "1686"
           ],
           "note": "same order as the English card"
@@ -37235,6 +37858,7 @@
             "I",
             "C"
           ],
+          "via": "image",
           "same_as": [
             "48",
             "51",
@@ -37249,6 +37873,7 @@
             "224",
             "245",
             "258",
+            "269",
             "277",
             "297",
             "340",
@@ -37260,6 +37885,7 @@
             "800",
             "808",
             "819",
+            "893",
             "1639",
             "1675"
           ],
@@ -37988,6 +38614,7 @@
             "L",
             "H"
           ],
+          "via": "image",
           "same_as": [
             "30",
             "32",
@@ -37999,6 +38626,8 @@
             "54",
             "55",
             "79",
+            "251",
+            "269",
             "313",
             "318",
             "375",
@@ -38010,6 +38639,7 @@
             "414",
             "419",
             "428",
+            "893",
             "1634",
             "1673"
           ],
@@ -38025,6 +38655,7 @@
             "I",
             "K"
           ],
+          "via": "image",
           "same_as": [
             "62",
             "64",
@@ -38037,7 +38668,9 @@
             "91",
             "93",
             "132",
+            "250",
             "253",
+            "254",
             "309",
             "310",
             "316",
@@ -38048,6 +38681,7 @@
             "385",
             "430",
             "432",
+            "893",
             "1637",
             "1683",
             "1689"
@@ -38231,6 +38865,7 @@
             "I",
             "K"
           ],
+          "via": "image",
           "same_as": [
             "62",
             "64",
@@ -38243,7 +38878,9 @@
             "91",
             "93",
             "132",
+            "250",
             "253",
+            "254",
             "309",
             "310",
             "316",
@@ -38254,6 +38891,7 @@
             "385",
             "430",
             "432",
+            "893",
             "1637",
             "1683",
             "1689"
@@ -38270,6 +38908,7 @@
             "G",
             "F"
           ],
+          "via": "image",
           "same_as": [
             "71",
             "74",
@@ -38283,7 +38922,9 @@
             "94",
             "242",
             "243",
+            "250",
             "252",
+            "254",
             "256",
             "268",
             "275",
@@ -38298,6 +38939,7 @@
             "794",
             "799",
             "803",
+            "893",
             "1686"
           ],
           "note": "same order as the English card"
@@ -39334,6 +39976,7 @@
             "G",
             "F"
           ],
+          "via": "image",
           "same_as": [
             "71",
             "74",
@@ -39347,7 +39990,9 @@
             "94",
             "242",
             "243",
+            "250",
             "252",
+            "254",
             "256",
             "268",
             "275",
@@ -39362,6 +40007,7 @@
             "794",
             "799",
             "803",
+            "893",
             "1686"
           ],
           "note": "same order as the English card"
@@ -40337,6 +40983,7 @@
             "I",
             "C"
           ],
+          "via": "image",
           "same_as": [
             "48",
             "51",
@@ -40351,6 +40998,7 @@
             "224",
             "245",
             "258",
+            "269",
             "277",
             "297",
             "340",
@@ -40362,6 +41010,7 @@
             "800",
             "808",
             "819",
+            "893",
             "1639",
             "1675"
           ],
@@ -40377,6 +41026,7 @@
             "H",
             "C"
           ],
+          "via": "image",
           "same_as": [
             "84",
             "96",
@@ -40405,6 +41055,7 @@
             "357",
             "358",
             "427",
+            "893",
             "1672"
           ],
           "note": "same order as the English card"
@@ -41424,6 +42075,7 @@
             "H",
             "C"
           ],
+          "via": "image",
           "same_as": [
             "84",
             "96",
@@ -41452,6 +42104,7 @@
             "357",
             "358",
             "427",
+            "893",
             "1672"
           ],
           "note": "same order as the English card"
@@ -45034,8 +45687,14 @@
           ]
         },
         "caulfield": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "partial",
+          "order": [
+            "STAFRACE, Mikaela"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1
+          }
         },
         "clarinda": {
           "status": "read",
@@ -47008,36 +47667,204 @@
           ]
         },
         "eastern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "G",
+            "F",
+            "D",
+            "K",
+            "I",
+            "C"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         },
         "north-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "C",
+            "A",
+            "K",
+            "B",
+            "L",
+            "H"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         },
         "northern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "K",
+            "L",
+            "A",
+            "D",
+            "I",
+            "C"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         },
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "C",
+            "I",
+            "L",
+            "K",
+            "E",
+            "J"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         },
         "south-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "D",
+            "F",
+            "H",
+            "E",
+            "I",
+            "K"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         },
         "southern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "A",
+            "C",
+            "K",
+            "B",
+            "G",
+            "F"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         },
         "western-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "E",
+            "D",
+            "B",
+            "I",
+            "H",
+            "C"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 4,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         },
         "western-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "C",
+            "D",
+            "A",
+            "M",
+            "E",
+            "F"
+          ],
+          "via": "image",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -50477,36 +51304,123 @@
           }
         },
         "eastern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "B",
+            "I",
+            "H",
+            "C",
+            "E"
+          ],
+          "via": "image",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 4
+          }
         },
         "north-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "G",
+            "F",
+            "I",
+            "E",
+            "H"
+          ],
+          "via": "image",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 5
+          }
         },
         "northern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "E",
+            "M",
+            "F",
+            "C",
+            "I"
+          ],
+          "via": "image",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 4
+          }
         },
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "H",
+            "E",
+            "D",
+            "A",
+            "G"
+          ],
+          "via": "image",
+          "ranks": {
+            "ONP": 1
+          }
         },
         "south-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "A",
+            "I",
+            "C",
+            "G",
+            "K"
+          ],
+          "via": "image",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 5
+          }
         },
         "southern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "D",
+            "E",
+            "H",
+            "F",
+            "B"
+          ],
+          "via": "image",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 4
+          }
         },
         "western-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "K",
+            "H",
+            "G",
+            "C",
+            "L"
+          ],
+          "via": "image",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 4
+          }
         },
         "western-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "K",
+            "M",
+            "N",
+            "I",
+            "F"
+          ],
+          "via": "image",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 5
+          }
         }
       }
     },
@@ -67316,8 +68230,14 @@
       "read_on": "2026-11-20",
       "orders": {
         "albert-park": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "partial",
+          "order": [
+            "SEMMENS, Sonya"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1
+          }
         },
         "brighton": {
           "status": "read",
@@ -67466,12 +68386,34 @@
           }
         },
         "northern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "D",
+            "L",
+            "G",
+            "J",
+            "K"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         },
         "southern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "K",
+            "G",
+            "B",
+            "C",
+            "A"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -69324,8 +70266,14 @@
       "read_on": "2026-11-23",
       "orders": {
         "ashwood": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "partial",
+          "order": [
+            "RANDALL, Tim"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1
+          }
         },
         "box-hill": {
           "status": "read",
@@ -69468,12 +70416,34 @@
           }
         },
         "north-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "K",
+            "B",
+            "L",
+            "A",
+            "C"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         },
         "southern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "K",
+            "G",
+            "B",
+            "C",
+            "A"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -76345,8 +77315,25 @@
           }
         },
         "berwick": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "DE SILVA, Roshan",
+            "AMARASIRI GUNAWARDANA, Nalinda",
+            "KHAN, Rana",
+            "BATTIN, Brad",
+            "JOHN, David",
+            "DOWLING, Scott",
+            "KING, Ethelyn",
+            "DE PAOLIS, Vincenzo",
+            "PIASTRINO, Michael"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 3,
+            "LNP": 4,
+            "ONP": 9
+          }
         },
         "box-hill": {
           "status": "read",
@@ -76707,8 +77694,31 @@
           }
         },
         "footscray": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "PEREYRA, Elena",
+            "DUFF, Jasmine",
+            "MARSH, Jess",
+            "NGUYEN, Minh Quan",
+            "HALL, Katie",
+            "IBRAHIM, Marcus",
+            "CHANG, Tim",
+            "FELATE, Andualem",
+            "DINH, Hai",
+            "CUMMING, Catherine",
+            "HESS, Kristina",
+            "CALDER, Daryle",
+            "LEWIS, Daniel",
+            "FLORES, Ana",
+            "LOPEZ, Alexander"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5,
+            "LNP": 7,
+            "ONP": 15
+          }
         },
         "frankston": {
           "status": "read",
@@ -77501,8 +78511,29 @@
           }
         },
         "prahran": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "DI CAMILLO, Angelica",
+            "DOUEIHI, Clayton",
+            "O'NEILL, G. Daniel",
+            "LEETON WATTS, George",
+            "DICKS, Max",
+            "MENADUE, Alan",
+            "HOPPER, Meghan",
+            "FINNIGAN, Tosh-Jake",
+            "WESTAWAY, Rachel",
+            "WONG, Nicholas",
+            "JONES, Daniel",
+            "JONAS, Morgan",
+            "VIRSU, Shaun"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 7,
+            "LNP": 9,
+            "ONP": 13
+          }
         },
         "preston": {
           "status": "read",
@@ -77528,8 +78559,25 @@
           }
         },
         "richmond": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "de VIETRI, Gabrielle",
+            "DITE, Chris",
+            "MCKENZIE, Sarah",
+            "PEAD-PHILIPSON, Jack",
+            "MEYER, David",
+            "APONSO, Charles",
+            "GRAY, Bernadette",
+            "MAYNARD, Christine",
+            "RINDFLEISH, Harrison"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 3,
+            "LNP": 6,
+            "ONP": 9
+          }
         },
         "ringwood": {
           "status": "read",
@@ -77693,12 +78741,51 @@
           }
         },
         "sunbury": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "GRANGER-BROWN, Lauren",
+            "BREMNER, Adam",
+            "MOHR, Rohanna",
+            "VINE, Geoff",
+            "BULL, Josh",
+            "COTTOM, Simmone",
+            "BETHI, Bhasker Reddy",
+            "STAFFORD, John",
+            "MEDCRAFT, Steve Jack",
+            "BATRES, Elmer",
+            "DABROWSKI, Elita"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5,
+            "LNP": 6,
+            "ONP": 11
+          }
         },
         "sydenham": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "JANE, Maggie",
+            "KHAN, Shania",
+            "POON, Bruce",
+            "LANCASHIRE, Bruce",
+            "RASIC, Uros",
+            "MOUSSI, Nathalie",
+            "KERR, Maria",
+            "SINCLAIR, Brandon",
+            "LANKALA KENDERLA, Laxmi",
+            "CROES, Nancy G",
+            "VANDENBERG, Ashleigh",
+            "BAUCH, Joh"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5,
+            "LNP": 6,
+            "ONP": 12
+          }
         },
         "tarneit": {
           "status": "read",
@@ -77843,36 +78930,124 @@
           }
         },
         "eastern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "K",
+            "A",
+            "F",
+            "D",
+            "G"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         },
         "north-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "K",
+            "B",
+            "L",
+            "A",
+            "C"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         },
         "northern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "D",
+            "G",
+            "L",
+            "J",
+            "K"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         },
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "K",
+            "I",
+            "M",
+            "L",
+            "C"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         },
         "south-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "H",
+            "E",
+            "J",
+            "F",
+            "D"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         },
         "southern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "K",
+            "G",
+            "B",
+            "C",
+            "A"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         },
         "western-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "I",
+            "D",
+            "F",
+            "L",
+            "E"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         },
         "western-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "A",
+            "J",
+            "G",
+            "H",
+            "C"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -88889,8 +90064,14 @@
           ]
         },
         "footscray": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "partial",
+          "order": [
+            "CHANG, Tim"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1
+          }
         },
         "frankston": {
           "status": "read",
@@ -90315,36 +91496,124 @@
           ]
         },
         "eastern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "C",
+            "E",
+            "I",
+            "B",
+            "H"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "north-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         },
         "northern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "C",
+            "H",
+            "E",
+            "M",
+            "I"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         },
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "J",
+            "D",
+            "F",
+            "H",
+            "E"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "south-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "K",
+            "I",
+            "L",
+            "A",
+            "J"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "southern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "F",
+            "E",
+            "I",
+            "D",
+            "B"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "western-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "C",
+            "L",
+            "A",
+            "K",
+            "H"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "western-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "F",
+            "L",
+            "K",
+            "M",
+            "I"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         }
       }
     },
@@ -93876,8 +95145,14 @@
           }
         },
         "hawthorn": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "partial",
+          "order": [
+            "ROCHA, Kylie"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1
+          }
         },
         "kew": {
           "status": "read",
@@ -94010,12 +95285,34 @@
           }
         },
         "northern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "D",
+            "L",
+            "G",
+            "J",
+            "K"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         },
         "southern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "K",
+            "G",
+            "B",
+            "C",
+            "A"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -100867,8 +102164,14 @@
           ]
         },
         "footscray": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "partial",
+          "order": [
+            "CHANG, Tim"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1
+          }
         },
         "frankston": {
           "status": "read",
@@ -102293,36 +103596,124 @@
           ]
         },
         "eastern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "C",
+            "E",
+            "I",
+            "B",
+            "H"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "north-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         },
         "northern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "C",
+            "H",
+            "E",
+            "M",
+            "I"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         },
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "J",
+            "D",
+            "F",
+            "H",
+            "E"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "south-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "K",
+            "I",
+            "L",
+            "A",
+            "J"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "southern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "F",
+            "E",
+            "I",
+            "D",
+            "B"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "western-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "C",
+            "L",
+            "A",
+            "K",
+            "H"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "western-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "F",
+            "L",
+            "K",
+            "M",
+            "I"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         }
       }
     },
@@ -102374,8 +103765,24 @@
       "read_on": "2026-11-20",
       "orders": {
         "berwick": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "DE SILVA, Roshan",
+            "AMARASIRI GUNAWARDANA, Nalinda",
+            "KHAN, Rana",
+            "BATTIN, Brad",
+            "JOHN, David",
+            "DOWLING, Scott",
+            "KING, Ethelyn",
+            "DE PAOLIS, Vincenzo",
+            "PIASTRINO, Michael"
+          ],
+          "via": "image",
+          "same_as": [
+            "1190",
+            "1545"
+          ],
+          "note": "same order as the English card"
         },
         "carrum": {
           "status": "read",
@@ -103393,8 +104800,14 @@
           ]
         },
         "footscray": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "partial",
+          "order": [
+            "CHANG, Tim"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1
+          }
         },
         "frankston": {
           "status": "read",
@@ -104819,36 +106232,124 @@
           ]
         },
         "eastern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "C",
+            "E",
+            "I",
+            "B",
+            "H"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "north-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         },
         "northern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "C",
+            "H",
+            "E",
+            "M",
+            "I"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         },
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "J",
+            "D",
+            "F",
+            "H",
+            "E"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "south-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "K",
+            "I",
+            "L",
+            "A",
+            "J"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "southern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "F",
+            "E",
+            "I",
+            "D",
+            "B"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "western-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "C",
+            "L",
+            "A",
+            "K",
+            "H"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "western-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "F",
+            "L",
+            "K",
+            "M",
+            "I"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         }
       }
     },
@@ -104879,8 +106380,24 @@
       "read_on": "2026-11-20",
       "orders": {
         "berwick": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "DE SILVA, Roshan",
+            "AMARASIRI GUNAWARDANA, Nalinda",
+            "KHAN, Rana",
+            "BATTIN, Brad",
+            "JOHN, David",
+            "DOWLING, Scott",
+            "KING, Ethelyn",
+            "DE PAOLIS, Vincenzo",
+            "PIASTRINO, Michael"
+          ],
+          "via": "image",
+          "same_as": [
+            "1190",
+            "1545"
+          ],
+          "note": "same order as the English card"
         },
         "carrum": {
           "status": "read",
@@ -105941,8 +107458,14 @@
           ]
         },
         "footscray": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "partial",
+          "order": [
+            "CHANG, Tim"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1
+          }
         },
         "frankston": {
           "status": "read",
@@ -107367,36 +108890,124 @@
           ]
         },
         "eastern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "C",
+            "E",
+            "I",
+            "B",
+            "H"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "north-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         },
         "northern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "C",
+            "H",
+            "E",
+            "M",
+            "I"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         },
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "J",
+            "D",
+            "F",
+            "H",
+            "E"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "south-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "K",
+            "I",
+            "L",
+            "A",
+            "J"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "southern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "F",
+            "E",
+            "I",
+            "D",
+            "B"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "western-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "C",
+            "L",
+            "A",
+            "K",
+            "H"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "western-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "F",
+            "L",
+            "K",
+            "M",
+            "I"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         }
       }
     },
@@ -108177,8 +109788,14 @@
           ]
         },
         "footscray": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "partial",
+          "order": [
+            "CHANG, Tim"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1
+          }
         },
         "frankston": {
           "status": "read",
@@ -109603,36 +111220,124 @@
           ]
         },
         "eastern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "C",
+            "E",
+            "I",
+            "B",
+            "H"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "north-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "H",
+            "E",
+            "I",
+            "F",
+            "G"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 5
+          }
         },
         "northern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "C",
+            "H",
+            "E",
+            "M",
+            "I"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         },
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "J",
+            "D",
+            "F",
+            "H",
+            "E"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "south-eastern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "K",
+            "I",
+            "L",
+            "A",
+            "J"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "southern-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "F",
+            "E",
+            "I",
+            "D",
+            "B"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "western-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "C",
+            "L",
+            "A",
+            "K",
+            "H"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "western-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "F",
+            "L",
+            "K",
+            "M",
+            "I"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         }
       }
     },
@@ -110612,48 +112317,226 @@
       "read_on": "2026-11-20",
       "orders": {
         "berwick": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "DE SILVA, Roshan",
+            "AMARASIRI GUNAWARDANA, Nalinda",
+            "KHAN, Rana",
+            "BATTIN, Brad",
+            "JOHN, David",
+            "DOWLING, Scott",
+            "KING, Ethelyn",
+            "DE PAOLIS, Vincenzo",
+            "PIASTRINO, Michael"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 3,
+            "LNP": 4,
+            "ONP": 9
+          }
         },
         "carrum": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "PEGRUM, Zoe",
+            "ABABNEH, Reema",
+            "MOORE, Carolyn",
+            "MACKENZIE, Harley",
+            "KILKENNY, Sonya",
+            "SHELLEY, Jeff",
+            "SMITH, Trevor",
+            "MATHEWS, Joshua"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5,
+            "LNP": 6,
+            "ONP": 8
+          }
         },
         "clarinda": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "BOYD-EEDLE, Conor",
+            "MESSAGE, Kit",
+            "TAK, Meng Heang",
+            "PAGANIS, John",
+            "ROCHE, Liam",
+            "WHITE, Caroline",
+            "BAIN, Gavin"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 3,
+            "LNP": 4,
+            "ONP": 7
+          }
         },
         "cranbourne": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "MERCER, Annalise",
+            "YUNIS, Reem",
+            "URQUIOLA, Liam",
+            "RICHARDS, Pauline",
+            "TRIPODI, Gino",
+            "BAIRD, Craig",
+            "FOREMAN, Shane",
+            "HIRST, Andrew"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 4,
+            "LNP": 5,
+            "ONP": 8
+          }
         },
         "dandenong": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "D'ARCY, Catherine",
+            "McMAHON, Jack",
+            "WILLIAMS, Gabrielle",
+            "BILLINGS, William",
+            "KHAN, Arshad Ali",
+            "FORTE, Jordan",
+            "HARVEY, Jacqueline",
+            "WRIGHT, Glenda"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 3,
+            "LNP": 4,
+            "ONP": 8
+          }
         },
         "frankston": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "GOULAS, Katie",
+            "KELSALL, Henry",
+            "CHEESEMAN, Andrew",
+            "HARMAN, Julie",
+            "KNIPE, Jeff",
+            "EDBROOKE, Paul",
+            "ABRAHAM, Chrysten",
+            "AMBRY, Bree",
+            "BARRY, Nicola",
+            "NICHOLES, Peter",
+            "STAFFORD, Paul"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 6,
+            "LNP": 8,
+            "ONP": 11
+          }
         },
         "mordialloc": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "BRESKIN, Alex",
+            "HOSSAIN, Mahee",
+            "THOMPSON, Renee",
+            "RICHARDSON, Tim",
+            "O'HALLORAN, Paul",
+            "VERSTEEGEN, Rachel",
+            "POTUCEK, Lily",
+            "TICEHURST, Nadia"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 4,
+            "LNP": 5,
+            "ONP": 8
+          }
         },
         "mulgrave": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "SCHOFIELD, Paul J",
+            "BUCHANAN, Connor",
+            "FOSTER, Eden",
+            "TRAN, Charles",
+            "THEODOSSOPOULOU, Fotini",
+            "COOK, Ian",
+            "DOBRZYNSKI, Stewart",
+            "REBBECHI, Cody"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 3,
+            "LNP": 4,
+            "ONP": 8
+          }
         },
         "narre-warren-north": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "PERRY, Hayley",
+            "McCRACKEN, Lachlan",
+            "LEAHY, Martin",
+            "WILSON, Belinda",
+            "NATHANIELSZ, Shemane",
+            "UTOYO, Joshua",
+            "EMMANUEL, Cristina",
+            "CRUTCHFIELD, Sebastian"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 4,
+            "LNP": 5,
+            "ONP": 8
+          }
         },
         "narre-warren-south": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "NAMBU, Jill",
+            "McCRACKEN, Bailey",
+            "WATSON, Scott",
+            "KOOMEN, Stefan",
+            "PETERSON, Norliah",
+            "DENKER, Lydia",
+            "CURRIE, Alan",
+            "HAMMOND, Trevor"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 4,
+            "LNP": 5,
+            "ONP": 8
+          }
         },
         "rowville": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "MASSEY, David",
+            "HIEMSTRA, Lars",
+            "SHAHBAZ, Muhammad",
+            "WILLIAMS, Max",
+            "ROBSON, Scott",
+            "DOBRZYNSKI, Fiona",
+            "WATT, Bradley"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 3,
+            "LNP": 4,
+            "ONP": 7
+          }
         },
         "south-eastern-metropolitan": {
           "atl": [
@@ -111030,6 +112913,7 @@
             "MAYNARD, Christine",
             "RINDFLEISH, Harrison"
           ],
+          "via": "image",
           "same_as": [
             "952",
             "956",
@@ -111044,6 +112928,7 @@
             "1138",
             "1142",
             "1154",
+            "1190",
             "1191",
             "1199",
             "1202",
@@ -111458,6 +113343,7 @@
             "MAYNARD, Christine",
             "RINDFLEISH, Harrison"
           ],
+          "via": "image",
           "same_as": [
             "952",
             "956",
@@ -111472,6 +113358,7 @@
             "1138",
             "1142",
             "1154",
+            "1190",
             "1191",
             "1199",
             "1202",
@@ -112141,6 +114028,7 @@
             "JONAS, Morgan",
             "VIRSU, Shaun"
           ],
+          "via": "image",
           "same_as": [
             "952",
             "956",
@@ -112154,6 +114042,7 @@
             "1186",
             "1187",
             "1188",
+            "1190",
             "1192",
             "1199",
             "1202",
@@ -112809,6 +114698,7 @@
             "MAYNARD, Christine",
             "RINDFLEISH, Harrison"
           ],
+          "via": "image",
           "same_as": [
             "952",
             "956",
@@ -112823,6 +114713,7 @@
             "1138",
             "1142",
             "1154",
+            "1190",
             "1191",
             "1199",
             "1202",
@@ -112895,8 +114786,24 @@
       "read_on": "2026-11-20",
       "orders": {
         "berwick": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "DE SILVA, Roshan",
+            "AMARASIRI GUNAWARDANA, Nalinda",
+            "KHAN, Rana",
+            "BATTIN, Brad",
+            "JOHN, David",
+            "DOWLING, Scott",
+            "KING, Ethelyn",
+            "DE PAOLIS, Vincenzo",
+            "PIASTRINO, Michael"
+          ],
+          "via": "image",
+          "same_as": [
+            "1190",
+            "1545"
+          ],
+          "note": "same order as the English card"
         },
         "carrum": {
           "status": "same_as",
@@ -112910,6 +114817,7 @@
             "SMITH, Trevor",
             "MATHEWS, Joshua"
           ],
+          "via": "image",
           "same_as": [
             "899",
             "901",
@@ -112921,6 +114829,7 @@
             "1114",
             "1157",
             "1190",
+            "1545",
             "1550"
           ],
           "note": "same order as the English card"
@@ -112936,6 +114845,7 @@
             "WHITE, Caroline",
             "BAIN, Gavin"
           ],
+          "via": "image",
           "same_as": [
             "911",
             "926",
@@ -112948,6 +114858,7 @@
             "1190",
             "1192",
             "1363",
+            "1545",
             "1550"
           ],
           "note": "same order as the English card"
@@ -112964,6 +114875,7 @@
             "FOREMAN, Shane",
             "HIRST, Andrew"
           ],
+          "via": "image",
           "same_as": [
             "899",
             "918",
@@ -112975,6 +114887,7 @@
             "1157",
             "1190",
             "1204",
+            "1545",
             "1550"
           ],
           "note": "same order as the English card"
@@ -112991,6 +114904,7 @@
             "HARVEY, Jacqueline",
             "WRIGHT, Glenda"
           ],
+          "via": "image",
           "same_as": [
             "909",
             "911",
@@ -113005,6 +114919,7 @@
             "1157",
             "1190",
             "1363",
+            "1545",
             "1550"
           ],
           "note": "same order as the English card"
@@ -113024,6 +114939,7 @@
             "NICHOLES, Peter",
             "STAFFORD, Paul"
           ],
+          "via": "image",
           "same_as": [
             "899",
             "901",
@@ -113033,6 +114949,7 @@
             "1157",
             "1158",
             "1190",
+            "1545",
             "1550"
           ],
           "note": "same order as the English card"
@@ -113049,6 +114966,7 @@
             "POTUCEK, Lily",
             "TICEHURST, Nadia"
           ],
+          "via": "image",
           "same_as": [
             "899",
             "911",
@@ -113061,6 +114979,7 @@
             "1190",
             "1192",
             "1363",
+            "1545",
             "1550"
           ],
           "note": "same order as the English card"
@@ -113077,6 +114996,7 @@
             "DOBRZYNSKI, Stewart",
             "REBBECHI, Cody"
           ],
+          "via": "image",
           "same_as": [
             "911",
             "926",
@@ -113088,6 +115008,7 @@
             "1136",
             "1190",
             "1363",
+            "1545",
             "1550"
           ],
           "note": "same order as the English card"
@@ -113104,6 +115025,7 @@
             "EMMANUEL, Cristina",
             "CRUTCHFIELD, Sebastian"
           ],
+          "via": "image",
           "same_as": [
             "909",
             "918",
@@ -113113,6 +115035,7 @@
             "1157",
             "1190",
             "1363",
+            "1545",
             "1550"
           ],
           "note": "same order as the English card"
@@ -113129,6 +115052,7 @@
             "CURRIE, Alan",
             "HAMMOND, Trevor"
           ],
+          "via": "image",
           "same_as": [
             "899",
             "909",
@@ -113139,6 +115063,7 @@
             "1157",
             "1190",
             "1204",
+            "1545",
             "1550"
           ],
           "note": "same order as the English card"
@@ -113154,6 +115079,7 @@
             "DOBRZYNSKI, Fiona",
             "WATT, Bradley"
           ],
+          "via": "image",
           "same_as": [
             "936",
             "953",
@@ -113161,6 +115087,7 @@
             "1003",
             "1112",
             "1190",
+            "1545",
             "1550"
           ],
           "note": "same order as the English card"
@@ -113540,6 +115467,7 @@
             "MAYNARD, Christine",
             "RINDFLEISH, Harrison"
           ],
+          "via": "image",
           "same_as": [
             "952",
             "956",
@@ -113554,6 +115482,7 @@
             "1138",
             "1142",
             "1154",
+            "1190",
             "1191",
             "1199",
             "1202",
@@ -113908,6 +115837,7 @@
             "H",
             "C"
           ],
+          "via": "image",
           "same_as": [
             "1106",
             "1124",
@@ -113922,6 +115852,7 @@
             "1181",
             "1182",
             "1183",
+            "1190",
             "1198",
             "1208",
             "1410",
@@ -113962,8 +115893,24 @@
       "read_on": "2026-11-20",
       "orders": {
         "berwick": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "DE SILVA, Roshan",
+            "AMARASIRI GUNAWARDANA, Nalinda",
+            "KHAN, Rana",
+            "BATTIN, Brad",
+            "JOHN, David",
+            "DOWLING, Scott",
+            "KING, Ethelyn",
+            "DE PAOLIS, Vincenzo",
+            "PIASTRINO, Michael"
+          ],
+          "via": "image",
+          "same_as": [
+            "1190",
+            "1545"
+          ],
+          "note": "same order as the English card"
         },
         "carrum": {
           "status": "same_as",
@@ -113977,6 +115924,7 @@
             "SMITH, Trevor",
             "MATHEWS, Joshua"
           ],
+          "via": "image",
           "same_as": [
             "899",
             "901",
@@ -113988,6 +115936,7 @@
             "1114",
             "1157",
             "1190",
+            "1545",
             "1550"
           ],
           "note": "same order as the English card"
@@ -114003,6 +115952,7 @@
             "WHITE, Caroline",
             "BAIN, Gavin"
           ],
+          "via": "image",
           "same_as": [
             "911",
             "926",
@@ -114015,6 +115965,7 @@
             "1190",
             "1192",
             "1363",
+            "1545",
             "1550"
           ],
           "note": "same order as the English card"
@@ -114031,6 +115982,7 @@
             "FOREMAN, Shane",
             "HIRST, Andrew"
           ],
+          "via": "image",
           "same_as": [
             "899",
             "918",
@@ -114042,6 +115994,7 @@
             "1157",
             "1190",
             "1204",
+            "1545",
             "1550"
           ],
           "note": "same order as the English card"
@@ -114058,6 +116011,7 @@
             "HARVEY, Jacqueline",
             "WRIGHT, Glenda"
           ],
+          "via": "image",
           "same_as": [
             "909",
             "911",
@@ -114072,6 +116026,7 @@
             "1157",
             "1190",
             "1363",
+            "1545",
             "1550"
           ],
           "note": "same order as the English card"
@@ -114091,6 +116046,7 @@
             "NICHOLES, Peter",
             "STAFFORD, Paul"
           ],
+          "via": "image",
           "same_as": [
             "899",
             "901",
@@ -114100,6 +116056,7 @@
             "1157",
             "1158",
             "1190",
+            "1545",
             "1550"
           ],
           "note": "same order as the English card"
@@ -114116,6 +116073,7 @@
             "POTUCEK, Lily",
             "TICEHURST, Nadia"
           ],
+          "via": "image",
           "same_as": [
             "899",
             "911",
@@ -114128,6 +116086,7 @@
             "1190",
             "1192",
             "1363",
+            "1545",
             "1550"
           ],
           "note": "same order as the English card"
@@ -114144,6 +116103,7 @@
             "DOBRZYNSKI, Stewart",
             "REBBECHI, Cody"
           ],
+          "via": "image",
           "same_as": [
             "911",
             "926",
@@ -114155,6 +116115,7 @@
             "1136",
             "1190",
             "1363",
+            "1545",
             "1550"
           ],
           "note": "same order as the English card"
@@ -114171,6 +116132,7 @@
             "EMMANUEL, Cristina",
             "CRUTCHFIELD, Sebastian"
           ],
+          "via": "image",
           "same_as": [
             "909",
             "918",
@@ -114180,6 +116142,7 @@
             "1157",
             "1190",
             "1363",
+            "1545",
             "1550"
           ],
           "note": "same order as the English card"
@@ -114196,6 +116159,7 @@
             "CURRIE, Alan",
             "HAMMOND, Trevor"
           ],
+          "via": "image",
           "same_as": [
             "899",
             "909",
@@ -114206,6 +116170,7 @@
             "1157",
             "1190",
             "1204",
+            "1545",
             "1550"
           ],
           "note": "same order as the English card"
@@ -114221,6 +116186,7 @@
             "DOBRZYNSKI, Fiona",
             "WATT, Bradley"
           ],
+          "via": "image",
           "same_as": [
             "936",
             "953",
@@ -114228,6 +116194,7 @@
             "1003",
             "1112",
             "1190",
+            "1545",
             "1550"
           ],
           "note": "same order as the English card"
@@ -114881,6 +116848,7 @@
             "MAYNARD, Christine",
             "RINDFLEISH, Harrison"
           ],
+          "via": "image",
           "same_as": [
             "952",
             "956",
@@ -114895,6 +116863,7 @@
             "1138",
             "1142",
             "1154",
+            "1190",
             "1191",
             "1199",
             "1202",
@@ -115942,6 +117911,7 @@
             "MAYNARD, Christine",
             "RINDFLEISH, Harrison"
           ],
+          "via": "image",
           "same_as": [
             "952",
             "956",
@@ -115956,6 +117926,7 @@
             "1138",
             "1142",
             "1154",
+            "1190",
             "1191",
             "1199",
             "1202",
@@ -116370,6 +118341,7 @@
             "MAYNARD, Christine",
             "RINDFLEISH, Harrison"
           ],
+          "via": "image",
           "same_as": [
             "952",
             "956",
@@ -116384,6 +118356,7 @@
             "1138",
             "1142",
             "1154",
+            "1190",
             "1191",
             "1199",
             "1202",
@@ -116806,16 +118779,49 @@
           ]
         },
         "eastern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "C",
+            "E",
+            "B",
+            "I",
+            "H"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         },
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "J",
+            "F",
+            "D",
+            "H",
+            "E"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         },
         "western-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "F",
+            "L",
+            "I",
+            "K",
+            "M"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         }
       }
     },
@@ -116837,16 +118843,75 @@
       "read_on": "2026-11-20",
       "orders": {
         "bendigo-east": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "LETHLEAN, Andrew",
+            "WRIGHT, Liz",
+            "JOHN, Des",
+            "HAWKEN, Cheryl",
+            "HOSKINS, Kristie",
+            "RICKWOOD, Tim",
+            "TOLHURST, Michael",
+            "DUNN, Bonnie",
+            "NORSEN, Denali"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4,
+            "ALP": 6,
+            "GRN": 7
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         },
         "bendigo-west": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "HUTCHINGS, David",
+            "MORGAN, Ellen",
+            "HARISOPOULOS, Christos",
+            "BALDWIN, Brenton",
+            "SHAW, Liza",
+            "SHALEVSKI, Tayne",
+            "TRANTER, Debra"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 2,
+            "ALP": 4,
+            "GRN": 5
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 2,
+              "of_n": 4
+            }
+          ]
         },
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "J",
+            "F",
+            "D",
+            "H",
+            "E"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         }
       }
     },
@@ -119022,16 +121087,75 @@
       "read_on": "2026-11-20",
       "orders": {
         "bendigo-east": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "LETHLEAN, Andrew",
+            "WRIGHT, Liz",
+            "JOHN, Des",
+            "HAWKEN, Cheryl",
+            "HOSKINS, Kristie",
+            "RICKWOOD, Tim",
+            "TOLHURST, Michael",
+            "DUNN, Bonnie",
+            "NORSEN, Denali"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4,
+            "ALP": 6,
+            "GRN": 7
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 4,
+              "of_n": 6
+            }
+          ]
         },
         "bendigo-west": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "HUTCHINGS, David",
+            "MORGAN, Ellen",
+            "HARISOPOULOS, Christos",
+            "BALDWIN, Brenton",
+            "SHAW, Liza",
+            "SHALEVSKI, Tayne",
+            "TRANTER, Debra"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 2,
+            "ALP": 4,
+            "GRN": 5
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 2,
+              "of_n": 4
+            }
+          ]
         },
         "northern-victoria": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "J",
+            "F",
+            "D",
+            "H",
+            "E"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4
+          }
         }
       }
     },
@@ -119200,16 +121324,49 @@
       "read_on": "2026-11-21",
       "orders": {
         "footscray": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "partial",
+          "order": [
+            "NGUYEN, Minh Quan"
+          ],
+          "via": "image"
         },
         "niddrie": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "PATRIKEOS, Brett",
+            "METE, Domenic",
+            "SFAMENI, Sam",
+            "TAVERNA, Jason",
+            "BYRNE, Samantha",
+            "HASELGROVE, Salomae",
+            "NGUYEN, Lana",
+            "THEODOROU, George",
+            "CARROLL, Ben",
+            "CHITTEDI, Karthik Reddy",
+            "LAWS, Brendan"
+          ],
+          "via": "image",
+          "ranks": {
+            "ONP": 4,
+            "LNP": 5,
+            "GRN": 7,
+            "ALP": 9
+          }
         },
         "western-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "L",
+            "A",
+            "B",
+            "C",
+            "I"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 4,
+            "GRN": 5
+          }
         }
       }
     },
@@ -119231,16 +121388,61 @@
       "read_on": "2026-11-21",
       "orders": {
         "kororoit": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "SOUTHERN, Donna",
+            "PIDI, Divya",
+            "KANDPAL, Vasundhara",
+            "MCDONALD, Joyce",
+            "CHAKOMA, Jack",
+            "HASSAN, Rayan",
+            "GRIGOROVITCH, Luba",
+            "PATTERSON, Nick",
+            "MELNIKOV, Seva"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 4,
+            "LNP": 5,
+            "ALP": 7,
+            "ONP": 9
+          }
         },
         "laverton": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "MENDELSOHN, Emma",
+            "CHITTEDI, Suchithra",
+            "MANSOURI JAJAEE, Shohre",
+            "GARCIA, Jo",
+            "NOUNE, Ghada",
+            "NGUYEN, Lucy",
+            "PAREDES, Rufo",
+            "RUDD, Van Thanh",
+            "CONNOLLY, Sarah"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 5,
+            "GRN": 6,
+            "ONP": 7,
+            "ALP": 9
+          }
         },
         "western-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "L",
+            "A",
+            "B",
+            "C",
+            "I"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 4,
+            "GRN": 5
+          }
         }
       }
     },
@@ -119377,20 +121579,85 @@
       "read_on": "2026-11-21",
       "orders": {
         "kororoit": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "SOUTHERN, Donna",
+            "PIDI, Divya",
+            "KANDPAL, Vasundhara",
+            "MCDONALD, Joyce",
+            "CHAKOMA, Jack",
+            "HASSAN, Rayan",
+            "GRIGOROVITCH, Luba",
+            "PATTERSON, Nick",
+            "MELNIKOV, Seva"
+          ],
+          "via": "image",
+          "ranks": {
+            "GRN": 4,
+            "LNP": 5,
+            "ALP": 7,
+            "ONP": 9
+          }
         },
         "st-albans": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "WALKER, Luân",
+            "DAVINDER KAUR",
+            "JANTEN, Kerry",
+            "COWELL, John",
+            "DUNSTAN, Rob",
+            "HUYNH, Thuc Bao",
+            "HAKIZIMANA, Alex",
+            "NGUYEN, Leanna",
+            "SULEYMAN, Natalie"
+          ],
+          "via": "image",
+          "ranks": {
+            "ONP": 4,
+            "LNP": 5,
+            "GRN": 6,
+            "ALP": 9
+          }
         },
         "sydenham": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "order": [
+            "LANCASHIRE, Bruce",
+            "VANDENBERG, Ashleigh",
+            "LANKALA KENDERLA, Laxmi",
+            "CROES, Nancy G",
+            "KERR, Maria",
+            "MOUSSI, Nathalie",
+            "BAUCH, Joh",
+            "SINCLAIR, Brandon",
+            "POON, Bruce",
+            "JANE, Maggie",
+            "KHAN, Shania",
+            "RASIC, Uros"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 6,
+            "ONP": 7,
+            "GRN": 10,
+            "ALP": 12
+          }
         },
         "western-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "read",
+          "atl": [
+            "L",
+            "A",
+            "B",
+            "C",
+            "I"
+          ],
+          "via": "image",
+          "ranks": {
+            "LNP": 4,
+            "GRN": 5
+          }
         }
       }
     },
@@ -119499,12 +121766,40 @@
       "read_on": "2026-11-21",
       "orders": {
         "laverton": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "order": [
+            "MENDELSOHN, Emma",
+            "CHITTEDI, Suchithra",
+            "MANSOURI JAJAEE, Shohre",
+            "GARCIA, Jo",
+            "NOUNE, Ghada",
+            "NGUYEN, Lucy",
+            "PAREDES, Rufo",
+            "RUDD, Van Thanh",
+            "CONNOLLY, Sarah"
+          ],
+          "via": "image",
+          "same_as": [
+            "1615"
+          ],
+          "note": "same order as the English card"
         },
         "western-metropolitan": {
-          "status": "unreadable",
-          "note": "unreadable, see card"
+          "status": "same_as",
+          "atl": [
+            "L",
+            "A",
+            "B",
+            "C",
+            "I"
+          ],
+          "via": "image",
+          "same_as": [
+            "1614",
+            "1615",
+            "1620"
+          ],
+          "note": "same order as the English card"
         }
       }
     },
@@ -120078,6 +122373,7 @@
             "M",
             "I"
           ],
+          "via": "image",
           "same_as": [
             "544",
             "569",
@@ -120103,8 +122399,13 @@
             "836",
             "1258",
             "1266",
+            "1327",
             "1328",
             "1335",
+            "1504",
+            "1508",
+            "1512",
+            "1513",
             "1515",
             "1520",
             "1645",
@@ -120121,6 +122422,7 @@
             "H",
             "E"
           ],
+          "via": "image",
           "same_as": [
             "571",
             "588",
@@ -120132,7 +122434,12 @@
             "690",
             "1257",
             "1305",
-            "1328"
+            "1327",
+            "1328",
+            "1504",
+            "1508",
+            "1512",
+            "1513"
           ],
           "note": "same order as the English card"
         }
@@ -120335,6 +122642,7 @@
             "MAYNARD, Christine",
             "RINDFLEISH, Harrison"
           ],
+          "via": "image",
           "same_as": [
             "952",
             "956",
@@ -120349,6 +122657,7 @@
             "1138",
             "1142",
             "1154",
+            "1190",
             "1191",
             "1199",
             "1202",
@@ -120407,6 +122716,7 @@
             "MAYNARD, Christine",
             "RINDFLEISH, Harrison"
           ],
+          "via": "image",
           "same_as": [
             "952",
             "956",
@@ -120421,6 +122731,7 @@
             "1138",
             "1142",
             "1154",
+            "1190",
             "1191",
             "1199",
             "1202",
@@ -120479,6 +122790,7 @@
             "MAYNARD, Christine",
             "RINDFLEISH, Harrison"
           ],
+          "via": "image",
           "same_as": [
             "952",
             "956",
@@ -120493,6 +122805,7 @@
             "1138",
             "1142",
             "1154",
+            "1190",
             "1191",
             "1199",
             "1202",
