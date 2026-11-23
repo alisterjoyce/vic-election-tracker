@@ -1036,7 +1036,7 @@
     { label: "Lower house", items: [["Seats", "lower.html"], ["Your ballot", "ballot.html"], ["Candidates", "candidate.html"], ["My seats", "myseats.html"]] },
     { label: "Upper house", items: [["Regions", "upper.html"], ["Quota calculator", "upper.html#quota"]] },
     { label: "About", items: [["Methodology", "about.html"], ["Data", "data/"], ["Polls", "poll.html"], ["Policies", "policies.html"],
-      ["Independence", "independence.html"], ["Disclaimer", "disclaimer.html"], ["Privacy", "privacy.html"], ["Terms of use", "terms.html"]] },
+      ["Glossary", "glossary.html"], ["Independence", "independence.html"], ["Disclaimer", "disclaimer.html"], ["Privacy", "privacy.html"], ["Terms of use", "terms.html"]] },
   ];
 
   function initNav() {
@@ -1550,11 +1550,137 @@
       .then(() => fn && fn());
   }
 
+  /* ---- Glossary terms: a dotted underline and a short definition on tap, linking to glossary.html ---- */
+  // One entry per term: id (glossary.html#<id>), the term as headed there, the patterns that mark it in page text,
+  // and the one-line definition the popover shows (the glossary page has the fuller wording). Keep the two in step.
+  const GLOSSARY = [
+    { id: "2pp", term: "Two-party preferred (2PP)", re: /\b2PP\b|\btwo-party[- ]preferred\b/i,
+      short: "The vote after preferences, counted as if only Labor and the Coalition were in the race." },
+    { id: "2cp", term: "Two-candidate preferred (2CP)", re: /\b2CP\b|\btwo-candidate[- ]preferred\b/i,
+      short: "The vote after preferences between the two candidates left at the end of a seat's count, whoever they are." },
+    { id: "primary-vote", term: "Primary vote", re: /\bprimary votes?\b|\bfirst[- ]preferences?\b/i,
+      short: "The number 1 votes a party or candidate gets, before any preferences are counted." },
+    { id: "swing", term: "Swing", re: /\bswings?\b/i,
+      short: "The change in a party's share of the vote since the last election, in percentage points." },
+    { id: "notional-margin", term: "Notional margin", re: /\bnotional margins?\b|\bnotional\b/i,
+      short: "How far the leading side was above 50% at the last election, recalculated for today's boundaries." },
+    { id: "quota", term: "Quota", re: /\bquotas?\b/i,
+      short: "The share of the vote that elects one upper-house member: one-sixth of the formal vote, plus one (16.7%)." },
+    { id: "above-the-line", term: "Above the line", re: /\babove[- ]the[- ]line\b/i,
+      short: "Numbering group boxes on the upper-house paper (at least 5); the vote follows each group's own order of candidates." },
+    { id: "below-the-line", term: "Below the line", re: /\bbelow[- ]the[- ]line\b/i,
+      short: "Numbering individual candidates on the upper-house paper (at least 5) in your own order." },
+    { id: "preference-flow", term: "Preference flow", re: /\bpreference flows?\b/i,
+      short: "Where a candidate's votes go next, by voters' later numbers, once that candidate is excluded from the count." },
+    { id: "how-to-vote-card", term: "How-to-vote card", re: /\bhow-to-vote cards?\b/i,
+      short: "A party's or candidate's suggested way to number the ballot, registered with the VEC. Voters don't have to follow it." },
+    { id: "ballot-draw", term: "Ballot draw", re: /\bballot draw\b|\bdrew for the ballot\b/i,
+      short: "The VEC's random draw, after nominations close, that sets the order of candidates (and groups) on the ballot paper." },
+    { id: "early-votes", term: "Early votes", re: /\bearly vot(?:es?|ing)\b/i,
+      short: "Votes cast in person at an early voting centre in the days before election day." },
+    { id: "postal-votes", term: "Postal votes", re: /\bpostal vot(?:es?|ing)\b/i,
+      short: "Votes sent back by post (or dropped at a voting centre) by people who applied for a postal vote." },
+    { id: "final-two", term: "Final two", re: /\bfinal two\b|\bfinal pair(?:s|ings?)?\b/i,
+      short: "The two candidates left at the end of a seat's count; whoever has more of the 2CP vote wins." },
+  ];
+  // Where terms aren't marked: inside links and controls, headings, code, graphics, the share-card renderer, the
+  // glossary page itself and anything marked data-no-gloss.
+  const GLOSS_SKIP = "a, button, select, option, textarea, input, label, summary, h1, h2, script, style, svg, canvas, code, .tabs, .gloss-pop, [data-no-gloss], .hc-host";
+  const glossUsed = new WeakMap();   // container -> Set of term ids already marked in it (each term once per card or section)
+
+  function glossarize(root) {
+    if (!root || (root.closest && root.closest(GLOSS_SKIP))) return;
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: (n) => (n.nodeValue.trim().length > 2 && !n.parentElement.closest(GLOSS_SKIP) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT),
+    });
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach((node) => {
+      const box = node.parentElement.closest(".card, section, article, .tab-panel, main") || document.body;
+      const used = glossUsed.get(box) || new Set();
+      glossUsed.set(box, used);
+      let text = node;
+      for (;;) {
+        let best = null;
+        GLOSSARY.forEach((g) => {
+          if (used.has(g.id)) return;
+          const m = g.re.exec(text.nodeValue);
+          if (m && (!best || m.index < best.m.index)) best = { g, m };
+        });
+        if (!best) break;
+        used.add(best.g.id);
+        const start = text.splitText(best.m.index);
+        const rest = start.splitText(best.m[0].length);
+        const a = document.createElement("a");
+        a.className = "gloss";
+        a.href = new URL(`glossary.html#${best.g.id}`, ROOT).href;
+        a.dataset.gloss = best.g.id;
+        a.title = best.g.short;
+        a.textContent = start.nodeValue;
+        start.replaceWith(a);
+        text = rest;
+      }
+    });
+  }
+
+  function initGlossary() {
+    const main = document.querySelector("main");
+    if (!main || main.hasAttribute("data-no-gloss")) return;
+    let pending = new Set(), timer = null;
+    const observer = new MutationObserver((records) => {
+      records.forEach((r) => r.addedNodes.forEach((n) => { if (n.nodeType === 1 || n.nodeType === 3) pending.add(n.nodeType === 1 ? n : n.parentElement); }));
+      clearTimeout(timer);
+      timer = setTimeout(run, 150);
+    });
+    function run() {
+      const roots = [...pending].filter((n) => n && n.isConnected);
+      pending = new Set();
+      observer.disconnect();   // our own changes aren't news
+      roots.forEach(glossarize);
+      observer.observe(main, { childList: true, subtree: true });
+    }
+    afterPaint(() => { glossarize(main); observer.observe(main, { childList: true, subtree: true }); });
+
+    // The definition on tap (or Enter): a small popover under the term with a link to the glossary entry.
+    let pop = null, owner = null;
+    const close = (refocus) => {
+      if (!pop) return;
+      pop.remove(); pop = null;
+      if (owner) { owner.setAttribute("aria-expanded", "false"); if (refocus) owner.focus(); }
+      owner = null;
+    };
+    document.addEventListener("click", (e) => {
+      const a = e.target.closest("a.gloss");
+      if (!a) { if (pop && !e.target.closest(".gloss-pop")) close(false); return; }
+      e.preventDefault();
+      if (owner === a) { close(false); return; }
+      close(false);
+      const g = GLOSSARY.find((x) => x.id === a.dataset.gloss);
+      if (!g) return;
+      pop = document.createElement("div");
+      pop.className = "gloss-pop";
+      pop.id = "gloss-pop";
+      pop.setAttribute("role", "dialog");
+      pop.setAttribute("aria-label", g.term);
+      pop.innerHTML = `<strong>${escapeHtml(g.term)}</strong><p>${escapeHtml(g.short)}</p><a href="${escapeHtml(a.href)}">In the glossary</a>`;
+      document.body.append(pop);
+      const r = a.getBoundingClientRect(), w = Math.min(300, window.innerWidth - 24);
+      pop.style.width = `${w}px`;
+      pop.style.left = `${Math.max(12, Math.min(window.scrollX + r.left, window.scrollX + window.innerWidth - w - 12))}px`;
+      pop.style.top = `${window.scrollY + r.bottom + 6}px`;
+      owner = a;
+      a.setAttribute("aria-expanded", "true");
+      a.setAttribute("aria-controls", "gloss-pop");
+    });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && pop) close(true); });
+  }
+
   function start() {
     initServiceWorker();
     initTheme();
     initNav();
     initSearch();
+    initGlossary();
     loadJSON("meta").then(renderChrome).catch((err) => {
       console.error(err);
       renderChrome(null);
@@ -1570,7 +1696,7 @@
   window.App = {
     PARTIES, STATUSES, COALITION, partyOrder, byValue, candidateOrder, surnameOf, loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, partyBadge, statusBadge,
     slugify, parseDate, fmtDate, fmtMonth, fmtDateTime, dataUpdatedText, fmtPrice, fmtMargin, fmtSwing, melbourneToday, daysBetween,
-    hashId, cssVar, currentTheme, showError, copyLink, tabBar, tabPanel, initTabs,
+    hashId, cssVar, currentTheme, showError, copyLink, tabBar, tabPanel, initTabs, GLOSSARY, glossarize,
     DAY, preparePolls, pollExclusion, commissionLabel, AVG_MIN_SAMPLE, smoothedSeries, smoothedLatest, fmtRange, pollRecords, statewideSwing, swingAdjusted, projectSeats, modelSeats, seatCalls, apportion, hemicycle, seatRangeChart, modelsHemicycle, BLOC_LABEL, BLOC_COLOR, BLOCS, blocOf, modelLink, quotaBars,
     getWatchlist, setWatchlist, isWatched, toggleWatch, starButton, storageWorks,
     buildSearchIndex, searchItems,
