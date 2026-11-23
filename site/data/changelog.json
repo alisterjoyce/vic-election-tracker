@@ -6,8 +6,48 @@
       "entries": "[{date (Melbourne YYYY-MM-DD), at (ISO UTC), type, ...}] where type is one of: candidate_added {seat, name, party, status, source}; candidate_superseded {seat, name, party, by}; candidate_withdrawn {seat, name, party}; candidate_not_standing {seat, name, party}; poll_added {id, pollster, end_date, tpp (L/NP), primary}; odds_move {seat, label, party, from, to} (a price moving 0.5 or more); retirement {seat, name}; news {count} (new headlines collected)"
     }
   },
-  "updated": "2026-11-23T06:03:22Z",
+  "updated": "2026-11-23T10:15:26Z",
   "entries": [
+    {
+      "date": "2026-11-23",
+      "at": "2026-11-23T10:15:26Z",
+      "type": "poll_added",
+      "id": "roy-morgan-2026-11-19",
+      "pollster": "Roy Morgan",
+      "end_date": "2026-11-19",
+      "tpp": 55,
+      "primary": {
+        "ALP": 22.5,
+        "LNP": 31,
+        "GRN": 13,
+        "ONP": 20,
+        "IND": 5,
+        "OTH": 8.5
+      }
+    },
+    {
+      "date": "2026-11-23",
+      "at": "2026-11-23T10:15:26Z",
+      "type": "poll_added",
+      "id": "yougov-2026-11-23",
+      "pollster": "YouGov",
+      "end_date": "2026-11-23",
+      "tpp": 58,
+      "primary": {
+        "ALP": 20,
+        "LNP": 31,
+        "GRN": 16,
+        "ONP": 21,
+        "IND": 4,
+        "OTH": 9
+      }
+    },
+    {
+      "date": "2026-11-23",
+      "at": "2026-11-23T10:15:26Z",
+      "type": "news",
+      "count": 5
+    },
     {
       "date": "2026-11-23",
       "at": "2026-11-23T06:03:22Z",

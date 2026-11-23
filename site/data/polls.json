@@ -26,6 +26,32 @@
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election",
   "polls": [
     {
+      "id": "yougov-2026-11-23",
+      "start_date": "2026-11-06",
+      "end_date": "2026-11-23",
+      "pollster": "YouGov",
+      "client": "News24",
+      "sample_size": 3890,
+      "source_url": "https://www.news24.com.au/politics/australian-politics/victorian-labor-headed-for-nightmare-state-election-recording-worst-vote-since-1902-as-coalition-set-for-landslide-victory/news-story/d5f3b4209cbfc3c3c03d8afc852d8c66",
+      "primary": {
+        "ALP": 20,
+        "LNP": 31,
+        "GRN": 16,
+        "ONP": 21,
+        "IND": 4,
+        "OTH": 9
+      },
+      "tpp": {
+        "ALP": 42,
+        "LNP": 58
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "News24",
+        "via": "client"
+      }
+    },
+    {
       "id": "lighthouse-growth-intelligence-centre-2026-11-20",
       "start_date": "2026-11-20",
       "end_date": "2026-11-20",
@@ -94,6 +120,37 @@
         "category": "media",
         "name": "Australian Financial Review",
         "via": "electiontracker"
+      }
+    },
+    {
+      "id": "roy-morgan-2026-11-19",
+      "start_date": "2026-11-18",
+      "end_date": "2026-11-19",
+      "pollster": "Roy Morgan",
+      "client": null,
+      "sample_size": 1563,
+      "source_url": "https://www.roymorgan.com/findings/10393-victorian-state-voting-intention-november-2026",
+      "primary": {
+        "ALP": 22.5,
+        "LNP": 31,
+        "GRN": 13,
+        "ONP": 20,
+        "IND": 5,
+        "OTH": 8.5
+      },
+      "tpp": {
+        "ALP": 45,
+        "LNP": 55
+      },
+      "tpp3": {
+        "ALP": 43,
+        "LNP": 35,
+        "ONP": 22
+      },
+      "commissioned_by": {
+        "category": "pollster",
+        "name": null,
+        "via": "pollster"
       }
     },
     {
