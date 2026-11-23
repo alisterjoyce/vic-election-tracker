@@ -89,7 +89,13 @@ class Polite:
                 if 400 <= resp.status_code < 500:   # not there: trying again won't help
                     raise FetchFailed(f"{url}: HTTP {resp.status_code}")
                 resp.raise_for_status()
-                return resp.content if binary else resp.text
+                if binary:
+                    return resp.content
+                # The VEC sends "charset=utf-8" (checked 23 Nov 2026). Without one, requests falls back to
+                # ISO-8859-1 for text/html and an en dash comes out as "â€“", so read UTF-8 unless a charset is named.
+                if "charset=" not in (resp.headers.get("content-type") or "").lower():
+                    resp.encoding = "utf-8"
+                return resp.text
             except requests.RequestException as exc:
                 error = exc
                 log.warning("VEC fetch %s failed (attempt %d/%d): %s", url, attempt, ATTEMPTS, exc)
