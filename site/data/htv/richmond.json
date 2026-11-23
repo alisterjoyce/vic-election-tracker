@@ -2163,8 +2163,11 @@
       "type": "Combined",
       "registered_on": "2026-11-17",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=17630422-d7d4-4b22-ada3-c05804235b11%2Faustralian%20democrats%20combined%20richmond%20southern%20metro%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "unreadable",
-      "note": "unreadable, see card"
+      "status": "partial",
+      "order": [
+        "PEAD-PHILIPSON, Jack"
+      ],
+      "via": "image"
     },
     {
       "registration": "1446",
@@ -2175,8 +2178,11 @@
       "type": "Combined",
       "registered_on": "2026-11-17",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a600be01-7b04-4efd-88a7-b3823daed357%2Faustralian%20democrats%20combined%20richmond%20southern%20metro%204.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "unreadable",
-      "note": "unreadable, see card"
+      "status": "partial",
+      "order": [
+        "PEAD-PHILIPSON, Jack"
+      ],
+      "via": "image"
     },
     {
       "registration": "425",
@@ -2281,8 +2287,25 @@
       "type": "Single",
       "registered_on": "2026-11-16",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=bd5eb0e3-f9aa-4b9c-9119-579b92682f28%2Fmaynard%2C%20christine.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "unreadable",
-      "note": "unreadable, see card"
+      "status": "read",
+      "order": [
+        "MAYNARD, Christine",
+        "GRAY, Bernadette",
+        "APONSO, Charles",
+        "PEAD-PHILIPSON, Jack",
+        "RINDFLEISH, Harrison",
+        "MEYER, David",
+        "DITE, Chris",
+        "MCKENZIE, Sarah",
+        "de VIETRI, Gabrielle"
+      ],
+      "via": "image",
+      "ranks": {
+        "LNP": 3,
+        "ONP": 5,
+        "ALP": 8,
+        "GRN": 9
+      }
     },
     {
       "registration": "1462",

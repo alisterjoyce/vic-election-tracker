@@ -14,10 +14,10 @@
   "coverage": {
     "cards": 1423,
     "listings": 4815,
-    "orders_read": 4502,
-    "orders_image": 528,
+    "orders_read": 4530,
+    "orders_image": 556,
     "orders_same_as": 158,
-    "orders_unreadable": 127,
+    "orders_unreadable": 99,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -273,9 +273,9 @@
     "bentleigh": {
       "house": "lower",
       "cards": 35,
-      "read": 33,
+      "read": 34,
       "same_as": 1,
-      "unreadable": 1,
+      "unreadable": 0,
       "parties": {
         "ALP": 7,
         "VS": 2,
@@ -289,9 +289,9 @@
     "berwick": {
       "house": "lower",
       "cards": 43,
-      "read": 36,
+      "read": 37,
       "same_as": 4,
-      "unreadable": 3,
+      "unreadable": 2,
       "parties": {
         "ALP": 10,
         "VS": 2,
@@ -344,9 +344,9 @@
     "broadmeadows": {
       "house": "lower",
       "cards": 60,
-      "read": 51,
+      "read": 52,
       "same_as": 7,
-      "unreadable": 2,
+      "unreadable": 1,
       "parties": {
         "ALP": 9,
         "SAL": 1,
@@ -363,9 +363,9 @@
     "brunswick": {
       "house": "lower",
       "cards": 57,
-      "read": 48,
+      "read": 49,
       "same_as": 7,
-      "unreadable": 2,
+      "unreadable": 1,
       "parties": {
         "ALP": 7,
         "VS": 2,
@@ -414,9 +414,9 @@
     "carrum": {
       "house": "lower",
       "cards": 42,
-      "read": 35,
+      "read": 36,
       "same_as": 2,
-      "unreadable": 5,
+      "unreadable": 4,
       "parties": {
         "NONCAND": 3,
         "ALP": 5,
@@ -468,9 +468,9 @@
     "cranbourne": {
       "house": "lower",
       "cards": 45,
-      "read": 39,
+      "read": 40,
       "same_as": 2,
-      "unreadable": 4,
+      "unreadable": 3,
       "parties": {
         "NONCAND": 3,
         "ALP": 11,
@@ -504,9 +504,9 @@
     "dandenong": {
       "house": "lower",
       "cards": 49,
-      "read": 45,
+      "read": 47,
       "same_as": 2,
-      "unreadable": 2,
+      "unreadable": 0,
       "parties": {
         "ALP": 9,
         "VS": 2,
@@ -558,9 +558,9 @@
     "essendon": {
       "house": "lower",
       "cards": 63,
-      "read": 54,
+      "read": 55,
       "same_as": 7,
-      "unreadable": 2,
+      "unreadable": 1,
       "parties": {
         "IND": 3,
         "ALP": 10,
@@ -628,9 +628,9 @@
     "footscray": {
       "house": "lower",
       "cards": 53,
-      "read": 52,
+      "read": 53,
       "same_as": 0,
-      "unreadable": 1,
+      "unreadable": 0,
       "parties": {
         "ALP": 6,
         "VS": 2,
@@ -647,9 +647,9 @@
     "frankston": {
       "house": "lower",
       "cards": 46,
-      "read": 38,
+      "read": 39,
       "same_as": 2,
-      "unreadable": 6,
+      "unreadable": 5,
       "parties": {
         "NONCAND": 5,
         "IND": 3,
@@ -901,9 +901,9 @@
     "lowan": {
       "house": "lower",
       "cards": 27,
-      "read": 24,
+      "read": 26,
       "same_as": 1,
-      "unreadable": 2,
+      "unreadable": 0,
       "parties": {
         "ALP": 3,
         "VS": 2,
@@ -1043,9 +1043,9 @@
     "mordialloc": {
       "house": "lower",
       "cards": 45,
-      "read": 42,
+      "read": 43,
       "same_as": 2,
-      "unreadable": 1,
+      "unreadable": 0,
       "parties": {
         "ALP": 9,
         "VS": 2,
@@ -1061,9 +1061,9 @@
     "mornington": {
       "house": "lower",
       "cards": 24,
-      "read": 23,
+      "read": 24,
       "same_as": 0,
-      "unreadable": 1,
+      "unreadable": 0,
       "parties": {
         "NONCAND": 1,
         "ALP": 3,
@@ -1146,9 +1146,9 @@
     "narre-warren-north": {
       "house": "lower",
       "cards": 42,
-      "read": 36,
+      "read": 37,
       "same_as": 2,
-      "unreadable": 4,
+      "unreadable": 3,
       "parties": {
         "NONCAND": 3,
         "ALP": 10,
@@ -1331,9 +1331,9 @@
     "polwarth": {
       "house": "lower",
       "cards": 38,
-      "read": 36,
+      "read": 37,
       "same_as": 1,
-      "unreadable": 1,
+      "unreadable": 0,
       "parties": {
         "ALP": 3,
         "VS": 2,
@@ -1384,9 +1384,9 @@
     "richmond": {
       "house": "lower",
       "cards": 69,
-      "read": 53,
+      "read": 56,
       "same_as": 10,
-      "unreadable": 6,
+      "unreadable": 3,
       "parties": {
         "ALP": 10,
         "VS": 2,
@@ -1474,9 +1474,9 @@
     "shepparton": {
       "house": "lower",
       "cards": 20,
-      "read": 19,
+      "read": 20,
       "same_as": 0,
-      "unreadable": 1,
+      "unreadable": 0,
       "parties": {
         "ALP": 3,
         "VS": 2,
@@ -1546,9 +1546,9 @@
     "sunbury": {
       "house": "lower",
       "cards": 40,
-      "read": 38,
+      "read": 39,
       "same_as": 1,
-      "unreadable": 1,
+      "unreadable": 0,
       "parties": {
         "ALP": 4,
         "VS": 2,
@@ -1567,9 +1567,9 @@
     "sydenham": {
       "house": "lower",
       "cards": 50,
-      "read": 48,
+      "read": 49,
       "same_as": 0,
-      "unreadable": 2,
+      "unreadable": 1,
       "parties": {
         "ALP": 12,
         "VS": 2,
@@ -1741,9 +1741,9 @@
     "north-eastern-metropolitan": {
       "house": "upper",
       "cards": 184,
-      "read": 164,
+      "read": 165,
       "same_as": 4,
-      "unreadable": 2,
+      "unreadable": 1,
       "parties": {
         "ALP": 47,
         "NONCAND": 5,
@@ -1811,9 +1811,9 @@
     "south-eastern-metropolitan": {
       "house": "upper",
       "cards": 181,
-      "read": 175,
+      "read": 176,
       "same_as": 2,
-      "unreadable": 4,
+      "unreadable": 3,
       "parties": {
         "ALP": 56,
         "VS": 12,
@@ -1854,9 +1854,9 @@
     "western-metropolitan": {
       "house": "upper",
       "cards": 197,
-      "read": 190,
+      "read": 192,
       "same_as": 2,
-      "unreadable": 5,
+      "unreadable": 3,
       "parties": {
         "ALP": 60,
         "IND": 1,
@@ -1877,9 +1877,9 @@
     "western-victoria": {
       "house": "upper",
       "cards": 135,
-      "read": 133,
+      "read": 134,
       "same_as": 1,
-      "unreadable": 1,
+      "unreadable": 0,
       "parties": {
         "SFF": 2,
         "SAL": 8,
@@ -3505,7 +3505,7 @@
       "area": "essendon",
       "party": "GRN",
       "cards": 37,
-      "read": 29,
+      "read": 30,
       "differ": true,
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=3a410b71-e5c7-45d9-a59b-6997e35025bb%2Fthe%20greens%20combined%20northern%20metro%20melbourne%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
     },
