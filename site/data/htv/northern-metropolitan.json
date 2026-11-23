@@ -463,8 +463,11 @@
       "type": "Single",
       "registered_on": "2026-11-18",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fd27a741-cb50-4da2-bd92-216f8706af19%2Fhtv_vic_l%26uh_northernmetro_region_v2_redacted.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "unreadable",
-      "note": "unreadable, see card"
+      "status": "read",
+      "atl": [
+        "J"
+      ],
+      "via": "image"
     },
     {
       "registration": "48",
@@ -3794,8 +3797,19 @@
       "type": "Combined",
       "registered_on": "2026-11-19",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=924f62e8-8c52-4daf-8085-7578978c97b1%2Fthe%20greens%20combined%20northern%20metro%20arabic%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "unreadable",
-      "note": "unreadable, see card"
+      "status": "read",
+      "atl": [
+        "D",
+        "G",
+        "L",
+        "J",
+        "K"
+      ],
+      "via": "image",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5
+      }
     },
     {
       "registration": "1553",
@@ -5643,8 +5657,19 @@
       "type": "Single",
       "registered_on": "2026-11-20",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5329daf4-897c-4c72-9a26-c1398b7aa5fd%2F1670%20-%20northern%20metro_redacted.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "unreadable",
-      "note": "unreadable, see card"
+      "status": "read",
+      "atl": [
+        "J",
+        "D",
+        "G",
+        "L",
+        "K"
+      ],
+      "via": "image",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 5
+      }
     },
     {
       "registration": "1671",

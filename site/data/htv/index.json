@@ -14,10 +14,10 @@
   "coverage": {
     "cards": 1423,
     "listings": 4815,
-    "orders_read": 4549,
-    "orders_image": 575,
-    "orders_same_as": 156,
-    "orders_unreadable": 82,
+    "orders_read": 4565,
+    "orders_image": 591,
+    "orders_same_as": 154,
+    "orders_unreadable": 68,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -289,9 +289,9 @@
     "berwick": {
       "house": "lower",
       "cards": 43,
-      "read": 39,
-      "same_as": 2,
-      "unreadable": 2,
+      "read": 43,
+      "same_as": 0,
+      "unreadable": 0,
       "parties": {
         "ALP": 10,
         "VS": 2,
@@ -575,9 +575,9 @@
     "eureka": {
       "house": "lower",
       "cards": 40,
-      "read": 38,
+      "read": 39,
       "same_as": 0,
-      "unreadable": 2,
+      "unreadable": 1,
       "parties": {
         "ALP": 4,
         "VS": 2,
@@ -756,9 +756,9 @@
     "hastings": {
       "house": "lower",
       "cards": 28,
-      "read": 27,
+      "read": 28,
       "same_as": 0,
-      "unreadable": 1,
+      "unreadable": 0,
       "parties": {
         "ALP": 3,
         "VS": 2,
@@ -953,9 +953,9 @@
     "melbourne": {
       "house": "lower",
       "cards": 70,
-      "read": 60,
+      "read": 61,
       "same_as": 7,
-      "unreadable": 3,
+      "unreadable": 2,
       "parties": {
         "ALP": 10,
         "VS": 2,
@@ -972,9 +972,9 @@
     "melton": {
       "house": "lower",
       "cards": 36,
-      "read": 31,
+      "read": 32,
       "same_as": 1,
-      "unreadable": 1,
+      "unreadable": 0,
       "parties": {
         "ALP": 3,
         "VS": 2,
@@ -1366,9 +1366,9 @@
     "preston": {
       "house": "lower",
       "cards": 53,
-      "read": 45,
+      "read": 46,
       "same_as": 7,
-      "unreadable": 1,
+      "unreadable": 0,
       "parties": {
         "ALP": 9,
         "VS": 2,
@@ -1384,9 +1384,9 @@
     "richmond": {
       "house": "lower",
       "cards": 69,
-      "read": 56,
+      "read": 57,
       "same_as": 10,
-      "unreadable": 3,
+      "unreadable": 2,
       "parties": {
         "ALP": 10,
         "VS": 2,
@@ -1527,9 +1527,9 @@
     "st-albans": {
       "house": "lower",
       "cards": 41,
-      "read": 40,
+      "read": 41,
       "same_as": 0,
-      "unreadable": 1,
+      "unreadable": 0,
       "parties": {
         "ALP": 8,
         "VS": 2,
@@ -1741,9 +1741,9 @@
     "north-eastern-metropolitan": {
       "house": "upper",
       "cards": 184,
-      "read": 165,
+      "read": 166,
       "same_as": 4,
-      "unreadable": 1,
+      "unreadable": 0,
       "parties": {
         "ALP": 47,
         "NONCAND": 5,
@@ -1763,9 +1763,9 @@
     "northern-metropolitan": {
       "house": "upper",
       "cards": 201,
-      "read": 191,
+      "read": 194,
       "same_as": 3,
-      "unreadable": 7,
+      "unreadable": 4,
       "parties": {
         "ALP": 69,
         "SUS": 1,
@@ -1811,9 +1811,9 @@
     "south-eastern-metropolitan": {
       "house": "upper",
       "cards": 181,
-      "read": 176,
+      "read": 177,
       "same_as": 2,
-      "unreadable": 3,
+      "unreadable": 2,
       "parties": {
         "ALP": 56,
         "VS": 12,
@@ -2506,7 +2506,7 @@
       "area": "berwick",
       "party": "GRN",
       "cards": 15,
-      "read": 12,
+      "read": 15,
       "ranks": {
         "GRN": 1,
         "ALP": 3,
@@ -3568,7 +3568,7 @@
       "area": "eureka",
       "party": "GRN",
       "cards": 16,
-      "read": 15,
+      "read": 16,
       "differ": true,
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=fec738f3-7cc3-4cfc-98c9-c6aa8f009357%2Fems%201106%20the%20greens%20combined%20geelong%20south%20barwon%20bellarine%20western%20victoria%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
     },
