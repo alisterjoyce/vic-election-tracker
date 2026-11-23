@@ -13,7 +13,7 @@
 
   function tallyBar(t) {
     const blocs = Object.keys(BLOC_NAMES).map((b) => ({ b, called: (t.called || {})[b] || 0, leading: (t.leading || {})[b] || 0 }))
-      .filter((x) => x.called + x.leading > 0).sort((a, b) => App.BLOCS.indexOf(a.b) - App.BLOCS.indexOf(b.b));   // fixed order, never by size
+      .filter((x) => x.called + x.leading > 0).sort(App.byValue((x) => x.called + x.leading, (x) => x.b));   // most seats (called and leading) first
     const segs = blocs.map((x) => {
       const style = `background:var(${App.partyVar(BLOC_CODE[x.b])});color:${App.inkVar(BLOC_CODE[x.b])}`;
       return `${x.called ? `<span class="hb-seg" style="flex:${x.called} 0 0;${style}" title="${BLOC_NAMES[x.b]}: ${x.called} called">${x.called >= 4 ? x.called : ""}</span>` : ""}`

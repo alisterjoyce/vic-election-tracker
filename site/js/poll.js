@@ -133,7 +133,7 @@
 
   function renderDetail(p) {
     document.title = `${p.pollster} poll, ${fmtDate(p.end_date)} · Vic Election 2026`;
-    const prim = Object.entries(p.primary || {}).sort(([a], [b]) => App.partyOrder(a, b)).map(([k, v]) => [partyName(k), k, v]);
+    const prim = Object.entries(p.primary || {}).sort(App.byValue(([, v]) => v, ([k]) => k)).map(([k, v]) => [partyName(k), k, v]);
     const maxPrim = Math.max(1, ...prim.map(([, , v]) => v));
     const pp = p.preferred_premier, ap = p.approval;
     const own = polls.filter((x) => x.pollster === p.pollster).reverse();
@@ -158,8 +158,8 @@
         ${App.pollExclusion(p) ? `<p class="small poll-excl-note"><strong>Not in this site's poll of polls:</strong> ${escapeHtml(App.pollExclusion(p).toLowerCase())}. <a href="poll.html#aggregates">How the average works</a></p>` : ""}
         ${recordNotes(p)}
         ${prim.length ? `<h3>Primary vote</h3>${bars(prim, maxPrim)}` : ""}
-        ${p.tpp ? `<h3>Two-party preferred</h3>${splitBar([["Labor", "ALP", p.tpp.ALP], ["L/NP", "LNP", p.tpp.LNP]])}` : '<p class="muted small">No ALP v L/NP two-party figure published.</p>'}
-        ${p.tpp3 ? `<h3>Three-party preferred</h3>${splitBar([["Labor", "ALP", p.tpp3.ALP], ["L/NP", "LNP", p.tpp3.LNP], ["One Nation", "ONP", p.tpp3.ONP]])}` : ""}
+        ${p.tpp ? `<h3>Two-party preferred</h3>${splitBar([["Labor", "ALP", p.tpp.ALP], ["L/NP", "LNP", p.tpp.LNP]].sort(App.byValue((x) => x[2], (x) => x[1])))}` : '<p class="muted small">No ALP v L/NP two-party figure published.</p>'}
+        ${p.tpp3 ? `<h3>Three-party preferred</h3>${splitBar([["Labor", "ALP", p.tpp3.ALP], ["L/NP", "LNP", p.tpp3.LNP], ["One Nation", "ONP", p.tpp3.ONP]].sort(App.byValue((x) => x[2], (x) => x[1])))}` : ""}
         ${pp ? `<h3>Preferred premier <span class="muted small">${escapeHtml(pp.matchup || "")}</span></h3>
           ${bars([...Object.entries(pp.leaders).map(([n, v]) => [n, LEADER_PARTY[n] || "OTH", v]),
                   ...(pp.undecided != null ? [["Undecided", "OTH", pp.undecided]] : [])], 100)}` : ""}

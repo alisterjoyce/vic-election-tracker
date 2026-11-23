@@ -127,7 +127,7 @@
     const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
     const lead = sorted[0] && (!sorted[1] || sorted[0][1] > sorted[1][1]) ? sorted[0][0] : null;
     return { code: lead, opacity: lead ? 0.6 : 0.25,
-             text: sorted.slice().sort(([a], [b]) => App.partyOrder(a, b)).map(([p, n]) => `${partyShort(p)} ${n}`).join(", ") || "–" };
+             text: sorted.slice().sort(App.byValue(([, n]) => n, ([p]) => p)).map(([p, n]) => `${partyShort(p)} ${n}`).join(", ") || "–" };
   }
 
   async function homeMap(root) {

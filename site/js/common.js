@@ -40,6 +40,17 @@
     if (la !== lb) return la - lb;   // -1 (not an independent or Other) sorts first
     return ((PARTIES[a] && PARTIES[a].name) || a || "").localeCompare((PARTIES[b] && PARTIES[b].name) || b || "");
   }
+  // The ordering rule for anything that shows a number per party or candidate (a seat count, a vote share, a win
+  // chance, a price as a chance): largest first, ties in the fixed party order; items without a number last.
+  // byValue(value, key) -> comparator; value(item) is the number, key(item) the party or bloc code (default: the item).
+  function byValue(value, key = (x) => x) {
+    return (a, b) => {
+      const va = value(a), vb = value(b);
+      const na = va == null || Number.isNaN(va), nb = vb == null || Number.isNaN(vb);
+      if (na !== nb) return na ? 1 : -1;
+      return (na ? 0 : vb - va) || partyOrder(key(a), key(b));
+    };
+  }
   // Candidates: the VEC's ballot order (ballot_position: for the Council, the position among all the region's
   // candidates, groups in letter order then ungrouped), else alphabetical by surname, then given names.
   function surnameOf(c) {
@@ -453,8 +464,8 @@
   }
 
   // An 88-dot half circle: rows of seats from the inside out, filled left to right by angle, so each party is a
-  // wedge. segments: [{code (party colour code), n, outline (true: leading, not called)}] in the order drawn (the
-  // fixed party order); seats beyond them are grey (undecided or unplaced). The majority seat is marked with a
+  // wedge. segments: [{code (party colour code), n, outline (true: leading, not called)}] in the order drawn
+  // (callers pass the largest party first, by byValue); seats beyond them are grey (undecided or unplaced). The majority seat is marked with a
   // radial line. Returns an inline SVG string that follows the theme (colours are CSS variables).
   function hemicycle({ segments = [], total = ASSEMBLY_SEATS, majority = 45, label = "", rows = 5, className = "" } = {}) {
     const R = 100, r0 = 40;
@@ -492,11 +503,11 @@
       <text x="${(R + pad + 8) * Math.cos(am)}" y="${-(R + pad + 6) * Math.sin(am)}" text-anchor="middle" style="fill:var(--muted);font-size:9px;font-family:var(--font-body)">${majority}</text></svg>`;
   }
 
-  // Seat-range chart: one row per bloc (the fixed party order; a bloc every model puts under half a seat is left
+  // Seat-range chart: one row per bloc (largest median first, by byValue; a bloc every model puts under half a seat is left
   // out), the span from the lowest to the highest model, a dot at the median, on an 88-seat scale with the
   // majority line; then the key. ms: modelSeats(). Returns HTML (style.css .mv*).
   function seatRangeChart(ms, { seats = ASSEMBLY_SEATS, majority = 45, what = "Seat projection" } = {}) {
-    const blocs = BLOCS.filter((b) => ms.summary[b] && ms.summary[b].hi >= 0.5);
+    const blocs = BLOCS.filter((b) => ms.summary[b] && ms.summary[b].hi >= 0.5).sort(byValue((b) => ms.summary[b].median));   // largest median first
     const r = Math.round;
     const pos = (n) => `${((100 * Math.min(n, seats)) / seats).toFixed(2)}%`;
     const fig = (s) => (r(s.lo) === r(s.hi) ? `${r(s.median)}` : `${r(s.median)} (${r(s.lo)} to ${r(s.hi)})`);
@@ -540,7 +551,7 @@
   function modelsHemicycle(ms, opts = {}) {
     const med = Object.fromEntries(BLOCS.filter((b) => ms.summary[b]).map((b) => [b, ms.summary[b].median]));
     const whole = apportion(med);
-    const segments = BLOCS.filter((b) => whole[b]).map((b) => ({ code: BLOC_COLOR[b], n: whole[b], bloc: b }));
+    const segments = BLOCS.filter((b) => whole[b]).sort(byValue((b) => whole[b])).map((b) => ({ code: BLOC_COLOR[b], n: whole[b], bloc: b }));   // largest first
     return hemicycle({ segments, label: `Hemicycle of the 88 seats: the models' medians, rounded to whole seats: ${segments.map((s) => `${BLOC_LABEL[s.bloc]} ${s.n}`).join(", ")}. 45 seats needed for a majority.`, ...opts });
   }
 
@@ -1508,7 +1519,7 @@
   });
 
   window.App = {
-    PARTIES, STATUSES, COALITION, partyOrder, candidateOrder, surnameOf, loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, partyBadge, statusBadge,
+    PARTIES, STATUSES, COALITION, partyOrder, byValue, candidateOrder, surnameOf, loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, partyBadge, statusBadge,
     slugify, parseDate, fmtDate, fmtMonth, fmtDateTime, dataUpdatedText, fmtPrice, fmtMargin, fmtSwing, melbourneToday, daysBetween,
     hashId, cssVar, currentTheme, showError, copyLink,
     DAY, preparePolls, pollExclusion, commissionLabel, AVG_MIN_SAMPLE, smoothedSeries, smoothedLatest, fmtRange, pollRecords, statewideSwing, swingAdjusted, projectSeats, modelSeats, seatCalls, apportion, hemicycle, seatRangeChart, modelsHemicycle, BLOC_LABEL, BLOC_COLOR, BLOCS, blocOf, modelLink, quotaBars,

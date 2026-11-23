@@ -735,6 +735,24 @@ select {
 .outlook-note { margin: 8px 0 0; }
 @media (max-width: 560px) { .outlook-row { grid-template-columns: 1fr; } }
 /* Forecasts row: one line per model, an agreement line above */
+/* Seat page Forecasts: summary, the per-candidate table (sorted by median chance), likely final two */
+.fc-summary { margin: 0 0 8px; font-weight: 600; }
+.outlook-wide { grid-template-columns: minmax(0, 1fr); }   /* the Forecasts table takes the full width under its label */
+.fc-table { font-size: 0.86rem; overflow-wrap: normal; }
+.fc-table th { vertical-align: bottom; white-space: normal; min-width: 6.5em; }
+.fc-table th a { text-transform: none; letter-spacing: 0; font-size: 0.85rem; }
+.fc-table .fc-cand, .fc-table .fc-cand-h { position: sticky; left: 0; z-index: 1; background: var(--surface); min-width: 0; }   /* names stay in view as the table scrolls */
+.fc-date { display: block; font-weight: 400; font-size: 0.75rem; color: var(--muted); text-transform: none; letter-spacing: 0; white-space: normal; min-width: 7.5em; }
+.fc-table td { white-space: nowrap; }
+.fc-cand { border-left: 4px solid var(--party-color, var(--border)); white-space: normal !important; min-width: 8.5em; max-width: 14em; }
+.fc-fav { font-weight: 700; box-shadow: inset 0 0 0 2px var(--accent); border-radius: 4px; }
+.fc-others td { color: var(--muted); }
+.fc-notes { margin: 6px 0 0; }
+.fc-final2 h4 { margin: 12px 0 4px; font-size: 0.9rem; }
+.fc-pairs { margin: 0; padding-left: 1.4em; }
+.fc-pairs li { padding: 2px 0; }
+.fc-final2 p { margin: 4px 0 0; }
+.fc-2022 { min-height: 1.5em; }
 .fc-list { list-style: none; margin: 0; padding: 0; }
 .fc-list > li { padding: 3px 0; }
 .fc-src { color: var(--muted); font-size: 0.85rem; }

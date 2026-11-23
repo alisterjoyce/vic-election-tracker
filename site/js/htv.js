@@ -43,7 +43,7 @@
       if (c.status === "same_as") col.same.push(c);
       else { if (col.card.status === "same_as") col.card = c; col.cards.push(c); }
     }
-    // Parties' cards in the site's fixed party order, then independents' cards, then others' (CLAUDE.md, "Neutral ordering").
+    // Parties' cards in the site's fixed party order, then independents' cards, then others' (CLAUDE.md, "Ordering": no number shown, so the fixed order).
     const rank = (c) => (c.kind === "party" ? 0 : c.kind === "independent" ? 1 : 2);
     return [...cols.values()].sort((a, b) => rank(a.card) - rank(b.card)
       || (a.card.kind === "party" ? App.partyOrder(a.card.party, b.card.party) : 0) || who(a.card).localeCompare(who(b.card)));

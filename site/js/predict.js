@@ -46,19 +46,20 @@
 
   function renderSummary() {
     const c = counts(), base = counts((id) => defaults[id]);
-    const segments = BLOCS.filter((b) => c[b]).map((b) => ({ code: COLOR[b], n: c[b] }));
-    const hemi = App.hemicycle({ segments, label: `Your parliament: ${BLOCS.filter((b) => c[b]).map((b) => `${LABEL[b]} ${c[b]}`).join(", ")}. ${MAJORITY} seats needed for a majority.` });
+    const ranked = BLOCS.slice().sort(App.byValue((b) => c[b]));   // most seats first, ties in the fixed party order
+    const segments = ranked.filter((b) => c[b]).map((b) => ({ code: COLOR[b], n: c[b] }));
+    const hemi = App.hemicycle({ segments, label: `Your parliament: ${ranked.filter((b) => c[b]).map((b) => `${LABEL[b]} ${c[b]}`).join(", ")}. ${MAJORITY} seats needed for a majority.` });
     const changed = Object.keys(picks).length;
     const diff = (b) => { const d = c[b] - base[b]; return `<span class="pred-diff">${d ? `${d > 0 ? "+" : "−"}${Math.abs(d)}` : ""}</span>`; };   // always there, so the figures line up
     $("pred-summary").innerHTML = `<figure class="pred-hemi">${hemi}</figure>
       <div class="pred-side"><p class="pred-verdict">${escapeHtml(verdict(c))}</p>
-        <ul class="pred-totals">${BLOCS.map((b) => `<li><span class="swatch" style="background:var(${App.partyVar(COLOR[b])})"></span>${LABEL[b]}<b>${c[b]}</b>${diff(b)}</li>`).join("")}
+        <ul class="pred-totals">${ranked.map((b) => `<li><span class="swatch" style="background:var(${App.partyVar(COLOR[b])})"></span>${LABEL[b]}<b>${c[b]}</b>${diff(b)}</li>`).join("")}
           <li class="hb-maj-key"><span class="hb-maj-mark"></span>${MAJORITY} for a majority</li></ul></div>`;
     $("pred-note").textContent = changed
       ? `You've changed ${changed} seat${changed === 1 ? "" : "s"} from the starting picks; the small figures show the difference.`
       : "These are the starting picks. Change any seat below.";
     $("pred-strip").innerHTML = `<span class="pred-strip-v">${escapeHtml(verdict(c))}</span>
-      <span class="pred-strip-n">${BLOCS.filter((b) => c[b]).map((b) => `<span><i style="background:var(${App.partyVar(COLOR[b])})"></i>${SHORT[b]} <b>${c[b]}</b></span>`).join("")}</span>`;
+      <span class="pred-strip-n">${ranked.filter((b) => c[b]).map((b) => `<span><i style="background:var(${App.partyVar(COLOR[b])})"></i>${SHORT[b]} <b>${c[b]}</b></span>`).join("")}</span>`;
     $("pred-reset").disabled = !changed;
   }
 

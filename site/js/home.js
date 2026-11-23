@@ -79,10 +79,10 @@
     el.innerHTML = html;
   }
 
-  // One 88-seat bar: blocs in the site's fixed party order (never by size), undecided last, with the majority mark.
+  // One 88-seat bar: blocs largest first (ties in the fixed party order), undecided last, with the majority mark.
   // `fmt` formats a count (expected seats from a model are fractional: one decimal in the key, whole seats on the bar).
   function heroBar(counts, what, fmt = String) {
-    const order = Object.keys(counts).filter((b) => b !== "UND" && counts[b] > 0).sort(byPartyOrder);
+    const order = Object.keys(counts).filter((b) => b !== "UND" && counts[b] > 0).sort(App.byValue((b) => counts[b]));
     if (counts.UND) order.push("UND");
     const top = order.filter((b) => b !== "UND").reduce((best, b) => (best == null || counts[b] > counts[best] ? b : best), null);
     const fill = (b) => (b === "UND" ? "" : `background:var(${partyVar(BLOC_CODE[b])});color:${App.inkVar(BLOC_CODE[b])}`);
@@ -101,7 +101,7 @@
     if (s && series.length) {
       const lnp = s.current, alp = 100 - s.current;
       const last = series[series.length - 1];
-      const sides = [["Labor", alp, "--p-alp"], ["Coalition", lnp, "--p-lib"]];   // the fixed party order, not the leader first
+      const sides = [["Labor", alp, "--p-alp", "ALP"], ["Coalition", lnp, "--p-lib", "LNP"]].sort(App.byValue((s) => s[1], (s) => s[3]));   // the larger first
       document.getElementById("hero-tpp").innerHTML = sides.map(([n, v, c]) =>
         `<span class="tpp-side" style="--side:var(${c})">${n} <b>${v.toFixed(1)}</b></span>`).join('<span class="tpp-dash"> – </span>');
       // The 95% interval of the same average (Labor's is the Coalition's mirrored).
@@ -138,11 +138,11 @@
     const one = (a) => {
       let figs;
       if (a.tpp && a.tpp.LNP != null && a.tpp.ALP != null) {
-        const sides = [["ALP", a.tpp.ALP], ["L/NP", a.tpp.LNP]];
+        const sides = [["ALP", a.tpp.ALP, "ALP"], ["L/NP", a.tpp.LNP, "LNP"]].sort(App.byValue((s) => Number(s[1]), (s) => s[2]));   // the larger first
         figs = `${sides.map(([n, v]) => `${n} ${Number(v).toFixed(1)}`).join("–")}`;
       } else {
         figs = ["LNP", "ALP", "ONP", "GRN"].filter((k) => a.primary && a.primary[k] != null)
-          .sort(byPartyOrder)
+          .sort(App.byValue((k) => Number(a.primary[k])))
           .map((k) => `${partyShort(k)} ${Number(a.primary[k]).toFixed(1)}`).join(", ");
         figs = `primary vote ${figs}`;
       }
@@ -177,7 +177,7 @@
     if (!close.length) { el.innerHTML = '<li class="empty">No betting markets recorded yet.</li>'; return; }
     const opt = (x) => `<span class="watch-opt"><span class="swatch" style="background:var(${partyVar(x.party || "OTH")})"></span>${escapeHtml(x.party ? partyShort(x.party) : x.label)} <b>${fmtPrice(x.price)}</b></span>`;
     el.innerHTML = close.map((o) => {
-      const [a, b] = priced(o).slice(0, 2).sort((x, y) => (!x.party - !y.party) || (x.party && y.party ? byPartyOrder(x.party, y.party) : 0));   // the two shortest prices, in the fixed party order
+      const [a, b] = priced(o).slice(0, 2);   // the two shortest prices, shortest (the favourite) first
       return `<li><a href="lower.html#${escapeHtml(o.district)}">${escapeHtml(names[o.district] || o.district)}</a><span class="watch-odds">${opt(a)}${opt(b)}</span></li>`;
     }).join("");
     document.getElementById("watch-note").textContent = odds.date_checked ? `Sportsbet, ${fmtDate(odds.date_checked)}` : "Sportsbet";
@@ -214,7 +214,7 @@
   function seatBlock(counts, total, unknownLabel) {
     const majority = Math.floor(total / 2) + 1;
     const known = Object.values(counts).reduce((a, b) => a + b, 0);
-    const parties = Object.keys(counts).sort(byPartyOrder);
+    const parties = Object.keys(counts).sort(App.byValue((p) => counts[p]));   // most seats first
     const segs = parties.map((p) =>
       `<span style="width:${(counts[p] / total) * 100}%;background:var(${partyVar(p)})" title="${escapeHtml(partyName(p))}: ${counts[p]}"></span>`
     ).join("");
@@ -260,7 +260,9 @@
     const keys = new Set();
     polls.forEach((p) => Object.keys(p[measure] || {}).forEach((k) => keys.add(k)));
     if (measure === "primary" && keys.delete("IND")) keys.add("OTH");
-    return [...keys].sort(byPartyOrder);
+    // Largest current average first (the legend's order), ties in the fixed party order.
+    const latest = (k) => { const a = average(k); return a.length ? a[a.length - 1].y : null; };
+    return [...keys].sort(App.byValue(latest));
   }
 
   function average(key) {
@@ -441,7 +443,7 @@
     const s = App.statewideSwing(meta, pollData);
     if (!s) throw new Error("No poll average available");
     const primaries = {};
-    ["ALP", "LNP", "ONP", "GRN"].sort(byPartyOrder).forEach((k) => {
+    ["ALP", "LNP", "ONP", "GRN"].forEach((k) => {
       const v = last((p) => (p.primary && p.primary[k] != null ? p.primary[k] : null));
       if (v != null) primaries[k] = v;
     });

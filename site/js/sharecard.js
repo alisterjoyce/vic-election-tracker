@@ -346,11 +346,11 @@
   }
 
   // The seat models' projection (App.modelSeats) as share-card rows: per bloc the span from the lowest to the
-  // highest model, a dot at the median and the majority mark, in the fixed party order; and the models, dated.
+  // highest model, a dot at the median and the majority mark, largest median first; and the models, dated.
   const MV_BLOC = { GRN: ["Greens", "--p-grn"], ALP: ["Labor", "--p-alp"], LNP: ["Coalition", "--p-lib"], ONP: ["One Nation", "--p-onp"], OTH: ["Others", "--p-ind"] };
   function modelRows(ms) {
     const r = Math.round, pos = (n) => (100 * Math.min(n, 88)) / 88;
-    return App.BLOCS.filter((b) => ms.summary[b] && ms.summary[b].hi >= 0.5).map((b) => {
+    return App.BLOCS.filter((b) => ms.summary[b] && ms.summary[b].hi >= 0.5).sort(App.byValue((b) => ms.summary[b].median)).map((b) => {
       const s = ms.summary[b], [label, v] = MV_BLOC[b];
       return `<div class="hc-bar"><span>${label}</span><span class="hc-track"><b style="left:${pos(s.lo)}%;width:${pos(s.hi) - pos(s.lo)}%;background:var(${v})"></b><i style="left:${pos(45)}%"></i><em style="left:${pos(s.median)}%;background:var(${v})"></em></span>
         <strong>${r(s.median)}${r(s.lo) !== r(s.hi) ? `<small>${r(s.lo)}–${r(s.hi)}</small>` : ""}</strong></div>`;
@@ -373,7 +373,7 @@
           <div class="hc-facts">
             <div><span class="hc-label">Poll of polls, 2PP</span><span class="hc-value">Labor ${avg.ALP2pp.toFixed(1)} · L/NP ${avg.LNP2pp.toFixed(1)}</span>
               <span class="hc-sub">Smoothed average of ${avg.n} published polls</span></div>
-            <div><span class="hc-label">Primary vote</span><span class="hc-value">${Object.entries(avg.primaries).sort(([a], [b]) => App.partyOrder(a, b)).map(([k, v]) => `${escapeHtml(App.partyShort(k))} ${v.toFixed(0)}`).join(" · ")}</span>
+            <div><span class="hc-label">Primary vote</span><span class="hc-value">${Object.entries(avg.primaries).sort(App.byValue(([, v]) => v, ([k]) => k)).map(([k, v]) => `${escapeHtml(App.partyShort(k))} ${v.toFixed(0)}`).join(" · ")}</span>
               <span class="hc-sub">Poll-of-polls averages</span></div>
           </div>
           <div class="hc-label">Seats: median of ${ms.models.length} seat models, shaded from lowest to highest (45 for a majority)</div>
@@ -461,7 +461,7 @@
     const s = App.statewideSwing(meta, pollData);
     if (!s) throw new Error("No poll average available");
     const primaries = {};
-    ["LNP", "ALP", "ONP", "GRN"].sort(App.partyOrder).forEach((k) => {
+    ["LNP", "ALP", "ONP", "GRN"].forEach((k) => {
       const v = last((p) => (p.primary && p.primary[k] != null ? p.primary[k] : null));
       if (v != null) primaries[k] = v;
     });
@@ -480,7 +480,7 @@
     const lead = lnp >= 50 ? ["Coalition", lnp, "Labor", alp] : ["Labor", alp, "Coalition", lnp];
     const BLOC = { LNP: ["Coalition", "--p-lib"], ALP: ["Labor", "--p-alp"], GRN: ["Greens", "--p-grn"], ONP: ["One Nation", "--p-onp"], OTH: ["Others", "--p-ind"] };
     const BLOC_SHORT = { LNP: "L/NP", ALP: "ALP", GRN: "GRN", ONP: "ONP", OTH: "OTH" };
-    const seats = App.BLOCS.filter((b) => ms.summary[b] && Math.round(ms.summary[b].median) > 0);   // the fixed party order, never by size
+    const seats = App.BLOCS.filter((b) => ms.summary[b] && Math.round(ms.summary[b].median) > 0).sort(App.byValue((b) => ms.summary[b].median));   // largest median first
     const pct = (v) => `${Math.round(v)}%`;
     const move = (m) => {
       const party = escapeHtml(App.partyName(m.party));
@@ -500,7 +500,7 @@
           <div class="hc-kicker">This week · ${escapeHtml(fmtDate(day))}${days > 0 ? ` · ${days} days to election day` : ` · election day ${escapeHtml(fmtDate(electionDate))}`}</div>
           <div class="hc-title hc-title-sm">${lead[0]} ${lead[1].toFixed(1)} – ${lead[2]} ${lead[3].toFixed(1)} <span class="hc-sub">2PP, poll of polls</span></div>
           <div class="hc-facts">
-            <div><span class="hc-label">Primary vote</span><span class="hc-value">${Object.entries(primaries).map(([k, v]) => `${escapeHtml(App.partyShort(k))} ${v.toFixed(0)}`).join(" · ")}</span>
+            <div><span class="hc-label">Primary vote</span><span class="hc-value">${Object.entries(primaries).sort(App.byValue(([, v]) => v, ([k]) => k)).map(([k, v]) => `${escapeHtml(App.partyShort(k))} ${v.toFixed(0)}`).join(" · ")}</span>
               <span class="hc-sub">Average of ${n} polls</span></div>
             <div><span class="hc-label">Seat models, median of ${ms.models.length} (45 to win)</span>
               ${seats.length ? `<div class="hc-seatrow">${App.modelsHemicycle(ms)}<ul class="hc-seatlist">${seats.map((b) => {
@@ -522,7 +522,7 @@
 
   /* ---------- Build your own prediction (predict.html): the reader's parliament and totals ---------- */
   function predictCard({ counts, changed }) {
-    const blocs = App.BLOCS.filter((b) => counts[b]);   // the fixed party order
+    const blocs = App.BLOCS.filter((b) => counts[b]).sort(App.byValue((b) => counts[b]));   // most seats first
     const top = App.BLOCS.reduce((a, b) => (counts[b] > counts[a] ? b : a));
     const L = App.BLOC_LABEL, C = App.BLOC_COLOR;
     const title = counts[top] >= 45 ? `${L[top]} majority, ${counts[top]} seats` : `No majority: ${L[top]} ${counts[top]}, ${45 - counts[top]} short`;

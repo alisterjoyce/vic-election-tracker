@@ -8,8 +8,8 @@ A static tracker for the 2026 Victorian state election (polling day Saturday 28 
 - **Lower house** (`lower.html`): filter districts by region and metro/regional, then pick one to see its sitting MP, margin and candidates with status badges. Each district links to its ABC guide page and its page in [The Poll Bludger's guide](https://pollbludger.net/vic2026/) (`LA.htm?s=` + the name without spaces); where the Poll Bludger's guide lists a different margin, a note under ours gives its figure ("Poll Bludger: GRN 12.0% vs LIB (2CP)"), and the Data page lists every such seat.
 - **Seat outlook** (on each district page, under the margin cards):
   - **Swing-adjusted margin:** the current poll-of-polls statewide 2PP swing since 2022 (`meta.json` → `previous_election`), applied uniformly to the seat margin. Shown only for Labor-v-Coalition contests.
-  - **MRP estimates:** from `seat_models.json`.
-  - **Betting favourite:** from `seat_odds.json`.
+  - **Forecasts:** a one-line summary of who each source favours, then one row per candidate, sorted by the median win chance across the sources that give one (largest first), with ballot position as a column and a column per source with its date: Australian Election Forecasts' win chance, the YouGov MRP's call, RedBridge's rating (statewide totals only, so "not modelled"), and Sportsbet's price as a chance with the bookmaker's margin removed; each source's favourite is highlighted. Below it, the likeliest final two (the model's top three final pairings with their chance) and the 2022 final pair. From `seat_models.json` and `seat_odds.json`.
+  - **Betting favourite:** from `seat_odds.json`, shortest price first.
   - **Seat polls:** from `seat_polls.json`.
 - **Upper house** (`upper.html`): pick one of the 8 regions to see its current MLCs and 2026 tickets.
 - **Candidates** (`candidate.html`): a directory of every candidate and current MLC (filter by name, seat, house, party), and a profile for each (`candidate.html#bendigo-west/brenton-baldwin`): photo with its source credit, party, status, seat facts, sources, others in the same contest, and a downloadable share card. Seat pages have a share card too.
@@ -36,6 +36,7 @@ A static tracker for the 2026 Victorian state election (polling day Saturday 28 
 - **Navigation:** four groups (Overview, Lower house, Upper house, About) with dropdowns on desktop and a Menu button on phones, built by `common.js`.
 - **On every page:** a key-dates strip under the header (countdowns plus a "Today:" note, from `meta.json` → `key_dates`), and a search box that matches districts, regions, candidates, suburbs and postcodes, grouped as Seats, Candidates (with party colours), Suburbs and Postcodes, with arrow keys, Enter and a "/" shortcut. On the home page it heads the headline card, with a search button in the header.
 - Shareable links: `lower.html#bendigo-east`, `upper.html#northern-victoria`, `candidate.html#bendigo-west/brenton-baldwin`. A district hash on the home page (`/#bendigo-east`) redirects to the lower-house page.
+- **Ordering:** anything that shows a number per party or candidate is sorted by that number, largest first (ties in a fixed alphabetical party order); candidate lists without a projection follow the VEC's ballot order.
 - Light and dark mode follow the system setting and can be overridden with the toggle in the header.
 - The footer shows `last_updated` from `site/data/meta.json`.
 

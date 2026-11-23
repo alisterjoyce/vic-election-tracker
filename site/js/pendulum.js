@@ -77,7 +77,7 @@
   }
 
   function tallyBars(tally) {
-    return BLOCS.filter((b) => tally[b] > 0 || b === "ALP" || b === "LNP").map((b) => `
+    return BLOCS.filter((b) => tally[b] > 0 || b === "ALP" || b === "LNP").sort(App.byValue((b) => tally[b])).map((b) => `
       <div class="tally-row">
         <span class="tally-label">${BLOC_NAMES[b]}</span>
         <span class="tally-track"><span class="tally-fill" style="width:${(100 * tally[b]) / SEATS}%;background:var(${blocVar(b)})"></span>
@@ -166,7 +166,7 @@
       const cur = currentPolls();
       const avg = average ? average.current : null;
       body = `
-        <p class="small muted">At ${escapeHtml(swingText(entry))}: ${BLOCS.filter((b) => tally[b]).map((b) => `${BLOC_NAMES[b]} ${tally[b]}`).join(", ")}.</p>
+        <p class="small muted">At ${escapeHtml(swingText(entry))}: ${BLOCS.filter((b) => tally[b]).sort(App.byValue((b) => tally[b])).map((b) => `${BLOC_NAMES[b]} ${tally[b]}`).join(", ")}.</p>
         <h4>Seats that must fall (${lost.length})</h4>
         ${lost.length ? `<ul class="sc-seats">${lost.map((s) => {
           const w = winners[s.id];
