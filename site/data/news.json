@@ -8,8 +8,50 @@
       "sources": "Source (outlet, the Bing News search, the leader searches, or articles added by hand) -> {status: ok | error | skipped, via: feed | sitemap | Bing News search | news_manual.json, url (what was read), page (the outlet's election page, if any), items (items read this run), last_7_days (election headlines from it dated in the last 7 days), message}"
     }
   },
-  "updated": "2026-11-23T10:15:21Z",
+  "updated": "2026-11-23T20:03:08Z",
   "statewide": [
+    {
+      "title": "As Victorian Labor fights for survival, several unions have left its side",
+      "outlet": "ABC News",
+      "published": "2026-11-23T18:14:28Z",
+      "url": "https://www.abc.net.au/news/2026-11-24/victorian-election-unions-abandon-labor/107367014"
+    },
+    {
+      "title": "Jess Wilson needs three terms to fix Victoria",
+      "outlet": "Australian Financial Review",
+      "published": "2026-11-23T18:00:00Z",
+      "url": "https://www.afr.com/politics/jess-wilson-needs-three-terms-to-fix-victoria-20261124-p61gdo?ref=rss&utm_medium=rss&utm_source=rss_politics"
+    },
+    {
+      "title": "Zoe Daniel shadow launches another Goldstein tilt",
+      "outlet": "Australian Financial Review",
+      "published": "2026-11-23T18:00:00Z",
+      "url": "https://www.afr.com/rear-window/zoe-daniel-shadow-launches-another-goldstein-tilt-20261124-p61ggd?ref=rss&utm_medium=rss&utm_source=rss_politics"
+    },
+    {
+      "title": "Potholes and polling booths: Danny O’Brien’s fight to hold back the orange wave - and fix country roads",
+      "outlet": "The Age",
+      "published": "2026-11-23T11:00:00Z",
+      "url": "https://www.theage.com.au/politics/victoria/potholes-and-polling-booths-danny-o-brien-s-fight-to-hold-back-the-orange-wave-and-fix-country-roads-20261124-p61ggb.html"
+    },
+    {
+      "title": "The Carroll Labor government is set for a wipeout at Saturday’s Victorian state election, another poll shows",
+      "outlet": "news.com.au",
+      "published": "2026-11-23T10:39:00Z",
+      "url": "https://www.news.com.au/national/victoria/politics/the-carroll-labor-government-is-set-for-a-wipeout-at-saturdays-victorian-state-election-another-poll-shows/news-story/650935efda82611d386ce9c845dadb77"
+    },
+    {
+      "title": "Victorian Liberal leader Jess Wilson vows to shut safe injecting room, look at alternative locations",
+      "outlet": "The Australian",
+      "published": "2026-11-23T10:00:00Z",
+      "url": "https://www.theaustralian.com.au/nation/victorian-liberal-leader-jess-wilson-vows-to-shut-safe-injecting-room-look-at-alternative-locations/news-story/fc2546ef79806b35379c26ea562f85eb"
+    },
+    {
+      "title": "Shannon Deery: Jess Wilson rebuilt the Victorian Liberals from a fractured party to an election-ready government",
+      "outlet": "Herald Sun",
+      "published": "2026-11-23T06:59:00Z",
+      "url": "https://www.heraldsun.com.au/news/opinion/shannon-deery-jess-wilson-rebuilt-the-victorian-liberals-from-a-fractured-party-to-an-electionready-government/news-story/1d713eab619bd3cbf1843ce0bac110a1"
+    },
     {
       "title": "Why Ben Carroll can’t outrun the Andrews-Allan legacy",
       "outlet": "Australian Financial Review",
@@ -21,6 +63,12 @@
       "outlet": "Guardian Australia",
       "published": "2026-11-23T03:23:44Z",
       "url": "https://www.theguardian.com/australia-news/2026/nov/23/victorian-liberal-party-uses-ai-to-write-jess-wilsons-tribute-to-molly-meldrum"
+    },
+    {
+      "title": "Victorian election 2026: What’s on voters’ minds and when will we know who won?",
+      "outlet": "thetimes",
+      "published": "2026-11-23T02:46:00Z",
+      "url": "https://www.thetimes.com.au/world/54002-victorian-election-2026-whats-on-voters-minds-and-when-will-we-know-who-won"
     },
     {
       "title": "The Snoop: Labor and Greens sling mud at each other, BookTok book tour ableism controversy, and more",
@@ -89,22 +137,16 @@
       "url": "https://www.afr.com/politics/jess-wilson-should-win-but-bookies-shouldn-t-pay-out-yet-20261123-p61g6w?ref=rss&utm_medium=rss&utm_source=rss_politics"
     },
     {
-      "title": "Victorian election 2026: What’s on voters’ minds and when will we know who won?",
-      "outlet": "thetimes",
-      "published": "2026-11-22T17:44:00Z",
-      "url": "https://www.thetimes.com.au/world/54002-victorian-election-2026-whats-on-voters-minds-and-when-will-we-know-who-won"
-    },
-    {
       "title": "21 bush battles set to shape the Victorian state election",
       "outlet": "Herald Sun",
       "published": "2026-11-22T17:07:00Z",
       "url": "https://www.heraldsun.com.au/news/victoria/21-bush-battles-set-to-shape-the-victorian-state-election/news-story/4aac75f57989a92779970b0c931cb55b"
     },
     {
-      "title": "Shannon Deery: Jess Wilson rebuilt the Victorian Liberals from a fractured party to an election-ready government",
-      "outlet": "Herald Sun",
-      "published": "2026-11-22T17:00:00Z",
-      "url": "https://www.heraldsun.com.au/news/opinion/shannon-deery-jess-wilson-rebuilt-the-victorian-liberals-from-a-fractured-party-to-an-electionready-government/news-story/1d713eab619bd3cbf1843ce0bac110a1"
+      "title": "Victorian State Voting Intention: Liberal-National Coalition set for victory at this week’s Victorian State Election",
+      "outlet": "Roy Morgan Research",
+      "published": "2026-11-22T16:00:00Z",
+      "url": "https://www.roymorgan.com/findings/10393-victorian-state-voting-intention-november-2026"
     },
     {
       "title": "Confused About The Victorian Election? Build A Ballot Gives You Somewhere To Start",
@@ -245,6 +287,12 @@
       "url": "https://www.news24.com.au/politics/australian-politics/one-nation-claims-it-is-on-track-to-secure-balance-of-power-as-victorian-election-race-tightens/news-story/e8773e37c852bc0a253c4d37242a14cc"
     },
     {
+      "title": "VICTORIAN ELECTION | From RED TO BLUE, Jess Wilson and the Liberals set for victory | S3 Ep 29",
+      "outlet": "The Spectator Australia",
+      "published": "2026-11-21T08:59:00Z",
+      "url": "https://www.spectator.com.au/2026/11/victorian-election-from-red-to-blue-jess-wilson-and-the-liberals-set-for-victory-s3-ep-29/"
+    },
+    {
       "title": "Dysfunction to discipline: How Jess Wilson has revived the Liberal brand",
       "outlet": "The Australian",
       "published": "2026-11-21T07:50:00Z",
@@ -261,54 +309,6 @@
       "outlet": "Star Weekly",
       "published": "2026-11-21T07:05:00Z",
       "url": "https://starweekly.com.au/news/2026/11/21/last-chance-to-apply-for-a-postal-vote-for-the-state-election/"
-    },
-    {
-      "title": "Labor set for historic defeat at Victorian election, political experts say",
-      "outlet": "ABC News",
-      "published": "2026-11-21T04:25:18Z",
-      "url": "https://www.abc.net.au/news/2026-11-21/victorian-election-final-week/107412434"
-    },
-    {
-      "title": "Liberal voters expected to 'come home' in Victorian leader's seat of Kew",
-      "outlet": "ABC News",
-      "published": "2026-11-21T01:37:55Z",
-      "url": "https://www.abc.net.au/news/2026-11-21/jess-wilson-kew-district-sophie-torney-victorian-electorate/107400636"
-    },
-    {
-      "title": "Ben Carroll and Jess Wilson trade fierce blows on campaign trail one week out from election day",
-      "outlet": "The Australian",
-      "published": "2026-11-20T19:16:00Z",
-      "url": "https://www.theaustralian.com.au/nation/ben-carroll-and-jess-wilson-trade-fierce-blows-on-campaign-trail-one-week-out-from-election-day/news-story/203b333ecdb93699924308572c2a3e51"
-    },
-    {
-      "title": "Liberals have held Kew on shrinking margins. Jess Wilson's leadership could change that",
-      "outlet": "ABC (Australian Broadcasting Corporation) on MSN",
-      "published": "2026-11-20T17:37:55Z",
-      "url": "https://www.msn.com/en-au/news/australia/liberals-have-held-kew-on-shrinking-margins-jess-wilsons-leadership-could-change-that/ar-AA2hTdUw"
-    },
-    {
-      "title": "Candidates make final pitch",
-      "outlet": "gannawarratimes.com.au",
-      "published": "2026-11-20T16:00:00Z",
-      "url": "https://gannawarratimes.com.au/news/2026/11/21/candidates-make-final-pitch/"
-    },
-    {
-      "title": "Labor MP John Lister lashes media minutes after the cameras stop rolling",
-      "outlet": "Herald Sun",
-      "published": "2026-11-20T14:05:00Z",
-      "url": "https://www.heraldsun.com.au/news/victoria/state-election/labor-promises-14m-portable-leave-scheme-for-victorias-patient-transport-workers/live-coverage/31024755e99fa0ce9876a68d3c166ff8"
-    },
-    {
-      "title": "Steve Bracks is on board: Ben Carroll finds a believer as most write off Labor’s Victorian election chances",
-      "outlet": "Guardian Australia",
-      "published": "2026-11-20T14:00:33Z",
-      "url": "https://www.theguardian.com/australia-news/2026/nov/21/steve-bracks-believes-labor-can-win-the-victorian-election"
-    },
-    {
-      "title": "Ex-premier sprinkles hope for Labor's election chances",
-      "outlet": "Australian Associated Press on MSN",
-      "published": "2026-11-20T08:29:00Z",
-      "url": "https://www.msn.com/en-au/news/other/ex-premier-sprinkles-hope-for-labors-election-chances/ar-AA2hN3G3"
     }
   ],
   "seats": {
@@ -448,8 +448,8 @@
       {
         "title": "Six days out from polling day, is there one last hurrah from Jacinta Allan?",
         "outlet": "Bendigo Advertiser",
-        "published": "2026-11-23T00:26:52Z",
-        "url": "https://www.bendigoadvertiser.com.au/story/9395492/jacinta-allan-absent-from-labor-media-events-in-bendigo/?src=rss"
+        "published": "2026-11-23T03:26:00Z",
+        "url": "https://www.bendigoadvertiser.com.au/story/9395492/jacinta-allan-absent-from-labor-media-events-in-bendigo/"
       },
       {
         "title": "Vic Premier Ben Carroll haunted by Daniel Andrews at debate",
@@ -812,7 +812,7 @@
       {
         "title": "Victorian election 2026: What’s on voters’ minds and when will we know who won?",
         "outlet": "thetimes",
-        "published": "2026-11-22T17:44:00Z",
+        "published": "2026-11-23T02:46:00Z",
         "url": "https://www.thetimes.com.au/world/54002-victorian-election-2026-whats-on-voters-minds-and-when-will-we-know-who-won"
       },
       {
@@ -1058,7 +1058,14 @@
         "url": "https://lakespost.com.au/22182/the-candidates/"
       }
     ],
-    "gippsland-south": [],
+    "gippsland-south": [
+      {
+        "title": "Potholes and polling booths: Danny O’Brien’s fight to hold back the orange wave - and fix country roads",
+        "outlet": "The Age",
+        "published": "2026-11-23T11:00:00Z",
+        "url": "https://www.theage.com.au/politics/victoria/potholes-and-polling-booths-danny-o-brien-s-fight-to-hold-back-the-orange-wave-and-fix-country-roads-20261124-p61ggb.html"
+      }
+    ],
     "glen-waverley": [
       {
         "title": "Potholes and parking on the minds of Glen Waverley voters as Victorian election nears",
@@ -1169,6 +1176,30 @@
     ],
     "kew": [
       {
+        "title": "Jess Wilson needs three terms to fix Victoria",
+        "outlet": "Australian Financial Review",
+        "published": "2026-11-23T18:00:00Z",
+        "url": "https://www.afr.com/politics/jess-wilson-needs-three-terms-to-fix-victoria-20261124-p61gdo?ref=rss&utm_medium=rss&utm_source=rss_politics"
+      },
+      {
+        "title": "Zoe Daniel shadow launches another Goldstein tilt",
+        "outlet": "Australian Financial Review",
+        "published": "2026-11-23T18:00:00Z",
+        "url": "https://www.afr.com/rear-window/zoe-daniel-shadow-launches-another-goldstein-tilt-20261124-p61ggd?ref=rss&utm_medium=rss&utm_source=rss_politics"
+      },
+      {
+        "title": "Victorian Liberal leader Jess Wilson vows to shut safe injecting room, look at alternative locations",
+        "outlet": "The Australian",
+        "published": "2026-11-23T10:00:00Z",
+        "url": "https://www.theaustralian.com.au/nation/victorian-liberal-leader-jess-wilson-vows-to-shut-safe-injecting-room-look-at-alternative-locations/news-story/fc2546ef79806b35379c26ea562f85eb"
+      },
+      {
+        "title": "Shannon Deery: Jess Wilson rebuilt the Victorian Liberals from a fractured party to an election-ready government",
+        "outlet": "Herald Sun",
+        "published": "2026-11-23T06:59:00Z",
+        "url": "https://www.heraldsun.com.au/news/opinion/shannon-deery-jess-wilson-rebuilt-the-victorian-liberals-from-a-fractured-party-to-an-electionready-government/news-story/1d713eab619bd3cbf1843ce0bac110a1"
+      },
+      {
         "title": "Victorian Liberal party uses AI to write Jess Wilson’s tribute to Molly Meldrum",
         "outlet": "Guardian Australia",
         "published": "2026-11-23T03:23:44Z",
@@ -1179,12 +1210,6 @@
         "outlet": "Australian Financial Review",
         "published": "2026-11-22T18:00:00Z",
         "url": "https://www.afr.com/politics/jess-wilson-should-win-but-bookies-shouldn-t-pay-out-yet-20261123-p61g6w?ref=rss&utm_medium=rss&utm_source=rss_politics"
-      },
-      {
-        "title": "Shannon Deery: Jess Wilson rebuilt the Victorian Liberals from a fractured party to an election-ready government",
-        "outlet": "Herald Sun",
-        "published": "2026-11-22T17:00:00Z",
-        "url": "https://www.heraldsun.com.au/news/opinion/shannon-deery-jess-wilson-rebuilt-the-victorian-liberals-from-a-fractured-party-to-an-electionready-government/news-story/1d713eab619bd3cbf1843ce0bac110a1"
       },
       {
         "title": "A message from Jess Wilson, ahead of the Victorian election",
@@ -1209,24 +1234,6 @@
         "outlet": "The Australia Today",
         "published": "2026-11-22T09:59:00Z",
         "url": "https://www.theaustraliatoday.com.au/jess-wilson-takes-fight-to-labor-with-bold-election-plan-promising-a-fresh-start-for-victoria/"
-      },
-      {
-        "title": "‘Victorians have had enough’: Three Melbourne stabbings in one night reignite crime debate days before election",
-        "outlet": "News24",
-        "published": "2026-11-22T05:15:00Z",
-        "url": "https://www.news24.com.au/politics/australian-politics/victorians-have-had-enough-three-melbourne-stabbings-in-one-night-reignite-crime-debate-days-before-election/news-story/ae1bafc9b2476ebd08a48f1d6e9a1911"
-      },
-      {
-        "title": "Carroll sandbags Labor heartland as wipeout looms",
-        "outlet": "Australian Financial Review",
-        "published": "2026-11-22T04:14:34Z",
-        "url": "https://www.afr.com/politics/federal/brazil-ex-president-bolsonaro-taken-to-icu-mexico-captures-top-drug-lord-20261122-p61g6z?ref=rss&utm_medium=rss&utm_source=rss_politics"
-      },
-      {
-        "title": "Inside a would-be millennial premier's path to power",
-        "outlet": "inkl",
-        "published": "2026-11-21T12:00:00Z",
-        "url": "https://www.inkl.com/news/inside-a-would-be-millennial-premiers-path-to-power"
       }
     ],
     "kororoit": [],
@@ -1685,6 +1692,12 @@
         "url": "https://www.news.com.au/finance/culture/inside-parliament/richard-marles-says-ben-carroll-is-doing-a-good-job-7-times-but-uphill-battle-looms/news-story/fdd5e1403aafe6049f04df844a0632af"
       },
       {
+        "title": "VICTORIAN ELECTION | From RED TO BLUE, Jess Wilson and the Liberals set for victory | S3 Ep 29",
+        "outlet": "The Spectator Australia",
+        "published": "2026-11-21T08:59:00Z",
+        "url": "https://www.spectator.com.au/2026/11/victorian-election-from-red-to-blue-jess-wilson-and-the-liberals-set-for-victory-s3-ep-29/"
+      },
+      {
         "title": "Labor set for historic defeat at Victorian election, political experts say",
         "outlet": "ABC News",
         "published": "2026-11-21T04:25:18Z",
@@ -1695,12 +1708,6 @@
         "outlet": "The Australian",
         "published": "2026-11-20T19:16:00Z",
         "url": "https://www.theaustralian.com.au/nation/ben-carroll-and-jess-wilson-trade-fierce-blows-on-campaign-trail-one-week-out-from-election-day/news-story/203b333ecdb93699924308572c2a3e51"
-      },
-      {
-        "title": "Steve Bracks is on board: Ben Carroll finds a believer as most write off Labor’s Victorian election chances",
-        "outlet": "Guardian Australia",
-        "published": "2026-11-20T14:00:33Z",
-        "url": "https://www.theguardian.com/australia-news/2026/nov/21/steve-bracks-believes-labor-can-win-the-victorian-election"
       }
     ],
     "northcote": [
@@ -1974,9 +1981,9 @@
     "ripon": [
       {
         "title": "Ripon election hangs in balance as One Nation and Coalition challenge vulnerable Labor",
-        "outlet": "Geelong Advertiser",
+        "outlet": "Herald Sun",
         "published": "2026-11-18T10:00:00Z",
-        "url": "https://www.geelongadvertiser.com.au/news/victoria/ripon-election-hangs-in-balance-as-one-nation-and-coalition-challenge-vulnerable-labor/news-story/57e7cfac3bdebc7c389d137b27ec7a8a"
+        "url": "https://www.heraldsun.com.au/news/victoria/ripon-election-hangs-in-balance-as-one-nation-and-coalition-challenge-vulnerable-labor/news-story/57e7cfac3bdebc7c389d137b27ec7a8a"
       },
       {
         "title": "Victorian Labor MP accuses council of mismanaging Maryborough pool redevelopment",
@@ -2356,7 +2363,7 @@
       "url": "https://www.abc.net.au/news/feed/51120/rss.xml",
       "via": "feed and Bing News search",
       "items": 37,
-      "last_7_days": 8
+      "last_7_days": 7
     },
     "The Age": {
       "status": "ok",
@@ -2372,7 +2379,7 @@
       "via": "Bing News search",
       "items": 12,
       "message": "robots.txt disallows the whole site (checked 16 Nov 2026)",
-      "last_7_days": 4
+      "last_7_days": 5
     },
     "Guardian Australia": {
       "status": "ok",
@@ -2394,7 +2401,7 @@
       "page": "https://www.nine.com.au/australia-news/vic",
       "url": "https://www.nine.com.au/sitemaps/news/brands/nine",
       "via": "sitemap",
-      "items": 142,
+      "items": 154,
       "last_7_days": 0
     },
     "7News": {
@@ -2435,13 +2442,13 @@
       "url": "https://www.afr.com/rss/politics.xml",
       "via": "feed",
       "items": 20,
-      "last_7_days": 3
+      "last_7_days": 4
     },
     "AAP": {
       "status": "ok",
       "url": "https://www.bing.com/news/search?q=site%3Aaap.com.au+%22Victorian+election%22",
       "via": "Bing News search",
-      "items": 11,
+      "items": 12,
       "message": "no RSS feed found",
       "last_7_days": 0
     },
@@ -2478,7 +2485,7 @@
       "status": "ok",
       "url": "https://www.bing.com/news/search?q=site%3Athenewdaily.com.au+%22Victorian+election%22",
       "via": "Bing News search",
-      "items": 10,
+      "items": 11,
       "message": "no RSS feed found",
       "last_7_days": 0
     },
@@ -2494,7 +2501,7 @@
       "status": "ok",
       "url": "https://www.dailymail.co.uk/auhome/index.rss",
       "via": "feed",
-      "items": 76,
+      "items": 79,
       "last_7_days": 0
     },
     "Bendigo Advertiser": {
@@ -2523,7 +2530,7 @@
       "url": "https://www.latrobevalleyexpress.com.au/feed/",
       "via": "feed",
       "items": 12,
-      "last_7_days": 2
+      "last_7_days": 0
     },
     "Sunraysia Daily": {
       "status": "ok",
@@ -2537,7 +2544,7 @@
       "url": "https://www.starweekly.com.au/feed/",
       "via": "feed",
       "items": 12,
-      "last_7_days": 1
+      "last_7_days": 0
     },
     "Shepparton News": {
       "status": "error",
@@ -2555,9 +2562,9 @@
       "status": "ok",
       "url": "https://www.bing.com/news/search",
       "via": "Bing News search",
-      "items": 72,
+      "items": 71,
       "message": "10 searches for 5 party leaders",
-      "last_7_days": 28
+      "last_7_days": 31
     },
     "Added by hand": {
       "status": "ok",
@@ -2573,7 +2580,7 @@
       "via": "Bing News search",
       "items": 176,
       "message": "176 searches for 88 districts, plus 2 statewide",
-      "last_7_days": 37
+      "last_7_days": 34
     },
     "Google News": {
       "status": "skipped",

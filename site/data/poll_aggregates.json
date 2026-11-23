@@ -13,7 +13,7 @@
       "aggregates[].tpp_note": "Why tpp is null, in a few words"
     }
   },
-  "updated": "2026-11-22T23:30:36Z",
+  "updated": "2026-11-23T19:53:11Z",
   "aggregates": [
     {
       "id": "bludgertrack",
@@ -25,18 +25,18 @@
       "licence": null,
       "cadence": "daily",
       "primary": {
-        "ALP": 21.5,
-        "LNP": 31.5,
-        "GRN": 15.1,
-        "ONP": 22.1
+        "ALP": 21.0,
+        "LNP": 31.8,
+        "GRN": 15.3,
+        "ONP": 21.7
       },
       "tpp": {
-        "ALP": 46.2,
-        "LNP": 53.8
+        "ALP": 46.0,
+        "LNP": 54.0
       },
-      "as_of": "2026-11-17",
-      "published": "2026-11-22T07:28:50Z",
-      "checked": "2026-11-23"
+      "as_of": "2026-11-19",
+      "published": "2026-11-23T12:13:50Z",
+      "checked": "2026-11-24"
     },
     {
       "id": "acestrategies",
@@ -48,19 +48,19 @@
       "licence": null,
       "cadence": "daily",
       "primary": {
-        "LNP": 29.9,
+        "LNP": 30.1,
         "ALP": 23.3,
-        "ONP": 22.6,
-        "GRN": 14.0,
-        "OTH": 11.1
+        "ONP": 22.5,
+        "GRN": 13.9,
+        "OTH": 11.3
       },
       "tpp": {
-        "LNP": 54.8,
-        "ALP": 45.2
+        "LNP": 55.1,
+        "ALP": 44.9
       },
-      "as_of": "2026-11-22",
-      "published": "2026-11-22T22:18:00+11:00",
-      "checked": "2026-11-23"
+      "as_of": "2026-11-23",
+      "published": "2026-11-23T22:17:00+11:00",
+      "checked": "2026-11-24"
     },
     {
       "id": "electiontracker",
@@ -83,7 +83,7 @@
       "published": "2026-11-22T21:39:20.977Z",
       "polls_included": 5,
       "tpp": null,
-      "checked": "2026-11-23"
+      "checked": "2026-11-24"
     }
   ]
 }

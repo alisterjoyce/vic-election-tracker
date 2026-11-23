@@ -30,7 +30,7 @@
       "start_date": "2026-11-06",
       "end_date": "2026-11-23",
       "pollster": "YouGov",
-      "client": "News24",
+      "client": "News24/Herald Sun",
       "sample_size": 3890,
       "source_url": "https://www.news24.com.au/politics/australian-politics/victorian-labor-headed-for-nightmare-state-election-recording-worst-vote-since-1902-as-coalition-set-for-landslide-victory/news-story/d5f3b4209cbfc3c3c03d8afc852d8c66",
       "primary": {
@@ -45,9 +45,40 @@
         "ALP": 42,
         "LNP": 58
       },
+      "tpp3": {
+        "ALP": 38,
+        "LNP": 37,
+        "ONP": 25
+      },
+      "preferred_premier": {
+        "matchup": "Carroll vs Wilson vs Pickering",
+        "leaders": {
+          "Carroll": 19,
+          "Wilson": 34,
+          "Pickering": 19
+        },
+        "undecided": 29
+      },
+      "approval": {
+        "matchup": "Carroll vs Wilson vs Pickering",
+        "leaders": {
+          "Carroll": {
+            "positive": 30,
+            "negative": 59,
+            "undecided": 11,
+            "net": -29
+          },
+          "Wilson": {
+            "positive": 50,
+            "negative": 38,
+            "undecided": 12,
+            "net": 12
+          }
+        }
+      },
       "commissioned_by": {
         "category": "media",
-        "name": "News24",
+        "name": "News24/Herald Sun",
         "via": "client"
       }
     },
