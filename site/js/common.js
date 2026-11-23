@@ -389,6 +389,49 @@
     return { winners, tally };
   }
 
+  // Seat totals from every published model in seat_models.json, and per bloc the median, lowest and highest
+  // across them: the home page's seat projection and both home share cards. A forecast counts its expected seats
+  // (the sum of its win chances), a projection its published totals, an MRP its predicted winners (only with a
+  // winner in all 88 seats). A bloc a model doesn't give (a projection's Others, unless its totals make 88) is
+  // left out of that bloc's figures. Returns {models: [{model, seats: {bloc: n | null}, when, basis}], summary:
+  // {bloc: {median, lo, hi, n}}}.
+  const ASSEMBLY_SEATS = 88;
+  function modelSeats(doc) {
+    const rows = (doc && doc.seats) || [];
+    const models = [];
+    ((doc && doc.models) || []).filter((m) => m.published).forEach((m) => {
+      let seats = null, when = "", basis = "";
+      if (m.kind === "forecast" && m.expected_seats) {
+        seats = Object.fromEntries(BLOCS.map((b) => [b, Number(m.expected_seats[b] || 0)]));
+        when = m.model_date ? `model of ${fmtDate(m.model_date)}` : "";
+        basis = "expected seats";
+      } else if (m.kind === "projection" && m.totals) {
+        seats = Object.fromEntries(BLOCS.map((b) => [b, m.totals[b] != null ? Number(m.totals[b]) : null]));
+        const known = BLOCS.reduce((sum, b) => sum + (seats[b] || 0), 0);
+        if (seats.OTH == null && known === ASSEMBLY_SEATS) seats.OTH = 0;
+        when = m.published_date ? `published ${fmtDate(m.published_date)}` : "";
+        basis = `seat totals${m.totals.toss_up ? ` (${m.totals.toss_up} toss-ups)` : ""}`;
+      } else if (m.kind === "mrp") {
+        const won = rows.filter((r) => r.model === m.id && r.winner);
+        if (won.length === ASSEMBLY_SEATS) {
+          seats = Object.fromEntries(BLOCS.map((b) => [b, 0]));
+          won.forEach((r) => { seats[blocOf(r.winner)]++; });
+          when = m.published_date ? `published ${fmtDate(m.published_date)}` : m.fieldwork ? `fieldwork ${m.fieldwork}` : "";
+          basis = "predicted winners";
+        }
+      }
+      if (seats) models.push({ model: m, seats, when, basis });
+    });
+    const summary = {};
+    BLOCS.forEach((b) => {
+      const v = models.map((x) => x.seats[b]).filter((n) => n != null).sort((x, y) => x - y);
+      if (!v.length) return;
+      const k = v.length;
+      summary[b] = { median: k % 2 ? v[(k - 1) / 2] : (v[k / 2 - 1] + v[k / 2]) / 2, lo: v[0], hi: v[k - 1], n: k };
+    });
+    return { models, summary };
+  }
+
   /* ---- Candidates: ids, headshots and initials avatars ---- */
   // "<district or region id>/<slug of Given Surname>", matching scripts/build_headshots.py.
   function givenFirst(name) {
@@ -1356,7 +1399,7 @@
     PARTIES, STATUSES, COALITION, partyOrder, candidateOrder, surnameOf, loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, partyBadge, statusBadge,
     slugify, parseDate, fmtDate, fmtMonth, fmtDateTime, dataUpdatedText, fmtPrice, fmtMargin, fmtSwing, melbourneToday, daysBetween,
     hashId, cssVar, currentTheme, showError, copyLink,
-    DAY, preparePolls, pollExclusion, commissionLabel, AVG_MIN_SAMPLE, smoothedSeries, smoothedLatest, fmtRange, pollRecords, statewideSwing, swingAdjusted, projectSeats, BLOCS, blocOf, modelLink, quotaBars,
+    DAY, preparePolls, pollExclusion, commissionLabel, AVG_MIN_SAMPLE, smoothedSeries, smoothedLatest, fmtRange, pollRecords, statewideSwing, swingAdjusted, projectSeats, modelSeats, BLOCS, blocOf, modelLink, quotaBars,
     getWatchlist, setWatchlist, isWatched, toggleWatch, starButton, storageWorks,
     buildSearchIndex, searchItems,
     candidateId, givenFirst, loadHeadshots, avatar, photoCredits, initials, inkFor, inkVar, newsList,

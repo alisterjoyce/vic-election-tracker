@@ -91,7 +91,7 @@
       <ul class="hb-key">${key}<li class="hb-maj-key"><span class="hb-maj-mark"></span>${MAJORITY} for a majority</li></ul>`;
   }
 
-  // Poll-of-polls 2PP, its move over the last fortnight of polling, and the uniform-swing projection.
+  // Poll-of-polls 2PP, its move over the last fortnight of polling, and the betting favourites.
   function renderHero(meta, districts, pollData, odds) {
     const s = App.statewideSwing(meta, pollData);
     const series = smoothedSeries(preparePolls(pollData), (p) => (p.tpp && p.tpp.LNP != null ? p.tpp.LNP : null));
@@ -110,14 +110,8 @@
       document.getElementById("hero-trend").textContent = Math.abs(move) < 0.05
         ? "Steady over the latest fortnight of polling"
         : `${App.fmtSwing(Math.abs(move))} to ${move > 0 ? "Coalition" : "Labor"} this fortnight`;
-      const proj = App.projectSeats(districts, s).tally;
-      document.getElementById("hero-proj").innerHTML = heroBar(proj, "Seat projection at a uniform swing");
-      const note = document.getElementById("hero-proj-note");
-      note.textContent = `Uniform swing, ${App.fmtSwing(Math.abs(s.swing))} to ${s.swing >= 0 ? "L/NP" : "Labor"}`;
-      note.href = `pendulum.html#swing=${(Math.round(s.swing * 10) / 10).toFixed(1)}`;
     } else {
       document.getElementById("hero-tpp").textContent = "No poll average yet";
-      document.getElementById("hero-proj").innerHTML = '<p class="empty">Needs a poll average.</p>';
     }
     // Betting: a joint favourite, a partial market or no market counts as undecided.
     const counts = { UND: 0 };
@@ -154,25 +148,29 @@
     el.innerHTML = `<a href="poll.html#aggregates">Other aggregates:</a> ${list.map(one).join('<span class="agg-sep" aria-hidden="true"> · </span>')}`;
   }
 
-  // Models: Australian Election Forecasts' expected seats (the sum of its win probabilities), RedBridge's totals beneath.
+  // Seat projection: per bloc, the median of the published seat models we hold, with the lowest and highest
+  // model as a range (App.modelSeats), on an 88-seat scale with the majority line; each model, linked and dated,
+  // beneath. Uniform swing can't model One Nation or independents, so it stays on the pendulum as a what-if.
   function renderModels(doc) {
-    const models = (doc && doc.models) || [];
-    const aef = models.find((m) => m.kind === "forecast" && m.published && m.expected_seats);
-    const el = document.getElementById("hero-models");
-    // The header's credit link is in the page itself (no shift when this fills in); the model's date goes on the line beneath.
-    const lines = [];
-    if (aef) {
-      el.innerHTML = heroBar(aef.expected_seats, "Expected seats, Australian Election Forecasts", (n) => Number(n).toFixed(1));
-      lines.push(`Expected seats (sum of win chances), model of ${escapeHtml(fmtDate(aef.model_date))}.`);
-    } else el.innerHTML = '<p class="empty">No forecast model loaded.</p>';
-    const rb = models.find((m) => m.kind === "projection" && m.published && m.totals);
-    if (rb) {
-      const t = rb.totals;
-      const parts = App.BLOCS.filter((b) => b !== "OTH" && t[b] != null).map((b) => `${BLOC_NAMES[b]} ${t[b]}`);
-      if (t.toss_up) parts.push(`${t.toss_up} toss-ups`);
-      lines.push(`<a href="${escapeHtml(rb.source_url)}" rel="noopener" target="_blank">${escapeHtml(rb.name)}</a>, ${escapeHtml(fmtDate(rb.published_date))}: ${escapeHtml(parts.join(" · "))}`);
-    }
-    document.getElementById("hero-models-rb").innerHTML = lines.join(" ");
+    const ms = App.modelSeats(doc);
+    const el = document.getElementById("hero-proj");
+    const list = document.getElementById("hero-proj-models");
+    if (!ms.models.length) { el.innerHTML = '<p class="empty">No seat model loaded.</p>'; list.innerHTML = ""; return; }
+    const blocs = App.BLOCS.filter((b) => ms.summary[b] && ms.summary[b].hi >= 0.5);   // the fixed party order, never by size
+    const r = Math.round;
+    const pos = (n) => `${((100 * Math.min(n, SEATS)) / SEATS).toFixed(2)}%`;
+    const fig = (s) => (r(s.lo) === r(s.hi) ? `${r(s.median)}` : `${r(s.median)} (${r(s.lo)} to ${r(s.hi)})`);
+    const rows = blocs.map((b) => {
+      const s = ms.summary[b], v = partyVar(BLOC_CODE[b]);
+      return `<div class="mv-row"><span class="mv-name">${BLOC_NAMES[b]}</span>
+        <span class="mv-track"><span class="mv-range" style="left:${pos(s.lo)};width:calc(${pos(s.hi)} - ${pos(s.lo)});background:var(${v})"></span><span class="hb-majority" style="left:${pos(MAJORITY)}"></span><span class="mv-mid" style="left:${pos(s.median)};background:var(${v})"></span></span>
+        <span class="mv-num"><b>${r(s.median)}</b>${r(s.lo) !== r(s.hi) ? ` <span class="mv-rng">${r(s.lo)}–${r(s.hi)}</span>` : ""}</span></div>`;
+    }).join("");
+    const label = `Seat projection: median of ${ms.models.length} seat models, with the lowest and highest: ${blocs.map((b) => `${BLOC_NAMES[b]} ${fig(ms.summary[b])}`).join(", ")}. ${MAJORITY} seats needed for a majority.`;
+    el.innerHTML = `<div class="mv" role="img" aria-label="${escapeHtml(label)}">${rows}</div>
+      <ul class="hb-key"><li><span class="mv-key-mid"></span>Median of ${ms.models.length} models</li><li><span class="mv-key-rng"></span>Lowest to highest</li><li class="hb-maj-key"><span class="hb-maj-mark"></span>${MAJORITY} for a majority</li></ul>`;
+    list.innerHTML = ms.models.map(({ model: m, when, basis }) =>
+      `<li>${App.modelLink(m)}${m.client ? ` for ${escapeHtml(m.client)}` : ""}${when ? `, ${escapeHtml(when)}` : ""}: ${escapeHtml(basis)}</li>`).join("");
   }
 
   /* ---------- Seats to watch: the closest betting contests ---------- */
@@ -426,8 +424,8 @@
     });
   }
 
-  /* ---------- Share card: poll average and the uniform-swing seat projection ---------- */
-  function headlineCard(meta, districts, pollData) {
+  /* ---------- Share card: poll average and the seat models' projection ---------- */
+  async function headlineCard(meta, pollData) {
     const all = preparePolls(pollData);
     const last = (fn) => { const s = smoothedSeries(all, fn); return s.length ? s[s.length - 1].y : null; };
     const s = App.statewideSwing(meta, pollData);
@@ -437,12 +435,12 @@
       const v = last((p) => (p.primary && p.primary[k] != null ? p.primary[k] : null));
       if (v != null) primaries[k] = v;
     });
-    // The pendulum's uniform-swing projection; the card folds One Nation into Others.
-    const t = App.projectSeats(districts, s).tally;
-    const tally = { ALP: t.ALP, LNP: t.LNP, GRN: t.GRN, OTH: t.OTH + t.ONP };
+    // The hero card's seat projection: the median and range of the published seat models.
+    const ms = App.modelSeats(await loadJSON("seat_models"));
+    if (!ms.models.length) throw new Error("No seat model available");
     return App.ShareCard.homeCard({
       avg: { LNP2pp: s.current, ALP2pp: 100 - s.current, primaries, n: all.filter((p) => !App.pollExclusion(p)).length },
-      tally, swing: s.swing, electionDate: meta.election_date,
+      ms, electionDate: meta.election_date,
       days: App.daysBetween(App.melbourneToday(), meta.election_date),
     });
   }
@@ -554,13 +552,13 @@
       renderHero(meta, districtData.districts, pollData, odds);
       // The other aggregates' line has its height reserved (style.css), so it can wait until the card has painted.
       App.afterPaint(() => loadJSON("poll_aggregates")).then(renderAggregates, () => {});
-      // seat_models.json is the biggest of these (about 20 KB gzipped): fetched once the card has painted. Its space is reserved.
+      // seat_models.json (the seat projection) is the biggest of these (about 20 KB gzipped): fetched once the card has painted. Its space is reserved.
       App.afterPaint(() => loadJSON("seat_models")).then(renderModels, () => {
-        document.getElementById("hero-models").innerHTML = '<p class="empty">Models failed to load.</p>';
+        document.getElementById("hero-proj").innerHTML = '<p class="empty">Seat models failed to load.</p>';
       });
       renderWatch(districtData.districts, odds);
       renderSeats(meta, districtData.districts, regionData.regions);
-      App.ShareCard.shareButton(document.getElementById("share-home"), async () => headlineCard(meta, districtData.districts, pollData));
+      App.ShareCard.shareButton(document.getElementById("share-home"), () => headlineCard(meta, pollData));
       // "This week": the weekly briefing image (the same card refresh saves as share/this-week.png).
       App.ShareCard.shareButton(document.getElementById("share-week"), () => App.ShareCard.weekly());
       // The headline card paints first; the polls table and the chart (Chart.js, fetched once it has

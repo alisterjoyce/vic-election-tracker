@@ -41,11 +41,13 @@
 
     <section class="hero">
       <h1>Pendulum</h1>
-      <p class="muted">All 88 lower-house seats ordered by their 2022 notional margin. Move the swing to see which seats fall.</p>
+      <p class="muted">All 88 lower-house seats ordered by their 2022 notional margin. Move the swing to see which seats fall: a what-if, not a projection.</p>
     </section>
 
     <section class="card" id="pendulum-card" aria-labelledby="pd-title">
       <div class="card-head"><h2 id="pd-title">Uniform swing</h2></div>
+      <p class="whatif-note"><strong>Uniform swing: a what-if tool that does not model One Nation or independents.</strong>
+        It moves every Labor-v-Coalition seat by the same two-party swing and leaves every other seat with its holder, so it can't show seats One Nation or an independent might win. For a seat projection, see the <a href="index.html">home page</a>, which takes the median of the published seat models.</p>
       <div class="swing-control">
         <label for="swing" class="swing-label"><strong id="swing-value">No swing</strong> <span class="muted small" id="swing-tpp"></span></label>
         <input id="swing" type="range" min="-10" max="15" step="0.1" value="0" aria-describedby="pendulum-note">
@@ -57,7 +59,7 @@
         <p class="muted small" id="pendulum-note"></p>
       </div>
 
-      <h3>Seats won</h3>
+      <h3>Seats won at this uniform swing</h3>
       <div class="tally" id="tally" aria-live="polite"></div>
       <p class="muted small" id="tally-note"></p>
 

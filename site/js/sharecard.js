@@ -345,9 +345,21 @@
     };
   }
 
-  /* avg: {LNP2pp, ALP2pp, primaries: {code: %}, n}; tally: {ALP, LNP, GRN, OTH}; swing: number; days: days to go */
-  function homeCard({ avg, tally, swing, days, electionDate }) {
-    const bar = (label, n, v) => `<div class="hc-bar"><span>${label}</span><span class="hc-track"><span style="width:${(100 * n) / 88}%;background:var(${v})"></span><i style="left:${(100 * 45) / 88}%"></i></span><strong>${n}</strong></div>`;
+  // The seat models' projection (App.modelSeats) as share-card rows: per bloc the span from the lowest to the
+  // highest model, a dot at the median and the majority mark, in the fixed party order; and the models, dated.
+  const MV_BLOC = { GRN: ["Greens", "--p-grn"], ALP: ["Labor", "--p-alp"], LNP: ["Coalition", "--p-lib"], ONP: ["One Nation", "--p-onp"], OTH: ["Others", "--p-ind"] };
+  function modelRows(ms) {
+    const r = Math.round, pos = (n) => (100 * Math.min(n, 88)) / 88;
+    return App.BLOCS.filter((b) => ms.summary[b] && ms.summary[b].hi >= 0.5).map((b) => {
+      const s = ms.summary[b], [label, v] = MV_BLOC[b];
+      return `<div class="hc-bar"><span>${label}</span><span class="hc-track"><b style="left:${pos(s.lo)}%;width:${pos(s.hi) - pos(s.lo)}%;background:var(${v})"></b><i style="left:${pos(45)}%"></i><em style="left:${pos(s.median)}%;background:var(${v})"></em></span>
+        <strong>${r(s.median)}${r(s.lo) !== r(s.hi) ? `<small>${r(s.lo)}–${r(s.hi)}</small>` : ""}</strong></div>`;
+    }).join("");
+  }
+  const modelNames = (ms) => ms.models.map(({ model: m, when }) => `${m.name}${when ? ` (${when})` : ""}`).join(" · ");
+
+  /* avg: {LNP2pp, ALP2pp, primaries: {code: %}, n}; ms: App.modelSeats(seat_models.json); days: days to go */
+  function homeCard({ avg, ms, days, electionDate }) {
     const lead = avg.LNP2pp >= 50 ? ["Coalition", avg.LNP2pp] : ["Labor", avg.ALP2pp];
     return {
       accent: avg.LNP2pp >= 50 ? "--p-lib" : "--p-alp",
@@ -364,8 +376,9 @@
             <div><span class="hc-label">Primary vote</span><span class="hc-value">${Object.entries(avg.primaries).sort(([a], [b]) => App.partyOrder(a, b)).map(([k, v]) => `${escapeHtml(App.partyShort(k))} ${v.toFixed(0)}`).join(" · ")}</span>
               <span class="hc-sub">Poll-of-polls averages</span></div>
           </div>
-          <div class="hc-label">Seats on a uniform swing of ${escapeHtml(App.fmtSwing(swing))} to L/NP (45 for a majority)</div>
-          <div class="hc-bars">${bar("Greens", tally.GRN, "--p-grn")}${bar("Labor", tally.ALP, "--p-alp")}${bar("Coalition", tally.LNP, "--p-lib")}${tally.OTH ? bar("Others", tally.OTH, "--p-ind") : ""}</div>
+          <div class="hc-label">Seats: median of ${ms.models.length} seat models, shaded from lowest to highest (45 for a majority)</div>
+          <div class="hc-bars hc-mv">${modelRows(ms)}</div>
+          <div class="hc-models">${escapeHtml(modelNames(ms))}</div>
         </div>
         <div class="hc-foot"><strong>Vic Election 2026</strong><span>${escapeHtml(siteLink())}</span><span>${escapeHtml(today())}</span></div>`,
     };
@@ -439,8 +452,9 @@
 
   // Everything the weekly card shows, from the published data files.
   async function weekly() {
-    const [meta, dd, pollData, history] = await Promise.all([
-      App.loadJSON("meta"), App.loadJSON("districts"), App.loadJSON("polls"), App.loadJSON("seat_history").catch(() => null)]);
+    const [meta, dd, pollData, history, models] = await Promise.all([
+      App.loadJSON("meta"), App.loadJSON("districts"), App.loadJSON("polls"), App.loadJSON("seat_history").catch(() => null),
+      App.loadJSON("seat_models").catch(() => null)]);
     const districts = dd.districts;
     const all = App.preparePolls(pollData);
     const last = (fn) => { const ser = App.smoothedSeries(all, fn); return ser.length ? ser[ser.length - 1].y : null; };
@@ -451,21 +465,22 @@
       const v = last((p) => (p.primary && p.primary[k] != null ? p.primary[k] : null));
       if (v != null) primaries[k] = v;
     });
-    const tally = App.projectSeats(districts, s).tally;
+    const ms = App.modelSeats(models);   // the home page's seat projection: the seat models' median and range
     const today = App.melbourneToday();
     const next = ((meta.key_dates && meta.key_dates.events) || []).filter((e) => !e.ongoing && e.from > today)
       .sort((a, b) => a.from.localeCompare(b.from))[0] || null;
     const names = Object.fromEntries(districts.map((d) => [d.id, d.name]));
     const moves = seatMovers(history);
-    return weekCard({ today, s, primaries, tally, n: all.filter((p) => !App.pollExclusion(p)).length, next, moves, names,
+    return weekCard({ today, s, primaries, ms, n: all.filter((p) => !App.pollExclusion(p)).length, next, moves, names,
       days: App.daysBetween(today, meta.election_date), electionDate: meta.election_date });
   }
 
-  function weekCard({ today: day, s, primaries, tally, n, next, moves, names, days, electionDate }) {
+  function weekCard({ today: day, s, primaries, ms, n, next, moves, names, days, electionDate }) {
     const lnp = s.current, alp = 100 - s.current;
     const lead = lnp >= 50 ? ["Coalition", lnp, "Labor", alp] : ["Labor", alp, "Coalition", lnp];
     const BLOC = { LNP: ["Coalition", "--p-lib"], ALP: ["Labor", "--p-alp"], GRN: ["Greens", "--p-grn"], ONP: ["One Nation", "--p-onp"], OTH: ["Others", "--p-ind"] };
-    const seats = App.BLOCS.filter((b) => tally[b]);   // the fixed party order, never by size
+    const BLOC_SHORT = { LNP: "L/NP", ALP: "ALP", GRN: "GRN", ONP: "ONP", OTH: "OTH" };
+    const seats = App.BLOCS.filter((b) => ms.summary[b] && Math.round(ms.summary[b].median) > 0);   // the fixed party order, never by size
     const pct = (v) => `${Math.round(v)}%`;
     const move = (m) => {
       const party = escapeHtml(App.partyName(m.party));
@@ -487,8 +502,8 @@
           <div class="hc-facts">
             <div><span class="hc-label">Primary vote</span><span class="hc-value">${Object.entries(primaries).map(([k, v]) => `${escapeHtml(App.partyShort(k))} ${v.toFixed(0)}`).join(" · ")}</span>
               <span class="hc-sub">Average of ${n} polls</span></div>
-            <div><span class="hc-label">Seat projection (45 to win)</span><span class="hc-value">${seats.map((b) => `<i style="background:var(${BLOC[b][1]})"></i>${BLOC[b][0]} ${tally[b]}`).join(" ")}</span>
-              <span class="hc-sub">Uniform swing of ${escapeHtml(App.fmtSwing(Math.abs(s.swing)))} to ${s.swing >= 0 ? "L/NP" : "Labor"}</span></div>
+            <div><span class="hc-label">Seat models, median (45 to win)</span><span class="hc-value">${seats.length ? seats.map((b) => `${BLOC_SHORT[b]} ${Math.round(ms.summary[b].median)}`).join(" · ") : "No model loaded"}</span>
+              <span class="hc-sub">${seats.length ? `Median of ${ms.models.length} models; range ${seats.map((b) => `${BLOC_SHORT[b]} ${Math.round(ms.summary[b].lo)}–${Math.round(ms.summary[b].hi)}`).join(", ")}` : ""}</span></div>
           </div>
           <div class="hc-week-cols">
             <div><div class="hc-label">Biggest seat moves${moves.since ? ` since ${escapeHtml(short(moves.since))}` : ""}</div>
