@@ -2,7 +2,7 @@
 (function () {
   "use strict";
   const App = window.App;
-  const { loadJSON, escapeHtml, partyName, partyVar, partyBadge, statusBadge, hashId, copyLink } = App;
+  const { loadJSON, escapeHtml, partyName, partyVar, partyBadge, statusBadge, hashId, copyLink, fmtDate } = App;
 
   let regions = [];
   let districts = [];
@@ -87,7 +87,64 @@
     </section>`;
   }
 
-  function renderDetail(r) {
+  /* ---------- Regional polling (council_polls.json) and the contest for the last seat ---------- */
+  const QUOTA_PCT = 100 / 6;   // the 2026 Droop quota: one-sixth of the formal vote (plus one vote)
+  const regionPolls = (r) => councilPolls.filter((p) => p.regions && p.regions[r.id]);
+
+  // One poll's figures for the region, largest first (OTH is the pollster's combined others, never one party).
+  function pollBlock(p, r) {
+    const figs = Object.entries(p.regions[r.id]).sort(App.byValue(([, v]) => v, ([k]) => k));
+    const max = Math.max(...figs.map(([, v]) => v));
+    return `<article class="rp-poll">
+      <h3><a href="${escapeHtml(p.source_url)}" target="_blank" rel="noopener">${escapeHtml(p.pollster)}</a>
+        <span class="muted small">${escapeHtml(p.fieldwork_label || "")}${p.published ? `, published ${escapeHtml(fmtDate(p.published))}` : ""}${p.client ? ` for ${escapeHtml(p.client)}` : ""}</span></h3>
+      <ul class="vote-bars">${figs.map(([k, v]) => `<li><span class="vb-name">${escapeHtml(k === "OTH" ? "Others (several parties)" : partyName(k))}</span>
+        <span class="vb-track"><span class="vb-fill" style="display:block;width:${(100 * v) / max}%;background:var(${partyVar(k)})"></span></span>
+        <span class="vb-num">${v.toFixed(1)}%</span></li>`).join("")}</ul>
+      ${p.notes ? `<p class="muted small">${escapeHtml(p.notes)}</p>` : ""}
+    </article>`;
+  }
+
+  // The contest for the last seat on the latest poll, on first preferences: each party's vote in quotas; whole
+  // quotas elect members, and the seats left go to the largest remainders. Parties whose remainder is within half
+  // a quota of the remainder that takes the last seat are in the contest, largest first. No preference flows: the
+  // quota calculator models those.
+  function lastSeat(p, r) {
+    const fig = p.regions[r.id];
+    const total = Object.values(fig).reduce((s, v) => s + v, 0);
+    const parties = Object.entries(fig).filter(([k]) => k !== "OTH").map(([k, v]) => {
+      const q = ((100 * v) / total) / QUOTA_PCT;
+      return { k, v: (100 * v) / total, q, whole: Math.floor(q), rem: q - Math.floor(q) };
+    });
+    const wholeSeats = parties.reduce((s, x) => s + x.whole, 0);
+    const left = 5 - wholeSeats;
+    if (left <= 0) return '<p class="muted">On this poll every seat is filled by whole quotas, so there is no contest for the last seat.</p>';
+    const byRem = parties.slice().sort(App.byValue((x) => x.rem, (x) => x.k));
+    const winner = byRem[left - 1];
+    const contest = byRem.filter((x) => Math.abs(x.rem - winner.rem) <= 0.5);
+    const seatsOf = (x) => x.whole + (byRem.indexOf(x) < left ? 1 : 0);
+    return `<p class="small">On ${escapeHtml(p.pollster)}'s ${escapeHtml(p.fieldwork_label || "")} figures, whole quotas fill ${wholeSeats} of the 5 seats
+      (${parties.filter((x) => x.whole).sort(App.byValue((x) => x.whole, (x) => x.k)).map((x) => `${escapeHtml(partyName(x.k))} ${x.whole}`).join(", ") || "none"}).
+      The ${left === 1 ? "last seat goes" : `last ${left} seats go`} to the largest part-quotas. ${contest.length > 1 ? `These parties are within half a quota of the one that ${left === 1 ? "takes it" : "takes the last"}, largest part-quota first:` : `${escapeHtml(partyName(winner.k))} takes the last seat, and no other party is within half a quota of it:`}</p>
+      <div class="table-scroll"><table class="last-seat">
+        <thead><tr><th>Party</th><th class="num">Vote</th><th class="num">Quotas</th><th class="num">Part-quota left</th><th class="num">Gap to the last seat</th><th class="num">Seats on these figures</th></tr></thead>
+        <tbody>${contest.map((x) => `<tr${x === winner ? ' class="ls-winner"' : ""}><td style="--party-color: var(${partyVar(x.k)})" class="ls-party">${escapeHtml(partyName(x.k))}${x === winner ? ' <span class="muted small">takes the last seat</span>' : ""}</td>
+          <td class="num">${x.v.toFixed(1)}%</td><td class="num">${x.q.toFixed(2)}</td><td class="num">${x.rem.toFixed(2)}</td>
+          <td class="num" data-csv="${(x.rem - winner.rem).toFixed(2)}">${x === winner ? "–" : `${x.rem > winner.rem ? "+" : "−"}${Math.abs(x.rem - winner.rem).toFixed(2)} quota`}</td><td class="num">${seatsOf(x)}</td></tr>`).join("")}</tbody></table></div>
+      <p class="muted small">First preferences only: a quota is one-sixth of the formal vote (16.7%). Preferences decide who really takes the seat, and with optional preferences many votes exhaust; the <a href="#${escapeHtml(r.id)}/quota" data-tab-go="quota">quota calculator</a> models flows and exhaustion. Regional samples are small (see the poll's note), so a gap under a few points is within the poll's error.</p>`;
+  }
+
+  function pollsPanel(r) {
+    const ps = regionPolls(r);
+    if (!ps.length) return '<p class="empty">No published poll gives this region\'s upper-house vote yet.</p>';
+    return `<h3 class="rp-h">Contest for the last seat</h3>${lastSeat(ps[0], r)}
+      <h3 class="rp-h">Latest regional polling</h3>${ps.map((p) => pollBlock(p, r)).join("")}`;
+  }
+
+  const REGION_TABS = ["overview", "groups", "how-to-vote", "polls", "quota"];
+  let showTab = null;
+
+  function renderDetail(r, tab = "overview") {
     const el = document.getElementById("region-detail");
     if (!r) {
       el.innerHTML = '<div class="card"><p class="empty">Choose a region above.</p></div>';
@@ -98,14 +155,18 @@
     const inRegion = districts.filter((d) => d.region === r.id).sort((a, b) => a.name.localeCompare(b.name));
     // Withdrawn tickets stay in regions.json for the record but aren't shown.
     const tickets = (r.tickets || []).filter((t) => t.status !== "withdrawn").sort(ticketSort);
+    const TABS = [["overview", "Overview"], ["groups", "Groups and candidates"], ["how-to-vote", "How-to-vote"], ["polls", "Polls"], ["quota", "Quota calculator"]];
+    const P = (key, html) => App.tabPanel(key, tab, "region", html);
 
     el.innerHTML = `
-      <div class="card">
+      <div class="card" data-region="${escapeHtml(r.id)}">
         <div class="card-head">
           <h2>${escapeHtml(r.name)}</h2>
           <button class="icon-btn" type="button" id="copy-link">Copy link</button>
         </div>
-        <p class="muted small" style="margin-top:0">${r.area === "regional" ? "Regional" : "Metropolitan"} region · 5 members</p>
+        <p class="muted small" style="margin-top:0">${r.area === "regional" ? "Country" : "Metropolitan"} region · 5 members</p>
+        ${App.tabBar(TABS, tab, "region", `${r.name}: sections`)}
+        ${P("overview", `
         ${regionCount(r)}
         <h3>Current MLCs</h3>
         ${(r.mlcs || []).length ? `
@@ -119,10 +180,7 @@
               </li>`).join("")}
           </ul>
           ${App.photoCredits(shots, r.mlcs.map((m) => [r.id, m.name]))}` : '<p class="empty">No members recorded.</p>'}
-      </div>
-
-      <div class="card">
-        <div class="card-head"><h2>2026 tickets</h2><span class="muted small">${tickets.length} group${tickets.length === 1 ? "" : "s"}</span></div>
+        <div class="card-head"><h3>2026 tickets</h3><span class="muted small">${tickets.length} group${tickets.length === 1 ? "" : "s"}</span></div>
         ${tickets.length ? `
           <div class="tickets">
             ${tickets.map((t) => `
@@ -141,52 +199,53 @@
         ${tickets.some((t) => t.order_official === false) ? `<p class="muted small">From the VEC's list of nominations. The VEC drew the
           groups' letters and order at 4 pm on Mon 9 Nov and hasn't published them yet: until it does, each party's names are in the order
           reported before nominations closed, then the other nominees in the order they nominated.</p>` : ""}
-        ${r.notes ? `<p class="muted small" style="margin-bottom:0">${escapeHtml(r.notes)}</p>` : ""}
-      </div>
-
-      ${vec && vec.regions && vec.regions[r.id] ? `<section class="card" id="ballot-order" aria-labelledby="ballot-h">
-        <h2 id="ballot-h">Ballot paper</h2>
-        ${App.ballotPaper(vec.regions[r.id], "upper")}
-      </section>` : ""}
-
-      ${renderExtraCandidates(r)}
-
-      <section class="card" id="region-htv" style="min-height:${htvDocs[r.id] ? 0 : App.Htv.reserve(((vec && vec.regions && vec.regions[r.id] && vec.regions[r.id].groups) || []).length + 2)}px">${htvDocs[r.id] ? App.Htv.section(htvDocs[r.id], { h: "h2" }) : ""}</section>
-
-      <section class="card quota" id="quota-card" aria-label="Quota calculator"></section>
-
-      <div class="card">
-        <h2>Districts in this region</h2>
+        ${r.notes ? `<p class="muted small">${escapeHtml(r.notes)}</p>` : ""}
+        <h3>Districts in this region</h3>
         ${inRegion.length ? `<div class="chips">${inRegion.map((d) =>
           `<a class="chip" href="lower.html#${escapeHtml(d.id)}" style="text-decoration:none">${escapeHtml(d.name)}</a>`).join("")}</div>`
-          : '<p class="empty">No districts in the dataset for this region yet.</p>'}
+          : '<p class="empty">No districts in the dataset for this region yet.</p>'}`)}
+        ${P("groups", `
+        ${vec && vec.regions && vec.regions[r.id] ? `<section id="ballot-order" aria-labelledby="ballot-h">
+          <h3 id="ballot-h">Ballot paper: groups and candidates in ballot order</h3>
+          ${App.ballotPaper(vec.regions[r.id], "upper")}
+        </section>` : '<p class="empty">The VEC\'s list of groups and candidates isn\'t loaded yet.</p>'}
+        ${renderExtraCandidates(r)}`)}
+        ${P("how-to-vote", `<section id="region-htv" style="min-height:${htvDocs[r.id] ? 0 : App.Htv.reserve(((vec && vec.regions && vec.regions[r.id] && vec.regions[r.id].groups) || []).length + 2)}px">${htvDocs[r.id] ? App.Htv.section(htvDocs[r.id], { h: "h3" }) : ""}</section>`)}
+        ${P("polls", pollsPanel(r))}
+        ${P("quota", `<section class="quota" id="quota-card" aria-label="Quota calculator"></section>`)}
       </div>`;
     document.getElementById("copy-link").addEventListener("click", (e) => copyLink(e.currentTarget));
     if (!htvDocs[r.id]) {   // fill the reserved space once the region's cards arrive
       App.Htv.load(r.id).then((doc) => { htvDocs[r.id] = doc; }).catch(() => null).then(() => {
         const box = document.getElementById("region-htv");
         if (!box || hashId().split("/")[0] !== r.id) return;
-        box.innerHTML = App.Htv.section(htvDocs[r.id] || null, { area: r.id, h: "h2" });
+        box.innerHTML = App.Htv.section(htvDocs[r.id] || null, { area: r.id, h: "h3" });
         box.style.minHeight = "";
       });
     }
     if (App.Quota) App.Quota.mount(document.getElementById("quota-card"), r, councilPolls.find((p) => p.regions && p.regions[r.id]));
+    showTab = App.initTabs(el.querySelector(".card"), (key, how) => {
+      if (how === "user") history.replaceState(null, "", key === "overview" ? `#${r.id}` : `#${r.id}/${key}`);
+    });
   }
 
-  // "#northern-victoria" shows a region; "#quota" asks for a region and "#northern-victoria/quota"
-  // opens that region at its quota calculator (the nav's "Quota calculator" link).
+  // "#northern-victoria" shows a region and "#northern-victoria/<tab>" one of its tabs (groups, how-to-vote, polls,
+  // quota); "#quota" asks for a region and then opens its quota calculator (the nav's "Quota calculator" link).
   let quotaMode = false;
   function onHashChange() {
     const [id, sub] = hashId().split("/");
     quotaMode = id === "quota" || sub === "quota";
     const r = regions.find((x) => x.id === id);
+    const tab = REGION_TABS.includes(sub) ? sub : "overview";
+    const card = document.querySelector("#region-detail [data-region]");
+    if (r && showTab && card && card.dataset.region === r.id) { showTab(tab, { how: "hash" }); return; }   // same region, another tab
     renderChips(r ? r.id : "");
-    renderDetail(r);
+    renderDetail(r, tab);
     if (!r && id === "quota") {
       document.getElementById("region-detail").innerHTML =
         '<div class="card"><h2 style="margin-top:0">Quota calculator</h2><p>Choose a region above to open its quota calculator, seeded with the latest regional polling.</p></div>';
     }
-    if (r && sub === "quota") document.getElementById("quota-card").scrollIntoView();
+    if (r && sub) document.querySelector("#region-detail .tabs").scrollIntoView();
   }
 
   async function init() {
