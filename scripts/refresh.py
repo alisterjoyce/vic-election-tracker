@@ -3566,6 +3566,196 @@ def refresh_changelog(data_dir: Path, meta: dict) -> bool:
 
 
 # --------------------------------------------------------------------------
+# Candidate status history: every status a candidates.json row has had (announced, endorsed, vec_nominated,
+# withdrawn, superseded, not_standing ...), with the date and the source of each change, in the row's
+# `status_history`. refresh.py appends an entry whenever a row's status differs from its last one (whichever
+# step, or hand edit, changed it); --backfill-status-history rebuilds every row's history from git history.
+# --------------------------------------------------------------------------
+
+STATUS_SEED_COMMIT = "3b3b4e2"     # the first commit with real candidates: the 30 Oct 2026 research report
+STATUS_SEED_DATE = "2026-10-30"
+STATUS_HISTORY_FIELD = (
+    "[{status, date (YYYY-MM-DD, Melbourne), source, url?}], oldest first: each status the row has had and when it "
+    "changed. source: seed (the 30 Oct 2026 research report) | wikipedia | abc (the ABC election guide) | vec (the VEC's "
+    "list of nominations; for withdrawn, 'did not nominate') | electiontracker (a party or campaign page found through "
+    "electiontracker.au) | hand (entered or corrected by hand; url, where given, is the page it came from, and the row's notes say more). A status the row held only briefly the same day (a correction) isn't kept. url is left out where it is the row's own "
+    "source_url (or, for vec, its vec_url or the seat's VEC nominations page). Backfilled from git history on "
+    "23 Nov 2026 (scripts/refresh.py --backfill-status-history); refresh.py adds an entry whenever the status changes")
+
+
+def _vec_contest_url(c: dict) -> str:
+    """The VEC nominations page for the row's district or region."""
+    if c.get("district"):
+        return f"https://www.vec.vic.gov.au/electoral-boundaries/state-districts/{c['district']}-district/nominations"
+    return f"https://www.vec.vic.gov.au/electoral-boundaries/state-regions/{c.get('region')}-region/nominations"
+
+
+def _status_source(c: dict, rows: list[dict], seed: bool = False) -> tuple[str, str | None]:
+    """(source code, url) for the row's current status: what put it there."""
+    status = c.get("status")
+    if seed:
+        return "seed", None
+    if status == "vec_nominated" or (status == "withdrawn" and "did not nominate" in (c.get("notes") or "")):
+        return "vec", c.get("vec_url") or _vec_contest_url(c)
+    if status == "superseded":
+        seat = c.get("district") or c.get("region")
+        by = next((r for r in rows if (r.get("district") or r.get("region")) == seat
+                   and _name_key(r.get("name", "")) == _name_key(c.get("superseded_by") or "")), None)
+        if by and by.get("source") == "abc":
+            return "abc", by.get("source_url")
+        return "hand", (by or {}).get("source_url") or c.get("source_url")
+    src = c.get("source")
+    if status == "not_standing":
+        return "hand", None   # the row's notes say how it was checked
+    # The Wikipedia step only adds 'announced' rows and the ABC step only makes rows 'endorsed': any other change
+    # on such a row was made by hand.
+    if (src == "wikipedia" and status == "announced") or (src == "abc" and status == "endorsed")             or (src == "electiontracker" and status in ("announced", "endorsed", "reported")):
+        return src, c.get("source_url")
+    return "hand", c.get("source_url")
+
+
+STATUS_INACTIVE = ("withdrawn", "superseded", "not_standing")
+
+
+def _tidy_status_history(hist: list[dict]) -> list[dict]:
+    """Drop same-day bounces: an inactive status replaced later the same day (a correction made within the day, such
+    as a respelled name briefly superseding its own row), and an entry repeating the status before it."""
+    out: list[dict] = []
+    for e in hist:
+        while out and out[-1]["date"] == e["date"] and out[-1]["status"] in STATUS_INACTIVE and e["status"] != out[-1]["status"]:
+            out.pop()
+        if out and out[-1]["status"] == e["status"]:
+            continue
+        out.append(e)
+    return out
+
+
+def _status_entry(c: dict, status: str, day: str, rows: list[dict], first: bool, seed: bool = False) -> dict:
+    """One status_history entry for row c, which has just taken `status` on `day` (Melbourne)."""
+    when = day
+    if first and c.get("date_added") and c["date_added"] <= day:
+        when = c["date_added"]
+    elif status == "superseded" and c.get("superseded_on"):
+        when = c["superseded_on"]
+    elif status == "withdrawn" and c.get("withdrawn_on"):
+        when = c["withdrawn_on"]
+    if seed:
+        when = STATUS_SEED_DATE
+    source, url = _status_source(c, rows, seed)
+    entry = {"status": status, "date": when, "source": source}
+    if url:
+        entry["url"] = url
+    return entry
+
+
+def _compact_status_history(c: dict) -> None:
+    """Drop each entry's url where the page can rebuild it from the row (see STATUS_HISTORY_FIELD)."""
+    for e in c.get("status_history") or []:
+        url = e.get("url")
+        if not url:
+            continue
+        if e["source"] == "vec" and url in (c.get("vec_url"), _vec_contest_url(c)):
+            del e["url"]
+        elif e["source"] != "vec" and url == c.get("source_url"):
+            del e["url"]
+
+
+def update_status_history(cands: list[dict], today: str) -> int:
+    """Append an entry to each row whose status differs from its history's last one. Returns how many."""
+    added = 0
+    for c in cands:
+        status = c.get("status")
+        if not status:
+            continue
+        hist = c.setdefault("status_history", [])
+        if hist and hist[-1]["status"] == status:
+            continue
+        hist.append(_status_entry(c, status, today, cands, first=not hist))
+        c["status_history"] = _tidy_status_history(hist)
+        _compact_status_history(c)
+        added += 1
+    return added
+
+
+def refresh_status_history(data_dir: Path, meta: dict) -> bool:
+    """Record status changes made by this run (or by hand since the last one) in candidates.json."""
+    path = data_dir / "candidates.json"
+    doc = read_json(path, {}) or {}
+    cands = doc.get("candidates") or []
+    if not cands:
+        return False
+    today = datetime.now(MELBOURNE).date().isoformat()
+    added = update_status_history(cands, today)
+    schema_fields = doc.setdefault("_schema", {}).setdefault("fields", {})
+    if not added and schema_fields.get("status_history") == STATUS_HISTORY_FIELD:
+        log.info("Status history: no status changes")
+        return False
+    schema_fields["status_history"] = STATUS_HISTORY_FIELD
+    write_json(path, doc)
+    log.info("Status history: %d status changes recorded", added)
+    return bool(added)
+
+
+def _row_keys(c: dict) -> set[tuple[str, str]]:
+    seat = c.get("district") or c.get("region")
+    return {(seat, _name_key(n)) for n in [c.get("name", ""), *(c.get("former_names") or [])] if n}
+
+
+def backfill_status_history(data_dir: Path) -> None:
+    """Rebuild every row's status_history from git history: each commit's candidates.json in turn, from the
+    research report on, then the working copy. A row is followed back by its seat and its name, else a former
+    spelling (the same party first, when two rows share them)."""
+    import subprocess
+    root = Path(subprocess.check_output(["git", "rev-parse", "--show-toplevel"], cwd=data_dir, text=True).strip())
+    rel = data_dir.resolve().relative_to(root.resolve()).as_posix()
+    commits = subprocess.check_output(["git", "log", "--reverse", "--format=%H %cI",
+                                       f"{STATUS_SEED_COMMIT}^..HEAD", "--", f"{rel}/candidates.json"],
+                                      cwd=root, text=True).splitlines()
+    path = data_dir / "candidates.json"
+    doc = read_json(path, {}) or {}
+    current = doc.get("candidates") or []
+    for c in current:
+        c["status_history"] = []
+    states = []
+    for line in filter(None, commits):
+        sha, when = line.split(" ", 1)
+        try:
+            rows = json.loads(subprocess.check_output(["git", "show", f"{sha}:{rel}/candidates.json"], cwd=root,
+                                                      stderr=subprocess.DEVNULL).decode("utf-8")).get("candidates", [])
+        except (subprocess.CalledProcessError, json.JSONDecodeError):
+            continue
+        day = datetime.fromisoformat(when).astimezone(MELBOURNE).date().isoformat()
+        states.append((sha, day, rows))
+    states.append(("working copy", datetime.now(MELBOURNE).date().isoformat(), current))
+    for i, (sha, day, rows) in enumerate(states):
+        index: dict[tuple[str, str], list[dict]] = {}
+        for r in rows:
+            for k in _row_keys(r):
+                index.setdefault(k, []).append(r)
+        for c in current:
+            seat = c.get("district") or c.get("region")
+            # The row's own name first; a former spelling only when no row carries the current one.
+            found = index.get((seat, _name_key(c.get("name", ""))), []) or [r for k in _row_keys(c) for r in index.get(k, [])]
+            if not found:
+                continue
+            r = next((x for x in found if x.get("party") == c.get("party")), found[0])
+            status = r.get("status")
+            hist = c["status_history"]
+            if not status or (hist and hist[-1]["status"] == status):
+                continue
+            hist.append(_status_entry(r, status, day, rows, first=not hist, seed=(i == 0 and sha.startswith(STATUS_SEED_COMMIT))))
+    for c in current:
+        if not c["status_history"] and c.get("status"):   # never seen in a commit: recorded as of today
+            c["status_history"].append(_status_entry(c, c["status"], states[-1][1], current, first=True))
+        c["status_history"] = _tidy_status_history(c["status_history"])
+        _compact_status_history(c)
+    doc.setdefault("_schema", {}).setdefault("fields", {})["status_history"] = STATUS_HISTORY_FIELD
+    write_json(path, doc)
+    changes = sum(len(c["status_history"]) - 1 for c in current)
+    log.info("Status history rebuilt from %d commits: %d rows, %d status changes", len(states) - 1, len(current), changes)
+
+
+# --------------------------------------------------------------------------
 # Seat history: a daily snapshot of each seat's model probabilities and betting prices, so the weekly
 # briefing card can name the seats that moved most in 7 days without reading git history.
 # --------------------------------------------------------------------------
@@ -3715,6 +3905,8 @@ def main(argv=None) -> int:
                         help="read the VEC's voting centres now, even if they were read today (normally once a day)")
     parser.add_argument("--backfill-seat-history", action="store_true",
                         help="rebuild seat_history.json from git history instead of refreshing")
+    parser.add_argument("--backfill-status-history", action="store_true",
+                        help="rebuild every candidate's status_history in candidates.json from git history instead of refreshing")
     args = parser.parse_args(argv)
 
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
@@ -3731,6 +3923,9 @@ def main(argv=None) -> int:
         return 0
     if args.backfill_seat_history:
         backfill_seat_history(data_dir)
+        return 0
+    if args.backfill_status_history:
+        backfill_status_history(data_dir)
         return 0
 
     meta_path = data_dir / "meta.json"
@@ -3757,6 +3952,7 @@ def main(argv=None) -> int:
         check_profiles(data_dir, meta),        # watch only: warns when a respelled or withdrawn name strands a profile
         sync_profile_files(data_dir, meta),    # data/profiles/<seat>.json, the candidate page's copy of profiles.json
         refresh_seat_history(data_dir, meta),  # after the models and odds: today's snapshot for the weekly card
+        refresh_status_history(data_dir, meta),   # after every step that changes candidates.json (and hand edits)
     ]
     refresh_changelog(data_dir, meta)   # last: compares everything written above with the previous run
     if any(updated):

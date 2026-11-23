@@ -476,7 +476,7 @@
       add(seat, c.name, { party: c.party, status: c.status, ticket_position: c.ticket_position, incumbent: c.incumbent || null,
         source: c.source, source_url: c.source_url, notes: c.notes || null, date_added: c.date_added, updated: c.updated, contesting: true,
         website: c.website, ballot_position: c.ballot_position, ballot_name: c.ballot_name, group: c.group,
-        party_name: c.party_name, former_names: c.former_names, moved_to: c.moved_to });
+        party_name: c.party_name, former_names: c.former_names, moved_to: c.moved_to, vec_url: c.vec_url, status_history: c.status_history });
     });
     Object.values(regions).forEach((r) => (r.mlcs || []).forEach((m) =>
       add(r.id, m.name, { party: m.party, mlc: { party: m.party, retiring: !!m.retiring, notes: m.notes || "" } })));

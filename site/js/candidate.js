@@ -114,6 +114,23 @@
     return `<dl class="profile-record">${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>`;
   }
 
+  // Each status the candidate's row has had, oldest first (candidates.json → status_history), with its source.
+  const HISTORY_SOURCES = { seed: "the tracker's first candidate list (research report, 30 Oct 2026)", wikipedia: "Wikipedia",
+    abc: "ABC election guide", vec: "Victorian Electoral Commission", electiontracker: "party page found via electiontracker.au", hand: "entered by hand" };
+  const vecPage = (p) => `https://www.vec.vic.gov.au/electoral-boundaries/${p.house === "lower" ? `state-districts/${p.seat}-district` : `state-regions/${p.seat}-region`}/nominations`;
+  function statusHistory(p) {
+    const hist = p.status_history || [];
+    if (!hist.length) return "";
+    const url = (e) => e.url || (e.source === "vec" ? p.vec_url || vecPage(p) : e.source === "seed" ? "" : p.source_url || "");
+    const src = (e) => {
+      const label = HISTORY_SOURCES[e.source] || e.source;
+      return url(e) ? `<a href="${escapeHtml(url(e))}" target="_blank" rel="noopener">${escapeHtml(label)}</a>` : escapeHtml(label);
+    };
+    return `<h2 class="status-h">Status history</h2>
+      <ol class="status-timeline">${hist.map((e) => `<li><time datetime="${escapeHtml(e.date)}">${escapeHtml(fmtDate(e.date))}</time>
+        ${statusBadge(e.status)} <span class="muted small">${src(e)}</span></li>`).join("")}</ol>`;
+  }
+
   function photoBlock(p) {
     const shot = shots[p.id];
     const caption = shot
@@ -238,6 +255,7 @@
             : "This candidate has withdrawn."}</p>` : ""}
         ${links(p)}
         ${record(p)}
+        ${statusHistory(p)}
         ${photoDetails(p)}
       </article>
 

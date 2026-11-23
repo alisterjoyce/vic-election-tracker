@@ -845,6 +845,15 @@ html.js .agg-table { min-height: 274px; }
 @media (max-width: 640px) { html.js .agg-table { min-height: 310px; } }
 @media (max-width: 420px) { html.js .agg-table { min-height: 331px; } }
 
+/* ---------- Candidate status history (candidate.html) ---------- */
+.status-h { font-size: 1rem; margin: 16px 0 6px; }
+.status-timeline { list-style: none; margin: 0; padding: 0 0 0 14px; border-left: 2px solid var(--border); }
+.status-timeline li { position: relative; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; padding: 3px 0; }
+.status-timeline li::before { content: ""; position: absolute; left: -20px; top: 0.75em; width: 10px; height: 10px; border-radius: 50%;
+  background: var(--surface); border: 2px solid var(--muted); }
+.status-timeline li:last-child::before { background: var(--accent); border-color: var(--accent); }
+.status-timeline time { min-width: 6.5em; font-variant-numeric: tabular-nums; }
+
 /* ---------- Timeline (timeline.html) ---------- */
 .timeline { list-style: none; margin: 0; padding: 0 0 0 4px; position: relative; }
 .timeline::before { content: ""; position: absolute; left: 7.4em; top: 0; bottom: 0; width: 2px; background: var(--border); }
