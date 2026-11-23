@@ -1692,8 +1692,11 @@
       "type": "Single",
       "registered_on": "2026-11-13",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=88dec964-4f25-4273-b8ce-6834d713f3ba%2Ffootscray%20district%20-%20marsh%2C%20jess%20-%20htvc.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "unreadable",
-      "note": "unreadable, see card"
+      "status": "partial",
+      "order": [
+        "MARSH, Jess"
+      ],
+      "via": "image"
     },
     {
       "registration": "1033",
@@ -1704,8 +1707,31 @@
       "type": "Single",
       "registered_on": "2026-11-13",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=748da3a6-38b4-4f41-80ea-a0192d7003cc%2Fibrahim%2C%20marcus.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "unreadable",
-      "note": "unreadable, see card"
+      "status": "read",
+      "order": [
+        "IBRAHIM, Marcus",
+        "HALL, Katie",
+        "PEREYRA, Elena",
+        "DUFF, Jasmine",
+        "LOPEZ, Alexander",
+        "CALDER, Daryle",
+        "FLORES, Ana",
+        "DINH, Hai",
+        "CHANG, Tim",
+        "MARSH, Jess",
+        "NGUYEN, Minh Quan",
+        "LEWIS, Daniel",
+        "FELATE, Andualem",
+        "CUMMING, Catherine",
+        "HESS, Kristina"
+      ],
+      "via": "image",
+      "ranks": {
+        "ALP": 2,
+        "GRN": 3,
+        "ONP": 5,
+        "LNP": 9
+      }
     },
     {
       "registration": "1397",

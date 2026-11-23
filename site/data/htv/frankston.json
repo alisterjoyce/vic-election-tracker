@@ -102,8 +102,27 @@
       "type": "Single",
       "registered_on": "2026-11-13",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=77d2189e-2c7b-4a49-ba13-6d0202c7679a%2Ffrankston%20district.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "unreadable",
-      "note": "unreadable, see card"
+      "status": "read",
+      "order": [
+        "HARMAN, Julie",
+        "GOULAS, Katie",
+        "KNIPE, Jeff",
+        "CHEESEMAN, Andrew",
+        "EDBROOKE, Paul",
+        "ABRAHAM, Chrysten",
+        "KELSALL, Henry",
+        "BARRY, Nicola",
+        "AMBRY, Bree",
+        "NICHOLES, Peter",
+        "STAFFORD, Paul"
+      ],
+      "via": "image",
+      "ranks": {
+        "GRN": 2,
+        "ALP": 5,
+        "LNP": 9,
+        "ONP": 11
+      }
     },
     {
       "registration": "1351",
@@ -1432,8 +1451,11 @@
       "type": "Single",
       "registered_on": "2026-11-13",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c58cd101-be73-4b14-b156-c07f11e9d31d%2Fabraham%2C%20chrysten%20jaslyn%20myra.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "unreadable",
-      "note": "unreadable, see card"
+      "status": "partial",
+      "order": [
+        "ABRAHAM, Chrysten"
+      ],
+      "via": "image"
     },
     {
       "registration": "1270",
