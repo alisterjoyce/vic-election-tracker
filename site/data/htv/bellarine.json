@@ -416,8 +416,14 @@
       "type": "Combined",
       "registered_on": "2026-11-13",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=0f7383aa-b7b6-4b87-b25d-5bd1ddac347f%2Fthe%20greens%20combined%20geelong%20south%20barwon%20bellarine%20western%20victoria%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "unreadable",
-      "note": "unreadable, see card"
+      "status": "partial",
+      "order": [
+        "POPE, Mitch"
+      ],
+      "via": "image",
+      "ranks": {
+        "GRN": 1
+      }
     },
     {
       "registration": "1165",
@@ -1031,8 +1037,24 @@
       "type": "Combined",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=bdf43a33-fab6-4e3e-ac97-7e68b8280c3d%2Fonv%20-%20combined%20-%20western%20victoria%20region%20-%20bellarine%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "unreadable",
-      "note": "unreadable, see card"
+      "status": "read",
+      "order": [
+        "MCRAE, Ross",
+        "MANUELL, Guy",
+        "WHITEHEAD, Callum",
+        "MARCHANT, Alison",
+        "LOCKHART, Kate",
+        "POPE, Mitch",
+        "WILLIAMS, Dom",
+        "KEOGH, Ronan"
+      ],
+      "via": "image",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 3,
+        "ALP": 4,
+        "GRN": 6
+      }
     },
     {
       "registration": "921",
