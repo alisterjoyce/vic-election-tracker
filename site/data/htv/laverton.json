@@ -1437,8 +1437,25 @@
       "type": "Combined",
       "registered_on": "2026-11-19",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ef78407c-9167-44e9-8bc0-ec313effb00f%2Fhtv%20the%20west%20party%20st%20albans%20laverton.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "unreadable",
-      "note": "unreadable, see card"
+      "status": "read",
+      "order": [
+        "MENDELSOHN, Emma",
+        "CHITTEDI, Suchithra",
+        "MANSOURI JAJAEE, Shohre",
+        "GARCIA, Jo",
+        "NOUNE, Ghada",
+        "NGUYEN, Lucy",
+        "PAREDES, Rufo",
+        "RUDD, Van Thanh",
+        "CONNOLLY, Sarah"
+      ],
+      "via": "image",
+      "ranks": {
+        "LNP": 5,
+        "GRN": 6,
+        "ONP": 7,
+        "ALP": 9
+      }
     },
     {
       "registration": "1619",
@@ -1449,8 +1466,25 @@
       "type": "Combined",
       "registered_on": "2026-11-19",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e30cf081-a368-4403-bbab-b962f453918a%2Fhtv%20the%20west%20party%20footscray%20laverton.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "unreadable",
-      "note": "unreadable, see card"
+      "status": "read",
+      "order": [
+        "MENDELSOHN, Emma",
+        "CHITTEDI, Suchithra",
+        "MANSOURI JAJAEE, Shohre",
+        "GARCIA, Jo",
+        "NOUNE, Ghada",
+        "NGUYEN, Lucy",
+        "PAREDES, Rufo",
+        "RUDD, Van Thanh",
+        "CONNOLLY, Sarah"
+      ],
+      "via": "image",
+      "ranks": {
+        "LNP": 5,
+        "GRN": 6,
+        "ONP": 7,
+        "ALP": 9
+      }
     },
     {
       "registration": "1624",
@@ -1475,7 +1509,9 @@
       ],
       "via": "image",
       "same_as": [
-        "1615"
+        "1615",
+        "1617",
+        "1619"
       ],
       "note": "same order as the English card"
     }
