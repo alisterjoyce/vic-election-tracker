@@ -17,12 +17,12 @@
   "registration_opens": "2026-11-10",
   "registration_closes": "2026-11-20",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
-  "last_checked": "2026-11-24T10:02:33Z",
-  "pending": 4,
+  "last_checked": "2026-11-24T19:55:33Z",
+  "pending": 3,
   "coverage": {
     "cards": 1425,
     "listings": 4817,
-    "orders_read": 4587,
+    "orders_read": 4588,
     "orders_image": 597,
     "orders_same_as": 154,
     "orders_unreadable": 72,
@@ -117370,7 +117370,7 @@
       "orders": {
         "melton": {
           "status": "pending",
-          "tried": "2026-11-24",
+          "tried": "2026-11-25",
           "note": "the VEC's link to this card didn't open"
         }
       }
@@ -117391,7 +117391,7 @@
       "orders": {
         "melton": {
           "status": "pending",
-          "tried": "2026-11-24",
+          "tried": "2026-11-25",
           "note": "the VEC's link to this card didn't open"
         }
       }
@@ -117412,7 +117412,7 @@
       "orders": {
         "melton": {
           "status": "pending",
-          "tried": "2026-11-24",
+          "tried": "2026-11-25",
           "note": "the VEC's link to this card didn't open"
         }
       }
@@ -131450,11 +131450,34 @@
       ],
       "party": "ALP",
       "candidate": null,
+      "read_on": "2026-11-25",
       "orders": {
         "bendigo-west": {
-          "status": "pending",
-          "tried": "2026-11-24",
-          "note": "the VEC's link to this card didn't open"
+          "status": "read",
+          "order": [
+            "SHAW, Liza",
+            "BALDWIN, Brenton",
+            "TRANTER, Debra",
+            "SHALEVSKI, Tayne",
+            "HUTCHINGS, David",
+            "HARISOPOULOS, Christos",
+            "MORGAN, Ellen"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 2,
+            "LNP": 5,
+            "ONP": 7
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 1,
+              "of_n": 5
+            }
+          ]
         }
       }
     },

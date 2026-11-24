@@ -275,9 +275,31 @@
       "type": "Single",
       "registered_on": "2026-11-24",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=93167b8d-7bad-4467-95ff-ce6375b7a777%2Fbendigo%20west_green%20contests_htv_v2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending",
-      "tried": "2026-11-24",
-      "note": "the VEC's link to this card didn't open"
+      "status": "read",
+      "order": [
+        "SHAW, Liza",
+        "BALDWIN, Brenton",
+        "TRANTER, Debra",
+        "SHALEVSKI, Tayne",
+        "HUTCHINGS, David",
+        "HARISOPOULOS, Christos",
+        "MORGAN, Ellen"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 2,
+        "LNP": 5,
+        "ONP": 7
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 1,
+          "of_n": 5
+        }
+      ]
     },
     {
       "registration": "546",
