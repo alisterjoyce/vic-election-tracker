@@ -26,6 +26,33 @@
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election",
   "polls": [
     {
+      "id": "resolve-2026-11-23",
+      "start_date": "2026-11-20",
+      "end_date": "2026-11-23",
+      "pollster": "Resolve",
+      "client": "The Age",
+      "sample_size": 1000,
+      "source_url": "https://www.pollbludger.net/2026/11/25/resolve-strategic-labor-20-coalition-31-one-nation-25-in-victoria/",
+      "primary": {
+        "ALP": 20,
+        "LNP": 31,
+        "ONP": 25,
+        "GRN": 13,
+        "OTH": 11
+      },
+      "et_id": "resolve-2026-11-23-age",
+      "added_from": "electiontracker",
+      "via": {
+        "label": "electiontracker.au poll ledger (CC BY 4.0)",
+        "url": "https://electiontracker.au/elections/vic/2026/polls"
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Age",
+        "via": "electiontracker"
+      }
+    },
+    {
       "id": "yougov-2026-11-23",
       "start_date": "2026-11-06",
       "end_date": "2026-11-23",

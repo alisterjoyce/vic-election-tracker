@@ -15,8 +15,8 @@
   "page": "https://electiontracker.au/elections/vic/2026/polls",
   "credit": "Australian Election Tracker (OZE), electiontracker.au",
   "licence": "CC BY 4.0",
-  "generated": "2026-11-23T21:40:06.180Z",
-  "read": "2026-11-23T23:38:41Z",
+  "generated": "2026-11-24T21:42:35.565Z",
+  "read": "2026-11-24T23:38:59Z",
   "polls": [
     {
       "id": "agenda-c-synesis-2026-11-22",
@@ -527,6 +527,23 @@
         "OTH": 9
       },
       "source_url": "https://www.theage.com.au/politics/victoria/wilson-is-gaining-economic-traction-as-carroll-s-popularity-takes-a-further-dive-20261012-p614pi.html"
+    },
+    {
+      "id": "resolve-2026-11-23-age",
+      "pollster": "resolve",
+      "commissioner": "the-age",
+      "commissioner_type": "media",
+      "start_date": "2026-11-20",
+      "end_date": "2026-11-23",
+      "sample_size": 1000,
+      "primary": {
+        "ALP": 20,
+        "LNP": 31,
+        "ONP": 25,
+        "GRN": 13,
+        "OTH": 11
+      },
+      "source_url": "https://www.pollbludger.net/2026/11/25/resolve-strategic-labor-20-coalition-31-one-nation-25-in-victoria/"
     },
     {
       "id": "resolve-2026-11-age",
