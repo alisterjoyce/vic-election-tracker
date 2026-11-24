@@ -10,11 +10,11 @@
   "status": "closed",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
   "registration_closes": "2026-11-20",
-  "last_checked": "2026-11-23T23:41:26Z",
+  "last_checked": "2026-11-24T05:51:50Z",
   "coverage": {
-    "cards": 1423,
-    "listings": 4815,
-    "orders_read": 4586,
+    "cards": 1425,
+    "listings": 4817,
+    "orders_read": 4587,
     "orders_image": 597,
     "orders_same_as": 154,
     "orders_unreadable": 72,
@@ -22,7 +22,7 @@
     "regions_with_cards": 8,
     "by_party": {
       "ALP": {
-        "cards": 330,
+        "cards": 332,
         "districts": 88,
         "regions": 8
       },
@@ -237,12 +237,12 @@
     },
     "bendigo-east": {
       "house": "lower",
-      "cards": 28,
-      "read": 27,
+      "cards": 29,
+      "read": 28,
       "same_as": 0,
       "unreadable": 1,
       "parties": {
-        "ALP": 5,
+        "ALP": 6,
         "VS": 2,
         "NAT": 5,
         "FF": 1,
@@ -255,12 +255,12 @@
     },
     "bendigo-west": {
       "house": "lower",
-      "cards": 25,
+      "cards": 26,
       "read": 25,
       "same_as": 0,
       "unreadable": 0,
       "parties": {
-        "ALP": 5,
+        "ALP": 6,
         "VS": 2,
         "NAT": 5,
         "FF": 2,
@@ -2288,8 +2288,8 @@
     {
       "area": "bendigo-east",
       "party": "ALP",
-      "cards": 5,
-      "read": 5,
+      "cards": 6,
+      "read": 6,
       "differ": true,
       "flags_some": [
         {
@@ -2352,7 +2352,7 @@
     {
       "area": "bendigo-west",
       "party": "ALP",
-      "cards": 5,
+      "cards": 6,
       "read": 5,
       "differ": true,
       "flags_some": [
