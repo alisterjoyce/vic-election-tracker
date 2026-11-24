@@ -436,7 +436,7 @@ h3 { font-size: 1rem; }
 .vote-bars .vb-name { overflow-wrap: anywhere; font-size: 0.9rem; }
 .vote-bars .vb-track { height: 14px; background: var(--surface-2); border-radius: 4px; overflow: hidden; }
 .vote-bars .vb-fill { height: 100%; }
-.vote-bars .vb-num { font-size: 0.85rem; text-align: right; white-space: nowrap; }
+.vote-bars .vb-num { font-size: 0.85rem; text-align: right; white-space: nowrap; min-width: 7.5em; }   /* the same width every row, so the bars line up */
 .swing-up { color: var(--s-nominated-fg); }
 .swing-down { color: var(--s-withdrawn-fg); }
 .tcp-bar { display: flex; height: 26px; border-radius: 6px; overflow: hidden; margin: 6px 0; }
@@ -802,6 +802,144 @@ select {
 .seat-all { margin-top: 2px; }
 .seat-all > summary { cursor: pointer; color: var(--accent); font-size: 0.88rem; min-height: 24px; }
 .seat-all > p { margin: 4px 0 0; }
+/* Shared card styles (common.js App.ui): seat and region pages. One spacing step (12px), rounded cards, party chips. */
+.lead { font-size: 1.02rem; line-height: 1.45; margin: 0 0 12px; }   /* each section's one-sentence answer */
+.pchip { display: inline-flex; align-items: center; max-width: 100%; padding: 1px 9px; border-radius: 999px; background: var(--party-color); color: var(--party-ink); font-size: 0.8rem; font-weight: 600; line-height: 1.5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; vertical-align: middle; }
+.tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 0 0 12px; }
+.tile { background: var(--surface-2); border-radius: 10px; padding: 10px 12px; min-width: 0; border-top: 4px solid var(--party-color, var(--border)); }
+.tile-v { font-family: var(--font-display); font-size: 1.7rem; font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tile-l { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+.tile-s { font-size: 0.82rem; margin-top: 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tile-s .pchip { font-size: 0.75rem; }
+@media (max-width: 400px) { .tiles { gap: 6px; } .tile { padding: 8px 9px; } .tile-v { font-size: 1.45rem; } }
+
+.pcards { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.pcards > li, .pcard, .pcard > summary, .vcards > li, .ncards > li, .rlist > li { min-width: 0; }
+.pcards, .vcards, .ncards, .rlist { grid-template-columns: minmax(0, 1fr); }
+.pcard { border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+.pcard > summary, div.pcard { display: flex; align-items: center; gap: 10px; padding: 10px 12px; min-height: 44px; }
+.pcard > summary { cursor: pointer; list-style: none; }
+.pcard > summary::-webkit-details-marker { display: none; }
+.pcard > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 12px; }
+.pc-badge { flex: none; width: 26px; height: 26px; border-radius: 50%; background: var(--surface-2); color: var(--text); font-weight: 700; font-size: 0.85rem; display: inline-flex; align-items: center; justify-content: center; }
+.pc-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.pc-name { font-weight: 650; line-height: 1.25; }
+.pc-sub { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; }
+.pc-line { font-size: 0.86rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-height: 1.3em; }
+.pc-chev { flex: none; width: 8px; height: 8px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: rotate(45deg); margin: 0 4px 4px; }
+.pcard[open] .pc-chev { transform: rotate(-135deg); margin-bottom: -4px; }
+.pc-body { padding: 0 12px 12px; border-top: 1px solid var(--border); padding-top: 10px; font-size: 0.92rem; }
+.pc-body p { margin: 0 0 8px; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.btn-row a { display: inline-flex; align-items: center; min-height: 36px; padding: 0 12px; border: 1px solid var(--border); border-radius: 999px; text-decoration: none; color: var(--text); font-size: 0.86rem; font-weight: 600; background: var(--surface); }
+.btn-row a:hover { background: var(--surface-2); }
+
+.rlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.rlist > li { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 10px; background: var(--surface-2); border-left: 4px solid var(--party-color, var(--border)); min-height: 40px; }
+.rlist > li.rl-top { background: var(--surface); box-shadow: inset 0 0 0 1px var(--border); font-weight: 600; }
+.rl-n { flex: none; min-width: 24px; height: 24px; border-radius: 12px; padding: 0 6px; background: var(--surface); color: var(--text); font-weight: 700; font-size: 0.82rem; display: inline-flex; align-items: center; justify-content: center; box-shadow: inset 0 0 0 1px var(--border); }
+.rl-top .rl-n { background: var(--accent); color: var(--accent-text); box-shadow: none; }
+.rl-label { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.rl-label .muted { font-weight: 400; }
+.rl-v { flex: none; font-weight: 600; text-align: right; }
+.rl-more { margin-top: 6px; }
+.rl-more > summary, .as-table > summary, .see-more > summary { cursor: pointer; color: var(--accent); font-weight: 600; font-size: 0.9rem; min-height: 36px; display: flex; align-items: center; }
+.rl-more[open] > summary { margin-bottom: 4px; }
+
+.pbar-wrap { margin: 0 0 14px; }
+.pbar-h { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 10px; margin-bottom: 4px; }
+.pbar-l { font-weight: 650; font-size: 0.92rem; }
+.pbar-s { font-size: 0.8rem; color: var(--muted); }
+.pbar { display: flex; height: 26px; border-radius: 8px; overflow: hidden; background: var(--surface-2); }
+.pbar > span { display: flex; align-items: center; justify-content: center; font-size: 0.78rem; font-weight: 700; min-width: 0; overflow: hidden; white-space: nowrap; }
+.pbar > span + span { box-shadow: inset 1px 0 0 var(--surface); }
+.pbar-key { list-style: none; margin: 6px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 2px 14px; font-size: 0.84rem; }
+.pbar-key li { display: inline-flex; align-items: center; gap: 5px; }
+.pk-dot { width: 10px; height: 10px; border-radius: 3px; flex: none; }
+.sbar-wrap { margin: 0 0 14px; }
+.sbar-h { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 4px; font-size: 0.95rem; }
+.sbar { display: flex; height: 22px; border-radius: 8px; overflow: hidden; }
+.sbar > span + span { box-shadow: inset 2px 0 0 var(--surface); }
+.sbar-s { font-size: 0.82rem; color: var(--muted); margin-top: 4px; }
+
+.lcard { display: flex; flex-direction: column; gap: 2px; padding: 12px 14px; border: 1px solid var(--border); border-radius: 12px; text-decoration: none; color: var(--text); background: var(--surface); margin: 10px 0 0; }
+.lcard:hover { background: var(--surface-2); }
+.lc-t { font-weight: 650; color: var(--accent); }
+.lc-s { font-size: 0.86rem; color: var(--muted); }
+.ncards { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.ncard { display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border: 1px solid var(--border); border-radius: 12px; text-decoration: none; color: var(--text); background: var(--surface); }
+.ncard:hover { background: var(--surface-2); }
+.nc-t { font-weight: 650; line-height: 1.3; }
+.nc-s { font-size: 0.82rem; color: var(--muted); }
+
+.clamp-body { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+.clamp.open .clamp-body { display: block; -webkit-line-clamp: none; }
+.clamp-body > p { margin: 0 0 6px; }
+.clamp-body > p:last-child { margin-bottom: 0; }
+.clamp-btn { border: 0; background: none; padding: 4px 0; min-height: 32px; color: var(--accent); font: inherit; font-size: 0.88rem; font-weight: 600; cursor: pointer; }
+.clamp { margin: 0 0 10px; }
+.clamp.note { font-size: 0.86rem; color: var(--muted); }
+.as-table { margin-top: 10px; }
+@media (max-width: 640px) { .as-table { display: none; } }   /* tables are for wider screens; phones get the cards */
+.subcard { border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; margin: 0 0 10px; background: var(--surface); }
+.subcard > h4:first-child { margin-top: 0; }
+.status-card { border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; background: var(--surface-2); border-left: 5px solid var(--accent); }
+.status-card strong { display: block; font-size: 1.05rem; }
+.status-card span { display: block; font-size: 0.88rem; color: var(--muted); margin-top: 2px; }
+.tag { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 0.75rem; font-weight: 700; background: var(--surface-2); color: var(--muted); white-space: nowrap; }
+.tag.open { background: var(--s-nominated-bg); color: var(--s-nominated-fg); }
+.see-more { margin-top: 10px; }
+.flag-note { border-radius: 12px; padding: 10px 14px; margin: 0 0 12px; background: var(--warn-bg); color: var(--warn-text); }
+.flag-note p { margin: 0 0 4px; }
+.flag-note .clamp { margin: 0 0 4px; }
+.flag-note .clamp-btn { color: inherit; text-decoration: underline; }
+.flag-note p:last-child { margin: 0; }
+.chipbar { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+.chipbtn { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding: 0 12px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); color: var(--text); font: inherit; font-size: 0.86rem; font-weight: 600; cursor: pointer; }
+.chipbtn::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--party-color); flex: none; }
+.chipbtn[aria-pressed="true"] { background: var(--party-color); border-color: var(--party-color); color: var(--party-ink); }
+.chipbtn[aria-pressed="true"]::before { background: var(--party-ink); }
+.chipbtn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.meta-list { list-style: none; margin: 0 0 12px; padding: 0; display: grid; gap: 4px; font-size: 0.9rem; }
+.meta-list li { display: flex; gap: 8px; min-width: 0; }
+.meta-list .ml-k { flex: none; width: 5.5em; color: var(--muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.03em; padding-top: 2px; }
+.meta-list .ml-v { min-width: 0; overflow-wrap: anywhere; }
+.desk-only { display: block; }
+.phone-only { display: none; }
+@media (max-width: 640px) { .desk-only { display: none; } .phone-only { display: block; } }
+.glance-lead { font-size: 1.08rem; font-weight: 600; }
+.pb-note { margin: 0 0 10px; }
+.vcards { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.vcard { display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+.vc-name { font-weight: 650; }
+.vc-addr, .vc-acc { font-size: 0.84rem; color: var(--muted); }
+.vc-when { font-size: 0.9rem; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
+@media (min-width: 900px) { .vcards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.vc-map { height: 300px; border-radius: 12px; margin: 14px 0 6px; background: var(--surface-2); isolation: isolate; }
+@media (max-width: 640px) { .vc-map { height: 240px; } }
+.ev-tiles .tiles { margin-bottom: 4px; }
+.ev-src { margin: 0 0 12px; }
+.htv-panel { margin: 0 0 8px; }
+.htv-ph { margin: 0 0 8px; }
+.htv-vh { margin: 12px 0 6px; font-weight: 600; }
+.htv-place { margin: 8px 0 0; }
+.htv-version + .htv-version { margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--border); }
+.rlist .yb-gl { display: inline-flex; min-width: 22px; justify-content: center; font-weight: 700; margin-right: 4px; }
+.chipbtn { max-width: 100%; }
+.credits { font-size: 0.86rem; }
+.see-more > summary { border-top: 1px solid var(--border); padding-top: 6px; }
+.see-more[open] > summary { margin-bottom: 8px; }
+.compare.as-table { margin-top: 12px; }
+.gcards { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) { .gcards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.gcard { border: 1px solid var(--border); border-top: 4px solid var(--party-color); border-radius: 12px; padding: 10px 12px; background: var(--surface); min-width: 0; }
+.gc-head { display: flex; align-items: center; gap: 8px; margin: 0 0 8px; min-width: 0; }
+.gc-letter { flex: none; width: 30px; height: 30px; border-radius: 8px; background: var(--surface-2); font-family: var(--font-display); font-weight: 700; display: inline-flex; align-items: center; justify-content: center; }
+.gc-name { flex: 1; min-width: 0; font-weight: 650; overflow-wrap: anywhere; }
+@media (max-width: 640px) {   /* the quota calculator on a phone: party and primary vote only; the seat chips below show the result */
+  .quota-table th:nth-child(n+3), .quota-table td:nth-child(n+3) { display: none; }
+}
+@media (min-width: 900px) { .pcards { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; } }
 .link-btn { border: 0; background: none; padding: 0; font: inherit; color: var(--accent); text-decoration: underline; cursor: pointer; }
 .abc-results { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin: 4px 0 12px; }
 /* Glossary terms: a dotted underline, and a popover with the short definition on tap */
@@ -1251,12 +1389,12 @@ html.js .key-dates { min-height: 84px; }   /* 960px and wider: the milestones an
   html.js .key-dates { display: flex; flex-direction: column; justify-content: center; }
   html.js .key-dates > .container { width: 100%; }   /* auto margins in a flex column would shrink it to fit */
 }
-.r22:has(> .empty) { min-height: 1100px; }
+.r22:has(> .empty) { min-height: 460px; }   /* the 2022 panel before it loads: its shortest (24 Nov 2026), with the booths behind "See booths" */
 /* lower.html#seat: room for the seat before it renders (measured 24 Nov 2026 over all 88 seats: with every section
-   open above 640px the shortest is 5,400px, so a window's height is enough; on phones, At a glance and the six
-   collapsed sections, shortest 937px at 412px wide) */
+   open above 640px the shortest is 4,400px, so a window's height is enough; on phones, At a glance and the six
+   collapsed sections, shortest 928px at 412px wide, re-measured after the card redesign) */
 html.has-hash #district-detail[hidden] { display: block; min-height: 1200px; }
-@media (max-width: 640px) { html.has-hash #district-detail[hidden] { min-height: 930px; } }
+@media (max-width: 640px) { html.has-hash #district-detail[hidden] { min-height: 920px; } }
 /* upper.html#region: room for the region before it renders (24 Nov 2026: every section open above 640px, shortest
    well over 5,000px; on phones At a glance with five MLCs and the collapsed sections, about 1,100px) */
 html.has-hash #region-detail { min-height: 1200px; }

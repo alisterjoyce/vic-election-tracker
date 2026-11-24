@@ -294,5 +294,146 @@
       <p class="muted small">${index.last_checked ? `Register checked ${escapeHtml(App.fmtDateTime(index.last_checked))}. ` : ""}A card counts once however many districts and regions it covers.</p>`;
   }
 
-  App.Htv = { load, section, matrix, flagsHtml, statusLine, watch, coverage, reserve, columns };
+  /* ---------- Phone-first view (seat and region pages): one registrant's card at a time ---------- */
+  // Chips for every party or person with a card (largest projected vote first, then the fixed order); the chosen
+  // one's card as a ranked list in printed order, 1 to 3 highlighted and the rest under "Show full order"; identical
+  // cards merged ("3 cards, same order"), different orders shown as versions; one line placing the leading
+  // contenders; major-party flags in plain words; the full grid only on wider screens ("Compare all cards").
+  const COAL = (p) => COALITION.includes(p);
+  const shortName = (code) => (code === "LNP" ? "Coalition" : partyName(code));
+  const keyOf = (c) => `${c.kind}|${c.party}|${c.registered_by}`;
+  function registrants(doc) {
+    const groups = new Map();
+    columns(doc).forEach((col) => {
+      const k = keyOf(col.card);
+      if (!groups.has(k)) groups.set(k, { card: col.card, variants: [], unread: [] });
+      groups.get(k).variants.push(col);
+    });
+    (doc.cards || []).filter((c) => !isRead(c)).forEach((c) => {
+      const k = keyOf(c);
+      if (!groups.has(k)) groups.set(k, { card: c, variants: [], unread: [] });
+      groups.get(k).unread.push(c);
+    });
+    return [...groups.values()];
+  }
+  // One printed order as ranked-list items: Assembly names; Council groups above the line (else names below it).
+  function orderItems(doc, card) {
+    const byName = new Map((doc.ballot || []).map((b) => [b.ballot_name, b]));
+    if (doc.house === "lower" || !(card.atl && card.atl.length)) {
+      return (card.order || card.btl || []).map((n) => {
+        const b = byName.get(n) || { name: n, party: "OTH" };
+        return { code: b.party || "IND", party: b.party, label: `${escapeHtml(b.name || App.ui.niceName(n))} <span class="muted small">${escapeHtml(b.party && b.party !== "OTH" ? partyName(b.party) : b.party_label || "Independent")}</span>` };
+      });
+    }
+    const groups = new Map((doc.groups || []).map((g) => [g.group, g]));
+    return card.atl.map((letter) => {
+      const g = groups.get(letter) || { group: letter, party: "OTH" };
+      const label = !g.label || /^unnamed/i.test(g.label) ? "Group with no name" : g.label;
+      return { code: g.party || "OTH", party: g.party, label: `<span class="yb-gl">${escapeHtml(letter)}</span> ${escapeHtml(label)}` };
+    });
+  }
+  // "Liberal 3rd, One Nation 4th, Labor 9th": where the card puts each leading contender other than its own party.
+  function placement(items, own, contenders) {
+    const same = (a, b) => a === b || (COAL(a) && COAL(b));
+    const parts = (contenders || []).filter((p) => !same(p, own)).map((p) => {
+      const i = items.findIndex((it) => same(it.party, p));
+      return `${shortName(p)} ${i < 0 ? "not numbered" : ord(i + 1)}`;
+    });
+    return parts.length ? `<p class="htv-place small"><strong>Places the contenders:</strong> ${escapeHtml(parts.join(", "))}</p>` : "";
+  }
+  const possessive = (s) => `${s}${/s$/.test(s) ? "'" : "'s"}`;
+  const ord = (n) => App.ui.ord(n);
+
+  // Plain-words facts: major-party cards that put One Nation or the Greens ahead of the other side, and in
+  // Labor-v-Greens seats which of the two each card ranks higher.
+  function plainFlags(doc) {
+    // One line per card reading: the positions of the parties its flags name (and, in a Labor-v-Greens seat, of
+    // Labor and the Greens), in printed order.
+    const lines = new Map();
+    const lvg = doc.labor_greens && doc.house === "lower";
+    const party = new Map((doc.ballot || []).map((b) => [b.ballot_name, b.party]));
+    columns(doc).forEach((col) => {
+      const c = col.card, pos = new Map();
+      (c.flags || []).forEach((f) => {
+        pos.set(NAMES[f.ahead].replace(/^the /, ""), f.ahead_n);
+        pos.set(sideName(f.of, doc, c).replace(/^the /, ""), f.of_n);
+      });
+      if (lvg && !["ALP", "GRN"].includes(c.party)) {
+        const order = c.order || [];
+        const at = (code) => { const k = order.findIndex((n) => party.get(n) === code); return k < 0 ? null : k + 1; };
+        if (at("ALP") && at("GRN")) { pos.set("Labor", at("ALP")); pos.set("Greens", at("GRN")); }
+      }
+      if (!pos.size) return;
+      const who_ = c.kind === "party" && c.party && c.party !== "OTH" ? partyName(c.party) : who(c);
+      lines.set(`${possessive(who_)} card: ${[...pos.entries()].sort((a, b) => a[1] - b[1]).map(([n, k]) => `${n} ${ord(k)}`).join(", ")}`, 1);
+    });
+    if (!lines.size) return "";
+    return `<div class="flag-note" role="note">${App.ui.clamp([...lines.keys()].map((t) => `<p>${escapeHtml(t)}</p>`).join(""))}
+      <p class="small">${lvg ? "Labor and the Greens are the main contest here. " : ""}As printed on the cards: their preferences, not this site's.</p></div>`;
+  }
+
+  // ctx: {vote(card) -> projected vote or null (chip order), contenders: [party codes], area}
+  function cardsView(doc, ctx = {}) {
+    if (!doc) return `<p class="muted small">The how-to-vote card register isn't available right now.</p>${App.ui.linkCard(REGISTER, "VEC how-to-vote card register", "Every registered card, on the VEC's site", true)}`;
+    const regs = registrants(doc);
+    if (!regs.length) return `<p class="lead">No how-to-vote cards are registered here.</p>`;
+    // A candidate's card is named as on the profile ("Omor Faruq"), not as on the ballot ("FARUQ, M.D. Omor").
+    const ballotName = new Map((doc.ballot || []).map((b) => [b.ballot_name, b.name]));
+    const who = (c) => (c.kind === "party" && c.party && c.party !== "OTH" ? partyName(c.party)
+      : ballotName.get(c.registered_by) || (c.registered_by && /,/.test(c.registered_by) ? App.ui.niceName(c.registered_by) : c.registered_by) || "Not named in the VEC's list");
+    const vote = (g) => (ctx.vote ? ctx.vote(g.card) : null);
+    const rank = (c) => (c.kind === "party" ? 0 : c.kind === "independent" ? 1 : 2);
+    regs.sort((a, b) => ((vote(b) ?? -1) - (vote(a) ?? -1)) || rank(a.card) - rank(b.card)
+      || (a.card.kind === "party" && b.card.kind === "party" ? App.partyOrder(a.card.party, b.card.party) : 0) || who(a.card).localeCompare(who(b.card)));
+    const id = escapeHtml(doc.area);
+    const code = (c) => (c.kind === "non_candidate" ? "OTH" : c.party || "IND");
+    const chips = regs.map((g, i) => `<button type="button" class="chipbtn" data-htv-i="${i}" aria-pressed="${i === 0}" aria-controls="htvp-${id}-${i}"
+      style="--party-color: var(${partyVar(code(g.card))}); --party-ink: ${App.inkVar(code(g.card))}">${escapeHtml(who(g.card))}</button>`).join("");
+    const panel = (g, i) => {
+      const n = (col) => col.cards.length + col.same.length;
+      const total = g.variants.reduce((s, col) => s + n(col), 0);
+      const meta = g.variants.length > 1 ? `${g.variants.length} versions that differ` : total > 1 ? `${total} cards, same order` : g.variants.length ? "1 card" : "";
+      const versions = g.variants.map((col, k) => {
+        const items = orderItems(doc, col.card);
+        return `<div class="htv-version">${g.variants.length > 1 ? `<p class="htv-vh">Version ${k + 1} <span class="muted small">· ${n(col)} card${n(col) === 1 ? "" : "s"}</span></p>` : ""}
+          ${App.ui.rankedList(items, { show: 3, top: 3, more: `Show full order (${items.length})` })}
+          ${placement(items, col.card.party, ctx.contenders)}
+          ${col.card.status === "partial" ? '<p class="small muted">Only the numbered boxes could be read: check the card.</p>' : ""}
+          ${col.cards.concat(col.same).some(byImage) ? '<p class="small muted">Numbers read from the card\'s image: check the card.</p>' : ""}
+          <div class="btn-row"><a href="${escapeHtml(col.card.card_url)}" target="_blank" rel="noopener">View card ↗</a></div></div>`;
+      }).join("");
+      const unread = g.unread.length ? `<p class="small muted">${g.variants.length ? "Another card" : "This card"}'s order couldn't be read here.</p>
+        <div class="btn-row"><a href="${escapeHtml(g.unread[0].card_url)}" target="_blank" rel="noopener">View card ↗</a></div>` : "";
+      // Only the chosen card is in the page; the others wait in templates until their chip is picked.
+      const html = `<div class="htv-panel" id="htvp-${id}-${i}" data-htv-panel="${i}"${i ? " hidden" : ""}>
+        <p class="htv-ph"><strong>${escapeHtml(possessive(who(g.card)))} card</strong>${meta ? ` <span class="muted small">· ${meta}</span>` : ""}${g.card.kind === "non_candidate" ? ' <span class="muted small">· not a candidate</span>' : ""}</p>
+        ${versions}${unread}</div>`;
+      return i ? `<template data-htv-tpl="${i}">${html}</template>` : html;
+    };
+    const noCard = doc.no_card || [];
+    const whose = doc.house === "lower" ? "candidate" : "candidate";
+    return `<div class="htv2">
+      <p class="lead">${regs.length} ${regs.length === 1 ? "party or candidate has" : "parties and candidates have"} registered how-to-vote cards${doc.house === "lower" ? ` for ${escapeHtml(doc.name)}` : ` for ${escapeHtml(doc.name)} Region`}. Pick one to see its order.</p>
+      ${plainFlags(doc)}
+      <div class="chipbar" role="group" aria-label="How-to-vote cards by party or candidate">${chips}</div>
+      ${regs.map(panel).join("")}
+      ${noCard.length ? `<details class="rl-more"><summary>No card registered for ${noCard.length} ${whose}${noCard.length === 1 ? "" : "s"}</summary><p class="small">${noCard.map((x) => escapeHtml(x)).join("; ")}</p></details>` : ""}
+      ${App.ui.asTable(`<p class="muted small">Every card's numbers side by side, one column per card reading.</p>${matrix(doc, `Preference numbers on each registered how-to-vote card for ${doc.name}`)}`, "Compare all cards")}
+      ${App.ui.linkCard(doc.source_url || REGISTER, "VEC how-to-vote card register", `${(doc.cards || []).length} cards registered; ${(doc.cards || []).filter(isRead).length} read here`, true)}
+    </div>`;
+  }
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".htv2 .chipbtn[data-htv-i]");
+    if (!btn) return;
+    const box = btn.closest(".htv2");
+    const tpl = box.querySelector(`template[data-htv-tpl="${btn.dataset.htvI}"]`);
+    if (tpl) tpl.replaceWith(tpl.content.cloneNode(true));
+    box.querySelectorAll(".chipbtn[data-htv-i]").forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
+    box.querySelectorAll("[data-htv-panel]").forEach((p) => {
+      p.hidden = p.dataset.htvPanel !== btn.dataset.htvI;
+      if (!p.hidden) { App.ui.initClamps(p); App.glossarize(p); }
+    });
+  });
+
+  App.Htv = { load, section, cardsView, matrix, flagsHtml, statusLine, watch, coverage, reserve, columns };
 })();

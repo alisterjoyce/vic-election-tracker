@@ -353,6 +353,26 @@
     return { placed: placed.length, total: contest.polling_places.length, pins };
   }
 
+  // The seat page's Voting section: the district's outline and its 2026 places to vote, without the 2022 booths.
+  async function centresMap(el, districtId, centres) {
+    const geo = await loadGeo("districts");
+    if (!el.isConnected) return null;
+    for (const [box, m] of boothMaps) {
+      if (box === el || !box.isConnected) { m.remove(); boothMaps.delete(box); }
+    }
+    const feature = geo.features.find((f) => f.properties.id === districtId);
+    const map = baseMap(el);
+    boothMaps.set(el, map);
+    const pts = ["early", "election_day"].flatMap((k) => (centres[k] || []).filter((c) => c.lat != null).map((c) => [c.lat, c.lon]));
+    if (feature) map.fitBounds(L.geoJSON(feature).getBounds(), { padding: [10, 10] });
+    else if (pts.length) map.fitBounds(L.latLngBounds(pts), { padding: [20, 20] });
+    else map.setView([-37.8, 145], 8);
+    if (feature) {
+      L.geoJSON(feature, { style: { color: cssVar("--text"), weight: 1.5, fillColor: cssVar("--surface-2"), fillOpacity: 0.6 }, interactive: false }).addTo(map);
+    }
+    return { pins: centrePins(map, centres) };
+  }
+
   /* ---------------- Find my seat: the district containing a point ---------------- */
   // Ray casting over every ring (outer rings and holes alike), so holes come out right.
   function inRings(rings, x, y) {
@@ -377,5 +397,5 @@
     return hit ? hit.properties.id : null;
   }
 
-  App.Maps = { homeMap, boothMap, loadGeo, districtAt };
+  App.Maps = { homeMap, boothMap, centresMap, loadGeo, districtAt };
 })();

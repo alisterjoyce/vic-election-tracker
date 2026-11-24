@@ -681,63 +681,6 @@
     return people;
   }
 
-  /* ---- Ballot paper (data/vec_nominations.json: the VEC's official list) ---- */
-  // "SURNAME, Given" as the ballot prints it, surname in capitals.
-  function ballotNameHtml(b) {
-    const i = String(b).indexOf(",");
-    return i < 0 ? `<span class="bp-sur">${escapeHtml(b)}</span>`
-      : `<span class="bp-sur">${escapeHtml(b.slice(0, i))}</span>, ${escapeHtml(b.slice(i + 1).trim())}`;
-  }
-
-  const bpLink = (c) => (c.id ? `<a class="bp-name" href="candidate.html#${escapeHtml(c.id)}">${ballotNameHtml(c.ballot_name)}</a>`
-    : `<span class="bp-name">${ballotNameHtml(c.ballot_name)}</span>`);
-  const bpParty = (c) => `<span class="bp-party">${escapeHtml(c.party_label || (c.party === "IND" ? "Independent" : ""))}</span>`;
-
-  // The seat's or region's ballot paper, in the VEC's order once the 9 Nov draw is published (before that, the
-  // order the candidates nominated, clearly labelled). entry: vec_nominations.json → districts[id] or regions[id].
-  function ballotPaper(entry, house) {
-    if (!entry || !(entry.candidates || []).length) return "";
-    const drawn = !!entry.ballot_drawn;
-    const src = `<p class="muted small bp-src">Source: <a href="${escapeHtml(entry.url)}" target="_blank" rel="noopener">Victorian Electoral Commission</a>,
-      nominations closed noon Mon 9 Nov 2026. ${entry.candidates.length} candidates${house === "upper" ? ` for ${entry.vacancies || 5} vacancies` : ""}.</p>`;
-    const pending = `<p class="bp-note">The VEC drew the ballot order at 4 pm on Mon 9 Nov; it will show here once the VEC publishes it.
-      Until then the candidates are listed in the order they nominated, which is not the ballot order.</p>`;
-    const byNom = (a, b) => (a.nominated || 0) - (b.nominated || 0);
-    if (house === "lower") {
-      const cands = entry.candidates.slice().sort(drawn ? (a, b) => a.ballot_position - b.ballot_position : byNom);
-      return `<div class="ballot-paper${drawn ? "" : " is-pending"}">
-        <p class="bp-head">Legislative Assembly · ${escapeHtml(entry.name)} District</p>
-        ${drawn ? "" : pending}
-        <ol class="bp-list">${cands.map((c) => `<li style="--party-color: var(${partyVar(c.party)})">
-          <span class="bp-pos" aria-label="${drawn ? `Ballot position ${c.ballot_position}` : ""}">${drawn ? c.ballot_position : ""}</span>
-          <span class="bp-box" aria-hidden="true"></span>
-          <span class="bp-who">${bpLink(c)}${bpParty(c)}</span></li>`).join("")}</ol>
-        ${src}</div>`;
-    }
-    if (!drawn) {
-      const cands = entry.candidates.slice().sort(byNom);
-      return `<div class="ballot-paper bp-upper is-pending">
-        <p class="bp-head">Legislative Council · ${escapeHtml(entry.name)} Region</p>
-        ${pending.replace("ballot order", "group letters and order")}
-        <ul class="bp-list bp-cols">${cands.map((c) => `<li style="--party-color: var(${partyVar(c.party)})">
-          <span class="bp-who">${bpLink(c)}${bpParty(c)}</span></li>`).join("")}</ul>
-        ${src}</div>`;
-    }
-    const groups = (entry.groups || []).map((g) => ({ ...g, members: entry.candidates.filter((c) => c.group === g.group) }));
-    const loose = entry.candidates.filter((c) => !c.group);
-    const col = (letter, label, party, members) => `<div class="bp-group" style="--party-color: var(${partyVar(party)})">
-        <div class="bp-ghead">${letter ? `<span class="bp-letter">${escapeHtml(letter)}</span>` : ""}<span class="bp-glabel">${escapeHtml(label || "")}</span></div>
-        <ol class="bp-list">${members.map((c) => `<li style="--party-color: var(${partyVar(c.party)})">
-          <span class="bp-box" aria-hidden="true"></span><span class="bp-who">${bpLink(c)}${letter && c.party_label && c.party_label !== label ? bpParty(c) : (letter ? "" : bpParty(c))}</span></li>`).join("")}</ol>
-      </div>`;
-    return `<div class="ballot-paper bp-upper">
-      <p class="bp-head">Legislative Council · ${escapeHtml(entry.name)} Region</p>
-      <div class="bp-groups">${groups.map((g) => col(g.group, g.label || "(group with no name)", g.party || "OTH", g.members)).join("")}
-        ${loose.length ? col("", "Ungrouped", "IND", loose) : ""}</div>
-      <p class="muted small">Groups in ballot order (A first), each with its candidates in their order on the ballot; ungrouped candidates last.</p>
-      ${src}</div>`;
-  }
-
   /* ---- News (data/news.json): headline, outlet, date and link only ---- */
   function newsList(items, { more = 0 } = {}) {
     if (!items || !items.length) return '<p class="empty">No recent stories found.</p>';
@@ -766,6 +709,105 @@
     return `<p class="abc-results small"><a class="icon-btn" href="${escapeHtml(url)}" target="_blank" rel="noopener">ABC results: ${escapeHtml(x.name)}${kind === "region" ? " Region" : ""} ↗</a>
       <span class="muted">The ABC's own count and analysis, on its site.</span></p>`;
   }
+
+  /* ---- Shared card styles for the seat and region pages (App.ui): big-number tiles, person cards, ranked lists,
+     probability bars, link cards, party chips, "More" for long text and "Show as table" (desktop only) ---- */
+  const ord = (n) => { const s = ["th", "st", "nd", "rd"], v = n % 100; return `${n}${s[(v - 20) % 10] || s[v] || s[0]}`; };
+  // A party-colour chip: the party's colour with its --ink-* text (CLAUDE.md, "Text on a party colour").
+  const chip = (code, text) => `<span class="pchip" style="--party-color: var(${partyVar(code)}); --party-ink: ${inkVar(code)}">${escapeHtml(text != null ? text : partyName(code))}</span>`;
+  // Big-number tiles: [{value, label, sub (HTML), code (party for a colour edge)}].
+  const tiles = (items) => `<div class="tiles">${items.map((t) => `<div class="tile"${t.code ? ` style="--party-color: var(${partyVar(t.code)})"` : ""}>
+      <div class="tile-v">${t.value}</div><div class="tile-l">${escapeHtml(t.label)}</div>${t.sub ? `<div class="tile-s">${t.sub}</div>` : ""}</div>`).join("")}</div>`;
+  // A person card: {badge (ballot number), avatar, name (HTML), code + party (chip text), line (one line), body (HTML
+  // shown on a tap; none means a plain card), extra (HTML after the chip, e.g. a Retiring badge)}.
+  function personCard(p) {
+    const head = `${p.badge != null ? `<span class="pc-badge" aria-label="Ballot position ${escapeHtml(p.badge)}">${escapeHtml(p.badge)}</span>` : ""}
+      ${p.avatar || ""}<span class="pc-main"><span class="pc-name">${p.name}</span>
+      <span class="pc-sub">${p.code ? chip(p.code, p.party) : ""}${p.extra || ""}</span>
+      ${p.line != null ? `<span class="pc-line">${p.line}</span>` : ""}</span>`;
+    return p.body ? `<details class="pcard"><summary>${head}<span class="pc-chev" aria-hidden="true"></span></summary><div class="pc-body">${p.body}</div></details>`
+      : `<div class="pcard">${head}</div>`;
+  }
+  // A ranked list: items [{label (HTML), code (party chip), value (HTML, right)}], the first `show` visible and the
+  // rest behind a "Show ..." control; `top` items highlighted. Numbered by position unless numbered: false.
+  function rankedList(items, { show = items.length, top = 0, more = "Show all", numbered = true, start = 1 } = {}) {
+    const li = (it, i) => `<li class="${i < top ? "rl-top" : ""}"${it.code ? ` style="--party-color: var(${partyVar(it.code)})"` : ""}>${numbered ? `<span class="rl-n">${i + start}</span>` : ""}
+      <span class="rl-label">${it.label}</span>${it.value != null ? `<span class="rl-v">${it.value}</span>` : ""}</li>`;
+    const head = items.slice(0, show), rest = items.slice(show);
+    return `<ol class="rlist${numbered ? "" : " rl-plain"}">${head.map(li).join("")}</ol>${rest.length ? `<details class="rl-more"><summary>${escapeHtml(more)}</summary>
+      <ol class="rlist${numbered ? "" : " rl-plain"}" start="${show + start}">${rest.map((it, i) => li(it, i + show)).join("")}</ol></details>` : ""}`;
+  }
+  // A horizontal stacked probability bar: segs [{code, label, value (percent)}], drawn largest first, with a legend of
+  // the largest three and the rest combined. A segment wide enough shows its figure in the party's ink colour.
+  function probBar(segs, { label = "", sub = "", legend = 3 } = {}) {
+    const list = segs.filter((s) => s.value > 0).sort(byValue((s) => s.value, (s) => s.code || "OTH"));
+    const total = list.reduce((a, s) => a + s.value, 0) || 1;
+    const pct = (v) => `${v < 1 && v > 0 ? "<1" : Math.round(v)}%`;
+    const shown = list.slice(0, legend), rest = list.slice(legend);
+    const restV = rest.reduce((a, s) => a + s.value, 0);
+    const aria = list.map((s) => `${s.label} ${pct(s.value)}`).join(", ");
+    return `<div class="pbar-wrap">${label ? `<div class="pbar-h"><span class="pbar-l">${label}</span>${sub ? `<span class="pbar-s">${sub}</span>` : ""}</div>` : ""}
+      <div class="pbar" role="img" aria-label="${escapeHtml(`${label.replace(/<[^>]+>/g, "")}: ${aria}`)}">${list.map((s) => `<span style="width:${(100 * s.value) / total}%;background:var(${partyVar(s.code || "OTH")});color:${inkVar(s.code || "OTH")}">${(100 * s.value) / total >= 14 ? pct(s.value) : ""}</span>`).join("")}</div>
+      <ul class="pbar-key">${shown.map((s) => `<li><span class="pk-dot" style="background:var(${partyVar(s.code || "OTH")})"></span>${escapeHtml(s.label)} <strong>${pct(s.value)}</strong></li>`).join("")}${restV > 0 ? `<li><span class="pk-dot" style="background:var(--border)"></span>${rest.length === 1 ? escapeHtml(rest[0].label) : `${rest.length} others`} <strong>${pct(restV)}</strong></li>` : ""}</ul></div>`;
+  }
+  // A two-sided bar (a 2CP result): a and b {code, label, value}.
+  const splitBar = (a, b, sub = "") => `<div class="sbar-wrap"><div class="sbar-h"><span>${chip(a.code, a.label)} <strong>${a.value.toFixed(1)}%</strong></span><span><strong>${b.value.toFixed(1)}%</strong> ${chip(b.code, b.label)}</span></div>
+      <div class="sbar" role="img" aria-label="${escapeHtml(`${a.label} ${a.value.toFixed(1)}%, ${b.label} ${b.value.toFixed(1)}%`)}"><span style="width:${a.value}%;background:var(${partyVar(a.code)})"></span><span style="width:${b.value}%;background:var(${partyVar(b.code)})"></span></div>${sub ? `<div class="sbar-s">${sub}</div>` : ""}</div>`;
+  // A link card: a whole-card link with a title and one line under it.
+  const linkCard = (href, title, sub = "", external = false) => `<a class="lcard" href="${escapeHtml(href)}"${external ? ' target="_blank" rel="noopener"' : ""}><span class="lc-t">${escapeHtml(title)}${external ? " ↗" : " →"}</span>${sub ? `<span class="lc-s">${sub}</span>` : ""}</a>`;
+  // Text clamped to three lines with a "More" button (shown only when the text is longer: App.ui.initClamps measures
+  // it, synchronously after rendering and when a section opens, so nothing moves once painted).
+  const clamp = (html, cls = "") => `<div class="clamp${cls ? ` ${cls}` : ""}"><div class="clamp-body">${html}</div><button type="button" class="clamp-btn" hidden>More</button></div>`;
+  function initClamps(root) {
+    (root || document).querySelectorAll(".clamp:not(.open)").forEach((c) => {
+      const body = c.firstElementChild, btn = c.lastElementChild;
+      if (!body.offsetParent) return;   // hidden: measured when it opens
+      btn.hidden = body.scrollHeight <= body.clientHeight + 2;
+    });
+  }
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".clamp-btn");
+    if (!btn) return;
+    const c = btn.parentElement, open = c.classList.toggle("open");
+    btn.textContent = open ? "Less" : "More";
+    btn.setAttribute("aria-expanded", String(open));
+  });
+  // A table shown only on wider screens, under a "Show as table" control (phones get the cards instead).
+  const asTable = (html, label = "Show as table") => `<details class="as-table"><summary>${escapeHtml(label)}</summary>${lazy(html)}</details>`;
+  // Content that waits in an inert <template> until its <details> first opens (no layout, glossary or CSV work before).
+  const lazy = (html) => `<template data-lazy>${html}</template>`;
+  document.addEventListener("toggle", (e) => {
+    const d = e.target;
+    if (!(d instanceof HTMLDetailsElement) || !d.open) return;
+    d.querySelectorAll("template[data-lazy]").forEach((t) => { if (t.closest("details") === d) t.replaceWith(t.content.cloneNode(true)); });
+  }, true);
+  // "2 hours ago", "3 days ago"; older than a fortnight, the date.
+  function ago(iso) {
+    const t = Date.parse(iso);
+    if (!t) return "";
+    const m = Math.round((Date.now() - t) / 60000);
+    if (m < 1) return "just now";
+    if (m < 60) return `${m} minute${m === 1 ? "" : "s"} ago`;
+    const h = Math.round(m / 60);
+    if (h < 24) return `${h} hour${h === 1 ? "" : "s"} ago`;
+    const d = Math.round(h / 24);
+    return d <= 14 ? `${d} day${d === 1 ? "" : "s"} ago` : fmtDate(iso);
+  }
+  // Headline cards: the first `show`, the rest behind "More headlines".
+  function newsCards(items, show = 5) {
+    if (!items || !items.length) return '<p class="empty">No recent stories found.</p>';
+    const card = (it) => `<li><a class="ncard" href="${escapeHtml(it.url)}" target="_blank" rel="noopener"><span class="nc-t">${escapeHtml(it.title)}</span>
+      <span class="nc-s">${escapeHtml(it.outlet || "")}${it.outlet ? " · " : ""}${escapeHtml(ago(it.published))}</span></a></li>`;
+    const rest = items.slice(show);
+    return `<ul class="ncards">${items.slice(0, show).map(card).join("")}</ul>${rest.length ? `<details class="rl-more"><summary>More headlines (${rest.length})</summary><ul class="ncards">${rest.map(card).join("")}</ul></details>` : ""}`;
+  }
+  // "McGHIE, Steve" (a ballot-paper name) -> "Steve McGhie": given names first, capitals only where names have them.
+  function niceName(name) {
+    const cap = (w) => w.replace(/[A-Za-z][^\s'-]*/g, (x) => (/^Mc[A-Z]/.test(x) ? `Mc${x[2]}${x.slice(3).toLowerCase()}`
+      : x === x.toUpperCase() && x.length > 1 ? x[0] + x.slice(1).toLowerCase() : x));
+    return givenFirst(String(name || "")).split(" ").map(cap).join(" ");
+  }
+  const ui = { lazy, niceName, ord, chip, tiles, personCard, rankedList, probBar, splitBar, linkCard, clamp, initClamps, asTable, ago, newsCards };
 
   /* ---- Collapsible sections (seat and region pages): a heading button per section with a one-line summary, a
      sticky jump bar of pills that appears once the "At a glance" block is scrolled past, and a "…" menu ---- */
@@ -814,6 +856,7 @@
       sec.querySelector(".sec-btn").setAttribute("aria-expanded", String(open));
       sec.querySelector(".sec-body").hidden = !open;
       if (open && onOpen) onOpen(sec.dataset.sec, how);
+      if (open) { initClamps(sec); glossarize(sec.querySelector(".sec-body")); }
     }
     function open(key, { scroll = true, how = "link" } = {}) {
       const sec = get(key);
@@ -1747,7 +1790,7 @@
   ];
   // Where terms aren't marked: inside links and controls, headings, code, graphics, the share-card renderer, the
   // glossary page itself and anything marked data-no-gloss.
-  const GLOSS_SKIP = "a, button, select, option, textarea, input, label, summary, h1, h2, script, style, svg, canvas, code, .jump-bar, .gloss-pop, [data-no-gloss], .hc-host";
+  const GLOSS_SKIP = "a, button, select, option, textarea, input, label, summary, h1, h2, script, style, svg, canvas, code, .jump-bar, [hidden], template, .gloss-pop, [data-no-gloss], .hc-host";
   const glossUsed = new WeakMap();   // container -> Set of term ids already marked in it (each term once per card or section)
 
   function glossarize(root) {
@@ -1858,13 +1901,13 @@
   window.App = {
     PARTIES, STATUSES, COALITION, partyOrder, byValue, candidateOrder, surnameOf, loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, partyBadge, statusBadge,
     slugify, parseDate, fmtDate, fmtMonth, fmtDateTime, dataUpdatedText, fmtPrice, fmtMargin, fmtSwing, melbourneToday, daysBetween,
-    hashId, cssVar, currentTheme, showError, copyLink, section, setSectionSummary, jumpPills, initSections, moreMenu, phoneView, keyDateNext, GLOSSARY, glossarize, abcResultsLink,
+    hashId, cssVar, currentTheme, showError, copyLink, ui, section, setSectionSummary, jumpPills, initSections, moreMenu, phoneView, keyDateNext, GLOSSARY, glossarize, abcResultsLink,
     DAY, preparePolls, pollExclusion, commissionLabel, AVG_MIN_SAMPLE, smoothedSeries, smoothedLatest, fmtRange, pollRecords, statewideSwing, swingAdjusted, projectSeats, modelSeats, seatCalls, apportion, hemicycle, seatRangeChart, modelsHemicycle, BLOC_LABEL, BLOC_COLOR, BLOCS, blocOf, modelLink, quotaBars,
     getWatchlist, setWatchlist, isWatched, toggleWatch, starButton, storageWorks,
     buildSearchIndex, searchItems,
     candidateId, givenFirst, loadHeadshots, avatar, photoCredits, initials, inkFor, inkVar, newsList,
     ROOT, tableToCsv, loadLib, afterPaint,
-    profileHref, profileLink, isPlaceholder, buildPeople, loadPeople, ballotPaper,
+    profileHref, profileLink, isPlaceholder, buildPeople, loadPeople,
   };
 
   // Scripts are deferred and this one loads first, so the page is already parsed: build the header,

@@ -43,7 +43,9 @@
   // ctx: {models: seat_models.json, odds: seat_odds.json, cands: the seat's active candidates (candidates.json rows or
   // vec_nominations.json entries: name, party, ballot_position)}. Returns {html, topMed (the leader's median chance or
   // null), split (the sources' favourites are different parties), favs ([[source, party]]), holder, summary (one
-  // sentence), short (a few words, for a collapsed section's summary line)}.
+  // sentence), short (a few words, for a collapsed section's summary line), and for the seat page's cards: bars
+  // ([{label, link, date, note, segs}]), calls ([{label, url, date, text}]), pairs, meds ([{code, label, value}]),
+  // tableHtml (the full comparison) and fp ({party: the model's median first preference})}.
   function build(d, ctx) {
     const odds = ctx.odds || null;
     const seatOdds = odds && (odds.seats || []).find((x) => x.district === d.id);
@@ -175,11 +177,47 @@
         : `Sportsbet: each price as 1 ÷ price, scaled so the market adds to 100% (its prices added to ${fmt1(100 * imp.book)}%)${imp.hidden ? "; longer-priced options Sportsbet folded away aren't included" : ""}.`) : "",
       "The highlighted cell in each column is that source's favourite. The Swing Is On isn't included: it states no licence for reuse.",
     ].filter(Boolean).join(" ");
+    // For the seat page's cards: a stacked bar per source that gives chances, the other sources' calls in words, the
+    // final pairs and each candidate's median chance; tableHtml is the full comparison (wider screens).
+    const labelOf = (party, cname) => (["IND", "OTH"].includes(party) && cname ? cname : name(party));
+    const bars = [];
+    if (aefE && (aefE.candidates || []).length) {
+      const others = (aefE.others || []).reduce((s, o) => s + (o.win_probability || 0), 0);
+      bars.push({ key: "aef", label: "Australian Election Forecasts", link: App.modelLink(aef), date: `model of ${fmtDate(aef.model_date)}`,
+        segs: aefE.candidates.map((r) => ({ code: r.party, label: labelOf(r.party, r.name), value: r.win_probability }))
+          .concat(others > 0 ? [{ code: "OTH", label: "Anyone else", value: others }] : []) });
+    }
+    if (imp) {
+      bars.push({ key: "odds", label: "Sportsbet", link: "Sportsbet", date: `implied by prices${oddsDate ? ` on ${fmtDate(oddsDate)}` : ""}`,
+        note: imp.partial ? "Part of the market was cut off, so these are 1 ÷ price with the bookmaker's margin left in." : "",
+        segs: imp.opts.map((o) => ({ code: o.party || "OTH", label: o.candidate ? o.label : o.party ? name(o.party) : o.label, value: o.chance })) });
+    }
+    const calls = [];
+    mrps.forEach((m) => {
+      const e = entry(m);
+      calls.push({ label: m.name, url: m.source_url, date: `fieldwork ${m.fieldwork || ""}`,
+        text: e && e.winner ? `${name(e.winner)} to win${e.winner_2cp != null ? ` (${fmt1(e.winner_2cp)}% 2CP)` : ""}${e.runner_up ? `, ${name(e.runner_up)} second` : ""}` : "No call for this seat" });
+    });
+    if (rb) {
+      calls.push({ label: rb.name, url: rb.source_url, date: fmtDate(rb.published_date),
+        text: rbE && rbE.winner ? `${name(rbE.winner)} favoured` : (rb.toss_ups || []).includes(d.id) ? "Rated a toss-up" : "Statewide totals only, no call for this seat" });
+    }
+    const pairData = ((aefE && aefE.two_cp) || []).slice().sort((a, b) => b.probability - a.probability).slice(0, 3).map((s) => {
+      const [a, b] = s.parties, sh = s.share ? s.share[1] : null;
+      const order = sh != null && sh < 50 ? [[b, 100 - sh], [a, sh]] : [[a, sh], [b, sh != null ? 100 - sh : null]];
+      return { pair: order.map(([code, share]) => ({ code, share })), p: s.probability };
+    });
+    const meds = rows.filter((r) => r.med != null).map((r) => ({ code: r.c.party, label: labelOf(r.c.party, r.c.name), name: r.c.name, value: r.med }));
+    const tableHtml = `${table}<p class="muted small fc-notes">${escapeHtml(notes)}</p>${fpRows ? `<h4>First-preference ranges (Australian Election Forecasts)</h4>
+        <div class="table-scroll"><table data-no-csv><thead><tr><th>Candidate</th><th>Party</th><th class="num">Win</th><th class="num">First pref. % (90% range)</th></tr></thead><tbody>${fpRows}</tbody></table></div>` : ""}`;
+    const fp = ((aefE && aefE.candidates) || []).reduce((m, c) => { if (c.fp) m[c.party] = Math.max(m[c.party] || 0, c.fp[1]); return m; }, {});
+
     const html = `<p class="fc-summary">${escapeHtml(summary)}</p>${table}<p class="muted small fc-notes">${escapeHtml(notes)}</p>${final2}
       ${fpRows ? `<details class="fc-detail"><summary>First-preference ranges (Australian Election Forecasts)</summary>
         <div class="table-scroll"><table data-no-csv><thead><tr><th>Candidate</th><th>Party</th><th class="num">Win</th><th class="num">First pref. % (90% range)</th></tr></thead><tbody>${fpRows}</tbody></table></div></details>` : ""}`;
     const favParties = new Set(favs.map(([, p]) => p));
-    return { html, topMed: rows.length && rows[0].med != null ? rows[0].med : null, split: favParties.size > 1, favs, holder, summary, short };
+    return { html, topMed: rows.length && rows[0].med != null ? rows[0].med : null, split: favParties.size > 1, favs, holder, summary, short,
+      bars, calls, pairs: pairData, meds, tableHtml, fp };
   }
 
   // The 2022 final pair, from results_2022/<id>.json, into the line the Forecasts block reserves (within root).

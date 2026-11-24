@@ -89,12 +89,12 @@
     let exhaust = DEFAULT_EXHAUST;
 
     el.innerHTML = `
-      <div class="card-head"><h2>Quota calculator</h2><span class="muted small">Quota ${fmt(QUOTA)}%</span></div>
-      <p class="muted small" style="margin-top:0">${seed
+      <div class="card-head"><h4>Primary votes</h4><span class="muted small">Quota ${fmt(QUOTA)}%</span></div>
+      ${App.ui.clamp(`<p>${seed
         ? `Seeded from <a href="${escapeHtml(poll.source_url)}" target="_blank" rel="noopener">${escapeHtml(poll.pollster)}</a>
            (fieldwork ${escapeHtml(poll.fieldwork_label)}, published ${escapeHtml(fmtDate(poll.published))}, about
            ${Math.round(poll.sample_size / 8)} electors per region, so roughly ±5 points). Edit any figure.`
-        : "No published regional poll for this region yet. Enter primary votes to try a result."}</p>
+        : "No published regional poll for this region yet. Enter primary votes to try a result."}</p>`, "note")}
       <div class="table-scroll"><table class="quota-table">
         <thead><tr><th>Party</th><th class="num">Primary %</th><th class="num">Quotas</th><th class="num">Seats</th><th class="num">Final count</th></tr></thead>
         <tbody></tbody>
@@ -112,11 +112,11 @@
       </div>
       <div class="quota-result" aria-live="polite"></div>
       <details class="quota-steps"><summary>How the count went</summary><ol></ol></details>
-      <p class="muted small">Rules: 5 members, quota of one-sixth of formal votes plus one. Group voting tickets are gone, and above-the-line
+      ${App.ui.clamp(`<p>Rules: 5 members, quota of one-sixth of formal votes plus one. Group voting tickets are gone, and above-the-line
         voters number at least 5 boxes, so a party's preferences go only where its voters send them. The model treats each party
         as one group and sends non-exhausted preferences to parties of the same leaning (Labor, Greens, Socialists, Animal Justice,
         Legalise Cannabis on one side; Coalition, One Nation, Family First, Libertarians, DLP, Shooters on the other) in proportion
-        to their votes. "Others" is several small parties, so it can't win a seat as a group and is excluded first.</p>`;
+        to their votes. "Others" is several small parties, so it can't win a seat as a group and is excluded first.</p>`, "note")}`;
 
     const tbody = el.querySelector("tbody");
     const add = el.querySelector("[data-add]");
