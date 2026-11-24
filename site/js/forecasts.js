@@ -42,7 +42,8 @@
 
   // ctx: {models: seat_models.json, odds: seat_odds.json, cands: the seat's active candidates (candidates.json rows or
   // vec_nominations.json entries: name, party, ballot_position)}. Returns {html, topMed (the leader's median chance or
-  // null), split (the sources' favourites are different parties), favs ([[source, party]]), holder}.
+  // null), split (the sources' favourites are different parties), favs ([[source, party]]), holder, summary (one
+  // sentence), short (a few words, for a collapsed section's summary line)}.
   function build(d, ctx) {
     const odds = ctx.odds || null;
     const seatOdds = odds && (odds.seats || []).find((x) => x.district === d.id);
@@ -134,13 +135,15 @@
     });
     const holder = d.party;
     const name = (p) => App.partyName(p);
-    let summary;
-    if (!favs.length) summary = `No source rates ${d.name}.`;
+    let summary, short;   // short: the one line under a collapsed Forecasts section ("Sources split: Liberal or One Nation")
+    if (!favs.length) { summary = `No source rates ${d.name}.`; short = "No source rates this seat"; }
     else {
       const byParty = {};
       favs.forEach(([src, p]) => { (byParty[p] = byParty[p] || []).push(src); });
       const medOf = (p) => Math.max(-1, ...rows.filter((r) => r.c.party === p && r.med != null).map((r) => r.med));
       const parties = Object.keys(byParty).sort((a, b) => byParty[b].length - byParty[a].length || medOf(b) - medOf(a) || App.partyOrder(a, b));
+      short = parties.length > 1 ? `Sources split: ${parties.map(name).join(" or ")}`
+        : favs.length === 1 ? `${favs[0][0]} favours ${name(parties[0])}` : `All ${favs.length} sources favour ${name(parties[0])}`;
       if (parties.length === 1) {
         const p = parties[0];
         summary = `${favs.length === 1 ? `The only source that rates ${d.name}, ${favs[0][0]},` : `All ${favs.length} sources`} favour${favs.length === 1 ? "s" : ""} ${p === holder ? `${name(p)} to hold ${d.name}` : `${name(p)} to win ${d.name} from ${name(holder)}`}.`;
@@ -176,7 +179,7 @@
       ${fpRows ? `<details class="fc-detail"><summary>First-preference ranges (Australian Election Forecasts)</summary>
         <div class="table-scroll"><table data-no-csv><thead><tr><th>Candidate</th><th>Party</th><th class="num">Win</th><th class="num">First pref. % (90% range)</th></tr></thead><tbody>${fpRows}</tbody></table></div></details>` : ""}`;
     const favParties = new Set(favs.map(([, p]) => p));
-    return { html, topMed: rows.length && rows[0].med != null ? rows[0].med : null, split: favParties.size > 1, favs, holder, summary };
+    return { html, topMed: rows.length && rows[0].med != null ? rows[0].med : null, split: favParties.size > 1, favs, holder, summary, short };
   }
 
   // The 2022 final pair, from results_2022/<id>.json, into the line the Forecasts block reserves (within root).

@@ -2,14 +2,17 @@
 (function () {
   "use strict";
   const App = window.App;
-  const { loadJSON, escapeHtml, partyBadge, partyShort, statusBadge, fmtDate, copyLink } = window.App;
-  // "#bendigo-west" or "#bendigo-west/<tab>" (e.g. "/candidates"): the district, then the tab to open. The Voting page's
-  // older "#<district>/where-to-vote" links open the Voting tab.
+  const { loadJSON, escapeHtml, partyBadge, partyShort, statusBadge, fmtDate } = window.App;
+  // "#bendigo-west" or "#bendigo-west/<section>" (e.g. "/candidates"): the district, then the section to open and
+  // scroll to. The Voting page's "#<district>/where-to-vote" links open the Voting section; "/overview" (the old
+  // first tab) is the top of the seat.
   const hashId = () => App.hashId().split("/")[0];
   const hashSection = () => App.hashId().split("/")[1] || "";
-  const TAB_KEYS = ["overview", "candidates", "how-to-vote", "forecasts", "voting", "results", "news"];
-  const tabFromHash = () => { const s = hashSection(); return s === "where-to-vote" ? "voting" : TAB_KEYS.includes(s) ? s : "overview"; };
-  let showTab = null;   // the open seat's App.initTabs show(key)
+  const SECTION_KEYS = ["candidates", "how-to-vote", "forecasts", "voting", "results", "news"];
+  const sectionFromHash = () => { const s = hashSection(); return s === "where-to-vote" ? "voting" : SECTION_KEYS.includes(s) ? s : ""; };
+  let seatSecs = null;   // the open seat's App.initSections controller
+  const HTV_OPTS = { h: "h4", hideHead: true };   // the section's own heading names it
+  let meta = null;      // data/meta.json (the next key date in At a glance)
 
   // Strongest confirmation first.
 
@@ -41,7 +44,8 @@
     return `<div class="outlook-row${cls ? ` ${cls}` : ""}"><dt>${escapeHtml(label)}</dt><dd>${body}</dd></div>`;
   }
 
-  function renderOutlook(d) {
+  // The Forecasts section: the comparison table, the betting market, seat polls, then the uniform-swing what-if.
+  function renderOutlook(d, fc) {
     const s = outlook.swing;
     const adj = App.swingAdjusted(d.margin, s);
     let swingCell;
@@ -54,7 +58,6 @@
 
     const odds = outlook.odds;
     const seatOdds = odds && (odds.seats || []).find((x) => x.district === d.id);
-    const fc = App.Forecasts.build(d, { models: outlook.models, odds, cands: seatCands(d) });
     let oddsCell;
     const price = App.fmtPrice;
     const favLabel = (code, candidate) => (candidate ? `${escapeHtml(candidate)} (Ind)`
@@ -92,26 +95,21 @@
         ${p.source_url ? ` <a class="small" href="${escapeHtml(p.source_url)}" rel="noopener" target="_blank">source</a>` : ""}</div>`;
     }).join("") : '<span class="muted">none published</span>';
 
-    // The Overview tab: the swing-adjusted margin and the forecasts' one-line summary; the Forecasts tab: everything.
-    return {
-      overview: `
-      <section class="outlook" aria-label="Seat outlook">
-        <h3>Seat outlook</h3>
+    return `
+      <div class="outlook">
         <dl>
-          ${outlookRow("Swing-adjusted margin", swingCell)}
-          ${outlookRow("Forecasts", `<p class="fc-summary">${escapeHtml(fc.summary)}</p><button type="button" class="link-btn" data-tab-go="forecasts">Every candidate, source by source</button>`)}
-        </dl>
-        <p class="muted small outlook-note">The swing-adjusted figure is a uniform-swing estimate; One Nation's vote breaks uniform swing in outer-suburban and regional seats.</p>
-      </section>`,
-      forecasts: `
-      <section class="outlook" aria-label="Forecasts">
-        <dl>
-          ${outlookRow("Forecasts", fc.html, "outlook-wide")}
+          ${outlookRow("By candidate", fc.html, "outlook-wide")}
           ${outlookRow("Betting favourite", oddsCell)}
           ${outlookRow("Seat polls", pollsCell)}
         </dl>
-      </section>`,
-    };
+      </div>
+      <div class="whatif-note seat-whatif">
+        <p><strong>Uniform swing: a what-if that does not model One Nation or independents.</strong></p>
+        <div class="seat-whatif-fig"><span class="muted">Swing-adjusted margin:</span> ${swingCell}</div>
+        <p class="muted small">It moves every Labor-v-Coalition seat by the same statewide two-party swing, so it can't show a seat One Nation or an
+          independent might win, and One Nation's vote breaks uniform swing in outer-suburban and regional seats. Try other swings on the
+          <a href="pendulum.html${s ? `#swing=${fmt1(s.swing)}` : ""}">pendulum</a>.</p>
+      </div>`;
   }
 
   // The ABC's classification ("Very Safe Labor") when we have it.
@@ -185,8 +183,76 @@
     return App.candidateOrder(a, b);
   }
 
+  // The seat's sections, in page order: [key, title]. The Results title changes once counting starts.
+  const sectionList = (live) => [["candidates", "Candidates"], ["how-to-vote", "How-to-vote"], ["forecasts", "Forecasts"],
+    ["voting", "Voting"], ["results", live ? "Results" : "2022 results"], ["news", "News"]];
+
+  // The one-line summaries shown under each collapsed section's title.
+  const plural = (n, one, many = `${one}s`) => `${n} ${n === 1 ? one : many}`;
+  function candSummary(cands) {
+    if (!cands.length) return "None recorded yet";
+    return cands.some((c) => c.ballot_position != null) ? `${cands.length} on the ballot` : plural(cands.length, "candidate");
+  }
+  function htvSummary(doc) {
+    if (doc === undefined) return "Loading the VEC's register…";
+    if (!doc) return "The VEC's register isn't available right now";
+    const n = (doc.cards || []).length;
+    return n ? `${plural(n, "card")} registered` : "No cards registered";
+  }
+  function newsSummary(d) {
+    if (news === undefined) return "Loading headlines…";
+    const n = ((news && news.seats && news.seats[d.id]) || []).length;
+    return n ? plural(n, "recent headline") : "No recent headlines";
+  }
+  function liveSummary(live) {
+    const l = live.leader;
+    if (!l) return "No votes counted yet";
+    const who = `${App.partyName(l.party)} (${l.name})`;
+    if (live.called_by === "vec") return `Declared by the VEC: ${who}`;
+    if (live.status === "called") return `Called by this site: ${who}`;
+    return `Leading: ${who}, ${(live.counted_pct || 0).toFixed(1)}% counted`;
+  }
+  // "Labor won 54.4–45.6 v Liberal", from the 2022 count (results_2022/<id>.json, which the Forecasts block loads too).
+  async function resultsSummary(d) {
+    let text = "Not available for this district";
+    try {
+      const r = await loadJSON(`results_2022/${d.id}`);
+      const cand = Object.fromEntries((r.candidates || []).map((c) => [c.id, c]));
+      const dist = r.distribution && Object.keys(r.distribution.candidates || {}).length === 2 ? r.distribution.candidates : null;
+      const pair = Object.entries(dist || (r.tcp && r.tcp.candidates) || {}).sort((a, b) => b[1] - a[1]);
+      if (pair.length === 2) {
+        const total = pair[0][1] + pair[1][1];
+        const year = r.event && r.event.date && !/^State Election 2022/.test(r.event.name || "") ? ` (${r.event.date.slice(0, 4)} poll)` : "";
+        text = `${App.partyName(cand[pair[0][0]].party)} won ${fmt1((100 * pair[0][1]) / total)}–${fmt1((100 * pair[1][1]) / total)} v ${App.partyName(cand[pair[1][0]].party)}${year}`;
+      }
+    } catch (e) { /* the panel says so too */ }
+    if (hashId() === d.id) App.setSectionSummary($("district-detail"), "results", escapeHtml(text));
+  }
+
+  // "At a glance": the seat's facts, the forecasts' one-line summary and the next key date, above the sections.
+  function glanceBlock(d, region, cands, fc, live) {
+    const kn = App.keyDateNext(meta);
+    return `<section class="glance" id="seat-glance" aria-labelledby="glance-h">
+      <h3 class="glance-h" id="glance-h">At a glance</h3>
+      <div class="facts glance-facts">
+        <div class="fact"><div class="label">Sitting MP</div><div class="value">${escapeHtml(d.sitting_mp || "–")}${d.retiring ? ' <span class="badge neutral">Retiring</span>' : ""}</div></div>
+        <div class="fact"><div class="label">Held by</div><div class="value">${partyBadge(d.party)}</div></div>
+        <div class="fact"><div class="label">Margin</div><div class="value">${marginText(d.margin)}</div><div class="muted small">${escapeHtml(seatLabel(d))}</div>${pbNote(d)}</div>
+        <div class="fact"><div class="label">Region</div><div class="value">${region ? `<a href="upper.html#${escapeHtml(region.id)}">${escapeHtml(region.name)}</a>` : escapeHtml(d.region)}${d.needs_check ? ' <span class="badge reported" title="Region allocation flagged for checking">Check</span>' : ""}</div><div class="muted small">${d.area === "regional" ? "Regional" : "Metro"}</div></div>
+        <div class="fact"><div class="label">Candidates</div><div class="value"><button type="button" class="link-btn" data-sec-go="candidates">${escapeHtml(candSummary(cands))}</button></div></div>
+        <div class="fact"><div class="label">${kn && kn.label === "Today" ? "Today" : "Next key date"}</div><div class="value fact-date">${kn ? escapeHtml(kn.text) : "–"}</div></div>
+      </div>
+      <p class="glance-fc"><strong>Forecasts:</strong> ${escapeHtml(fc.summary)} <button type="button" class="link-btn" data-sec-go="forecasts">Every candidate, source by source</button></p>
+      ${overviewResults(d, live)}
+      ${d.notes ? `<p>${escapeHtml(d.notes)}</p>` : ""}
+      ${d.region_note ? `<p class="muted small">${escapeHtml(d.region_note)}</p>` : ""}
+    </section>`;
+  }
+
   function renderDetail() {
     const el = $("district-detail");
+    const bar = $("seat-jump");
+    if (seatSecs) { seatSecs.destroy(); seatSecs = null; }
     const id = hashId();
     const d = districts.find((x) => x.id === id);
     if (!d) {
@@ -202,85 +268,75 @@
     const region = regionsById[d.region];
     const cands = seatCands(d);
     const live = liveResult(d);
-
-    const tab = tabFromHash();
-    const outlookParts = renderOutlook(d);
-    const TABS = [["overview", "Overview"], ["candidates", "Candidates"], ["how-to-vote", "How-to-vote"], ["forecasts", "Forecasts"],
-      ["voting", "Voting"], ["results", live ? "Results" : "2022 results"], ["news", "News"]];
-    const P = (key, html) => App.tabPanel(key, tab, "seat", html);
+    const fc = App.Forecasts.build(d, { models: outlook.models, odds: outlook.odds, cands });
+    // Phones open only the section a link names; wider screens open them all.
+    const want = sectionFromHash(), wide = !App.phoneView();
+    const S = (key, title, sum, html) => App.section("sec", key, title, sum, html, wide || key === want);
+    const T = Object.fromEntries(sectionList(live));
     el.hidden = false;
     el.dataset.seat = d.id;
     el.innerHTML = `
       <div class="card-head">
         <h2>${App.starButton(d.id, d.name)} ${escapeHtml(d.name)}</h2>
         <div class="card-actions">
-          ${d.abc_url ? `<a class="icon-btn" href="${escapeHtml(d.abc_url)}" target="_blank" rel="noopener">ABC guide ↗</a>` : ""}
-          <a class="icon-btn" href="${escapeHtml(pbUrl(d))}" target="_blank" rel="noopener">Poll Bludger guide ↗</a>
           <a class="icon-btn" href="ballot.html#${escapeHtml(d.id)}">Your ballot</a>
-          <button class="icon-btn" type="button" id="copy-link">Copy link</button>
           <button class="icon-btn" type="button" id="share-seat" title="Share or download a 1200x630 image of this seat">Share</button>
+          ${App.moreMenu("seat-more", "More: guides and copy link", [
+            d.abc_url ? `<a href="${escapeHtml(d.abc_url)}" target="_blank" rel="noopener">ABC guide ↗</a>` : "",
+            `<a href="${escapeHtml(pbUrl(d))}" target="_blank" rel="noopener">Poll Bludger guide ↗</a>`,
+            '<button type="button" data-copy-link>Copy link</button>',
+          ].filter(Boolean))}
         </div>
       </div>
-      ${App.tabBar(TABS, tab, "seat", `${d.name}: sections`)}
-      ${P("overview", `
-      <div class="facts">
-        <div class="fact"><div class="label">Sitting MP</div><div class="value">${escapeHtml(d.sitting_mp || "–")}${d.retiring ? ' <span class="badge neutral">Retiring</span>' : ""}</div></div>
-        <div class="fact"><div class="label">Held by</div><div class="value">${partyBadge(d.party)}</div></div>
-        <div class="fact"><div class="label">Margin</div><div class="value">${marginText(d.margin)}</div><div class="muted small">${escapeHtml(seatLabel(d))}</div>${pbNote(d)}</div>
-        <div class="fact"><div class="label">Region</div><div class="value">${region ? `<a href="upper.html#${escapeHtml(region.id)}">${escapeHtml(region.name)}</a>` : escapeHtml(d.region)}${d.needs_check ? ' <span class="badge reported" title="Region allocation flagged for checking">Check</span>' : ""}</div><div class="muted small">${d.area === "regional" ? "Regional" : "Metro"}</div></div>
-      </div>
-      ${overviewResults(d, live)}
-      ${outlookParts.overview}
-      ${d.notes ? `<p>${escapeHtml(d.notes)}</p>` : ""}
-      ${d.region_note ? `<p class="muted small">${escapeHtml(d.region_note)}</p>` : ""}`)}
-      ${P("candidates", `
-      <h3>Candidates</h3>
+      ${glanceBlock(d, region, cands, fc, live)}
+      <div class="secs">
+      ${S("candidates", T.candidates, escapeHtml(candSummary(cands)), `
       <div id="seat-cands">${candidatesBlock(d, cands)}</div>
       <details class="compare" id="compare">
-        <summary><h3 id="compare-h">Compare candidates</h3><span class="muted small">Party, occupation, roles and stated priorities side by side</span></summary>
+        <summary><h4 id="compare-h">Compare candidates</h4><span class="muted small">Party, occupation, roles and stated priorities side by side</span></summary>
         <div id="compare-body"><p class="muted small">Loading profiles…</p></div>
       </details>
       <section class="seat-ballot" id="ballot-order" aria-labelledby="ballot-h">
-        <h3 id="ballot-h">Ballot paper</h3>
+        <h4 id="ballot-h">Ballot paper</h4>
         <div id="seat-ballot" style="min-height:${ballotHeight(cands)}px">${ballotBlock(d)}</div>
       </section>`)}
-      ${P("how-to-vote", `
-      <div id="seat-htv" style="min-height:${htvDocs[d.id] ? 0 : App.Htv.reserve(cands.filter((c) => !isInactive(c)).length)}px">${htvDocs[d.id] ? App.Htv.section(htvDocs[d.id]) : ""}</div>`)}
-      ${P("forecasts", outlookParts.forecasts)}
-      ${P("voting", `
-      <section class="seat-vote" id="where-to-vote" aria-labelledby="wtv-h">
-        <h3 id="wtv-h">Where to vote</h3>
+      ${S("how-to-vote", T["how-to-vote"], escapeHtml(htvSummary(htvDocs[d.id])), `
+      <div id="seat-htv" style="min-height:${htvDocs[d.id] ? 0 : App.Htv.reserve(cands.length)}px">${htvDocs[d.id] ? App.Htv.section(htvDocs[d.id], HTV_OPTS) : ""}</div>`)}
+      ${S("forecasts", T.forecasts, escapeHtml(fc.short), renderOutlook(d, fc))}
+      ${S("voting", T.voting, "Early voting Wed 18 to Fri 27 Nov; election day Sat 28 Nov", `
+      <div class="seat-vote" id="where-to-vote">
         <p class="small wtv-times">${VOTE_TIMES}</p>
         <p class="small wtv-early-votes" id="wtv-early-votes">&nbsp;</p>
         <details class="wtv-list" id="wtv-early"><summary>Early voting centres <span class="muted" data-count></span></summary><div class="wtv-body"><p class="muted small">Loading…</p></div></details>
         <details class="wtv-list" id="wtv-day"><summary>Election-day voting centres <span class="muted" data-count></span></summary><div class="wtv-body"><p class="muted small">Loading…</p></div></details>
         <p class="muted small wtv-src">From the VEC's <a href="https://www.vec.vic.gov.au/voting/2026-state-election/voting-locations" target="_blank" rel="noopener">voting locations</a>
-          (© Victorian Electoral Commission, CC BY 4.0). Pins on the booth map in the <a href="#${escapeHtml(d.id)}/results" data-tab-go="results">${live ? "Results" : "2022 results"} tab</a> mark them. Check the VEC's list before you go.</p>
-      </section>`)}
-      ${P("results", `
+          (© Victorian Electoral Commission, CC BY 4.0). Pins on the booth map in the <a href="#${escapeHtml(d.id)}/results" data-sec-go="results">${escapeHtml(T.results)} section</a> mark them. Check the VEC's list before you go.</p>
+      </div>`)}
+      ${S("results", T.results, live ? escapeHtml(liveSummary(live)) : "Loading the 2022 count…", `
       ${live ? App.abcResultsLink("district", d) : ""}
-      ${live ? `<section class="r26" id="r26" aria-labelledby="r26-h"><h3 id="r26-h">2026 results</h3><p class="empty">Loading 2026 results…</p></section>` : ""}
+      ${live ? `<section class="r26" id="r26" aria-labelledby="r26-h"><h4 id="r26-h">2026 results</h4><p class="empty">Loading 2026 results…</p></section>` : ""}
       <section class="r22" id="r22" aria-labelledby="r22-h">
-        <h3 id="r22-h">How it voted in 2022</h3>
+        <h4 id="r22-h">How it voted in 2022</h4>
         <p class="empty">Loading 2022 results…</p>
       </section>`)}
-      ${P("news", `
-      <section class="seat-news" aria-labelledby="news-h">
-        <h3 id="news-h">In the news</h3>
+      ${S("news", T.news, escapeHtml(newsSummary(d)), `
+      <div class="seat-news">
         <div id="seat-news">${newsBlock(d)}</div>
         <p class="muted small">Headlines and links only, from news searches and publishers' feeds that mention ${escapeHtml(d.name)} or its MP. Updated four times a day.</p>
-      </section>`)}`;
-    $("copy-link").addEventListener("click", (e) => copyLink(e.currentTarget));
+      </div>`)}
+      </div>`;
+    bar.innerHTML = App.jumpPills(sectionList(live), (key) => `#${d.id}/${key}`);
     if (!htvDocs[d.id]) {   // another seat chosen after load: fetch its cards into the reserved space
-      App.Htv.load(d.id).then((doc) => { htvDocs[d.id] = doc; }).catch(() => null).then(() => {
+      App.Htv.load(d.id).then((doc) => { htvDocs[d.id] = doc; }).catch(() => { htvDocs[d.id] = null; }).then(() => {
         const box = $("seat-htv");
         if (!box || hashId() !== d.id) return;
-        box.innerHTML = App.Htv.section(htvDocs[d.id] || null, { area: d.id });
+        box.innerHTML = App.Htv.section(htvDocs[d.id] || null, { ...HTV_OPTS, area: d.id });
         box.style.minHeight = "";
+        App.setSectionSummary(el, "how-to-vote", escapeHtml(htvSummary(htvDocs[d.id])));
       });
     }
     App.ShareCard.shareButton($("share-seat"), async () => App.ShareCard.seatCard({
-      seat: d, cands: cands.filter((c) => !isInactive(c)), shots: await App.loadHeadshots(), classification: seatLabel(d),
+      seat: d, cands, shots: await App.loadHeadshots(), classification: seatLabel(d),
       odds: outlook.odds && (outlook.odds.seats || []).find((x) => x.district === d.id),
       oddsDate: outlook.odds && outlook.odds.date_checked,
     }));
@@ -288,22 +344,28 @@
     // The comparison loads the seat's profiles (data/profiles/<seat>.json) only when it is opened.
     $("compare").addEventListener("toggle", (e) => { if (e.currentTarget.open) renderCompare(d); });
     App.Forecasts.fillFinal2022(d);
-    // The results panels (with their Leaflet booth maps, which need a visible box) draw the first time their tab opens.
+    if (!live) resultsSummary(d);
+    // The results panels (with their Leaflet booth maps, which need a visible box) draw the first time their section opens.
     let resultsDrawn = false;
-    showTab = App.initTabs(el, (key, how) => {
-      if (how === "user") history.replaceState(null, "", key === "overview" ? `#${d.id}` : `#${d.id}/${key}`);
-      if (key === "results" && !resultsDrawn) {
+    seatSecs = App.initSections(el, {
+      bar, glance: $("seat-glance"),
+      onHash: (key, k) => {
+        if (key) history.replaceState(null, "", `#${d.id}/${key}`);
+        else if (sectionFromHash() === k) history.replaceState(null, "", `#${d.id}`);
+      },
+      onOpen: (key) => {
+        if (key !== "results" || resultsDrawn) return;
         resultsDrawn = true;
         if (live) renderContest(d, { key: "r26", file: `results_2026/${d.id}`, title: "2026 results", live, intro: intro2026 });
         renderContest(d, { key: "r22", file: `results_2022/${d.id}`, title: "How it voted in 2022", intro: intro2022 });
-      }
+      },
     });
   }
 
-  // The Overview tab's line on the 2026 count: the leader and call once counting starts (the full panel is the Results tab).
+  // At a glance's line on the 2026 count: the leader and call once counting starts (the full panel is the Results section).
   function overviewResults(d, live) {
     if (live) {
-      return `<p class="r26-wait small"><strong>2026 count:</strong> ${statusLine(live)} <button type="button" class="link-btn" data-tab-go="results">Full results</button></p>`;
+      return `<p class="r26-wait small"><strong>2026 count:</strong> ${statusLine(live)} <button type="button" class="link-btn" data-sec-go="results">Full results</button></p>`;
     }
     return resultsSlot(d, live);
   }
@@ -358,6 +420,10 @@
     if (hashId() === d.id && $("wtv-early-votes")) $("wtv-early-votes").innerHTML = earlyVotesLine(d, ev);
     const sec = $("where-to-vote");
     if (hashId() !== d.id || !sec || !sec.isConnected) return;
+    if (doc) {
+      const ne = (doc.early || []).length, nd = (doc.election_day || []).length;
+      App.setSectionSummary($("district-detail"), "voting", `${ne} early, ${nd} election-day voting centres`);
+    }
     const names = Object.fromEntries(districts.map((x) => [x.id, x.name]));
     const item = (c) => `<li><strong>${escapeHtml(String(c.venue || c.name).replace(/\s*\(EVC\)$/, ""))}</strong>
         <span class="muted small">${escapeHtml([c.address, [c.suburb, c.postcode].filter(Boolean).join(" ")].filter(Boolean).join(", "))}</span>
@@ -526,7 +592,7 @@
     try {
       r = await loadJSON(opts.file);
     } catch (err) {
-      el.innerHTML = `<h3 id="${key}-h">${escapeHtml(opts.title)}</h3><p class="empty">${key === "r26" ? "2026 results" : "2022 results"} are not available for this district${key === "r26" ? " yet" : ""}.</p>`;
+      el.innerHTML = `<h4 id="${key}-h">${escapeHtml(opts.title)}</h4><p class="empty">${key === "r26" ? "2026 results" : "2022 results"} are not available for this district${key === "r26" ? " yet" : ""}.</p>`;
       return;
     }
     if (hashId() !== d.id || !el.isConnected) return;   // user moved on
@@ -555,9 +621,9 @@
     }
 
     el.innerHTML = `
-      <h3 id="${key}-h">${escapeHtml(opts.title)}</h3>
+      <h4 id="${key}-h">${escapeHtml(opts.title)}</h4>
       ${opts.intro(r)}
-      <h4>First preferences</h4>
+      <h5>First preferences</h5>
       <ul class="vote-bars">
         ${fpRows.map(([id, v]) => {
           const c = cand[id];
@@ -568,13 +634,13 @@
       </ul>
       <p class="muted small">${fp.formal.toLocaleString("en-AU")} formal votes, ${fp.informal.toLocaleString("en-AU")} informal (${pct(fp.informal, fp.total).toFixed(1)}%)${r.contest.enrolment ? `; enrolment ${r.contest.enrolment.toLocaleString("en-AU")}` : ""}.</p>
       ${headEntries.length ? `
-        <h4>${dist ? "After preferences" : "Two-candidate preferred"}</h4>
+        <h5>${dist ? "After preferences" : "Two-candidate preferred"}</h5>
         <div class="tcp-bar" role="img" aria-label="${headEntries.map(([id, v]) => `${App.partyName(cand[id].party)} ${pct(v, headTotal).toFixed(1)}%`).join(", ")}">
           ${headEntries.map(([id, v]) => `<span style="width:${pct(v, headTotal)}%;background:var(${App.partyVar(cand[id].party)})"></span>`).join("")}
         </div>
         <p>${headEntries.map(([id, v]) => `${label(cand[id])} <strong>${pct(v, headTotal).toFixed(1)}%</strong>${swingSpan(tsw[id])}`).join(" · ")}</p>
         ${notes.map((n) => `<p class="muted small">${n}</p>`).join("")}` : ""}
-      <h4>Voting centres</h4>
+      <h5>Voting centres</h5>
       <div class="booth-map" id="${key}-booth-map"></div>
       <p class="muted small" id="${key}-booth-note"></p>
       ${byType.length ? `
@@ -613,21 +679,22 @@
     }
   }
 
-  // "#<district>/<tab>": bring the tab bar to the top once everything above it has filled in, so nothing moves after.
+  // "#<district>/<section>": open the section and bring it to the top once photos, headlines and the ballot paper
+  // are in, so nothing above it moves afterwards.
   function scrollToSection() {
-    if (!extrasDone || !hashSection()) return;
+    if (!extrasDone || !sectionFromHash()) return;
     const want = App.hashId();
     extrasDone.then(() => App.afterPaint()).then(() => {
-      const bar = App.hashId() === want && document.querySelector("#district-detail .tabs");
-      if (bar) bar.scrollIntoView({ block: "start" });
+      if (App.hashId() === want && seatSecs) seatSecs.open(sectionFromHash(), { how: "link" });
     });
   }
 
   function onHashChange() {
     const id = hashId();
     const d = districts.find((x) => x.id === id);
-    if (d && showTab && $("district-detail").dataset.seat === id && !$("district-detail").hidden) {   // same seat, another tab
-      showTab(tabFromHash(), { how: "hash" });
+    if (d && seatSecs && $("district-detail").dataset.seat === id && !$("district-detail").hidden) {   // same seat, another section
+      if (sectionFromHash()) seatSecs.open(sectionFromHash(), { how: "link" });
+      else $("district-detail").scrollIntoView({ block: "start" });
       return;
     }
     // If a shared link points outside the current filters, clear them so it shows up.
@@ -635,7 +702,7 @@
     renderDistrictOptions();
     renderList();
     renderDetail();
-    if (d && hashSection()) scrollToSection();
+    if (d && sectionFromHash()) scrollToSection();
     else if (d) $("district-detail").scrollIntoView({ block: "nearest" });
   }
 
@@ -652,6 +719,7 @@
       if (d && $("seat-cands")) {
         $("seat-cands").innerHTML = candidatesBlock(d, seatCands(d));
         $("seat-news").innerHTML = newsBlock(d);
+        App.setSectionSummary($("district-detail"), "news", escapeHtml(newsSummary(d)));
         $("seat-ballot").innerHTML = ballotBlock(d);
         $("seat-ballot").style.minHeight = "";
       }
@@ -663,13 +731,14 @@
       const optional = (name) => loadJSON(name).catch((err) => { console.warn(err); return null; });
       // What the seat panel needs, in parallel. Photos and headlines wait until it has painted.
       const first = hashId();
-      const [dd, cd, rd, meta, pollData, models, odds, seatPolls, resultData, pb] = await Promise.all([
+      const [dd, cd, rd, metaData, pollData, models, odds, seatPolls, resultData, pb] = await Promise.all([
         loadJSON("districts"), loadJSON("candidates"), loadJSON("regions"),
         optional("meta"), optional("polls"), optional("seat_models"), optional("seat_odds"), optional("seat_polls"),
         optional("results"), optional("pollbludger_margins"),
-        first ? App.Htv.load(first).then((doc) => { htvDocs[first] = doc; }).catch(() => null) : null,
+        first ? App.Htv.load(first).then((doc) => { htvDocs[first] = doc; }).catch(() => { htvDocs[first] = null; }) : null,
       ]);
       results = resultData;
+      meta = metaData;
       ((pb && pb.differences) || []).forEach((x) => { pbDiffs[x.district] = x; });
       outlook = { swing: App.statewideSwing(meta, pollData), models, odds, seatPolls };
       districts = dd.districts.slice().sort((a, b) => a.name.localeCompare(b.name));

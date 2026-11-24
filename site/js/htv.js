@@ -187,9 +187,9 @@
         <p class="muted small">The how-to-vote card register isn't available right now. <a href="${REGISTER}" target="_blank" rel="noopener">VEC register ↗</a></p></section>`;
     }
     const noCard = doc.no_card || [];
-    const H = opts.h || "h3";
+    const H = opts.h || "h3";   // opts.hideHead: the heading is for screen readers only (a section heading above names it)
     return `<section class="htv" aria-labelledby="htv-h-${id}">
-      <${H} id="htv-h-${id}">How-to-vote cards</${H}>
+      <${H} id="htv-h-${id}"${opts.hideHead ? ' class="sr-only"' : ""}>How-to-vote cards</${H}>
       <p class="muted small">${statusLine(doc)} <a href="${escapeHtml(doc.source_url || REGISTER)}" target="_blank" rel="noopener">VEC register ↗</a></p>
       ${flagsHtml(doc)}
       ${laborGreensHtml(doc)}
@@ -206,6 +206,18 @@
   const reserve = (nRows) => 150 + 38 * (nRows + 1);
 
   /* ---------- lower.html: Preference watch, from htv/index.json ---------- */
+  // A list of seats after its count: up to SEATS_SHOWN names in full; a longer one gives only the exceptions (when
+  // most seats are in it and the rest are few) and a "Show all seats" control that opens the full list.
+  const SEATS_SHOWN = 8;
+  function seatNames(list, of, seat) {
+    const names = (rows) => rows.slice().sort((a, b) => a.area.localeCompare(b.area)).map((r) => seat(r.area) + (r.differ ? "*" : "")).join(", ");
+    if (!list.length) return ".";
+    if (list.length <= SEATS_SHOWN) return `: <span class="small">${names(list)}</span>`;
+    const inList = new Set(list.map((r) => r.area));
+    const except = of.filter((r) => !inList.has(r.area));
+    const lead = !except.length ? ", all of them." : except.length <= SEATS_SHOWN ? `. Exceptions: <span class="small">${names(except)}</span>.` : ".";
+    return `${lead} <details class="seat-all"><summary>Show all ${list.length} seats</summary><p class="small">${names(list)}</p></details>`;
+  }
   function watch(index, districts) {
     if (!index) return `<div class="card-head"><h2>Preference watch</h2></div><p class="muted small">The how-to-vote card summary isn't available right now.</p>`;
     const byId = new Map(districts.map((d) => [d.id, d]));
@@ -220,8 +232,7 @@
         const list = flagged(party, ahead);
         const other = party === "ALP" ? "the Coalition" : "Labor";
         lines.push(`<li><span class="party" style="--party-color: var(${partyVar(party)})">${escapeHtml(partyName(party))}</span>
-          cards put ${NAMES[ahead]} ahead of ${other} in <strong>${list.length}</strong> of the ${read.length} districts where their order was read${list.length ? `:
-          <span class="small">${list.sort((a, b) => a.area.localeCompare(b.area)).map((r) => seat(r.area) + (r.differ ? "*" : "")).join(", ")}</span>` : "."}</li>`);
+          cards put ${NAMES[ahead]} ahead of ${other} in <strong>${list.length}</strong> of the ${read.length} districts where their order was read${seatNames(list, read, seat)}</li>`);
       }
     }
     // The Liberal decision in Labor-v-Greens seats.

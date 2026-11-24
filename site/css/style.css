@@ -430,7 +430,7 @@ h3 { font-size: 1rem; }
 }
 
 /* Seat page: 2022 results */
-.r22 h3 { margin-top: 18px; }
+.r22 h4 { margin-top: 18px; }
 .vote-bars { list-style: none; padding: 0; margin: 0; }
 .vote-bars li { display: grid; grid-template-columns: minmax(110px, 1.2fr) 3fr auto; gap: 4px 10px; align-items: center; padding: 4px 0; }
 .vote-bars .vb-name { overflow-wrap: anywhere; font-size: 0.9rem; }
@@ -540,6 +540,7 @@ main { padding: 24px 0 40px; }
 .card-head h2 { margin: 0; }
 .card-actions { display: flex; gap: 8px; flex-wrap: wrap; }
 a.icon-btn { text-decoration: none; display: inline-block; }
+.card-actions > a.icon-btn { display: inline-flex; align-items: center; }
 
 .grid { display: grid; gap: 20px; }
 .grid-2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
@@ -735,16 +736,72 @@ select {
 .outlook-note { margin: 8px 0 0; }
 @media (max-width: 560px) { .outlook-row { grid-template-columns: 1fr; } }
 /* Forecasts row: one line per model, an agreement line above */
-/* Tabs (seat and region pages): a bar that scrolls sideways on a phone and stays at the top as the page scrolls */
-.tabs { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; margin: 12px -4px 14px; padding: 0 4px; border-bottom: 1px solid var(--border); background: var(--surface); position: sticky; top: var(--tabs-top, 57px); z-index: 6; }   /* 57px: the sticky header on desktop */
-.tabs::-webkit-scrollbar { display: none; }
-.tab { flex: none; border: 0; background: none; color: var(--muted); font: inherit; font-size: 0.92rem; font-weight: 600; padding: 10px 12px; min-height: 44px; border-bottom: 3px solid transparent; margin-bottom: -1px; cursor: pointer; white-space: nowrap; }
-.tab:hover { color: var(--text); }
-.tab[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
-.tab:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
-@media (max-width: 640px) { .tabs { top: 0; margin-left: -18px; margin-right: -18px; padding: 0 14px; } }   /* the header doesn't stick on a phone */
-.tab-panel:focus { outline: none; }
-.tab-panel > .card-head { margin-top: 18px; }
+/* Seat and region pages: "At a glance", then collapsible sections (common.js App.section / initSections), a jump
+   bar that appears once At a glance is scrolled past, and the "…" menu (App.moreMenu) */
+.glance { margin: 0 0 4px; }
+.glance-h { font-family: var(--font-body); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin: 0 0 6px; }
+.glance .facts { margin: 0 0 12px; }
+@media (max-width: 640px) {
+  .glance .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .glance .fact { padding: 8px 10px; }
+}
+.glance-fc { margin: 0 0 10px; }
+.glance .fact .link-btn { font-weight: 600; text-align: left; }
+.glance-mlcs { margin: 0 0 12px; }
+.glance-sub { font-size: 0.95rem; margin: 6px 0 6px; }
+@media (max-width: 640px) { .glance .facts > .fact:nth-child(3):last-child { grid-column: 1 / -1; } }   /* a region's third fact: the full row */
+.secs { border-top: 1px solid var(--border); margin-top: 8px; }
+.sec { border-bottom: 1px solid var(--border); scroll-margin-top: calc(var(--jb-top, 0px) + 58px); }   /* clears the header and the jump bar */
+.sec-h { margin: 0; font-size: 1.05rem; }
+.sec-btn {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: 12px;
+  width: 100%; min-height: 56px; padding: 10px 2px; border: 0; background: none; color: var(--text);
+  font: inherit; text-align: left; cursor: pointer;
+}
+.sec-title { grid-column: 1; }
+.sec-chev {
+  grid-column: 2; grid-row: 1 / span 2; width: 9px; height: 9px; margin: 0 8px 4px;
+  border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: rotate(45deg);
+}
+.sec.is-open .sec-chev { transform: rotate(-135deg); margin-bottom: -4px; }
+.sec-sum { grid-column: 1; font-family: var(--font-body); font-size: 0.88rem; font-weight: 400; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sec.is-open .sec-sum { display: none; }
+.sec-btn:hover .sec-title { color: var(--accent); }
+.sec-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+.sec-body { padding: 0 0 18px; }
+.sec-body > :first-child, .sec-body > :first-child > :first-child { margin-top: 0; }
+.sec-body h4 { font-family: var(--font-display); font-size: 1rem; line-height: 1.2; margin: 18px 0 0.5rem; }
+.sec-body h5 { font-size: 0.92rem; margin: 14px 0 6px; }
+.seat-whatif { margin: 16px 0 0; }
+.seat-whatif p { margin: 0 0 6px; }
+.seat-whatif p:last-child { margin: 6px 0 0; }
+
+.jump-bar { position: fixed; left: 0; right: 0; top: var(--jb-top, 0px); z-index: 9; background: var(--surface); border-bottom: 1px solid var(--border); box-shadow: var(--shadow); }
+.jump-bar[hidden] { display: none; }
+.jb-inner { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; max-width: 1100px; margin: 0 auto; padding: 8px var(--gutter); }
+.jb-inner::-webkit-scrollbar { display: none; }
+.jb-pill {
+  flex: none; display: inline-flex; align-items: center; min-height: 36px; padding: 0 14px; border: 1px solid var(--border);
+  border-radius: 999px; background: var(--surface); color: var(--text); text-decoration: none; font-size: 0.88rem; font-weight: 600; white-space: nowrap;
+}
+.jb-pill:hover { background: var(--surface-2); }
+.jb-pill[aria-current="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
+.jb-pill:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.more { position: relative; }
+.more-btn { min-width: 44px; min-height: 36px; font-weight: 700; }
+.more-list { position: absolute; right: 0; top: calc(100% + 4px); z-index: 12; min-width: 210px; padding: 6px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; box-shadow: var(--shadow); }
+.more-list[hidden] { display: none; }
+.more-list > [role="menuitem"] {
+  display: flex; align-items: center; width: 100%; min-height: 44px; padding: 0 12px; box-sizing: border-box; border: 0; border-radius: 6px;
+  background: none; color: var(--text); font: inherit; font-size: 0.92rem; text-align: left; text-decoration: none; cursor: pointer; white-space: nowrap;
+}
+.more-list > [role="menuitem"]:hover, .more-list > [role="menuitem"]:focus { background: var(--surface-2); }
+.more-list > [role="menuitem"]:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+.seat-all { margin-top: 2px; }
+.seat-all > summary { cursor: pointer; color: var(--accent); font-size: 0.88rem; min-height: 24px; }
+.seat-all > p { margin: 4px 0 0; }
 .link-btn { border: 0; background: none; padding: 0; font: inherit; color: var(--accent); text-decoration: underline; cursor: pointer; }
 .abc-results { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin: 4px 0 12px; }
 /* Glossary terms: a dotted underline, and a popover with the short definition on tap */
@@ -758,7 +815,7 @@ a.gloss:hover, a.gloss[aria-expanded="true"] { text-decoration-color: var(--acce
 .glossary dd { margin: 4px 0 0; }
 /* Region pages: regional polls and the contest for the last seat */
 .rp-h { margin: 16px 0 6px; }
-.rp-poll h3 { font-size: 1rem; margin: 8px 0 6px; }
+.rp-poll h5 { font-size: 1rem; margin: 8px 0 6px; }
 .last-seat .ls-party { border-left: 4px solid var(--party-color, var(--border)); }
 .last-seat .ls-winner td { font-weight: 700; }
 /* Seat page Forecasts: summary, the per-candidate table (sorted by median chance), likely final two */
@@ -1195,13 +1252,27 @@ html.js .key-dates { min-height: 84px; }   /* 960px and wider: the milestones an
   html.js .key-dates > .container { width: 100%; }   /* auto margins in a flex column would shrink it to fit */
 }
 .r22:has(> .empty) { min-height: 1100px; }
-html.has-hash #district-detail[hidden] { display: block; min-height: 680px; }   /* lower.html#seat: room for the seat (its Overview tab, measured 23 Nov 2026) before it renders */
-@media (max-width: 640px) { html.has-hash #district-detail[hidden] { min-height: 1250px; } }
-#pref-watch:empty { min-height: 520px; }
+/* lower.html#seat: room for the seat before it renders (measured 24 Nov 2026 over all 88 seats: with every section
+   open above 640px the shortest is 5,400px, so a window's height is enough; on phones, At a glance and the six
+   collapsed sections, shortest 937px at 412px wide) */
+html.has-hash #district-detail[hidden] { display: block; min-height: 1200px; }
+@media (max-width: 640px) { html.has-hash #district-detail[hidden] { min-height: 930px; } }
+/* upper.html#region: room for the region before it renders (24 Nov 2026: every section open above 640px, shortest
+   well over 5,000px; on phones At a glance with five MLCs and the collapsed sections, about 1,100px) */
+html.has-hash #region-detail { min-height: 1200px; }
+@media (max-width: 640px) { html.has-hash #region-detail { min-height: 1000px; } }
+#pref-watch:empty { min-height: 925px; }   /* lower.html: Preference watch, the shortest it fills at each width (24 Nov 2026) */
 .tally:empty { min-height: 85px; } .pd-list:empty { min-height: 1600px; }   /* pendulum.html: 88 seats */   /* lower.html: the Preference watch card, filled once the data loads */
-#region-chips:empty { min-height: 44px; }  /* upper.html: one row of region chips */
-@media (max-width: 760px) { #pref-watch:empty { min-height: 760px; } #region-chips:empty { min-height: 254px; } }
-@media (max-width: 400px) { #region-chips:empty { min-height: 341px; } }  /* seat pages: the 2022 results load after the page scrolls to the seat */
+/* upper.html: the region chips, as tall as they wrap at each width (measured 24 Nov 2026 every 20px; kept after filling) */
+html.js #region-chips { min-height: 79px; }
+@media (max-width: 799px) { html.js #region-chips { min-height: 123px; } }
+@media (max-width: 619px) { html.js #region-chips { min-height: 166px; } }
+@media (max-width: 479px) { html.js #region-chips { min-height: 210px; } }
+@media (max-width: 439px) { html.js #region-chips { min-height: 254px; } }
+@media (max-width: 399px) { html.js #region-chips { min-height: 341px; } }
+@media (max-width: 760px) { #pref-watch:empty { min-height: 1150px; } }
+@media (max-width: 640px) { #pref-watch:empty { min-height: 1300px; } }
+@media (max-width: 420px) { #pref-watch:empty { min-height: 1500px; } }
 @media (min-width: 840px) and (max-width: 959px) { html.js .key-dates { min-height: 105px; } }   /* a long note runs to three lines */
 @media (min-width: 840px) and (max-width: 859px) { html.js .key-dates { min-height: 112px; } }   /* 25 Nov: "today, 6 pm" wraps the milestones (measured 16 Nov 2026) */
 @media (min-width: 641px) and (max-width: 839px) { html.js .key-dates { min-height: 133px; } }   /* the milestones wrap too */
@@ -1235,7 +1306,7 @@ html.has-hash #district-detail[hidden] { display: block; min-height: 680px; }   
 
 /* ---------- Election-night results (results.html, the seat page's 2026 panel, the region count) ---------- */
 .r26 { border: 2px solid var(--accent); border-radius: 10px; padding: 4px 14px 10px; margin: 0 0 18px; }
-.r26 h3:first-child { margin-top: 10px; }
+.r26 h4:first-child { margin-top: 10px; }
 .r26:has(> .empty) { min-height: 900px; }   /* the 2026 panel's space while its contest file loads */
 .r26-wait { border-left: 3px solid var(--accent); padding: 6px 10px; background: var(--surface-2); border-radius: 0 6px 6px 0; }
 .r26-status { margin: 4px 0 6px; line-height: 1.7; }
@@ -1310,7 +1381,6 @@ html.has-hash #district-detail[hidden] { display: block; min-height: 680px; }   
 
 /* ---------- Where to vote (seat pages; data/voting_centres/) ---------- */
 .seat-vote { margin-top: 20px; }
-.seat-vote h3 { margin-bottom: 6px; }
 .wtv-times { margin: 0 0 8px; }
 .wtv-list { border-top: 1px solid var(--border); }
 .wtv-list:last-of-type { border-bottom: 1px solid var(--border); }
@@ -1325,7 +1395,7 @@ html.has-hash #district-detail[hidden] { display: block; min-height: 680px; }   
 /* ---------- Compare candidates (seat pages): one column per candidate, opened on demand ---------- */
 .compare { margin: 20px 0 0; border: 1px solid var(--border); border-radius: 8px; padding: 0 12px; }
 .compare > summary { cursor: pointer; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; padding: 10px 0; min-height: 44px; box-sizing: border-box; }
-.compare > summary h3 { display: inline; margin: 0; font-size: 1rem; }
+.compare > summary h4 { display: inline; margin: 0; font-size: 1rem; }
 .compare > summary::marker { color: var(--muted); }
 .compare[open] { padding-bottom: 12px; }
 .compare #compare-body > p { margin: 0 0 8px; }

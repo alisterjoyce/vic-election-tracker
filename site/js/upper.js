@@ -2,7 +2,7 @@
 (function () {
   "use strict";
   const App = window.App;
-  const { loadJSON, escapeHtml, partyName, partyVar, partyBadge, statusBadge, hashId, copyLink, fmtDate } = App;
+  const { loadJSON, escapeHtml, partyName, partyVar, partyBadge, statusBadge, hashId, fmtDate } = App;
 
   let regions = [];
   let districts = [];
@@ -12,6 +12,7 @@
   let councilPolls = [];   // regional upper-house polls (data/council_polls.json), newest first
   let resultsLc = null;    // data/results_lc.json: the 2026 count by region (scripts/results.py), null if missing
   let vec = null;          // data/vec_nominations.json: the VEC's official list (ballot paper), null if missing
+  let meta = null;         // data/meta.json (the next key date in At a glance)
 
   function ticketSort(a, b) {
     const wa = a.status === "withdrawn", wb = b.status === "withdrawn";
@@ -97,8 +98,8 @@
     const figs = Object.entries(p.regions[r.id]).sort(App.byValue(([, v]) => v, ([k]) => k));
     const max = Math.max(...figs.map(([, v]) => v));
     return `<article class="rp-poll">
-      <h3><a href="${escapeHtml(p.source_url)}" target="_blank" rel="noopener">${escapeHtml(p.pollster)}</a>
-        <span class="muted small">${escapeHtml(p.fieldwork_label || "")}${p.published ? `, published ${escapeHtml(fmtDate(p.published))}` : ""}${p.client ? ` for ${escapeHtml(p.client)}` : ""}</span></h3>
+      <h5><a href="${escapeHtml(p.source_url)}" target="_blank" rel="noopener">${escapeHtml(p.pollster)}</a>
+        <span class="muted small">${escapeHtml(p.fieldwork_label || "")}${p.published ? `, published ${escapeHtml(fmtDate(p.published))}` : ""}${p.client ? ` for ${escapeHtml(p.client)}` : ""}</span></h5>
       <ul class="vote-bars">${figs.map(([k, v]) => `<li><span class="vb-name">${escapeHtml(k === "OTH" ? "Others (several parties)" : partyName(k))}</span>
         <span class="vb-track"><span class="vb-fill" style="display:block;width:${(100 * v) / max}%;background:var(${partyVar(k)})"></span></span>
         <span class="vb-num">${v.toFixed(1)}%</span></li>`).join("")}</ul>
@@ -132,21 +133,78 @@
         <tbody>${contest.map((x) => `<tr${x === winner ? ' class="ls-winner"' : ""}><td style="--party-color: var(${partyVar(x.k)})" class="ls-party">${escapeHtml(partyName(x.k))}${x === winner ? ' <span class="muted small">takes the last seat</span>' : ""}</td>
           <td class="num">${x.v.toFixed(1)}%</td><td class="num">${x.q.toFixed(2)}</td><td class="num">${x.rem.toFixed(2)}</td>
           <td class="num" data-csv="${(x.rem - winner.rem).toFixed(2)}">${x === winner ? "–" : `${x.rem > winner.rem ? "+" : "−"}${Math.abs(x.rem - winner.rem).toFixed(2)} quota`}</td><td class="num">${seatsOf(x)}</td></tr>`).join("")}</tbody></table></div>
-      <p class="muted small">First preferences only: a quota is one-sixth of the formal vote (16.7%). Preferences decide who really takes the seat, and with optional preferences many votes exhaust; the <a href="#${escapeHtml(r.id)}/quota" data-tab-go="quota">quota calculator</a> models flows and exhaustion. Regional samples are small (see the poll's note), so a gap under a few points is within the poll's error.</p>`;
+      <p class="muted small">First preferences only: a quota is one-sixth of the formal vote (16.7%). Preferences decide who really takes the seat, and with optional preferences many votes exhaust; the <a href="#${escapeHtml(r.id)}/quota" data-sec-go="quota">quota calculator</a> models flows and exhaustion. Regional samples are small (see the poll's note), so a gap under a few points is within the poll's error.</p>`;
   }
 
   function pollsPanel(r) {
     const ps = regionPolls(r);
     if (!ps.length) return '<p class="empty">No published poll gives this region\'s upper-house vote yet.</p>';
-    return `<h3 class="rp-h">Contest for the last seat</h3>${lastSeat(ps[0], r)}
-      <h3 class="rp-h">Latest regional polling</h3>${ps.map((p) => pollBlock(p, r)).join("")}`;
+    return `<h4 class="rp-h">Contest for the last seat</h4>${lastSeat(ps[0], r)}
+      <h4 class="rp-h">Latest regional polling</h4>${ps.map((p) => pollBlock(p, r)).join("")}`;
   }
 
-  const REGION_TABS = ["overview", "groups", "how-to-vote", "polls", "quota"];
-  let showTab = null;
+  // The region's sections, in page order: [key, title]. "overview" (the old first tab) is At a glance.
+  const REGION_SECTIONS = [["groups", "Groups and candidates"], ["how-to-vote", "How-to-vote"], ["polls", "Polls"],
+    ["quota", "Quota calculator"], ["districts", "Districts"]];
+  const SECTION_KEYS = REGION_SECTIONS.map(([k]) => k);
+  const HTV_OPTS = { h: "h4", hideHead: true };   // the section's own heading names it
+  let regionSecs = null;   // the open region's App.initSections controller
+  const plural = (n, one, many = `${one}s`) => `${n} ${n === 1 ? one : many}`;
 
-  function renderDetail(r, tab = "overview") {
+  // The one-line summaries under each collapsed section's title.
+  function ballotCounts(r) {
+    const e = vec && vec.regions && vec.regions[r.id];
+    if (!e) return null;
+    return { groups: (e.groups || []).length, ungrouped: (e.candidates || []).filter((c) => !c.group).length, candidates: (e.candidates || []).length };
+  }
+  function groupsSummary(r) {
+    const b = ballotCounts(r);
+    if (!b) return "The VEC's list isn't loaded";
+    return `${plural(b.groups, "group")}, ${b.candidates} candidates`;
+  }
+  function htvSummary(doc) {
+    if (doc === undefined) return "Loading the VEC's register…";
+    if (!doc) return "The VEC's register isn't available right now";
+    const n = (doc.cards || []).length;
+    return n ? `${plural(n, "card")} registered` : "No cards registered";
+  }
+  function pollsSummary(r) {
+    const ps = regionPolls(r);
+    return ps.length ? `Latest: ${ps[0].pollster}${ps[0].fieldwork_label ? `, ${ps[0].fieldwork_label}` : ""}` : "No regional poll published yet";
+  }
+
+  // "At a glance": the current MLCs, the groups on the ballot and the next key date, above the sections.
+  function glanceBlock(r, inRegion) {
+    const kn = App.keyDateNext(meta);
+    const b = ballotCounts(r);
+    return `<section class="glance" id="region-glance" aria-labelledby="glance-h">
+      <h3 class="glance-h" id="glance-h">At a glance</h3>
+      <div class="facts">
+        <div class="fact"><div class="label">Region</div><div class="value">${r.area === "regional" ? "Country" : "Metropolitan"}</div><div class="muted small">5 members · <button type="button" class="link-btn" data-sec-go="districts">${plural(inRegion.length, "district")}</button></div></div>
+        <div class="fact"><div class="label">On the ballot</div><div class="value">${b ? `<button type="button" class="link-btn" data-sec-go="groups">${plural(b.groups, "group")}</button>` : "–"}</div>${b ? `<div class="muted small">${b.ungrouped ? `${b.ungrouped} ungrouped; ` : ""}${b.candidates} candidates</div>` : ""}</div>
+        <div class="fact"><div class="label">${kn && kn.label === "Today" ? "Today" : "Next key date"}</div><div class="value fact-date">${kn ? escapeHtml(kn.text) : "–"}</div></div>
+      </div>
+      ${regionCount(r)}
+      <h4 class="glance-sub">Current MLCs</h4>
+      ${(r.mlcs || []).length ? `
+        <ul class="people glance-mlcs">
+          ${r.mlcs.map((m) => `
+            <li>
+              ${App.avatar(shots, r.id, m.name, m.party)}
+              <span class="name">${App.profileLink(r.id, m.name)}${m.retiring ? ' <span class="badge neutral">Retiring</span>' : ""}</span>
+              ${partyBadge(m.party)}
+              ${m.notes ? `<span class="note muted small">${escapeHtml(m.notes)}</span>` : ""}
+            </li>`).join("")}
+        </ul>
+        ${App.photoCredits(shots, r.mlcs.map((m) => [r.id, m.name]))}` : '<p class="empty">No members recorded.</p>'}
+      ${r.notes ? `<p class="muted small">${escapeHtml(r.notes)}</p>` : ""}
+    </section>`;
+  }
+
+  function renderDetail(r, want = "") {
     const el = document.getElementById("region-detail");
+    const bar = document.getElementById("region-jump");
+    if (regionSecs) { regionSecs.destroy(); regionSecs = null; }
     if (!r) {
       el.innerHTML = '<div class="card"><p class="empty">Choose a region above.</p></div>';
       document.title = "Upper House Regions · Vic Election 2026";
@@ -156,32 +214,31 @@
     const inRegion = districts.filter((d) => d.region === r.id).sort((a, b) => a.name.localeCompare(b.name));
     // Withdrawn tickets stay in regions.json for the record but aren't shown.
     const tickets = (r.tickets || []).filter((t) => t.status !== "withdrawn").sort(ticketSort);
-    const TABS = [["overview", "Overview"], ["groups", "Groups and candidates"], ["how-to-vote", "How-to-vote"], ["polls", "Polls"], ["quota", "Quota calculator"]];
-    const P = (key, html) => App.tabPanel(key, tab, "region", html);
+    // Phones open only the section a link names; wider screens open them all.
+    const wide = !App.phoneView();
+    const S = (key, title, sum, html) => App.section("rsec", key, title, sum, html, wide || key === want);
+    const T = Object.fromEntries(REGION_SECTIONS);
+    const vecEntry = vec && vec.regions && vec.regions[r.id];
 
     el.innerHTML = `
       <div class="card" data-region="${escapeHtml(r.id)}">
         <div class="card-head">
           <h2>${escapeHtml(r.name)}</h2>
-          <button class="icon-btn" type="button" id="copy-link">Copy link</button>
+          <div class="card-actions">
+            ${App.moreMenu("region-more", "More: links", [
+              vecEntry && vecEntry.url ? `<a href="${escapeHtml(vecEntry.url)}" target="_blank" rel="noopener">VEC nominations ↗</a>` : "",
+              '<button type="button" data-copy-link>Copy link</button>',
+            ].filter(Boolean))}
+          </div>
         </div>
-        <p class="muted small" style="margin-top:0">${r.area === "regional" ? "Country" : "Metropolitan"} region · 5 members</p>
-        ${App.tabBar(TABS, tab, "region", `${r.name}: sections`)}
-        ${P("overview", `
-        ${regionCount(r)}
-        <h3>Current MLCs</h3>
-        ${(r.mlcs || []).length ? `
-          <ul class="people">
-            ${r.mlcs.map((m) => `
-              <li>
-                ${App.avatar(shots, r.id, m.name, m.party)}
-                <span class="name">${App.profileLink(r.id, m.name)}${m.retiring ? ' <span class="badge neutral">Retiring</span>' : ""}</span>
-                ${partyBadge(m.party)}
-                ${m.notes ? `<span class="note muted small">${escapeHtml(m.notes)}</span>` : ""}
-              </li>`).join("")}
-          </ul>
-          ${App.photoCredits(shots, r.mlcs.map((m) => [r.id, m.name]))}` : '<p class="empty">No members recorded.</p>'}
-        <div class="card-head"><h3>2026 tickets</h3><span class="muted small">${tickets.length} group${tickets.length === 1 ? "" : "s"}</span></div>
+        ${glanceBlock(r, inRegion)}
+        <div class="secs">
+        ${S("groups", T.groups, escapeHtml(groupsSummary(r)), `
+        ${vecEntry ? `<section id="ballot-order" aria-labelledby="ballot-h">
+          <h4 id="ballot-h">Ballot paper: groups and candidates in ballot order</h4>
+          ${App.ballotPaper(vecEntry, "upper")}
+        </section>` : '<p class="empty">The VEC\'s list of groups and candidates isn\'t loaded yet.</p>'}
+        <div class="card-head"><h4>2026 tickets</h4><span class="muted small">${tickets.length} group${tickets.length === 1 ? "" : "s"}</span></div>
         ${tickets.length ? `
           <div class="tickets">
             ${tickets.map((t) => `
@@ -200,60 +257,66 @@
         ${tickets.some((t) => t.order_official === false) ? `<p class="muted small">From the VEC's list of nominations. The VEC drew the
           groups' letters and order at 4 pm on Mon 9 Nov and hasn't published them yet: until it does, each party's names are in the order
           reported before nominations closed, then the other nominees in the order they nominated.</p>` : ""}
-        ${r.notes ? `<p class="muted small">${escapeHtml(r.notes)}</p>` : ""}
-        <h3>Districts in this region</h3>
-        ${inRegion.length ? `<div class="chips">${inRegion.map((d) =>
-          `<a class="chip" href="lower.html#${escapeHtml(d.id)}" style="text-decoration:none">${escapeHtml(d.name)}</a>`).join("")}</div>`
-          : '<p class="empty">No districts in the dataset for this region yet.</p>'}`)}
-        ${P("groups", `
-        ${vec && vec.regions && vec.regions[r.id] ? `<section id="ballot-order" aria-labelledby="ballot-h">
-          <h3 id="ballot-h">Ballot paper: groups and candidates in ballot order</h3>
-          ${App.ballotPaper(vec.regions[r.id], "upper")}
-        </section>` : '<p class="empty">The VEC\'s list of groups and candidates isn\'t loaded yet.</p>'}
         ${renderExtraCandidates(r)}`)}
-        ${P("how-to-vote", `<section id="region-htv" style="min-height:${htvDocs[r.id] ? 0 : App.Htv.reserve(((vec && vec.regions && vec.regions[r.id] && vec.regions[r.id].groups) || []).length + 2)}px">${htvDocs[r.id] ? App.Htv.section(htvDocs[r.id], { h: "h3" }) : ""}</section>`)}
-        ${P("polls", pollsPanel(r))}
-        ${P("quota", `<section class="quota" id="quota-card" aria-label="Quota calculator"></section>`)}
+        ${S("how-to-vote", T["how-to-vote"], escapeHtml(htvSummary(htvDocs[r.id])), `<div id="region-htv" style="min-height:${htvDocs[r.id] ? 0 : App.Htv.reserve(((vecEntry && vecEntry.groups) || []).length + 2)}px">${htvDocs[r.id] ? App.Htv.section(htvDocs[r.id], HTV_OPTS) : ""}</div>`)}
+        ${S("polls", T.polls, escapeHtml(pollsSummary(r)), pollsPanel(r))}
+        ${S("quota", T.quota, "Model the five seats from polling", `<section class="quota" id="quota-card" aria-label="Quota calculator"></section>`)}
+        ${S("districts", T.districts, escapeHtml(plural(inRegion.length, "Assembly district")), inRegion.length ? `<div class="chips">${inRegion.map((d) =>
+          `<a class="chip" href="lower.html#${escapeHtml(d.id)}" style="text-decoration:none">${escapeHtml(d.name)}</a>`).join("")}</div>`
+          : '<p class="empty">No districts in the dataset for this region yet.</p>')}
+        </div>
       </div>`;
-    document.getElementById("copy-link").addEventListener("click", (e) => copyLink(e.currentTarget));
+    bar.innerHTML = App.jumpPills(REGION_SECTIONS.map(([k, t]) => [k, k === "groups" ? "Groups" : k === "quota" ? "Quota" : t]), (key) => `#${r.id}/${key}`);
     if (!htvDocs[r.id]) {   // fill the reserved space once the region's cards arrive
-      App.Htv.load(r.id).then((doc) => { htvDocs[r.id] = doc; }).catch(() => null).then(() => {
+      App.Htv.load(r.id).then((doc) => { htvDocs[r.id] = doc; }).catch(() => { htvDocs[r.id] = null; }).then(() => {
         const box = document.getElementById("region-htv");
         if (!box || hashId().split("/")[0] !== r.id) return;
-        box.innerHTML = App.Htv.section(htvDocs[r.id] || null, { area: r.id, h: "h3" });
+        box.innerHTML = App.Htv.section(htvDocs[r.id] || null, { ...HTV_OPTS, area: r.id });
         box.style.minHeight = "";
+        App.setSectionSummary(el, "how-to-vote", escapeHtml(htvSummary(htvDocs[r.id])));
       });
     }
     if (App.Quota) App.Quota.mount(document.getElementById("quota-card"), r, councilPolls.find((p) => p.regions && p.regions[r.id]));
-    showTab = App.initTabs(el.querySelector(".card"), (key, how) => {
-      if (how === "user") history.replaceState(null, "", key === "overview" ? `#${r.id}` : `#${r.id}/${key}`);
+    const card = el.querySelector(".card");
+    regionSecs = App.initSections(card, {
+      bar, glance: document.getElementById("region-glance"),
+      onHash: (key, k) => {
+        if (key) history.replaceState(null, "", `#${r.id}/${key}`);
+        else if (hashId().split("/")[1] === k) history.replaceState(null, "", `#${r.id}`);
+      },
     });
   }
 
-  // "#northern-victoria" shows a region and "#northern-victoria/<tab>" one of its tabs (groups, how-to-vote, polls,
-  // quota); "#quota" asks for a region and then opens its quota calculator (the nav's "Quota calculator" link).
+  // "#northern-victoria" shows a region and "#northern-victoria/<section>" opens one of its sections and scrolls to it
+  // (groups, how-to-vote, polls, quota, districts); "#quota" asks for a region and then opens its quota calculator
+  // (the nav's "Quota calculator" link).
   let quotaMode = false;
   function onHashChange() {
     const [id, sub] = hashId().split("/");
     quotaMode = id === "quota" || sub === "quota";
     const r = regions.find((x) => x.id === id);
-    const tab = REGION_TABS.includes(sub) ? sub : "overview";
+    const want = SECTION_KEYS.includes(sub) ? sub : "";
     const card = document.querySelector("#region-detail [data-region]");
-    if (r && showTab && card && card.dataset.region === r.id) { showTab(tab, { how: "hash" }); return; }   // same region, another tab
+    if (r && regionSecs && card && card.dataset.region === r.id) {   // same region, another section
+      if (want) regionSecs.open(want);
+      else card.scrollIntoView({ block: "start" });
+      return;
+    }
     renderChips(r ? r.id : "");
-    renderDetail(r, tab);
+    renderDetail(r, want);
     if (!r && id === "quota") {
       document.getElementById("region-detail").innerHTML =
         '<div class="card"><h2 style="margin-top:0">Quota calculator</h2><p>Choose a region above to open its quota calculator, seeded with the latest regional polling.</p></div>';
     }
-    if (r && sub) document.querySelector("#region-detail .tabs").scrollIntoView();
+    if (r && want) App.afterPaint(() => { if (hashId().split("/")[1] === want && regionSecs) regionSecs.open(want); });
   }
 
   async function init() {
     try {
-      const [rd, dd, cd, shotData, cp, lcData] = await Promise.all([loadJSON("regions"), loadJSON("districts"), loadJSON("candidates"),
+      const [rd, dd, cd, shotData, cp, lcData, metaData] = await Promise.all([loadJSON("regions"), loadJSON("districts"), loadJSON("candidates"),
         App.loadHeadshots(), loadJSON("council_polls").then((d) => d.polls || []).catch(() => []),
-        loadJSON("results_lc").catch(() => null)]);
+        loadJSON("results_lc").catch(() => null), loadJSON("meta").catch(() => null)]);
+      meta = metaData;
       vec = await loadJSON("vec_nominations").catch(() => null);
       resultsLc = lcData;
       regions = rd.regions.slice().sort((a, b) => a.name.localeCompare(b.name));

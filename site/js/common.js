@@ -767,54 +767,192 @@
       <span class="muted">The ABC's own count and analysis, on its site.</span></p>`;
   }
 
-  /* ---- Tabs (seat and region pages): a scrollable tab bar and its panels ---- */
-  // tabs: [[key, label]]; panels are tabPanel(key, ...) elements with id "<prefix>-<key>".
-  function tabBar(tabs, current, prefix, label) {
-    return `<div class="tabs" role="tablist" aria-label="${escapeHtml(label)}">${tabs.map(([key, text]) =>
-      `<button type="button" role="tab" class="tab" id="${prefix}-tab-${key}" data-tab="${key}" aria-controls="${prefix}-${key}" aria-selected="${key === current}" tabindex="${key === current ? 0 : -1}">${escapeHtml(text)}</button>`).join("")}</div>`;
+  /* ---- Collapsible sections (seat and region pages): a heading button per section with a one-line summary, a
+     sticky jump bar of pills that appears once the "At a glance" block is scrolled past, and a "…" menu ---- */
+  // Phones start with every section collapsed; wider screens with every section open.
+  const phoneView = () => window.matchMedia("(max-width: 640px)").matches;
+  // One section. summary: HTML for the line under the title while collapsed (one line; [data-sec-sum] to update it).
+  function section(prefix, key, title, summary, html, open) {
+    const id = `${prefix}-${key}`;
+    return `<section class="sec${open ? " is-open" : ""}" id="${id}" data-sec="${key}" aria-labelledby="${id}-h">
+      <h3 class="sec-h" id="${id}-h"><button type="button" class="sec-btn" aria-expanded="${open}" aria-controls="${id}-body">
+        <span class="sec-title">${escapeHtml(title)}</span><span class="sec-chev" aria-hidden="true"></span>
+        <span class="sec-sum" data-sec-sum>${summary}</span></button></h3>
+      <div class="sec-body" id="${id}-body"${open ? "" : " hidden"}>${html}</div></section>`;
   }
-  function tabPanel(key, current, prefix, html) {
-    return `<div class="tab-panel" role="tabpanel" id="${prefix}-${key}" aria-labelledby="${prefix}-tab-${key}"${key === current ? "" : " hidden"}>${html}</div>`;
+  // Replace a section's summary line (inside root).
+  function setSectionSummary(root, key, html) {
+    const el = root && root.querySelector(`.sec[data-sec="${key}"] [data-sec-sum]`);
+    if (el) el.innerHTML = html;
   }
-  // Wires the tab bar inside root: click, arrow keys, Home and End, and any [data-tab-go="<key>"] link in root.
-  // onShow(key, how) runs after each change ("init" first, "user" on a click or key). Returns show(key).
-  function initTabs(root, onShow) {
-    const bar = root.querySelector('[role="tablist"]');
-    const tabs = [...bar.querySelectorAll('[role="tab"]')];
-    function show(key, { focus = false, how = "user" } = {}) {
-      const t = tabs.find((x) => x.dataset.tab === key) || tabs[0];
-      tabs.forEach((x) => {
-        const on = x === t;
-        x.setAttribute("aria-selected", String(on));
-        x.tabIndex = on ? 0 : -1;
-        const p = document.getElementById(x.getAttribute("aria-controls"));
-        if (p) p.hidden = !on;
-      });
-      if (focus) t.focus();
-      bar.scrollLeft = Math.max(0, t.offsetLeft - (bar.clientWidth - t.offsetWidth) / 2);   // keep the chosen tab in view on a phone
-      if (onShow) onShow(t.dataset.tab, how);
-      return t.dataset.tab;
+  // The jump bar's pills: items [[key, label]], href(key) the section's shareable link.
+  function jumpPills(items, href) {
+    return `<div class="jb-inner">${items.map(([key, text]) => `<a class="jb-pill" href="${escapeHtml(href(key))}" data-jump="${escapeHtml(key)}">${escapeHtml(text)}</a>`).join("")}</div>`;
+  }
+  // Pixels the sticky header covers at the top of the window (it is static on phones).
+  function stickyTop() {
+    const h = document.querySelector(".site-header");
+    return h && getComputedStyle(h).position === "sticky" ? Math.round(h.getBoundingClientRect().height) : 0;
+  }
+
+  // Wires the sections in root. opts: onOpen(key, how) each time a section opens ("init" for those open at the
+  // start, then "user", "jump" or "link"); onHash(key | null, key) when the user opens a section (key) or closes one
+  // (null); bar: the jump bar element (filled with jumpPills); glance: the "At a glance" block, after which the bar
+  // appears. Returns {open(key, {scroll, how}), destroy()}.
+  function initSections(root, { onOpen, onHash, bar, glance } = {}) {
+    const secs = [...root.querySelectorAll(".sec")];
+    const get = (key) => secs.find((s) => s.dataset.sec === key);
+    const isOpen = (sec) => sec.classList.contains("is-open");
+    const setTop = () => {
+      const t = stickyTop();
+      document.documentElement.style.setProperty("--jb-top", `${t}px`);
+      return t;
+    };
+    let top = setTop();
+    function setOpen(sec, open, how) {
+      sec.classList.toggle("is-open", open);
+      sec.querySelector(".sec-btn").setAttribute("aria-expanded", String(open));
+      sec.querySelector(".sec-body").hidden = !open;
+      if (open && onOpen) onOpen(sec.dataset.sec, how);
     }
-    bar.addEventListener("click", (e) => { const t = e.target.closest('[role="tab"]'); if (t) show(t.dataset.tab); });
-    bar.addEventListener("keydown", (e) => {
-      const i = tabs.indexOf(document.activeElement);
-      if (i < 0) return;
-      const j = { ArrowRight: (i + 1) % tabs.length, ArrowLeft: (i - 1 + tabs.length) % tabs.length, Home: 0, End: tabs.length - 1 }[e.key];
-      if (j == null) return;
-      e.preventDefault();
-      show(tabs[j].dataset.tab, { focus: true });
-    });
-    root.addEventListener("click", (e) => {
-      const go = e.target.closest("[data-tab-go]");
-      if (!go) return;
-      e.preventDefault();
-      show(go.dataset.tabGo);
-      bar.scrollIntoView({ block: "start" });
-    });
-    const current = tabs.find((x) => x.getAttribute("aria-selected") === "true") || tabs[0];
-    show(current.dataset.tab, { how: "init" });
-    return show;
+    function open(key, { scroll = true, how = "link" } = {}) {
+      const sec = get(key);
+      if (!sec) return null;
+      if (!isOpen(sec)) setOpen(sec, true, how);
+      if (scroll) sec.scrollIntoView({ block: "start" });
+      return sec;
+    }
+    const onClick = (e) => {
+      const btn = e.target.closest(".sec-btn");
+      if (btn && root.contains(btn)) {
+        const sec = btn.closest(".sec"), on = !isOpen(sec);
+        setOpen(sec, on, "user");
+        if (onHash) onHash(on ? sec.dataset.sec : null, sec.dataset.sec);
+        return;
+      }
+      const go = e.target.closest("[data-sec-go]");
+      if (go && root.contains(go)) {
+        e.preventDefault();
+        if (open(go.dataset.secGo, { how: "link" }) && onHash) onHash(go.dataset.secGo, go.dataset.secGo);
+      }
+    };
+    root.addEventListener("click", onClick);
+    secs.filter(isOpen).forEach((s) => onOpen && onOpen(s.dataset.sec, "init"));
+
+    const cleanup = [() => root.removeEventListener("click", onClick)];
+    if (bar && "IntersectionObserver" in window) {
+      const pills = [...bar.querySelectorAll("[data-jump]")];
+      bar.onclick = (e) => {
+        const pill = e.target.closest("[data-jump]");
+        if (!pill || e.ctrlKey || e.metaKey || e.shiftKey || e.button) return;   // let a new-tab click through
+        e.preventDefault();
+        if (open(pill.dataset.jump, { how: "jump" }) && onHash) onHash(pill.dataset.jump, pill.dataset.jump);
+      };
+      // Shown once the "At a glance" block is above the window, while the panel is still on screen.
+      let pastGlance = false, panelOn = true;
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.target === glance) pastGlance = !e.isIntersecting && e.boundingClientRect.top < 0;
+          else panelOn = e.isIntersecting;
+        });
+        const was = bar.hidden;
+        bar.hidden = !(pastGlance && panelOn);
+        if (was && !bar.hidden) mark();
+      });
+      if (glance) io.observe(glance);
+      io.observe(root);
+      // The section in view: the first one crossing the band under the bar, else the last one whose top is above it.
+      const seen = new Map();
+      let spy = null;
+      function mark() {
+        let cur = secs.find((s) => seen.get(s));
+        if (!cur) cur = secs.filter((s) => s.getBoundingClientRect().top < top + 72).pop();
+        pills.forEach((p) => {
+          if (cur && p.dataset.jump === cur.dataset.sec) {
+            p.setAttribute("aria-current", "true");
+            const inner = p.parentElement;
+            if (!bar.hidden) inner.scrollLeft = Math.max(0, p.offsetLeft - (inner.clientWidth - p.offsetWidth) / 2);
+          } else p.removeAttribute("aria-current");
+        });
+      }
+      const watch = () => {
+        if (spy) spy.disconnect();
+        spy = new IntersectionObserver((entries) => { entries.forEach((e) => seen.set(e.target, e.isIntersecting)); mark(); },
+          { rootMargin: `-${top + 72}px 0px -55% 0px` });
+        secs.forEach((s) => spy.observe(s));
+      };
+      watch();
+      const onResize = () => { const t = setTop(); if (t !== top) { top = t; watch(); } };
+      window.addEventListener("resize", onResize);
+      cleanup.push(() => { io.disconnect(); if (spy) spy.disconnect(); window.removeEventListener("resize", onResize); bar.hidden = true; bar.onclick = null; });
+    }
+    return { open, destroy() { cleanup.forEach((f) => f()); } };
   }
+
+  // A "…" menu button: items are HTML for <a> or <button> elements; each gets role="menuitem". Opens on a click (and
+  // on ArrowDown or ArrowUp), moves with the arrow keys, Home and End, and closes on Escape, Tab, a choice or a tap
+  // outside. A [data-copy-link] item copies the page's address.
+  function moreMenu(id, label, items) {
+    return `<div class="more"><button type="button" class="icon-btn more-btn" id="${id}-btn" aria-haspopup="menu" aria-expanded="false" aria-controls="${id}" aria-label="${escapeHtml(label)}"><span aria-hidden="true">…</span></button>
+      <div class="more-list" id="${id}" role="menu" aria-labelledby="${id}-btn" hidden>${items.map((html) => html.replace(/^\s*<(a|button)\b/, '<$1 role="menuitem" tabindex="-1"')).join("")}</div></div>`;
+  }
+  (function initMoreMenus() {
+    const itemsOf = (list) => [...list.querySelectorAll('[role="menuitem"]')];
+    const listOf = (btn) => document.getElementById(btn.getAttribute("aria-controls"));
+    const close = (btn, refocus) => {
+      const list = listOf(btn);
+      btn.setAttribute("aria-expanded", "false");
+      if (list) list.hidden = true;
+      if (refocus) btn.focus();
+    };
+    const closeAll = (except) => document.querySelectorAll('.more-btn[aria-expanded="true"]').forEach((b) => { if (b !== except) close(b, false); });
+    const openMenu = (btn, focusAt) => {
+      closeAll(btn);
+      const list = listOf(btn);
+      if (!list) return;
+      btn.setAttribute("aria-expanded", "true");
+      list.hidden = false;
+      const items = itemsOf(list);
+      if (focusAt === "first") items[0].focus();
+      else if (focusAt === "last") items[items.length - 1].focus();
+    };
+    document.addEventListener("click", (e) => {
+      const btn = e.target.closest(".more-btn");
+      if (btn) {
+        if (btn.getAttribute("aria-expanded") === "true") close(btn, false);
+        else openMenu(btn, e.detail === 0 ? "first" : null);   // Enter or Space: straight into the menu
+        return;
+      }
+      const item = e.target.closest('.more-list [role="menuitem"]');
+      if (item) {
+        const owner = document.getElementById(item.closest(".more-list").getAttribute("aria-labelledby"));
+        if (item.hasAttribute("data-copy-link")) {
+          e.preventDefault();
+          copyLink(item);
+          setTimeout(() => close(owner, document.activeElement === item), 900);
+        } else close(owner, false);
+        return;
+      }
+      if (!e.target.closest(".more-list")) closeAll();
+    });
+    document.addEventListener("keydown", (e) => {
+      const t = e.target instanceof Element ? e.target : null;
+      const btn = t && t.closest(".more-btn");
+      if (btn && (e.key === "ArrowDown" || e.key === "ArrowUp")) {
+        e.preventDefault();
+        openMenu(btn, e.key === "ArrowUp" ? "last" : "first");
+        return;
+      }
+      const listEl = t && t.closest(".more-list");
+      if (!listEl) { if (e.key === "Escape") closeAll(); return; }
+      const owner = document.getElementById(listEl.getAttribute("aria-labelledby"));
+      const items = itemsOf(listEl), i = items.indexOf(document.activeElement);
+      if (e.key === "Escape") { e.preventDefault(); close(owner, true); return; }
+      if (e.key === "Tab") { close(owner, false); return; }
+      const j = { ArrowDown: (i + 1) % items.length, ArrowUp: (i - 1 + items.length) % items.length, Home: 0, End: items.length - 1 }[e.key];
+      if (j != null) { e.preventDefault(); items[j].focus(); }
+    });
+  })();
 
   /* ---- Watchlist (localStorage; works without a backend, degrades to this page only) ---- */
   const WATCH_KEY = "vic2026.watchlist";
@@ -920,6 +1058,28 @@
   }
 
   /* ---- Key-dates strip (under the header on every page) ---- */
+  // Today: the narrowest event covering today. Next: the next milestone (events marked "ongoing" are stretches
+  // between milestones, e.g. counting, and never count as one).
+  function keyDateEvents(kd, today) {
+    const events = (kd.events || []).map((e) => ({ ...e, to: e.to || e.from }));
+    const current = events.filter((e) => e.from <= today && today <= e.to)
+      .sort((a, b) => daysBetween(a.from, a.to) - daysBetween(b.from, b.to))[0];
+    const milestones = events.filter((e) => !e.ongoing).sort((a, b) => a.from.localeCompare(b.from));
+    return { current, next: milestones.find((e) => e.from > today), startsToday: milestones.find((e) => e.from === today) };
+  }
+  // The key-dates strip's phone line as {label: "Today" | "Next", text}: a milestone on its own day, else the next
+  // milestone ("Wed 25 Nov, postal vote applications close"), else what is on today. null when there's nothing.
+  function keyDateNext(meta) {
+    const kd = meta && meta.key_dates;
+    if (!kd) return null;
+    const { current, next, startsToday } = keyDateEvents(kd, melbourneToday(new Date()));
+    const cap = (x) => x[0].toUpperCase() + x.slice(1);
+    const dayMonth = (iso) => fmtDate(iso).replace(/ \d{4}$/, "");
+    if (startsToday) return { label: "Today", text: cap(startsToday.short || startsToday.text) };
+    if (next) return { label: "Next", text: `${dayMonth(next.from)}, ${next.short || next.text}` };
+    if (current) return { label: "Today", text: cap(current.short || current.text) };
+    return null;
+  }
   function renderKeyDates(meta) {
     const kd = meta && meta.key_dates;
     const header = document.querySelector(".site-header");
@@ -948,24 +1108,12 @@
         <span class="kd-when">${escapeHtml(when)}</span><span class="kd-date">${escapeHtml(fmtDate(date))}</span></li>`;
     }).join("");
 
-    // What happens today: the narrowest event covering today, else the next one.
-    // Today: the narrowest event covering today. Next: the next milestone (events marked "ongoing" are
-    // stretches between milestones, e.g. counting, and never count as one).
-    const events = (kd.events || []).map((e) => ({ ...e, to: e.to || e.from }));
-    const current = events.filter((e) => e.from <= today && today <= e.to)
-      .sort((a, b) => daysBetween(a.from, a.to) - daysBetween(b.from, b.to))[0];
-    const milestones = events.filter((e) => !e.ongoing).sort((a, b) => a.from.localeCompare(b.from));
-    const startsToday = milestones.find((e) => e.from === today);
-    const next = milestones.find((e) => e.from > today);
-    const dayMonth = (iso) => fmtDate(iso).replace(/ \d{4}$/, "");
-    const cap = (s) => s[0].toUpperCase() + s.slice(1);
+    const { current, next } = keyDateEvents(kd, today);
     const nextNote = next ? ` <strong>Next,</strong> ${escapeHtml(fmtDate(next.from))}: ${escapeHtml(next.text)}` : "";
     const note = (current ? `<strong>Today:</strong> ${escapeHtml(current.text)}` : "<strong>Today:</strong> no scheduled milestone.") + nextNote;
     // The phone line: "Today:" on a milestone's own day, otherwise what's next.
-    const line = startsToday ? `<strong>Today:</strong> ${escapeHtml(cap(startsToday.short || startsToday.text))}`
-      : next ? `<strong>Next:</strong> ${escapeHtml(dayMonth(next.from))}, ${escapeHtml(next.short || next.text)}`
-      : current ? `<strong>Today:</strong> ${escapeHtml(cap(current.short || current.text))}`
-      : "<strong>Today:</strong> no scheduled milestone.";
+    const kn = keyDateNext(meta);
+    const line = kn ? `<strong>${kn.label}:</strong> ${escapeHtml(kn.text)}` : "<strong>Today:</strong> no scheduled milestone.";
     // Phones show only the summary button; it opens the full strip (CSS hides one or the other).
     strip.innerHTML = `<div class="container">
       <button type="button" class="kd-summary" aria-expanded="false" aria-controls="kd-full"><span class="kd-line">${line}</span><span class="kd-caret" aria-hidden="true"></span></button>
@@ -1599,7 +1747,7 @@
   ];
   // Where terms aren't marked: inside links and controls, headings, code, graphics, the share-card renderer, the
   // glossary page itself and anything marked data-no-gloss.
-  const GLOSS_SKIP = "a, button, select, option, textarea, input, label, summary, h1, h2, script, style, svg, canvas, code, .tabs, .gloss-pop, [data-no-gloss], .hc-host";
+  const GLOSS_SKIP = "a, button, select, option, textarea, input, label, summary, h1, h2, script, style, svg, canvas, code, .jump-bar, .gloss-pop, [data-no-gloss], .hc-host";
   const glossUsed = new WeakMap();   // container -> Set of term ids already marked in it (each term once per card or section)
 
   function glossarize(root) {
@@ -1610,7 +1758,7 @@
     const nodes = [];
     while (walker.nextNode()) nodes.push(walker.currentNode);
     nodes.forEach((node) => {
-      const box = node.parentElement.closest(".card, section, article, .tab-panel, main") || document.body;
+      const box = node.parentElement.closest(".card, section, article, main") || document.body;
       const used = glossUsed.get(box) || new Set();
       glossUsed.set(box, used);
       let text = node;
@@ -1710,7 +1858,7 @@
   window.App = {
     PARTIES, STATUSES, COALITION, partyOrder, byValue, candidateOrder, surnameOf, loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, partyBadge, statusBadge,
     slugify, parseDate, fmtDate, fmtMonth, fmtDateTime, dataUpdatedText, fmtPrice, fmtMargin, fmtSwing, melbourneToday, daysBetween,
-    hashId, cssVar, currentTheme, showError, copyLink, tabBar, tabPanel, initTabs, GLOSSARY, glossarize, abcResultsLink,
+    hashId, cssVar, currentTheme, showError, copyLink, section, setSectionSummary, jumpPills, initSections, moreMenu, phoneView, keyDateNext, GLOSSARY, glossarize, abcResultsLink,
     DAY, preparePolls, pollExclusion, commissionLabel, AVG_MIN_SAMPLE, smoothedSeries, smoothedLatest, fmtRange, pollRecords, statewideSwing, swingAdjusted, projectSeats, modelSeats, seatCalls, apportion, hemicycle, seatRangeChart, modelsHemicycle, BLOC_LABEL, BLOC_COLOR, BLOCS, blocOf, modelLink, quotaBars,
     getWatchlist, setWatchlist, isWatched, toggleWatch, starButton, storageWorks,
     buildSearchIndex, searchItems,

@@ -14,7 +14,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Vic Election">
-  <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <script>document.documentElement.classList.add("js");if(location.hash.length>1&&location.hash!=="#quota")document.documentElement.classList.add("has-hash");try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
   <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
@@ -48,6 +48,7 @@
       <div class="chips" id="region-chips" role="group" aria-label="Regions"></div>
     </section>
 
+    <nav id="region-jump" class="jump-bar" aria-label="Sections of this region" hidden></nav>
     <section id="region-detail" aria-live="polite">
       <div class="card"><p class="empty">Loading…</p></div>
     </section>
