@@ -10,55 +10,55 @@
   "status": "closed",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
   "registration_closes": "2026-11-20",
-  "last_checked": "2026-11-25T05:51:55Z",
+  "last_checked": "2026-11-25T10:04:14Z",
   "coverage": {
-    "cards": 1425,
-    "listings": 4817,
-    "orders_read": 4588,
-    "orders_image": 597,
-    "orders_same_as": 154,
-    "orders_unreadable": 72,
-    "districts_with_cards": 88,
+    "cards": 1419,
+    "listings": 4691,
+    "orders_read": 4469,
+    "orders_image": 590,
+    "orders_same_as": 151,
+    "orders_unreadable": 68,
+    "districts_with_cards": 85,
     "regions_with_cards": 8,
     "by_party": {
       "ALP": {
         "cards": 332,
-        "districts": 88,
+        "districts": 85,
         "regions": 8
       },
       "LIB": {
         "cards": 275,
-        "districts": 77,
+        "districts": 74,
         "regions": 8
       },
       "GRN": {
         "cards": 192,
-        "districts": 88,
+        "districts": 85,
         "regions": 8
       },
       "VS": {
         "cards": 96,
-        "districts": 88,
+        "districts": 85,
         "regions": 8
       },
       "IND": {
-        "cards": 95,
-        "districts": 49,
+        "cards": 91,
+        "districts": 47,
         "regions": 5
       },
       "ONP": {
         "cards": 89,
-        "districts": 88,
+        "districts": 85,
         "regions": 8
       },
       "NONCAND": {
-        "cards": 88,
-        "districts": 32,
+        "cards": 86,
+        "districts": 31,
         "regions": 6
       },
       "FF": {
         "cards": 65,
-        "districts": 65,
+        "districts": 63,
         "regions": 6
       },
       "AJP": {
@@ -89,7 +89,7 @@
       },
       "DLP": {
         "cards": 20,
-        "districts": 12,
+        "districts": 11,
         "regions": 8
       },
       "NAT": {
@@ -124,7 +124,7 @@
       }
     },
     "no_card": {
-      "lower": 41,
+      "lower": 62,
       "upper": 16,
       "candidates_lower": 734,
       "candidates_upper": 303
@@ -133,37 +133,21 @@
   "areas": {
     "albert-park": {
       "house": "lower",
-      "cards": 40,
-      "read": 37,
-      "same_as": 1,
-      "unreadable": 2,
-      "parties": {
-        "ALP": 7,
-        "VS": 2,
-        "LIB": 8,
-        "ONP": 2,
-        "GRN": 19,
-        "IND": 2
-      },
-      "no_card": 0
+      "cards": 0,
+      "read": 0,
+      "same_as": 0,
+      "unreadable": 0,
+      "parties": {},
+      "no_card": 7
     },
     "ashwood": {
       "house": "lower",
-      "cards": 50,
-      "read": 47,
-      "same_as": 1,
-      "unreadable": 2,
-      "parties": {
-        "IND": 2,
-        "ALP": 9,
-        "VS": 2,
-        "FF": 1,
-        "LIB": 15,
-        "NONCAND": 2,
-        "ONP": 2,
-        "GRN": 17
-      },
-      "no_card": 0
+      "cards": 0,
+      "read": 0,
+      "same_as": 0,
+      "unreadable": 0,
+      "parties": {},
+      "no_card": 7
     },
     "bass": {
       "house": "lower",
@@ -183,20 +167,12 @@
     },
     "bayswater": {
       "house": "lower",
-      "cards": 36,
-      "read": 35,
-      "same_as": 1,
+      "cards": 0,
+      "read": 0,
+      "same_as": 0,
       "unreadable": 0,
-      "parties": {
-        "ALP": 7,
-        "VS": 2,
-        "FF": 1,
-        "LIB": 11,
-        "ONP": 2,
-        "GRN": 12,
-        "DLP": 1
-      },
-      "no_card": 1
+      "parties": {},
+      "no_card": 8
     },
     "bellarine": {
       "house": "lower",
@@ -1902,122 +1878,6 @@
   },
   "watch": [
     {
-      "area": "albert-park",
-      "party": "ALP",
-      "cards": 7,
-      "read": 7,
-      "differ": true,
-      "flags_some": [
-        {
-          "ahead": "GRN",
-          "ahead_n": 3,
-          "of": "LNP",
-          "of_n": 5
-        }
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=0f255ccf-f8d7-43f6-8272-fcea03bad813%2Falp_combined_sm%20albert%20park_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "area": "albert-park",
-      "party": "GRN",
-      "cards": 19,
-      "read": 17,
-      "differ": true,
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=08163ce1-1331-4594-9582-201769fab2d3%2Fthe%20greens%20combined%20southern%20metro%20prahran%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "area": "albert-park",
-      "party": "LIB",
-      "cards": 8,
-      "read": 8,
-      "ranks": {
-        "LNP": 1,
-        "ONP": 4,
-        "ALP": 5,
-        "GRN": 6
-      },
-      "flags": [
-        {
-          "ahead": "ONP",
-          "of": "ALP",
-          "ahead_n": 4,
-          "of_n": 5
-        }
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c785306e-9f51-4604-b401-f85d07c7275e%2Fliberal_combined_smr%20albert%20park_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "area": "albert-park",
-      "party": "ONP",
-      "cards": 2,
-      "read": 2,
-      "differ": true,
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=76deead9-fdde-4ff3-ab4f-b13521893e4e%2Fonv%20-%20combined%20-%20southern%20metropolitan%20region%20-%20albert%20park%20-%203.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "area": "ashwood",
-      "party": "ALP",
-      "cards": 9,
-      "read": 9,
-      "ranks": {
-        "ALP": 1,
-        "GRN": 3,
-        "LNP": 5,
-        "ONP": 7
-      },
-      "flags": [
-        {
-          "ahead": "GRN",
-          "of": "LNP",
-          "ahead_n": 3,
-          "of_n": 5
-        }
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d70796db-126e-482c-ba11-52ee51020013%2Falp_combined_sm_ashwood_tr7_1-compressed.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "area": "ashwood",
-      "party": "GRN",
-      "cards": 17,
-      "read": 16,
-      "differ": true,
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1dc33acc-b28a-4045-ab09-ad65a11633c6%2Fthe%20greens%20combined%20north-east%20metro%20glen%20waverley%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "area": "ashwood",
-      "party": "LIB",
-      "cards": 15,
-      "read": 15,
-      "ranks": {
-        "LNP": 1,
-        "ONP": 4,
-        "ALP": 5,
-        "GRN": 6
-      },
-      "flags": [
-        {
-          "ahead": "ONP",
-          "of": "ALP",
-          "ahead_n": 4,
-          "of_n": 5
-        }
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2d747444-f9e4-4f68-b9c9-91ee7a1d06dc%2Fliberal_combined_smr%20ashwood_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "area": "ashwood",
-      "party": "ONP",
-      "cards": 2,
-      "read": 2,
-      "ranks": {
-        "ONP": 1,
-        "LNP": 3,
-        "ALP": 4,
-        "GRN": 6
-      },
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d27d1c00-b349-4ac8-a9db-e4ee0f1723e8%2Fonv%20-%20combined%20-%20southern%20metropolitan%20region%20-%20ashwood%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
       "area": "bass",
       "party": "ALP",
       "cards": 6,
@@ -2084,74 +1944,6 @@
         "GRN": 5
       },
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "area": "bayswater",
-      "party": "ALP",
-      "cards": 7,
-      "read": 7,
-      "ranks": {
-        "ALP": 1,
-        "GRN": 2,
-        "LNP": 6,
-        "ONP": 8
-      },
-      "flags": [
-        {
-          "ahead": "GRN",
-          "of": "LNP",
-          "ahead_n": 2,
-          "of_n": 6
-        }
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7ac95d4d-3d81-4e30-9639-2de10dc3342a%2Falp_combined_nem%20bayswater_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "area": "bayswater",
-      "party": "GRN",
-      "cards": 12,
-      "read": 11,
-      "ranks": {
-        "GRN": 1,
-        "ALP": 3,
-        "LNP": 5,
-        "ONP": 8
-      },
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=485d04ee-385f-4905-9e17-74c0ca7fc687%2Fthe%20greens%20combined%20north-east%20metro%20bayswater%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "area": "bayswater",
-      "party": "LIB",
-      "cards": 11,
-      "read": 11,
-      "ranks": {
-        "LNP": 1,
-        "ONP": 4,
-        "ALP": 6,
-        "GRN": 7
-      },
-      "flags": [
-        {
-          "ahead": "ONP",
-          "of": "ALP",
-          "ahead_n": 4,
-          "of_n": 6
-        }
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=28a2f873-8937-4a62-9518-06376165c06f%2Fliberal_combined_nemr%20bayswater_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "area": "bayswater",
-      "party": "ONP",
-      "cards": 2,
-      "read": 2,
-      "ranks": {
-        "ONP": 1,
-        "LNP": 3,
-        "ALP": 5,
-        "GRN": 7
-      },
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b6230277-2d79-4490-851f-bce5a3b99095%2Fonv%20-%20combined%20-%20north-eastern%20metropolitan%20region%20-%20bayswater%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
     },
     {
       "area": "bellarine",
