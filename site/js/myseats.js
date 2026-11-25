@@ -19,9 +19,11 @@
   }
 
   function mrp(models, id) {
-    const m = models && (models.models || []).find((x) => App.currentModel(x) && x.kind === "mrp");
-    const e = m && (models.seats || []).find((x) => x.district === id && x.model === m.id);
-    return e && e.winner ? partyBadge(e.winner, { full: false }) : '<span class="muted">not published</span>';
+    // The current MRP with a call for this seat (a partly replaced one gives way where its newer model has figures).
+    const ms = models ? (models.models || []).filter((x) => App.currentModel(x) && x.kind === "mrp" && !App.replacedIn(models, x, id)) : [];
+    const e = ms.map((m) => (models.seats || []).find((x) => x.district === id && x.model === m.id && x.winner)).find(Boolean);
+    const m = e && ms.find((x) => x.id === e.model);
+    return e ? `${partyBadge(e.winner, { full: false })}${ms.length > 1 ? ` <span class="muted small">${escapeHtml(m.name.replace(/^YouGov MRP /, ""))}</span>` : ""}` : '<span class="muted">not published</span>';
   }
 
   function render() {
@@ -36,7 +38,8 @@
       return;
     }
     const oddsDate = data.odds && data.odds.date_checked ? ` (as at ${escapeHtml(App.fmtDate(data.odds.date_checked))})` : "";
-    const mrpModel = data.models && (data.models.models || []).find((x) => App.currentModel(x) && x.kind === "mrp");
+    const mrpModels = data.models ? (data.models.models || []).filter((x) => App.currentModel(x) && x.kind === "mrp") : [];
+    const mrpModel = mrpModels.length === 1 ? mrpModels[0] : mrpModels.length ? { name: "YouGov MRP" } : null;
     el.innerHTML = `
       <table>
         <thead><tr>

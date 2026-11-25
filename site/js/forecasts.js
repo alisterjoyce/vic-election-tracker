@@ -55,7 +55,8 @@
     const cands = ctx.cands || [];
     const aef = models.find((m) => m.kind === "forecast" && App.currentModel(m));
     const aefE = aef && entry(aef);
-    const mrps = models.filter((m) => m.kind === "mrp" && App.currentModel(m));   // a superseded MRP is history
+    // A superseded MRP is history; one partly replaced (updated_by) gives way in the seats its newer model covers.
+    const mrps = models.filter((m) => m.kind === "mrp" && App.currentModel(m) && !App.replacedIn(doc, m, d.id));
     const rb = models.find((m) => m.kind === "projection" && App.currentModel(m));
     const rbE = rb && entry(rb);
     const imp = impliedChances(seatOdds);

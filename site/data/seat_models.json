@@ -1,8 +1,8 @@
 {
   "_schema": {
-    "description": "Seat-level models, one entry per district per model: MRP polls (by hand; an MRP replaced by a newer one from the same pollster stays as history with superseded_by and is no longer counted), Australian Election Forecasts (aeforecasts.com, refreshed by scripts/refresh.py every run) and RedBridge's seat model (statewide totals, by hand; refresh.py warns when RedBridge's site shows a newer Victorian release). null = not published.",
+    "description": "Seat-level models, one entry per district per model: MRP polls (by hand; an MRP replaced by a newer one from the same pollster stays as history with superseded_by and is no longer counted; one only partly replaced (the newer one published for some seats) has updated_by and still counts, the newer one taking its place in the seats it covers), Australian Election Forecasts (aeforecasts.com, refreshed by scripts/refresh.py every run) and RedBridge's seat model (statewide totals, by hand; refresh.py warns when RedBridge's site shows a newer Victorian release). null = not published.",
     "fields": {
-      "models": "[{id, source, kind (mrp | forecast | projection), name, credit, client, fieldwork, sample_size, published, model_date (forecast: when the model was run) or published_date (YYYY-MM-DD), label, source_url, data_url, notes; superseded_by and superseded_on (an older model kept as history: pages count only published models without superseded_by); via [{label, url, districts}] (where hand-entered seat figures were read, when the pollster's own release couldn't be); seats_published (how many districts have figures, when not all 88); forecasts also fp_percentiles and expected_seats {bloc: sum of win probabilities}; projections also inputs {poll, primary} and totals {bloc: seats, toss_up}, toss_ups ([district ids] or null if not published)}]",
+      "models": "[{id, source, kind (mrp | forecast | projection), name, credit, client, fieldwork, sample_size, published, model_date (forecast: when the model was run) or published_date (YYYY-MM-DD), label, source_url, data_url, notes; superseded_by and superseded_on (an older model kept as history: pages count only published models without superseded_by); updated_by (a newer model from the same pollster published for only some seats: this one still counts, including in the seat totals, but in each seat the newer one gives a winner or runner-up for, the newer one is used instead); via [{label, url, districts}] (where hand-entered seat figures were read, when the pollster's own release couldn't be); seats_published (how many districts have figures, when not all 88); forecasts also fp_percentiles and expected_seats {bloc: sum of win probabilities}; projections also inputs {poll, primary} and totals {bloc: seats, toss_up}, toss_ups ([district ids] or null if not published)}]",
       "district": "id of the district in districts.json",
       "model": "id of the model in models",
       "winner": "Predicted winner party code (ALP, LIB, NAT, LNP, GRN, ONP, IND, OTH) or null if not published",
@@ -25,11 +25,10 @@
       "sample_size": 4003,
       "published": true,
       "source_url": "https://actionnetwork.org/user_files/user_files/000/146/615/original/yougov-vic-mrp-treaty-report-state-voting-intetion-treaty-support.pdf",
-      "notes": "Projected winner, runner-up and winner's 2CP share from the report's per-seat table. No win probabilities published. Fieldwork predates the July 2026 Labor leadership change.",
+      "notes": "Projected winner, runner-up and winner's 2CP share from the report's per-seat table. No win probabilities published. Fieldwork predates the July 2026 Labor leadership change. Still counted (decided 26 Nov 2026), including in the home page's seat projection, because YouGov's November MRP is held for six seats only; in those six seats the November figures are used instead.",
       "source": "yougov-mrp",
       "kind": "mrp",
-      "superseded_by": "yougov-mrp-2026-11",
-      "superseded_on": "2026-11-26"
+      "updated_by": "yougov-mrp-2026-11"
     },
     {
       "id": "yougov-mrp-2026-11",
@@ -80,7 +79,7 @@
         }
       ],
       "seats_published": 6,
-      "notes": "The Herald Sun and News24 publish YouGov's projection for every seat, but both are News Corp sites whose robots.txt disallows all agents, so only the seats reported by The Conversation, Yahoo News and The Poll Bludger are stored; the other 82 are null (not read). No statewide seat totals were found in a source we may read, so this model doesn't count in the home page's seat projection (an MRP counts only with a winner in all 88). Niddrie: Labor projected to lose 43-57, the winning party not stated. Win likelihoods published for Bendigo East and Mulgrave only."
+      "notes": "The Herald Sun and News24 publish YouGov's projection for every seat, but both are News Corp sites whose robots.txt disallows all agents, so only the seats reported by The Conversation, Yahoo News and The Poll Bludger are stored; the other 82 are null (not read). No statewide seat totals were found in a source we may read, so this model doesn't count in the home page's seat projection (an MRP counts only with a winner in all 88); the July MRP still does, and in these six seats this model replaces it. Niddrie: Labor projected to lose 43-57, the winning party not stated. Win likelihoods published for Bendigo East and Mulgrave only."
     },
     {
       "id": "demosau-mrp-2026-10",

@@ -410,6 +410,14 @@
   // A model the pages count: published, and not replaced by a newer one from the same source (an older MRP stays in
   // seat_models.json as history, with superseded_by).
   const currentModel = (m) => !!(m && m.published && !m.superseded_by);
+  // An older model only partly replaced (updated_by: the newer one from the same pollster, published for some seats)
+  // still counts, but in a seat the newer one gives a winner or runner-up for, the newer one is used instead.
+  function replacedIn(doc, m, districtId) {
+    if (!m || !m.updated_by) return false;
+    const newer = ((doc && doc.models) || []).find((x) => x.id === m.updated_by);
+    return !!(newer && currentModel(newer) && ((doc && doc.seats) || [])
+      .some((r) => r.model === newer.id && r.district === districtId && (r.winner || r.runner_up)));
+  }
   function modelSeats(doc) {
     const rows = (doc && doc.seats) || [];
     const models = [];
@@ -536,7 +544,7 @@
     const add = (id, c) => { (out[id] = out[id] || { calls: [] }).calls.push(c); };
     const models = ((modelsDoc && modelsDoc.models) || []).filter((m) => currentModel(m) && (m.kind === "forecast" || m.kind === "mrp"))
       .sort((a, b) => (a.kind === "forecast" ? 0 : 1) - (b.kind === "forecast" ? 0 : 1));
-    models.forEach((m) => ((modelsDoc && modelsDoc.seats) || []).filter((r) => r.model === m.id && r.winner)
+    models.forEach((m) => ((modelsDoc && modelsDoc.seats) || []).filter((r) => r.model === m.id && r.winner && !replacedIn(modelsDoc, m, r.district))
       .forEach((r) => add(r.district, { source: m.id, label: m.name, party: r.winner })));
     ((oddsDoc && oddsDoc.seats) || []).forEach((s) => {
       if (s.favourite && !s.partial && !(s.joint_favourites || []).length) add(s.district, { source: "sportsbet", label: "Sportsbet favourite", party: s.favourite });
@@ -1905,7 +1913,7 @@
     PARTIES, STATUSES, COALITION, partyOrder, byValue, candidateOrder, surnameOf, loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, partyBadge, statusBadge,
     slugify, parseDate, fmtDate, fmtMonth, fmtDateTime, dataUpdatedText, fmtPrice, fmtMargin, fmtSwing, melbourneToday, daysBetween,
     hashId, cssVar, currentTheme, showError, copyLink, ui, section, setSectionSummary, jumpPills, initSections, moreMenu, phoneView, keyDateNext, GLOSSARY, glossarize, abcResultsLink,
-    DAY, preparePolls, pollExclusion, commissionLabel, AVG_MIN_SAMPLE, smoothedSeries, smoothedLatest, fmtRange, pollRecords, statewideSwing, swingAdjusted, projectSeats, modelSeats, currentModel, seatCalls, apportion, hemicycle, seatRangeChart, modelsHemicycle, BLOC_LABEL, BLOC_COLOR, BLOCS, blocOf, modelLink, quotaBars,
+    DAY, preparePolls, pollExclusion, commissionLabel, AVG_MIN_SAMPLE, smoothedSeries, smoothedLatest, fmtRange, pollRecords, statewideSwing, swingAdjusted, projectSeats, modelSeats, currentModel, replacedIn, seatCalls, apportion, hemicycle, seatRangeChart, modelsHemicycle, BLOC_LABEL, BLOC_COLOR, BLOCS, blocOf, modelLink, quotaBars,
     getWatchlist, setWatchlist, isWatched, toggleWatch, starButton, storageWorks,
     buildSearchIndex, searchItems,
     candidateId, givenFirst, loadHeadshots, avatar, photoCredits, initials, inkFor, inkVar, newsList,
