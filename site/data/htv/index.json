@@ -10,46 +10,46 @@
   "status": "closed",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
   "registration_closes": "2026-11-20",
-  "last_checked": "2026-11-25T19:47:38Z",
+  "last_checked": "2026-11-25T23:42:05Z",
   "coverage": {
-    "cards": 1416,
-    "listings": 4682,
-    "orders_read": 4388,
+    "cards": 1425,
+    "listings": 4817,
+    "orders_read": 4425,
     "orders_image": 564,
     "orders_same_as": 152,
-    "orders_unreadable": 74,
+    "orders_unreadable": 77,
     "districts_with_cards": 88,
-    "regions_with_cards": 7,
+    "regions_with_cards": 8,
     "by_party": {
       "ALP": {
         "cards": 332,
         "districts": 88,
-        "regions": 7
+        "regions": 8
       },
       "LIB": {
-        "cards": 274,
+        "cards": 275,
         "districts": 77,
-        "regions": 7
+        "regions": 8
       },
       "GRN": {
-        "cards": 191,
+        "cards": 192,
         "districts": 88,
-        "regions": 7
+        "regions": 8
       },
       "VS": {
         "cards": 96,
         "districts": 88,
-        "regions": 7
+        "regions": 8
       },
       "IND": {
-        "cards": 94,
+        "cards": 95,
         "districts": 49,
-        "regions": 4
+        "regions": 5
       },
       "ONP": {
         "cards": 89,
         "districts": 88,
-        "regions": 7
+        "regions": 8
       },
       "NONCAND": {
         "cards": 88,
@@ -59,22 +59,17 @@
       "FF": {
         "cards": 65,
         "districts": 65,
-        "regions": 5
+        "regions": 6
       },
       "AJP": {
         "cards": 47,
         "districts": 40,
         "regions": 2
       },
-      "LBT": {
-        "cards": 27,
-        "districts": 23,
-        "regions": 2
-      },
       "OTH": {
-        "cards": 27,
+        "cards": 29,
         "districts": 17,
-        "regions": 5,
+        "regions": 6,
         "registered_by": [
           "Australian Democrats",
           "Christian Alliance Party – Reform AU",
@@ -82,35 +77,40 @@
           "The Republican"
         ]
       },
+      "LBT": {
+        "cards": 28,
+        "districts": 23,
+        "regions": 3
+      },
       "WEST": {
         "cards": 22,
         "districts": 12,
         "regions": 1
       },
+      "DLP": {
+        "cards": 20,
+        "districts": 12,
+        "regions": 8
+      },
       "NAT": {
         "cards": 19,
         "districts": 12,
-        "regions": 2
-      },
-      "DLP": {
-        "cards": 19,
-        "districts": 12,
-        "regions": 7
+        "regions": 3
       },
       "SAL": {
         "cards": 10,
         "districts": 6,
-        "regions": 1
+        "regions": 2
       },
       "LCV": {
-        "cards": 7,
+        "cards": 8,
         "districts": 5,
-        "regions": 7
+        "regions": 8
       },
       "SFF": {
-        "cards": 4,
+        "cards": 5,
         "districts": 2,
-        "regions": 2
+        "regions": 3
       },
       "UNNAMED": {
         "cards": 4,
@@ -120,12 +120,12 @@
       "SUS": {
         "cards": 1,
         "districts": 0,
-        "regions": 7
+        "regions": 8
       }
     },
     "no_card": {
       "lower": 41,
-      "upper": 58,
+      "upper": 16,
       "candidates_lower": 734,
       "candidates_upper": 303
     }
@@ -150,9 +150,9 @@
     "ashwood": {
       "house": "lower",
       "cards": 50,
-      "read": 12,
+      "read": 24,
       "same_as": 1,
-      "unreadable": 0,
+      "unreadable": 1,
       "parties": {
         "IND": 2,
         "ALP": 9,
@@ -184,9 +184,9 @@
     "bayswater": {
       "house": "lower",
       "cards": 36,
-      "read": 8,
+      "read": 33,
       "same_as": 0,
-      "unreadable": 0,
+      "unreadable": 1,
       "parties": {
         "ALP": 7,
         "VS": 2,
@@ -1876,12 +1876,28 @@
     },
     "western-victoria": {
       "house": "upper",
-      "cards": 0,
+      "cards": 135,
       "read": 0,
       "same_as": 0,
-      "unreadable": 0,
-      "parties": {},
-      "no_card": 44
+      "unreadable": 1,
+      "parties": {
+        "SFF": 2,
+        "SAL": 8,
+        "ALP": 26,
+        "VS": 12,
+        "SUS": 1,
+        "LCV": 1,
+        "NAT": 5,
+        "LIB": 32,
+        "ONP": 12,
+        "IND": 1,
+        "GRN": 24,
+        "FF": 3,
+        "OTH": 4,
+        "LBT": 2,
+        "DLP": 2
+      },
+      "no_card": 2
     }
   },
   "watch": [
@@ -1973,20 +1989,20 @@
       "area": "ashwood",
       "party": "GRN",
       "cards": 17,
-      "read": 4,
+      "read": 8,
       "ranks": {
         "GRN": 1,
         "ALP": 4,
         "LNP": 5,
         "ONP": 7
       },
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=904c89f5-10fe-4efc-93f5-c5502c017a30%2Fthe%20greens%20combined%20malvern%20caulfield%20prahran%20southern%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=aec166dd-e527-4c71-aca7-95bee0af060d%2Fthe%20greens%20combined%20southern%20metro%20hawthorn%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
     },
     {
       "area": "ashwood",
       "party": "LIB",
       "cards": 15,
-      "read": 5,
+      "read": 13,
       "ranks": {
         "LNP": 1,
         "ONP": 4,
@@ -2001,7 +2017,7 @@
           "of_n": 5
         }
       ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b46170eb-08d9-4b72-be91-ec6f74de894b%2Fliberal_combined_nemr%20box%20hill_nemr%20glen%20waverley_nemr%20ringwood_smr%20ashwood_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
     },
     {
       "area": "ashwood",
@@ -2088,7 +2104,7 @@
       "area": "bayswater",
       "party": "ALP",
       "cards": 7,
-      "read": 1,
+      "read": 7,
       "ranks": {
         "ALP": 1,
         "GRN": 2,
@@ -2103,26 +2119,26 @@
           "of_n": 6
         }
       ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9db73664-5208-4e02-bd1e-21e505dbd766%2Fhtv-statewide_all%20template_a3_4pp_2026.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7ac95d4d-3d81-4e30-9639-2de10dc3342a%2Falp_combined_nem%20bayswater_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
     },
     {
       "area": "bayswater",
       "party": "GRN",
       "cards": 12,
-      "read": 1,
+      "read": 10,
       "ranks": {
         "GRN": 1,
         "ALP": 3,
         "LNP": 5,
         "ONP": 8
       },
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=485d04ee-385f-4905-9e17-74c0ca7fc687%2Fthe%20greens%20combined%20north-east%20metro%20bayswater%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
     },
     {
       "area": "bayswater",
       "party": "LIB",
       "cards": 11,
-      "read": 5,
+      "read": 11,
       "ranks": {
         "LNP": 1,
         "ONP": 4,
@@ -2137,7 +2153,7 @@
           "of_n": 6
         }
       ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=28a2f873-8937-4a62-9518-06376165c06f%2Fliberal_combined_nemr%20bayswater_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
     },
     {
       "area": "bayswater",
