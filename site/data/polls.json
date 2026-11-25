@@ -32,20 +32,29 @@
       "pollster": "Resolve",
       "client": "The Age",
       "sample_size": 1000,
-      "source_url": "https://www.pollbludger.net/2026/11/25/resolve-strategic-labor-20-coalition-31-one-nation-25-in-victoria/",
+      "source_url": "https://www.theage.com.au/politics/victoria/four-out-of-five-voters-want-anyone-but-labor-a-once-in-a-century-drubbing-looms-20261125-p61gug.html",
       "primary": {
         "ALP": 20,
         "LNP": 31,
-        "ONP": 25,
         "GRN": 13,
-        "OTH": 11
+        "ONP": 25,
+        "IND": 4,
+        "OTH": 7
+      },
+      "tpp": {
+        "ALP": 41,
+        "LNP": 59
+      },
+      "preferred_premier": {
+        "matchup": "Carroll vs Wilson vs Pickering",
+        "leaders": {
+          "Carroll": 23,
+          "Wilson": 34,
+          "Pickering": 19
+        },
+        "undecided": 25
       },
       "et_id": "resolve-2026-11-23-age",
-      "added_from": "electiontracker",
-      "via": {
-        "label": "electiontracker.au poll ledger (CC BY 4.0)",
-        "url": "https://electiontracker.au/elections/vic/2026/polls"
-      },
       "commissioned_by": {
         "category": "media",
         "name": "The Age",
