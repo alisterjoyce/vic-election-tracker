@@ -139,7 +139,7 @@
       loadGeo("districts"), loadGeo("regions"), loadJSON("districts"), loadJSON("regions"),
       optional("seat_odds"), optional("results_2026/index"), optional("seat_models"),
     ]);
-    const aef = models && (models.models || []).find((m) => m.kind === "forecast" && m.published);
+    const aef = models && (models.models || []).find((m) => m.kind === "forecast" && App.currentModel(m));
     const districts = Object.fromEntries(dd.districts.map((d) => [d.id, d]));
     const regions = Object.fromEntries(rd.regions.map((r) => [r.id, r]));
     const ctx = {
@@ -217,8 +217,8 @@
 
     // The seat-by-seat sources behind the disagreement colouring, linked and dated.
     function disagreeSources() {
-      const ms = ((models && models.models) || []).filter((m) => m.published && (m.kind === "forecast" || m.kind === "mrp"));
-      return [...ms.map((m) => `${App.modelLink(m)} (${escapeHtml(m.model_date ? `model of ${App.fmtDate(m.model_date)}` : m.fieldwork ? `fieldwork ${m.fieldwork}` : "")})`),
+      const ms = ((models && models.models) || []).filter((m) => App.currentModel(m) && (m.kind === "forecast" || m.kind === "mrp"));
+      return [...ms.map((m) => `${App.modelLink(m)} (${escapeHtml(m.model_date ? `model of ${App.fmtDate(m.model_date)}` : m.fieldwork ? `fieldwork ${m.fieldwork}` : "")}${m.seats_published ? `, ${m.seats_published} seats` : ""})`),
         `Sportsbet favourite${odds && odds.date_checked ? ` (as at ${escapeHtml(App.fmtDate(odds.date_checked))})` : ""}`].join(", ");
     }
 

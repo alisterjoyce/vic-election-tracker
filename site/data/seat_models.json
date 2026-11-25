@@ -1,8 +1,8 @@
 {
   "_schema": {
-    "description": "Seat-level models, one entry per district per model: MRP polls (by hand), Australian Election Forecasts (aeforecasts.com, refreshed by scripts/refresh.py every run) and RedBridge's seat model (statewide totals, by hand; refresh.py warns when RedBridge's site shows a newer Victorian release). null = not published.",
+    "description": "Seat-level models, one entry per district per model: MRP polls (by hand; an MRP replaced by a newer one from the same pollster stays as history with superseded_by and is no longer counted), Australian Election Forecasts (aeforecasts.com, refreshed by scripts/refresh.py every run) and RedBridge's seat model (statewide totals, by hand; refresh.py warns when RedBridge's site shows a newer Victorian release). null = not published.",
     "fields": {
-      "models": "[{id, source, kind (mrp | forecast | projection), name, credit, client, fieldwork, sample_size, published, model_date (forecast: when the model was run) or published_date (YYYY-MM-DD), label, source_url, data_url, notes; forecasts also fp_percentiles and expected_seats {bloc: sum of win probabilities}; projections also inputs {poll, primary} and totals {bloc: seats, toss_up}, toss_ups ([district ids] or null if not published)}]",
+      "models": "[{id, source, kind (mrp | forecast | projection), name, credit, client, fieldwork, sample_size, published, model_date (forecast: when the model was run) or published_date (YYYY-MM-DD), label, source_url, data_url, notes; superseded_by and superseded_on (an older model kept as history: pages count only published models without superseded_by); via [{label, url, districts}] (where hand-entered seat figures were read, when the pollster's own release couldn't be); seats_published (how many districts have figures, when not all 88); forecasts also fp_percentiles and expected_seats {bloc: sum of win probabilities}; projections also inputs {poll, primary} and totals {bloc: seats, toss_up}, toss_ups ([district ids] or null if not published)}]",
       "district": "id of the district in districts.json",
       "model": "id of the model in models",
       "winner": "Predicted winner party code (ALP, LIB, NAT, LNP, GRN, ONP, IND, OTH) or null if not published",
@@ -12,13 +12,14 @@
       "win_probability": "Predicted probability (0-100) the winner takes the seat, or null if not published",
       "candidates": "Forecasts: [{name, party, win_probability (0-100), fp [low, central, high] first-preference %}], fp at the model's fp_percentiles",
       "others": "Forecasts: [{label, party, win_probability, fp}] for outcomes without a named candidate (others, an emerging independent or party)",
-      "two_cp": "Forecasts: [{parties [A, B], probability (0-100) of that final pairing, share [low, central, high] of A's 2CP %}]"
+      "two_cp": "Forecasts: [{parties [A, B], probability (0-100) of that final pairing, share [low, central, high] of A's 2CP %}]",
+      "note": "Optional: what a hand-entered row's figures cover where they are incomplete (e.g. a winner not stated)"
     }
   },
   "models": [
     {
       "id": "yougov-mrp-2026-07",
-      "name": "YouGov MRP",
+      "name": "YouGov MRP (Jul 2026)",
       "client": "Common Threads",
       "fieldwork": "16 Jun - 10 Jul 2026",
       "sample_size": 4003,
@@ -26,7 +27,60 @@
       "source_url": "https://actionnetwork.org/user_files/user_files/000/146/615/original/yougov-vic-mrp-treaty-report-state-voting-intetion-treaty-support.pdf",
       "notes": "Projected winner, runner-up and winner's 2CP share from the report's per-seat table. No win probabilities published. Fieldwork predates the July 2026 Labor leadership change.",
       "source": "yougov-mrp",
-      "kind": "mrp"
+      "kind": "mrp",
+      "superseded_by": "yougov-mrp-2026-11",
+      "superseded_on": "2026-11-26"
+    },
+    {
+      "id": "yougov-mrp-2026-11",
+      "source": "yougov-mrp",
+      "kind": "mrp",
+      "name": "YouGov MRP (Nov 2026)",
+      "credit": "YouGov",
+      "client": "News24/Herald Sun",
+      "fieldwork": "6 - 23 Nov 2026",
+      "sample_size": 3890,
+      "published": true,
+      "published_date": "2026-11-24",
+      "source_url": "https://www.pollbludger.net/2026/11/26/victorian-election-minus-two-days-3/",
+      "via": [
+        {
+          "label": "The Conversation (Adrian Beaumont, 25 Nov 2026), as republished by Yahoo News: 2CP",
+          "url": "https://au.news.yahoo.com/victorian-labor-danger-losing-opposition-031903659.html",
+          "districts": [
+            "bendigo-east",
+            "mulgrave"
+          ]
+        },
+        {
+          "label": "Yahoo News, 25 Nov 2026: win likelihood",
+          "url": "https://au.news.yahoo.com/not-lifetime-labor-vote-collapses-200949623.html",
+          "districts": [
+            "bendigo-east",
+            "mulgrave"
+          ]
+        },
+        {
+          "label": "The Poll Bludger, 25 Nov 2026",
+          "url": "https://www.pollbludger.net/2026/11/25/resolve-strategic-labor-20-coalition-31-one-nation-25-in-victoria/",
+          "districts": [
+            "bendigo-east",
+            "mulgrave"
+          ]
+        },
+        {
+          "label": "The Poll Bludger, 26 Nov 2026",
+          "url": "https://www.pollbludger.net/2026/11/26/victorian-election-minus-two-days-3/",
+          "districts": [
+            "kew",
+            "melbourne",
+            "niddrie",
+            "pakenham"
+          ]
+        }
+      ],
+      "seats_published": 6,
+      "notes": "The Herald Sun and News24 publish YouGov's projection for every seat, but both are News Corp sites whose robots.txt disallows all agents, so only the seats reported by The Conversation, Yahoo News and The Poll Bludger are stored; the other 82 are null (not read). No statewide seat totals were found in a source we may read, so this model doesn't count in the home page's seat projection (an MRP counts only with a winner in all 88). Niddrie: Labor projected to lose 43-57, the winning party not stated. Win likelihoods published for Bendigo East and Mulgrave only."
     },
     {
       "id": "demosau-mrp-2026-10",
@@ -12162,6 +12216,712 @@
       "winner": "ONP",
       "runner_up": "ALP",
       "winner_2cp": 57.7,
+      "win_probability": null
+    },
+    {
+      "district": "albert-park",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "ashwood",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "bass",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "bayswater",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "bellarine",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "benambra",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "bendigo-east",
+      "model": "yougov-mrp-2026-11",
+      "winner": "NAT",
+      "runner_up": "ALP",
+      "winner_2cp": 60,
+      "win_probability": 99
+    },
+    {
+      "district": "bendigo-west",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "bentleigh",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "berwick",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "box-hill",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "brighton",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "broadmeadows",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "brunswick",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "bulleen",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "bundoora",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "carrum",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "caulfield",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "clarinda",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "cranbourne",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "croydon",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "dandenong",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "eildon",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "eltham",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "essendon",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "eureka",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "euroa",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "evelyn",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "footscray",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "frankston",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "geelong",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "gippsland-east",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "gippsland-south",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "glen-waverley",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "greenvale",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "hastings",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "hawthorn",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "ivanhoe",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "kalkallo",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "kew",
+      "model": "yougov-mrp-2026-11",
+      "winner": "LIB",
+      "runner_up": "IND",
+      "winner_2cp": 67,
+      "win_probability": null
+    },
+    {
+      "district": "kororoit",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "lara",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "laverton",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "lowan",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "macedon",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "malvern",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "melbourne",
+      "model": "yougov-mrp-2026-11",
+      "winner": "GRN",
+      "runner_up": "LIB",
+      "winner_2cp": 62,
+      "win_probability": null
+    },
+    {
+      "district": "melton",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "mildura",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "mill-park",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "monbulk",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "mordialloc",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "mornington",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "morwell",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "mulgrave",
+      "model": "yougov-mrp-2026-11",
+      "winner": "LIB",
+      "runner_up": "ALP",
+      "winner_2cp": 56,
+      "win_probability": 94
+    },
+    {
+      "district": "murray-plains",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "narracan",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "narre-warren-north",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "narre-warren-south",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "nepean",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "niddrie",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": "ALP",
+      "winner_2cp": 57,
+      "win_probability": null,
+      "note": "Labor (Ben Carroll) projected to lose 43-57; the winning party isn't stated in the sources read."
+    },
+    {
+      "district": "northcote",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "oakleigh",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "ovens-valley",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "pakenham",
+      "model": "yougov-mrp-2026-11",
+      "winner": "ONP",
+      "runner_up": "GRN",
+      "winner_2cp": 54,
+      "win_probability": null,
+      "note": "Runner-up as The Poll Bludger reads the projection (Greens second, on 14% of first preferences); the 54-46 opponent isn't named."
+    },
+    {
+      "district": "pascoe-vale",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "point-cook",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "polwarth",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "prahran",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "preston",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "richmond",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "ringwood",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "ripon",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "rowville",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "sandringham",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "shepparton",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "south-barwon",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "south-west-coast",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "st-albans",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "sunbury",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "sydenham",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "tarneit",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "thomastown",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "warrandyte",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "wendouree",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "werribee",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "williamstown",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
+      "win_probability": null
+    },
+    {
+      "district": "yan-yean",
+      "model": "yougov-mrp-2026-11",
+      "winner": null,
+      "runner_up": null,
+      "winner_2cp": null,
       "win_probability": null
     }
   ]

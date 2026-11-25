@@ -400,17 +400,20 @@
     return { winners, tally };
   }
 
-  // Seat totals from every published model in seat_models.json, and per bloc the median, lowest and highest
+  // Seat totals from every current model in seat_models.json (currentModel), and per bloc the median, lowest and highest
   // across them: the home page's seat projection and both home share cards. A forecast counts its expected seats
   // (the sum of its win chances), a projection its published totals, an MRP its predicted winners (only with a
   // winner in all 88 seats). A bloc a model doesn't give (a projection's Others, unless its totals make 88) is
   // left out of that bloc's figures. Returns {models: [{model, seats: {bloc: n | null}, when, basis}], summary:
   // {bloc: {median, lo, hi, n}}}.
   const ASSEMBLY_SEATS = 88;
+  // A model the pages count: published, and not replaced by a newer one from the same source (an older MRP stays in
+  // seat_models.json as history, with superseded_by).
+  const currentModel = (m) => !!(m && m.published && !m.superseded_by);
   function modelSeats(doc) {
     const rows = (doc && doc.seats) || [];
     const models = [];
-    ((doc && doc.models) || []).filter((m) => m.published).forEach((m) => {
+    ((doc && doc.models) || []).filter(currentModel).forEach((m) => {
       let seats = null, when = "", basis = "";
       if (m.kind === "forecast" && m.expected_seats) {
         seats = Object.fromEntries(BLOCS.map((b) => [b, Number(m.expected_seats[b] || 0)]));
@@ -522,7 +525,7 @@
       <ul class="hb-key"><li><span class="mv-key-mid"></span>Median of ${ms.models.length} models</li><li><span class="mv-key-rng"></span>Lowest to highest</li><li class="hb-maj-key"><span class="hb-maj-mark"></span>${majority} for a majority</li></ul>`;
   }
 
-  // Each seat's calls from the sources that rate seats one by one: every published seat model with a winner per
+  // Each seat's calls from the sources that rate seats one by one: every current seat model with a winner per
   // seat (forecasts first, so Australian Election Forecasts, then the YouGov MRP) and Sportsbet's outright favourite
   // (not joint favourites or a partial market). RedBridge publishes statewide totals only, so it makes no seat calls.
   // {district id: {calls: [{source, label, party}], pick, agree, disagree}}: pick is the party most sources name (a
@@ -531,7 +534,7 @@
   function seatCalls(modelsDoc, oddsDoc) {
     const out = {};
     const add = (id, c) => { (out[id] = out[id] || { calls: [] }).calls.push(c); };
-    const models = ((modelsDoc && modelsDoc.models) || []).filter((m) => m.published && (m.kind === "forecast" || m.kind === "mrp"))
+    const models = ((modelsDoc && modelsDoc.models) || []).filter((m) => currentModel(m) && (m.kind === "forecast" || m.kind === "mrp"))
       .sort((a, b) => (a.kind === "forecast" ? 0 : 1) - (b.kind === "forecast" ? 0 : 1));
     models.forEach((m) => ((modelsDoc && modelsDoc.seats) || []).filter((r) => r.model === m.id && r.winner)
       .forEach((r) => add(r.district, { source: m.id, label: m.name, party: r.winner })));
@@ -1902,7 +1905,7 @@
     PARTIES, STATUSES, COALITION, partyOrder, byValue, candidateOrder, surnameOf, loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, partyBadge, statusBadge,
     slugify, parseDate, fmtDate, fmtMonth, fmtDateTime, dataUpdatedText, fmtPrice, fmtMargin, fmtSwing, melbourneToday, daysBetween,
     hashId, cssVar, currentTheme, showError, copyLink, ui, section, setSectionSummary, jumpPills, initSections, moreMenu, phoneView, keyDateNext, GLOSSARY, glossarize, abcResultsLink,
-    DAY, preparePolls, pollExclusion, commissionLabel, AVG_MIN_SAMPLE, smoothedSeries, smoothedLatest, fmtRange, pollRecords, statewideSwing, swingAdjusted, projectSeats, modelSeats, seatCalls, apportion, hemicycle, seatRangeChart, modelsHemicycle, BLOC_LABEL, BLOC_COLOR, BLOCS, blocOf, modelLink, quotaBars,
+    DAY, preparePolls, pollExclusion, commissionLabel, AVG_MIN_SAMPLE, smoothedSeries, smoothedLatest, fmtRange, pollRecords, statewideSwing, swingAdjusted, projectSeats, modelSeats, currentModel, seatCalls, apportion, hemicycle, seatRangeChart, modelsHemicycle, BLOC_LABEL, BLOC_COLOR, BLOCS, blocOf, modelLink, quotaBars,
     getWatchlist, setWatchlist, isWatched, toggleWatch, starButton, storageWorks,
     buildSearchIndex, searchItems,
     candidateId, givenFirst, loadHeadshots, avatar, photoCredits, initials, inkFor, inkVar, newsList,

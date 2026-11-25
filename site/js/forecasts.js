@@ -53,10 +53,10 @@
     const models = doc.models || [];
     const entry = (m) => (doc.seats || []).find((x) => x.district === d.id && x.model === m.id);
     const cands = ctx.cands || [];
-    const aef = models.find((m) => m.kind === "forecast" && m.published);
+    const aef = models.find((m) => m.kind === "forecast" && App.currentModel(m));
     const aefE = aef && entry(aef);
-    const mrps = models.filter((m) => m.kind === "mrp" && m.published);
-    const rb = models.find((m) => m.kind === "projection" && m.published);
+    const mrps = models.filter((m) => m.kind === "mrp" && App.currentModel(m));   // a superseded MRP is history
+    const rb = models.find((m) => m.kind === "projection" && App.currentModel(m));
     const rbE = rb && entry(rb);
     const imp = impliedChances(seatOdds);
     const oddsDate = seatOdds && (seatOdds.date_checked || (odds && odds.date_checked));
@@ -77,10 +77,11 @@
       const e = entry(m);
       cols.push({ key: m.id, head: `<a href="${escapeHtml(m.source_url || "#")}" rel="noopener" target="_blank">${escapeHtml(m.name)}</a><span class="fc-date">call, fieldwork ${escapeHtml(m.fieldwork || "")}</span>`,
         cell: (c) => {
-          if (!e || !e.winner) return { text: NM };
+          if (!e || (!e.winner && !e.runner_up)) return { text: NM };
           const one = (p) => cands.filter((x) => x.party === p).length === 1;   // a party call names a candidate only if it has one
           if (c.party === e.winner && one(e.winner)) return { text: `Win${e.winner_2cp != null ? ` <span class="muted small">${fmt1(e.winner_2cp)}% 2CP</span>` : ""}`, fav: true };
-          if (c.party === e.runner_up && one(e.runner_up)) return { text: "Runner-up" };
+          // A row with only the loser published (winner not stated): the loser's 2CP is 100 - winner_2cp.
+          if (c.party === e.runner_up && one(e.runner_up)) return { text: `${e.winner ? "Runner-up" : "Loses"}${!e.winner && e.winner_2cp != null ? ` <span class="muted small">${fmt1(100 - e.winner_2cp)}% 2CP</span>` : ""}` };
           return { text: '<span class="muted">–</span>' };
         }, fav: e && e.winner, label: m.name });
     });
@@ -137,6 +138,7 @@
     });
     const holder = d.party;
     const name = (p) => App.partyName(p);
+    const allOf = (n) => (n === 2 ? "Both sources" : `All ${n} sources`);
     let summary, short;   // short: the one line under a collapsed Forecasts section ("Sources split: Liberal or One Nation")
     if (!favs.length) { summary = `No source rates ${d.name}.`; short = "No source rates this seat"; }
     else {
@@ -145,10 +147,10 @@
       const medOf = (p) => Math.max(-1, ...rows.filter((r) => r.c.party === p && r.med != null).map((r) => r.med));
       const parties = Object.keys(byParty).sort((a, b) => byParty[b].length - byParty[a].length || medOf(b) - medOf(a) || App.partyOrder(a, b));
       short = parties.length > 1 ? `Sources split: ${parties.map(name).join(" or ")}`
-        : favs.length === 1 ? `${favs[0][0]} favours ${name(parties[0])}` : `All ${favs.length} sources favour ${name(parties[0])}`;
+        : favs.length === 1 ? `${favs[0][0]} favours ${name(parties[0])}` : `${allOf(favs.length)} favour ${name(parties[0])}`;
       if (parties.length === 1) {
         const p = parties[0];
-        summary = `${favs.length === 1 ? `The only source that rates ${d.name}, ${favs[0][0]},` : `All ${favs.length} sources`} favour${favs.length === 1 ? "s" : ""} ${p === holder ? `${name(p)} to hold ${d.name}` : `${name(p)} to win ${d.name} from ${name(holder)}`}.`;
+        summary = `${favs.length === 1 ? `The only source that rates ${d.name}, ${favs[0][0]},` : allOf(favs.length)} favour${favs.length === 1 ? "s" : ""} ${p === holder ? `${name(p)} to hold ${d.name}` : `${name(p)} to win ${d.name} from ${name(holder)}`}.`;
       } else if (!byParty[holder]) {
         summary = `No source favours ${name(holder)} to hold ${d.name}; they split between ${parties.map((p) => `${name(p)} (${byParty[p].join(", ")})`).join(" and ")}.`;
       } else {
@@ -196,7 +198,9 @@
     mrps.forEach((m) => {
       const e = entry(m);
       calls.push({ label: m.name, url: m.source_url, date: `fieldwork ${m.fieldwork || ""}`,
-        text: e && e.winner ? `${name(e.winner)} to win${e.winner_2cp != null ? ` (${fmt1(e.winner_2cp)}% 2CP)` : ""}${e.runner_up ? `, ${name(e.runner_up)} second` : ""}` : "No call for this seat" });
+        text: e && e.winner ? `${name(e.winner)} to win${e.winner_2cp != null ? ` (${fmt1(e.winner_2cp)}% 2CP)` : ""}${e.runner_up ? `, ${name(e.runner_up)} second` : ""}`
+          : e && e.runner_up ? `${name(e.runner_up)} to lose${e.winner_2cp != null ? ` (${fmt1(100 - e.winner_2cp)}% 2CP)` : ""}; the winner isn't published`
+          : m.seats_published ? `Not among the ${m.seats_published} seats published` : "No call for this seat" });
     });
     if (rb) {
       calls.push({ label: rb.name, url: rb.source_url, date: fmtDate(rb.published_date),

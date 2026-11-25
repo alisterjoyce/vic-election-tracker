@@ -628,11 +628,10 @@ a.icon-btn { text-decoration: none; display: inline-block; }
 .mv-rng { color: var(--muted); font-size: 0.8rem; }
 .mv-key-mid { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--text); }
 .mv-key-rng { display: inline-block; width: 18px; height: 8px; border-radius: 4px; background: var(--text); opacity: 0.4; }
-.hero-mv-models { margin: 6px 0 0; padding-left: 1.1em; font-size: 0.8rem; line-height: 1.45; color: var(--muted); min-height: 57px; }   /* three models, a line each */
-@media (max-width: 629px) { .hero-mv-models { min-height: 93px; } }   /* five lines */
-@media (max-width: 499px) { .hero-mv-models { min-height: 111px; } }
-@media (max-width: 369px) { .hero-mv-models { min-height: 130px; } }
-@media (max-width: 349px) { .hero-mv-models { min-height: 149px; } }
+.hero-mv-models { margin: 6px 0 0; padding-left: 1.1em; font-size: 0.8rem; line-height: 1.45; color: var(--muted); min-height: 37px; }   /* two models, a line each (re-measured 26 Nov 2026 when the July YouGov MRP was superseded) */
+@media (max-width: 639px) { .hero-mv-models { min-height: 56px; } }   /* three lines from 624px (+15px for a desktop scrollbar) */
+@media (max-width: 509px) { .hero-mv-models { min-height: 74px; } }   /* four lines from 490px */
+@media (max-width: 399px) { .hero-mv-models { min-height: 93px; } }   /* five lines from 382px */
 .hero-updated { margin-top: 10px !important; font-size: 0.8rem; line-height: 1.5; min-height: 1.5em; }
 .hero-foot { display: flex; align-items: center; justify-content: space-between; gap: 8px 12px; margin-top: 10px; }
 .hero-foot .hero-updated { margin-top: 0 !important; }
@@ -1091,8 +1090,7 @@ a.gloss:hover, a.gloss[aria-expanded="true"] { text-decoration-color: var(--acce
 .sc-models-chart { min-height: 155px; }   /* five rows plus the key, filled after the first paint (measured 23 Nov 2026) */
 @media (max-width: 479px) { .sc-models-chart { min-height: 175px; } }   /* the key wraps */
 .sc-model-line { min-height: 2.9em; }   /* two lines, filled once the models load */
-@media (max-width: 499px) { .sc-models-list { min-height: 130px; } }
-@media (max-width: 369px) { .sc-models-list { min-height: 149px; } }
+/* .sc-models-list takes .hero-mv-models' reserved heights: with two models it wraps no further (measured 26 Nov 2026) */
 .scenario h4 { margin: 14px 0 6px; font-size: 0.9rem; }
 .sc-status { font-weight: 600; }
 .sc-seats { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 4px; }
