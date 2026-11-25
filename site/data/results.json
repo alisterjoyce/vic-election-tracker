@@ -9,7 +9,7 @@
       "vec_updated": "The latest 'last updated' time shown on any VEC page read (raw text as published)",
       "call_rule": "{buffer_pct_of_enrolment, buffer_min_votes, turnout_default, text}",
       "tally": "{called: {bloc: seats}, leading: {bloc: seats}, undecided, counted_seats, majority}; blocs ALP, LNP, GRN, ONP, OTH",
-      "districts": "{district id: {name, url, vec_updated, fetched, enrolment, formal, informal, total, counted_pct (of enrolment), centres_counted, centres_total, declared, elected {name, party}, candidates [{id, name, party, party_name, votes, pct}], tcp [{id, name, party, votes, pct}] or null, tcp_basis (2cp | distribution), leader {id, name, party, basis}, margin_votes, uncounted_estimate, status (called | leading | undecided), called_by (vec | site | null), holder (party before the election), changes_hands, swing_2cp (leader's 2CP change since 2022, same pair only)}}"
+      "districts": "{district id: {name, url, vec_updated, fetched, enrolment, formal, informal, total, counted_pct (of enrolment), centres_counted, centres_total, declared, elected {name, party}, candidates [{id, name, party, party_name, votes, pct}], tcp [{id, name, party, votes, pct}] or null, tcp_basis (2cp | distribution), leader {id, name, party, basis}, margin_votes, uncounted_estimate, status (called | leading | undecided), called_by (vec | site | null), holder (party before the election), changes_hands, swing_2cp (leader's 2CP change since 2022, same pair only), declaration_votes {early_cast, postal_returned, as_of (the VEC's pre-election figures, early_votes.json), early_counted, postal_counted (formal first preferences of those types so far), outstanding} or null when the VEC published no district figures}}"
     }
   },
   "source": {
@@ -18,13 +18,13 @@
   },
   "profile": "2026",
   "counting_starts": "2026-11-28T18:00:00+11:00",
-  "updated": "2026-11-05T02:25:46Z",
+  "updated": "2026-11-25T23:14:44Z",
   "vec_updated": null,
   "call_rule": {
     "buffer_pct_of_enrolment": 1.0,
     "buffer_min_votes": 250,
     "turnout_default": 0.89,
-    "text": "Called by this site when the leader's two-candidate-preferred margin is larger than the estimated uncounted vote plus a buffer (the larger of 250 votes and 1% of enrolment), so the trailing candidate couldn't catch up even with every remaining vote. Uncounted = enrolment x the seat's 2022 turnout - votes counted. A seat the VEC has declared is called by the VEC."
+    "text": "Called by this site when the leader's two-candidate-preferred margin is larger than the estimated uncounted vote plus a buffer (the larger of 250 votes and 1% of enrolment), so the trailing candidate couldn't catch up even with every remaining vote. Uncounted = enrolment x the seat's 2022 turnout - votes counted, or, if larger, the early and postal votes the VEC says were cast that aren't in the count yet. A seat the VEC has declared is called by the VEC."
   },
   "tally": {
     "called": {},

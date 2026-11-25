@@ -663,7 +663,7 @@
         <span class="vb-track"><span class="vb-fill" style="display:block;width:${(100 * pct(v, fp.formal)) / maxShare}%;background:var(${App.partyVar(c.party)})"></span></span>
         <span class="vb-num">${pct(v, fp.formal).toFixed(1)}%${swingSpan(sw[id])}</span></li>`;
     }).join("")}</ul>`;
-    const pairLead = pair ? `<p class="lead">${escapeHtml(App.partyName(pair[0][0].party))} ${key === "r26" ? "leads" : "won"} ${fmt1(pair[0][1])}–${fmt1(pair[1][1])} against ${escapeHtml(App.partyName(pair[1][0].party))} after preferences.</p>` : "";
+    const pairLead = pair ? `<p class="lead">${escapeHtml(App.partyName(pair[0][0].party))} ${key === "r26" && !(elected && elected.id === pair[0][0].id) ? "leads" : "won"} ${fmt1(pair[0][1])}–${fmt1(pair[1][1])} against ${escapeHtml(App.partyName(pair[1][0].party))} after preferences.</p>` : "";
     const booths = r.polling_places.slice().sort((a, b) => (b.total || 0) - (a.total || 0)).map((p) => {
       const s = p.tcp ? Object.values(p.tcp).reduce((a, b) => a + (b || 0), 0) : 0;
       const lead = p.tcp ? Object.entries(p.tcp).sort((a, b) => b[1] - a[1])[0] : null;

@@ -1,28 +1,44 @@
 name: Election-night results
 
 # Reads the VEC's public results pages (scripts/results.py) and publishes results.json, results_lc.json and
-# results_2026/ when they change. Before turning the schedule on, fill the 2026 'base' in scripts/results_urls.json
-# and check every page answers: python scripts/results.py --check-urls
+# results_2026/ when they change. Election-night checklist: CLAUDE.md, "Election-night results".
+#
+# Run it by hand at any time ("Run workflow" on this workflow's page in the Actions tab, on the web or in the GitHub
+# mobile app, or: gh workflow run results.yml --ref main). A manual run does exactly what a scheduled one does.
+run-name: ${{ github.event_name == 'workflow_dispatch' && format('Results, run by hand ({0})', github.actor) || 'Results, every 5 minutes' }}
+
 on:
-  # Every 5 minutes from election night. Uncomment to turn it on (GitHub may start scheduled runs a few minutes
-  # late at busy times); comment it out again once the count is final.
+  # Every 5 minutes from election night. To turn it on, remove the "# " in front of the next two lines (keep the
+  # indentation) and push; comment them out again once the count is final. GitHub may start scheduled runs a few
+  # minutes late at busy times: a manual run fills the gap.
   # schedule:
   #   - cron: "*/5 * * * *"
   workflow_dispatch:
+    inputs:
+      deploy:
+        description: "Publish the site even if the results haven't changed (e.g. after a failed deploy)"
+        type: boolean
+        required: false
+        default: false
 
 permissions:
   contents: write
   pages: write      # deploy job: publish to GitHub Pages
   id-token: write   # deploy job: authenticate the Pages deployment
 
+# One run at a time. A run that starts while another is going waits; if a second one arrives while one is waiting
+# (a manual run while a scheduled one is queued, or the schedule outpacing a slow run), GitHub cancels the waiting
+# one and keeps the newer: both would do the same work, so nothing is lost.
 concurrency:
   group: results
-  cancel-in-progress: false   # a slow run finishes; the next scheduled one waits
+  cancel-in-progress: false
 
 jobs:
   results:
     runs-on: ubuntu-latest
-    timeout-minutes: 15   # ~1.4 s a page (VEC pages are ~150 KB): ~2 min when nothing changed, ~7 min when every seat did
+    # ~2 s a page at one request a second (VEC pages are ~150 KB): ~3 min when nothing changed (98 pages),
+    # ~9 min when every seat did (~274 pages); measured 26 Nov 2026 against the 2022 pages
+    timeout-minutes: 15
     outputs:
       changed: ${{ steps.commit.outputs.changed }}
     steps:
@@ -44,6 +60,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Only the results files are ever staged or committed.
           git add site/data/results.json site/data/results_lc.json site/data/results_2026
           # _fetch.json (page hashes) changes with any page; commit only when the results themselves did.
           if git diff --cached --quiet -- site/data/results.json site/data/results_lc.json ':(glob)site/data/results_2026/[!_]*'; then
@@ -52,22 +69,40 @@ jobs:
             git reset -q
             exit 0
           fi
-          git commit -m "Results $(date -u +'%Y-%m-%d %H:%M UTC')"
-          # The four-a-day data refresh may have pushed meanwhile: rebase onto it (different files) and retry.
-          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
-          echo "changed=true" >> "$GITHUB_OUTPUT"
+          git commit -q -m "Results $(date -u +'%Y-%m-%d %H:%M UTC')"
+          # The four-a-day data refresh (or a hand edit) may have pushed meanwhile: rebase onto it and push again,
+          # up to 3 times. If the rebase conflicts (someone changed a results file by hand), push nothing: the next
+          # run redoes this one's results on top of their commit.
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "::warning title=Results push::main moved during the run; rebasing the results commit onto it (attempt $attempt of 3)"
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort
+              echo "::warning title=Results not pushed::This run's results conflict with a commit pushed to main while it ran, so nothing was pushed; the next run will redo it."
+              echo "changed=false" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          done
+          echo "::error title=Results not pushed::The results commit could not be pushed after 3 rebases."
+          exit 1
 
+  # Publish to GitHub Pages. The results job pushes with GITHUB_TOKEN, which doesn't trigger deploy.yml, so this job
+  # deploys itself: when the results changed, or when a manual run asked for it.
   deploy:
     needs: results
-    if: needs.results.outputs.changed == 'true'
+    if: needs.results.outputs.changed == 'true' || (github.event_name == 'workflow_dispatch' && inputs.deploy)
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20   # up to 3 deploy attempts, 60 s apart
     concurrency:
       group: pages
       cancel-in-progress: false
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment2.outputs.page_url || steps.deployment3.outputs.page_url }}
     steps:
       - uses: actions/checkout@v5
         with:
@@ -79,5 +114,29 @@ jobs:
         with:
           path: site
 
+      # deploy-pages sometimes can't see the artifact uploaded a moment before (20 Nov 2026). Try up to 3 times, 60 s
+      # apart, in this job (a re-run of the job uploads a second artifact and fails); the last try fails the run.
       - id: deployment
         uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+      - name: Wait 60 s before deploy attempt 2
+        if: steps.deployment.outcome == 'failure'
+        run: echo "::warning::Pages deploy attempt 1 failed; trying again in 60 s" && sleep 60
+
+      - id: deployment2
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+      - name: Wait 60 s before deploy attempt 3
+        if: steps.deployment.outcome == 'failure' && steps.deployment2.outcome == 'failure'
+        run: echo "::warning::Pages deploy attempt 2 failed; trying once more in 60 s" && sleep 60
+
+      - id: deployment3
+        if: steps.deployment.outcome == 'failure' && steps.deployment2.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+
+      - name: Report a failed deploy
+        if: failure()
+        run: echo "::error title=Pages deploy::The site was not deployed after 3 attempts; run this workflow by hand with 'Publish the site even if the results haven't changed' ticked."

@@ -188,22 +188,27 @@ Google News isn't used: its robots.txt disallows automated access, so news comes
 
 Results come from the Victorian Electoral Commission's public results pages (the media feed wasn't available), read by `scripts/results.py` into `site/data/results.json`, `site/data/results_lc.json` and `site/data/results_2026/`.
 
-1. **Fill the URL map.** When the VEC publishes its 2026 results pages (expected after nominations close on 9 Nov, with an election-night trial on 25 Nov), open `scripts/results_urls.json` and set the `2026` profile's `base` to the address of the VEC's "2026 State election results" page. The page patterns (`district_page`, `district_vc_page`, `district_tcp_page`, `region_page`) follow the 2022 site; change them if 2026 differs, or put a single odd page in `overrides` (`"district:bass": "<url>"`). Check with:
+1. **Fill the URL map.** When the VEC publishes its 2026 results pages (not yet on 26 Nov 2026), open `scripts/results_urls.json` and set the `2026` profile's `base` to the address of the VEC's "2026 State election results" page. Until then each run looks for that link on the VEC's state election results page and uses it if it appears (with a warning to fill the map). Each run also follows the links on the results index page and on each district page, so pages whose addresses don't follow the patterns are still read; a page the index doesn't link goes in `overrides` (`"district:bass": "<url>"`). Check with:
 
    ```bash
    python scripts/results.py --check-urls
    ```
 
-2. **Turn the schedule on.** In `.github/workflows/results.yml`, uncomment the `schedule:` block (`cron: "*/5 * * * *"`) and push. It reads the pages every 5 minutes (one request a second; a district's voting-centre pages only when its main page changed), commits only when the results change, and deploys. Run it by hand from the Actions tab at any time (`workflow_dispatch`), for example during the 25 Nov trial. Comment the schedule out again when the count is final.
+2. **Turn the schedule on.** In `.github/workflows/results.yml`, uncomment the `schedule:` block (`cron: "*/5 * * * *"`) and push. It reads the pages every 5 minutes (one request a second; a district's voting-centre pages only when its main page changed), commits only the results files and only when they change, and deploys. One run at a time; if main moved meanwhile it rebases and retries. Comment the schedule out again when the count is final.
 
-3. **Test without the 2026 pages** by reading the final 2022 pages into a copy of the data:
+3. **Run it by hand** if the schedule lags: in the GitHub mobile app open the repository, then Actions, "Election-night results", "Run workflow" (or on the web, the workflow's page in the Actions tab; or `gh workflow run results.yml --ref main`). The optional "Publish the site even if the results haven't changed" box redeploys after a failed deploy.
+
+4. **Test without the 2026 pages** by reading the final 2022 pages, or the VEC's newest template (the 2026 Nepean by-election), into a copy of the data:
 
    ```bash
    python scripts/results.py --profile 2022 --data-dir /tmp/data-copy
    python scripts/results.py --selftest-samples "website samples and summary (complete set)" --data-dir /tmp/data-copy
+   python scripts/results.py --profile template-2026 --data-dir /tmp/other-copy
    ```
 
    The second command checks the output against the VEC's 2026 sample XML (kept out of the repo). Serve `site/` with the copied data to look at the Results page.
+
+The full election-night checklist (what to check if results stop updating, and turning it off) is in `CLAUDE.md` under "Election-night results".
 
 A seat is "called by this site" when the leader's two-candidate-preferred margin is larger than the estimated uncounted vote plus a buffer (the larger of 250 votes and 1% of enrolment); a seat the VEC has declared is marked as the VEC's. See `about.html#results`.
 

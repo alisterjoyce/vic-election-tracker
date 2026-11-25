@@ -1,12 +1,17 @@
 {
   "_readme": [
     "URL map for scripts/results.py: where the VEC's public results pages are. Each profile lists the page address patterns;",
-    "{base} is the profile's base, {slug} the district or region name lower-cased and hyphenated as the VEC writes it",
-    "(e.g. 'albert-park', 'eastern-victoria'). 'overrides' maps a district or region id to a full URL when one page doesn't",
-    "follow the pattern. The 2026 profile's base is null until the VEC publishes its 2026 results pages (expected after",
-    "nominations close on 9 Nov; election-night trial on 25 Nov): fill in 'base' (and any changed pattern) from the VEC's",
-    "'2026 State election results' page, then run 'python scripts/results.py --check-urls' to confirm every page answers.",
-    "The 2022 profile points at the final 2022 pages and is used to test the parser ('--profile 2022 --data-dir <copy>')."
+    "{base} is the profile's base, {slug} the district or region id as the VEC writes it ('albert-park', 'eastern-victoria').",
+    "Every run also reads the results index page ({base}) and uses the address each district and region link there has, and each",
+    "district page's own links to its voting-centre and 2CP pages, so an address that doesn't follow a pattern is still read;",
+    "'overrides' ('district:<id>' or 'region:<id>' -> full URL) beats both, for a page the index doesn't link.",
+    "The 2026 base is null until the VEC publishes its 2026 results pages (checked 26 Nov 2026: https://www.vec.vic.gov.au/results/state-election-results",
+    "lists 2022 back to 2006 and by-elections only; .../2026-state-election-results and .../2026-state-election return 404). Until then each",
+    "run looks at 'discover.page' for a link whose text matches 'discover.link_text' and, if it finds one, uses it as the base for that run",
+    "with a ::warning::; put that address in 'base' then, and run 'python scripts/results.py --check-urls' (all 96 pages must answer).",
+    "'2022' points at the final 2022 pages and tests the parser end to end ('--profile 2022 --data-dir <copy>'). 'template-2026' is the",
+    "VEC's newest results template, the 2026 Nepean by-election (one district, read through its override): run it the same way to check",
+    "the parsers against the layout the 2026 pages are most likely to use."
   ],
   "active": "2026",
   "profiles": {
@@ -20,7 +25,11 @@
       "district_vc_page": "{base}/results-by-district/{slug}-district-results/{slug}-district-results-by-voting-centre",
       "district_tcp_page": "{base}/results-by-district/{slug}-district-results/{slug}-2cp-results-by-voting-centre",
       "region_page": "{base}/results-by-region/{slug}-region-results",
-      "overrides": {}
+      "overrides": {},
+      "discover": {
+        "page": "https://www.vec.vic.gov.au/results/state-election-results",
+        "link_text": "\\b2026 state election results\\b"
+      }
     },
     "2022": {
       "event": "2022 State Election",
@@ -33,6 +42,20 @@
       "district_tcp_page": "{base}/results-by-district/{slug}-district-results/{slug}-2cp-results-by-voting-centre",
       "region_page": "{base}/results-by-region/{slug}-region-results",
       "overrides": {}
+    },
+    "template-2026": {
+      "event": "2026 Nepean District by-election",
+      "election_date": "2026-05-02",
+      "counting_starts": "2026-05-02T18:00:00+10:00",
+      "base": null,
+      "index_page": "{base}",
+      "district_page": "{base}/results-by-district/{slug}-district-results",
+      "district_vc_page": "{base}/results-by-district/{slug}-district-results/{slug}-district-results-by-voting-centre",
+      "district_tcp_page": "{base}/results-by-district/{slug}-district-results/{slug}-2cp-results-by-voting-centre",
+      "region_page": "{base}/results-by-region/{slug}-region-results",
+      "overrides": {
+        "district:nepean": "https://www.vec.vic.gov.au/results/state-election-results/state-by-elections-timeline/nepean-by-election-results/results-by-district/nepean-district-results"
+      }
     }
   }
 }

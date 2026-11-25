@@ -48,8 +48,10 @@ import sys
 import tempfile
 import time
 import unicodedata
+import urllib.robotparser
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import urljoin, urlsplit
 from zoneinfo import ZoneInfo
 
 import lxml.html
@@ -76,6 +78,14 @@ BLOCS = {"LIB": "LNP", "NAT": "LNP", "LNP": "LNP", "ALP": "ALP", "GRN": "GRN", "
 TYPE_ROWS = {"ordinary votes total": "Ordinary", "early votes total": "Early", "early votes": "Early",
              "absent votes": "Absent", "marked as voted votes": "MarkedAsVoted", "postal votes": "Postal",
              "provisional votes": "Provisional", "mobile voting": "MobileVotingEarly"}
+# Rows that are neither a place nor a vote type: "Other early votes" (the current template, e.g. the 2026 Nepean
+# by-election's 2CP page) is the early votes not shown by centre, already inside "Early votes total".
+NOT_PLACES = {"other early votes"}
+# Section headings (rows with no figures) -> the kind of place listed under them
+SECTION_ROWS = {"ordinary votes": "ordinary", "voting centres": "ordinary", "early votes": "early",
+                "early voting centres": "early", "declaration votes": "declaration"}
+# 2022 pages: "Total enrolment as at close of rolls: 49,984"; the current template (2025-26 by-elections): "Total enrolled voters: 50,910"
+ENROLMENT_RE = r"Total enrol(?:ment|led voters)[^:\d]{0,40}:\s*([\d,]+)"
 
 log = logging.getLogger("results")
 
@@ -216,12 +226,39 @@ class Fetcher:
         self.state = state
         self.last = 0.0
         self.count = 0
+        self.robots = {}   # host -> RobotFileParser (None if robots.txt couldn't be read: then allowed, as the VEC's allowed us)
 
-    def get(self, url: str, conditional=True):
-        """(html or None, changed). None with changed=False means 304 Not Modified. Raises on HTTP errors."""
+    def _pause(self):
         wait = self.last + DELAY - time.monotonic()
         if wait > 0:
             time.sleep(wait)
+
+    def allowed(self, url: str) -> bool:
+        """robots.txt, read once per host per run (checked 26 Nov 2026: www.vec.vic.gov.au disallows /assets/, /sitecore/,
+        /*.ashx and the like, not /results/)."""
+        parts = urlsplit(url)
+        host = f"{parts.scheme}://{parts.netloc}"
+        if host not in self.robots:
+            self._pause()
+            rp = urllib.robotparser.RobotFileParser()
+            try:
+                resp = self.session.get(host + "/robots.txt", timeout=TIMEOUT)
+                rp.parse(resp.text.splitlines() if resp.status_code == 200 else [])
+            except requests.RequestException as exc:
+                log.warning("robots.txt for %s unreadable (%s); carrying on", host, exc)
+                rp = None
+            finally:
+                self.last = time.monotonic()
+                self.count += 1
+            self.robots[host] = rp
+        rp = self.robots[host]
+        return rp is None or rp.can_fetch(USER_AGENT, url)
+
+    def get(self, url: str, conditional=True):
+        """(html or None, changed). None with changed=False means 304 Not Modified. Raises on HTTP errors."""
+        if not self.allowed(url):
+            raise PermissionError(f"robots.txt disallows {url}")
+        self._pause()
         st = self.state.get(url, {})
         headers = {}
         if conditional and st.get("etag"):
@@ -254,7 +291,7 @@ def parse_district_page(html: str) -> dict:
         raise ValueError("no 'District results' heading")
     out = {"name": name, "enrolment": None, "formal": None, "informal": None, "total": None, "fp": [], "tcp": None,
            "distribution": None, "elected": None, "centres_counted": None, "centres_total": None}
-    for key, pat in [("enrolment", r"Total enrolment[^:]*:\s*([\d,]+)"), ("formal", r"Formal votes:\s*([\d,]+)"),
+    for key, pat in [("enrolment", ENROLMENT_RE), ("formal", r"Formal votes:\s*([\d,]+)"),
                      ("informal", r"Informal votes:\s*([\d,]+)"), ("total", r"Total votes:\s*([\d,]+)")]:
         mm = re.search(pat, text, re.I)
         out[key] = num(mm.group(1)) if mm else None
@@ -301,6 +338,23 @@ def elected_from(text: str, rows: list[dict]) -> list[dict]:
     return [{"name": r["name"], "party_name": r.get("party_name")} for r in found]
 
 
+def _head_rows(table) -> list[list[str]]:
+    """The header as [names, parties]. 2022 pages have two header rows (names, then parties); the current template
+    (2025-26 by-elections) has one, each cell holding the name in an <a> and the party in a <div> under it."""
+    trs = table.xpath(".//thead/tr")
+    if len(trs) == 1:
+        ths = trs[0].xpath("./th|./td")
+        if any(th.xpath(".//a") and th.xpath(".//div") for th in ths):
+            names, parties = [], []
+            for th in ths:
+                a = th.xpath(".//a")
+                divs = [clean(d.text_content()) for d in th.xpath(".//div") if clean(d.text_content())]
+                names.append(clean(a[0].text_content()) if a else clean(th.text_content()))
+                parties.append(divs[-1] if divs else "")
+            return [names, parties]
+    return [cells(r) for r in trs]
+
+
 def _vote_cols(head_rows):
     """Column index -> (name, party) for candidate columns, plus the informal and total column indexes."""
     names = head_rows[0] if head_rows else []
@@ -315,7 +369,7 @@ def _vote_cols(head_rows):
             informal = i
         elif "total" in label:
             total = i
-        elif "mis-sort" in label or "missort" in label:
+        elif re.search(r"mis+-?sort", label):   # "Mis-sorts" (2022), "Miss-sorts" (2026 by-elections)
             continue
         elif names[i]:
             cand[i] = (names[i], parties[i])
@@ -329,7 +383,7 @@ def parse_vc_page(html: str, kind: str) -> dict:
     if not tables:
         raise ValueError("no table")
     t = tables[0]
-    cand, informal_col, total_col = _vote_cols([cells(r) for r in t.xpath(".//thead/tr")])
+    cand, informal_col, total_col = _vote_cols(_head_rows(t))
     if not cand:
         raise ValueError("no candidate columns")
     order = sorted(cand)
@@ -341,14 +395,15 @@ def parse_vc_page(html: str, kind: str) -> dict:
         label, low = c[0], c[0].lower()
         values = {i: num(c[i]) if i < len(c) else None for i in order}
         has_numbers = any(v is not None for v in values.values())
-        if low.startswith("percentage"):
+        if low.startswith("percentage") or low in NOT_PLACES:
             continue
-        if low in ("total", "total first preference votes"):
+        # "Total" (2022), "Total first preference votes", "Total two candidate preferred votes" (current template)
+        if low == "total" or (low.startswith("total ") and low.endswith(" votes")):
             if has_numbers:
                 totals = {i: v or 0 for i, v in values.items()}
             continue
-        if not has_numbers and low in ("ordinary votes", "early votes", "declaration votes"):
-            section = low.split()[0]
+        if not has_numbers and low in SECTION_ROWS:
+            section = SECTION_ROWS[low]
             continue
         if low in TYPE_ROWS:
             if has_numbers:
@@ -373,7 +428,7 @@ def parse_region_page(html: str) -> dict:
     if not name:
         raise ValueError("no 'Region results' heading")
     out = {"name": name}
-    for key, pat in [("enrolment", r"Total enrolment[^:]*:\s*([\d,]+)"), ("formal", r"Formal votes:\s*([\d,]+)"),
+    for key, pat in [("enrolment", ENROLMENT_RE), ("formal", r"Formal votes:\s*([\d,]+)"),
                      ("informal", r"Informal votes:\s*([\d,]+)"), ("total", r"Total votes:\s*([\d,]+)"),
                      ("quota", r"Quota[^:\d]*:?\s*([\d,]+)")]:
         mm = re.search(pat, text, re.I)
@@ -563,7 +618,8 @@ def summarise(did: str, contest: dict, page: dict, url: str, holder: str | None,
         before = tcp_2022(data_dir, did)
         if set(before) == {lead["party"], second["party"]} and lead["pct"] is not None:
             out["swing_2cp"] = round(lead["pct"] - before[lead["party"]], 1)
-        if out["margin_votes"] > (uncounted or 0) + buffer:
+        # Never call without an estimate of what's left (no enrolment figure): that would call seats on the first booth.
+        if uncounted is not None and out["margin_votes"] > uncounted + buffer:
             out["status"], out["called_by"] = "called", "site"
         else:
             out["status"] = "leading"
@@ -641,11 +697,81 @@ def load_config(name: str | None) -> dict:
 
 
 def page_url(cfg: dict, kind: str, sid: str) -> str | None:
-    if cfg["overrides"].get(f"{kind}:{sid}"):
-        return cfg["overrides"][f"{kind}:{sid}"]
+    """overrides (by hand) first, then the links found on the results index page this run, then the pattern."""
+    for source in (cfg["overrides"], cfg.get("_found") or {}):
+        if source.get(f"{kind}:{sid}"):
+            return source[f"{kind}:{sid}"]
     if not cfg.get("base"):
         return None
     return cfg[f"{kind}_page"].format(base=cfg["base"].rstrip("/"), slug=sid)
+
+
+def _main_links(html: str, url: str) -> list[tuple[str, str]]:
+    """(link text, absolute URL) for every link in <main> to an HTML page on the same host."""
+    host = urlsplit(url).netloc
+    out = []
+    for a in main_el(html).xpath(".//a[@href]"):
+        href = urljoin(url, a.get("href").strip()).split("#")[0]
+        if urlsplit(href).netloc == host and not re.search(r"\.(xlsx?|csv|pdf|zip)$", href, re.I):
+            out.append((clean(a.text_content()), href))
+    return out
+
+
+def sub_links(html: str, url: str) -> dict:
+    """A district page's own links to its voting-centre pages ('Latest results by voting centre', 'Two candidate
+    preferred results by voting centre'), so a differently written address (the 2026 Nepean by-election's are
+    'Nepean-District-results-by-voting-centre' and 'Nepean-2CP-results-by-voting-centre') still works. Patterns are the fallback."""
+    found = {}
+    for text, href in _main_links(html, url):
+        low = text.lower()
+        if re.search(r"(two[- ]candidate[- ]preferred|2cp).*voting centre", low):
+            found.setdefault("district_tcp", href)
+        elif "results by voting centre" in low:
+            found.setdefault("district_vc", href)
+    return found
+
+
+def discover(cfg: dict, fetcher, districts: list, regions: list) -> None:
+    """Fills cfg['base'] from the VEC's state election results page when the map has none (with a warning to put it
+    in the map), then reads the results index page's links ('Albert Park District results', 'Eastern Victoria
+    Region results') into cfg['_found'], so a page whose address doesn't follow the pattern is still read."""
+    disc = cfg.get("discover") or {}
+    if not cfg.get("base") and disc.get("page"):
+        try:
+            html, _ = fetcher.get(disc["page"], conditional=False)
+            hit = next((href for text, href in _main_links(html, disc["page"]) if re.search(disc["link_text"], text, re.I)), None)
+        except Exception as exc:  # noqa: BLE001
+            log.warning("Couldn't read %s to look for the results pages: %s", disc["page"], str(exc)[:200])
+            hit = None
+        if not hit:
+            log.info("The VEC's results page (%s) doesn't link the %s results yet: nothing to fetch.", disc["page"], cfg["event"])
+            return
+        cfg["base"] = hit.rstrip("/")
+        log.warning("Found the %s results pages at %s; put this in scripts/results_urls.json as the 2026 'base'.", cfg["event"], cfg["base"])
+        warn_ci(f"results base found by discovery, not in the URL map: {cfg['base']} (fill scripts/results_urls.json)")
+    if not cfg.get("base"):
+        return
+    index = cfg["index_page"].format(base=cfg["base"].rstrip("/"))
+    try:
+        html, _ = fetcher.get(index, conditional=False)
+    except Exception as exc:  # noqa: BLE001
+        log.warning("Results index page unreadable (%s): %s; using the URL patterns", index, str(exc)[:200])
+        return
+    names = {("district", name_key(d["name"])): d["id"] for d in districts}
+    names.update({("region", name_key(r["name"])): r["id"] for r in regions})
+    found = {}
+    under = cfg["base"].rstrip("/").lower() + "/"
+    for text, href in _main_links(html, index):
+        if not href.lower().startswith(under):
+            continue   # e.g. the 2022 index links Narracan to the supplementary election's page, elsewhere on the site
+        m = re.match(r"(.+?)\s+(District|Region)\b", text)
+        sid = m and names.get((m.group(2).lower(), name_key(m.group(1))))
+        if sid:
+            found.setdefault(f"{m.group(2).lower()}:{sid}", href)
+    cfg["_found"] = found
+    pattern = sum(1 for k, u in found.items() if u.rstrip("/").lower() == page_url({**cfg, "_found": {}}, *k.split(":")).rstrip("/").lower())
+    log.info("Results index %s links %d of %d districts and regions (%d at the patterned address)",
+             index, len(found), len(districts) + len(regions), pattern)
 
 
 def strip_volatile(d):
@@ -681,10 +807,13 @@ def run(cfg: dict, data_dir: Path, only: set | None = None) -> int:
            "tally": None, "districts": dict(old.get("districts") or {})}
     lc = {"_schema": LC_SCHEMA, "source": res["source"], "profile": cfg["profile"], "updated": old_lc.get("updated"),
           "regions": dict(old_lc.get("regions") or {})}
+    fetcher = Fetcher(state)
+    discover(cfg, fetcher, districts, regions)
     if not cfg.get("base") and not cfg["overrides"]:
         log.info("No results page addresses yet (profile %s has no base URL): nothing to fetch. Fill scripts/results_urls.json.", cfg["profile"])
-    fetcher = Fetcher(state)
-    skipped, parsed = [], 0
+    # Close-of-roll enrolment by district (early_votes.json), used only where a results page prints none we can read
+    roll = (((read_json(data_dir / "early_votes.json", {}) or {}).get("enrolment") or {}).get("districts")) or {}
+    skipped, parsed, no_enrolment = [], 0, []
     holders = {d["id"]: (d.get("margin") or {}).get("party") or d.get("party") for d in districts}
     index = {}
     for d in districts:
@@ -705,9 +834,13 @@ def run(cfg: dict, data_dir: Path, only: set | None = None) -> int:
             log.warning("%s: district page skipped (%s): %s", did, url, str(exc)[:200])
             skipped.append(did)
             continue
+        if not page["enrolment"] and roll.get(did):
+            page["enrolment"] = roll[did]   # the page printed none we could read: the VEC's close-of-roll figure
+            no_enrolment.append(did)
         vc = tcp = None
+        found = sub_links(html, url)
         for kind in ("district_vc", "district_tcp"):
-            sub = page_url(cfg, kind, did)
+            sub = found.get(kind) or page_url(cfg, kind, did)
             if not sub:
                 continue
             try:
@@ -782,13 +915,19 @@ def run(cfg: dict, data_dir: Path, only: set | None = None) -> int:
              cfg["profile"], fetcher.count, parsed, len(skipped), t["called"], t["leading"], t["undecided"], changed_files or "nothing")
     if skipped:
         warn_ci(f"results.py skipped {len(skipped)} page(s): {', '.join(skipped[:12])}")
+    if no_enrolment:
+        log.warning("No enrolment figure read on %d district page(s) (%s); used the close-of-roll figure. Check the page's wording.",
+                    len(no_enrolment), ", ".join(no_enrolment[:12]))
+        warn_ci(f"results.py read no enrolment on {len(no_enrolment)} district page(s); check ENROLMENT_RE against the page")
     return 0
 
 
 def check_urls(cfg: dict, data_dir: Path) -> int:
+    """Fetches every district and region page once (after discovery, as a run would) and reports. Exit 1 if any fails."""
     districts = (read_json(data_dir / "districts.json", {}) or {}).get("districts", [])
     regions = (read_json(data_dir / "regions.json", {}) or {}).get("regions", [])
     fetcher = Fetcher({})
+    discover(cfg, fetcher, districts, regions)
     bad = 0
     targets = [("district", d["id"]) for d in districts] + [("region", r["id"]) for r in regions]
     for kind, sid in targets:
@@ -804,7 +943,7 @@ def check_urls(cfg: dict, data_dir: Path) -> int:
             print(f"FAIL  {url}: {str(exc)[:120]}")
             bad += 1
     print(f"{len(targets) - bad} of {len(targets)} pages answered")
-    return 0
+    return 1 if bad else 0
 
 
 # ---------------------------------------------------------------- self-test against the VEC's 2026 sample XML

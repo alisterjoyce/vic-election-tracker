@@ -117,7 +117,18 @@
         const r = ctx.results && ctx.results[d.id];
         return r ? { code: r.leader, opacity: r.declared ? 0.9 : 0.55, text: r.text } : { code: null, opacity: 0.12, text: "no results yet" };
       },
-      legend: () => [],
+      // Seats by the party ahead (largest first), then what the shading means.
+      legend: (ds, ctx) => {
+        const res = ctx.results || {};
+        const counts = {};
+        ds.forEach((d) => { const r = res[d.id]; if (r && r.leader) counts[r.leader] = (counts[r.leader] || 0) + 1; });
+        const items = Object.entries(counts).sort(App.byValue(([, n]) => n, ([k]) => k)).map(([code, n]) => ({ code, text: `${partyName(code)} ahead (${n})` }));
+        items.push({ code: "OTH", opacity: 0.9, text: "Declared by the VEC: solid", neutral: true },
+          { code: "OTH", opacity: 0.55, text: "Counting: lighter", neutral: true });
+        const none = ds.filter((d) => !(res[d.id] && res[d.id].leader)).length;
+        if (none) items.push({ code: null, opacity: 0.12, text: `No results yet (${none})` });
+        return items;
+      },
     },
   };
 
