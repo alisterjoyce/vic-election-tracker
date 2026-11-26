@@ -10,35 +10,35 @@
   "status": "closed",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
   "registration_closes": "2026-11-20",
-  "last_checked": "2026-11-26T05:51:17Z",
+  "last_checked": "2026-11-26T10:02:11Z",
   "coverage": {
-    "cards": 1425,
-    "listings": 4817,
-    "orders_read": 4459,
-    "orders_image": 564,
+    "cards": 1423,
+    "listings": 4771,
+    "orders_read": 4446,
+    "orders_image": 557,
     "orders_same_as": 154,
-    "orders_unreadable": 81,
-    "districts_with_cards": 88,
+    "orders_unreadable": 88,
+    "districts_with_cards": 87,
     "regions_with_cards": 8,
     "by_party": {
       "ALP": {
         "cards": 332,
-        "districts": 88,
+        "districts": 87,
         "regions": 8
       },
       "LIB": {
         "cards": 275,
-        "districts": 77,
+        "districts": 76,
         "regions": 8
       },
       "GRN": {
         "cards": 192,
-        "districts": 88,
+        "districts": 87,
         "regions": 8
       },
       "VS": {
         "cards": 96,
-        "districts": 88,
+        "districts": 87,
         "regions": 8
       },
       "IND": {
@@ -48,7 +48,7 @@
       },
       "ONP": {
         "cards": 89,
-        "districts": 88,
+        "districts": 87,
         "regions": 8
       },
       "NONCAND": {
@@ -57,18 +57,18 @@
         "regions": 6
       },
       "FF": {
-        "cards": 65,
-        "districts": 65,
+        "cards": 64,
+        "districts": 64,
         "regions": 6
       },
       "AJP": {
-        "cards": 47,
-        "districts": 40,
+        "cards": 46,
+        "districts": 39,
         "regions": 2
       },
       "OTH": {
         "cards": 29,
-        "districts": 17,
+        "districts": 16,
         "regions": 6,
         "registered_by": [
           "Australian Democrats",
@@ -84,7 +84,7 @@
       },
       "WEST": {
         "cards": 22,
-        "districts": 12,
+        "districts": 11,
         "regions": 1
       },
       "DLP": {
@@ -124,7 +124,7 @@
       }
     },
     "no_card": {
-      "lower": 41,
+      "lower": 50,
       "upper": 16,
       "candidates_lower": 734,
       "candidates_upper": 303
@@ -881,22 +881,12 @@
     },
     "laverton": {
       "house": "lower",
-      "cards": 46,
-      "read": 46,
+      "cards": 0,
+      "read": 0,
       "same_as": 0,
       "unreadable": 0,
-      "parties": {
-        "ALP": 11,
-        "VS": 2,
-        "FF": 1,
-        "LIB": 8,
-        "ONP": 2,
-        "GRN": 15,
-        "AJP": 1,
-        "WEST": 5,
-        "OTH": 1
-      },
-      "no_card": 0
+      "parties": {},
+      "no_card": 9
     },
     "lowan": {
       "house": "lower",
@@ -1877,9 +1867,9 @@
     "western-victoria": {
       "house": "upper",
       "cards": 135,
-      "read": 34,
+      "read": 67,
       "same_as": 1,
-      "unreadable": 5,
+      "unreadable": 12,
       "parties": {
         "SFF": 2,
         "SAL": 8,
@@ -4679,74 +4669,6 @@
         "GRN": 5
       },
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ebe1ddc1-24c2-415a-8ec4-a62a4464030b%2Fonv%20-%20statewide%20-%20multiple%201%20b%26o.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "area": "laverton",
-      "party": "ALP",
-      "cards": 11,
-      "read": 11,
-      "ranks": {
-        "ALP": 1,
-        "GRN": 5,
-        "LNP": 7,
-        "ONP": 9
-      },
-      "flags": [
-        {
-          "ahead": "GRN",
-          "of": "LNP",
-          "ahead_n": 5,
-          "of_n": 7
-        }
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d6be94ef-2287-4ec8-9298-37c69dc5f9db%2Falp_combined_wm%20laverton_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "area": "laverton",
-      "party": "GRN",
-      "cards": 15,
-      "read": 15,
-      "ranks": {
-        "GRN": 1,
-        "ALP": 5,
-        "LNP": 6,
-        "ONP": 9
-      },
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=930fe8a4-bd44-4010-b049-c895564fa4a9%2Fthe%20greens%20combined%20western%20metro%20footscray%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "area": "laverton",
-      "party": "LIB",
-      "cards": 8,
-      "read": 8,
-      "ranks": {
-        "LNP": 1,
-        "ONP": 4,
-        "ALP": 7,
-        "GRN": 8
-      },
-      "flags": [
-        {
-          "ahead": "ONP",
-          "of": "ALP",
-          "ahead_n": 4,
-          "of_n": 7
-        }
-      ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=769437a3-cd64-470a-8ab9-fb5085f675ce%2Fliberal_combined_wmr%20laverton_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
-    },
-    {
-      "area": "laverton",
-      "party": "ONP",
-      "cards": 2,
-      "read": 2,
-      "ranks": {
-        "ONP": 1,
-        "LNP": 3,
-        "ALP": 6,
-        "GRN": 7
-      },
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=591ae3e9-7c79-4531-abd2-23c194d29e00%2Fonv%20-%20combined%20-%20western%20metropolitan%20region%20-%20laverton%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
     },
     {
       "area": "lowan",
