@@ -10,14 +10,14 @@
   "status": "closed",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
   "registration_closes": "2026-11-20",
-  "last_checked": "2026-11-25T23:42:05Z",
+  "last_checked": "2026-11-26T05:51:17Z",
   "coverage": {
     "cards": 1425,
     "listings": 4817,
-    "orders_read": 4425,
+    "orders_read": 4459,
     "orders_image": 564,
-    "orders_same_as": 152,
-    "orders_unreadable": 77,
+    "orders_same_as": 154,
+    "orders_unreadable": 81,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -185,7 +185,7 @@
       "house": "lower",
       "cards": 36,
       "read": 33,
-      "same_as": 0,
+      "same_as": 1,
       "unreadable": 1,
       "parties": {
         "ALP": 7,
@@ -1877,9 +1877,9 @@
     "western-victoria": {
       "house": "upper",
       "cards": 135,
-      "read": 0,
-      "same_as": 0,
-      "unreadable": 1,
+      "read": 34,
+      "same_as": 1,
+      "unreadable": 5,
       "parties": {
         "SFF": 2,
         "SAL": 8,

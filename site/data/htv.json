@@ -17,15 +17,15 @@
   "registration_opens": "2026-11-10",
   "registration_closes": "2026-11-20",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
-  "last_checked": "2026-11-25T23:42:05Z",
-  "pending": 163,
+  "last_checked": "2026-11-26T05:51:17Z",
+  "pending": 123,
   "coverage": {
     "cards": 1425,
     "listings": 4817,
-    "orders_read": 4425,
+    "orders_read": 4459,
     "orders_image": 564,
-    "orders_same_as": 152,
-    "orders_unreadable": 77,
+    "orders_same_as": 154,
+    "orders_unreadable": 81,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -1442,7 +1442,7 @@
       ],
       "party": "SAL",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bellarine": {
           "status": "read",
@@ -1465,7 +1465,20 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "J",
+            "G",
+            "A",
+            "H",
+            "D",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 3,
+            "ALP": 6
+          }
         }
       }
     },
@@ -5997,7 +6010,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "eureka": {
           "status": "read",
@@ -6029,7 +6042,29 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "D",
+            "A",
+            "M",
+            "E",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -6047,7 +6082,6 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
       "orders": {
         "bellarine": {
           "status": "read",
@@ -6078,7 +6112,9 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "status": "pending",
+          "tried": "2026-11-26",
+          "note": "the VEC's link to this card didn't open"
         }
       }
     },
@@ -9746,7 +9782,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bellarine": {
           "status": "read",
@@ -9861,7 +9897,29 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "D",
+            "A",
+            "M",
+            "E",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -10498,7 +10556,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "eureka": {
           "status": "read",
@@ -10589,7 +10647,29 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "D",
+            "A",
+            "M",
+            "E",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -15656,7 +15736,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bellarine": {
           "status": "read",
@@ -15715,7 +15795,29 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "D",
+            "A",
+            "M",
+            "E",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -20974,7 +21076,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "eureka": {
           "status": "read",
@@ -21033,7 +21135,29 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "D",
+            "A",
+            "M",
+            "E",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -22438,7 +22562,7 @@
       ],
       "party": "VS",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "eureka": {
           "status": "read",
@@ -22462,7 +22586,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "G",
+            "J",
+            "A",
+            "D",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 3,
+            "ALP": 5
+          }
         }
       }
     },
@@ -22801,7 +22937,7 @@
       ],
       "party": "SAL",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bellarine": {
           "status": "read",
@@ -22824,7 +22960,20 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "J",
+            "G",
+            "A",
+            "H",
+            "D",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 3,
+            "ALP": 6
+          }
         }
       }
     },
@@ -23598,7 +23747,7 @@
       ],
       "party": "NAT",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bendigo-east": {
           "status": "read",
@@ -23952,7 +24101,8 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -25258,7 +25408,7 @@
       ],
       "party": "VS",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bellarine": {
           "status": "read",
@@ -25281,7 +25431,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "G",
+            "J",
+            "A",
+            "D",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 3,
+            "ALP": 5
+          }
         }
       }
     },
@@ -28048,7 +28210,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "eureka": {
           "status": "read",
@@ -28080,7 +28242,19 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "F",
+            "L",
+            "K",
+            "M",
+            "I"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         }
       }
     },
@@ -30214,7 +30388,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bellarine": {
           "status": "read",
@@ -30245,7 +30419,19 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "F",
+            "L",
+            "K",
+            "M",
+            "I"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         }
       }
     },
@@ -30945,7 +31131,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bellarine": {
           "status": "read",
@@ -30976,7 +31162,19 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "F",
+            "L",
+            "K",
+            "M",
+            "I"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         }
       }
     },
@@ -35174,7 +35372,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "eureka": {
           "status": "read",
@@ -35206,7 +35404,19 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "F",
+            "L",
+            "K",
+            "M",
+            "I"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         }
       }
     },
@@ -37980,7 +38190,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bellarine": {
           "status": "read",
@@ -38095,7 +38305,29 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "D",
+            "A",
+            "M",
+            "E",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -44294,7 +44526,7 @@
       ],
       "party": "ONP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "eureka": {
           "status": "read",
@@ -44318,7 +44550,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "K",
+            "M",
+            "N",
+            "I",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 5
+          }
         }
       }
     },
@@ -50566,7 +50810,7 @@
       ],
       "party": "ONP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bellarine": {
           "status": "read",
@@ -50589,7 +50833,8 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -64662,7 +64907,7 @@
       ],
       "party": "VS",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bellarine": {
           "status": "read",
@@ -64889,7 +65134,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "G",
+            "J",
+            "A",
+            "D",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 3,
+            "ALP": 5
+          }
         }
       }
     },
@@ -66637,7 +66894,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bellarine": {
           "status": "read",
@@ -66760,7 +67017,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "A",
+            "J",
+            "G",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -68860,7 +69129,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "eureka": {
           "status": "read",
@@ -68927,7 +69196,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "A",
+            "J",
+            "G",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -68951,7 +69232,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bellarine": {
           "status": "read",
@@ -69092,7 +69373,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "A",
+            "J",
+            "G",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -69485,7 +69778,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bellarine": {
           "status": "read",
@@ -69587,7 +69880,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "A",
+            "J",
+            "G",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -72527,7 +72832,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bellarine": {
           "status": "partial",
@@ -72630,7 +72935,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "A",
+            "J",
+            "G",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -75396,7 +75713,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bellarine": {
           "status": "read",
@@ -75498,7 +75815,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "A",
+            "J",
+            "G",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -76279,7 +76608,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bellarine": {
           "status": "read",
@@ -76402,7 +76731,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "A",
+            "J",
+            "G",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -76971,7 +77312,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "eureka": {
           "status": "read",
@@ -77154,7 +77495,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "A",
+            "J",
+            "G",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -77179,7 +77532,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bendigo-east": {
           "status": "read",
@@ -77344,7 +77697,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "A",
+            "J",
+            "G",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -82151,7 +82516,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bellarine": {
           "status": "read",
@@ -82293,7 +82658,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "A",
+            "J",
+            "G",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -83715,7 +84092,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bellarine": {
           "status": "read",
@@ -83797,7 +84174,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "A",
+            "J",
+            "G",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -84392,7 +84781,7 @@
       ],
       "party": "FF",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bellarine": {
           "status": "read",
@@ -84495,7 +84884,8 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -87013,7 +87403,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "eureka": {
           "status": "read",
@@ -87104,7 +87494,19 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "F",
+            "L",
+            "K",
+            "M",
+            "I"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         }
       }
     },
@@ -88458,7 +88860,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bellarine": {
           "status": "read",
@@ -88517,7 +88919,19 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "F",
+            "L",
+            "K",
+            "M",
+            "I"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         }
       }
     },
@@ -88730,7 +89144,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "eureka": {
           "status": "read",
@@ -88789,7 +89203,19 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "F",
+            "L",
+            "K",
+            "M",
+            "I"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         }
       }
     },
@@ -98751,7 +99177,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bellarine": {
           "status": "read",
@@ -98833,7 +99259,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "A",
+            "J",
+            "G",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -98857,7 +99295,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bellarine": {
           "status": "read",
@@ -98998,7 +99436,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "A",
+            "J",
+            "G",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -103086,7 +103536,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bellarine": {
           "status": "read",
@@ -103321,7 +103771,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "A",
+            "J",
+            "G",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -119188,7 +119650,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bellarine": {
           "status": "same_as",
@@ -119472,7 +119934,31 @@
           "note": "same order as the English card"
         },
         "western-victoria": {
-          "status": "pending"
+          "status": "same_as",
+          "atl": [
+            "A",
+            "J",
+            "G",
+            "H",
+            "C"
+          ],
+          "same_as": [
+            "1106",
+            "1124",
+            "1125",
+            "1128",
+            "1145",
+            "1165",
+            "1172",
+            "1176",
+            "1177",
+            "1198",
+            "1208",
+            "1410",
+            "1411",
+            "1657"
+          ],
+          "note": "same order as the English card"
         }
       }
     },
@@ -120846,10 +121332,32 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-23",
+      "read_on": "2026-11-26",
       "orders": {
         "bayswater": {
-          "status": "pending"
+          "status": "same_as",
+          "order": [
+            "KENNEDY, Jess",
+            "FERGUSON, Alec",
+            "BUXTON, Julie",
+            "CLARKE, Mathew",
+            "KITCHEN, David",
+            "HUBBARD, Naomi",
+            "COOMBES, Gary",
+            "BLEAKNEY, Kayte"
+          ],
+          "same_as": [
+            "936",
+            "950",
+            "954",
+            "961",
+            "1003",
+            "1112",
+            "1185",
+            "1189",
+            "1190"
+          ],
+          "note": "same order as the English card"
         },
         "box-hill": {
           "status": "same_as",
@@ -122028,7 +122536,7 @@
       ],
       "party": "NAT",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bendigo-east": {
           "status": "read",
@@ -122397,7 +122905,8 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -127065,7 +127574,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-26",
       "orders": {
         "bellarine": {
           "status": "read",
@@ -127167,7 +127676,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "A",
+            "J",
+            "G",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
