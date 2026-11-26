@@ -17,15 +17,15 @@
   "registration_opens": "2026-11-10",
   "registration_closes": "2026-11-20",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
-  "last_checked": "2026-11-26T19:55:27Z",
-  "pending": 82,
+  "last_checked": "2026-11-26T23:45:57Z",
+  "pending": 42,
   "coverage": {
     "cards": 1425,
     "listings": 4817,
-    "orders_read": 4484,
+    "orders_read": 4517,
     "orders_image": 557,
     "orders_same_as": 154,
-    "orders_unreadable": 97,
+    "orders_unreadable": 104,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -442,7 +442,7 @@
       ],
       "party": "SFF",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "ripon": {
           "status": "partial",
@@ -452,7 +452,11 @@
           "via": "image"
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "M"
+          ],
+          "via": "text",
+          "status": "read"
         }
       }
     },
@@ -3770,10 +3774,36 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-27",
       "orders": {
         "laverton": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "CONNOLLY, Sarah",
+            "MANSOURI JAJAEE, Shohre",
+            "CHITTEDI, Suchithra",
+            "RUDD, Van Thanh",
+            "NGUYEN, Lucy",
+            "MENDELSOHN, Emma",
+            "NOUNE, Ghada",
+            "GARCIA, Jo",
+            "PAREDES, Rufo"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 5,
+            "LNP": 7,
+            "ONP": 9
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 5,
+              "of_n": 7
+            }
+          ]
         },
         "western-metropolitan": {
           "atl": [
@@ -5304,7 +5334,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "polwarth": {
           "status": "read",
@@ -5334,7 +5364,29 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "D",
+            "A",
+            "M",
+            "E",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -5430,7 +5482,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "ripon": {
           "status": "read",
@@ -5465,7 +5517,29 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "D",
+            "A",
+            "M",
+            "E",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -7941,7 +8015,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "ripon": {
           "status": "read",
@@ -8003,7 +8077,29 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "D",
+            "A",
+            "M",
+            "E",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -12210,10 +12306,36 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-27",
       "orders": {
         "laverton": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "CONNOLLY, Sarah",
+            "MANSOURI JAJAEE, Shohre",
+            "CHITTEDI, Suchithra",
+            "RUDD, Van Thanh",
+            "NGUYEN, Lucy",
+            "MENDELSOHN, Emma",
+            "NOUNE, Ghada",
+            "GARCIA, Jo",
+            "PAREDES, Rufo"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 5,
+            "LNP": 7,
+            "ONP": 9
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 5,
+              "of_n": 7
+            }
+          ]
         },
         "point-cook": {
           "status": "read",
@@ -13060,10 +13182,36 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-27",
       "orders": {
         "laverton": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "CONNOLLY, Sarah",
+            "MANSOURI JAJAEE, Shohre",
+            "CHITTEDI, Suchithra",
+            "RUDD, Van Thanh",
+            "NGUYEN, Lucy",
+            "MENDELSOHN, Emma",
+            "NOUNE, Ghada",
+            "GARCIA, Jo",
+            "PAREDES, Rufo"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 5,
+            "LNP": 7,
+            "ONP": 9
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 5,
+              "of_n": 7
+            }
+          ]
         },
         "williamstown": {
           "status": "read",
@@ -13453,10 +13601,36 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-27",
       "orders": {
         "laverton": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "CONNOLLY, Sarah",
+            "MANSOURI JAJAEE, Shohre",
+            "CHITTEDI, Suchithra",
+            "RUDD, Van Thanh",
+            "NGUYEN, Lucy",
+            "MENDELSOHN, Emma",
+            "NOUNE, Ghada",
+            "GARCIA, Jo",
+            "PAREDES, Rufo"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 5,
+            "LNP": 7,
+            "ONP": 9
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 5,
+              "of_n": 7
+            }
+          ]
         },
         "tarneit": {
           "status": "read",
@@ -15198,7 +15372,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-27",
       "orders": {
         "kororoit": {
           "status": "read",
@@ -15230,7 +15404,33 @@
           ]
         },
         "laverton": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "CONNOLLY, Sarah",
+            "MANSOURI JAJAEE, Shohre",
+            "CHITTEDI, Suchithra",
+            "RUDD, Van Thanh",
+            "NGUYEN, Lucy",
+            "MENDELSOHN, Emma",
+            "NOUNE, Ghada",
+            "GARCIA, Jo",
+            "PAREDES, Rufo"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 5,
+            "LNP": 7,
+            "ONP": 9
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 5,
+              "of_n": 7
+            }
+          ]
         },
         "western-metropolitan": {
           "atl": [
@@ -16695,10 +16895,36 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-27",
       "orders": {
         "laverton": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "CONNOLLY, Sarah",
+            "MANSOURI JAJAEE, Shohre",
+            "CHITTEDI, Suchithra",
+            "RUDD, Van Thanh",
+            "NGUYEN, Lucy",
+            "MENDELSOHN, Emma",
+            "NOUNE, Ghada",
+            "GARCIA, Jo",
+            "PAREDES, Rufo"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 5,
+            "LNP": 7,
+            "ONP": 9
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 5,
+              "of_n": 7
+            }
+          ]
         },
         "st-albans": {
           "status": "read",
@@ -17392,7 +17618,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "polwarth": {
           "status": "read",
@@ -17450,7 +17676,29 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "D",
+            "A",
+            "M",
+            "E",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -22955,7 +23203,7 @@
       ],
       "party": "VS",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "polwarth": {
           "status": "read",
@@ -22977,7 +23225,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "G",
+            "J",
+            "A",
+            "D",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 3,
+            "ALP": 5
+          }
         }
       }
     },
@@ -25028,10 +25288,28 @@
       ],
       "party": "VS",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-27",
       "orders": {
         "laverton": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "RUDD, Van Thanh",
+            "NGUYEN, Lucy",
+            "MANSOURI JAJAEE, Shohre",
+            "CONNOLLY, Sarah",
+            "MENDELSOHN, Emma",
+            "CHITTEDI, Suchithra",
+            "NOUNE, Ghada",
+            "GARCIA, Jo",
+            "PAREDES, Rufo"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 2,
+            "ALP": 4,
+            "LNP": 7,
+            "ONP": 9
+          }
         },
         "western-metropolitan": {
           "atl": [
@@ -26210,9 +26488,28 @@
       ],
       "party": "FF",
       "candidate": null,
+      "read_on": "2026-11-27",
       "orders": {
         "laverton": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "GARCIA, Jo",
+            "PAREDES, Rufo",
+            "CHITTEDI, Suchithra",
+            "NOUNE, Ghada",
+            "MENDELSOHN, Emma",
+            "CONNOLLY, Sarah",
+            "MANSOURI JAJAEE, Shohre",
+            "NGUYEN, Lucy",
+            "RUDD, Van Thanh"
+          ],
+          "via": "text",
+          "ranks": {
+            "ONP": 2,
+            "LNP": 4,
+            "ALP": 6,
+            "GRN": 8
+          }
         }
       }
     },
@@ -29078,10 +29375,36 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-27",
       "orders": {
         "laverton": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "NOUNE, Ghada",
+            "GARCIA, Jo",
+            "MENDELSOHN, Emma",
+            "PAREDES, Rufo",
+            "MANSOURI JAJAEE, Shohre",
+            "CHITTEDI, Suchithra",
+            "CONNOLLY, Sarah",
+            "NGUYEN, Lucy",
+            "RUDD, Van Thanh"
+          ],
+          "via": "text",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4,
+            "ALP": 7,
+            "GRN": 8
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 4,
+              "of_n": 7
+            }
+          ]
         },
         "western-metropolitan": {
           "atl": [
@@ -33471,7 +33794,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "polwarth": {
           "status": "read",
@@ -33501,7 +33824,19 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "F",
+            "L",
+            "K",
+            "M",
+            "I"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         }
       }
     },
@@ -34067,7 +34402,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "melton": {
           "status": "read",
@@ -34101,7 +34436,19 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "F",
+            "L",
+            "K",
+            "M",
+            "I"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         }
       }
     },
@@ -34180,10 +34527,36 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-27",
       "orders": {
         "laverton": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "NOUNE, Ghada",
+            "GARCIA, Jo",
+            "MENDELSOHN, Emma",
+            "PAREDES, Rufo",
+            "MANSOURI JAJAEE, Shohre",
+            "CHITTEDI, Suchithra",
+            "CONNOLLY, Sarah",
+            "NGUYEN, Lucy",
+            "RUDD, Van Thanh"
+          ],
+          "via": "text",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4,
+            "ALP": 7,
+            "GRN": 8
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 4,
+              "of_n": 7
+            }
+          ]
         },
         "western-metropolitan": {
           "atl": [
@@ -35136,7 +35509,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "polwarth": {
           "status": "read",
@@ -35166,7 +35539,19 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "F",
+            "L",
+            "K",
+            "M",
+            "I"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         }
       }
     },
@@ -38188,10 +38573,36 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-27",
       "orders": {
         "laverton": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "CONNOLLY, Sarah",
+            "MANSOURI JAJAEE, Shohre",
+            "CHITTEDI, Suchithra",
+            "RUDD, Van Thanh",
+            "NGUYEN, Lucy",
+            "MENDELSOHN, Emma",
+            "NOUNE, Ghada",
+            "GARCIA, Jo",
+            "PAREDES, Rufo"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 5,
+            "LNP": 7,
+            "ONP": 9
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 5,
+              "of_n": 7
+            }
+          ]
         },
         "western-metropolitan": {
           "atl": [
@@ -41154,10 +41565,36 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-27",
       "orders": {
         "laverton": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "CONNOLLY, Sarah",
+            "MANSOURI JAJAEE, Shohre",
+            "CHITTEDI, Suchithra",
+            "RUDD, Van Thanh",
+            "NGUYEN, Lucy",
+            "MENDELSOHN, Emma",
+            "NOUNE, Ghada",
+            "GARCIA, Jo",
+            "PAREDES, Rufo"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 5,
+            "LNP": 7,
+            "ONP": 9
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 5,
+              "of_n": 7
+            }
+          ]
         },
         "point-cook": {
           "status": "read",
@@ -44770,7 +45207,7 @@
       ],
       "party": "ONP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "polwarth": {
           "status": "read",
@@ -44792,7 +45229,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "K",
+            "M",
+            "N",
+            "I",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 5
+          }
         }
       }
     },
@@ -45401,7 +45850,7 @@
       ],
       "party": "ONP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "melton": {
           "status": "read",
@@ -45427,7 +45876,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "K",
+            "M",
+            "N",
+            "I",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 5
+          }
         }
       }
     },
@@ -50765,10 +51226,11 @@
       ],
       "party": "ONP",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-27",
       "orders": {
         "laverton": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         },
         "western-metropolitan": {
           "atl": [
@@ -55099,7 +55561,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "melton": {
           "status": "read",
@@ -55133,7 +55595,29 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "D",
+            "A",
+            "M",
+            "E",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -60242,10 +60726,36 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-27",
       "orders": {
         "laverton": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "CONNOLLY, Sarah",
+            "MANSOURI JAJAEE, Shohre",
+            "CHITTEDI, Suchithra",
+            "RUDD, Van Thanh",
+            "NGUYEN, Lucy",
+            "MENDELSOHN, Emma",
+            "NOUNE, Ghada",
+            "GARCIA, Jo",
+            "PAREDES, Rufo"
+          ],
+          "via": "text",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 5,
+            "LNP": 7,
+            "ONP": 9
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 5,
+              "of_n": 7
+            }
+          ]
         },
         "western-metropolitan": {
           "atl": [
@@ -83486,7 +83996,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-27",
       "orders": {
         "footscray": {
           "status": "read",
@@ -83537,7 +84047,25 @@
           }
         },
         "laverton": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "NGUYEN, Lucy",
+            "RUDD, Van Thanh",
+            "MANSOURI JAJAEE, Shohre",
+            "MENDELSOHN, Emma",
+            "CONNOLLY, Sarah",
+            "NOUNE, Ghada",
+            "CHITTEDI, Suchithra",
+            "GARCIA, Jo",
+            "PAREDES, Rufo"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5,
+            "LNP": 6,
+            "ONP": 9
+          }
         },
         "melton": {
           "status": "read",
@@ -87126,7 +87654,7 @@
       ],
       "party": "VS",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-27",
       "orders": {
         "footscray": {
           "status": "read",
@@ -87177,7 +87705,25 @@
           }
         },
         "laverton": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "RUDD, Van Thanh",
+            "NGUYEN, Lucy",
+            "MANSOURI JAJAEE, Shohre",
+            "CONNOLLY, Sarah",
+            "MENDELSOHN, Emma",
+            "CHITTEDI, Suchithra",
+            "NOUNE, Ghada",
+            "GARCIA, Jo",
+            "PAREDES, Rufo"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 2,
+            "ALP": 4,
+            "LNP": 7,
+            "ONP": 9
+          }
         },
         "niddrie": {
           "status": "read",
@@ -89862,9 +90408,28 @@
       ],
       "party": "AJP",
       "candidate": null,
+      "read_on": "2026-11-27",
       "orders": {
         "laverton": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "MANSOURI JAJAEE, Shohre",
+            "NGUYEN, Lucy",
+            "RUDD, Van Thanh",
+            "CONNOLLY, Sarah",
+            "NOUNE, Ghada",
+            "MENDELSOHN, Emma",
+            "GARCIA, Jo",
+            "CHITTEDI, Suchithra",
+            "PAREDES, Rufo"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 2,
+            "ALP": 4,
+            "LNP": 5,
+            "ONP": 9
+          }
         }
       }
     },
@@ -92369,7 +92934,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "polwarth": {
           "status": "read",
@@ -92427,7 +92992,19 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "F",
+            "L",
+            "K",
+            "M",
+            "I"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         }
       }
     },
@@ -102995,7 +103572,6 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-21",
       "orders": {
         "footscray": {
           "status": "read",
@@ -103046,7 +103622,9 @@
           }
         },
         "laverton": {
-          "status": "pending"
+          "status": "pending",
+          "tried": "2026-11-27",
+          "note": "the VEC's link to this card didn't open"
         },
         "niddrie": {
           "status": "read",
@@ -104239,10 +104817,11 @@
       ],
       "party": "WEST",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-27",
       "orders": {
         "laverton": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         },
         "western-metropolitan": {
           "status": "read",
@@ -104325,7 +104904,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-27",
       "orders": {
         "footscray": {
           "status": "read",
@@ -104376,7 +104955,25 @@
           }
         },
         "laverton": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "NGUYEN, Lucy",
+            "RUDD, Van Thanh",
+            "MANSOURI JAJAEE, Shohre",
+            "MENDELSOHN, Emma",
+            "CONNOLLY, Sarah",
+            "NOUNE, Ghada",
+            "CHITTEDI, Suchithra",
+            "GARCIA, Jo",
+            "PAREDES, Rufo"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5,
+            "LNP": 6,
+            "ONP": 9
+          }
         },
         "niddrie": {
           "status": "same_as",
@@ -116007,7 +116604,7 @@
       "orders": {
         "melton": {
           "status": "pending",
-          "tried": "2026-11-25",
+          "tried": "2026-11-27",
           "note": "the VEC's link to this card didn't open"
         }
       }
@@ -116028,7 +116625,7 @@
       "orders": {
         "melton": {
           "status": "pending",
-          "tried": "2026-11-25",
+          "tried": "2026-11-27",
           "note": "the VEC's link to this card didn't open"
         }
       }
@@ -116049,7 +116646,7 @@
       "orders": {
         "melton": {
           "status": "pending",
-          "tried": "2026-11-25",
+          "tried": "2026-11-27",
           "note": "the VEC's link to this card didn't open"
         }
       }
@@ -116092,10 +116689,11 @@
       ],
       "party": "OTH",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-27",
       "orders": {
         "laverton": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         },
         "western-metropolitan": {
           "status": "read",
@@ -117888,7 +118486,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-27",
       "orders": {
         "footscray": {
           "status": "read",
@@ -117939,7 +118537,25 @@
           }
         },
         "laverton": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "NGUYEN, Lucy",
+            "RUDD, Van Thanh",
+            "MANSOURI JAJAEE, Shohre",
+            "MENDELSOHN, Emma",
+            "CONNOLLY, Sarah",
+            "NOUNE, Ghada",
+            "CHITTEDI, Suchithra",
+            "GARCIA, Jo",
+            "PAREDES, Rufo"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5,
+            "LNP": 6,
+            "ONP": 9
+          }
         },
         "niddrie": {
           "status": "same_as",
@@ -121421,7 +122037,7 @@
       ],
       "party": "GRN",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-27",
       "orders": {
         "footscray": {
           "status": "read",
@@ -121472,7 +122088,25 @@
           }
         },
         "laverton": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "NGUYEN, Lucy",
+            "RUDD, Van Thanh",
+            "MANSOURI JAJAEE, Shohre",
+            "MENDELSOHN, Emma",
+            "CONNOLLY, Sarah",
+            "NOUNE, Ghada",
+            "CHITTEDI, Suchithra",
+            "GARCIA, Jo",
+            "PAREDES, Rufo"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5,
+            "LNP": 6,
+            "ONP": 9
+          }
         },
         "niddrie": {
           "status": "read",
@@ -124934,10 +125568,36 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-27",
       "orders": {
         "laverton": {
-          "status": "pending"
+          "status": "read",
+          "order": [
+            "NOUNE, Ghada",
+            "GARCIA, Jo",
+            "MENDELSOHN, Emma",
+            "PAREDES, Rufo",
+            "MANSOURI JAJAEE, Shohre",
+            "CHITTEDI, Suchithra",
+            "CONNOLLY, Sarah",
+            "NGUYEN, Lucy",
+            "RUDD, Van Thanh"
+          ],
+          "via": "text",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 4,
+            "ALP": 7,
+            "GRN": 8
+          },
+          "flags": [
+            {
+              "ahead": "ONP",
+              "of": "ALP",
+              "ahead_n": 4,
+              "of_n": 7
+            }
+          ]
         },
         "western-metropolitan": {
           "atl": [
@@ -125960,7 +126620,7 @@
       ],
       "party": "WEST",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-27",
       "orders": {
         "kororoit": {
           "status": "read",
@@ -125984,7 +126644,8 @@
           }
         },
         "laverton": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         },
         "western-metropolitan": {
           "status": "read",
@@ -126083,10 +126744,11 @@
       ],
       "party": "WEST",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-27",
       "orders": {
         "laverton": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         },
         "st-albans": {
           "status": "read",
@@ -126162,7 +126824,7 @@
       ],
       "party": "WEST",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-27",
       "orders": {
         "footscray": {
           "status": "partial",
@@ -126172,7 +126834,8 @@
           "via": "image"
         },
         "laverton": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         },
         "western-metropolitan": {
           "status": "read",
@@ -126501,10 +127164,11 @@
       ],
       "party": "WEST",
       "candidate": null,
-      "read_on": "2026-11-21",
+      "read_on": "2026-11-27",
       "orders": {
         "laverton": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         },
         "western-metropolitan": {
           "status": "read",

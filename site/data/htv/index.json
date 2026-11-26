@@ -10,14 +10,14 @@
   "status": "closed",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
   "registration_closes": "2026-11-20",
-  "last_checked": "2026-11-26T19:55:27Z",
+  "last_checked": "2026-11-26T23:45:57Z",
   "coverage": {
     "cards": 1425,
     "listings": 4817,
-    "orders_read": 4484,
+    "orders_read": 4517,
     "orders_image": 557,
     "orders_same_as": 154,
-    "orders_unreadable": 97,
+    "orders_unreadable": 104,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -882,9 +882,9 @@
     "laverton": {
       "house": "lower",
       "cards": 46,
-      "read": 15,
+      "read": 35,
       "same_as": 0,
-      "unreadable": 0,
+      "unreadable": 7,
       "parties": {
         "ALP": 11,
         "VS": 2,
@@ -1877,7 +1877,7 @@
     "western-victoria": {
       "house": "upper",
       "cards": 135,
-      "read": 68,
+      "read": 81,
       "same_as": 1,
       "unreadable": 18,
       "parties": {
@@ -4684,7 +4684,7 @@
       "area": "laverton",
       "party": "ALP",
       "cards": 11,
-      "read": 2,
+      "read": 11,
       "ranks": {
         "ALP": 1,
         "GRN": 5,
@@ -4699,13 +4699,13 @@
           "of_n": 7
         }
       ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ec2b0593-6819-4f3b-8146-8371799cedd9%2Falp_combined_wm_footscray_laverton_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d6be94ef-2287-4ec8-9298-37c69dc5f9db%2Falp_combined_wm%20laverton_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
     },
     {
       "area": "laverton",
       "party": "GRN",
       "cards": 15,
-      "read": 7,
+      "read": 11,
       "ranks": {
         "GRN": 1,
         "ALP": 5,
@@ -4718,7 +4718,7 @@
       "area": "laverton",
       "party": "LIB",
       "cards": 8,
-      "read": 5,
+      "read": 8,
       "ranks": {
         "LNP": 1,
         "ONP": 4,
@@ -4733,7 +4733,7 @@
           "of_n": 7
         }
       ],
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=5cf0cfbb-dc25-4ff3-9a11-49daf799beae%2Fliberal_multiple_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=769437a3-cd64-470a-8ab9-fb5085f675ce%2Fliberal_combined_wmr%20laverton_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D"
     },
     {
       "area": "laverton",

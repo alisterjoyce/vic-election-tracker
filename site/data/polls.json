@@ -84,6 +84,31 @@
       }
     },
     {
+      "id": "newspoll-2026-11-25",
+      "start_date": "2026-11-20",
+      "end_date": "2026-11-25",
+      "pollster": "Newspoll",
+      "client": "The Australian",
+      "sample_size": 1506,
+      "source_url": "https://www.theaustralian.com.au/nation/politics/jess-wilson-opens-15point-newspoll-lead-as-victorian-labor-collapses/news-story/b8962613a919752e3d789fd8f1bec001",
+      "primary": {
+        "ALP": 20,
+        "LNP": 33,
+        "GRN": 17,
+        "ONP": 18,
+        "OTH": 12
+      },
+      "tpp": {
+        "ALP": 42.5,
+        "LNP": 57.5
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "The Australian",
+        "via": "client"
+      }
+    },
+    {
       "id": "resolve-2026-11-23",
       "start_date": "2026-11-20",
       "end_date": "2026-11-23",
