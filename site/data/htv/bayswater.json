@@ -444,9 +444,24 @@
       "type": "Combined",
       "registered_on": "2026-11-13",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1dc33acc-b28a-4045-ab09-ad65a11633c6%2Fthe%20greens%20combined%20north-east%20metro%20glen%20waverley%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending",
-      "tried": "2026-11-26",
-      "note": "the VEC's link to this card didn't open"
+      "status": "read",
+      "order": [
+        "KENNEDY, Jess",
+        "FERGUSON, Alec",
+        "BUXTON, Julie",
+        "CLARKE, Mathew",
+        "KITCHEN, David",
+        "HUBBARD, Naomi",
+        "COOMBES, Gary",
+        "BLEAKNEY, Kayte"
+      ],
+      "via": "text",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 3,
+        "LNP": 5,
+        "ONP": 8
+      }
     },
     {
       "registration": "954",
@@ -695,6 +710,7 @@
       "same_as": [
         "936",
         "950",
+        "953",
         "954",
         "961",
         "1003",

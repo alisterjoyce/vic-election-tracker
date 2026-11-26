@@ -26,6 +26,64 @@
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election",
   "polls": [
     {
+      "id": "demosau-premier-national-2026-11-25",
+      "start_date": "2026-11-21",
+      "end_date": "2026-11-25",
+      "pollster": "DemosAU/Premier National",
+      "client": null,
+      "sample_size": 2092,
+      "source_url": "https://demosau.com/news/coalition-in-election-winning-lead-in-final-demosau-premiernational-victorian-poll/",
+      "primary": {
+        "ALP": 19,
+        "LNP": 34,
+        "GRN": 16,
+        "ONP": 16,
+        "IND": 6,
+        "OTH": 9
+      },
+      "tpp": {
+        "ALP": 45,
+        "LNP": 55
+      },
+      "preferred_premier": {
+        "matchup": "Carroll vs Wilson vs Pickering",
+        "leaders": {
+          "Carroll": 28,
+          "Wilson": 36,
+          "Pickering": 15
+        },
+        "undecided": 21
+      },
+      "approval": {
+        "matchup": "Carroll vs Wilson vs Pickering",
+        "leaders": {
+          "Carroll": {
+            "positive": 18,
+            "negative": 50,
+            "undecided": 32,
+            "net": -32
+          },
+          "Wilson": {
+            "positive": 35,
+            "negative": 31,
+            "undecided": 34,
+            "net": 4
+          },
+          "Pickering": {
+            "positive": 22,
+            "negative": 43,
+            "undecided": 35,
+            "net": -21
+          }
+        }
+      },
+      "commissioned_by": {
+        "category": null,
+        "name": null,
+        "via": null
+      }
+    },
+    {
       "id": "resolve-2026-11-23",
       "start_date": "2026-11-20",
       "end_date": "2026-11-23",
