@@ -26,6 +26,40 @@
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Victorian_state_election",
   "polls": [
     {
+      "id": "freshwater-2026-11-26",
+      "start_date": "2026-11-23",
+      "end_date": "2026-11-26",
+      "pollster": "Freshwater",
+      "client": "Herald Sun",
+      "sample_size": 1026,
+      "source_url": "https://www.heraldsun.com.au/news/victoria/state-election/final-victorian-election-polls-show-coalition-on-track-to-form-majority-government/news-story/b458264b2534bc9c8be90ab8ccf39584",
+      "primary": {
+        "ALP": 21,
+        "LNP": 34,
+        "GRN": 15,
+        "ONP": 23,
+        "OTH": 7
+      },
+      "tpp": {
+        "ALP": 42,
+        "LNP": 58
+      },
+      "preferred_premier": {
+        "matchup": "Carroll vs Wilson vs Pickering",
+        "leaders": {
+          "Carroll": 27,
+          "Wilson": 43,
+          "Pickering": 17
+        },
+        "undecided": 13
+      },
+      "commissioned_by": {
+        "category": "media",
+        "name": "Herald Sun",
+        "via": "client"
+      }
+    },
+    {
       "id": "demosau-premier-national-2026-11-25",
       "start_date": "2026-11-21",
       "end_date": "2026-11-25",

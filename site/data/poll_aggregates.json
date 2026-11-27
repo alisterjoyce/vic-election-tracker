@@ -13,7 +13,7 @@
       "aggregates[].tpp_note": "Why tpp is null, in a few words"
     }
   },
-  "updated": "2026-11-26T23:43:01Z",
+  "updated": "2026-11-27T19:48:11Z",
   "aggregates": [
     {
       "id": "bludgertrack",
@@ -36,7 +36,7 @@
       },
       "as_of": "2026-11-23",
       "published": "2026-11-26T10:57:52Z",
-      "checked": "2026-11-27"
+      "checked": "2026-11-28"
     },
     {
       "id": "acestrategies",
@@ -48,19 +48,19 @@
       "licence": null,
       "cadence": "daily",
       "primary": {
-        "LNP": 30.2,
-        "ALP": 23.1,
-        "ONP": 22.6,
-        "GRN": 13.9,
-        "OTH": 11.3
+        "LNP": 30.4,
+        "ALP": 22.8,
+        "ONP": 22.2,
+        "GRN": 14.1,
+        "OTH": 11.5
       },
       "tpp": {
-        "LNP": 55.2,
-        "ALP": 44.8
+        "LNP": 55.3,
+        "ALP": 44.7
       },
-      "as_of": "2026-11-26",
-      "published": "2026-11-26T00:08:00+11:00",
-      "checked": "2026-11-27"
+      "as_of": "2026-11-27",
+      "published": "2026-11-27T07:16:00+11:00",
+      "checked": "2026-11-28"
     },
     {
       "id": "electiontracker",
@@ -83,7 +83,7 @@
       "published": "2026-11-26T21:37:55.262Z",
       "polls_included": 5,
       "tpp": null,
-      "checked": "2026-11-27"
+      "checked": "2026-11-28"
     }
   ]
 }

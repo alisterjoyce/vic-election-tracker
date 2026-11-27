@@ -17,12 +17,12 @@
   "registration_opens": "2026-11-10",
   "registration_closes": "2026-11-20",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
-  "last_checked": "2026-11-27T10:00:57Z",
-  "pending": 6,
+  "last_checked": "2026-11-27T19:50:57Z",
+  "pending": 2,
   "coverage": {
     "cards": 1425,
     "listings": 4817,
-    "orders_read": 4546,
+    "orders_read": 4550,
     "orders_image": 557,
     "orders_same_as": 154,
     "orders_unreadable": 111,
@@ -32787,6 +32787,7 @@
       ],
       "party": "LIB",
       "candidate": null,
+      "read_on": "2026-11-28",
       "orders": {
         "wendouree": {
           "status": "read",
@@ -32816,9 +32817,19 @@
           ]
         },
         "western-victoria": {
-          "status": "pending",
-          "tried": "2026-11-27",
-          "note": "the VEC's link to this card didn't open"
+          "atl": [
+            "F",
+            "L",
+            "K",
+            "M",
+            "I"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         }
       }
     },
@@ -61084,6 +61095,7 @@
       ],
       "party": "GRN",
       "candidate": null,
+      "read_on": "2026-11-28",
       "orders": {
         "albert-park": {
           "status": "read",
@@ -61152,9 +61164,25 @@
           }
         },
         "laverton": {
-          "status": "pending",
-          "tried": "2026-11-27",
-          "note": "the VEC's link to this card didn't open"
+          "status": "read",
+          "order": [
+            "NGUYEN, Lucy",
+            "RUDD, Van Thanh",
+            "MANSOURI JAJAEE, Shohre",
+            "MENDELSOHN, Emma",
+            "CONNOLLY, Sarah",
+            "NOUNE, Ghada",
+            "CHITTEDI, Suchithra",
+            "GARCIA, Jo",
+            "PAREDES, Rufo"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5,
+            "LNP": 6,
+            "ONP": 9
+          }
         },
         "melbourne": {
           "status": "read",
@@ -70839,6 +70867,7 @@
       ],
       "party": "GRN",
       "candidate": null,
+      "read_on": "2026-11-28",
       "orders": {
         "albert-park": {
           "status": "read",
@@ -70887,9 +70916,25 @@
           }
         },
         "laverton": {
-          "status": "pending",
-          "tried": "2026-11-27",
-          "note": "the VEC's link to this card didn't open"
+          "status": "read",
+          "order": [
+            "NGUYEN, Lucy",
+            "RUDD, Van Thanh",
+            "MANSOURI JAJAEE, Shohre",
+            "MENDELSOHN, Emma",
+            "CONNOLLY, Sarah",
+            "NOUNE, Ghada",
+            "CHITTEDI, Suchithra",
+            "GARCIA, Jo",
+            "PAREDES, Rufo"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5,
+            "LNP": 6,
+            "ONP": 9
+          }
         },
         "melbourne": {
           "status": "read",
@@ -81993,7 +82038,7 @@
         },
         "laverton": {
           "status": "pending",
-          "tried": "2026-11-27",
+          "tried": "2026-11-28",
           "note": "the VEC's link to this card didn't open"
         },
         "lowan": {
@@ -83028,7 +83073,7 @@
         },
         "western-victoria": {
           "status": "pending",
-          "tried": "2026-11-27",
+          "tried": "2026-11-28",
           "note": "the VEC's link to this card didn't open"
         }
       }
@@ -103921,6 +103966,7 @@
       ],
       "party": "GRN",
       "candidate": null,
+      "read_on": "2026-11-28",
       "orders": {
         "footscray": {
           "status": "read",
@@ -103971,9 +104017,25 @@
           }
         },
         "laverton": {
-          "status": "pending",
-          "tried": "2026-11-27",
-          "note": "the VEC's link to this card didn't open"
+          "status": "read",
+          "order": [
+            "NGUYEN, Lucy",
+            "RUDD, Van Thanh",
+            "MANSOURI JAJAEE, Shohre",
+            "MENDELSOHN, Emma",
+            "CONNOLLY, Sarah",
+            "NOUNE, Ghada",
+            "CHITTEDI, Suchithra",
+            "GARCIA, Jo",
+            "PAREDES, Rufo"
+          ],
+          "via": "text",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5,
+            "LNP": 6,
+            "ONP": 9
+          }
         },
         "niddrie": {
           "status": "read",

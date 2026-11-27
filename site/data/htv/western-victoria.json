@@ -1661,7 +1661,7 @@
       "registered_on": "2026-11-14",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=60fcfa7f-d729-4071-a57b-3aa3ab329226%2Fthe%20greens%20multiple%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
       "status": "pending",
-      "tried": "2026-11-27",
+      "tried": "2026-11-28",
       "note": "the VEC's link to this card didn't open"
     },
     {
@@ -2212,9 +2212,19 @@
       "type": "Combined",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f2cd31fd-1f07-4a84-bc9e-31ee3dddff0e%2Fliberal_combined_wvr%20wendouree_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending",
-      "tried": "2026-11-27",
-      "note": "the VEC's link to this card didn't open"
+      "atl": [
+        "F",
+        "L",
+        "K",
+        "M",
+        "I"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3
+      }
     },
     {
       "registration": "637",
