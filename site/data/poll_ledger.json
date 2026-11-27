@@ -15,8 +15,8 @@
   "page": "https://electiontracker.au/elections/vic/2026/polls",
   "credit": "Australian Election Tracker (OZE), electiontracker.au",
   "licence": "CC BY 4.0",
-  "generated": "2026-11-24T21:42:35.565Z",
-  "read": "2026-11-24T23:38:59Z",
+  "generated": "2026-11-27T21:41:03.858Z",
+  "read": "2026-11-27T23:41:26Z",
   "polls": [
     {
       "id": "agenda-c-synesis-2026-11-22",
@@ -85,6 +85,23 @@
         "OTH": 11
       },
       "source_url": "https://www.pollbludger.net/2026/09/29/victorian-election-demosau-poll-election-guide-and-seat-projection-model/"
+    },
+    {
+      "id": "demosau-2026-11-final",
+      "pollster": "demosau",
+      "commissioner": "premier-national",
+      "commissioner_type": "media",
+      "start_date": "2026-11-21",
+      "end_date": "2026-11-25",
+      "sample_size": 2092,
+      "primary": {
+        "ALP": 19,
+        "LNP": 34,
+        "ONP": 16,
+        "GRN": 16,
+        "OTH": 15
+      },
+      "source_url": "https://www.pollbludger.net/2026/11/27/victorian-polls-newspoll-and-demosau/"
     },
     {
       "id": "demosau-2026-11",
@@ -189,6 +206,23 @@
       "source_url": "https://freshwaterstrategy.com/2026/10/02/herald-sun-freshwater-strategy-september-polling-data/"
     },
     {
+      "id": "freshwater-2026-11-herald-sun",
+      "pollster": "freshwater",
+      "commissioner": "herald-sun",
+      "commissioner_type": "media",
+      "start_date": "2026-11-23",
+      "end_date": "2026-11-26",
+      "sample_size": 1026,
+      "primary": {
+        "ALP": 21,
+        "LNP": 34,
+        "ONP": 23,
+        "GRN": 15,
+        "OTH": 7
+      },
+      "source_url": "https://www.pollbludger.net/2026/11/28/victorian-election-late-polling/"
+    },
+    {
       "id": "growth-intelligence-2026-11-13-herald-sun",
       "pollster": "growth-intelligence-centre",
       "commissioner": "herald-sun",
@@ -221,6 +255,23 @@
         "OTH": 8
       },
       "source_url": "https://www.onenewsaustralia.com/australian-poll-tracker/"
+    },
+    {
+      "id": "growth-intelligence-2026-11-28-herald-sun",
+      "pollster": "growth-intelligence-centre",
+      "commissioner": "herald-sun",
+      "commissioner_type": "media",
+      "start_date": "2026-11-09",
+      "end_date": "2026-11-22",
+      "sample_size": 1200,
+      "primary": {
+        "ALP": 22,
+        "LNP": 26,
+        "ONP": 26,
+        "GRN": 15,
+        "OTH": 11
+      },
+      "source_url": "https://www.pollbludger.net/2026/11/28/victorian-election-late-polling/"
     },
     {
       "id": "growth-intelligence-2026-11-herald-sun",
@@ -272,6 +323,23 @@
         "OTH": 9
       },
       "source_url": "https://www.theaustralian.com.au/nation/politics/newspoll-coalition-on-track-to-end-12-years-of-labor-rule-in-victoria/news-story/de80200643073b5304702a952a05b3ec"
+    },
+    {
+      "id": "newspoll-2026-11",
+      "pollster": "Newspoll / Pyxis",
+      "commissioner": "the-australian",
+      "commissioner_type": "media",
+      "start_date": "2026-11-20",
+      "end_date": "2026-11-25",
+      "sample_size": 1506,
+      "primary": {
+        "ALP": 20,
+        "LNP": 33,
+        "ONP": 18,
+        "GRN": 17,
+        "OTH": 12
+      },
+      "source_url": "https://www.theaustralian.com.au/nation/politics/jess-wilson-opens-15point-newspoll-lead-as-victorian-labor-collapses/news-story/b8962613a919752e3d789fd8f1bec001"
     },
     {
       "id": "oru-2026-10-greens",

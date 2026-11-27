@@ -53,10 +53,11 @@
         },
         "undecided": 13
       },
+      "et_id": "freshwater-2026-11-herald-sun",
       "commissioned_by": {
         "category": "media",
         "name": "Herald Sun",
-        "via": "client"
+        "via": "electiontracker"
       }
     },
     {
@@ -64,7 +65,7 @@
       "start_date": "2026-11-21",
       "end_date": "2026-11-25",
       "pollster": "DemosAU/Premier National",
-      "client": null,
+      "client": "Premier National",
       "sample_size": 2092,
       "source_url": "https://demosau.com/news/coalition-in-election-winning-lead-in-final-demosau-premiernational-victorian-poll/",
       "primary": {
@@ -111,10 +112,20 @@
           }
         }
       },
+      "et_id": "demosau-2026-11-final",
+      "supplemented": [
+        {
+          "fields": [
+            "client"
+          ],
+          "label": "electiontracker.au poll ledger (CC BY 4.0)",
+          "url": "https://electiontracker.au/elections/vic/2026/polls"
+        }
+      ],
       "commissioned_by": {
-        "category": null,
-        "name": null,
-        "via": null
+        "category": "media",
+        "name": "Premier National",
+        "via": "electiontracker"
       }
     },
     {
@@ -144,10 +155,11 @@
         },
         "undecided": 15
       },
+      "et_id": "newspoll-2026-11",
       "commissioned_by": {
         "category": "media",
         "name": "The Australian",
-        "via": "client"
+        "via": "electiontracker"
       }
     },
     {
@@ -245,21 +257,30 @@
       }
     },
     {
-      "id": "lighthouse-growth-intelligence-centre-2026-11-20",
-      "start_date": "2026-11-20",
-      "end_date": "2026-11-20",
+      "id": "lighthouse-growth-intelligence-centre-2026-11-22",
+      "start_date": "2026-11-09",
+      "end_date": "2026-11-22",
       "pollster": "Lighthouse/Growth Intelligence Centre",
       "client": "Herald Sun",
-      "sample_size": 1221,
-      "source_url": "https://www.heraldsun.com.au/news/victoria/state-election/poll-puts-coalition-primary-vote-at-31-per-cent-one-nation-24-per-cent-labor-22-per-cent-greens-15-per-cent-and-8-per-cent-other/news-story/03b5f85d726a1206e2b6347f9e65cec4",
+      "sample_size": 1200,
+      "source_url": "https://www.pollbludger.net/2026/11/28/victorian-election-late-polling/",
       "primary": {
         "ALP": 22,
-        "LNP": 31,
+        "LNP": 28,
         "GRN": 15,
-        "ONP": 24,
-        "OTH": 8
+        "ONP": 26,
+        "OTH": 9
       },
-      "et_id": "growth-intelligence-2026-11-20-herald-sun",
+      "et_id": "growth-intelligence-2026-11-28-herald-sun",
+      "supplemented": [
+        {
+          "fields": [
+            "source_url"
+          ],
+          "label": "electiontracker.au poll ledger (CC BY 4.0)",
+          "url": "https://electiontracker.au/elections/vic/2026/polls"
+        }
+      ],
       "commissioned_by": {
         "category": "media",
         "name": "Herald Sun",
@@ -374,19 +395,19 @@
       }
     },
     {
-      "id": "lighthouse-growth-intelligence-centre-2026-11-13",
-      "start_date": "2026-11-13",
-      "end_date": "2026-11-13",
+      "id": "lighthouse-growth-intelligence-centre-2026-11-15",
+      "start_date": "2026-11-02",
+      "end_date": "2026-11-15",
       "pollster": "Lighthouse/Growth Intelligence Centre",
       "client": "Herald Sun",
-      "sample_size": 1351,
-      "source_url": "https://www.heraldsun.com.au/news/victoria/state-election/time-for-a-change-coalition-extends-lead-over-labor-as-premier-ben-carroll-faces-losing-his-seat/news-story/5b54bdde2fb1c75512f1ab7a4a448fc3",
+      "sample_size": 1221,
+      "source_url": "https://www.heraldsun.com.au/news/victoria/state-election/poll-puts-coalition-primary-vote-at-31-per-cent-one-nation-24-per-cent-labor-22-per-cent-greens-15-per-cent-and-8-per-cent-other/news-story/03b5f85d726a1206e2b6347f9e65cec4",
       "primary": {
-        "ALP": 21,
-        "LNP": 32,
-        "GRN": 14,
-        "ONP": 23,
-        "OTH": 10
+        "ALP": 22,
+        "LNP": 31,
+        "GRN": 15,
+        "ONP": 24,
+        "OTH": 8
       },
       "approval": {
         "matchup": "Carroll vs Wilson vs Pickering",
@@ -399,7 +420,7 @@
           }
         }
       },
-      "et_id": "growth-intelligence-2026-11-13-herald-sun",
+      "et_id": "growth-intelligence-2026-11-20-herald-sun",
       "commissioned_by": {
         "category": "media",
         "name": "Herald Sun",
@@ -461,6 +482,28 @@
       "commissioned_by": {
         "category": "media",
         "name": "Australian Financial Review",
+        "via": "electiontracker"
+      }
+    },
+    {
+      "id": "lighthouse-growth-intelligence-centre-2026-11-08",
+      "start_date": "2026-11-02",
+      "end_date": "2026-11-08",
+      "pollster": "Lighthouse/Growth Intelligence Centre",
+      "client": "Herald Sun",
+      "sample_size": 1351,
+      "source_url": "https://www.heraldsun.com.au/news/victoria/state-election/time-for-a-change-coalition-extends-lead-over-labor-as-premier-ben-carroll-faces-losing-his-seat/news-story/5b54bdde2fb1c75512f1ab7a4a448fc3",
+      "primary": {
+        "ALP": 21,
+        "LNP": 32,
+        "GRN": 14,
+        "ONP": 23,
+        "OTH": 10
+      },
+      "et_id": "growth-intelligence-2026-11-13-herald-sun",
+      "commissioned_by": {
+        "category": "media",
+        "name": "Herald Sun",
         "via": "electiontracker"
       }
     },
