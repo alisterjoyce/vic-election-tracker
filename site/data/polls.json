@@ -102,6 +102,14 @@
         "ALP": 42.5,
         "LNP": 57.5
       },
+      "preferred_premier": {
+        "matchup": "Carroll vs Wilson vs Pickering",
+        "leaders": {
+          "Carroll": 34,
+          "Wilson": 51
+        },
+        "undecided": 15
+      },
       "commissioned_by": {
         "category": "media",
         "name": "The Australian",
@@ -655,16 +663,16 @@
         "matchup": "Carroll vs Wilson vs Pickering",
         "leaders": {
           "Carroll": {
-            "positive": 30,
-            "negative": 58,
-            "undecided": 12,
-            "net": -28
+            "positive": 29,
+            "negative": 64,
+            "undecided": 7,
+            "net": -35
           },
           "Wilson": {
             "positive": 49,
-            "negative": 39,
-            "undecided": 12,
-            "net": 10
+            "negative": 43,
+            "undecided": 8,
+            "net": 6
           }
         }
       },
