@@ -684,7 +684,29 @@
       "type": "Combined",
       "registered_on": "2026-11-10",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=dec097c6-b11a-4762-bd5a-715d4bd189e3%2Falp_combined_wv%20wendouree_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "C",
+        "D",
+        "A",
+        "M",
+        "E",
+        "F"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 6
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
     },
     {
       "registration": "122",
@@ -728,7 +750,29 @@
       "type": "Combined",
       "registered_on": "2026-11-10",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e20994ee-8a05-4ebb-b54d-810579ad0946%2Falp_combined_wv%20south-west%20coast_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "C",
+        "D",
+        "A",
+        "M",
+        "E",
+        "F"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 6
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
     },
     {
       "registration": "126",
@@ -772,7 +816,29 @@
       "type": "Combined",
       "registered_on": "2026-11-10",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=0757528b-0c00-4713-b304-e0a943449bce%2Falp_combined_wv%20south%20barwon_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "C",
+        "D",
+        "A",
+        "M",
+        "E",
+        "F"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "ALP": 1,
+        "GRN": 3,
+        "LNP": 6
+      },
+      "flags": [
+        {
+          "ahead": "GRN",
+          "of": "LNP",
+          "ahead_n": 3,
+          "of_n": 6
+        }
+      ]
     },
     {
       "registration": "248",
@@ -1236,7 +1302,19 @@
       "type": "Combined",
       "registered_on": "2026-11-17",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b9eca28e-c325-4ca5-a093-6461a67f7958%2Fdlp%20htv%20lower%20house%20-%20ripon%20district%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "L",
+        "F",
+        "I",
+        "K",
+        "N"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 2,
+        "ONP": 4
+      }
     },
     {
       "registration": "1428",
@@ -1247,7 +1325,19 @@
       "type": "Single",
       "registered_on": "2026-11-17",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b592efdc-947f-4158-9a79-ec13a87abdc8%2Fdlp%20htv%20upper%20house%20-%20western%20victoria%20region%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "L",
+        "F",
+        "I",
+        "K",
+        "N"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 2,
+        "ONP": 4
+      }
     },
     {
       "registration": "1212",
@@ -1744,7 +1834,19 @@
       "type": "Single",
       "registered_on": "2026-11-17",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=35206fe4-936f-4965-96e9-ff79689f73b7%2Fthe%20greens%20single%20western%20victoria%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "A",
+        "J",
+        "G",
+        "H",
+        "C"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "GRN": 1,
+        "ALP": 5
+      }
     },
     {
       "registration": "1554",
@@ -1782,6 +1884,7 @@
         "1410",
         "1411",
         "1412",
+        "1499",
         "1657",
         "1658"
       ],
@@ -1842,7 +1945,20 @@
       "type": "Single",
       "registered_on": "2026-11-16",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1fa9f6e2-cc1e-4ab7-a6aa-6b7c36de97ba%2Fwestregionhtv_v2_reg.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "I",
+        "N",
+        "M",
+        "L",
+        "K",
+        "F"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "ONP": 5,
+        "LNP": 6
+      }
     },
     {
       "registration": "1394",
@@ -1853,7 +1969,20 @@
       "type": "Combined",
       "registered_on": "2026-11-16",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=ff64298e-c773-4972-944b-00e757b55b24%2Fripondistricthtv_v2_reg.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "I",
+        "N",
+        "M",
+        "L",
+        "K",
+        "F"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "ONP": 5,
+        "LNP": 6
+      }
     },
     {
       "registration": "441",
@@ -1864,7 +1993,8 @@
       "type": "Single",
       "registered_on": "2026-11-11",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=eb034620-8855-4b5d-a58a-cc6402710967%2Flcv_single_western%20victoria_peter%20mitchell.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "status": "unreadable",
+      "note": "unreadable, see card"
     },
     {
       "registration": "554",
@@ -1875,7 +2005,19 @@
       "type": "Combined",
       "registered_on": "2026-11-11",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b1ea534c-f3d4-4761-abf3-6d3fad67f8aa%2Fliberal_combined_wvr%20south%20barwon_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "F",
+        "L",
+        "K",
+        "M",
+        "I"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3
+      }
     },
     {
       "registration": "540",
@@ -1932,7 +2074,19 @@
       "type": "Combined",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=62d1a4c5-64b0-4011-a266-3e61f051a27e%2Fliberal_combined_wvr%20south%20barwon_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "F",
+        "L",
+        "K",
+        "M",
+        "I"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3
+      }
     },
     {
       "registration": "570",
@@ -1989,7 +2143,19 @@
       "type": "Combined",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=655751a8-ee14-4064-b869-2860720a346b%2Fliberal_combined_wvr%20ripon_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "F",
+        "L",
+        "K",
+        "M",
+        "I"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3
+      }
     },
     {
       "registration": "598",
@@ -2046,7 +2212,9 @@
       "type": "Combined",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f2cd31fd-1f07-4a84-bc9e-31ee3dddff0e%2Fliberal_combined_wvr%20wendouree_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "status": "pending",
+      "tried": "2026-11-27",
+      "note": "the VEC's link to this card didn't open"
     },
     {
       "registration": "637",
@@ -2057,7 +2225,19 @@
       "type": "Combined",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e3100462-9b57-45db-b95a-5fea1aa27eb5%2Fliberal_combined_wvr%20ripon_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "F",
+        "L",
+        "K",
+        "M",
+        "I"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3
+      }
     },
     {
       "registration": "646",
@@ -2183,7 +2363,19 @@
       "type": "Combined",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=78825da1-4f27-49f3-b18b-063cd90080f5%2Fliberal_combined_wvr%20wendouree_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "F",
+        "L",
+        "K",
+        "M",
+        "I"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3
+      }
     },
     {
       "registration": "692",
@@ -2217,7 +2409,19 @@
       "type": "Combined",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6447d799-9ce1-48e8-93ba-5d6010859b71%2Fliberal_combined_wvr%20south-west%20coast_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "F",
+        "L",
+        "K",
+        "M",
+        "I"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3
+      }
     },
     {
       "registration": "834",
@@ -2228,7 +2432,19 @@
       "type": "Combined",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4832b6d2-9aea-4851-94bd-7cb153278b19%2Fliberal_combined_wvr%20south-west%20coast_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "F",
+        "L",
+        "K",
+        "M",
+        "I"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3
+      }
     },
     {
       "registration": "1237",
@@ -2389,7 +2605,19 @@
       "type": "Single",
       "registered_on": "2026-11-14",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8baa0525-ba6b-421e-871d-f4084c922c59%2Fliberal_single_wvr_2.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "F",
+        "L",
+        "K",
+        "M",
+        "I"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 1,
+        "ONP": 3
+      }
     },
     {
       "registration": "1327",
@@ -2448,7 +2676,8 @@
       "type": "Combined",
       "registered_on": "2026-11-11",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1457951f-e4d3-4dc2-b3ae-cde2c075c7f9%2Fripon%20jo%20armstrong%20htv%20vec%20no%20trims.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "status": "unreadable",
+      "note": "unreadable, see card"
     },
     {
       "registration": "487",
@@ -2599,7 +2828,19 @@
       "type": "Combined",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=72ff80ff-cf58-49a7-a18b-73768695d20a%2Fonv%20-%20combined%20-%20western%20victoria%20region%20-%20south%20barwon%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "K",
+        "M",
+        "N",
+        "I",
+        "F"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 5
+      }
     },
     {
       "registration": "879",
@@ -2610,7 +2851,19 @@
       "type": "Combined",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=9fae62ab-6eab-4200-b232-d75c39165e38%2Fonv%20-%20combined%20-%20western%20victoria%20region%20-%20ripon%20-%202%20%28%29.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "K",
+        "M",
+        "N",
+        "I",
+        "F"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 5
+      }
     },
     {
       "registration": "888",
@@ -2621,7 +2874,19 @@
       "type": "Combined",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=a013967b-1c26-4034-92c1-91f6ad8d1502%2Fonv%20-%20combined%20-%20western%20victoria%20region%20-%20south-west%20coast%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "K",
+        "M",
+        "N",
+        "I",
+        "F"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 5
+      }
     },
     {
       "registration": "910",
@@ -2644,7 +2909,19 @@
       "type": "Combined",
       "registered_on": "2026-11-12",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=c08facd8-4cb4-4392-a92f-32d264124e51%2Fonv%20-%20combined%20-%20western%20victoria%20region%20-%20wendouree%20-%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "K",
+        "M",
+        "N",
+        "I",
+        "F"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "ONP": 1,
+        "LNP": 5
+      }
     },
     {
       "registration": "938",
@@ -2713,7 +2990,8 @@
       "type": "Single",
       "registered_on": "2026-11-16",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f05d90df-76e6-4de8-bdd5-f3316dbae330%2Faustralian%20democrats%20single%20western%20victoria%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "status": "unreadable",
+      "note": "unreadable, see card"
     },
     {
       "registration": "1415",
@@ -2748,7 +3026,8 @@
       "type": "Single",
       "registered_on": "2026-11-18",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f85aa4ac-6141-4c37-9bd9-1a9e79c29413%2Fthe%20republican%20-%20single%20-%20western%20victoria.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "status": "unreadable",
+      "note": "unreadable, see card"
     },
     {
       "registration": "40",
@@ -2831,7 +3110,20 @@
       "type": "Combined",
       "registered_on": "2026-11-10",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=4a4ff542-ae83-4976-b6ff-8cfac932b50f%2Fsa_combined_wv_south%20barwon_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "J",
+        "G",
+        "A",
+        "H",
+        "D",
+        "C"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "GRN": 3,
+        "ALP": 6
+      }
     },
     {
       "registration": "442",
@@ -2842,7 +3134,20 @@
       "type": "Combined",
       "registered_on": "2026-11-11",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7eb23091-b6b4-4ae1-829c-4a6f82791d49%2Fsa_combined_south%20barwon.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "J",
+        "G",
+        "A",
+        "H",
+        "D",
+        "C"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "GRN": 3,
+        "ALP": 6
+      }
     },
     {
       "registration": "461",
@@ -2925,7 +3230,8 @@
       "type": "Single",
       "registered_on": "2026-11-10",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6e0d3066-6208-4ec2-89bd-893414e06ca6%2Fsff_single_westernvic_1.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "status": "unreadable",
+      "note": "unreadable, see card"
     },
     {
       "registration": "18",
@@ -2951,7 +3257,8 @@
       "type": "MEHTVC",
       "registered_on": "2026-11-11",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=db689a23-6147-4752-b19b-39ae0c759d43%2Fsap_multiple_all%208%20regions.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "status": "unreadable",
+      "note": "unreadable, see card"
     },
     {
       "registration": "364",
@@ -2962,7 +3269,19 @@
       "type": "Combined",
       "registered_on": "2026-11-11",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=e809b704-5f6f-432d-beec-8d0ad6dde41e%2Fvictorian%20socialists%20combined%20western%20victoria%20wendouree%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "G",
+        "J",
+        "A",
+        "D",
+        "C"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "GRN": 3,
+        "ALP": 5
+      }
     },
     {
       "registration": "429",
@@ -2973,7 +3292,19 @@
       "type": "Combined",
       "registered_on": "2026-11-11",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=aa780787-9b27-45d5-a03d-d11b3d08b35b%2Fvictorian%20socialists%20combined%20western%20victoria%20ripon%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "G",
+        "J",
+        "A",
+        "D",
+        "C"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "GRN": 3,
+        "ALP": 5
+      }
     },
     {
       "registration": "431",
@@ -3053,7 +3384,19 @@
       "type": "Combined",
       "registered_on": "2026-11-11",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=d69b5136-b6de-46ab-b0ef-c94f8cdd5a1c%2Fvictorian%20socialists%20combined%20western%20victoria%20south-west%20coast%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "G",
+        "J",
+        "A",
+        "D",
+        "C"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "GRN": 3,
+        "ALP": 5
+      }
     },
     {
       "registration": "443",
@@ -3064,7 +3407,19 @@
       "type": "Combined",
       "registered_on": "2026-11-11",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=36bf9cd7-838d-4ae8-a63d-e23f2d1380a3%2Fvictorian%20socialists%20combined%20western%20victoria%20south%20barwon%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "atl": [
+        "G",
+        "J",
+        "A",
+        "D",
+        "C"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "GRN": 3,
+        "ALP": 5
+      }
     },
     {
       "registration": "446",
@@ -3190,7 +3545,8 @@
       "type": "Single",
       "registered_on": "2026-11-14",
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6d9a9479-f742-4d28-8288-23241f3d370a%2Fmoriarty%2C%20aleta.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "pending"
+      "status": "unreadable",
+      "note": "unreadable, see card"
     }
   ],
   "no_card": [

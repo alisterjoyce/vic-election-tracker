@@ -17,15 +17,15 @@
   "registration_opens": "2026-11-10",
   "registration_closes": "2026-11-20",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
-  "last_checked": "2026-11-26T23:45:57Z",
-  "pending": 42,
+  "last_checked": "2026-11-27T05:54:27Z",
+  "pending": 6,
   "coverage": {
     "cards": 1425,
     "listings": 4817,
-    "orders_read": 4517,
+    "orders_read": 4546,
     "orders_image": 557,
     "orders_same_as": 154,
-    "orders_unreadable": 104,
+    "orders_unreadable": 111,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -422,9 +422,11 @@
       ],
       "party": "SFF",
       "candidate": null,
+      "read_on": "2026-11-27",
       "orders": {
         "western-victoria": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -1567,7 +1569,7 @@
       ],
       "party": "SAL",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "south-barwon": {
           "status": "read",
@@ -1590,7 +1592,20 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "J",
+            "G",
+            "A",
+            "H",
+            "D",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 3,
+            "ALP": 6
+          }
         }
       }
     },
@@ -6271,7 +6286,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "wendouree": {
           "status": "read",
@@ -6301,7 +6316,29 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "D",
+            "A",
+            "M",
+            "E",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -6465,7 +6502,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "south-west-coast": {
           "status": "read",
@@ -6494,7 +6531,29 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "D",
+            "A",
+            "M",
+            "E",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -6654,7 +6713,7 @@
       ],
       "party": "ALP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "south-barwon": {
           "status": "read",
@@ -6685,7 +6744,29 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "C",
+            "D",
+            "A",
+            "M",
+            "E",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ALP": 1,
+            "GRN": 3,
+            "LNP": 6
+          },
+          "flags": [
+            {
+              "ahead": "GRN",
+              "of": "LNP",
+              "ahead_n": 3,
+              "of_n": 6
+            }
+          ]
         }
       }
     },
@@ -17716,7 +17797,7 @@
       ],
       "party": "VS",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "wendouree": {
           "status": "read",
@@ -17738,7 +17819,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "G",
+            "J",
+            "A",
+            "D",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 3,
+            "ALP": 5
+          }
         }
       }
     },
@@ -18885,6 +18978,7 @@
       ],
       "party": "SUS",
       "candidate": null,
+      "read_on": "2026-11-27",
       "orders": {
         "eastern-victoria": {
           "status": "read",
@@ -18936,7 +19030,8 @@
           "via": "image"
         },
         "western-victoria": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -22476,7 +22571,7 @@
       ],
       "party": "VS",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "ripon": {
           "status": "read",
@@ -22503,7 +22598,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "G",
+            "J",
+            "A",
+            "D",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 3,
+            "ALP": 5
+          }
         }
       }
     },
@@ -22987,7 +23094,7 @@
       ],
       "party": "VS",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "south-west-coast": {
           "status": "read",
@@ -23008,7 +23115,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "G",
+            "J",
+            "A",
+            "D",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 3,
+            "ALP": 5
+          }
         }
       }
     },
@@ -23049,9 +23168,11 @@
       ],
       "party": "LCV",
       "candidate": null,
+      "read_on": "2026-11-27",
       "orders": {
         "western-victoria": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -23069,7 +23190,7 @@
       ],
       "party": "SAL",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "south-barwon": {
           "status": "read",
@@ -23092,7 +23213,20 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "J",
+            "G",
+            "A",
+            "H",
+            "D",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 3,
+            "ALP": 6
+          }
         }
       }
     },
@@ -23110,7 +23244,7 @@
       ],
       "party": "VS",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "south-barwon": {
           "status": "read",
@@ -23133,7 +23267,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "G",
+            "J",
+            "A",
+            "D",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 3,
+            "ALP": 5
+          }
         }
       }
     },
@@ -25573,7 +25719,7 @@
       ],
       "party": "NAT",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "ripon": {
           "status": "read",
@@ -25608,7 +25754,8 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -28554,7 +28701,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "south-barwon": {
           "status": "read",
@@ -28585,7 +28732,19 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "F",
+            "L",
+            "K",
+            "M",
+            "I"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         }
       }
     },
@@ -29083,7 +29242,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "south-barwon": {
           "status": "read",
@@ -29114,7 +29273,19 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "F",
+            "L",
+            "K",
+            "M",
+            "I"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         }
       }
     },
@@ -29978,7 +30149,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "ripon": {
           "status": "read",
@@ -30013,7 +30184,19 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "F",
+            "L",
+            "K",
+            "M",
+            "I"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         }
       }
     },
@@ -32604,7 +32787,6 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
       "orders": {
         "wendouree": {
           "status": "read",
@@ -32634,7 +32816,9 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "status": "pending",
+          "tried": "2026-11-27",
+          "note": "the VEC's link to this card didn't open"
         }
       }
     },
@@ -33259,7 +33443,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "ripon": {
           "status": "read",
@@ -33294,7 +33478,19 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "F",
+            "L",
+            "K",
+            "M",
+            "I"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         }
       }
     },
@@ -36181,7 +36377,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "wendouree": {
           "status": "read",
@@ -36211,7 +36407,19 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "F",
+            "L",
+            "K",
+            "M",
+            "I"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         }
       }
     },
@@ -44893,7 +45101,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "south-west-coast": {
           "status": "read",
@@ -44922,7 +45130,19 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "F",
+            "L",
+            "K",
+            "M",
+            "I"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         }
       }
     },
@@ -44964,7 +45184,7 @@
       ],
       "party": "LIB",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "south-west-coast": {
           "status": "read",
@@ -44993,7 +45213,19 @@
           ]
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "F",
+            "L",
+            "K",
+            "M",
+            "I"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         }
       }
     },
@@ -46417,7 +46649,7 @@
       ],
       "party": "ONP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "south-barwon": {
           "status": "read",
@@ -46440,7 +46672,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "K",
+            "M",
+            "N",
+            "I",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 5
+          }
         }
       }
     },
@@ -47074,7 +47318,7 @@
       ],
       "party": "ONP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "ripon": {
           "status": "read",
@@ -47101,7 +47345,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "K",
+            "M",
+            "N",
+            "I",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 5
+          }
         }
       }
     },
@@ -47540,7 +47796,7 @@
       ],
       "party": "ONP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "south-west-coast": {
           "status": "read",
@@ -47561,7 +47817,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "K",
+            "M",
+            "N",
+            "I",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 5
+          }
         }
       }
     },
@@ -55410,7 +55678,7 @@
       ],
       "party": "ONP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "wendouree": {
           "status": "read",
@@ -55432,7 +55700,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "K",
+            "M",
+            "N",
+            "I",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 1,
+            "LNP": 5
+          }
         }
       }
     },
@@ -67501,9 +67781,11 @@
       ],
       "party": "IND",
       "candidate": "western-victoria/aleta-moriarty",
+      "read_on": "2026-11-27",
       "orders": {
         "western-victoria": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -89572,9 +89854,22 @@
       ],
       "party": "LIB",
       "candidate": null,
+      "read_on": "2026-11-27",
       "orders": {
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "F",
+            "L",
+            "K",
+            "M",
+            "I"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 1,
+            "ONP": 3
+          }
         }
       }
     },
@@ -97216,9 +97511,11 @@
       ],
       "party": "OTH",
       "candidate": null,
+      "read_on": "2026-11-27",
       "orders": {
         "western-victoria": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -99697,9 +99994,23 @@
       ],
       "party": "LBT",
       "candidate": null,
+      "read_on": "2026-11-27",
       "orders": {
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "I",
+            "N",
+            "M",
+            "L",
+            "K",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 5,
+            "LNP": 6
+          }
         }
       }
     },
@@ -99717,7 +100028,7 @@
       ],
       "party": "LBT",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "ripon": {
           "status": "read",
@@ -99744,7 +100055,20 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "I",
+            "N",
+            "M",
+            "L",
+            "K",
+            "F"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "ONP": 5,
+            "LNP": 6
+          }
         }
       }
     },
@@ -101010,7 +101334,7 @@
       ],
       "party": "DLP",
       "candidate": null,
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-27",
       "orders": {
         "ripon": {
           "status": "read",
@@ -101037,7 +101361,19 @@
           }
         },
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "L",
+            "F",
+            "I",
+            "K",
+            "N"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 2,
+            "ONP": 4
+          }
         }
       }
     },
@@ -101195,9 +101531,22 @@
       ],
       "party": "DLP",
       "candidate": null,
+      "read_on": "2026-11-27",
       "orders": {
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "L",
+            "F",
+            "I",
+            "K",
+            "N"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "LNP": 2,
+            "ONP": 4
+          }
         }
       }
     },
@@ -105586,9 +105935,22 @@
       ],
       "party": "GRN",
       "candidate": null,
+      "read_on": "2026-11-27",
       "orders": {
         "western-victoria": {
-          "status": "pending"
+          "atl": [
+            "A",
+            "J",
+            "G",
+            "H",
+            "C"
+          ],
+          "via": "text",
+          "status": "read",
+          "ranks": {
+            "GRN": 1,
+            "ALP": 5
+          }
         }
       }
     },
@@ -116594,18 +116956,21 @@
       "kind": "independent",
       "type": "Single",
       "registered_on": "2026-11-18",
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2689ab6e-8932-423c-9e5d-d1717fb415b6%2Ffaruq%2C%20m.d.%20omor&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "file": "faruq, m.d. omor",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=847bc9cf-e028-400f-aa08-a1b7d1e2cf1c%2Ffaruq%2C%20m.d.%20omor.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "faruq, m.d. omor.pdf",
       "areas": [
         "melton"
       ],
       "party": "IND",
       "candidate": "melton/m-d-omor-faruq",
+      "read_on": "2026-11-27",
       "orders": {
         "melton": {
-          "status": "pending",
-          "tried": "2026-11-27",
-          "note": "the VEC's link to this card didn't open"
+          "status": "partial",
+          "order": [
+            "FARUQ, M.D. Omor"
+          ],
+          "via": "text"
         }
       }
     },
@@ -116615,18 +116980,21 @@
       "kind": "independent",
       "type": "Single",
       "registered_on": "2026-11-18",
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=7f37ad09-2abc-4a71-9b4e-558e6883faea%2Ffaruq%2C%20m.d.%20omor&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "file": "faruq, m.d. omor",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=da0d2b3d-3c39-466c-9cdb-770b8730c1da%2Ffaruq%2C%20m.d.%20omor.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "faruq, m.d. omor.pdf",
       "areas": [
         "melton"
       ],
       "party": "IND",
       "candidate": "melton/m-d-omor-faruq",
+      "read_on": "2026-11-27",
       "orders": {
         "melton": {
-          "status": "pending",
-          "tried": "2026-11-27",
-          "note": "the VEC's link to this card didn't open"
+          "status": "partial",
+          "order": [
+            "FARUQ, M.D. Omor"
+          ],
+          "via": "text"
         }
       }
     },
@@ -116636,18 +117004,21 @@
       "kind": "independent",
       "type": "Single",
       "registered_on": "2026-11-18",
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=267cb93d-f08b-4c22-b1d0-1344681f217a%2Ffaruq%2C%20m.d.%20omor&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "file": "faruq, m.d. omor",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=69858890-f3ec-4bc4-98c0-587cecc990f6%2Ffaruq%2C%20m.d.%20omor.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "file": "faruq, m.d. omor.pdf",
       "areas": [
         "melton"
       ],
       "party": "IND",
       "candidate": "melton/m-d-omor-faruq",
+      "read_on": "2026-11-27",
       "orders": {
         "melton": {
-          "status": "pending",
-          "tried": "2026-11-27",
-          "note": "the VEC's link to this card didn't open"
+          "status": "partial",
+          "order": [
+            "FARUQ, M.D. Omor"
+          ],
+          "via": "text"
         }
       }
     },
@@ -116781,9 +117152,11 @@
       ],
       "party": "OTH",
       "candidate": null,
+      "read_on": "2026-11-27",
       "orders": {
         "western-victoria": {
-          "status": "pending"
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -120951,6 +121324,7 @@
             "1410",
             "1411",
             "1412",
+            "1499",
             "1657",
             "1658"
           ],
@@ -131175,6 +131549,39 @@
   "changes": [
     {
       "date": "2026-11-27",
+      "kind": "amended",
+      "registration": "1524",
+      "registered_by": "FARUQ, M.D. Omor",
+      "areas": [
+        "melton"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=847bc9cf-e028-400f-aa08-a1b7d1e2cf1c%2Ffaruq%2C%20m.d.%20omor.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "detail": "replaces faruq, m.d. omor"
+    },
+    {
+      "date": "2026-11-27",
+      "kind": "amended",
+      "registration": "1525",
+      "registered_by": "FARUQ, M.D. Omor",
+      "areas": [
+        "melton"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=da0d2b3d-3c39-466c-9cdb-770b8730c1da%2Ffaruq%2C%20m.d.%20omor.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "detail": "replaces faruq, m.d. omor"
+    },
+    {
+      "date": "2026-11-27",
+      "kind": "amended",
+      "registration": "1526",
+      "registered_by": "FARUQ, M.D. Omor",
+      "areas": [
+        "melton"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=69858890-f3ec-4bc4-98c0-587cecc990f6%2Ffaruq%2C%20m.d.%20omor.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "detail": "replaces faruq, m.d. omor"
+    },
+    {
+      "date": "2026-11-27",
       "kind": "areas",
       "registration": "893",
       "registered_by": "Australian Labor Party",
@@ -137822,42 +138229,6 @@
         "southern-metropolitan"
       ],
       "detail": "was caulfield, hawthorn, kew, malvern, oakleigh, prahran, richmond, southern-metropolitan"
-    },
-    {
-      "date": "2026-11-26",
-      "kind": "areas",
-      "registration": "1339",
-      "registered_by": "Liberal",
-      "areas": [
-        "ashwood",
-        "hawthorn",
-        "southern-metropolitan"
-      ],
-      "detail": "was hawthorn, southern-metropolitan"
-    },
-    {
-      "date": "2026-11-26",
-      "kind": "areas",
-      "registration": "1343",
-      "registered_by": "Liberal",
-      "areas": [
-        "ashwood",
-        "southern-metropolitan"
-      ],
-      "detail": "was southern-metropolitan"
-    },
-    {
-      "date": "2026-11-26",
-      "kind": "areas",
-      "registration": "1249",
-      "registered_by": "Liberal",
-      "areas": [
-        "ashwood",
-        "box-hill",
-        "north-eastern-metropolitan",
-        "southern-metropolitan"
-      ],
-      "detail": "was box-hill, north-eastern-metropolitan, southern-metropolitan"
     }
   ]
 }
