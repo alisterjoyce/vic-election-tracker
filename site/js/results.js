@@ -71,7 +71,7 @@
         tr.hidden = v === "changes" ? tr.dataset.changes !== "1" : v ? tr.dataset.status !== v : false;
       });
     };
-    $("res-filter").addEventListener("change", filter);
+    $("res-filter").onchange = filter;   // re-rendered every minute on election night: one handler, not one per render
     filter();
     $("res-seats-card").hidden = false;
   }
@@ -113,10 +113,24 @@
     $("res-rule").textContent = res.call_rule ? `How seats are called: ${res.call_rule.text}` : "";
     if (!counting) {
       $("res-tally").innerHTML = `<div class="res-wait"><p class="res-wait-big">Counting begins 6 pm Sat 28 Nov</p>
-        <p class="muted">Results will appear here as the Victorian Electoral Commission publishes them, refreshed every 5 minutes.</p></div>`;
+        <p class="muted">Results will appear here as the Victorian Electoral Commission publishes them; this page checks for new figures every minute.</p></div>`;
+      App.pollJSON("results", App.RESULTS_POLL_MS, (doc) => {
+        if (Object.values(doc.districts || {}).some((d) => d.total)) location.reload();
+      }, res.updated);
       return;
     }
-    $("res-updated").textContent = res.vec_updated ? `VEC updated ${res.vec_updated}` : (res.updated ? `Checked ${App.fmtDateTime(res.updated)}` : "");
+    render(res, lc);
+    // Election night: check for new figures every minute and redraw in place.
+    let lcNow = lc;
+    App.pollJSON("results", App.RESULTS_POLL_MS, (doc) => {
+      App.loadFresh("results_lc").then((l) => { lcNow = l; }).catch(() => {}).finally(() => render(doc, lcNow));
+    }, res.updated);
+  }
+
+  function render(res, lc) {
+    const counting = Object.values(res.districts || {}).some((d) => d.total);
+    if (!counting) return;
+    $("res-updated").textContent = [App.updatedLabel(res.updated), res.vec_updated ? `VEC figures as at ${res.vec_updated}` : ""].filter(Boolean).join(" · ");
     $("res-tally").innerHTML = tallyBar(res.tally);
     renderChanges(res);
     renderSeats(res);

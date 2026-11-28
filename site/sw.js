@@ -17,7 +17,7 @@
    Bump VERSION when the shell list changes or to make every installed copy refresh at once: the new
    worker precaches, the page offers "Update available, tap to refresh", and old caches are deleted
    when it activates. */
-const VERSION = "v42";
+const VERSION = "v43";
 const PREFIX = "vet-";
 const CACHES = {
   shell: `${PREFIX}shell-${VERSION}`,
@@ -102,11 +102,13 @@ async function staleWhileRevalidate(event, cacheName, fallback) {
 
 // Data: a copy younger than maxAge is served at once (and refreshed behind the page); otherwise
 // wait for the network, falling back to the cached copy after NETWORK_TIMEOUT or offline.
-async function fresh(event, maxAge) {
+// key: the cache entry to use instead of the request (results: the address without its ?t= cache-buster, so each
+// minute's copy replaces the last rather than piling up).
+async function fresh(event, maxAge, key = event.request) {
   const { request } = event;
-  const cached = await caches.match(request);
+  const cached = await caches.match(key);
   const network = fetch(request).then((res) => {
-    event.waitUntil(put(CACHES.data, request, res.clone(), true));
+    event.waitUntil(put(CACHES.data, key, res.clone(), true));
     return res;
   });
   const settled = network.catch(() => null);
@@ -140,9 +142,10 @@ self.addEventListener("fetch", (event) => {
   if (!url.href.startsWith(BASE)) return;   // outside the app's scope
   const path = url.href.slice(BASE.length).split("?")[0];
 
-  if (path === "data/news.json" || /^data\/results(_lc)?\.json$/.test(path) || path.startsWith("data/results_2026/")) {
-    return event.respondWith(fresh(event, 0));
+  if (/^data\/results(_lc)?\.json$/.test(path) || path.startsWith("data/results_2026/")) {
+    return event.respondWith(fresh(event, 0, new Request(url.origin + url.pathname)));   // network first, one cached copy
   }
+  if (path === "data/news.json") return event.respondWith(fresh(event, 0));
   if (path.startsWith("data/") && /\.(json|geojson)$/.test(path)) return event.respondWith(fresh(event, DATA_MAX_AGE));
   if (path.startsWith("photos/") || (path.startsWith("fonts/") && !SHELL.includes(path))) return event.respondWith(cacheFirst(event, CACHES.media));
   // Pages and the rest of the shell. An uncached page offline falls back to the home page.

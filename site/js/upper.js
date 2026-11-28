@@ -63,7 +63,7 @@
     }
     const groups = c.groups.filter((g) => g.quotas >= 0.05);
     return `<section class="region-count" aria-labelledby="rc-h">
-      <h3 id="rc-h">2026 count: quotas filled</h3>
+      <h3 id="rc-h">2026 count: quotas filled <span class="muted small">${escapeHtml(App.updatedLabel(resultsLc.updated))}</span></h3>
       ${App.abcResultsLink("region", r)}
       <p class="muted small" style="margin-top:0">${c.counted_pct.toFixed(1)}% of enrolment counted · ${c.formal.toLocaleString("en-AU")} formal votes ·
         quota ${c.quota.toLocaleString("en-AU")} (${c.quota_source === "vec" ? "as published by the VEC" : "formal votes ÷ 6, plus 1"})${c.elected.length
@@ -340,6 +340,15 @@
       meta = metaData;
       vec = vecData;
       resultsLc = lcData;
+      if (resultsLc) {   // election night: redraw the open region's count when results_lc.json changes (checked every minute)
+        App.pollJSON("results_lc", App.RESULTS_POLL_MS, (doc) => {
+          resultsLc = doc;
+          const id = (location.hash.slice(1).split("/")[0] || "");
+          const box = document.querySelector("#region-glance .region-count, #region-glance .r26-wait");
+          const r = regions.find((x) => x.id === id);
+          if (box && r) box.outerHTML = regionCount(r);
+        }, resultsLc.updated);
+      }
       regions = rd.regions.slice().sort((a, b) => a.name.localeCompare(b.name));
       districts = dd.districts;
       councilPolls = cp;

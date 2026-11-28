@@ -26,6 +26,7 @@
   const profileDocs = {};   // data/profiles/<district>.json, loaded per seat after the first paint
   let news;         // data/news.json (headlines per seat); undefined until loaded, null if it failed
   let results = null;   // data/results.json: the 2026 count (scripts/results.py), null if missing
+  let liveRefresh = null;   // the open seat's in-place update when results.json changes (election night)
   let pbDiffs = {};     // district id -> where The Poll Bludger's guide lists a different margin (data/pollbludger_margins.json)
   let fcNow = null;     // the open seat's App.Forecasts.build result (the how-to-vote cards' contenders)
 
@@ -192,7 +193,7 @@
         ${kn ? `<li><span class="ml-k">${kn.label === "Today" ? "Today" : "Next"}</span><span class="ml-v">${escapeHtml(kn.text)}</span></li>` : ""}
       </ul>
       ${pbNote(d)}
-      ${live ? `<p class="r26-wait small"><strong>2026 count:</strong> ${statusLine(live)} <button type="button" class="link-btn" data-sec-go="results">Full results</button></p>`
+      ${live ? `<p class="r26-wait small">${countLine(live)}</p>`
         : results ? '<p class="r26-wait small">2026 count: from 6 pm Sat 28 Nov.</p>' : ""}
       ${d.notes || d.region_note ? ui.clamp([d.notes, d.region_note].filter(Boolean).map((t) => `<p>${escapeHtml(t)}</p>`).join(""), "note") : ""}
     </section>`;
@@ -504,6 +505,21 @@
         renderContest(d, { key: "r22", file: `results_2022/${d.id}`, title: "How it voted in 2022", intro: intro2022 });
       },
     });
+    // Election night: new figures (checked every minute) update the count line, the section summary and, once drawn,
+    // the 2026 panel in place; a seat whose first votes arrive is redrawn with its Results section.
+    liveRefresh = () => {
+      if (hashId() !== d.id) return;
+      const now = liveResult(d);
+      if (!now) return;
+      if (!live) { renderDetail(); return; }
+      const w = $("seat-glance") && $("seat-glance").querySelector(".r26-wait");
+      if (w) w.innerHTML = countLine(now);
+      App.setSectionSummary(el, "results", escapeHtml(liveSummary(now)));
+      if (resultsDrawn) {
+        App.loadFresh(`results_2026/${d.id}`).then(() =>
+          renderContest(d, { key: "r26", file: `results_2026/${d.id}`, title: "2026 results", live: now, intro: intro2026 })).catch(() => {});
+      }
+    };
     ui.initClamps(el);
   }
 
@@ -567,6 +583,11 @@
     return r && r.total ? r : null;
   }
 
+  function countLine(live) {
+    return `<strong>2026 count:</strong> ${statusLine(live)} <button type="button" class="link-btn" data-sec-go="results">Full results</button>
+      <span class="muted small r26-upd">${escapeHtml(App.updatedLabel(results && results.updated))}</span>`;
+  }
+
   function statusLine(live) {
     const leader = live.leader;
     if (!leader) return '<span class="muted">No votes counted yet.</span>';
@@ -593,7 +614,7 @@
         <span style="width:${Math.min(100, counted)}%"></span></div>
       ${ui.clamp(`<p>${counted.toFixed(1)}% of enrolment counted${centres ? ` · ${centres}` : ""}${swing}.
         Source: <a href="${escapeHtml(live.url || r.event.source)}" rel="noopener" target="_blank">Victorian Electoral Commission</a>${
-        live.vec_updated ? `, updated ${escapeHtml(live.vec_updated)}` : ""}. Refreshed every 5 minutes.
+        live.vec_updated ? `, updated ${escapeHtml(live.vec_updated)}` : ""}. This page checks for new figures every minute.
         ${declarationText(live.declaration_votes)}
         ${live.holder && live.changes_hands ? `<strong>${escapeHtml(App.partyName(live.holder))} hold the seat; on these figures it would change hands.</strong>` : ""}</p>`, "note")}`;
   }
@@ -796,6 +817,9 @@
       ]);
       results = resultData;
       meta = metaData;
+      if (results) {
+        App.pollJSON("results", App.RESULTS_POLL_MS, (doc) => { results = doc; if (liveRefresh) liveRefresh(); }, results.updated);
+      }
       ((pb && pb.differences) || []).forEach((x) => { pbDiffs[x.district] = x; });
       outlook = { swing: App.statewideSwing(meta, pollData), models, odds, seatPolls };
       districts = dd.districts.slice().sort((a, b) => a.name.localeCompare(b.name));

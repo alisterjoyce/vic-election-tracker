@@ -91,6 +91,40 @@
     return cache[name];
   }
 
+  // Election night: data/<name>.json past every cache (a ?t= cache-buster and no-store), replacing the page's copy.
+  function loadFresh(name) {
+    const p = fetch(new URL(`data/${name}.json?t=${Date.now()}`, ROOT), { cache: "no-store" }).then((r) => {
+      if (!r.ok) throw new Error(`${name}.json: HTTP ${r.status}`);
+      return r.json();
+    });
+    p.then(() => { cache[name] = p; }, () => {});
+    return p;
+  }
+
+  // Checks data/<name>.json every `every` ms while the page is visible (and as soon as it's shown again), and calls
+  // onChange(doc) whenever its `updated` differs from the last one seen (`seen`: the copy the page drew from).
+  const RESULTS_POLL_MS = 60000;
+  function pollJSON(name, every, onChange, seen) {
+    let last = seen;
+    let busy = false;
+    const tick = () => {
+      if (document.hidden || busy) return;
+      busy = true;
+      loadFresh(name).then((doc) => {
+        if (doc && doc.updated && doc.updated !== last) { last = doc.updated; onChange(doc); }
+      }).catch(() => {}).finally(() => { busy = false; });
+    };
+    setInterval(tick, every);
+    document.addEventListener("visibilitychange", () => { if (!document.hidden) tick(); });
+  }
+
+  // "Updated 7:42 pm" (Melbourne time) from an ISO time.
+  function updatedLabel(iso) {
+    if (!iso) return "";
+    const t = new Date(iso).toLocaleTimeString("en-AU", { timeZone: "Australia/Melbourne", hour: "numeric", minute: "2-digit" });
+    return `Updated ${t.replace(/\s+/g, " ").toLowerCase()}`;
+  }
+
   function escapeHtml(s) {
     return String(s ?? "").replace(/[&<>"']/g, (c) => ({
       "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
@@ -1911,6 +1945,7 @@
 
   window.App = {
     PARTIES, STATUSES, COALITION, partyOrder, byValue, candidateOrder, surnameOf, loadJSON, escapeHtml, partyName, partyShort, partyVar, partyColor, partyBadge, statusBadge,
+    loadFresh, pollJSON, RESULTS_POLL_MS, updatedLabel,
     slugify, parseDate, fmtDate, fmtMonth, fmtDateTime, dataUpdatedText, fmtPrice, fmtMargin, fmtSwing, melbourneToday, daysBetween,
     hashId, cssVar, currentTheme, showError, copyLink, ui, section, setSectionSummary, jumpPills, initSections, moreMenu, phoneView, keyDateNext, GLOSSARY, glossarize, abcResultsLink,
     DAY, preparePolls, pollExclusion, commissionLabel, AVG_MIN_SAMPLE, smoothedSeries, smoothedLatest, fmtRange, pollRecords, statewideSwing, swingAdjusted, projectSeats, modelSeats, currentModel, replacedIn, seatCalls, apportion, hemicycle, seatRangeChart, modelsHemicycle, BLOC_LABEL, BLOC_COLOR, BLOCS, blocOf, modelLink, quotaBars,
