@@ -1,4 +1,1649 @@
 {
   "_note": "results.py fetch bookkeeping: validators and page hashes. Not data; not shown.",
-  "pages": {}
+  "pages": {
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "2a22601311bba96927e16bb090c8c1d3e3abc1b7f11371aaeaf8afd123dafb82",
+      "fetched": "2026-11-28T08:19:31Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/region-election-page": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "dbbfd8abb5f0c55c4e69bc6bf8aaafd5d7a4817d3dc9e12940336c7ce0022e92",
+      "fetched": "2026-11-28T08:19:33Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Albert-Park-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "6ea8b80efae0a35784e7c1fdfba8fb0010eea0cbf7b50fc6bc59de55beaa6ab8",
+      "fetched": "2026-11-28T08:19:36Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Albert-Park-District-results/Albert-Park-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "7bf7b08a1fab5bc8aca3ce61a740af76201ea795eba8f6354dd5076fc36707dd",
+      "fetched": "2026-11-28T08:19:39Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Albert-Park-District-results/Albert-Park-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "eddae5b41232e7da88deccb0c27fa85183fe66e4775a23f268de45d3761f5fd3",
+      "fetched": "2026-11-28T08:19:41Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Ashwood-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "cb3a2e223bd9e2f32def339bb5c2ce02d638cef0b69bf6f3995789c64dc32272",
+      "fetched": "2026-11-28T08:19:44Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Ashwood-District-results/Ashwood-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "1e10a69b84e774dcd8839f8ab641cd8f519fdd422a0e8cc86fde805aa26056ec",
+      "fetched": "2026-11-28T08:19:46Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Ashwood-District-results/Ashwood-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "845e2db5d57e07d8ee6580f7a2535a3ad3b53d4b8395e1ba562166069dd5b3e2",
+      "fetched": "2026-11-28T08:19:49Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bass-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "a02872488a68176707b94b1978f6e56a4c58a79e3b7e9c675bcb462fa88ab54d",
+      "fetched": "2026-11-28T08:19:52Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bass-District-results/Bass-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "bd25d9b861ad0f6984046b811c10871dec7ab0f42521b9208a5aa3783fe7cf35",
+      "fetched": "2026-11-28T08:19:55Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bass-District-results/Bass-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "f241110eee661a6c133f42d97cefe6e1d14d15d38084b862fa529b5a9d647cd4",
+      "fetched": "2026-11-28T08:19:58Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bayswater-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "d613296f67065a373059269b76827f328be4c755829ecc63d4375615080d65e5",
+      "fetched": "2026-11-28T08:20:00Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bayswater-District-results/Bayswater-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "1e3f40f61fd168eab7cdb36c799941072b55bc1ad576051173723bef33def016",
+      "fetched": "2026-11-28T08:20:03Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bayswater-District-results/Bayswater-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "0fa375289ebde0aaad8d9671c10dcc4ee3ef39cea9ad3a9f3aa791ef017b6f56",
+      "fetched": "2026-11-28T08:20:06Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bellarine-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "4c8bf037164648bebdac9d899de48de6543ab8ede82b28a213cab85cdb09025c",
+      "fetched": "2026-11-28T08:20:08Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bellarine-District-results/Bellarine-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "3d393403628037e47616a56a62e9ffc0a4321abb8944fad0b2fb3e09adc1ab99",
+      "fetched": "2026-11-28T08:20:11Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bellarine-District-results/Bellarine-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "f48b4064fb580c68abc5b9072cd199faffcddfb94908a8d0fb3994a87bdd5b56",
+      "fetched": "2026-11-28T08:20:14Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Benambra-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "1705b1b85721c8280c61593661b6a82b4838731e59ec4b8a4e83b58a5e372478",
+      "fetched": "2026-11-28T08:20:16Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Benambra-District-results/Benambra-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "87bb6f03c442d48f2cd0ae86067ca62975b438f11b566a413de9bbd93de093f9",
+      "fetched": "2026-11-28T08:20:19Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Benambra-District-results/Benambra-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "a1215a3c8a49e09d726631dea96ebff5bccad100304f9c4f5ef2ea2ddc27ebab",
+      "fetched": "2026-11-28T08:20:22Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bendigo-East-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "703ae64d147e518d7de51190a20327f24fe4d6df87df1644a7975223efebb67d",
+      "fetched": "2026-11-28T08:20:24Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bendigo-East-District-results/Bendigo-East-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "b066bc3fa1cd751fedae2e58b18194cec0543e7200cda07c3b3a71a87b81a3ad",
+      "fetched": "2026-11-28T08:20:27Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bendigo-East-District-results/Bendigo-East-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "bb3fba5da9bcab3a59ad71cd38c4389d8cbc17ea4f920cda77f5d7e9ee4c5bd9",
+      "fetched": "2026-11-28T08:20:30Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bendigo-West-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "7a0e90647e710c3183cf24f27282c53c79b5fbf8ec374eb4345711091376c66c",
+      "fetched": "2026-11-28T08:20:33Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bendigo-West-District-results/Bendigo-West-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "5ad9b1a088b282fde74a1f8bcf4f00b7f928f42683d7d5d11503630ce7828ff3",
+      "fetched": "2026-11-28T08:20:35Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bendigo-West-District-results/Bendigo-West-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "d513f1044cb0ff21677dd72906c5faa91c96d39350f1b17a25766cf4f0b89220",
+      "fetched": "2026-11-28T08:20:38Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bentleigh-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "4ef8101a7bc6b6b562423b33929b3a0490e16a7f71befed08a026d203d67fbef",
+      "fetched": "2026-11-28T08:20:40Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bentleigh-District-results/Bentleigh-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "d66cb8f22e92171b9b425fbe8866aa692f77f8f46b8254759ed33a46435a5c85",
+      "fetched": "2026-11-28T08:20:44Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bentleigh-District-results/Bentleigh-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "e8db87e093fcbfb4df06fb11e04313335fd8cfd720e578f633c4335ebaae82e4",
+      "fetched": "2026-11-28T08:20:46Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Berwick-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "b035bd621340df6b4c0b6343b481c35844de3164f174c60008868e012e73e354",
+      "fetched": "2026-11-28T08:20:49Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Berwick-District-results/Berwick-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "fd041b67287399e2465b01f73b381850b8d04522e3a76c781042c7e8cb06b2c9",
+      "fetched": "2026-11-28T08:20:52Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Berwick-District-results/Berwick-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "a569f88b716f1722a7192f4de0972ffac45c2a9386fec138139c36295049b2d6",
+      "fetched": "2026-11-28T08:20:53Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Box-Hill-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "fdfa3479e6ffcde5b867a1abe708fef724cdcf8992ca247b0a6fb172b74574be",
+      "fetched": "2026-11-28T08:20:56Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Box-Hill-District-results/Box-Hill-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "f4be216b4c4a40a1bdcb6d4164d3ad6729a2194e0623d50c941e351b64725701",
+      "fetched": "2026-11-28T08:20:59Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Box-Hill-District-results/Box-Hill-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "7387136974e2e97d9e0095d744facb2f14812f22bac51ef8bb0e334cb3acd2b0",
+      "fetched": "2026-11-28T08:21:02Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Brighton-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "d330a891811d3a7420ed01fba15a6363ad9b2cd46377becc361a22817fe38783",
+      "fetched": "2026-11-28T08:21:05Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Brighton-District-results/Brighton-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "6eb94974288681b5d5d1767989b11f47e77f9031601418f1d099d7d737bf3522",
+      "fetched": "2026-11-28T08:21:07Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Brighton-District-results/Brighton-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "1c4885f2c86d16b89ce40226e1487af378167670e2f4f721df56ab746f36fc2f",
+      "fetched": "2026-11-28T08:21:10Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Broadmeadows-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "cb26152c3595812b440f58bdbed16a99e25ab5f246d1400a96f2959d329b7dbb",
+      "fetched": "2026-11-28T08:21:13Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Broadmeadows-District-results/Broadmeadows-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "b04e7a8e3fc74f0f8dac1804fddb1235a63996fa29f869ce8d8b55b00f2c980b",
+      "fetched": "2026-11-28T08:21:15Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Broadmeadows-District-results/Broadmeadows-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "27dc63605ab27bd56e222897bdd929a0b4249b342d77ad92a87ddf1ee4c8fb08",
+      "fetched": "2026-11-28T08:21:18Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Brunswick-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "2cb403fabc5659e2f7076a4581a501011b25cd8dcd85464ee5f776d16d1ace89",
+      "fetched": "2026-11-28T08:21:21Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Brunswick-District-results/Brunswick-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "9e07451712770ca14f7c5869051ea8e9f71f789ace4a47be727c5baa63d5d803",
+      "fetched": "2026-11-28T08:21:24Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Brunswick-District-results/Brunswick-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "dbc532afe2c69b668046df9962565206ada6f8f5d321cef6f78c458dd434ad8d",
+      "fetched": "2026-11-28T08:21:27Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bulleen-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "430aa6cc42788ef7c6889bd2d4dbb0acba6d851904e35bf10226de5759b30e94",
+      "fetched": "2026-11-28T08:21:29Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bulleen-District-results/Bulleen-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "b75b57bcf28f56d6c287a9d1b08f2343e64e79d2dc613be6dc976c5d2054490d",
+      "fetched": "2026-11-28T08:21:31Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bulleen-District-results/Bulleen-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "241b337337059eb2809a9358d2e65df6ee5bce90bd2bec8c64ac06d93c683c4f",
+      "fetched": "2026-11-28T08:21:34Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bundoora-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "b94de03ec194fad5a916721ca29c87df6d12f1df34d7a2a17f67ae8c8d7350aa",
+      "fetched": "2026-11-28T08:21:36Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bundoora-District-results/Bundoora-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "1b849b64668d14005d95319d7258e5658f314e307e63b4ed347acbd2ae4addcd",
+      "fetched": "2026-11-28T08:21:39Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bundoora-District-results/Bundoora-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "ee87ccbbbb91daf8d1356d1967922bc05baff7988f5b5623d2c61c8552608873",
+      "fetched": "2026-11-28T08:21:41Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Carrum-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "de2cc7a8f79ec8138bc32fad3dfe67ed33e3b0069f931c494e940353dc9ac163",
+      "fetched": "2026-11-28T08:21:44Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Carrum-District-results/Carrum-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "f523faf1b983238155192da1eaf367ae07745afb3d3b82cc55488d9913cf7fc7",
+      "fetched": "2026-11-28T08:21:47Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Carrum-District-results/Carrum-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "3064bc92e0ca8823ddfd6976d35ae73beb78a484a4c4ec328b01858e63514cde",
+      "fetched": "2026-11-28T08:21:50Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Caulfield-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "fa619b1c76ba97195656f551bab2a97fb74e60b0c6b98695ef95858e68c7d6f3",
+      "fetched": "2026-11-28T08:21:52Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Caulfield-District-results/Caulfield-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "6306e1cf0ceaabda341e5df12200ac172d1b9e6e5dcd81bed650dc1329cb068f",
+      "fetched": "2026-11-28T08:21:55Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Caulfield-District-results/Caulfield-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "038b5e1827b57c43a817fdaa9846de7fc6c1ec166eb9769f1c9b36e68c4af7d0",
+      "fetched": "2026-11-28T08:21:57Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Clarinda-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "34ebd34171fb1aa18d2591df8a0aea47d2ff061a7bdcf8024ea57be22ddff3bc",
+      "fetched": "2026-11-28T08:21:59Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Clarinda-District-results/Clarinda-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "e40fb5478a97d60a545f761e47edbdfcd0524f140d1b137a53709550388417ae",
+      "fetched": "2026-11-28T08:22:02Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Clarinda-District-results/Clarinda-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "3f3a046c650a8e1a572f2e0943f904f3d7af8f851fc019eb6557f5bb980dad29",
+      "fetched": "2026-11-28T08:22:05Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Cranbourne-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "b1cfdc8ce3265c733e3c3d1629b8f0e3994a05a7b3142f2f5edf8a5b4a509816",
+      "fetched": "2026-11-28T08:22:08Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Cranbourne-District-results/Cranbourne-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "1ca7555a169516b3f81495f752ea96f385859d3b3809032c3e42d65c1123dcdd",
+      "fetched": "2026-11-28T08:22:11Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Cranbourne-District-results/Cranbourne-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "d311904d654f2f564c03346efcbba94806dfd7100cadcb6f8bd1eddfc482019c",
+      "fetched": "2026-11-28T08:22:13Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Croydon-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "3f39ae6c75efbc4e6d92697d451ee1c86822dc7a32aaf5629c6104657b74dda2",
+      "fetched": "2026-11-28T08:22:15Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Croydon-District-results/Croydon-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "783449d7c14d92aaa442e288d167bcaa0b482c8826bdbc760401af0ad0b7fd57",
+      "fetched": "2026-11-28T08:22:18Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Croydon-District-results/Croydon-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "3cb742a02c8bbbd1c726fe4a5d98f735258834323f797652dd90a58accd94153",
+      "fetched": "2026-11-28T08:22:20Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Dandenong-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "6636d731586fe6c9b145287e709444d0ecdf4184858efa926202357e92cc35f5",
+      "fetched": "2026-11-28T08:22:23Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Dandenong-District-results/Dandenong-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "accb70fcb932ccfeecbeaaee71c5865e6d85006e1f6372a08d3aed9c9d105173",
+      "fetched": "2026-11-28T08:22:24Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Dandenong-District-results/Dandenong-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "cda7b3f9e87f14d76f178d2075df2c2e8a4915d840460d05851798cc1a8494cc",
+      "fetched": "2026-11-28T08:22:27Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Eildon-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "0ae2f70e20e6cf6a74e750326ff64044af4f6b40e98bd3638fa55b302b845294",
+      "fetched": "2026-11-28T08:22:30Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Eildon-District-results/Eildon-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "763fdceefcada68e5824d8a8597c13f7a06fac031b9f32d4f7fa31ebdd57c98a",
+      "fetched": "2026-11-28T08:22:31Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Eildon-District-results/Eildon-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "b6f571ac17b36082e48e486c7ce9607915c8506346cfa54286d8414e74e8f864",
+      "fetched": "2026-11-28T08:22:34Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Eltham-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "bf48e6d2c7368cd743ee3ac6c1cebacc65ea37c79215711774b0e950223e15aa",
+      "fetched": "2026-11-28T08:22:36Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Eltham-District-results/Eltham-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "966ea649e1668ed229bd192d5abc37c44a39163efbee52e9e238f5c3216f4e71",
+      "fetched": "2026-11-28T08:22:39Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Eltham-District-results/Eltham-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "3e6b748d4a2d4a797da0ed7398706bb311f4a98f7a6b159c3b4cd9ce13ca0071",
+      "fetched": "2026-11-28T08:22:42Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Essendon-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "9496e46c7014604d68cb479912693222958a9ff1e4af26f989c76d796518700e",
+      "fetched": "2026-11-28T08:22:45Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Essendon-District-results/Essendon-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "b26cc5afb8f7b207563e9ab0ed5ffcd24a19fa82f5ad0c1c4d27ddfa06cc8cf6",
+      "fetched": "2026-11-28T08:22:47Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Essendon-District-results/Essendon-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "348f4dc811cfb9f81c10b8f5122eebec5e76fe084f3b5e1e840d6289ac1d5be3",
+      "fetched": "2026-11-28T08:22:50Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Eureka-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "421833517d017e3efd04b480ac20bbeb4e8f5d94dc47894f40159d3b1620bb3f",
+      "fetched": "2026-11-28T08:22:53Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Eureka-District-results/Eureka-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "8808c7515e2571c16a9faab209e91d04d76cc70a46d2e413f0648022fafce92b",
+      "fetched": "2026-11-28T08:22:55Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Eureka-District-results/Eureka-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "94efb22d5232ab316ed071821a7a11e716018f192c92a13f65f87a0d412efaeb",
+      "fetched": "2026-11-28T08:22:57Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Euroa-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "bb06298d228f8b71d551e73d4333a0237a9e30fc056acbcc2a8574fc778507ef",
+      "fetched": "2026-11-28T08:22:59Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Euroa-District-results/Euroa-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "852a6227d623516daaab963db1d7ae5ba39d2c6b1aa465df04e69b9f3fad1542",
+      "fetched": "2026-11-28T08:23:01Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Euroa-District-results/Euroa-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "6e060aa3a196c9d3d0bc710634a897adb7f9e118b2278711050a9c795f7466ef",
+      "fetched": "2026-11-28T08:23:04Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Evelyn-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "099ef2271438cb1ab495750d177845807146f93f9a283fc88e63464538074c4b",
+      "fetched": "2026-11-28T08:23:07Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Evelyn-District-results/Evelyn-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "647b81c143e8d7a4cf61dc8b6b5d7ad37ea7ccc846261fafc25eee88307098de",
+      "fetched": "2026-11-28T08:23:10Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Evelyn-District-results/Evelyn-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "ce3dfdc0d7bbe52393102d8df012c5fec33fea42b0cb6d5f5989ec550aa22314",
+      "fetched": "2026-11-28T08:23:12Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Footscray-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "15b6be6c5905dc2f8e780ceadb739e0e383d99ed288d462b4fafb3356c719517",
+      "fetched": "2026-11-28T08:23:15Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Footscray-District-results/Footscray-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "97d0d55941fc60ee42b4afcd0eda4571a4092f35b449a9054477f63fb7080306",
+      "fetched": "2026-11-28T08:23:18Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Footscray-District-results/Footscray-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "2216111b9e6907931d545d052c7225db21889f82a518cc8217063a4be3c60b0a",
+      "fetched": "2026-11-28T08:23:20Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Frankston-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "915f5349431ffbfe974681378869ca8fa3d2ebb724deffd1894fd23035f38e19",
+      "fetched": "2026-11-28T08:23:23Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Frankston-District-results/Frankston-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "8de1fb57f99c3385f846707d4ce43ff5731b3cae026e704b212516746bea5016",
+      "fetched": "2026-11-28T08:23:26Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Frankston-District-results/Frankston-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "4191f1d40737f28023e47e2642f1bc10cc2bff28a6418a2656c5dcdb1c1848d4",
+      "fetched": "2026-11-28T08:23:28Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Geelong-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "99d118a053361fa182b60974c1b8a3c43c027e5f2559b93fe8ebe0dab47e97c9",
+      "fetched": "2026-11-28T08:23:31Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Geelong-District-results/Geelong-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "b8c40986a40070c36086f4a45e2156400031fece6fb415f623f435661202ad01",
+      "fetched": "2026-11-28T08:23:33Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Geelong-District-results/Geelong-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "3ad96cd7ce965be16c302498cce07205638bd3b2977af032296ff61decb94103",
+      "fetched": "2026-11-28T08:23:36Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Gippsland-East-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "06f7f2d57a8d47facd7eda08bd3733b45869039bc1711b619bb53bc168690703",
+      "fetched": "2026-11-28T08:23:39Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Gippsland-East-District-results/Gippsland-East-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "d5da3afafebbf33f8a2077d086575b3f75727baf2cdf8e5f689356d6f164c5a5",
+      "fetched": "2026-11-28T08:23:41Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Gippsland-East-District-results/Gippsland-East-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "09c9de35fea4da98a720038d3ec0f77b430af04a4339fbb590fcaf0c2c781fda",
+      "fetched": "2026-11-28T08:23:44Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Gippsland-South-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "e9c3f98698c748b59d00238a8a363f5f8486d3291df3cb537d86bc934b7f4882",
+      "fetched": "2026-11-28T08:23:47Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Gippsland-South-District-results/Gippsland-South-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "3306b4439b5fc1b01689540aa08f57f9f4ee1325661c41e13c7720b11288ee3f",
+      "fetched": "2026-11-28T08:23:50Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Gippsland-South-District-results/Gippsland-South-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "d590d8a75d8d6f0711019befc17c81a15a12264225d495b29b00170b04ef1f3a",
+      "fetched": "2026-11-28T08:23:52Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Glen-Waverley-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "5647fed84c633afba9c2118b8867e3853007ba5c9040688e38fee7b405819de2",
+      "fetched": "2026-11-28T08:23:55Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Glen-Waverley-District-results/Glen-Waverley-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "3f4dd44f345c2fa05147b3042b59395c9864a2dd5496707d801bed0de7ca1fb7",
+      "fetched": "2026-11-28T08:23:58Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Glen-Waverley-District-results/Glen-Waverley-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "7fa310170a8b0f9d96f0babc477589422b2e2125353621a5efea44b405893494",
+      "fetched": "2026-11-28T08:24:01Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Greenvale-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "68e7f437c21418492e8442d69329d7f4c775ae34d118d641a261a3826e38c40e",
+      "fetched": "2026-11-28T08:24:03Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Greenvale-District-results/Greenvale-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "f8ed0801326372e24fa4ea97b8459aa82f91592442a8461631379a32f58b3926",
+      "fetched": "2026-11-28T08:24:06Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Greenvale-District-results/Greenvale-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "7dadef49e0e1d1602f713ff989c86d9fae24f9822b69d15b5efd17d246354824",
+      "fetched": "2026-11-28T08:24:09Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Hastings-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "e1ba023b72d337e4a40f0d28a1a612be678a4e1a6f53cc249db0d3d4bd2f5e01",
+      "fetched": "2026-11-28T08:24:11Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Hastings-District-results/Hastings-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "b11ecc2eef25a1eb046678bda358a8d41087cecf19cc615cdc1b216030d17bff",
+      "fetched": "2026-11-28T08:24:14Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Hastings-District-results/Hastings-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "c5612c6539118e999c1647eaa8a60d4ef4e74fd4cfa5edd522a589d948a59dc8",
+      "fetched": "2026-11-28T08:24:17Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Hawthorn-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "b84df3c20495497c7eb801a12aa70e809df1aa1fcf2985334049b98d89c9bdc9",
+      "fetched": "2026-11-28T08:24:19Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Hawthorn-District-results/Hawthorn-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "cd54613fd58f0f0c4903d68762cd794642416d51b8e5452bb34bf9eb65691c09",
+      "fetched": "2026-11-28T08:24:22Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Hawthorn-District-results/Hawthorn-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "8d2269890767cceb192a3a028dc99482830e4a984d27133b82e16a3a6b48533c",
+      "fetched": "2026-11-28T08:24:25Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Ivanhoe-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "1f45ee9f294d960aef5e54c8c0eb27887009df0ed1a1e684747e14aa8f999f94",
+      "fetched": "2026-11-28T08:24:27Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Ivanhoe-District-results/Ivanhoe-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "73e9cb5c457e015ba161c752a44cfd12e53917439105faa9a963b2464b973dd9",
+      "fetched": "2026-11-28T08:24:30Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Ivanhoe-District-results/Ivanhoe-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "883967d8716210f7195feb77743ee7ad20eb26b919cbadfd213e33e57ca8885e",
+      "fetched": "2026-11-28T08:24:32Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Kalkallo-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "16454f33373d671de90f8dc588ef6a25c74639f73607743eeea4eeaa636b0422",
+      "fetched": "2026-11-28T08:24:35Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Kalkallo-District-results/Kalkallo-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "5b30e5594e30725e9f26763b9ea92b4257aae7acfbd3fa3421628d31cb10eeb9",
+      "fetched": "2026-11-28T08:24:37Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Kalkallo-District-results/Kalkallo-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "ea4b01107fe2e9583cd4e185b718a5d5d4f0a4b4668c96ea6762f6cf5843c3dd",
+      "fetched": "2026-11-28T08:24:40Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Kew-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "778a81da96413370a1ceac0de7a1d66a611546b3f6792e5c970c1070de2adb52",
+      "fetched": "2026-11-28T08:24:43Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Kew-District-results/Kew-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "f1fb95b9fbb8374d00015fa00bbcbfea2ea9bdd6088869ce166cef7db6384d52",
+      "fetched": "2026-11-28T08:24:46Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Kew-District-results/Kew-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "8111e09705cc4f04a23af8e7c58c4f8d3af466a2dd428edc7e8e2725add5e019",
+      "fetched": "2026-11-28T08:24:48Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Kororoit-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "b9f91c7016ee3f88b2bd8aabe26556537468910ac071db654e8e53b3eb4af17f",
+      "fetched": "2026-11-28T08:24:51Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Kororoit-District-results/Kororoit-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "7f85845a07cbeb8a12525d10187795eaf60ae39cd802d620fa8167edf9db890c",
+      "fetched": "2026-11-28T08:24:53Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Kororoit-District-results/Kororoit-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "9ca89cce5b0ec94ad1c325687310df15707eede750017e2c5ebe361b1acb8fba",
+      "fetched": "2026-11-28T08:24:56Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Lara-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "593e09e9328a65dd691e61fcf4828cef0a51f9939ac5d5ee7e9f2e7bb9d474f7",
+      "fetched": "2026-11-28T08:24:59Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Lara-District-results/Lara-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "d24265cf1628950cb9410293b540bf2a5bf197bc8c810cc25411026eb1b95414",
+      "fetched": "2026-11-28T08:25:01Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Lara-District-results/Lara-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "91cac3d13222392ac3bbbbda4a033820e5ed257b3a471aa39bf00a6eead7f593",
+      "fetched": "2026-11-28T08:25:03Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Laverton-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "f0da21b4b5a01ca794b8f72aeab6ac9c61f55e6f10605e26035d540a1efdd498",
+      "fetched": "2026-11-28T08:25:05Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Laverton-District-results/Laverton-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "42b3a98787e54f8cd5e33d29e9f56da20061acee17d2118af86e88e0e14c834a",
+      "fetched": "2026-11-28T08:25:08Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Laverton-District-results/Laverton-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "65841882802a7be87c6be01d25d9c2c0b189855502ff06dfad2eacee0bf95891",
+      "fetched": "2026-11-28T08:25:11Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Lowan-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "53a1216fb1df44f96a29e9a3e05c80d3eaf077c94289e82e0fba219f26553085",
+      "fetched": "2026-11-28T08:25:13Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Lowan-District-results/Lowan-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "729e336254bd9e3999f64225c4527c5ebd4f4d35b529af0dff0f5f3fff4195c3",
+      "fetched": "2026-11-28T08:25:16Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Lowan-District-results/Lowan-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "9a4a9529685c8f0f0501261c56f904c396c21390aafa3c87eca6bc220ddbae13",
+      "fetched": "2026-11-28T08:25:18Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Macedon-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "e25988c9572bd17a55b14ae8662287f6c3022e2d2199c1065963ccaee9180708",
+      "fetched": "2026-11-28T08:25:21Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Macedon-District-results/Macedon-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "2b1c3215f01e6785b6612ee1bba615d4d69f6799b8c01e4d76e1fb657005f3af",
+      "fetched": "2026-11-28T08:25:23Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Macedon-District-results/Macedon-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "e66e36f657c576cb6bdf2299643cbcc446fcc6b6432424f35d5a67ccd21f4664",
+      "fetched": "2026-11-28T08:25:26Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Malvern-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "9f65aebc5aa5358088c70a448d859039478df36514bff0e5762450d629a42177",
+      "fetched": "2026-11-28T08:25:28Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Malvern-District-results/Malvern-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "e879b28dac2f9823247b1308a6aed5f10f1904e4eafa8546847f6f97949518a0",
+      "fetched": "2026-11-28T08:25:32Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Malvern-District-results/Malvern-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "306eca30070353e9e7e98c5765bc0d3f8216db7cf67d79076bb206a01beb1bc7",
+      "fetched": "2026-11-28T08:25:34Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Melbourne-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "a0a18207fa8531820a49ab8092d511c39489069261cce3b31929b67f1f8f8b10",
+      "fetched": "2026-11-28T08:25:37Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Melbourne-District-results/Melbourne-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "0fcba781953784f97e87b75b02f5eda1b2434a457e900aaf1e3d55ea5ea6ff3e",
+      "fetched": "2026-11-28T08:25:40Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Melbourne-District-results/Melbourne-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "08fc768746ac08cf8a866f81f459f3bc71afeae510cf4cfd88223a2032f0af45",
+      "fetched": "2026-11-28T08:25:43Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Melton-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "12f0302fdac95754fd1c9881b9edfee20c97a3fb2bebbd7f20df477662b7829c",
+      "fetched": "2026-11-28T08:25:45Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Melton-District-results/Melton-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "c05e1a7de0f7e401061b81b1987fcb912cb1a428f14ce6e182a062f6379ccad2",
+      "fetched": "2026-11-28T08:25:48Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Melton-District-results/Melton-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "fe2a620afb9d022379448c6798e4e6966dfcdb0d48cbd90ff806b3e56da5201f",
+      "fetched": "2026-11-28T08:25:51Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Mildura-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "7df02513af80b3a38fa93d5923c6199cd0886a7e73220b734d65f7f0952727eb",
+      "fetched": "2026-11-28T08:25:54Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Mildura-District-results/Mildura-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "eeae1541cfa672030ec686167176e24a90c130246f31795f25b3d81a1b93d9fc",
+      "fetched": "2026-11-28T08:25:57Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Mildura-District-results/Mildura-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "5c1b4de55ec3b85a0952c4ea5949ab5716f50c5b2c4357dad894a82723758b98",
+      "fetched": "2026-11-28T08:26:00Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Mill-Park-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "86e267fec8c4b077208cb36e31a2aeb463d60c258b652980bbb8cd4a8c8768b9",
+      "fetched": "2026-11-28T08:26:02Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Mill-Park-District-results/Mill-Park-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "bbdd77481b8a8356384358979105a22a903ce29f02219f94f84e246cffd2f35a",
+      "fetched": "2026-11-28T08:26:05Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Mill-Park-District-results/Mill-Park-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "f06ea26cb88fff1e2c5c62a1c78560abf90ef9398fa230866c6950905498ef04",
+      "fetched": "2026-11-28T08:26:07Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Monbulk-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "b478f4cef89dba175cb3e784af98762553cc05a9263eb18d137de18dd066e435",
+      "fetched": "2026-11-28T08:26:10Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Monbulk-District-results/Monbulk-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "0c1781de68c88298675828815888928b724a41e61c5836910c1d59824ac138ba",
+      "fetched": "2026-11-28T08:26:12Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Monbulk-District-results/Monbulk-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "fd521b147e79fa87179ad711dfa56245a1752823a6e58de7c24ff985f4287d6b",
+      "fetched": "2026-11-28T08:26:16Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Mordialloc-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "5e9cc467803bd1087e143b7f37476c18d8e209c392306871c826a77ce28f7c59",
+      "fetched": "2026-11-28T08:26:17Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Mordialloc-District-results/Mordialloc-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "206abce6284fdc80423825c6d30283a810f0490810381a0ecc294fb19feabff0",
+      "fetched": "2026-11-28T08:26:20Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Mordialloc-District-results/Mordialloc-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "eb208ff04255a2e8c6bd214165e35c348daeed0f8b8113558992cb089dae7eb7",
+      "fetched": "2026-11-28T08:26:22Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Mornington-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "394c3e1dd88cfe32fb03a2d7c38eb51e217b13d2d19f3f20b111781ab0270f01",
+      "fetched": "2026-11-28T08:26:24Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Mornington-District-results/Mornington-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "6060f7f4fb045d99fde3ab7dacddd6326080206b623b988e78070823ea30a79a",
+      "fetched": "2026-11-28T08:26:29Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Mornington-District-results/Mornington-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "ccc5443c99f21cdf28e651f3b913ad3cc51da075d492156ac1392a2ede7c3777",
+      "fetched": "2026-11-28T08:26:31Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Morwell-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "9ebb70a419b4a43a7d000c5bf6f087cef66afaa5540abec230a36cb394e9caee",
+      "fetched": "2026-11-28T08:26:34Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Morwell-District-results/Morwell-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "7be3bdd6849604f0bfdf8453337e96a66fecc48914227ad1323390f1edef8ee9",
+      "fetched": "2026-11-28T08:26:37Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Morwell-District-results/Morwell-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "af970461606981c9d8be81ff338dcad3ae7f02cfbd674580dc0b5c034db1badc",
+      "fetched": "2026-11-28T08:26:40Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Mulgrave-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "4367d6c7319d4c605faf13a4471f28deac786d6874339797e831a7c3ec42897f",
+      "fetched": "2026-11-28T08:26:41Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Mulgrave-District-results/Mulgrave-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "6626d97fd05bf45f48d378122c312a861e2c50fc2065bad28e7919d081aaee68",
+      "fetched": "2026-11-28T08:26:43Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Mulgrave-District-results/Mulgrave-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "a857e6f1bb0590ea14fd551d944062f300cc28470bc71908ae9bcd0d2a8359d0",
+      "fetched": "2026-11-28T08:26:45Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Murray-Plains-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "8483ca85d3f1b5f8742da5e67be1e6c1e45e91e49a5ddd54ff4aa0778ad6b9c0",
+      "fetched": "2026-11-28T08:26:48Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Murray-Plains-District-results/Murray-Plains-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "7946879262c39780b38bcb3d8bebb4a471b281e127c0525399c1fa86db7fba48",
+      "fetched": "2026-11-28T08:26:50Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Murray-Plains-District-results/Murray-Plains-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "1ddc4e207e642807ae98ca86c6feae6480cdd456f9e8c7cfd94fa74107cde8f1",
+      "fetched": "2026-11-28T08:26:53Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Narracan-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "038981ae70b7f34e5bd86442d1d2aa33f64dff42866169edbc309dfffa400342",
+      "fetched": "2026-11-28T08:26:56Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Narracan-District-results/Narracan-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "65d4e71c77030e4119871da421003073633439f4c4f5dce1624935aeccc71fbc",
+      "fetched": "2026-11-28T08:26:58Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Narracan-District-results/Narracan-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "633d4d339c0fac1b461bf02c1a224859d0d0b67156309b6ad3ddf2fe58735b54",
+      "fetched": "2026-11-28T08:27:00Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Narre-Warren-North-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "a0b536f7c67383207a757f408553af5eebf6ec1f8639d331aeb680dd55b078c6",
+      "fetched": "2026-11-28T08:27:03Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Narre-Warren-North-District-results/Narre-Warren-North-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "92c151565cf0d9a062aaa06d8b2cfd717d683a032f1916f6d6732f2b177518ba",
+      "fetched": "2026-11-28T08:27:06Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Narre-Warren-North-District-results/Narre-Warren-North-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "124b372d3bb3f0617db4cbbaad51f6fc128fb9a90230a42576cba9524cc272d8",
+      "fetched": "2026-11-28T08:27:09Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Narre-Warren-South-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "925c56c3e0e8a5709e622d6dd022bdd98322a49c83759eda0833c31b66693f50",
+      "fetched": "2026-11-28T08:27:10Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Narre-Warren-South-District-results/Narre-Warren-South-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "14dad2f9d58332c5064f79b178d357a5d8813024e3a0069ad65acf64f9b9602a",
+      "fetched": "2026-11-28T08:27:13Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Narre-Warren-South-District-results/Narre-Warren-South-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "7488c4ce253fd9286a9c7c96df15ff74953cc9d5651fbf7a673e1646fa8202a8",
+      "fetched": "2026-11-28T08:27:16Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Nepean-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "bae27ec86bb9e7c3f20e00ac830a9e5b421f7db4245b9f29fb63e50a4fbf4a25",
+      "fetched": "2026-11-28T08:27:17Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Nepean-District-results/Nepean-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "15361b0029e219a1b2e748354c030580ca756c47a871aa8a569bb9a53e406ffd",
+      "fetched": "2026-11-28T08:27:20Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Nepean-District-results/Nepean-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "2fce02cce8d00730efba40065c283fdd6137143e71babcb1972bd046d5399975",
+      "fetched": "2026-11-28T08:27:23Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Niddrie-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "0cdad7ab710c184579034f124ed9f03ff275c4adf8caea99d7afb9fb14d0be65",
+      "fetched": "2026-11-28T08:27:25Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Niddrie-District-results/Niddrie-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "ab0d4af6b99fc50da2b6ed0cfab3b14d3209284f5c7da82072eb834c0c2681f7",
+      "fetched": "2026-11-28T08:27:28Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Niddrie-District-results/Niddrie-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "3d58d939f435b7cbbc971f088895ee34269c7fc4c3ecf125a2e3664d14176cad",
+      "fetched": "2026-11-28T08:27:31Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Northcote-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "156166dc62648194a50a2b9e8499f6f28819e2157bb0fb947fde773921a6ba12",
+      "fetched": "2026-11-28T08:27:33Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Northcote-District-results/Northcote-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "370b16f86cf98c73dd0d4f1b624db20824b63d0d7c2ef2eb8d14c337aac2fa27",
+      "fetched": "2026-11-28T08:27:36Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Northcote-District-results/Northcote-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "6c6afc17c427c195b365a92a366a64a9331a43b2829d8900ea76cb47e7785906",
+      "fetched": "2026-11-28T08:27:39Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Oakleigh-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "b955df4d4f0bc1762c7ee9248e583e7b1054abb33e446dcfb82cd6ae1e8c0476",
+      "fetched": "2026-11-28T08:27:41Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Oakleigh-District-results/Oakleigh-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "5e3ecd0797280e6b7a98a6a7432184bbec1565f66943f0be4f06770f61417e9a",
+      "fetched": "2026-11-28T08:27:44Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Oakleigh-District-results/Oakleigh-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "dd700b710052b9dd4b81ed1c01a4416ce44289f8d22e083d9965bc097a8260bd",
+      "fetched": "2026-11-28T08:27:47Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Ovens-Valley-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "8948dd7a6a5411acffc8b54479cb4f403f9599af16d45efe765baf0cfa746116",
+      "fetched": "2026-11-28T08:27:49Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Ovens-Valley-District-results/Ovens-Valley-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "9cc3eea2052d7dd1e4d10fabc3f523f7b8bb01f36631162f8f4ac452216db22c",
+      "fetched": "2026-11-28T08:27:52Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Ovens-Valley-District-results/Ovens-Valley-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "67d6b4332818125878cd17f2633cf01501594602ef9daf5793cbf084ac08a04e",
+      "fetched": "2026-11-28T08:27:55Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Pakenham-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "9409090e82dd01ee3fa3f716761c8939b4fa944a40708b604e4eafdd79a3cdf8",
+      "fetched": "2026-11-28T08:27:57Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Pakenham-District-results/Pakenham-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "a9b78fadf7ce69f74eb30a7928013301de34477734cca3e92342fa7f907d635f",
+      "fetched": "2026-11-28T08:28:00Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Pakenham-District-results/Pakenham-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "370d8541eab9d3a088a552025a6d36d92f437cc355575a8617ee440e1305c970",
+      "fetched": "2026-11-28T08:28:03Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Pascoe-Vale-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "1e804c7d96b2147d5b0b618027c9a683274a5f48a688b253f1544aac719fd901",
+      "fetched": "2026-11-28T08:28:06Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Pascoe-Vale-District-results/Pascoe-Vale-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "0d03af0e9cf591c52c0dce5f1bbe8fbd34e9b11e69a76bdfd395006ce7970433",
+      "fetched": "2026-11-28T08:28:08Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Pascoe-Vale-District-results/Pascoe-Vale-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "af2cbae0274f47170c7b126fca05ef8f00390123d78d925aabcb5d0b7c5f400e",
+      "fetched": "2026-11-28T08:28:11Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Point-Cook-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "6a125c56f4482b92550fa4bb062cc03439ed50c762d9f8aaee6b394132dbd56b",
+      "fetched": "2026-11-28T08:28:14Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Point-Cook-District-results/Point-Cook-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "9d3684b4a5475a9895abd0ee25c7ffd696b1db830426a973a99489bf21a05583",
+      "fetched": "2026-11-28T08:28:16Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Point-Cook-District-results/Point-Cook-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "f27b3395d6abf848a75d7547c54d78b36d83c2ebd661df888e86084e3186d756",
+      "fetched": "2026-11-28T08:28:18Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Polwarth-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "111887a2724119895ea3e9dd75a3460cfc3950afdc477a73267ec2b816fb1c59",
+      "fetched": "2026-11-28T08:28:21Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Polwarth-District-results/Polwarth-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "a902a107001b12481b40c8fa8d39e355afc0fb0ae01d1a1c84ee6e92bc6d629c",
+      "fetched": "2026-11-28T08:28:23Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Polwarth-District-results/Polwarth-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "7a948ddb1ff67dbbef12230eea67d90246ab56b6bea31628a8766d781c6f89ce",
+      "fetched": "2026-11-28T08:28:27Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Prahran-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "34945579a894a69767934c652acd9b90d871ae4c9f1522ef5c5174429b3f14cc",
+      "fetched": "2026-11-28T08:28:29Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Prahran-District-results/Prahran-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "60a23f479e7519a68fd2f7fdb01b668de1e06b1ba6d332d8ed9d68569b1882f8",
+      "fetched": "2026-11-28T08:28:32Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Prahran-District-results/Prahran-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "9bf46b952336decc8ed49c5035bba9b702e2dd050e4477488890759bd988ba2c",
+      "fetched": "2026-11-28T08:28:35Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Preston-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "1160ed05cd9dfb2f6483e122c39e4a065d84794b847b0466c136b29207506bf2",
+      "fetched": "2026-11-28T08:28:36Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Preston-District-results/Preston-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "23f4abe3a3bfbed90fdcac7bb6c8133360de99ab80f1b61ef54f2e9c4f0c7db2",
+      "fetched": "2026-11-28T08:28:39Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Preston-District-results/Preston-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "7eed1f55b430e26564c5d8b1437730597d59250492cc7df39ce0248344c1da01",
+      "fetched": "2026-11-28T08:28:42Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Richmond-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "2f01527322d77633312e2c6bd5a7d157e1fadb8e7c4664f58fc5720fb1638e69",
+      "fetched": "2026-11-28T08:28:44Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Richmond-District-results/Richmond-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "ca4129423793bcb301199570817b453bea5b330e5831e62d968d04bafa9c67f5",
+      "fetched": "2026-11-28T08:28:47Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Richmond-District-results/Richmond-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "cfa9d163a54636d77f70331fd9155a691a4b59669505d7ff6d62366cb3ae3748",
+      "fetched": "2026-11-28T08:28:50Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Ringwood-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "1366be644c5cd5b835e3e86327175da1f50664ee1a69ad533b06c6d58b3b457f",
+      "fetched": "2026-11-28T08:28:51Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Ringwood-District-results/Ringwood-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "04b1213b0de3e5e5f5a709aa20c26e48c91c27577548d5138dd74c30c3b1805e",
+      "fetched": "2026-11-28T08:28:54Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Ringwood-District-results/Ringwood-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "5e8429103110cbb92514266595a7302c77251822389224d948af1db2a5c42559",
+      "fetched": "2026-11-28T08:28:57Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Ripon-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "0222fc1867e325bd90190228ed8f4795c5a71829a65d0277dbe5b01e4b14bebc",
+      "fetched": "2026-11-28T08:29:00Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Ripon-District-results/Ripon-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "563ec934f3a7fb170057d6c1d53d64ae68cbf8d58e88ba42597fbd245c4a8e22",
+      "fetched": "2026-11-28T08:29:01Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Ripon-District-results/Ripon-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "a81870ec67724012f70e78b5c6b8069816235764cbf87bc84f2905a409a71ef3",
+      "fetched": "2026-11-28T08:29:03Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Rowville-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "fff4715d5761a8988861d16c66d2dc60560d5f8aa7a76374439da0dcdbee182e",
+      "fetched": "2026-11-28T08:29:06Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Rowville-District-results/Rowville-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "89bcecf3839dbb38773e3ea871a95e0d5ac71d5855a66c708201091473f8d869",
+      "fetched": "2026-11-28T08:29:07Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Rowville-District-results/Rowville-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "b6c71a2dd6dbb492e63fd7659826cebc127822ed2249b466932ebceaaad9a8d2",
+      "fetched": "2026-11-28T08:29:10Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Sandringham-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "459f7a6b38dcf8c1513a7d22b79759db97a8dae08256e6b52f610b503dab436b",
+      "fetched": "2026-11-28T08:29:13Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Sandringham-District-results/Sandringham-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "06f387675b5999c224d4f66f821f62fbb97f7ddc604466efe39fdbccc9d0d46b",
+      "fetched": "2026-11-28T08:29:15Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Sandringham-District-results/Sandringham-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "3456ee41af50a2db46a37bf8f98e6dfcbc52cd8c95d498191803ddcaf3a58990",
+      "fetched": "2026-11-28T08:29:18Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Shepparton-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "9fd91e78dd687de2093f98259aa10f544a2a2848f72620977664ec6e4345c44d",
+      "fetched": "2026-11-28T08:29:21Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Shepparton-District-results/Shepparton-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "cc24dcc887e48e849eb556a6a6684ac865b1287c52e03dba61b63268d6c53eeb",
+      "fetched": "2026-11-28T08:29:24Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Shepparton-District-results/Shepparton-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "ad327feaf5e3756f60d20c8f1a420b0a07c837cd42b7d6c39e92386b9df24fb0",
+      "fetched": "2026-11-28T08:29:27Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/South-Barwon-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "7bab6c323e43471874d0db964f852b8dd1a65b29b39d9f9030155f09d7547853",
+      "fetched": "2026-11-28T08:29:30Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/South-Barwon-District-results/South-Barwon-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "223b3d362265101fa5001cd189765ab0130d22172bcdce7da5f4b0d2421c1158",
+      "fetched": "2026-11-28T08:29:33Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/South-Barwon-District-results/South-Barwon-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "7d79b87ba295e784aeab6d56c83b9816a325283a02ba86ee60b9ad996bcc4c54",
+      "fetched": "2026-11-28T08:29:36Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/South-West-Coast-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "a621e840da500ef89058c6a428ecf9e943f5460b0e7f8885833f29d7a7661ac1",
+      "fetched": "2026-11-28T08:29:38Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/South-West-Coast-District-results/South-West-Coast-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "af21019c69d97709a27008458acdbc43c41bc9803b0e6b3eb905e6ad7864cc86",
+      "fetched": "2026-11-28T08:29:41Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/South-West-Coast-District-results/South-West-Coast-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "2b53f8e49dc185aa698b893d4bf357c06f7886f111a2970abc204bd018b6ab90",
+      "fetched": "2026-11-28T08:29:44Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/St-Albans-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "42835960ffed38d252073f880aa3ff4a687adf2f24f0496c029976faf530c961",
+      "fetched": "2026-11-28T08:29:47Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/St-Albans-District-results/St-Albans-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "e7627190bc49d5446b1e0ec0bce9ed8d6ca754730088da389883794a3d754170",
+      "fetched": "2026-11-28T08:29:49Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/St-Albans-District-results/St-Albans-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "595fda860685df0042e2461bce3146ea98beb7582bfdd7e4961684b72ca4044f",
+      "fetched": "2026-11-28T08:29:52Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Sunbury-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "f2eaf92d3049e97f7b58669e47f3e9c836dcb5fad0ed5ea332fa64a0147efe4c",
+      "fetched": "2026-11-28T08:29:54Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Sunbury-District-results/Sunbury-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "0a66a306f1466e62ea145d8b32b7b49a9fcd525b4909070ce5595aa1f867c68b",
+      "fetched": "2026-11-28T08:29:56Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Sunbury-District-results/Sunbury-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "79622dfe0bbd10aa30b0cb369d546f9e32383248d0887e022e8666ab49f7eba2",
+      "fetched": "2026-11-28T08:29:58Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Sydenham-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "90a6975ee55f6e4ebb159ac4ef097a61564ed70ee28047ab28f1c0e1b882c28a",
+      "fetched": "2026-11-28T08:30:01Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Sydenham-District-results/Sydenham-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "a6f8e8026a7509c17147278fb0ce37de18c18cddc85985df5bc1c0e42305d14a",
+      "fetched": "2026-11-28T08:30:04Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Sydenham-District-results/Sydenham-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "8f36541f8a3ae1555f37ccf1db2c9b16b7f37b7ea2fc2b95d41417a70dcee79a",
+      "fetched": "2026-11-28T08:30:07Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Tarneit-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "49cf06c8cc9e8ad900a52cfab398fa2e4af1faf93a108a6851ba669534228327",
+      "fetched": "2026-11-28T08:30:09Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Tarneit-District-results/Tarneit-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "917df1a176dc268561b9238d2a94368015937013c23d4d08cf436df1d7b87711",
+      "fetched": "2026-11-28T08:30:12Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Tarneit-District-results/Tarneit-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "93ab64b3b3f85398b620fa61432b32d5edff91be2aa702beb37cb43869f4074c",
+      "fetched": "2026-11-28T08:30:15Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Thomastown-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "461ee22be4faecae121b4ab6ea68ebe6c0c5240adaaf027b5bcf7f0ba98d1d67",
+      "fetched": "2026-11-28T08:30:17Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Thomastown-District-results/Thomastown-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "7c22782bf7937c33b275b577b27ff73193c08ee637f8f0bf4d0413282155feb8",
+      "fetched": "2026-11-28T08:30:19Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Thomastown-District-results/Thomastown-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "02ec60f4b428610288909745adf57e9a23a52929a708d0ad37fb37d81400a5a6",
+      "fetched": "2026-11-28T08:30:22Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Warrandyte-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "430fd30faebb0b9179d1efcbc77abc717bd0b96f47078ccc155e3f74cf7ca719",
+      "fetched": "2026-11-28T08:30:25Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Warrandyte-District-results/Warrandyte-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "d854e1da6a70abe31b6bce83fdcd5067fd619cfe6b76a94aad9010535aee22dc",
+      "fetched": "2026-11-28T08:30:28Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Warrandyte-District-results/Warrandyte-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "5403d4e9b6d9fb5530b6584f087c62271ca1aa3440fc58ac6950ac11dbfbccb6",
+      "fetched": "2026-11-28T08:30:31Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Wendouree-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "c2e18d6a2037621e6d17d8ae9d5dd7168e51f3315af37c8b1e2d29351bf09c70",
+      "fetched": "2026-11-28T08:30:32Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Wendouree-District-results/Wendouree-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "ab19a47e1f4dc862793e098a83935ef433bbe995dfa1cc17c5091e444d089f34",
+      "fetched": "2026-11-28T08:30:35Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Wendouree-District-results/Wendouree-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "5b8445e94d8f7922140bc1fdca5112726098c7f2adec480bddbc7fc14fef3850",
+      "fetched": "2026-11-28T08:30:37Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Werribee-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "c97ca5161d7345bd718f90edba74c77209bcbf45b22d2b8d7b81c923cf638784",
+      "fetched": "2026-11-28T08:30:40Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Werribee-District-results/Werribee-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "c4563a84caa1b303f8f9ffb15bd2f80422b3bb7d3ff139a89115818b7115941d",
+      "fetched": "2026-11-28T08:30:43Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Werribee-District-results/Werribee-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "a45bb78edfdc7c2dd570ca02577ff9a48a7af2fbd1e29a8832925e22a8ea62c7",
+      "fetched": "2026-11-28T08:30:45Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Williamstown-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "1527e2675c9bde766746d031290c27a227ee5dcae9b6a23ada4e8be12afe5496",
+      "fetched": "2026-11-28T08:30:48Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Williamstown-District-results/Williamstown-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "353419bee519ef415211f0905706ebc968b9534b4522c9fa03f17babf92c62d1",
+      "fetched": "2026-11-28T08:30:51Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Williamstown-District-results/Williamstown-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "59911c4ad3c7d0d6c11f708ba5fde1d2f0322fedb611d778e5c84790f8716676",
+      "fetched": "2026-11-28T08:30:53Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Yan-Yean-District-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "1a3b681219200480119da2ef02cedbc82783c8a6f054512e12a701aeb4e1da87",
+      "fetched": "2026-11-28T08:30:56Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Yan-Yean-District-results/Yan-Yean-District-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "9841e75a53daa28be5ee1e1c438684d49292e339c98143d54a1bdfd8e8c99efe",
+      "fetched": "2026-11-28T08:30:59Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Yan-Yean-District-results/Yan-Yean-2CP-results-by-voting-centre": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "b9467ea4b1e6142d2b8f200296ac42fc0ad400ca76938b0e0bef3322a156d43d",
+      "fetched": "2026-11-28T08:31:02Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/region-election-page/region-summary-page/Eastern-Victoria-Region-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "6b2b6ae1bfc864912187071b889dfd22ef2f7d6c56f0025184950aa6bd391e87",
+      "fetched": "2026-11-28T08:31:04Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/region-election-page/region-summary-page/North-Eastern-Metropolitan-Region-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "dd9ac353b0531ff0a6318e1f7222cde71470448484c451f285f23b77948f5954",
+      "fetched": "2026-11-28T08:31:07Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/region-election-page/region-summary-page/Northern-Metropolitan-Region-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "5e3616119a9ae3225a0a7bdcdaa54bd46995e86c85b6a79e42387f2819beb7f6",
+      "fetched": "2026-11-28T08:31:10Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/region-election-page/region-summary-page/Northern-Victoria-Region-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "166c7b36fedf96d4ad9879c05d850fd666703bab4832a5bbe13aaff95de748d4",
+      "fetched": "2026-11-28T08:31:11Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/region-election-page/region-summary-page/South-Eastern-Metropolitan-Region-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "eb81d0cd0000d9ed8c854f8d9ae4fd92560e4eea816bd818f224204c0e3b5a88",
+      "fetched": "2026-11-28T08:31:14Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/region-election-page/region-summary-page/Southern-Metropolitan-Region-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "e0df72bb70377116fe9f858df624258aa76d124db5e9e23037572eef5f0ce9e4",
+      "fetched": "2026-11-28T08:31:16Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/region-election-page/region-summary-page/Western-Metropolitan-Region-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "ba303fbfb86ceb754f8ca3c9c69b7e3551f6ecf1f6329ec4e6719a76937f81da",
+      "fetched": "2026-11-28T08:31:19Z"
+    },
+    "https://www.vec.vic.gov.au/results/2026-results/region-election-page/region-summary-page/Western-Victoria-Region-results": {
+      "etag": null,
+      "last_modified": null,
+      "sha": "29c976c08b19966916f75221962086064f6a72dd826236695bfde1864a2ba5a6",
+      "fetched": "2026-11-28T08:31:22Z"
+    }
+  }
 }

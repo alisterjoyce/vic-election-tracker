@@ -8,9 +8,1714 @@
   },
   "source": {
     "name": "Victorian Electoral Commission",
-    "url": null
+    "url": "https://www.vec.vic.gov.au/results/2026-results"
   },
   "profile": "2026",
-  "updated": "2026-11-05T02:25:46Z",
-  "regions": {}
+  "updated": "2026-11-28T08:31:22Z",
+  "regions": {
+    "eastern-victoria": {
+      "name": "Eastern Victoria",
+      "url": "https://www.vec.vic.gov.au/results/2026-results/region-election-page/region-summary-page/Eastern-Victoria-Region-results",
+      "vec_updated": "Saturday, 28 November 2026",
+      "fetched": "2026-11-28T08:31:04Z",
+      "enrolment": 583167,
+      "formal": 143,
+      "informal": 3,
+      "total": 146,
+      "counted_pct": 0.0,
+      "positions": 5,
+      "quota": 3,
+      "quota_source": "vec",
+      "elected": [],
+      "groups": [
+        {
+          "group": "One Nation Victoria",
+          "name": "One Nation Victoria",
+          "party": "ONP",
+          "votes": 58,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "B",
+              "votes": 58
+            }
+          ],
+          "pct": 40.56,
+          "quotas": 19.333
+        },
+        {
+          "group": "Australian Labor Party",
+          "name": "Australian Labor Party",
+          "party": "ALP",
+          "votes": 23,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "G",
+              "votes": 23
+            }
+          ],
+          "pct": 16.08,
+          "quotas": 7.667
+        },
+        {
+          "group": "Liberal / The Nationals",
+          "name": "Liberal / The Nationals",
+          "party": "LIB",
+          "votes": 19,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "C",
+              "votes": 19
+            }
+          ],
+          "pct": 13.29,
+          "quotas": 6.333
+        },
+        {
+          "group": "The Greens",
+          "name": "The Greens",
+          "party": "GRN",
+          "votes": 11,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "K",
+              "votes": 11
+            }
+          ],
+          "pct": 7.69,
+          "quotas": 3.667
+        },
+        {
+          "group": "Legalise Cannabis Victoria",
+          "name": "Legalise Cannabis Victoria",
+          "party": "LCV",
+          "votes": 5,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "D",
+              "votes": 5
+            }
+          ],
+          "pct": 3.5,
+          "quotas": 1.667
+        },
+        {
+          "group": "Animal Justice Party",
+          "name": "Animal Justice Party",
+          "party": "AJP",
+          "votes": 5,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "F",
+              "votes": 5
+            }
+          ],
+          "pct": 3.5,
+          "quotas": 1.667
+        },
+        {
+          "group": "Shooters, Fishers and Farmers Party Victoria",
+          "name": "Shooters, Fishers and Farmers Party Victoria",
+          "party": "SFF",
+          "votes": 5,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "I",
+              "votes": 5
+            }
+          ],
+          "pct": 3.5,
+          "quotas": 1.667
+        },
+        {
+          "group": "Victorian Socialists",
+          "name": "Victorian Socialists",
+          "party": "VS",
+          "votes": 3,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "A",
+              "votes": 3
+            }
+          ],
+          "pct": 2.1,
+          "quotas": 1.0
+        },
+        {
+          "group": "Labour DLP",
+          "name": "Labour DLP",
+          "party": "DLP",
+          "votes": 3,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "E",
+              "votes": 3
+            }
+          ],
+          "pct": 2.1,
+          "quotas": 1.0
+        },
+        {
+          "group": "Affordable Housing Now – Sustainable Australia Party",
+          "name": "Affordable Housing Now – Sustainable Australia Party",
+          "party": "SUS",
+          "votes": 1,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "H",
+              "votes": 1
+            }
+          ],
+          "pct": 0.7,
+          "quotas": 0.333
+        },
+        {
+          "group": "Group J",
+          "name": "Group J",
+          "party": "OTH",
+          "votes": 1,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "J",
+              "votes": 1
+            }
+          ],
+          "pct": 0.7,
+          "quotas": 0.333
+        }
+      ],
+      "ungrouped": []
+    },
+    "north-eastern-metropolitan": {
+      "name": "North-Eastern Victoria",
+      "url": "https://www.vec.vic.gov.au/results/2026-results/region-election-page/region-summary-page/North-Eastern-Metropolitan-Region-results",
+      "vec_updated": "Saturday, 28 November 2026",
+      "fetched": "2026-11-28T08:31:07Z",
+      "enrolment": 566998,
+      "formal": 0,
+      "informal": 0,
+      "total": 0,
+      "counted_pct": 0.0,
+      "positions": 5,
+      "quota": null,
+      "quota_source": "computed",
+      "elected": [],
+      "groups": [
+        {
+          "group": "Legalise Cannabis Victoria",
+          "name": "Legalise Cannabis Victoria",
+          "party": "LCV",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "A",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Victorian Socialists",
+          "name": "Victorian Socialists",
+          "party": "VS",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "B",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Australian Labor Party",
+          "name": "Australian Labor Party",
+          "party": "ALP",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "C",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Affordable Housing Now – Sustainable Australia Party",
+          "name": "Affordable Housing Now – Sustainable Australia Party",
+          "party": "SUS",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "D",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Labour DLP",
+          "name": "Labour DLP",
+          "party": "DLP",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "E",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Family First",
+          "name": "Family First",
+          "party": "FF",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "F",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "One Nation Victoria",
+          "name": "One Nation Victoria",
+          "party": "ONP",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "G",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Liberal",
+          "name": "Liberal",
+          "party": "LIB",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "H",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Libertarian (formerly Liberal Democrats)",
+          "name": "Libertarian (formerly Liberal Democrats)",
+          "party": "LBT",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "I",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Group J",
+          "name": "Group J",
+          "party": "OTH",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "J",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "The Greens",
+          "name": "The Greens",
+          "party": "GRN",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "K",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Australian Democrats",
+          "name": "Australian Democrats",
+          "party": "OTH",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "L",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        }
+      ],
+      "ungrouped": []
+    },
+    "northern-metropolitan": {
+      "name": "Northern Metropolitan",
+      "url": "https://www.vec.vic.gov.au/results/2026-results/region-election-page/region-summary-page/Northern-Metropolitan-Region-results",
+      "vec_updated": "Saturday, 28 November 2026",
+      "fetched": "2026-11-28T08:31:10Z",
+      "enrolment": 610433,
+      "formal": 0,
+      "informal": 0,
+      "total": 0,
+      "counted_pct": 0.0,
+      "positions": 5,
+      "quota": null,
+      "quota_source": "computed",
+      "elected": [],
+      "groups": [
+        {
+          "group": "Legalise Cannabis Victoria",
+          "name": "Legalise Cannabis Victoria",
+          "party": "LCV",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "A",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Group B",
+          "name": "Group B",
+          "party": "OTH",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "B",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Liberal",
+          "name": "Liberal",
+          "party": "LIB",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "C",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "The Greens",
+          "name": "The Greens",
+          "party": "GRN",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "D",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "One Nation Victoria",
+          "name": "One Nation Victoria",
+          "party": "ONP",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "E",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Affordable Housing Now – Sustainable Australia Party",
+          "name": "Affordable Housing Now – Sustainable Australia Party",
+          "party": "SUS",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "F",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Socialist Alliance",
+          "name": "Socialist Alliance",
+          "party": "SAL",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "G",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Labour DLP",
+          "name": "Labour DLP",
+          "party": "DLP",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "H",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Australian Democrats",
+          "name": "Australian Democrats",
+          "party": "OTH",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "I",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Group J",
+          "name": "Group J",
+          "party": "OTH",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "J",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Australian Labor Party",
+          "name": "Australian Labor Party",
+          "party": "ALP",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "K",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Victorian Socialists",
+          "name": "Victorian Socialists",
+          "party": "VS",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "L",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Family First",
+          "name": "Family First",
+          "party": "FF",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "M",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "RAZOS, Peter",
+          "name": "RAZOS, Peter",
+          "party": "OTH",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        }
+      ],
+      "ungrouped": []
+    },
+    "northern-victoria": {
+      "name": "Northern Victoria",
+      "url": "https://www.vec.vic.gov.au/results/2026-results/region-election-page/region-summary-page/Northern-Victoria-Region-results",
+      "vec_updated": "Saturday, 28 November 2026",
+      "fetched": "2026-11-28T08:31:11Z",
+      "enrolment": 570598,
+      "formal": 290,
+      "informal": 12,
+      "total": 302,
+      "counted_pct": 0.1,
+      "positions": 5,
+      "quota": 1,
+      "quota_source": "vec",
+      "elected": [],
+      "groups": [
+        {
+          "group": "One Nation Victoria",
+          "name": "One Nation Victoria",
+          "party": "ONP",
+          "votes": 150,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "H",
+              "votes": 150
+            }
+          ],
+          "pct": 51.72,
+          "quotas": 150.0
+        },
+        {
+          "group": "Liberal / The Nationals",
+          "name": "Liberal / The Nationals",
+          "party": "LIB",
+          "votes": 71,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "J",
+              "votes": 71
+            }
+          ],
+          "pct": 24.48,
+          "quotas": 71.0
+        },
+        {
+          "group": "Australian Labor Party",
+          "name": "Australian Labor Party",
+          "party": "ALP",
+          "votes": 15,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "C",
+              "votes": 15
+            }
+          ],
+          "pct": 5.17,
+          "quotas": 15.0
+        },
+        {
+          "group": "Shooters, Fishers and Farmers Party Victoria",
+          "name": "Shooters, Fishers and Farmers Party Victoria",
+          "party": "SFF",
+          "votes": 10,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "E",
+              "votes": 10
+            }
+          ],
+          "pct": 3.45,
+          "quotas": 10.0
+        },
+        {
+          "group": "The Greens",
+          "name": "The Greens",
+          "party": "GRN",
+          "votes": 10,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "K",
+              "votes": 10
+            }
+          ],
+          "pct": 3.45,
+          "quotas": 10.0
+        },
+        {
+          "group": "Legalise Cannabis Victoria",
+          "name": "Legalise Cannabis Victoria",
+          "party": "LCV",
+          "votes": 8,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "L",
+              "votes": 8
+            }
+          ],
+          "pct": 2.76,
+          "quotas": 8.0
+        },
+        {
+          "group": "Family First",
+          "name": "Family First",
+          "party": "FF",
+          "votes": 4,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "D",
+              "votes": 4
+            }
+          ],
+          "pct": 1.38,
+          "quotas": 4.0
+        },
+        {
+          "group": "Affordable Housing Now – Sustainable Australia Party",
+          "name": "Affordable Housing Now – Sustainable Australia Party",
+          "party": "SUS",
+          "votes": 3,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "G",
+              "votes": 3
+            }
+          ],
+          "pct": 1.03,
+          "quotas": 3.0
+        },
+        {
+          "group": "Animal Justice Party",
+          "name": "Animal Justice Party",
+          "party": "AJP",
+          "votes": 2,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "I",
+              "votes": 2
+            }
+          ],
+          "pct": 0.69,
+          "quotas": 2.0
+        },
+        {
+          "group": "Citizens Party",
+          "name": "Citizens Party",
+          "party": "OTH",
+          "votes": 1,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "A",
+              "votes": 1
+            }
+          ],
+          "pct": 0.34,
+          "quotas": 1.0
+        },
+        {
+          "group": "Group B",
+          "name": "Group B",
+          "party": "OTH",
+          "votes": 1,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "B",
+              "votes": 1
+            }
+          ],
+          "pct": 0.34,
+          "quotas": 1.0
+        },
+        {
+          "group": "Labour DLP",
+          "name": "Labour DLP",
+          "party": "DLP",
+          "votes": 1,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "F",
+              "votes": 1
+            }
+          ],
+          "pct": 0.34,
+          "quotas": 1.0
+        },
+        {
+          "group": "Victorian Socialists",
+          "name": "Victorian Socialists",
+          "party": "VS",
+          "votes": 1,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "M",
+              "votes": 1
+            }
+          ],
+          "pct": 0.34,
+          "quotas": 1.0
+        },
+        {
+          "group": "McHUGH, Nick",
+          "name": "McHUGH, Nick",
+          "party": "OTH",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "",
+              "votes": 0
+            }
+          ],
+          "pct": 0.0,
+          "quotas": 0.0
+        }
+      ],
+      "ungrouped": []
+    },
+    "south-eastern-metropolitan": {
+      "name": "South-Eastern Metropolitan",
+      "url": "https://www.vec.vic.gov.au/results/2026-results/region-election-page/region-summary-page/South-Eastern-Metropolitan-Region-results",
+      "vec_updated": "Saturday, 28 November 2026",
+      "fetched": "2026-11-28T08:31:14Z",
+      "enrolment": 598816,
+      "formal": 0,
+      "informal": 0,
+      "total": 0,
+      "counted_pct": 0.0,
+      "positions": 5,
+      "quota": null,
+      "quota_source": "computed",
+      "elected": [],
+      "groups": [
+        {
+          "group": "One Nation Victoria",
+          "name": "One Nation Victoria",
+          "party": "ONP",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "A",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Christian Alliance Party - Reform AU",
+          "name": "Christian Alliance Party - Reform AU",
+          "party": "OTH",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "B",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Citizens Party",
+          "name": "Citizens Party",
+          "party": "OTH",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "C",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Australian Labor Party",
+          "name": "Australian Labor Party",
+          "party": "ALP",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "D",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Victorian Socialists",
+          "name": "Victorian Socialists",
+          "party": "VS",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "E",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Legalise Cannabis Victoria",
+          "name": "Legalise Cannabis Victoria",
+          "party": "LCV",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "F",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Affordable Housing Now – Sustainable Australia Party",
+          "name": "Affordable Housing Now – Sustainable Australia Party",
+          "party": "SUS",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "G",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "The Greens",
+          "name": "The Greens",
+          "party": "GRN",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "H",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Libertarian (formerly Liberal Democrats)",
+          "name": "Libertarian (formerly Liberal Democrats)",
+          "party": "LBT",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "I",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Australian Democrats",
+          "name": "Australian Democrats",
+          "party": "OTH",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "J",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Liberal",
+          "name": "Liberal",
+          "party": "LIB",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "K",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "Labour DLP",
+          "name": "Labour DLP",
+          "party": "DLP",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "L",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        },
+        {
+          "group": "ABEYSINGHE, Susantha",
+          "name": "ABEYSINGHE, Susantha",
+          "party": "OTH",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "",
+              "votes": 0
+            }
+          ],
+          "pct": null,
+          "quotas": null
+        }
+      ],
+      "ungrouped": []
+    },
+    "southern-metropolitan": {
+      "name": "Southern Metropolitan",
+      "url": "https://www.vec.vic.gov.au/results/2026-results/region-election-page/region-summary-page/Southern-Metropolitan-Region-results",
+      "vec_updated": "Saturday, 28 November 2026",
+      "fetched": "2026-11-28T08:31:16Z",
+      "enrolment": 567082,
+      "formal": 193,
+      "informal": 11,
+      "total": 204,
+      "counted_pct": 0.0,
+      "positions": 5,
+      "quota": 29,
+      "quota_source": "vec",
+      "elected": [],
+      "groups": [
+        {
+          "group": "Liberal",
+          "name": "Liberal",
+          "party": "LIB",
+          "votes": 96,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "F",
+              "votes": 96
+            }
+          ],
+          "pct": 49.74,
+          "quotas": 3.31
+        },
+        {
+          "group": "Australian Labor Party",
+          "name": "Australian Labor Party",
+          "party": "ALP",
+          "votes": 29,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "A",
+              "votes": 29
+            }
+          ],
+          "pct": 15.03,
+          "quotas": 1.0
+        },
+        {
+          "group": "The Greens",
+          "name": "The Greens",
+          "party": "GRN",
+          "votes": 26,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "K",
+              "votes": 26
+            }
+          ],
+          "pct": 13.47,
+          "quotas": 0.897
+        },
+        {
+          "group": "One Nation Victoria",
+          "name": "One Nation Victoria",
+          "party": "ONP",
+          "votes": 11,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "D",
+              "votes": 11
+            }
+          ],
+          "pct": 5.7,
+          "quotas": 0.379
+        },
+        {
+          "group": "Victorian Socialists",
+          "name": "Victorian Socialists",
+          "party": "VS",
+          "votes": 6,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "G",
+              "votes": 6
+            }
+          ],
+          "pct": 3.11,
+          "quotas": 0.207
+        },
+        {
+          "group": "Australian Democrats",
+          "name": "Australian Democrats",
+          "party": "OTH",
+          "votes": 3,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "B",
+              "votes": 3
+            }
+          ],
+          "pct": 1.55,
+          "quotas": 0.103
+        },
+        {
+          "group": "Legalise Cannabis Victoria",
+          "name": "Legalise Cannabis Victoria",
+          "party": "LCV",
+          "votes": 2,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "C",
+              "votes": 2
+            }
+          ],
+          "pct": 1.04,
+          "quotas": 0.069
+        },
+        {
+          "group": "Family First",
+          "name": "Family First",
+          "party": "FF",
+          "votes": 2,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "E",
+              "votes": 2
+            }
+          ],
+          "pct": 1.04,
+          "quotas": 0.069
+        },
+        {
+          "group": "Affordable Housing Now – Sustainable Australia Party",
+          "name": "Affordable Housing Now – Sustainable Australia Party",
+          "party": "SUS",
+          "votes": 1,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "H",
+              "votes": 1
+            }
+          ],
+          "pct": 0.52,
+          "quotas": 0.034
+        },
+        {
+          "group": "Labour DLP",
+          "name": "Labour DLP",
+          "party": "DLP",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "I",
+              "votes": 0
+            }
+          ],
+          "pct": 0.0,
+          "quotas": 0.0
+        },
+        {
+          "group": "Group J",
+          "name": "Group J",
+          "party": "OTH",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "J",
+              "votes": 0
+            }
+          ],
+          "pct": 0.0,
+          "quotas": 0.0
+        }
+      ],
+      "ungrouped": []
+    },
+    "western-metropolitan": {
+      "name": "Western Metropolitan",
+      "url": "https://www.vec.vic.gov.au/results/2026-results/region-election-page/region-summary-page/Western-Metropolitan-Region-results",
+      "vec_updated": "Saturday, 28 November 2026",
+      "fetched": "2026-11-28T08:31:19Z",
+      "enrolment": 616432,
+      "formal": 25,
+      "informal": 3,
+      "total": 28,
+      "counted_pct": 0.0,
+      "positions": 5,
+      "quota": 3,
+      "quota_source": "vec",
+      "elected": [],
+      "groups": [
+        {
+          "group": "Australian Labor Party",
+          "name": "Australian Labor Party",
+          "party": "ALP",
+          "votes": 8,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "E",
+              "votes": 8
+            }
+          ],
+          "pct": 32.0,
+          "quotas": 2.667
+        },
+        {
+          "group": "The Greens",
+          "name": "The Greens",
+          "party": "GRN",
+          "votes": 4,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "I",
+              "votes": 4
+            }
+          ],
+          "pct": 16.0,
+          "quotas": 1.333
+        },
+        {
+          "group": "Labour DLP",
+          "name": "Labour DLP",
+          "party": "DLP",
+          "votes": 3,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "A",
+              "votes": 3
+            }
+          ],
+          "pct": 12.0,
+          "quotas": 1.0
+        },
+        {
+          "group": "Liberal",
+          "name": "Liberal",
+          "party": "LIB",
+          "votes": 3,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "C",
+              "votes": 3
+            }
+          ],
+          "pct": 12.0,
+          "quotas": 1.0
+        },
+        {
+          "group": "One Nation Victoria",
+          "name": "One Nation Victoria",
+          "party": "ONP",
+          "votes": 3,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "K",
+              "votes": 3
+            }
+          ],
+          "pct": 12.0,
+          "quotas": 1.0
+        },
+        {
+          "group": "Victorian Socialists",
+          "name": "Victorian Socialists",
+          "party": "VS",
+          "votes": 2,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "D",
+              "votes": 2
+            }
+          ],
+          "pct": 8.0,
+          "quotas": 0.667
+        },
+        {
+          "group": "Affordable Housing Now – Sustainable Australia Party",
+          "name": "Affordable Housing Now – Sustainable Australia Party",
+          "party": "SUS",
+          "votes": 1,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "G",
+              "votes": 1
+            }
+          ],
+          "pct": 4.0,
+          "quotas": 0.333
+        },
+        {
+          "group": "Family First",
+          "name": "Family First",
+          "party": "FF",
+          "votes": 1,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "H",
+              "votes": 1
+            }
+          ],
+          "pct": 4.0,
+          "quotas": 0.333
+        },
+        {
+          "group": "Legalise Cannabis Victoria",
+          "name": "Legalise Cannabis Victoria",
+          "party": "LCV",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "B",
+              "votes": 0
+            }
+          ],
+          "pct": 0.0,
+          "quotas": 0.0
+        },
+        {
+          "group": "Australian Democrats",
+          "name": "Australian Democrats",
+          "party": "OTH",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "F",
+              "votes": 0
+            }
+          ],
+          "pct": 0.0,
+          "quotas": 0.0
+        },
+        {
+          "group": "The Republican",
+          "name": "The Republican",
+          "party": "OTH",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "J",
+              "votes": 0
+            }
+          ],
+          "pct": 0.0,
+          "quotas": 0.0
+        },
+        {
+          "group": "The West Party",
+          "name": "The West Party",
+          "party": "WEST",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "L",
+              "votes": 0
+            }
+          ],
+          "pct": 0.0,
+          "quotas": 0.0
+        },
+        {
+          "group": "RAIZADA, Rakesh",
+          "name": "RAIZADA, Rakesh",
+          "party": "OTH",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "",
+              "votes": 0
+            }
+          ],
+          "pct": 0.0,
+          "quotas": 0.0
+        }
+      ],
+      "ungrouped": []
+    },
+    "western-victoria": {
+      "name": "Western Victoria",
+      "url": "https://www.vec.vic.gov.au/results/2026-results/region-election-page/region-summary-page/Western-Victoria-Region-results",
+      "vec_updated": "Saturday, 28 November 2026",
+      "fetched": "2026-11-28T08:31:22Z",
+      "enrolment": 613399,
+      "formal": 134,
+      "informal": 3,
+      "total": 137,
+      "counted_pct": 0.0,
+      "positions": 5,
+      "quota": 4,
+      "quota_source": "vec",
+      "elected": [],
+      "groups": [
+        {
+          "group": "One Nation Victoria",
+          "name": "One Nation Victoria",
+          "party": "ONP",
+          "votes": 53,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "K",
+              "votes": 53
+            }
+          ],
+          "pct": 39.55,
+          "quotas": 13.25
+        },
+        {
+          "group": "Liberal / The Nationals",
+          "name": "Liberal / The Nationals",
+          "party": "LIB",
+          "votes": 51,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "F",
+              "votes": 51
+            }
+          ],
+          "pct": 38.06,
+          "quotas": 12.75
+        },
+        {
+          "group": "Australian Labor Party",
+          "name": "Australian Labor Party",
+          "party": "ALP",
+          "votes": 10,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "C",
+              "votes": 10
+            }
+          ],
+          "pct": 7.46,
+          "quotas": 2.5
+        },
+        {
+          "group": "Legalise Cannabis Victoria",
+          "name": "Legalise Cannabis Victoria",
+          "party": "LCV",
+          "votes": 5,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "D",
+              "votes": 5
+            }
+          ],
+          "pct": 3.73,
+          "quotas": 1.25
+        },
+        {
+          "group": "The Greens",
+          "name": "The Greens",
+          "party": "GRN",
+          "votes": 4,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "A",
+              "votes": 4
+            }
+          ],
+          "pct": 2.99,
+          "quotas": 1.0
+        },
+        {
+          "group": "Family First",
+          "name": "Family First",
+          "party": "FF",
+          "votes": 2,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "N",
+              "votes": 2
+            }
+          ],
+          "pct": 1.49,
+          "quotas": 0.5
+        },
+        {
+          "group": "Affordable Housing Now – Sustainable Australia Party",
+          "name": "Affordable Housing Now – Sustainable Australia Party",
+          "party": "SUS",
+          "votes": 1,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "B",
+              "votes": 1
+            }
+          ],
+          "pct": 0.75,
+          "quotas": 0.25
+        },
+        {
+          "group": "Australian Democrats",
+          "name": "Australian Democrats",
+          "party": "OTH",
+          "votes": 1,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "E",
+              "votes": 1
+            }
+          ],
+          "pct": 0.75,
+          "quotas": 0.25
+        },
+        {
+          "group": "Victorian Socialists",
+          "name": "Victorian Socialists",
+          "party": "VS",
+          "votes": 1,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "G",
+              "votes": 1
+            }
+          ],
+          "pct": 0.75,
+          "quotas": 0.25
+        },
+        {
+          "group": "Libertarian (formerly Liberal Democrats)",
+          "name": "Libertarian (formerly Liberal Democrats)",
+          "party": "LBT",
+          "votes": 1,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "I",
+              "votes": 1
+            }
+          ],
+          "pct": 0.75,
+          "quotas": 0.25
+        },
+        {
+          "group": "Shooters, Fishers and Farmers Party Victoria",
+          "name": "Shooters, Fishers and Farmers Party Victoria",
+          "party": "SFF",
+          "votes": 1,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "M",
+              "votes": 1
+            }
+          ],
+          "pct": 0.75,
+          "quotas": 0.25
+        },
+        {
+          "group": "Group H",
+          "name": "Group H",
+          "party": "OTH",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "H",
+              "votes": 0
+            }
+          ],
+          "pct": 0.0,
+          "quotas": 0.0
+        },
+        {
+          "group": "Socialist Alliance",
+          "name": "Socialist Alliance",
+          "party": "SAL",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "J",
+              "votes": 0
+            }
+          ],
+          "pct": 0.0,
+          "quotas": 0.0
+        },
+        {
+          "group": "Labour DLP",
+          "name": "Labour DLP",
+          "party": "DLP",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "L",
+              "votes": 0
+            }
+          ],
+          "pct": 0.0,
+          "quotas": 0.0
+        },
+        {
+          "group": "The Republican",
+          "name": "The Republican",
+          "party": "OTH",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "O",
+              "votes": 0
+            }
+          ],
+          "pct": 0.0,
+          "quotas": 0.0
+        },
+        {
+          "group": "FISHER, Eve",
+          "name": "FISHER, Eve",
+          "party": "OTH",
+          "votes": 0,
+          "ticket_votes": 0,
+          "candidates": [
+            {
+              "name": "",
+              "votes": 0
+            }
+          ],
+          "pct": 0.0,
+          "quotas": 0.0
+        }
+      ],
+      "ungrouped": []
+    }
+  }
 }
