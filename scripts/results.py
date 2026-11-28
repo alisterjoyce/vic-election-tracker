@@ -66,7 +66,8 @@ CONFIG = Path(__file__).with_name("results_urls.json")
 MELBOURNE = ZoneInfo("Australia/Melbourne")
 USER_AGENT = ("vic-election-tracker/1.0 (election-night results from the VEC's public results pages, every 5 minutes, "
               "one request a second; +https://alisterjoyce.github.io/vic-election-tracker/)")
-DELAY = 1.0           # seconds between requests
+DELAY = 1.0           # seconds between requests (one at a time)
+MANY_GAP = 0.25       # seconds between request starts when fetching in parallel (get_many: at most 4 in flight)
 TIMEOUT = 30
 SEATS, MAJORITY = 88, 45
 REGION_POSITIONS = 5
@@ -280,6 +281,60 @@ class Fetcher:
                            "sha": sha, "fetched": now_iso()}
         return html, changed
 
+    def get_many(self, urls: list, workers: int = 4, conditional=True) -> dict:
+        """Fetches urls with at most `workers` requests in flight (never more than 4) and request starts at least
+        MANY_GAP seconds apart. {url: (html, changed)} or {url: Exception}. Same validators and hashes as get()."""
+        import threading
+        from concurrent.futures import ThreadPoolExecutor
+        workers = max(1, min(4, workers))
+        lock, local = threading.Lock(), threading.local()
+        out = {}
+        for u in urls:   # robots.txt once per host, before the pool starts
+            if not self.allowed(u):
+                out[u] = PermissionError(f"robots.txt disallows {u}")
+        todo = [u for u in dict.fromkeys(urls) if u not in out]
+
+        def one(url):
+            if not hasattr(local, "s"):
+                local.s = requests.Session()
+                local.s.headers["User-Agent"] = USER_AGENT
+            with lock:
+                wait = self.last + MANY_GAP - time.monotonic()
+                self.last = time.monotonic() + max(0.0, wait)
+                st = dict(self.state.get(url, {}))
+            if wait > 0:
+                time.sleep(wait)
+            headers = {}
+            if conditional and st.get("etag"):
+                headers["If-None-Match"] = st["etag"]
+            if conditional and st.get("last_modified"):
+                headers["If-Modified-Since"] = st["last_modified"]
+            try:
+                resp = local.s.get(url, headers=headers, timeout=TIMEOUT)
+            except requests.RequestException as exc:
+                return url, exc
+            finally:
+                with lock:
+                    self.count += 1
+            if resp.status_code == 304:
+                return url, (None, False)
+            try:
+                resp.raise_for_status()
+            except requests.HTTPError as exc:
+                return url, exc
+            html = resp.text
+            sha = hashlib.sha256(clean(main_el(html).text_content()).encode()).hexdigest()
+            with lock:
+                changed = sha != self.state.get(url, {}).get("sha")
+                self.state[url] = {"etag": resp.headers.get("ETag"), "last_modified": resp.headers.get("Last-Modified"),
+                                   "sha": sha, "fetched": now_iso()}
+            return url, (html, changed)
+
+        with ThreadPoolExecutor(max_workers=workers) as pool:
+            for url, r in pool.map(one, todo):
+                out[url] = r
+        return out
+
 
 # ---------------------------------------------------------------- page parsers (tolerant: missing parts are None)
 def parse_district_page(html: str) -> dict:
@@ -487,7 +542,8 @@ def tcp_2022(data_dir: Path, did: str) -> dict:
     return {cand[i]["party"]: 100 * v / total for i, v in pair.items() if i in cand} if total else {}
 
 
-def build_contest(did: str, event: dict, page: dict, vc: dict | None, tcp: dict | None, old_booths: dict, url: str, phase: str) -> dict:
+def build_contest(did: str, event: dict, page: dict, vc: dict | None, tcp: dict | None, old_booths: dict, url: str, phase: str,
+                  prefer_page_tcp: bool = False) -> dict:
     """The district in vec-contest-v1, the shape results_2022/ and the booth map use."""
     # Candidates in ballot order: the voting-centre page's columns, else the first-preference table's rows.
     order = vc["candidates"] if vc else [(r["name"], r["party_name"]) for r in page["fp"]]
@@ -538,6 +594,15 @@ def build_contest(did: str, event: dict, page: dict, vc: dict | None, tcp: dict 
         if key in places and b["votes"]:
             col_id = dict(zip(tcp["cols"], [by_key.get(name_key(n)) for n, _ in tcp["candidates"]]))
             places[key]["tcp"] = {col_id[i]: v for i, v in b["votes"].items() if col_id.get(i)}
+    # Fast pass: vc and tcp are the booth pages as last read (cached); the district page's own 2CP summary is fresher.
+    if prefer_page_tcp and page.get("tcp"):
+        fresh = ids(page["tcp"])
+        if len(fresh) == 2:
+            same_pair = bool(tcp_out) and set(tcp_out["candidates"]) == set(fresh)
+            tcp_out = {"candidates": fresh, "by_type": tcp_out["by_type"] if same_pair else {}}
+            if not same_pair:   # the VEC changed the 2CP pair since the booth pages were read: drop the old pair's booths
+                for p in places.values():
+                    p["tcp"] = None
     dist = ids(page.get("distribution"))
     return {
         "format": FORMAT,
@@ -786,7 +851,8 @@ def strip_volatile(d):
     return d
 
 
-def run(cfg: dict, data_dir: Path, only: set | None = None) -> int:
+def run(cfg: dict, data_dir: Path, only: set | None = None, fast: bool = False, workers: int = 1,
+        sub_cache: dict | None = None, stats: dict | None = None) -> int:
     districts = (read_json(data_dir / "districts.json", {}) or {}).get("districts", [])
     regions = (read_json(data_dir / "regions.json", {}) or {}).get("regions", [])
     if not districts:
@@ -819,16 +885,22 @@ def run(cfg: dict, data_dir: Path, only: set | None = None) -> int:
     skipped, parsed, no_enrolment = [], 0, []
     holders = {d["id"]: (d.get("margin") or {}).get("party") or d.get("party") for d in districts}
     index = {}
-    for d in districts:
-        did = d["id"]
-        if only and did not in only:
-            continue
-        url = page_url(cfg, "district", did)
-        if not url:
-            continue
+    # sub_cache (the local election-night loop only): each district's booth pages as last parsed, and the district page's
+    # hash when they were read. Fast pass: district pages only, booths from the cache. Slow pass: booth pages too, for
+    # every district whose page changed since its booths were last read. Without a cache (GitHub runs): as before.
+    cache = sub_cache if sub_cache is not None else {}
+    targets = [(d["id"], page_url(cfg, "district", d["id"])) for d in districts if not only or d["id"] in only]
+    targets = [(did, url) for did, url in targets if url]
+    pre = fetcher.get_many([u for _, u in targets], workers) if workers > 1 else {}
+    work = []   # (did, url, page, sub urls to read or None to use the cache)
+    for did, url in targets:
         try:
-            html, changed = fetcher.get(url)
-            if not changed and did in res["districts"] and (out_dir / f"{did}.json").exists():
+            got = pre.get(url)
+            if isinstance(got, Exception):
+                raise got
+            html, changed = got if got else fetcher.get(url)
+            subs_stale = sub_cache is not None and cache.get(did, {}).get("main_sha") != fetcher.state.get(url, {}).get("sha")
+            if not changed and did in res["districts"] and (out_dir / f"{did}.json").exists() and not (subs_stale and not fast):
                 continue   # page unchanged since the last run: keep its figures, skip the voting-centre pages
             if html is None:
                 html, _ = fetcher.get(url, conditional=False)   # 304 but nothing stored: fetch it in full
@@ -840,23 +912,36 @@ def run(cfg: dict, data_dir: Path, only: set | None = None) -> int:
         if not page["enrolment"] and roll.get(did):
             page["enrolment"] = roll[did]   # the page printed none we could read: the VEC's close-of-roll figure
             no_enrolment.append(did)
-        vc = tcp = None
+        if fast and did in cache:
+            work.append((did, url, page, None))
+            continue
         found = sub_links(html, url)
-        for kind in ("district_vc", "district_tcp"):
-            sub = found.get(kind) or page_url(cfg, kind, did)
-            if not sub:
-                continue
-            try:
-                sub_html, _ = fetcher.get(sub, conditional=False)
-                parsed_sub = parse_vc_page(sub_html, "fp" if kind == "district_vc" else "tcp")
-                if kind == "district_vc":
-                    vc = parsed_sub
-                else:
-                    tcp = parsed_sub
-            except Exception as exc:  # noqa: BLE001
-                log.warning("%s: %s page skipped (%s): %s", did, kind.split("_")[1], sub, str(exc)[:200])
+        subs = {kind: found.get(kind) or page_url(cfg, kind, did) for kind in ("district_vc", "district_tcp")}
+        work.append((did, url, page, {k: u for k, u in subs.items() if u}))
+    sub_urls = [u for *_, subs in work if subs for u in subs.values()]
+    sub_pre = fetcher.get_many(sub_urls, workers, conditional=False) if workers > 1 else {}
+    for did, url, page, subs in work:
+        if subs is None:
+            vc, tcp = cache[did].get("vc"), cache[did].get("tcp")
+        else:
+            vc = tcp = None
+            for kind, sub in subs.items():
+                try:
+                    got = sub_pre.get(sub)
+                    if isinstance(got, Exception):
+                        raise got
+                    sub_html, _ = got if got else fetcher.get(sub, conditional=False)
+                    parsed_sub = parse_vc_page(sub_html, "fp" if kind == "district_vc" else "tcp")
+                    if kind == "district_vc":
+                        vc = parsed_sub
+                    else:
+                        tcp = parsed_sub
+                except Exception as exc:  # noqa: BLE001
+                    log.warning("%s: %s page skipped (%s): %s", did, kind.split("_")[1], sub, str(exc)[:200])
+            if sub_cache is not None and (vc or tcp):
+                sub_cache[did] = {"vc": vc, "tcp": tcp, "main_sha": fetcher.state.get(url, {}).get("sha")}
         try:
-            contest = build_contest(did, cfg, page, vc, tcp, booths_2022(data_dir, did), url, phase)
+            contest = build_contest(did, cfg, page, vc, tcp, booths_2022(data_dir, did), url, phase, prefer_page_tcp=subs is None)
             summary = summarise(did, contest, page, url, holders.get(did), data_dir)
         except Exception as exc:  # noqa: BLE001
             log.warning("%s: couldn't build the result (%s)", did, str(exc)[:200])
@@ -869,8 +954,8 @@ def run(cfg: dict, data_dir: Path, only: set | None = None) -> int:
         parsed += 1
     for r in regions:
         rid = r["id"]
-        if only and rid not in only:
-            continue
+        if (only and rid not in only) or fast:
+            continue   # the fast pass leaves the Council to the slow pass
         url = page_url(cfg, "region", rid)
         if not url:
             continue
@@ -916,6 +1001,9 @@ def run(cfg: dict, data_dir: Path, only: set | None = None) -> int:
     t = res["tally"]
     log.info("Results (%s): %d pages fetched, %d districts parsed, %d skipped; called %s, leading %s, undecided %d; changed: %s",
              cfg["profile"], fetcher.count, parsed, len(skipped), t["called"], t["leading"], t["undecided"], changed_files or "nothing")
+    if stats is not None:
+        stats.update(fetched=fetcher.count, parsed=parsed, skipped=skipped, changed=changed_files, tally=t,
+                     with_votes=sum(1 for s in res["districts"].values() if s.get("total")))
     if skipped:
         warn_ci(f"results.py skipped {len(skipped)} page(s): {', '.join(skipped[:12])}")
     if no_enrolment:

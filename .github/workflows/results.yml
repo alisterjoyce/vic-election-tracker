@@ -43,19 +43,41 @@ jobs:
       changed: ${{ steps.commit.outputs.changed }}
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 50   # enough history to see when results.json was last committed
+
+      # Election night: scripts/results_loop.py runs on a laptop every 2 minutes and commits results.json whenever the
+      # count moves. A scheduled run steps in only if that loop has gone quiet: it skips when results.json was committed
+      # in the last 4 minutes. A run by hand always runs.
+      - name: Skip if the local loop published in the last 4 minutes
+        id: skip
+        run: |
+          last=$(git log -1 --format=%ct -- site/data/results.json || echo 0)
+          age=$(( $(date +%s) - ${last:-0} ))
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$age" -lt 240 ]; then
+            echo "results.json was committed ${age}s ago (the local loop is running): skipping this scheduled run."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "results.json last committed ${age}s ago: running."
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - uses: actions/setup-python@v6
+        if: steps.skip.outputs.skip != 'true'
         with:
           python-version: "3.12"
           cache: pip
 
       - name: Install requirements
+        if: steps.skip.outputs.skip != 'true'
         run: pip install -r requirements.txt
 
       - name: Read the VEC results pages
+        if: steps.skip.outputs.skip != 'true'
         run: python scripts/results.py
 
       - name: Commit and push if the results changed
+        if: steps.skip.outputs.skip != 'true'
         id: commit
         run: |
           git config user.name "github-actions[bot]"
