@@ -5,7 +5,7 @@
     "Every run also reads the results index page ({base}) and uses the address each district and region link there has, and each",
     "district page's own links to its voting-centre and 2CP pages, so an address that doesn't follow a pattern is still read;",
     "'overrides' ('district:<id>' or 'region:<id>' -> full URL) beats both, for a page the index doesn't link.",
-    "The 2026 base is null until the VEC publishes its 2026 results pages (checked 26 Nov 2026: https://www.vec.vic.gov.au/results/state-election-results",
+    "The 2026 base was null until the VEC published its 2026 results pages on 28 Nov 2026 (checked 26 Nov 2026: https://www.vec.vic.gov.au/results/state-election-results",
     "lists 2022 back to 2006 and by-elections only; .../2026-state-election-results and .../2026-state-election return 404). Until then each",
     "run looks at 'discover.page' for a link whose text matches 'discover.link_text' and, if it finds one, uses it as the base for that run",
     "with a ::warning::; put that address in 'base' then, and run 'python scripts/results.py --check-urls' (all 96 pages must answer).",
@@ -19,17 +19,21 @@
       "event": "2026 State Election",
       "election_date": "2026-11-28",
       "counting_starts": "2026-11-28T18:00:00+11:00",
-      "base": null,
-      "index_page": "{base}",
-      "district_page": "{base}/results-by-district/{slug}-district-results",
+      "base": "https://www.vec.vic.gov.au/results/2026-results",
+      "index_page": [
+        "{base}/district-election-page",
+        "{base}/region-election-page"
+      ],
+      "district_page": "{base}/district-election-page/results-by-district/{slug}-District-results",
       "district_vc_page": "{base}/results-by-district/{slug}-district-results/{slug}-district-results-by-voting-centre",
       "district_tcp_page": "{base}/results-by-district/{slug}-district-results/{slug}-2cp-results-by-voting-centre",
-      "region_page": "{base}/results-by-region/{slug}-region-results",
+      "region_page": "{base}/region-election-page/region-summary-page/{slug}-Region-results",
       "overrides": {},
       "discover": {
         "page": "https://www.vec.vic.gov.au/results/state-election-results",
         "link_text": "\\b2026 state election results\\b"
-      }
+      },
+      "_note": "Filled 28 Nov 2026, 7 pm: the VEC published the 2026 results under /results/2026-results, with districts listed on district-election-page and regions on region-election-page (capitalised addresses, e.g. Albert-Park-District-results), so both are index pages; runs follow the links on them, and each district page's own links to its voting-centre pages. The patterns here are a fallback only (they lower-case the slug)."
     },
     "2022": {
       "event": "2022 State Election",

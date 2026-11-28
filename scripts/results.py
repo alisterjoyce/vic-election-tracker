@@ -751,23 +751,26 @@ def discover(cfg: dict, fetcher, districts: list, regions: list) -> None:
         warn_ci(f"results base found by discovery, not in the URL map: {cfg['base']} (fill scripts/results_urls.json)")
     if not cfg.get("base"):
         return
-    index = cfg["index_page"].format(base=cfg["base"].rstrip("/"))
-    try:
-        html, _ = fetcher.get(index, conditional=False)
-    except Exception as exc:  # noqa: BLE001
-        log.warning("Results index page unreadable (%s): %s; using the URL patterns", index, str(exc)[:200])
-        return
+    # One index page (2022) or several (2026: districts and regions on separate pages).
+    pages = cfg["index_page"] if isinstance(cfg["index_page"], list) else [cfg["index_page"]]
     names = {("district", name_key(d["name"])): d["id"] for d in districts}
     names.update({("region", name_key(r["name"])): r["id"] for r in regions})
     found = {}
     under = cfg["base"].rstrip("/").lower() + "/"
-    for text, href in _main_links(html, index):
-        if not href.lower().startswith(under):
-            continue   # e.g. the 2022 index links Narracan to the supplementary election's page, elsewhere on the site
-        m = re.match(r"(.+?)\s+(District|Region)\b", text)
-        sid = m and names.get((m.group(2).lower(), name_key(m.group(1))))
-        if sid:
-            found.setdefault(f"{m.group(2).lower()}:{sid}", href)
+    for index in (p.format(base=cfg["base"].rstrip("/")) for p in pages):
+        try:
+            html, _ = fetcher.get(index, conditional=False)
+        except Exception as exc:  # noqa: BLE001
+            log.warning("Results index page unreadable (%s): %s; using the URL patterns", index, str(exc)[:200])
+            continue
+        for text, href in _main_links(html, index):
+            if not href.lower().startswith(under):
+                continue   # e.g. the 2022 index links Narracan to the supplementary election's page, elsewhere on the site
+            m = re.match(r"(.+?)\s+(District|Region)\b", text)
+            sid = m and names.get((m.group(2).lower(), name_key(m.group(1))))
+            if sid:
+                found.setdefault(f"{m.group(2).lower()}:{sid}", href)
+    index = ", ".join(p.format(base=cfg["base"].rstrip("/")) for p in pages)
     cfg["_found"] = found
     pattern = sum(1 for k, u in found.items() if u.rstrip("/").lower() == page_url({**cfg, "_found": {}}, *k.split(":")).rstrip("/").lower())
     log.info("Results index %s links %d of %d districts and regions (%d at the patterned address)",
