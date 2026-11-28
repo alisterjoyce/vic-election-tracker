@@ -18,7 +18,7 @@
   },
   "profile": "2026",
   "counting_starts": "2026-11-28T18:00:00+11:00",
-  "updated": "2026-11-28T15:22:13Z",
+  "updated": "2026-11-28T16:09:56Z",
   "vec_updated": "Sunday, 29 November 2026",
   "call_rule": {
     "buffer_pct_of_enrolment": 1.0,
@@ -28,14 +28,14 @@
   },
   "tally": {
     "called": {
-      "LNP": 3
+      "GRN": 2
     },
     "leading": {
-      "LNP": 58,
+      "LNP": 62,
       "OTH": 1,
-      "ALP": 10,
-      "GRN": 7,
-      "ONP": 9
+      "ALP": 9,
+      "GRN": 4,
+      "ONP": 10
     },
     "undecided": 0,
     "counted_seats": 88,
@@ -46,7 +46,7 @@
       "name": "Albert Park",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Albert-Park-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:17:36Z",
+      "fetched": "2026-11-28T16:05:11Z",
       "enrolment": 51117,
       "formal": 14664,
       "informal": 629,
@@ -159,7 +159,7 @@
       "name": "Ashwood",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Ashwood-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:17:40Z",
+      "fetched": "2026-11-28T16:05:16Z",
       "enrolment": 53131,
       "formal": 36626,
       "informal": 1318,
@@ -272,7 +272,7 @@
       "name": "Bass",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bass-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:17:44Z",
+      "fetched": "2026-11-28T16:05:19Z",
       "enrolment": 57998,
       "formal": 34834,
       "informal": 999,
@@ -377,7 +377,7 @@
       "name": "Bayswater",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bayswater-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:17:49Z",
+      "fetched": "2026-11-28T16:05:23Z",
       "enrolment": 51511,
       "formal": 29498,
       "informal": 1807,
@@ -498,7 +498,7 @@
       "name": "Bellarine",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bellarine-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:17:52Z",
+      "fetched": "2026-11-28T16:05:28Z",
       "enrolment": 59824,
       "formal": 17019,
       "informal": 909,
@@ -574,21 +574,38 @@
           "pct": 0.46
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c1",
+          "name": "WHITEHEAD, Callum",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 9618,
+          "pct": 56.53
+        },
+        {
+          "id": "c2",
+          "name": "MARCHANT, Alison",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 7396,
+          "pct": 43.47
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c1",
         "name": "WHITEHEAD, Callum",
         "party": "LIB",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
+      "margin_votes": 2222,
       "uncounted_estimate": 35626,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
       "changes_hands": true,
-      "swing_2cp": null,
+      "swing_2cp": 15.0,
       "declaration_votes": {
         "early_cast": 30345,
         "postal_returned": 4526,
@@ -602,7 +619,7 @@
       "name": "Benambra",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Benambra-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:17:56Z",
+      "fetched": "2026-11-28T16:05:32Z",
       "enrolment": 51973,
       "formal": 28506,
       "informal": 1860,
@@ -686,21 +703,38 @@
           "pct": 0.78
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c5",
+          "name": "McKEEMAN, Lachie",
+          "party": "IND",
+          "party_name": null,
+          "votes": 14647,
+          "pct": 51.4
+        },
+        {
+          "id": "c6",
+          "name": "MARTIN, Steve",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 13851,
+          "pct": 48.6
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c5",
         "name": "McKEEMAN, Lachie",
         "party": "IND",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
+      "margin_votes": 796,
       "uncounted_estimate": 14500,
       "status": "leading",
       "called_by": null,
       "holder": "LIB",
       "changes_hands": true,
-      "swing_2cp": null,
+      "swing_2cp": 2.3,
       "declaration_votes": {
         "early_cast": 24228,
         "postal_returned": 1814,
@@ -714,14 +748,14 @@
       "name": "Bendigo East",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bendigo-East-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:17:58Z",
+      "fetched": "2026-11-28T16:05:37Z",
       "enrolment": 56152,
       "formal": 16030,
       "informal": 1048,
       "total": 17078,
       "counted_pct": 30.4,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 28,
+      "centres_total": 28,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -798,15 +832,32 @@
           "pct": 0.49
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c5",
+          "name": "LETHLEAN, Andrew",
+          "party": "NAT",
+          "party_name": "The Nationals",
+          "votes": 7260,
+          "pct": 64.71
+        },
+        {
+          "id": "c8",
+          "name": "RICKWOOD, Tim",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 3960,
+          "pct": 35.29
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c5",
         "name": "LETHLEAN, Andrew",
         "party": "NAT",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
+      "margin_votes": 3300,
       "uncounted_estimate": 33367,
       "status": "leading",
       "called_by": null,
@@ -818,15 +869,15 @@
         "postal_returned": 3044,
         "as_of": "2026-11-27",
         "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 33151
+        "postal_counted": 1188,
+        "outstanding": 31963
       }
     },
     "bendigo-west": {
       "name": "Bendigo West",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bendigo-West-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:01Z",
+      "fetched": "2026-11-28T16:05:40Z",
       "enrolment": 49735,
       "formal": 34480,
       "informal": 1636,
@@ -894,15 +945,32 @@
           "pct": 2.02
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c2",
+          "name": "HUTCHINGS, David",
+          "party": "NAT",
+          "party_name": "The Nationals",
+          "votes": 14262,
+          "pct": 53.36
+        },
+        {
+          "id": "c4",
+          "name": "BALDWIN, Brenton",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 12468,
+          "pct": 46.64
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c2",
         "name": "HUTCHINGS, David",
         "party": "NAT",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
+      "margin_votes": 1794,
       "uncounted_estimate": 8246,
       "status": "leading",
       "called_by": null,
@@ -922,7 +990,7 @@
       "name": "Bentleigh",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bentleigh-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:05Z",
+      "fetched": "2026-11-28T16:05:44Z",
       "enrolment": 54956,
       "formal": 24848,
       "informal": 638,
@@ -982,21 +1050,38 @@
           "pct": 0.81
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c1",
+          "name": "PUTT, Tynan",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 15376,
+          "pct": 61.88
+        },
+        {
+          "id": "c5",
+          "name": "STAIKOS, Nick",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 9471,
+          "pct": 38.12
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c1",
         "name": "PUTT, Tynan",
         "party": "LIB",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
+      "margin_votes": 5905,
       "uncounted_estimate": 24225,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
       "changes_hands": true,
-      "swing_2cp": null,
+      "swing_2cp": 19.9,
       "declaration_votes": {
         "early_cast": 26063,
         "postal_returned": 5911,
@@ -1010,14 +1095,14 @@
       "name": "Berwick",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Berwick-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:07Z",
+      "fetched": "2026-11-28T16:05:49Z",
       "enrolment": 67010,
       "formal": 38193,
       "informal": 2004,
       "total": 40197,
       "counted_pct": 60.0,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 19,
+      "centres_total": 19,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -1094,42 +1179,59 @@
           "pct": 0.4
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c5",
+          "name": "BATTIN, Brad",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 24319,
+          "pct": 71.83
+        },
+        {
+          "id": "c1",
+          "name": "KHAN, Rana",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 9537,
+          "pct": 28.17
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c5",
         "name": "BATTIN, Brad",
         "party": "LIB",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 37572,
+      "margin_votes": 14782,
+      "uncounted_estimate": 19349,
       "status": "leading",
       "called_by": null,
       "holder": "LIB",
       "changes_hands": false,
-      "swing_2cp": null,
+      "swing_2cp": 17.1,
       "declaration_votes": {
         "early_cast": 31566,
         "postal_returned": 6006,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 37572
+        "early_counted": 18316,
+        "postal_counted": 4305,
+        "outstanding": 14951
       }
     },
     "box-hill": {
       "name": "Box Hill",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Box-Hill-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:09Z",
+      "fetched": "2026-11-28T16:05:53Z",
       "enrolment": 52758,
       "formal": 23722,
       "informal": 854,
       "total": 24576,
       "counted_pct": 46.6,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 21,
+      "centres_total": 21,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -1139,7 +1241,7 @@
           "party": "LIB",
           "party_name": "Liberal",
           "votes": 10467,
-          "pct": 44.12
+          "pct": 44.44
         },
         {
           "id": "c6",
@@ -1147,7 +1249,7 @@
           "party": "ALP",
           "party_name": "Australian Labor Party",
           "votes": 5039,
-          "pct": 21.24
+          "pct": 21.4
         },
         {
           "id": "c1",
@@ -1155,7 +1257,7 @@
           "party": "GRN",
           "party_name": "The Greens",
           "votes": 3916,
-          "pct": 16.51
+          "pct": 16.63
         },
         {
           "id": "c3",
@@ -1163,7 +1265,7 @@
           "party": "ONP",
           "party_name": "One Nation Victoria",
           "votes": 1933,
-          "pct": 8.15
+          "pct": 8.21
         },
         {
           "id": "c2",
@@ -1171,7 +1273,7 @@
           "party": "IND",
           "party_name": null,
           "votes": 1079,
-          "pct": 4.55
+          "pct": 4.58
         },
         {
           "id": "c7",
@@ -1179,7 +1281,7 @@
           "party": "VS",
           "party_name": "Victorian Socialists",
           "votes": 761,
-          "pct": 3.21
+          "pct": 3.23
         },
         {
           "id": "c8",
@@ -1187,53 +1289,62 @@
           "party": "FF",
           "party_name": "Family First",
           "votes": 356,
-          "pct": 1.5
-        },
-        {
-          "id": "c5",
-          "name": "McGRATH, Sue-Ellen",
-          "party": "DLP",
-          "party_name": "Labour DLP",
-          "votes": 171,
-          "pct": 0.72
+          "pct": 1.51
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c4",
+          "name": "HOUGUET, Sally",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 8352,
+          "pct": 57.98
+        },
+        {
+          "id": "c6",
+          "name": "HAMER, Paul",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 6054,
+          "pct": 42.02
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c4",
         "name": "HOUGUET, Sally",
         "party": "LIB",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 30286,
+      "margin_votes": 2298,
+      "uncounted_estimate": 23178,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
       "changes_hands": true,
-      "swing_2cp": null,
+      "swing_2cp": 15.2,
       "declaration_votes": {
         "early_cast": 24788,
         "postal_returned": 5498,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 30286
+        "early_counted": 6999,
+        "postal_counted": 4328,
+        "outstanding": 18959
       }
     },
     "brighton": {
       "name": "Brighton",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Brighton-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:11Z",
+      "fetched": "2026-11-28T16:05:57Z",
       "enrolment": 50950,
       "formal": 29703,
       "informal": 1053,
       "total": 30756,
       "counted_pct": 60.4,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 15,
+      "centres_total": 15,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -1302,60 +1413,69 @@
           "pct": 0.49
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c6",
+          "name": "NEWBURY, James",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 7178,
+          "pct": 66.46
+        },
+        {
+          "id": "c4",
+          "name": "MULLAHY, Bridget",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 3622,
+          "pct": 33.54
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c6",
         "name": "NEWBURY, James",
         "party": "LIB",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 31275,
+      "margin_votes": 3556,
+      "uncounted_estimate": 14614,
       "status": "leading",
       "called_by": null,
       "holder": "LIB",
       "changes_hands": false,
-      "swing_2cp": null,
+      "swing_2cp": 12.2,
       "declaration_votes": {
         "early_cast": 27240,
         "postal_returned": 4035,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 31275
+        "early_counted": 19042,
+        "postal_counted": 1924,
+        "outstanding": 10309
       }
     },
     "broadmeadows": {
       "name": "Broadmeadows",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Broadmeadows-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:14Z",
+      "fetched": "2026-11-28T16:06:01Z",
       "enrolment": 51575,
       "formal": 24465,
       "informal": 2620,
       "total": 27085,
       "counted_pct": 52.5,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 17,
+      "centres_total": 17,
       "declared": false,
       "elected": null,
       "candidates": [
-        {
-          "id": "c6",
-          "name": "MATTHEWS-WARD, Kathleen",
-          "party": "ALP",
-          "party_name": "Australian Labor Party",
-          "votes": 6669,
-          "pct": 27.26
-        },
         {
           "id": "c3",
           "name": "DUZOVA, Baris",
           "party": "LIB",
           "party_name": "Liberal",
           "votes": 4626,
-          "pct": 18.91
+          "pct": 25.99
         },
         {
           "id": "c8",
@@ -1363,7 +1483,7 @@
           "party": "ONP",
           "party_name": "One Nation Victoria",
           "votes": 4201,
-          "pct": 17.17
+          "pct": 23.61
         },
         {
           "id": "c4",
@@ -1371,7 +1491,7 @@
           "party": "GRN",
           "party_name": "The Greens",
           "votes": 4157,
-          "pct": 16.99
+          "pct": 23.36
         },
         {
           "id": "c1",
@@ -1379,7 +1499,7 @@
           "party": "VS",
           "party_name": "Victorian Socialists",
           "votes": 1951,
-          "pct": 7.97
+          "pct": 10.96
         },
         {
           "id": "c10",
@@ -1387,7 +1507,7 @@
           "party": "SAL",
           "party_name": "Socialist Alliance",
           "votes": 1109,
-          "pct": 4.53
+          "pct": 6.23
         },
         {
           "id": "c5",
@@ -1395,7 +1515,7 @@
           "party": "IND",
           "party_name": null,
           "votes": 581,
-          "pct": 2.37
+          "pct": 3.26
         },
         {
           "id": "c7",
@@ -1403,7 +1523,7 @@
           "party": "FF",
           "party_name": "Family First",
           "votes": 441,
-          "pct": 1.8
+          "pct": 2.48
         },
         {
           "id": "c2",
@@ -1411,7 +1531,7 @@
           "party": "IND",
           "party_name": null,
           "votes": 366,
-          "pct": 1.5
+          "pct": 2.06
         },
         {
           "id": "c9",
@@ -1419,62 +1539,45 @@
           "party": "AJP",
           "party_name": "Animal Justice Party",
           "votes": 364,
-          "pct": 1.49
+          "pct": 2.05
         }
       ],
-      "tcp": [
-        {
-          "id": "c6",
-          "name": "MATTHEWS-WARD, Kathleen",
-          "party": "ALP",
-          "party_name": "Australian Labor Party",
-          "votes": 13868,
-          "pct": 56.79
-        },
-        {
-          "id": "c3",
-          "name": "DUZOVA, Baris",
-          "party": "LIB",
-          "party_name": "Liberal",
-          "votes": 10551,
-          "pct": 43.21
-        }
-      ],
-      "tcp_basis": "2cp",
+      "tcp": null,
+      "tcp_basis": null,
       "leader": {
-        "id": "c6",
-        "name": "MATTHEWS-WARD, Kathleen",
-        "party": "ALP",
-        "basis": "2cp"
+        "id": "c3",
+        "name": "DUZOVA, Baris",
+        "party": "LIB",
+        "basis": "first preferences"
       },
-      "margin_votes": 3317,
-      "uncounted_estimate": 25265,
+      "margin_votes": null,
+      "uncounted_estimate": 14425,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
-      "changes_hands": false,
-      "swing_2cp": -8.7,
+      "changes_hands": true,
+      "swing_2cp": null,
       "declaration_votes": {
         "early_cast": 21067,
         "postal_returned": 4198,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 25265
+        "early_counted": 10849,
+        "postal_counted": 2244,
+        "outstanding": 12172
       }
     },
     "brunswick": {
       "name": "Brunswick",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Brunswick-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:16Z",
+      "fetched": "2026-11-28T16:06:05Z",
       "enrolment": 56194,
       "formal": 36109,
       "informal": 1681,
       "total": 37790,
       "counted_pct": 67.2,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 20,
+      "centres_total": 20,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -1543,42 +1646,59 @@
           "pct": 0.47
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c3",
+          "name": "PULFORD, Adam",
+          "party": "GRN",
+          "party_name": "The Greens",
+          "votes": 26804,
+          "pct": 74.28
+        },
+        {
+          "id": "c6",
+          "name": "STEGER, Gabe",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 9279,
+          "pct": 25.72
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c3",
         "name": "PULFORD, Adam",
         "party": "GRN",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 29859,
-      "status": "leading",
-      "called_by": null,
+      "margin_votes": 17525,
+      "uncounted_estimate": 10887,
+      "status": "called",
+      "called_by": "site",
       "holder": "GRN",
       "changes_hands": false,
-      "swing_2cp": null,
+      "swing_2cp": 10.8,
       "declaration_votes": {
         "early_cast": 26818,
         "postal_returned": 3041,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 29859
+        "early_counted": 19786,
+        "postal_counted": 1334,
+        "outstanding": 8739
       }
     },
     "bulleen": {
       "name": "Bulleen",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bulleen-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:19Z",
+      "fetched": "2026-11-28T16:06:09Z",
       "enrolment": 51233,
       "formal": 29562,
       "informal": 1736,
       "total": 31298,
       "counted_pct": 61.1,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 19,
+      "centres_total": 19,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -1647,42 +1767,59 @@
           "pct": 0.78
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c4",
+          "name": "GUY, Matthew",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 20467,
+          "pct": 71.77
+        },
+        {
+          "id": "c7",
+          "name": "DALE, Tim",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 8050,
+          "pct": 28.23
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c4",
         "name": "GUY, Matthew",
         "party": "LIB",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 30446,
+      "margin_votes": 12417,
+      "uncounted_estimate": 14650,
       "status": "leading",
       "called_by": null,
       "holder": "LIB",
       "changes_hands": false,
-      "swing_2cp": null,
+      "swing_2cp": 15.8,
       "declaration_votes": {
         "early_cast": 24976,
         "postal_returned": 5470,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 30446
+        "early_counted": 13909,
+        "postal_counted": 4284,
+        "outstanding": 12253
       }
     },
     "bundoora": {
       "name": "Bundoora",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Bundoora-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:21Z",
+      "fetched": "2026-11-28T16:06:12Z",
       "enrolment": 48975,
       "formal": 33375,
       "informal": 1800,
       "total": 35175,
       "counted_pct": 71.8,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 18,
+      "centres_total": 18,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -1692,7 +1829,7 @@
           "party": "LIB",
           "party_name": "Liberal",
           "votes": 10874,
-          "pct": 32.58
+          "pct": 33.51
         },
         {
           "id": "c7",
@@ -1700,7 +1837,7 @@
           "party": "ALP",
           "party_name": "Australian Labor Party",
           "votes": 8155,
-          "pct": 24.43
+          "pct": 25.13
         },
         {
           "id": "c4",
@@ -1708,7 +1845,7 @@
           "party": "ONP",
           "party_name": "One Nation Victoria",
           "votes": 5946,
-          "pct": 17.82
+          "pct": 18.32
         },
         {
           "id": "c2",
@@ -1716,7 +1853,7 @@
           "party": "GRN",
           "party_name": "The Greens",
           "votes": 5178,
-          "pct": 15.51
+          "pct": 15.96
         },
         {
           "id": "c8",
@@ -1724,15 +1861,7 @@
           "party": "VS",
           "party_name": "Victorian Socialists",
           "votes": 1243,
-          "pct": 3.72
-        },
-        {
-          "id": "c1",
-          "name": "MURPHY-WEBSTER, Melissa",
-          "party": "IND",
-          "party_name": null,
-          "votes": 927,
-          "pct": 2.78
+          "pct": 3.83
         },
         {
           "id": "c5",
@@ -1740,7 +1869,7 @@
           "party": "FF",
           "party_name": "Family First",
           "votes": 546,
-          "pct": 1.64
+          "pct": 1.68
         },
         {
           "id": "c6",
@@ -1748,38 +1877,55 @@
           "party": "AJP",
           "party_name": "Animal Justice Party",
           "votes": 506,
-          "pct": 1.52
+          "pct": 1.56
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c3",
+          "name": "PARR, Chris",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 18425,
+          "pct": 55.24
+        },
+        {
+          "id": "c7",
+          "name": "BROOKS, Colin",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 14931,
+          "pct": 44.76
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c3",
         "name": "PARR, Chris",
         "party": "LIB",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 28129,
+      "margin_votes": 3494,
+      "uncounted_estimate": 8841,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
       "changes_hands": true,
-      "swing_2cp": null,
+      "swing_2cp": 18.0,
       "declaration_votes": {
         "early_cast": 24859,
         "postal_returned": 3270,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 28129
+        "early_counted": 19643,
+        "postal_counted": 2418,
+        "outstanding": 6068
       }
     },
     "carrum": {
       "name": "Carrum",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Carrum-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:24Z",
+      "fetched": "2026-11-28T16:06:17Z",
       "enrolment": 54535,
       "formal": 36590,
       "informal": 1918,
@@ -1855,21 +2001,38 @@
           "pct": 0.99
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c8",
+          "name": "SHELLEY, Jeff",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 8945,
+          "pct": 58.14
+        },
+        {
+          "id": "c6",
+          "name": "KILKENNY, Sonya",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 6439,
+          "pct": 41.86
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c8",
         "name": "SHELLEY, Jeff",
         "party": "LIB",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
+      "margin_votes": 2506,
       "uncounted_estimate": 9862,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
       "changes_hands": true,
-      "swing_2cp": null,
+      "swing_2cp": 18.1,
       "declaration_votes": {
         "early_cast": 26806,
         "postal_returned": 4768,
@@ -1883,14 +2046,14 @@
       "name": "Caulfield",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Caulfield-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:26Z",
+      "fetched": "2026-11-28T16:06:21Z",
       "enrolment": 51087,
       "formal": 32624,
       "informal": 1179,
       "total": 33803,
       "counted_pct": 66.2,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 18,
+      "centres_total": 18,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -1951,42 +2114,59 @@
           "pct": 0.71
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c6",
+          "name": "SOUTHWICK, David",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 15996,
+          "pct": 62.76
+        },
+        {
+          "id": "c4",
+          "name": "STAFRACE, Mikaela",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 9491,
+          "pct": 37.24
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c6",
         "name": "SOUTHWICK, David",
         "party": "LIB",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 29143,
+      "margin_votes": 6505,
+      "uncounted_estimate": 10539,
       "status": "leading",
       "called_by": null,
       "holder": "LIB",
       "changes_hands": false,
-      "swing_2cp": null,
+      "swing_2cp": 10.7,
       "declaration_votes": {
         "early_cast": 23545,
         "postal_returned": 5598,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 29143
+        "early_counted": 18038,
+        "postal_counted": 4237,
+        "outstanding": 6868
       }
     },
     "clarinda": {
       "name": "Clarinda",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Clarinda-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:28Z",
+      "fetched": "2026-11-28T16:06:26Z",
       "enrolment": 49578,
       "formal": 27810,
       "informal": 1458,
       "total": 29268,
       "counted_pct": 59.0,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 23,
+      "centres_total": 23,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -1996,7 +2176,7 @@
           "party": "ALP",
           "party_name": "Australian Labor Party",
           "votes": 8689,
-          "pct": 31.24
+          "pct": 34.95
         },
         {
           "id": "c7",
@@ -2004,7 +2184,7 @@
           "party": "LIB",
           "party_name": "Liberal",
           "votes": 8530,
-          "pct": 30.67
+          "pct": 34.31
         },
         {
           "id": "c6",
@@ -2012,15 +2192,7 @@
           "party": "ONP",
           "party_name": "One Nation Victoria",
           "votes": 4084,
-          "pct": 14.69
-        },
-        {
-          "id": "c2",
-          "name": "BOYD-EEDLE, Conor",
-          "party": "GRN",
-          "party_name": "The Greens",
-          "votes": 2952,
-          "pct": 10.61
+          "pct": 16.43
         },
         {
           "id": "c5",
@@ -2028,7 +2200,7 @@
           "party": "IND",
           "party_name": null,
           "votes": 2428,
-          "pct": 8.73
+          "pct": 9.77
         },
         {
           "id": "c4",
@@ -2036,7 +2208,7 @@
           "party": "VS",
           "party_name": "Victorian Socialists",
           "votes": 619,
-          "pct": 2.23
+          "pct": 2.49
         },
         {
           "id": "c1",
@@ -2044,45 +2216,62 @@
           "party": "LBT",
           "party_name": "Libertarian (formerly Liberal Democrats)",
           "votes": 508,
-          "pct": 1.83
+          "pct": 2.04
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c7",
+          "name": "PAGANIS, John",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 14398,
+          "pct": 51.8
+        },
+        {
+          "id": "c3",
+          "name": "TAK, Meng Heang",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 13396,
+          "pct": 48.2
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
-        "id": "c3",
-        "name": "TAK, Meng Heang",
-        "party": "ALP",
-        "basis": "first preferences"
+        "id": "c7",
+        "name": "PAGANIS, John",
+        "party": "LIB",
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 29823,
+      "margin_votes": 1002,
+      "uncounted_estimate": 14776,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
-      "changes_hands": false,
-      "swing_2cp": null,
+      "changes_hands": true,
+      "swing_2cp": 12.2,
       "declaration_votes": {
         "early_cast": 24679,
         "postal_returned": 5144,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 29823
+        "early_counted": 14714,
+        "postal_counted": 2263,
+        "outstanding": 12846
       }
     },
     "cranbourne": {
       "name": "Cranbourne",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Cranbourne-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:30Z",
+      "fetched": "2026-11-28T16:06:29Z",
       "enrolment": 58761,
-      "formal": 35503,
+      "formal": 35502,
       "informal": 2416,
-      "total": 37919,
+      "total": 37918,
       "counted_pct": 64.5,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 17,
+      "centres_total": 17,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -2091,8 +2280,8 @@
           "name": "TRIPODI, Gino",
           "party": "LIB",
           "party_name": "Liberal",
-          "votes": 10465,
-          "pct": 29.48
+          "votes": 10464,
+          "pct": 29.47
         },
         {
           "id": "c5",
@@ -2151,42 +2340,59 @@
           "pct": 1.19
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c5",
+          "name": "RICHARDS, Pauline",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 18010,
+          "pct": 50.77
+        },
+        {
+          "id": "c7",
+          "name": "HIRST, Andrew",
+          "party": "ONP",
+          "party_name": "One Nation Victoria",
+          "votes": 17464,
+          "pct": 49.23
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
-        "id": "c4",
-        "name": "TRIPODI, Gino",
-        "party": "LIB",
-        "basis": "first preferences"
+        "id": "c5",
+        "name": "RICHARDS, Pauline",
+        "party": "ALP",
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 33666,
+      "margin_votes": 546,
+      "uncounted_estimate": 12656,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
-      "changes_hands": true,
+      "changes_hands": false,
       "swing_2cp": null,
       "declaration_votes": {
         "early_cast": 28344,
         "postal_returned": 5322,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 33666
+        "early_counted": 21269,
+        "postal_counted": 1446,
+        "outstanding": 10951
       }
     },
     "croydon": {
       "name": "Croydon",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Croydon-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:32Z",
+      "fetched": "2026-11-28T16:06:33Z",
       "enrolment": 55612,
       "formal": 35309,
       "informal": 1852,
       "total": 37161,
       "counted_pct": 66.8,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 21,
+      "centres_total": 21,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -2255,42 +2461,59 @@
           "pct": 0.89
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c5",
+          "name": "WOOLDRIDGE, Toby",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 19212,
+          "pct": 62.44
+        },
+        {
+          "id": "c1",
+          "name": "FARR, Richard",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 11555,
+          "pct": 37.56
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c5",
         "name": "WOOLDRIDGE, Toby",
         "party": "LIB",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 31210,
+      "margin_votes": 7657,
+      "uncounted_estimate": 13165,
       "status": "leading",
       "called_by": null,
       "holder": "LIB",
       "changes_hands": false,
-      "swing_2cp": null,
+      "swing_2cp": 11.1,
       "declaration_votes": {
         "early_cast": 25868,
         "postal_returned": 5342,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 31210
+        "early_counted": 16319,
+        "postal_counted": 4324,
+        "outstanding": 10567
       }
     },
     "dandenong": {
       "name": "Dandenong",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Dandenong-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:34Z",
+      "fetched": "2026-11-28T16:06:36Z",
       "enrolment": 54251,
       "formal": 33923,
       "informal": 3774,
       "total": 37697,
       "counted_pct": 69.5,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 21,
+      "centres_total": 21,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -2359,16 +2582,33 @@
           "pct": 1.01
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c5",
+          "name": "WILLIAMS, Gabrielle",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 12600,
+          "pct": 63.36
+        },
+        {
+          "id": "c8",
+          "name": "WRIGHT, Glenda",
+          "party": "ONP",
+          "party_name": "One Nation Victoria",
+          "votes": 7285,
+          "pct": 36.64
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c5",
         "name": "WILLIAMS, Gabrielle",
         "party": "ALP",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 30586,
+      "margin_votes": 5315,
+      "uncounted_estimate": 8000,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
@@ -2378,23 +2618,23 @@
         "early_cast": 26116,
         "postal_returned": 4470,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 30586
+        "early_counted": 20729,
+        "postal_counted": 1857,
+        "outstanding": 8000
       }
     },
     "eildon": {
       "name": "Eildon",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Eildon-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:36Z",
+      "fetched": "2026-11-28T16:06:41Z",
       "enrolment": 51711,
       "formal": 30885,
       "informal": 1573,
       "total": 32458,
       "counted_pct": 62.8,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 39,
+      "centres_total": 39,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -2463,16 +2703,33 @@
           "pct": 1.18
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c2",
+          "name": "MCLEISH, Cindy",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 18711,
+          "pct": 63.21
+        },
+        {
+          "id": "c3",
+          "name": "BARBER, Tim",
+          "party": "ONP",
+          "party_name": "One Nation Victoria",
+          "votes": 10888,
+          "pct": 36.79
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c2",
         "name": "MCLEISH, Cindy",
         "party": "LIB",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 23112,
+      "margin_votes": 7823,
+      "uncounted_estimate": 13671,
       "status": "leading",
       "called_by": null,
       "holder": "LIB",
@@ -2482,23 +2739,23 @@
         "early_cast": 19307,
         "postal_returned": 3805,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 23112
+        "early_counted": 11670,
+        "postal_counted": 2291,
+        "outstanding": 9151
       }
     },
     "eltham": {
       "name": "Eltham",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Eltham-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:38Z",
+      "fetched": "2026-11-28T16:06:45Z",
       "enrolment": 50567,
       "formal": 33005,
       "informal": 1037,
       "total": 34042,
       "counted_pct": 67.3,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 18,
+      "centres_total": 18,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -2559,42 +2816,59 @@
           "pct": 0.58
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c2",
+          "name": "BYRNES, Paul",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 18286,
+          "pct": 57.66
+        },
+        {
+          "id": "c5",
+          "name": "WARD, Vicki",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 13430,
+          "pct": 42.34
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c2",
         "name": "BYRNES, Paul",
         "party": "LIB",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 26821,
+      "margin_votes": 4856,
+      "uncounted_estimate": 12784,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
       "changes_hands": true,
-      "swing_2cp": null,
+      "swing_2cp": 16.7,
       "declaration_votes": {
         "early_cast": 23036,
         "postal_returned": 3785,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 26821
+        "early_counted": 15222,
+        "postal_counted": 2221,
+        "outstanding": 9378
       }
     },
     "essendon": {
       "name": "Essendon",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Essendon-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:40Z",
+      "fetched": "2026-11-28T16:06:48Z",
       "enrolment": 53729,
       "formal": 26410,
       "informal": 1415,
       "total": 27825,
       "counted_pct": 51.8,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 15,
+      "centres_total": 15,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -2663,42 +2937,59 @@
           "pct": 0.56
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c5",
+          "name": "THEODOSIS, Kat",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 8275,
+          "pct": 50.6
+        },
+        {
+          "id": "c3",
+          "name": "LE DEUX, Tommy",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 8078,
+          "pct": 49.4
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
-        "id": "c3",
-        "name": "LE DEUX, Tommy",
-        "party": "LIB",
-        "basis": "first preferences"
+        "id": "c5",
+        "name": "THEODOSIS, Kat",
+        "party": "ALP",
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 29767,
+      "margin_votes": 197,
+      "uncounted_estimate": 19488,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
-      "changes_hands": true,
-      "swing_2cp": null,
+      "changes_hands": false,
+      "swing_2cp": -11.9,
       "declaration_votes": {
         "early_cast": 25453,
         "postal_returned": 4314,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 29767
+        "early_counted": 10503,
+        "postal_counted": 2504,
+        "outstanding": 16760
       }
     },
     "eureka": {
       "name": "Eureka",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Eureka-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:42Z",
+      "fetched": "2026-11-28T16:06:53Z",
       "enrolment": 58117,
       "formal": 35985,
       "informal": 2302,
       "total": 38287,
       "counted_pct": 65.9,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 28,
+      "centres_total": 28,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -2708,7 +2999,7 @@
           "party": "ONP",
           "party_name": "One Nation Victoria",
           "votes": 10939,
-          "pct": 30.4
+          "pct": 31.14
         },
         {
           "id": "c8",
@@ -2716,7 +3007,7 @@
           "party": "LIB",
           "party_name": "Liberal",
           "votes": 10034,
-          "pct": 27.88
+          "pct": 28.56
         },
         {
           "id": "c3",
@@ -2724,7 +3015,7 @@
           "party": "ALP",
           "party_name": "Australian Labor Party",
           "votes": 5965,
-          "pct": 16.58
+          "pct": 16.98
         },
         {
           "id": "c2",
@@ -2732,7 +3023,7 @@
           "party": "GRN",
           "party_name": "The Greens",
           "votes": 5197,
-          "pct": 14.44
+          "pct": 14.79
         },
         {
           "id": "c1",
@@ -2740,15 +3031,7 @@
           "party": "IND",
           "party_name": null,
           "votes": 886,
-          "pct": 2.46
-        },
-        {
-          "id": "c9",
-          "name": "VENDITTI-TAYLOR, Steven",
-          "party": "IND",
-          "party_name": null,
-          "votes": 857,
-          "pct": 2.38
+          "pct": 2.52
         },
         {
           "id": "c4",
@@ -2756,7 +3039,7 @@
           "party": "VS",
           "party_name": "Victorian Socialists",
           "votes": 839,
-          "pct": 2.33
+          "pct": 2.39
         },
         {
           "id": "c5",
@@ -2764,7 +3047,7 @@
           "party": "FF",
           "party_name": "Family First",
           "votes": 675,
-          "pct": 1.88
+          "pct": 1.92
         },
         {
           "id": "c6",
@@ -2772,38 +3055,55 @@
           "party": "AJP",
           "party_name": "Animal Justice Party",
           "votes": 593,
-          "pct": 1.65
+          "pct": 1.69
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c8",
+          "name": "MUIR, Emma",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 22285,
+          "pct": 62.38
+        },
+        {
+          "id": "c3",
+          "name": "SETTLE, Michaela",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 13439,
+          "pct": 37.62
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
-        "id": "c7",
-        "name": "BALLINGER, Paul",
-        "party": "ONP",
-        "basis": "first preferences"
+        "id": "c8",
+        "name": "MUIR, Emma",
+        "party": "LIB",
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 30108,
+      "margin_votes": 8846,
+      "uncounted_estimate": 13463,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
       "changes_hands": true,
-      "swing_2cp": null,
+      "swing_2cp": 19.6,
       "declaration_votes": {
         "early_cast": 26994,
         "postal_returned": 3114,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 30108
+        "early_counted": 16799,
+        "postal_counted": 2402,
+        "outstanding": 10907
       }
     },
     "euroa": {
       "name": "Euroa",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Euroa-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:45Z",
+      "fetched": "2026-11-28T16:06:57Z",
       "enrolment": 53147,
       "formal": 24337,
       "informal": 1117,
@@ -2871,15 +3171,32 @@
           "pct": 1.71
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c1",
+          "name": "CLEELAND, Annabelle",
+          "party": "NAT",
+          "party_name": "The Nationals",
+          "votes": 12301,
+          "pct": 61.2
+        },
+        {
+          "id": "c6",
+          "name": "CAMPBELL, Steve",
+          "party": "ONP",
+          "party_name": "One Nation Victoria",
+          "votes": 7798,
+          "pct": 38.8
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c1",
         "name": "CLEELAND, Annabelle",
         "party": "NAT",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
+      "margin_votes": 4503,
       "uncounted_estimate": 21398,
       "status": "leading",
       "called_by": null,
@@ -2899,14 +3216,14 @@
       "name": "Evelyn",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Evelyn-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:47Z",
+      "fetched": "2026-11-28T16:07:00Z",
       "enrolment": 53163,
       "formal": 17060,
       "informal": 780,
       "total": 17840,
       "counted_pct": 33.6,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 21,
+      "centres_total": 21,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -2967,42 +3284,59 @@
           "pct": 1.91
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c4",
+          "name": "VALLENCE, Bridget",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 11946,
+          "pct": 70.05
+        },
+        {
+          "id": "c1",
+          "name": "SHERLOCK, Analise",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 5107,
+          "pct": 29.95
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c4",
         "name": "VALLENCE, Bridget",
         "party": "LIB",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 31223,
+      "margin_votes": 6839,
+      "uncounted_estimate": 30692,
       "status": "leading",
       "called_by": null,
       "holder": "LIB",
       "changes_hands": false,
-      "swing_2cp": null,
+      "swing_2cp": 14.8,
       "declaration_votes": {
         "early_cast": 26463,
         "postal_returned": 4760,
         "as_of": "2026-11-27",
         "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 31223
+        "postal_counted": 3303,
+        "outstanding": 27920
       }
     },
     "footscray": {
       "name": "Footscray",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Footscray-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:49Z",
+      "fetched": "2026-11-28T16:07:05Z",
       "enrolment": 51960,
       "formal": 30346,
       "informal": 2852,
       "total": 33198,
       "counted_pct": 63.9,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 16,
+      "centres_total": 16,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -3127,42 +3461,59 @@
           "pct": 0.16
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c2",
+          "name": "PEREYRA, Elena",
+          "party": "GRN",
+          "party_name": "The Greens",
+          "votes": 18706,
+          "pct": 61.68
+        },
+        {
+          "id": "c10",
+          "name": "HALL, Katie",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 11620,
+          "pct": 38.32
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c2",
         "name": "PEREYRA, Elena",
         "party": "GRN",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 29006,
+      "margin_votes": 7086,
+      "uncounted_estimate": 11427,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
       "changes_hands": true,
-      "swing_2cp": null,
+      "swing_2cp": 15.9,
       "declaration_votes": {
         "early_cast": 25847,
         "postal_returned": 3159,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 29006
+        "early_counted": 17388,
+        "postal_counted": 2017,
+        "outstanding": 9601
       }
     },
     "frankston": {
       "name": "Frankston",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Frankston-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:51Z",
+      "fetched": "2026-11-28T16:07:09Z",
       "enrolment": 51237,
       "formal": 25455,
       "informal": 1715,
       "total": 27170,
       "counted_pct": 53.0,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 17,
+      "centres_total": 17,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -3255,42 +3606,59 @@
           "pct": 0.38
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c7",
+          "name": "AMBRY, Bree",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 14473,
+          "pct": 56.92
+        },
+        {
+          "id": "c5",
+          "name": "EDBROOKE, Paul",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 10955,
+          "pct": 43.08
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c7",
         "name": "AMBRY, Bree",
         "party": "LIB",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 24981,
+      "margin_votes": 3518,
+      "uncounted_estimate": 16867,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
       "changes_hands": true,
-      "swing_2cp": null,
+      "swing_2cp": 15.6,
       "declaration_votes": {
         "early_cast": 22343,
         "postal_returned": 2638,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 24981
+        "early_counted": 9419,
+        "postal_counted": 2389,
+        "outstanding": 13173
       }
     },
     "geelong": {
       "name": "Geelong",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Geelong-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:53Z",
+      "fetched": "2026-11-28T16:07:14Z",
       "enrolment": 53903,
       "formal": 37771,
       "informal": 1757,
       "total": 39528,
       "counted_pct": 73.3,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 24,
+      "centres_total": 24,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -3359,42 +3727,59 @@
           "pct": 1.04
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c2",
+          "name": "POBJOY, Andy",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 12680,
+          "pct": 57.44
+        },
+        {
+          "id": "c7",
+          "name": "COUZENS, Christine",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 9396,
+          "pct": 42.56
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c2",
         "name": "POBJOY, Andy",
         "party": "LIB",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 30377,
+      "margin_votes": 3284,
+      "uncounted_estimate": 8485,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
       "changes_hands": true,
-      "swing_2cp": null,
+      "swing_2cp": 22.1,
       "declaration_votes": {
         "early_cast": 26817,
         "postal_returned": 3560,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 30377
+        "early_counted": 22016,
+        "postal_counted": 2404,
+        "outstanding": 5957
       }
     },
     "gippsland-east": {
       "name": "Gippsland East",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Gippsland-East-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:56Z",
+      "fetched": "2026-11-28T16:07:18Z",
       "enrolment": 51687,
       "formal": 34430,
       "informal": 1695,
       "total": 36125,
       "counted_pct": 69.9,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 35,
+      "centres_total": 35,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -3455,16 +3840,33 @@
           "pct": 1.31
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c4",
+          "name": "RENDELL, Gemma",
+          "party": "NAT",
+          "party_name": "The Nationals",
+          "votes": 20035,
+          "pct": 58.22
+        },
+        {
+          "id": "c6",
+          "name": "GOODMAN, Steve",
+          "party": "ONP",
+          "party_name": "One Nation Victoria",
+          "votes": 14377,
+          "pct": 41.78
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c4",
         "name": "RENDELL, Gemma",
         "party": "NAT",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 27239,
+      "margin_votes": 5658,
+      "uncounted_estimate": 9837,
       "status": "leading",
       "called_by": null,
       "holder": "NAT",
@@ -3474,23 +3876,23 @@
         "early_cast": 25757,
         "postal_returned": 1482,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 27239
+        "early_counted": 18859,
+        "postal_counted": 876,
+        "outstanding": 7504
       }
     },
     "gippsland-south": {
       "name": "Gippsland South",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Gippsland-South-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:18:58Z",
+      "fetched": "2026-11-28T16:07:21Z",
       "enrolment": 50953,
       "formal": 29456,
       "informal": 1697,
       "total": 31153,
       "counted_pct": 61.1,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 41,
+      "centres_total": 41,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -3500,7 +3902,7 @@
           "party": "NAT",
           "party_name": "The Nationals",
           "votes": 11765,
-          "pct": 39.94
+          "pct": 44.55
         },
         {
           "id": "c7",
@@ -3508,15 +3910,7 @@
           "party": "ONP",
           "party_name": "One Nation Victoria",
           "votes": 10407,
-          "pct": 35.33
-        },
-        {
-          "id": "c1",
-          "name": "BARRY-MACAULAY, Amy",
-          "party": "ALP",
-          "party_name": "Australian Labor Party",
-          "votes": 3048,
-          "pct": 10.35
+          "pct": 39.41
         },
         {
           "id": "c5",
@@ -3524,7 +3918,7 @@
           "party": "GRN",
           "party_name": "The Greens",
           "votes": 2906,
-          "pct": 9.87
+          "pct": 11.0
         },
         {
           "id": "c2",
@@ -3532,7 +3926,7 @@
           "party": "AJP",
           "party_name": "Animal Justice Party",
           "votes": 590,
-          "pct": 2.0
+          "pct": 2.23
         },
         {
           "id": "c6",
@@ -3540,7 +3934,7 @@
           "party": "VS",
           "party_name": "Victorian Socialists",
           "votes": 458,
-          "pct": 1.55
+          "pct": 1.73
         },
         {
           "id": "c4",
@@ -3548,19 +3942,36 @@
           "party": "IND",
           "party_name": null,
           "votes": 282,
-          "pct": 0.96
+          "pct": 1.07
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c3",
+          "name": "O'BRIEN, Danny",
+          "party": "NAT",
+          "party_name": "The Nationals",
+          "votes": 18175,
+          "pct": 61.7
+        },
+        {
+          "id": "c7",
+          "name": "WILKIE, Bianca",
+          "party": "ONP",
+          "party_name": "One Nation Victoria",
+          "votes": 11280,
+          "pct": 38.3
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c3",
         "name": "O'BRIEN, Danny",
         "party": "NAT",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 24062,
+      "margin_votes": 6895,
+      "uncounted_estimate": 14666,
       "status": "leading",
       "called_by": null,
       "holder": "NAT",
@@ -3570,23 +3981,23 @@
         "early_cast": 22000,
         "postal_returned": 2062,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 24062
+        "early_counted": 9552,
+        "postal_counted": 1890,
+        "outstanding": 12620
       }
     },
     "glen-waverley": {
       "name": "Glen Waverley",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Glen-Waverley-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:00Z",
+      "fetched": "2026-11-28T16:07:25Z",
       "enrolment": 50821,
       "formal": 34982,
       "informal": 1348,
       "total": 36330,
       "counted_pct": 71.5,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 21,
+      "centres_total": 21,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -3647,42 +4058,59 @@
           "pct": 1.03
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c1",
+          "name": "SUN, Jacky",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 22180,
+          "pct": 63.42
+        },
+        {
+          "id": "c7",
+          "name": "MULLAHY, John",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 12795,
+          "pct": 36.58
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c1",
         "name": "SUN, Jacky",
         "party": "LIB",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 28542,
+      "margin_votes": 9385,
+      "uncounted_estimate": 9845,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
       "changes_hands": true,
-      "swing_2cp": null,
+      "swing_2cp": 16.7,
       "declaration_votes": {
         "early_cast": 23900,
         "postal_returned": 4642,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 28542
+        "early_counted": 20222,
+        "postal_counted": 2378,
+        "outstanding": 5942
       }
     },
     "greenvale": {
       "name": "Greenvale",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Greenvale-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:02Z",
+      "fetched": "2026-11-28T16:07:30Z",
       "enrolment": 55541,
       "formal": 12264,
       "informal": 1306,
       "total": 13570,
       "counted_pct": 24.4,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 15,
+      "centres_total": 15,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -3767,15 +4195,32 @@
           "pct": 1.11
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c10",
+          "name": "WALTERS, Iwan",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 6409,
+          "pct": 62.11
+        },
+        {
+          "id": "c4",
+          "name": "MOORE, Chris",
+          "party": "ONP",
+          "party_name": "One Nation Victoria",
+          "votes": 3910,
+          "pct": 37.89
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c10",
         "name": "WALTERS, Iwan",
         "party": "ALP",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
+      "margin_votes": 2499,
       "uncounted_estimate": 32804,
       "status": "leading",
       "called_by": null,
@@ -3786,23 +4231,23 @@
         "early_cast": 23954,
         "postal_returned": 4729,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 28683
+        "early_counted": 156,
+        "postal_counted": 1910,
+        "outstanding": 26617
       }
     },
     "hastings": {
       "name": "Hastings",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Hastings-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:04Z",
+      "fetched": "2026-11-28T16:07:33Z",
       "enrolment": 50849,
       "formal": 32153,
       "informal": 1526,
       "total": 33679,
       "counted_pct": 66.2,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 16,
+      "centres_total": 16,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -3863,16 +4308,33 @@
           "pct": 0.88
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c7",
+          "name": "ANGELICO, Peter",
+          "party": "ONP",
+          "party_name": "One Nation Victoria",
+          "votes": 18783,
+          "pct": 58.44
+        },
+        {
+          "id": "c4",
+          "name": "MERCURIO, Paul",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 13360,
+          "pct": 41.56
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
-        "id": "c5",
-        "name": "SCHIEFLER, Frank",
-        "party": "LIB",
-        "basis": "first preferences"
+        "id": "c7",
+        "name": "ANGELICO, Peter",
+        "party": "ONP",
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 30128,
+      "margin_votes": 5423,
+      "uncounted_estimate": 11879,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
@@ -3882,23 +4344,23 @@
         "early_cast": 25720,
         "postal_returned": 4408,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 30128
+        "early_counted": 17119,
+        "postal_counted": 2419,
+        "outstanding": 10590
       }
     },
     "hawthorn": {
       "name": "Hawthorn",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Hawthorn-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:06Z",
+      "fetched": "2026-11-28T16:07:37Z",
       "enrolment": 51920,
       "formal": 34836,
       "informal": 852,
       "total": 35688,
       "counted_pct": 68.7,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 20,
+      "centres_total": 20,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -3959,16 +4421,33 @@
           "pct": 0.73
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c7",
+          "name": "PESUTTO, John",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 19615,
+          "pct": 56.34
+        },
+        {
+          "id": "c3",
+          "name": "IBUKI, Shima",
+          "party": "IND",
+          "party_name": null,
+          "votes": 15202,
+          "pct": 43.66
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c7",
         "name": "PESUTTO, John",
         "party": "LIB",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 27423,
+      "margin_votes": 4413,
+      "uncounted_estimate": 11510,
       "status": "leading",
       "called_by": null,
       "holder": "LIB",
@@ -3978,23 +4457,23 @@
         "early_cast": 23363,
         "postal_returned": 4060,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 27423
+        "early_counted": 17128,
+        "postal_counted": 2442,
+        "outstanding": 7853
       }
     },
     "ivanhoe": {
       "name": "Ivanhoe",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Ivanhoe-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:08Z",
+      "fetched": "2026-11-28T16:07:42Z",
       "enrolment": 50245,
       "formal": 34215,
       "informal": 1910,
       "total": 36125,
       "counted_pct": 71.9,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 16,
+      "centres_total": 16,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -4063,42 +4542,59 @@
           "pct": 0.51
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c3",
+          "name": "CARBINES, Anthony",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 12381,
+          "pct": 50.99
+        },
+        {
+          "id": "c4",
+          "name": "LOPEZ RIOS, Oscar",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 11898,
+          "pct": 49.01
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
-        "id": "c4",
-        "name": "LOPEZ RIOS, Oscar",
-        "party": "LIB",
-        "basis": "first preferences"
+        "id": "c3",
+        "name": "CARBINES, Anthony",
+        "party": "ALP",
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 27187,
+      "margin_votes": 483,
+      "uncounted_estimate": 8934,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
-      "changes_hands": true,
-      "swing_2cp": null,
+      "changes_hands": false,
+      "swing_2cp": -11.8,
       "declaration_votes": {
         "early_cast": 23721,
         "postal_returned": 3466,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 27187
+        "early_counted": 18101,
+        "postal_counted": 1928,
+        "outstanding": 7158
       }
     },
     "kalkallo": {
       "name": "Kalkallo",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Kalkallo-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:10Z",
+      "fetched": "2026-11-28T16:07:45Z",
       "enrolment": 70361,
-      "formal": 21624,
-      "informal": 2031,
-      "total": 23655,
-      "counted_pct": 33.6,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "formal": 22532,
+      "informal": 2139,
+      "total": 24671,
+      "counted_pct": 35.1,
+      "centres_counted": 18,
+      "centres_total": 18,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -4107,47 +4603,47 @@
           "name": "DADISHO, Eddie",
           "party": "LIB",
           "party_name": "Liberal",
-          "votes": 6628,
-          "pct": 30.65
+          "votes": 6871,
+          "pct": 30.49
         },
         {
           "id": "c5",
           "name": "STEANS, Troy",
           "party": "ONP",
           "party_name": "One Nation Victoria",
-          "votes": 5703,
-          "pct": 26.37
+          "votes": 5889,
+          "pct": 26.14
         },
         {
           "id": "c1",
           "name": "SPENCE, Ros",
           "party": "ALP",
           "party_name": "Australian Labor Party",
-          "votes": 4659,
-          "pct": 21.55
+          "votes": 4888,
+          "pct": 21.69
         },
         {
           "id": "c6",
           "name": "TIWARI, Payal",
           "party": "GRN",
           "party_name": "The Greens",
-          "votes": 2286,
-          "pct": 10.57
+          "votes": 2431,
+          "pct": 10.79
         },
         {
           "id": "c8",
           "name": "MILLETT, Courtney",
           "party": "VS",
           "party_name": "Victorian Socialists",
-          "votes": 914,
-          "pct": 4.23
+          "votes": 951,
+          "pct": 4.22
         },
         {
           "id": "c3",
           "name": "DOBSON, Jeanette",
           "party": "FF",
           "party_name": "Family First",
-          "votes": 606,
+          "votes": 632,
           "pct": 2.8
         },
         {
@@ -4155,28 +4651,45 @@
           "name": "ISLAM, Rebeca",
           "party": "IND",
           "party_name": null,
-          "votes": 527,
-          "pct": 2.44
+          "votes": 559,
+          "pct": 2.48
         },
         {
           "id": "c4",
           "name": "LYNCH, Matthew",
           "party": "AJP",
           "party_name": "Animal Justice Party",
-          "votes": 301,
-          "pct": 1.39
+          "votes": 311,
+          "pct": 1.38
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c5",
+          "name": "STEANS, Troy",
+          "party": "ONP",
+          "party_name": "One Nation Victoria",
+          "votes": 7784,
+          "pct": 51.59
+        },
+        {
+          "id": "c1",
+          "name": "SPENCE, Ros",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 7303,
+          "pct": 48.41
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
-        "id": "c2",
-        "name": "DADISHO, Eddie",
-        "party": "LIB",
-        "basis": "first preferences"
+        "id": "c5",
+        "name": "STEANS, Troy",
+        "party": "ONP",
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 38855,
+      "margin_votes": 481,
+      "uncounted_estimate": 33902,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
@@ -4186,23 +4699,23 @@
         "early_cast": 33453,
         "postal_returned": 5402,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 38855
+        "early_counted": 6415,
+        "postal_counted": 4265,
+        "outstanding": 28175
       }
     },
     "kew": {
       "name": "Kew",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Kew-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:12Z",
+      "fetched": "2026-11-28T16:07:49Z",
       "enrolment": 51115,
       "formal": 31796,
       "informal": 1337,
       "total": 33133,
       "counted_pct": 64.8,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 19,
+      "centres_total": 19,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -4287,16 +4800,33 @@
           "pct": 0.15
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c7",
+          "name": "WILSON, Jess",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 19382,
+          "pct": 62.55
+        },
+        {
+          "id": "c2",
+          "name": "TORNEY, Sophie",
+          "party": "IND",
+          "party_name": null,
+          "votes": 11603,
+          "pct": 37.45
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c7",
         "name": "WILSON, Jess",
         "party": "LIB",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 25472,
+      "margin_votes": 7779,
+      "uncounted_estimate": 12898,
       "status": "leading",
       "called_by": null,
       "holder": "LIB",
@@ -4306,23 +4836,23 @@
         "early_cast": 21879,
         "postal_returned": 3593,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 25472
+        "early_counted": 15483,
+        "postal_counted": 1463,
+        "outstanding": 8526
       }
     },
     "kororoit": {
       "name": "Kororoit",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Kororoit-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:14Z",
+      "fetched": "2026-11-28T16:07:54Z",
       "enrolment": 61816,
       "formal": 18556,
       "informal": 1760,
       "total": 20316,
       "counted_pct": 32.9,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 16,
+      "centres_total": 16,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -4399,42 +4929,59 @@
           "pct": 0.73
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c6",
+          "name": "CHAKOMA, Jack",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 5258,
+          "pct": 52.79
+        },
+        {
+          "id": "c7",
+          "name": "GRIGOROVITCH, Luba",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 4702,
+          "pct": 47.21
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
-        "id": "c7",
-        "name": "GRIGOROVITCH, Luba",
-        "party": "ALP",
-        "basis": "first preferences"
+        "id": "c6",
+        "name": "CHAKOMA, Jack",
+        "party": "LIB",
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 36548,
+      "margin_votes": 556,
+      "uncounted_estimate": 32264,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
-      "changes_hands": false,
-      "swing_2cp": null,
+      "changes_hands": true,
+      "swing_2cp": 17.0,
       "declaration_votes": {
         "early_cast": 32698,
         "postal_returned": 3850,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 36548
+        "early_counted": 6871,
+        "postal_counted": 1422,
+        "outstanding": 28255
       }
     },
     "lara": {
       "name": "Lara",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Lara-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:16Z",
+      "fetched": "2026-11-28T16:07:57Z",
       "enrolment": 51659,
       "formal": 35017,
       "informal": 2453,
       "total": 37470,
       "counted_pct": 72.5,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 20,
+      "centres_total": 20,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -4503,16 +5050,33 @@
           "pct": 1.59
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c5",
+          "name": "SPYROS, Steven",
+          "party": "ONP",
+          "party_name": "One Nation Victoria",
+          "votes": 13491,
+          "pct": 51.58
+        },
+        {
+          "id": "c7",
+          "name": "GEORGE, Ella",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 12665,
+          "pct": 48.42
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c5",
         "name": "SPYROS, Steven",
         "party": "ONP",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 29253,
+      "margin_votes": 826,
+      "uncounted_estimate": 7044,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
@@ -4522,23 +5086,23 @@
         "early_cast": 26167,
         "postal_returned": 3086,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 29253
+        "early_counted": 20474,
+        "postal_counted": 2155,
+        "outstanding": 6624
       }
     },
     "laverton": {
       "name": "Laverton",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Laverton-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:18Z",
+      "fetched": "2026-11-28T16:08:02Z",
       "enrolment": 56046,
       "formal": 34157,
       "informal": 2831,
       "total": 36988,
       "counted_pct": 66.0,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 16,
+      "centres_total": 16,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -4615,42 +5179,59 @@
           "pct": 0.69
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c5",
+          "name": "CONNOLLY, Sarah",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 12077,
+          "pct": 57.9
+        },
+        {
+          "id": "c8",
+          "name": "NOUNE, Ghada",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 8783,
+          "pct": 42.1
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c5",
         "name": "CONNOLLY, Sarah",
         "party": "ALP",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 34135,
+      "margin_votes": 3294,
+      "uncounted_estimate": 9470,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
       "changes_hands": false,
-      "swing_2cp": null,
+      "swing_2cp": -10.1,
       "declaration_votes": {
         "early_cast": 31207,
         "postal_returned": 2928,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 34135
+        "early_counted": 23141,
+        "postal_counted": 2613,
+        "outstanding": 8381
       }
     },
     "lowan": {
       "name": "Lowan",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Lowan-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:20Z",
+      "fetched": "2026-11-28T16:08:06Z",
       "enrolment": 51035,
       "formal": 31346,
       "informal": 2135,
       "total": 33481,
       "counted_pct": 65.6,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 51,
+      "centres_total": 51,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -4660,7 +5241,7 @@
           "party": "NAT",
           "party_name": "The Nationals",
           "votes": 13218,
-          "pct": 42.17
+          "pct": 43.04
         },
         {
           "id": "c6",
@@ -4668,7 +5249,7 @@
           "party": "ONP",
           "party_name": "One Nation Victoria",
           "votes": 11065,
-          "pct": 35.3
+          "pct": 36.03
         },
         {
           "id": "c8",
@@ -4676,7 +5257,7 @@
           "party": "GRN",
           "party_name": "The Greens",
           "votes": 2512,
-          "pct": 8.01
+          "pct": 8.18
         },
         {
           "id": "c4",
@@ -4684,15 +5265,7 @@
           "party": "ALP",
           "party_name": "Australian Labor Party",
           "votes": 2429,
-          "pct": 7.75
-        },
-        {
-          "id": "c5",
-          "name": "ELMES, Lee-Ann",
-          "party": "FF",
-          "party_name": "Family First",
-          "votes": 635,
-          "pct": 2.03
+          "pct": 7.91
         },
         {
           "id": "c2",
@@ -4700,7 +5273,7 @@
           "party": "OTH",
           "party_name": "Australian Democrats",
           "votes": 567,
-          "pct": 1.81
+          "pct": 1.85
         },
         {
           "id": "c1",
@@ -4708,7 +5281,7 @@
           "party": "IND",
           "party_name": null,
           "votes": 566,
-          "pct": 1.81
+          "pct": 1.84
         },
         {
           "id": "c7",
@@ -4716,19 +5289,36 @@
           "party": "VS",
           "party_name": "Victorian Socialists",
           "votes": 354,
-          "pct": 1.13
+          "pct": 1.15
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c3",
+          "name": "KEALY, Emma",
+          "party": "NAT",
+          "party_name": "The Nationals",
+          "votes": 18805,
+          "pct": 60.02
+        },
+        {
+          "id": "c6",
+          "name": "PARTRIDGE, Andrew",
+          "party": "ONP",
+          "party_name": "One Nation Victoria",
+          "votes": 12528,
+          "pct": 39.98
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c3",
         "name": "KEALY, Emma",
         "party": "NAT",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 23248,
+      "margin_votes": 6277,
+      "uncounted_estimate": 12238,
       "status": "leading",
       "called_by": null,
       "holder": "NAT",
@@ -4738,23 +5328,23 @@
         "early_cast": 21537,
         "postal_returned": 1711,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 23248
+        "early_counted": 12434,
+        "postal_counted": 1427,
+        "outstanding": 9387
       }
     },
     "macedon": {
       "name": "Macedon",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Macedon-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:22Z",
+      "fetched": "2026-11-28T16:08:09Z",
       "enrolment": 51446,
       "formal": 26637,
       "informal": 1301,
       "total": 27938,
       "counted_pct": 54.3,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 25,
+      "centres_total": 25,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -4831,42 +5421,59 @@
           "pct": 1.08
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c8",
+          "name": "KENDALL, Kate",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 15198,
+          "pct": 61.28
+        },
+        {
+          "id": "c2",
+          "name": "DEATH, Annette",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 9603,
+          "pct": 38.72
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c8",
         "name": "KENDALL, Kate",
         "party": "LIB",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 25201,
+      "margin_votes": 5595,
+      "uncounted_estimate": 18720,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
       "changes_hands": true,
-      "swing_2cp": null,
+      "swing_2cp": 20.8,
       "declaration_votes": {
         "early_cast": 21982,
         "postal_returned": 3219,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 25201
+        "early_counted": 9751,
+        "postal_counted": 1453,
+        "outstanding": 13997
       }
     },
     "malvern": {
       "name": "Malvern",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Malvern-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:24Z",
+      "fetched": "2026-11-28T16:08:13Z",
       "enrolment": 49058,
       "formal": 17031,
       "informal": 509,
       "total": 17540,
       "counted_pct": 35.8,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 16,
+      "centres_total": 16,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -4927,16 +5534,33 @@
           "pct": 0.9
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c7",
+          "name": "HAMER, Amelia",
+          "party": "LIB",
+          "party_name": "Liberal",
+          "votes": 10909,
+          "pct": 68.03
+        },
+        {
+          "id": "c6",
+          "name": "ZIGOURAS, Christina",
+          "party": "IND",
+          "party_name": null,
+          "votes": 5127,
+          "pct": 31.97
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c7",
         "name": "HAMER, Amelia",
         "party": "LIB",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
-      "uncounted_estimate": 29491,
+      "margin_votes": 5782,
+      "uncounted_estimate": 26312,
       "status": "leading",
       "called_by": null,
       "holder": "LIB",
@@ -4946,23 +5570,23 @@
         "early_cast": 24729,
         "postal_returned": 4762,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 29491
+        "early_counted": 4529,
+        "postal_counted": 1447,
+        "outstanding": 23515
       }
     },
     "melbourne": {
       "name": "Melbourne",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Melbourne-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:28Z",
+      "fetched": "2026-11-28T16:08:17Z",
       "enrolment": 57336,
       "formal": 36068,
       "informal": 1472,
       "total": 37540,
       "counted_pct": 65.5,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 15,
+      "centres_total": 15,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -5065,9 +5689,9 @@
         "basis": "2cp"
       },
       "margin_votes": 9964,
-      "uncounted_estimate": 31488,
-      "status": "leading",
-      "called_by": null,
+      "uncounted_estimate": 8723,
+      "status": "called",
+      "called_by": "site",
       "holder": "GRN",
       "changes_hands": false,
       "swing_2cp": 3.7,
@@ -5075,16 +5699,16 @@
         "early_cast": 27537,
         "postal_returned": 3951,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 31488
+        "early_counted": 21723,
+        "postal_counted": 3665,
+        "outstanding": 6100
       }
     },
     "melton": {
       "name": "Melton",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Melton-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:30Z",
+      "fetched": "2026-11-28T16:08:19Z",
       "enrolment": 60210,
       "formal": 25620,
       "informal": 2846,
@@ -5212,7 +5836,7 @@
       "name": "Mildura",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Mildura-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:32Z",
+      "fetched": "2026-11-28T16:08:22Z",
       "enrolment": 48557,
       "formal": 23249,
       "informal": 1368,
@@ -5280,15 +5904,32 @@
           "pct": 1.09
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c4",
+          "name": "BENHAM, Jade",
+          "party": "NAT",
+          "party_name": "The Nationals",
+          "votes": 12737,
+          "pct": 57.73
+        },
+        {
+          "id": "c2",
+          "name": "COOPER, Guy",
+          "party": "ONP",
+          "party_name": "One Nation Victoria",
+          "votes": 9326,
+          "pct": 42.27
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
         "id": "c4",
         "name": "BENHAM, Jade",
         "party": "NAT",
-        "basis": "first preferences"
+        "basis": "2cp"
       },
-      "margin_votes": null,
+      "margin_votes": 3411,
       "uncounted_estimate": 23846,
       "status": "leading",
       "called_by": null,
@@ -5308,7 +5949,7 @@
       "name": "Mill Park",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Mill-Park-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:34Z",
+      "fetched": "2026-11-28T16:08:26Z",
       "enrolment": 48297,
       "formal": 29824,
       "informal": 2690,
@@ -5384,15 +6025,32 @@
           "pct": 0.67
         }
       ],
-      "tcp": null,
-      "tcp_basis": null,
+      "tcp": [
+        {
+          "id": "c7",
+          "name": "TSOUTSOULIS, Arthur",
+          "party": "ONP",
+          "party_name": "One Nation Victoria",
+          "votes": 8205,
+          "pct": 50.29
+        },
+        {
+          "id": "c1",
+          "name": "NEALY, Elizabeth",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 8109,
+          "pct": 49.71
+        }
+      ],
+      "tcp_basis": "2cp",
       "leader": {
-        "id": "c2",
-        "name": "DRYSDALE, Joel",
-        "party": "LIB",
-        "basis": "first preferences"
+        "id": "c7",
+        "name": "TSOUTSOULIS, Arthur",
+        "party": "ONP",
+        "basis": "2cp"
       },
-      "margin_votes": null,
+      "margin_votes": 96,
       "uncounted_estimate": 28553,
       "status": "leading",
       "called_by": null,
@@ -5412,7 +6070,7 @@
       "name": "Monbulk",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Monbulk-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:36Z",
+      "fetched": "2026-11-28T16:08:28Z",
       "enrolment": 50003,
       "formal": 28785,
       "informal": 1000,
@@ -5508,7 +6166,7 @@
       "name": "Mordialloc",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Mordialloc-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:38Z",
+      "fetched": "2026-11-28T16:08:30Z",
       "enrolment": 54102,
       "formal": 20002,
       "informal": 931,
@@ -5612,7 +6270,7 @@
       "name": "Mornington",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Mornington-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:40Z",
+      "fetched": "2026-11-28T16:08:32Z",
       "enrolment": 50151,
       "formal": 36900,
       "informal": 1955,
@@ -5708,14 +6366,14 @@
       "name": "Morwell",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Morwell-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:42Z",
+      "fetched": "2026-11-28T16:08:36Z",
       "enrolment": 55328,
       "formal": 26568,
       "informal": 1393,
       "total": 27961,
       "counted_pct": 50.5,
-      "centres_counted": 0,
-      "centres_total": 0,
+      "centres_counted": 20,
+      "centres_total": 20,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -5785,7 +6443,7 @@
         "basis": "first preferences"
       },
       "margin_votes": null,
-      "uncounted_estimate": 34516,
+      "uncounted_estimate": 20177,
       "status": "leading",
       "called_by": null,
       "holder": "NAT",
@@ -5795,16 +6453,16 @@
         "early_cast": 32916,
         "postal_returned": 1600,
         "as_of": "2026-11-27",
-        "early_counted": 0,
-        "postal_counted": 0,
-        "outstanding": 34516
+        "early_counted": 14676,
+        "postal_counted": 833,
+        "outstanding": 19007
       }
     },
     "mulgrave": {
       "name": "Mulgrave",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Mulgrave-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:44Z",
+      "fetched": "2026-11-28T16:08:38Z",
       "enrolment": 48090,
       "formal": 28177,
       "informal": 1875,
@@ -5908,7 +6566,7 @@
       "name": "Murray Plains",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Murray-Plains-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:46Z",
+      "fetched": "2026-11-28T16:08:40Z",
       "enrolment": 48371,
       "formal": 36811,
       "informal": 1715,
@@ -6004,7 +6662,7 @@
       "name": "Narracan",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Narracan-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:48Z",
+      "fetched": "2026-11-28T16:08:42Z",
       "enrolment": 55254,
       "formal": 32213,
       "informal": 795,
@@ -6092,12 +6750,12 @@
       "name": "Narre Warren North",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Narre-Warren-North-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:50Z",
+      "fetched": "2026-11-28T16:08:44Z",
       "enrolment": 53493,
-      "formal": 33634,
-      "informal": 2277,
-      "total": 35911,
-      "counted_pct": 67.1,
+      "formal": 34945,
+      "informal": 2396,
+      "total": 37341,
+      "counted_pct": 69.8,
       "centres_counted": 0,
       "centres_total": 0,
       "declared": false,
@@ -6108,47 +6766,47 @@
           "name": "NATHANIELSZ, Shemane",
           "party": "LIB",
           "party_name": "Liberal",
-          "votes": 9970,
-          "pct": 29.64
+          "votes": 10326,
+          "pct": 29.55
         },
         {
           "id": "c6",
           "name": "WILSON, Belinda",
           "party": "ALP",
           "party_name": "Australian Labor Party",
-          "votes": 8835,
-          "pct": 26.27
+          "votes": 9311,
+          "pct": 26.64
         },
         {
           "id": "c2",
           "name": "CRUTCHFIELD, Sebastian",
           "party": "ONP",
           "party_name": "One Nation Victoria",
-          "votes": 8030,
-          "pct": 23.87
+          "votes": 8243,
+          "pct": 23.59
         },
         {
           "id": "c7",
           "name": "PERRY, Hayley",
           "party": "GRN",
           "party_name": "The Greens",
-          "votes": 4292,
-          "pct": 12.76
+          "votes": 4457,
+          "pct": 12.75
         },
         {
           "id": "c4",
           "name": "EMMANUEL, Cristina",
           "party": "FF",
           "party_name": "Family First",
-          "votes": 793,
-          "pct": 2.36
+          "votes": 831,
+          "pct": 2.38
         },
         {
           "id": "c5",
           "name": "LEAHY, Martin",
           "party": "LCV",
           "party_name": "Legalise Cannabis Victoria",
-          "votes": 788,
+          "votes": 819,
           "pct": 2.34
         },
         {
@@ -6156,7 +6814,7 @@
           "name": "McCRACKEN, Lachlan",
           "party": "VS",
           "party_name": "Victorian Socialists",
-          "votes": 646,
+          "votes": 671,
           "pct": 1.92
         },
         {
@@ -6164,8 +6822,8 @@
           "name": "UTOYO, Joshua",
           "party": "LBT",
           "party_name": "Libertarian (formerly Liberal Democrats)",
-          "votes": 280,
-          "pct": 0.83
+          "votes": 287,
+          "pct": 0.82
         }
       ],
       "tcp": null,
@@ -6196,12 +6854,12 @@
       "name": "Narre Warren South",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Narre-Warren-South-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:52Z",
+      "fetched": "2026-11-28T16:08:46Z",
       "enrolment": 57195,
-      "formal": 16373,
-      "informal": 1323,
-      "total": 17696,
-      "counted_pct": 30.9,
+      "formal": 16952,
+      "informal": 1357,
+      "total": 18309,
+      "counted_pct": 32.0,
       "centres_counted": 0,
       "centres_total": 0,
       "declared": false,
@@ -6212,64 +6870,64 @@
           "name": "KOOMEN, Stefan",
           "party": "ALP",
           "party_name": "Australian Labor Party",
-          "votes": 4520,
-          "pct": 27.61
+          "votes": 4707,
+          "pct": 27.77
         },
         {
           "id": "c8",
           "name": "PETERSON, Norliah",
           "party": "LIB",
           "party_name": "Liberal",
-          "votes": 4216,
-          "pct": 25.75
+          "votes": 4372,
+          "pct": 25.79
         },
         {
           "id": "c3",
           "name": "HAMMOND, Trevor",
           "party": "ONP",
           "party_name": "One Nation Victoria",
-          "votes": 3640,
-          "pct": 22.23
+          "votes": 3737,
+          "pct": 22.04
         },
         {
           "id": "c6",
           "name": "NAMBU, Jill",
           "party": "GRN",
           "party_name": "The Greens",
-          "votes": 2376,
-          "pct": 14.51
+          "votes": 2476,
+          "pct": 14.61
         },
         {
           "id": "c5",
           "name": "WATSON, Scott",
           "party": "IND",
           "party_name": null,
-          "votes": 608,
-          "pct": 3.71
+          "votes": 615,
+          "pct": 3.63
         },
         {
           "id": "c2",
           "name": "CURRIE, Alan",
           "party": "FF",
           "party_name": "Family First",
-          "votes": 449,
-          "pct": 2.74
+          "votes": 463,
+          "pct": 2.73
         },
         {
           "id": "c1",
           "name": "McCRACKEN, Bailey",
           "party": "VS",
           "party_name": "Victorian Socialists",
-          "votes": 400,
-          "pct": 2.44
+          "votes": 415,
+          "pct": 2.45
         },
         {
           "id": "c4",
           "name": "DENKER, Lydia",
           "party": "LBT",
           "party_name": "Libertarian (formerly Liberal Democrats)",
-          "votes": 164,
-          "pct": 1.0
+          "votes": 167,
+          "pct": 0.99
         }
       ],
       "tcp": null,
@@ -6281,7 +6939,7 @@
         "basis": "first preferences"
       },
       "margin_votes": null,
-      "uncounted_estimate": 31739,
+      "uncounted_estimate": 31126,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
@@ -6300,7 +6958,7 @@
       "name": "Nepean",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Nepean-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:54Z",
+      "fetched": "2026-11-28T16:08:48Z",
       "enrolment": 51871,
       "formal": 33569,
       "informal": 2031,
@@ -6412,7 +7070,7 @@
       "name": "Niddrie",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Niddrie-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:56Z",
+      "fetched": "2026-11-28T16:08:50Z",
       "enrolment": 52610,
       "formal": 30937,
       "informal": 2565,
@@ -6540,7 +7198,7 @@
       "name": "Northcote",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Northcote-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:19:58Z",
+      "fetched": "2026-11-28T16:08:52Z",
       "enrolment": 53893,
       "formal": 33323,
       "informal": 1595,
@@ -6660,7 +7318,7 @@
       "name": "Oakleigh",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Oakleigh-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:20:01Z",
+      "fetched": "2026-11-28T16:08:54Z",
       "enrolment": 54228,
       "formal": 34286,
       "informal": 908,
@@ -6720,38 +7378,21 @@
           "pct": 1.6
         }
       ],
-      "tcp": [
-        {
-          "id": "c3",
-          "name": "JUNG, Martin",
-          "party": "LIB",
-          "party_name": "Liberal",
-          "votes": 17526,
-          "pct": 51.15
-        },
-        {
-          "id": "c2",
-          "name": "DIMOPOULOS, Steve",
-          "party": "ALP",
-          "party_name": "Australian Labor Party",
-          "votes": 16735,
-          "pct": 48.85
-        }
-      ],
-      "tcp_basis": "2cp",
+      "tcp": null,
+      "tcp_basis": null,
       "leader": {
         "id": "c3",
         "name": "JUNG, Martin",
         "party": "LIB",
-        "basis": "2cp"
+        "basis": "first preferences"
       },
-      "margin_votes": 791,
+      "margin_votes": null,
       "uncounted_estimate": 30056,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
       "changes_hands": true,
-      "swing_2cp": 14.6,
+      "swing_2cp": null,
       "declaration_votes": {
         "early_cast": 25192,
         "postal_returned": 4864,
@@ -6765,14 +7406,14 @@
       "name": "Ovens Valley",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Ovens-Valley-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:20:07Z",
+      "fetched": "2026-11-28T16:08:56Z",
       "enrolment": 49586,
       "formal": 31751,
       "informal": 1876,
       "total": 33627,
       "counted_pct": 67.8,
-      "centres_counted": 33,
-      "centres_total": 33,
+      "centres_counted": 0,
+      "centres_total": 0,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -6782,7 +7423,7 @@
           "party": "NAT",
           "party_name": "The Nationals",
           "votes": 11167,
-          "pct": 35.53
+          "pct": 35.17
         },
         {
           "id": "c4",
@@ -6790,7 +7431,7 @@
           "party": "ONP",
           "party_name": "One Nation Victoria",
           "votes": 9337,
-          "pct": 29.7
+          "pct": 29.41
         },
         {
           "id": "c5",
@@ -6798,7 +7439,7 @@
           "party": "IND",
           "party_name": null,
           "votes": 6924,
-          "pct": 22.03
+          "pct": 21.81
         },
         {
           "id": "c7",
@@ -6806,7 +7447,7 @@
           "party": "ALP",
           "party_name": "Australian Labor Party",
           "votes": 1552,
-          "pct": 4.94
+          "pct": 4.89
         },
         {
           "id": "c8",
@@ -6814,7 +7455,7 @@
           "party": "GRN",
           "party_name": "The Greens",
           "votes": 1250,
-          "pct": 3.98
+          "pct": 3.94
         },
         {
           "id": "c2",
@@ -6822,7 +7463,7 @@
           "party": "LBT",
           "party_name": "Libertarian (formerly Liberal Democrats)",
           "votes": 623,
-          "pct": 1.98
+          "pct": 1.96
         },
         {
           "id": "c9",
@@ -6830,7 +7471,15 @@
           "party": "AJP",
           "party_name": "Animal Justice Party",
           "votes": 339,
-          "pct": 1.08
+          "pct": 1.07
+        },
+        {
+          "id": "c6",
+          "name": "NORTON-SMITH, Carol",
+          "party": "FF",
+          "party_name": "Family First",
+          "votes": 317,
+          "pct": 1.0
         },
         {
           "id": "c3",
@@ -6838,36 +7487,19 @@
           "party": "VS",
           "party_name": "Victorian Socialists",
           "votes": 242,
-          "pct": 0.77
+          "pct": 0.76
         }
       ],
-      "tcp": [
-        {
-          "id": "c1",
-          "name": "McCURDY, Tim",
-          "party": "NAT",
-          "party_name": "The Nationals",
-          "votes": 9723,
-          "pct": 60.13
-        },
-        {
-          "id": "c4",
-          "name": "ROUEL, James",
-          "party": "ONP",
-          "party_name": "One Nation Victoria",
-          "votes": 6447,
-          "pct": 39.87
-        }
-      ],
-      "tcp_basis": "2cp",
+      "tcp": null,
+      "tcp_basis": null,
       "leader": {
         "id": "c1",
         "name": "McCURDY, Tim",
         "party": "NAT",
-        "basis": "2cp"
+        "basis": "first preferences"
       },
-      "margin_votes": 3276,
-      "uncounted_estimate": 10457,
+      "margin_votes": null,
+      "uncounted_estimate": 21734,
       "status": "leading",
       "called_by": null,
       "holder": "NAT",
@@ -6877,23 +7509,23 @@
         "early_cast": 18782,
         "postal_returned": 2952,
         "as_of": "2026-11-27",
-        "early_counted": 14316,
-        "postal_counted": 751,
-        "outstanding": 6667
+        "early_counted": 0,
+        "postal_counted": 0,
+        "outstanding": 21734
       }
     },
     "pakenham": {
       "name": "Pakenham",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Pakenham-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:20:11Z",
+      "fetched": "2026-11-28T16:08:59Z",
       "enrolment": 55910,
       "formal": 30785,
       "informal": 2259,
       "total": 33044,
       "counted_pct": 59.1,
-      "centres_counted": 15,
-      "centres_total": 15,
+      "centres_counted": 0,
+      "centres_total": 0,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -7004,7 +7636,7 @@
         "basis": "2cp"
       },
       "margin_votes": 7366,
-      "uncounted_estimate": 15806,
+      "uncounted_estimate": 33901,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
@@ -7014,23 +7646,23 @@
         "early_cast": 29723,
         "postal_returned": 4178,
         "as_of": "2026-11-27",
-        "early_counted": 18962,
-        "postal_counted": 2368,
-        "outstanding": 12571
+        "early_counted": 0,
+        "postal_counted": 0,
+        "outstanding": 33901
       }
     },
     "pascoe-vale": {
       "name": "Pascoe Vale",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Pascoe-Vale-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:20:16Z",
+      "fetched": "2026-11-28T16:09:01Z",
       "enrolment": 52169,
       "formal": 19615,
       "informal": 1153,
       "total": 20768,
       "counted_pct": 39.8,
-      "centres_counted": 22,
-      "centres_total": 22,
+      "centres_counted": 0,
+      "centres_total": 0,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -7115,59 +7747,42 @@
           "pct": 0.41
         }
       ],
-      "tcp": [
-        {
-          "id": "c5",
-          "name": "PANOPOULOS, Angelica",
-          "party": "GRN",
-          "party_name": "The Greens",
-          "votes": 7701,
-          "pct": 57.08
-        },
-        {
-          "id": "c3",
-          "name": "CIANFLONE, Anthony",
-          "party": "ALP",
-          "party_name": "Australian Labor Party",
-          "votes": 5791,
-          "pct": 42.92
-        }
-      ],
-      "tcp_basis": "2cp",
+      "tcp": null,
+      "tcp_basis": null,
       "leader": {
         "id": "c5",
         "name": "PANOPOULOS, Angelica",
         "party": "GRN",
-        "basis": "2cp"
+        "basis": "first preferences"
       },
-      "margin_votes": 1910,
-      "uncounted_estimate": 24856,
+      "margin_votes": null,
+      "uncounted_estimate": 27082,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
       "changes_hands": true,
-      "swing_2cp": 9.1,
+      "swing_2cp": null,
       "declaration_votes": {
         "early_cast": 23525,
         "postal_returned": 3557,
         "as_of": "2026-11-27",
-        "early_counted": 3910,
-        "postal_counted": 2282,
-        "outstanding": 20890
+        "early_counted": 0,
+        "postal_counted": 0,
+        "outstanding": 27082
       }
     },
     "point-cook": {
       "name": "Point Cook",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Point-Cook-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:20:21Z",
+      "fetched": "2026-11-28T16:09:03Z",
       "enrolment": 55756,
-      "formal": 15105,
-      "informal": 1010,
-      "total": 16115,
-      "counted_pct": 28.9,
-      "centres_counted": 12,
-      "centres_total": 12,
+      "formal": 40121,
+      "informal": 2387,
+      "total": 42508,
+      "counted_pct": 76.2,
+      "centres_counted": 0,
+      "centres_total": 0,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -7176,127 +7791,110 @@
           "name": "REDDY, Raja",
           "party": "LIB",
           "party_name": "Liberal",
-          "votes": 4373,
-          "pct": 28.95
+          "votes": 12844,
+          "pct": 32.01
         },
         {
           "id": "c4",
           "name": "HILAKARI, Mathew",
           "party": "ALP",
           "party_name": "Australian Labor Party",
-          "votes": 4025,
-          "pct": 26.65
+          "votes": 10546,
+          "pct": 26.29
         },
         {
           "id": "c9",
           "name": "REID, Cameron",
           "party": "ONP",
           "party_name": "One Nation Victoria",
-          "votes": 3093,
-          "pct": 20.48
+          "votes": 8266,
+          "pct": 20.6
         },
         {
           "id": "c6",
           "name": "KRISHNA PANDI, Ponraj",
           "party": "GRN",
           "party_name": "The Greens",
-          "votes": 1856,
-          "pct": 12.29
+          "votes": 4199,
+          "pct": 10.47
         },
         {
           "id": "c1",
           "name": "LAINE, Taylor",
           "party": "VS",
           "party_name": "Victorian Socialists",
-          "votes": 781,
-          "pct": 5.17
+          "votes": 1877,
+          "pct": 4.68
         },
         {
           "id": "c2",
           "name": "GRECH, Mark",
           "party": "WEST",
           "party_name": "The West Party",
-          "votes": 472,
-          "pct": 3.12
+          "votes": 1123,
+          "pct": 2.8
         },
         {
           "id": "c7",
           "name": "MEURE, Keith",
           "party": "FF",
           "party_name": "Family First",
-          "votes": 281,
-          "pct": 1.86
+          "votes": 691,
+          "pct": 1.72
         },
         {
           "id": "c3",
           "name": "KELLY, Paul",
           "party": "DLP",
           "party_name": "Labour DLP",
-          "votes": 194,
-          "pct": 1.28
+          "votes": 470,
+          "pct": 1.17
         },
         {
           "id": "c5",
           "name": "ALLE, Kirti",
           "party": "OTH",
           "party_name": "The Republican",
-          "votes": 30,
-          "pct": 0.2
+          "votes": 105,
+          "pct": 0.26
         }
       ],
-      "tcp": [
-        {
-          "id": "c8",
-          "name": "REDDY, Raja",
-          "party": "LIB",
-          "party_name": "Liberal",
-          "votes": 8070,
-          "pct": 53.46
-        },
-        {
-          "id": "c4",
-          "name": "HILAKARI, Mathew",
-          "party": "ALP",
-          "party_name": "Australian Labor Party",
-          "votes": 7025,
-          "pct": 46.54
-        }
-      ],
-      "tcp_basis": "2cp",
+      "tcp": null,
+      "tcp_basis": null,
       "leader": {
         "id": "c8",
         "name": "REDDY, Raja",
         "party": "LIB",
-        "basis": "2cp"
+        "basis": "first preferences"
       },
-      "margin_votes": 1045,
-      "uncounted_estimate": 32575,
+      "margin_votes": null,
+      "uncounted_estimate": 33719,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
       "changes_hands": true,
-      "swing_2cp": 11.8,
+      "swing_2cp": null,
       "declaration_votes": {
         "early_cast": 30157,
         "postal_returned": 3562,
         "as_of": "2026-11-27",
         "early_counted": 0,
-        "postal_counted": 3231,
-        "outstanding": 30488
+        "postal_counted": 0,
+        "outstanding": 33719
       }
     },
     "polwarth": {
       "name": "Polwarth",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Polwarth-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:20:26Z",
+      "fetched": "2026-11-28T16:09:05Z",
       "enrolment": 55081,
-      "formal": 14106,
-      "informal": 719,
-      "total": 14825,
-      "counted_pct": 26.9,
-      "centres_counted": 32,
-      "centres_total": 32,
+      "formal": 23216,
+      "informal": 1146,
+      "total": 24362,
+      "counted_pct": 44.2,
+      "centres_counted": 0,
+      "centres_total": 0,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -7305,104 +7903,87 @@
           "name": "RIORDAN, Richard",
           "party": "LIB",
           "party_name": "Liberal",
-          "votes": 5669,
-          "pct": 40.19
+          "votes": 10172,
+          "pct": 43.81
         },
         {
           "id": "c6",
           "name": "MALCOLM, Anna",
           "party": "ONP",
           "party_name": "One Nation Victoria",
-          "votes": 2982,
-          "pct": 21.14
+          "votes": 5239,
+          "pct": 22.57
         },
         {
           "id": "c4",
           "name": "HOLDEN, Jesse",
           "party": "GRN",
           "party_name": "The Greens",
-          "votes": 2870,
-          "pct": 20.35
+          "votes": 3765,
+          "pct": 16.22
         },
         {
           "id": "c3",
           "name": "HUSSEIN, Hutch",
           "party": "ALP",
           "party_name": "Australian Labor Party",
-          "votes": 1831,
-          "pct": 12.98
+          "votes": 2904,
+          "pct": 12.51
         },
         {
           "id": "c1",
           "name": "TOLLEY, Lula",
           "party": "VS",
           "party_name": "Victorian Socialists",
-          "votes": 423,
-          "pct": 3.0
+          "votes": 592,
+          "pct": 2.55
         },
         {
           "id": "c7",
           "name": "COLLA, Vince",
           "party": "FF",
           "party_name": "Family First",
-          "votes": 248,
-          "pct": 1.76
+          "votes": 386,
+          "pct": 1.66
         },
         {
           "id": "c5",
           "name": "CARBINS, Brenton",
           "party": "OTH",
           "party_name": "Citizens Party",
-          "votes": 83,
-          "pct": 0.59
+          "votes": 158,
+          "pct": 0.68
         }
       ],
-      "tcp": [
-        {
-          "id": "c2",
-          "name": "RIORDAN, Richard",
-          "party": "LIB",
-          "party_name": "Liberal",
-          "votes": 9066,
-          "pct": 65.71
-        },
-        {
-          "id": "c3",
-          "name": "HUSSEIN, Hutch",
-          "party": "ALP",
-          "party_name": "Australian Labor Party",
-          "votes": 4732,
-          "pct": 34.29
-        }
-      ],
-      "tcp_basis": "2cp",
+      "tcp": null,
+      "tcp_basis": null,
       "leader": {
         "id": "c2",
         "name": "RIORDAN, Richard",
         "party": "LIB",
-        "basis": "2cp"
+        "basis": "first preferences"
       },
-      "margin_votes": 4334,
-      "uncounted_estimate": 34848,
+      "margin_votes": null,
+      "uncounted_estimate": 27696,
       "status": "leading",
       "called_by": null,
       "holder": "LIB",
       "changes_hands": false,
-      "swing_2cp": 13.9,
+      "swing_2cp": null,
       "declaration_votes": {
         "early_cast": 25234,
         "postal_returned": 2462,
         "as_of": "2026-11-27",
         "early_counted": 0,
-        "postal_counted": 1357,
-        "outstanding": 26339
+        "postal_counted": 0,
+        "outstanding": 27696
       }
     },
     "prahran": {
       "name": "Prahran",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Prahran-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:20:30Z",
+      "fetched": "2026-11-28T16:09:09Z",
       "enrolment": 49678,
       "formal": 26687,
       "informal": 1673,
@@ -7510,38 +8091,21 @@
           "pct": 0.21
         }
       ],
-      "tcp": [
-        {
-          "id": "c4",
-          "name": "WESTAWAY, Rachel",
-          "party": "LIB",
-          "party_name": "Liberal",
-          "votes": 13190,
-          "pct": 50.22
-        },
-        {
-          "id": "c13",
-          "name": "DI CAMILLO, Angelica",
-          "party": "GRN",
-          "party_name": "The Greens",
-          "votes": 13073,
-          "pct": 49.78
-        }
-      ],
-      "tcp_basis": "2cp",
+      "tcp": null,
+      "tcp_basis": null,
       "leader": {
         "id": "c4",
         "name": "WESTAWAY, Rachel",
         "party": "LIB",
-        "basis": "2cp"
+        "basis": "first preferences"
       },
-      "margin_votes": 117,
+      "margin_votes": null,
       "uncounted_estimate": 12731,
       "status": "leading",
       "called_by": null,
       "holder": "LIB",
       "changes_hands": false,
-      "swing_2cp": 12.2,
+      "swing_2cp": null,
       "declaration_votes": {
         "early_cast": 23239,
         "postal_returned": 3008,
@@ -7555,14 +8119,14 @@
       "name": "Preston",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Preston-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:20:35Z",
+      "fetched": "2026-11-28T16:09:11Z",
       "enrolment": 53545,
       "formal": 16282,
       "informal": 1577,
       "total": 17859,
       "counted_pct": 33.4,
-      "centres_counted": 19,
-      "centres_total": 19,
+      "centres_counted": 0,
+      "centres_total": 0,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -7655,59 +8219,42 @@
           "pct": 0.24
         }
       ],
-      "tcp": [
-        {
-          "id": "c6",
-          "name": "SANGARYA, Loki",
-          "party": "GRN",
-          "party_name": "The Greens",
-          "votes": 8406,
-          "pct": 57.36
-        },
-        {
-          "id": "c11",
-          "name": "LAMBERT, Nathan",
-          "party": "ALP",
-          "party_name": "Australian Labor Party",
-          "votes": 6248,
-          "pct": 42.64
-        }
-      ],
-      "tcp_basis": "2cp",
+      "tcp": null,
+      "tcp_basis": null,
       "leader": {
-        "id": "c6",
-        "name": "SANGARYA, Loki",
-        "party": "GRN",
-        "basis": "2cp"
+        "id": "c11",
+        "name": "LAMBERT, Nathan",
+        "party": "ALP",
+        "basis": "first preferences"
       },
-      "margin_votes": 2158,
+      "margin_votes": null,
       "uncounted_estimate": 28080,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
-      "changes_hands": true,
-      "swing_2cp": 9.4,
+      "changes_hands": false,
+      "swing_2cp": null,
       "declaration_votes": {
         "early_cast": 23721,
         "postal_returned": 3397,
         "as_of": "2026-11-27",
-        "early_counted": 160,
-        "postal_counted": 1924,
-        "outstanding": 25034
+        "early_counted": 0,
+        "postal_counted": 0,
+        "outstanding": 27118
       }
     },
     "richmond": {
       "name": "Richmond",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Richmond-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:20:40Z",
+      "fetched": "2026-11-28T16:09:13Z",
       "enrolment": 49900,
       "formal": 25645,
       "informal": 1185,
       "total": 26830,
       "counted_pct": 53.8,
-      "centres_counted": 16,
-      "centres_total": 16,
+      "centres_counted": 0,
+      "centres_total": 0,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -7717,7 +8264,7 @@
           "party": "GRN",
           "party_name": "The Greens",
           "votes": 10238,
-          "pct": 40.49
+          "pct": 39.92
         },
         {
           "id": "c2",
@@ -7725,7 +8272,7 @@
           "party": "LIB",
           "party_name": "Liberal",
           "votes": 5550,
-          "pct": 21.95
+          "pct": 21.64
         },
         {
           "id": "c4",
@@ -7733,7 +8280,7 @@
           "party": "ALP",
           "party_name": "Australian Labor Party",
           "votes": 4637,
-          "pct": 18.34
+          "pct": 18.08
         },
         {
           "id": "c3",
@@ -7741,7 +8288,7 @@
           "party": "VS",
           "party_name": "Victorian Socialists",
           "votes": 2859,
-          "pct": 11.31
+          "pct": 11.15
         },
         {
           "id": "c1",
@@ -7749,7 +8296,7 @@
           "party": "ONP",
           "party_name": "One Nation Victoria",
           "votes": 1397,
-          "pct": 5.53
+          "pct": 5.45
         },
         {
           "id": "c9",
@@ -7757,7 +8304,15 @@
           "party": "IND",
           "party_name": null,
           "votes": 370,
-          "pct": 1.46
+          "pct": 1.44
+        },
+        {
+          "id": "c7",
+          "name": "PEAD-PHILIPSON, Jack",
+          "party": "OTH",
+          "party_name": "Australian Democrats",
+          "votes": 360,
+          "pct": 1.4
         },
         {
           "id": "c5",
@@ -7765,7 +8320,7 @@
           "party": "IND",
           "party_name": null,
           "votes": 134,
-          "pct": 0.53
+          "pct": 0.52
         },
         {
           "id": "c6",
@@ -7773,62 +8328,45 @@
           "party": "LBT",
           "party_name": "Libertarian (formerly Liberal Democrats)",
           "votes": 100,
-          "pct": 0.4
+          "pct": 0.39
         }
       ],
-      "tcp": [
-        {
-          "id": "c8",
-          "name": "de VIETRI, Gabrielle",
-          "party": "GRN",
-          "party_name": "The Greens",
-          "votes": 7175,
-          "pct": 63.5
-        },
-        {
-          "id": "c4",
-          "name": "MCKENZIE, Sarah",
-          "party": "ALP",
-          "party_name": "Australian Labor Party",
-          "votes": 4124,
-          "pct": 36.5
-        }
-      ],
-      "tcp_basis": "2cp",
+      "tcp": null,
+      "tcp_basis": null,
       "leader": {
         "id": "c8",
         "name": "de VIETRI, Gabrielle",
         "party": "GRN",
-        "basis": "2cp"
+        "basis": "first preferences"
       },
-      "margin_votes": 3051,
-      "uncounted_estimate": 15644,
+      "margin_votes": null,
+      "uncounted_estimate": 27025,
       "status": "leading",
       "called_by": null,
       "holder": "GRN",
       "changes_hands": false,
-      "swing_2cp": 6.2,
+      "swing_2cp": null,
       "declaration_votes": {
         "early_cast": 24550,
         "postal_returned": 2475,
         "as_of": "2026-11-27",
-        "early_counted": 13632,
-        "postal_counted": 839,
-        "outstanding": 12554
+        "early_counted": 0,
+        "postal_counted": 0,
+        "outstanding": 27025
       }
     },
     "ringwood": {
       "name": "Ringwood",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Ringwood-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:20:44Z",
+      "fetched": "2026-11-28T16:09:15Z",
       "enrolment": 54911,
       "formal": 39210,
       "informal": 1730,
       "total": 40940,
       "counted_pct": 74.6,
-      "centres_counted": 23,
-      "centres_total": 23,
+      "centres_counted": 0,
+      "centres_total": 0,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -7905,59 +8443,42 @@
           "pct": 0.47
         }
       ],
-      "tcp": [
-        {
-          "id": "c2",
-          "name": "McGOWAN, Nick",
-          "party": "LIB",
-          "party_name": "Liberal",
-          "votes": 20995,
-          "pct": 60.42
-        },
-        {
-          "id": "c1",
-          "name": "HALSE, Rachel",
-          "party": "ALP",
-          "party_name": "Australian Labor Party",
-          "votes": 13753,
-          "pct": 39.58
-        }
-      ],
-      "tcp_basis": "2cp",
+      "tcp": null,
+      "tcp_basis": null,
       "leader": {
         "id": "c2",
         "name": "McGOWAN, Nick",
         "party": "LIB",
-        "basis": "2cp"
+        "basis": "first preferences"
       },
-      "margin_votes": 7242,
-      "uncounted_estimate": 9093,
+      "margin_votes": null,
+      "uncounted_estimate": 29877,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
       "changes_hands": true,
-      "swing_2cp": 18.0,
+      "swing_2cp": null,
       "declaration_votes": {
         "early_cast": 24671,
         "postal_returned": 5206,
         "as_of": "2026-11-27",
-        "early_counted": 20208,
-        "postal_counted": 3401,
-        "outstanding": 6268
+        "early_counted": 0,
+        "postal_counted": 0,
+        "outstanding": 29877
       }
     },
     "ripon": {
       "name": "Ripon",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Ripon-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:20:49Z",
+      "fetched": "2026-11-28T16:09:17Z",
       "enrolment": 54525,
       "formal": 31344,
       "informal": 2842,
       "total": 34186,
       "counted_pct": 62.7,
-      "centres_counted": 38,
-      "centres_total": 38,
+      "centres_counted": 0,
+      "centres_total": 0,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -7967,7 +8488,7 @@
           "party": "ONP",
           "party_name": "One Nation Victoria",
           "votes": 10415,
-          "pct": 33.8
+          "pct": 33.23
         },
         {
           "id": "c11",
@@ -7975,7 +8496,7 @@
           "party": "LIB",
           "party_name": "Liberal",
           "votes": 7187,
-          "pct": 23.32
+          "pct": 22.93
         },
         {
           "id": "c8",
@@ -7983,7 +8504,7 @@
           "party": "ALP",
           "party_name": "Australian Labor Party",
           "votes": 5668,
-          "pct": 18.39
+          "pct": 18.08
         },
         {
           "id": "c12",
@@ -7991,7 +8512,7 @@
           "party": "NAT",
           "party_name": "The Nationals",
           "votes": 2917,
-          "pct": 9.47
+          "pct": 9.31
         },
         {
           "id": "c9",
@@ -7999,7 +8520,7 @@
           "party": "GRN",
           "party_name": "The Greens",
           "votes": 2822,
-          "pct": 9.16
+          "pct": 9.0
         },
         {
           "id": "c1",
@@ -8007,7 +8528,15 @@
           "party": "SFF",
           "party_name": "Shooters, Fishers and Farmers Party Victoria",
           "votes": 795,
-          "pct": 2.58
+          "pct": 2.54
+        },
+        {
+          "id": "c5",
+          "name": "BRENNAN-JONES, Taylah",
+          "party": "VS",
+          "party_name": "Victorian Socialists",
+          "votes": 527,
+          "pct": 1.68
         },
         {
           "id": "c3",
@@ -8015,7 +8544,7 @@
           "party": "FF",
           "party_name": "Family First",
           "votes": 464,
-          "pct": 1.51
+          "pct": 1.48
         },
         {
           "id": "c4",
@@ -8023,7 +8552,7 @@
           "party": "DLP",
           "party_name": "Labour DLP",
           "votes": 156,
-          "pct": 0.51
+          "pct": 0.5
         },
         {
           "id": "c6",
@@ -8031,7 +8560,7 @@
           "party": "LBT",
           "party_name": "Libertarian (formerly Liberal Democrats)",
           "votes": 148,
-          "pct": 0.48
+          "pct": 0.47
         },
         {
           "id": "c2",
@@ -8047,36 +8576,19 @@
           "party": "IND",
           "party_name": null,
           "votes": 108,
-          "pct": 0.35
+          "pct": 0.34
         }
       ],
-      "tcp": [
-        {
-          "id": "c10",
-          "name": "BUXTON, Donna",
-          "party": "ONP",
-          "party_name": "One Nation Victoria",
-          "votes": 18533,
-          "pct": 61.96
-        },
-        {
-          "id": "c8",
-          "name": "HAYLETT, Martha",
-          "party": "ALP",
-          "party_name": "Australian Labor Party",
-          "votes": 11380,
-          "pct": 38.04
-        }
-      ],
-      "tcp_basis": "2cp",
+      "tcp": null,
+      "tcp_basis": null,
       "leader": {
         "id": "c10",
         "name": "BUXTON, Donna",
         "party": "ONP",
-        "basis": "2cp"
+        "basis": "first preferences"
       },
-      "margin_votes": 7153,
-      "uncounted_estimate": 14590,
+      "margin_votes": null,
+      "uncounted_estimate": 25913,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
@@ -8086,23 +8598,23 @@
         "early_cast": 22341,
         "postal_returned": 3572,
         "as_of": "2026-11-27",
-        "early_counted": 11850,
-        "postal_counted": 2343,
-        "outstanding": 11720
+        "early_counted": 0,
+        "postal_counted": 0,
+        "outstanding": 25913
       }
     },
     "rowville": {
       "name": "Rowville",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Rowville-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:20:54Z",
+      "fetched": "2026-11-28T16:09:19Z",
       "enrolment": 50564,
       "formal": 37146,
       "informal": 1652,
       "total": 38798,
       "counted_pct": 76.7,
-      "centres_counted": 15,
-      "centres_total": 15,
+      "centres_counted": 0,
+      "centres_total": 0,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -8163,59 +8675,42 @@
           "pct": 0.82
         }
       ],
-      "tcp": [
-        {
-          "id": "c2",
-          "name": "WILLIAMS, Max",
-          "party": "LIB",
-          "party_name": "Liberal",
-          "votes": 27010,
-          "pct": 72.72
-        },
-        {
-          "id": "c4",
-          "name": "SHAHBAZ, Muhammad",
-          "party": "ALP",
-          "party_name": "Australian Labor Party",
-          "votes": 10132,
-          "pct": 27.28
-        }
-      ],
-      "tcp_basis": "2cp",
+      "tcp": null,
+      "tcp_basis": null,
       "leader": {
         "id": "c2",
         "name": "WILLIAMS, Max",
         "party": "LIB",
-        "basis": "2cp"
+        "basis": "first preferences"
       },
-      "margin_votes": 16878,
-      "uncounted_estimate": 7393,
-      "status": "called",
-      "called_by": "site",
+      "margin_votes": null,
+      "uncounted_estimate": 30386,
+      "status": "leading",
+      "called_by": null,
       "holder": "LIB",
       "changes_hands": false,
-      "swing_2cp": 19.1,
+      "swing_2cp": null,
       "declaration_votes": {
         "early_cast": 25744,
         "postal_returned": 4642,
         "as_of": "2026-11-27",
-        "early_counted": 22484,
-        "postal_counted": 2247,
-        "outstanding": 5655
+        "early_counted": 0,
+        "postal_counted": 0,
+        "outstanding": 30386
       }
     },
     "sandringham": {
       "name": "Sandringham",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Sandringham-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:20:58Z",
+      "fetched": "2026-11-28T16:09:21Z",
       "enrolment": 49842,
       "formal": 37683,
       "informal": 596,
       "total": 38279,
       "counted_pct": 76.8,
-      "centres_counted": 17,
-      "centres_total": 17,
+      "centres_counted": 0,
+      "centres_total": 0,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -8225,7 +8720,7 @@
           "party": "LIB",
           "party_name": "Liberal",
           "votes": 21005,
-          "pct": 64.85
+          "pct": 55.74
         },
         {
           "id": "c2",
@@ -8233,7 +8728,15 @@
           "party": "GRN",
           "party_name": "The Greens",
           "votes": 6366,
-          "pct": 19.65
+          "pct": 16.89
+        },
+        {
+          "id": "c4",
+          "name": "SAGRIS-DESMOND, Anastasia",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 5291,
+          "pct": 14.04
         },
         {
           "id": "c5",
@@ -8241,7 +8744,7 @@
           "party": "ONP",
           "party_name": "One Nation Victoria",
           "votes": 3734,
-          "pct": 11.53
+          "pct": 9.91
         },
         {
           "id": "c1",
@@ -8249,7 +8752,7 @@
           "party": "VS",
           "party_name": "Victorian Socialists",
           "votes": 1287,
-          "pct": 3.97
+          "pct": 3.42
         }
       ],
       "tcp": null,
@@ -8261,7 +8764,7 @@
         "basis": "first preferences"
       },
       "margin_votes": null,
-      "uncounted_estimate": 7147,
+      "uncounted_estimate": 28445,
       "status": "leading",
       "called_by": null,
       "holder": "LIB",
@@ -8271,23 +8774,23 @@
         "early_cast": 25132,
         "postal_returned": 3313,
         "as_of": "2026-11-27",
-        "early_counted": 22278,
-        "postal_counted": 2422,
-        "outstanding": 3745
+        "early_counted": 0,
+        "postal_counted": 0,
+        "outstanding": 28445
       }
     },
     "shepparton": {
       "name": "Shepparton",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Shepparton-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:21:03Z",
+      "fetched": "2026-11-28T16:09:23Z",
       "enrolment": 52626,
       "formal": 23479,
       "informal": 1646,
       "total": 25125,
       "counted_pct": 47.7,
-      "centres_counted": 30,
-      "centres_total": 30,
+      "centres_counted": 0,
+      "centres_total": 0,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -8297,7 +8800,7 @@
           "party": "NAT",
           "party_name": "The Nationals",
           "votes": 9786,
-          "pct": 42.07
+          "pct": 41.68
         },
         {
           "id": "c7",
@@ -8305,7 +8808,7 @@
           "party": "ONP",
           "party_name": "One Nation Victoria",
           "votes": 7907,
-          "pct": 33.99
+          "pct": 33.68
         },
         {
           "id": "c5",
@@ -8313,7 +8816,7 @@
           "party": "IND",
           "party_name": null,
           "votes": 2684,
-          "pct": 11.54
+          "pct": 11.43
         },
         {
           "id": "c6",
@@ -8321,7 +8824,7 @@
           "party": "ALP",
           "party_name": "Australian Labor Party",
           "votes": 1208,
-          "pct": 5.19
+          "pct": 5.15
         },
         {
           "id": "c3",
@@ -8329,7 +8832,7 @@
           "party": "GRN",
           "party_name": "The Greens",
           "votes": 904,
-          "pct": 3.89
+          "pct": 3.85
         },
         {
           "id": "c2",
@@ -8337,7 +8840,7 @@
           "party": "FF",
           "party_name": "Family First",
           "votes": 379,
-          "pct": 1.63
+          "pct": 1.61
         },
         {
           "id": "c4",
@@ -8345,7 +8848,15 @@
           "party": "VS",
           "party_name": "Victorian Socialists",
           "votes": 255,
-          "pct": 1.1
+          "pct": 1.09
+        },
+        {
+          "id": "c8",
+          "name": "MURPHY-GINGER, Faith",
+          "party": "AJP",
+          "party_name": "Animal Justice Party",
+          "votes": 218,
+          "pct": 0.93
         },
         {
           "id": "c9",
@@ -8356,33 +8867,16 @@
           "pct": 0.59
         }
       ],
-      "tcp": [
-        {
-          "id": "c1",
-          "name": "SALI, Shane",
-          "party": "NAT",
-          "party_name": "The Nationals",
-          "votes": 11566,
-          "pct": 60.98
-        },
-        {
-          "id": "c7",
-          "name": "BRYANT, Phillip",
-          "party": "ONP",
-          "party_name": "One Nation Victoria",
-          "votes": 7400,
-          "pct": 39.02
-        }
-      ],
-      "tcp_basis": "2cp",
+      "tcp": null,
+      "tcp_basis": null,
       "leader": {
         "id": "c1",
         "name": "SALI, Shane",
         "party": "NAT",
-        "basis": "2cp"
+        "basis": "first preferences"
       },
-      "margin_votes": 4166,
-      "uncounted_estimate": 20244,
+      "margin_votes": null,
+      "uncounted_estimate": 27922,
       "status": "leading",
       "called_by": null,
       "holder": "NAT",
@@ -8392,23 +8886,23 @@
         "early_cast": 25840,
         "postal_returned": 2082,
         "as_of": "2026-11-27",
-        "early_counted": 8261,
-        "postal_counted": 1428,
-        "outstanding": 18233
+        "early_counted": 0,
+        "postal_counted": 0,
+        "outstanding": 27922
       }
     },
     "south-barwon": {
       "name": "South Barwon",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/South-Barwon-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:21:08Z",
+      "fetched": "2026-11-28T16:09:25Z",
       "enrolment": 61036,
-      "formal": 17733,
-      "informal": 944,
-      "total": 18677,
-      "counted_pct": 30.6,
-      "centres_counted": 21,
-      "centres_total": 21,
+      "formal": 36379,
+      "informal": 1729,
+      "total": 38108,
+      "counted_pct": 62.4,
+      "centres_counted": 0,
+      "centres_total": 0,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -8417,31 +8911,31 @@
           "name": "PETTIT, Libby",
           "party": "LIB",
           "party_name": "Liberal",
-          "votes": 5528,
-          "pct": 31.17
-        },
-        {
-          "id": "c7",
-          "name": "SCHERRER, Izzy",
-          "party": "GRN",
-          "party_name": "The Greens",
-          "votes": 3648,
-          "pct": 20.57
+          "votes": 12378,
+          "pct": 34.03
         },
         {
           "id": "c6",
           "name": "GEARD, Josh",
           "party": "ONP",
           "party_name": "One Nation Victoria",
-          "votes": 3468,
-          "pct": 19.56
+          "votes": 7004,
+          "pct": 19.25
+        },
+        {
+          "id": "c7",
+          "name": "SCHERRER, Izzy",
+          "party": "GRN",
+          "party_name": "The Greens",
+          "votes": 6855,
+          "pct": 18.84
         },
         {
           "id": "c1",
           "name": "THISTLETON, Rebecca",
           "party": "ALP",
           "party_name": "Australian Labor Party",
-          "votes": 3046,
+          "votes": 6249,
           "pct": 17.18
         },
         {
@@ -8449,87 +8943,70 @@
           "name": "NELSON, Ron",
           "party": "IND",
           "party_name": null,
-          "votes": 998,
-          "pct": 5.63
+          "votes": 2061,
+          "pct": 5.67
         },
         {
           "id": "c5",
           "name": "GORMAN, Madilyn",
           "party": "VS",
           "party_name": "Victorian Socialists",
-          "votes": 508,
-          "pct": 2.86
+          "votes": 850,
+          "pct": 2.34
         },
         {
           "id": "c3",
           "name": "BARRON, Alan",
           "party": "FF",
           "party_name": "Family First",
-          "votes": 384,
-          "pct": 2.17
+          "votes": 690,
+          "pct": 1.9
         },
         {
           "id": "c4",
           "name": "HEDLEY, Freya",
           "party": "SAL",
           "party_name": "Socialist Alliance",
-          "votes": 153,
-          "pct": 0.86
+          "votes": 292,
+          "pct": 0.8
         }
       ],
-      "tcp": [
-        {
-          "id": "c8",
-          "name": "PETTIT, Libby",
-          "party": "LIB",
-          "party_name": "Liberal",
-          "votes": 9857,
-          "pct": 60.97
-        },
-        {
-          "id": "c1",
-          "name": "THISTLETON, Rebecca",
-          "party": "ALP",
-          "party_name": "Australian Labor Party",
-          "votes": 6309,
-          "pct": 39.03
-        }
-      ],
-      "tcp_basis": "2cp",
+      "tcp": null,
+      "tcp_basis": null,
       "leader": {
         "id": "c8",
         "name": "PETTIT, Libby",
         "party": "LIB",
-        "basis": "2cp"
+        "basis": "first preferences"
       },
-      "margin_votes": 3548,
-      "uncounted_estimate": 36759,
+      "margin_votes": null,
+      "uncounted_estimate": 34323,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
       "changes_hands": true,
-      "swing_2cp": 20.8,
+      "swing_2cp": null,
       "declaration_votes": {
         "early_cast": 29670,
         "postal_returned": 4653,
         "as_of": "2026-11-27",
         "early_counted": 0,
-        "postal_counted": 2296,
-        "outstanding": 32027
+        "postal_counted": 0,
+        "outstanding": 34323
       }
     },
     "south-west-coast": {
       "name": "South-West Coast",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/South-West-Coast-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:21:12Z",
+      "fetched": "2026-11-28T16:09:27Z",
       "enrolment": 54428,
       "formal": 44242,
       "informal": 1425,
       "total": 45667,
       "counted_pct": 83.9,
-      "centres_counted": 34,
-      "centres_total": 34,
+      "centres_counted": 0,
+      "centres_total": 0,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -8582,35 +9059,18 @@
           "pct": 2.31
         }
       ],
-      "tcp": [
-        {
-          "id": "c5",
-          "name": "BRITNELL, Roma",
-          "party": "LIB",
-          "party_name": "Liberal",
-          "votes": 28911,
-          "pct": 66.67
-        },
-        {
-          "id": "c2",
-          "name": "HUGHES, Richard",
-          "party": "ONP",
-          "party_name": "One Nation Victoria",
-          "votes": 14456,
-          "pct": 33.33
-        }
-      ],
-      "tcp_basis": "2cp",
+      "tcp": null,
+      "tcp_basis": null,
       "leader": {
         "id": "c5",
         "name": "BRITNELL, Roma",
         "party": "LIB",
-        "basis": "2cp"
+        "basis": "first preferences"
       },
-      "margin_votes": 14455,
-      "uncounted_estimate": 3787,
-      "status": "called",
-      "called_by": "site",
+      "margin_votes": null,
+      "uncounted_estimate": 30146,
+      "status": "leading",
+      "called_by": null,
       "holder": "LIB",
       "changes_hands": false,
       "swing_2cp": null,
@@ -8618,23 +9078,23 @@
         "early_cast": 28435,
         "postal_returned": 1711,
         "as_of": "2026-11-27",
-        "early_counted": 26298,
-        "postal_counted": 1460,
-        "outstanding": 2388
+        "early_counted": 0,
+        "postal_counted": 0,
+        "outstanding": 30146
       }
     },
     "st-albans": {
       "name": "St Albans",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/St-Albans-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:21:16Z",
+      "fetched": "2026-11-28T16:09:29Z",
       "enrolment": 47825,
       "formal": 26272,
       "informal": 2756,
       "total": 29028,
       "counted_pct": 60.7,
-      "centres_counted": 13,
-      "centres_total": 13,
+      "centres_counted": 0,
+      "centres_total": 0,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -8711,59 +9171,42 @@
           "pct": 0.46
         }
       ],
-      "tcp": [
-        {
-          "id": "c4",
-          "name": "SULEYMAN, Natalie",
-          "party": "ALP",
-          "party_name": "Australian Labor Party",
-          "votes": 9313,
-          "pct": 53.83
-        },
-        {
-          "id": "c5",
-          "name": "DUNSTAN, Rob",
-          "party": "LIB",
-          "party_name": "Liberal",
-          "votes": 7989,
-          "pct": 46.17
-        }
-      ],
-      "tcp_basis": "2cp",
+      "tcp": null,
+      "tcp_basis": null,
       "leader": {
         "id": "c4",
         "name": "SULEYMAN, Natalie",
         "party": "ALP",
-        "basis": "2cp"
+        "basis": "first preferences"
       },
-      "margin_votes": 1324,
-      "uncounted_estimate": 11483,
+      "margin_votes": null,
+      "uncounted_estimate": 29554,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
       "changes_hands": false,
-      "swing_2cp": -5.7,
+      "swing_2cp": null,
       "declaration_votes": {
         "early_cast": 26130,
         "postal_returned": 3424,
         "as_of": "2026-11-27",
-        "early_counted": 18317,
-        "postal_counted": 1441,
-        "outstanding": 9796
+        "early_counted": 0,
+        "postal_counted": 0,
+        "outstanding": 29554
       }
     },
     "sunbury": {
       "name": "Sunbury",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Sunbury-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:21:21Z",
+      "fetched": "2026-11-28T16:09:31Z",
       "enrolment": 51664,
       "formal": 12968,
       "informal": 1102,
       "total": 14070,
       "counted_pct": 27.2,
-      "centres_counted": 14,
-      "centres_total": 14,
+      "centres_counted": 0,
+      "centres_total": 0,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -8773,7 +9216,7 @@
           "party": "ONP",
           "party_name": "One Nation Victoria",
           "votes": 3876,
-          "pct": 33.52
+          "pct": 29.89
         },
         {
           "id": "c4",
@@ -8781,7 +9224,7 @@
           "party": "LIB",
           "party_name": "Liberal",
           "votes": 3511,
-          "pct": 30.37
+          "pct": 27.07
         },
         {
           "id": "c5",
@@ -8789,7 +9232,15 @@
           "party": "ALP",
           "party_name": "Australian Labor Party",
           "votes": 2374,
-          "pct": 20.53
+          "pct": 18.31
+        },
+        {
+          "id": "c10",
+          "name": "GRANGER-BROWN, Lauren",
+          "party": "GRN",
+          "party_name": "The Greens",
+          "votes": 1406,
+          "pct": 10.84
         },
         {
           "id": "c1",
@@ -8797,7 +9248,7 @@
           "party": "VS",
           "party_name": "Victorian Socialists",
           "votes": 927,
-          "pct": 8.02
+          "pct": 7.15
         },
         {
           "id": "c11",
@@ -8805,7 +9256,7 @@
           "party": "FF",
           "party_name": "Family First",
           "votes": 290,
-          "pct": 2.51
+          "pct": 2.24
         },
         {
           "id": "c6",
@@ -8813,7 +9264,7 @@
           "party": "AJP",
           "party_name": "Animal Justice Party",
           "votes": 229,
-          "pct": 1.98
+          "pct": 1.77
         },
         {
           "id": "c9",
@@ -8821,7 +9272,7 @@
           "party": "IND",
           "party_name": null,
           "votes": 150,
-          "pct": 1.3
+          "pct": 1.16
         },
         {
           "id": "c8",
@@ -8829,7 +9280,7 @@
           "party": "DLP",
           "party_name": "Labour DLP",
           "votes": 108,
-          "pct": 0.93
+          "pct": 0.83
         },
         {
           "id": "c3",
@@ -8837,7 +9288,7 @@
           "party": "WEST",
           "party_name": "The West Party",
           "votes": 76,
-          "pct": 0.66
+          "pct": 0.59
         },
         {
           "id": "c7",
@@ -8845,35 +9296,18 @@
           "party": "OTH",
           "party_name": "The Republican",
           "votes": 21,
-          "pct": 0.18
+          "pct": 0.16
         }
       ],
-      "tcp": [
-        {
-          "id": "c2",
-          "name": "DABROWSKI, Elita",
-          "party": "ONP",
-          "party_name": "One Nation Victoria",
-          "votes": 7454,
-          "pct": 57.52
-        },
-        {
-          "id": "c5",
-          "name": "BULL, Josh",
-          "party": "ALP",
-          "party_name": "Australian Labor Party",
-          "votes": 5504,
-          "pct": 42.48
-        }
-      ],
-      "tcp_basis": "2cp",
+      "tcp": null,
+      "tcp_basis": null,
       "leader": {
         "id": "c2",
         "name": "DABROWSKI, Elita",
         "party": "ONP",
-        "basis": "2cp"
+        "basis": "first preferences"
       },
-      "margin_votes": 1950,
+      "margin_votes": null,
       "uncounted_estimate": 31597,
       "status": "leading",
       "called_by": null,
@@ -8885,22 +9319,22 @@
         "postal_returned": 3930,
         "as_of": "2026-11-27",
         "early_counted": 0,
-        "postal_counted": 1414,
-        "outstanding": 29250
+        "postal_counted": 0,
+        "outstanding": 30664
       }
     },
     "sydenham": {
       "name": "Sydenham",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Sydenham-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:21:25Z",
+      "fetched": "2026-11-28T16:09:33Z",
       "enrolment": 64794,
       "formal": 21227,
       "informal": 2061,
       "total": 23288,
       "counted_pct": 35.9,
-      "centres_counted": 15,
-      "centres_total": 15,
+      "centres_counted": 0,
+      "centres_total": 0,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -9001,59 +9435,42 @@
           "pct": 0.33
         }
       ],
-      "tcp": [
-        {
-          "id": "c7",
-          "name": "MOUSSI, Nathalie",
-          "party": "LIB",
-          "party_name": "Liberal",
-          "votes": 7657,
-          "pct": 60.54
-        },
-        {
-          "id": "c10",
-          "name": "RASIC, Uros",
-          "party": "ALP",
-          "party_name": "Australian Labor Party",
-          "votes": 4990,
-          "pct": 39.46
-        }
-      ],
-      "tcp_basis": "2cp",
+      "tcp": null,
+      "tcp_basis": null,
       "leader": {
         "id": "c7",
         "name": "MOUSSI, Nathalie",
         "party": "LIB",
-        "basis": "2cp"
+        "basis": "first preferences"
       },
-      "margin_votes": 2667,
-      "uncounted_estimate": 34357,
+      "margin_votes": null,
+      "uncounted_estimate": 38574,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
       "changes_hands": true,
-      "swing_2cp": 19.3,
+      "swing_2cp": null,
       "declaration_votes": {
         "early_cast": 33836,
         "postal_returned": 4738,
         "as_of": "2026-11-27",
-        "early_counted": 7641,
-        "postal_counted": 2380,
-        "outstanding": 28553
+        "early_counted": 0,
+        "postal_counted": 0,
+        "outstanding": 38574
       }
     },
     "tarneit": {
       "name": "Tarneit",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Tarneit-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:21:31Z",
+      "fetched": "2026-11-28T16:09:35Z",
       "enrolment": 60755,
       "formal": 14675,
       "informal": 1634,
       "total": 16309,
       "counted_pct": 26.8,
-      "centres_counted": 17,
-      "centres_total": 17,
+      "centres_counted": 0,
+      "centres_total": 0,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -9154,164 +9571,130 @@
           "pct": 0.59
         }
       ],
-      "tcp": [
-        {
-          "id": "c11",
-          "name": "UPPARLAPALLE, Venkat Ram",
-          "party": "LIB",
-          "party_name": "Liberal",
-          "votes": 7094,
-          "pct": 51.64
-        },
-        {
-          "id": "c2",
-          "name": "WIGHT, Dylan",
-          "party": "ALP",
-          "party_name": "Australian Labor Party",
-          "votes": 6644,
-          "pct": 48.36
-        }
-      ],
-      "tcp_basis": "2cp",
+      "tcp": null,
+      "tcp_basis": null,
       "leader": {
         "id": "c11",
         "name": "UPPARLAPALLE, Venkat Ram",
         "party": "LIB",
-        "basis": "2cp"
+        "basis": "first preferences"
       },
-      "margin_votes": 450,
+      "margin_votes": null,
       "uncounted_estimate": 35838,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
       "changes_hands": true,
-      "swing_2cp": 14.2,
+      "swing_2cp": null,
       "declaration_votes": {
         "early_cast": 30873,
         "postal_returned": 3702,
         "as_of": "2026-11-27",
         "early_counted": 0,
-        "postal_counted": 1746,
-        "outstanding": 32829
+        "postal_counted": 0,
+        "outstanding": 34575
       }
     },
     "thomastown": {
       "name": "Thomastown",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Thomastown-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:21:34Z",
+      "fetched": "2026-11-28T16:09:38Z",
       "enrolment": 56190,
-      "formal": 13263,
-      "informal": 792,
-      "total": 14055,
-      "counted_pct": 25.0,
-      "centres_counted": 17,
-      "centres_total": 17,
+      "formal": 29409,
+      "informal": 1532,
+      "total": 30941,
+      "counted_pct": 55.1,
+      "centres_counted": 0,
+      "centres_total": 0,
       "declared": false,
       "elected": null,
       "candidates": [
-        {
-          "id": "c5",
-          "name": "HALFPENNY, Bronwyn",
-          "party": "ALP",
-          "party_name": "Australian Labor Party",
-          "votes": 3786,
-          "pct": 28.55
-        },
         {
           "id": "c2",
           "name": "STOJCEVSKI, Belinda",
           "party": "LIB",
           "party_name": "Liberal",
-          "votes": 3477,
-          "pct": 26.22
+          "votes": 8158,
+          "pct": 27.74
+        },
+        {
+          "id": "c5",
+          "name": "HALFPENNY, Bronwyn",
+          "party": "ALP",
+          "party_name": "Australian Labor Party",
+          "votes": 7947,
+          "pct": 27.02
         },
         {
           "id": "c3",
           "name": "ANTHONY, Nadia",
           "party": "ONP",
           "party_name": "One Nation Victoria",
-          "votes": 2622,
-          "pct": 19.77
+          "votes": 5912,
+          "pct": 20.1
         },
         {
           "id": "c4",
           "name": "REDDY, Priya",
           "party": "VS",
           "party_name": "Victorian Socialists",
-          "votes": 1462,
-          "pct": 11.02
+          "votes": 3256,
+          "pct": 11.07
         },
         {
           "id": "c6",
           "name": "TREWELLA, Gavin",
           "party": "GRN",
           "party_name": "The Greens",
-          "votes": 1391,
-          "pct": 10.49
+          "votes": 2992,
+          "pct": 10.17
         },
         {
           "id": "c1",
           "name": "RANCIE, Rob",
           "party": "FF",
           "party_name": "Family First",
-          "votes": 525,
-          "pct": 3.96
+          "votes": 1144,
+          "pct": 3.89
         }
       ],
-      "tcp": [
-        {
-          "id": "c5",
-          "name": "HALFPENNY, Bronwyn",
-          "party": "ALP",
-          "party_name": "Australian Labor Party",
-          "votes": 7545,
-          "pct": 56.94
-        },
-        {
-          "id": "c3",
-          "name": "ANTHONY, Nadia",
-          "party": "ONP",
-          "party_name": "One Nation Victoria",
-          "votes": 5706,
-          "pct": 43.06
-        }
-      ],
-      "tcp_basis": "2cp",
+      "tcp": null,
+      "tcp_basis": null,
       "leader": {
-        "id": "c5",
-        "name": "HALFPENNY, Bronwyn",
-        "party": "ALP",
-        "basis": "2cp"
+        "id": "c2",
+        "name": "STOJCEVSKI, Belinda",
+        "party": "LIB",
+        "basis": "first preferences"
       },
-      "margin_votes": 1839,
-      "uncounted_estimate": 33714,
+      "margin_votes": null,
+      "uncounted_estimate": 29254,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
-      "changes_hands": false,
+      "changes_hands": true,
       "swing_2cp": null,
       "declaration_votes": {
         "early_cast": 23904,
         "postal_returned": 5350,
         "as_of": "2026-11-27",
-        "early_counted": 197,
-        "postal_counted": 2420,
-        "outstanding": 26637
+        "early_counted": 0,
+        "postal_counted": 0,
+        "outstanding": 29254
       }
     },
     "warrandyte": {
       "name": "Warrandyte",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Warrandyte-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:21:38Z",
+      "fetched": "2026-11-28T16:09:40Z",
       "enrolment": 52068,
       "formal": 32451,
       "informal": 792,
       "total": 33243,
       "counted_pct": 63.8,
-      "centres_counted": 23,
-      "centres_total": 23,
+      "centres_counted": 0,
+      "centres_total": 0,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -9364,59 +9747,42 @@
           "pct": 0.84
         }
       ],
-      "tcp": [
-        {
-          "id": "c2",
-          "name": "WERNER, Nicole",
-          "party": "LIB",
-          "party_name": "Liberal",
-          "votes": 23907,
-          "pct": 73.67
-        },
-        {
-          "id": "c3",
-          "name": "PATERSON, Rebecca",
-          "party": "ALP",
-          "party_name": "Australian Labor Party",
-          "votes": 8544,
-          "pct": 26.33
-        }
-      ],
-      "tcp_basis": "2cp",
+      "tcp": null,
+      "tcp_basis": null,
       "leader": {
         "id": "c2",
         "name": "WERNER, Nicole",
         "party": "LIB",
-        "basis": "2cp"
+        "basis": "first preferences"
       },
-      "margin_votes": 15363,
-      "uncounted_estimate": 14421,
-      "status": "called",
-      "called_by": "site",
+      "margin_votes": null,
+      "uncounted_estimate": 31162,
+      "status": "leading",
+      "called_by": null,
       "holder": "LIB",
       "changes_hands": false,
-      "swing_2cp": 19.5,
+      "swing_2cp": null,
       "declaration_votes": {
         "early_cast": 26145,
         "postal_returned": 5017,
         "as_of": "2026-11-27",
-        "early_counted": 17588,
-        "postal_counted": 2393,
-        "outstanding": 11181
+        "early_counted": 0,
+        "postal_counted": 0,
+        "outstanding": 31162
       }
     },
     "wendouree": {
       "name": "Wendouree",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Wendouree-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:21:43Z",
+      "fetched": "2026-11-28T16:09:42Z",
       "enrolment": 53581,
       "formal": 29472,
       "informal": 1257,
       "total": 30729,
       "counted_pct": 57.4,
-      "centres_counted": 17,
-      "centres_total": 17,
+      "centres_counted": 0,
+      "centres_total": 0,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -9477,59 +9843,42 @@
           "pct": 2.21
         }
       ],
-      "tcp": [
-        {
-          "id": "c5",
-          "name": "RONAN, Gav",
-          "party": "LIB",
-          "party_name": "Liberal",
-          "votes": 11609,
-          "pct": 54.03
-        },
-        {
-          "id": "c1",
-          "name": "ADDISON, Juliana",
-          "party": "ALP",
-          "party_name": "Australian Labor Party",
-          "votes": 9878,
-          "pct": 45.97
-        }
-      ],
-      "tcp_basis": "2cp",
+      "tcp": null,
+      "tcp_basis": null,
       "leader": {
         "id": "c5",
         "name": "RONAN, Gav",
         "party": "LIB",
-        "basis": "2cp"
+        "basis": "first preferences"
       },
-      "margin_votes": 1731,
-      "uncounted_estimate": 16572,
+      "margin_votes": null,
+      "uncounted_estimate": 31146,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
       "changes_hands": true,
-      "swing_2cp": 17.5,
+      "swing_2cp": null,
       "declaration_votes": {
         "early_cast": 28932,
         "postal_returned": 2214,
         "as_of": "2026-11-27",
-        "early_counted": 16288,
-        "postal_counted": 1304,
-        "outstanding": 13554
+        "early_counted": 0,
+        "postal_counted": 0,
+        "outstanding": 31146
       }
     },
     "werribee": {
       "name": "Werribee",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Werribee-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:21:48Z",
+      "fetched": "2026-11-28T16:09:44Z",
       "enrolment": 62801,
       "formal": 15656,
       "informal": 1214,
       "total": 16870,
       "counted_pct": 26.9,
-      "centres_counted": 17,
-      "centres_total": 17,
+      "centres_counted": 0,
+      "centres_total": 0,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -9614,59 +9963,42 @@
           "pct": 0.4
         }
       ],
-      "tcp": [
-        {
-          "id": "c4",
-          "name": "CLARK, Reece",
-          "party": "LIB",
-          "party_name": "Liberal",
-          "votes": 8005,
-          "pct": 53.85
-        },
-        {
-          "id": "c6",
-          "name": "LISTER, John",
-          "party": "ALP",
-          "party_name": "Australian Labor Party",
-          "votes": 6860,
-          "pct": 46.15
-        }
-      ],
-      "tcp_basis": "2cp",
+      "tcp": null,
+      "tcp_basis": null,
       "leader": {
         "id": "c4",
         "name": "CLARK, Reece",
         "party": "LIB",
-        "basis": "2cp"
+        "basis": "first preferences"
       },
-      "margin_votes": 1145,
+      "margin_votes": null,
       "uncounted_estimate": 37208,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
       "changes_hands": true,
-      "swing_2cp": 14.4,
+      "swing_2cp": null,
       "declaration_votes": {
         "early_cast": 33032,
         "postal_returned": 3349,
         "as_of": "2026-11-27",
         "early_counted": 0,
-        "postal_counted": 1851,
-        "outstanding": 34530
+        "postal_counted": 0,
+        "outstanding": 36381
       }
     },
     "williamstown": {
       "name": "Williamstown",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Williamstown-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:21:51Z",
+      "fetched": "2026-11-28T16:09:46Z",
       "enrolment": 50405,
       "formal": 36418,
       "informal": 2291,
       "total": 38709,
       "counted_pct": 76.8,
-      "centres_counted": 19,
-      "centres_total": 19,
+      "centres_counted": 0,
+      "centres_total": 0,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -9743,59 +10075,42 @@
           "pct": 0.15
         }
       ],
-      "tcp": [
-        {
-          "id": "c7",
-          "name": "HORNE, Melissa",
-          "party": "ALP",
-          "party_name": "Australian Labor Party",
-          "votes": 19635,
-          "pct": 53.97
-        },
-        {
-          "id": "c9",
-          "name": "LINDEMANN, Paul",
-          "party": "LIB",
-          "party_name": "Liberal",
-          "votes": 16747,
-          "pct": 46.03
-        }
-      ],
-      "tcp_basis": "2cp",
+      "tcp": null,
+      "tcp_basis": null,
       "leader": {
-        "id": "c7",
-        "name": "HORNE, Melissa",
-        "party": "ALP",
-        "basis": "2cp"
+        "id": "c9",
+        "name": "LINDEMANN, Paul",
+        "party": "LIB",
+        "basis": "first preferences"
       },
-      "margin_votes": 2888,
-      "uncounted_estimate": 6070,
+      "margin_votes": null,
+      "uncounted_estimate": 28826,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
-      "changes_hands": false,
-      "swing_2cp": -9.5,
+      "changes_hands": true,
+      "swing_2cp": null,
       "declaration_votes": {
         "early_cast": 25667,
         "postal_returned": 3159,
         "as_of": "2026-11-27",
-        "early_counted": 22054,
-        "postal_counted": 2302,
-        "outstanding": 4470
+        "early_counted": 0,
+        "postal_counted": 0,
+        "outstanding": 28826
       }
     },
     "yan-yean": {
       "name": "Yan Yean",
       "url": "https://www.vec.vic.gov.au/results/2026-results/district-election-page/results-by-district/Yan-Yean-District-results",
       "vec_updated": "Sunday, 29 November 2026",
-      "fetched": "2026-11-28T15:21:56Z",
+      "fetched": "2026-11-28T16:09:48Z",
       "enrolment": 57294,
       "formal": 26175,
       "informal": 1284,
       "total": 27459,
       "counted_pct": 47.9,
-      "centres_counted": 17,
-      "centres_total": 17,
+      "centres_counted": 0,
+      "centres_total": 0,
       "declared": false,
       "elected": null,
       "candidates": [
@@ -9864,33 +10179,16 @@
           "pct": 0.44
         }
       ],
-      "tcp": [
-        {
-          "id": "c2",
-          "name": "JOHNSON, Jeremy",
-          "party": "ONP",
-          "party_name": "One Nation Victoria",
-          "votes": 14761,
-          "pct": 57.35
-        },
-        {
-          "id": "c1",
-          "name": "KATHAGE, Lauren",
-          "party": "ALP",
-          "party_name": "Australian Labor Party",
-          "votes": 10978,
-          "pct": 42.65
-        }
-      ],
-      "tcp_basis": "2cp",
+      "tcp": null,
+      "tcp_basis": null,
       "leader": {
-        "id": "c2",
-        "name": "JOHNSON, Jeremy",
-        "party": "ONP",
-        "basis": "2cp"
+        "id": "c6",
+        "name": "DOW, Amanda",
+        "party": "LIB",
+        "basis": "first preferences"
       },
-      "margin_votes": 3783,
-      "uncounted_estimate": 23213,
+      "margin_votes": null,
+      "uncounted_estimate": 32474,
       "status": "leading",
       "called_by": null,
       "holder": "ALP",
@@ -9900,9 +10198,9 @@
         "early_cast": 28377,
         "postal_returned": 4097,
         "as_of": "2026-11-27",
-        "early_counted": 12200,
-        "postal_counted": 1871,
-        "outstanding": 18403
+        "early_counted": 0,
+        "postal_counted": 0,
+        "outstanding": 32474
       }
     }
   }
