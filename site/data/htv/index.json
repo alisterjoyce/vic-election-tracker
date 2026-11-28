@@ -10,14 +10,14 @@
   "status": "closed",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
   "registration_closes": "2026-11-20",
-  "last_checked": "2026-11-27T23:44:07Z",
+  "last_checked": "2026-11-28T05:50:00Z",
   "coverage": {
     "cards": 1425,
     "listings": 4817,
-    "orders_read": 4550,
-    "orders_image": 557,
+    "orders_read": 4549,
+    "orders_image": 556,
     "orders_same_as": 154,
-    "orders_unreadable": 111,
+    "orders_unreadable": 112,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -1681,9 +1681,9 @@
     "williamstown": {
       "house": "lower",
       "cards": 40,
-      "read": 40,
+      "read": 39,
       "same_as": 0,
-      "unreadable": 0,
+      "unreadable": 1,
       "parties": {
         "ALP": 10,
         "VS": 2,

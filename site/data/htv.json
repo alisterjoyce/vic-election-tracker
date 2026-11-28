@@ -17,15 +17,15 @@
   "registration_opens": "2026-11-10",
   "registration_closes": "2026-11-20",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
-  "last_checked": "2026-11-27T23:44:07Z",
+  "last_checked": "2026-11-28T05:50:00Z",
   "pending": 2,
   "coverage": {
     "cards": 1425,
     "listings": 4817,
-    "orders_read": 4550,
-    "orders_image": 557,
+    "orders_read": 4549,
+    "orders_image": 556,
     "orders_same_as": 154,
-    "orders_unreadable": 111,
+    "orders_unreadable": 112,
     "districts_with_cards": 88,
     "regions_with_cards": 8,
     "by_party": {
@@ -102806,35 +102806,18 @@
       "kind": "independent",
       "type": "Single",
       "registered_on": "2026-11-18",
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b74eae47-1901-4fe0-b937-6f66eb1ae91a%2Flindemann%2C%20paul%20andrew.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=05afd6ce-6634-4a82-96cf-b6beb1b012a6%2Flindemann%2C%20paul%20andrew.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
       "file": "lindemann, paul andrew.pdf",
       "areas": [
         "williamstown"
       ],
       "party": "IND",
       "candidate": "williamstown/paul-lindemann",
-      "read_on": "2026-11-20",
+      "read_on": "2026-11-28",
       "orders": {
         "williamstown": {
-          "status": "read",
-          "order": [
-            "LINDEMANN, Paul",
-            "O'REGAN, Bruce",
-            "GANNON, Gill",
-            "LOUGHNAN, Catherine",
-            "YARRA, Sagar Reddy",
-            "BRIFFA, Tony",
-            "HOCKING, Ben",
-            "MARTIN, Oskar",
-            "HORNE, Melissa"
-          ],
-          "via": "image",
-          "ranks": {
-            "LNP": 1,
-            "ONP": 4,
-            "GRN": 7,
-            "ALP": 9
-          }
+          "status": "unreadable",
+          "note": "unreadable, see card"
         }
       }
     },
@@ -131610,6 +131593,17 @@
   ],
   "changes": [
     {
+      "date": "2026-11-28",
+      "kind": "amended",
+      "registration": "1465",
+      "registered_by": "LINDEMANN, Paul",
+      "areas": [
+        "williamstown"
+      ],
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=05afd6ce-6634-4a82-96cf-b6beb1b012a6%2Flindemann%2C%20paul%20andrew.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "detail": "replaces lindemann, paul andrew.pdf"
+    },
+    {
       "date": "2026-11-27",
       "kind": "amended",
       "registration": "1524",
@@ -138273,24 +138267,6 @@
         "southern-metropolitan"
       ],
       "detail": "was caulfield, hawthorn, malvern, oakleigh, prahran, richmond, southern-metropolitan"
-    },
-    {
-      "date": "2026-11-26",
-      "kind": "areas",
-      "registration": "1207",
-      "registered_by": "The Greens",
-      "areas": [
-        "ashwood",
-        "caulfield",
-        "hawthorn",
-        "kew",
-        "malvern",
-        "oakleigh",
-        "prahran",
-        "richmond",
-        "southern-metropolitan"
-      ],
-      "detail": "was caulfield, hawthorn, kew, malvern, oakleigh, prahran, richmond, southern-metropolitan"
     }
   ]
 }
