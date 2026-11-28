@@ -17,7 +17,7 @@
   "registration_opens": "2026-11-10",
   "registration_closes": "2026-11-20",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
-  "last_checked": "2026-11-28T05:50:00Z",
+  "last_checked": "2026-11-28T09:47:22Z",
   "pending": 2,
   "coverage": {
     "cards": 1425,
@@ -69,21 +69,22 @@
         "districts": 65,
         "regions": 6
       },
-      "AJP": {
-        "cards": 47,
-        "districts": 40,
-        "regions": 2
-      },
       "OTH": {
-        "cards": 29,
-        "districts": 17,
-        "regions": 6,
+        "cards": 49,
+        "districts": 24,
+        "regions": 8,
         "registered_by": [
           "Australian Democrats",
           "Christian Alliance Party – Reform AU",
           "Citizens Party",
+          "Labour DLP",
           "The Republican"
         ]
+      },
+      "AJP": {
+        "cards": 47,
+        "districts": 40,
+        "regions": 2
       },
       "LBT": {
         "cards": 28,
@@ -94,11 +95,6 @@
         "cards": 22,
         "districts": 12,
         "regions": 1
-      },
-      "DLP": {
-        "cards": 20,
-        "districts": 12,
-        "regions": 8
       },
       "NAT": {
         "cards": 19,
@@ -101203,7 +101199,7 @@
       "areas": [
         "western-metropolitan"
       ],
-      "party": "DLP",
+      "party": "OTH",
       "candidate": null,
       "read_on": "2026-11-22",
       "orders": {
@@ -101256,7 +101252,7 @@
       "areas": [
         "southern-metropolitan"
       ],
-      "party": "DLP",
+      "party": "OTH",
       "candidate": null,
       "read_on": "2026-11-20",
       "orders": {
@@ -101289,7 +101285,7 @@
         "sunbury",
         "western-metropolitan"
       ],
-      "party": "DLP",
+      "party": "OTH",
       "candidate": null,
       "read_on": "2026-11-22",
       "orders": {
@@ -101344,7 +101340,7 @@
       "areas": [
         "northern-metropolitan"
       ],
-      "party": "DLP",
+      "party": "OTH",
       "candidate": null,
       "read_on": "2026-11-20",
       "orders": {
@@ -101377,7 +101373,7 @@
         "ripon",
         "western-victoria"
       ],
-      "party": "DLP",
+      "party": "OTH",
       "candidate": null,
       "read_on": "2026-11-27",
       "orders": {
@@ -101434,7 +101430,7 @@
         "morwell",
         "eastern-victoria"
       ],
-      "party": "DLP",
+      "party": "OTH",
       "candidate": null,
       "read_on": "2026-11-20",
       "orders": {
@@ -101486,7 +101482,7 @@
         "sydenham",
         "western-metropolitan"
       ],
-      "party": "DLP",
+      "party": "OTH",
       "candidate": null,
       "read_on": "2026-11-22",
       "orders": {
@@ -101542,7 +101538,7 @@
       "areas": [
         "eastern-victoria"
       ],
-      "party": "DLP",
+      "party": "OTH",
       "candidate": null,
       "read_on": "2026-11-20",
       "orders": {
@@ -101574,7 +101570,7 @@
       "areas": [
         "western-victoria"
       ],
-      "party": "DLP",
+      "party": "OTH",
       "candidate": null,
       "read_on": "2026-11-27",
       "orders": {
@@ -101607,7 +101603,7 @@
         "glen-waverley",
         "north-eastern-metropolitan"
       ],
-      "party": "DLP",
+      "party": "OTH",
       "candidate": null,
       "read_on": "2026-11-23",
       "orders": {
@@ -101659,7 +101655,7 @@
         "niddrie",
         "western-metropolitan"
       ],
-      "party": "DLP",
+      "party": "OTH",
       "candidate": null,
       "read_on": "2026-11-21",
       "orders": {
@@ -101714,7 +101710,7 @@
       "areas": [
         "northern-victoria"
       ],
-      "party": "DLP",
+      "party": "OTH",
       "candidate": null,
       "read_on": "2026-11-20",
       "orders": {
@@ -101747,7 +101743,7 @@
         "bayswater",
         "north-eastern-metropolitan"
       ],
-      "party": "DLP",
+      "party": "OTH",
       "candidate": null,
       "read_on": "2026-11-26",
       "orders": {
@@ -101799,7 +101795,7 @@
       "areas": [
         "north-eastern-metropolitan"
       ],
-      "party": "DLP",
+      "party": "OTH",
       "candidate": null,
       "orders": {
         "north-eastern-metropolitan": {
@@ -101831,7 +101827,7 @@
         "pakenham",
         "eastern-victoria"
       ],
-      "party": "DLP",
+      "party": "OTH",
       "candidate": null,
       "read_on": "2026-11-20",
       "orders": {
@@ -101886,7 +101882,7 @@
         "werribee",
         "western-metropolitan"
       ],
-      "party": "DLP",
+      "party": "OTH",
       "candidate": null,
       "read_on": "2026-11-22",
       "orders": {
@@ -101941,7 +101937,7 @@
         "box-hill",
         "north-eastern-metropolitan"
       ],
-      "party": "DLP",
+      "party": "OTH",
       "candidate": null,
       "read_on": "2026-11-23",
       "orders": {
@@ -101994,7 +101990,7 @@
         "ringwood",
         "north-eastern-metropolitan"
       ],
-      "party": "DLP",
+      "party": "OTH",
       "candidate": null,
       "read_on": "2026-11-23",
       "orders": {
@@ -102047,7 +102043,7 @@
       "areas": [
         "south-eastern-metropolitan"
       ],
-      "party": "DLP",
+      "party": "OTH",
       "candidate": null,
       "read_on": "2026-11-20",
       "orders": {
@@ -102080,7 +102076,7 @@
         "point-cook",
         "western-metropolitan"
       ],
-      "party": "DLP",
+      "party": "OTH",
       "candidate": null,
       "read_on": "2026-11-22",
       "orders": {

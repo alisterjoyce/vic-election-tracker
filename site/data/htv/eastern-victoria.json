@@ -117,7 +117,7 @@
     {
       "ballot_name": "WHITE, Khalif",
       "name": "Khalif White",
-      "party": "DLP",
+      "party": "OTH",
       "party_label": "Labour DLP",
       "ballot_position": 13,
       "group": "E",
@@ -126,7 +126,7 @@
     {
       "ballot_name": "HAMMAN, Daniel",
       "name": "Daniel Hamman",
-      "party": "DLP",
+      "party": "OTH",
       "party_label": "Labour DLP",
       "ballot_position": 14,
       "group": "E",
@@ -317,7 +317,7 @@
     {
       "group": "E",
       "label": "Labour DLP",
-      "party": "DLP"
+      "party": "OTH"
     },
     {
       "group": "F",
@@ -1455,75 +1455,6 @@
           "of_n": 6
         }
       ]
-    },
-    {
-      "registration": "1425",
-      "registered_by": "Labour DLP",
-      "kind": "party",
-      "party": "DLP",
-      "candidate": null,
-      "type": "Combined",
-      "registered_on": "2026-11-17",
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b28f566a-552b-4cec-95a5-ed6d5c828d8a%2Fdlp%20htv%20lower%20house%20-%20morwell%20district%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "atl": [
-        "E",
-        "C",
-        "B",
-        "I",
-        "H"
-      ],
-      "via": "text",
-      "status": "read",
-      "ranks": {
-        "LNP": 2,
-        "ONP": 3
-      }
-    },
-    {
-      "registration": "1427",
-      "registered_by": "Labour DLP",
-      "kind": "party",
-      "party": "DLP",
-      "candidate": null,
-      "type": "Single",
-      "registered_on": "2026-11-17",
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2a9c696b-42c3-4757-81ca-cc788e777818%2Fdlp%20htv%20upper%20house%20-%20eastern%20victoria%20region%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "atl": [
-        "E",
-        "C",
-        "B",
-        "I",
-        "H"
-      ],
-      "via": "text",
-      "status": "read",
-      "ranks": {
-        "LNP": 2,
-        "ONP": 3
-      }
-    },
-    {
-      "registration": "1434",
-      "registered_by": "Labour DLP",
-      "kind": "party",
-      "party": "DLP",
-      "candidate": null,
-      "type": "Combined",
-      "registered_on": "2026-11-17",
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=04b5a4a5-789e-4bae-85c6-b59c2d1b50b5%2Fdlp%20htv%20lower%20house%20-%20pakenham%20district%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "atl": [
-        "E",
-        "C",
-        "B",
-        "I",
-        "H"
-      ],
-      "via": "text",
-      "status": "read",
-      "ranks": {
-        "LNP": 2,
-        "ONP": 3
-      }
     },
     {
       "registration": "499",
@@ -3056,6 +2987,75 @@
       "ranks": {
         "ONP": 1,
         "LNP": 4
+      }
+    },
+    {
+      "registration": "1425",
+      "registered_by": "Labour DLP",
+      "kind": "party",
+      "party": "OTH",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b28f566a-552b-4cec-95a5-ed6d5c828d8a%2Fdlp%20htv%20lower%20house%20-%20morwell%20district%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "atl": [
+        "E",
+        "C",
+        "B",
+        "I",
+        "H"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 2,
+        "ONP": 3
+      }
+    },
+    {
+      "registration": "1427",
+      "registered_by": "Labour DLP",
+      "kind": "party",
+      "party": "OTH",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=2a9c696b-42c3-4757-81ca-cc788e777818%2Fdlp%20htv%20upper%20house%20-%20eastern%20victoria%20region%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "atl": [
+        "E",
+        "C",
+        "B",
+        "I",
+        "H"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 2,
+        "ONP": 3
+      }
+    },
+    {
+      "registration": "1434",
+      "registered_by": "Labour DLP",
+      "kind": "party",
+      "party": "OTH",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=04b5a4a5-789e-4bae-85c6-b59c2d1b50b5%2Fdlp%20htv%20lower%20house%20-%20pakenham%20district%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "atl": [
+        "E",
+        "C",
+        "B",
+        "I",
+        "H"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 2,
+        "ONP": 3
       }
     },
     {

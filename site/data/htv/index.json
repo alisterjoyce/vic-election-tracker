@@ -10,7 +10,7 @@
   "status": "closed",
   "source_url": "https://www.vec.vic.gov.au/voting/2026-state-election/how-to-vote-cards",
   "registration_closes": "2026-11-20",
-  "last_checked": "2026-11-28T05:50:00Z",
+  "last_checked": "2026-11-28T09:47:22Z",
   "coverage": {
     "cards": 1425,
     "listings": 4817,
@@ -61,21 +61,22 @@
         "districts": 65,
         "regions": 6
       },
-      "AJP": {
-        "cards": 47,
-        "districts": 40,
-        "regions": 2
-      },
       "OTH": {
-        "cards": 29,
-        "districts": 17,
-        "regions": 6,
+        "cards": 49,
+        "districts": 24,
+        "regions": 8,
         "registered_by": [
           "Australian Democrats",
           "Christian Alliance Party – Reform AU",
           "Citizens Party",
+          "Labour DLP",
           "The Republican"
         ]
+      },
+      "AJP": {
+        "cards": 47,
+        "districts": 40,
+        "regions": 2
       },
       "LBT": {
         "cards": 28,
@@ -86,11 +87,6 @@
         "cards": 22,
         "districts": 12,
         "regions": 1
-      },
-      "DLP": {
-        "cards": 20,
-        "districts": 12,
-        "regions": 8
       },
       "NAT": {
         "cards": 19,
@@ -194,7 +190,7 @@
         "LIB": 11,
         "ONP": 2,
         "GRN": 12,
-        "DLP": 1
+        "OTH": 1
       },
       "no_card": 1
     },
@@ -320,7 +316,7 @@
         "ONP": 2,
         "GRN": 16,
         "IND": 2,
-        "DLP": 1
+        "OTH": 1
       },
       "no_card": 0
     },
@@ -729,7 +725,7 @@
         "FF": 1,
         "ONP": 2,
         "GRN": 16,
-        "DLP": 1
+        "OTH": 1
       },
       "no_card": 0
     },
@@ -1088,7 +1084,7 @@
         "GRN": 7,
         "FF": 1,
         "ONP": 2,
-        "DLP": 1
+        "OTH": 1
       },
       "no_card": 0
     },
@@ -1213,9 +1209,8 @@
         "GRN": 23,
         "IND": 1,
         "AJP": 2,
-        "DLP": 1,
-        "WEST": 2,
-        "OTH": 1
+        "OTH": 2,
+        "WEST": 2
       },
       "no_card": 0
     },
@@ -1287,7 +1282,7 @@
         "ONP": 2,
         "GRN": 7,
         "LBT": 1,
-        "DLP": 1
+        "OTH": 1
       },
       "no_card": 0
     },
@@ -1322,9 +1317,8 @@
         "GRN": 11,
         "LIB": 11,
         "ONP": 2,
-        "DLP": 1,
-        "WEST": 2,
-        "OTH": 1
+        "OTH": 2,
+        "WEST": 2
       },
       "no_card": 0
     },
@@ -1415,7 +1409,7 @@
         "GRN": 14,
         "IND": 1,
         "AJP": 1,
-        "DLP": 1
+        "OTH": 1
       },
       "no_card": 0
     },
@@ -1435,7 +1429,7 @@
         "GRN": 16,
         "FF": 2,
         "LBT": 1,
-        "DLP": 1
+        "OTH": 1
       },
       "no_card": 2
     },
@@ -1558,9 +1552,8 @@
         "GRN": 15,
         "AJP": 2,
         "IND": 1,
-        "DLP": 1,
-        "WEST": 1,
-        "OTH": 1
+        "OTH": 2,
+        "WEST": 1
       },
       "no_card": 0
     },
@@ -1580,9 +1573,8 @@
         "GRN": 14,
         "IND": 3,
         "AJP": 1,
-        "DLP": 1,
-        "WEST": 3,
-        "OTH": 1
+        "OTH": 2,
+        "WEST": 3
       },
       "no_card": 0
     },
@@ -1671,10 +1663,9 @@
         "LIB": 8,
         "NONCAND": 1,
         "ONP": 2,
-        "DLP": 1,
+        "OTH": 2,
         "IND": 1,
-        "WEST": 2,
-        "OTH": 1
+        "WEST": 2
       },
       "no_card": 0
     },
@@ -1734,7 +1725,7 @@
         "ONP": 12,
         "AJP": 4,
         "null": 1,
-        "DLP": 3
+        "OTH": 3
       },
       "no_card": 0
     },
@@ -1755,8 +1746,7 @@
         "ONP": 12,
         "GRN": 22,
         "LBT": 4,
-        "OTH": 1,
-        "DLP": 5
+        "OTH": 6
       },
       "no_card": 2
     },
@@ -1777,9 +1767,8 @@
         "ONP": 12,
         "GRN": 47,
         "IND": 2,
-        "OTH": 3,
+        "OTH": 4,
         "NONCAND": 7,
-        "DLP": 1,
         "null": 1
       },
       "no_card": 5
@@ -1803,8 +1792,7 @@
         "ONP": 12,
         "AJP": 13,
         "GRN": 19,
-        "OTH": 1,
-        "DLP": 1
+        "OTH": 2
       },
       "no_card": 3
     },
@@ -1824,8 +1812,7 @@
         "GRN": 25,
         "LBT": 13,
         "NONCAND": 1,
-        "OTH": 5,
-        "DLP": 1
+        "OTH": 6
       },
       "no_card": 1
     },
@@ -1847,7 +1834,7 @@
         "GRN": 28,
         "IND": 1,
         "null": 2,
-        "DLP": 1
+        "OTH": 1
       },
       "no_card": 3
     },
@@ -1868,8 +1855,7 @@
         "LIB": 41,
         "ONP": 12,
         "NONCAND": 3,
-        "DLP": 6,
-        "OTH": 12,
+        "OTH": 18,
         "WEST": 21
       },
       "no_card": 0
@@ -1893,9 +1879,8 @@
         "IND": 1,
         "GRN": 24,
         "FF": 3,
-        "OTH": 4,
-        "LBT": 2,
-        "DLP": 2
+        "OTH": 6,
+        "LBT": 2
       },
       "no_card": 2
     }

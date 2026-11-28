@@ -124,7 +124,7 @@
     {
       "ballot_name": "VAN DORSSEN, Chae",
       "name": "Chae Van Dorssen",
-      "party": "DLP",
+      "party": "OTH",
       "party_label": "Labour DLP",
       "ballot_position": 14,
       "group": "F",
@@ -133,7 +133,7 @@
     {
       "ballot_name": "DE WIT, Sophie",
       "name": "Sophie De Wit",
-      "party": "DLP",
+      "party": "OTH",
       "party_label": "Labour DLP",
       "ballot_position": 15,
       "group": "F",
@@ -365,7 +365,7 @@
     {
       "group": "F",
       "label": "Labour DLP",
-      "party": "DLP"
+      "party": "OTH"
     },
     {
       "group": "G",
@@ -1357,29 +1357,6 @@
           "of_n": 6
         }
       ]
-    },
-    {
-      "registration": "1431",
-      "registered_by": "Labour DLP",
-      "kind": "party",
-      "party": "DLP",
-      "candidate": null,
-      "type": "Single",
-      "registered_on": "2026-11-17",
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=589e77c6-9f2a-43c5-a434-5d0451f13a36%2Fdlp%20htv%20upper%20house%20-%20northern%20victoria%20region%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "atl": [
-        "F",
-        "J",
-        "E",
-        "H",
-        "D"
-      ],
-      "via": "text",
-      "status": "read",
-      "ranks": {
-        "LNP": 2,
-        "ONP": 4
-      }
     },
     {
       "registration": "546",
@@ -3094,6 +3071,29 @@
       ],
       "via": "text",
       "status": "read"
+    },
+    {
+      "registration": "1431",
+      "registered_by": "Labour DLP",
+      "kind": "party",
+      "party": "OTH",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=589e77c6-9f2a-43c5-a434-5d0451f13a36%2Fdlp%20htv%20upper%20house%20-%20northern%20victoria%20region%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "atl": [
+        "F",
+        "J",
+        "E",
+        "H",
+        "D"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 2,
+        "ONP": 4
+      }
     },
     {
       "registration": "14",

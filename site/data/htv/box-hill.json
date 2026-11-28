@@ -40,7 +40,7 @@
     {
       "ballot_name": "McGRATH, Sue-Ellen",
       "name": "Sue-Ellen McGrath",
-      "party": "DLP",
+      "party": "OTH",
       "party_label": "Labour DLP",
       "ballot_position": 5,
       "id": "box-hill/sue-ellen-mcgrath"
@@ -430,34 +430,6 @@
           "of_n": 6
         }
       ]
-    },
-    {
-      "registration": "1436",
-      "registered_by": "Labour DLP",
-      "kind": "party",
-      "party": "DLP",
-      "candidate": null,
-      "type": "Combined",
-      "registered_on": "2026-11-17",
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=78d174d2-1a5a-46e7-a228-9a37ad433e60%2Fdlp%20htv%20lower%20house%20-%20box%20hill%20district%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "read",
-      "order": [
-        "McGRATH, Sue-Ellen",
-        "BAKER, Jamie",
-        "HOUGUET, Sally",
-        "FAGG, Peter",
-        "CHEUNG, Heena",
-        "HAMER, Paul",
-        "QIN, Aaron",
-        "AFAJ, Saravina"
-      ],
-      "via": "text",
-      "ranks": {
-        "ONP": 2,
-        "LNP": 3,
-        "ALP": 6,
-        "GRN": 7
-      }
     },
     {
       "registration": "528",
@@ -1718,6 +1690,34 @@
         "ONP": 1,
         "LNP": 3,
         "ALP": 5,
+        "GRN": 7
+      }
+    },
+    {
+      "registration": "1436",
+      "registered_by": "Labour DLP",
+      "kind": "party",
+      "party": "OTH",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=78d174d2-1a5a-46e7-a228-9a37ad433e60%2Fdlp%20htv%20lower%20house%20-%20box%20hill%20district%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "McGRATH, Sue-Ellen",
+        "BAKER, Jamie",
+        "HOUGUET, Sally",
+        "FAGG, Peter",
+        "CHEUNG, Heena",
+        "HAMER, Paul",
+        "QIN, Aaron",
+        "AFAJ, Saravina"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 3,
+        "ALP": 6,
         "GRN": 7
       }
     },

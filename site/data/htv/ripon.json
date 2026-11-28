@@ -32,7 +32,7 @@
     {
       "ballot_name": "SKRUZNY, Ronald",
       "name": "Ronald Skruzny",
-      "party": "DLP",
+      "party": "OTH",
       "party_label": "Labour DLP",
       "ballot_position": 4,
       "id": "ripon/ronald-skruzny"
@@ -301,38 +301,6 @@
           "of_n": 8
         }
       ]
-    },
-    {
-      "registration": "1424",
-      "registered_by": "Labour DLP",
-      "kind": "party",
-      "party": "DLP",
-      "candidate": null,
-      "type": "Combined",
-      "registered_on": "2026-11-17",
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b9eca28e-c325-4ca5-a093-6461a67f7958%2Fdlp%20htv%20lower%20house%20-%20ripon%20district%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "read",
-      "order": [
-        "SKRUZNY, Ronald",
-        "ARMSTRONG, Jo",
-        "MCGRATH, Mark",
-        "READ, Megan",
-        "BUXTON, Donna",
-        "WOJTKOWSKI, Krzysztof",
-        "BARRY, Jeff",
-        "QUINCE, Bernard",
-        "ANDREI, Trevor Scott",
-        "HAYLETT, Martha",
-        "DRYLIE, Tim",
-        "BRENNAN-JONES, Taylah"
-      ],
-      "via": "text",
-      "ranks": {
-        "LNP": 2,
-        "ONP": 5,
-        "ALP": 10,
-        "GRN": 11
-      }
     },
     {
       "registration": "1212",
@@ -1452,6 +1420,38 @@
       "ranks": {
         "ONP": 1,
         "LNP": 5,
+        "ALP": 10,
+        "GRN": 11
+      }
+    },
+    {
+      "registration": "1424",
+      "registered_by": "Labour DLP",
+      "kind": "party",
+      "party": "OTH",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b9eca28e-c325-4ca5-a093-6461a67f7958%2Fdlp%20htv%20lower%20house%20-%20ripon%20district%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "SKRUZNY, Ronald",
+        "ARMSTRONG, Jo",
+        "MCGRATH, Mark",
+        "READ, Megan",
+        "BUXTON, Donna",
+        "WOJTKOWSKI, Krzysztof",
+        "BARRY, Jeff",
+        "QUINCE, Bernard",
+        "ANDREI, Trevor Scott",
+        "HAYLETT, Martha",
+        "DRYLIE, Tim",
+        "BRENNAN-JONES, Taylah"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 2,
+        "ONP": 5,
         "ALP": 10,
         "GRN": 11
       }

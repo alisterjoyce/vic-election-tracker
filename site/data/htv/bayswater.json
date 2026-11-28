@@ -48,7 +48,7 @@
     {
       "ballot_name": "HUBBARD, Naomi",
       "name": "Naomi Hubbard",
-      "party": "DLP",
+      "party": "OTH",
       "party_label": "Labour DLP",
       "ballot_position": 6,
       "id": "bayswater/naomi-hubbard"
@@ -322,34 +322,6 @@
           "of_n": 6
         }
       ]
-    },
-    {
-      "registration": "1432",
-      "registered_by": "Labour DLP",
-      "kind": "party",
-      "party": "DLP",
-      "candidate": null,
-      "type": "Combined",
-      "registered_on": "2026-11-17",
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f53cdb16-85a5-4066-825d-46c682c8f3e1%2Fdlp%20htv%20lower%20house%20-%20bayswater%20district%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "read",
-      "order": [
-        "HUBBARD, Naomi",
-        "BLEAKNEY, Kayte",
-        "KITCHEN, David",
-        "COOMBES, Gary",
-        "CLARKE, Mathew",
-        "BUXTON, Julie",
-        "KENNEDY, Jess",
-        "FERGUSON, Alec"
-      ],
-      "via": "text",
-      "ranks": {
-        "ONP": 2,
-        "LNP": 3,
-        "ALP": 6,
-        "GRN": 7
-      }
     },
     {
       "registration": "532",
@@ -1154,6 +1126,34 @@
         "ONP": 1,
         "LNP": 3,
         "ALP": 5,
+        "GRN": 7
+      }
+    },
+    {
+      "registration": "1432",
+      "registered_by": "Labour DLP",
+      "kind": "party",
+      "party": "OTH",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=f53cdb16-85a5-4066-825d-46c682c8f3e1%2Fdlp%20htv%20lower%20house%20-%20bayswater%20district%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "HUBBARD, Naomi",
+        "BLEAKNEY, Kayte",
+        "KITCHEN, David",
+        "COOMBES, Gary",
+        "CLARKE, Mathew",
+        "BUXTON, Julie",
+        "KENNEDY, Jess",
+        "FERGUSON, Alec"
+      ],
+      "via": "text",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 3,
+        "ALP": 6,
         "GRN": 7
       }
     },

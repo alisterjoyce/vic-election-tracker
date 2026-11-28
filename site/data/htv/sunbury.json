@@ -65,7 +65,7 @@
     {
       "ballot_name": "STAFFORD, John",
       "name": "John Stafford",
-      "party": "DLP",
+      "party": "OTH",
       "party_label": "Labour DLP",
       "ballot_position": 8,
       "id": "sunbury/john-stafford"
@@ -303,37 +303,6 @@
           "of_n": 10
         }
       ]
-    },
-    {
-      "registration": "1422",
-      "registered_by": "Labour DLP",
-      "kind": "party",
-      "party": "DLP",
-      "candidate": null,
-      "type": "Combined",
-      "registered_on": "2026-11-17",
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6229dd84-279c-4322-b790-29e706745bd2%2Fdlp%20htv%20lower%20house%20-%20sunbury%20district%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "read",
-      "order": [
-        "STAFFORD, John",
-        "VINE, Geoff",
-        "COTTOM, Simmone",
-        "BATRES, Elmer",
-        "DABROWSKI, Elita",
-        "MEDCRAFT, Steve Jack",
-        "BETHI, Bhasker Reddy",
-        "MOHR, Rohanna",
-        "BULL, Josh",
-        "GRANGER-BROWN, Lauren",
-        "BREMNER, Adam"
-      ],
-      "via": "text",
-      "ranks": {
-        "LNP": 3,
-        "ONP": 5,
-        "ALP": 9,
-        "GRN": 10
-      }
     },
     {
       "registration": "497",
@@ -1265,6 +1234,37 @@
         "LNP": 3,
         "ALP": 8,
         "GRN": 9
+      }
+    },
+    {
+      "registration": "1422",
+      "registered_by": "Labour DLP",
+      "kind": "party",
+      "party": "OTH",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=6229dd84-279c-4322-b790-29e706745bd2%2Fdlp%20htv%20lower%20house%20-%20sunbury%20district%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "STAFFORD, John",
+        "VINE, Geoff",
+        "COTTOM, Simmone",
+        "BATRES, Elmer",
+        "DABROWSKI, Elita",
+        "MEDCRAFT, Steve Jack",
+        "BETHI, Bhasker Reddy",
+        "MOHR, Rohanna",
+        "BULL, Josh",
+        "GRANGER-BROWN, Lauren",
+        "BREMNER, Adam"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 3,
+        "ONP": 5,
+        "ALP": 9,
+        "GRN": 10
       }
     },
     {

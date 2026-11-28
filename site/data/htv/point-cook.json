@@ -25,7 +25,7 @@
     {
       "ballot_name": "KELLY, Paul",
       "name": "Paul Kelly",
-      "party": "DLP",
+      "party": "OTH",
       "party_label": "Labour DLP",
       "ballot_position": 3,
       "id": "point-cook/paul-kelly"
@@ -486,35 +486,6 @@
           "of_n": 8
         }
       ]
-    },
-    {
-      "registration": "1439",
-      "registered_by": "Labour DLP",
-      "kind": "party",
-      "party": "DLP",
-      "candidate": null,
-      "type": "Combined",
-      "registered_on": "2026-11-17",
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8161e2a4-ce2e-4b95-a7d6-a2d39426602f%2Fdlp%20htv%20lower%20house%20-%20point%20cook%20district%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "read",
-      "order": [
-        "KELLY, Paul",
-        "GRECH, Mark",
-        "REDDY, Raja",
-        "MEURE, Keith",
-        "REID, Cameron",
-        "ALLE, Kirti",
-        "HILAKARI, Mathew",
-        "KRISHNA PANDI, Ponraj",
-        "LAINE, Taylor"
-      ],
-      "via": "text",
-      "ranks": {
-        "LNP": 3,
-        "ONP": 5,
-        "ALP": 7,
-        "GRN": 8
-      }
     },
     {
       "registration": "502",
@@ -1303,6 +1274,35 @@
       "ranks": {
         "ONP": 1,
         "LNP": 3,
+        "ALP": 7,
+        "GRN": 8
+      }
+    },
+    {
+      "registration": "1439",
+      "registered_by": "Labour DLP",
+      "kind": "party",
+      "party": "OTH",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8161e2a4-ce2e-4b95-a7d6-a2d39426602f%2Fdlp%20htv%20lower%20house%20-%20point%20cook%20district%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "KELLY, Paul",
+        "GRECH, Mark",
+        "REDDY, Raja",
+        "MEURE, Keith",
+        "REID, Cameron",
+        "ALLE, Kirti",
+        "HILAKARI, Mathew",
+        "KRISHNA PANDI, Ponraj",
+        "LAINE, Taylor"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 3,
+        "ONP": 5,
         "ALP": 7,
         "GRN": 8
       }

@@ -207,7 +207,7 @@
     {
       "ballot_name": "ZMEGAC, Karla",
       "name": "Karla Zmegac",
-      "party": "DLP",
+      "party": "OTH",
       "party_label": "Labour DLP",
       "ballot_position": 23,
       "group": "I",
@@ -216,7 +216,7 @@
     {
       "ballot_name": "DEAN, Paul",
       "name": "Paul Dean",
-      "party": "DLP",
+      "party": "OTH",
       "party_label": "Labour DLP",
       "ballot_position": 24,
       "group": "I",
@@ -328,7 +328,7 @@
     {
       "group": "I",
       "label": "Labour DLP",
-      "party": "DLP"
+      "party": "OTH"
     },
     {
       "group": "J",
@@ -2205,29 +2205,6 @@
           "of_n": 6
         }
       ]
-    },
-    {
-      "registration": "1421",
-      "registered_by": "Labour DLP",
-      "kind": "party",
-      "party": "DLP",
-      "candidate": null,
-      "type": "Single",
-      "registered_on": "2026-11-17",
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8b7dde33-3965-47a5-8f4e-04f16fbfcc32%2Fdlp%20htv%20upper%20house%20-%20southern%20metropolitan%20region%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "atl": [
-        "I",
-        "D",
-        "F",
-        "E",
-        "H"
-      ],
-      "via": "text",
-      "status": "read",
-      "ranks": {
-        "ONP": 2,
-        "LNP": 3
-      }
     },
     {
       "registration": "506",
@@ -4571,6 +4548,29 @@
       "ranks": {
         "ONP": 1,
         "LNP": 4
+      }
+    },
+    {
+      "registration": "1421",
+      "registered_by": "Labour DLP",
+      "kind": "party",
+      "party": "OTH",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8b7dde33-3965-47a5-8f4e-04f16fbfcc32%2Fdlp%20htv%20upper%20house%20-%20southern%20metropolitan%20region%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "atl": [
+        "I",
+        "D",
+        "F",
+        "E",
+        "H"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "ONP": 2,
+        "LNP": 3
       }
     },
     {

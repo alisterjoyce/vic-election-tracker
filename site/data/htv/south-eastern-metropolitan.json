@@ -297,7 +297,7 @@
     {
       "ballot_name": "ZMEGAC, Andrew",
       "name": "Andrew Zmegac",
-      "party": "DLP",
+      "party": "OTH",
       "party_label": "Labour DLP",
       "ballot_position": 33,
       "group": "L",
@@ -306,7 +306,7 @@
     {
       "ballot_name": "MARSH, Scott",
       "name": "Scott Marsh",
-      "party": "DLP",
+      "party": "OTH",
       "party_label": "Labour DLP",
       "ballot_position": 34,
       "group": "L",
@@ -379,7 +379,7 @@
     {
       "group": "L",
       "label": "Labour DLP",
-      "party": "DLP"
+      "party": "OTH"
     }
   ],
   "cards": [
@@ -2286,29 +2286,6 @@
           "of_n": 6
         }
       ]
-    },
-    {
-      "registration": "1438",
-      "registered_by": "Labour DLP",
-      "kind": "party",
-      "party": "DLP",
-      "candidate": null,
-      "type": "Single",
-      "registered_on": "2026-11-17",
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1ffa8475-f111-487b-b7f0-feadc2a68b6b%2Fdlp%20htv%20upper%20house%20-%20south-eastern%20metropolitan%20region%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "atl": [
-        "L",
-        "B",
-        "I",
-        "K",
-        "A"
-      ],
-      "via": "text",
-      "status": "read",
-      "ranks": {
-        "LNP": 4,
-        "ONP": 5
-      }
     },
     {
       "registration": "911",
@@ -4754,6 +4731,29 @@
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=8b3cde31-ee24-4468-a1b7-fc0ae67db028%2Faustralian%20democrats%20single%20southern%20metro%201.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
       "status": "unreadable",
       "note": "unreadable, see card"
+    },
+    {
+      "registration": "1438",
+      "registered_by": "Labour DLP",
+      "kind": "party",
+      "party": "OTH",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=1ffa8475-f111-487b-b7f0-feadc2a68b6b%2Fdlp%20htv%20upper%20house%20-%20south-eastern%20metropolitan%20region%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "atl": [
+        "L",
+        "B",
+        "I",
+        "K",
+        "A"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 4,
+        "ONP": 5
+      }
     },
     {
       "registration": "1627",

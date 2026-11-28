@@ -33,7 +33,7 @@
     {
       "ballot_name": "McPHEE, Ross",
       "name": "Ross McPhee",
-      "party": "DLP",
+      "party": "OTH",
       "party_label": "Labour DLP",
       "ballot_position": 4,
       "id": "morwell/ross-mcphee"
@@ -168,33 +168,6 @@
           "of_n": 5
         }
       ]
-    },
-    {
-      "registration": "1425",
-      "registered_by": "Labour DLP",
-      "kind": "party",
-      "party": "DLP",
-      "candidate": null,
-      "type": "Combined",
-      "registered_on": "2026-11-17",
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b28f566a-552b-4cec-95a5-ed6d5c828d8a%2Fdlp%20htv%20lower%20house%20-%20morwell%20district%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "status": "read",
-      "order": [
-        "McPHEE, Ross",
-        "CAMERON, Martin",
-        "MURPHY, Casey",
-        "CLARKE, Brendan",
-        "LUND, Tracie",
-        "HINE, Rochelle",
-        "ACREMAN, Natalie"
-      ],
-      "via": "text",
-      "ranks": {
-        "LNP": 2,
-        "ONP": 3,
-        "ALP": 5,
-        "GRN": 6
-      }
     },
     {
       "registration": "555",
@@ -593,6 +566,33 @@
       "ranks": {
         "ONP": 1,
         "LNP": 3,
+        "ALP": 5,
+        "GRN": 6
+      }
+    },
+    {
+      "registration": "1425",
+      "registered_by": "Labour DLP",
+      "kind": "party",
+      "party": "OTH",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b28f566a-552b-4cec-95a5-ed6d5c828d8a%2Fdlp%20htv%20lower%20house%20-%20morwell%20district%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "status": "read",
+      "order": [
+        "McPHEE, Ross",
+        "CAMERON, Martin",
+        "MURPHY, Casey",
+        "CLARKE, Brendan",
+        "LUND, Tracie",
+        "HINE, Rochelle",
+        "ACREMAN, Natalie"
+      ],
+      "via": "text",
+      "ranks": {
+        "LNP": 2,
+        "ONP": 3,
         "ALP": 5,
         "GRN": 6
       }

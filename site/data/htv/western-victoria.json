@@ -304,7 +304,7 @@
     {
       "ballot_name": "DI BIASE, Costa",
       "name": "Costa Di Biase",
-      "party": "DLP",
+      "party": "OTH",
       "party_label": "Labour DLP",
       "ballot_position": 34,
       "group": "L",
@@ -313,7 +313,7 @@
     {
       "ballot_name": "BOWDEN, Jennifer",
       "name": "Jennifer Bowden",
-      "party": "DLP",
+      "party": "OTH",
       "party_label": "Labour DLP",
       "ballot_position": 35,
       "group": "L",
@@ -458,7 +458,7 @@
     {
       "group": "L",
       "label": "Labour DLP",
-      "party": "DLP"
+      "party": "OTH"
     },
     {
       "group": "M",
@@ -1292,52 +1292,6 @@
           "of_n": 6
         }
       ]
-    },
-    {
-      "registration": "1424",
-      "registered_by": "Labour DLP",
-      "kind": "party",
-      "party": "DLP",
-      "candidate": null,
-      "type": "Combined",
-      "registered_on": "2026-11-17",
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b9eca28e-c325-4ca5-a093-6461a67f7958%2Fdlp%20htv%20lower%20house%20-%20ripon%20district%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "atl": [
-        "L",
-        "F",
-        "I",
-        "K",
-        "N"
-      ],
-      "via": "text",
-      "status": "read",
-      "ranks": {
-        "LNP": 2,
-        "ONP": 4
-      }
-    },
-    {
-      "registration": "1428",
-      "registered_by": "Labour DLP",
-      "kind": "party",
-      "party": "DLP",
-      "candidate": null,
-      "type": "Single",
-      "registered_on": "2026-11-17",
-      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b592efdc-947f-4158-9a79-ec13a87abdc8%2Fdlp%20htv%20upper%20house%20-%20western%20victoria%20region%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
-      "atl": [
-        "L",
-        "F",
-        "I",
-        "K",
-        "N"
-      ],
-      "via": "text",
-      "status": "read",
-      "ranks": {
-        "LNP": 2,
-        "ONP": 4
-      }
     },
     {
       "registration": "1212",
@@ -3014,6 +2968,52 @@
       "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=37fad0a9-ff36-43a4-8884-6f66023897b0%2Faustralian%20democrats%20combined%20lowan%20western%20victoria%202.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
       "status": "unreadable",
       "note": "unreadable, see card"
+    },
+    {
+      "registration": "1424",
+      "registered_by": "Labour DLP",
+      "kind": "party",
+      "party": "OTH",
+      "candidate": null,
+      "type": "Combined",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b9eca28e-c325-4ca5-a093-6461a67f7958%2Fdlp%20htv%20lower%20house%20-%20ripon%20district%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "atl": [
+        "L",
+        "F",
+        "I",
+        "K",
+        "N"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 2,
+        "ONP": 4
+      }
+    },
+    {
+      "registration": "1428",
+      "registered_by": "Labour DLP",
+      "kind": "party",
+      "party": "OTH",
+      "candidate": null,
+      "type": "Single",
+      "registered_on": "2026-11-17",
+      "card_url": "https://www.vec.vic.gov.au/api/sitecore/HtvcResults/ViewCard?blobPath=b592efdc-947f-4158-9a79-ec13a87abdc8%2Fdlp%20htv%20upper%20house%20-%20western%20victoria%20region%202p.pdf&settingsItemId=%7B001D8F7A-28BA-45B7-897A-F0A24F37AEC3%7D",
+      "atl": [
+        "L",
+        "F",
+        "I",
+        "K",
+        "N"
+      ],
+      "via": "text",
+      "status": "read",
+      "ranks": {
+        "LNP": 2,
+        "ONP": 4
+      }
     },
     {
       "registration": "1523",
