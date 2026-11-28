@@ -11,8 +11,8 @@ on:
   # Every 5 minutes from election night. To turn it on, remove the "# " in front of the next two lines (keep the
   # indentation) and push; comment them out again once the count is final. GitHub may start scheduled runs a few
   # minutes late at busy times: a manual run fills the gap.
-  # schedule:
-  #   - cron: "*/5 * * * *"
+  schedule:
+    - cron: "*/5 * * * *"
   workflow_dispatch:
     inputs:
       deploy:
