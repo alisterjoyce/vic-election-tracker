@@ -106,6 +106,11 @@ def main(argv=None) -> int:
         sys.stderr.reconfigure(encoding="utf-8", errors="replace")
     CACHE_DIR.mkdir(exist_ok=True)
     STOP.unlink(missing_ok=True)
+    if sys.platform == "win32" and not a.once:
+        # Keep Windows from sleeping while the loop runs (ES_CONTINUOUS | ES_SYSTEM_REQUIRED); released when it exits.
+        import ctypes
+        ctypes.windll.kernel32.SetThreadExecutionState(0x80000000 | 0x00000001)
+        log.info("Asked Windows to stay awake while the loop runs.")
     n = 0
     while True:
         start = time.monotonic()
